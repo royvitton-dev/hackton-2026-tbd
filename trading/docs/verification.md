@@ -1,6 +1,6 @@
 # 누적 검증과 완료 기준
 
-2026-09-21 20:06 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-21 20:26 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
@@ -15,6 +15,7 @@
 | 성공 ACK 복구·응답 유실·재시도 | 통과 | 저장소 실제 child kill + API 응답 차단 proxy·재시작·동일 ID 재시도, 전체 상태 비교 |
 | 브라우저 재연결·재동기화 | 통과 | [동일 탭 엔진 재시작 전후](../evidence/browser-reconnect-2026-09-21T09-02-02-365Z), 수동 reload 없이 EVENT2971→3026, 잔고 유지. [504 뒤 idle시장 재구독·unknown 보존·동일ID 재시도](../evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/README.md)도 통과 |
 | 느린 수신자 격리 | 통과(이번 호스트·부하 범위) | [실제 WS 수신 중단](slow-ws-validation.md): 중단 중288명령 처리, 정상289상태 연속 수신, 전체416요청 조회/자산 검사. 느린 연결 reset 후 새 연결 상태 일치. reset 원인이 lag/send timeout 중 어느 것인지는 미확정 |
+| WS 종료 사유·peer 정상 종료 | 수정 후 통과 / 범위 제한 | [종료 진단](ws-diagnostics.md): peer Close응답flush후1000·오류0. 별도paused수신자의실제send_timeout/state확인,정상289frames·416ACK/조회·16중복검증. 서버행정shutdown의1006과이전고부하1005원인미확정은유지 |
 | 빌드·포맷·린트·테스트 | 통과 | Rust release 및 fmt, [최신 Clippy all-targets -D warnings](../evidence/20260921T090534849Z-checkpoint-error-format-clippy-e41e5b01), [프런트7개 테스트](../evidence/frontend-20260921T090509598Z), [최신 안내문구 포함 TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) |
 | 성능·할당 계측 보존 | 통과 / 목표 일부 미달 | [성능 결과](performance.md). A 통과. B/C 최초 fetch 처리량 미달, 측정된 클라이언트 전송 대기 개선 후 동일 바이너리 node:http 목표 통과. 정상 execute 할당 0 미달 |
 | CPU·메모리 구간 분석 | 계산 검증 통과 / 장시간 관찰 진행 | [사용 방법·실측·독립 검토](resource-observation.md), 알려진 카운터·누락·공백·PID교체 등7검증. 현재41분 CPU평균14프로세스합0.581%,엔진0.307%;6시간최종결과는아님 |
@@ -38,6 +39,8 @@
 19:38 새 관찰의 [32.7분 중간 분석](../evidence/2026-09-21T10-38-39-637Z-observation-analysis-39decc3a/analysis.json)은388표본,최대간격5.996초,12봇,자산보존,WS누락/단절0이다. [첫 자동 checkpoint32781](../evidence/2026-09-21T10-40-17-904Z-first-periodic-checkpoint-17d364f9/summary.json)은19:35:21에24.47MB로 게시됐다. 그 주변126응답은125accepted/1ORDER_NOT_OPEN,최대75.97ms. [현재 자원 원시계측](../evidence/20260921T103750097Z-live-resources-corrected-11589dd1/README.md)은 거래소14프로세스 합계 CPU0.351%(16논리코어,5.015초),working set1.012GB다. 브라우저·관찰기는제외하며공유메모리중복가능성을명시한다. 관찰은진행중이고6시간최종통과나전체복구검증을대신하지않는다.
 
 ## 실패 이력과 수정
+
+- [WS 진단 첫 실행](../evidence/2026-09-21T11-18-03-976Z-ws-diagnostics-bb871788/README.md)은 먼저 닫은 peer의 오류를 정상 연결의 공유 배열에 잘못 집계해 실패했다. 연결별 기록으로 수정하고 정상 수신자 오류 검사를 유지했다. 동시에 실제 peer Close1000이1006으로 보이는 결함을 확인하여 대기 중 응답을 최대1초flush하도록 서버를 수정했다. [실제 재검증](../evidence/2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c/README.md)에서 정상1000·오류0·flushed와paused send_timeout을확인. 해당95fa바이너리의[API10/10](../evidence/20260921T112429143Z-ws-diagnostics-api-regression-de52e405/run.json),[Clippy](../evidence/20260921T112429480Z-ws-diagnostics-clippy-ffcf0575/run.json),release/fmt통과. 기존관찰PID20540은09bc바이너리그대로유지.
 
 - 사용자 요청의 [부하 테스트](engine-load-test.md)에서 격리 엔진의 WS 소비자 1개가 24동시 단계 말에 close1005로 단절됐다. 수신 중 순번 누락0이지만최종17736까지따라잡지못해연속수신은실패다. 원인분기로그가없어lag/send timeout등을확정하지않는다. 96동시단계의CPU감소·처리량은WS없는조건이므로스케일향상근거로쓰지않는다. 전체durableACK·정산/잔고검사와정상종료는통과했으며, 기존6시간데모의WS는유지됐다.
 

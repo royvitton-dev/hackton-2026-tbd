@@ -1,0 +1,67 @@
+{
+  "reviewed_at": "2026-09-21T11:26:44.7933469Z",
+  "base_commit": "4550acec05a5255862783048c07c6de297f5bb1b",
+  "scope": "Read-only source diff, local dependency source and preserved diagnostic artifacts; no build, service or test execution",
+  "files": [
+    {
+      "path": "engine/src/main.rs",
+      "bytes": 23848,
+      "sha256": "2e639c2d57552efc62bd2ba16e63bf36b86093906d9b3dbb4c2fe4b0cd3cd6bd"
+    },
+    {
+      "path": "scripts/ws-diagnostics.mjs",
+      "bytes": 28455,
+      "sha256": "4fa3c618839c43c4d0647817e65dcf0cd76842d5d4aa8dce748dcfd51fb1e7b8"
+    },
+    {
+      "path": "evidence/2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c/executed-ws-diagnostics.mjs",
+      "bytes": 28455,
+      "sha256": "4fa3c618839c43c4d0647817e65dcf0cd76842d5d4aa8dce748dcfd51fb1e7b8"
+    },
+    {
+      "path": "evidence/2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c/metadata.json",
+      "bytes": 3831,
+      "sha256": "4bbb79ac0994c0144508023e40d46ddd545f14417732b8bd99943dd4f57aa694"
+    },
+    {
+      "path": "evidence/2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c/summary.json",
+      "bytes": 4083,
+      "sha256": "f0575cd8c19d873253dc802f24f0cdb4ac72c94a5701a3839df329acf3628b14"
+    },
+    {
+      "path": "evidence/2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c/websocket-clients.json",
+      "bytes": 45383,
+      "sha256": "009e69e812c0d3a833d3219e3d71b5398d6062324aea6b18c42cd2ee48d8ecc7"
+    },
+    {
+      "path": "evidence/2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c/websocket-termination-events.json",
+      "bytes": 1020,
+      "sha256": "8d81a7602c8ecf7abf248f6a6f5de9a354a15dac51f5f87f2530617386c4846b"
+    },
+    {
+      "path": "evidence/2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c/engine.stderr.log",
+      "bytes": 1357,
+      "sha256": "a454ba0724f66dd86b918838e960b8ee469f73df3ff7c995943af40dcd6419e3"
+    },
+    {
+      "path": "evidence/2026-09-21T11-18-03-976Z-ws-diagnostics-bb871788/summary.json",
+      "bytes": 3426,
+      "sha256": "81e2d4bb4d5491d2bf73262e86ea7754b9c2e6c3f058ac45dd91ba7b6fb0f129"
+    },
+    {
+      "path": "evidence/2026-09-21T11-18-03-976Z-ws-diagnostics-bb871788/events.json",
+      "bytes": 1809,
+      "sha256": "4ccc9ba07917639f65e0fb901844b5efe53094e0c4139726115e300b5e754919"
+    },
+    {
+      "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tungstenite-0.29.0/src/protocol/mod.rs",
+      "bytes": 36247,
+      "sha256": "a531ed6cda998b0db2ede7a0878453d49599f45d585d6278450e282d2b64dfb0"
+    },
+    {
+      "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-tungstenite-0.29.0/src/lib.rs",
+      "bytes": 15062,
+      "sha256": "33ad167c6de78cc76f010bffe33f4f8bd254ce843136763be959384031cfb33f"
+    }
+  ]
+}

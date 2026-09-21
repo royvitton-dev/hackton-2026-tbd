@@ -1,0 +1,17 @@
+{
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine",
+  "exit_code": 0,
+  "run_id": "20260921T112429480Z-ws-diagnostics-clippy-ffcf0575",
+  "status": "passed",
+  "ended_at": "2026-09-21T11:24:30.7443166Z",
+  "started_at": "2026-09-21T11:24:29.5081940Z",
+  "command": "cargo",
+  "args": [
+    "clippy",
+    "--locked",
+    "--all-targets",
+    "--",
+    "-D",
+    "warnings"
+  ]
+}

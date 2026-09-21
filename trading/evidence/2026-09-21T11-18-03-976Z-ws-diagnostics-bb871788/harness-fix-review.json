@@ -1,0 +1,25 @@
+{
+  "reviewed_at": "2026-09-21T11:19:54.004Z",
+  "scope": "Offline source-function regression and saved failed-run artifact checks; no live rerun",
+  "source_before_sha256": "668cd3c9e07fde557b59eb4f7071f1bdd43dcabaa5386ce58439ba9745b7b8c4",
+  "source_after_sha256": "706b882e8e24d101a478628b6bfde13f61049c260ea989b82ce036c022778541",
+  "regression_passed": [
+    "peer error and close remain in peer record",
+    "peer error does not populate normal or replacement errors",
+    "normal/replacement errors each fail their unchanged empty-error assertion",
+    "normal close tracking preserved",
+    "cleanup errors preserved with cleanup=true",
+    "malformed state still aborts globally"
+  ],
+  "saved_run": {
+    "complete": false,
+    "unique_durable_acks": 416,
+    "normal_contiguous_sequences": [
+      128,
+      416
+    ],
+    "request_lookups": 0,
+    "demo_unchanged": true
+  },
+  "runtime_validation_of_modified_script": "HOLD until root review; not executed"
+}

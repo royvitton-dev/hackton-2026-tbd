@@ -9,13 +9,17 @@ use axum::{
     routing::{get, post},
 };
 use crossbeam_channel::{Sender, TrySendError};
+use futures_util::SinkExt;
 use leave_exchange::{model::*, storage::Store};
 use serde::{Deserialize, Serialize};
 use serde_json::{Value, json};
 use std::{
     collections::BTreeMap,
     net::SocketAddr,
-    sync::Arc,
+    sync::{
+        Arc,
+        atomic::{AtomicU64, Ordering},
+    },
     time::{Duration, SystemTime, UNIX_EPOCH},
 };
 use tokio::sync::{RwLock, broadcast, oneshot, watch};
@@ -26,6 +30,7 @@ use tower_http::{
 
 const QUEUE_CAPACITY: usize = 2048;
 const EVENT_CAPACITY: usize = 32;
+static NEXT_WS_CONNECTION: AtomicU64 = AtomicU64::new(1);
 type ApiError = (StatusCode, Json<Value>);
 type Reply<T> = oneshot::Sender<Result<T, String>>;
 
@@ -347,18 +352,44 @@ async fn websocket(
         .on_upgrade(move |socket| stream(socket, rx, initial, shutdown)))
 }
 
-async fn send_state(socket: &mut WebSocket, market: &MarketSnapshot) -> bool {
-    let Ok(payload) = serde_json::to_string(&json!({"type":"state","state":market})) else {
-        return false;
-    };
-    matches!(
-        tokio::time::timeout(
-            Duration::from_secs(3),
-            socket.send(Message::Text(payload.into()))
-        )
-        .await,
-        Ok(Ok(()))
-    )
+struct StreamExit {
+    reason: &'static str,
+    stage: &'static str,
+    skipped: Option<u64>,
+    close_reply: Option<&'static str>,
+}
+
+impl StreamExit {
+    fn new(reason: &'static str, stage: &'static str) -> Self {
+        Self {
+            reason,
+            stage,
+            skipped: None,
+            close_reply: None,
+        }
+    }
+}
+
+async fn send_message(
+    socket: &mut WebSocket,
+    message: Message,
+    stage: &'static str,
+) -> Result<(), StreamExit> {
+    match tokio::time::timeout(Duration::from_secs(3), socket.send(message)).await {
+        Ok(Ok(())) => Ok(()),
+        Ok(Err(_)) => Err(StreamExit::new("send_error", stage)),
+        Err(_) => Err(StreamExit::new("send_timeout", stage)),
+    }
+}
+
+async fn send_state(
+    socket: &mut WebSocket,
+    market: &MarketSnapshot,
+    stage: &'static str,
+) -> Result<(), StreamExit> {
+    let payload = serde_json::to_string(&json!({"type":"state","state":market}))
+        .map_err(|_| StreamExit::new("serialization_error", stage))?;
+    send_message(socket, Message::Text(payload.into()), stage).await
 }
 
 async fn stream(
@@ -367,29 +398,83 @@ async fn stream(
     initial: MarketSnapshot,
     mut shutdown: watch::Receiver<bool>,
 ) {
-    if *shutdown.borrow() {
-        return;
-    }
-    let mut last_seq = initial.event_seq;
-    if !send_state(&mut socket, &initial).await {
-        return;
-    }
-    let mut ping = tokio::time::interval(Duration::from_secs(10));
-    loop {
+    let connection_id = NEXT_WS_CONNECTION.fetch_add(1, Ordering::Relaxed);
+    let started = std::time::Instant::now();
+    let mut last_seq = None;
+    let exit = async {
         if *shutdown.borrow() {
-            break;
+            return StreamExit::new("server_shutdown", "shutdown");
         }
-        tokio::select! {
-            _=shutdown.changed()=>break,
-            event=rx.recv()=>match event {
-                Ok(market)=>{if market.event_seq>last_seq || (market.event_seq==last_seq && market.engine_status!="ready") {last_seq=market.event_seq;if !send_state(&mut socket,&market).await{break;}}},
-                // Lagged consumers reconnect and get a new authoritative snapshot.
-                Err(_)=>{let _=tokio::time::timeout(Duration::from_secs(1),socket.send(Message::Close(None))).await;break;},
-            },
-            incoming=socket.recv()=>match incoming {Some(Ok(Message::Close(_)))|None|Some(Err(_))=>break,_=>{}},
-            _=ping.tick()=>{if !matches!(tokio::time::timeout(Duration::from_secs(3),socket.send(Message::Ping(Vec::new().into()))).await,Ok(Ok(()))){break;}},
+        if let Err(exit) = send_state(&mut socket, &initial, "initial").await {
+            return exit;
         }
-    }
+        last_seq = Some(initial.event_seq);
+        let mut ping = tokio::time::interval(Duration::from_secs(10));
+        loop {
+            if *shutdown.borrow() {
+                break StreamExit::new("server_shutdown", "shutdown");
+            }
+            tokio::select! {
+                _ = shutdown.changed() => break StreamExit::new("server_shutdown", "shutdown"),
+                event = rx.recv() => match event {
+                    Ok(market) => {
+                        if Some(market.event_seq) > last_seq
+                            || (Some(market.event_seq) == last_seq && market.engine_status != "ready")
+                        {
+                            if let Err(exit) = send_state(&mut socket, &market, "state").await {
+                                break exit;
+                            }
+                            last_seq = Some(market.event_seq);
+                        }
+                    },
+                    // Preserve the bounded slow-consumer policy and record why it closed.
+                    Err(error) => {
+                        let exit = match error {
+                            broadcast::error::RecvError::Lagged(skipped) => StreamExit {
+                                reason: "broadcast_lagged", stage: "broadcast", skipped: Some(skipped), close_reply: None,
+                            },
+                            broadcast::error::RecvError::Closed => StreamExit::new("broadcast_closed", "broadcast"),
+                        };
+                        let _ = tokio::time::timeout(Duration::from_secs(1), socket.send(Message::Close(None))).await;
+                        break exit;
+                    },
+                },
+                incoming = socket.recv() => match incoming {
+                    Some(Ok(Message::Close(_))) => {
+                        // Tungstenite queued the close reply during recv; dropping now would
+                        // discard it and make the peer observe an abnormal closure (1006).
+                        let reply = match tokio::time::timeout(Duration::from_secs(1), socket.flush()).await {
+                            Ok(Ok(())) => "flushed",
+                            Ok(Err(_)) => "error",
+                            Err(_) => "timeout",
+                        };
+                        let mut exit = StreamExit::new("peer_closed", "receive");
+                        exit.close_reply = Some(reply);
+                        break exit;
+                    },
+                    None => break StreamExit::new("peer_eof", "receive"),
+                    Some(Err(_)) => break StreamExit::new("receive_error", "receive"),
+                    _ => {},
+                },
+                _ = ping.tick() => {
+                    if let Err(exit) = send_message(&mut socket, Message::Ping(Vec::new().into()), "ping").await {
+                        break exit;
+                    }
+                },
+            }
+        }
+    }.await;
+    // One bounded record per connection; never include arbitrary peer text or payloads.
+    eprintln!(
+        "{}",
+        json!({
+            "event": "websocket_closed", "timestamp_ms": now_ms(),
+            "connection_id": connection_id, "reason": exit.reason, "stage": exit.stage,
+            "last_event_seq": last_seq, "skipped": exit.skipped,
+            "close_reply": exit.close_reply,
+            "connected_ms": started.elapsed().as_millis(),
+        })
+    );
 }
 
 #[tokio::main]

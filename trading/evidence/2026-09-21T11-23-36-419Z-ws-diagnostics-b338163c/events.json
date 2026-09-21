@@ -1,0 +1,102 @@
+[
+  {
+    "at": "2026-09-21T11:23:37.447Z",
+    "relative_ms": 1027.9569999999999,
+    "event": "peer-close-case_close",
+    "code": 1000,
+    "reason": "diagnostic-private-peer-reason-cd49e460",
+    "cleanup": false
+  },
+  {
+    "at": "2026-09-21T11:23:37.481Z",
+    "relative_ms": 1061.8555,
+    "event": "peer_close_case_passed",
+    "structured_event": {
+      "close_reply": "flushed",
+      "connected_ms": 19,
+      "connection_id": 1,
+      "event": "websocket_closed",
+      "last_event_seq": 128,
+      "reason": "peer_closed",
+      "skipped": null,
+      "stage": "receive",
+      "timestamp_ms": 1789989817419
+    }
+  },
+  {
+    "at": "2026-09-21T11:23:37.514Z",
+    "relative_ms": 1095.1631,
+    "event": "slow_read_paused",
+    "bytes_read": 243,
+    "buffered_after_headers": 0
+  },
+  {
+    "at": "2026-09-21T11:23:42.521Z",
+    "relative_ms": 6102.4127,
+    "event": "paused_receiver_verification_passed",
+    "completed_unique_commands": 288,
+    "normal_event_seq": 416,
+    "all_lookup_results": 416,
+    "unchanged_after_duplicates": true
+  },
+  {
+    "at": "2026-09-21T11:23:42.531Z",
+    "relative_ms": 6111.9286,
+    "event": "paused_receiver_reason_confirmed",
+    "structured_event": {
+      "close_reply": null,
+      "connected_ms": 3034,
+      "connection_id": 3,
+      "event": "websocket_closed",
+      "last_event_seq": 136,
+      "reason": "send_timeout",
+      "skipped": null,
+      "stage": "state",
+      "timestamp_ms": 1789989820550
+    }
+  },
+  {
+    "at": "2026-09-21T11:23:42.531Z",
+    "relative_ms": 6112.0982,
+    "event": "slow_read_resumed",
+    "paused_ms": 5016.8589,
+    "bytes_read_before_resume": 25559
+  },
+  {
+    "at": "2026-09-21T11:23:42.532Z",
+    "relative_ms": 6112.8823,
+    "event": "slow_error",
+    "message": "read ECONNRESET"
+  },
+  {
+    "at": "2026-09-21T11:23:42.532Z",
+    "relative_ms": 6112.9508,
+    "event": "slow_close",
+    "had_error": true,
+    "local_destroy": false,
+    "resumed": true
+  },
+  {
+    "at": "2026-09-21T11:23:42.608Z",
+    "relative_ms": 6189.4693,
+    "event": "normal_close",
+    "code": 1006,
+    "reason": "",
+    "cleanup": true
+  },
+  {
+    "at": "2026-09-21T11:23:42.609Z",
+    "relative_ms": 6189.5539,
+    "event": "replacement_close",
+    "code": 1006,
+    "reason": "",
+    "cleanup": true
+  },
+  {
+    "at": "2026-09-21T11:23:42.627Z",
+    "relative_ms": 6208.4688,
+    "event": "engine_exit",
+    "code": 0,
+    "signal": null
+  }
+]

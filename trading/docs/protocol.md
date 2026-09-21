@@ -29,6 +29,8 @@ Admission errors include HTTP 401 session problems, 403 Origin or ownership of a
 
 The broadcast queue holds 32 shared snapshots. Slow clients cannot block the writer; lag closes their connection, and the UI reconnects. Socket writes time out after three seconds. Ten-second server pings are transport liveness, never generated market prices. Chart price/volume uses actual engine trades.
 
+The server flushes the automatically queued reply to a peer Close frame with a one-second limit before dropping the connection. Structured `websocket_closed` stderr records distinguish lag, send timeout/error, peer close, receive error and server shutdown, without logging arbitrary peer text or session tokens. `last_event_seq` is the last successful server send, not a client delivery acknowledgement. See [diagnostic fields, actual verification and limits](ws-diagnostics.md). Administrative server shutdown still drops open streams; a clean client-side close code is not promised on that path.
+
 ## Operational endpoints
 
 - `GET /health`: status, sequences, bounded queue occupancy, declared durability mode. HTTP listener starts only after recovery; startup recovery details go to structured stderr logs. `failed_closed` is not healthy trading availability.

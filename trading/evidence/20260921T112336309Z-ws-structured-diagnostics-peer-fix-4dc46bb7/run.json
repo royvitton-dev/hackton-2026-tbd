@@ -1,0 +1,15 @@
+{
+  "command": "node",
+  "args": [
+    "scripts/ws-diagnostics.mjs",
+    "--competing-resource-stress",
+    "--expected-binary-sha256",
+    "95fa92425c8dad104cc9b2440c9c6bb00bd985d6d7f58e9dd65d4bf7df7fe781"
+  ],
+  "run_id": "20260921T112336309Z-ws-structured-diagnostics-peer-fix-4dc46bb7",
+  "exit_code": 0,
+  "status": "passed",
+  "started_at": "2026-09-21T11:23:36.3317268Z",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "ended_at": "2026-09-21T11:23:42.7049810Z"
+}

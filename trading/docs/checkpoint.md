@@ -1,15 +1,17 @@
 # 작업 체크포인트
 
-갱신: 2026-09-21 20:10 KST. 마감: 2026-09-22 09:00 KST (약12시간50분 남음).
+갱신: 2026-09-21 20:26 KST. 마감: 2026-09-22 09:00 KST (약12시간34분 남음).
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 경계·사용자 지시·Git
 - PROJECT_ROOT `C:\project\hackton-2026-tbd` 사용자 확인. 프로젝트 파일/산출물은 `trading` 내부만. 적용할 AGENTS.md는 처음 검사한 프로젝트/상위 경로에 없었다.
 - 초기Git clean, 기준 `d249d3d6892d44f588b5651f7b17a44cf8833211`. 현재 브랜치 `codex/leave-exchange`, remote `https://github.com/royvitton-dev/hackton-2026-tbd.git`.
 - 사용자 추가 지시: GS리테이/GS칼테스/GS건썰, 독립 거래소UI, 완성 변경 commit/push 승인. 실제 외부배포 금지. 기존 루트UI 변경 없음, 선택적 링크 adapter만 trading 안에 준비.
+- **앞으로 모든 검증된 후속 변경은 main에 push**하라는 사용자 지시를20:21에받았다. 원격main최신변경보존/강제push금지. 현재sourcecheckout의브랜치이름과무관하게최종push대상은main이다.
 - 안정 소스/완료 증거787파일의 commit `7bc9b56b726bca181938f7f890b1dbcdb2d4a9e5`를 **19:28 KST에 origin/codex/leave-exchange로 push 완료**했다. 사용자 문의에 따라 완성된 구현 체크포인트부터 먼저 전달했다. `git ls-remote`로 원격 SHA와 local HEAD 일치를 확인했다. 진행 중demo/6시간관찰/콘솔과 후속 검증·문서는 별도 추가 commit/push 예정이며 전체 마감 작업 완료 선언이 아니다.
 - **19:33 추가 push 완료:** `2bcfd5545aa3bdb336a0f448bab4a7390f158f76`에 느린WS 실제 검증·커밋 소스 setup 재현·문서 탐색 감사와 구체적 안내 수정을 포함했다. 원격 SHA 동일 확인. 현재 남은 변경은 진행 중 장시간 관찰과 후속 상태 기록이다.
-- **CPU·메모리 분석 추가 push 완료:** `e4553bf0dee22c70e836c182bf04cc1cb59f637a`가 현재 local/remote HEAD다. 새로운 카운터 분석·7검증·독립검토·중간 자원/스냅샷 증거를 포함하며 `git ls-remote`로 일치를 확인했다. 진행 중demo/6시간관찰 원본3경로는완료후추가할예정이다.
+- **CPU·메모리 분석 추가 push 완료:** `e4553bf0dee22c70e836c182bf04cc1cb59f637a`를19:50에push했다. 새로운 카운터 분석·7검증·독립검토·중간 자원/스냅샷 증거를 포함하며 당시 `git ls-remote`로 일치를 확인했다. 진행 중demo/6시간관찰 원본3경로는완료후추가할예정이다.
+- **사용자 요청 부하 측정 추가 push 완료:** 최신 local/remote HEAD `4550acec05a5255862783048c07c6de297f5bb1b`. 실제17736명령부하/CPU·메모리원본/그래프/독립검토/1시간중간관찰33파일을commit하고push exit0 및원격SHA일치를확인했다. 이후이체크포인트·push기록과진행중3경로만로컬후속변경이며6시간관찰은계속실행중이다.
 - Node24.19.0/pnpm11.25.0, portableRust1.98.1GNU+LLVM. Rust명령 전 `. ./scripts/env.ps1`. 도구/캐시/빌드/데이터는로컬보존,Git제외. 큰FULLCore runtimeJSON도로컬보존+해시/비교결과추적. `engine/tests/fixtures/*.json`은추적.
 
 ## 완료·담당
@@ -19,6 +21,8 @@
 - `/root/frontend`: 독립UI,미확인요청/reload/동일ID재시도,production/Vercel준비,선택적adapter,demo lifecycle보호완료. 19:30 README/docs 25개 로컬 링크120개와 실행 명령 정적 감사를 완료했다. 서비스/빌드/테스트 변경 없음. 현재 유휴.
 
 ## 최근 검증·정직한 한계
+- **20:24 WS 진단·정상종료 수정 통과:** [새진단문서](ws-diagnostics.md),releaseSHA95fa92425c8dad104cc9b2440c9c6bb00bd985d6d7f58e9dd65d4bf7df7fe781. peerClose뒤queuedreply를최대1초flush하여기존1006→실제1000·오류0확인. 종료원인구조로그에임의peer문구/token미포함. paused수신자의send_timeout/state를이번fixture에서확인했으며이전고부하1005원인은여전히미확정. 성공run `2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c`:416ACK/416조회/16중복/정상289연속frames/자산예약검증/격리engine13996exit0·sampler8656정리. 기존행정shutdown클라이언트1006정책은유지했다.
+- 새main.rs만변경해core·저장소규칙미변경. release/fmt/Clippyalltargets-Dwarnings/API10회귀통과. `evidence/20260921T112214016Z-ws-close-reply-build-6102ee9b`, `20260921T112429143Z-ws-diagnostics-api-regression-de52e405`, `20260921T112429480Z-ws-diagnostics-clippy-ffcf0575`. matching_core독립소스검토완료 `evidence/20260921T112644739Z-ws-diagnostics-independent-review-75a00872`:새production정확성회귀발견없음. 검증된변경을main에push하는중. **실행중메인20540은09bc이며관찰종료전재시작하지않는다**.
 - 사용자 요청 [엔진 부하 테스트](engine-load-test.md)를20:01–20:02에1회실행. 최신release09bc격리엔진,6/24/96동시요청,17736명령/8868체결전부durableACK·잔고/예약/건수검증통과. 단계별472.44/482.60/510.14cmd/s,ACKp9917.04/56.58/186.66ms,엔진CPU평균5.84/7.36/1.75%(16논리CPU총량기준),working set관측최대18.0/30.9/33.3MiB. phase당6000명령cap으로12.70/12.33/11.29초후종료. 최대용량/장시간누수시험아님.
 - 위부하의WS1개가24단계말close1005로단절,최종순번미도달. **WS연속성실패**,96단계는WS가없어CPU/처리량을같은조건으로비교하지않는다. 원인미확정. 원시자료 `evidence/2026-09-21T11-01-25-875Z-engine-load-8774ce30`,root CPU67구간독립재계산/그래프 `evidence/20260921T110252023359Z-engine-load-plot-bbb045e3`. 격리engine22032exit0,client10036/sampler3032종료;정상demo/observer와manifest동일. 새prod엔진변경/반복부하없음.
 - `/root/durability` 독립 검토 `evidence/2026-09-21T11-08-10-329Z-engine-load-independent-review-1389375f` 완료. 전체ACK에서4barrier잔고/건수재구성,CPU/메모리재계산에불일치없음. 실제미수신WS순번5801개와96무WS조건을명시했다. engine-load의complete=true를WS통과로표시하지않는다. 이후개선대상은WS단절원인분기진단과동일조건검증이며메인장기관찰은유지한다.
@@ -67,3 +71,13 @@
 - 이전1시간벽시계관찰은641표본/18944명령/14211h증가,WS누락·단절0/자산보존. **절전공백356.739초로연속1시간불통과**. 기존코드summary.passed=true는보존하되새analysis.continuous_demo_pass=false로명시. 최종분석 `evidence/2026-09-21T10-03-08-381Z-observation-analysis-5360a05c`,원runREADME참조. 엔진WS15.93→40.78MB,로그0.50→11.88MB.
 - 모니터만돌아가는기간과실제agent구현시간을구분할것. 앱/세션/사용량한계가없어진다고가정하지않음. 실제예약재개/제약이관찰되면그시각과이유를추가기록.
 - 07:00대형변경제한,08:00최종검증/문서,08:30치명적결함만,08:55제출준비/승인된push,09:00전실제상태인계. deadline은미완료를완료로바꾸지않는다.
+
+## 20:19 사용자 main 병합과 현재 진단 작업
+- 사용자 지시로 검증·push된 `codex/leave-exchange`의 `4550acec05a5255862783048c07c6de297f5bb1b`를 **main에 병합하고 원격 push 완료**. 최종 main `3912d1a726d147de1259901effb094711b35a72d`, 원격 SHA 일치 확인. 최초 main c3f5a2e에서 병합 후 다른 작업의97622c1 갱신으로 첫 push가 거절되어 이를 다시 merge하고 강제 push 없이 반영했다. 충돌없음, main의 trading tree는4550ace와완전히동일,다른main파일보존. 근거 `evidence/20260921T111721387Z-merge-main-053c03b7`.
+- 병합 전용 detached worktree `trading/.tmp/merge-main-20260921T111721374Z` 보존. 원래checkout은codex/leave-exchange이고미커밋진단작업/실행중프로세스그대로다. PR은만들지않았다.
+- 이전 goal turn은실제부하/원시CPU·메모리/독립검토/그래프/push를완료한progress. 현재turn은종료사유로그구현과main병합progress. observer20793은20:12실제새출력/살아있는handle재확인. 전체goal여전히active.
+- root의미커밋 `engine/src/main.rs` 변경: WS연결종료마다 structured websocket_closed(reason/stage/last_event_seq/skipped/connection_id)1개기록,peer임의payload/reason/token미포함. 전송3초/lag닫기1초/32event정책유지. fmt+release build exit0. 새release SHA `c7dd06405ce706f6cf2ff2d819480f43a14dec9cdec6a23c52f1bdbf845d404c`, 근거 `evidence/20260921T111520137Z-ws-diagnostics-build-01ae2b6b`. **메인실행PID20540은기존09bc바이너리유지**,새변경은main병합에없다.
+- `/root/matching_core`오프라인분석완료 `evidence/20260921T111408499Z-ws-offline-analysis-e434154c`: WS JSON2.345GB,phase24평균101.96MB/s,frame최근1000trades81.54%. HTTP+WS JSON파싱동일Node루프,close원인미확정. 작은후보typedborrowedwrapper로중간Value제거(전송량변화없음);더큰delta/coalescing은계약검토필요. 새부하/빌드없음.
+- `/root/durability`의c7dd첫실행은harness공유오류배열문제로실패했고 `2026-09-21T11-18-03-976Z-ws-diagnostics-bb871788`에보존했다. peerClose1006도실제로관찰됐다. 이후연결별오류기록·strictpeer1000검증과서버queuedreplyflush를수정했고위20:24재검증/API/Clippy를완료했다. 첫실패를지우거나성공으로바꾸지않았다.
+
+- **사용자 영속 지시 추가:** 앞으로 검증된 후속 변경의 push 대상은 main이다. codex브랜치에만push해서끝내지말것. 원격main최신변경을보존하고강제push없이합친뒤main에반영한다.

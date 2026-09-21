@@ -1,0 +1,2125 @@
+{
+  "peer-close-case": {
+    "label": "peer-close-case",
+    "events": [
+      {
+        "event": "state",
+        "label": "peer-close-case",
+        "at_ms": 983.3953,
+        "event_seq": 128,
+        "bytes": 25310
+      },
+      {
+        "event": "close",
+        "at_ms": 1027.9098999999999,
+        "code": 1000,
+        "reason": "diagnostic-private-peer-reason-cd49e460",
+        "cleanup": false
+      }
+    ],
+    "errors": [],
+    "close": {
+      "event": "close",
+      "at_ms": 1027.9098999999999,
+      "code": 1000,
+      "reason": "diagnostic-private-peer-reason-cd49e460",
+      "cleanup": false
+    }
+  },
+  "normal": {
+    "label": "normal",
+    "events": [
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1064.6573999999998,
+        "event_seq": 128,
+        "bytes": 25310
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1098.7871,
+        "event_seq": 129,
+        "bytes": 25483
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1100.8387,
+        "event_seq": 130,
+        "bytes": 25656
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1103.3279,
+        "event_seq": 131,
+        "bytes": 25829
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1105.9093,
+        "event_seq": 132,
+        "bytes": 26002
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1108.4292,
+        "event_seq": 133,
+        "bytes": 26175
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1110.6122,
+        "event_seq": 134,
+        "bytes": 26348
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1113.0556,
+        "event_seq": 135,
+        "bytes": 26521
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1115.1476,
+        "event_seq": 136,
+        "bytes": 26694
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1117.9676,
+        "event_seq": 137,
+        "bytes": 26867
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1119.7667,
+        "event_seq": 138,
+        "bytes": 27040
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1122.4054999999998,
+        "event_seq": 139,
+        "bytes": 27213
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1124.3338999999999,
+        "event_seq": 140,
+        "bytes": 27386
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1126.87,
+        "event_seq": 141,
+        "bytes": 27559
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1128.6198,
+        "event_seq": 142,
+        "bytes": 27732
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1131.0049,
+        "event_seq": 143,
+        "bytes": 27905
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1133.0873,
+        "event_seq": 144,
+        "bytes": 28078
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1135.4122,
+        "event_seq": 145,
+        "bytes": 28251
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1137.4429,
+        "event_seq": 146,
+        "bytes": 28424
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1139.8417,
+        "event_seq": 147,
+        "bytes": 28597
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1142.1879999999999,
+        "event_seq": 148,
+        "bytes": 28770
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1144.6453,
+        "event_seq": 149,
+        "bytes": 28943
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1146.7504999999999,
+        "event_seq": 150,
+        "bytes": 29116
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1149.2768999999998,
+        "event_seq": 151,
+        "bytes": 29289
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1151.5657999999999,
+        "event_seq": 152,
+        "bytes": 29462
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1153.8432,
+        "event_seq": 153,
+        "bytes": 29635
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1156.0437,
+        "event_seq": 154,
+        "bytes": 29808
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1158.2784,
+        "event_seq": 155,
+        "bytes": 29981
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1160.1824,
+        "event_seq": 156,
+        "bytes": 30154
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1162.3972999999999,
+        "event_seq": 157,
+        "bytes": 30327
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1164.6497,
+        "event_seq": 158,
+        "bytes": 30500
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1167.4488999999999,
+        "event_seq": 159,
+        "bytes": 30673
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1169.551,
+        "event_seq": 160,
+        "bytes": 30846
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1172.0077999999999,
+        "event_seq": 161,
+        "bytes": 31019
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1174.1176,
+        "event_seq": 162,
+        "bytes": 31192
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1176.4535999999998,
+        "event_seq": 163,
+        "bytes": 31365
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1178.6300999999999,
+        "event_seq": 164,
+        "bytes": 31538
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1181.081,
+        "event_seq": 165,
+        "bytes": 31711
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1183.2421,
+        "event_seq": 166,
+        "bytes": 31884
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1185.4239,
+        "event_seq": 167,
+        "bytes": 32057
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1187.6503,
+        "event_seq": 168,
+        "bytes": 32230
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1190.0105999999998,
+        "event_seq": 169,
+        "bytes": 32404
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1192.0828999999999,
+        "event_seq": 170,
+        "bytes": 32578
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1194.6154999999999,
+        "event_seq": 171,
+        "bytes": 32752
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1196.8551,
+        "event_seq": 172,
+        "bytes": 32926
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1199.2131,
+        "event_seq": 173,
+        "bytes": 33100
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1201.2792,
+        "event_seq": 174,
+        "bytes": 33274
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1203.5403,
+        "event_seq": 175,
+        "bytes": 33448
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1205.3824,
+        "event_seq": 176,
+        "bytes": 33622
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1207.5221,
+        "event_seq": 177,
+        "bytes": 33796
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1209.4597999999999,
+        "event_seq": 178,
+        "bytes": 33970
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1211.6499999999999,
+        "event_seq": 179,
+        "bytes": 34144
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1213.5933,
+        "event_seq": 180,
+        "bytes": 34318
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1215.8615,
+        "event_seq": 181,
+        "bytes": 34491
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1217.8932,
+        "event_seq": 182,
+        "bytes": 34664
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1220.1612,
+        "event_seq": 183,
+        "bytes": 34837
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1222.1008,
+        "event_seq": 184,
+        "bytes": 35010
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1224.3445,
+        "event_seq": 185,
+        "bytes": 35183
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1226.1499999999999,
+        "event_seq": 186,
+        "bytes": 35356
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1228.3482,
+        "event_seq": 187,
+        "bytes": 35529
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1230.2785,
+        "event_seq": 188,
+        "bytes": 35702
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1232.5035,
+        "event_seq": 189,
+        "bytes": 35875
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1234.4000999999998,
+        "event_seq": 190,
+        "bytes": 36048
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1236.619,
+        "event_seq": 191,
+        "bytes": 36221
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1238.4534999999998,
+        "event_seq": 192,
+        "bytes": 36394
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1240.8121999999998,
+        "event_seq": 193,
+        "bytes": 36567
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1243.0661,
+        "event_seq": 194,
+        "bytes": 36740
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1244.8734,
+        "event_seq": 195,
+        "bytes": 36913
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1246.7621,
+        "event_seq": 196,
+        "bytes": 37086
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1249.0339,
+        "event_seq": 197,
+        "bytes": 37259
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1251.1605,
+        "event_seq": 198,
+        "bytes": 37432
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1253.5098,
+        "event_seq": 199,
+        "bytes": 37605
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1255.7609,
+        "event_seq": 200,
+        "bytes": 37778
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1258.2541999999999,
+        "event_seq": 201,
+        "bytes": 37951
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1260.2319,
+        "event_seq": 202,
+        "bytes": 38124
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1262.6138999999998,
+        "event_seq": 203,
+        "bytes": 38297
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1264.649,
+        "event_seq": 204,
+        "bytes": 38470
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1266.9962,
+        "event_seq": 205,
+        "bytes": 38643
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1268.8659,
+        "event_seq": 206,
+        "bytes": 38816
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1271.3634,
+        "event_seq": 207,
+        "bytes": 38989
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1273.3868,
+        "event_seq": 208,
+        "bytes": 39162
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1275.9948,
+        "event_seq": 209,
+        "bytes": 39335
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1277.7239,
+        "event_seq": 210,
+        "bytes": 39508
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1280.2719,
+        "event_seq": 211,
+        "bytes": 39681
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1282.6359,
+        "event_seq": 212,
+        "bytes": 39854
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1285.7129,
+        "event_seq": 213,
+        "bytes": 40027
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1287.8558,
+        "event_seq": 214,
+        "bytes": 40200
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1290.1645999999998,
+        "event_seq": 215,
+        "bytes": 40373
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1292.2043999999999,
+        "event_seq": 216,
+        "bytes": 40546
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1294.4759,
+        "event_seq": 217,
+        "bytes": 40719
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1296.5991999999999,
+        "event_seq": 218,
+        "bytes": 40892
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1298.9882,
+        "event_seq": 219,
+        "bytes": 41065
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1300.8659,
+        "event_seq": 220,
+        "bytes": 41238
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1303.1083999999998,
+        "event_seq": 221,
+        "bytes": 41411
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1304.9741,
+        "event_seq": 222,
+        "bytes": 41584
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1307.2722999999999,
+        "event_seq": 223,
+        "bytes": 41757
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1309.2549999999999,
+        "event_seq": 224,
+        "bytes": 41930
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1312.0485999999999,
+        "event_seq": 225,
+        "bytes": 42103
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1313.7992,
+        "event_seq": 226,
+        "bytes": 42276
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1316.5033999999998,
+        "event_seq": 227,
+        "bytes": 42449
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1318.5261,
+        "event_seq": 228,
+        "bytes": 42622
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1320.8597,
+        "event_seq": 229,
+        "bytes": 42795
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1322.8994,
+        "event_seq": 230,
+        "bytes": 42968
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1325.7949999999998,
+        "event_seq": 231,
+        "bytes": 43141
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1327.8002999999999,
+        "event_seq": 232,
+        "bytes": 43314
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1330.2676,
+        "event_seq": 233,
+        "bytes": 43487
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1332.1508999999999,
+        "event_seq": 234,
+        "bytes": 43660
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1334.5783999999999,
+        "event_seq": 235,
+        "bytes": 43833
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1336.3582999999999,
+        "event_seq": 236,
+        "bytes": 44006
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1338.5567999999998,
+        "event_seq": 237,
+        "bytes": 44179
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1340.1567,
+        "event_seq": 238,
+        "bytes": 44352
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1342.7132,
+        "event_seq": 239,
+        "bytes": 44525
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1344.4879999999998,
+        "event_seq": 240,
+        "bytes": 44698
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1346.9316999999999,
+        "event_seq": 241,
+        "bytes": 44871
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1348.8236,
+        "event_seq": 242,
+        "bytes": 45044
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1351.3057999999999,
+        "event_seq": 243,
+        "bytes": 45217
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1353.0987,
+        "event_seq": 244,
+        "bytes": 45390
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1355.5868,
+        "event_seq": 245,
+        "bytes": 45563
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1357.3241,
+        "event_seq": 246,
+        "bytes": 45736
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1359.7361999999998,
+        "event_seq": 247,
+        "bytes": 45909
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1361.5879,
+        "event_seq": 248,
+        "bytes": 46082
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1364.2132,
+        "event_seq": 249,
+        "bytes": 46255
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1366.0263,
+        "event_seq": 250,
+        "bytes": 46428
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1368.3836,
+        "event_seq": 251,
+        "bytes": 46601
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1370.3734,
+        "event_seq": 252,
+        "bytes": 46774
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1372.754,
+        "event_seq": 253,
+        "bytes": 46947
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1374.6924,
+        "event_seq": 254,
+        "bytes": 47120
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1377.2924,
+        "event_seq": 255,
+        "bytes": 47293
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1378.9960999999998,
+        "event_seq": 256,
+        "bytes": 47466
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1381.3818999999999,
+        "event_seq": 257,
+        "bytes": 47639
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1382.9983,
+        "event_seq": 258,
+        "bytes": 47812
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1385.3065,
+        "event_seq": 259,
+        "bytes": 47985
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1387.0927,
+        "event_seq": 260,
+        "bytes": 48158
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1389.4168,
+        "event_seq": 261,
+        "bytes": 48331
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1391.1192999999998,
+        "event_seq": 262,
+        "bytes": 48504
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1393.5412999999999,
+        "event_seq": 263,
+        "bytes": 48677
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1395.322,
+        "event_seq": 264,
+        "bytes": 48850
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1397.7984999999999,
+        "event_seq": 265,
+        "bytes": 49023
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1399.6752,
+        "event_seq": 266,
+        "bytes": 49196
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1402.0172,
+        "event_seq": 267,
+        "bytes": 49369
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1403.7094,
+        "event_seq": 268,
+        "bytes": 49542
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1405.9836,
+        "event_seq": 269,
+        "bytes": 49715
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1407.7313,
+        "event_seq": 270,
+        "bytes": 49888
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1410.1295,
+        "event_seq": 271,
+        "bytes": 50061
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1411.8135,
+        "event_seq": 272,
+        "bytes": 50234
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1414.1074999999998,
+        "event_seq": 273,
+        "bytes": 50407
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1415.8421999999998,
+        "event_seq": 274,
+        "bytes": 50580
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1418.1534,
+        "event_seq": 275,
+        "bytes": 50753
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1419.8600999999999,
+        "event_seq": 276,
+        "bytes": 50926
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1422.2965,
+        "event_seq": 277,
+        "bytes": 51099
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1423.9316999999999,
+        "event_seq": 278,
+        "bytes": 51272
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1426.2624999999998,
+        "event_seq": 279,
+        "bytes": 51445
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1428.0076999999999,
+        "event_seq": 280,
+        "bytes": 51618
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1430.7966999999999,
+        "event_seq": 281,
+        "bytes": 51791
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1432.8692999999998,
+        "event_seq": 282,
+        "bytes": 51964
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1435.0411,
+        "event_seq": 283,
+        "bytes": 52137
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1436.7546,
+        "event_seq": 284,
+        "bytes": 52310
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1439.46,
+        "event_seq": 285,
+        "bytes": 52483
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1441.2477999999999,
+        "event_seq": 286,
+        "bytes": 52656
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1443.9868,
+        "event_seq": 287,
+        "bytes": 52829
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1445.7711,
+        "event_seq": 288,
+        "bytes": 53002
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1448.2316999999998,
+        "event_seq": 289,
+        "bytes": 53175
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1449.9680999999998,
+        "event_seq": 290,
+        "bytes": 53348
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1452.3592999999998,
+        "event_seq": 291,
+        "bytes": 53521
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1454.5116,
+        "event_seq": 292,
+        "bytes": 53694
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1457.1784,
+        "event_seq": 293,
+        "bytes": 53867
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1459.0848999999998,
+        "event_seq": 294,
+        "bytes": 54040
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1462.1944999999998,
+        "event_seq": 295,
+        "bytes": 54213
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1464.1455999999998,
+        "event_seq": 296,
+        "bytes": 54386
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1467.2304,
+        "event_seq": 297,
+        "bytes": 54559
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1468.6982,
+        "event_seq": 298,
+        "bytes": 54734
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1471.3033,
+        "event_seq": 299,
+        "bytes": 54909
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1473.3744,
+        "event_seq": 300,
+        "bytes": 55084
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1476.0065,
+        "event_seq": 301,
+        "bytes": 55257
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1478.21,
+        "event_seq": 302,
+        "bytes": 55430
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1480.7640999999999,
+        "event_seq": 303,
+        "bytes": 55603
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1482.877,
+        "event_seq": 304,
+        "bytes": 55776
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1485.4415,
+        "event_seq": 305,
+        "bytes": 55949
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1487.4821,
+        "event_seq": 306,
+        "bytes": 56122
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1490.1517,
+        "event_seq": 307,
+        "bytes": 56295
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1492.4873,
+        "event_seq": 308,
+        "bytes": 56468
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1495.1394,
+        "event_seq": 309,
+        "bytes": 56641
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1497.2292,
+        "event_seq": 310,
+        "bytes": 56814
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1499.6698,
+        "event_seq": 311,
+        "bytes": 56987
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1501.6648,
+        "event_seq": 312,
+        "bytes": 57160
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1504.4776,
+        "event_seq": 313,
+        "bytes": 57333
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1506.5551,
+        "event_seq": 314,
+        "bytes": 57506
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1508.9214,
+        "event_seq": 315,
+        "bytes": 57679
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1511.104,
+        "event_seq": 316,
+        "bytes": 57852
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1513.9233,
+        "event_seq": 317,
+        "bytes": 58025
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1516.2287,
+        "event_seq": 318,
+        "bytes": 58198
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1518.8871,
+        "event_seq": 319,
+        "bytes": 58371
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1520.9587999999999,
+        "event_seq": 320,
+        "bytes": 58544
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1523.5455,
+        "event_seq": 321,
+        "bytes": 58717
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1525.4814999999999,
+        "event_seq": 322,
+        "bytes": 58890
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1528.431,
+        "event_seq": 323,
+        "bytes": 59063
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1530.2904999999998,
+        "event_seq": 324,
+        "bytes": 59236
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1532.831,
+        "event_seq": 325,
+        "bytes": 59409
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1535.1122,
+        "event_seq": 326,
+        "bytes": 59582
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1537.378,
+        "event_seq": 327,
+        "bytes": 59755
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1539.4556,
+        "event_seq": 328,
+        "bytes": 59928
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1541.9903,
+        "event_seq": 329,
+        "bytes": 60101
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1543.8274999999999,
+        "event_seq": 330,
+        "bytes": 60274
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1546.3627999999999,
+        "event_seq": 331,
+        "bytes": 60447
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1548.375,
+        "event_seq": 332,
+        "bytes": 60620
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1550.7966,
+        "event_seq": 333,
+        "bytes": 60793
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1552.4759,
+        "event_seq": 334,
+        "bytes": 60966
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1555.8122999999998,
+        "event_seq": 335,
+        "bytes": 61139
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1558.2464,
+        "event_seq": 336,
+        "bytes": 61312
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1561.0065,
+        "event_seq": 337,
+        "bytes": 61485
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1562.8632,
+        "event_seq": 338,
+        "bytes": 61658
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1565.5847999999999,
+        "event_seq": 339,
+        "bytes": 61831
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1567.5774,
+        "event_seq": 340,
+        "bytes": 62004
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1570.1647,
+        "event_seq": 341,
+        "bytes": 62177
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1572.7414999999999,
+        "event_seq": 342,
+        "bytes": 62350
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1575.6471999999999,
+        "event_seq": 343,
+        "bytes": 62523
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1578.1174999999998,
+        "event_seq": 344,
+        "bytes": 62696
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1581.2662,
+        "event_seq": 345,
+        "bytes": 62869
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1583.2224999999999,
+        "event_seq": 346,
+        "bytes": 63042
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1586.2378999999999,
+        "event_seq": 347,
+        "bytes": 63215
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1587.9725999999998,
+        "event_seq": 348,
+        "bytes": 63388
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1591.6965,
+        "event_seq": 349,
+        "bytes": 63561
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1593.1953999999998,
+        "event_seq": 350,
+        "bytes": 63734
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1595.7214,
+        "event_seq": 351,
+        "bytes": 63907
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1597.4784,
+        "event_seq": 352,
+        "bytes": 64080
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1600.8169,
+        "event_seq": 353,
+        "bytes": 64253
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1602.2084,
+        "event_seq": 354,
+        "bytes": 64426
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1604.8582999999999,
+        "event_seq": 355,
+        "bytes": 64599
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1606.3534,
+        "event_seq": 356,
+        "bytes": 64772
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1609.0678,
+        "event_seq": 357,
+        "bytes": 64945
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1610.7223,
+        "event_seq": 358,
+        "bytes": 65118
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1613.5748999999998,
+        "event_seq": 359,
+        "bytes": 65291
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1615.4449,
+        "event_seq": 360,
+        "bytes": 65464
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1619.9176,
+        "event_seq": 361,
+        "bytes": 65637
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1620.3011999999999,
+        "event_seq": 362,
+        "bytes": 65810
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1622.9151,
+        "event_seq": 363,
+        "bytes": 65983
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1624.4981,
+        "event_seq": 364,
+        "bytes": 66156
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1627.2803999999999,
+        "event_seq": 365,
+        "bytes": 66329
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1628.9025,
+        "event_seq": 366,
+        "bytes": 66502
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1631.3826,
+        "event_seq": 367,
+        "bytes": 66675
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1633.138,
+        "event_seq": 368,
+        "bytes": 66848
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1635.6162,
+        "event_seq": 369,
+        "bytes": 67021
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1637.9099999999999,
+        "event_seq": 370,
+        "bytes": 67194
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1639.8663999999999,
+        "event_seq": 371,
+        "bytes": 67367
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1641.7803,
+        "event_seq": 372,
+        "bytes": 67540
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1643.994,
+        "event_seq": 373,
+        "bytes": 67713
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1645.8047,
+        "event_seq": 374,
+        "bytes": 67886
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1648.3809999999999,
+        "event_seq": 375,
+        "bytes": 68059
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1649.9243999999999,
+        "event_seq": 376,
+        "bytes": 68232
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1652.7578999999998,
+        "event_seq": 377,
+        "bytes": 68405
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1654.5279,
+        "event_seq": 378,
+        "bytes": 68578
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1657.1897999999999,
+        "event_seq": 379,
+        "bytes": 68751
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1659.0263,
+        "event_seq": 380,
+        "bytes": 68924
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1661.6220999999998,
+        "event_seq": 381,
+        "bytes": 69097
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1663.8543,
+        "event_seq": 382,
+        "bytes": 69270
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1667.1961999999999,
+        "event_seq": 383,
+        "bytes": 69443
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1668.5107,
+        "event_seq": 384,
+        "bytes": 69616
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1671.368,
+        "event_seq": 385,
+        "bytes": 69621
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1672.964,
+        "event_seq": 386,
+        "bytes": 69626
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1675.8269,
+        "event_seq": 387,
+        "bytes": 69631
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1677.5344,
+        "event_seq": 388,
+        "bytes": 69636
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1680.0948999999998,
+        "event_seq": 389,
+        "bytes": 69641
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1681.9696,
+        "event_seq": 390,
+        "bytes": 69646
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1684.8575999999998,
+        "event_seq": 391,
+        "bytes": 69651
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1686.7311,
+        "event_seq": 392,
+        "bytes": 69656
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1689.6104,
+        "event_seq": 393,
+        "bytes": 69661
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1691.2393,
+        "event_seq": 394,
+        "bytes": 69666
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1694.0093,
+        "event_seq": 395,
+        "bytes": 69671
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1695.7114,
+        "event_seq": 396,
+        "bytes": 69676
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1698.578,
+        "event_seq": 397,
+        "bytes": 69681
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1700.0151999999998,
+        "event_seq": 398,
+        "bytes": 69686
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1702.5965999999999,
+        "event_seq": 399,
+        "bytes": 69691
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1704.2558999999999,
+        "event_seq": 400,
+        "bytes": 69696
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1706.9286,
+        "event_seq": 401,
+        "bytes": 69701
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1708.7260999999999,
+        "event_seq": 402,
+        "bytes": 69706
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1711.1743999999999,
+        "event_seq": 403,
+        "bytes": 69711
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1713.2037,
+        "event_seq": 404,
+        "bytes": 69716
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1715.7522,
+        "event_seq": 405,
+        "bytes": 69721
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1717.7542999999998,
+        "event_seq": 406,
+        "bytes": 69726
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1720.502,
+        "event_seq": 407,
+        "bytes": 69731
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1722.5131999999999,
+        "event_seq": 408,
+        "bytes": 69736
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1726.0578,
+        "event_seq": 409,
+        "bytes": 69741
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1727.2463,
+        "event_seq": 410,
+        "bytes": 69746
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1730.0243,
+        "event_seq": 411,
+        "bytes": 69751
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1731.8841,
+        "event_seq": 412,
+        "bytes": 69756
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1734.4532,
+        "event_seq": 413,
+        "bytes": 69761
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1736.4222,
+        "event_seq": 414,
+        "bytes": 69766
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1739.2417,
+        "event_seq": 415,
+        "bytes": 69771
+      },
+      {
+        "event": "state",
+        "label": "normal",
+        "at_ms": 1741.0458999999998,
+        "event_seq": 416,
+        "bytes": 69776
+      },
+      {
+        "event": "error",
+        "at_ms": 6189.3453,
+        "message": "normal error",
+        "cleanup": true
+      },
+      {
+        "event": "close",
+        "at_ms": 6189.4453,
+        "code": 1006,
+        "reason": "",
+        "cleanup": true
+      }
+    ],
+    "errors": [
+      {
+        "event": "error",
+        "at_ms": 6189.3453,
+        "message": "normal error",
+        "cleanup": true
+      }
+    ],
+    "close": {
+      "event": "close",
+      "at_ms": 6189.4453,
+      "code": 1006,
+      "reason": "",
+      "cleanup": true
+    }
+  },
+  "replacement": {
+    "label": "replacement",
+    "events": [
+      {
+        "event": "state",
+        "label": "replacement",
+        "at_ms": 6156.0761999999995,
+        "event_seq": 416,
+        "bytes": 69776
+      },
+      {
+        "event": "error",
+        "at_ms": 6189.5278,
+        "message": "replacement error",
+        "cleanup": true
+      },
+      {
+        "event": "close",
+        "at_ms": 6189.543,
+        "code": 1006,
+        "reason": "",
+        "cleanup": true
+      }
+    ],
+    "errors": [
+      {
+        "event": "error",
+        "at_ms": 6189.5278,
+        "message": "replacement error",
+        "cleanup": true
+      }
+    ],
+    "close": {
+      "event": "close",
+      "at_ms": 6189.543,
+      "code": 1006,
+      "reason": "",
+      "cleanup": true
+    }
+  }
+}

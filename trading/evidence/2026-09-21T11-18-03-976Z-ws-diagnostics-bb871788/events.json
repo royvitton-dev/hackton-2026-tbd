@@ -1,0 +1,62 @@
+[
+  {
+    "at": "2026-09-21T11:18:05.340Z",
+    "relative_ms": 1364.2518,
+    "event": "peer_close_case_passed",
+    "structured_event": {
+      "connected_ms": 26,
+      "connection_id": 1,
+      "event": "websocket_closed",
+      "last_event_seq": 128,
+      "reason": "peer_closed",
+      "skipped": null,
+      "stage": "receive",
+      "timestamp_ms": 1789989485294
+    }
+  },
+  {
+    "at": "2026-09-21T11:18:05.347Z",
+    "relative_ms": 1370.9624000000001,
+    "event": "peer-close-case_close",
+    "code": 1006,
+    "reason": "",
+    "cleanup": false
+  },
+  {
+    "at": "2026-09-21T11:18:05.379Z",
+    "relative_ms": 1403.7432000000001,
+    "event": "slow_read_paused",
+    "bytes_read": 243,
+    "buffered_after_headers": 0
+  },
+  {
+    "at": "2026-09-21T11:18:06.186Z",
+    "relative_ms": 2210.5017,
+    "event": "probe_failure",
+    "message": "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'peer-close-case error'\n+ ]\n- []\n",
+    "stack": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   'peer-close-case error'\n+ ]\n- []\n\n    at file:///C:/project/hackton-2026-tbd/trading/scripts/ws-diagnostics.mjs:232:83\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)"
+  },
+  {
+    "at": "2026-09-21T11:18:06.187Z",
+    "relative_ms": 2211.3531999999996,
+    "event": "slow_close",
+    "had_error": false,
+    "local_destroy": true,
+    "resumed": false
+  },
+  {
+    "at": "2026-09-21T11:18:06.190Z",
+    "relative_ms": 2214.3887999999997,
+    "event": "normal_close",
+    "code": 1006,
+    "reason": "",
+    "cleanup": true
+  },
+  {
+    "at": "2026-09-21T11:18:06.217Z",
+    "relative_ms": 2241.5191999999997,
+    "event": "engine_exit",
+    "code": 0,
+    "signal": null
+  }
+]
