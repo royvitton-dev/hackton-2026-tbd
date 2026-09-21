@@ -103,3 +103,11 @@ node tests/browser.mjs
 - `EVIDENCE_DIR=evidence/park-20260921/28-build-smoke BASE_URL=http://127.0.0.1:4189 node tests/build-smoke.mjs`: WebGL/Canvas2/2와브라우저정리통과.
 - `python3 desktop/build-macos.py --node /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node --node-license /Applications/ChatGPT.app/Contents/Resources/cua_node/LICENSE --out ../package-28/DROP-LAND-macOS-arm64`: 실제명령은절대경로,로컬서명검증포함.
 - `python3 desktop/build-android.py --tools ../packaging-tools --keystore ../packaging-private/dropland-local.p12 --out ../package-28/DROP-LAND-Android.apk`: 실제명령은절대경로,기존로컬개발키/v2/v3검증. 키파일은제출/커밋에서제외.
+
+
+## 29 그래픽 복구 검사
+
+- `node scripts/build.mjs`:29b21파일구문/복사통과.
+- `EVIDENCE_PREFIX=29b node tests/context-loss.mjs`: PC/모바일×경기/결과/대기6/6,실제WebGL확장유도중단,같은Chrome최종판정재현. 수정전29실패보존.
+- `EVIDENCE_PREFIX=29-exception BASE_URL=http://127.0.0.1:4189/dist/index.html node tests/winner-recovery.mjs`: 기존그리기예외회귀PC/모바일2/2.
+- 브라우저PLAYWRIGHT_MODULE_PATH는앞선검사와동일하다. Android실기기검사로대체하지않는다.

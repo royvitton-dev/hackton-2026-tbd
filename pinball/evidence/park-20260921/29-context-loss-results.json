@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-21T14:03:09.455Z",
+  "base": "http://127.0.0.1:4189/dist/index.html",
+  "status": "FAIL",
+  "scope": "Chrome WebGL context loss induced by WEBGL_lose_context; not a real device GPU failure",
+  "tests": [],
+  "lastObserved": {
+    "device": "desktop",
+    "phase": "racing",
+    "settings": {
+      "gameMode": "player",
+      "sound": false,
+      "reduced": true,
+      "mapId": "neon",
+      "playbackSpeed": 3,
+      "renderFault": false,
+      "focusMode": false,
+      "viewMode": "follow",
+      "physicsModule": "http://127.0.0.1:4189/dist/src/physics.js",
+      "renderer": "webgl",
+      "camera": "PerspectiveCamera"
+    },
+    "state": "paused",
+    "errorVisible": false,
+    "startDisabled": true,
+    "pauseDisabled": false,
+    "hud": "3D / SECTOR 03 / 03",
+    "blindResume": {
+      "state": "racing",
+      "time": 19.02499999999956,
+      "contextLost": true
+    }
+  },
+  "error": "AssertionError [ERR_ASSERTION]: Lost graphics must block gameplay\n\nfalse !== true\n\n    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/context-loss.mjs:20:10"
+}

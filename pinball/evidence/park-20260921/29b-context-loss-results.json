@@ -1,0 +1,91 @@
+{
+  "at": "2026-09-21T14:04:35.177Z",
+  "base": "http://127.0.0.1:4189/dist/index.html",
+  "status": "PASS",
+  "scope": "Chrome WebGL context loss induced by WEBGL_lose_context; not a real device GPU failure",
+  "tests": [
+    {
+      "device": "desktop",
+      "phase": "racing",
+      "status": "PASS",
+      "preservedState": "paused",
+      "rankCount": 3,
+      "cameraHUD": "3D / SECTOR 03 / 03",
+      "explicitRecovery": true,
+      "automaticResume": false
+    },
+    {
+      "device": "desktop",
+      "phase": "complete",
+      "status": "PASS",
+      "preservedState": "complete",
+      "rankCount": 59,
+      "cameraHUD": "3D / SECTOR 03 / 03",
+      "explicitRecovery": true,
+      "automaticResume": false
+    },
+    {
+      "device": "desktop",
+      "phase": "ready",
+      "status": "PASS",
+      "preservedState": "ready",
+      "rankCount": 0,
+      "cameraHUD": "3D / SECTOR 01 / 03",
+      "explicitRecovery": true,
+      "automaticResume": false
+    },
+    {
+      "device": "mobile-emulation",
+      "phase": "racing",
+      "status": "PASS",
+      "preservedState": "paused",
+      "rankCount": 3,
+      "cameraHUD": "3D / SECTOR 03 / 03",
+      "explicitRecovery": true,
+      "automaticResume": false
+    },
+    {
+      "device": "mobile-emulation",
+      "phase": "complete",
+      "status": "PASS",
+      "preservedState": "complete",
+      "rankCount": 59,
+      "cameraHUD": "3D / SECTOR 02 / 03",
+      "explicitRecovery": true,
+      "automaticResume": false
+    },
+    {
+      "device": "mobile-emulation",
+      "phase": "ready",
+      "status": "PASS",
+      "preservedState": "ready",
+      "rankCount": 0,
+      "cameraHUD": "3D / SECTOR 01 / 03",
+      "explicitRecovery": true,
+      "automaticResume": false
+    }
+  ],
+  "lastObserved": {
+    "device": "mobile-emulation",
+    "phase": "ready",
+    "settings": {
+      "gameMode": "player",
+      "sound": false,
+      "reduced": true,
+      "mapId": "neon",
+      "playbackSpeed": 3,
+      "renderFault": true,
+      "contextLost": true,
+      "focusMode": false,
+      "viewMode": "follow",
+      "physicsModule": "http://127.0.0.1:4189/dist/src/physics.js",
+      "renderer": "webgl",
+      "camera": "PerspectiveCamera"
+    },
+    "state": "ready",
+    "errorVisible": true,
+    "startDisabled": true,
+    "pauseDisabled": true,
+    "hud": "3D / SECTOR 01 / 03"
+  }
+}

@@ -206,3 +206,16 @@ Existing heartbeat drop-land-23 was updated, not duplicated: every15minutes, unt
 - 물리·맵·랜덤·순위판정·렌더러 코드는 수정하지 않았다. 원더가든의 출구 정체는 그대로 미해결이며 새 출구 구조를 시험하지 않았다.
 
 - Mac 앱/APK를work/package-28에 재빌드한 뒤 내장22파일(빌드메타포함)의 바이트 일치를 확인했다. APK resources.arsc는1484offset/4byte정렬, v2/v3서명과추출파일모바일플레이어/로또2/2통과. Mac로컬ad-hoc서명·ZIP CRC·실행권한·Node라이선스보존통과. outputs의MacZIP/APK/앱폴더를 최신으로 갱신했다. Mac은 잠겨 네이티브 창 재실행 미실행이며, Android 실기기도 미실행이다. 상세해시는28-package-results.json.
+
+
+## 29 — 2026-09-21 23:10 KST 그래픽 연결 중단과 복구
+
+- 확장의실제WebGL컨텍스트중단으로기존문제재현: state는paused였으나 renderFault=false,안내미표시,재개버튼활성. 재개클릭후contextLost=true인채racing/time19.025초로진행했다. 29-context-loss-results의FAIL과blindResume관찰을보존했다. 제품의물리/시드를주입하거나당첨을강제한검사가아니다.
+- 연결손실과복구이벤트를오류UI에연결했다. 손실중에는시작/재개/재경기와복구버튼을막고위치·순위를보존한다. 연결이돌아온뒤화면복구를명시적으로누르면같은경기를그리되자동재개하지않는다. 일반그리기예외도같은안내경로를사용한다.
+- 보드를다시그릴때같은roundId이면카메라구간과이미도착한공의사라짐상태를유지한다. 복구시카메라가출발점으로돌아가거나도착공들이잠깐다시나타나는부분을방지했다. 새경기는기존대로카메라를초기화한다.
+- 29b PC/모바일×경기중/결과/대기6/6통과. 각환경60개공. 오류중진행차단,복구뒤전체snapshot동일,같은구간HUD,한겹의공60개이름표,최종실제59도착+마지막남은공당첨,같은Chrome물리재실행일치확인. 브라우저정리종료코드0.
+- 기존그리기예외복구/대형당첨/재시작은29-exception PC/모바일2/2통과. 다섯맵시각표시도포함. 물리/장치/맵/난수/당첨규칙은수정하지않았다.
+- 이검사는Chrome의WEBGL_lose_context로유도한중단이다. 실제GPU고장·AndroidWebView컨텍스트복구시험이라고주장하지않는다. 참고한확장사양:https://registry.khronos.org/webgl/extensions/WEBGL_lose_context/ 및Three로컬onContextRestore구현/https://threejs.org/docs/pages/WebGLRenderer.html.
+- Fork접근은이번목표턴에서도Mac잠금으로실패했다. 앞선두목표턴의동일원인이며기존잠금해제질문이대기중이다. 제품오류수정·검증은계속진행할수있었으므로단순상태반복으로처리하지않았다. 아직푸시완료가아니다.
+
+- 29빌드모바일WebGL/Canvas3배속N번째당첨/재시작2/2및Chrome종료통과. Mac/APK별도29폴더재빌드·서명확인,내장22파일dist일치,resources1484offset/4byte정렬,MacZIP CRC/실행권한/라이선스보존확인후outputs갱신. 최신APK추출별도Chrome실행은반복하지않았으며현재웹빌드와바이트동일성만확인했다. 실제Android/최신Mac창재실행은미실행이다. 29-package-results에해시보존.

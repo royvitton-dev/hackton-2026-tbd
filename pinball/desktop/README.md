@@ -35,3 +35,6 @@ python3 desktop/build-android.py --tools /path/to/packaging-tools --keystore /pr
 
 
 후속 결과 화면 수정이 포함된 최신 패키지는 [28 검증](../evidence/park-20260921/28-package-results.json)에 기록했다. Mac 빌드·서명·내장 파일 일치는 재확인했으나 Mac 잠금으로 최신 번들의 네이티브 창 재실행은 미실행이다. 네이티브 런처 소스는25실행검사와 같다. 최신 APK 추출 파일은 모바일 Chrome의 플레이어·로또2흐름을 다시 통과했으며 Android 실기기 실행은 여전히 미검증이다.
+
+
+현재 그래픽 복구 수정이 포함된 패키지는 [29 검증](../evidence/park-20260921/29-package-results.json)을 따른다. Mac/APK 모두 Chrome에서 검증한 최신dist22파일(메타포함)과 바이트가 일치한다. 이번판 APK 추출파일을 별도 브라우저에서 다시 실행하지는 않았으며, 이전28추출검사와 구분한다. 실제Android와 최신Mac네이티브창 재실행은 미실행이다.

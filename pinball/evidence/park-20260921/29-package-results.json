@@ -1,0 +1,36 @@
+{
+  "at": "2026-09-21T23:12:38.918489+09:00",
+  "changes": "Block invisible play on WebGL loss; explicit recovery keeps camera and finished balls",
+  "macOS": {
+    "build": "PASS",
+    "signature": "PASS local ad-hoc",
+    "zipCRCExecutableLicense": "PASS",
+    "assetsMatchDist": 22,
+    "latestNativeLaunch": "NOT RUN: Mac locked; launcher source unchanged from phase25"
+  },
+  "android": {
+    "build": "PASS",
+    "signature": "PASS v2/v3",
+    "assetsMatchDist": 22,
+    "resourcesOffset": 1484,
+    "resourceAlignment": "PASS",
+    "nativeDeviceExecution": "NOT RUN",
+    "nativeLifecycle": "NOT RUN",
+    "currentExtractedAssetsBrowserRun": "NOT RUN; byte identity to tested dist verified; prior extracted-APK flow was phase28"
+  },
+  "webVerification": {
+    "contextLossRestore": "6/6 PASS",
+    "drawingExceptionRecovery": "2/2 PASS",
+    "mobileWebGLCanvasBuildSmoke": "2/2 PASS"
+  },
+  "files": {
+    "DROP-LAND-macOS-arm64.zip": {
+      "bytes": 39913793,
+      "sha256": "e5bdd20957ee565bd17c4037ed483e600c8eed528517ec8c9857c7cad3842257"
+    },
+    "DROP-LAND-Android.apk": {
+      "bytes": 489549,
+      "sha256": "4498624dc09c2c140ce7126c1f25027708ce91914670dd41e8576d523ffab4be"
+    }
+  }
+}

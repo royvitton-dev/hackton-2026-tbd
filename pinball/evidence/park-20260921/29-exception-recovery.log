@@ -1,0 +1,18 @@
+PASS recovery and large winner {
+  device: 'desktop',
+  renderFailure: 'caught and paused',
+  recovery: 'same positions and exact replay',
+  winnerFontPx: 66,
+  largeWinner: 'PASS',
+  replay: 'PASS',
+  errors: []
+}
+PASS recovery and large winner {
+  device: 'mobile',
+  renderFailure: 'caught and paused',
+  recovery: 'same positions and exact replay',
+  winnerFontPx: 39,
+  largeWinner: 'PASS',
+  replay: 'PASS',
+  errors: []
+}

@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-21T14:05:40.994Z",
+  "tests": [
+    {
+      "device": "desktop",
+      "renderFailure": "caught and paused",
+      "recovery": "same positions and exact replay",
+      "winnerFontPx": 66,
+      "largeWinner": "PASS",
+      "replay": "PASS",
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "renderFailure": "caught and paused",
+      "recovery": "same positions and exact replay",
+      "winnerFontPx": 39,
+      "largeWinner": "PASS",
+      "replay": "PASS",
+      "errors": []
+    }
+  ],
+  "status": "PASS"
+}

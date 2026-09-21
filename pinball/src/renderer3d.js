@@ -30,6 +30,7 @@ export class Renderer3D {
   this.labelButton.addEventListener('click',()=>{this.allLabels=!this.allLabels;this.labelButton.textContent=this.allLabels?'이름 모두 보기':'이름 간결하게';this.labelButton.setAttribute('aria-pressed',String(this.allLabels));});canvas.parentElement.append(this.labelButton);
   this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();document.dispatchEvent(new Event('pinball-renderer-lost'));});
+  canvas.addEventListener('webglcontextrestored',()=>document.dispatchEvent(new Event('pinball-renderer-restored')));
  }
  overlay(className){const e=document.createElement('div');e.className=className;this.canvas.parentElement.append(e);return e;}
  resize(){const rect=this.canvas.getBoundingClientRect();this.width=Math.max(1,rect.width);this.height=Math.max(1,rect.height);this.webgl.setSize(this.width,this.height,false);this.aspect=this.width/this.height;}
@@ -318,8 +319,13 @@ export class Renderer3D {
   const effect=this.impacts[this.impactCursor++%this.impacts.length];effect.born=elapsed;effect.mesh.position.set(X(event.x),.055,Z(event.y));effect.mesh.material.color.set(event.kind==='bumper'?0xffdd88:0xfff5e8);effect.mesh.visible=true;
   if(event.kind==='bumper'){const ride=this.carousels.find(c=>c.key===`${event.obstacleX}:${event.obstacleY}`);if(ride)ride.hitAt=elapsed;}
  }
+ requestRebuild(){this.rebuildPending=true;}
  draw(race,reduced=false,selected=null){
-  if(this.lastRound!==race.roundId)this.build(race);const map=race.map,aspect=this.aspect||1,direction=CAMERA_DIRECTIONS[this.angle];
+  if(this.lastRound!==race.roundId||this.rebuildPending){
+   const previous=this.lastRound===race.roundId?{cameraCenter:this.cameraCenter,finishedAt:new Map(this.finishedAt)}:null;
+   this.build(race);if(previous){this.cameraCenter=previous.cameraCenter;this.finishedAt=previous.finishedAt;}this.rebuildPending=false;
+  }
+  const map=race.map,aspect=this.aspect||1,direction=CAMERA_DIRECTIONS[this.angle];
   const distance=Math.max(this.angle===2?14.5:20,(this.angle===2?6.2:7.2)/(Math.tan(THREE.MathUtils.degToRad(20))*aspect));
   const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.65)]?.y??map.finish;
   const target=['ready','mixing','countdown'].includes(race.state)?400:Math.max(400,Math.min(map.finish-200,progress+100));

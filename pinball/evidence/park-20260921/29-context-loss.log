@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: Lost graphics must block gameplay
+
+false !== true
+
+    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/context-loss.mjs:20:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
