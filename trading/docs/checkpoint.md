@@ -1,13 +1,15 @@
 # 작업 체크포인트
+최종 상태: 2026-09-22 08:50 KST 사용자 요청으로 지속 목표 종료. 최신 상태·실행법·미완료 항목은 [최종 인계](handoff-20260922.md)를 우선한다. 아래 내용은 이전 진행 이력이다.
 
-갱신: 2026-09-22 00:56 KST. 마감: 2026-09-22 09:00 KST (약8시간4분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
+
+갱신: 2026-09-22 01:03 KST. 마감: 2026-09-22 09:00 KST (약7시간57분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 재개 시 우선 확인할 현재 상태
 
-- main 마지막확인 local/remote는 `ca8c6117576cc595705b3150b0b5146a7439fc2c`(00:43)다. 이번모바일·안내·감사완료분390fde8과동시에추가된원격차량변경4d2427b를비강제merge/push했다. 완료된 후속 변경은 직접 main에 push한다. 별도 작업의 `park/vite.config.mjs`는 보존하고 stage하지 않는다.
+- main 마지막확인 local/remote는 `426da01ce308f04f91194bcf8d8bd3bda98707df`(00:57)다. 모바일·안내·감사완료분390fde8/원격차량변경4d2427b의정상merge ca8c611 위에다음할당실험준비문서24파일을push했다. 완료된 후속 변경은 직접 main에 push한다. 별도 작업의 `park/vite.config.mjs`는 보존하고 stage하지 않는다.
 - 메인 시장은 엔진20540·UI4220·12봇으로 계속 관찰한다. 시장 manifest는 `data/demo-current.json`, 관찰 session20793/PID18184/helper15744, 보완 자원 수집 session90617/PID16840이다. 이전 엔진09bc의 장시간 기록이며 새65348c의 성능으로 표시하지 않는다.
-- 최근 주기 분석은00:31, 다음은01:01. 원 관찰은01:05:55, 보완 수집은01:06 종료 예정이다. 실제 실행 핸들과 PID 종료를 확인한 뒤 [정확한 후속 순서](quiet-window.md)에 따라 정상 stop·실제 exit → keeper → FULL 누적 복구 → A 3쌍 → B/C → keeper 해제 → ensure를 수행한다.
+- 최근 주기 분석은01:01, 다음최종분석은01:06이후실제종료시다. 원 관찰은01:05:55, 보완 수집은01:06 종료 예정이다. 실제 실행 핸들과 PID 종료를 확인한 뒤 [정확한 후속 순서](quiet-window.md)에 따라 정상 stop·실제 exit → keeper → FULL 누적 복구 → A 3쌍 → B/C → keeper 해제 → ensure를 수행한다.
 - 최신 엔진65348c·코어 벤치7cfd820a·복구 도구d2c8dd9e는 비교 측정까지 유지한다. keeper를 소유한 채 demo start/stop/ensure를 호출하지 않는다. 사용자 Park19312는 다시 시작하지 않는다.
 - 현재 남은 작업: 장시간 최종 분석·전체 누적 복구·최신 A/B/C·검증된 바이너리로 시연 재개·마감 검증과 인계. 무할당 목표 미달, 과거 자원 공백, 새 통합 Park 전체 시작의 미검증, Linux/Docker 및 실제 외부 배포 미실행을 유지한다.
 - `/trading/` production 부분은 [빌드·실제 브라우저 읽기 연결·새로고침](router-production-preview.md)을00:11에 검증했다. 임시 fixture19860/session99877은 actual exit0·부재 확인 후 종료 상태이며 전체 Park 시작의 대체 증거로 쓰지 않는다.
@@ -301,3 +303,14 @@
 - 최종resource그래프script의고정in-progress표시를발견했다. frontend는00:55cutoff를지켜원본+입력해시15-55-12...98605d59만보존하고수정/AST/plot없이대기. quiet후 scripts/plot-resource-coverage.py의subtitle/마지막limits를실제primary.observation_complete 및supp.source_status+source_reported_completed로교체해야한다. 과거자원공백·계산·선연결은그대로유지. 최종분석후그림을새evidence에렌더링할때수행한다.
 - 00:53공개예정live비ignored파일67개합83280230B,최대약5.24MB/50MiB초과0 확인. 아직실행중이므로stage하지않았다. 실제engine경로는demo run/bin/leave-engine.exe(PID20540). 현재5.8h데모에는이전09bc가사용된다. 최신653/7cfd/d2c8는기존계획대로동결.
 - 00:54:37 session20793실제running,00:54:26event144553/12봇/ready/gap0/disconnect0. 00:55:30 session90617도actualrunning(새stdout없음). 모든agent는00:55까지/직후read-only기록만남기고idle,추가빌드·테스트·브라우저작업없음. 다음01:01분석,01:05:55/01:06실제종료후quiet순서. 그전에는소유시장을재시작하지않으며관찰자종료만으로6시간자원연속성/UI연속성통과주장않는다.
+
+## 00:59 준비 단위 push와 실행 중 관찰 대기
+- main426da01ce308f04f91194bcf8d8bd3bda98707df를00:57에push0/localremote일치로확인했다.24파일은문서·읽기검토·미적용제안patch와직전push기록뿐이다. evidence20260921T155700979Z-allocation-preparation-main-push-bed7a03e/{before,verified}.json/commit·fetch·push로그. 운영엔진·corebench·aged·manifest·별도parkvite5SHA유지/indexempty. plot script SHA54bc9331...ef1c도변경없으며완료상태문구수정은quiet후남아있다.
+- 00:57–00:58에는실행중session20793을45초대기했다. 실제running응답/00:58:29.339event145975,elapsed21154.655초(5h52m34s),12봇/ready/WSgap0disconnect0. 누적콘솔은이번범위에서잘리지않았고원본관찰파일에보존된다. 완료시간추정으로서비스를종료하지않는다. 다음01:01분석및01:06이후관찰·보완수집실제종료확인.
+- 이goal turn은Order.status후속실험의구체적patch/독립serde·저장호환검토와문서정정·push라는progress이며후반은특정live관찰handle의verified wait다. 완성판정은아직아니다. 모든agentidle/엔진핀유지. quiet-window.md의stop(먼저실제exitwatcher준비)→keeper→FULLaged→A3쌍→B/C→해제→ensure를순차수행한다. quiet종료뒤에만plot상태문구/최종그림·격리Cow상태후보실험을진행한다.
+
+## 01:03 종료 전 중간 집계와 실제 실행 준비
+- 새 operator 증거 디렉터리는 evidence/20260921T155959231Z-six-hour-operator-52e012e5다. started.json은운영quiet아직시작전임을기록하며명령/interim원본을모은다. 진행중이므로최종완료까지stage하지않는다. 01:00:53 actualexec20793/90617둘모두running,00:55이후agent실행없음. collaboration목록에서도세agent completed를확인했다.
+- 01:01 interim3분석exit0:시장16-01-05...e6c26f89 4195표본/21306.6549초/명령+124441/volume+94209h/최소12봇/ready/자산보존/WSgap0disconnect0. source_status running/observation_complete false. 봇16-01-06...70ea3fe1 durable124660=accepted124601+rejected59,p9929.1591ms/max1814.1419ms.
+- 보완16-01-05...e941a221 326표본/325구간9772.5985초전부유효,14CPU평균0.6170394%(16논리CPU전체). 마지막01:00:52engineWS164188160B/private171610112B. 구자원공백유지. 실제종료/6h완료아님.
+- 실제진단시새PowerShell마다 . ./scripts/env.ps1부터적용해기존tool/DLL경로와Rust메타데이터를맞춘다(빌드아님). 모든quiet명령cwd는trading. 별도Park19312는보존한다. 최종분석/stopwatcher/stop/keeper/aged/A/B/C/해제/ensure는기존단계순서를유지한다. 관찰6시간명세보다좁은현재소계로완료판정하지않는다.

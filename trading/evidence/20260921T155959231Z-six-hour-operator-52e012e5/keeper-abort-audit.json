@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-21T23:47:33.1769532Z",
+  "shell_pid": 18448,
+  "process_20484": [],
+  "keeper_process": [],
+  "validator_process": [],
+  "manifest_sha256": "ED868B9154D2DF673B001CF108048D2FB885350D888B275F3E1CD67F7C44840E",
+  "launcher_lock": "{\"pid\":14068,\"token\":\"0453dcee-f16f-49ba-b582-0d11a31a1e56\",\"started_at\":\"2026-09-21T23:46:06.687Z\",\"command\":[\"--manifest-sha256\",\"ed868b9154d2df673b001cf108048d2fb885350d888b275f3e1cd67f7c44840e\",\"--absent-pids\",\"18184,15744,16840\",\"--not-before\",\"2026-09-21T16:06:00Z\"]}",
+  "aborted": "{\n  \"at\": \"2026-09-21T23:46:55.075Z\",\n  \"error\": \"Guarded process 20484 still exists\\n\\ntrue !== false\\n\",\n  \"automatic_release_performed\": false,\n  \"lock_status\": {\n    \"exists\": true,\n    \"original_owner_matches\": true\n  },\n  \"pid\": 14068\n}\n"
+}

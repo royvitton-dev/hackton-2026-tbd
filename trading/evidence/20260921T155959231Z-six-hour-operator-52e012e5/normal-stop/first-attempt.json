@@ -1,0 +1,6 @@
+{
+  "at": "2026-09-21T23:45:22.1153015Z",
+  "command": "powershell.exe -NoProfile -NonInteractive -File scripts/watch-process-exit.ps1",
+  "exit_code": 1,
+  "error": "Child Windows PowerShell execution policy prevented the read-only watcher script from loading; engine was not stopped."
+}

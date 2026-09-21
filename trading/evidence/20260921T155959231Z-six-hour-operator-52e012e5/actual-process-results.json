@@ -1,0 +1,30 @@
+{
+  "captured_at": "2026-09-21T23:44:47Z",
+  "observer": {
+    "chunk_id": "029b29",
+    "wall_time_seconds": 0.0000114,
+    "exit_code": 0,
+    "original_token_count": 290,
+    "output": "{\r\n  \"run_id\": \"2026-09-21T10-05-54-901Z-observe-0b80d28e\",\r\n  \"started_at\": \"2026-09-21T10:05:54.955Z\",\r\n  \"ended_at\": \"2026-09-21T16:05:55.350Z\",\r\n  \"duration_ms\": 21595659.437,\r\n  \"samples\": 4252,\r\n  \"commands_delta\": 126131,\r\n  \"volume_delta\": 95398,\r\n  \"distinct_book_states\": 4251,\r\n  \"distinct_trade_prices\": 60,\r\n  \"min_connected_bots\": 12,\r\n  \"participating_bots\": 12,\r\n  \"bots_with_fills\": 12,\r\n  \"websocket_events\": 126161,\r\n  \"websocket_gaps\": 0,\r\n  \"websocket_disconnects\": 0,\r\n  \"asset_conservation\": true,\r\n  \"continued_trade_intervals\": 4251,\r\n  \"limitations\": [\r\n    \"Public totals and actual trade/event observations; Rust tests check complete accounting invariants.\",\r\n    \"WebSocket receipt verified; browser rendering requires separate browser evidence.\"\r\n  ],\r\n  \"requested_seconds\": 21600,\r\n  \"sampling_continuity\": {\r\n    \"max_allowed_gap_ms\": 15000,\r\n    \"max_observed_gap_ms\": 6638.025700001046,\r\n    \"gaps\": [],\r\n    \"longest_contiguous_sample_span_ms\": 21595635.1833,\r\n    \"continuous\": true\r\n  },\r\n  \"passed\": true,\r\n  \"evidence\": \"C:\\\\project\\\\hackton-2026-tbd\\\\trading\\\\evidence\\\\2026-09-21T10-05-54-901Z-observe-0b80d28e\"\r\n}\r\n"
+  },
+  "supplement": {
+    "chunk_id": "a0a3b7",
+    "wall_time_seconds": 0.0000067,
+    "exit_code": 0,
+    "original_token_count": 154,
+    "output": "{\"run_id\":\"20260921T131759342Z-supplementary-resources-259339d4\",\"status\":\"completed\",\"sampler_pid\":16840,\"started_at\":\"2026-09-21T13:17:59.3427491+00:00\",\"until_utc\":\"2026-09-21T16:06:00.0000000+00:00\",\"interval_seconds\":30,\"logical_processors\":16,\"manifest_file\":\"C:\\\\project\\\\hackton-2026-tbd\\\\trading\\\\data\\\\demo-current.json\",\"source_sha256\":\"AED5CCF88C2D73AB120CD4D23973A426F050A266DA855D92A4630341D073E88D\",\"purpose\":\"Supplementary resource counters; does not fill gaps in the original observer or issue market requests.\",\"stop_requested\":false,\"samples\":336,\"ended_at\":\"2026-09-21T23:44:25.1012392+00:00\"}\r\n"
+  },
+  "normal_stop_watcher": {
+    "chunk_id": "acdb8e",
+    "wall_time_seconds": 0.0000083,
+    "exit_code": 0,
+    "original_token_count": 113,
+    "output": "{\r\n  \"ended_at\": \"2026-09-21T23:45:43.7907752Z\",\r\n  \"scope\": \"Read-only process-handle observation; no signal or termination is sent\",\r\n  \"process_started_at\": \"2026-09-21T10:05:21.4715478Z\",\r\n  \"target_pid\": 20540,\r\n  \"observed_at\": \"2026-09-21T23:45:22.2042336Z\",\r\n  \"expected_executable\": \"C:\\\\project\\\\hackton-2026-tbd\\\\trading\\\\evidence\\\\2026-09-21T10-05-21-198Z-demo-3b10627b\\\\bin\\\\leave-engine.exe\",\r\n  \"status\": \"exited\",\r\n  \"exit_code\": 0\r\n}\r\n"
+  },
+  "execution_gap": {
+    "last_observed_utc": "2026-09-21T16:05:22Z",
+    "resumed_utc": "2026-09-21T23:44:39Z",
+    "cause": "unconfirmed; not counted as active agent work",
+    "note": "Primary observer completed at 16:05:55Z. Supplement final sample 16:05:52Z but its process completed only at 23:44:25Z."
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "run_id": "2026-09-21T23-46-24-868Z-aged-recovery-c9333dea",
+  "started_at": "2026-09-21T23:46:24.876Z",
+  "mode": "offline-source-copy",
+  "source": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo",
+  "tool_binary": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\examples\\aged_recovery.exe",
+  "copied_binary": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-46-24-868Z-aged-recovery-c9333dea\\aged_recovery.exe",
+  "node": "v24.19.0",
+  "platform": "win32",
+  "timeout_ms": 300000,
+  "status": "passed",
+  "ended_at": "2026-09-21T23:47:31.863Z",
+  "validator_args": [
+    "--source",
+    "C:\\project\\hackton-2026-tbd\\trading\\data\\demo",
+    "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-46-24-868Z-aged-recovery-c9333dea"
+  ],
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

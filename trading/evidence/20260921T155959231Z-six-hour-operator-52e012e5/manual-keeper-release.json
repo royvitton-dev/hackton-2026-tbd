@@ -1,0 +1,11 @@
+{
+  "at": "2026-09-21T23:48:06.9694139Z",
+  "owner": 14068,
+  "validator": 9340,
+  "owner_and_all_diagnostics_absent": true,
+  "actual_owner_exit": 1,
+  "actual_aged_exit": 0,
+  "marker_saved": "aborted-keeper-marker.json",
+  "action": "Removed only matching stale launcher marker after actual wrapper completion and process absence",
+  "benchmarks": "A and B/C not run: keeper aborted on PID existence guard; no unguarded performance claim"
+}

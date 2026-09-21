@@ -1,0 +1,349 @@
+- banner:
+  - link "LEAVE PARK 휴가 거래소":
+    - /url: "#market"
+    - text: LEAVE
+    - text: PARK
+    - generic: ✳
+  - button "모의 거래 안내":
+  - generic: 로컬 모의 계정
+  - combobox "모의 거래 계정 선택":
+    - option "시연 임직원 1 · GS리테이" [selected]
+    - option "시연 임직원 2 · GS칼테스"
+    - option "시연 임직원 3 · GS건썰"
+- main:
+  - paragraph: YOUR NEXT BREAK STARTS HERE
+  - heading "당신의 다음 쉼표를 거래하세요" [level=1]:
+    - text: 당신의 다음
+    - emphasis: 쉼표
+    - text: 를 거래하세요
+  - paragraph: 바쁜 하루에 여유를 더하는 작은 거래. 오늘은 몇 시간 쉬어갈까요?
+  - heading "모두의 휴가" [level=2]
+  - generic: LEAVE-1H
+  - paragraph: 그룹 공통 휴가 시간 · 1시간부터 거래
+  - generic: 현재가
+  - strong: "995"
+  - generic: P
+  - text: "-5 (-0.50%)"
+  - generic: 기준가
+  - strong: 1,000 P
+  - generic: 누적 거래량
+  - strong: 112,696 시간
+  - region "실제 체결 가격 차트":
+    - generic: "01"
+    - heading "시장의 흐름" [level=2]
+    - generic: 실시간 체결
+    - button "최근 80건" [pressed]
+    - button "최근 240건"
+    - generic: 체결 가격
+    - generic: 거래량
+    - paragraph:
+      - text: 08:49:07
+      - generic: 995 P
+      - text: · 3시간
+    - img "최근 80건 실제 체결. 마지막 가격 995 포인트":
+      - generic: 1,036
+      - generic: 1,020
+      - generic: 1,004
+      - generic: "988"
+      - generic: 08:48:37
+      - generic: 체결 순서
+      - generic: 08:49:07
+    - text: 확정 체결 데이터
+    - generic: 표시 80건 · 동일 간격의 체결 순서
+  - generic: "02"
+  - heading "호가 보드" [level=2]
+  - generic: 가격 (P)
+  - generic: 잔량 (시간)
+  - generic: 주문
+  - button "1,004 1 1":
+    - generic: 1,004
+    - generic: "1"
+    - generic: "1"
+  - button "1,003 1 1":
+    - generic: 1,003
+    - generic: "1"
+    - generic: "1"
+  - button "1,001 6 4":
+    - generic: 1,001
+    - generic: "6"
+    - generic: "4"
+  - button "999 3 2":
+    - generic: "999"
+    - generic: "3"
+    - generic: "2"
+  - button "998 1 1":
+    - generic: "998"
+    - generic: "1"
+    - generic: "1"
+  - button "997 2 2":
+    - generic: "997"
+    - generic: "2"
+    - generic: "2"
+  - strong: 995 P
+  - text: 현재가
+  - paragraph: 매수 호가 대기 중
+  - generic: 매도
+  - generic: 가격을 누르면 주문에 입력됩니다
+  - generic: 매수
+  - generic: "03"
+  - heading "나의 거래" [level=2]
+  - generic: GS리테이
+  - button "미체결 0" [pressed]:
+    - text: 미체결
+    - generic: "0"
+  - button "최근 완료 주문"
+  - button "요청 결과"
+  - table:
+    - rowgroup:
+      - row "주문 가격 체결 / 주문 상태":
+        - columnheader "주문"
+        - columnheader "가격"
+        - columnheader "체결 / 주문"
+        - columnheader "상태"
+        - columnheader
+    - rowgroup
+  - paragraph: 기다리는 주문이 없어요
+  - generic: 원하는 가격으로 첫 휴가 티켓을 주문해 보세요.
+  - generic: "04"
+  - heading "방금 체결된 거래" [level=2]
+  - generic: 체결 시각
+  - generic: 가격 (P)
+  - generic: 시간
+  - generic: 08:49:07
+  - strong: "995"
+  - generic: 3 h
+  - generic: 08:49:07
+  - strong: "995"
+  - generic: 1 h
+  - generic: 08:49:07
+  - strong: "995"
+  - generic: 1 h
+  - generic: 08:49:07
+  - strong: "995"
+  - generic: 1 h
+  - generic: 08:49:06
+  - strong: "995"
+  - generic: 1 h
+  - generic: 08:49:06
+  - strong: "995"
+  - generic: 2 h
+  - generic: 08:49:06
+  - strong: "995"
+  - generic: 1 h
+  - generic: 08:49:05
+  - strong: "997"
+  - generic: 2 h
+  - generic: 08:49:04
+  - strong: "999"
+  - generic: 1 h
+  - generic: 08:49:04
+  - strong: "999"
+  - generic: 1 h
+  - complementary:
+    - paragraph: ONE TICKET, MORE TIME
+    - heading "나의 다음 쉼표" [level=2]
+    - group "거래 방향":
+      - button "휴가 매수" [pressed]
+      - button "휴가 매도"
+    - form "휴가 지정가 주문":
+      - generic: 주문 가격
+      - button "최우선 호가":
+        - text: 최우선 호가
+      - spinbutton "주문 가격": "1000"
+      - generic: P / 시간
+      - generic: 주문 수량
+      - generic: 최소 1시간
+      - spinbutton "주문 수량": "1"
+      - generic: 시간
+      - button "1시간" [pressed]
+      - button "4시간"
+      - button "하루 · 8시간"
+      - paragraph
+      - generic: 주문 총액
+      - strong: 1,000P
+      - generic: 사용 가능 포인트
+      - generic: 1,009,975 P
+      - button "휴가 매수하기":
+        - generic: 휴가 매수하기
+      - paragraph:
+        - text: 지정가 주문 · 체결 전까지 예약됩니다
+    - status:
+      - strong: 주문이 확정되었습니다
+      - paragraph: "주문 #1651 · 1시간 체결"
+      - text: "저장 완료 · 명령 #1908"
+      - generic "요청 ID"
+    - generic: LEAVE PARK EXCHANGE
+    - generic: ADMIT ONE BREAK
+    - heading "내 보관함" [level=2]
+    - generic: 모의 자산
+    - generic: 사용 가능한 휴가
+    - strong: 1,032시간
+    - generic: 휴가 총 보유
+    - generic: 1,032 h
+    - generic: 매도 예약
+    - generic: 0 h
+    - generic: 사용 가능 포인트
+    - generic: 1,009,975 P
+    - generic: 매수 예약
+    - generic: 0 P
+    - generic: 포인트 총 보유
+    - generic: 1,009,975 P
+  - paragraph: PARK CREW
+  - heading "시장을 움직이는 크루 12" [level=2]
+  - generic: 12개 봇 연결 중
+  - article:
+    - generic: CREW 01
+    - generic: 활동 중
+    - heading "마켓 메이커" [level=3]
+    - paragraph:
+      - text: GS리테이
+      - generic: "#01"
+    - generic: 주문 9,934
+    - generic: 체결 10,622
+    - generic "08:49:03":
+      - text: 3s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 02
+    - generic: 활동 중
+    - heading "마켓 메이커" [level=3]
+    - paragraph:
+      - text: GS칼테스
+      - generic: "#02"
+    - generic: 주문 9,885
+    - generic: 체결 10,470
+    - generic "08:49:04":
+      - text: 2s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 03
+    - generic: 활동 중
+    - heading "마켓 메이커" [level=3]
+    - paragraph:
+      - text: GS건썰
+      - generic: "#03"
+    - generic: 주문 9,899
+    - generic: 체결 10,495
+    - generic "08:49:04":
+      - text: 2s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 04
+    - generic: 활동 중
+    - heading "마켓 메이커" [level=3]
+    - paragraph:
+      - text: GS리테이
+      - generic: "#04"
+    - generic: 주문 9,913
+    - generic: 체결 10,442
+    - generic "08:49:04":
+      - text: 2s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 05
+    - generic: 활동 중
+    - heading "유동성 소비" [level=3]
+    - paragraph:
+      - text: GS칼테스
+      - generic: "#05"
+    - generic: 주문 11,292
+    - generic: 체결 15,481
+    - generic "08:49:04":
+      - text: 2s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 06
+    - generic: 활동 중
+    - heading "유동성 소비" [level=3]
+    - paragraph:
+      - text: GS건썰
+      - generic: "#06"
+    - generic: 주문 11,298
+    - generic: 체결 15,509
+    - generic "08:49:04":
+      - text: 2s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 07
+    - generic: 활동 중
+    - heading "유동성 소비" [level=3]
+    - paragraph:
+      - text: GS리테이
+      - generic: "#07"
+    - generic: 주문 11,330
+    - generic: 체결 15,558
+    - generic "08:49:03":
+      - text: 3s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 08
+    - generic: 활동 중
+    - heading "유동성 소비" [level=3]
+    - paragraph:
+      - text: GS칼테스
+      - generic: "#08"
+    - generic: 주문 11,298
+    - generic: 체결 15,488
+    - generic "08:49:04":
+      - text: 2s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 09
+    - generic: 활동 중
+    - heading "추세 추종" [level=3]
+    - paragraph:
+      - text: GS건썰
+      - generic: "#09"
+    - generic: 주문 11,301
+    - generic: 체결 15,484
+    - generic "08:49:03":
+      - text: 3s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 10
+    - generic: 활동 중
+    - heading "추세 추종" [level=3]
+    - paragraph:
+      - text: GS리테이
+      - generic: "#10"
+    - generic: 주문 11,311
+    - generic: 체결 15,434
+    - generic "08:49:03":
+      - text: 3s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 11
+    - generic: 활동 중
+    - heading "추세 추종" [level=3]
+    - paragraph:
+      - text: GS칼테스
+      - generic: "#11"
+    - generic: 주문 11,318
+    - generic: 체결 15,622
+    - generic "08:49:03":
+      - text: 3s
+    - generic "전략 정보 +"
+  - article:
+    - generic: CREW 12
+    - generic: 활동 중
+    - heading "추세 추종" [level=3]
+    - paragraph:
+      - text: GS건썰
+      - generic: "#12"
+    - generic: 주문 11,258
+    - generic: 체결 15,394
+    - generic "08:49:02":
+      - text: 4s
+    - generic "전략 정보 +"
+  - paragraph:
+    - text: 모든 크루는 사용자와 같은 시장, 같은 잔고·체결 규칙으로 거래합니다. 주문·체결 수는 엔진 누적값입니다.
+  - text: LEAVE PARK
+  - text: 모의 휴가 거래소
+  - text: 엔진 정상 운영
+  - text: EVENT
+  - generic: "#149,379"
+  - text: 재동기화
+  - generic: "0"
+  - text: 수신
+  - generic: 08:49:07
+  - button "엔진 상태 새로고침":

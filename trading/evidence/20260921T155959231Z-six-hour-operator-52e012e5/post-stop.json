@@ -1,0 +1,43 @@
+{
+  "at": "2026-09-21T23:45:58.6570483Z",
+  "all_17_absent": true,
+  "manifest_sha256": "ed868b9154d2df673b001cf108048d2fb885350d888b275f3e1cd67f7c44840e",
+  "data_bytes": 1344867932.0,
+  "data_files": 25,
+  "free_bytes": 242755751936,
+  "stop_results": [
+    {
+      "action": "checkpoint",
+      "confirmed": true
+    },
+    {
+      "action": "engine_shutdown_request",
+      "confirmed": true
+    },
+    {
+      "action": "engine_shutdown",
+      "exited": true,
+      "exit_code": null,
+      "exit_code_note": "Detached PID exit observed; launcher has no child exit-code handle."
+    },
+    {
+      "action": "process_termination",
+      "name": "frontend",
+      "pid": 4220
+    }
+  ],
+  "binaries": [
+    {
+      "file": "engine/target/release/leave-engine.exe",
+      "sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512"
+    },
+    {
+      "file": "engine/target/release/examples/core_bench.exe",
+      "sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86"
+    },
+    {
+      "file": "engine/target/debug/examples/aged_recovery.exe",
+      "sha256": "d2c8dd9ed9315d6859be5350f5b2e8c909594735d6000a4c7a0c30966ad14d43"
+    }
+  ]
+}
