@@ -1,0 +1,14 @@
+{
+  "tool": "exec_command",
+  "arguments": {
+    "cmd": "node 'trading/evidence/2026-09-21T13-49-23-655Z-supplementary-analysis-independent-review-095d1add/recompute.mjs'",
+    "workdir": "C:\\project\\hackton-2026-tbd"
+  },
+  "result": {
+    "chunk_id": "e85138",
+    "wall_time_seconds": 0.6325846,
+    "exit_code": 0,
+    "original_token_count": 400,
+    "output": "{\n  \"status\": \"passed\",\n  \"prefix_sha256\": \"8f6f167510c4bd3d194b706cc9d5b1c54bc962ca5424ebca9ff3a3c88e2cd939\",\n  \"samples\": 56,\n  \"identity_count\": 14,\n  \"intervals\": 55,\n  \"raw_utc\": {\n    \"first_at\": \"2026-09-21T13:17:59.7923779+00:00\",\n    \"last_at\": \"2026-09-21T13:45:35.2698299+00:00\",\n    \"unchanged_as_strings\": true\n  },\n  \"cpu\": {\n    \"cpu_seconds\": 235.78125,\n    \"covered_seconds\": 1655.5168512999999,\n    \"weighted_mean_percent_total_capacity\": 0.8901345892932622,\n    \"independent_sum_delta_percent\": 0.8901345892932622,\n    \"max_interval_percent_total_capacity\": 2.1769417293615123,\n    \"matches_original\": true\n  },\n  \"memory_last\": {\n    \"at\": \"2026-09-21T13:45:35.2698299+00:00\",\n    \"working_set_bytes\": 644681728,\n    \"private_bytes\": 1179230208\n  },\n  \"source_hashes\": [\n    {\n      \"path\": \"scripts/supplementary-resource-analysis.mjs\",\n      \"sha256\": \"39fc9659be45cf2023c393f50b09d11b466cde0e2129559969e56fb84546494c\",\n      \"bytes\": 16089,\n      \"matches_tested_source\": true,\n      \"matches_analysis_capture\": true\n    },\n    {\n      \"path\": \"scripts/summarize-supplementary-resources.mjs\",\n      \"sha256\": \"ff7206a1cc6ee522f13b469d5f88e67bf879393df6c6856cb7828395dacf6831\",\n      \"bytes\": 5769,\n      \"matches_tested_source\": true,\n      \"matches_analysis_capture\": true\n    },\n    {\n      \"path\": \"scripts/supplementary-resource-analysis.test.mjs\",\n      \"sha256\": \"b6e0750577708a983ea86ad3c1b78dd0088facff65fd9d7bed1839c52b00a85d\",\n      \"bytes\": 14594,\n      \"matches_tested_source\": true,\n      \"matches_analysis_capture\": null\n    }\n  ],\n  \"actionable_findings\": 0\n}\n"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "run_id": "2026-09-21T13-45-29-751Z-supplementary-resource-analysis-f3c70983",
+  "source_directory": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-678Z-supplementary-analysis-test-5a60d4ea\\valid",
+  "captured_started_at": "2026-09-21T13:45:29.754Z",
+  "command": {
+    "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "args": [
+      "C:\\project\\hackton-2026-tbd\\trading\\scripts\\summarize-supplementary-resources.mjs",
+      "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-678Z-supplementary-analysis-test-5a60d4ea\\valid"
+    ],
+    "cwd": "C:\\project\\hackton-2026-tbd",
+    "node": "v24.19.0"
+  },
+  "max_source_bytes": 67108864,
+  "source_run_sha256": "42dd4030e74764e92f0b33156832443d512955e6556c5fa41e2b67a1ae4d3ad5",
+  "source_status_captured": "running",
+  "source_reported_completed": false,
+  "source_size_at_open": 5014,
+  "source_mtime_at_open": "2026-09-21T13:45:29.685Z",
+  "source_size_after_read": 5014,
+  "captured_bytes": 5014,
+  "complete_prefix_bytes": 5008,
+  "complete_prefix_sha256": "b4302860a25de4cd6c27f59d217672883492718c45d6408e6356e6dcf4db37cf",
+  "excluded_partial_tail_bytes": 6,
+  "excluded_partial_tail_sha256": "831431eb81f583c550b44044aa8300bbe278749371b039eb09179365518b15c4",
+  "bytes_appended_during_read_not_captured": 0,
+  "source_run_after_sha256": "42dd4030e74764e92f0b33156832443d512955e6556c5fa41e2b67a1ae4d3ad5",
+  "source_run_changed_during_capture": false,
+  "captured_ended_at": "2026-09-21T13:45:29.759Z",
+  "complete_sample_count": 2,
+  "analysis_sources": [
+    {
+      "path": "scripts/supplementary-resource-analysis.mjs",
+      "sha256": "39fc9659be45cf2023c393f50b09d11b466cde0e2129559969e56fb84546494c"
+    },
+    {
+      "path": "scripts/summarize-supplementary-resources.mjs",
+      "sha256": "ff7206a1cc6ee522f13b469d5f88e67bf879393df6c6856cb7828395dacf6831"
+    }
+  ],
+  "status": "analyzed",
+  "analysis_completed_at": "2026-09-21T13:45:29.772Z"
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "2026-09-21T13-45-29-498Z-supplementary-analysis-validation-db65adb1",
+  "started_at": "2026-09-21T13:45:29.500Z",
+  "ended_at": "2026-09-21T13:45:29.929Z",
+  "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+  "args": [
+    "--test",
+    "trading/scripts/supplementary-resource-analysis.test.mjs"
+  ],
+  "cwd": "C:\\project\\hackton-2026-tbd",
+  "exit_code": 0,
+  "signal": null,
+  "error": null,
+  "sources": [
+    {
+      "path": "scripts/supplementary-resource-analysis.mjs",
+      "sha256": "39fc9659be45cf2023c393f50b09d11b466cde0e2129559969e56fb84546494c"
+    },
+    {
+      "path": "scripts/summarize-supplementary-resources.mjs",
+      "sha256": "ff7206a1cc6ee522f13b469d5f88e67bf879393df6c6856cb7828395dacf6831"
+    },
+    {
+      "path": "scripts/supplementary-resource-analysis.test.mjs",
+      "sha256": "b6e0750577708a983ea86ad3c1b78dd0088facff65fd9d7bed1839c52b00a85d"
+    }
+  ]
+}

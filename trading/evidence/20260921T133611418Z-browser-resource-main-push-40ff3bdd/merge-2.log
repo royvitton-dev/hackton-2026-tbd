@@ -1,0 +1,71 @@
+warning: in the working copy of 'park/vite.config.mjs', LF will be replaced by CRLF the next time Git touches it
+Merge made by the 'ort' strategy.
+ pinball/README.md                                  |    6 +
+ pinball/desktop/README.md                          |   34 +
+ pinball/desktop/android/AndroidManifest.xml        |   10 +
+ pinball/desktop/android/SignApk.java               |   16 +
+ pinball/desktop/android/res/drawable/app_icon.xml  |    5 +
+ .../src/com/dropland/game/MainActivity.java        |   54 +
+ pinball/desktop/build-android.py                   |   34 +
+ pinball/desktop/build-macos.py                     |   18 +
+ pinball/desktop/macos/icon.m                       |   14 +
+ pinball/desktop/macos/main.m                       |   45 +
+ pinball/desktop/macos/server.mjs                   |   20 +
+ pinball/desktop/toolchain-manifest.json            |   32 +
+ pinball/evidence/commands.md                       |    5 +
+ .../evidence/park-20260921/24-preview-publish.log  |   11 +
+ .../25-android-assets-lotto-round.json             | 1073 ++++++++++++++++++++
+ .../park-20260921/25-android-assets-lotto.png      |  Bin 0 -> 864264 bytes
+ .../25-android-assets-player-round.json            |  295 ++++++
+ .../park-20260921/25-android-assets-player.png     |  Bin 0 -> 721680 bytes
+ .../park-20260921/25-android-assets-results.json   |   19 +
+ .../evidence/park-20260921/25-android-assets.log   |    2 +
+ .../evidence/park-20260921/25-android-build.log    |   30 +
+ .../evidence/park-20260921/25-mac-app-result.png   |  Bin 0 -> 642881 bytes
+ .../park-20260921/25-macos-browser-results.json    |  207 ++++
+ .../evidence/park-20260921/25-macos-browser.log    |    1 +
+ pinball/evidence/park-20260921/25-macos-build.log  |   20 +
+ pinball/evidence/park-20260921/25-macos-quit.json  |    6 +
+ .../evidence/park-20260921/25-package-results.json |   32 +
+ pinball/evidence/park-20260921/25-packaging.md     |   41 +
+ .../evidence/park-20260921/25b-android-build.log   |   26 +
+ pinball/evidence/park-20260921/25b-macos-build.log |    8 +
+ .../evidence/park-20260921/25c-android-build.log   |   26 +
+ pinball/evidence/park-20260921/25c-macos-build.log |    2 +
+ pinball/evidence/park-20260921/session.md          |    5 +
+ pinball/evidence/verification.md                   |    5 +
+ pinball/tests/android-assets.mjs                   |   28 +
+ pinball/tests/launcher-browser.mjs                 |   15 +
+ 36 files changed, 2145 insertions(+)
+ create mode 100644 pinball/desktop/README.md
+ create mode 100644 pinball/desktop/android/AndroidManifest.xml
+ create mode 100644 pinball/desktop/android/SignApk.java
+ create mode 100644 pinball/desktop/android/res/drawable/app_icon.xml
+ create mode 100644 pinball/desktop/android/src/com/dropland/game/MainActivity.java
+ create mode 100644 pinball/desktop/build-android.py
+ create mode 100644 pinball/desktop/build-macos.py
+ create mode 100644 pinball/desktop/macos/icon.m
+ create mode 100644 pinball/desktop/macos/main.m
+ create mode 100644 pinball/desktop/macos/server.mjs
+ create mode 100644 pinball/desktop/toolchain-manifest.json
+ create mode 100644 pinball/evidence/park-20260921/24-preview-publish.log
+ create mode 100644 pinball/evidence/park-20260921/25-android-assets-lotto-round.json
+ create mode 100644 pinball/evidence/park-20260921/25-android-assets-lotto.png
+ create mode 100644 pinball/evidence/park-20260921/25-android-assets-player-round.json
+ create mode 100644 pinball/evidence/park-20260921/25-android-assets-player.png
+ create mode 100644 pinball/evidence/park-20260921/25-android-assets-results.json
+ create mode 100644 pinball/evidence/park-20260921/25-android-assets.log
+ create mode 100644 pinball/evidence/park-20260921/25-android-build.log
+ create mode 100644 pinball/evidence/park-20260921/25-mac-app-result.png
+ create mode 100644 pinball/evidence/park-20260921/25-macos-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/25-macos-browser.log
+ create mode 100644 pinball/evidence/park-20260921/25-macos-build.log
+ create mode 100644 pinball/evidence/park-20260921/25-macos-quit.json
+ create mode 100644 pinball/evidence/park-20260921/25-package-results.json
+ create mode 100644 pinball/evidence/park-20260921/25-packaging.md
+ create mode 100644 pinball/evidence/park-20260921/25b-android-build.log
+ create mode 100644 pinball/evidence/park-20260921/25b-macos-build.log
+ create mode 100644 pinball/evidence/park-20260921/25c-android-build.log
+ create mode 100644 pinball/evidence/park-20260921/25c-macos-build.log
+ create mode 100644 pinball/tests/android-assets.mjs
+ create mode 100644 pinball/tests/launcher-browser.mjs

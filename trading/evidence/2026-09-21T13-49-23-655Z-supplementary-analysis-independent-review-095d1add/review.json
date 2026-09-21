@@ -1,0 +1,261 @@
+{
+  "status": "passed",
+  "method": "Independent direct arithmetic over frozen56 raw samples; production analyzer/helper not imported. Existing test output read, no tests or live collection rerun.",
+  "source_run_status": "running",
+  "source_reported_completed": false,
+  "prefix_bytes": 156362,
+  "prefix_sha256": "8f6f167510c4bd3d194b706cc9d5b1c54bc962ca5424ebca9ff3a3c88e2cd939",
+  "source_run_sha256": "8b1e4a5a658fedaaa906b04b231aef0a10f11682de827b4e52d44dfc762128eb",
+  "original_analysis_sha256": "e7310f9d832daabcb587e01ab502a85530e7bfd8d006b40686888f67d30eaaca",
+  "source_hashes": [
+    {
+      "path": "scripts/supplementary-resource-analysis.mjs",
+      "sha256": "39fc9659be45cf2023c393f50b09d11b466cde0e2129559969e56fb84546494c",
+      "bytes": 16089,
+      "matches_tested_source": true,
+      "matches_analysis_capture": true
+    },
+    {
+      "path": "scripts/summarize-supplementary-resources.mjs",
+      "sha256": "ff7206a1cc6ee522f13b469d5f88e67bf879393df6c6856cb7828395dacf6831",
+      "bytes": 5769,
+      "matches_tested_source": true,
+      "matches_analysis_capture": true
+    },
+    {
+      "path": "scripts/supplementary-resource-analysis.test.mjs",
+      "sha256": "b6e0750577708a983ea86ad3c1b78dd0088facff65fd9d7bed1839c52b00a85d",
+      "bytes": 14594,
+      "matches_tested_source": true,
+      "matches_analysis_capture": null
+    }
+  ],
+  "existing_tests": {
+    "count": 13,
+    "pass": 13,
+    "fail": 0,
+    "exit_code": 0,
+    "test_run_sha256": "3e9dca45ba7e9cde1c5291760b5ea462b2f1e0a49df5438eff22ff862a6b7d78",
+    "stdout_sha256": "ca805a574720c70d3bd17e67a013477271d3978a0521a9fcd41040e1a496464d"
+  },
+  "raw_utc": {
+    "first_at": "2026-09-21T13:17:59.7923779+00:00",
+    "last_at": "2026-09-21T13:45:35.2698299+00:00",
+    "unchanged_as_strings": true
+  },
+  "samples": 56,
+  "identity_count": 14,
+  "intervals": 55,
+  "complete_four_field_membership_identical_at_all_samples": true,
+  "cpu": {
+    "cpu_seconds": 235.78125,
+    "covered_seconds": 1655.5168512999999,
+    "weighted_mean_percent_total_capacity": 0.8901345892932622,
+    "independent_sum_delta_percent": 0.8901345892932622,
+    "max_interval_percent_total_capacity": 2.1769417293615123,
+    "matches_original": true
+  },
+  "memory": {
+    "last": {
+      "at": "2026-09-21T13:45:35.2698299+00:00",
+      "working_set_bytes": 644681728,
+      "private_bytes": 1179230208
+    },
+    "min_working_set_bytes": 552951808,
+    "max_working_set_bytes": 792780800,
+    "min_private_bytes": 1170194432,
+    "max_private_bytes": 1181872128,
+    "per_identity_last_sums_match_full_group": true
+  },
+  "per_process": [
+    {
+      "identity": {
+        "Id": 20540,
+        "StartTimeUtc": "2026-09-21T10:05:21.4715478Z",
+        "role": "engine",
+        "ProcessName": "leave-engine"
+      },
+      "cpu_seconds": 149.78125,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.5654625694476614,
+      "last_working_set_bytes": 118026240,
+      "last_private_bytes": 127930368
+    },
+    {
+      "identity": {
+        "Id": 17444,
+        "StartTimeUtc": "2026-09-21T10:05:22.2784404Z",
+        "role": "bot-01",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 7.109375,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.026839710942904858,
+      "last_working_set_bytes": 39624704,
+      "last_private_bytes": 77045760
+    },
+    {
+      "identity": {
+        "Id": 7936,
+        "StartTimeUtc": "2026-09-21T10:05:22.3037571Z",
+        "role": "bot-02",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 7.109375,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.026839710942904858,
+      "last_working_set_bytes": 38518784,
+      "last_private_bytes": 75481088
+    },
+    {
+      "identity": {
+        "Id": 20776,
+        "StartTimeUtc": "2026-09-21T10:05:22.3346242Z",
+        "role": "bot-03",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 7.328125,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.027665548202686546,
+      "last_working_set_bytes": 38883328,
+      "last_private_bytes": 75493376
+    },
+    {
+      "identity": {
+        "Id": 16068,
+        "StartTimeUtc": "2026-09-21T10:05:22.3612932Z",
+        "role": "bot-04",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 7.046875,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.02660375744011009,
+      "last_working_set_bytes": 41328640,
+      "last_private_bytes": 76439552
+    },
+    {
+      "identity": {
+        "Id": 4928,
+        "StartTimeUtc": "2026-09-21T10:05:22.3890023Z",
+        "role": "bot-05",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 6.984375,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.02636780393731532,
+      "last_working_set_bytes": 38793216,
+      "last_private_bytes": 75935744
+    },
+    {
+      "identity": {
+        "Id": 20940,
+        "StartTimeUtc": "2026-09-21T10:05:22.4216442Z",
+        "role": "bot-06",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 6.421875,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.024244222412162408,
+      "last_working_set_bytes": 40710144,
+      "last_private_bytes": 76615680
+    },
+    {
+      "identity": {
+        "Id": 12172,
+        "StartTimeUtc": "2026-09-21T10:05:22.4485053Z",
+        "role": "bot-07",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 7.1875,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.02713465282139832,
+      "last_working_set_bytes": 38551552,
+      "last_private_bytes": 75255808
+    },
+    {
+      "identity": {
+        "Id": 7916,
+        "StartTimeUtc": "2026-09-21T10:05:22.4762676Z",
+        "role": "bot-08",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 6.96875,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.02630881556161663,
+      "last_working_set_bytes": 40050688,
+      "last_private_bytes": 76005376
+    },
+    {
+      "identity": {
+        "Id": 15272,
+        "StartTimeUtc": "2026-09-21T10:05:22.5047340Z",
+        "role": "bot-09",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 7.203125,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.02719364119709701,
+      "last_working_set_bytes": 39194624,
+      "last_private_bytes": 76214272
+    },
+    {
+      "identity": {
+        "Id": 5412,
+        "StartTimeUtc": "2026-09-21T10:05:22.5355012Z",
+        "role": "bot-10",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 6.8125,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.02571893180462971,
+      "last_working_set_bytes": 40550400,
+      "last_private_bytes": 76177408
+    },
+    {
+      "identity": {
+        "Id": 20484,
+        "StartTimeUtc": "2026-09-21T10:05:22.5665942Z",
+        "role": "bot-11",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 7.515625,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.02837340871107085,
+      "last_working_set_bytes": 38510592,
+      "last_private_bytes": 75931648
+    },
+    {
+      "identity": {
+        "Id": 6128,
+        "StartTimeUtc": "2026-09-21T10:05:22.5945324Z",
+        "role": "bot-12",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 7.578125,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.02860936221386562,
+      "last_working_set_bytes": 39256064,
+      "last_private_bytes": 76324864
+    },
+    {
+      "identity": {
+        "Id": 4220,
+        "StartTimeUtc": "2026-09-21T12:52:39.7804367Z",
+        "role": "frontend",
+        "ProcessName": "node"
+      },
+      "cpu_seconds": 0.734375,
+      "covered_seconds": 1655.5168512999999,
+      "mean_percent_total_capacity": 0.002772453657838524,
+      "last_working_set_bytes": 52682752,
+      "last_private_bytes": 138379264
+    }
+  ],
+  "findings": [],
+  "limitations": [
+    "No original observer missing counters are reconstructed.",
+    "Four-field identity segments observed processes but is not proof of executable ownership.",
+    "UTC strings with submillisecond precision are retained verbatim; Date.parse is used only for millisecond wall-clock interval comparison with the recorded tolerance.",
+    "CPU describes 16-logical-processor host capacity over this fixed27.59-minute prefix, not instantaneous use or six-hour completion."
+  ]
+}

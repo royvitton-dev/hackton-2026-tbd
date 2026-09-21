@@ -1,0 +1,32 @@
+{
+  "run_id": "2026-09-21T13-45-29-868Z-supplementary-resource-analysis-2bddd4e1",
+  "source_directory": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-678Z-supplementary-analysis-test-5a60d4ea\\malformed",
+  "captured_started_at": "2026-09-21T13:45:29.870Z",
+  "command": {
+    "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "args": [
+      "C:\\project\\hackton-2026-tbd\\trading\\scripts\\summarize-supplementary-resources.mjs",
+      "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-678Z-supplementary-analysis-test-5a60d4ea\\malformed"
+    ],
+    "cwd": "C:\\project\\hackton-2026-tbd",
+    "node": "v24.19.0"
+  },
+  "max_source_bytes": 67108864,
+  "source_run_sha256": "57c34ea8f0a414364931fcfaa4ea03972ae38bd27a7f35f0e72a99d5636da4f0",
+  "source_status_captured": "running",
+  "source_reported_completed": false,
+  "source_size_at_open": 5014,
+  "source_mtime_at_open": "2026-09-21T13:45:29.802Z",
+  "source_size_after_read": 5014,
+  "captured_bytes": 5014,
+  "complete_prefix_bytes": 5014,
+  "complete_prefix_sha256": "a898965afb18acb4ae18334126e7f10959daf5738a4c8bac70c4ba9484eb85d5",
+  "excluded_partial_tail_bytes": 0,
+  "excluded_partial_tail_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "bytes_appended_during_read_not_captured": 0,
+  "source_run_after_sha256": "57c34ea8f0a414364931fcfaa4ea03972ae38bd27a7f35f0e72a99d5636da4f0",
+  "source_run_changed_during_capture": false,
+  "captured_ended_at": "2026-09-21T13:45:29.875Z",
+  "status": "analysis_failed",
+  "failed_at": "2026-09-21T13:45:29.875Z"
+}
