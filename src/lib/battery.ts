@@ -1,4 +1,5 @@
 import type { UserVehicle, Vehicle, BatteryAttribution } from '../types/vehicle';
+import { calculateScientificScore, isNmcReferenceCompatible } from '../../battery_health/src/scientificScore';
 
 export interface RawVehicle {
   vehicleId: string; manufacturer: string; modelName: string; modelYear: number; trimName: string;
@@ -42,7 +43,9 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
     const deep = s.userReportedStartSocPct !== null && s.userReportedStartSocPct<r.deep_start_soc_threshold_pct;
     const highC = power/vehicle.batteryCapacityKwh>=r.high_c_rate_threshold;
     const issue = hours<=0 || s.chargedKwh<=0 || (s.chargerType==='AC_SLOW' ? power>raw.maxAcChargeKw*1.6 : power>raw.maxDcChargeKw*1.3);
-    return {s,fast,ultra,slowNight,longIdle,taper,anchor,highSocIdle:highSoc&&longIdle,deep,highC,issue};
+    const startSoc = s.mockTruthStartSocPct ?? s.userReportedStartSocPct;
+    const endSoc = s.mockTruthEndSocPct ?? s.userReportedEndSocPct;
+    return {s,fast,ultra,slowNight,longIdle,taper,anchor,highSocIdle:highSoc&&longIdle,deep,highC,issue,power,idle,startSoc,endSoc};
   });
   const count = feature.length;
   const countWhere = (key: 'fast'|'ultra'|'slowNight'|'longIdle'|'taper'|'anchor'|'highSocIdle'|'deep'|'highC'|'issue') => feature.filter(f=>f[key]).length;
@@ -50,21 +53,32 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
   const end = sessions.at(-1)?.endedAt ?? null;
   const period = count ? (Date.parse(end!)-Date.parse(sessions[0].startedAt))/day : 0;
   const efc = sessions.reduce((sum,s)=>sum+s.chargedKwh,0)/vehicle.batteryCapacityKwh;
-  const eligible = count>=r.minimum_sessions_required && period>=r.minimum_period_days && efc>=r.minimum_total_efc_for_score;
+  const scientific = calculateScientificScore(feature.map((item) => ({
+    startSocPct: item.startSoc,
+    endSocPct: item.endSoc,
+    chargedKwh: item.s.chargedKwh,
+    cRate: item.power / vehicle.batteryCapacityKwh,
+    idleMinutes: item.idle,
+  })));
+  const minimumDataEligible = count>=r.minimum_sessions_required && period>=r.minimum_period_days && efc>=r.minimum_total_efc_for_score;
+  const modelEligible = isNmcReferenceCompatible(vehicle.chemistry)
+    && scientific.missingSocSessionCount === 0
+    && scientific.outOfRangeSessionCount === 0
+    && scientific.supportedSessionCount >= r.minimum_sessions_required;
+  const eligible = minimumDataEligible && modelEligible;
   const attribution: BatteryAttribution = {
-    fastChargePenalty: ratio('fast')*r.fast_charge_weight,
-    ultraChargePenalty: ratio('ultra')*r.ultra_charge_weight,
-    longIdlePenalty: Math.min(20,countWhere('longIdle')*r.long_idle_weight),
-    highSocIdlePenalty: Math.min(24,countWhere('highSocIdle')*r.high_soc_idle_weight),
-    highCRatePenalty: ratio('highC')*r.high_c_rate_weight,
-    // The source 06_User_Summary formula uses MIN(16, deepStartCount * 2).
-    deepDischargePenalty: Math.min(16,countWhere('deep')*2),
-    efcPenalty: efc*r.efc_penalty_weight,
-    stableSlowChargeBonus: ratio('slowNight')*r.slow_night_bonus_weight,
+    fastChargePenalty: 0, ultraChargePenalty: 0, longIdlePenalty: 0,
+    highSocIdlePenalty: 0, highCRatePenalty: 0, deepDischargePenalty: 0,
+    efcPenalty: 0, stableSlowChargeBonus: 0,
     recentHabitDegradation: null, basisSessionCount: count, basisPeriodDays: period,
+    scoreModelId: scientific.modelId, scoreModelLabel: scientific.modelLabel,
+    referenceTemperatureC: scientific.referenceTemperatureC,
+    modelSupportedSessionCount: scientific.supportedSessionCount,
+    modelOutOfRangeSessionCount: scientific.outOfRangeSessionCount,
+    modeledCapacityStress: scientific.observedCapacityStress,
+    scoreLimitations: scientific.limitations,
   };
-  const penalty = attribution.fastChargePenalty+attribution.ultraChargePenalty+attribution.longIdlePenalty+attribution.highSocIdlePenalty+attribution.highCRatePenalty+attribution.deepDischargePenalty+attribution.efcPenalty;
-  const score = eligible ? Math.round(clamp(100-penalty+attribution.stableSlowChargeBonus,0,100)) : null;
+  const score = eligible ? scientific.score : null;
   const confidence = Math.round(Math.min(100,
     Math.min(r.soc_conf_sessions_weight,count/r.minimum_sessions_required*r.soc_conf_sessions_weight)+
     Math.min(r.soc_conf_days_weight,period/r.minimum_period_days*r.soc_conf_days_weight)+
@@ -88,5 +102,11 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
     nightSlowRatio:ratio('slowNight'),slowCount:count-countWhere('fast'),fastCount:countWhere('fast')-countWhere('ultra'),ultraCount:countWhere('ultra'),
     windowStart:end?new Date(cutoff).toISOString():'',windowEnd:end??'',observationDays:period,efc,
     chargingHabitSummary:habits,attribution,
-    insufficientReason:eligible?null:`최소 ${r.minimum_sessions_required}건, ${r.minimum_period_days}일, 누적 ${r.minimum_total_efc_for_score} EFC 이상의 충전 데이터가 필요합니다.` };
+    insufficientReason:eligible?null:[
+      !minimumDataEligible ? `최소 ${r.minimum_sessions_required}건, ${r.minimum_period_days}일, 누적 ${r.minimum_total_efc_for_score} EFC 필요` : null,
+      !isNmcReferenceCompatible(vehicle.chemistry) ? '검증된 NMC 계열 화학 정보 없음' : null,
+      scientific.missingSocSessionCount ? `SOC 누락 ${scientific.missingSocSessionCount}건` : null,
+      scientific.outOfRangeSessionCount ? `논문 모델 범위 밖 ${scientific.outOfRangeSessionCount}건` : null,
+      scientific.supportedSessionCount < r.minimum_sessions_required ? `모델 적용 가능 세션 ${r.minimum_sessions_required}건 미만` : null,
+    ].filter(Boolean).join(' · ') };
 }

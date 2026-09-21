@@ -8,6 +8,9 @@ export interface BatteryAttribution {
   highSocIdlePenalty: number; highCRatePenalty: number; deepDischargePenalty: number;
   efcPenalty: number; stableSlowChargeBonus: number; recentHabitDegradation: number | null;
   basisSessionCount: number; basisPeriodDays: number;
+  scoreModelId: string; scoreModelLabel: string; referenceTemperatureC: number;
+  modelSupportedSessionCount: number; modelOutOfRangeSessionCount: number;
+  modeledCapacityStress: number; scoreLimitations: string[];
 }
 export interface UserVehicle {
   initialOdometerKm: number | null; totalChargedKwh: number; latestChargedKwh: number | null; latestChargerType: string | null;

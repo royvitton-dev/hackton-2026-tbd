@@ -24,7 +24,7 @@ describe('battery data integration', () => {
     expect(sessions.every((session) => vehicleByUser.get(session.userId) === session.vehicleId)).toBe(true);
   });
 
-  it('matches the workbook eligibility totals', () => {
+  it('withholds scores outside the published model domain', () => {
     const vehicleById = new Map(vehicles.map((vehicle) => [vehicle.vehicleId, vehicle]));
     const sessionsByUser = new Map<string, ChargingSession[]>();
     sessions.forEach((session) => sessionsByUser.set(session.userId, [...(sessionsByUser.get(session.userId) ?? []), session]));
@@ -34,8 +34,8 @@ describe('battery data integration', () => {
       const features = (sessionsByUser.get(user.userId) ?? []).map((session) => deriveSession(session, vehicle, rules));
       if (calculateUserSummary(features, vehicle, rules).eligibleFlag) eligible += 1;
     }
-    expect(eligible).toBe(1188);
-    expect(users.length - eligible).toBe(62);
+    expect(eligible).toBe(139);
+    expect(users.length - eligible).toBe(1111);
   });
 });
 
@@ -68,5 +68,37 @@ describe('session feature calculation', () => {
     expect(summary.batteryCareScore).toBeNull();
     expect(summary.grade).toBe('INSUFFICIENT');
     expect(summary.insufficientReasons).toContain('세션 5건 미만');
+  });
+
+  it('gives lower stress scores to otherwise identical high-SOC exposure', () => {
+    const low = Array.from({ length: 5 }, (_, index) => {
+      const day = index * 2 + 1;
+      return deriveSession({
+        ...base,
+        sessionId: `LOW-${index}`,
+        startedAt: `2026-09-${String(day).padStart(2, '0')}T23:30:00`,
+        endedAt: `2026-09-${String(day + 1).padStart(2, '0')}T00:30:00`,
+        unpluggedAt: `2026-09-${String(day + 1).padStart(2, '0')}T03:00:00`,
+        mockTruthStartSocPct: 20,
+        mockTruthEndSocPct: 50,
+      }, vehicle, rules);
+    });
+    const high = low.map((session) => ({ ...session, mockTruthStartSocPct: 70, mockTruthEndSocPct: 100 }));
+    expect(calculateUserSummary(low, vehicle, rules).batteryCareScore)
+      .toBeGreaterThan(calculateUserSummary(high, vehicle, rules).batteryCareScore!);
+  });
+
+  it('does not extrapolate beyond the published 1C charge-rate boundary', () => {
+    const feature = deriveSession({ ...base, chargedKwh: vehicle.batteryUsableKwh * 1.1 }, vehicle, rules);
+    const summary = calculateUserSummary(Array.from({ length: 5 }, (_, index) => ({
+      ...feature,
+      sessionId: `HIGH-C-${index}`,
+      startedAt: `2026-09-${String(index * 2 + 1).padStart(2, '0')}T00:00:00`,
+      endedAt: `2026-09-${String(index * 2 + 1).padStart(2, '0')}T01:00:00`,
+      unpluggedAt: `2026-09-${String(index * 2 + 1).padStart(2, '0')}T01:10:00`,
+    })), vehicle, rules);
+    expect(summary.batteryCareScore).toBeNull();
+    expect(summary.modelOutOfRangeSessionCount).toBe(5);
+    expect(summary.insufficientReasons).toContain('논문 모델 범위 밖 5건');
   });
 });

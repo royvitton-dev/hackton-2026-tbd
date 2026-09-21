@@ -5,6 +5,7 @@ import type {
   UserSummary,
   Vehicle,
 } from './types';
+import { calculateScientificScore, isNmcReferenceCompatible } from './scientificScore';
 
 const REQUIRED_SESSION_FIELDS: (keyof ChargingSession)[] = [
   'sessionId', 'userId', 'vehicleId', 'chargedKwh', 'startedAt', 'endedAt',
@@ -99,7 +100,6 @@ export function calculateUserSummary(
   const ultraFastChargeRatio = ratio((feature) => feature.chargerClass === 'ULTRA_FAST');
   const slowChargeRatio = ratio((feature) => feature.chargerClass === 'AC_SLOW');
   const nightSlowChargeRatio = ratio((feature) => feature.isNightCharge);
-  const highCRatio = ratio((feature) => feature.isHighC);
   const stableSocRatio = ratio((feature) => {
     const start = feature.mockTruthStartSocPct ?? feature.userReportedStartSocPct;
     const end = feature.mockTruthEndSocPct ?? feature.userReportedEndSocPct;
@@ -108,7 +108,6 @@ export function calculateUserSummary(
   const longIdleCount = features.filter((feature) => feature.isLongIdle).length;
   const highSocIdleCount = features.filter((feature) => feature.isHighSocIdle).length;
   const deepDischargeCount = features.filter((feature) => feature.isDeepDischarge).length;
-  const deepFastChargeCount = features.filter((feature) => feature.isDeepDischarge && feature.chargerClass !== 'AC_SLOW').length;
   const socAnchorCount = features.filter((feature) => feature.hasSocAnchor).length;
   const issueCount = features.filter((feature) => feature.dataIssue).length;
   const avgCRate = sessionCount ? features.reduce((sum, feature) => sum + feature.cRate, 0) / sessionCount : 0;
@@ -118,10 +117,22 @@ export function calculateUserSummary(
     ? completenessValues.filter((value) => value !== null && value !== undefined && value !== '').length / completenessValues.length * 100
     : 0;
 
+  const scientific = calculateScientificScore(features.map((feature) => ({
+    startSocPct: feature.mockTruthStartSocPct ?? feature.userReportedStartSocPct,
+    endSocPct: feature.mockTruthEndSocPct ?? feature.userReportedEndSocPct,
+    chargedKwh: feature.chargedKwh,
+    cRate: feature.cRate,
+    idleMinutes: feature.idleMinutes,
+  })));
+
   const insufficientReasons: string[] = [];
   if (sessionCount < rules.minimum_sessions_required) insufficientReasons.push(`세션 ${rules.minimum_sessions_required}건 미만`);
   if (observationDays < rules.minimum_period_days) insufficientReasons.push(`관측 ${rules.minimum_period_days}일 미만`);
   if (estimatedEfc < rules.minimum_total_efc_for_score) insufficientReasons.push(`누적 ${rules.minimum_total_efc_for_score}EFC 미만`);
+  if (!isNmcReferenceCompatible(vehicle.batteryChemistry)) insufficientReasons.push('검증된 NMC 계열 화학 정보 없음');
+  if (scientific.missingSocSessionCount > 0) insufficientReasons.push(`SOC 누락 ${scientific.missingSocSessionCount}건`);
+  if (scientific.outOfRangeSessionCount > 0) insufficientReasons.push(`논문 모델 범위 밖 ${scientific.outOfRangeSessionCount}건`);
+  if (scientific.supportedSessionCount < rules.minimum_sessions_required) insufficientReasons.push(`모델 적용 가능 세션 ${rules.minimum_sessions_required}건 미만`);
   const eligibleFlag = insufficientReasons.length === 0;
 
   const socConfidenceScore = Math.round(Math.min(100,
@@ -131,17 +142,7 @@ export function calculateUserSummary(
     + Math.max(0, rules.soc_conf_quality_weight - issueCount * 5),
   ));
 
-  const rawCareScore = 100
-    - fastChargeRatio * rules.fast_charge_weight
-    - ultraFastChargeRatio * rules.ultra_charge_weight
-    - Math.min(20, longIdleCount * rules.long_idle_weight)
-    - Math.min(24, highSocIdleCount * rules.high_soc_idle_weight)
-    - highCRatio * rules.high_c_rate_weight
-    - Math.min(16, deepFastChargeCount * rules.deep_discharge_weight)
-    - estimatedEfc * rules.efc_penalty_weight
-    + nightSlowChargeRatio * rules.slow_night_bonus_weight
-    + stableSocRatio * 5;
-  const batteryCareScore = eligibleFlag ? Math.round(Math.max(0, Math.min(100, rawCareScore))) : null;
+  const batteryCareScore = eligibleFlag ? scientific.score : null;
   const grade = !eligibleFlag ? 'INSUFFICIENT'
     : socConfidenceScore < 60 ? 'LOW_CONFIDENCE'
       : batteryCareScore! >= 85 ? 'EXCELLENT'
@@ -184,6 +185,13 @@ export function calculateUserSummary(
     insufficientReasons,
     socConfidenceScore,
     batteryCareScore,
+    scoreModelId: scientific.modelId,
+    scoreModelLabel: scientific.modelLabel,
+    referenceTemperatureC: scientific.referenceTemperatureC,
+    modelSupportedSessionCount: scientific.supportedSessionCount,
+    modelOutOfRangeSessionCount: scientific.outOfRangeSessionCount,
+    modeledCapacityStress: round(scientific.observedCapacityStress, 6),
+    scoreLimitations: scientific.limitations,
     grade,
     goodHabits,
     cautions,

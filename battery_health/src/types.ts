@@ -117,6 +117,13 @@ export interface UserSummary {
   insufficientReasons: string[];
   socConfidenceScore: number;
   batteryCareScore: number | null;
+  scoreModelId: string;
+  scoreModelLabel: string;
+  referenceTemperatureC: number;
+  modelSupportedSessionCount: number;
+  modelOutOfRangeSessionCount: number;
+  modeledCapacityStress: number;
+  scoreLimitations: string[];
   grade: ScoreGrade;
   goodHabits: string[];
   cautions: string[];

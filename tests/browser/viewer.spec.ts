@@ -7,14 +7,15 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
   await expect.poll(async()=>Number(await canvas.getAttribute('data-model-triangles'))).toBeGreaterThan(100000);
   await expect(page.getByTestId('odometer')).toContainText('95,454');
-  await expect(page.getByTestId('health-score')).toHaveText('99');
+  await expect(page.getByTestId('health-score')).toHaveText('—');
   await expect(page.locator('img')).toHaveCount(0);
   await expect(page.getByRole('tab')).toHaveCount(6);
   await page.screenshot({path:'test-results/demo-desktop.png',fullPage:true});
   await page.getByRole('button',{name:/^Battery Info/}).click();
   await expect(page.locator('#battery-info-panel')).toBeVisible();
   await page.getByRole('button',{name:/점수 산정 근거/}).click();
-  await expect(page.locator('#score-attribution')).toContainText('고SOC 방치 감점');
+  await expect(page.locator('#score-attribution')).toContainText('Schmalstieg–Ecker NMC111/Graphite');
+  await expect(page.locator('#score-attribution')).toContainText('검증된 NMC 계열 화학 정보 없음');
   await page.screenshot({path:'test-results/demo-battery-focus.png',fullPage:true});
   await page.keyboard.press('Escape');await expect(page.locator('#battery-info-panel')).toHaveCount(0);
   await page.getByRole('button',{name:'배터리 hotspot 정보 열기'}).click();
@@ -48,7 +49,7 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   await page.evaluate(()=>window.scrollTo(0,0));
   await page.screenshot({path:'test-results/demo-ioniq5.png',fullPage:true});
   await page.getByRole('button',{name:/^Battery Info/}).click();
-  await expect(page.locator('#battery-info-panel')).toContainText('42 / 100');
+  await expect(page.locator('#battery-info-panel')).toContainText('논문 모델 범위 밖 2건');
   await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0003');
   await expect(page.getByTestId('model-unavailable')).toContainText('3D 모델 미등록');
   await expect(page.locator('canvas')).toHaveCount(0);

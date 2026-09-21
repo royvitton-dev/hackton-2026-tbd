@@ -77,7 +77,7 @@ function renderDashboard(
   const careArc = summary.batteryCareScore ?? 0;
   const profile = profileNames[user.driverProfile] ?? user.driverProfile;
   const scoreDescription = summary.eligibleFlag
-    ? `${summary.sessionCount}건의 충전 기록을 바탕으로 관리 습관을 분석했습니다.`
+    ? `${summary.scoreModelLabel}에서 ${summary.modelSupportedSessionCount}건을 분석했습니다.`
     : INSUFFICIENT_MESSAGE;
 
   app.innerHTML = `
@@ -103,7 +103,7 @@ function renderDashboard(
           <div>
             <p class="eyebrow">BATTERY CARE OVERVIEW</p>
             <h1>${escapeHtml(vehicle.modelName)} <em>${escapeHtml(vehicle.trimName)}</em></h1>
-            <p class="hero-copy">BMS 연동 없이 충전 세션 기반으로 추정한 관리 점수입니다.<br>실제 SOH 진단값이 아닌, 더 나은 충전 습관을 위한 안내 지표예요.</p>
+            <p class="hero-copy">논문 열화식을 25°C 표준 조건에 적용한 상대 충전 스트레스 점수입니다.<br>온도·BMS가 없는 실제 SOH 진단값 또는 잔존수명 예측값이 아닙니다.</p>
           </div>
           <div class="identity-card">
             <span class="avatar">${escapeHtml(user.userId.slice(-2))}</span>
@@ -119,15 +119,17 @@ function renderDashboard(
               <div class="score-copy"><small>충전 습관 등급</small><h2>${gradeLabels[summary.grade]}</h2><p>${escapeHtml(scoreDescription)}</p></div>
             </div>
             ${summary.insufficientReasons.length ? `<div class="insufficient-note"><strong>추가 데이터 필요</strong><span>${escapeHtml(summary.insufficientReasons.join(' · '))}</span></div>` : ''}
+            <div class="insufficient-note"><strong>논문 모델</strong><span>${escapeHtml(summary.scoreModelLabel)} · 적용 ${summary.modelSupportedSessionCount}건 · 범위 밖 ${summary.modelOutOfRangeSessionCount}건</span></div>
           </article>
           <article class="score-card confidence">
-            <div class="score-heading"><span>SOCConfidenceScore</span><span class="hint">데이터 신뢰도</span></div>
+            <div class="score-heading"><span>SOC 데이터 품질</span><span class="hint">배터리 점수 아님</span></div>
             <div class="confidence-score"><strong>${summary.socConfidenceScore}</strong><span>/ 100</span></div>
             <div class="progress"><i style="width:${summary.socConfidenceScore}%"></i></div>
             <div class="confidence-meta">
               <span><small>SOC 앵커</small><strong>${summary.socAnchorCount}건</strong></span>
               <span><small>데이터 완성도</small><strong>${number.format(summary.dataCompletenessScore)}%</strong></span>
             </div>
+            <p class="score-description">SOC 입력·앵커·결측 여부를 나타내며 현재 SOC나 배터리 건강도를 뜻하지 않습니다.</p>
           </article>
           <article class="score-card mix">
             <div class="score-heading"><span>충전 구성</span><span class="hint">전체 세션 기준</span></div>

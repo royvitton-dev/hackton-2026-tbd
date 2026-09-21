@@ -18,8 +18,8 @@ test('Every workbook user maps to one vehicle and only their own charge sessions
     assert.equal(u.estimatedSoh,null);
     assert.ok(u.healthScore===null || u.healthScore>=0&&u.healthScore<=100);
   }
-  assert.equal(users.filter(u=>u.healthScore!==null).length,1188);
-  assert.equal(users.filter(u=>u.healthScore===null).length,62);
+  assert.equal(users.filter(u=>u.healthScore!==null).length,139);
+  assert.equal(users.filter(u=>u.healthScore===null).length,1111);
 });
 test('Known workbook user U0001 has genuine reported SOC and vehicle capacity',()=>{
   const [u]=getMockUserVehicles();assert.equal(u.userId,'U0001');
@@ -27,8 +27,8 @@ test('Known workbook user U0001 has genuine reported SOC and vehicle capacity',(
   assert.equal(u.attribution.basisSessionCount,9);
   assert.equal(u.initialOdometerKm,11194);
   assert.match(u.socSource,/사용자 입력/);
-  const a=u.attribution;
-  assert.equal(u.healthScore,Math.round(Math.max(0,Math.min(100,100-a.fastChargePenalty-a.ultraChargePenalty-a.longIdlePenalty-a.highSocIdlePenalty-a.highCRatePenalty-a.deepDischargePenalty-a.efcPenalty+a.stableSlowChargeBonus))));
+  assert.equal(u.attribution.scoreModelId,'SCHMALSTIEG_2014_NMC111_25C_REFERENCE');
+  assert.equal(u.attribution.referenceTemperatureC,25);
 });
 test('Insufficient data never becomes a precise health score; missing SOC stays unknown',()=>{
   const user=workbook.users[0],vehicle=workbook.vehicles.find(v=>v.vehicleId===user.vehicleId)!;
