@@ -4,6 +4,8 @@
 
 ```sh
 # 저장소 루트에서
+python3 -m venv map_new/.runtime/vision-env
+map_new/.runtime/vision-env/bin/python -m pip install -r map_new/scripts/requirements-vision.txt
 npm run park:dev
 npm run verify --prefix map_new
 # 변경 감시: 변경이 있을 때 변환·단위·커버리지·빌드·브라우저·골든·라우터 검증
@@ -22,7 +24,7 @@ npm run watch --prefix map_new -- --checkpoint
 
 ## 원본과 결과
 
-모든 새 자산은 `map_new/public/sources`, `photos`, `generated`에 저장합니다. `map/` 원본은 변경하지 않습니다.
+모든 새 자산은 `map_new/public/sources`, `photos`, `analysis`, `generated`에 저장합니다. `map/` 원본은 변경하지 않습니다.
 
 ```sh
 node map_new/scripts/acquire.mjs  # 기존 원본 해시 확인·재사용, 공개 사진 복원
@@ -105,3 +107,17 @@ OCR 실행에는 macOS Vision과 Swift가 필요합니다. 변환·빌드·열�
 대천항 1층 원본에서 일반 주차면 50곳·장애인 2곳을 대조했습니다. 북측·서측 차로의 진입점부터 일반 주차면 **앞 차로**까지 차량·보행 경로를 제공합니다. 화면의 주차면을 클릭하거나 목적지에서 선택하고 안내를 시작합니다. 1·3인칭, 재생 속도와 도착 표시를 사용할 수 있습니다. 이 도면의 구획 내부 전진·후진 주차 조작은 자동 안내에 포함하지 않습니다.
 
 원본 벽 62개와 유리면 10개를 주석하여 문 개구부를 보존했고, 도로·차양 점선을 벽체에서 제외했습니다. 축척은 원본의 10m 막대(274px)로 맞췄습니다. 각 벽의 시작·끝 좌표, 길이·두께·가정 높이를 도면 정보에서 확인할 수 있습니다. 현장 측량·현재 출입 허용은 별도 확인 대상입니다. 차량 충돌 검사는 경로 전체의 벽·기둥과 차체를 확인하고, 잘게 나뉜 같은 차로의 그래프 구간 경계도 연속된 차로로 처리합니다.
+
+### 모든 도면의 Python 분할 분석
+
+`npm run sources:analyze --prefix map_new`는 보관된 **63장 전체**를 Python/OpenCV로 분석합니다. `convert`에도 같은 단계가 포함되며 원본·OCR·알고리즘·출력 파일의 해시가 같으면 결과를 재사용합니다. 별도의 Python 환경은 `ATLAS_VISION_PYTHON`으로 지정할 수 있습니다. 분석 환경은 `.runtime/vision-env`에 격리하고 의존성 버전은 `scripts/requirements-vision.txt`에 고정했습니다.
+
+원본을 축소하지 않고 알파를 흰 배경에 합성한 뒤 회색조, 대비 보정, CLAHE, Otsu와 국소 이진화를 적용합니다. 1,024px 타일을 160px 겹쳐 분석하고 원본 좌표로 복원합니다. 수평·수직 연속선과 사선의 굵은 선을 찾고, 겹친 검출을 병합합니다. 작은 OCR 글자 영역은 제외하며 긴 OCR 문단으로 건물 전체를 지우지 않습니다. 병합 시 2px보다 큰 틈은 연결하지 않아 문 개구부가 타일 연결 때문에 닫히지 않도록 합니다. 이 조건은 모든 문이 인식되었다는 의미가 아닙니다.
+
+`public/analysis/도면ID/`에는 `analysis.json`, 보정 흑백 이미지, 이진화 이미지, 검출선 미리보기, 원본 해상도의 타일 PNG가 있습니다. `analysis/index.json`은 도면 전체 현황입니다. `plan.rasterAnalysis`에 원본 해상도·분할 개수·출처 해시·모델 적용 방식을 기록하고 `plan.wallDetection`에 원본 픽셀과 잘린 도면의 미터 좌표를 함께 보존합니다. 자동 구조선 모델에는 2.8m 높이와 추정 축척을 사용합니다. 원본 대조 주석이 있는 도면은 기존 벽·차로를 유지하며 공원 안내도와 단지 배치도는 벽으로 올리지 않습니다. 자동 후보에는 가구·치수선 등이 포함될 수 있으며 진입점·통행 허용·안전 출구를 자동 확정하지 않습니다.
+
+전체 자료를 시각 대조하여 도서당 3장의 안내 문서와 달리·코이노니아 4장의 입체도를 별도로 구분했습니다. 이 7장은 평면도로 벽체 변환하지 않고 원본·흑백·타일로 제공합니다. 유형 판단과 원본 해시는 `sources/drawing-kinds.json`에 보존합니다. 따라서 라이브러리의 63장은 모두 주차장 평면도라는 의미가 아니며, 안내도·배치도·참고 자료를 포함한 공개 이미지 전체 수입니다.
+
+**공간 표현·도면 정보 → 전체 도면 인식 결과**에서 63장을 선택하고 원본 컬러·보정 흑백·이진화·검출선을 비교합니다. 분할 영역을 클릭하거나 목록에서 선택하면 원본 좌표의 조각을 확대할 수 있고 JSON도 내려받습니다. 청색과 황색은 구조선 유형이며 충전기의 초록/빨강 전파 점수와 별개입니다. 브라우저에서 새로 가져온 파일은 기존 클라이언트 분석기를 사용하며 서버의 Python 분석 결과와 구분합니다.
+
+`npm run test:vision --prefix map_new`는 타일의 전체 픽셀 포함, 경계 병합, 문틈 보존, 흐린 색 선·투명 픽셀, OCR 제외, 사선·빈 이미지·안내도 처리를 검사합니다. `verify`에 Python 회귀 검사도 포함합니다. 보고서의 V8 커버리지 수치는 JavaScript 코어 대상으로 Python 커버리지를 합산하지 않습니다. 구현 참고: [OpenCV 이진화](https://docs.opencv.org/4.13.0/d7/d4d/tutorial_py_thresholding.html), [Hough 선 검출](https://docs.opencv.org/4.13.0/d9/db0/tutorial_hough_lines.html).

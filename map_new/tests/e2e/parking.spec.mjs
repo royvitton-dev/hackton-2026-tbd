@@ -127,3 +127,33 @@ test('guides to a clicked source parking bay through the real drawing aisles and
   const arrived=await page.evaluate(()=>{const s=window.__parking.state;return {pose:s.pose,destination:s.route.destination};});expect(arrived.pose.x).toBeCloseTo(arrived.destination.x);expect(arrived.pose.z).toBeCloseTo(arrived.destination.z);
   await page.locator('#car-width').fill('7');await page.locator('#car-width').blur();await expect(page.locator('#play')).toBeDisabled();
 });
+test('compares native drawings, grayscale and overlapping tiles across the entire library',async({page})=>{
+  await open(page,'parking-131601-0');const route=await page.evaluate(()=>window.__parking.state.route.ids);
+  await page.locator('.visual-controls summary').click();await page.locator('#analysis-open').click();
+  await expect(page.locator('.analysis-intro')).toContainText('63 / 63장');await expect(page.locator('#analysis-status')).toContainText('병합 완료');
+  await expect(page.locator('#analysis-tile-canvas')).toHaveAttribute('data-tile-id','tile-1-1');
+  await page.locator('[data-analysis-mode=binary]').click();await expect(page.locator('#analysis-overview-image')).toHaveAttribute('src',/binary\.png$/);await expect(page.locator('#analysis-status')).toContainText('병합 완료');
+  await page.locator('#analysis-tile-select').selectOption('3');await expect(page.locator('#analysis-tile-note')).toContainText('원본 (0, 489)');
+  await screenshot(page,'native-analysis.png');
+  await page.locator('#analysis-site').selectOption('10002143-0');await expect(page.locator('#analysis-stats')).toContainText('4958 × 7008');await expect(page.locator('#analysis-tile-canvas')).toHaveAttribute('data-tile-id','tile-1-1');
+  const last=await page.locator('#analysis-tile-select option').last().getAttribute('value');await page.locator('#analysis-tile-select').selectOption(last);await expect(page.locator('#analysis-tile-note')).toContainText('원본 (3934, 5984)');
+  expect(await page.locator('#analysis-tile-canvas').evaluate(c=>[c.width,c.height])).toEqual([1024,1024]);
+  await page.locator('[data-analysis-mode=grayscale]').click();await expect(page.locator('#analysis-overview-image')).toHaveAttribute('src',/grayscale\.webp$/);
+  const download=page.waitForEvent('download');await page.locator('#analysis-export').click();expect((await download).suggestedFilename()).toBe('10002143-0-native-analysis.json');
+  expect(await page.evaluate(()=>window.__parking.state.route.ids)).toEqual(route);
+  await page.locator('#analysis-site').selectOption('park-boramae');await expect(page.locator('#analysis-status')).toContainText('건물 벽체 변환은 보류');
+  await page.locator('#analysis-open-plan').click();await expect(page.locator('#dialog')).not.toBeVisible();await expect(page.locator('#scene-title')).toHaveText('보라매공원');await expect(page.locator('#play')).toBeDisabled();
+});
+test('serves all native artifacts and provides usable mobile tile zoom without affecting source routes',async({page,request})=>{
+  const catalog=await (await request.get('/map_new/generated/catalog.json')).json();
+  const status=await Promise.all(catalog.filter(s=>!s.synthetic).map(async s=>{const response=await request.get('/map_new/'+s.rasterAnalysis.file);const a=await response.json();return {ok:response.ok(),id:a.id,sha:a.sourceSha256,scale:a.resizeScale,tiles:a.tiles.length};}));
+  expect(status).toHaveLength(63);expect(status.every(s=>s.ok&&s.scale===1&&s.tiles>0&&/^[a-f0-9]{64}$/.test(s.sha))).toBe(true);
+  await page.setViewportSize({width:390,height:844});await open(page,'parking-168780-0');await page.locator('.visual-controls summary').click();await page.locator('#analysis-open').click();
+  await expect(page.locator('#analysis-status')).toContainText('병합 완료');await page.locator('[data-analysis-mode=original]').click();
+  await expect(page.locator('#analysis-overview-image')).toHaveAttribute('src',/sources\/high-resolution\/parking-168780-0.jpg$/);
+  await page.locator('#analysis-tile-select').selectOption('1');await expect(page.locator('#analysis-tile-canvas')).toHaveAttribute('data-tile-id','tile-1-2');
+  await page.locator('#analysis-zoom').fill('150');await expect(page.locator('#analysis-zoom-value')).toHaveText('150%');
+  expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);
+  expect(await page.locator('.analysis-tile-scroll').evaluate(e=>e.scrollWidth>e.clientWidth)).toBe(true);
+  await page.getByRole('button',{name:'닫기',exact:true}).click();expect(await page.evaluate(()=>window.__parking.state.plan.id)).toBe('parking-168780-0');
+});

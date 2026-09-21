@@ -27,6 +27,16 @@
       "currentFacilityStatus": "not-surveyed"
     },
     "location": null,
+    "rasterAnalysis": {
+      "file": "analysis/changdong-b2/analysis.json",
+      "tileCount": 4,
+      "candidates": 529,
+      "sourcePixels": {
+        "width": 1800,
+        "height": 1350
+      },
+      "modelPolicy": "reviewed-preserved"
+    },
     "modelFile": "generated/changdong-b2.json",
     "statistics": {
       "walls": 23,
@@ -41,7 +51,7 @@
       "matchedParking": 38
     },
     "routingReady": true,
-    "modelHash": "84e8d693b656d6c338a35139c031f5af53f8fb6a13214dd99d03e169e13331d0"
+    "modelHash": "adc726403b4b3fa80bf4a60ca2df96aad5e660be2091d8d66c49576dc824bfab"
   },
   {
     "id": "10000901-0",
@@ -205,6 +215,16 @@
       "license": "© OpenStreetMap contributors, ODbL 1.0",
       "sha256": "8e45c8c71a3cc100330738195999f59a7f4cfbacb2fc4b23521178b5efc38fd7"
     },
+    "rasterAnalysis": {
+      "file": "analysis/10000901-0/analysis.json",
+      "tileCount": 1,
+      "candidates": 475,
+      "sourcePixels": {
+        "width": 1000,
+        "height": 600
+      },
+      "modelPolicy": "reviewed-preserved"
+    },
     "modelFile": "generated/10000901-0.json",
     "statistics": {
       "walls": 16,
@@ -219,7 +239,7 @@
       "matchedParking": 1
     },
     "routingReady": true,
-    "modelHash": "87da86f699ae3da862e3f55b3b0b72f62b995f9665b563fd9c2d4d0ee4948384",
+    "modelHash": "80c7545cdfafed67d7413f7d27aea2144c31b8c4dcdbdd20182d3ce9a4d5232a",
     "radio": {
       "file": "generated/radio-10000901.json",
       "count": 48,
@@ -271,21 +291,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000555-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 338,
+      "sourcePixels": {
+        "width": 1065,
+        "height": 754
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000555-0.json",
     "statistics": {
-      "walls": 7,
+      "walls": 17,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 16,
-      "triangles": 84,
+      "triangles": 204,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "d272dde3d7f1573cb7cad23ad3055dec955930b90dd13e07e7d27a4107153f72",
+    "modelHash": "9c17ffd590638860be2447f6f71ae20b879e4b8eeca36cef8f8baeb13bab5590",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -337,21 +367,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000555-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 337,
+      "sourcePixels": {
+        "width": 1063,
+        "height": 757
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000555-1.json",
     "statistics": {
-      "walls": 6,
+      "walls": 19,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 11,
-      "triangles": 72,
+      "triangles": 228,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f6bcb2f84eedeba8e97cde3f5f057bd29013e2294519d2ad159185da6e3bebfc",
+    "modelHash": "3e2a251e14ccd23892dcb99feac4ee8794c5f8577f3fd1ffa8dc6472243210fc",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -403,21 +443,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000555-2/analysis.json",
+      "tileCount": 2,
+      "candidates": 295,
+      "sourcePixels": {
+        "width": 1061,
+        "height": 755
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000555-2.json",
     "statistics": {
-      "walls": 6,
+      "walls": 19,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 15,
-      "triangles": 72,
+      "triangles": 228,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "efccabd6b419b78a9146138c7e84adb4417e7265573fef4ff47fceea943ebb37",
+    "modelHash": "558121586555487d9efa32612b3984aff5e15bb0d00ef537550fdf4202b82046",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -469,21 +519,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002143-0/analysis.json",
+      "tileCount": 48,
+      "candidates": 322,
+      "sourcePixels": {
+        "width": 4958,
+        "height": 7008
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
     "modelFile": "generated/10002143-0.json",
     "statistics": {
-      "walls": 39,
+      "walls": 0,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 46,
-      "triangles": 468,
+      "triangles": 0,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "d080ef292a9866967276ff3780c189f49807668ea2b18b4edb1ac7897bcf90b9",
+    "modelHash": "093adef8d7d047b7e3813b10440ef580d4e3cd90333811f7dd1481c56ec2c4da",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -535,21 +595,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002143-1/analysis.json",
+      "tileCount": 1,
+      "candidates": 224,
+      "sourcePixels": {
+        "width": 664,
+        "height": 938
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
     "modelFile": "generated/10002143-1.json",
     "statistics": {
-      "walls": 40,
+      "walls": 0,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 43,
-      "triangles": 480,
+      "triangles": 0,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "37e3eeb865676ebdf77a3cb1ec916137eea6b9b0269db67fa62639c6bcdaef94",
+    "modelHash": "0cdf2733860962978ba9ef95ae8d6dcf8702bba64cc304616e00d3a0860c7d6f",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -601,21 +671,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002143-2/analysis.json",
+      "tileCount": 48,
+      "candidates": 52,
+      "sourcePixels": {
+        "width": 4958,
+        "height": 7008
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
     "modelFile": "generated/10002143-2.json",
     "statistics": {
-      "walls": 28,
+      "walls": 0,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 37,
-      "triangles": 336,
+      "triangles": 0,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "0b171429b23f6256a11f1c9a97e34f6059fb0e25d2d670a54f19be97631b9ef2",
+    "modelHash": "f3c82365132fca37460bca7776a916251a10cda33061ddf2df2cd309ec4968d9",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -689,21 +769,31 @@
       "selectedWidth": 2048,
       "selectedHeight": 1256
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-159344-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 348,
+      "sourcePixels": {
+        "width": 2048,
+        "height": 1256
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-159344-0.json",
     "statistics": {
-      "walls": 99,
+      "walls": 109,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 7,
-      "triangles": 1188,
+      "triangles": 1308,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "c1af641790565feecf27160982f0d2921b368928f9fe35598da8b22b6329ab61",
+    "modelHash": "a6ca641289e34c352b2cdf7eb3ed86bc0b4dc94baca8cb06aeb6c2e064737cff",
     "radio": {
       "file": "generated/radio-parking-159344.json",
       "count": 48,
@@ -762,21 +852,31 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 90,
+    "rasterAnalysis": {
+      "file": "analysis/multilevel-dogok-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 287,
+      "sourcePixels": {
+        "width": 1185,
+        "height": 955
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/multilevel-dogok-0.json",
     "statistics": {
-      "walls": 85,
+      "walls": 143,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 1020,
+      "triangles": 1716,
       "detectedParking": 27,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "443a09a0a2766769b8ad6fc0342a7edf71268672bf75a1a83795c2c14b68f857",
+    "modelHash": "74984e8b66823d6658c36aa446b88c0bacd70d937d1c04e1630b083f8e41cea9",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -835,21 +935,31 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 90,
+    "rasterAnalysis": {
+      "file": "analysis/multilevel-dogok-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 270,
+      "sourcePixels": {
+        "width": 1185,
+        "height": 955
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/multilevel-dogok-1.json",
     "statistics": {
-      "walls": 63,
+      "walls": 154,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 7,
-      "triangles": 756,
+      "triangles": 1848,
       "detectedParking": 3,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "a1e6b64c85bcc4d682fce1e46db1e7e67aa3986aaf1885511653cc37f44e26ad",
+    "modelHash": "1d9002f425552b7f432143a2f1d03ef81f9619f9225b604171ab93595f2162f4",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -908,21 +1018,31 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 90,
+    "rasterAnalysis": {
+      "file": "analysis/multilevel-dogok-2/analysis.json",
+      "tileCount": 2,
+      "candidates": 259,
+      "sourcePixels": {
+        "width": 1185,
+        "height": 1022
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/multilevel-dogok-2.json",
     "statistics": {
-      "walls": 54,
+      "walls": 146,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 648,
+      "triangles": 1752,
       "detectedParking": 3,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "55f44b08cdadd3da5b7e7964730bd7551b91ea6cd4ee08371422ec3516235b34",
+    "modelHash": "8e004ba1076cba5de44753f6b8de8607f20832a29d732330b2e9aa21ee54cff4",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -981,21 +1101,31 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 90,
+    "rasterAnalysis": {
+      "file": "analysis/multilevel-dogok-3/analysis.json",
+      "tileCount": 2,
+      "candidates": 265,
+      "sourcePixels": {
+        "width": 1185,
+        "height": 1022
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/multilevel-dogok-3.json",
     "statistics": {
-      "walls": 43,
+      "walls": 155,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 516,
+      "triangles": 1860,
       "detectedParking": 17,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "ae970d2a539599b0af9905322e963ee9d9167e6ee3f18633d3571145d87088a1",
+    "modelHash": "1ee97c5cc88bd253948e1e86196469f47ca1d2ad569b665941b8daaf8d2b26b3",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -1047,21 +1177,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000367-0/analysis.json",
+      "tileCount": 1,
+      "candidates": 274,
+      "sourcePixels": {
+        "width": 880,
+        "height": 613
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000367-0.json",
     "statistics": {
-      "walls": 19,
+      "walls": 21,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 228,
+      "triangles": 252,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "53ddd0285dd9f83a43a1bac4b05568261969607d1a68e5f4736ba3581971e028",
+    "modelHash": "b9b7205caa58075c6d6efe384913ddf992cd0230da1ad95b0d3c611c26ecac5f",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1113,21 +1253,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000367-1/analysis.json",
+      "tileCount": 1,
+      "candidates": 289,
+      "sourcePixels": {
+        "width": 880,
+        "height": 613
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000367-1.json",
     "statistics": {
-      "walls": 11,
+      "walls": 13,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 17,
-      "triangles": 132,
+      "triangles": 156,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "223ea9f220b5066dd2af68694aa46a1ad8e8d51caf8ba9a0d7cc36dbd906a78b",
+    "modelHash": "4f288a1fcd355bd2b46479e4a45c948db72d4c6d147910373df45ada9e196c02",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1179,21 +1329,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000367-2/analysis.json",
+      "tileCount": 1,
+      "candidates": 374,
+      "sourcePixels": {
+        "width": 880,
+        "height": 613
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000367-2.json",
     "statistics": {
-      "walls": 18,
+      "walls": 22,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 18,
-      "triangles": 216,
+      "triangles": 264,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "6c1650bcc0a49a2f74604f9b1736ff46f61bb832a69a1d7eac369f78d29c4082",
+    "modelHash": "c9ff4877f95be1b80088a281494621ac1b6500400ff812836c02df735fc7d139",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1245,21 +1405,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000474-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 495,
+      "sourcePixels": {
+        "width": 950,
+        "height": 1599
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000474-0.json",
     "statistics": {
-      "walls": 74,
+      "walls": 117,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 44,
-      "triangles": 888,
+      "triangles": 1404,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "47547c600577018eaa3222e8a6dcdae53b346a6f05830561aa4e5497afab641e",
+    "modelHash": "6825614c2fb3d78ea132c6cf710f91f91301d7ca4a16387819ba709f508a70fc",
     "radio": {
       "file": "generated/radio-20000474.json",
       "count": 48,
@@ -1311,21 +1481,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10000921-0/analysis.json",
+      "tileCount": 1,
+      "candidates": 238,
+      "sourcePixels": {
+        "width": 1000,
+        "height": 600
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
     "modelFile": "generated/10000921-0.json",
     "statistics": {
-      "walls": 23,
+      "walls": 0,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 6,
-      "triangles": 276,
+      "triangles": 0,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "ce5a70c684d3b39f7a12e1181e096c720b201a9bfb437a5d13eb3336bf744ca7",
+    "modelHash": "19765f0b513b05b65b9e4402d74b5da29423cee14ea0fb814c663db2487e75df",
     "radio": {
       "file": "generated/radio-10000921.json",
       "count": 48,
@@ -1377,21 +1557,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000441-0/analysis.json",
+      "tileCount": 12,
+      "candidates": 785,
+      "sourcePixels": {
+        "width": 3309,
+        "height": 2339
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000441-0.json",
     "statistics": {
-      "walls": 17,
+      "walls": 99,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 60,
-      "triangles": 204,
+      "triangles": 1188,
       "detectedParking": 3,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "1efc14eee1902ab198adec65cdbf50a42b3addd87ba63970861ceeebf884ec66",
+    "modelHash": "0c46202f78ae6ed9a0d8cf442863e2843d3919d9660df4a2e1753bf67c91e541",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1443,21 +1633,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000441-1/analysis.json",
+      "tileCount": 12,
+      "candidates": 1296,
+      "sourcePixels": {
+        "width": 3309,
+        "height": 2339
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000441-1.json",
     "statistics": {
-      "walls": 5,
+      "walls": 64,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 78,
-      "triangles": 60,
+      "triangles": 768,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "647a8cb55aac62b475f530d3d456ef21b5f3ae6f15f8cfa8b1ed4305a3359171",
+    "modelHash": "ba2d8617ac0444b47633c0a7b25d140f105ba80a0af1a943bf52f548fcafb972",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1509,21 +1709,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000441-2/analysis.json",
+      "tileCount": 12,
+      "candidates": 828,
+      "sourcePixels": {
+        "width": 3309,
+        "height": 2339
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000441-2.json",
     "statistics": {
-      "walls": 8,
+      "walls": 80,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 60,
-      "triangles": 96,
+      "triangles": 960,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "ef2ca4abcc5fcbc94001ff5d495376a5d4ad842b7a782abf96621be1a48e214d",
+    "modelHash": "a5974f058ea542203d26805368df032482641eaf0ef6a686e9ffe3f52f45641f",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1575,21 +1785,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000536-0/analysis.json",
+      "tileCount": 1,
+      "candidates": 367,
+      "sourcePixels": {
+        "width": 1000,
+        "height": 668
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000536-0.json",
     "statistics": {
-      "walls": 159,
+      "walls": 45,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 56,
-      "triangles": 1908,
+      "triangles": 540,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "2c7e612c4851db13f2b64873c0f0e9ab9f3209739727829899c10f2fea074eb0",
+    "modelHash": "0fa83c40695c78788f1cf8051e894f4cb87fca0bf4c5938e5d849e1d59bb550a",
     "radio": {
       "file": "generated/radio-20000536.json",
       "count": 48,
@@ -1641,21 +1861,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000536-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 374,
+      "sourcePixels": {
+        "width": 1044,
+        "height": 689
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000536-1.json",
     "statistics": {
-      "walls": 168,
+      "walls": 45,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 48,
-      "triangles": 2016,
+      "triangles": 540,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "c8ba46be688cfd03bbb5f40e77714f3d1a9fad8e6111dedf66b4df5f99e14f23",
+    "modelHash": "e42484ec169c298565b8229720ebc7eb38a9b90eb63ea92fb3c98387ce04c4c1",
     "radio": {
       "file": "generated/radio-20000536.json",
       "count": 48,
@@ -1707,21 +1937,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002042-0/analysis.json",
+      "tileCount": 15,
+      "candidates": 574,
+      "sourcePixels": {
+        "width": 3840,
+        "height": 2160
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
     "modelFile": "generated/10002042-0.json",
     "statistics": {
-      "walls": 50,
+      "walls": 0,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 600,
+      "triangles": 0,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "293fc1e88adcad63bbab9273c07dd58503f96632b02a7cd69e8eb5f141a48dcc",
+    "modelHash": "eb89f08e69c57c9ed2373183c5426fdd731347dd449e9af2398032c7f9030ce3",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -1773,21 +2013,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002042-1/analysis.json",
+      "tileCount": 15,
+      "candidates": 885,
+      "sourcePixels": {
+        "width": 3840,
+        "height": 2160
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
     "modelFile": "generated/10002042-1.json",
     "statistics": {
-      "walls": 84,
+      "walls": 0,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 1008,
+      "triangles": 0,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "6750d56320f6e4ee03dc91f9ce0ca9be4be32a235e7ef3b9f330eda700828a40",
+    "modelHash": "98bb360b888a47cdc0c3dd9212e87e85931b8f0cb51f1afa6948e86c8631b91a",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -1839,21 +2089,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002042-2/analysis.json",
+      "tileCount": 15,
+      "candidates": 602,
+      "sourcePixels": {
+        "width": 3840,
+        "height": 2160
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
     "modelFile": "generated/10002042-2.json",
     "statistics": {
-      "walls": 35,
+      "walls": 0,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 420,
+      "triangles": 0,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "3364ade4e72ffe5e3b6726897414b3f0b46f4d4893a68998ac0805958d3a5ae7",
+    "modelHash": "1593e7a422978145d37ea7c095e6e74e82c750973c1e649692a575c2511a48b1",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -1905,21 +2165,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000570-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 444,
+      "sourcePixels": {
+        "width": 1080,
+        "height": 763
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000570-0.json",
     "statistics": {
-      "walls": 20,
+      "walls": 36,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 28,
-      "triangles": 240,
+      "triangles": 432,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "30b8d677716589578a36e6db3a2176fd303d9d4be9b4eb88d408dae94feeaf86",
+    "modelHash": "98c0ecab0f6d15079c5d0231e67d00e3e079a872cc6471ca63802dde86f1ed79",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -1971,21 +2241,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000570-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 322,
+      "sourcePixels": {
+        "width": 1080,
+        "height": 763
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000570-1.json",
     "statistics": {
-      "walls": 50,
+      "walls": 52,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 10,
-      "triangles": 600,
+      "triangles": 624,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "3808171e8c93692ec6be609123525709a9e4a835d4344306f61e23d19049ff4c",
+    "modelHash": "d3e824efde868364d7cd451070e5b166dd0bd7e5ee57f2104e7daedf35750032",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -2037,21 +2317,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000570-2/analysis.json",
+      "tileCount": 2,
+      "candidates": 304,
+      "sourcePixels": {
+        "width": 1080,
+        "height": 763
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/20000570-2.json",
     "statistics": {
-      "walls": 38,
+      "walls": 59,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 11,
-      "triangles": 456,
+      "triangles": 708,
       "detectedParking": 3,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "383df0dcb6db7acad45ece59ce1c41c797f5607468f8d6b9670b492ce643efe0",
+    "modelHash": "9125dc325307960b6b081cfb57881ffa568e2bd4209626c0e260fe3f94ed9899",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -2125,21 +2415,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1414
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-139632-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 349,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1414
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-139632-0.json",
     "statistics": {
-      "walls": 24,
+      "walls": 37,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 10,
-      "triangles": 288,
+      "triangles": 444,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "997b4817840bd46794e814c7ff4b46e18ad854a6b904d7b04773b87bdb902b71",
+    "modelHash": "23456fb9da2b8af4f7a48752b17e384632ee314f821ae92b2b22603f3f43f303",
     "radio": {
       "file": "generated/radio-parking-139632.json",
       "count": 48,
@@ -2213,21 +2513,31 @@
       "selectedWidth": 1500,
       "selectedHeight": 1060
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-27446-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 96,
+      "sourcePixels": {
+        "width": 1500,
+        "height": 1060
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-27446-0.json",
     "statistics": {
-      "walls": 39,
+      "walls": 12,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 468,
+      "triangles": 144,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "9d78b5e6ee3f8cf1c518e5da7aaaa91210c05d4f17ce9e22a4336e3fa8ee0886",
+    "modelHash": "38b78fb0e4b343babdefdd61a09e722d726b876d6f32617ccd51ace104bff2b4",
     "radio": {
       "file": "generated/radio-parking-27446.json",
       "count": 48,
@@ -2303,21 +2613,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1112
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-65955-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 1470,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1112
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-65955-0.json",
     "statistics": {
-      "walls": 18,
+      "walls": 216,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 10,
-      "triangles": 216,
+      "triangles": 2592,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "cedb622c197dd1634e6c3d1e6d4395450258202cd896278cf9ddaa154cdc584e",
+    "modelHash": "1514eba207b2536d7c9026bc5a2138cb6f8b759f1dd7c8f552e063d569300a78",
     "radio": {
       "file": "generated/radio-parking-65955.json",
       "count": 48,
@@ -2391,21 +2711,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1413
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-57413-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 343,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1413
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-57413-0.json",
     "statistics": {
-      "walls": 26,
+      "walls": 197,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 10,
-      "triangles": 312,
+      "triangles": 2364,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "c3e3cdfd1839bb29e028805be14b58ff6b95d6e149cbbdf5c77129dcbb2302f5",
+    "modelHash": "32b5744109c573608efc27897b30f7a3854bab834249d69de126746840e2ce75",
     "radio": {
       "file": "generated/radio-parking-57413.json",
       "count": 48,
@@ -2479,21 +2809,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1680
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-63653-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 453,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1680
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-63653-0.json",
     "statistics": {
-      "walls": 24,
+      "walls": 61,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 23,
-      "triangles": 288,
+      "triangles": 732,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "7a48c06e2bc53fe20541ee7e8137659211369498c5b590d0533804811d31260f",
+    "modelHash": "7fe49847c431817dbf1ceff57d22f8f735281cfbbcfccb47ee78dc4befd01bff",
     "radio": {
       "file": "generated/radio-parking-63653.json",
       "count": 48,
@@ -2567,21 +2907,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1269
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-52328-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 260,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1269
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-52328-0.json",
     "statistics": {
-      "walls": 73,
+      "walls": 31,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 21,
-      "triangles": 876,
+      "triangles": 372,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "8ab944ef1ab60ba0ad781523eae4fe3381451f80878d62092eb4de4b0b260316",
+    "modelHash": "7143e4a7037e73dafb0dbbc178056fedc1e94b3bdb22890e878f26008b08b633",
     "radio": {
       "file": "generated/radio-parking-52328.json",
       "count": 48,
@@ -2655,21 +3005,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1379
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-49698-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 463,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1379
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-49698-0.json",
     "statistics": {
-      "walls": 252,
+      "walls": 49,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 13,
-      "triangles": 3024,
+      "triangles": 588,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "444ba73a210513a7d1667ab52dec8839f0090ca0ae5fd7307a24689d95491a9d",
+    "modelHash": "dc1ae6589c7af2103672a2a0a2b744684205cb0cb67857f8d6d20282e173b155",
     "radio": {
       "file": "generated/radio-parking-49698.json",
       "count": 48,
@@ -2743,21 +3103,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1414
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-43658-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 641,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1414
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-43658-0.json",
     "statistics": {
-      "walls": 95,
+      "walls": 113,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 18,
-      "triangles": 1140,
+      "triangles": 1356,
       "detectedParking": 4,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "0f3d569e61511b43759b9dabc1542880077808c9d8b00cf808a3b6b33e47bd84",
+    "modelHash": "f9c7f55b9a85297d5c7f184decfb03a599016206cebe712963b976839382eeae",
     "radio": {
       "file": "generated/radio-parking-43658.json",
       "count": 48,
@@ -2831,21 +3201,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1675
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-45519-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 313,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1675
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-45519-0.json",
     "statistics": {
-      "walls": 23,
+      "walls": 52,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 27,
-      "triangles": 276,
+      "triangles": 624,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "b4cce7d3c9db71151310811dfa6803147db82a40510d6e8bd1f37a27f205d600",
+    "modelHash": "331008cf377ea89948b85ef5d0edd3b8894685bc2ab86ba18a7a75db18437c04",
     "radio": {
       "file": "generated/radio-parking-45519.json",
       "count": 48,
@@ -2919,21 +3299,31 @@
       "selectedWidth": 2048,
       "selectedHeight": 1448
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-39327-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 225,
+      "sourcePixels": {
+        "width": 2048,
+        "height": 1448
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-39327-0.json",
     "statistics": {
-      "walls": 9,
+      "walls": 86,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 12,
-      "triangles": 108,
+      "triangles": 1032,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f876d1659e246112bd0e05e8baa460dc4a0921f13c82b141d406097e51a0c6d1",
+    "modelHash": "4f29862a528d1edfb0c2daf3e9dc0a9adae6e6831feff44b79a5be24812435f3",
     "radio": {
       "file": "generated/radio-parking-39327.json",
       "count": 48,
@@ -3007,21 +3397,31 @@
       "selectedWidth": 1072,
       "selectedHeight": 930
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-35314-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 89,
+      "sourcePixels": {
+        "width": 1072,
+        "height": 930
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-35314-0.json",
     "statistics": {
-      "walls": 24,
+      "walls": 15,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 2,
-      "triangles": 288,
+      "triangles": 180,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "626caf9135d627ecddb7e31e5244c7431b0713f1bd3a35f548ae14cceeea0be9",
+    "modelHash": "cda3777c38f0328239bb528a78a27ca2949f72563c83e47e63941a712d6d3a1f",
     "radio": {
       "file": "generated/radio-parking-35314.json",
       "count": 48,
@@ -3095,21 +3495,31 @@
       "selectedWidth": 1536,
       "selectedHeight": 1085
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-146002-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 454,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1085
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-146002-0.json",
     "statistics": {
-      "walls": 432,
+      "walls": 114,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 29,
-      "triangles": 5184,
+      "triangles": 1368,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "229cd23bb36534a70f9b3168d49f2fd5f4f9ef770dea3a54d2830bbc8eddd1e6",
+    "modelHash": "d0824675387a9ea0d47b1a812a650b6a40a44554faa3416a40a8177031bbdc66",
     "radio": {
       "file": "generated/radio-parking-146002.json",
       "count": 48,
@@ -3183,21 +3593,31 @@
       "selectedWidth": 1220,
       "selectedHeight": 862
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-7128-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 551,
+      "sourcePixels": {
+        "width": 1220,
+        "height": 862
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-7128-0.json",
     "statistics": {
-      "walls": 204,
+      "walls": 40,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 13,
-      "triangles": 2448,
+      "triangles": 480,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "8237ab2b2f214d349c42aa11ccde48467a6b426e5a267ca782fdf40c5a9beafc",
+    "modelHash": "916aaad863a8efeae1e3d0ed8e412842f60614197666cfa9da3c0176a73ef1bb",
     "radio": {
       "file": "generated/radio-parking-7128.json",
       "count": 48,
@@ -3271,21 +3691,31 @@
       "selectedWidth": 1220,
       "selectedHeight": 864
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-15333-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 853,
+      "sourcePixels": {
+        "width": 1220,
+        "height": 864
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-15333-0.json",
     "statistics": {
-      "walls": 31,
+      "walls": 141,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 372,
+      "triangles": 1692,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "09182048ba4e84dea1d0e83f2d6c797026bc46e23afbc4e26ab5be8e65fc8d27",
+    "modelHash": "4fb9b994b0d22a8a569cac5552938056d45bea57df503af2295ca1a015bdb85a",
     "radio": {
       "file": "generated/radio-parking-15333.json",
       "count": 48,
@@ -3380,21 +3810,31 @@
       "selectedWidth": 1536,
       "selectedHeight": 822
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-168780-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 1031,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 822
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-168780-0.json",
     "statistics": {
-      "walls": 15,
+      "walls": 120,
       "nodes": 0,
       "edges": 0,
       "spaces": 31,
       "objects": 21,
       "accessible": 12,
       "ocrLabels": 40,
-      "triangles": 180,
+      "triangles": 1440,
       "detectedParking": 17,
       "matchedParking": 9
     },
     "routingReady": false,
-    "modelHash": "58a17cf461e4adefa24670c0f178c79c5aa2f992c967a7bef174195c3b4ada6c",
+    "modelHash": "8235d8c885af9b0862d16fdd70f9ca2e76aa16aba604b0736b9cb73f97cc6fad",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -3489,21 +3929,31 @@
       "selectedWidth": 1536,
       "selectedHeight": 748
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-168780-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 809,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 748
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-168780-1.json",
     "statistics": {
-      "walls": 18,
+      "walls": 149,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 8,
       "accessible": 0,
       "ocrLabels": 30,
-      "triangles": 216,
+      "triangles": 1788,
       "detectedParking": 4,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "58a02a77076d42b10a26e7013303de512365ec0628dd2885641133343ddb7a54",
+    "modelHash": "5226e78b865787624f3267f29357baf0f45a7e522f73c1e4ff2d3cdb16174b21",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -3598,21 +4048,31 @@
       "selectedWidth": 1536,
       "selectedHeight": 743
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-168780-2/analysis.json",
+      "tileCount": 2,
+      "candidates": 1324,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 743
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-168780-2.json",
     "statistics": {
-      "walls": 38,
+      "walls": 163,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 12,
       "accessible": 0,
       "ocrLabels": 49,
-      "triangles": 456,
+      "triangles": 1956,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "df960674acc642e20eed3830a5af288e02099618628a408265866fb9d9f8a950",
+    "modelHash": "351311f3c7456e5c6543a9c6457c1e7d984b856b64f65fbb883f1753ccd8f828",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -3686,21 +4146,31 @@
       "selectedWidth": 1536,
       "selectedHeight": 1054
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-146396-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 757,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1054
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-146396-0.json",
     "statistics": {
-      "walls": 36,
+      "walls": 62,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 7,
-      "triangles": 432,
+      "triangles": 744,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "1fd0c581b0ae26ddf31915c5b1893368e92f7327b7fc4d8e445edd4f5a4e9505",
+    "modelHash": "2fedbc06fd42c942ddc2e92bf58e340285922cfff1f211cca8bb8ae71828ace8",
     "radio": {
       "file": "generated/radio-parking-146396.json",
       "count": 21,
@@ -3774,21 +4244,31 @@
       "selectedWidth": 1536,
       "selectedHeight": 1091
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-143447-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 551,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1091
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-143447-0.json",
     "statistics": {
-      "walls": 16,
+      "walls": 135,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 19,
-      "triangles": 192,
+      "triangles": 1620,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "78296779eef76d5f38da1b22402f41d6235322ba9a197d81e3313630c5f41f11",
+    "modelHash": "09d151e2b352c638c5c15c8fa3038f58b8750e33255aa84c92a6b733ca47c183",
     "radio": {
       "file": "generated/radio-parking-143447.json",
       "count": 48,
@@ -3862,21 +4342,31 @@
       "selectedWidth": 2048,
       "selectedHeight": 1229
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-140714-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 357,
+      "sourcePixels": {
+        "width": 2048,
+        "height": 1229
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-140714-0.json",
     "statistics": {
-      "walls": 33,
+      "walls": 26,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 396,
+      "triangles": 312,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "7cdddaa0fb0468033f7ea2b91e5e2badbae4254e87d456cfa46de706a3ec7e51",
+    "modelHash": "da25b69de382990be2cfc05106155b6ce89311844c1bb0143ce1344346d842bf",
     "radio": {
       "file": "generated/radio-parking-140714.json",
       "count": 15,
@@ -3950,6 +4440,16 @@
       "selectedHeight": 1513
     },
     "annotation": "sources/daecheon-layers.svg",
+    "rasterAnalysis": {
+      "file": "analysis/parking-131601-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 1426,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1513
+      },
+      "modelPolicy": "reviewed-preserved"
+    },
     "modelFile": "generated/parking-131601-0.json",
     "statistics": {
       "walls": 72,
@@ -3964,7 +4464,7 @@
       "matchedParking": 50
     },
     "routingReady": true,
-    "modelHash": "ec1c303d6bb0a8aab29ffa805cbcc79da01cfd8f15076bd80a9396effc14f5df",
+    "modelHash": "24b77b66adb7daa53a096fa2426fceed5cbd7254da270d56752795b144f73034",
     "radio": {
       "file": "generated/radio-parking-131601.json",
       "count": 37,
@@ -4014,21 +4514,31 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/parking-24500-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 404,
+      "sourcePixels": {
+        "width": 1062,
+        "height": 1500
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-24500-0.json",
     "statistics": {
-      "walls": 289,
+      "walls": 72,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 3,
-      "triangles": 3468,
+      "triangles": 864,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "26f30abdf62530c127d4067d48f4fa408ab3dc8b73419f8b6697e111b40a17ac",
+    "modelHash": "b22ff1581014500fde6bf0ddf01aa7ba9224f4e76c99e8c574a90ba423e4e500",
     "radio": {
       "file": "generated/radio-parking-24500.json",
       "count": 48,
@@ -4102,21 +4612,31 @@
       "selectedWidth": 1536,
       "selectedHeight": 1049
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-90014-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 1867,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1049
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-90014-0.json",
     "statistics": {
-      "walls": 26,
+      "walls": 186,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 15,
-      "triangles": 312,
+      "triangles": 2232,
       "detectedParking": 3,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "9d4070cbd0709e0c5517cbaaf6395c9b469c5790af60a30f4c0d5006e40add38",
+    "modelHash": "ff1feef0b0a6572c377ed83de1d858517c74eca4ee1ab4106693e7f94ffc5670",
     "radio": {
       "file": "generated/radio-parking-90014.json",
       "count": 48,
@@ -4190,21 +4710,31 @@
       "selectedWidth": 2048,
       "selectedHeight": 1441
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-89845-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 1172,
+      "sourcePixels": {
+        "width": 2048,
+        "height": 1441
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-89845-0.json",
     "statistics": {
-      "walls": 19,
+      "walls": 97,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 16,
-      "triangles": 228,
+      "triangles": 1164,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "1f45eff305fccc4b5ba95fc688ec5c61fff278e925997b396a5508aad4adc4d8",
+    "modelHash": "520929d1889b194ebca164f07a6bb168d84df28161e8e1864ed6c6b3a0387d31",
     "radio": {
       "file": "generated/radio-parking-89845.json",
       "count": 32,
@@ -4278,21 +4808,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1282
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-68790-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 485,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1282
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-68790-0.json",
     "statistics": {
-      "walls": 62,
+      "walls": 64,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 2,
-      "triangles": 744,
+      "triangles": 768,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "bbe909880fadf06754b3a23239815723649376db6f3d8b1024714cdc0d355719",
+    "modelHash": "3712169aa52ea7c4ee52397b1fcaaf87e48c1b07946dc37a27a3ff299d54bbd5",
     "radio": {
       "file": "generated/radio-parking-68790.json",
       "count": 48,
@@ -4366,21 +4906,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1413
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-56837-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 391,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1413
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-56837-0.json",
     "statistics": {
-      "walls": 357,
+      "walls": 104,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 8,
-      "triangles": 4284,
+      "triangles": 1248,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "b88f78e1963ce236c476c115235f069f85cf21779b1dfd47d46bce9ef60d1e04",
+    "modelHash": "9719b59327b8d13d91e5dcca146a16f26d99f9f127f08f7db80530ff095765cd",
     "radio": {
       "file": "generated/radio-parking-56837.json",
       "count": 48,
@@ -4454,21 +5004,31 @@
       "selectedWidth": 1220,
       "selectedHeight": 862
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-52390-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 179,
+      "sourcePixels": {
+        "width": 1220,
+        "height": 862
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-52390-0.json",
     "statistics": {
-      "walls": 16,
+      "walls": 43,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 5,
-      "triangles": 192,
+      "triangles": 516,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f9e8867fe2ffa45733ab24271c7ff76ba22723e929a65ca9497d5d8235ee8bb0",
+    "modelHash": "168614be667dfb1addd02b1feba5b3731e674245bae9cfa3f01e73ea5dfbcc2e",
     "radio": {
       "file": "generated/radio-parking-52390.json",
       "count": 48,
@@ -4542,21 +5102,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1414
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-47946-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 427,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1414
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-47946-0.json",
     "statistics": {
-      "walls": 24,
+      "walls": 90,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 13,
-      "triangles": 288,
+      "triangles": 1080,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "8489be75ab73588ebf07f32978d4143fc239e89e7f4e8cdd6fc83ad521b27585",
+    "modelHash": "f938348da040ecaedcbf14f8cb2b3e350d3cf4bce56c0e3839a91746bcee656c",
     "radio": {
       "file": "generated/radio-parking-47946.json",
       "count": 48,
@@ -4632,21 +5202,31 @@
       "selectedWidth": 2000,
       "selectedHeight": 1414
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-46541-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 386,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1414
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-46541-0.json",
     "statistics": {
-      "walls": 4,
+      "walls": 72,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 1,
-      "triangles": 48,
+      "triangles": 864,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "47febfd198bff584cc1837a54984093982fa53f0c1176836d73b9804fc86a6c3",
+    "modelHash": "91496a88fc66139399dbe838b3f5147e96248e29c77886054d23a1f72953fc20",
     "radio": {
       "file": "generated/radio-parking-46541.json",
       "count": 48,
@@ -4720,21 +5300,31 @@
       "selectedWidth": 1655,
       "selectedHeight": 1320
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-42450-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 834,
+      "sourcePixels": {
+        "width": 1655,
+        "height": 1320
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-42450-0.json",
     "statistics": {
-      "walls": 19,
+      "walls": 107,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 41,
-      "triangles": 228,
+      "triangles": 1284,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "98c8bb56c3947fa2b339b50cc1600fd93af3f63b97fb9b8b0caf284eea64694d",
+    "modelHash": "132b2d5de3e803396f40538f511a17022b508b361003199219685039727eb4e8",
     "radio": {
       "file": "generated/radio-parking-42450.json",
       "count": 48,
@@ -4808,21 +5398,31 @@
       "selectedWidth": 1536,
       "selectedHeight": 1086
     },
+    "rasterAnalysis": {
+      "file": "analysis/parking-170036-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 521,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1086
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
     "modelFile": "generated/parking-170036-0.json",
     "statistics": {
-      "walls": 57,
+      "walls": 47,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 684,
+      "triangles": 564,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "efee0cb6d63aec56ac11b278d83c8ccef6d8222eafa24c2fde07279459543264",
+    "modelHash": "2e7a5005f93f2afb836907f6e14914d21c0214d78b0cfca34b4d92f990fe17ca",
     "radio": {
       "file": "generated/radio-parking-170036.json",
       "count": 48,
@@ -4868,21 +5468,31 @@
     "parkingEvidence": null,
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/complex-onepentas-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 670,
+      "sourcePixels": {
+        "width": 1200,
+        "height": 1798
+      },
+      "modelPolicy": "context-map"
+    },
     "modelFile": "generated/complex-onepentas-0.json",
     "statistics": {
-      "walls": 41,
+      "walls": 0,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 132,
-      "triangles": 492,
+      "triangles": 0,
       "detectedParking": 0,
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f9b9d34e823fad542c6bb8c956688f0cb6a2ed42b85fc293416d43b1a49c78a7",
+    "modelHash": "4f9ed36e3b7c7740324474ad3029c2159f2d152cb961a6f4b1be54ec3e962dcd",
     "radio": {
       "file": "generated/radio-complex-onepentas.json",
       "count": 48,
@@ -4948,6 +5558,16 @@
       "note": "서울시 2025 공원 안내도. P 주차장과 장애인 전용 주차장 범례 확인. 개별 주차면 치수는 제공되지 않습니다.",
       "currentFacilityStatus": "not-surveyed"
     },
+    "rasterAnalysis": {
+      "file": "analysis/park-boramae/analysis.json",
+      "tileCount": 6,
+      "candidates": 967,
+      "sourcePixels": {
+        "width": 2040,
+        "height": 1071
+      },
+      "modelPolicy": "context-map"
+    },
     "modelFile": "generated/park-boramae.json",
     "statistics": {
       "walls": 0,
@@ -4962,7 +5582,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "c06c2d65c78c7a67ed61eb097475464512f59e68c801ac706f65dcb388b9be8f",
+    "modelHash": "bc3c2a5c78fed89c79fc0962675e254836a363277ac25f28bf37799417b35015",
     "radio": {
       "file": "generated/radio-park-boramae.json",
       "count": 48,
@@ -5028,6 +5648,16 @@
       "note": "서울시 2026-02-27 안내 자료 5쪽. 당시 이용 안내도이며 현재 운영·공사 현황을 뜻하지 않습니다. 오른쪽 아래 서울숲 주차장 표기.",
       "currentFacilityStatus": "not-surveyed"
     },
+    "rasterAnalysis": {
+      "file": "analysis/park-seoul-forest/analysis.json",
+      "tileCount": 4,
+      "candidates": 564,
+      "sourcePixels": {
+        "width": 1071,
+        "height": 1513
+      },
+      "modelPolicy": "context-map"
+    },
     "modelFile": "generated/park-seoul-forest.json",
     "statistics": {
       "walls": 0,
@@ -5042,7 +5672,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "89222b0248d6dfc252bb90c85496306073079228afb8283a915d582797187909",
+    "modelHash": "0e5918cb545e2dadea7a9e8e9d0e766b6ccd9c26ac3ffe44eb4ce198e2ead87f",
     "radio": {
       "file": "generated/radio-park-seoul-forest.json",
       "count": 48,

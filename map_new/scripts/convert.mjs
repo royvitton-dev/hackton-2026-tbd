@@ -14,6 +14,8 @@ import {normalizeStation} from '../src/core/radio.js';
 import {enrichObjects} from './semantic-objects.mjs';
 import {detectParking,matchReviewedParking} from '../src/core/detect-parking.js';
 import {daecheonSvg,DAE_SCALE} from './daecheon.mjs';
+import {runVision} from './vision.mjs';
+import {applyRasterEvidence} from '../src/core/raster-evidence.js';
 const root=fileURLToPath(new URL('../public/',import.meta.url)),sha=b=>createHash('sha256').update(b).digest('hex');
 await mkdir(path.join(root,'generated'),{recursive:true});
 await writeFile(path.join(root,'sources/integration-lab.svg'),fixtureSvg());
@@ -22,6 +24,7 @@ await writeFile(path.join(root,'sources/daecheon-layers.svg'),daecheonSvg());
 execFileSync('python3',[fileURLToPath(new URL('./extract-osm.py',import.meta.url))],{stdio:'inherit'});
 const context=JSON.parse(await readFile(path.join(root,'generated/neonadeuli-context.json')));
 const sites=JSON.parse(await readFile(path.join(root,'sources/catalog.json')));
+runVision(['scripts/analyze_drawings.py']);
 const radioStationIds=new Set();
 sites.push({id:'integration-lab',name:'도로 → 주차·EV · 검증용 시나리오',buildingType:'test',sourceAsset:{file:'sources/integration-lab.svg'},annotation:'sources/integration-lab.svg',synthetic:true});
 for(const site of sites){
@@ -61,6 +64,12 @@ for(const site of sites){
   }
   if(site.synthetic){plan.spaces[1].accessible=true;plan.spaces[1].label='장애인 전용 · 합성 검증';}
   if(site.id==='changdong-b2')plan.sourceCrop={x:550/1800,y:330/1350,width:1030/1800,height:830/1350};
+  if(!site.synthetic){
+    const analysis=JSON.parse(await readFile(path.join(root,'analysis',site.id,'analysis.json')));
+    if(analysis.sourceSha256!==sha(bytes))throw Error('Raster analysis source hash mismatch: '+site.id);
+    plan=applyRasterEvidence(plan,analysis,{preserveWalls:!!site.annotation});
+    site.rasterAnalysis={file:plan.rasterAnalysis.file,tileCount:analysis.tiles.length,candidates:analysis.candidates.length,sourcePixels:analysis.sourcePixels,modelPolicy:plan.rasterAnalysis.modelPolicy};
+  }
   if(!site.synthetic&&site.buildingType!=='park'){
     if(!pixels){const {data,info}=await sharp(bytes).resize({width:1300,height:1000,fit:'inside',withoutEnlargement:true}).ensureAlpha().raw().toBuffer({resolveWithObject:true});pixels={data,width:info.width,height:info.height};}
     const crop=plan.sourceCrop||{x:0,y:0,width:1,height:1};
@@ -92,5 +101,7 @@ for(const site of sites){
 }
 await writeFile(path.join(root,'generated/catalog.json'),JSON.stringify(sites,null,2)+'\n');
 const real=sites.filter(s=>!s.synthetic),unique=[...new Map(real.map(s=>[s.siteId,s])).values()];
-const inventory={places:unique.length,drawings:real.length,types:Object.fromEntries([...new Set(unique.map(s=>s.buildingType))].map(type=>[type,unique.filter(s=>s.buildingType===type).length])),radioPlaces:unique.filter(s=>s.radio).length,uniqueStations:radioStationIds.size,precisePlaces:unique.filter(s=>s.location&&s.location.precision!=='address-area').length,parkingPlans:real.filter(s=>s.statistics.spaces>0).length,parkingBays:real.reduce((sum,s)=>sum+s.statistics.spaces,0),objects:real.reduce((sum,s)=>sum+s.statistics.objects,0),ocrLabels:real.reduce((sum,s)=>sum+s.statistics.ocrLabels,0),higherResolutionDrawings:real.filter(s=>s.sourceResolution).length,detectedParking:real.reduce((sum,s)=>sum+s.statistics.detectedParking,0),matchedParking:real.reduce((sum,s)=>sum+s.statistics.matchedParking,0)};
+const inventory={places:unique.length,drawings:real.length,types:Object.fromEntries([...new Set(unique.map(s=>s.buildingType))].map(type=>[type,unique.filter(s=>s.buildingType===type).length])),radioPlaces:unique.filter(s=>s.radio).length,uniqueStations:radioStationIds.size,precisePlaces:unique.filter(s=>s.location&&s.location.precision!=='address-area').length,parkingPlans:real.filter(s=>s.statistics.spaces>0).length,parkingBays:real.reduce((sum,s)=>sum+s.statistics.spaces,0),objects:real.reduce((sum,s)=>sum+s.statistics.objects,0),ocrLabels:real.reduce((sum,s)=>sum+s.statistics.ocrLabels,0),higherResolutionDrawings:real.filter(s=>s.sourceResolution).length,detectedParking:real.reduce((sum,s)=>sum+s.statistics.detectedParking,0),matchedParking:real.reduce((sum,s)=>sum+s.statistics.matchedParking,0),pythonAnalyzedDrawings:real.filter(s=>s.rasterAnalysis).length,analysisTiles:real.reduce((sum,s)=>sum+(s.rasterAnalysis?.tileCount||0),0),wallCandidates:real.reduce((sum,s)=>sum+(s.rasterAnalysis?.candidates||0),0),modeledWalls:real.reduce((sum,s)=>sum+s.statistics.walls,0)};
+inventory.referenceDrawings=real.filter(s=>s.rasterAnalysis?.modelPolicy==='non-plan-drawing').length;
+inventory.contextMaps=real.filter(s=>s.rasterAnalysis?.modelPolicy==='context-map').length;
 await writeFile(path.join(root,'generated/inventory.json'),JSON.stringify(inventory,null,2)+'\n');console.log(inventory);
