@@ -1,11 +1,13 @@
 {
   "title": "기본 5명",
   "mode": "player",
-  "input": "하늘, 지우, 민준, 서연, 도윤",
+  "input": "병우, 종호, 동길, 태성, 순수",
+  "shuffleOnPageLoad": true,
+  "editable": true,
   "defaultBallsPerParticipant": 1,
   "rule": "first",
   "mapId": "neon",
   "playbackSpeed": 1.5,
   "boardMotion": true,
-  "fictional": true
+  "source": "user-provided defaults"
 }

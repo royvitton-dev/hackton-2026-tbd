@@ -303,6 +303,8 @@ export class Renderer3D {
    const dot=document.createElement('i');dot.style.background=b.color;this.progress.append(dot);this.balls.set(b.id,{m,label,dot,history:[],lastTrail:-1,lastX:b.x,lastY:b.y});
   }
   for(const entry of this.balls.values())entry.labelWidth=entry.label.getBoundingClientRect().width;
+  // Reserve the maximum two-digit ride counter once, without per-frame layout reads.
+  for(const ride of this.deviceRides){ride.label.textContent='자석 · 60';const box=ride.label.getBoundingClientRect();ride.labelWidth=box.width;ride.labelHeight=box.height;}
   this.impactCursor=0;this.impacts=[];
   const impactGeometry=new THREE.TorusGeometry(.22,.022,4,20);
   for(let i=0;i<18;i++){const material=new THREE.MeshBasicMaterial({color:0xfff3c7,transparent:true,opacity:0,depthWrite:false});const mesh=this.mesh(impactGeometry,material,0,.055,0);mesh.rotation.x=-Math.PI/2;mesh.castShadow=false;mesh.visible=false;this.impacts.push({mesh,born:-10});}
@@ -351,7 +353,8 @@ export class Renderer3D {
   for(const effect of this.impacts){const age=race.elapsed-effect.born;effect.mesh.visible=!reduced&&age>=0&&age<.32;effect.mesh.scale.setScalar(1+Math.max(0,age)*4);effect.mesh.material.opacity=Math.max(0,1-age/.32)*.72;}
   const motion=!reduced&&['racing','paused','complete'].includes(race.state)?race.motion():{roll:0,pitch:0,offsetX:0,offsetY:0};
   this.group.rotation.set(motion.pitch,0,motion.roll);const pivot=new THREE.Vector3(0,0,map.height*S/2);this.group.position.copy(pivot).sub(pivot.clone().applyEuler(this.group.rotation));this.group.position.x+=motion.offsetX*S;this.group.position.z+=motion.offsetY*S;this.group.updateMatrixWorld(true);
-  for(const ride of this.deviceRides){const d=race.devices.find(d=>d.id===ride.id),v=new THREE.Vector3(X(d.x),1.1,Z(d.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);ride.label.hidden=ride.label.hidden||Math.abs(v.x)>.95||Math.abs(v.y)>.9;ride.label.style.left=`${(v.x*.5+.5)*100}%`;ride.label.style.top=`${(-v.y*.5+.5)*100}%`;}
+  const deviceBoxes=[];
+  for(const ride of this.deviceRides){const d=race.devices.find(d=>d.id===ride.id),v=new THREE.Vector3(X(d.x),1.1,Z(d.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);ride.label.hidden=ride.label.hidden||Math.abs(v.x)>.95||Math.abs(v.y)>.9;const x=(v.x*.5+.5)*this.width,y=(-v.y*.5+.5)*this.height;ride.label.style.left=`${x/this.width*100}%`;ride.label.style.top=`${y/this.height*100}%`;if(!ride.label.hidden)deviceBoxes.push({l:x-ride.labelWidth/2,r:x+ride.labelWidth/2,t:y-ride.labelHeight,b:y});}
   const now=performance.now();
   this.trails.visible=!reduced&&race.state==='racing';this.winnerHalo.visible=false;let trailIndex=0;const labelCandidates=[];
   for(const b of race.balls){
@@ -365,7 +368,7 @@ export class Renderer3D {
    const v=new THREE.Vector3(X(b.x),m.position.y+.41,Z(b.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);label.hidden=true;
    if(!b.finished&&m.visible&&!this.overview&&Math.abs(v.x)<.97&&Math.abs(v.y)<.88){const x=(v.x*.5+.5)*this.width,y=(-v.y*.5+.5)*this.height;labelCandidates.push({label,x,y,progress:b.y,width:entry.labelWidth,id:b.id});}
   }
-  const occupied=[];let shown=0;
+  const occupied=deviceBoxes;let shown=0;
   labelCandidates.sort((a,b)=>(b.id===selected)-(a.id===selected)||b.progress-a.progress);
   for(const c of labelCandidates){const box={l:c.x-c.width/2,r:c.x+c.width/2,t:c.y-21,b:c.y+3};if(!this.allLabels&&(shown>=(this.width<450?12:20)||occupied.some(o=>box.l<o.r+4&&box.r>o.l-4&&box.t<o.b+3&&box.b>o.t-3)))continue;c.label.hidden=false;c.label.style.left=`${c.x/this.width*100}%`;c.label.style.top=`${c.y/this.height*100}%`;occupied.push(box);shown++;}
   this.trails.instanceMatrix.needsUpdate=true;

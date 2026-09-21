@@ -2067,6 +2067,48 @@
       },
       {
         "ax": 90,
+        "ay": 1034,
+        "bx": 126,
+        "by": 1089,
+        "r": 5
+      },
+      {
+        "ax": 210,
+        "ay": 1034,
+        "bx": 174,
+        "by": 1089,
+        "r": 5
+      },
+      {
+        "ax": 250,
+        "ay": 1034,
+        "bx": 286,
+        "by": 1089,
+        "r": 5
+      },
+      {
+        "ax": 370,
+        "ay": 1034,
+        "bx": 334,
+        "by": 1089,
+        "r": 5
+      },
+      {
+        "ax": 410,
+        "ay": 1034,
+        "bx": 446,
+        "by": 1089,
+        "r": 5
+      },
+      {
+        "ax": 530,
+        "ay": 1034,
+        "bx": 494,
+        "by": 1089,
+        "r": 5
+      },
+      {
+        "ax": 90,
         "ay": 1234,
         "bx": 126,
         "by": 1289,
@@ -2128,18 +2170,18 @@
         "blades": 2
       },
       {
-        "x": 220,
-        "y": 1060,
-        "length": 62,
+        "x": 160,
+        "y": 1730,
+        "length": 42,
         "omega": 1.36,
         "phase": 0.2,
         "ride": "windmill",
         "blades": 4
       },
       {
-        "x": 400,
-        "y": 1060,
-        "length": 62,
+        "x": 460,
+        "y": 1730,
+        "length": 42,
         "omega": -0.93,
         "phase": 1.2,
         "ride": "teacups",
@@ -2169,7 +2211,7 @@
     "subtitle": "캐논 퍼레이드",
     "accent": "#ffbc75",
     "surface": "#513039",
-    "description": "여섯 대포의 연속 발사와 마지막 타이밍 게이트",
+    "description": "아홉 대포의 연속 발사와 마지막 타이밍 게이트",
     "sliders": [
       {
         "x": 310,
@@ -2248,7 +2290,7 @@
         "id": "parade-cannon-5",
         "kind": "cannon",
         "x": 150,
-        "y": 1280,
+        "y": 1080,
         "captureRadius": 18,
         "holdMin": 0.8,
         "holdMax": 1.5
@@ -2257,13 +2299,40 @@
         "id": "parade-cannon-6",
         "kind": "cannon",
         "x": 310,
-        "y": 1280,
+        "y": 1080,
         "captureRadius": 18,
         "holdMin": 0.8,
         "holdMax": 1.5
       },
       {
         "id": "parade-cannon-7",
+        "kind": "cannon",
+        "x": 470,
+        "y": 1080,
+        "captureRadius": 18,
+        "holdMin": 0.8,
+        "holdMax": 1.5
+      },
+      {
+        "id": "parade-cannon-8",
+        "kind": "cannon",
+        "x": 150,
+        "y": 1280,
+        "captureRadius": 18,
+        "holdMin": 0.8,
+        "holdMax": 1.5
+      },
+      {
+        "id": "parade-cannon-9",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1280,
+        "captureRadius": 18,
+        "holdMin": 0.8,
+        "holdMax": 1.5
+      },
+      {
+        "id": "parade-cannon-10",
         "kind": "cannon",
         "x": 470,
         "y": 1280,

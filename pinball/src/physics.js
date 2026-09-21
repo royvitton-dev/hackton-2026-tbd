@@ -51,11 +51,11 @@ export function rotorPose(rotor,time){
  return rotor.swing?{angle:Math.sin(phase)*rotor.swing,velocity:Math.cos(phase)*rotor.swing*rotor.omega}:{angle:phase,velocity:rotor.omega};
 }
 // Cannon Parade: an open launch plaza followed by a layered timing finale.
-MAPS.push({...MAP,id:'parade',name:'CANNON PARADE',subtitle:'캐논 퍼레이드',height:2240,finish:2150,accent:'#ffbc75',surface:'#513039',description:'여섯 대포의 연속 발사와 마지막 타이밍 게이트',
+MAPS.push({...MAP,id:'parade',name:'CANNON PARADE',subtitle:'캐논 퍼레이드',height:2240,finish:2150,accent:'#ffbc75',surface:'#513039',description:'아홉 대포의 연속 발사와 마지막 타이밍 게이트',
  pins:Array.from({length:3},(_,row)=>Array.from({length:7},(_,i)=>({x:85+i*72+(row%2?20:0),y:305+row*62,r:8}))).flat().concat([{x:100,y:1745,r:10},{x:215,y:1775,r:9},{x:405,y:1775,r:9},{x:520,y:1745,r:10}]),
  bumpers:[{x:310,y:550,r:40},{x:165,y:610,r:30},{x:455,y:610,r:30},{x:190,y:1510,r:34},{x:430,y:1510,r:34},{x:100,y:1950,r:27},{x:520,y:1950,r:27}].map((b,i)=>({...b,ride:['carousel','ufo','bumper-car'][i%3]})),
  rails:[{ax:30,ay:1560,bx:140,by:1640,r:9},{ax:590,ay:1560,bx:480,by:1640,r:9},{ax:30,ay:1860,bx:205,by:1950,r:8},{ax:590,ay:1860,bx:415,by:1950,r:8}],
- rotors:[{x:145,y:735,length:54,omega:.82,phase:.5,ride:'teacups',blades:2},{x:475,y:735,length:54,omega:-1.17,phase:1,ride:'teacups',blades:2},{x:220,y:1060,length:62,omega:1.36,phase:.2,ride:'windmill',blades:4},{x:400,y:1060,length:62,omega:-.93,phase:1.2,ride:'teacups',blades:2},{x:310,y:1635,length:76,omega:-1.41,phase:.4,ride:'windmill',blades:4},{x:310,y:1970,length:56,omega:.68,phase:.7,ride:'flower-gate',blades:2}],
+ rotors:[{x:145,y:735,length:54,omega:.82,phase:.5,ride:'teacups',blades:2},{x:475,y:735,length:54,omega:-1.17,phase:1,ride:'teacups',blades:2},{x:160,y:1730,length:42,omega:1.36,phase:.2,ride:'windmill',blades:4},{x:460,y:1730,length:42,omega:-.93,phase:1.2,ride:'teacups',blades:2},{x:310,y:1635,length:76,omega:-1.41,phase:.4,ride:'windmill',blades:4},{x:310,y:1970,length:56,omega:.68,phase:.7,ride:'flower-gate',blades:2}],
  sliders:[{x:310,y:1440,length:50,amplitude:130,omega:1.03,phase:1,ride:'train'},{x:310,y:1820,length:62,amplitude:145,omega:-.87,phase:.3,ride:'bumper-shuttle'}]});
 // Every course converges into one real central goal throat.
 for(const map of MAPS){
