@@ -425,380 +425,33 @@
     "total": 60,
     "rule": "first",
     "target": 1,
-    "mapId": "neon"
+    "mapId": "neon",
+    "boardMotion": true,
+    "finishMode": "winner"
   },
-  "seed": 1049566946,
+  "seed": 277868079,
   "result": {
-    "roundId": "ea63f6a5-2006-42ff-8307-19da51f2adbc",
+    "roundId": "b36b1684-299a-4518-b20c-69ef1c9aee99",
     "state": "complete",
-    "seed": 1049566946,
-    "time": 32.283333333332145,
+    "seed": 277868079,
+    "time": 18.344482559297127,
     "target": 1,
     "total": 60,
     "winner": {
-      "id": "p20-b1",
-      "participantId": "p20",
-      "name": "공 20",
-      "label": "공 20",
-      "color": "#64e4e0",
+      "id": "p49-b1",
+      "participantId": "p49",
+      "name": "공 49",
+      "label": "공 49",
+      "color": "#c6ff58",
       "number": 1,
       "rank": 1,
-      "time": 12.688597679190478,
-      "exitId": 3
+      "time": 18.344482559297127,
+      "exitId": 1,
+      "criterion": "arrival",
+      "crossedFinish": true
     },
+    "completionReason": "target-arrived",
     "finishOrder": [
-      {
-        "id": "p20-b1",
-        "participantId": "p20",
-        "name": "공 20",
-        "label": "공 20",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 1,
-        "time": 12.688597679190478,
-        "exitId": 3
-      },
-      {
-        "id": "p19-b1",
-        "participantId": "p19",
-        "name": "공 19",
-        "label": "공 19",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 2,
-        "time": 13.349639672069125,
-        "exitId": 3
-      },
-      {
-        "id": "p36-b1",
-        "participantId": "p36",
-        "name": "공 36",
-        "label": "공 36",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 3,
-        "time": 13.526356674630398,
-        "exitId": 3
-      },
-      {
-        "id": "p41-b1",
-        "participantId": "p41",
-        "name": "공 41",
-        "label": "공 41",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 4,
-        "time": 14.093409389726203,
-        "exitId": 2
-      },
-      {
-        "id": "p57-b1",
-        "participantId": "p57",
-        "name": "공 57",
-        "label": "공 57",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 5,
-        "time": 14.32058075238372,
-        "exitId": 2
-      },
-      {
-        "id": "p31-b1",
-        "participantId": "p31",
-        "name": "공 31",
-        "label": "공 31",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 6,
-        "time": 14.638397488027875,
-        "exitId": 3
-      },
-      {
-        "id": "p6-b1",
-        "participantId": "p6",
-        "name": "공 6",
-        "label": "공 6",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 7,
-        "time": 14.65588171172571,
-        "exitId": 2
-      },
-      {
-        "id": "p17-b1",
-        "participantId": "p17",
-        "name": "공 17",
-        "label": "공 17",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 8,
-        "time": 14.781026395077339,
-        "exitId": 2
-      },
-      {
-        "id": "p40-b1",
-        "participantId": "p40",
-        "name": "공 40",
-        "label": "공 40",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 9,
-        "time": 15.000961900645029,
-        "exitId": 2
-      },
-      {
-        "id": "p25-b1",
-        "participantId": "p25",
-        "name": "공 25",
-        "label": "공 25",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 10,
-        "time": 15.057477030947593,
-        "exitId": 2
-      },
-      {
-        "id": "p8-b1",
-        "participantId": "p8",
-        "name": "공 8",
-        "label": "공 8",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 11,
-        "time": 15.34501705866709,
-        "exitId": 2
-      },
-      {
-        "id": "p13-b1",
-        "participantId": "p13",
-        "name": "공 13",
-        "label": "공 13",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 12,
-        "time": 15.436917086085593,
-        "exitId": 2
-      },
-      {
-        "id": "p24-b1",
-        "participantId": "p24",
-        "name": "공 24",
-        "label": "공 24",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 13,
-        "time": 15.761679492529137,
-        "exitId": 3
-      },
-      {
-        "id": "p26-b1",
-        "participantId": "p26",
-        "name": "공 26",
-        "label": "공 26",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 14,
-        "time": 15.77704246758933,
-        "exitId": 3
-      },
-      {
-        "id": "p59-b1",
-        "participantId": "p59",
-        "name": "공 59",
-        "label": "공 59",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 15,
-        "time": 15.930080713937178,
-        "exitId": 2
-      },
-      {
-        "id": "p43-b1",
-        "participantId": "p43",
-        "name": "공 43",
-        "label": "공 43",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 16,
-        "time": 15.93362503195642,
-        "exitId": 4
-      },
-      {
-        "id": "p51-b1",
-        "participantId": "p51",
-        "name": "공 51",
-        "label": "공 51",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 17,
-        "time": 16.556284590937427,
-        "exitId": 2
-      },
-      {
-        "id": "p47-b1",
-        "participantId": "p47",
-        "name": "공 47",
-        "label": "공 47",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 18,
-        "time": 16.688926161751407,
-        "exitId": 2
-      },
-      {
-        "id": "p44-b1",
-        "participantId": "p44",
-        "name": "공 44",
-        "label": "공 44",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 19,
-        "time": 16.820901320606215,
-        "exitId": 1
-      },
-      {
-        "id": "p55-b1",
-        "participantId": "p55",
-        "name": "공 55",
-        "label": "공 55",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 20,
-        "time": 16.92069078075934,
-        "exitId": 2
-      },
-      {
-        "id": "p21-b1",
-        "participantId": "p21",
-        "name": "공 21",
-        "label": "공 21",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 21,
-        "time": 17.085573336172796,
-        "exitId": 2
-      },
-      {
-        "id": "p11-b1",
-        "participantId": "p11",
-        "name": "공 11",
-        "label": "공 11",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 22,
-        "time": 17.185409172677765,
-        "exitId": 3
-      },
-      {
-        "id": "p42-b1",
-        "participantId": "p42",
-        "name": "공 42",
-        "label": "공 42",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 23,
-        "time": 17.21314628337793,
-        "exitId": 2
-      },
-      {
-        "id": "p60-b1",
-        "participantId": "p60",
-        "name": "공 60",
-        "label": "공 60",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 24,
-        "time": 17.354618273845954,
-        "exitId": 2
-      },
-      {
-        "id": "p18-b1",
-        "participantId": "p18",
-        "name": "공 18",
-        "label": "공 18",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 25,
-        "time": 17.757560762399045,
-        "exitId": 3
-      },
-      {
-        "id": "p14-b1",
-        "participantId": "p14",
-        "name": "공 14",
-        "label": "공 14",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 26,
-        "time": 17.862093155026262,
-        "exitId": 2
-      },
-      {
-        "id": "p50-b1",
-        "participantId": "p50",
-        "name": "공 50",
-        "label": "공 50",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 27,
-        "time": 18.196667348561295,
-        "exitId": 3
-      },
-      {
-        "id": "p27-b1",
-        "participantId": "p27",
-        "name": "공 27",
-        "label": "공 27",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 28,
-        "time": 18.769831612113148,
-        "exitId": 3
-      },
-      {
-        "id": "p52-b1",
-        "participantId": "p52",
-        "name": "공 52",
-        "label": "공 52",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 29,
-        "time": 19.645751222697005,
-        "exitId": 3
-      },
-      {
-        "id": "p39-b1",
-        "participantId": "p39",
-        "name": "공 39",
-        "label": "공 39",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 30,
-        "time": 19.830597738806055,
-        "exitId": 2
-      },
-      {
-        "id": "p54-b1",
-        "participantId": "p54",
-        "name": "공 54",
-        "label": "공 54",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 31,
-        "time": 19.960853465811653,
-        "exitId": 3
-      },
-      {
-        "id": "p37-b1",
-        "participantId": "p37",
-        "name": "공 37",
-        "label": "공 37",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 32,
-        "time": 20.090108342366953,
-        "exitId": 1
-      },
       {
         "id": "p49-b1",
         "participantId": "p49",
@@ -806,729 +459,533 @@
         "label": "공 49",
         "color": "#c6ff58",
         "number": 1,
-        "rank": 33,
-        "time": 20.29245024611302,
-        "exitId": 2
-      },
-      {
-        "id": "p28-b1",
-        "participantId": "p28",
-        "name": "공 28",
-        "label": "공 28",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 34,
-        "time": 20.32745778672644,
-        "exitId": 3
-      },
-      {
-        "id": "p34-b1",
-        "participantId": "p34",
-        "name": "공 34",
-        "label": "공 34",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 35,
-        "time": 20.553978002858337,
-        "exitId": 2
-      },
-      {
-        "id": "p53-b1",
-        "participantId": "p53",
-        "name": "공 53",
-        "label": "공 53",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 36,
-        "time": 20.57367347838341,
-        "exitId": 3
-      },
-      {
-        "id": "p38-b1",
-        "participantId": "p38",
-        "name": "공 38",
-        "label": "공 38",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 37,
-        "time": 20.648207604221867,
-        "exitId": 2
-      },
-      {
-        "id": "p5-b1",
-        "participantId": "p5",
-        "name": "공 5",
-        "label": "공 5",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 38,
-        "time": 20.685861024980294,
-        "exitId": 2
-      },
-      {
-        "id": "p4-b1",
-        "participantId": "p4",
-        "name": "공 4",
-        "label": "공 4",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 39,
-        "time": 20.772217292341885,
-        "exitId": 2
-      },
-      {
-        "id": "p45-b1",
-        "participantId": "p45",
-        "name": "공 45",
-        "label": "공 45",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 40,
-        "time": 20.772251779379225,
-        "exitId": 3
-      },
-      {
-        "id": "p9-b1",
-        "participantId": "p9",
-        "name": "공 9",
-        "label": "공 9",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 41,
-        "time": 20.80724289325734,
+        "rank": 1,
+        "time": 18.344482559297127,
         "exitId": 1
-      },
-      {
-        "id": "p1-b1",
-        "participantId": "p1",
-        "name": "공 1",
-        "label": "공 1",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 42,
-        "time": 20.86361894139903,
-        "exitId": 3
-      },
-      {
-        "id": "p29-b1",
-        "participantId": "p29",
-        "name": "공 29",
-        "label": "공 29",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 43,
-        "time": 20.87772617646129,
-        "exitId": 2
-      },
-      {
-        "id": "p33-b1",
-        "participantId": "p33",
-        "name": "공 33",
-        "label": "공 33",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 44,
-        "time": 20.988484133810076,
-        "exitId": 2
-      },
-      {
-        "id": "p16-b1",
-        "participantId": "p16",
-        "name": "공 16",
-        "label": "공 16",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 45,
-        "time": 21.162406678509836,
-        "exitId": 3
-      },
-      {
-        "id": "p10-b1",
-        "participantId": "p10",
-        "name": "공 10",
-        "label": "공 10",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 46,
-        "time": 21.199288113560957,
-        "exitId": 2
-      },
-      {
-        "id": "p30-b1",
-        "participantId": "p30",
-        "name": "공 30",
-        "label": "공 30",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 47,
-        "time": 21.312892913225323,
-        "exitId": 2
-      },
-      {
-        "id": "p35-b1",
-        "participantId": "p35",
-        "name": "공 35",
-        "label": "공 35",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 48,
-        "time": 21.479696528689317,
-        "exitId": 2
-      },
-      {
-        "id": "p2-b1",
-        "participantId": "p2",
-        "name": "공 2",
-        "label": "공 2",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 49,
-        "time": 21.543785997073318,
-        "exitId": 2
-      },
-      {
-        "id": "p23-b1",
-        "participantId": "p23",
-        "name": "공 23",
-        "label": "공 23",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 50,
-        "time": 21.649056159052524,
-        "exitId": 3
-      },
-      {
-        "id": "p58-b1",
-        "participantId": "p58",
-        "name": "공 58",
-        "label": "공 58",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 51,
-        "time": 22.405541350931475,
-        "exitId": 3
-      },
-      {
-        "id": "p15-b1",
-        "participantId": "p15",
-        "name": "공 15",
-        "label": "공 15",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 52,
-        "time": 24.90911113295465,
-        "exitId": 3
-      },
-      {
-        "id": "p56-b1",
-        "participantId": "p56",
-        "name": "공 56",
-        "label": "공 56",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 53,
-        "time": 25.267747659495814,
-        "exitId": 3
-      },
-      {
-        "id": "p32-b1",
-        "participantId": "p32",
-        "name": "공 32",
-        "label": "공 32",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 54,
-        "time": 25.424948139599245,
-        "exitId": 2
-      },
-      {
-        "id": "p22-b1",
-        "participantId": "p22",
-        "name": "공 22",
-        "label": "공 22",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 55,
-        "time": 25.814330634916587,
-        "exitId": 2
-      },
-      {
-        "id": "p48-b1",
-        "participantId": "p48",
-        "name": "공 48",
-        "label": "공 48",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 56,
-        "time": 26.309519747931713,
-        "exitId": 3
-      },
-      {
-        "id": "p3-b1",
-        "participantId": "p3",
-        "name": "공 3",
-        "label": "공 3",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 57,
-        "time": 26.709415970528575,
-        "exitId": 3
-      },
-      {
-        "id": "p46-b1",
-        "participantId": "p46",
-        "name": "공 46",
-        "label": "공 46",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 58,
-        "time": 27.478073183724987,
-        "exitId": 3
-      },
-      {
-        "id": "p12-b1",
-        "participantId": "p12",
-        "name": "공 12",
-        "label": "공 12",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 59,
-        "time": 27.520582877698043,
-        "exitId": 2
-      },
-      {
-        "id": "p7-b1",
-        "participantId": "p7",
-        "name": "공 7",
-        "label": "공 7",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 60,
-        "time": 32.281383769264615,
-        "exitId": 2
       }
     ],
     "assists": 0,
+    "motion": {
+      "enabled": true,
+      "active": false,
+      "axis": null,
+      "cycle": 3,
+      "phase": 0,
+      "roll": 0,
+      "pitch": 0,
+      "offsetX": 0,
+      "offsetY": 0,
+      "forceX": 0,
+      "forceY": 0,
+      "nextIn": 1.8641612845883841
+    },
+    "deviceStats": {
+      "captures": 15,
+      "launches": 10,
+      "releases": 4
+    },
+    "devices": [
+      {
+        "id": "neon-magnet-0",
+        "kind": "magnet",
+        "x": 310,
+        "y": 530,
+        "ballId": null,
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false
+      },
+      {
+        "id": "neon-cannon-1",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1510,
+        "ballId": "p25-b1",
+        "angle": -3.705521755056701,
+        "progress": 0.7481427884813407,
+        "holding": true
+      }
+    ],
     "balls": [
       {
-        "id": "p7-b1",
-        "x": 251.9455470268143,
-        "y": 2150,
-        "finished": true,
-        "rank": 60
-      },
-      {
-        "id": "p13-b1",
-        "x": 228.13009263714372,
-        "y": 2150,
-        "finished": true,
-        "rank": 12
-      },
-      {
-        "id": "p37-b1",
-        "x": 87.92485330539668,
-        "y": 2150,
-        "finished": true,
-        "rank": 32
-      },
-      {
-        "id": "p35-b1",
-        "x": 249.66456590073128,
-        "y": 2150,
-        "finished": true,
-        "rank": 48
-      },
-      {
-        "id": "p22-b1",
-        "x": 229.40969469635573,
-        "y": 2150,
-        "finished": true,
-        "rank": 55
-      },
-      {
-        "id": "p16-b1",
-        "x": 368.5089722319403,
-        "y": 2150,
-        "finished": true,
-        "rank": 45
-      },
-      {
-        "id": "p4-b1",
-        "x": 239.06952140496477,
-        "y": 2150,
-        "finished": true,
-        "rank": 39
-      },
-      {
-        "id": "p24-b1",
-        "x": 368.6127482153295,
-        "y": 2150,
-        "finished": true,
-        "rank": 13
-      },
-      {
-        "id": "p26-b1",
-        "x": 389.5511834082449,
-        "y": 2150,
-        "finished": true,
-        "rank": 14
-      },
-      {
-        "id": "p12-b1",
-        "x": 242.373479656747,
-        "y": 2150,
-        "finished": true,
-        "rank": 59
-      },
-      {
-        "id": "p10-b1",
-        "x": 238.13779624304416,
-        "y": 2150,
-        "finished": true,
-        "rank": 46
-      },
-      {
-        "id": "p19-b1",
-        "x": 391.28985770890677,
-        "y": 2150,
-        "finished": true,
-        "rank": 2
-      },
-      {
-        "id": "p38-b1",
-        "x": 252.94006059202792,
-        "y": 2150,
-        "finished": true,
-        "rank": 37
-      },
-      {
-        "id": "p50-b1",
-        "x": 388.0485978139576,
-        "y": 2150,
-        "finished": true,
-        "rank": 27
-      },
-      {
-        "id": "p43-b1",
-        "x": 516.1189523991643,
-        "y": 2150,
-        "finished": true,
-        "rank": 16
-      },
-      {
-        "id": "p45-b1",
-        "x": 379.37487319618475,
-        "y": 2150,
-        "finished": true,
-        "rank": 40
-      },
-      {
-        "id": "p18-b1",
-        "x": 366.8653212264097,
-        "y": 2150,
-        "finished": true,
-        "rank": 25
-      },
-      {
-        "id": "p48-b1",
-        "x": 371.57790173377407,
-        "y": 2150,
-        "finished": true,
-        "rank": 56
-      },
-      {
-        "id": "p54-b1",
-        "x": 393.4898861423667,
-        "y": 2150,
-        "finished": true,
-        "rank": 31
-      },
-      {
-        "id": "p39-b1",
-        "x": 230.0902043191021,
-        "y": 2150,
-        "finished": true,
-        "rank": 30
-      },
-      {
-        "id": "p49-b1",
-        "x": 233.88867862915345,
-        "y": 2150,
-        "finished": true,
-        "rank": 33
+        "id": "p1-b1",
+        "x": 556.9802160669651,
+        "y": 1760.6720235821333,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
       },
       {
         "id": "p40-b1",
-        "x": 234.719449746638,
-        "y": 2150,
-        "finished": true,
-        "rank": 9
-      },
-      {
-        "id": "p57-b1",
-        "x": 245.38434551293744,
-        "y": 2150,
-        "finished": true,
-        "rank": 5
-      },
-      {
-        "id": "p11-b1",
-        "x": 368.6657220747967,
-        "y": 2150,
-        "finished": true,
-        "rank": 22
-      },
-      {
-        "id": "p56-b1",
-        "x": 369.9078859990282,
-        "y": 2150,
-        "finished": true,
-        "rank": 53
-      },
-      {
-        "id": "p28-b1",
-        "x": 372.0927445702729,
-        "y": 2150,
-        "finished": true,
-        "rank": 34
-      },
-      {
-        "id": "p23-b1",
-        "x": 393.32538435716776,
-        "y": 2150,
-        "finished": true,
-        "rank": 50
-      },
-      {
-        "id": "p58-b1",
-        "x": 392.91500141388235,
-        "y": 2150,
-        "finished": true,
-        "rank": 51
-      },
-      {
-        "id": "p55-b1",
-        "x": 242.74291939380925,
-        "y": 2150,
-        "finished": true,
-        "rank": 20
-      },
-      {
-        "id": "p8-b1",
-        "x": 226.84961609318168,
-        "y": 2150,
-        "finished": true,
-        "rank": 11
-      },
-      {
-        "id": "p44-b1",
-        "x": 106.05672972589603,
-        "y": 2150,
-        "finished": true,
-        "rank": 19
-      },
-      {
-        "id": "p31-b1",
-        "x": 394,
-        "y": 2150,
-        "finished": true,
-        "rank": 6
-      },
-      {
-        "id": "p15-b1",
-        "x": 389.8764463076341,
-        "y": 2150,
-        "finished": true,
-        "rank": 52
-      },
-      {
-        "id": "p1-b1",
-        "x": 366.8867934219499,
-        "y": 2150,
-        "finished": true,
-        "rank": 42
-      },
-      {
-        "id": "p42-b1",
-        "x": 235.25436073155237,
-        "y": 2150,
-        "finished": true,
-        "rank": 23
-      },
-      {
-        "id": "p34-b1",
-        "x": 236.33337457460132,
-        "y": 2150,
-        "finished": true,
-        "rank": 35
-      },
-      {
-        "id": "p33-b1",
-        "x": 228.85957104590472,
-        "y": 2150,
-        "finished": true,
-        "rank": 44
-      },
-      {
-        "id": "p41-b1",
-        "x": 240.98470475894575,
-        "y": 2150,
-        "finished": true,
-        "rank": 4
-      },
-      {
-        "id": "p9-b1",
-        "x": 90.56444544621796,
-        "y": 2150,
-        "finished": true,
-        "rank": 41
-      },
-      {
-        "id": "p51-b1",
-        "x": 227.95718909276718,
-        "y": 2150,
-        "finished": true,
-        "rank": 17
-      },
-      {
-        "id": "p60-b1",
-        "x": 233.58256043050977,
-        "y": 2150,
-        "finished": true,
-        "rank": 24
-      },
-      {
-        "id": "p25-b1",
-        "x": 236.62417369720936,
-        "y": 2150,
-        "finished": true,
-        "rank": 10
-      },
-      {
-        "id": "p2-b1",
-        "x": 231.05722246094555,
-        "y": 2150,
-        "finished": true,
-        "rank": 49
-      },
-      {
-        "id": "p27-b1",
-        "x": 377.71402050240926,
-        "y": 2150,
-        "finished": true,
-        "rank": 28
-      },
-      {
-        "id": "p32-b1",
-        "x": 234.81601914078234,
-        "y": 2150,
-        "finished": true,
-        "rank": 54
-      },
-      {
-        "id": "p52-b1",
-        "x": 391.0773473016417,
-        "y": 2150,
-        "finished": true,
-        "rank": 29
-      },
-      {
-        "id": "p17-b1",
-        "x": 238.456541399931,
-        "y": 2150,
-        "finished": true,
-        "rank": 8
-      },
-      {
-        "id": "p21-b1",
-        "x": 251.68349761053125,
-        "y": 2150,
-        "finished": true,
-        "rank": 21
-      },
-      {
-        "id": "p53-b1",
-        "x": 385.91919067579533,
-        "y": 2150,
-        "finished": true,
-        "rank": 36
-      },
-      {
-        "id": "p3-b1",
-        "x": 369.83167067939627,
-        "y": 2150,
-        "finished": true,
-        "rank": 57
-      },
-      {
-        "id": "p29-b1",
-        "x": 229.95273364027898,
-        "y": 2150,
-        "finished": true,
-        "rank": 43
-      },
-      {
-        "id": "p59-b1",
-        "x": 229.40528756940046,
-        "y": 2150,
-        "finished": true,
-        "rank": 15
-      },
-      {
-        "id": "p36-b1",
-        "x": 368.8672674691424,
-        "y": 2150,
-        "finished": true,
-        "rank": 3
-      },
-      {
-        "id": "p20-b1",
-        "x": 384.6163193042713,
-        "y": 2150,
-        "finished": true,
-        "rank": 1
-      },
-      {
-        "id": "p5-b1",
-        "x": 231.31922678413144,
-        "y": 2150,
-        "finished": true,
-        "rank": 38
-      },
-      {
-        "id": "p46-b1",
-        "x": 392.74710052882966,
-        "y": 2150,
-        "finished": true,
-        "rank": 58
+        "x": 137.00094579583342,
+        "y": 1852.2991527595843,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
       },
       {
         "id": "p30-b1",
-        "x": 236.80298256014075,
-        "y": 2150,
-        "finished": true,
-        "rank": 47
+        "x": 241.68960853659883,
+        "y": 2065.3020603699915,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
       },
       {
-        "id": "p6-b1",
-        "x": 246.66084805405134,
-        "y": 2150,
-        "finished": true,
-        "rank": 7
+        "id": "p48-b1",
+        "x": 537.3829890579357,
+        "y": 1116.4468302449875,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p7-b1",
+        "x": 385.44985112088847,
+        "y": 1713.1384971828215,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p50-b1",
+        "x": 464.2135502634748,
+        "y": 1577.0874754778788,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
       },
       {
         "id": "p14-b1",
-        "x": 247.41529675920836,
+        "x": 555.4224393080243,
+        "y": 1844.5306539127794,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p6-b1",
+        "x": 274.0295837076422,
+        "y": 1166.2290972753517,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p39-b1",
+        "x": 337.083096088564,
+        "y": 1169.3753278281838,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p46-b1",
+        "x": 244.82535778766456,
+        "y": 1439.4397788243857,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p32-b1",
+        "x": 246.1714245759092,
+        "y": 1893.54774299811,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p37-b1",
+        "x": 333.7657701090806,
+        "y": 1413.8229130442498,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p33-b1",
+        "x": 278.7903098576673,
+        "y": 1480.037399670627,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p24-b1",
+        "x": 342.6896218922265,
+        "y": 1971.9203694229786,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p49-b1",
+        "x": 317.6661920669662,
         "y": 2150,
         "finished": true,
-        "rank": 26
+        "rank": 1,
+        "heldBy": null
+      },
+      {
+        "id": "p4-b1",
+        "x": 209.9450961738963,
+        "y": 1581.6331663086842,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p57-b1",
+        "x": 283.49871401264375,
+        "y": 2033.4477904264218,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p12-b1",
+        "x": 216.46380021361986,
+        "y": 1085.7525138650665,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p15-b1",
+        "x": 110.34913706024169,
+        "y": 1706.6433754991938,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p54-b1",
+        "x": 255.8034533524187,
+        "y": 1262.8622937721839,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p25-b1",
+        "x": 301.8246622335653,
+        "y": 1525.4231052939458,
+        "finished": false,
+        "rank": null,
+        "heldBy": "neon-cannon-1"
+      },
+      {
+        "id": "p29-b1",
+        "x": 346.7023352865345,
+        "y": 1188.6402658079576,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p9-b1",
+        "x": 329.59102100008033,
+        "y": 1987.143886532566,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p3-b1",
+        "x": 540.5498627151186,
+        "y": 1475.3804061318194,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p5-b1",
+        "x": 325.86352915895804,
+        "y": 1494.6922830646627,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p11-b1",
+        "x": 483.9790353827403,
+        "y": 1848.5693783993722,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p59-b1",
+        "x": 262.91684565703775,
+        "y": 1449.5940726878473,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p58-b1",
+        "x": 260.68058042817194,
+        "y": 1955.9980425325955,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p41-b1",
+        "x": 319.99962628469143,
+        "y": 1464.4938111450526,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p27-b1",
+        "x": 255.82489020082767,
+        "y": 1709.8329473940846,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p21-b1",
+        "x": 300.53062184205646,
+        "y": 2123.105559605737,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p53-b1",
+        "x": 223.4255653386462,
+        "y": 1934.6390433971621,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p51-b1",
+        "x": 389.699255583536,
+        "y": 1461.7948143442475,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p17-b1",
+        "x": 411.1196546440313,
+        "y": 1817.0357177485005,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p43-b1",
+        "x": 291.1152134389778,
+        "y": 1963.5156251714411,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p26-b1",
+        "x": 494.1138309007687,
+        "y": 1081.3042083593812,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p2-b1",
+        "x": 342.4851164078319,
+        "y": 1433.1258687216032,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p31-b1",
+        "x": 480.43332287300274,
+        "y": 1816.5282430185766,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p20-b1",
+        "x": 559.6768592225151,
+        "y": 1819.075047725622,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p34-b1",
+        "x": 298.35510224135624,
+        "y": 1485.5109285061842,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p44-b1",
+        "x": 214.05873427316286,
+        "y": 2077.395745476478,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p13-b1",
+        "x": 319.2484802253647,
+        "y": 1515.249295650764,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p22-b1",
+        "x": 268.8761286774462,
+        "y": 2062.1819102268373,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p8-b1",
+        "x": 521.8240766325449,
+        "y": 1851.8265388485027,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p55-b1",
+        "x": 553.873432376907,
+        "y": 1791.6800568764922,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p35-b1",
+        "x": 295.29651401113034,
+        "y": 1505.4542654257573,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p38-b1",
+        "x": 286.46756720881143,
+        "y": 1988.2656736519214,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p18-b1",
+        "x": 284.7162128628364,
+        "y": 2104.0628160977108,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p28-b1",
+        "x": 272.93734911347985,
+        "y": 1973.2905717332355,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
       },
       {
         "id": "p47-b1",
-        "x": 233.93940651325138,
-        "y": 2150,
-        "finished": true,
-        "rank": 18
+        "x": 361.1142903122713,
+        "y": 2097.321570601566,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p42-b1",
+        "x": 272.34174926883674,
+        "y": 1920.3644834084432,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p10-b1",
+        "x": 341.91803171907435,
+        "y": 1479.5137097132838,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p19-b1",
+        "x": 278.9021805283378,
+        "y": 1430.5691356347716,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p45-b1",
+        "x": 463.75835028584896,
+        "y": 1896.573258852369,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p60-b1",
+        "x": 243.94039481702288,
+        "y": 1815.3750586249155,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p23-b1",
+        "x": 235.73127904293798,
+        "y": 976.3547485293625,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p16-b1",
+        "x": 284.0657358642652,
+        "y": 1943.557141849215,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p52-b1",
+        "x": 242.27821827759988,
+        "y": 1945.5765455461114,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p56-b1",
+        "x": 268.98142737434443,
+        "y": 2013.1964413246444,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p36-b1",
+        "x": 248.12211497863035,
+        "y": 2086.233878011532,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
       }
     ]
   }

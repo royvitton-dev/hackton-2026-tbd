@@ -1,0 +1,52 @@
+PASS ride models neon {
+  geometries: 117,
+  textures: 11,
+  programs: 23,
+  drawCalls: 64,
+  triangles: 46124,
+  pixelRatio: 1
+}
+PASS ride models orbit {
+  geometries: 138,
+  textures: 12,
+  programs: 24,
+  drawCalls: 77,
+  triangles: 55318,
+  pixelRatio: 1
+}
+PASS ride models zigzag {
+  geometries: 97,
+  textures: 11,
+  programs: 23,
+  drawCalls: 57,
+  triangles: 43310,
+  pixelRatio: 1
+}
+PASS ride models split {
+  geometries: 126,
+  textures: 12,
+  programs: 24,
+  drawCalls: 67,
+  triangles: 45853,
+  pixelRatio: 1
+}
+PASS graphics resource stability after 40 map switches {
+  switches: 40,
+  before: {
+    geometries: 76,
+    textures: 10,
+    programs: 24,
+    drawCalls: 56,
+    triangles: 46304,
+    pixelRatio: 1
+  },
+  after: {
+    geometries: 76,
+    textures: 10,
+    programs: 24,
+    drawCalls: 58,
+    triangles: 47344,
+    pixelRatio: 1
+  },
+  status: 'PASS'
+}

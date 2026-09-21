@@ -1,0 +1,44 @@
+PASS return portal {
+  device: 'desktop',
+  map: 'orbit',
+  status: 'PASS',
+  returns: 16,
+  time: 86.94471979554406,
+  goalOnlyRanks: 20,
+  pausePreservesTransit: true,
+  exactBrowserReplay: true,
+  errors: []
+}
+PASS return portal {
+  device: 'desktop',
+  map: 'split',
+  status: 'PASS',
+  returns: 23,
+  time: 101.97143738410071,
+  goalOnlyRanks: 20,
+  pausePreservesTransit: true,
+  exactBrowserReplay: true,
+  errors: []
+}
+PASS return portal {
+  device: 'mobile',
+  map: 'orbit',
+  status: 'PASS',
+  returns: 16,
+  time: 86.94471979554406,
+  goalOnlyRanks: 20,
+  pausePreservesTransit: true,
+  exactBrowserReplay: true,
+  errors: []
+}
+PASS return portal {
+  device: 'mobile',
+  map: 'split',
+  status: 'PASS',
+  returns: 23,
+  time: 101.97143738410071,
+  goalOnlyRanks: 20,
+  pausePreservesTransit: true,
+  exactBrowserReplay: true,
+  errors: []
+}

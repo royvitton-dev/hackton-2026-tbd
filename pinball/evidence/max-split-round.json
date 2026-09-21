@@ -425,48 +425,97 @@
     "total": 60,
     "rule": "last",
     "target": 60,
-    "mapId": "split"
+    "mapId": "split",
+    "boardMotion": true,
+    "finishMode": "winner"
   },
-  "seed": 340737034,
+  "seed": 1324473501,
   "result": {
-    "roundId": "3cce22c3-1fcc-4f2b-8809-e4504c17259b",
+    "roundId": "3c08a308-4588-445b-a8ea-e49d07e493f9",
     "state": "complete",
-    "seed": 340737034,
-    "time": 33.6416666666654,
+    "seed": 1324473501,
+    "time": 26.098864658853298,
     "target": 60,
     "total": 60,
     "winner": {
-      "id": "p47-b1",
-      "participantId": "p47",
-      "name": "번호 47",
-      "label": "번호 47",
-      "color": "#edeeed",
+      "id": "p53-b1",
+      "participantId": "p53",
+      "name": "번호 53",
+      "label": "번호 53",
+      "color": "#ffc168",
       "number": 1,
       "rank": 60,
-      "time": 33.63784591504677,
-      "exitId": 2
+      "time": 26.098864658853298,
+      "exitId": null,
+      "criterion": "last-remaining",
+      "crossedFinish": false
     },
+    "completionReason": "last-remaining",
     "finishOrder": [
       {
-        "id": "p55-b1",
-        "participantId": "p55",
-        "name": "번호 55",
-        "label": "번호 55",
-        "color": "#edeeed",
+        "id": "p57-b1",
+        "participantId": "p57",
+        "name": "번호 57",
+        "label": "번호 57",
+        "color": "#c6ff58",
         "number": 1,
         "rank": 1,
-        "time": 6.149710765700364,
+        "time": 9.536944273175083,
+        "exitId": 2
+      },
+      {
+        "id": "p35-b1",
+        "participantId": "p35",
+        "name": "번호 35",
+        "label": "번호 35",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 2,
+        "time": 10.82715564322479,
+        "exitId": 4
+      },
+      {
+        "id": "p26-b1",
+        "participantId": "p26",
+        "name": "번호 26",
+        "label": "번호 26",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 3,
+        "time": 11.194836525743352,
+        "exitId": 2
+      },
+      {
+        "id": "p59-b1",
+        "participantId": "p59",
+        "name": "번호 59",
+        "label": "번호 59",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 4,
+        "time": 11.286978088763323,
         "exitId": 3
       },
       {
-        "id": "p30-b1",
-        "participantId": "p30",
-        "name": "번호 30",
-        "label": "번호 30",
-        "color": "#8daaff",
+        "id": "p11-b1",
+        "participantId": "p11",
+        "name": "번호 11",
+        "label": "번호 11",
+        "color": "#ff82af",
         "number": 1,
-        "rank": 2,
-        "time": 6.532875168966165,
+        "rank": 5,
+        "time": 11.683408640102916,
+        "exitId": 3
+      },
+      {
+        "id": "p32-b1",
+        "participantId": "p32",
+        "name": "번호 32",
+        "label": "번호 32",
+        "color": "#ff826c",
+        "number": 1,
+        "rank": 6,
+        "time": 11.834593505315437,
         "exitId": 3
       },
       {
@@ -476,350 +525,9 @@
         "label": "번호 36",
         "color": "#64e4e0",
         "number": 1,
-        "rank": 3,
-        "time": 8.537910754298359,
-        "exitId": 2
-      },
-      {
-        "id": "p39-b1",
-        "participantId": "p39",
-        "name": "번호 39",
-        "label": "번호 39",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 4,
-        "time": 9.008071950428961,
-        "exitId": 3
-      },
-      {
-        "id": "p26-b1",
-        "participantId": "p26",
-        "name": "번호 26",
-        "label": "번호 26",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 5,
-        "time": 9.923672811918216,
-        "exitId": 2
-      },
-      {
-        "id": "p12-b1",
-        "participantId": "p12",
-        "name": "번호 12",
-        "label": "번호 12",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 6,
-        "time": 9.998291119940351,
-        "exitId": 3
-      },
-      {
-        "id": "p9-b1",
-        "participantId": "p9",
-        "name": "번호 9",
-        "label": "번호 9",
-        "color": "#c6ff58",
-        "number": 1,
         "rank": 7,
-        "time": 10.903989786408925,
-        "exitId": 2
-      },
-      {
-        "id": "p48-b1",
-        "participantId": "p48",
-        "name": "번호 48",
-        "label": "번호 48",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 8,
-        "time": 10.986555903805169,
+        "time": 12.198416634081426,
         "exitId": 3
-      },
-      {
-        "id": "p52-b1",
-        "participantId": "p52",
-        "name": "번호 52",
-        "label": "번호 52",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 9,
-        "time": 11.299536619733079,
-        "exitId": 3
-      },
-      {
-        "id": "p1-b1",
-        "participantId": "p1",
-        "name": "번호 1",
-        "label": "번호 1",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 10,
-        "time": 11.402803566134772,
-        "exitId": 3
-      },
-      {
-        "id": "p42-b1",
-        "participantId": "p42",
-        "name": "번호 42",
-        "label": "번호 42",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 11,
-        "time": 11.570024731116572,
-        "exitId": 3
-      },
-      {
-        "id": "p43-b1",
-        "participantId": "p43",
-        "name": "번호 43",
-        "label": "번호 43",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 12,
-        "time": 11.61381687700957,
-        "exitId": 2
-      },
-      {
-        "id": "p44-b1",
-        "participantId": "p44",
-        "name": "번호 44",
-        "label": "번호 44",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 13,
-        "time": 11.830316462732426,
-        "exitId": 2
-      },
-      {
-        "id": "p8-b1",
-        "participantId": "p8",
-        "name": "번호 8",
-        "label": "번호 8",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 14,
-        "time": 11.913597686602351,
-        "exitId": 3
-      },
-      {
-        "id": "p24-b1",
-        "participantId": "p24",
-        "name": "번호 24",
-        "label": "번호 24",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 15,
-        "time": 11.916489536469955,
-        "exitId": 2
-      },
-      {
-        "id": "p45-b1",
-        "participantId": "p45",
-        "name": "번호 45",
-        "label": "번호 45",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 16,
-        "time": 11.996870045394806,
-        "exitId": 2
-      },
-      {
-        "id": "p28-b1",
-        "participantId": "p28",
-        "name": "번호 28",
-        "label": "번호 28",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 17,
-        "time": 12.070006558802685,
-        "exitId": 2
-      },
-      {
-        "id": "p33-b1",
-        "participantId": "p33",
-        "name": "번호 33",
-        "label": "번호 33",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 18,
-        "time": 12.222282943285135,
-        "exitId": 3
-      },
-      {
-        "id": "p37-b1",
-        "participantId": "p37",
-        "name": "번호 37",
-        "label": "번호 37",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 19,
-        "time": 12.347530214460273,
-        "exitId": 2
-      },
-      {
-        "id": "p3-b1",
-        "participantId": "p3",
-        "name": "번호 3",
-        "label": "번호 3",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 20,
-        "time": 12.442974296705113,
-        "exitId": 3
-      },
-      {
-        "id": "p41-b1",
-        "participantId": "p41",
-        "name": "번호 41",
-        "label": "번호 41",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 21,
-        "time": 12.531278236290863,
-        "exitId": 2
-      },
-      {
-        "id": "p13-b1",
-        "participantId": "p13",
-        "name": "번호 13",
-        "label": "번호 13",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 22,
-        "time": 12.629214413846805,
-        "exitId": 3
-      },
-      {
-        "id": "p21-b1",
-        "participantId": "p21",
-        "name": "번호 21",
-        "label": "번호 21",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 23,
-        "time": 12.646316793663148,
-        "exitId": 2
-      },
-      {
-        "id": "p16-b1",
-        "participantId": "p16",
-        "name": "번호 16",
-        "label": "번호 16",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 24,
-        "time": 12.981018837255334,
-        "exitId": 2
-      },
-      {
-        "id": "p11-b1",
-        "participantId": "p11",
-        "name": "번호 11",
-        "label": "번호 11",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 25,
-        "time": 13.034298984523645,
-        "exitId": 3
-      },
-      {
-        "id": "p2-b1",
-        "participantId": "p2",
-        "name": "번호 2",
-        "label": "번호 2",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 26,
-        "time": 13.248299199971019,
-        "exitId": 3
-      },
-      {
-        "id": "p4-b1",
-        "participantId": "p4",
-        "name": "번호 4",
-        "label": "번호 4",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 27,
-        "time": 13.495775062776934,
-        "exitId": 2
-      },
-      {
-        "id": "p27-b1",
-        "participantId": "p27",
-        "name": "번호 27",
-        "label": "번호 27",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 28,
-        "time": 13.830840199791554,
-        "exitId": 3
-      },
-      {
-        "id": "p35-b1",
-        "participantId": "p35",
-        "name": "번호 35",
-        "label": "번호 35",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 29,
-        "time": 13.999812290485346,
-        "exitId": 2
-      },
-      {
-        "id": "p38-b1",
-        "participantId": "p38",
-        "name": "번호 38",
-        "label": "번호 38",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 30,
-        "time": 14.10898658348579,
-        "exitId": 2
-      },
-      {
-        "id": "p34-b1",
-        "participantId": "p34",
-        "name": "번호 34",
-        "label": "번호 34",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 31,
-        "time": 14.250267966912574,
-        "exitId": 3
-      },
-      {
-        "id": "p19-b1",
-        "participantId": "p19",
-        "name": "번호 19",
-        "label": "번호 19",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 32,
-        "time": 14.264876533872712,
-        "exitId": 2
-      },
-      {
-        "id": "p7-b1",
-        "participantId": "p7",
-        "name": "번호 7",
-        "label": "번호 7",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 33,
-        "time": 14.375188194341064,
-        "exitId": 2
-      },
-      {
-        "id": "p56-b1",
-        "participantId": "p56",
-        "name": "번호 56",
-        "label": "번호 56",
-        "color": "#ff826c",
-        "number": 1,
-        "rank": 34,
-        "time": 14.905926773310863,
-        "exitId": 2
       },
       {
         "id": "p22-b1",
@@ -828,206 +536,30 @@
         "label": "번호 22",
         "color": "#8daaff",
         "number": 1,
-        "rank": 35,
-        "time": 15.104749143604327,
-        "exitId": 3
-      },
-      {
-        "id": "p6-b1",
-        "participantId": "p6",
-        "name": "번호 6",
-        "label": "번호 6",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 36,
-        "time": 15.659092726658672,
-        "exitId": 3
-      },
-      {
-        "id": "p18-b1",
-        "participantId": "p18",
-        "name": "번호 18",
-        "label": "번호 18",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 37,
-        "time": 16.035095518600887,
+        "rank": 8,
+        "time": 12.25341330112081,
         "exitId": 2
       },
       {
-        "id": "p49-b1",
-        "participantId": "p49",
-        "name": "번호 49",
-        "label": "번호 49",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 38,
-        "time": 16.377097358736417,
-        "exitId": 3
-      },
-      {
-        "id": "p51-b1",
-        "participantId": "p51",
-        "name": "번호 51",
-        "label": "번호 51",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 39,
-        "time": 16.443900781107,
-        "exitId": 2
-      },
-      {
-        "id": "p53-b1",
-        "participantId": "p53",
-        "name": "번호 53",
-        "label": "번호 53",
-        "color": "#ffc168",
-        "number": 1,
-        "rank": 40,
-        "time": 16.794324125085033,
-        "exitId": 2
-      },
-      {
-        "id": "p60-b1",
-        "participantId": "p60",
-        "name": "번호 60",
-        "label": "번호 60",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 41,
-        "time": 16.869944097001863,
-        "exitId": 3
-      },
-      {
-        "id": "p20-b1",
-        "participantId": "p20",
-        "name": "번호 20",
-        "label": "번호 20",
-        "color": "#64e4e0",
-        "number": 1,
-        "rank": 42,
-        "time": 17.108634649101425,
-        "exitId": 2
-      },
-      {
-        "id": "p31-b1",
-        "participantId": "p31",
-        "name": "번호 31",
-        "label": "번호 31",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 43,
-        "time": 17.398793688523277,
-        "exitId": 3
-      },
-      {
-        "id": "p25-b1",
-        "participantId": "p25",
-        "name": "번호 25",
-        "label": "번호 25",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 44,
-        "time": 17.704672478648767,
-        "exitId": 3
-      },
-      {
-        "id": "p46-b1",
-        "participantId": "p46",
-        "name": "번호 46",
-        "label": "번호 46",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 45,
-        "time": 17.824892416297743,
-        "exitId": 2
-      },
-      {
-        "id": "p10-b1",
-        "participantId": "p10",
-        "name": "번호 10",
-        "label": "번호 10",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 46,
-        "time": 17.943597360705137,
-        "exitId": 3
-      },
-      {
-        "id": "p50-b1",
-        "participantId": "p50",
-        "name": "번호 50",
-        "label": "번호 50",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 47,
-        "time": 18.005880262220533,
-        "exitId": 3
-      },
-      {
-        "id": "p14-b1",
-        "participantId": "p14",
-        "name": "번호 14",
-        "label": "번호 14",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 48,
-        "time": 18.057900520308596,
-        "exitId": 2
-      },
-      {
-        "id": "p15-b1",
-        "participantId": "p15",
-        "name": "번호 15",
-        "label": "번호 15",
-        "color": "#edeeed",
-        "number": 1,
-        "rank": 49,
-        "time": 18.264055979329903,
-        "exitId": 3
-      },
-      {
-        "id": "p59-b1",
-        "participantId": "p59",
-        "name": "번호 59",
-        "label": "번호 59",
-        "color": "#ff82af",
-        "number": 1,
-        "rank": 50,
-        "time": 18.349971900943554,
-        "exitId": 2
-      },
-      {
-        "id": "p32-b1",
-        "participantId": "p32",
-        "name": "번호 32",
-        "label": "번호 32",
+        "id": "p24-b1",
+        "participantId": "p24",
+        "name": "번호 24",
+        "label": "번호 24",
         "color": "#ff826c",
         "number": 1,
-        "rank": 51,
-        "time": 18.81086361069149,
+        "rank": 9,
+        "time": 12.330226386530311,
         "exitId": 2
       },
       {
-        "id": "p5-b1",
-        "participantId": "p5",
-        "name": "번호 5",
-        "label": "번호 5",
-        "color": "#ffc168",
+        "id": "p52-b1",
+        "participantId": "p52",
+        "name": "번호 52",
+        "label": "번호 52",
+        "color": "#64e4e0",
         "number": 1,
-        "rank": 52,
-        "time": 18.944453256032027,
-        "exitId": 3
-      },
-      {
-        "id": "p57-b1",
-        "participantId": "p57",
-        "name": "번호 57",
-        "label": "번호 57",
-        "color": "#c6ff58",
-        "number": 1,
-        "rank": 53,
-        "time": 18.959736656061658,
+        "rank": 10,
+        "time": 12.55195576482914,
         "exitId": 2
       },
       {
@@ -1037,9 +569,9 @@
         "label": "번호 40",
         "color": "#ff826c",
         "number": 1,
-        "rank": 54,
-        "time": 19.134559813279477,
-        "exitId": 3
+        "rank": 11,
+        "time": 13.158019919959274,
+        "exitId": 2
       },
       {
         "id": "p29-b1",
@@ -1048,30 +580,19 @@
         "label": "번호 29",
         "color": "#ffc168",
         "number": 1,
-        "rank": 55,
-        "time": 19.351025137546124,
+        "rank": 12,
+        "time": 13.195720951065267,
         "exitId": 3
       },
       {
-        "id": "p54-b1",
-        "participantId": "p54",
-        "name": "번호 54",
-        "label": "번호 54",
-        "color": "#8daaff",
-        "number": 1,
-        "rank": 56,
-        "time": 19.829983307837722,
-        "exitId": 2
-      },
-      {
-        "id": "p23-b1",
-        "participantId": "p23",
-        "name": "번호 23",
-        "label": "번호 23",
+        "id": "p7-b1",
+        "participantId": "p7",
+        "name": "번호 7",
+        "label": "번호 7",
         "color": "#edeeed",
         "number": 1,
-        "rank": 57,
-        "time": 19.90273747838193,
+        "rank": 13,
+        "time": 13.487502172020891,
         "exitId": 3
       },
       {
@@ -1081,8 +602,470 @@
         "label": "번호 58",
         "color": "#bca7ff",
         "number": 1,
-        "rank": 58,
-        "time": 20.1993496201311,
+        "rank": 14,
+        "time": 13.956352542928919,
+        "exitId": 3
+      },
+      {
+        "id": "p3-b1",
+        "participantId": "p3",
+        "name": "번호 3",
+        "label": "번호 3",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 15,
+        "time": 14.207158922210605,
+        "exitId": 3
+      },
+      {
+        "id": "p10-b1",
+        "participantId": "p10",
+        "name": "번호 10",
+        "label": "번호 10",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 16,
+        "time": 14.538016745773835,
+        "exitId": 3
+      },
+      {
+        "id": "p25-b1",
+        "participantId": "p25",
+        "name": "번호 25",
+        "label": "번호 25",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 17,
+        "time": 14.687313158828024,
+        "exitId": 2
+      },
+      {
+        "id": "p56-b1",
+        "participantId": "p56",
+        "name": "번호 56",
+        "label": "번호 56",
+        "color": "#ff826c",
+        "number": 1,
+        "rank": 18,
+        "time": 14.70943349489306,
+        "exitId": 3
+      },
+      {
+        "id": "p12-b1",
+        "participantId": "p12",
+        "name": "번호 12",
+        "label": "번호 12",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 19,
+        "time": 14.793850644395569,
+        "exitId": 3
+      },
+      {
+        "id": "p48-b1",
+        "participantId": "p48",
+        "name": "번호 48",
+        "label": "번호 48",
+        "color": "#ff826c",
+        "number": 1,
+        "rank": 20,
+        "time": 14.835964302370126,
+        "exitId": 3
+      },
+      {
+        "id": "p54-b1",
+        "participantId": "p54",
+        "name": "번호 54",
+        "label": "번호 54",
+        "color": "#8daaff",
+        "number": 1,
+        "rank": 21,
+        "time": 15.368726846732978,
+        "exitId": 2
+      },
+      {
+        "id": "p23-b1",
+        "participantId": "p23",
+        "name": "번호 23",
+        "label": "번호 23",
+        "color": "#edeeed",
+        "number": 1,
+        "rank": 22,
+        "time": 15.479315818961007,
+        "exitId": 2
+      },
+      {
+        "id": "p60-b1",
+        "participantId": "p60",
+        "name": "번호 60",
+        "label": "번호 60",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 23,
+        "time": 15.525649022932827,
+        "exitId": 3
+      },
+      {
+        "id": "p16-b1",
+        "participantId": "p16",
+        "name": "번호 16",
+        "label": "번호 16",
+        "color": "#ff826c",
+        "number": 1,
+        "rank": 24,
+        "time": 15.681437256625099,
+        "exitId": 2
+      },
+      {
+        "id": "p47-b1",
+        "participantId": "p47",
+        "name": "번호 47",
+        "label": "번호 47",
+        "color": "#edeeed",
+        "number": 1,
+        "rank": 25,
+        "time": 15.926952471875532,
+        "exitId": 2
+      },
+      {
+        "id": "p42-b1",
+        "participantId": "p42",
+        "name": "번호 42",
+        "label": "번호 42",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 26,
+        "time": 16.183203404624177,
+        "exitId": 2
+      },
+      {
+        "id": "p21-b1",
+        "participantId": "p21",
+        "name": "번호 21",
+        "label": "번호 21",
+        "color": "#ffc168",
+        "number": 1,
+        "rank": 27,
+        "time": 16.58288492824821,
+        "exitId": 3
+      },
+      {
+        "id": "p8-b1",
+        "participantId": "p8",
+        "name": "번호 8",
+        "label": "번호 8",
+        "color": "#ff826c",
+        "number": 1,
+        "rank": 28,
+        "time": 16.63871701797345,
+        "exitId": 2
+      },
+      {
+        "id": "p14-b1",
+        "participantId": "p14",
+        "name": "번호 14",
+        "label": "번호 14",
+        "color": "#8daaff",
+        "number": 1,
+        "rank": 29,
+        "time": 16.743291807803455,
+        "exitId": 2
+      },
+      {
+        "id": "p15-b1",
+        "participantId": "p15",
+        "name": "번호 15",
+        "label": "번호 15",
+        "color": "#edeeed",
+        "number": 1,
+        "rank": 30,
+        "time": 16.94904724639943,
+        "exitId": 3
+      },
+      {
+        "id": "p30-b1",
+        "participantId": "p30",
+        "name": "번호 30",
+        "label": "번호 30",
+        "color": "#8daaff",
+        "number": 1,
+        "rank": 31,
+        "time": 17.0686940317998,
+        "exitId": 2
+      },
+      {
+        "id": "p43-b1",
+        "participantId": "p43",
+        "name": "번호 43",
+        "label": "번호 43",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 32,
+        "time": 17.16572140982405,
+        "exitId": 3
+      },
+      {
+        "id": "p4-b1",
+        "participantId": "p4",
+        "name": "번호 4",
+        "label": "번호 4",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 33,
+        "time": 17.28928843155287,
+        "exitId": 3
+      },
+      {
+        "id": "p9-b1",
+        "participantId": "p9",
+        "name": "번호 9",
+        "label": "번호 9",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 34,
+        "time": 17.39436461200328,
+        "exitId": 3
+      },
+      {
+        "id": "p44-b1",
+        "participantId": "p44",
+        "name": "번호 44",
+        "label": "번호 44",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 35,
+        "time": 17.56697666296115,
+        "exitId": 3
+      },
+      {
+        "id": "p41-b1",
+        "participantId": "p41",
+        "name": "번호 41",
+        "label": "번호 41",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 36,
+        "time": 17.768619857059154,
+        "exitId": 3
+      },
+      {
+        "id": "p1-b1",
+        "participantId": "p1",
+        "name": "번호 1",
+        "label": "번호 1",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 37,
+        "time": 17.976149814002614,
+        "exitId": 3
+      },
+      {
+        "id": "p6-b1",
+        "participantId": "p6",
+        "name": "번호 6",
+        "label": "번호 6",
+        "color": "#8daaff",
+        "number": 1,
+        "rank": 38,
+        "time": 18.160617351548854,
+        "exitId": 2
+      },
+      {
+        "id": "p46-b1",
+        "participantId": "p46",
+        "name": "번호 46",
+        "label": "번호 46",
+        "color": "#8daaff",
+        "number": 1,
+        "rank": 39,
+        "time": 18.38131975952085,
+        "exitId": 2
+      },
+      {
+        "id": "p33-b1",
+        "participantId": "p33",
+        "name": "번호 33",
+        "label": "번호 33",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 40,
+        "time": 18.74433418259024,
+        "exitId": 2
+      },
+      {
+        "id": "p19-b1",
+        "participantId": "p19",
+        "name": "번호 19",
+        "label": "번호 19",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 41,
+        "time": 18.81516097971728,
+        "exitId": 2
+      },
+      {
+        "id": "p49-b1",
+        "participantId": "p49",
+        "name": "번호 49",
+        "label": "번호 49",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 42,
+        "time": 19.234201295929942,
+        "exitId": 2
+      },
+      {
+        "id": "p55-b1",
+        "participantId": "p55",
+        "name": "번호 55",
+        "label": "번호 55",
+        "color": "#edeeed",
+        "number": 1,
+        "rank": 43,
+        "time": 19.41164872195218,
+        "exitId": 2
+      },
+      {
+        "id": "p45-b1",
+        "participantId": "p45",
+        "name": "번호 45",
+        "label": "번호 45",
+        "color": "#ffc168",
+        "number": 1,
+        "rank": 44,
+        "time": 19.73608898417313,
+        "exitId": 3
+      },
+      {
+        "id": "p37-b1",
+        "participantId": "p37",
+        "name": "번호 37",
+        "label": "번호 37",
+        "color": "#ffc168",
+        "number": 1,
+        "rank": 45,
+        "time": 19.871430406726592,
+        "exitId": 3
+      },
+      {
+        "id": "p13-b1",
+        "participantId": "p13",
+        "name": "번호 13",
+        "label": "번호 13",
+        "color": "#ffc168",
+        "number": 1,
+        "rank": 46,
+        "time": 20.00663809224485,
+        "exitId": 3
+      },
+      {
+        "id": "p27-b1",
+        "participantId": "p27",
+        "name": "번호 27",
+        "label": "번호 27",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 47,
+        "time": 20.1881935410173,
+        "exitId": 3
+      },
+      {
+        "id": "p31-b1",
+        "participantId": "p31",
+        "name": "번호 31",
+        "label": "번호 31",
+        "color": "#edeeed",
+        "number": 1,
+        "rank": 48,
+        "time": 20.28397778038491,
+        "exitId": 2
+      },
+      {
+        "id": "p39-b1",
+        "participantId": "p39",
+        "name": "번호 39",
+        "label": "번호 39",
+        "color": "#edeeed",
+        "number": 1,
+        "rank": 49,
+        "time": 20.312030867729256,
+        "exitId": 3
+      },
+      {
+        "id": "p38-b1",
+        "participantId": "p38",
+        "name": "번호 38",
+        "label": "번호 38",
+        "color": "#8daaff",
+        "number": 1,
+        "rank": 50,
+        "time": 20.489100611091953,
+        "exitId": 2
+      },
+      {
+        "id": "p18-b1",
+        "participantId": "p18",
+        "name": "번호 18",
+        "label": "번호 18",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 51,
+        "time": 20.839691020447937,
+        "exitId": 2
+      },
+      {
+        "id": "p2-b1",
+        "participantId": "p2",
+        "name": "번호 2",
+        "label": "번호 2",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 52,
+        "time": 21.220161902974937,
+        "exitId": 2
+      },
+      {
+        "id": "p50-b1",
+        "participantId": "p50",
+        "name": "번호 50",
+        "label": "번호 50",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 53,
+        "time": 22.041202390351714,
+        "exitId": 2
+      },
+      {
+        "id": "p28-b1",
+        "participantId": "p28",
+        "name": "번호 28",
+        "label": "번호 28",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 54,
+        "time": 22.12415255424303,
+        "exitId": 3
+      },
+      {
+        "id": "p34-b1",
+        "participantId": "p34",
+        "name": "번호 34",
+        "label": "번호 34",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 55,
+        "time": 22.357548380215356,
+        "exitId": 2
+      },
+      {
+        "id": "p51-b1",
+        "participantId": "p51",
+        "name": "번호 51",
+        "label": "번호 51",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 56,
+        "time": 22.530606787036977,
         "exitId": 3
       },
       {
@@ -1092,443 +1075,555 @@
         "label": "번호 17",
         "color": "#c6ff58",
         "number": 1,
-        "rank": 59,
-        "time": 25.322296878365766,
-        "exitId": 3
+        "rank": 57,
+        "time": 23.669572238135544,
+        "exitId": 2
       },
       {
-        "id": "p47-b1",
-        "participantId": "p47",
-        "name": "번호 47",
-        "label": "번호 47",
-        "color": "#edeeed",
+        "id": "p5-b1",
+        "participantId": "p5",
+        "name": "번호 5",
+        "label": "번호 5",
+        "color": "#ffc168",
         "number": 1,
-        "rank": 60,
-        "time": 33.63784591504677,
+        "rank": 58,
+        "time": 25.466627704625378,
+        "exitId": 2
+      },
+      {
+        "id": "p20-b1",
+        "participantId": "p20",
+        "name": "번호 20",
+        "label": "번호 20",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 59,
+        "time": 26.098864658853298,
         "exitId": 2
       }
     ],
     "assists": 0,
+    "motion": {
+      "enabled": true,
+      "active": false,
+      "axis": null,
+      "cycle": 5,
+      "phase": 0,
+      "roll": 0,
+      "pitch": 0,
+      "offsetX": 0,
+      "offsetY": 0,
+      "forceX": 0,
+      "forceY": 0,
+      "nextIn": 2.5279225771070664
+    },
+    "deviceStats": {
+      "captures": 11,
+      "launches": 8,
+      "releases": 3
+    },
+    "devices": [
+      {
+        "id": "split-magnet-0",
+        "kind": "magnet",
+        "x": 310,
+        "y": 875,
+        "ballId": null,
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false
+      },
+      {
+        "id": "split-cannon-1",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1850,
+        "ballId": null,
+        "angle": -5.61801943154821,
+        "progress": 0,
+        "holding": false
+      }
+    ],
     "balls": [
       {
-        "id": "p11-b1",
-        "x": 371.82669728753615,
+        "id": "p3-b1",
+        "x": 377.65379087337004,
         "y": 2150,
         "finished": true,
-        "rank": 25
-      },
-      {
-        "id": "p57-b1",
-        "x": 250.99053487487538,
-        "y": 2150,
-        "finished": true,
-        "rank": 53
-      },
-      {
-        "id": "p49-b1",
-        "x": 388.67865573122964,
-        "y": 2150,
-        "finished": true,
-        "rank": 38
-      },
-      {
-        "id": "p9-b1",
-        "x": 245.93334459793653,
-        "y": 2150,
-        "finished": true,
-        "rank": 7
-      },
-      {
-        "id": "p13-b1",
-        "x": 369.1822160611388,
-        "y": 2150,
-        "finished": true,
-        "rank": 22
-      },
-      {
-        "id": "p12-b1",
-        "x": 382.8383032630302,
-        "y": 2150,
-        "finished": true,
-        "rank": 6
-      },
-      {
-        "id": "p48-b1",
-        "x": 393.2139102651277,
-        "y": 2150,
-        "finished": true,
-        "rank": 8
-      },
-      {
-        "id": "p42-b1",
-        "x": 380.7125051670372,
-        "y": 2150,
-        "finished": true,
-        "rank": 11
-      },
-      {
-        "id": "p51-b1",
-        "x": 228.183838500314,
-        "y": 2150,
-        "finished": true,
-        "rank": 39
+        "rank": 15,
+        "heldBy": null
       },
       {
         "id": "p39-b1",
-        "x": 381.3549150692878,
+        "x": 368.39438525948,
         "y": 2150,
         "finished": true,
-        "rank": 4
-      },
-      {
-        "id": "p26-b1",
-        "x": 226,
-        "y": 2150,
-        "finished": true,
-        "rank": 5
-      },
-      {
-        "id": "p46-b1",
-        "x": 232.66802726767438,
-        "y": 2150,
-        "finished": true,
-        "rank": 45
-      },
-      {
-        "id": "p22-b1",
-        "x": 366.40418186848217,
-        "y": 2150,
-        "finished": true,
-        "rank": 35
-      },
-      {
-        "id": "p35-b1",
-        "x": 251.6029940134487,
-        "y": 2150,
-        "finished": true,
-        "rank": 29
-      },
-      {
-        "id": "p16-b1",
-        "x": 229.0575628731043,
-        "y": 2150,
-        "finished": true,
-        "rank": 24
-      },
-      {
-        "id": "p1-b1",
-        "x": 385.5807658833362,
-        "y": 2150,
-        "finished": true,
-        "rank": 10
-      },
-      {
-        "id": "p36-b1",
-        "x": 245.93700068547992,
-        "y": 2150,
-        "finished": true,
-        "rank": 3
-      },
-      {
-        "id": "p21-b1",
-        "x": 235.91607516060185,
-        "y": 2150,
-        "finished": true,
-        "rank": 23
-      },
-      {
-        "id": "p43-b1",
-        "x": 236.01256445107646,
-        "y": 2150,
-        "finished": true,
-        "rank": 12
-      },
-      {
-        "id": "p53-b1",
-        "x": 241.07299559553067,
-        "y": 2150,
-        "finished": true,
-        "rank": 40
-      },
-      {
-        "id": "p4-b1",
-        "x": 246.74576081592156,
-        "y": 2150,
-        "finished": true,
-        "rank": 27
-      },
-      {
-        "id": "p27-b1",
-        "x": 387.55849805399583,
-        "y": 2150,
-        "finished": true,
-        "rank": 28
-      },
-      {
-        "id": "p29-b1",
-        "x": 388.5040459337586,
-        "y": 2150,
-        "finished": true,
-        "rank": 55
-      },
-      {
-        "id": "p58-b1",
-        "x": 391.5479159701931,
-        "y": 2150,
-        "finished": true,
-        "rank": 58
-      },
-      {
-        "id": "p30-b1",
-        "x": 389.4196760644476,
-        "y": 2150,
-        "finished": true,
-        "rank": 2
-      },
-      {
-        "id": "p8-b1",
-        "x": 391.49950896227693,
-        "y": 2150,
-        "finished": true,
-        "rank": 14
-      },
-      {
-        "id": "p23-b1",
-        "x": 373.3364401658534,
-        "y": 2150,
-        "finished": true,
-        "rank": 57
-      },
-      {
-        "id": "p6-b1",
-        "x": 375.9125512183091,
-        "y": 2150,
-        "finished": true,
-        "rank": 36
-      },
-      {
-        "id": "p45-b1",
-        "x": 228.98220631656892,
-        "y": 2150,
-        "finished": true,
-        "rank": 16
-      },
-      {
-        "id": "p3-b1",
-        "x": 393.36780011444216,
-        "y": 2150,
-        "finished": true,
-        "rank": 20
-      },
-      {
-        "id": "p31-b1",
-        "x": 393.7311201704365,
-        "y": 2150,
-        "finished": true,
-        "rank": 43
-      },
-      {
-        "id": "p37-b1",
-        "x": 233.46972527007563,
-        "y": 2150,
-        "finished": true,
-        "rank": 19
-      },
-      {
-        "id": "p47-b1",
-        "x": 236.4897524870126,
-        "y": 2150,
-        "finished": true,
-        "rank": 60
-      },
-      {
-        "id": "p18-b1",
-        "x": 230.43477415004426,
-        "y": 2150,
-        "finished": true,
-        "rank": 37
-      },
-      {
-        "id": "p15-b1",
-        "x": 391.0308213771972,
-        "y": 2150,
-        "finished": true,
-        "rank": 49
-      },
-      {
-        "id": "p7-b1",
-        "x": 249.774485710785,
-        "y": 2150,
-        "finished": true,
-        "rank": 33
-      },
-      {
-        "id": "p17-b1",
-        "x": 391.4110307733597,
-        "y": 2150,
-        "finished": true,
-        "rank": 59
-      },
-      {
-        "id": "p41-b1",
-        "x": 226.7591991093168,
-        "y": 2150,
-        "finished": true,
-        "rank": 21
-      },
-      {
-        "id": "p28-b1",
-        "x": 226.63175493010144,
-        "y": 2150,
-        "finished": true,
-        "rank": 17
-      },
-      {
-        "id": "p2-b1",
-        "x": 378.43921291734443,
-        "y": 2150,
-        "finished": true,
-        "rank": 26
-      },
-      {
-        "id": "p34-b1",
-        "x": 388.5252716304877,
-        "y": 2150,
-        "finished": true,
-        "rank": 31
-      },
-      {
-        "id": "p54-b1",
-        "x": 252.22216788351295,
-        "y": 2150,
-        "finished": true,
-        "rank": 56
-      },
-      {
-        "id": "p60-b1",
-        "x": 377.92875277009534,
-        "y": 2150,
-        "finished": true,
-        "rank": 41
-      },
-      {
-        "id": "p10-b1",
-        "x": 370.8445276240434,
-        "y": 2150,
-        "finished": true,
-        "rank": 46
+        "rank": 49,
+        "heldBy": null
       },
       {
         "id": "p19-b1",
-        "x": 237.3564543028324,
+        "x": 238.99047764932786,
         "y": 2150,
         "finished": true,
-        "rank": 32
+        "rank": 41,
+        "heldBy": null
       },
       {
-        "id": "p32-b1",
-        "x": 239.0684701262039,
+        "id": "p36-b1",
+        "x": 369.04882020073785,
         "y": 2150,
         "finished": true,
-        "rank": 51
+        "rank": 7,
+        "heldBy": null
       },
       {
-        "id": "p33-b1",
-        "x": 385.9052978538669,
+        "id": "p23-b1",
+        "x": 226.92085687828748,
         "y": 2150,
         "finished": true,
-        "rank": 18
-      },
-      {
-        "id": "p5-b1",
-        "x": 393.3066786802281,
-        "y": 2150,
-        "finished": true,
-        "rank": 52
-      },
-      {
-        "id": "p20-b1",
-        "x": 229.340201548152,
-        "y": 2150,
-        "finished": true,
-        "rank": 42
-      },
-      {
-        "id": "p50-b1",
-        "x": 389.5298395611722,
-        "y": 2150,
-        "finished": true,
-        "rank": 47
-      },
-      {
-        "id": "p56-b1",
-        "x": 233.1227294464632,
-        "y": 2150,
-        "finished": true,
-        "rank": 34
-      },
-      {
-        "id": "p52-b1",
-        "x": 389.5320761492323,
-        "y": 2150,
-        "finished": true,
-        "rank": 9
-      },
-      {
-        "id": "p38-b1",
-        "x": 227.80313720611724,
-        "y": 2150,
-        "finished": true,
-        "rank": 30
-      },
-      {
-        "id": "p59-b1",
-        "x": 241.02012789816953,
-        "y": 2150,
-        "finished": true,
-        "rank": 50
-      },
-      {
-        "id": "p25-b1",
-        "x": 366.01682355737466,
-        "y": 2150,
-        "finished": true,
-        "rank": 44
-      },
-      {
-        "id": "p14-b1",
-        "x": 228.35347964482665,
-        "y": 2150,
-        "finished": true,
-        "rank": 48
-      },
-      {
-        "id": "p55-b1",
-        "x": 387.07233935567666,
-        "y": 2150,
-        "finished": true,
-        "rank": 1
-      },
-      {
-        "id": "p40-b1",
-        "x": 391.49566104207815,
-        "y": 2150,
-        "finished": true,
-        "rank": 54
+        "rank": 22,
+        "heldBy": null
       },
       {
         "id": "p44-b1",
-        "x": 231.5096773417837,
+        "x": 379.3933450301749,
         "y": 2150,
         "finished": true,
-        "rank": 13
+        "rank": 35,
+        "heldBy": null
       },
       {
         "id": "p24-b1",
+        "x": 227.72118015078786,
+        "y": 2150,
+        "finished": true,
+        "rank": 9,
+        "heldBy": null
+      },
+      {
+        "id": "p11-b1",
+        "x": 384.1069999834121,
+        "y": 2150,
+        "finished": true,
+        "rank": 5,
+        "heldBy": null
+      },
+      {
+        "id": "p4-b1",
+        "x": 376.9159334779836,
+        "y": 2150,
+        "finished": true,
+        "rank": 33,
+        "heldBy": null
+      },
+      {
+        "id": "p51-b1",
+        "x": 384.1659346891285,
+        "y": 2150,
+        "finished": true,
+        "rank": 56,
+        "heldBy": null
+      },
+      {
+        "id": "p54-b1",
+        "x": 227.76451267413532,
+        "y": 2150,
+        "finished": true,
+        "rank": 21,
+        "heldBy": null
+      },
+      {
+        "id": "p7-b1",
+        "x": 388.14421205456017,
+        "y": 2150,
+        "finished": true,
+        "rank": 13,
+        "heldBy": null
+      },
+      {
+        "id": "p38-b1",
+        "x": 247.7235222415462,
+        "y": 2150,
+        "finished": true,
+        "rank": 50,
+        "heldBy": null
+      },
+      {
+        "id": "p46-b1",
+        "x": 242.4097210458304,
+        "y": 2150,
+        "finished": true,
+        "rank": 39,
+        "heldBy": null
+      },
+      {
+        "id": "p34-b1",
+        "x": 237.146030688428,
+        "y": 2150,
+        "finished": true,
+        "rank": 55,
+        "heldBy": null
+      },
+      {
+        "id": "p6-b1",
+        "x": 239.08636819394695,
+        "y": 2150,
+        "finished": true,
+        "rank": 38,
+        "heldBy": null
+      },
+      {
+        "id": "p8-b1",
+        "x": 241.205223575676,
+        "y": 2150,
+        "finished": true,
+        "rank": 28,
+        "heldBy": null
+      },
+      {
+        "id": "p5-b1",
+        "x": 247.25422877870537,
+        "y": 2150,
+        "finished": true,
+        "rank": 58,
+        "heldBy": null
+      },
+      {
+        "id": "p58-b1",
+        "x": 393.21190272876225,
+        "y": 2150,
+        "finished": true,
+        "rank": 14,
+        "heldBy": null
+      },
+      {
+        "id": "p42-b1",
+        "x": 248.53458585642574,
+        "y": 2150,
+        "finished": true,
+        "rank": 26,
+        "heldBy": null
+      },
+      {
+        "id": "p35-b1",
+        "x": 532.6084884667795,
+        "y": 2150,
+        "finished": true,
+        "rank": 2,
+        "heldBy": null
+      },
+      {
+        "id": "p43-b1",
+        "x": 389.6896480498395,
+        "y": 2150,
+        "finished": true,
+        "rank": 32,
+        "heldBy": null
+      },
+      {
+        "id": "p45-b1",
+        "x": 391.0817349818153,
+        "y": 2150,
+        "finished": true,
+        "rank": 44,
+        "heldBy": null
+      },
+      {
+        "id": "p28-b1",
+        "x": 393.7333405754197,
+        "y": 2150,
+        "finished": true,
+        "rank": 54,
+        "heldBy": null
+      },
+      {
+        "id": "p49-b1",
+        "x": 226.44298710648462,
+        "y": 2150,
+        "finished": true,
+        "rank": 42,
+        "heldBy": null
+      },
+      {
+        "id": "p59-b1",
+        "x": 392.57912199215906,
+        "y": 2150,
+        "finished": true,
+        "rank": 4,
+        "heldBy": null
+      },
+      {
+        "id": "p12-b1",
+        "x": 391.36515486844667,
+        "y": 2150,
+        "finished": true,
+        "rank": 19,
+        "heldBy": null
+      },
+      {
+        "id": "p26-b1",
+        "x": 228.30508563592204,
+        "y": 2150,
+        "finished": true,
+        "rank": 3,
+        "heldBy": null
+      },
+      {
+        "id": "p37-b1",
+        "x": 387.5505723100458,
+        "y": 2150,
+        "finished": true,
+        "rank": 45,
+        "heldBy": null
+      },
+      {
+        "id": "p27-b1",
+        "x": 369.1355803898763,
+        "y": 2150,
+        "finished": true,
+        "rank": 47,
+        "heldBy": null
+      },
+      {
+        "id": "p60-b1",
+        "x": 378.5560068210947,
+        "y": 2150,
+        "finished": true,
+        "rank": 23,
+        "heldBy": null
+      },
+      {
+        "id": "p56-b1",
+        "x": 371.54678571732836,
+        "y": 2150,
+        "finished": true,
+        "rank": 18,
+        "heldBy": null
+      },
+      {
+        "id": "p47-b1",
+        "x": 242.9104330169796,
+        "y": 2150,
+        "finished": true,
+        "rank": 25,
+        "heldBy": null
+      },
+      {
+        "id": "p2-b1",
+        "x": 253.33167517763872,
+        "y": 2150,
+        "finished": true,
+        "rank": 52,
+        "heldBy": null
+      },
+      {
+        "id": "p1-b1",
+        "x": 375.58350203340797,
+        "y": 2150,
+        "finished": true,
+        "rank": 37,
+        "heldBy": null
+      },
+      {
+        "id": "p48-b1",
+        "x": 366.4296531911505,
+        "y": 2150,
+        "finished": true,
+        "rank": 20,
+        "heldBy": null
+      },
+      {
+        "id": "p20-b1",
+        "x": 239.08733659496988,
+        "y": 2150,
+        "finished": true,
+        "rank": 59,
+        "heldBy": null
+      },
+      {
+        "id": "p16-b1",
+        "x": 233.88603073827053,
+        "y": 2150,
+        "finished": true,
+        "rank": 24,
+        "heldBy": null
+      },
+      {
+        "id": "p40-b1",
+        "x": 249.2905145724843,
+        "y": 2150,
+        "finished": true,
+        "rank": 11,
+        "heldBy": null
+      },
+      {
+        "id": "p55-b1",
+        "x": 232.34391732492156,
+        "y": 2150,
+        "finished": true,
+        "rank": 43,
+        "heldBy": null
+      },
+      {
+        "id": "p14-b1",
+        "x": 252.6036803299648,
+        "y": 2150,
+        "finished": true,
+        "rank": 29,
+        "heldBy": null
+      },
+      {
+        "id": "p17-b1",
+        "x": 237.5431401053553,
+        "y": 2150,
+        "finished": true,
+        "rank": 57,
+        "heldBy": null
+      },
+      {
+        "id": "p33-b1",
+        "x": 230.9570935890722,
+        "y": 2150,
+        "finished": true,
+        "rank": 40,
+        "heldBy": null
+      },
+      {
+        "id": "p18-b1",
+        "x": 245.03807761070087,
+        "y": 2150,
+        "finished": true,
+        "rank": 51,
+        "heldBy": null
+      },
+      {
+        "id": "p22-b1",
+        "x": 236.6323046963012,
+        "y": 2150,
+        "finished": true,
+        "rank": 8,
+        "heldBy": null
+      },
+      {
+        "id": "p21-b1",
+        "x": 390.5688811058779,
+        "y": 2150,
+        "finished": true,
+        "rank": 27,
+        "heldBy": null
+      },
+      {
+        "id": "p29-b1",
+        "x": 372.6149828306664,
+        "y": 2150,
+        "finished": true,
+        "rank": 12,
+        "heldBy": null
+      },
+      {
+        "id": "p15-b1",
+        "x": 383.8837408294322,
+        "y": 2150,
+        "finished": true,
+        "rank": 30,
+        "heldBy": null
+      },
+      {
+        "id": "p9-b1",
+        "x": 392.1769437778646,
+        "y": 2150,
+        "finished": true,
+        "rank": 34,
+        "heldBy": null
+      },
+      {
+        "id": "p10-b1",
+        "x": 378.2773276618885,
+        "y": 2150,
+        "finished": true,
+        "rank": 16,
+        "heldBy": null
+      },
+      {
+        "id": "p53-b1",
+        "x": 204.00664937081112,
+        "y": 2074.561897981135,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p32-b1",
+        "x": 390.69102408954535,
+        "y": 2150,
+        "finished": true,
+        "rank": 6,
+        "heldBy": null
+      },
+      {
+        "id": "p41-b1",
+        "x": 378.51008167753787,
+        "y": 2150,
+        "finished": true,
+        "rank": 36,
+        "heldBy": null
+      },
+      {
+        "id": "p25-b1",
         "x": 226,
         "y": 2150,
         "finished": true,
-        "rank": 15
+        "rank": 17,
+        "heldBy": null
+      },
+      {
+        "id": "p31-b1",
+        "x": 246.00038542837464,
+        "y": 2150,
+        "finished": true,
+        "rank": 48,
+        "heldBy": null
+      },
+      {
+        "id": "p13-b1",
+        "x": 382.4480223808305,
+        "y": 2150,
+        "finished": true,
+        "rank": 46,
+        "heldBy": null
+      },
+      {
+        "id": "p50-b1",
+        "x": 245.11474464574678,
+        "y": 2150,
+        "finished": true,
+        "rank": 53,
+        "heldBy": null
+      },
+      {
+        "id": "p57-b1",
+        "x": 253.28589136036678,
+        "y": 2150,
+        "finished": true,
+        "rank": 1,
+        "heldBy": null
+      },
+      {
+        "id": "p30-b1",
+        "x": 236.14868128344085,
+        "y": 2150,
+        "finished": true,
+        "rank": 31,
+        "heldBy": null
+      },
+      {
+        "id": "p52-b1",
+        "x": 249.78670286922912,
+        "y": 2150,
+        "finished": true,
+        "rank": 10,
+        "heldBy": null
       }
     ]
   }

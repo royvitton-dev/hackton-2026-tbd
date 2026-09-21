@@ -26,49 +26,43 @@
     "total": 4,
     "rule": "nth",
     "target": 3,
-    "mapId": "orbit"
+    "mapId": "orbit",
+    "boardMotion": true,
+    "finishMode": "winner"
   },
-  "seed": 2652298243,
+  "seed": 1668668476,
   "result": {
-    "roundId": "72046877-1812-4d13-b9c7-992142e6bdce",
+    "roundId": "64abd613-1cdb-46ae-8317-fc6292d31226",
     "state": "complete",
-    "seed": 2652298243,
-    "time": 33.799999999998725,
+    "seed": 1668668476,
+    "time": 24.526010774972395,
     "target": 3,
     "total": 4,
     "winner": {
-      "id": "p3-b1",
-      "participantId": "p3",
-      "name": "모바일 C",
-      "label": "모바일 C",
-      "color": "#ff82af",
-      "number": 1,
+      "id": "p1-b2",
+      "participantId": "p1",
+      "name": "모바일 A",
+      "label": "모바일 A",
+      "color": "#c6ff58",
+      "number": 2,
       "rank": 3,
-      "time": 29.17264750489294,
-      "exitId": 4
+      "time": 24.526010774972395,
+      "exitId": 4,
+      "criterion": "arrival",
+      "crossedFinish": true
     },
+    "completionReason": "target-arrived",
     "finishOrder": [
       {
-        "id": "p2-b1",
-        "participantId": "p2",
-        "name": "모바일 B",
-        "label": "모바일 B",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 1,
-        "time": 8.986157699246336,
-        "exitId": 4
-      },
-      {
-        "id": "p1-b2",
+        "id": "p1-b1",
         "participantId": "p1",
         "name": "모바일 A",
         "label": "모바일 A",
         "color": "#c6ff58",
-        "number": 2,
-        "rank": 2,
-        "time": 20.093419495992634,
-        "exitId": 4
+        "number": 1,
+        "rank": 1,
+        "time": 18.81876200583036,
+        "exitId": 2
       },
       {
         "id": "p3-b1",
@@ -77,51 +71,96 @@
         "label": "모바일 C",
         "color": "#ff82af",
         "number": 1,
-        "rank": 3,
-        "time": 29.17264750489294,
-        "exitId": 4
+        "rank": 2,
+        "time": 21.23745252754878,
+        "exitId": 3
       },
       {
-        "id": "p1-b1",
+        "id": "p1-b2",
         "participantId": "p1",
         "name": "모바일 A",
         "label": "모바일 A",
         "color": "#c6ff58",
-        "number": 1,
-        "rank": 4,
-        "time": 33.798227070633985,
-        "exitId": 3
+        "number": 2,
+        "rank": 3,
+        "time": 24.526010774972395,
+        "exitId": 4
       }
     ],
-    "assists": 0,
+    "assists": 1,
+    "motion": {
+      "enabled": true,
+      "active": true,
+      "axis": "x",
+      "cycle": 5,
+      "phase": 0.42038376777459396,
+      "roll": 0.018010125586164306,
+      "pitch": 0,
+      "offsetX": -2.2512656982705384,
+      "offsetY": 0,
+      "forceX": -20.711644424088952,
+      "forceY": 0,
+      "nextIn": 0
+    },
+    "deviceStats": {
+      "captures": 2,
+      "launches": 2,
+      "releases": 0
+    },
+    "devices": [
+      {
+        "id": "orbit-magnet-0",
+        "kind": "magnet",
+        "x": 310,
+        "y": 1160,
+        "ballId": null,
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false
+      },
+      {
+        "id": "orbit-cannon-1",
+        "kind": "cannon",
+        "x": 105,
+        "y": 1840,
+        "ballId": null,
+        "angle": 7.740906029285787,
+        "progress": 0,
+        "holding": false
+      }
+    ],
     "balls": [
       {
-        "id": "p1-b1",
-        "x": 387.75088450435084,
-        "y": 2150,
-        "finished": true,
-        "rank": 4
-      },
-      {
         "id": "p1-b2",
-        "x": 507.3700215293585,
+        "x": 507.3549048935528,
         "y": 2150,
         "finished": true,
-        "rank": 2
+        "rank": 3,
+        "heldBy": null
       },
       {
-        "id": "p3-b1",
-        "x": 528.8968462750207,
+        "id": "p1-b1",
+        "x": 238.50554970935934,
         "y": 2150,
         "finished": true,
-        "rank": 3
+        "rank": 1,
+        "heldBy": null
       },
       {
         "id": "p2-b1",
-        "x": 512.0187541467876,
+        "x": 87.34253123990085,
+        "y": 1162.621358286751,
+        "finished": false,
+        "rank": null,
+        "heldBy": null
+      },
+      {
+        "id": "p3-b1",
+        "x": 368.64718146676626,
         "y": 2150,
         "finished": true,
-        "rank": 1
+        "rank": 2,
+        "heldBy": null
       }
     ]
   }

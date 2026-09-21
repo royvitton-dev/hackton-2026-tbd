@@ -1,3 +1,4 @@
+import {returnPose} from './return-portals.js';
 import {devicePose} from './devices.js';
 import {MAPS} from './physics.js';
 export class Renderer {
@@ -31,6 +32,7 @@ c.textAlign='center';c.font='600 11px sans-serif';c.fillStyle='#a196b5';c.fillTe
  for(const pin of map.pins)this.disk(pin.x,pin.y,pin.r,'#c2b8e1',9);
  for(const b of map.bumpers){this.disk(b.x,b.y,b.r+4,map.accent,5,true);this.disk(b.x,b.y,b.r-6,'#302941',14);p=this.project(b.x,b.y,14);c.fillStyle=map.accent;c.font='800 22px sans-serif';c.fillText('✦',p.x,p.y+7);}
  for(const s of map.rails){this.line(s.ax,s.ay,s.bx,s.by,'#0008',s.r*2+5,-8);this.line(s.ax,s.ay,s.bx,s.by,'#735887',s.r*2,8);this.line(s.ax,s.ay,s.bx,s.by,map.accent,3,13);}
+ for(const s of race.returnGateSegments())this.line(s.ax,s.ay,s.bx,s.by,'#ffcf68',s.r*2,12);
  for(const s of race.rotorSegments()){this.line(s.ax,s.ay,s.bx,s.by,'#0008',25,-10);this.line(s.ax,s.ay,s.bx,s.by,'#258783',21,10);this.line(s.ax,s.ay,s.bx,s.by,'#77f1d9',12,16);this.disk(s.x,s.y,13,'#e5ffcd',21);}
  for(const slider of race.sliderSegments()) {this.line(slider.ax,slider.ay,slider.bx,slider.by,'#0008',26,-8);this.line(slider.ax,slider.ay,slider.bx,slider.by,'#bc7525',22,10);this.line(slider.ax,slider.ay,slider.bx,slider.by,'#ffd177',13,17);const q=this.project((slider.ax+slider.bx)/2,slider.y,17);c.fillStyle='#50331c';c.font='800 20px sans-serif';c.textAlign='center';c.fillText('↔',q.x,q.y+5);}
  for(const d of race.devices){const q=this.project(d.x,d.y),pose=devicePose(d,race.raceTime);c.save();c.strokeStyle=d.kind==='cannon'?'#ffc650':'#77e7ff';c.globalAlpha=pose.holding?.9:.4;c.lineWidth=3;c.beginPath();c.ellipse(q.x,q.y,28,22,0,0,Math.PI*2);c.stroke();c.restore();
@@ -39,12 +41,13 @@ c.textAlign='center';c.font='600 11px sans-serif';c.fillStyle='#a196b5';c.fillTe
  }
  const held=['ready' ,'mixing','countdown'].includes(race.state)||(race.state==='paused'&&race.resumeState!=='racing');
  if(held){this.line(32,map.gate,588,map.gate,'#100e15',15,2);this.line(32,map.gate,588,map.gate,map.accent,8,10);for(let x=50;x<590;x+=27)this.line(x,map.gate-3,x+9,map.gate+3,'#f4ecff',3,13);}
- // Only these four physical throats can register a finish.
- for(const hole of map.exits){const p=this.project(hole.x,map.finish);c.save();c.fillStyle=map.accent;c.shadowColor=map.accent;c.shadowBlur=15;c.beginPath();c.ellipse(p.x,p.y,31,19,0,0,Math.PI*2);c.fill();c.shadowBlur=0;c.fillStyle='#05050b';c.beginPath();c.ellipse(p.x,p.y+1,26,14,0,0,Math.PI*2);c.fill();c.fillStyle='#b1a8c4';c.font='700 15px sans-serif';c.textAlign='center';c.fillText(String(hole.id).padStart(2,'0'),p.x,p.y+38);c.restore();}
+ // Only the physical goal throat can register a finish.
+ for(const hole of map.exits){const p=this.project(hole.x,hole.y??map.finish);c.save();c.fillStyle=map.accent;c.shadowColor=map.accent;c.shadowBlur=15;c.beginPath();c.ellipse(p.x,p.y,hole.width/2-1,23,0,0,Math.PI*2);c.fill();c.shadowBlur=0;c.fillStyle='#05050b';c.beginPath();c.ellipse(p.x,p.y+1,hole.width/2-6,18,0,0,Math.PI*2);c.fill();c.fillStyle='#b1a8c4';c.font='700 15px sans-serif';c.textAlign='center';c.fillText(hole.kind==='return'?'RETURN':'GOAL',p.x,p.y+38);c.restore();}
  p=this.project(310,map.finish-135);c.font='italic 800 16px sans-serif';c.fillStyle='#e6dfef';c.textAlign='center';c.fillText('F I N A L   D R O P',p.x,p.y);
  for(const b of [...race.balls].filter(b=>!b.finished).sort((a,b)=>a.y-b.y)){
-  if(!reduced&&Math.hypot(b.vx,b.vy)>190)this.line(b.x-b.vx*.038,b.y-b.vy*.038,b.x,b.y,b.color+'55',6,9);
-  p=this.project(b.x,b.y,10);if(selection===b.id){c.strokeStyle='#fff';c.lineWidth=2;c.beginPath();c.arc(p.x,p.y,18,0,Math.PI*2);c.stroke();}
+  if(b.hold?.kind==='cannon')continue;const portal=returnPose(b,race.raceTime);if(portal&&!portal.visible)continue;
+  if(!b.portal&&!reduced&&Math.hypot(b.vx,b.vy)>190)this.line(b.x-b.vx*.038,b.y-b.vy*.038,b.x,b.y,b.color+'55',6,9);
+  p=this.project(b.x,b.y,portal?portal.height*60:10);if(selection===b.id){c.strokeStyle='#fff';c.lineWidth=2;c.beginPath();c.arc(p.x,p.y,18,0,Math.PI*2);c.stroke();}
   // A radial sphere highlight gives each equal physical marble a rounded appearance.
   const shade=c.createRadialGradient(p.x-4,p.y-5,1,p.x+2,p.y+3,13);shade.addColorStop(0,'#fff');shade.addColorStop(.22,b.color);shade.addColorStop(.72,b.color);shade.addColorStop(1,'#302433');
   c.fillStyle='#0006';c.beginPath();c.ellipse(p.x+5,p.y+14,12,5,0,0,Math.PI*2);c.fill();c.fillStyle=shade;c.beginPath();c.arc(p.x,p.y,12,0,Math.PI*2);c.fill();c.fillStyle='#fff9';c.beginPath();c.arc(p.x-4,p.y-5,2,0,Math.PI*2);c.fill();
