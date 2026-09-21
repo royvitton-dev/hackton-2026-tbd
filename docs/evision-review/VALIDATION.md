@@ -30,6 +30,7 @@
 - IONIQ 6 벽 / ID.4 다른 차량이 누끼에 포함: 원본 교체 후 실제 rembg 재생성과 육안 검수. 이전 실패 이력 유지.
 - Model Y 다운로드 timeout: 미완성 GLB를 성공 처리하지 않고 이어받기 후 길이 검증/최적화.
 - 개발 서버 종료 및 동시 빌드 간섭: 별도 3101 포트의 프로덕션 검수 구성 추가.
+- 실행 중인 프로덕션 서버가 이전 빌드의 page/webpack JavaScript를 요청해 HTTP 404 발생: 검증한 빌드 복사본으로 데모를 복구. Chrome에서 Model 3의 681,368 triangles와 Battery Info 화면을 다시 확인. 재발 방지를 위해 `npm run demo` 빌드 복사본 실행 명령 추가.
 - Playwright reducedMotion 옵션 타입 오류: contextOptions로 수정 후 typecheck/build 통과.
 
 ## 남은 제약

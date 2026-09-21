@@ -57,6 +57,18 @@ npm run build
 npm run start
 ```
 
+작업 중 계속 열어 둘 데모는 빌드 복사본으로 실행합니다.
+
+```sh
+npm run build
+npm run demo
+# 다른 포트: npm run demo -- --port 3103
+```
+
+`demo`는 완성된 `.next`, public asset과 설정을 임시 디렉터리에 복사해 실행합니다. 이후 작업 폴더에서 빌드하거나 Git 브랜치를 바꿔도 실행 중인 화면의 JavaScript/GLB 경로가 유지됩니다. 새 결과를 보려면 데모를 종료한 뒤 다시 실행합니다. 의존성은 현재 `node_modules`를 사용하므로 의존성을 변경한 뒤에도 다시 실행해야 합니다. 임시 복사본은 정상 종료할 때 제거합니다.
+
+`npm run start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:3000/?user=U0002 입니다. IONIQ 5 등 GLB 미확보 차량은 로딩을 기다려도 나타나지 않으며, 아래 모델 준비 현황을 확인하세요.
+
 ## 데이터 기준
 
 원본: `battery_health/resoures/ev_battery_health_mock_data_10000_v2.xlsx`.

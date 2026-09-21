@@ -8,6 +8,7 @@
     "dev": "next dev",
     "build": "next build --webpack",
     "start": "next start",
+    "demo": "node scripts/serve-vehicle-demo.mjs",
     "lint": "eslint src scripts tests",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
