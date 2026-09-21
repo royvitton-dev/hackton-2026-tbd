@@ -53,3 +53,8 @@ CLI HTTPS 인증 실패는 Fork에 저장된 토큰이 CLI 자격 증명 도우�
 ## 2026-09-21T22:03:22.259594+09:00 — 강한 스윙·9대포·지정 기본 이름
 
 main `789866bb653d285ad7f6149e384223743cfa4054` 직접 커밋. Fork 일반 Push 뒤 실제 원격 main 해시 일치 및 깨끗한 작업트리 확인. 4188 미리보기를 `main-789866bb653d`로 원자적으로 전환했다. 첫 열기·새로고침 모두21개실행파일의바이트가해당커밋과일치하고기본명단5개가정확함을23-pushed-preview로확인했다.
+
+
+## 2026-09-21 22:34 KST — Mac / Android packaging
+
+Packaging source commit: `1c857b5811a0f4e18c1b3a28ca7c18400cbba99d`. Two normal push attempts were rejected because other tasks advanced remote main. No pinball conflicts were found. Remote work was preserved with normal merges, including `aea4cba`, `b314b3a`, and `2131c72`. The last fetch/merge was performed after preparing the Fork push dialog, then normal Push succeeded. The remote main hash exactly matched `2131c72f70bfb0e609928b94b7d535d3ba389c41`; worktree clean. The source commit is included. No force push or token extraction occurred. The local preview was switched to main-2131c72f70bf.

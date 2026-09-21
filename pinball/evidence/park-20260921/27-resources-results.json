@@ -1,0 +1,1177 @@
+{
+  "at": "2026-09-21T13:40:19.001Z",
+  "base": "http://127.0.0.1:4189/dist/index.html",
+  "status": "PASS",
+  "tests": [
+    {
+      "device": "desktop",
+      "status": "PASS",
+      "mapSelections": 30,
+      "startPauseResetCycles": 25,
+      "balls": 60,
+      "baseline": {
+        "neon": {
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 97,
+            "triangles": 67624,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        "orbit": {
+          "graphics": {
+            "geometries": 89,
+            "textures": 10,
+            "programs": 22,
+            "drawCalls": 91,
+            "triangles": 73576,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        "zigzag": {
+          "graphics": {
+            "geometries": 77,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 81,
+            "triangles": 61344,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        "split": {
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 79,
+            "triangles": 63612,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        "parade": {
+          "graphics": {
+            "geometries": 98,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 96,
+            "triangles": 70444,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        }
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "map": "neon",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 97,
+            "triangles": 67624,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 1,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 89,
+            "textures": 10,
+            "programs": 22,
+            "drawCalls": 91,
+            "triangles": 73576,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 1,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 77,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 81,
+            "triangles": 61344,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 1,
+          "map": "split",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 79,
+            "triangles": 63612,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 1,
+          "map": "parade",
+          "graphics": {
+            "geometries": 98,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 96,
+            "triangles": 70444,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "neon",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 97,
+            "triangles": 67624,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 89,
+            "textures": 10,
+            "programs": 22,
+            "drawCalls": 91,
+            "triangles": 73576,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 77,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 81,
+            "triangles": 61344,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "split",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 79,
+            "triangles": 63612,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "parade",
+          "graphics": {
+            "geometries": 98,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 96,
+            "triangles": 70444,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "neon",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 97,
+            "triangles": 67624,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 89,
+            "textures": 10,
+            "programs": 22,
+            "drawCalls": 91,
+            "triangles": 73576,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 77,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 81,
+            "triangles": 61344,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "split",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 79,
+            "triangles": 63612,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "parade",
+          "graphics": {
+            "geometries": 98,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 96,
+            "triangles": 70444,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "neon",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 97,
+            "triangles": 67624,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 89,
+            "textures": 10,
+            "programs": 22,
+            "drawCalls": 91,
+            "triangles": 73576,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 77,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 81,
+            "triangles": 61344,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "split",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 79,
+            "triangles": 63612,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "parade",
+          "graphics": {
+            "geometries": 98,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 96,
+            "triangles": 70444,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "neon",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 97,
+            "triangles": 67624,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 89,
+            "textures": 10,
+            "programs": 22,
+            "drawCalls": 91,
+            "triangles": 73576,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 77,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 81,
+            "triangles": 61344,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "split",
+          "graphics": {
+            "geometries": 76,
+            "textures": 10,
+            "programs": 21,
+            "drawCalls": 79,
+            "triangles": 63612,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "parade",
+          "graphics": {
+            "geometries": 98,
+            "textures": 10,
+            "programs": 23,
+            "drawCalls": 96,
+            "triangles": 70444,
+            "pixelRatio": 1
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        }
+      ],
+      "before": {
+        "Documents": 1,
+        "JSEventListeners": 78,
+        "Nodes": 826,
+        "JSHeapUsedSize": 8349716
+      },
+      "after": {
+        "Documents": 1,
+        "JSEventListeners": 78,
+        "Nodes": 832,
+        "JSHeapUsedSize": 9364340
+      },
+      "errors": [],
+      "limits": "Chrome counters and forced-GC heap sample; not OS/GPU allocation or an Android WebView measurement."
+    },
+    {
+      "device": "mobile-emulation",
+      "status": "PASS",
+      "mapSelections": 30,
+      "startPauseResetCycles": 25,
+      "balls": 60,
+      "baseline": {
+        "neon": {
+          "graphics": {
+            "geometries": 80,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 115,
+            "triangles": 73790,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        "orbit": {
+          "graphics": {
+            "geometries": 93,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 130,
+            "triangles": 81674,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        "zigzag": {
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 108,
+            "triangles": 68950,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        "split": {
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 123,
+            "triangles": 72246,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        "parade": {
+          "graphics": {
+            "geometries": 105,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 133,
+            "triangles": 80798,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        }
+      },
+      "cycles": [
+        {
+          "cycle": 1,
+          "map": "neon",
+          "graphics": {
+            "geometries": 80,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 115,
+            "triangles": 73790,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 1,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 93,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 130,
+            "triangles": 81674,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 1,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 108,
+            "triangles": 68950,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 1,
+          "map": "split",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 123,
+            "triangles": 72246,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 1,
+          "map": "parade",
+          "graphics": {
+            "geometries": 105,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 133,
+            "triangles": 80798,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "neon",
+          "graphics": {
+            "geometries": 80,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 115,
+            "triangles": 73790,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 93,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 130,
+            "triangles": 81674,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 108,
+            "triangles": 68950,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "split",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 123,
+            "triangles": 72246,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 2,
+          "map": "parade",
+          "graphics": {
+            "geometries": 105,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 133,
+            "triangles": 80798,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "neon",
+          "graphics": {
+            "geometries": 80,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 115,
+            "triangles": 73790,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 93,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 130,
+            "triangles": 81674,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 108,
+            "triangles": 68950,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "split",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 123,
+            "triangles": 72246,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 3,
+          "map": "parade",
+          "graphics": {
+            "geometries": 105,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 133,
+            "triangles": 80798,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "neon",
+          "graphics": {
+            "geometries": 80,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 115,
+            "triangles": 73790,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 93,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 130,
+            "triangles": 81674,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 108,
+            "triangles": 68950,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "split",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 123,
+            "triangles": 72246,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 4,
+          "map": "parade",
+          "graphics": {
+            "geometries": 105,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 133,
+            "triangles": 80798,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "neon",
+          "graphics": {
+            "geometries": 80,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 115,
+            "triangles": 73790,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "orbit",
+          "graphics": {
+            "geometries": 93,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 130,
+            "triangles": 81674,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "zigzag",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 22,
+            "drawCalls": 108,
+            "triangles": 68950,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "split",
+          "graphics": {
+            "geometries": 82,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 123,
+            "triangles": 72246,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 4,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        },
+        {
+          "cycle": 5,
+          "map": "parade",
+          "graphics": {
+            "geometries": 105,
+            "textures": 11,
+            "programs": 23,
+            "drawCalls": 133,
+            "triangles": 80798,
+            "pixelRatio": 1.5
+          },
+          "labels": 60,
+          "devices": 11,
+          "overlays": 1,
+          "angles": 1,
+          "progress": 60,
+          "state": "ready",
+          "renderer": "webgl"
+        }
+      ],
+      "before": {
+        "Documents": 1,
+        "JSEventListeners": 78,
+        "Nodes": 826,
+        "JSHeapUsedSize": 8523880
+      },
+      "after": {
+        "Documents": 1,
+        "JSEventListeners": 78,
+        "Nodes": 833,
+        "JSHeapUsedSize": 9806936
+      },
+      "errors": [],
+      "limits": "Chrome counters and forced-GC heap sample; not OS/GPU allocation or an Android WebView measurement."
+    }
+  ]
+}

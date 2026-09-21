@@ -181,3 +181,18 @@
 ## 25 - Desktop and Android delivery
 
 [Actual packaging work, retained failures, tests and untested native Android behavior](25-packaging.md).
+
+
+## 26 — User extended continuation until 2026-09-22 09:00 KST
+
+Existing heartbeat drop-land-23 was updated, not duplicated: every15minutes, until2026-09-22T00:00:00Z. It preserves ongoing work, requires actual main push verification, immediate preview publication, meaningful tests, rebuilt Mac/APK outputs for game changes, and honest native Android limitations. Goal remains active; the earlier21/23hour deadlines are superseded. Packaging commit1c857b5 reached remote main2131c72 after preserving concurrent external commits.
+
+
+## 27 — 2026-09-21 22:45 KST 반복 렌더링 자원·실제 탭 생명주기
+
+- PC1440×1000,모바일390×844/DPR2에서 각5맵을30회선택하고60개공으로25회시작·정지·초기화했다. 매맵의geometry/texture/program수와공60개이름표·진행점·장치표시·오버레이수가같은맵의첫기준과정확히일치했다. 원더가든은대기/섞기까지만검사했고출구구조재시도는하지않았다. 27-resources-results.json과PC/모바일스크린샷보존.
+- 강제GC후JSheap은PC8,349,716→9,364,340bytes,모바일8,523,880→9,806,936bytes였다. 제한된프레임통계표본등을포함한측정이며프로세스전체메모리/GPU할당량이나장시간무누수를보장하는수치는아니다. Documents1/JSEventListeners78은유지됐다. 페이지오류0건.
+- 실제일반Chrome에서다른탭으로전환해섞기·카운트다운·경기진행3단계가자동정지됨을검증했다. 숨김900ms및복귀250ms동안전체snapshot동일,명시적재개후같은경기ID/해당단계유지와공위치이동을확인했다. 실제AndroidWebView시험은아니다. 27c-tab-lifecycle-results.json,Chrome종료확인포함.
+- 최초27/27b탭검사는5초timeout으로실패보존했다. Playwright자체CDP세션이포커스에뮬레이션의capturer를유지하므로별도CDP세션에서false로설정해도해제되지않았다. 번들crPage.js/Chromium소스확인후강제포커스를사용하지않는임시프로필일반Chrome+rawCDP로검사해3/3통과. document.hidden덮어쓰기나visibilitychange합성이아니다. 테스트환경원인이며제품코드는변경하지않았다.
+- 참고: https://playwright.dev/docs/pages#multiple-pages 및 https://chromium.googlesource.com/chromium/src/+/ce37893fc2edd6144ef3e346dc703a5a4f340006/content/browser/devtools/protocol/emulation_handler.cc
+- 이번묶음은검사/증빙/기한문서변경뿐이다. 게임실행파일은2131c72의21파일과동일하며Mac/APK에게임변경은없다. main직접커밋·일반푸시확인은별도전달기록에기록한다.

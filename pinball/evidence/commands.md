@@ -87,3 +87,10 @@ node tests/browser.mjs
 ## Package build commands
 
 [Mac and Android build/test commands](park-20260921/25-packaging.md).
+
+
+## 27 반복 자원·실제 탭 (22:39–22:45 KST)
+
+- `PLAYWRIGHT_MODULE_PATH=/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/playwright/index.mjs node tests/renderer-lifecycle.mjs` — PC/모바일2/2,총50시작정지초기화사이클.
+- `EVIDENCE_PREFIX=27c node tests/tab-lifecycle.mjs` — rawCDP,임시프로필일반Chrome,실제숨김3/3. 기본Chrome경로는macOS이며다른환경은CHROME_PATH로지정한다. Node24내장WebSocket을사용했다.
+- 두검사는 `http://127.0.0.1:4189/dist/index.html`의현재21파일빌드를검사했다. BASE_URL로대상변경가능. 최초27/27b탭실패로그별도보존.
