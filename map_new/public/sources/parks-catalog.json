@@ -1,0 +1,90 @@
+[
+  {
+    "id": "park-boramae",
+    "siteId": "park-boramae",
+    "name": "보라매공원",
+    "address": "서울특별시 동작구 여의대방로20길 33",
+    "buildingType": "park",
+    "source": "https://gov.seoul.go.kr/festa/files/2025/05/682bc1be350963.28180700.pdf#page=1",
+    "publisher": "서울특별시",
+    "acquiredAt": "2026-09-21T16:19:42.172Z",
+    "sourceDocument": {
+      "file": "sources/park-boramae.pdf",
+      "sha256": "951b8fb4450b2605f67a99369e945b3d420ce46f5711e91cb9665249eb6c1d58",
+      "bytes": 2482095
+    },
+    "sourceAsset": {
+      "file": "sources/park-boramae.png",
+      "url": "https://gov.seoul.go.kr/festa/files/2025/05/682bc1be350963.28180700.pdf",
+      "label": "공원 안내도",
+      "kind": "park-guide",
+      "sourcePage": 1,
+      "sha256": "7c04b98cd49652f805baf1508c5b74e84184040fc5820ef03fe9ef8cb31908be",
+      "bytes": 1059812
+    },
+    "location": {
+      "lat": 37.4932422,
+      "lng": 126.920474,
+      "precision": "park-centroid",
+      "source": "https://www.openstreetmap.org/way/286555214",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "bounds": [
+        37.490273,
+        37.4962073,
+        126.9158909,
+        126.9261166
+      ],
+      "checkedAt": "2026-09-21T16:19:41.071Z"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 1250,
+    "parkingEvidence": {
+      "note": "서울시 2025 공원 안내도. P 주차장과 장애인 전용 주차장 범례 확인. 개별 주차면 치수는 제공되지 않습니다.",
+      "currentFacilityStatus": "not-surveyed"
+    }
+  },
+  {
+    "id": "park-seoul-forest",
+    "siteId": "park-seoul-forest",
+    "name": "서울숲",
+    "address": "서울특별시 성동구 뚝섬로 273",
+    "buildingType": "park",
+    "source": "https://www.seoul.go.kr/festa/files/2026/03/69a93ec17497e4.06719720.pdf#page=5",
+    "publisher": "서울특별시",
+    "acquiredAt": "2026-09-21T16:19:44.220Z",
+    "sourceDocument": {
+      "file": "sources/park-seoul-forest.pdf",
+      "sha256": "c6bd1b71e4556daed6f58d456b741d951bc6c6466c5363e2a0450a44f54306dd",
+      "bytes": 3362491
+    },
+    "sourceAsset": {
+      "file": "sources/park-seoul-forest.png",
+      "url": "https://www.seoul.go.kr/festa/files/2026/03/69a93ec17497e4.06719720.pdf",
+      "label": "공원 안내도",
+      "kind": "park-guide",
+      "sourcePage": 5,
+      "sha256": "dd1afd2495d0dbfda8e82c7c1202a857ce23becb43dd0d9d76c18e426604d41d",
+      "bytes": 841681
+    },
+    "location": {
+      "lat": 37.5435916,
+      "lng": 127.0447397,
+      "precision": "park-centroid",
+      "source": "https://www.openstreetmap.org/node/6312484234",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "bounds": [
+        37.5385916,
+        37.5485916,
+        127.0397397,
+        127.0497397
+      ],
+      "checkedAt": "2026-09-21T16:19:43.119Z"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 1200,
+    "parkingEvidence": {
+      "note": "서울시 2026-02-27 안내 자료 5쪽. 당시 이용 안내도이며 현재 운영·공사 현황을 뜻하지 않습니다. 오른쪽 아래 서울숲 주차장 표기.",
+      "currentFacilityStatus": "not-surveyed"
+    }
+  }
+]

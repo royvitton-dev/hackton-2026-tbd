@@ -83,8 +83,21 @@ export function createGlobe(parent){
   trees.push({point,scale:.4+rand()*.6,color:i%13===0?'#d9a1bf':['#759d55','#a0b95e','#618c50','#8eb16e'][i%4]});
  }
  const trunks=new THREE.InstancedMesh(new THREE.CylinderGeometry(.055,.08,.72,6),material('#877755'),trees.length),crowns=new THREE.InstancedMesh(new THREE.IcosahedronGeometry(.65,1),material('#ffffff',{roughness:.94}),trees.length*3),dummy=new THREE.Object3D(),matrix=new THREE.Matrix4(),local=new THREE.Matrix4(),color=new THREE.Color();
- trees.forEach((tree,i)=>{dummy.position.copy(tree.point);dummy.quaternion.setFromUnitVectors(up,tree.point.clone().normalize());dummy.scale.setScalar(tree.scale);dummy.updateMatrix();local.makeTranslation(0,.36,0);matrix.multiplyMatrices(dummy.matrix,local);trunks.setMatrixAt(i,matrix);
-  for(let j=0;j<3;j++){local.compose(new THREE.Vector3(Math.sin(j*2.4)*.2,.8+j*.25,Math.cos(j*2.4)*.18),new THREE.Quaternion(),new THREE.Vector3(.8,1,.8));matrix.multiplyMatrices(dummy.matrix,local);crowns.setMatrixAt(i*3+j,matrix);crowns.setColorAt(i*3+j,color.set(tree.color).multiplyScalar(.9+j*.055));}});
+ let clearingCount=-1;
+ function setAttractionClearings(count){
+  if(count===clearingCount)return;clearingCount=count;
+  const centers=Array.from({length:count},(_,i)=>new THREE.Vector3().fromArray(surfacePoint(...themeCoordinates(i))));let visible=0;
+  // Keep the original woodland data so removing an attraction restores its trees.
+  for(const tree of trees){
+   if(centers.some(center=>center.distanceTo(tree.point)<6.2))continue;
+   const i=visible++;dummy.position.copy(tree.point);dummy.quaternion.setFromUnitVectors(up,tree.point.clone().normalize());dummy.scale.setScalar(tree.scale);dummy.updateMatrix();local.makeTranslation(0,.36,0);matrix.multiplyMatrices(dummy.matrix,local);trunks.setMatrixAt(i,matrix);
+   for(let j=0;j<3;j++){local.compose(new THREE.Vector3(Math.sin(j*2.4)*.2,.8+j*.25,Math.cos(j*2.4)*.18),new THREE.Quaternion(),new THREE.Vector3(.8,1,.8));matrix.multiplyMatrices(dummy.matrix,local);crowns.setMatrixAt(i*3+j,matrix);crowns.setColorAt(i*3+j,color.set(tree.color).multiplyScalar(.9+j*.055));}
+  }
+  trunks.count=visible;crowns.count=visible*3;
+  for(const mesh of [trunks,crowns]){mesh.instanceMatrix.needsUpdate=true;mesh.computeBoundingSphere();}
+  crowns.instanceColor.needsUpdate=true;
+ }
+ setAttractionClearings(0);
  for(const mesh of [trunks,crowns]){mesh.castShadow=true;mesh.receiveShadow=true;mesh.userData.dynamic=true;root.add(mesh);}crowns.name='Planet woodland';
  for(let i=0;i<18;i++){
   const anchor=surfaceAnchor(root,i%2?45:-37,-70+i*19);anchor.scale.setScalar(.48+rand()*.2);box(anchor,1.65,1.5,1.4,['#ead2b1','#d6c5d9','#c6d6ba'][i%3],0,.75,0);
@@ -94,7 +107,7 @@ export function createGlobe(parent){
  }
  const vertices=[];for(let i=0;i<400;i++){const a=rand()*Math.PI*2,y=rand()*2-1,r=Math.sqrt(1-y*y);vertices.push(Math.cos(a)*r*145,y*145,Math.sin(a)*r*145);}
  const stars=new THREE.Points(new THREE.BufferGeometry().setAttribute('position',new THREE.Float32BufferAttribute(vertices,3)),new THREE.PointsMaterial({color:'#ead7ff',size:.22,transparent:true,opacity:.7,sizeAttenuation:true,depthWrite:false}));stars.visible=false;stars.name='Storybook stars';root.add(stars);staticBatch(root);
- return {root,terrain,stars,animations,ready:Promise.resolve(),setNight:night=>{stars.visible=night;terrainMaterial.emissiveIntensity=night?.35:.08;water.emissiveIntensity=night?.3:.12;}};
+ return {root,terrain,stars,animations,setAttractionClearings,ready:Promise.resolve(),setNight:night=>{stars.visible=night;terrainMaterial.emissiveIntensity=night?.35:.08;water.emissiveIntensity=night?.3:.12;}};
 }
 
 export function createThemeIsland(parent,index,color){

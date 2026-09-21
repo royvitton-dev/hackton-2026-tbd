@@ -1,0 +1,70 @@
+// The raster detector and explicit annotated-SVG exchange format originate in map/.
+// Keep that source unchanged; all extensions and conversion outputs live here.
+import {analyzeBlueprint,analyzeSvg as parseSvg,validatePlan as validateV1} from '../vendor/analysis-v1.js';
+import {distance,localPosition} from './geometry.js';
+import {graphFromLayers} from './layers.js';
+export {analyzeBlueprint};
+const finite=Number.isFinite;
+export function validatePlan(plan) {
+  validateV1(plan);
+  const edgeIds=new Set(),nodes=new Map(plan.nodes.map(n=>[n.id,n]));
+  for(const node of plan.nodes){
+    if(typeof node.id!=='string'||(node.y!==undefined&&!finite(node.y))||Math.max(Math.abs(node.x),Math.abs(node.z))>100000)throw Error('노드 좌표가 올바르지 않습니다.');
+  }
+  for(const edge of plan.edges){
+    if(typeof edge.id!=='string'||!edge.id||edgeIds.has(edge.id)||edge.from===edge.to||distance(nodes.get(edge.from),nodes.get(edge.to))<.001)throw Error('중복되거나 길이가 없는 경로입니다.');
+    if(edge.height!==undefined&&(!finite(edge.height)||edge.height<=0))throw Error('통로 높이가 올바르지 않습니다.');
+    if(edge.oneWay!==undefined&&typeof edge.oneWay!=='boolean')throw Error('일방통행 값이 올바르지 않습니다.');
+    edgeIds.add(edge.id);
+  }
+  const spaces=new Set();
+  for(const s of plan.spaces){
+    if(!s.id||spaces.has(s.id)||![s.x,s.z,s.width,s.depth].every(finite)||s.width<=0||s.depth<=0)throw Error('주차 구역 좌표가 올바르지 않습니다.');
+    spaces.add(s.id);
+  }
+  return plan;
+}
+export function analyzeSvg(text) {
+  const plan=parseSvg(text),attrs=tag=>Object.fromEntries([...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map(m=>[m[1],m[2]]));
+  const graph=graphFromLayers(text);
+  if(graph){if(plan.edges.length||plan.nodes.length)throw Error('차로 레이어와 명시적 그래프를 한 도면에서 혼용할 수 없습니다.');plan.nodes=graph.nodes;plan.edges=graph.edges;plan.graphAnalysis={method:graph.method,sourceLaneCount:graph.sourceLaneCount};plan.routingReady=true;}
+  for(const match of text.matchAll(/<(circle|line)\b[^>]*>/g)){
+    const a=attrs(match[0]);
+    const item=(a['data-kind']==='node'?plan.nodes:plan.edges).find(n=>n.id===a.id);
+    if(!item)continue;
+    if(a['data-y']!==undefined)item.y=Number(a['data-y']);
+    if(a['data-floor'])item.floor=a['data-floor'];
+    if(a['data-zone'])item.zone=a['data-zone'];
+    if(a['data-connection'])item.kind=a['data-connection'];
+    if(a['data-height']&&a['data-kind']==='edge')item.height=Number(a['data-height']);
+    if(a['data-verified'])item.verified=a['data-verified']==='true';
+  }
+  return validatePlan(plan);
+}
+// Indexed cuboids are standalone model data, not just a Three.js rendering hint.
+export function compileMeshes(plan) {
+  validatePlan(plan);
+  const indices=[0,2,1,0,3,2,4,5,6,4,6,7,0,1,5,0,5,4,2,3,7,2,7,6,1,2,6,1,6,5,3,0,4,3,4,7];
+  const meshes=plan.walls.map((w,i)=>{
+    const length=Math.hypot(w.x2-w.x1,w.z2-w.z1),nx=length?-(w.z2-w.z1)/length*w.thickness/2:0,nz=length?(w.x2-w.x1)/length*w.thickness/2:0;
+    const corners=[[w.x1+nx,w.z1+nz],[w.x2+nx,w.z2+nz],[w.x2-nx,w.z2-nz],[w.x1-nx,w.z1-nz]];
+    return {id:`wall-${i}`,kind:'wall',positions:[0,w.height].flatMap(y=>corners.flatMap(([x,z])=>[x,y+(w.y||0),z])),indices:[...indices]};
+  });
+  return {version:1,units:'meters',coordinateSystem:'drawing-x-right-y-up-z-down',meshes,nodes:plan.nodes,graph:plan.edges,spaces:plan.spaces,source:plan.provenance||null};
+}
+// Roads retain their source IDs and coordinate provenance. An explicit surveyed
+// portal is mandatory; never infer an entrance from a building centroid.
+export function connectRoads(plan,roads,portal) {
+  validatePlan(plan);
+  if(!portal?.verified||!plan.anchor||!roads.nodes?.length||!roads.edges?.length)throw Error('검증된 도로·진입점·기준 좌표가 필요합니다.');
+  const entry=plan.nodes.find(n=>n.id===portal.indoorId),road=roads.nodes.find(n=>n.id===portal.roadId);
+  if(!entry||!road)throw Error('진입점 노드를 찾을 수 없습니다.');
+  const projected=roads.nodes.map(n=>({...n,...localPosition(n,plan.anchor),id:`road:${n.id}`,zone:'road'}));
+  const end=projected.find(n=>n.id===`road:${road.id}`);
+  const gap=distance(entry,end);
+  if(gap>.5&&!portal.path)throw Error('도로와 입구 사이에는 명시적인 연결 경로가 필요합니다.');
+  const middle=(portal.path||[]).map((p,i)=>({...p,id:`portal:${i}`,zone:'entry'}));
+  const joined=[end,...middle,entry];
+  const connectors=joined.slice(1).map((n,i)=>({id:`portal-edge:${i}`,from:joined[i].id,to:n.id,width:portal.width,height:portal.height,modes:['car','person'],kind:'entrance',verified:true}));
+  return validatePlan({...plan,nodes:[...plan.nodes,...projected,...middle],edges:[...plan.edges,...roads.edges.map(e=>({...e,id:`road:${e.id}`,from:`road:${e.from}`,to:`road:${e.to}`})),...connectors]});
+}

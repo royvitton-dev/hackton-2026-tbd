@@ -1,0 +1,798 @@
+[
+  {
+    "id": "changdong-b2",
+    "siteId": "changdong",
+    "sourceDocument": {
+      "file": "sources/changdong-parking-source.pdf",
+      "sha256": "5a5ed94416d48d77141977f192e78dabc788b8ecb3707acf50f4fd519c85a295",
+      "bytes": 7965912
+    },
+    "acquiredAt": "2026-09-21T08:38:23.048Z",
+    "name": "동북권 복합시설 · B2 주차장",
+    "address": "서울특별시 도봉구 창동 · 공개 계획도",
+    "buildingType": "public",
+    "publisher": "서울특별시",
+    "source": "https://mediahub.seoul.go.kr/wp-content/uploads/2020/03/ff42c687eb729c49cb070336a85c9abc.pdf#page=16",
+    "sourceAsset": {
+      "file": "sources/changdong-parking-b2.png",
+      "sha256": "891b63ffd187e2c2825b70ab6b958f99c5432cd2967a444f192bc2afaab1fc72",
+      "bytes": 621061,
+      "sourcePage": 16
+    },
+    "annotation": "sources/changdong-parking-annotated.svg",
+    "scaleStatus": "estimated",
+    "parkingEvidence": {
+      "floor": "B2",
+      "note": "공개 PDF 16쪽 주차장 평면도. 차로·코어는 분석자가 수동 주석; 축척 추정.",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "location": null,
+    "modelFile": "generated/changdong-b2.json",
+    "statistics": {
+      "walls": 24,
+      "nodes": 11,
+      "edges": 12,
+      "spaces": 81,
+      "triangles": 288
+    },
+    "routingReady": true,
+    "modelHash": "7e219f9c04c217303979ee12df8038d98efb01c4a55ce96b3e3af6514315d547"
+  },
+  {
+    "id": "10000901-0",
+    "siteId": "10000901",
+    "name": "신내소행주 - 공동육아형 공동체주택 [너나들이]",
+    "address": "서울 중랑구 신내역로1길 145 너나들이",
+    "acquiredAt": "2026-09-21T08:30:08.582Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000901&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10000901-0.jpg",
+      "label": "신내소행주 - 공동육아형 공동체주택 [너나들이]_평면도_12",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA6408ABDDE050007F01002F05&fileSn=21",
+      "bytes": 336882,
+      "sha256": "0579a33ec8152eada9ee9c8d2cc662f7e4002a64c84ccc9fcaf3213b8b2b6fc6"
+    },
+    "location": {
+      "lat": 37.6180982,
+      "lng": 127.1102204,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000901&menuNo=200015",
+      "independentCheck": {
+        "lat": 37.618107,
+        "lng": 127.110295,
+        "query": "서울 중랑구 신내역로1길 145 너나들이",
+        "precision": "address-result",
+        "displayName": "신내소행주 너나들이, 145, 신내역로1길, 신내1동, 중랑구, 서울특별시, 02263, 대한민국",
+        "bounds": [
+          37.6179862,
+          37.6182214,
+          127.109983,
+          127.1106999
+        ],
+        "source": "https://www.openstreetmap.org/way/843403989",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:41:59.795Z"
+      }
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "서울시 공개 평면도 상단: 차량 진입과 주차 차량 확인. 경계·차로는 분석가 추적, 교차점·주차구역 연결은 자동 생성. OSM 도로와 두 기준점 정합.",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "photo": {
+      "file": "photos/neonadeuli-exterior.jpg",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA6408ABDDE050007F01002F05&fileSn=15",
+      "sha256": "c15b5ad61d8e148461ad86180055ade9c9c81148a466b00796aa49e700ec48e7",
+      "bytes": 992732,
+      "publisher": "서울특별시 공동체주택 플랫폼",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000901&menuNo=200015",
+      "acquiredAt": "2026-09-21T15:20:24.130Z",
+      "rights": "서울시 공개 게시 사진. 별도 자유 재배포 라이선스 확인되지 않음.",
+      "review": "외관 직접 검토: 흰색 상부, 회색 하부, 어두운 기단, 검은 난간, 노란색 입면 부분. 공개 입주표 2–5층의 4개 주거층을 반영한 개념 재구성; 실측 아님.",
+      "facade": {
+        "residentialFloors": 4,
+        "baseHeight": 4,
+        "floorHeight": 2.8,
+        "upper": "#d5d4c3",
+        "lower": "#939292",
+        "base": "#41494a",
+        "accent": "#dbbd42",
+        "rail": "#303939"
+      }
+    },
+    "annotation": "sources/neonadeuli-layers.svg",
+    "footprint": [
+      {
+        "x": -17.494082851240446,
+        "y": 0,
+        "z": 12.467782969007416
+      },
+      {
+        "x": -20.932939863380827,
+        "y": 0,
+        "z": 2.504688542852705
+      },
+      {
+        "x": -9.716975455344114,
+        "y": 0,
+        "z": -1.3692297369387658
+      },
+      {
+        "x": -9.443630410734746,
+        "y": 0,
+        "z": -0.5788613525618723
+      },
+      {
+        "x": -2.0809493719052936,
+        "y": 0,
+        "z": -3.116945742251854
+      },
+      {
+        "x": -1.9222328938242805,
+        "y": 0,
+        "z": -2.6605358302025897
+      },
+      {
+        "x": 18.455199297526057,
+        "y": 0,
+        "z": -9.695927648292606
+      },
+      {
+        "x": 18.781449835246782,
+        "y": 0,
+        "z": -8.738580027356413
+      },
+      {
+        "x": 23.560579323251808,
+        "y": 0,
+        "z": -10.397240440576114
+      },
+      {
+        "x": 23.745748547261964,
+        "y": 0,
+        "z": -9.851774935642492
+      },
+      {
+        "x": 34.28275913518114,
+        "y": 0,
+        "z": -13.491922284409135
+      },
+      {
+        "x": 34.670732746318855,
+        "y": 0,
+        "z": -12.36759542691364
+      },
+      {
+        "x": 38.60337435581969,
+        "y": 0,
+        "z": -13.714561266224546
+      },
+      {
+        "x": 39.45867981713564,
+        "y": 0,
+        "z": -11.221004671790286
+      },
+      {
+        "x": 41.037027010121804,
+        "y": 0,
+        "z": -11.76647017672391
+      },
+      {
+        "x": 42.28030608382853,
+        "y": 0,
+        "z": -8.159718675585514
+      }
+    ],
+    "footprintSource": {
+      "source": "https://www.openstreetmap.org/way/843403989",
+      "license": "© OpenStreetMap contributors, ODbL 1.0",
+      "sha256": "8e45c8c71a3cc100330738195999f59a7f4cfbacb2fc4b23521178b5efc38fd7"
+    },
+    "modelFile": "generated/10000901-0.json",
+    "statistics": {
+      "walls": 16,
+      "nodes": 6,
+      "edges": 5,
+      "spaces": 3,
+      "triangles": 192
+    },
+    "routingReady": true,
+    "modelHash": "5e7f4ade7f6b725f32f1d37b7ea6611b059dc54b04643575e6617fbbce19413e"
+  },
+  {
+    "id": "20000555-0",
+    "siteId": "20000555",
+    "name": "어반그로잉 동숭",
+    "address": "서울 종로구 동숭동 192-6 1",
+    "acquiredAt": "2026-09-21T08:30:10.710Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000555-0.png",
+      "label": "어반그로잉 동숭_평면도_3",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=504806813443494d97388963c26a8317&fileSn=4",
+      "bytes": 86186,
+      "sha256": "78d0d7cf61bef7fef07a71f0902f668368ea5cbb66fa928a1fa7937b43170452"
+    },
+    "location": {
+      "lat": 37.58096,
+      "lng": 127.0051932,
+      "query": "서울 종로구 동숭동",
+      "precision": "address-area",
+      "displayName": "동숭동, 이화동, 종로구, 서울특별시, 03085, 대한민국",
+      "bounds": [
+        37.57096,
+        37.59096,
+        126.9951932,
+        127.0151932
+      ],
+      "source": "https://www.openstreetmap.org/node/5611290376",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:06.956Z"
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "modelFile": "generated/20000555-0.json",
+    "statistics": {
+      "walls": 7,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 84
+    },
+    "routingReady": false,
+    "modelHash": "272c5041c4cfb35cc371c660601625b4bb5d1a979efa421830561294b615d13c"
+  },
+  {
+    "id": "20000555-1",
+    "siteId": "20000555",
+    "name": "어반그로잉 동숭",
+    "address": "서울 종로구 동숭동 192-6 1",
+    "acquiredAt": "2026-09-21T08:30:10.710Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000555-1.png",
+      "label": "어반그로잉 동숭_평면도_4",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=504806813443494d97388963c26a8317&fileSn=5",
+      "bytes": 58763,
+      "sha256": "a7e2a50df2c9af8a95c9d2a9b38c8d6da89bdcfeb2fea1ac7bbbf551ac6fca12"
+    },
+    "location": {
+      "lat": 37.58096,
+      "lng": 127.0051932,
+      "query": "서울 종로구 동숭동",
+      "precision": "address-area",
+      "displayName": "동숭동, 이화동, 종로구, 서울특별시, 03085, 대한민국",
+      "bounds": [
+        37.57096,
+        37.59096,
+        126.9951932,
+        127.0151932
+      ],
+      "source": "https://www.openstreetmap.org/node/5611290376",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:06.956Z"
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "modelFile": "generated/20000555-1.json",
+    "statistics": {
+      "walls": 6,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 72
+    },
+    "routingReady": false,
+    "modelHash": "c01f1ea89436a8a5b48d8465ac22bface2c4b1d0e482e502f8456bd1ee53937f"
+  },
+  {
+    "id": "20000555-2",
+    "siteId": "20000555",
+    "name": "어반그로잉 동숭",
+    "address": "서울 종로구 동숭동 192-6 1",
+    "acquiredAt": "2026-09-21T08:30:10.710Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000555-2.png",
+      "label": "어반그로잉 동숭_평면도_5",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=504806813443494d97388963c26a8317&fileSn=6",
+      "bytes": 61561,
+      "sha256": "396861411f3315ff68c555a35e46ff320ce15827c2c6897dee4f622763e4973c"
+    },
+    "location": {
+      "lat": 37.58096,
+      "lng": 127.0051932,
+      "query": "서울 종로구 동숭동",
+      "precision": "address-area",
+      "displayName": "동숭동, 이화동, 종로구, 서울특별시, 03085, 대한민국",
+      "bounds": [
+        37.57096,
+        37.59096,
+        126.9951932,
+        127.0151932
+      ],
+      "source": "https://www.openstreetmap.org/node/5611290376",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:06.956Z"
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "modelFile": "generated/20000555-2.json",
+    "statistics": {
+      "walls": 6,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 72
+    },
+    "routingReady": false,
+    "modelHash": "8ea5c24afdc4dbd73ea442d8a9bca707e829dd01cb3e40b0e379b91fa52cdef2"
+  },
+  {
+    "id": "10002143-0",
+    "siteId": "10002143",
+    "name": "면목동 공동체주택마을 [도서당]",
+    "address": "서울특별시 중랑구 동일로631-3 (면목동) 앞 면목동 176-129번지",
+    "acquiredAt": "2026-09-21T08:30:23.359Z",
+    "buildingType": "public",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002143-0.jpg",
+      "label": "면목동 공동체주택마을 [도서당]_평면도_31",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA631EABDDE050007F01002F05&fileSn=115",
+      "bytes": 4095159,
+      "sha256": "aeaaa29b3491053c449bba01367b9e59a5ae009e5cec48235618b08442a74442"
+    },
+    "location": {
+      "lat": 37.6063,
+      "lng": 127.093,
+      "query": "서울특별시 중랑구",
+      "precision": "address-area",
+      "displayName": "중랑구, 서울특별시, 대한민국",
+      "bounds": [
+        37.56955,
+        37.6210737,
+        127.0693771,
+        127.1183601
+      ],
+      "source": "https://www.openstreetmap.org/relation/2419948",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:10.363Z"
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "modelFile": "generated/10002143-0.json",
+    "statistics": {
+      "walls": 39,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 468
+    },
+    "routingReady": false,
+    "modelHash": "b249996fdd1a4981c68023716926f385bf4a963fd514ab24f6ab8d3ca7b49012"
+  },
+  {
+    "id": "10002143-1",
+    "siteId": "10002143",
+    "name": "면목동 공동체주택마을 [도서당]",
+    "address": "서울특별시 중랑구 동일로631-3 (면목동) 앞 면목동 176-129번지",
+    "acquiredAt": "2026-09-21T08:30:23.359Z",
+    "buildingType": "public",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002143-1.jpg",
+      "label": "면목동 공동체주택마을 [도서당]_평면도_32",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA631EABDDE050007F01002F05&fileSn=117",
+      "bytes": 158871,
+      "sha256": "d20183340dc5fe4ed8e22bf752332c660d067158656271e17343369627f4ad95"
+    },
+    "location": {
+      "lat": 37.6063,
+      "lng": 127.093,
+      "query": "서울특별시 중랑구",
+      "precision": "address-area",
+      "displayName": "중랑구, 서울특별시, 대한민국",
+      "bounds": [
+        37.56955,
+        37.6210737,
+        127.0693771,
+        127.1183601
+      ],
+      "source": "https://www.openstreetmap.org/relation/2419948",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:10.363Z"
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "modelFile": "generated/10002143-1.json",
+    "statistics": {
+      "walls": 40,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 480
+    },
+    "routingReady": false,
+    "modelHash": "b958ec6883321d04bbc22200d8a8ec176e1e12be71ab72224288ba2485edc4e5"
+  },
+  {
+    "id": "10002143-2",
+    "siteId": "10002143",
+    "name": "면목동 공동체주택마을 [도서당]",
+    "address": "서울특별시 중랑구 동일로631-3 (면목동) 앞 면목동 176-129번지",
+    "acquiredAt": "2026-09-21T08:30:23.359Z",
+    "buildingType": "public",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002143-2.jpg",
+      "label": "면목동 공동체주택마을 [도서당]_평면도_33",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA631EABDDE050007F01002F05&fileSn=118",
+      "bytes": 2893170,
+      "sha256": "6eee0bcaf53b1646d2b7c2a21721a26f2ccc8206837e8f4587b41f6aeacfb5d0"
+    },
+    "location": {
+      "lat": 37.6063,
+      "lng": 127.093,
+      "query": "서울특별시 중랑구",
+      "precision": "address-area",
+      "displayName": "중랑구, 서울특별시, 대한민국",
+      "bounds": [
+        37.56955,
+        37.6210737,
+        127.0693771,
+        127.1183601
+      ],
+      "source": "https://www.openstreetmap.org/relation/2419948",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:10.363Z"
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "modelFile": "generated/10002143-2.json",
+    "statistics": {
+      "walls": 28,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 336
+    },
+    "routingReady": false,
+    "modelHash": "f30421b4b8ed4c6f7a509b352c8b52d5cf68280ef920cb8e3d7e8646ecc52186"
+  },
+  {
+    "id": "parking-159344-0",
+    "siteId": "parking-159344",
+    "name": "녹틸럭스",
+    "address": "서울시 강남구 봉은사로37길 45-11 (논현동)",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "building",
+    "source": "https://magazine.brique.co/project/noctilux-ciid/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/parking-159344-0.png",
+      "label": "1층 평면도 ©CIID",
+      "url": "https://media.brique.co/2025/11/1f-floor-plan-905x555.png",
+      "bytes": 29013,
+      "sha256": "899cda554bb68e53f8cf6dbf971f1a01c24ba15b38d31b434e85184d93e027e2"
+    },
+    "location": {
+      "lat": 37.5088724,
+      "lng": 127.0369323,
+      "query": "서울특별시 강남구 봉은사로37길 45-11",
+      "precision": "address-area",
+      "displayName": "봉은사로37길, 논현2동, 강남구, 서울특별시, 06135, 대한민국",
+      "bounds": [
+        37.5083154,
+        37.5093478,
+        127.0365105,
+        127.0372394
+      ],
+      "source": "https://www.openstreetmap.org/way/908671828",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:19.519Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "왼쪽 차량 6대와 주차 구획, Parking lot 범례",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "modelFile": "generated/parking-159344-0.json",
+    "statistics": {
+      "walls": 66,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 792
+    },
+    "routingReady": false,
+    "modelHash": "841995996440133f1ead3ccc194638d651d222062570ea49a93170a36b7a9bd6"
+  },
+  {
+    "id": "multilevel-dogok-0",
+    "siteId": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층 · B1",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "public",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "sourceAsset": {
+      "file": "sources/multilevel-dogok-0.png",
+      "label": "지하 1층 · 학교 주차장·특별교실",
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+      "bytes": 756379,
+      "sha256": "ec1281817d5c39212f55d8763042286b40ec4d4d70e58d96b0b5ed2effea77fc",
+      "floor": "B1",
+      "kind": "parking-plan",
+      "sourcePage": 17,
+      "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+      "cropNormalized": [
+        0.502,
+        0.44,
+        0.395,
+        0.225
+      ]
+    },
+    "location": {
+      "lat": 37.4925348,
+      "lng": 127.0449746,
+      "query": "도곡중학교",
+      "precision": "address-result",
+      "displayName": "도곡중학교, 언주로57길, 도곡동, 도곡1동, 강남구, 서울특별시, 06273, 대한민국",
+      "bounds": [
+        37.4919393,
+        37.4930401,
+        127.0443661,
+        127.0457928
+      ],
+      "source": "https://www.openstreetmap.org/way/417952853",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 90,
+    "modelFile": "generated/multilevel-dogok-0.json",
+    "statistics": {
+      "walls": 85,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 1020
+    },
+    "routingReady": false,
+    "modelHash": "cbd71f58cc2f30e2d9e4c474fd11e6a0165598a1e57efbbc22605b694493c13f"
+  },
+  {
+    "id": "multilevel-dogok-1",
+    "siteId": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층 · B2",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "public",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "sourceAsset": {
+      "file": "sources/multilevel-dogok-1.png",
+      "label": "지하 2층 · 병원 측 주차장",
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+      "bytes": 649771,
+      "sha256": "4b701b475eb5814c8c779f40b5a87230ae53f259fce99d96918864cb7f7876e8",
+      "floor": "B2",
+      "kind": "parking-plan",
+      "sourcePage": 17,
+      "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+      "cropNormalized": [
+        0.102,
+        0.44,
+        0.395,
+        0.225
+      ]
+    },
+    "location": {
+      "lat": 37.4925348,
+      "lng": 127.0449746,
+      "query": "도곡중학교",
+      "precision": "address-result",
+      "displayName": "도곡중학교, 언주로57길, 도곡동, 도곡1동, 강남구, 서울특별시, 06273, 대한민국",
+      "bounds": [
+        37.4919393,
+        37.4930401,
+        127.0443661,
+        127.0457928
+      ],
+      "source": "https://www.openstreetmap.org/way/417952853",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 90,
+    "modelFile": "generated/multilevel-dogok-1.json",
+    "statistics": {
+      "walls": 63,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 756
+    },
+    "routingReady": false,
+    "modelHash": "c844287342c15380653f6551d1724605990c08dfe4f5df86b299a68e4b942391"
+  },
+  {
+    "id": "multilevel-dogok-2",
+    "siteId": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층 · B3",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "public",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "sourceAsset": {
+      "file": "sources/multilevel-dogok-2.png",
+      "label": "지하 3층 · 병원 측 주차장",
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+      "bytes": 796493,
+      "sha256": "450c734e12e3e1675509694f75cb3c48e603e608e17f115e5f120ef95b600e42",
+      "floor": "B3",
+      "kind": "parking-plan",
+      "sourcePage": 17,
+      "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+      "cropNormalized": [
+        0.502,
+        0.196,
+        0.395,
+        0.241
+      ]
+    },
+    "location": {
+      "lat": 37.4925348,
+      "lng": 127.0449746,
+      "query": "도곡중학교",
+      "precision": "address-result",
+      "displayName": "도곡중학교, 언주로57길, 도곡동, 도곡1동, 강남구, 서울특별시, 06273, 대한민국",
+      "bounds": [
+        37.4919393,
+        37.4930401,
+        127.0443661,
+        127.0457928
+      ],
+      "source": "https://www.openstreetmap.org/way/417952853",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 90,
+    "modelFile": "generated/multilevel-dogok-2.json",
+    "statistics": {
+      "walls": 54,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 648
+    },
+    "routingReady": false,
+    "modelHash": "1b476f2e2c1a112593f6d65453abbba1a67885d274e2490a6234799903683225"
+  },
+  {
+    "id": "multilevel-dogok-3",
+    "siteId": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층 · B4",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "public",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "sourceAsset": {
+      "file": "sources/multilevel-dogok-3.png",
+      "label": "지하 4층 · 병원 측 주차장",
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+      "bytes": 781685,
+      "sha256": "68cffede0c299507ac72bfb9a5ca76be2401d514f5b22f9e034760aa3cf93fd4",
+      "floor": "B4",
+      "kind": "parking-plan",
+      "sourcePage": 17,
+      "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+      "cropNormalized": [
+        0.102,
+        0.196,
+        0.395,
+        0.241
+      ]
+    },
+    "location": {
+      "lat": 37.4925348,
+      "lng": 127.0449746,
+      "query": "도곡중학교",
+      "precision": "address-result",
+      "displayName": "도곡중학교, 언주로57길, 도곡동, 도곡1동, 강남구, 서울특별시, 06273, 대한민국",
+      "bounds": [
+        37.4919393,
+        37.4930401,
+        127.0443661,
+        127.0457928
+      ],
+      "source": "https://www.openstreetmap.org/way/417952853",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 90,
+    "modelFile": "generated/multilevel-dogok-3.json",
+    "statistics": {
+      "walls": 43,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "triangles": 516
+    },
+    "routingReady": false,
+    "modelHash": "b76a7ce306569488a691a3f8c83c6f57e1f5aae75ca1be3702f96b4e000a9bbd"
+  },
+  {
+    "id": "integration-lab",
+    "name": "도로 → 주차·EV · 검증용 시나리오",
+    "buildingType": "test",
+    "sourceAsset": {
+      "file": "sources/integration-lab.svg"
+    },
+    "annotation": "sources/integration-lab.svg",
+    "synthetic": true,
+    "modelFile": "generated/integration-lab.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 15,
+      "edges": 16,
+      "spaces": 20,
+      "triangles": 0
+    },
+    "routingReady": true,
+    "modelHash": "f960a29c9600a94ce3bdab531c3c3290a5e7bc03c8c5e51c2fd8a7e5c13d2682"
+  }
+]

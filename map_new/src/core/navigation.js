@@ -1,0 +1,116 @@
+import {distance,project,pointAt} from './geometry.js';
+import {validatePlan} from './analysis.js';
+export {pointAt};
+export const DEFAULT_VEHICLE=Object.freeze({width:1.9,length:4.6,height:1.8,turnRadius:5.2,speed:3.5,clearance:.2});
+function settings(options){
+  const o={mode:'car',hazards:[],blocked:[],...options,vehicle:{...DEFAULT_VEHICLE,...options.vehicle}};
+  if(!['car','person'].includes(o.mode)||Object.values(o.vehicle).some(n=>!Number.isFinite(n)||n<=0)||!Array.isArray(o.hazards)||o.hazards.some(h=>![h.x,h.z,h.radius,h.y??0].every(Number.isFinite)||h.radius<0))throw Error('이동 모드·차량 제원·위험 위치를 확인하세요.');
+  return o;
+}
+function allowed(edge,o){
+  return edge.modes.includes(o.mode)&&!o.blocked.includes(edge.id)&&edge.width>=(o.mode==='car'?o.vehicle.width+2*o.vehicle.clearance:.8)&&!(o.mode==='car'&&(['stairs','elevator'].includes(edge.kind)||(edge.height??Infinity)<o.vehicle.height))&&!(o.hazards.length&&edge.kind==='elevator');
+}
+function dangerous(p,o,margin=0){
+  return o.hazards.some(h=>Math.abs((p.y||0)-(h.y||0))<=(h.verticalRadius??2)&&Math.hypot(p.x-h.x,p.z-h.z)<=h.radius+margin);
+}
+function edgeRisk(a,b,o){
+  let risk=1;
+  for(const h of o.hazards){
+    const q=project({...h,y:h.y||0},a,b),gap=Math.hypot(q.x-h.x,q.z-h.z),margin=o.mode==='car'?o.vehicle.width/2:.35;
+    if(Math.abs(q.y-(h.y||0))>(h.verticalRadius??2))continue;
+    if(gap<=h.radius+margin)return Infinity;
+    risk+=Math.max(0,1-(gap-h.radius-margin)/8)*4;
+  }
+  return risk;
+}
+// Circular fillets enforce curvature. Each search state carries the tangent
+// consumed by its preceding turn so adjacent arcs cannot overlap.
+export function turn(a,b,c,radius,usedTangent=0){
+  const incoming=distance(a,b),outgoing=distance(b,c);
+  if(!incoming||!outgoing)return null;
+  const u={x:(b.x-a.x)/incoming,z:(b.z-a.z)/incoming},v={x:(c.x-b.x)/outgoing,z:(c.z-b.z)/outgoing};
+  const angle=Math.acos(Math.max(-1,Math.min(1,u.x*v.x+u.z*v.z)));
+  if(angle<.005)return {points:[],tangent:0,angle:0};
+  if(Math.abs((a.y||0)-(b.y||0))>.01||Math.abs((b.y||0)-(c.y||0))>.01||angle>Math.PI-.05)return null;
+  const tangent=radius*Math.tan(angle/2);
+  if(tangent>incoming-usedTangent||tangent>outgoing)return null;
+  const sign=Math.sign(u.x*v.z-u.z*v.x),start={x:b.x-u.x*tangent,y:b.y||0,z:b.z-u.z*tangent};
+  const center={x:start.x-u.z*sign*radius,z:start.z+u.x*sign*radius},startAngle=Math.atan2(start.z-center.z,start.x-center.x);
+  const count=Math.max(6,Math.ceil(radius*angle/.25));
+  const points=Array.from({length:count+1},(_,i)=>{const t=startAngle+sign*angle*i/count;return {x:center.x+Math.cos(t)*radius,y:b.y||0,z:center.z+Math.sin(t)*radius,heading:Math.atan2(-Math.sin(t)*sign,Math.cos(t)*sign)};});
+  return {points,tangent,angle};
+}
+function corners(p,v){
+  const sin=Math.sin(p.heading),cos=Math.cos(p.heading),halfW=v.width/2+v.clearance,halfL=v.length/2+v.clearance;
+  return [-1,1].flatMap(side=>[-1,0,1].map(end=>({x:p.x+cos*halfW*side+sin*halfL*end,y:p.y||0,z:p.z-sin*halfW*side+cos*halfL*end})));
+}
+function sweptClear(p,plan,nodeMap,o,edges=plan.edges){
+  const footprint=o.mode==='car'?corners(p,o.vehicle):[p];
+  const radius=o.mode==='car'?o.vehicle.width/2:.35;
+  if(dangerous(p,o,radius))return false;
+  return footprint.every(q=>!dangerous(q,o,o.mode==='person'?.35:0)&&edges.some(e=>allowed(e,o)&&project(q,nodeMap.get(e.from),nodeMap.get(e.to)).distance<=e.width/2)&&!plan.walls.some(w=>Math.abs((w.y||0)-(q.y||0))<2&&project(q,{x:w.x1,y:q.y,z:w.z1},{x:w.x2,y:q.y,z:w.z2}).distance<=w.thickness/2));
+}
+export function route(plan,startId,endId,options={}){
+  validatePlan(plan);const o=settings(options),nodes=new Map(plan.nodes.map(n=>[n.id,n]));
+  if(!nodes.has(startId)||!nodes.has(endId)||dangerous(nodes.get(startId),o)||dangerous(nodes.get(endId),o))return null;
+  if(startId===endId)return {ids:[startId],edges:[],points:[nodes.get(startId)],distance:0,seconds:0,cost:0,destination:nodes.get(endId),mode:o.mode};
+  const start={id:startId,previous:null,via:null,cost:0,key:JSON.stringify([null,startId])},open=[start],best=new Map([[start.key,0]]),came=new Map();let finish;
+  while(open.length){
+    open.sort((a,b)=>b.cost-a.cost);const current=open.pop();
+    if(current.cost!==best.get(current.key))continue;
+    if(current.id===endId){finish=current;break;}
+    for(const e of plan.edges){
+      const next=e.from===current.id?e.to:e.to===current.id&&(!e.oneWay||o.mode==='person')?e.from:null;
+      if(!next||next===current.previous||!allowed(e,o))continue;
+      const a=nodes.get(current.id),b=nodes.get(next),risk=edgeRisk(a,b,o);
+      if(!Number.isFinite(risk))continue;
+      // Even a declared graph edge cannot pass through a wall in the drawing.
+      const count=Math.ceil(distance(a,b)/.4);
+      if(Array.from({length:count+1},(_,i)=>({x:a.x+(b.x-a.x)*i/count,y:(a.y||0)+((b.y||0)-(a.y||0))*i/count,z:a.z+(b.z-a.z)*i/count,heading:Math.atan2(b.x-a.x,b.z-a.z)})).some(p=>!sweptClear(p,plan,nodes,o,[e])))continue;
+      let bend;
+      if(o.mode==='car'&&current.previous){
+        bend=turn(nodes.get(current.previous),a,b,o.vehicle.turnRadius,current.bend?.tangent||0);
+        const incoming=plan.edges.find(x=>x.id===current.via);
+        if(!bend||bend.points.some(p=>!sweptClear(p,plan,nodes,o,[incoming,e])))continue;
+      }
+      const key=JSON.stringify([current.id,next,e.id,bend?.tangent||0]),cost=current.cost+distance(a,b)*risk;
+      if(cost>=(best.get(key)??Infinity))continue;
+      const state={id:next,previous:current.id,via:e.id,cost,key,bend};
+      best.set(key,cost);came.set(key,current);open.push(state);
+    }
+  }
+  if(!finish)return null;
+  const states=[finish];while(states[0].key!==start.key)states.unshift(came.get(states[0].key));
+  const points=[nodes.get(startId)];
+  for(let i=1;i<states.length-1;i++){
+    const bend=states[i+1].bend;
+    if(bend?.points.length)points.push(...bend.points);else points.push(nodes.get(states[i].id));
+  }
+  points.push(nodes.get(endId));
+  const length=points.slice(1).reduce((sum,p,i)=>sum+distance(points[i],p),0);
+  return {ids:states.map(s=>s.id),edges:states.slice(1).map(s=>s.via),points,distance:length,cost:finish.cost,seconds:length/(o.mode==='car'?o.vehicle.speed:options.walkSpeed||1.3),destination:nodes.get(endId),mode:o.mode,objective:'minimum-risk-weighted-graph-distance'};
+}
+export function evacuation(plan,startId,options={}){
+  return plan.nodes.filter(n=>['shelter','exit'].includes(n.kind)&&n.safe===true).map(n=>route(plan,startId,n.id,{...options,mode:'person'})).filter(Boolean).sort((a,b)=>a.cost-b.cost)[0]||null;
+}
+export function attachPosition(plan,position,options={}){
+  const o=settings(options),nodes=new Map(plan.nodes.map(n=>[n.id,n]));let best;
+  for(const e of plan.edges){if(!allowed(e,o))continue;const p=project(position,nodes.get(e.from),nodes.get(e.to));if(p.distance<=e.width/2&&(!best||p.distance<best.p.distance))best={e,p};}
+  if(!best)return null;
+  const {e,p}=best,id='@position';
+  if(plan.nodes.some(n=>n.id===id))throw Error('현재 위치 식별자가 이미 사용 중입니다.');
+  if(distance(position,nodes.get(e.from))<.01)return {plan,startId:e.from};
+  if(distance(position,nodes.get(e.to))<.01)return {plan,startId:e.to};
+  // Preserve actual location, avoid accidentally bridging adjacent unconnected lanes.
+  const node={...position,y:position.y||0,id,kind:'position',zone:nodes.get(e.from).zone};
+  return {plan:{...plan,nodes:[...plan.nodes,node],edges:[...plan.edges.filter(x=>x!==e),{...e,id:e.id+':a',to:id},{...e,id:e.id+':b',from:id}]},startId:id,projection:p};
+}
+export function moveAgent(plan,pose,input,delta,options={}){
+  const o=settings(options),nodes=new Map(plan.nodes.map(n=>[n.id,n]));
+  if(!Number.isFinite(delta)||delta<0||![input.forward,input.turn].every(Number.isFinite))throw Error('이동 입력이 올바르지 않습니다.');
+  const dt=Math.min(delta,.1),forward=Math.max(-1,Math.min(1,input.forward)),steer=Math.max(-1,Math.min(1,input.turn)),speed=o.mode==='car'?o.vehicle.speed:1.3;
+  const step=forward*speed*dt;
+  const yaw=o.mode==='car'?step/o.vehicle.turnRadius*steer:steer*2*dt;
+  const next={...pose,heading:pose.heading+yaw,x:pose.x+Math.sin(pose.heading+yaw/2)*step,z:pose.z+Math.cos(pose.heading+yaw/2)*step};
+  return sweptClear(next,plan,nodes,o)?next:pose;
+}

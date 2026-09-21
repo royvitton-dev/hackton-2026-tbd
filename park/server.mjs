@@ -11,6 +11,7 @@ import { createTradingProxy } from './server/trading-proxy.mjs';
 import { directory, voiceGuide } from './server/pages.mjs';
 import { infrastructurePlugin } from '../map/src/server/infrastructure.js';
 import { loadEnv } from 'vite';
+import {startVerification,verificationState} from '../map_new/scripts/runtime.mjs';
 import { createParkRouterTradingStartup } from '../trading/scripts/park-router-startup.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
@@ -19,6 +20,7 @@ const port = Number(process.env.PORT || process.env.PARK_PORT || 5190);
 const serverStateFile = process.env.PARK_SERVER_STATE_FILE || path.join(root, '.park-runtime/server.json');
 const mime = { '.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.png':'image/png','.jpg':'image/jpeg','.jpeg':'image/jpeg','.svg':'image/svg+xml','.webp':'image/webp','.mp4':'video/mp4','.webm':'video/webm','.wav':'audio/wav','.vtt':'text/vtt; charset=utf-8','.glb':'model/gltf-binary','.woff2':'font/woff2','.woff':'font/woff','.wasm':'application/wasm','.pdf':'application/pdf','.md':'text/plain; charset=utf-8' };
 const clients = new Set();
+let parkingVerifier;
 const json = (res,data,status=200) => {res.writeHead(status,{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store'});res.end(JSON.stringify(data));};
 const html = (res,body) => {res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});res.end(body);};
 const notFound = res => json(res,{error:'Not found'},404);
@@ -70,6 +72,7 @@ const server = http.createServer(async (req,res) => {
   if(url.pathname.startsWith('/api/')){
    if(origin&&originHost!==req.headers.host)return json(res,{error:'Origin denied'},403);
    if(url.pathname==='/api/park')return json(res,await catalog());
+   if(url.pathname==='/api/parking-verification')return json(res,verificationState(root));
    if(url.pathname==='/api/events'){
     res.writeHead(200,{'Content-Type':'text/event-stream','Cache-Control':'no-cache',Connection:'keep-alive'});res.write('retry: 3000\n\n');clients.add(res);req.on('close',()=>clients.delete(res));return;
    }
@@ -95,6 +98,8 @@ const server = http.createServer(async (req,res) => {
    }
    return notFound(res);
   }
+  const parkingReport=/^\/(?:map_new\/reports|reports\/map_new)\/(.*)$/.exec(url.pathname);
+  if(parkingReport){const rel=decodeURIComponent(parkingReport[1])||'index.html';res.setHeader('Cache-Control','no-store');return await sendFile(req,res,path.resolve(root,'reports',rel.endsWith('/')?rel+'index.html':rel),path.join(root,'reports'));}
   const report=/^\/(?:park\/)?reports\/(.*)$/.exec(url.pathname);
   if(report){const rel=decodeURIComponent(report[1])||'index.html';return await sendFile(req,res,path.resolve(root,'park/reports',rel.endsWith('/')?rel+'index.html':rel),path.join(root,'park/reports'));}
   const app=matchApp(url.pathname);if(!app)return notFound(res);
@@ -130,6 +135,7 @@ const updates=setInterval(async()=>{try{const data=await catalog(),encoded=JSON.
 server.listen(port,'127.0.0.1',async()=>{
  await mkdir(path.dirname(serverStateFile),{recursive:true});await writeFile(serverStateFile,JSON.stringify({pid:process.pid,port,router:true}));
  console.log(`TBD shared server: http://localhost:${port}/projects/`);
+ if(!production)parkingVerifier=startVerification(root);
  prepareTrading().then(result=>{
   console.log(JSON.stringify({event:'trading_prepared',...result}));
  }).catch(error=>{
@@ -137,5 +143,5 @@ server.listen(port,'127.0.0.1',async()=>{
  });
 });
 server.on('error',error=>{console.error(error.message);process.exit(1);});
-async function stop(){clearInterval(updates);for(const client of clients)client.end();await apps.close();server.close(()=>process.exit(0));server.closeIdleConnections();}
+async function stop(){parkingVerifier?.kill('SIGTERM');clearInterval(updates);for(const client of clients)client.end();await apps.close();server.close(()=>process.exit(0));server.closeIdleConnections();}
 process.on('SIGINT',stop);process.on('SIGTERM',stop);

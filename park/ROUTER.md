@@ -7,15 +7,16 @@ npm ci
 npm --prefix map ci
 npm --prefix dopamin ci
 npm --prefix webpage ci
-npm --prefix battery_health ci
 # 기존 pnpm 환경이면 trading/frontend에서 pnpm install --frozen-lockfile 사용 가능
 npm --prefix trading/frontend install --package-lock=false
 npm run dev
 ```
 
+배터리 화면은 http://localhost:5190/battery_health/?user=U0037 에서 최신 EVision 3D 앱으로 열립니다. 예전 `/vehicle/` 링크도 쿼리와 하위 경로를 보존해 `/battery_health/`로 이동합니다. `battery_health/` 폴더의 예전 Vite MVP는 통합 빌드에서 제외하고 소스만 보존합니다.
+
 기본 주소는 http://localhost:5190/projects/ 입니다. `/`는 `/park/`로 이동합니다. `PORT` 또는 `PARK_PORT`로 포트를 변경할 수 있습니다. 원격 공개가 아닌 로컬 루프백 서버입니다.
 
-`park/server/routes.mjs`가 각 폴더의 경로를 정의합니다. 개발 시 Vite 앱은 middlewareMode로 같은 Node HTTP 서버와 HMR WebSocket을 사용합니다. Next.js EVision도 같은 서버에서 `/vehicle/` 아래 요청과 업그레이드를 처리합니다. 브라우저 코드, 이미지, GLB, Draco 디코더, JSON, 도면, API와 게임 이미지의 기본 경로를 각 앱 아래로 맞췄습니다. `/apps/<프로젝트>/` 링크는 새 경로로 리다이렉트합니다.
+`park/server/routes.mjs`가 각 폴더의 경로를 정의합니다. 개발 시 Vite 앱은 middlewareMode로 같은 Node HTTP 서버와 HMR WebSocket을 사용합니다. Next.js EVision도 같은 서버에서 `/battery_health/` 아래 요청과 업그레이드를 처리합니다. 브라우저 코드, 이미지, GLB, Draco 디코더, JSON, 도면, API와 게임 이미지의 기본 경로를 각 앱 아래로 맞췄습니다. `/apps/<프로젝트>/` 링크는 새 경로로 리다이렉트합니다.
 
 ```sh
 npm run build

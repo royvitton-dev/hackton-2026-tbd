@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1030 830" data-meters-per-unit="0.09" data-name="동북권 복합시설 · B2 주차장" data-source-kind="source-traced" data-scale-status="estimated">
+<line data-kind="wall" x1="8" y1="15" x2="62" y2="15" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="62" y1="15" x2="62" y2="0" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="62" y1="0" x2="124" y2="0" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="124" y1="0" x2="124" y2="45" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="124" y1="45" x2="220" y2="45" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="220" y1="45" x2="1025" y2="248" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="1025" y1="248" x2="1025" y2="828" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="1025" y1="828" x2="135" y2="828" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="135" y1="828" x2="114" y2="806" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="114" y1="806" x2="8" y2="240" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="8" y1="240" x2="8" y2="15" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="10" y1="203" x2="160" y2="203" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="10" y1="203" x2="60" y2="547" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="60" y1="547" x2="220" y2="547" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="220" y1="547" x2="220" y2="760" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="220" y1="760" x2="1024" y2="760" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="220" y1="760" x2="246" y2="825" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="220" y1="45" x2="220" y2="164" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="220" y1="164" x2="300" y2="189" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="300" y1="65" x2="300" y2="205" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="300" y1="205" x2="460" y2="244" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="460" y1="105" x2="460" y2="244" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="697" y1="173" x2="697" y2="295" data-height="3.3" stroke-width="4"/>
+<line data-kind="wall" x1="697" y1="295" x2="1020" y2="295" data-height="3.3" stroke-width="4"/>
+<circle id="entrance" data-kind="node" data-role="entrance" data-label="차량 램프 입구" data-heading="0" cx="662" cy="318"/>
+<circle id="top" data-kind="node" data-role="junction" data-label="북측 차로" data-heading="0" cx="662" cy="354"/>
+<circle id="tl" data-kind="node" data-role="junction" data-label="서북 차로" data-heading="0" cx="344" cy="354"/>
+<circle id="tr" data-kind="node" data-role="junction" data-label="동북 차로" data-heading="0" cx="924" cy="354"/>
+<circle id="ml" data-kind="node" data-role="junction" data-label="서측 차로" data-heading="0" cx="344" cy="540"/>
+<circle id="mr" data-kind="node" data-role="junction" data-label="동측 차로" data-heading="0" cx="924" cy="540"/>
+<circle id="bl" data-kind="node" data-role="junction" data-label="서남 차로" data-heading="0" cx="344" cy="723"/>
+<circle id="br" data-kind="node" data-role="junction" data-label="동남 차로" data-heading="0" cx="924" cy="723"/>
+<circle id="A" data-kind="node" data-role="building" data-label="서측 상부 코어 접근" data-heading="0" cx="324" cy="354"/>
+<circle id="B" data-kind="node" data-role="building" data-label="서측 하부 코어 접근" data-heading="0" cx="344" cy="514"/>
+<circle id="C" data-kind="node" data-role="building" data-label="동측 코어 접근" data-heading="0" cx="924" cy="514"/>
+<line id="entrance-top" data-kind="edge" data-from="entrance" data-to="top" data-width="5" data-modes="car,person"/>
+<line id="top-tl" data-kind="edge" data-from="top" data-to="tl" data-width="5" data-modes="car,person"/>
+<line id="top-tr" data-kind="edge" data-from="top" data-to="tr" data-width="5" data-modes="car,person"/>
+<line id="tl-B" data-kind="edge" data-from="tl" data-to="B" data-width="5" data-modes="car,person"/>
+<line id="B-ml" data-kind="edge" data-from="B" data-to="ml" data-width="5" data-modes="car,person"/>
+<line id="tr-C" data-kind="edge" data-from="tr" data-to="C" data-width="5" data-modes="car,person"/>
+<line id="C-mr" data-kind="edge" data-from="C" data-to="mr" data-width="5" data-modes="car,person"/>
+<line id="ml-mr" data-kind="edge" data-from="ml" data-to="mr" data-width="5" data-modes="car,person"/>
+<line id="ml-bl" data-kind="edge" data-from="ml" data-to="bl" data-width="5" data-modes="car,person"/>
+<line id="mr-br" data-kind="edge" data-from="mr" data-to="br" data-width="5" data-modes="car,person"/>
+<line id="bl-br" data-kind="edge" data-from="bl" data-to="br" data-width="5" data-modes="car,person"/>
+<line id="tl-A" data-kind="edge" data-from="tl" data-to="A" data-width="5" data-modes="car,person"/>
+<rect id="core-a" data-kind="space" data-role="core" data-label="상부 코어" x="160" y="203" width="110" height="82"/>
+<rect id="core-b" data-kind="space" data-role="core" data-label="서측 코어" x="104" y="384" width="115" height="108"/>
+<rect id="core-c" data-kind="space" data-role="core" data-label="동측 코어" x="770" y="395" width="114" height="112"/>
+<rect id="p0" data-kind="space" data-role="parking" data-label="" x="402" y="398" width="27" height="53"/>
+<rect id="p1" data-kind="space" data-role="parking" data-label="" x="432" y="398" width="27" height="53"/>
+<rect id="p2" data-kind="space" data-role="parking" data-label="" x="462" y="398" width="27" height="53"/>
+<rect id="p3" data-kind="space" data-role="parking" data-label="" x="492" y="398" width="27" height="53"/>
+<rect id="p4" data-kind="space" data-role="parking" data-label="" x="522" y="398" width="27" height="53"/>
+<rect id="p5" data-kind="space" data-role="parking" data-label="" x="552" y="398" width="27" height="53"/>
+<rect id="p6" data-kind="space" data-role="parking" data-label="" x="582" y="398" width="27" height="53"/>
+<rect id="p7" data-kind="space" data-role="parking" data-label="" x="612" y="398" width="27" height="53"/>
+<rect id="p8" data-kind="space" data-role="parking" data-label="" x="642" y="398" width="27" height="53"/>
+<rect id="p9" data-kind="space" data-role="parking" data-label="" x="672" y="398" width="27" height="53"/>
+<rect id="p10" data-kind="space" data-role="parking" data-label="" x="702" y="398" width="27" height="53"/>
+<rect id="p11" data-kind="space" data-role="parking" data-label="" x="402" y="455" width="27" height="53"/>
+<rect id="p12" data-kind="space" data-role="parking" data-label="" x="432" y="455" width="27" height="53"/>
+<rect id="p13" data-kind="space" data-role="parking" data-label="" x="462" y="455" width="27" height="53"/>
+<rect id="p14" data-kind="space" data-role="parking" data-label="" x="492" y="455" width="27" height="53"/>
+<rect id="p15" data-kind="space" data-role="parking" data-label="" x="522" y="455" width="27" height="53"/>
+<rect id="p16" data-kind="space" data-role="parking" data-label="" x="552" y="455" width="27" height="53"/>
+<rect id="p17" data-kind="space" data-role="parking" data-label="" x="582" y="455" width="27" height="53"/>
+<rect id="p18" data-kind="space" data-role="parking" data-label="" x="612" y="455" width="27" height="53"/>
+<rect id="p19" data-kind="space" data-role="parking" data-label="" x="642" y="455" width="27" height="53"/>
+<rect id="p20" data-kind="space" data-role="parking" data-label="" x="672" y="455" width="27" height="53"/>
+<rect id="p21" data-kind="space" data-role="parking" data-label="" x="702" y="455" width="27" height="53"/>
+<rect id="p22" data-kind="space" data-role="parking" data-label="" x="402" y="582" width="27" height="53"/>
+<rect id="p23" data-kind="space" data-role="parking" data-label="" x="432" y="582" width="27" height="53"/>
+<rect id="p24" data-kind="space" data-role="parking" data-label="" x="462" y="582" width="27" height="53"/>
+<rect id="p25" data-kind="space" data-role="parking" data-label="" x="492" y="582" width="27" height="53"/>
+<rect id="p26" data-kind="space" data-role="parking" data-label="" x="522" y="582" width="27" height="53"/>
+<rect id="p27" data-kind="space" data-role="parking" data-label="" x="552" y="582" width="27" height="53"/>
+<rect id="p28" data-kind="space" data-role="parking" data-label="" x="582" y="582" width="27" height="53"/>
+<rect id="p29" data-kind="space" data-role="parking" data-label="" x="612" y="582" width="27" height="53"/>
+<rect id="p30" data-kind="space" data-role="parking" data-label="" x="642" y="582" width="27" height="53"/>
+<rect id="p31" data-kind="space" data-role="parking" data-label="" x="672" y="582" width="27" height="53"/>
+<rect id="p32" data-kind="space" data-role="parking" data-label="" x="702" y="582" width="27" height="53"/>
+<rect id="p33" data-kind="space" data-role="parking" data-label="" x="402" y="641" width="27" height="53"/>
+<rect id="p34" data-kind="space" data-role="parking" data-label="" x="432" y="641" width="27" height="53"/>
+<rect id="p35" data-kind="space" data-role="parking" data-label="" x="462" y="641" width="27" height="53"/>
+<rect id="p36" data-kind="space" data-role="parking" data-label="" x="492" y="641" width="27" height="53"/>
+<rect id="p37" data-kind="space" data-role="parking" data-label="" x="522" y="641" width="27" height="53"/>
+<rect id="p38" data-kind="space" data-role="parking" data-label="" x="552" y="641" width="27" height="53"/>
+<rect id="p39" data-kind="space" data-role="parking" data-label="" x="582" y="641" width="27" height="53"/>
+<rect id="p40" data-kind="space" data-role="parking" data-label="" x="612" y="641" width="27" height="53"/>
+<rect id="p41" data-kind="space" data-role="parking" data-label="" x="642" y="641" width="27" height="53"/>
+<rect id="p42" data-kind="space" data-role="parking" data-label="" x="672" y="641" width="27" height="53"/>
+<rect id="p43" data-kind="space" data-role="parking" data-label="" x="702" y="641" width="27" height="53"/>
+<rect id="p44" data-kind="space" data-role="parking" data-label="" x="270" y="765" width="27" height="53"/>
+<rect id="p45" data-kind="space" data-role="parking" data-label="" x="300" y="765" width="27" height="53"/>
+<rect id="p46" data-kind="space" data-role="parking" data-label="" x="330" y="765" width="27" height="53"/>
+<rect id="p47" data-kind="space" data-role="parking" data-label="" x="360" y="765" width="27" height="53"/>
+<rect id="p48" data-kind="space" data-role="parking" data-label="" x="390" y="765" width="27" height="53"/>
+<rect id="p49" data-kind="space" data-role="parking" data-label="" x="420" y="765" width="27" height="53"/>
+<rect id="p50" data-kind="space" data-role="parking" data-label="" x="450" y="765" width="27" height="53"/>
+<rect id="p51" data-kind="space" data-role="parking" data-label="" x="480" y="765" width="27" height="53"/>
+<rect id="p52" data-kind="space" data-role="parking" data-label="" x="510" y="765" width="27" height="53"/>
+<rect id="p53" data-kind="space" data-role="parking" data-label="" x="540" y="765" width="27" height="53"/>
+<rect id="p54" data-kind="space" data-role="parking" data-label="" x="570" y="765" width="27" height="53"/>
+<rect id="p55" data-kind="space" data-role="parking" data-label="" x="600" y="765" width="27" height="53"/>
+<rect id="p56" data-kind="space" data-role="parking" data-label="" x="630" y="765" width="27" height="53"/>
+<rect id="p57" data-kind="space" data-role="parking" data-label="" x="660" y="765" width="27" height="53"/>
+<rect id="p58" data-kind="space" data-role="parking" data-label="" x="690" y="765" width="27" height="53"/>
+<rect id="p59" data-kind="space" data-role="parking" data-label="" x="720" y="765" width="27" height="53"/>
+<rect id="p60" data-kind="space" data-role="parking" data-label="" x="750" y="765" width="27" height="53"/>
+<rect id="p61" data-kind="space" data-role="parking" data-label="" x="780" y="765" width="27" height="53"/>
+<rect id="p62" data-kind="space" data-role="parking" data-label="" x="810" y="765" width="27" height="53"/>
+<rect id="p63" data-kind="space" data-role="parking" data-label="" x="840" y="765" width="27" height="53"/>
+<rect id="p64" data-kind="space" data-role="parking" data-label="" x="870" y="765" width="27" height="53"/>
+<rect id="p65" data-kind="space" data-role="parking" data-label="" x="900" y="765" width="27" height="53"/>
+<rect id="p66" data-kind="space" data-role="parking" data-label="" x="930" y="765" width="27" height="53"/>
+<rect id="p67" data-kind="space" data-role="parking" data-label="" x="968" y="405" width="48" height="27"/>
+<rect id="p68" data-kind="space" data-role="parking" data-label="" x="968" y="435" width="48" height="27"/>
+<rect id="p69" data-kind="space" data-role="parking" data-label="" x="968" y="465" width="48" height="27"/>
+<rect id="p70" data-kind="space" data-role="parking" data-label="" x="968" y="495" width="48" height="27"/>
+<rect id="p71" data-kind="space" data-role="parking" data-label="" x="968" y="525" width="48" height="27"/>
+<rect id="p72" data-kind="space" data-role="parking" data-label="" x="968" y="555" width="48" height="27"/>
+<rect id="p73" data-kind="space" data-role="parking" data-label="" x="968" y="585" width="48" height="27"/>
+<rect id="p74" data-kind="space" data-role="parking" data-label="" x="968" y="615" width="48" height="27"/>
+<rect id="p75" data-kind="space" data-role="parking" data-label="" x="968" y="645" width="48" height="27"/>
+<rect id="p76" data-kind="space" data-role="parking" data-label="" x="968" y="675" width="48" height="27"/>
+<rect id="p77" data-kind="space" data-role="parking" data-label="" x="968" y="705" width="48" height="27"/>
+</svg>

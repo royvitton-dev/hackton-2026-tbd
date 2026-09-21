@@ -1,6 +1,6 @@
 import path from 'node:path';
 import {createServer as createVite} from 'vite';
-import {APPS} from './routes.mjs';
+import {APPS,NEXT_BASE_PATH} from './routes.mjs';
 
 export function createAppMiddleware({root,server,port,production}){
  const pending=new Map();let nextApp;
@@ -19,7 +19,7 @@ export function createAppMiddleware({root,server,port,production}){
  }
  async function next(){
   if(!nextApp){
-   process.env.NEXT_PUBLIC_BASE_PATH='/vehicle';
+   process.env.NEXT_PUBLIC_BASE_PATH=NEXT_BASE_PATH;
    nextApp=import('next').then(async({default:next})=>{
     const app=next({dev:!production,dir:root,hostname:'127.0.0.1',port,httpServer:server,webpack:true});
     await app.prepare();return app;
@@ -33,7 +33,7 @@ export function createAppMiddleware({root,server,port,production}){
    return (await get(app)).middlewares(req,res,notFound);
   },
   async upgrade(req,socket,head){
-   if(req.url.startsWith('/vehicle/'))return (await next()).getUpgradeHandler()(req,socket,head);
+   if(req.url.startsWith(NEXT_BASE_PATH+'/'))return (await next()).getUpgradeHandler()(req,socket,head);
    // Each Vite instance attaches an upgrade listener to this same HTTP server.
   },
   async close(){await Promise.allSettled([...pending.values()].map(async p=>(await p).close()));if(nextApp)await (await nextApp).close();},
