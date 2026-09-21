@@ -1,0 +1,42 @@
+{
+  "at": "2026-09-21T11:13:27.853Z",
+  "tests": [
+    {
+      "device": "desktop",
+      "status": "PASS",
+      "defaultSpeed": 1.5,
+      "capturePause": "PASS",
+      "speedChangeDuringHold": "PASS",
+      "sameBrowserExactReplay": "PASS",
+      "deviceStats": {
+        "captures": 30,
+        "launches": 24,
+        "releases": 6
+      },
+      "finishCount": 59,
+      "exitIds": [
+        1
+      ],
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "status": "PASS",
+      "defaultSpeed": 1.5,
+      "capturePause": "PASS",
+      "speedChangeDuringHold": "PASS",
+      "sameBrowserExactReplay": "PASS",
+      "deviceStats": {
+        "captures": 30,
+        "launches": 24,
+        "releases": 6
+      },
+      "finishCount": 59,
+      "exitIds": [
+        1
+      ],
+      "errors": []
+    }
+  ],
+  "status": "PASS"
+}

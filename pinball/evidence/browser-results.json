@@ -1,102 +1,23 @@
 {
-  "at": "2026-09-21T09:55:53.610Z",
+  "at": "2026-09-21T11:15:52.996Z",
   "browser": "153.0.8010.48",
   "tests": [
     {
       "name": "PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count",
       "status": "PASS",
-      "ms": 3033,
+      "ms": 9736,
       "errors": [],
       "external": []
     },
     {
       "name": "PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay",
       "status": "PASS",
-      "ms": 47893,
-      "errors": [],
-      "external": []
-    },
-    {
-      "name": "4 map selection and real 60-ball maximum performance, last winner",
-      "status": "PASS",
-      "ms": 165181,
-      "errors": [],
-      "external": []
-    },
-    {
-      "name": "Mobile 390x844 touch: per-person balls → Nth → pause → result → replay",
-      "status": "PASS",
-      "ms": 41031,
-      "errors": [],
-      "external": []
-    },
-    {
-      "name": "Mobile maximum: 60 balls, reduced motion and frame timing",
-      "status": "PASS",
-      "ms": 38648,
-      "errors": [],
-      "external": []
-    },
-    {
-      "name": "Responsive, keyboard, mute, visibility pause",
-      "status": "PASS",
-      "ms": 736,
+      "ms": 19338,
       "errors": [],
       "external": []
     }
   ],
-  "performance": [
-    {
-      "map": "neon",
-      "device": "desktop 1440x1000",
-      "balls": 60,
-      "samples": 196,
-      "meanFrameCostMs": 3.1040816327024783,
-      "p95FrameCostMs": 4.5,
-      "p95FrameIntervalMs": 33.400000000000546,
-      "fps": 35.53041838880429
-    },
-    {
-      "map": "orbit",
-      "device": "desktop 1440x1000",
-      "balls": 60,
-      "samples": 215,
-      "meanFrameCostMs": 2.283255813859923,
-      "p95FrameCostMs": 3,
-      "p95FrameIntervalMs": 33.400000000001455,
-      "fps": 38.97469364078021
-    },
-    {
-      "map": "zigzag",
-      "device": "desktop 1440x1000",
-      "balls": 60,
-      "samples": 240,
-      "meanFrameCostMs": 1.997916666806365,
-      "p95FrameCostMs": 2.899999998509884,
-      "p95FrameIntervalMs": 33.39999999999418,
-      "fps": 43.1158378844496
-    },
-    {
-      "map": "split",
-      "device": "desktop 1440x1000",
-      "balls": 60,
-      "samples": 302,
-      "meanFrameCostMs": 1.945033112627189,
-      "p95FrameCostMs": 2.899999998509884,
-      "p95FrameIntervalMs": 33.30000000001746,
-      "fps": 54.090843960452816
-    },
-    {
-      "map": "neon",
-      "device": "mobile emulation 390x844 DPR2",
-      "balls": 60,
-      "samples": 270,
-      "meanFrameCostMs": 2.5703703703979652,
-      "p95FrameCostMs": 3.5,
-      "p95FrameIntervalMs": 33.399999999999636,
-      "fps": 48.79723843776546
-    }
-  ],
+  "performance": [],
   "limitations": [
     "Mobile Chrome viewport emulation, not a physical phone.",
     "Synthesized audio scheduling tested without human speaker listening.",

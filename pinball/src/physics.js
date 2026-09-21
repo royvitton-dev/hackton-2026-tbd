@@ -1,3 +1,4 @@
+import {deviceDefinitions,devicePose,attractDevices,holdDevices,captureDevices} from './devices.js';
 import {boardMotionAt} from './board-motion.js';
 export const MAX_BALLS=60, STEP=1/120, RADIUS=10;
 export const COLORS=['#c6ff58','#bca7ff','#ff82af','#64e4e0','#ffc168','#8daaff','#edeeed','#ff826c'];
@@ -22,24 +23,45 @@ const extraCourses={
 for(const map of MAPS){const extra=extraCourses[map.id];map.height=2240;map.finish=2150;map.sliders=extra.sliders;for(const key of ['pins','bumpers','rails','rotors'])map[key].push(...extra[key]);}
 // The short-course rotor in switchback is replaced by its fourth ramp.
 MAPS.find(m=>m.id==='zigzag').rotors=MAPS.find(m=>m.id==='zigzag').rotors.filter(r=>r.y!==893);
+// Cloud Coaster: five ramps, with two open ride courts replacing repetitive ramps.
+const cloud=MAPS.find(m=>m.id==='zigzag');
+cloud.rails=cloud.rails.filter(r=>![640,1195].includes(r.ay));
+cloud.bumpers.push({x:185,y:720,r:34},{x:435,y:760,r:34},{x:180,y:1220,r:29},{x:450,y:1260,r:29});
+cloud.rotors.push({x:310,y:1165,length:64,omega:.96,phase:.7});
+// Candy Orbit gains two late side attractions before its final exit dividers.
+const candy=MAPS.find(m=>m.id==='orbit');
+candy.bumpers.push({x:104,y:1995,r:27},{x:516,y:1995,r:27});
+candy.pins.push({x:62,y:1925,r:9},{x:558,y:1925,r:9},{x:155,y:2040,r:9},{x:465,y:2040,r:9});
 // Distinct, fixed speeds per ride: both directions, no dependence on participants.
-const rideSpeeds={neon:[.79,-1.13,1.49,-.94,1.72],orbit:[1.07,-1.56,.73,-1.31],zigzag:[-.86,1.39],split:[1.42,-.78,1.14,-1.63,.95]};
+const rideSpeeds={neon:[.79,-1.13,1.49,-.94,1.72],orbit:[1.07,-1.56,.73,-1.31],zigzag:[-.86,1.39,.96],split:[1.42,-.78,1.14,-1.63,.95]};
 for(const map of MAPS)map.rotors.forEach((r,i)=>{r.omega=rideSpeeds[map.id][i];});
 for(const map of MAPS){
  map.bumpers.forEach((b,i)=>{b.ride=['carousel','ufo','bumper-car'][i%3];});
  map.rotors.forEach((r,i)=>{r.ride=['teacups','windmill','pirate'][i%3];r.blades=r.ride==='windmill'?4:2;if(r.ride==='pirate')r.swing=.95;});
  map.sliders.forEach((s,i)=>{s.ride=i%2?'bumper-shuttle':'train';});
 }
+cloud.rotors.at(-1).ride='windmill';cloud.rotors.at(-1).blades=4;delete cloud.rotors.at(-1).swing;
+// A rotating flower gate opens and closes each Garden throat physically.
+const starlight=MAPS.find(m=>m.id==='neon');starlight.rotors.push({x:310,y:1970,length:56,omega:-.63,phase:.5,ride:'flower-gate',blades:2});
+const garden=MAPS.find(m=>m.id==='split');
+for(const [i,x]of [100,240,380,520].entries())garden.rotors.push({x:x-34,y:2105,length:30,omega:[.62,-.87,1.13,-.72][i],phase:i*.8,ride:'flower-gate',blades:2});
 export function rotorPose(rotor,time){
  const phase=rotor.phase+time*rotor.omega;
  return rotor.swing?{angle:Math.sin(phase)*rotor.swing,velocity:Math.cos(phase)*rotor.swing*rotor.omega}:{angle:phase,velocity:rotor.omega};
 }
-// Four real exit throats. Sloping divider rails prevent a flat dead zone between holes.
+// Real exit throats: Starlight has one central goal; other courses have four.
 for(const map of MAPS){
- map.exits=[100,240,380,520].map((x,i)=>({id:i+1,x,width:64}));
- map.rails.push({ax:30,ay:2040,bx:68,by:2120,r:8},{ax:552,ay:2120,bx:590,by:2040,r:8});
- for(let i=0;i<3;i++){const left=map.exits[i].x+32,right=map.exits[i+1].x-32,mid=(left+right)/2;map.rails.push({ax:left,ay:2120,bx:mid,by:2055,r:8},{ax:mid,ay:2055,bx:right,by:2120,r:8});}
- for(const hole of map.exits)map.rails.push({ax:hole.x-32,ay:2120,bx:hole.x-32,by:2178,r:8},{ax:hole.x+32,ay:2120,bx:hole.x+32,by:2178,r:8});
+ map.exits=(map.id==='neon'?[310]:[100,240,380,520]).map((x,i)=>({id:i+1,x,width:map.id==='neon'?80:64}));
+ map.rails.push({ax:30,ay:2040,bx:map.exits[0].x-map.exits[0].width/2,by:2120,r:8},{ax:map.exits.at(-1).x+map.exits.at(-1).width/2,ay:2120,bx:590,by:2040,r:8});
+ for(let i=0;i<map.exits.length-1;i++){const left=map.exits[i].x+map.exits[i].width/2,right=map.exits[i+1].x-map.exits[i+1].width/2,mid=(left+right)/2;map.rails.push({ax:left,ay:2120,bx:mid,by:2055,r:8},{ax:mid,ay:2055,bx:right,by:2120,r:8});}
+ for(const hole of map.exits)map.rails.push({ax:hole.x-hole.width/2,ay:2120,bx:hole.x-hole.width/2,by:2178,r:8},{ax:hole.x+hole.width/2,ay:2120,bx:hole.x+hole.width/2,by:2178,r:8});
+}
+// Funnel walls and magnet poles are real colliders, shared by every ball.
+for(const map of MAPS){
+ map.devices=deviceDefinitions(map.id);map.devicePoles=[];
+ for(const d of map.devices)if(d.kind==='cannon'){
+  map.rails.push({ax:d.x-60,ay:d.y-46,bx:d.x-24,by:d.y+9,r:5},{ax:d.x+60,ay:d.y-46,bx:d.x+24,by:d.y+9,r:5});
+ }else map.devicePoles.push({x:d.x-29,y:d.y,r:9},{x:d.x+29,y:d.y,r:9});
 }
 export const SAMPLE_NAMES=['하늘','지우','민준','서연','도윤','수빈','지호','예린','우진','다은','시우','소윤','준서','하린','건우','유나','현우','채원','지안','태오'];
 export function integer(value,min,max,label){const s=String(value).trim();if(!/^\d+$/.test(s)||!Number.isSafeInteger(+s)||+s<min||+s>max)throw new Error(`${label}: ${min}~${max} 사이 정수를 입력해 주세요.`);return +s;}
@@ -57,7 +79,8 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export class Race {
  constructor(config,seed=randomSeed()){
   this.map=MAPS.find(m=>m.id===config.mapId)??MAPS[0];
-  this.config=structuredClone(config);this.seed=seed;this.rng=seededRandom(seed);this.state='ready';this.elapsed=0;this.raceTime=0;this.finishOrder=[];this.events=[];this.winner=null;this.assists=0;this.lastMotionCycle=-1;this.roundId=globalThis.crypto?.randomUUID?.()??String(seed);this.phaseTime=0;this.resumeState=null;this.rotationTime=0;this.stats={steps:0,collisions:0,maxPenetration:0};
+  this.devices=this.map.devices.map(d=>({...d,hold:null,restAngle:Math.PI/2,releasedAt:-10}));
+  this.config=structuredClone(config);this.seed=seed;this.rng=seededRandom(seed);this.state='ready';this.elapsed=0;this.raceTime=0;this.finishOrder=[];this.events=[];this.winner=null;this.assists=0;this.lastMotionCycle=-1;this.roundId=globalThis.crypto?.randomUUID?.()??String(seed);this.phaseTime=0;this.resumeState=null;this.rotationTime=0;this.stats={steps:0,collisions:0,maxPenetration:0,captures:0,launches:0,releases:0};
   const entries=[];for(const p of this.config.people)for(let i=0;i<p.count;i++)entries.push({id:`${p.id}-b${i+1}`,participantId:p.id,name:p.name,label:p.label,color:p.color,number:i+1});shuffle(entries,this.rng);
   const slots=shuffle(Array.from({length:60},(_,i)=>({x:62+(i%10)*55,y:54+Math.floor(i/10)*27})),this.rng);
   this.balls=entries.map((b,i)=>({...b,x:slots[i].x,y:slots[i].y,vx:(this.rng()-.5)*100,vy:(this.rng()-.5)*50,r:RADIUS,finished:false,rank:null,stuckTime:0,progressTime:0,progressY:slots[i].y,anchorX:slots[i].x,anchorY:slots[i].y,assistCount:0,tieKey:this.rng()}));
@@ -65,7 +88,7 @@ export class Race {
  start(){if(this.state!=='ready')return false;this.state='mixing';this.phaseTime=0;return true;}
  pause(){if(!['mixing','countdown','racing'].includes(this.state))return false;this.resumeState=this.state;this.state='paused';return true;}
  resume(){if(this.state!=='paused')return false;this.state=this.resumeState;this.resumeState=null;return true;}
- emit(event){this.events.push(event);if(this.events.length>200)this.events.shift();}
+ emit(event){if(event.type==='capture')this.stats.captures++;if(event.type==='launch')this.stats.launches++;if(event.type==='release')this.stats.releases++;this.events.push(event);if(this.events.length>200)this.events.shift();}
  motion(){return boardMotionAt(this.raceTime,this.seed,this.config.boardMotion===true);}
  sliderSegments(){return (this.map.sliders??[]).map(s=>{const phase=this.rotationTime*s.omega+s.phase,x=s.x+Math.sin(phase)*s.amplitude;return {...s,ax:x-s.length,ay:s.y,bx:x+s.length,by:s.y,r:10,svx:Math.cos(phase)*s.amplitude*s.omega,svy:0};});}
  rotorSegments(){return this.map.rotors.flatMap(o=>{const pose=rotorPose(o,this.rotationTime);return Array.from({length:(o.blades??2)/2},(_,i)=>{const a=pose.angle+i*Math.PI/2;return {...o,omega:pose.velocity,ax:o.x-Math.cos(a)*o.length,ay:o.y-Math.sin(a)*o.length,bx:o.x+Math.cos(a)*o.length,by:o.y+Math.sin(a)*o.length,r:9};});});}
@@ -83,21 +106,25 @@ export class Race {
   if(racing&&motion.active&&motion.cycle!==this.lastMotionCycle){this.lastMotionCycle=motion.cycle;this.emit({type:'board-motion',axis:motion.axis,cycle:motion.cycle,time:this.raceTime});}
   const active=this.balls.filter(b=>!b.finished),rotors=this.rotorSegments(),sliders=this.sliderSegments();const crossing=[];
   for(const b of active){b.prevX=b.x;b.prevY=b.y;
+   if(racing&&holdDevices(this,b))continue;
+   if(racing)attractDevices(this,b,dt);
    if(!racing){b.vx+=Math.sin(this.elapsed*5+b.tieKey*18)*430*dt;b.vy+=Math.cos(this.elapsed*4+b.tieKey*13)*290*dt;}else{b.vx+=motion.forceX*dt;b.vy+=(255+motion.forceY)*dt;}
-   b.vx*=Math.exp(-.09*dt);b.vy*=Math.exp(-.04*dt);const speed=Math.hypot(b.vx,b.vy);if(speed>560){b.vx*=560/speed;b.vy*=560/speed;}
+   b.vx*=Math.exp(-.09*dt);b.vy*=Math.exp(-.04*dt);const speed=Math.hypot(b.vx,b.vy),limit=(b.boostUntil??0)>this.raceTime?780:560;if(speed>limit){b.vx*=limit/speed;b.vy*=limit/speed;}
    b.x+=b.vx*dt;b.y+=b.vy*dt;
   }
   // Iterative positional solving: equal radius and mass for every marble.
   for(let iteration=0;iteration<4;iteration++){
    for(const b of active){
+    if(b.hold)continue;
     this.boundaries(b,racing);
-    if(racing){for(const p of this.map.pins)this.circle(b,p,.78);for(const p of this.map.bumpers)this.circle(b,p,1.12);for(const s of this.map.rails)this.segment(b,s,.55);for(const s of rotors)this.segment(b,s,.65);for(const s of sliders)this.segment(b,s,.65);}
+    if(racing){for(const p of this.map.devicePoles)this.circle(b,p,.65);for(const p of this.map.pins)this.circle(b,p,.78);for(const p of this.map.bumpers)this.circle(b,p,1.12);for(const s of this.map.rails)this.segment(b,s,.55);for(const s of rotors)this.segment(b,s,.65);for(const s of sliders)this.segment(b,s,.65);}
    }
    for(let i=0;i<active.length;i++)for(let j=i+1;j<active.length;j++)this.pair(active[i],active[j]);
   }
-  for(const b of active){this.boundaries(b,racing);
+  for(const b of active){if(b.hold)continue;this.boundaries(b,racing);
    if(!Number.isFinite(b.x+b.y+b.vx+b.vy)){this.state='invalid';this.winner=null;this.emit({type:'invalid',reason:'물리 상태 오류'});return;}
    if(racing){
+    captureDevices(this,b);if(b.hold)continue;
     if(b.prevY<this.map.finish&&b.y>=this.map.finish){const fraction=(this.map.finish-b.prevY)/(b.y-b.prevY),crossX=b.prevX+(b.x-b.prevX)*fraction;const exit=this.map.exits.find(h=>Math.abs(crossX-h.x)<=h.width/2-b.r);if(exit)crossing.push({b,time:this.raceTime-dt+dt*fraction,exitId:exit.id});else{b.y=this.map.finish-.01;b.vy=-Math.abs(b.vy)*.55;}}
     const moved=Math.hypot(b.x-b.anchorX,b.y-b.anchorY);if(moved>20){b.anchorX=b.x;b.anchorY=b.y;b.stuckTime=0;}else b.stuckTime+=dt;
     if(b.y>b.progressY+24){b.progressY=b.y;b.progressTime=0;}else b.progressTime+=dt;
@@ -140,7 +167,7 @@ export class Race {
  circle(b,p,e){const dx=b.x-p.x,dy=b.y-p.y,d=Math.hypot(dx,dy),min=b.r+p.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0;this.contact(b,nx,ny,min-d,e,0,0,p.r>20?'bumper':'pin',p);}
  segment(b,s,e){const dx=s.bx-s.ax,dy=s.by-s.ay,t=clamp(((b.x-s.ax)*dx+(b.y-s.ay)*dy)/(dx*dx+dy*dy),0,1);const x=s.ax+t*dx,y=s.ay+t*dy;const bx=b.x-x,by=b.y-y,d=Math.hypot(bx,by),min=b.r+s.r;if(d>=min)return;const nx=d>1e-7?bx/d:-dy/Math.hypot(dx,dy),ny=d>1e-7?by/d:dx/Math.hypot(dx,dy);this.contact(b,nx,ny,min-d,e,s.svx??(s.omega?-s.omega*(y-s.y):0),s.svy??(s.omega?s.omega*(x-s.x):0));}
  contact(b,nx,ny,penetration,e,svx,svy,kind='rail',obstacle=null){b.x+=nx*penetration;b.y+=ny*penetration;const v=(b.vx-svx)*nx+(b.vy-svy)*ny;if(v<0){b.vx-=(1+e)*v*nx;b.vy-=(1+e)*v*ny;this.stats.collisions++;if(-v>80)this.emit({type:'hit',speed:-v,ballId:b.id,x:b.x-nx*b.r,y:b.y-ny*b.r,kind,obstacleX:obstacle?.x,obstacleY:obstacle?.y});}this.stats.maxPenetration=Math.max(this.stats.maxPenetration,penetration);}
- pair(a,b){const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy),min=a.r+b.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0,p=(min-d)/2;a.x-=nx*p;a.y-=ny*p;b.x+=nx*p;b.y+=ny*p;const v=(b.vx-a.vx)*nx+(b.vy-a.vy)*ny;if(v<0){const impulse=-(1+.6)*v/2;a.vx-=impulse*nx;a.vy-=impulse*ny;b.vx+=impulse*nx;b.vy+=impulse*ny;}}
+ pair(a,b){if(a.hold&&b.hold)return;if(a.hold){this.circle(b,a,.6);return;}if(b.hold){this.circle(a,b,.6);return;}const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy),min=a.r+b.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0,p=(min-d)/2;a.x-=nx*p;a.y-=ny*p;b.x+=nx*p;b.y+=ny*p;const v=(b.vx-a.vx)*nx+(b.vy-a.vy)*ny;if(v<0){const impulse=-(1+.6)*v/2;a.vx-=impulse*nx;a.vy-=impulse*ny;b.vx+=impulse*nx;b.vy+=impulse*ny;}}
  finish(b,time,exitId=null){if(b.finished)return false;b.finished=true;b.y=this.map.finish;b.rank=this.finishOrder.length+1;b.time=time;b.vx=0;b.vy=0;const result={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:b.rank,time,exitId};this.finishOrder.push(result);if(b.rank===this.config.target){this.winner={...result,criterion:'arrival',crossedFinish:true};this.emit({type:'winner',result:this.winner});}this.emit({type:'finish',result});return true;}
- snapshot(){return {roundId:this.roundId,state:this.state,seed:this.seed,time:this.raceTime,target:this.config.target,total:this.balls.length,winner:this.winner,completionReason:this.completionReason??null,finishOrder:this.finishOrder.map(r=>({...r})),assists:this.assists,motion:this.motion(),balls:this.balls.map(b=>({id:b.id,x:b.x,y:b.y,finished:b.finished,rank:b.rank}))};}
+ snapshot(){return {roundId:this.roundId,state:this.state,seed:this.seed,time:this.raceTime,target:this.config.target,total:this.balls.length,winner:this.winner,completionReason:this.completionReason??null,finishOrder:this.finishOrder.map(r=>({...r})),assists:this.assists,motion:this.motion(),deviceStats:{captures:this.stats.captures,launches:this.stats.launches,releases:this.stats.releases},devices:this.devices.map(d=>({id:d.id,kind:d.kind,x:d.x,y:d.y,ballId:d.hold?.ballId??null,...devicePose(d,this.raceTime)})),balls:this.balls.map(b=>({id:b.id,x:b.x,y:b.y,finished:b.finished,rank:b.rank,heldBy:b.hold?.deviceId??null}))};}
 }

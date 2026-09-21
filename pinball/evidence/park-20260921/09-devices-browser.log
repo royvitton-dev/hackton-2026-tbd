@@ -1,0 +1,24 @@
+PASS actual devices {
+  device: 'desktop',
+  status: 'PASS',
+  defaultSpeed: 1.5,
+  capturePause: 'PASS',
+  speedChangeDuringHold: 'PASS',
+  sameBrowserExactReplay: 'PASS',
+  deviceStats: { captures: 30, launches: 24, releases: 6 },
+  finishCount: 59,
+  exitIds: [ 1 ],
+  errors: []
+}
+PASS actual devices {
+  device: 'mobile',
+  status: 'PASS',
+  defaultSpeed: 1.5,
+  capturePause: 'PASS',
+  speedChangeDuringHold: 'PASS',
+  sameBrowserExactReplay: 'PASS',
+  deviceStats: { captures: 30, launches: 24, releases: 6 },
+  finishCount: 59,
+  exitIds: [ 1 ],
+  errors: []
+}

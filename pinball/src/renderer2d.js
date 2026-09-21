@@ -1,3 +1,4 @@
+import {devicePose} from './devices.js';
 import {MAPS} from './physics.js';
 export class Renderer {
  constructor(canvas){this.canvas=canvas;this.ctx=canvas.getContext('2d');this.width=760;this.height=1100;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=760*dpr;canvas.height=1100*dpr;this.ctx.scale(dpr,dpr);this.map=MAPS[0];this.cameraY=0;this.overview=false;this.lastRound=null;}
@@ -32,7 +33,11 @@ c.textAlign='center';c.font='600 11px sans-serif';c.fillStyle='#a196b5';c.fillTe
  for(const s of map.rails){this.line(s.ax,s.ay,s.bx,s.by,'#0008',s.r*2+5,-8);this.line(s.ax,s.ay,s.bx,s.by,'#735887',s.r*2,8);this.line(s.ax,s.ay,s.bx,s.by,map.accent,3,13);}
  for(const s of race.rotorSegments()){this.line(s.ax,s.ay,s.bx,s.by,'#0008',25,-10);this.line(s.ax,s.ay,s.bx,s.by,'#258783',21,10);this.line(s.ax,s.ay,s.bx,s.by,'#77f1d9',12,16);this.disk(s.x,s.y,13,'#e5ffcd',21);}
  for(const slider of race.sliderSegments()) {this.line(slider.ax,slider.ay,slider.bx,slider.by,'#0008',26,-8);this.line(slider.ax,slider.ay,slider.bx,slider.by,'#bc7525',22,10);this.line(slider.ax,slider.ay,slider.bx,slider.by,'#ffd177',13,17);const q=this.project((slider.ax+slider.bx)/2,slider.y,17);c.fillStyle='#50331c';c.font='800 20px sans-serif';c.textAlign='center';c.fillText('↔',q.x,q.y+5);}
- const held=['ready','mixing','countdown'].includes(race.state)||(race.state==='paused'&&race.resumeState!=='racing');
+ for(const d of race.devices){const q=this.project(d.x,d.y),pose=devicePose(d,race.raceTime);c.save();c.strokeStyle=d.kind==='cannon'?'#ffc650':'#77e7ff';c.globalAlpha=pose.holding?.9:.4;c.lineWidth=3;c.beginPath();c.ellipse(q.x,q.y,28,22,0,0,Math.PI*2);c.stroke();c.restore();
+  if(d.kind==='magnet'){this.disk(d.x-29,d.y,9,'#ff46a4',12);this.disk(d.x+29,d.y,9,'#36e4ff',12);c.font='bold 26px sans-serif';c.fillStyle='#9aeaff';c.fillText('U',q.x,q.y-10);}
+  else{this.disk(d.x,d.y,20,'#ffd17a',4);this.line(d.x,d.y,d.x+Math.cos(pose.angle)*48,d.y+Math.sin(pose.angle)*48,'#8062d9',22,18);this.disk(d.x+Math.cos(pose.angle)*48,d.y+Math.sin(pose.angle)*48,11,'#33244a',18);}
+ }
+ const held=['ready' ,'mixing','countdown'].includes(race.state)||(race.state==='paused'&&race.resumeState!=='racing');
  if(held){this.line(32,map.gate,588,map.gate,'#100e15',15,2);this.line(32,map.gate,588,map.gate,map.accent,8,10);for(let x=50;x<590;x+=27)this.line(x,map.gate-3,x+9,map.gate+3,'#f4ecff',3,13);}
  // Only these four physical throats can register a finish.
  for(const hole of map.exits){const p=this.project(hole.x,map.finish);c.save();c.fillStyle=map.accent;c.shadowColor=map.accent;c.shadowBlur=15;c.beginPath();c.ellipse(p.x,p.y,31,19,0,0,Math.PI*2);c.fill();c.shadowBlur=0;c.fillStyle='#05050b';c.beginPath();c.ellipse(p.x,p.y+1,26,14,0,0,Math.PI*2);c.fill();c.fillStyle='#b1a8c4';c.font='700 15px sans-serif';c.textAlign='center';c.fillText(String(hole.id).padStart(2,'0'),p.x,p.y+38);c.restore();}
