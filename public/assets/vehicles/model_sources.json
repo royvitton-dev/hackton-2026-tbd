@@ -297,16 +297,16 @@
     "manufacturer": "Audi",
     "model": "Q4 45 e-tron",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": "https://sketchfab.com/3d-models/2022-audi-q4-e-tron-89d8009af27340d6a63d127e77780751",
-    "downloadUrl": "https://api.sketchfab.com/v3/models/89d8009af27340d6a63d127e77780751/download",
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "Authenticated download endpoint returned HTTP 401. No file downloaded; the 2022 CC BY candidate remains unconnected.",
-    "nextAction": "Provide a legitimately downloaded Q4 e-tron model and its license/source record; then convert, sync and inspect.",
-    "displayNote": null,
+    "glbPath": "/assets/vehicles/models/audi_q4_45_etron_2026_authored.glb",
+    "available": true,
+    "sourceUrl": "https://github.com/royvitton-dev/hackton-2026-tbd/blob/main/scripts/generate-authored-vehicles.mjs",
+    "downloadUrl": null,
+    "license": "Original project-authored geometry for this repository. No manufacturer CAD or trademark license is asserted.",
+    "author": "EVision project",
+    "representativeNote": "공개 치수와 외형을 참고해 직접 제작한 개략 3D입니다. 정밀 실차 CAD나 사진 수준의 외관 복원은 아닙니다.",
+    "failureReason": null,
+    "nextAction": "Replace with a licensed vehicle-specific production model when available; retain authored provenance until then.",
+    "displayNote": "자체 제작 개략 3D · 정밀 CAD 아님",
     "researchDate": "2026-09-21",
     "failures": [
       {
@@ -321,24 +321,68 @@
         "httpStatus": 403,
         "reason": "Official 3D configurator link from Audi Nederland returned HTTP 403 on 2026-09-21; no model obtained. Download authorization was not bypassed."
       }
-    ]
+    ],
+    "sourceHistory": [
+      {
+        "sourceUrl": "https://sketchfab.com/3d-models/2022-audi-q4-e-tron-89d8009af27340d6a63d127e77780751",
+        "downloadUrl": "https://api.sketchfab.com/v3/models/89d8009af27340d6a63d127e77780751/download",
+        "available": false,
+        "failureReason": "Authenticated download endpoint returned HTTP 401. No file downloaded; the 2022 CC BY candidate remains unconnected.",
+        "nextAction": "Provide a legitimately downloaded Q4 e-tron model and its license/source record; then convert, sync and inspect."
+      }
+    ],
+    "sourceType": "project-authored",
+    "downloaded": false,
+    "generated": true,
+    "manufacturerCad": false,
+    "sourceTriangles": 196004,
+    "dimensionReferenceUrl": "https://www.audi.com/en/electric-suvs-in-the-premium-compact-segment-the-audi-q4-e-tron-and-the-q4-sportback-e-tron-until-2026-13887/everyday-usability-13893",
+    "authoredDimensionsMeters": [
+      4.588,
+      1.865,
+      1.632
+    ],
+    "generatedOn": "2026-09-22",
+    "surfaceOnly": true
   },
   {
     "vehicleId": "audi_q6_etron_quattro_2025",
     "manufacturer": "Audi",
     "model": "Q6 e-tron",
     "requestedYear": 2025,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": "https://www.blenderkit.com/api/v1/search/?query=Audi%20Q6+asset_type:model",
+    "glbPath": "/assets/vehicles/models/audi_q6_etron_quattro_2025_authored.glb",
+    "available": true,
+    "sourceUrl": "https://github.com/royvitton-dev/hackton-2026-tbd/blob/main/scripts/generate-authored-vehicles.mjs",
     "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "BlenderKit Audi Q6 e-tron candidate reports isFree=false and royalty_free license. No purchase or paid download was performed.",
-    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
-    "displayNote": null,
-    "researchDate": "2026-09-21"
+    "license": "Original project-authored geometry for this repository. No manufacturer CAD or trademark license is asserted.",
+    "author": "EVision project",
+    "representativeNote": "공개 치수와 외형을 참고해 직접 제작한 개략 3D입니다. 정밀 실차 CAD나 사진 수준의 외관 복원은 아닙니다.",
+    "failureReason": null,
+    "nextAction": "Replace with a licensed vehicle-specific production model when available; retain authored provenance until then.",
+    "displayNote": "자체 제작 개략 3D · 정밀 CAD 아님",
+    "researchDate": "2026-09-21",
+    "sourceHistory": [
+      {
+        "sourceUrl": "https://www.blenderkit.com/api/v1/search/?query=Audi%20Q6+asset_type:model",
+        "downloadUrl": null,
+        "available": false,
+        "failureReason": "BlenderKit Audi Q6 e-tron candidate reports isFree=false and royalty_free license. No purchase or paid download was performed.",
+        "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+      }
+    ],
+    "sourceType": "project-authored",
+    "downloaded": false,
+    "generated": true,
+    "manufacturerCad": false,
+    "sourceTriangles": 196124,
+    "dimensionReferenceUrl": "https://www.audi.com/en/press-releases/experience-vorsprung-durch-technik-the-new-audi-q6-e-tron-15923",
+    "authoredDimensionsMeters": [
+      4.771,
+      1.939,
+      1.648
+    ],
+    "generatedOn": "2026-09-22",
+    "surfaceOnly": true
   },
   {
     "vehicleId": "vw_id4_pro_2026",
@@ -372,34 +416,78 @@
     "manufacturer": "BMW",
     "model": "i5",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": "https://www.blenderkit.com/api/v1/search/?query=BMW%20i5+asset_type:model",
+    "glbPath": "/assets/vehicles/models/bmw_i5_edrive40_2026_authored.glb",
+    "available": true,
+    "sourceUrl": "https://github.com/royvitton-dev/hackton-2026-tbd/blob/main/scripts/generate-authored-vehicles.mjs",
     "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "BlenderKit BMW i5 candidate reports isFree=false and royalty_free license. No purchase or paid download was performed.",
-    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
-    "displayNote": null,
-    "researchDate": "2026-09-21"
+    "license": "Original project-authored geometry for this repository. No manufacturer CAD or trademark license is asserted.",
+    "author": "EVision project",
+    "representativeNote": "공개 치수와 외형을 참고해 직접 제작한 개략 3D입니다. 정밀 실차 CAD나 사진 수준의 외관 복원은 아닙니다.",
+    "failureReason": null,
+    "nextAction": "Replace with a licensed vehicle-specific production model when available; retain authored provenance until then.",
+    "displayNote": "자체 제작 개략 3D · 정밀 CAD 아님",
+    "researchDate": "2026-09-21",
+    "sourceHistory": [
+      {
+        "sourceUrl": "https://www.blenderkit.com/api/v1/search/?query=BMW%20i5+asset_type:model",
+        "downloadUrl": null,
+        "available": false,
+        "failureReason": "BlenderKit BMW i5 candidate reports isFree=false and royalty_free license. No purchase or paid download was performed.",
+        "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+      }
+    ],
+    "sourceType": "project-authored",
+    "downloaded": false,
+    "generated": true,
+    "manufacturerCad": false,
+    "sourceTriangles": 171136,
+    "dimensionReferenceUrl": "https://www.bmw.co.uk/en/all-models/bmw-i/i5/bmw-i5-technical-data.html",
+    "authoredDimensionsMeters": [
+      5.06,
+      1.9,
+      1.515
+    ],
+    "generatedOn": "2026-09-22",
+    "surfaceOnly": true
   },
   {
     "vehicleId": "mini_electric_cooper_2026",
     "manufacturer": "MINI",
     "model": "All-Electric MINI Cooper",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": "https://sketchfab.com/3d-models/mini-cooper-electric-b76a08a64ede498e9ee5ce7c0b9079fb",
+    "glbPath": "/assets/vehicles/models/mini_electric_cooper_2026_authored.glb",
+    "available": true,
+    "sourceUrl": "https://github.com/royvitton-dev/hackton-2026-tbd/blob/main/scripts/generate-authored-vehicles.mjs",
     "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "Electric-model candidate found on Sketchfab; download authorization is not available. Public GitHub Mini Cooper GLB has no verified EV identity and was not substituted.",
-    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
-    "displayNote": null,
-    "researchDate": "2026-09-21"
+    "license": "Original project-authored geometry for this repository. No manufacturer CAD or trademark license is asserted.",
+    "author": "EVision project",
+    "representativeNote": "공개 치수와 외형을 참고해 직접 제작한 개략 3D입니다. 정밀 실차 CAD나 사진 수준의 외관 복원은 아닙니다.",
+    "failureReason": null,
+    "nextAction": "Replace with a licensed vehicle-specific production model when available; retain authored provenance until then.",
+    "displayNote": "자체 제작 개략 3D · 정밀 CAD 아님",
+    "researchDate": "2026-09-21",
+    "sourceHistory": [
+      {
+        "sourceUrl": "https://sketchfab.com/3d-models/mini-cooper-electric-b76a08a64ede498e9ee5ce7c0b9079fb",
+        "downloadUrl": null,
+        "available": false,
+        "failureReason": "Electric-model candidate found on Sketchfab; download authorization is not available. Public GitHub Mini Cooper GLB has no verified EV identity and was not substituted.",
+        "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+      }
+    ],
+    "sourceType": "project-authored",
+    "downloaded": false,
+    "generated": true,
+    "manufacturerCad": false,
+    "sourceTriangles": 163848,
+    "dimensionReferenceUrl": "https://www.mini-egypt.com/content/dam/MINI/marketUV4/mini-egypt_com/brochures/The_All-New_MINI_Cooper_Brochure.pdf",
+    "authoredDimensionsMeters": [
+      3.858,
+      1.756,
+      1.46
+    ],
+    "generatedOn": "2026-09-22",
+    "surfaceOnly": true
   },
   {
     "vehicleId": "volvo_ex30_2026",

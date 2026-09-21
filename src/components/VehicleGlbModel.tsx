@@ -14,6 +14,7 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
       for(const m of Array.isArray(o.material)?o.material:[o.material]){
         if(m instanceof MeshStandardMaterial){
           m.envMapIntensity=.85;
+          if(m.name==='authored_glass')m.envMapIntensity=.28;
           if(m.name==='Paint'||m.name==='body'){m.color.set('#879baa');m.metalness=.45;m.roughness=.34;}
           if(m.name==='glass_body'){m.color.set('#102134');m.metalness=.22;m.roughness=.2;m.transparent=true;m.opacity=.88;m.depthWrite=false;}
           if(m.name==='glass_lights'||m.name==='glass_front_lights'){m.color.set('#b9cddd');m.roughness=.16;m.metalness=.1;m.transparent=true;m.opacity=.3;m.depthWrite=false;}
