@@ -1,0 +1,2354 @@
+{
+  "version": 1,
+  "collectedAt": "2026-09-21T13:52:10.968576+00:00",
+  "maps": [
+    {
+      "id": "seoul-jung",
+      "name": "서울 도심",
+      "center": [
+        126.9814297,
+        37.5709302
+      ],
+      "station": "node/9143730203",
+      "stationName": "Tesla Supercharger",
+      "distanceToSearchCenterM": 579,
+      "bbox": [
+        37.5644302,
+        126.9732288,
+        37.5774302,
+        126.9896306
+      ],
+      "raw": "/mobility/maps/raw/seoul-jung.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.5644302,
+          126.9732288,
+          37.5774302,
+          126.9896306
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.761165+00:00",
+        "sha256": "cda644861f58e95a9f513e055f54b1480dcb7d602d4283f6976bb7e11ce2f129",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 530,
+        "roadNodes": 2279,
+        "chargers": 1,
+        "buildings": 2092
+      },
+      "chargers": [
+        {
+          "id": "node/9143730203",
+          "coordinates": [
+            126.9814297,
+            37.5709302
+          ],
+          "name": "종로 슈퍼차저",
+          "operator": "Tesla, Inc.",
+          "capacity": 6,
+          "sockets": [
+            {
+              "type": "nacs",
+              "count": 6,
+              "output": null
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/9143730203",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand": "Tesla Supercharger",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "brand:wikipedia": "en:Tesla Supercharger",
+            "capacity": "6",
+            "description": "지하 6층\n수퍼차저 6개\n최대 120kW",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "name": "Tesla Supercharger",
+            "name:ko": "종로 슈퍼차저",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator": "Tesla, Inc.",
+            "operator:en": "Tesla, Inc.",
+            "operator:wikidata": "Q478214",
+            "operator:wikipedia": "en:Tesla, Inc.",
+            "ref:tesla": "31754",
+            "short_name": "Tesla",
+            "socket:nacs": "6",
+            "website": "https://www.tesla.com/findus/location/supercharger/31754"
+          },
+          "approach": {
+            "nodeId": 2420018454,
+            "coordinates": [
+              126.9818387,
+              37.5709151
+            ],
+            "distance": 36.0854842487925
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 287631232,
+        "end": 2420018454,
+        "chargerId": "node/9143730203",
+        "distance": 1072.721151785
+      }
+    },
+    {
+      "id": "seoul-gangnam",
+      "name": "서울 강남",
+      "center": [
+        127.0323086,
+        37.5000089
+      ],
+      "station": "node/9119269205",
+      "stationName": "서울-테헤란 테슬라 슈퍼차저",
+      "distanceToSearchCenterM": 441,
+      "bbox": [
+        37.4935089,
+        127.0241155,
+        37.5065089,
+        127.0405017
+      ],
+      "raw": "/mobility/maps/raw/seoul-gangnam.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.4935089,
+          127.0241155,
+          37.5065089,
+          127.0405017
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.780838+00:00",
+        "sha256": "73d2fd9ce6c9db487af8647ec7af90c350539d2cea01a3cf783772cdaf06bd2c",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 452,
+        "roadNodes": 1501,
+        "chargers": 1,
+        "buildings": 2283
+      },
+      "chargers": [
+        {
+          "id": "node/9119269205",
+          "coordinates": [
+            127.0323086,
+            37.5000089
+          ],
+          "name": "테헤란 슈퍼차저",
+          "operator": "Tesla",
+          "capacity": 4,
+          "sockets": [
+            {
+              "type": "nacs",
+              "count": 4,
+              "output": null
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/9119269205",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand": "Tesla Supercharger",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "brand:wikipedia": "en:Tesla Supercharger",
+            "capacity": "4",
+            "description": "V2 120kWh급\nB4F (지하4층)",
+            "fee": "yes",
+            "frequency": "0",
+            "level": "-4",
+            "motorcar": "designated",
+            "name": "서울-테헤란 테슬라 슈퍼차저",
+            "name:en": "Tesla Seoul-Teheran Supercharger",
+            "name:ko": "테헤란 슈퍼차저",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator": "Tesla",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "operator:wikipedia": "en:Tesla, Inc.",
+            "ref:tesla": "seolleungsupercharger",
+            "short_name": "Tesla",
+            "socket:nacs": "4",
+            "website": "https://www.tesla.com/findus/location/supercharger/seolleungsupercharger"
+          },
+          "approach": {
+            "nodeId": 5416057367,
+            "coordinates": [
+              127.032481,
+              37.5001972
+            ],
+            "distance": 25.878573070816124
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 286490183,
+        "end": 5416057367,
+        "chargerId": "node/9119269205",
+        "distance": 838.7125447593852
+      }
+    },
+    {
+      "id": "seoul-songpa",
+      "name": "서울 송파",
+      "center": [
+        127.1067431,
+        37.5137293
+      ],
+      "station": "node/13688600303",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 87,
+      "bbox": [
+        37.5072293,
+        127.0985485,
+        37.5202293,
+        127.1149377
+      ],
+      "raw": "/mobility/maps/raw/seoul-songpa.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.5072293,
+          127.0985485,
+          37.5202293,
+          127.1149377
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.793829+00:00",
+        "sha256": "d80d365a1dec8e3f8374fae44b6237254e49b645406fdb4f7577884923db092d",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 368,
+        "roadNodes": 1271,
+        "chargers": 3,
+        "buildings": 925
+      },
+      "chargers": [
+        {
+          "id": "node/13688600302",
+          "coordinates": [
+            127.0986541,
+            37.5117685
+          ],
+          "name": "충전소 13688600302",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/13688600302",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "seoulsongpaolympicparksupercharger",
+            "website": "https://www.tesla.com/findus/location/supercharger/seoulsongpaolympicparksupercharger"
+          },
+          "approach": {
+            "nodeId": 6718313314,
+            "coordinates": [
+              127.0995253,
+              37.5108825
+            ],
+            "distance": 124.94303810442402
+          }
+        },
+        {
+          "id": "node/13688600303",
+          "coordinates": [
+            127.1067431,
+            37.5137293
+          ],
+          "name": "충전소 13688600303",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/13688600303",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "songpasupercharger",
+            "website": "https://www.tesla.com/findus/location/supercharger/songpasupercharger"
+          },
+          "approach": {
+            "nodeId": 13897951092,
+            "coordinates": [
+              127.1066795,
+              37.5136001
+            ],
+            "distance": 15.422718069684937
+          }
+        },
+        {
+          "id": "node/13688601902",
+          "coordinates": [
+            127.1033902,
+            37.513546
+          ],
+          "name": "충전소 13688601902",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/13688601902",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "seouljamsilsupercharger",
+            "website": "https://www.tesla.com/findus/location/supercharger/seouljamsilsupercharger"
+          },
+          "approach": {
+            "nodeId": 13401519692,
+            "coordinates": [
+              127.1026684,
+              37.5139085
+            ],
+            "distance": 75.3508740910442
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 436854831,
+        "end": 13897951092,
+        "chargerId": "node/13688600303",
+        "distance": 1056.7168989587176
+      }
+    },
+    {
+      "id": "seoul-yeongdeungpo",
+      "name": "서울 서남권",
+      "center": [
+        126.8885348,
+        37.51751
+      ],
+      "station": "way/355418089",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 1152,
+      "bbox": [
+        37.51101,
+        126.8803398,
+        37.52401,
+        126.8967298
+      ],
+      "raw": "/mobility/maps/raw/seoul-yeongdeungpo.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.51101,
+          126.8803398,
+          37.52401,
+          126.8967298
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.802570+00:00",
+        "sha256": "2e1da8f8f034592e40248f74a6bbbef481f5e014fad28f060c6f75502e26232e",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 306,
+        "roadNodes": 1750,
+        "chargers": 1,
+        "buildings": 651
+      },
+      "chargers": [
+        {
+          "id": "way/355418089",
+          "coordinates": [
+            126.8885348,
+            37.517509950000004
+          ],
+          "name": "충전소 355418089",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/way/355418089",
+          "tags": {
+            "amenity": "charging_station"
+          },
+          "approach": {
+            "nodeId": 11455175138,
+            "coordinates": [
+              126.8885643,
+              37.5172623
+            ],
+            "distance": 27.660061761211697
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 414683190,
+        "end": 11455175138,
+        "chargerId": "way/355418089",
+        "distance": 897.1661200876562
+      }
+    },
+    {
+      "id": "seoul-mapo",
+      "name": "서울 서강대교 권역",
+      "center": [
+        126.9431154,
+        37.539375
+      ],
+      "station": "node/4591248792",
+      "stationName": "전기차 충전기",
+      "distanceToSearchCenterM": 2626,
+      "bbox": [
+        37.532875,
+        126.934918,
+        37.545875,
+        126.9513128
+      ],
+      "raw": "/mobility/maps/raw/seoul-mapo.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.532875,
+          126.934918,
+          37.545875,
+          126.9513128
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.809351+00:00",
+        "sha256": "3293849ac6ffb69397c9f587a2b9a56831123e93a9bd73385bed4a171ae90219",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 466,
+        "roadNodes": 2287,
+        "chargers": 1,
+        "buildings": 238
+      },
+      "chargers": [
+        {
+          "id": "node/4591248792",
+          "coordinates": [
+            126.9431154,
+            37.539375
+          ],
+          "name": "전기차 충전기",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/4591248792",
+          "tags": {
+            "amenity": "charging_station",
+            "name": "전기차 충전기"
+          },
+          "approach": {
+            "nodeId": 2451940610,
+            "coordinates": [
+              126.9431743,
+              37.5395696
+            ],
+            "distance": 22.252992814960017
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 387153850,
+        "end": 2451940610,
+        "chargerId": "node/4591248792",
+        "distance": 1851.8822657245764
+      }
+    },
+    {
+      "id": "incheon",
+      "name": "인천",
+      "center": [
+        126.6650712,
+        37.4702634
+      ],
+      "station": "node/9143682561",
+      "stationName": "Tesla Supercharger",
+      "distanceToSearchCenterM": 3872,
+      "bbox": [
+        37.4637634,
+        126.6568814,
+        37.4767634,
+        126.673261
+      ],
+      "raw": "/mobility/maps/raw/incheon.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.4637634,
+          126.6568814,
+          37.4767634,
+          126.673261
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.813612+00:00",
+        "sha256": "029541c834a7e812f6c0eab42a0ce4f7a69dd3d56173877653ec5f58451475bb",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 292,
+        "roadNodes": 1168,
+        "chargers": 1,
+        "buildings": 134
+      },
+      "chargers": [
+        {
+          "id": "node/9143682561",
+          "coordinates": [
+            126.6650712,
+            37.4702634
+          ],
+          "name": "미추홀 슈퍼차저",
+          "operator": "Tesla",
+          "capacity": 6,
+          "sockets": [
+            {
+              "type": "nacs",
+              "count": 6,
+              "output": null
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/9143682561",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand": "Tesla Supercharger",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "brand:wikipedia": "en:Tesla Supercharger",
+            "capacity": "6",
+            "description": "지하 4층\n수퍼차저 6개\n최대 250kW",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "name": "Tesla Supercharger",
+            "name:ko": "미추홀 슈퍼차저",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator": "Tesla",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "operator:wikipedia": "en:Tesla, Inc.",
+            "ref:tesla": "incheonmichuholsupercharger",
+            "short_name": "Tesla",
+            "socket:nacs": "6",
+            "website": "https://www.tesla.com/findus/location/supercharger/incheonmichuholsupercharger"
+          },
+          "approach": {
+            "nodeId": 8962994786,
+            "coordinates": [
+              126.6644615,
+              37.4707497
+            ],
+            "distance": 76.28372918720376
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 436676147,
+        "end": 8962994786,
+        "chargerId": "node/9143682561",
+        "distance": 1778.2781926432685
+      }
+    },
+    {
+      "id": "suwon",
+      "name": "수원",
+      "center": [
+        127.028817,
+        37.263822
+      ],
+      "station": "node/10690515481",
+      "stationName": "수원시청 별관",
+      "distanceToSearchCenterM": 31,
+      "bbox": [
+        37.257322,
+        127.0206497,
+        37.270322,
+        127.0369843
+      ],
+      "raw": "/mobility/maps/raw/suwon.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.257322,
+          127.0206497,
+          37.270322,
+          127.0369843
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.830575+00:00",
+        "sha256": "36a20d5f4f6244d888d3347c9ecd74af53486d6ce56d614aa42b7fce0a615564",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 314,
+        "roadNodes": 1088,
+        "chargers": 8,
+        "buildings": 1944
+      },
+      "chargers": [
+        {
+          "id": "node/10690515473",
+          "coordinates": [
+            127.030805,
+            37.267997
+          ],
+          "name": "수원롯데렌트카",
+          "operator": "수원롯데렌트카",
+          "capacity": null,
+          "sockets": [
+            {
+              "type": "type1",
+              "count": 2,
+              "output": "7 kW"
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10690515473",
+          "tags": {
+            "access": "yes",
+            "addr:city": "수원시",
+            "addr:district": "팔달구",
+            "addr:housenumber": "123",
+            "addr:postcode": "16487",
+            "addr:province": "경기도",
+            "addr:street": "인계로",
+            "addr:subdistrict": "인계동",
+            "amenity": "charging_station",
+            "description": "지하주차장 1층",
+            "opening_hours": "24/7",
+            "operator": "수원롯데렌트카",
+            "phone": "+82 1522 1782",
+            "socket:type1": "2",
+            "socket:type1:output": "7 kW"
+          },
+          "approach": {
+            "nodeId": 6265076624,
+            "coordinates": [
+              127.0309551,
+              37.2681099
+            ],
+            "distance": 18.276270650025722
+          }
+        },
+        {
+          "id": "node/10690515476",
+          "coordinates": [
+            127.035637,
+            37.265957
+          ],
+          "name": "한국국토정보공사 경기지역본부",
+          "operator": "한국국토정보공사 경기지역본부",
+          "capacity": null,
+          "sockets": [
+            {
+              "type": "type1",
+              "count": 2,
+              "output": "7 kW"
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "Mo-Su 09:00-18:00",
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10690515476",
+          "tags": {
+            "access": "yes",
+            "addr:city": "수원시",
+            "addr:district": "팔달구",
+            "addr:housenumber": "170",
+            "addr:postcode": "16488",
+            "addr:province": "경기도",
+            "addr:street": "인계로",
+            "addr:subdistrict": "인계동",
+            "amenity": "charging_station",
+            "description": "지하주차장",
+            "opening_hours": "Mo-Su 09:00-18:00",
+            "operator": "한국국토정보공사 경기지역본부",
+            "phone": "+82 1522 2573",
+            "socket:type1": "2",
+            "socket:type1:output": "7 kW"
+          },
+          "approach": {
+            "nodeId": 5880310768,
+            "coordinates": [
+              127.0353798,
+              37.2656945
+            ],
+            "distance": 37.01366894649204
+          }
+        },
+        {
+          "id": "node/10690515478",
+          "coordinates": [
+            127.025446,
+            37.265157
+          ],
+          "name": "경기수원 윌스기념병원",
+          "operator": "경기수원 윌스기념병원",
+          "capacity": null,
+          "sockets": [
+            {
+              "type": "type1",
+              "count": 9,
+              "output": "7 kW"
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10690515478",
+          "tags": {
+            "access": "yes",
+            "addr:city": "수원시",
+            "addr:district": "팔달구",
+            "addr:housenumber": "437",
+            "addr:postcode": "16480",
+            "addr:province": "경기도",
+            "addr:street": "경수대로",
+            "addr:subdistrict": "인계동",
+            "amenity": "charging_station",
+            "description": "3주차장 지하주차장 1층",
+            "opening_hours": "24/7",
+            "operator": "경기수원 윌스기념병원",
+            "phone": "+82 1661 7766",
+            "socket:type1": "9",
+            "socket:type1:output": "7 kW"
+          },
+          "approach": {
+            "nodeId": 5201195002,
+            "coordinates": [
+              127.0252683,
+              37.2649976
+            ],
+            "distance": 23.69478283539933
+          }
+        },
+        {
+          "id": "node/10690515481",
+          "coordinates": [
+            127.028817,
+            37.263822
+          ],
+          "name": "수원시청 별관",
+          "operator": "수원시청 별관",
+          "capacity": null,
+          "sockets": [
+            {
+              "type": "type1",
+              "count": 2,
+              "output": "7 kW"
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "Mo-Su 09:00-18:00",
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10690515481",
+          "tags": {
+            "access": "yes",
+            "addr:city": "수원시",
+            "addr:district": "팔달구",
+            "addr:housenumber": "241",
+            "addr:postcode": "16490",
+            "addr:province": "경기도",
+            "addr:street": "효원로",
+            "addr:subdistrict": "인계동",
+            "amenity": "charging_station",
+            "description": "별관지하3층",
+            "opening_hours": "Mo-Su 09:00-18:00",
+            "operator": "수원시청 별관",
+            "phone": "+82 1600 4047",
+            "socket:type1": "2",
+            "socket:type1:output": "7 kW"
+          },
+          "approach": {
+            "nodeId": 6150646224,
+            "coordinates": [
+              127.0282434,
+              37.2635226
+            ],
+            "distance": 60.704299270701725
+          }
+        },
+        {
+          "id": "node/10690515482",
+          "coordinates": [
+            127.0281358,
+            37.2630037
+          ],
+          "name": "수원시청",
+          "operator": "수원시청",
+          "capacity": null,
+          "sockets": [
+            {
+              "type": "chademo",
+              "count": 4,
+              "output": "50 kW"
+            },
+            {
+              "type": "type2_cable",
+              "count": 4,
+              "output": "43 kW"
+            },
+            {
+              "type": "type2_combo",
+              "count": 4,
+              "output": "50 kW"
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10690515482",
+          "tags": {
+            "access": "yes",
+            "addr:city": "수원시",
+            "addr:district": "팔달구",
+            "addr:housenumber": "241",
+            "addr:postcode": "16490",
+            "addr:province": "경기도",
+            "addr:street": "효원로",
+            "addr:subdistrict": "인계동",
+            "amenity": "charging_station",
+            "description": "본관 지상주차장",
+            "opening_hours": "24/7",
+            "operator": "수원시청",
+            "phone": "+82 31 230 8245",
+            "socket:chademo": "4",
+            "socket:chademo:output": "50 kW",
+            "socket:type2_cable": "4",
+            "socket:type2_cable:output": "43 kW",
+            "socket:type2_combo": "4",
+            "socket:type2_combo:output": "50 kW"
+          },
+          "approach": {
+            "nodeId": 7853623807,
+            "coordinates": [
+              127.0282087,
+              37.2629321
+            ],
+            "distance": 10.24727040624168
+          }
+        },
+        {
+          "id": "node/10690515483",
+          "coordinates": [
+            127.0280728,
+            37.2630112
+          ],
+          "name": "수원시청",
+          "operator": "수원시청",
+          "capacity": null,
+          "sockets": [
+            {
+              "type": "chademo",
+              "count": 2,
+              "output": "50 kW"
+            },
+            {
+              "type": "type2_cable",
+              "count": 2,
+              "output": "43 kW"
+            },
+            {
+              "type": "type2_combo",
+              "count": 2,
+              "output": "50 kW"
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10690515483",
+          "tags": {
+            "access": "yes",
+            "addr:city": "수원시",
+            "addr:district": "팔달구",
+            "addr:housenumber": "241",
+            "addr:postcode": "16490",
+            "addr:province": "경기도",
+            "addr:street": "효원로",
+            "addr:subdistrict": "인계동",
+            "amenity": "charging_station",
+            "description": "본관 지상주차장",
+            "opening_hours": "24/7",
+            "operator": "수원시청",
+            "phone": "+82 31 230 8245",
+            "socket:chademo": "2",
+            "socket:chademo:output": "50 kW",
+            "socket:type2_cable": "2",
+            "socket:type2_cable:output": "43 kW",
+            "socket:type2_combo": "2",
+            "socket:type2_combo:output": "50 kW"
+          },
+          "approach": {
+            "nodeId": 7853623807,
+            "coordinates": [
+              127.0282087,
+              37.2629321
+            ],
+            "distance": 14.899694018869301
+          }
+        },
+        {
+          "id": "node/10690515484",
+          "coordinates": [
+            127.030072,
+            37.262684
+          ],
+          "name": "홈플러스 동수원점",
+          "operator": "홈플러스 동수원점",
+          "capacity": null,
+          "sockets": [
+            {
+              "type": "chademo",
+              "count": 4,
+              "output": "50 kW"
+            },
+            {
+              "type": "type2_cable",
+              "count": 4,
+              "output": "43 kW"
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "Mo-Su 10:00-24:00",
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10690515484",
+          "tags": {
+            "access": "yes",
+            "addr:city": "수원시",
+            "addr:district": "팔달구",
+            "addr:housenumber": "257",
+            "addr:postcode": "16490",
+            "addr:province": "경기도",
+            "addr:street": "효원로",
+            "addr:subdistrict": "인계동",
+            "amenity": "charging_station",
+            "description": "지하주차장 1층",
+            "opening_hours": "Mo-Su 10:00-24:00",
+            "operator": "홈플러스 동수원점",
+            "phone": "+82 1661 9408",
+            "socket:chademo": "4",
+            "socket:chademo:output": "50 kW",
+            "socket:type2_cable": "4",
+            "socket:type2_cable:output": "43 kW"
+          },
+          "approach": {
+            "nodeId": 7877112799,
+            "coordinates": [
+              127.0303203,
+              37.2631599
+            ],
+            "distance": 57.29850556686287
+          }
+        },
+        {
+          "id": "node/10690515501",
+          "coordinates": [
+            127.024568,
+            37.257788
+          ],
+          "name": "수원시 권선1동 주민센터",
+          "operator": "수원시 권선1동 주민센터",
+          "capacity": null,
+          "sockets": [
+            {
+              "type": "type1",
+              "count": 2,
+              "output": "7 kW"
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10690515501",
+          "tags": {
+            "access": "yes",
+            "addr:city": "수원시",
+            "addr:district": "권선구",
+            "addr:housenumber": "29",
+            "addr:postcode": "16566",
+            "addr:province": "경기도",
+            "addr:street": "경수대로352번길",
+            "addr:subdistrict": "권선동",
+            "amenity": "charging_station",
+            "description": "주차장",
+            "opening_hours": "24/7",
+            "operator": "수원시 권선1동 주민센터",
+            "phone": "+82 1600 4047",
+            "socket:type1": "2",
+            "socket:type1:output": "7 kW"
+          },
+          "approach": {
+            "nodeId": 4714701059,
+            "coordinates": [
+              127.0250752,
+              37.2577624
+            ],
+            "distance": 44.978508718625555
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 414688104,
+        "end": 6150646224,
+        "chargerId": "node/10690515481",
+        "distance": 1173.6894332826098
+      }
+    },
+    {
+      "id": "seongnam",
+      "name": "성남",
+      "center": [
+        127.1247006,
+        37.4198194
+      ],
+      "station": "node/9567700634",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 160,
+      "bbox": [
+        37.4133194,
+        127.1165163,
+        37.4263194,
+        127.1328849
+      ],
+      "raw": "/mobility/maps/raw/seongnam.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.4133194,
+          127.1165163,
+          37.4263194,
+          127.1328849
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.837456+00:00",
+        "sha256": "f6c15de799d7c8017362905d04d66de6e4d2c7d6770bdaac37c3148863f7a678",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 269,
+        "roadNodes": 1395,
+        "chargers": 1,
+        "buildings": 328
+      },
+      "chargers": [
+        {
+          "id": "node/9567700634",
+          "coordinates": [
+            127.1247006,
+            37.4198194
+          ],
+          "name": "충전소 9567700634",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/9567700634",
+          "tags": {
+            "amenity": "charging_station"
+          },
+          "approach": {
+            "nodeId": 4285015031,
+            "coordinates": [
+              127.1247773,
+              37.419813
+            ],
+            "distance": 6.810774490629697
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 287284739,
+        "end": 4285015031,
+        "chargerId": "node/9567700634",
+        "distance": 1719.300923138089
+      }
+    },
+    {
+      "id": "daejeon",
+      "name": "대전",
+      "center": [
+        127.3901225,
+        36.3399444
+      ],
+      "station": "node/13688585601",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 1268,
+      "bbox": [
+        36.3334444,
+        127.3820531,
+        36.3464444,
+        127.3981919
+      ],
+      "raw": "/mobility/maps/raw/daejeon.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          36.3334444,
+          127.3820531,
+          36.3464444,
+          127.3981919
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.841601+00:00",
+        "sha256": "657585731cc9a8169c3d5b6162d77b3d4e67410c323d882fdc873c6d001e879d",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 282,
+        "roadNodes": 881,
+        "chargers": 1,
+        "buildings": 206
+      },
+      "chargers": [
+        {
+          "id": "node/13688585601",
+          "coordinates": [
+            127.3901225,
+            36.3399444
+          ],
+          "name": "충전소 13688585601",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/13688585601",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "Daejeon",
+            "website": "https://www.tesla.com/findus/location/supercharger/Daejeon"
+          },
+          "approach": {
+            "nodeId": 7068908066,
+            "coordinates": [
+              127.3895159,
+              36.3402595
+            ],
+            "distance": 64.65026769594537
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 278184414,
+        "end": 7068908066,
+        "chargerId": "node/13688585601",
+        "distance": 901.8771000625854
+      }
+    },
+    {
+      "id": "sejong",
+      "name": "세종",
+      "center": [
+        127.2684903,
+        36.4688691
+      ],
+      "station": "node/13688585801",
+      "stationName": "Tesla Supercharger",
+      "distanceToSearchCenterM": 2221,
+      "bbox": [
+        36.4623691,
+        127.2604075,
+        36.4753691,
+        127.2765731
+      ],
+      "raw": "/mobility/maps/raw/sejong.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          36.4623691,
+          127.2604075,
+          36.4753691,
+          127.2765731
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.846014+00:00",
+        "sha256": "15be8a73cb5f778d0c656e246b0fbcbf00f2a3f717e877e7bf9648f65d0db069",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 163,
+        "roadNodes": 847,
+        "chargers": 1,
+        "buildings": 97
+      },
+      "chargers": [
+        {
+          "id": "node/13688585801",
+          "coordinates": [
+            127.2684903,
+            36.4688691
+          ],
+          "name": "Tesla Supercharger",
+          "operator": "Tesla",
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/13688585801",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand": "Tesla Supercharger",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "name": "Tesla Supercharger",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator": "Tesla",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "31209",
+            "website": "https://www.tesla.com/findus/location/supercharger/31209"
+          },
+          "approach": {
+            "nodeId": 3664052437,
+            "coordinates": [
+              127.2686877,
+              36.4685607
+            ],
+            "distance": 38.56888203643353
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 1121131707,
+        "end": 3664052437,
+        "chargerId": "node/13688585801",
+        "distance": 1294.3656301986587
+      }
+    },
+    {
+      "id": "cheongju",
+      "name": "청주",
+      "center": [
+        127.4716598,
+        36.6280485
+      ],
+      "station": "node/6224845109",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 2225,
+      "bbox": [
+        36.6215485,
+        127.4635604,
+        36.6345485,
+        127.4797592
+      ],
+      "raw": "/mobility/maps/raw/cheongju.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          36.6215485,
+          127.4635604,
+          36.6345485,
+          127.4797592
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.855203+00:00",
+        "sha256": "f0cb5278e1b113547b4b9611c175d8a6475e54706ff1165e39900d6702c95ba9",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 465,
+        "roadNodes": 2134,
+        "chargers": 1,
+        "buildings": 502
+      },
+      "chargers": [
+        {
+          "id": "node/6224845109",
+          "coordinates": [
+            127.4716598,
+            36.6280485
+          ],
+          "name": "충전소 6224845109",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/6224845109",
+          "tags": {
+            "amenity": "charging_station"
+          },
+          "approach": {
+            "nodeId": 2967848604,
+            "coordinates": [
+              127.4717053,
+              36.6280055
+            ],
+            "distance": 6.272753514083439
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 437043963,
+        "end": 2967848604,
+        "chargerId": "node/6224845109",
+        "distance": 856.486724507866
+      }
+    },
+    {
+      "id": "cheonan",
+      "name": "천안",
+      "center": [
+        127.151347,
+        36.8414285
+      ],
+      "station": "way/1347104543",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 4442,
+      "bbox": [
+        36.8349285,
+        127.143225,
+        36.8479285,
+        127.159469
+      ],
+      "raw": "/mobility/maps/raw/cheonan.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          36.8349285,
+          127.143225,
+          36.8479285,
+          127.159469
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.858791+00:00",
+        "sha256": "cc1f9a9aa90d6c556b8b0c8db96fbf6054c3e0ed88db72aa8d78fea0db9021bc",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 202,
+        "roadNodes": 1148,
+        "chargers": 2,
+        "buildings": 91
+      },
+      "chargers": [
+        {
+          "id": "node/13688588002",
+          "coordinates": [
+            127.1513542,
+            36.8414838
+          ],
+          "name": "충전소 13688588002",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/13688588002",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "cheonancentralchurch",
+            "website": "https://www.tesla.com/findus/location/supercharger/cheonancentralchurch"
+          },
+          "approach": {
+            "nodeId": 1312558826,
+            "coordinates": [
+              127.1514521,
+              36.841372
+            ],
+            "distance": 15.180381576856595
+          }
+        },
+        {
+          "id": "way/1347104543",
+          "coordinates": [
+            127.15134695,
+            36.841428449999995
+          ],
+          "name": "충전소 1347104543",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/way/1347104543",
+          "tags": {
+            "amenity": "charging_station"
+          },
+          "approach": {
+            "nodeId": 1312558826,
+            "coordinates": [
+              127.1514521,
+              36.841372
+            ],
+            "distance": 11.267539105277937
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 436402860,
+        "end": 1312558826,
+        "chargerId": "way/1347104543",
+        "distance": 1048.9600625339783
+      }
+    },
+    {
+      "id": "daegu",
+      "name": "대구",
+      "center": [
+        128.625087,
+        35.8841091
+      ],
+      "station": "way/1218964414",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 2563,
+      "bbox": [
+        35.8776091,
+        128.6170643,
+        35.8906091,
+        128.6331097
+      ],
+      "raw": "/mobility/maps/raw/daegu.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          35.8776091,
+          128.6170643,
+          35.8906091,
+          128.6331097
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.892378+00:00",
+        "sha256": "5d6fcb9c1c570dbe8809399d147fe57b6062bb6adce440a700c9dc0312f4d68b",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 475,
+        "roadNodes": 1980,
+        "chargers": 1,
+        "buildings": 3362
+      },
+      "chargers": [
+        {
+          "id": "way/1218964414",
+          "coordinates": [
+            128.62508705,
+            35.8841091
+          ],
+          "name": "충전소 1218964414",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/way/1218964414",
+          "tags": {
+            "amenity": "charging_station"
+          },
+          "approach": {
+            "nodeId": 7679098530,
+            "coordinates": [
+              128.6249179,
+              35.8839872
+            ],
+            "distance": 20.39487678432801
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 366666348,
+        "end": 7679098530,
+        "chargerId": "way/1218964414",
+        "distance": 1355.8276571601882
+      }
+    },
+    {
+      "id": "busan",
+      "name": "부산",
+      "center": [
+        129.1099978,
+        35.1883882
+      ],
+      "station": "node/9119117924",
+      "stationName": "부산-연제 테슬라 슈퍼차저",
+      "distanceToSearchCenterM": 3279,
+      "bbox": [
+        35.1818882,
+        129.1020444,
+        35.1948882,
+        129.1179512
+      ],
+      "raw": "/mobility/maps/raw/busan.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          35.1818882,
+          129.1020444,
+          35.1948882,
+          129.1179512
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.897991+00:00",
+        "sha256": "d02fb3357d72b3b16e8a47997049beeb58d194ae051d4d43156d33146775eea5",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 289,
+        "roadNodes": 1242,
+        "chargers": 1,
+        "buildings": 208
+      },
+      "chargers": [
+        {
+          "id": "node/9119117924",
+          "coordinates": [
+            129.1099978,
+            35.1883882
+          ],
+          "name": "부산-연제 테슬라 슈퍼차저",
+          "operator": "Tesla",
+          "capacity": 4,
+          "sockets": [
+            {
+              "type": "nacs",
+              "count": 4,
+              "output": null
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/9119117924",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand": "Tesla Supercharger",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "capacity": "4",
+            "description": "V2 120kWh 급",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "name": "부산-연제 테슬라 슈퍼차저",
+            "name:en": "Tesla Busan-Yeonje Supercharger",
+            "name:ko": "부산-연제 테슬라 슈퍼차저",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator": "Tesla",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "busanservice",
+            "socket:nacs": "4",
+            "website": "https://www.tesla.com/findus/location/supercharger/busanservice"
+          },
+          "approach": {
+            "nodeId": 1773448785,
+            "coordinates": [
+              129.1099816,
+              35.1886215
+            ],
+            "distance": 25.983515390541676
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 436806218,
+        "end": 1773448785,
+        "chargerId": "node/9119117924",
+        "distance": 897.0088972649684
+      }
+    },
+    {
+      "id": "ulsan",
+      "name": "울산",
+      "center": [
+        129.357025,
+        35.5775794
+      ],
+      "station": "node/13688629603",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 5920,
+      "bbox": [
+        35.5710794,
+        129.3490331,
+        35.5840794,
+        129.3650169
+      ],
+      "raw": "/mobility/maps/raw/ulsan.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          35.5710794,
+          129.3490331,
+          35.5840794,
+          129.3650169
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.901331+00:00",
+        "sha256": "ebe5620a60c2206baf6fec05a32041cf0c94f80b46f08ee338c34713ed0ee613",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 232,
+        "roadNodes": 1161,
+        "chargers": 1,
+        "buildings": 191
+      },
+      "chargers": [
+        {
+          "id": "node/13688629603",
+          "coordinates": [
+            129.357025,
+            35.5775794
+          ],
+          "name": "충전소 13688629603",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/13688629603",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "31864",
+            "website": "https://www.tesla.com/findus/location/supercharger/31864"
+          },
+          "approach": {
+            "nodeId": 9959783288,
+            "coordinates": [
+              129.357034,
+              35.5776491
+            ],
+            "distance": 7.792909605665349
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 414673857,
+        "end": 9959783288,
+        "chargerId": "node/13688629603",
+        "distance": 1426.1023149308598
+      }
+    },
+    {
+      "id": "gwangju",
+      "name": "광주",
+      "center": [
+        126.8424663,
+        35.1519205
+      ],
+      "station": "node/9417452218",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 1250,
+      "bbox": [
+        35.1454205,
+        126.8345165,
+        35.1584205,
+        126.8504161
+      ],
+      "raw": "/mobility/maps/raw/gwangju.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          35.1454205,
+          126.8345165,
+          35.1584205,
+          126.8504161
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.908873+00:00",
+        "sha256": "588626391dadf5f27e5d392f4896dc59f2f4fd626b43d625d0b4a7e935614cba",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 302,
+        "roadNodes": 1281,
+        "chargers": 2,
+        "buildings": 531
+      },
+      "chargers": [
+        {
+          "id": "node/9119117929",
+          "coordinates": [
+            126.838181,
+            35.1472718
+          ],
+          "name": "광주 테슬라 슈퍼차저",
+          "operator": "Tesla",
+          "capacity": 6,
+          "sockets": [
+            {
+              "type": "nacs",
+              "count": 6,
+              "output": null
+            },
+            {
+              "type": "tesla_supercharger",
+              "count": 6,
+              "output": null
+            }
+          ],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/9119117929",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand": "Tesla Supercharger",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "capacity": "6",
+            "description": "V2 최대 120kWh B1F(지하1층)",
+            "fee": "yes",
+            "frequency": "0",
+            "level": "-1",
+            "motorcar": "designated",
+            "name": "광주 테슬라 슈퍼차저",
+            "name:en": "Tesla Gwangju Supercharger",
+            "name:ko": "광주 테슬라 슈퍼차저",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator": "Tesla",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "gwangjusupercharger",
+            "socket:nacs": "6",
+            "socket:tesla_supercharger": "6",
+            "website": "https://www.tesla.com/findus/location/supercharger/gwangjusupercharger"
+          },
+          "approach": {
+            "nodeId": 7801033523,
+            "coordinates": [
+              126.8388402,
+              35.1472964
+            ],
+            "distance": 59.99770994641686
+          }
+        },
+        {
+          "id": "node/9417452218",
+          "coordinates": [
+            126.8424663,
+            35.1519205
+          ],
+          "name": "충전소 9417452218",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/9417452218",
+          "tags": {
+            "amenity": "charging_station"
+          },
+          "approach": {
+            "nodeId": 436852566,
+            "coordinates": [
+              126.8429828,
+              35.1516856
+            ],
+            "distance": 53.7337401516415
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 436817048,
+        "end": 436852566,
+        "chargerId": "node/9417452218",
+        "distance": 1067.4529037833197
+      }
+    },
+    {
+      "id": "jeonju",
+      "name": "전주",
+      "center": [
+        127.1155763,
+        35.8069471
+      ],
+      "station": "node/13688595501",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 3500,
+      "bbox": [
+        35.8004471,
+        127.1075614,
+        35.8134471,
+        127.1235912
+      ],
+      "raw": "/mobility/maps/raw/jeonju.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          35.8004471,
+          127.1075614,
+          35.8134471,
+          127.1235912
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.924226+00:00",
+        "sha256": "5065672cf72dc92efa104b63388d0521c51b882e4859a165566d8d8348005b29",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 482,
+        "roadNodes": 1960,
+        "chargers": 1,
+        "buildings": 1858
+      },
+      "chargers": [
+        {
+          "id": "node/13688595501",
+          "coordinates": [
+            127.1155763,
+            35.8069471
+          ],
+          "name": "충전소 13688595501",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": "yes",
+          "openingHours": "24/7",
+          "fee": "yes",
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/13688595501",
+          "tags": {
+            "access": "yes",
+            "amenity": "charging_station",
+            "brand:en": "Tesla Supercharger",
+            "brand:website": "https://www.tesla.com/supercharger",
+            "brand:wikidata": "Q17089620",
+            "fee": "yes",
+            "frequency": "0",
+            "motorcar": "designated",
+            "network:en": "Supercharger",
+            "network:website": "https://www.tesla.com/supercharger",
+            "network:wikidata": "Q17089620",
+            "opening_hours": "24/7",
+            "operator:en": "Tesla",
+            "operator:wikidata": "Q478214",
+            "ref:tesla": "jeonjusupercharger",
+            "website": "https://www.tesla.com/findus/location/supercharger/jeonjusupercharger"
+          },
+          "approach": {
+            "nodeId": 13051838618,
+            "coordinates": [
+              127.1161927,
+              35.8066426
+            ],
+            "distance": 65.08629874779739
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 368692967,
+        "end": 13051838618,
+        "chargerId": "node/13688595501",
+        "distance": 762.3980911382782
+      }
+    },
+    {
+      "id": "chuncheon",
+      "name": "춘천",
+      "center": [
+        127.7340583,
+        37.8774989
+      ],
+      "station": "node/10695244554",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 553,
+      "bbox": [
+        37.8709989,
+        127.7258234,
+        37.8839989,
+        127.7422932
+      ],
+      "raw": "/mobility/maps/raw/chuncheon.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.8709989,
+          127.7258234,
+          37.8839989,
+          127.7422932
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.935135+00:00",
+        "sha256": "de82e8622ec66cfc58a7041cf816e8802334a56ee2961faba3faf056a9daadfe",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 332,
+        "roadNodes": 1331,
+        "chargers": 1,
+        "buildings": 943
+      },
+      "chargers": [
+        {
+          "id": "node/10695244554",
+          "coordinates": [
+            127.7340583,
+            37.8774989
+          ],
+          "name": "충전소 10695244554",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10695244554",
+          "tags": {
+            "amenity": "charging_station"
+          },
+          "approach": {
+            "nodeId": 8730530588,
+            "coordinates": [
+              127.7337791,
+              37.8774464
+            ],
+            "distance": 25.19085635024461
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 359495246,
+        "end": 8730530588,
+        "chargerId": "node/10695244554",
+        "distance": 1239.5928882283872
+      }
+    },
+    {
+      "id": "gangneung",
+      "name": "강릉",
+      "center": [
+        128.8920745,
+        37.7679368
+      ],
+      "station": "node/8341776378",
+      "stationName": "이름 미기재 충전소",
+      "distanceToSearchCenterM": 2278,
+      "bbox": [
+        37.7614368,
+        128.8838518,
+        37.7744368,
+        128.9002972
+      ],
+      "raw": "/mobility/maps/raw/gangneung.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          37.7614368,
+          128.8838518,
+          37.7744368,
+          128.9002972
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.938936+00:00",
+        "sha256": "59dbe1fcd0118c7fdd6e739c8de266339dbe09465492b3e195f3ac5144a3e105",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 228,
+        "roadNodes": 1330,
+        "chargers": 1,
+        "buildings": 129
+      },
+      "chargers": [
+        {
+          "id": "node/8341776378",
+          "coordinates": [
+            128.8920745,
+            37.7679368
+          ],
+          "name": "충전소 8341776378",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/8341776378",
+          "tags": {
+            "amenity": "charging_station"
+          },
+          "approach": {
+            "nodeId": 3243922144,
+            "coordinates": [
+              128.8919885,
+              37.7674762
+            ],
+            "distance": 51.771246392015094
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 259913809,
+        "end": 3243922144,
+        "chargerId": "node/8341776378",
+        "distance": 913.6160260157484
+      }
+    },
+    {
+      "id": "jeju",
+      "name": "제주",
+      "center": [
+        126.519337,
+        33.5184148
+      ],
+      "station": "node/10708259959",
+      "stationName": "전기차충전소",
+      "distanceToSearchCenterM": 2366,
+      "bbox": [
+        33.5119148,
+        126.5115405,
+        33.5249148,
+        126.5271335
+      ],
+      "raw": "/mobility/maps/raw/jeju.json",
+      "source": {
+        "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+        "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+        "bbox": [
+          33.5119148,
+          126.5115405,
+          33.5249148,
+          126.5271335
+        ],
+        "fetchedAt": "2026-09-21T13:52:10.968576+00:00",
+        "sha256": "f6224c16c8346410e57f4c5e8106a3b2809487df8c99c79f61e9a35daa76c062",
+        "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+        "extractor": "pyosmium 4.3.1",
+        "osmBase": "2026-09-20T20:22:06Z",
+        "license": "ODbL-1.0",
+        "attribution": "© OpenStreetMap contributors",
+        "copyrightUrl": "https://www.openstreetmap.org/copyright"
+      },
+      "counts": {
+        "roads": 493,
+        "roadNodes": 2328,
+        "chargers": 1,
+        "buildings": 2171
+      },
+      "chargers": [
+        {
+          "id": "node/10708259959",
+          "coordinates": [
+            126.519337,
+            33.5184148
+          ],
+          "name": "전기차충전소",
+          "operator": null,
+          "capacity": null,
+          "sockets": [],
+          "output": null,
+          "access": null,
+          "openingHours": null,
+          "fee": null,
+          "status": null,
+          "sourceUrl": "https://www.openstreetmap.org/node/10708259959",
+          "tags": {
+            "amenity": "charging_station",
+            "name": "전기차충전소"
+          },
+          "approach": {
+            "nodeId": 10708259958,
+            "coordinates": [
+              126.5193164,
+              33.518469
+            ],
+            "distance": 6.322093709793131
+          }
+        }
+      ],
+      "defaultRoute": {
+        "start": 414679118,
+        "end": 10708259958,
+        "chargerId": "node/10708259959",
+        "distance": 991.9807137403433
+      }
+    }
+  ]
+}
