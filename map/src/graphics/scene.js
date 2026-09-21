@@ -52,7 +52,13 @@ export class AtlasScene {
  }
  clear(root){root.traverse(o=>{if(o.isMesh){if(o.geometry!==unit&&!o.geometry.userData.sharedVehicle)o.geometry.dispose();if(o.material?.map&&!o.material.userData.persistent){o.material.map.dispose();o.material.dispose();}}});root.clear();}
  reset(){this.clear(this.world);this.clear(this.pathGroup);this.clear(this.hazards);this.picks=[];this.ceiling=null;this.car.visible=false;this.person.visible=false;this.view='orbit';this.cameraYaw=null;this.cameraPosition=null;this.controls.enabled=true;}
- async ready(){this.resize();await this.floorMaterial.userData.ready;await this.renderer.compileAsync(this.scene,this.camera);this.container.dataset.ready='true';}
+ async ready(){
+  const version=this.readyVersion=(this.readyVersion||0)+1;this.container.dataset.ready='false';this.resize();await this.floorMaterial.userData.ready;
+  if(version!==this.readyVersion)return;
+  // compileAsync polls material programs after disposal during rapid scene changes.
+  // Compile the latest scene in one synchronous turn so reset cannot invalidate it.
+  this.renderer.compile(this.scene,this.camera);this.container.dataset.ready='true';
+ }
  showCity(sites){
   this.reset();this.mode='city';this.camera.position.set(86,95,110);this.controls.target.set(0,2,0);
   box(this.world,150,1,112,'#d2d9cc',0,-1,0);box(this.world,152,.07,17,'#a0bcc0',0,-.43,13);
@@ -76,6 +82,17 @@ export class AtlasScene {
   for(const wall of plan.walls){const length=Math.hypot(wall.x2-wall.x1,wall.z2-wall.z1);if(length<.02)continue;const m=box(this.world,length,wall.height,wall.thickness,palette.white,(wall.x1+wall.x2)/2,wall.height/2,(wall.z1+wall.z2)/2);m.rotation.y=-Math.atan2(wall.z2-wall.z1,wall.x2-wall.x1);}
   if(garage)this.garageDetails(plan);
   batchStatic(this.world);this.ready();
+ }
+ showSourceBlueprint(plan){
+  if(!plan.sourceAsset)return;
+  const material=new THREE.MeshBasicMaterial({transparent:true,opacity:.78,depthWrite:false,side:THREE.DoubleSide});
+  const overlay=new THREE.Mesh(new THREE.PlaneGeometry(plan.width,plan.depth),material);overlay.name='source-blueprint';overlay.rotation.x=-Math.PI/2;overlay.position.y=-.025;this.world.add(overlay);
+  new THREE.TextureLoader().load(plan.sourceAsset,texture=>{
+   if(overlay.parent!==this.world){texture.dispose();material.dispose();return;}
+   texture.colorSpace=THREE.SRGBColorSpace;const crop=plan.sourceCrop;
+   if(crop){texture.repeat.set(crop.width,crop.height);texture.offset.set(crop.x,1-crop.y-crop.height);}
+   material.map=texture;material.needsUpdate=true;overlay.userData.ready=true;
+  },undefined,()=>{overlay.visible=false;});
  }
  garageDetails(plan){
   if(plan.layoutType==='source-traced'){this.sourceGarageDetails(plan);return;}
@@ -127,5 +144,5 @@ export class AtlasScene {
  frame(now){const delta=Math.min(.12,(now-this.last)/1000);this.last=now;this.elapsed+=delta;this.onFrame?.(delta);if(this.view!=='orbit'&&this.pose){const p=this.pose;this.cameraYaw=dampHeading(this.cameraYaw??p.heading,p.heading,delta);const forward=new THREE.Vector3(Math.sin(this.cameraYaw),0,Math.cos(this.cameraYaw));const target=new THREE.Vector3(p.x,this.moveMode==='person'?1.65:1.45,p.z);if(this.view==='first'){const desired=target.clone().addScaledVector(forward,.6);if(!this.cameraPosition)this.cameraPosition=desired.clone();this.cameraPosition.lerp(desired,1-Math.exp(-12*delta));this.camera.position.copy(this.cameraPosition);this.camera.lookAt(this.camera.position.clone().addScaledVector(forward,8));}else{this.camera.position.lerp(target.clone().addScaledVector(forward,-9).add(new THREE.Vector3(0,5,0)),.1);this.camera.lookAt(target.clone().addScaledVector(forward,3));}this.car.visible=this.moveMode==='car'&&this.view!=='first';this.person.visible=this.moveMode==='person'&&this.view!=='first';}else this.controls.update();
   if(this.container.clientWidth&&this.container.clientHeight)this.composer.render();this.frames++;if(now-this.fpsAt>1000){this.fps=Math.round(this.frames*1000/(now-this.fpsAt));this.frames=0;this.fpsAt=now;}
  }
- dispose(){this.renderer.setAnimationLoop(null);this.observer.disconnect();this.controls.dispose();this.clear(this.world);this.clear(this.pathGroup);this.clear(this.hazards);this.environment.dispose();this.composer.dispose();this.renderer.dispose();}
+ dispose(){this.readyVersion=(this.readyVersion||0)+1;this.renderer.setAnimationLoop(null);this.observer.disconnect();this.controls.dispose();this.clear(this.world);this.clear(this.pathGroup);this.clear(this.hazards);this.environment.dispose();this.composer.dispose();this.renderer.dispose();}
 }
