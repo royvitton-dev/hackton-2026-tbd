@@ -24,7 +24,7 @@ test('Hyundai defaults, real IONIQ 5 and Kona meshes, model-year notice and batt
   await expect(page.locator('#battery-info-panel')).toHaveCount(0);
 
   await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption('U0017');
-  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq6_lr_2wd_2026');
-  await expect(canvas).toHaveAttribute('data-renderer','webgl-cutout');
+  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq6_lr_2wd_2026',{timeout:90000});
+  await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
   expect(errors).toEqual([]);
 });

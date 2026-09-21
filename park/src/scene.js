@@ -19,11 +19,11 @@ import { PLANET_RADIUS, surfacePoint, surfaceDrop, themeCoordinates } from '../l
 import { createGlobe, createThemeIsland, surfaceAnchor, surfacePatch, conformToSurface, surfaceMotion, CASTLE_COORDINATES, PLAZA_COORDINATES } from './globe.js';
 import { createFireworks } from './fireworks.js';
 
-const overviewPosition=[58,44,78],overviewTarget=[0,4,0];
+const overviewPosition=[58,44,78],overviewTarget=[0,0,0];
 
 export class ParkScene {
  constructor(container,{onSelect,onReady,onError,onLabels,video,capture=false}={}){
-  this.container=container;this.onSelect=onSelect;this.onLabels=onLabels;this.video=video;this.capture=capture;this.fixedTime=6;this.running=true;this.night=false;this.mode='park';this.items=[];this.animations=[];this.attractions=[];this.picks=[];this.reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  this.container=container;this.onSelect=onSelect;this.onLabels=onLabels;this.video=video;this.capture=capture;this.fixedTime=6;this.running=true;this.night=false;this.mode='park';this.centeredOrbit=true;this.items=[];this.animations=[];this.attractions=[];this.picks=[];this.reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
   this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#e9eef0');this.scene.fog=new THREE.Fog('#e9eef0',180,400);this.backgroundDirty=true;
   this.camera=new THREE.PerspectiveCamera(38,1,.1,500);this.camera.position.fromArray(overviewPosition);
   try{this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});}catch(error){onError?.(error);return;}
@@ -31,8 +31,9 @@ export class ParkScene {
   this.renderer.toneMapping=THREE.ACESFilmicToneMapping;this.renderer.toneMappingExposure=.91;this.renderer.outputColorSpace=THREE.SRGBColorSpace;
   this.renderer.domElement.setAttribute('aria-label','어린왕자의 작은 별처럼 펼쳐진 디즈니 테마파크. 성의 불꽃놀이와 열 명의 친구들을 만나고 별을 회전해 테마를 선택하세요.');this.renderer.domElement.setAttribute('role','img');container.append(this.renderer.domElement);
   this.renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();this.running=false;onError?.(new Error('WebGL context lost'));});
-  this.controls=new OrbitControls(this.camera,this.renderer.domElement);this.controls.target.fromArray(overviewTarget);this.controls.enableDamping=true;this.controls.dampingFactor=.07;this.controls.minDistance=38;this.controls.maxDistance=180;this.controls.maxPolarAngle=Math.PI*.8;this.controls.minPolarAngle=.15;this.controls.enablePan=true;this.controls.screenSpacePanning=false;
-  this.controls.addEventListener('start',()=>{this.transition=null;this.tour=false;});
+  this.controls=new OrbitControls(this.camera,this.renderer.domElement);this.controls.target.fromArray(overviewTarget);this.controls.enableDamping=true;this.controls.dampingFactor=.07;this.controls.minDistance=38;this.controls.maxDistance=180;this.controls.maxPolarAngle=Math.PI*.8;this.controls.minPolarAngle=.15;this.controls.enablePan=false;this.controls.screenSpacePanning=false;
+  // Keep the planet pivot fixed, including a drag that interrupts the return animation.
+  this.controls.addEventListener('start',()=>{this.transition=null;this.tour=false;if(this.centeredOrbit)this.controls.target.fromArray(overviewTarget);});
   this.sun=new THREE.DirectionalLight('#ffeacb',3.1);this.sun.position.set(-50,90,75);this.sun.castShadow=true;this.sun.shadow.mapSize.set(4096,4096);Object.assign(this.sun.shadow.camera,{left:-52,right:52,top:62,bottom:-52,near:.5,far:200});this.sun.shadow.bias=-.00012;this.sun.shadow.normalBias=.045;this.sun.shadow.radius=2;this.scene.add(this.sun);
   this.hemisphere=new THREE.HemisphereLight('#d9efff','#667c43',.65);this.scene.add(this.hemisphere);
   const pmrem=new THREE.PMREMGenerator(this.renderer);const room=new RoomEnvironment();this.env=pmrem.fromScene(room,.04).texture;this.scene.environment=this.env;this.scene.environmentIntensity=.55;room.dispose();
@@ -83,15 +84,15 @@ export class ParkScene {
   if(this.mode==='park'&&this.onLabels){const rect=this.container.getBoundingClientRect();this.onLabels(this.attractions.map((a,i)=>{const p=a.label.clone().project(this.camera),facing=a.anchor.position.dot(this.camera.position.clone().sub(a.anchor.position))>0;return {id:this.items[i].id,x:(p.x+1)/2*rect.width,y:(-p.y+1)/2*rect.height,visible:facing&&p.z<1&&Math.abs(p.x)<1&&Math.abs(p.y)<1};}));}
   this.frames++;if(now-this.fpsAt>1000){this.fps=Math.round(this.frames*1000/(now-this.fpsAt));this.frames=0;this.fpsAt=now;}
  }
- move(position,target){this.transition={from:this.camera.position.clone(),to:new THREE.Vector3(...position),targetFrom:this.controls.target.clone(),targetTo:new THREE.Vector3(...target),start:performance.now()};}
- overview(){this.tour=false;this.controls.minDistance=38;this.move(overviewPosition,overviewTarget);}
+ move(position,target,{centered=false}={}){this.centeredOrbit=centered;this.transition={from:this.camera.position.clone(),to:new THREE.Vector3(...position),targetFrom:this.controls.target.clone(),targetTo:new THREE.Vector3(...target),start:performance.now()};}
+ overview(){this.tour=false;this.controls.minDistance=38;this.move(overviewPosition,overviewTarget,{centered:true});}
  focus(id){const attraction=this.attractions[this.items.findIndex(i=>i.id===id)];if(!attraction)return;this.tour=false;this.controls.minDistance=10;const anchor=attraction.anchor;this.move(anchor.localToWorld(new THREE.Vector3(12,15,21)).toArray(),anchor.localToWorld(new THREE.Vector3(0,2,0)).toArray());}
  focusCharacter(id){const character=this.characters.find(c=>c.definition.id===id);if(!character)return;this.tour=false;this.controls.minDistance=2;const height=id==='goofy'?1.3:id==='pluto'?.7:1;const target=character.root.localToWorld(new THREE.Vector3(0,height,0)),offset=new THREE.Vector3(1.6,1.1,6.2).applyQuaternion(character.root.getWorldQuaternion(new THREE.Quaternion()));this.move(target.clone().add(offset).toArray(),target.toArray());}
  focusCastle(){this.tour=false;this.controls.minDistance=12;this.move(this.castleAnchor.localToWorld(new THREE.Vector3(18,16,28)).toArray(),this.castleAnchor.localToWorld(new THREE.Vector3(0,8,0)).toArray());}
  setNight(night){this.night=night;const bg=night?'#091426':'#e9eef0';this.scene.background=new THREE.Color(bg);this.scene.fog.color.set(bg);this.globe.setNight(night);this.sun.intensity=night?.65:3.1;this.sun.color.set(night?'#b4cde8':'#ffeacb');this.hemisphere.intensity=night?.6:.85;this.bloom.strength=night?.45:.22;this.renderer.toneMappingExposure=night?1.1:.91;this.backgroundDirty=true;}
  setQuality(value){const ratio=value==='ultra'?Math.min(devicePixelRatio,2):value==='balanced'?1:Math.min(devicePixelRatio,1.75);this.renderer.setPixelRatio(ratio);this.ao.enabled=value!=='balanced';this.sun.shadow.mapSize.setScalar(value==='ultra'?4096:2048);this.sun.shadow.map?.dispose();this.sun.shadow.map=null;this.resize();}
  enterCinema(){this.mode='cinema';this.parkRoot.visible=false;this.projects.visible=false;this.globe.root.visible=false;this.fireworks.root.visible=false;this.cinema.root.visible=true;this.scene.background=new THREE.Color('#121821');this.scene.fog=new THREE.Fog('#121821',35,75);this.sun.intensity=.05;this.hemisphere.intensity=.2;this.scene.environmentIntensity=.1;this.bloom.strength=.22;this.controls.minDistance=6;this.controls.maxDistance=28;this.controls.enablePan=false;this.controls.maxPolarAngle=Math.PI*.53;this.move([.2,5.3,13],[0,5.1,-13]);}
- leaveCinema(){this.video.pause();this.mode='park';this.parkRoot.visible=true;this.projects.visible=true;this.globe.root.visible=true;this.fireworks.root.visible=true;this.cinema.root.visible=false;this.scene.fog=new THREE.Fog('#e9eef0',180,400);this.scene.environmentIntensity=.55;this.controls.minDistance=38;this.controls.maxDistance=180;this.controls.maxPolarAngle=Math.PI*.8;this.controls.enablePan=true;this.setNight(this.night);this.overview();}
+ leaveCinema(){this.video.pause();this.mode='park';this.parkRoot.visible=true;this.projects.visible=true;this.globe.root.visible=true;this.fireworks.root.visible=true;this.cinema.root.visible=false;this.scene.fog=new THREE.Fog('#e9eef0',180,400);this.scene.environmentIntensity=.55;this.controls.minDistance=38;this.controls.maxDistance=180;this.controls.maxPolarAngle=Math.PI*.8;this.controls.enablePan=false;this.setNight(this.night);this.overview();}
  setTime(time){this.capture=true;this.fixedTime=time;}
  captureImage(){return this.renderer.domElement.toDataURL('image/png');}
  dispose(){this.renderer.setAnimationLoop(null);this.resizeObserver.disconnect();this.controls.dispose();this.composer.dispose();this.renderer.dispose();}

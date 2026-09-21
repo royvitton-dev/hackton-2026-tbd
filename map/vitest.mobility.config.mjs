@@ -1,0 +1,2 @@
+import {defineConfig} from 'vitest/config';
+export default defineConfig({test:{include:['tests/unit/mobility.test.js'],reporters:['default','json'],outputFile:{json:'reports/mobility/unit/results.json'},coverage:{provider:'v8',include:['src/core/mobility.js'],reporter:['text','html','json-summary'],reportsDirectory:'reports/mobility/coverage',thresholds:{lines:100,functions:100,statements:100,branches:100}}}});

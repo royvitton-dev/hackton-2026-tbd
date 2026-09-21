@@ -50,6 +50,8 @@ npm run dev
 - 기본: http://localhost:3000/?user=U0001 (Hyundai IONIQ 5)
 - Model 3: http://localhost:3000/?user=U0002
 - Model Y: http://localhost:3000/?user=U0009
+- Volvo EX30: http://localhost:3000/?user=U0006
+- Volkswagen ID.4: http://localhost:3000/?user=U0076
 - Kona Electric: http://localhost:3000/?user=U0010 (2019 대표 외형)
 - 선택한 사용자 ID를 URL과 localStorage에 저장합니다.
 - 사용자 변경 시 차량·점수·주행 정보·충전 이력이 함께 바뀝니다.
@@ -72,7 +74,7 @@ npm run demo
 
 `demo`는 완성된 `.next`, public asset과 설정을 임시 디렉터리에 복사해 실행합니다. 이후 작업 폴더에서 빌드하거나 Git 브랜치를 바꿔도 실행 중인 화면의 JavaScript/GLB 경로가 유지됩니다. 새 결과를 보려면 데모를 종료한 뒤 다시 실행합니다. 의존성은 현재 `node_modules`를 사용하므로 의존성을 변경한 뒤에도 다시 실행해야 합니다. 임시 복사본은 정상 종료할 때 제거합니다.
 
-`npm run start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:3000/?user=U0001 입니다. 현재 20개 차량 프로필 모두 표시됩니다. 상세 GLB가 있는 13개는 실제 3D 모델로, 나머지 7개는 실차 투명 PNG를 WebGL에 고정해서 표시합니다. 장면 안내에서 두 방식을 구분합니다.
+`npm run start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:3000/?user=U0001 입니다. 현재 20개 차량 프로필 모두 표시됩니다. GLB가 있는 16개는 실제 3D 모델로, 나머지 4개는 실차 투명 PNG를 WebGL에 고정해서 표시합니다. 장면 안내에서 두 방식을 구분합니다.
 
 ## 데이터 기준
 
@@ -152,20 +154,23 @@ MINI Cooper / BMW i5 / Audi Q4·Q6 / Volvo EX30 / Volkswagen ID.4는 제조사 �
 
 ## 실제 WebGL 3D 렌더링
 
-GLB가 있으면 **실제 차량 메시**를 우선 렌더링합니다. GLB 미확보 7종은 현재 실차 누끼 PNG를 Canvas의 texture로 표시하며, 요청된 3D 회전·배터리 투시는 미완료 상태입니다. PNG는 고정된 시점으로 표시하고 사진 회전이나 depth-stack을 사용하지 않습니다. UI에서도 실차 이미지로 표기하며 실제 3D 모델로 설명하지 않습니다. 차량을 HTML img 또는 Next Image로 렌더링하지 않습니다.
+GLB가 있으면 **실제 차량 메시**를 우선 렌더링합니다. GLB 미확보 4종은 현재 실차 누끼 PNG를 Canvas의 texture로 표시하며, 요청된 3D 회전·배터리 투시는 미완료 상태입니다. PNG는 고정된 시점으로 표시하고 사진 회전이나 depth-stack을 사용하지 않습니다. UI에서도 실차 이미지로 표기하며 실제 3D 모델로 설명하지 않습니다. 차량을 HTML img 또는 Next Image로 렌더링하지 않습니다.
 
 현재 실제 GLB가 연결된 모델:
+- Volvo EX30: LagzDesign의 CC BY 4.0 커뮤니티 모델, 59,354 triangles / 0.33 MB. 실내가 없는 2023 대표 외형이며 정밀 CAD가 아닙니다. 원본 GLB에 제작자·원본 URL·라이선스가 포함되어 있습니다.
+- Volkswagen ID.4: ItsDiyor의 CC BY 4.0 모델, 224,854 triangles / 3.7 MB. 2021 대표 외형, 차체·휠·유리 원본 메시와 내장 texture를 유지합니다.
 - Hyundai IONIQ 5: 2개 트림. 현대 호주 공식 configurator의 차체·실내·휠 메시 105,109 triangles, 약 3.1 MB. 공식 stock 구성과 CyberGrey 소재를 선택하며 원본 geometry는 유지합니다.
 - Hyundai Kona Electric: 1개 트림. RADMATTER12의 CC BY 4.0 모델을 공개 Objaverse 보관본에서 확보했습니다. 248,120 triangles를 유지하며 약 14.4 MB → 1.5 MB로 압축했습니다. **2019년형 외형으로 원본 데이터의 2026년형과 다른 세대**라는 안내를 차량 장면에 표시합니다.
 - Tesla Model 3: 2개 트림. 출처 GLB 약 681,368 triangles, 3.1 MB. 원본 형상을 사용합니다.
 - Tesla Model Y: 2개 트림. 공개 Objaverse 보관본에서 받은 2021 모델을 701,663 triangles / 1.8 MB로 최적화했습니다.
 - Kia EV6: 기아 인도 공식 쇼룸의 페이스리프트 GT-Line 모델. 389,487 triangles / 10.1 MB. 원본 차체·실내·휠과 텍스처를 GLB로 변환했습니다.
+- Hyundai IONIQ 6: AutoTrader Pivot의 공개 2025 캐나다형 Preferred Long Range 모델. 차체·문·좌석·네 바퀴 원본 GLB, 783,652 triangles / 4.4 MB. 대표 연식 차이를 장면에 표시하며 드래그와 내부 배터리 투시를 제공합니다. 출처와 원본은 `images/sources/hyundai-ioniq6/`에 보존합니다. 공개 재배포 허가는 확인되지 않아 CC 모델로 표시하지 않습니다.
 - Hyundai Casper Electric: 현대 공식 2026 구성기의 차체·실내·휠을 선택한 트림으로 조립. 2,653,012 triangles / 15.3 MB. 별도 쇼룸 그림자를 제외하고 같은 재질의 draw call을 병합했습니다.
 - Kia EV3: 기아 네덜란드 공식 2025 Air 모델. 472,105 triangles / 7.4 MB. 실제 차체와 원본 네 바퀴 배치를 유지합니다. 2개 트림에 대표 외형으로 연결합니다.
 - Kia Niro EV: 기아 홍콩 공식 2세대 EV 모델. 445,929 triangles / 4.0 MB. 우핸들 대표 외형이며 연식/트림 차이가 있습니다.
 - Kia EV9: 기아 공식 글로벌 쇼룸의 GT-Line 모델. 228,611 triangles / 1.0 MB. 21인치 휠이 포함된 대표 외형입니다.
 
-**전체 16개 모델 / 20개 차량 프로필을 표시합니다: 실제 GLB 9개 모델 / 13개 프로필, 실차 PNG 7개 모델 / 7개 프로필.** PNG 대상은 IONIQ 6, Audi Q4 45 e-tron, Audi Q6 e-tron, BMW i5, MINI Cooper Electric, Volkswagen ID.4, Volvo EX30입니다. 모두 원본 사진에서 실제 배경을 제거한 파일이며 임의 placeholder가 아닙니다. 7종의 상세 GLB는 아직 미확보이고 그 이유는 별도로 유지합니다. IONIQ 5와 EV6의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았고, 제조사 공식 페이지에 공개 연결된 모델로 대체 확보했습니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. 확보한 모델은 정확한 2026년형 CAD가 아닌 대표 외형이며 연식·트림 차이를 UI에 고지합니다.
+**전체 16개 모델 / 20개 차량 프로필을 표시합니다: 실제 GLB 12개 모델 / 16개 프로필, 실차 PNG 4개 모델 / 4개 프로필.** PNG 대상은 Audi Q4 45 e-tron, Audi Q6 e-tron, BMW i5, MINI Cooper Electric입니다. 모두 원본 사진에서 실제 배경을 제거한 파일이며 임의 placeholder가 아닙니다. 4종의 상세 GLB는 아직 미확보이고 그 이유는 별도로 유지합니다. IONIQ 5와 EV6의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았고, 제조사 공식 페이지에 공개 연결된 모델로 대체 확보했습니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. 확보한 모델은 정확한 2026년형 CAD가 아닌 대표 외형이며 연식·트림 차이를 UI에 고지합니다.
 
 IONIQ 5 출처는 현대 공식 페이지 및 `model_sources.json`에 기록합니다. **제조사 저작권 자료이며 공개 재배포 라이선스는 확인되지 않았습니다.** CC BY 모델로 표시하지 않습니다. 호주형 기본 트림 외형이므로 원본 데이터의 국내 트림과 차이가 있을 수 있습니다. 원본 GLB와 트림 구성 JSON은 `images/sources/`에 보존합니다. 아래 명령으로 공식 트림 선택 결과를 재생성하고 동기화합니다.
 
@@ -251,7 +256,7 @@ node scripts/capture-demo.mjs
 - `src/components/VehicleBatteryDashboard.tsx`: 단일 사용자 컨테이너/탭.
 - `VehicleImageWebGLViewer.tsx`, `VehicleGlbModel.tsx`, `GarageEnvironment.tsx`: 실제 3D 렌더링.
 - `VehicleCutoutMesh.tsx`: GLB 미확보 차량의 실제 투명 PNG를 WebGL에서 고정 표시.
-- `tests/browser/cutouts.spec.ts`, `casper.spec.ts`: 7종의 PNG 전환/고정 카메라/상세 버튼 및 캐스퍼 실제 메시 검증.
+- `tests/browser/cutouts.spec.ts`, `casper.spec.ts`: 6종의 PNG 전환/고정 카메라/상세 버튼 및 캐스퍼 실제 메시 검증.
 - `tests/browser/battery-depth.spec.ts`: 차체 투시와 원래 재질 복원, 배터리 depth test와 차체 경계, 상단·측면 카메라 제한 검증.
 - `BatteryHotspot.tsx`, `BatteryFocusController.tsx`, `BatteryInfoPanel.tsx`: 배터리 포커스.
 - `VehicleDetails.tsx`, `ChargingHistory.tsx`: 리소스 기반 상세 정보.
