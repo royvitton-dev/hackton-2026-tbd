@@ -25,6 +25,15 @@ MAPS.find(m=>m.id==='zigzag').rotors=MAPS.find(m=>m.id==='zigzag').rotors.filter
 // Distinct, fixed speeds per ride: both directions, no dependence on participants.
 const rideSpeeds={neon:[.79,-1.13,1.49,-.94,1.72],orbit:[1.07,-1.56,.73,-1.31],zigzag:[-.86,1.39],split:[1.42,-.78,1.14,-1.63,.95]};
 for(const map of MAPS)map.rotors.forEach((r,i)=>{r.omega=rideSpeeds[map.id][i];});
+for(const map of MAPS){
+ map.bumpers.forEach((b,i)=>{b.ride=['carousel','ufo','bumper-car'][i%3];});
+ map.rotors.forEach((r,i)=>{r.ride=['teacups','windmill','pirate'][i%3];r.blades=r.ride==='windmill'?4:2;if(r.ride==='pirate')r.swing=.95;});
+ map.sliders.forEach((s,i)=>{s.ride=i%2?'bumper-shuttle':'train';});
+}
+export function rotorPose(rotor,time){
+ const phase=rotor.phase+time*rotor.omega;
+ return rotor.swing?{angle:Math.sin(phase)*rotor.swing,velocity:Math.cos(phase)*rotor.swing*rotor.omega}:{angle:phase,velocity:rotor.omega};
+}
 // Four real exit throats. Sloping divider rails prevent a flat dead zone between holes.
 for(const map of MAPS){
  map.exits=[100,240,380,520].map((x,i)=>({id:i+1,x,width:64}));
@@ -59,7 +68,7 @@ export class Race {
  emit(event){this.events.push(event);if(this.events.length>200)this.events.shift();}
  motion(){return boardMotionAt(this.raceTime,this.seed,this.config.boardMotion===true);}
  sliderSegments(){return (this.map.sliders??[]).map(s=>{const phase=this.rotationTime*s.omega+s.phase,x=s.x+Math.sin(phase)*s.amplitude;return {...s,ax:x-s.length,ay:s.y,bx:x+s.length,by:s.y,r:10,svx:Math.cos(phase)*s.amplitude*s.omega,svy:0};});}
- rotorSegments(){return this.map.rotors.map(o=>{const a=o.phase+this.rotationTime*o.omega;return {...o,ax:o.x-Math.cos(a)*o.length,ay:o.y-Math.sin(a)*o.length,bx:o.x+Math.cos(a)*o.length,by:o.y+Math.sin(a)*o.length,r:9};});}
+ rotorSegments(){return this.map.rotors.flatMap(o=>{const pose=rotorPose(o,this.rotationTime);return Array.from({length:(o.blades??2)/2},(_,i)=>{const a=pose.angle+i*Math.PI/2;return {...o,omega:pose.velocity,ax:o.x-Math.cos(a)*o.length,ay:o.y-Math.sin(a)*o.length,bx:o.x+Math.cos(a)*o.length,by:o.y+Math.sin(a)*o.length,r:9};});});}
  step(dt=STEP){
   if(!['mixing','countdown','racing'].includes(this.state))return;
   // Public stepping is bounded too: no giant timestep can tunnel through the board.

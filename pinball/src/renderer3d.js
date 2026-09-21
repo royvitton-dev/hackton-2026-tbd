@@ -1,6 +1,7 @@
 import * as THREE from '../vendor/three.module.js';
 import {LANDS} from './lands.js';
 import {batchStaticMeshes} from './geometry-batch.js';
+import {rotorPose} from './physics.js';
 const S=1/60, X=x=>(x-310)*S, Z=y=>y*S;
 const UP=new THREE.Vector3(0,1,0);
 const CAMERA_DIRECTIONS=[new THREE.Vector3(.18,.72,.67).normalize(),new THREE.Vector3(.35,.60,.72).normalize(),new THREE.Vector3(0,.995,.1).normalize()];
@@ -10,7 +11,7 @@ export class Renderer3D {
   Object.assign(this,{canvas,mode:'webgl',overview:false,angle:2,lastRound:null,cameraCenter:400,finishedAt:new Map()});
   this.webgl=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'high-performance'});
   this.webgl.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
-  this.webgl.shadowMap.enabled=true;this.webgl.shadowMap.type=THREE.PCFSoftShadowMap;
+  this.webgl.shadowMap.enabled=true;this.webgl.shadowMap.type=THREE.PCFShadowMap;
   this.webgl.outputColorSpace=THREE.SRGBColorSpace;this.webgl.toneMapping=THREE.ACESFilmicToneMapping;this.webgl.toneMappingExposure=.88;
   this.scene=new THREE.Scene();this.camera=new THREE.PerspectiveCamera(40,1,.1,180);
   this.scene.add(new THREE.HemisphereLight(0xfff4e7,0x887393,1.0));
@@ -72,7 +73,46 @@ export class Renderer3D {
    this.mesh(new THREE.CylinderGeometry(.025,.025,.49,6),mat.gold,cx,.56,cz,ride);
    const car=this.mesh(new THREE.SphereGeometry(r*.18,10,8),i%2?mat.pink:mat.mint,cx,.44,cz,ride);car.scale.y=.65;
   }
-  const index=this.carousels.length;this.carousels.push({roof,ride,phase:p.x*.01,rate:(.14+(index%5)*.07)*(index%2?-1:1),key:`${p.x}:${p.y}`,hitAt:-10});
+  const index=this.carousels.length;this.carousels.push({roof,ride,baseY:.94,phase:p.x*.01,rate:(.14+(index%5)*.07)*(index%2?-1:1),key:`${p.x}:${p.y}`,hitAt:-10});
+ }
+ saucer(p,mat){
+  const r=p.r*S,ride=new THREE.Group();ride.position.set(X(p.x),0,Z(p.y));this.group.add(ride);
+  this.mesh(new THREE.CylinderGeometry(r*.95,r,.19,28),mat.dark,0,.10,0,ride);
+  this.mesh(new THREE.CylinderGeometry(r*.67,r*.97,.18,28),mat.mint,0,.27,0,ride);
+  this.ring(0,0,r*.88,mat.neonCyan,.32,.047,ride);
+  const roof=this.mesh(new THREE.SphereGeometry(r*.52,20,12,0,Math.PI*2,0,Math.PI/2),mat.glass,0,.37,0,ride);roof.scale.y=.85;
+  for(let i=0;i<8;i++){const a=i*Math.PI/4;this.mesh(new THREE.SphereGeometry(.046,7,5),i%2?mat.neonPink:mat.neonGold,Math.cos(a)*r*.79,.38,Math.sin(a)*r*.79,ride);}
+  this.carousels.push({roof,ride,baseY:.37,phase:p.x*.01,rate:-.24,key:`${p.x}:${p.y}`,hitAt:-10});
+ }
+ bumperCar(p,mat){
+  const r=p.r*S,ride=new THREE.Group();ride.position.set(X(p.x),0,Z(p.y));this.group.add(ride);
+  this.mesh(new THREE.CylinderGeometry(r,r,.18,24),mat.dark,0,.1,0,ride);this.ring(0,0,r*.88,mat.neonPink,.23,.05,ride);
+  const roof=new THREE.Group();roof.position.y=.28;ride.add(roof);
+  const body=this.mesh(new THREE.CapsuleGeometry(r*.31,r*.72,3,12),mat.pink,0,0,0,roof);body.rotation.z=Math.PI/2;
+  this.mesh(new THREE.BoxGeometry(r*.5,r*.21,r*.44),mat.dark,-r*.05,.16,0,roof);
+  this.mesh(new THREE.BoxGeometry(r*.15,r*.28,r*.47),mat.cream,-r*.29,.19,0,roof);
+  for(const z of [-1,1])this.mesh(new THREE.SphereGeometry(r*.06,8,6),mat.neonGold,r*.55,.06,z*r*.21,roof);
+  this.mesh(new THREE.CylinderGeometry(.018,.018,.62,5),mat.gold,-r*.46,.53,0,roof);
+  this.mesh(new THREE.SphereGeometry(.055,8,6),mat.neonCyan,-r*.46,.87,0,roof);
+  batchStaticMeshes(roof);this.carousels.push({roof,ride,baseY:.28,phase:p.x*.01,rate:.21,key:`${p.x}:${p.y}`,hitAt:-10});
+ }
+ windmill(r,mat){
+  const g=new THREE.Group();g.position.set(X(r.x),.2,Z(r.y));this.group.add(g);const length=r.length*S;
+  for(let i=0;i<2;i++){
+   const arm=this.mesh(new THREE.CapsuleGeometry(9*S,length*2,3,8),i?mat.mint:mat.pink,0,0,0,g);arm.rotation.z=Math.PI/2;arm.rotation.y=i*Math.PI/2;
+   for(const sign of [-1,1]){const a=i*Math.PI/2,x=Math.cos(a)*sign*length*.86,z=Math.sin(a)*sign*length*.86;this.mesh(new THREE.CylinderGeometry(.105,.105,.065,8),i?mat.neonPink:mat.neonCyan,x,.17,z,g);}
+  }
+  this.mesh(new THREE.ConeGeometry(.21,.4,6),mat.gold,0,.23,0,g);return g;
+ }
+ pirateShip(r,mat){
+  const g=new THREE.Group();g.position.set(X(r.x),.2,Z(r.y));this.group.add(g);const length=r.length*S;
+  const hull=this.mesh(new THREE.CapsuleGeometry(9*S,length*2,3,10),mat.dark,0,0,0,g);hull.rotation.z=Math.PI/2;
+  this.mesh(new THREE.BoxGeometry(length*1.75,.12,.23),mat.gold,0,.16,0,g);
+  for(const x of [-length*.65,0,length*.65])this.mesh(new THREE.BoxGeometry(.11,.17,.27),mat.pink,x,.27,0,g);
+  this.mesh(new THREE.CylinderGeometry(.035,.035,.87,7),mat.cream,0,.55,0,g);
+  const sail=new THREE.Shape();sail.moveTo(-length*.32,0);sail.lineTo(length*.35,.13);sail.lineTo(0,.58);sail.closePath();
+  const flag=this.mesh(new THREE.ShapeGeometry(sail),mat.sail,0,.49,.025,g);flag.rotation.x=-.35;
+  for(const x of [-length*.88,length*.88])this.mesh(new THREE.SphereGeometry(.07,8,6),mat.neonPink,x,.18,0,g);return g;
  }
  teacupRotor(r,mat){
   const g=new THREE.Group();g.position.set(X(r.x),.20,Z(r.y));this.group.add(g);const length=r.length*S;
@@ -98,6 +138,35 @@ export class Renderer3D {
   }
   this.mesh(new THREE.CylinderGeometry(.06,.06,.14,8),mat.gold,-length*.76,.37,0,g);
   return g;
+ }
+ bumperShuttle(s,mat){
+  const g=new THREE.Group();g.position.set(X(s.x),.16,Z(s.y));this.group.add(g);const length=s.length*S;
+  const base=this.mesh(new THREE.CapsuleGeometry(10*S,length*2,3,8),mat.dark,0,0,0,g);base.rotation.z=Math.PI/2;
+  for(const side of [-1,1]){
+   const x=side*length*.5;
+   this.mesh(new THREE.BoxGeometry(length*.65,.17,.29),side<0?mat.pink:mat.mint,x,.15,0,g);
+   this.mesh(new THREE.BoxGeometry(length*.28,.09,.20),mat.dark,x,.28,0,g);
+   this.mesh(new THREE.BoxGeometry(length*.06,.16,.24),mat.cream,x-side*length*.13,.3,0,g);
+   this.mesh(new THREE.SphereGeometry(.05,7,5),mat.neonGold,x+side*length*.29,.24,0,g);
+  }
+  return g;
+ }
+ neonCourse(map,mat){
+  const c=document.createElement('canvas');c.width=c.height=64;const ctx=c.getContext('2d'),gradient=ctx.createRadialGradient(32,32,0,32,32,32);gradient.addColorStop(0,'rgba(255,255,255,.52)');gradient.addColorStop(.5,'rgba(255,255,255,.22)');gradient.addColorStop(1,'rgba(255,255,255,0)');ctx.fillStyle=gradient;ctx.fillRect(0,0,64,64);
+  const texture=new THREE.CanvasTexture(c);this.neonHalos=[];
+  const neon=[mat.neonPink,mat.neonCyan,mat.neonGold];
+  for(let sector=0;sector<3;sector++){
+   const y=500+sector*650,color=[0xff4fa4,0x41e9ff,0xffca54][sector];
+   const glow=new THREE.MeshBasicMaterial({map:texture,color,transparent:true,opacity:.65,depthWrite:false,blending:THREE.AdditiveBlending});
+   for(const side of [-1,1]){
+    const h=this.mesh(new THREE.PlaneGeometry(3.5,5.5),glow,X(side<0?70:550),.035,Z(y));h.rotation.x=-Math.PI/2;h.castShadow=false;h.receiveShadow=false;this.neonHalos.push(h);
+    for(let i=0;i<4;i++)this.rail({ax:side<0?36:584,ay:y-120+i*75,bx:side<0?36:584,by:y-72+i*75,r:3},neon[sector],this.group,.27);
+    const post=this.mesh(new THREE.CylinderGeometry(.065,.065,1.8,8),neon[sector],side*5.1,.72,Z(y));post.castShadow=false;
+    const star=this.mesh(new THREE.OctahedronGeometry(.22),neon[sector],side*5.1,1.75,Z(y));star.castShadow=false;
+   }
+   this.ring(0,Z(y+110),.78,neon[sector],.028,.022);
+  }
+  for(const b of map.bumpers)this.ring(X(b.x),Z(b.y),b.r*S+.10,b.ride==='ufo'?mat.neonCyan:mat.neonPink,.026,.021);
  }
  scenery(map,mat,theme){
   // All scenery lives outside the playable rails; it has no hidden collider.
@@ -158,6 +227,8 @@ export class Renderer3D {
   const map=race.map,theme=LANDS[map.id],length=map.height*S;
   const mat={cream:this.material(0xfff6dc),gold:this.material(theme.accent,.15,.35),pink:this.material(theme.secondary),mint:this.material(0xa4ddca),dark:this.material(theme.edge),cloud:this.material(0xfff8ef)};
   mat.bulb=new THREE.MeshStandardMaterial({color:0xffedbb,emissive:0xffcb73,emissiveIntensity:.45,roughness:.3});
+  for(const [key,color]of [['neonPink',0xff46a4],['neonCyan',0x36e4ff],['neonGold',0xffc650]])mat[key]=new THREE.MeshStandardMaterial({color,emissive:color,emissiveIntensity:1.2,roughness:.25});
+  this.neonMaterials=[mat.neonPink,mat.neonCyan,mat.neonGold];mat.glass=new THREE.MeshPhysicalMaterial({color:0xa4edf6,metalness:.3,roughness:.1,clearcoat:1});mat.sail=new THREE.MeshStandardMaterial({color:0xfff1cb,side:THREE.DoubleSide,roughness:.6});
   mat.canopy=this.material(0xffffff);mat.canopy.map=this.stripeTexture('#fff2d2','#'+new THREE.Color(theme.secondary).getHexString());
   const shape=new THREE.Shape();shape.moveTo(-5.08,-length+.25);shape.lineTo(-5.08,-.25);shape.quadraticCurveTo(-5.08,0,-4.83,0);shape.lineTo(4.83,0);shape.quadraticCurveTo(5.08,0,5.08,-.25);shape.lineTo(5.08,-length+.25);shape.quadraticCurveTo(5.08,-length,4.83,-length);shape.lineTo(-4.83,-length);shape.quadraticCurveTo(-5.08,-length,-5.08,-length+.25);
   for(const h of map.exits){const hole=new THREE.Path();hole.absarc(X(h.x),-Z(map.finish),.5,0,Math.PI*2,true);shape.holes.push(hole);}
@@ -168,14 +239,15 @@ export class Renderer3D {
   this.rail({ax:24,ay:18,bx:24,by:map.height-20,r:10},mat.cream);this.rail({ax:596,ay:18,bx:596,by:map.height-20,r:10},mat.cream);this.rail({ax:24,ay:18,bx:596,by:18,r:10},mat.cream);
   this.instances(new THREE.CylinderGeometry(1,1,1,8),mat.gold,map.pins.map(p=>({position:[X(p.x),.14,Z(p.y)],scale:[p.r*S*.48,.28,p.r*S*.48]})));
   this.instances(new THREE.SphereGeometry(1,12,8),mat.cream,map.pins.map((p,i)=>({position:[X(p.x),.31,Z(p.y)],scale:[p.r*S,p.r*S,p.r*S],color:[0xfff4d9,theme.secondary,theme.accent][i%3]})));
-  for(const p of map.bumpers)this.carousel(p,mat);
+  for(const p of map.bumpers)if(p.ride==='ufo')this.saucer(p,mat);else if(p.ride==='bumper-car')this.bumperCar(p,mat);else this.carousel(p,mat);
   for(const s of map.rails)this.rail(s,mat.cream);
-  for(const r of map.rotors)this.rotors.push(this.teacupRotor(r,mat));
-  for(const s of map.sliders)this.sliders.push(this.train(s,mat));
+  for(const r of map.rotors)this.rotors.push(r.ride==='windmill'?this.windmill(r,mat):r.ride==='pirate'?this.pirateShip(r,mat):this.teacupRotor(r,mat));
+  for(const s of map.sliders)this.sliders.push(s.ride==='bumper-shuttle'?this.bumperShuttle(s,mat):this.train(s,mat));
   this.gate=this.rail({ax:32,ay:map.gate,bx:588,by:map.gate,r:7},mat.pink);
   for(const h of map.exits){this.ring(X(h.x),Z(map.finish),.51,mat.gold,.08,.085);this.mesh(new THREE.CylinderGeometry(.49,.49,.75,24,1,true),mat.dark,X(h.x),-.4,Z(map.finish));this.mesh(new THREE.CircleGeometry(.49,24),new THREE.MeshBasicMaterial({color:0x24162d}),X(h.x),-.78,Z(map.finish)).rotation.x=-Math.PI/2;}
   this.text('BON VOYAGE!',253,3.9);this.text('A LITTLE WONDER',525,4.5,.4);this.text('EXPECT THE UNEXPECTED',1010,5.6,.35);this.text('YOUR LUCKY MOMENT',2008,5,.45);
   this.scenery(map,mat,theme);
+  this.neonCourse(map,mat);
   // Moving rides keep independent transforms; their internal pieces are batched.
   for(const g of [...this.rotors,...this.sliders,...this.wheels.map(w=>w.wheel)])batchStaticMeshes(g);
   const moving=new Set([this.gate,...this.rotors,...this.sliders,...this.carousels.map(c=>c.roof),...this.balloons.map(b=>b.group),...this.wheels.map(w=>w.wheel)]);
@@ -214,13 +286,14 @@ export class Renderer3D {
    if(corners.every(v=>Math.abs(v.x)<.94&&Math.abs(v.y)<.94))break;cameraDistance*=1.1;
   }
   this.light.position.set(-6,16,Z(center)-5);this.light.target.position.set(0,0,Z(center));
-  race.rotorSegments().forEach((s,i)=>this.rotors[i].rotation.y=-Math.atan2(s.by-s.ay,s.bx-s.ax));
+  map.rotors.forEach((r,i)=>this.rotors[i].rotation.y=-rotorPose(r,race.rotationTime).angle);
   race.sliderSegments().forEach((s,i)=>this.sliders[i].position.x=X((s.ax+s.bx)/2));
   this.gate.visible=['ready','mixing','countdown'].includes(race.state)||(race.state==='paused'&&race.resumeState!=='racing');
   const decorTime=reduced?0:race.elapsed;
   this.wheels.forEach(({wheel,rate})=>wheel.rotation.z=decorTime*rate);
   this.balloons.forEach(b=>{b.group.position.y=b.y+Math.sin(decorTime*1.3+b.phase)*.1;b.group.rotation.z=Math.sin(decorTime*.7+b.phase)*.045;});
-  this.carousels.forEach(c=>{c.roof.rotation.y=decorTime*c.rate+c.phase;const hit=decorTime-c.hitAt,pulse=!reduced&&hit>=0&&hit<.32?Math.sin(hit/.32*Math.PI):0;c.roof.scale.y=1-pulse*.18;c.roof.position.y=.94-pulse*.08;});
+  this.carousels.forEach(c=>{c.roof.rotation.y=decorTime*c.rate+c.phase;const hit=decorTime-c.hitAt,pulse=!reduced&&hit>=0&&hit<.32?Math.sin(hit/.32*Math.PI):0;c.roof.scale.y=1-pulse*.18;c.roof.position.y=c.baseY-pulse*.08;});
+  this.neonMaterials.forEach((m,i)=>{m.emissiveIntensity=reduced?1.05:1.05+Math.sin(decorTime*.95+i*2)*.32;});
   for(const effect of this.impacts){const age=race.elapsed-effect.born;effect.mesh.visible=!reduced&&age>=0&&age<.32;effect.mesh.scale.setScalar(1+Math.max(0,age)*4);effect.mesh.material.opacity=Math.max(0,1-age/.32)*.72;}
   const motion=!reduced&&['racing','paused'].includes(race.state)?race.motion():{roll:0,pitch:0,offsetX:0,offsetY:0};
   this.group.rotation.set(motion.pitch,0,motion.roll);const pivot=new THREE.Vector3(0,0,map.height*S/2);this.group.position.copy(pivot).sub(pivot.clone().applyEuler(this.group.rotation));this.group.position.x+=motion.offsetX*S;this.group.position.z+=motion.offsetY*S;this.group.updateMatrixWorld(true);

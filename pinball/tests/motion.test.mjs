@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {writeFile} from 'node:fs/promises';
-import {Race,makeConfig,MAPS,STEP} from '../src/physics.js';
+import {Race,makeConfig,MAPS,STEP,rotorPose} from '../src/physics.js';
 import {boardMotionAt,MOTION_START,MOTION_PERIOD,MOTION_DURATION} from '../src/board-motion.js';
 const config=(n,mapId='neon',boardMotion=true)=>({...makeConfig(Array.from({length:n},(_,i)=>`공 ${i+1}`).join('\n'),1,'last',n),mapId,boardMotion});
 const run=r=>{r.start();while(!['complete','invalid'].includes(r.state))r.step();return r;};
@@ -23,7 +23,15 @@ test('pause freezes active board motion and stepping chunks preserve the exact r
  const a=new Race(config(20),732),b=new Race(config(20),732);a.start();b.start();while(a.raceTime<7.45)a.step();a.pause();const frozen=a.snapshot();for(let i=0;i<200;i++)a.step();assert.deepEqual(a.snapshot(),frozen);a.resume();while(!['complete','invalid'].includes(a.state))a.step();while(!['complete','invalid'].includes(b.state))b.step(STEP*3);assert.equal(a.state,'complete');assert.deepEqual(a.finishOrder,b.finishOrder);
 });
 test('orbit single-ball oscillation is detected and escapes without fabricated finish',()=>{
- const r=run(new Race(config(1,'orbit',false),5));assert.equal(r.state,'complete');assert.ok(r.assists>0);assert.equal(r.finishOrder.length,1);assert.ok([1,2,3,4].includes(r.finishOrder[0].exitId));
+ const r=new Race(config(1,'orbit',false),5);r.map=structuredClone(r.map);for(const rotor of r.map.rotors){rotor.blades=2;delete rotor.swing;}run(r);assert.equal(r.state,'complete');assert.ok(r.assists>0);assert.equal(r.finishOrder.length,1);assert.ok([1,2,3,4].includes(r.finishOrder[0].exitId));
+});
+test('windmill blades share an actual perpendicular collider and pirate velocity matches its swing',()=>{
+ const r=new Race(config(1),17);r.rotationTime=1.234;
+ const windmill=r.map.rotors.find(o=>o.ride==='windmill'),arms=r.rotorSegments().filter(s=>s.x===windmill.x&&s.y===windmill.y);
+ assert.equal(arms.length,2);const a=arms[0],b=arms[1];assert.ok(Math.abs((a.bx-a.ax)*(b.bx-b.ax)+(a.by-a.ay)*(b.by-b.ay))<1e-8);
+ const pirate=r.map.rotors.find(o=>o.ride==='pirate');
+ for(let t=0;t<8;t+=.11){const h=.00001,approx=(rotorPose(pirate,t+h).angle-rotorPose(pirate,t-h).angle)/(2*h),pose=rotorPose(pirate,t);assert.ok(Math.abs(pose.velocity-approx)<1e-7);assert.ok(Math.abs(pose.angle)<=pirate.swing);}
+ const pose=rotorPose(pirate,r.rotationTime),segment=r.rotorSegments().find(s=>s.x===pirate.x&&s.y===pirate.y);assert.equal(segment.omega,pose.velocity);
 });
 test('all four maps with motion: 120 seeded races remain contained and finish with unique real ranks',async()=>{
  const report=[];
@@ -32,5 +40,5 @@ test('all four maps with motion: 120 seeded races remain contained and finish wi
   while(!['complete','invalid'].includes(r.state)){r.step();for(const b of r.balls){assert.ok(Number.isFinite(b.x+b.y+b.vx+b.vy));assert.ok(b.x>=40-1e-5&&b.x<=580+1e-5);assert.ok(b.y>=38-1e-5&&b.y<=r.map.finish+1e-5);}}
   assert.equal(r.state,'complete',`${map.id}/${n}/${seed}`);assert.equal(new Set(r.finishOrder.map(b=>b.id)).size,n);assert.ok(r.finishOrder.every(b=>[1,2,3,4].includes(b.exitId)));assert.equal(r.winner.id,r.finishOrder[n-1].id);report.push({map:map.id,balls:n,seed,duration:r.raceTime,assists:r.assists});
  }
- await writeFile('evidence/park-20260921/03-motion-physics-results.json',JSON.stringify(report,null,2));
+ await writeFile(`evidence/park-20260921/${process.env.EVIDENCE_PREFIX||'03'}-motion-physics-results.json`,JSON.stringify(report,null,2));
 });

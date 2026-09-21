@@ -1,0 +1,5 @@
+2026-09-21 19:31 KST, user reported blank playfield.
+Observed IAB error: TypeError: Cannot read properties of undefined (reading rotation) at Renderer3D.draw, renderer3d.js:217:54.
+New windmill generated two segments while previous renderer expected one segment per mesh.
+Corrected renderer to derive each ride pose via rotorPose; restored preview and visually verified countdown/balls/obstacles.
+Added injected-render-failure recovery test, separate candidate server, and immutable preview release URLs.

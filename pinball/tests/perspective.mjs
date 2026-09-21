@@ -7,7 +7,7 @@ const report={at:new Date().toISOString(),status:'PASS',tests:[]};
 for(const mobile of [false,true]){
  const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1000},deviceScaleFactor:mobile?2:1,isMobile:mobile,hasTouch:mobile,reducedMotion:'reduce'});
  const p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
- await p.goto('http://127.0.0.1:4188');await p.waitForFunction(()=>window.pinball);
+ await p.goto((process.env.BASE_URL||'http://127.0.0.1:4188'));await p.waitForFunction(()=>window.pinball);
  assert.equal((await p.evaluate(()=>window.pinball.settings())).camera,'PerspectiveCamera');
  await p.locator('#view').click();await p.locator('#board').screenshot({path:`evidence/3d-${mobile?'mobile':'desktop'}-overview.png`});await p.locator('#view').click();
  await p.locator('#participants').fill(Array.from({length:60},(_,i)=>`공 ${i+1}`).join('\n'));await p.locator('[data-speed="3"]').click();await p.locator('input[value=last]').check();await p.locator('#start').click();await p.waitForFunction(()=>document.body.dataset.state==='racing');

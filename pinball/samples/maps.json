@@ -267,32 +267,38 @@
       {
         "x": 165,
         "y": 590,
-        "r": 31
+        "r": 31,
+        "ride": "carousel"
       },
       {
         "x": 455,
         "y": 590,
-        "r": 31
+        "r": 31,
+        "ride": "ufo"
       },
       {
         "x": 310,
         "y": 638,
-        "r": 35
+        "r": 35,
+        "ride": "bumper-car"
       },
       {
         "x": 200,
         "y": 1410,
-        "r": 42
+        "r": 42,
+        "ride": "carousel"
       },
       {
         "x": 420,
         "y": 1410,
-        "r": 42
+        "r": 42,
+        "ride": "ufo"
       },
       {
         "x": 310,
         "y": 1590,
-        "r": 35
+        "r": 35,
+        "ride": "bumper-car"
       }
     ],
     "rails": [
@@ -471,35 +477,46 @@
         "y": 715,
         "length": 65,
         "omega": 0.79,
-        "phase": 0.2
+        "phase": 0.2,
+        "ride": "teacups",
+        "blades": 2
       },
       {
         "x": 454,
         "y": 715,
         "length": 65,
         "omega": -1.13,
-        "phase": 1.4
+        "phase": 1.4,
+        "ride": "windmill",
+        "blades": 4
       },
       {
         "x": 155,
         "y": 1260,
         "length": 74,
         "omega": 1.49,
-        "phase": 0
+        "phase": 0,
+        "ride": "pirate",
+        "blades": 2,
+        "swing": 0.95
       },
       {
         "x": 465,
         "y": 1260,
         "length": 74,
         "omega": -0.94,
-        "phase": 1
+        "phase": 1,
+        "ride": "teacups",
+        "blades": 2
       },
       {
         "x": 310,
         "y": 1770,
         "length": 95,
         "omega": 1.72,
-        "phase": 0
+        "phase": 0,
+        "ride": "windmill",
+        "blades": 4
       }
     ],
     "id": "neon",
@@ -515,7 +532,8 @@
         "length": 58,
         "amplitude": 150,
         "omega": 0.9,
-        "phase": 0
+        "phase": 0,
+        "ride": "train"
       },
       {
         "x": 310,
@@ -523,7 +541,8 @@
         "length": 62,
         "amplitude": 160,
         "omega": 1.2,
-        "phase": 1
+        "phase": 1,
+        "ride": "bumper-shuttle"
       }
     ],
     "exits": [
@@ -612,67 +631,80 @@
       {
         "x": 200,
         "y": 360,
-        "r": 44
+        "r": 44,
+        "ride": "carousel"
       },
       {
         "x": 420,
         "y": 360,
-        "r": 44
+        "r": 44,
+        "ride": "ufo"
       },
       {
         "x": 310,
         "y": 520,
-        "r": 54
+        "r": 54,
+        "ride": "bumper-car"
       },
       {
         "x": 140,
         "y": 640,
-        "r": 35
+        "r": 35,
+        "ride": "carousel"
       },
       {
         "x": 480,
         "y": 640,
-        "r": 35
+        "r": 35,
+        "ride": "ufo"
       },
       {
         "x": 310,
         "y": 838,
-        "r": 30
+        "r": 30,
+        "ride": "bumper-car"
       },
       {
         "x": 195,
         "y": 1090,
-        "r": 50
+        "r": 50,
+        "ride": "carousel"
       },
       {
         "x": 425,
         "y": 1090,
-        "r": 50
+        "r": 50,
+        "ride": "ufo"
       },
       {
         "x": 310,
         "y": 1295,
-        "r": 62
+        "r": 62,
+        "ride": "bumper-car"
       },
       {
         "x": 135,
         "y": 1485,
-        "r": 38
+        "r": 38,
+        "ride": "carousel"
       },
       {
         "x": 485,
         "y": 1485,
-        "r": 38
+        "r": 38,
+        "ride": "ufo"
       },
       {
         "x": 220,
         "y": 1765,
-        "r": 43
+        "r": 43,
+        "ride": "bumper-car"
       },
       {
         "x": 400,
         "y": 1765,
-        "r": 43
+        "r": 43,
+        "ride": "carousel"
       }
     ],
     "rails": [
@@ -823,28 +855,37 @@
         "y": 775,
         "length": 55,
         "omega": 1.07,
-        "phase": 0
+        "phase": 0,
+        "ride": "teacups",
+        "blades": 2
       },
       {
         "x": 430,
         "y": 775,
         "length": 55,
         "omega": -1.56,
-        "phase": 1
+        "phase": 1,
+        "ride": "windmill",
+        "blades": 4
       },
       {
         "x": 310,
         "y": 1570,
         "length": 100,
         "omega": 0.73,
-        "phase": 0
+        "phase": 0,
+        "ride": "pirate",
+        "blades": 2,
+        "swing": 0.95
       },
       {
         "x": 310,
         "y": 1970,
         "length": 73,
         "omega": -1.31,
-        "phase": 1
+        "phase": 1,
+        "ride": "teacups",
+        "blades": 2
       }
     ],
     "id": "orbit",
@@ -860,7 +901,8 @@
         "length": 66,
         "amplitude": 130,
         "omega": 1.1,
-        "phase": 0
+        "phase": 0,
+        "ride": "train"
       },
       {
         "x": 310,
@@ -868,7 +910,8 @@
         "length": 60,
         "amplitude": 160,
         "omega": 1.25,
-        "phase": 1
+        "phase": 1,
+        "ride": "bumper-shuttle"
       },
       {
         "x": 310,
@@ -876,7 +919,8 @@
         "length": 70,
         "amplitude": 130,
         "omega": 0.85,
-        "phase": 0
+        "phase": 0,
+        "ride": "train"
       }
     ],
     "exits": [
@@ -960,27 +1004,32 @@
       {
         "x": 270,
         "y": 436,
-        "r": 24
+        "r": 24,
+        "ride": "carousel"
       },
       {
         "x": 350,
         "y": 615,
-        "r": 24
+        "r": 24,
+        "ride": "ufo"
       },
       {
         "x": 510,
         "y": 1055,
-        "r": 24
+        "r": 24,
+        "ride": "bumper-car"
       },
       {
         "x": 510,
         "y": 1435,
-        "r": 24
+        "r": 24,
+        "ride": "carousel"
       },
       {
         "x": 310,
         "y": 1800,
-        "r": 32
+        "r": 32,
+        "ride": "ufo"
       }
     ],
     "rails": [
@@ -1152,14 +1201,18 @@
         "y": 1655,
         "length": 80,
         "omega": -0.86,
-        "phase": 1
+        "phase": 1,
+        "ride": "teacups",
+        "blades": 2
       },
       {
         "x": 310,
         "y": 1985,
         "length": 75,
         "omega": 1.39,
-        "phase": 0
+        "phase": 0,
+        "ride": "windmill",
+        "blades": 4
       }
     ],
     "id": "zigzag",
@@ -1175,7 +1228,8 @@
         "length": 55,
         "amplitude": 150,
         "omega": 1.1,
-        "phase": 0
+        "phase": 0,
+        "ride": "train"
       }
     ],
     "exits": [
@@ -1279,42 +1333,50 @@
       {
         "x": 150,
         "y": 500,
-        "r": 36
+        "r": 36,
+        "ride": "carousel"
       },
       {
         "x": 470,
         "y": 500,
-        "r": 36
+        "r": 36,
+        "ride": "ufo"
       },
       {
         "x": 310,
         "y": 735,
-        "r": 38
+        "r": 38,
+        "ride": "bumper-car"
       },
       {
         "x": 135,
         "y": 1220,
-        "r": 34
+        "r": 34,
+        "ride": "carousel"
       },
       {
         "x": 485,
         "y": 1220,
-        "r": 34
+        "r": 34,
+        "ride": "ufo"
       },
       {
         "x": 310,
         "y": 1610,
-        "r": 42
+        "r": 42,
+        "ride": "bumper-car"
       },
       {
         "x": 190,
         "y": 1880,
-        "r": 31
+        "r": 31,
+        "ride": "carousel"
       },
       {
         "x": 430,
         "y": 1880,
-        "r": 31
+        "r": 31,
+        "ride": "ufo"
       }
     ],
     "rails": [
@@ -1535,35 +1597,46 @@
         "y": 835,
         "length": 57,
         "omega": 1.42,
-        "phase": 1
+        "phase": 1,
+        "ride": "teacups",
+        "blades": 2
       },
       {
         "x": 460,
         "y": 835,
         "length": 57,
         "omega": -0.78,
-        "phase": 0
+        "phase": 0,
+        "ride": "windmill",
+        "blades": 4
       },
       {
         "x": 310,
         "y": 1050,
         "length": 80,
         "omega": 1.14,
-        "phase": 0
+        "phase": 0,
+        "ride": "pirate",
+        "blades": 2,
+        "swing": 0.95
       },
       {
         "x": 160,
         "y": 1510,
         "length": 62,
         "omega": -1.63,
-        "phase": 0
+        "phase": 0,
+        "ride": "teacups",
+        "blades": 2
       },
       {
         "x": 460,
         "y": 1510,
         "length": 62,
         "omega": 0.95,
-        "phase": 1
+        "phase": 1,
+        "ride": "windmill",
+        "blades": 4
       }
     ],
     "id": "split",
@@ -1579,7 +1652,8 @@
         "length": 65,
         "amplitude": 155,
         "omega": 1.2,
-        "phase": 0
+        "phase": 0,
+        "ride": "train"
       },
       {
         "x": 310,
@@ -1587,7 +1661,8 @@
         "length": 60,
         "amplitude": 175,
         "omega": 1.1,
-        "phase": 1
+        "phase": 1,
+        "ride": "bumper-shuttle"
       }
     ],
     "exits": [

@@ -9,7 +9,7 @@ try{
  for(const mobile of [false,true]){
   const device=mobile?'mobile':'desktop',context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1000},deviceScaleFactor:mobile?2:1,isMobile:mobile,hasTouch:mobile,reducedMotion:'no-preference'});
   const p=await context.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
-  await p.goto('http://127.0.0.1:4188');await p.waitForFunction(()=>window.pinball);
+  await p.goto((process.env.BASE_URL||'http://127.0.0.1:4188'));await p.waitForFunction(()=>window.pinball);
   assert.equal(await p.locator('#board-motion').isChecked(),true);
   await p.locator('#participants').fill(Array.from({length:60},(_,i)=>`친구 ${i+1}`).join('\n'));
   await p.locator('input[value=last]').check();await p.locator('[data-speed="3"]').click();
