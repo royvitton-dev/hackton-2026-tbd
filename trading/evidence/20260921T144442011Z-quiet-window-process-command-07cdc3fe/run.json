@@ -1,0 +1,14 @@
+{
+  "command": "node",
+  "args": [
+    "--test",
+    "scripts/quiet-window.process.test.mjs"
+  ],
+  "started_at": "2026-09-21T14:44:42.0384128Z",
+  "ended_at": "2026-09-21T14:44:43.5368889Z",
+  "exit_code": 0,
+  "test_sha256": "62a413a9c1adfc4731a22b4f568128eca86f34d28b97636df603f592933323c7",
+  "keeper_sha256": "c54498a51f66a18e9cefd3077e79539eb1e9a770a296a452111a8d206f185d73",
+  "real_lock_accessed": false,
+  "live_service_controlled": false
+}

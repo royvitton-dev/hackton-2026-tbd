@@ -1,0 +1,11 @@
+{
+  "command": "node evidence/20260921T152249816Z-bounded-queue-source-audit-7c8e0541/collect-evidence.mjs",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "exec_chunk": "3c0baf",
+  "exit_code": 1,
+  "node": "v24.19.0",
+  "error": "ENOENT: no such file or directory, open C:\\project\\hackton-2026-tbd\\trading\\.tools\\cargo\\registry\\src\\index.crates.io-1949cf8c6b5b557f\\crossbeam-channel-0.5.17\\.cargo-checksum.json",
+  "point": "First package source checksum manifest read, before analysis.json creation or any production action",
+  "original_source": "collection-attempt-01.mjs",
+  "handling": "Original source preserved; corrected collector compares SHA-verified cached .crate contents in memory. No runtime service or benchmark action occurred."
+}

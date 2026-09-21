@@ -5,13 +5,14 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { discoverAttractions, gitState, resolveAsset, safeName } from './lib/registry.mjs';
 import { readState } from './lib/sync.mjs';
-import { APPS, appPath, matchApp, privatePath, staticPath, redirectPath } from './server/routes.mjs';
+import { APPS, appPath, launchPath, matchApp, privatePath, staticPath, redirectPath } from './server/routes.mjs';
 import { createAppMiddleware } from './server/apps.mjs';
 import { createTradingProxy } from './server/trading-proxy.mjs';
 import { directory, voiceGuide } from './server/pages.mjs';
 import { infrastructurePlugin } from '../map/src/server/infrastructure.js';
 import { loadEnv } from 'vite';
 import {startVerification,verificationState} from '../map_new/scripts/runtime.mjs';
+import { createParkRouterTradingStartup } from '../trading/scripts/park-router-startup.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const production = process.argv.includes('--production');
@@ -24,6 +25,7 @@ const json = (res,data,status=200) => {res.writeHead(status,{'Content-Type':'app
 const html = (res,body) => {res.writeHead(200,{'Content-Type':'text/html; charset=utf-8'});res.end(body);};
 const notFound = res => json(res,{error:'Not found'},404);
 const trading = createTradingProxy(process.env.TRADING_ENGINE_URL || process.env.ENGINE_API_URL);
+const prepareTrading = createParkRouterTradingStartup();
 let infrastructure;
 infrastructurePlugin(loadEnv('development',path.join(root,'map'),'').OPENCELLID_API_KEY).configureServer({middlewares:{use(fn){infrastructure=fn;}}});
 async function sendFile(req, res, file, boundary) {
@@ -56,7 +58,9 @@ const server = http.createServer(async (req,res) => {
   const url=new URL(req.url,'http://localhost');
   if(privatePath(req.url.split('?')[0]))return json(res,{error:'Invalid path'},403);
   const origin=req.headers.origin;
-  if(origin&&new URL(origin).host!==req.headers.host&&req.method!=='GET'&&req.method!=='HEAD')return json(res,{error:'Origin denied'},403);
+  let originHost;
+  try{if(origin)originHost=new URL(origin).host;}catch{return json(res,{error:'Origin denied'},403);}
+  if(origin&&originHost!==req.headers.host&&req.method!=='GET'&&req.method!=='HEAD')return json(res,{error:'Origin denied'},403);
   const redirect=redirectPath(url.pathname,url.search);
   if(redirect){res.writeHead(308,{Location:redirect});res.end();return;}
   if(url.pathname==='/projects/'||url.pathname==='/projects')return html(res,directory());
@@ -66,7 +70,7 @@ const server = http.createServer(async (req,res) => {
    req.url=req.url.slice(4);return infrastructure(req,res,()=>notFound(res));
   }
   if(url.pathname.startsWith('/api/')){
-   if(origin&&new URL(origin).host!==req.headers.host)return json(res,{error:'Origin denied'},403);
+   if(origin&&originHost!==req.headers.host)return json(res,{error:'Origin denied'},403);
    if(url.pathname==='/api/park')return json(res,await catalog());
    if(url.pathname==='/api/parking-verification')return json(res,verificationState(root));
    if(url.pathname==='/api/events'){
@@ -85,7 +89,12 @@ const server = http.createServer(async (req,res) => {
     const id=url.searchParams.get('id'),attraction=(await discoverAttractions(root)).find(a=>a.id===id);
     // Catalog launch remains restricted to visible attractions. The directory also offers /webpage/.
     if(!attraction||!safeName(id)||!appPath(id))return json(res,{error:'Unknown attraction'},404);
-    return json(res,{url:new URL(appPath(id),`http://${req.headers.host}`).href,path:appPath(id)});
+    if(id==='trading'){
+     try{await prepareTrading();}
+     catch(error){return json(res,{error:error.message,code:error.code||'TRADING_START_FAILED'},503);}
+    }
+    const entry=launchPath(id);
+    return json(res,{url:new URL(entry,`http://${req.headers.host}`).href,path:entry});
    }
    return notFound(res);
   }
@@ -113,8 +122,10 @@ const server = http.createServer(async (req,res) => {
 });
 const apps=createAppMiddleware({root,server,port,production});
 server.on('upgrade',(req,socket,head)=>{
- if(privatePath(new URL(req.url,'http://localhost').pathname)){socket.destroy();return;}
- if(req.headers.origin&&new URL(req.headers.origin).host!==req.headers.host){socket.destroy();return;}
+ try{
+  if(privatePath(new URL(req.url,'http://localhost').pathname)){socket.destroy();return;}
+  if(req.headers.origin&&new URL(req.headers.origin).host!==req.headers.host){socket.destroy();return;}
+ }catch{socket.destroy();return;}
  if(req.url.startsWith('/trading/backend/'))return trading.upgrade(req,socket,head);
  apps.upgrade(req,socket,head).catch(()=>socket.destroy());
 });
@@ -125,6 +136,11 @@ server.listen(port,'127.0.0.1',async()=>{
  await mkdir(path.dirname(serverStateFile),{recursive:true});await writeFile(serverStateFile,JSON.stringify({pid:process.pid,port,router:true}));
  console.log(`TBD shared server: http://localhost:${port}/projects/`);
  if(!production)parkingVerifier=startVerification(root);
+ prepareTrading().then(result=>{
+  console.log(JSON.stringify({event:'trading_prepared',...result}));
+ }).catch(error=>{
+  console.error(JSON.stringify({event:'trading_start_failed',code:error.code||'TRADING_START_FAILED',message:error.message}));
+ });
 });
 server.on('error',error=>{console.error(error.message);process.exit(1);});
 async function stop(){parkingVerifier?.kill('SIGTERM');clearInterval(updates);for(const client of clients)client.end();await apps.close();server.close(()=>process.exit(0));server.closeIdleConnections();}

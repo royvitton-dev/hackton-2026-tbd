@@ -1,0 +1,8 @@
+{
+  "test_sha256": "6A6B7324C5B8F9114A0B2D592095B3DBCB2C5E1B1E9D06BF08BCFAABE87D32E9",
+  "proxy_sha256": "EDDC83F250B23D6214DF19DDB55064EE81DD0C5A70FD6D850C1E33075A2410F4",
+  "command": "node node_modules/vitest/vitest.mjs run park/tests/router-unit/proxy.test.mjs --config park/vitest.router.config.mjs --coverage.enabled false --outputFile.json <this-evidence>/unit.json",
+  "exit_code": 0,
+  "started_at": "2026-09-21T14:24:54.4419851+00:00",
+  "ended_at": "2026-09-21T14:24:55.4155204+00:00"
+}

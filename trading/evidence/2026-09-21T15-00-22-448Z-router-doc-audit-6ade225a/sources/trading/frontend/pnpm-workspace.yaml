@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: true
+storeDir: ../.tools/pnpm-store
+fetchTimeout: 300000
+networkConcurrency: 4

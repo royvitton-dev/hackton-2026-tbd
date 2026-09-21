@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-09-21T14:55:13.9510507Z",
+  "source_and_binary_unchanged": [
+    {
+      "file": "engine/src/core.rs",
+      "before_sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "after_sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "unchanged": true
+    },
+    {
+      "file": "engine/src/model.rs",
+      "before_sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "after_sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "unchanged": true
+    },
+    {
+      "file": "engine/target/release/leave-engine.exe",
+      "before_sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512",
+      "after_sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512",
+      "unchanged": true
+    },
+    {
+      "file": "engine/target/release/examples/core_bench.exe",
+      "before_sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86",
+      "after_sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86",
+      "unchanged": true
+    }
+  ],
+  "builds": 0,
+  "benchmarks": 0,
+  "services_started_or_controlled": 0,
+  "implementation_applied": false
+}

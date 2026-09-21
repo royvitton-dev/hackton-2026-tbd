@@ -1,0 +1,103 @@
+[
+  {
+    "name": "cross-origin",
+    "headers": {
+      "Origin": "https://unapproved.invalid"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "wrong-loopback-port",
+    "headers": {
+      "Origin": "http://127.0.0.1:5175"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "wrong-scheme",
+    "headers": {
+      "Origin": "https://127.0.0.1:49283"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "alias-origin-mismatch",
+    "headers": {
+      "Origin": "http://localhost:49283"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "opaque-null",
+    "headers": {
+      "Origin": "null"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "malformed-origin",
+    "headers": {
+      "Origin": "http://["
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "path-origin",
+    "headers": {
+      "Origin": "http://127.0.0.1:49283/path"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "credential-origin",
+    "headers": {
+      "Origin": "http://evil@127.0.0.1:49283"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "evil-host",
+    "headers": {
+      "Host": "evil.invalid:49283",
+      "Origin": "http://evil.invalid:49283"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "wrong-host-port",
+    "headers": {
+      "Host": "127.0.0.1:5175",
+      "Origin": "http://127.0.0.1:5175"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  },
+  {
+    "name": "evil-host-no-origin",
+    "headers": {
+      "Host": "evil.invalid:49283"
+    },
+    "http_status": 403,
+    "ws_status": 403,
+    "backend_forward_delta": 0
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "code": 0,
+  "signal": null,
+  "spawn_error": null,
+  "finished_at": "2026-09-21T15:08:13.331Z",
+  "input_count": 40,
+  "all_inputs_unchanged": true,
+  "changed_inputs": [],
+  "output_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-07-30-187Z-unified-trading-build-3c4f9b7c\\dist",
+  "artifact_count": 130,
+  "html_js_css": [
+    {
+      "path": "dist/assets/index-Bg9Ea7Dj.css",
+      "absolute_path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-07-30-187Z-unified-trading-build-3c4f9b7c\\dist\\assets\\index-Bg9Ea7Dj.css",
+      "bytes": 120979,
+      "sha256": "9ebe52b02b299a94825fa1f773778524185cf96261ebd9406372f842bf107dfc"
+    },
+    {
+      "path": "dist/assets/index-Dv25fCt5.js",
+      "absolute_path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-07-30-187Z-unified-trading-build-3c4f9b7c\\dist\\assets\\index-Dv25fCt5.js",
+      "bytes": 262342,
+      "sha256": "3d7dbc7aeb06c9156a69d5d39ab8a1dd4e3f5e50d224c4584460f427c14b5899"
+    },
+    {
+      "path": "dist/index.html",
+      "absolute_path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-07-30-187Z-unified-trading-build-3c4f9b7c\\dist\\index.html",
+      "bytes": 736,
+      "sha256": "21827fda36a5e2249c1c801d80efb7cff1f4d6bc13726a965527f99c8785849b"
+    }
+  ],
+  "scope": "Only the trading Vite step; no tsc, other app, Next build, server, browser, API, or deployment.",
+  "command_file": "command.json",
+  "stdout": "build.stdout.log",
+  "stderr": "build.stderr.log",
+  "combined": "build.combined.log"
+}

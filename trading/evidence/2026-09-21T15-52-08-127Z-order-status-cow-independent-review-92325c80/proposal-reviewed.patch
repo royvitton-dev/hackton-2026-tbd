@@ -1,0 +1,63 @@
+diff --git a/trading/engine/src/model.rs b/trading/engine/src/model.rs
+--- a/trading/engine/src/model.rs
++++ b/trading/engine/src/model.rs
+@@ -68,7 +68,7 @@
+     pub filled: u64,
+     pub cancelled: u64,
+     pub remaining: u64,
+-    pub status: String,
++    pub status: Cow<'static, str>,
+     pub command_seq: u64,
+     pub timestamp_ms: u64,
+ }
+diff --git a/trading/engine/src/core.rs b/trading/engine/src/core.rs
+--- a/trading/engine/src/core.rs
++++ b/trading/engine/src/core.rs
+@@ -383,10 +383,9 @@
+         // Allocate result space before publishing any account/order mutations.
+         let mut result_trades = Vec::with_capacity(self.fill_scratch.len());
+         let order_id = self.orders.len() as u64 + 1;
+-        // Reuse this buffer through open/partial/filled/cancelled transitions.
+-        // Restored legacy strings may be smaller; push_str grows them if needed.
+-        let mut status = String::with_capacity("partially_filled".len());
+-        status.push_str(order_status(quantity - remaining, remaining));
++        // Fresh and transitioned statuses borrow fixed strings. Legacy JSON
++        // strings remain owned until a successful transition replaces them.
++        let status = order_status(quantity - remaining, remaining).into();
+         self.orders.push(Order {
+             id: order_id,
+             account_id: command.account_id.clone(),
+@@ -414,10 +413,7 @@
+             let maker = &mut self.orders[(fill.maker_id - 1) as usize];
+             maker.filled += fill.quantity;
+             maker.remaining -= fill.quantity;
+-            maker.status.clear();
+-            maker
+-                .status
+-                .push_str(order_status(maker.filled, maker.remaining));
++            maker.status = order_status(maker.filled, maker.remaining).into();
+             let (buyer_id, seller_id) = match side {
+                 Side::Buy => (command.account_id.clone(), maker.account_id.clone()),
+                 Side::Sell => (maker.account_id.clone(), command.account_id.clone()),
+@@ -515,8 +511,7 @@
+         let order = &mut self.orders[index];
+         order.cancelled += order.remaining;
+         order.remaining = 0;
+-        order.status.clear();
+-        order.status.push_str("cancelled");
++        order.status = "cancelled".into();
+         Ok((order_id, Vec::new()))
+     }
+ 
+diff --git a/trading/engine/tests/core_rules.rs b/trading/engine/tests/core_rules.rs
+--- a/trading/engine/tests/core_rules.rs
++++ b/trading/engine/tests/core_rules.rs
+@@ -193,7 +193,7 @@
+             order.filled,
+             order.cancelled,
+             order.remaining,
+-            order.status.as_str()
++            order.status.as_ref()
+         ),
+         (5, 2, 3, 0, "cancelled")
+     );

@@ -1,0 +1,143 @@
+{
+  "status": "passed",
+  "source_changes": [
+    "frontend/src/api.ts: Prettier wrapping/parentheses only"
+  ],
+  "verification_script_runs": 1,
+  "verification_original_run": "frontend-20260921T142914818Z",
+  "format_exit": 0,
+  "protocol_exit": 0,
+  "protocol_tests": 7,
+  "build_exit": 0,
+  "source_hashes": [
+    {
+      "path": "frontend/src/api.ts",
+      "sha256": "a72116e8ddcc3ef1d3fe019217d3915d3c0ac73202802be8f74e6245a44d6147",
+      "bytes": 1721
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "sha256": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48",
+      "bytes": 196
+    },
+    {
+      "path": "frontend/scripts/verify.ps1",
+      "sha256": "8b8b04adbc50662c16106389fa2b602f70e55899b144168a0611877d0de8bb03",
+      "bytes": 2770
+    }
+  ],
+  "api_before_sha256": "d8177c44d04202772d78d524d15a45794b2b332dd3616fdbf5703595768e5d55",
+  "api_after_sha256": "a72116e8ddcc3ef1d3fe019217d3915d3c0ac73202802be8f74e6245a44d6147",
+  "address_checks": {
+    "method": "Offline evaluation of TypeScript-transpiled api.ts exports with injected window.location/import.meta.env; request() was never called; no network/service/browser.",
+    "cases": [
+      {
+        "name": "standalone-default-5175",
+        "origin": "http://127.0.0.1:5175",
+        "env": {
+          "BASE_URL": "/"
+        },
+        "expected": {
+          "api": "http://127.0.0.1:8787",
+          "ws": "ws://127.0.0.1:8787/ws",
+          "error": null
+        },
+        "actual": {
+          "api": "http://127.0.0.1:8787",
+          "ws": "ws://127.0.0.1:8787/ws",
+          "error": null
+        },
+        "before_after_equal": true
+      },
+      {
+        "name": "standalone-explicit-fixture",
+        "origin": "http://127.0.0.1:5175",
+        "env": {
+          "BASE_URL": "/",
+          "VITE_API_URL": "http://127.0.0.1:8794/",
+          "VITE_WS_URL": "ws://127.0.0.1:8795/ws"
+        },
+        "expected": {
+          "api": "http://127.0.0.1:8794",
+          "ws": "ws://127.0.0.1:8795/ws",
+          "error": null
+        },
+        "actual": {
+          "api": "http://127.0.0.1:8794",
+          "ws": "ws://127.0.0.1:8795/ws",
+          "error": null
+        },
+        "before_after_equal": true
+      },
+      {
+        "name": "integrated-development-boolean-define",
+        "origin": "http://localhost:5190",
+        "env": {
+          "BASE_URL": "/",
+          "VITE_ROUTER_MODE": true
+        },
+        "expected": {
+          "api": "http://localhost:5190/trading/backend",
+          "ws": "ws://localhost:5190/trading/backend/ws",
+          "error": null
+        },
+        "actual": {
+          "api": "http://localhost:5190/trading/backend",
+          "ws": "ws://localhost:5190/trading/backend/ws",
+          "error": null
+        },
+        "before_after_equal": true
+      },
+      {
+        "name": "integrated-production-base",
+        "origin": "http://127.0.0.1:5190",
+        "env": {
+          "BASE_URL": "/trading/",
+          "VITE_API_URL": "http://127.0.0.1:9999",
+          "VITE_WS_URL": "ws://127.0.0.1:9999/ws"
+        },
+        "expected": {
+          "api": "http://127.0.0.1:5190/trading/backend",
+          "ws": "ws://127.0.0.1:5190/trading/backend/ws",
+          "error": null
+        },
+        "actual": {
+          "api": "http://127.0.0.1:5190/trading/backend",
+          "ws": "ws://127.0.0.1:5190/trading/backend/ws",
+          "error": null
+        },
+        "before_after_equal": true
+      },
+      {
+        "name": "standalone-online-explicit-tls",
+        "origin": "https://exchange.example.test",
+        "env": {
+          "BASE_URL": "/",
+          "VITE_API_URL": "https://engine.example.test",
+          "VITE_WS_URL": "wss://engine.example.test/ws"
+        },
+        "expected": {
+          "api": "https://engine.example.test",
+          "ws": "wss://engine.example.test/ws",
+          "error": null
+        },
+        "actual": {
+          "api": "https://engine.example.test",
+          "ws": "wss://engine.example.test/ws",
+          "error": null
+        },
+        "before_after_equal": true
+      }
+    ]
+  },
+  "reviewed_integration": {
+    "dev": "park/server/apps.mjs defines actual boolean VITE_ROUTER_MODE and base /trading/",
+    "production": "scripts/build-unified.mjs passes --base /trading/; this unified build was read but not run",
+    "proxy": "park/server/trading-proxy.mjs strips /trading/backend for HTTP and WS; /api paths and /ws reach the selected engine"
+  },
+  "limitations": [
+    "verify.ps1 builds standalone dist only, not the unified router build.",
+    "No server start/restart, browser QA, actual HTTP/WS proxy or live-engine request was performed.",
+    "Direct VITE_ROUTER_MODE environment text true with base/ is not a supported branch here; current router explicitly defines boolean true and production uses the /trading/ base."
+  ]
+}

@@ -9,4 +9,5 @@
 .progress{width:220px;height:2px;background:#537b6d66;margin:27px 0 13px;overflow:hidden}.progress>div{height:100%;width:100%;background:#70f0c2;transform:scaleX(0);transform-origin:left}.copy>small{color:#668b7e;font-size:10px;letter-spacing:1px}
 .soundNote{position:absolute;left:9%;bottom:35px;z-index:2;font-size:11px;color:#77978c}
 .fallback{position:absolute;inset:0;display:grid;place-items:center;color:#79bbaa;font-size:14px}
+.startActions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;pointer-events:auto}.startActions button{padding:12px 18px;border:1px solid #85e9c2;border-radius:7px;background:#69e3b8;color:#071c17;font-weight:600;font-size:14px}.startActions button+button{background:#0b211bc9;color:#b6d9cd;border-color:#527d6b}
 @media(max-width:700px){.header{inset:22px 20px auto;align-items:flex-start}.header>span{font-size:21px}.header button{padding:9px 10px;font-size:11px}.header>div{gap:6px}.copy{left:7%;bottom:16%;right:7%}.copy h1{font-size:32px;letter-spacing:-1px}.copy p{font-size:13px}.eyebrow{font-size:8px;letter-spacing:1.8px}.soundNote{left:7%;right:7%;bottom:26px;font-size:10px;line-height:1.7}}

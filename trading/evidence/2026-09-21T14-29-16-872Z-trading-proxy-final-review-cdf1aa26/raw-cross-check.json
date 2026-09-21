@@ -1,0 +1,38 @@
+{
+  "completed_at": "2026-09-21T14:29:16.886Z",
+  "checks_passed": 5,
+  "checks": [
+    "actual report/source hash/cleanup",
+    "11 POST +11 WS denied raw responses and zero relay forwarding in interval",
+    "Origin stripped and mock session preserved",
+    "direct engine origin rejects but proxy durable ACK/lookup/exact retry remain correct",
+    "actual WS101, state sequences and close1000 with engine peer-close log"
+  ],
+  "raw_events": 59,
+  "denied_cases": 11,
+  "denied_http": 11,
+  "denied_ws": 11,
+  "forwarded_count": 12,
+  "engine_exit": {
+    "name": "isolated-proxy-engine",
+    "pid": 19552,
+    "spawned": true,
+    "exited": true,
+    "exit_code": 0,
+    "exit_signal": null,
+    "spawn_error": null,
+    "closed": true,
+    "close_code": 0,
+    "close_signal": null,
+    "closed_at": "2026-09-21T14:25:35.051Z",
+    "forced": false,
+    "kill_error": null,
+    "diagnostic_errors": [],
+    "success": true
+  },
+  "limitations": [
+    "Proxy module plus real isolated engine; not full Park routing/browser startup",
+    "Fixture cleanup explicitly destroys tracked sockets; raw zero count alone does not prove passive hostile-peer closure or fallback timer firing",
+    "Protected process snapshots show PID existence, not start-time identity"
+  ]
+}

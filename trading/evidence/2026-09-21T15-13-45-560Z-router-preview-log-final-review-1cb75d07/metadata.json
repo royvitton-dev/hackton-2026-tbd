@@ -1,0 +1,22 @@
+{
+  "reviewed_at": "2026-09-21T15:13:45.563Z",
+  "reviewer": "/root/durability",
+  "source_sha256": "d904871d2ca3263e794eaa1532d94fce01ddda282bdedea91520b9f5a54de8be",
+  "source_bytes": 8251,
+  "actual_previous_run": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-09-51-005Z-router-preview-bd08bc54",
+  "as_run_sha256": "fcec6d7fb1fa55b66b09d2a5d1e1a0e29b66ae31264fc0de9b38862c8ae9093c",
+  "as_run_matches_ready": true,
+  "request_count": 220,
+  "query_request_count": 0,
+  "prior_raw_origin_count": 2,
+  "closed": {
+    "at": "2026-09-21T15:11:43.593Z",
+    "pid": 19860,
+    "run_id": "2026-09-21T15-09-51-005Z-router-preview-bd08bc54",
+    "reason": "requested",
+    "failure": null,
+    "socket_count": 0,
+    "scope": "Only fixture listener/client sockets closed; backend/Park were not controlled"
+  },
+  "scope": "Static final logging fix review and previous-run raw log inspection only; no fixture/browser rerun, build, node --check, service/process or source/Git change."
+}

@@ -83,5 +83,6 @@ test('both dashboards use the same reference scores, eligibility and coverage fo
     assert.equal(summary.scoreSessionCount,user.attribution.scoreSessionCount,user.userId);
     assert.equal(summary.scoreExcludedSessionCount,user.attribution.scoreExcludedSessionCount,user.userId);
     assert.equal(summary.eligibleFlag,user.healthScore!==null,user.userId);
+    assert.deepEqual(summary.scoreExplanation,user.attribution.scoreExplanation,user.userId);
   }
 });

@@ -12,8 +12,9 @@ for (const entry of entries) {
     let cached = false;
     try { const m = await sharp(await readFile(dest)).metadata(); cached = m.format==='jpeg' && m.width>=500; } catch {}
     if (!cached || !entry.downloaded || process.argv.includes('--force')) {
-      const response = await fetchChecked(entry.downloadUrl);
-      const bytes = Buffer.from(await response.arrayBuffer());
+      const bytes = entry.sourceKind === 'user-upload'
+        ? await readFile(path.join(root, entry.resourceSourcePath))
+        : Buffer.from(await (await fetchChecked(entry.downloadUrl)).arrayBuffer());
       const meta = await sharp(bytes).metadata();
       if (!meta.width || meta.width<500) throw Error('Source image too small or invalid');
       await writeFile(dest, await sharp(bytes).rotate().resize({width:2400,withoutEnlargement:true}).flatten({background:'#ffffff'}).jpeg({quality:94}).toBuffer());

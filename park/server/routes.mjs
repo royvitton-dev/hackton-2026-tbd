@@ -15,6 +15,8 @@ export const APPS = Object.freeze([
 export const NEXT_BASE_PATH = '/battery_health';
 
 export function appPath(id){return APPS.some(app=>app.id===id)?`/${id}/`:null;}
+// Public entry links use the vehicle viewer's intro; canonical app/asset paths stay unchanged.
+export function launchPath(id){return id==='battery_health'||id==='vehicle'?`${NEXT_BASE_PATH}/?intro=pitstop`:appPath(id);}
 export function matchApp(pathname){return APPS.find(app=>pathname===`/${app.id}`||pathname.startsWith(`/${app.id}/`))||null;}
 export function privatePath(pathname){
  try {const decoded=decodeURIComponent(pathname);return /[\\\x00]/.test(decoded)||decoded.split('/').some(p=>p==='..'||(p.startsWith('.')&&!['.vite','.vite-unified'].includes(p))||/\.(?:pem|key)$/i.test(p));}catch{return true;}

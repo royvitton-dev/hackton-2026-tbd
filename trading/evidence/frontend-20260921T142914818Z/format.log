@@ -1,0 +1,3 @@
+$ prettier --check src vite.config.ts package.json tsconfig.json vercel.json index.html pnpm-workspace.yaml
+Checking formatting...
+All matched files use Prettier code style!

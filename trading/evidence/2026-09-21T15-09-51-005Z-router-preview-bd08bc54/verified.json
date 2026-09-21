@@ -1,0 +1,180 @@
+{
+  "current_fixture_sha": "D904871D2CA3263E794EAA1532D94FCE01DDDA282BDEDEA91520B9F5A54DE8BE",
+  "actual_exec_session": 99877,
+  "at": "2026-09-21T15:13:37.4977571Z",
+  "actual_exec_exit_code": 0,
+  "fixture_pid_absent": true,
+  "mutating_methods": 0,
+  "connected_both": true,
+  "scope": "Production trading bundle under /trading/ with production proxy and read-only existing demo access; not full Park cold start or a new matching/command test",
+  "after_ready_request_counts": [
+    {
+      "count": 2,
+      "key": "GET, /trading/, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/index-Bg9Ea7Dj.css, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/index-Dv25fCt5.js, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-106-wght-normal-DCG_yG2L.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-109-wght-normal-B6hzfDSQ.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-110-wght-normal-Bz2J7MHi.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-111-wght-normal-DeeXajyY.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-112-wght-normal-DApkhTZy.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-113-wght-normal-DnhzVD4m.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-114-wght-normal-BcwVxkxL.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-115-wght-normal-Czx6kN3B.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-116-wght-normal-DvHAaAUg.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-117-wght-normal-DNkILo1k.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-118-wght-normal-Be8jlQ51.woff2, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/assets/noto-sans-kr-119-wght-normal-C_6m2-od.woff2, 200"
+    },
+    {
+      "count": 26,
+      "key": "GET, /trading/backend/api/bots, 200"
+    },
+    {
+      "count": 26,
+      "key": "GET, /trading/backend/api/sessions, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/backend/api/state, 200"
+    },
+    {
+      "count": 2,
+      "key": "GET, /trading/favicon.svg, 200"
+    },
+    {
+      "count": 2,
+      "key": "/trading/backend/ws, upgrade"
+    }
+  ],
+  "browser_initial_event": "129,214",
+  "resolved_html_css_references": 129,
+  "manifest_sha": "99714647EF8C859336B318F0939179A51CDB90439908A160E0A0A2A4561EE53E",
+  "browser_reload_event": "129,447",
+  "park_vite_sha": "12E8C26386584B4B238DEB064A8D8EB156D296A2CA699D8F6A65F0D11CE8F0CC",
+  "log_hardening_scope": "As-run source preserved. Afterwards current fixture records approved pathname only and Origin presence boolean; syntax checked and source review requested. No repeated browser run claimed.",
+  "as_run_fixture_sha": "fcec6d7fb1fa55b66b09d2a5d1e1a0e29b66ae31264fc0de9b38862c8ae9093c",
+  "assets": 130,
+  "http_hash_checks": 130,
+  "query_requests": 0,
+  "protected_processes": [
+    {
+      "Id": 20540,
+      "BirthTicks": 639255819214715478
+    },
+    {
+      "Id": 4220,
+      "BirthTicks": 639255919597804367
+    },
+    {
+      "Id": 4928,
+      "BirthTicks": 639255819223890023
+    },
+    {
+      "Id": 5412,
+      "BirthTicks": 639255819225355012
+    },
+    {
+      "Id": 6128,
+      "BirthTicks": 639255819225945324
+    },
+    {
+      "Id": 7916,
+      "BirthTicks": 639255819224762676
+    },
+    {
+      "Id": 7936,
+      "BirthTicks": 639255819223037571
+    },
+    {
+      "Id": 12172,
+      "BirthTicks": 639255819224485053
+    },
+    {
+      "Id": 15272,
+      "BirthTicks": 639255819225047340
+    },
+    {
+      "Id": 16068,
+      "BirthTicks": 639255819223612932
+    },
+    {
+      "Id": 17444,
+      "BirthTicks": 639255819222784404
+    },
+    {
+      "Id": 18184,
+      "BirthTicks": 639255819548395149
+    },
+    {
+      "Id": 20484,
+      "BirthTicks": 639255819225665942
+    },
+    {
+      "Id": 20776,
+      "BirthTicks": 639255819223346242
+    },
+    {
+      "Id": 20940,
+      "BirthTicks": 639255819224216442
+    },
+    {
+      "Id": 15744,
+      "BirthTicks": 639255819549077476
+    },
+    {
+      "Id": 16840,
+      "BirthTicks": 639255934783172929
+    },
+    {
+      "Id": 19312,
+      "BirthTicks": 639255931977989384
+    }
+  ]
+}

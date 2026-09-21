@@ -1,0 +1,311 @@
+warning: in the working copy of 'park/vite.config.mjs', LF will be replaced by CRLF the next time Git touches it
+Merge made by the 'ort' strategy.
+ .gitignore                                         |    4 +
+ README.md                                          |   58 +-
+ .../sources/remaining-model-research-20260921.json |   19 +-
+ docs/evision-review/VALIDATION.md                  |    8 +
+ dopamin/src/App.tsx                                |    2 +-
+ map/docs/WORKING-MAPS.md                           |   69 +
+ map/public/mobility/maps/NOTICE.md                 |   23 +
+ map/public/mobility/maps/index.json                | 2354 ++++++++++++++++++++
+ map/public/mobility/maps/raw/busan.json            |    1 +
+ map/public/mobility/maps/raw/busan.source.json     |   14 +
+ map/public/mobility/maps/raw/cheonan.json          |    1 +
+ map/public/mobility/maps/raw/cheonan.source.json   |   14 +
+ map/public/mobility/maps/raw/cheongju.json         |    1 +
+ map/public/mobility/maps/raw/cheongju.source.json  |   14 +
+ map/public/mobility/maps/raw/chuncheon.json        |    1 +
+ map/public/mobility/maps/raw/chuncheon.source.json |   14 +
+ map/public/mobility/maps/raw/daegu.json            |    1 +
+ map/public/mobility/maps/raw/daegu.source.json     |   14 +
+ map/public/mobility/maps/raw/daejeon.json          |    1 +
+ map/public/mobility/maps/raw/daejeon.source.json   |   14 +
+ map/public/mobility/maps/raw/gangneung.json        |    1 +
+ map/public/mobility/maps/raw/gangneung.source.json |   14 +
+ map/public/mobility/maps/raw/gwangju.json          |    1 +
+ map/public/mobility/maps/raw/gwangju.source.json   |   14 +
+ map/public/mobility/maps/raw/incheon.json          |    1 +
+ map/public/mobility/maps/raw/incheon.source.json   |   14 +
+ map/public/mobility/maps/raw/jeju.json             |    1 +
+ map/public/mobility/maps/raw/jeju.source.json      |   14 +
+ map/public/mobility/maps/raw/jeonju.json           |    1 +
+ map/public/mobility/maps/raw/jeonju.source.json    |   14 +
+ map/public/mobility/maps/raw/sejong.json           |    1 +
+ map/public/mobility/maps/raw/sejong.source.json    |   14 +
+ map/public/mobility/maps/raw/seongnam.json         |    1 +
+ map/public/mobility/maps/raw/seongnam.source.json  |   14 +
+ map/public/mobility/maps/raw/seoul-gangnam.json    |    1 +
+ .../mobility/maps/raw/seoul-gangnam.source.json    |   14 +
+ map/public/mobility/maps/raw/seoul-jung.json       |    1 +
+ .../mobility/maps/raw/seoul-jung.source.json       |   14 +
+ map/public/mobility/maps/raw/seoul-mapo.json       |    1 +
+ .../mobility/maps/raw/seoul-mapo.source.json       |   14 +
+ map/public/mobility/maps/raw/seoul-songpa.json     |    1 +
+ .../mobility/maps/raw/seoul-songpa.source.json     |   14 +
+ .../mobility/maps/raw/seoul-yeongdeungpo.json      |    1 +
+ .../maps/raw/seoul-yeongdeungpo.source.json        |   14 +
+ map/public/mobility/maps/raw/suwon.json            |    1 +
+ map/public/mobility/maps/raw/suwon.source.json     |   14 +
+ map/public/mobility/maps/raw/ulsan.json            |    1 +
+ map/public/mobility/maps/raw/ulsan.source.json     |   14 +
+ map/scripts/acquire-road-maps.mjs                  |   26 +
+ map/scripts/extract-road-maps.py                   |   56 +
+ map/scripts/map-regions.json                       |  222 ++
+ map/src/base.js                                    |    3 +
+ map/src/charging-workspace.js                      |    5 +-
+ map/src/core/road-maps.js                          |   83 +
+ map/src/graphics/surfaces.js                       |    3 +-
+ map/src/graphics/vehicle.js                        |    3 +-
+ map/src/main.js                                    |   13 +-
+ map/src/mobility/entry.js                          |    3 +-
+ map/src/mobility/main.js                           |   15 +-
+ map/tests/unit/road-maps.test.js                   |   80 +
+ map/vite.config.mjs                                |    4 +-
+ movie/.gitignore                                   |    1 +
+ movie/README.md                                    |   29 +-
+ movie/assets/wonder/assets/ATTRIBUTION.md          |    5 +
+ movie/assets/wonder/assets/gs-group-ci.png         |  Bin 0 -> 12306 bytes
+ movie/assets/wonder/assets/kloppenheim-06-sky.hdr  |  Bin 0 -> 1173154 bytes
+ movie/assets/wonder/demo/000.jpg                   |  Bin 190225 -> 248909 bytes
+ movie/assets/wonder/demo/001.jpg                   |  Bin 189847 -> 248170 bytes
+ movie/assets/wonder/demo/002.jpg                   |  Bin 189974 -> 248371 bytes
+ movie/assets/wonder/demo/003.jpg                   |  Bin 189856 -> 247933 bytes
+ movie/assets/wonder/demo/004.jpg                   |  Bin 189767 -> 248104 bytes
+ movie/assets/wonder/demo/005.jpg                   |  Bin 189667 -> 248009 bytes
+ movie/assets/wonder/demo/006.jpg                   |  Bin 189705 -> 248087 bytes
+ movie/assets/wonder/demo/007.jpg                   |  Bin 189915 -> 248146 bytes
+ movie/assets/wonder/demo/008.jpg                   |  Bin 189834 -> 248342 bytes
+ movie/assets/wonder/demo/009.jpg                   |  Bin 189835 -> 248718 bytes
+ movie/assets/wonder/demo/010.jpg                   |  Bin 189805 -> 248317 bytes
+ movie/assets/wonder/demo/011.jpg                   |  Bin 189679 -> 248037 bytes
+ movie/assets/wonder/demo/012.jpg                   |  Bin 189567 -> 248099 bytes
+ movie/assets/wonder/demo/013.jpg                   |  Bin 189489 -> 248411 bytes
+ movie/assets/wonder/demo/014.jpg                   |  Bin 189429 -> 248535 bytes
+ movie/assets/wonder/demo/015.jpg                   |  Bin 189482 -> 248311 bytes
+ movie/assets/wonder/demo/016.jpg                   |  Bin 189129 -> 248195 bytes
+ movie/assets/wonder/demo/017.jpg                   |  Bin 189379 -> 248064 bytes
+ movie/assets/wonder/demo/018.jpg                   |  Bin 189323 -> 248079 bytes
+ movie/assets/wonder/demo/019.jpg                   |  Bin 189428 -> 248639 bytes
+ movie/assets/wonder/demo/020.jpg                   |  Bin 189285 -> 248393 bytes
+ movie/assets/wonder/demo/021.jpg                   |  Bin 189482 -> 248202 bytes
+ movie/assets/wonder/demo/022.jpg                   |  Bin 189170 -> 248791 bytes
+ movie/assets/wonder/demo/023.jpg                   |  Bin 189063 -> 248547 bytes
+ movie/assets/wonder/demo/024.jpg                   |  Bin 188948 -> 248953 bytes
+ movie/assets/wonder/demo/025.jpg                   |  Bin 189055 -> 248654 bytes
+ movie/assets/wonder/demo/026.jpg                   |  Bin 189192 -> 249089 bytes
+ movie/assets/wonder/demo/027.jpg                   |  Bin 223740 -> 269021 bytes
+ movie/assets/wonder/demo/028.jpg                   |  Bin 223634 -> 248896 bytes
+ movie/assets/wonder/demo/029.jpg                   |  Bin 223923 -> 244554 bytes
+ movie/assets/wonder/demo/030.jpg                   |  Bin 224006 -> 244759 bytes
+ movie/assets/wonder/demo/031.jpg                   |  Bin 223851 -> 244742 bytes
+ movie/assets/wonder/demo/032.jpg                   |  Bin 223868 -> 244807 bytes
+ movie/assets/wonder/demo/033.jpg                   |  Bin 223754 -> 244751 bytes
+ movie/assets/wonder/demo/034.jpg                   |  Bin 223906 -> 244733 bytes
+ movie/assets/wonder/demo/035.jpg                   |  Bin 223991 -> 244684 bytes
+ movie/assets/wonder/demo/036.jpg                   |  Bin 224027 -> 244617 bytes
+ movie/assets/wonder/demo/037.jpg                   |  Bin 223996 -> 244442 bytes
+ movie/assets/wonder/demo/038.jpg                   |  Bin 224121 -> 244337 bytes
+ movie/assets/wonder/demo/039.jpg                   |  Bin 223820 -> 244184 bytes
+ movie/assets/wonder/demo/040.jpg                   |  Bin 223939 -> 244111 bytes
+ movie/assets/wonder/demo/041.jpg                   |  Bin 223877 -> 244209 bytes
+ movie/assets/wonder/demo/042.jpg                   |  Bin 223844 -> 244051 bytes
+ movie/assets/wonder/demo/043.jpg                   |  Bin 223921 -> 243989 bytes
+ movie/assets/wonder/demo/044.jpg                   |  Bin 223771 -> 244135 bytes
+ movie/assets/wonder/demo/045.jpg                   |  Bin 223997 -> 243858 bytes
+ movie/assets/wonder/demo/046.jpg                   |  Bin 224078 -> 243890 bytes
+ movie/assets/wonder/demo/047.jpg                   |  Bin 224096 -> 243861 bytes
+ movie/assets/wonder/demo/048.jpg                   |  Bin 224250 -> 243960 bytes
+ movie/assets/wonder/demo/049.jpg                   |  Bin 224393 -> 243963 bytes
+ movie/assets/wonder/demo/050.jpg                   |  Bin 224378 -> 244025 bytes
+ movie/assets/wonder/demo/051.jpg                   |  Bin 224314 -> 243957 bytes
+ movie/assets/wonder/demo/052.jpg                   |  Bin 224243 -> 243827 bytes
+ movie/assets/wonder/demo/053.jpg                   |  Bin 224211 -> 243819 bytes
+ movie/assets/wonder/demo/054.jpg                   |  Bin 224083 -> 243795 bytes
+ movie/assets/wonder/demo/055.jpg                   |  Bin 224219 -> 243747 bytes
+ movie/assets/wonder/demo/056.jpg                   |  Bin 213491 -> 177808 bytes
+ movie/assets/wonder/demo/057.jpg                   |  Bin 213897 -> 178113 bytes
+ movie/assets/wonder/demo/058.jpg                   |  Bin 214360 -> 177824 bytes
+ movie/assets/wonder/demo/059.jpg                   |  Bin 214563 -> 177540 bytes
+ movie/assets/wonder/demo/060.jpg                   |  Bin 214477 -> 177207 bytes
+ movie/assets/wonder/demo/061.jpg                   |  Bin 214430 -> 176890 bytes
+ movie/assets/wonder/demo/062.jpg                   |  Bin 214475 -> 176473 bytes
+ movie/assets/wonder/demo/063.jpg                   |  Bin 214517 -> 176204 bytes
+ movie/assets/wonder/demo/064.jpg                   |  Bin 214514 -> 176210 bytes
+ movie/assets/wonder/demo/065.jpg                   |  Bin 214469 -> 176233 bytes
+ movie/assets/wonder/demo/066.jpg                   |  Bin 214571 -> 176291 bytes
+ movie/assets/wonder/demo/067.jpg                   |  Bin 214551 -> 176387 bytes
+ movie/assets/wonder/demo/068.jpg                   |  Bin 214515 -> 176496 bytes
+ movie/assets/wonder/demo/069.jpg                   |  Bin 214545 -> 176503 bytes
+ movie/assets/wonder/demo/070.jpg                   |  Bin 214574 -> 176587 bytes
+ movie/assets/wonder/demo/071.jpg                   |  Bin 214514 -> 176869 bytes
+ movie/assets/wonder/demo/072.jpg                   |  Bin 214494 -> 176872 bytes
+ movie/assets/wonder/demo/073.jpg                   |  Bin 214445 -> 176926 bytes
+ movie/assets/wonder/demo/074.jpg                   |  Bin 214626 -> 177190 bytes
+ movie/assets/wonder/demo/075.jpg                   |  Bin 214498 -> 177265 bytes
+ movie/assets/wonder/demo/076.jpg                   |  Bin 214576 -> 177341 bytes
+ movie/assets/wonder/demo/077.jpg                   |  Bin 214636 -> 177434 bytes
+ movie/assets/wonder/demo/078.jpg                   |  Bin 214641 -> 177430 bytes
+ movie/assets/wonder/demo/079.jpg                   |  Bin 214648 -> 177314 bytes
+ movie/assets/wonder/demo/080.jpg                   |  Bin 214558 -> 177417 bytes
+ movie/assets/wonder/demo/081.jpg                   |  Bin 214604 -> 177555 bytes
+ movie/assets/wonder/demo/082.jpg                   |  Bin 214731 -> 177708 bytes
+ movie/assets/wonder/demo/083.jpg                   |  Bin 214746 -> 177661 bytes
+ movie/assets/wonder/demo/084.jpg                   |  Bin 214657 -> 177568 bytes
+ movie/assets/wonder/demo/085.jpg                   |  Bin 214679 -> 177754 bytes
+ movie/assets/wonder/demo/086.jpg                   |  Bin 214719 -> 177749 bytes
+ movie/assets/wonder/demo/087.jpg                   |  Bin 214702 -> 177928 bytes
+ movie/assets/wonder/demo/088.jpg                   |  Bin 214727 -> 178001 bytes
+ movie/assets/wonder/demo/089.jpg                   |  Bin 214779 -> 177922 bytes
+ movie/assets/wonder/model/park-model.js            | 1205 ++++++++++
+ movie/assets/wonder/park-catalog.json              |   30 +-
+ movie/assets/wonder/park-reference.png             |  Bin 360386 -> 372687 bytes
+ movie/assets/wonder/park-source/attractions.js     |    4 +-
+ movie/assets/wonder/park-source/castle.js          |   15 +-
+ .../assets/wonder/park-source/character-friends.js |  109 +
+ movie/assets/wonder/park-source/characters.js      |   30 +-
+ movie/assets/wonder/park-source/fireworks.js       |   47 +
+ movie/assets/wonder/park-source/globe.js           |  104 +
+ movie/assets/wonder/park-source/landmark.js        |   20 +
+ movie/assets/wonder/park-source/landscape.js       |  101 +-
+ movie/assets/wonder/park-source/main.js            |  104 +
+ movie/assets/wonder/park-source/materials.js       |   11 +-
+ movie/assets/wonder/park-source/scene.js           |   99 +
+ movie/output/vitalis-hackathon-30s.mp4             |  Bin 14216362 -> 31687661 bytes
+ movie/output/wonder-park-30s.mp4                   |  Bin 14216362 -> 31687661 bytes
+ movie/output/wonder/cinema-link.json               |    2 +-
+ movie/output/wonder/contact-sheet.jpg              |  Bin 110576 -> 122137 bytes
+ movie/output/wonder/media-check.json               |    2 +-
+ movie/output/wonder/playback-check.json            |    2 +-
+ movie/output/wonder/poster.png                     |  Bin 1118006 -> 1570679 bytes
+ movie/output/wonder/preview-desktop.png            |  Bin 953241 -> 1145228 bytes
+ movie/output/wonder/preview-mobile.png             |  Bin 195708 -> 209424 bytes
+ movie/output/wonder/source-snapshot.json           |   20 +
+ movie/package.json                                 |   10 +-
+ movie/park-film-scene.js                           |    5 +-
+ movie/scripts/bundle-model.mjs                     |   27 +
+ movie/scripts/hourly-lib.mjs                       |  122 +
+ movie/scripts/hourly.mjs                           |  171 ++
+ movie/scripts/render.mjs                           |    2 +
+ movie/scripts/schedule.mjs                         |   83 +
+ movie/scripts/serve.mjs                            |    2 +-
+ movie/tests/hourly.test.mjs                        |   75 +
+ next-env.d.ts                                      |    4 +-
+ next.config.ts                                     |    7 +-
+ package.json                                       |   21 +-
+ park/README.md                                     |    8 +-
+ park/ROUTER-VERIFICATION.md                        |   25 +
+ park/ROUTER.md                                     |   50 +
+ park/playwright.router.config.mjs                  |    3 +
+ park/scripts/report-router.mjs                     |   14 +
+ park/scripts/report.mjs                            |    2 +-
+ park/server.mjs                                    |  156 +-
+ park/server/apps.mjs                               |   42 +
+ park/server/pages.mjs                              |    4 +
+ park/server/routes.mjs                             |   30 +
+ park/server/trading-proxy.mjs                      |   31 +
+ park/src/main.js                                   |    4 +-
+ .../router-e2e/golden/router-directory-mobile.png  |  Bin 0 -> 53105 bytes
+ park/tests/router-e2e/golden/router-directory.png  |  Bin 0 -> 52895 bytes
+ park/tests/router-e2e/golden/router-mobility.png   |  Bin 0 -> 213579 bytes
+ park/tests/router-e2e/router.spec.mjs              |   30 +
+ park/tests/router-unit/proxy.test.mjs              |   24 +
+ park/tests/router-unit/routes.test.mjs             |   10 +
+ park/vitest.router.config.mjs                      |    2 +
+ scripts/build-unified.mjs                          |   14 +
+ scripts/verify-vehicle-assets.mjs                  |    7 +-
+ src/components/ChargingHistory.tsx                 |    3 +-
+ src/components/VehicleBatteryDashboard.tsx         |    5 +-
+ src/components/VehicleGlbModel.tsx                 |    3 +-
+ src/data/vehicleImageMap.ts                        |    5 +-
+ src/lib/appPath.ts                                 |    1 +
+ tests/vehicle-assets.test.ts                       |   16 +
+ trading/frontend/src/api.ts                        |    5 +-
+ tsconfig.json                                      |    4 +-
+ webpage/src/game/GameApp.tsx                       |    2 +-
+ webpage/src/game/engine.ts                         |    8 +-
+ webpage/src/main.tsx                               |    2 +-
+ 224 files changed, 6124 insertions(+), 208 deletions(-)
+ create mode 100644 map/docs/WORKING-MAPS.md
+ create mode 100644 map/public/mobility/maps/NOTICE.md
+ create mode 100644 map/public/mobility/maps/index.json
+ create mode 100644 map/public/mobility/maps/raw/busan.json
+ create mode 100644 map/public/mobility/maps/raw/busan.source.json
+ create mode 100644 map/public/mobility/maps/raw/cheonan.json
+ create mode 100644 map/public/mobility/maps/raw/cheonan.source.json
+ create mode 100644 map/public/mobility/maps/raw/cheongju.json
+ create mode 100644 map/public/mobility/maps/raw/cheongju.source.json
+ create mode 100644 map/public/mobility/maps/raw/chuncheon.json
+ create mode 100644 map/public/mobility/maps/raw/chuncheon.source.json
+ create mode 100644 map/public/mobility/maps/raw/daegu.json
+ create mode 100644 map/public/mobility/maps/raw/daegu.source.json
+ create mode 100644 map/public/mobility/maps/raw/daejeon.json
+ create mode 100644 map/public/mobility/maps/raw/daejeon.source.json
+ create mode 100644 map/public/mobility/maps/raw/gangneung.json
+ create mode 100644 map/public/mobility/maps/raw/gangneung.source.json
+ create mode 100644 map/public/mobility/maps/raw/gwangju.json
+ create mode 100644 map/public/mobility/maps/raw/gwangju.source.json
+ create mode 100644 map/public/mobility/maps/raw/incheon.json
+ create mode 100644 map/public/mobility/maps/raw/incheon.source.json
+ create mode 100644 map/public/mobility/maps/raw/jeju.json
+ create mode 100644 map/public/mobility/maps/raw/jeju.source.json
+ create mode 100644 map/public/mobility/maps/raw/jeonju.json
+ create mode 100644 map/public/mobility/maps/raw/jeonju.source.json
+ create mode 100644 map/public/mobility/maps/raw/sejong.json
+ create mode 100644 map/public/mobility/maps/raw/sejong.source.json
+ create mode 100644 map/public/mobility/maps/raw/seongnam.json
+ create mode 100644 map/public/mobility/maps/raw/seongnam.source.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-gangnam.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-gangnam.source.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-jung.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-jung.source.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-mapo.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-mapo.source.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-songpa.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-songpa.source.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-yeongdeungpo.json
+ create mode 100644 map/public/mobility/maps/raw/seoul-yeongdeungpo.source.json
+ create mode 100644 map/public/mobility/maps/raw/suwon.json
+ create mode 100644 map/public/mobility/maps/raw/suwon.source.json
+ create mode 100644 map/public/mobility/maps/raw/ulsan.json
+ create mode 100644 map/public/mobility/maps/raw/ulsan.source.json
+ create mode 100644 map/scripts/acquire-road-maps.mjs
+ create mode 100644 map/scripts/extract-road-maps.py
+ create mode 100644 map/scripts/map-regions.json
+ create mode 100644 map/src/base.js
+ create mode 100644 map/src/core/road-maps.js
+ create mode 100644 map/tests/unit/road-maps.test.js
+ create mode 100644 movie/.gitignore
+ create mode 100644 movie/assets/wonder/assets/ATTRIBUTION.md
+ create mode 100644 movie/assets/wonder/assets/gs-group-ci.png
+ create mode 100644 movie/assets/wonder/assets/kloppenheim-06-sky.hdr
+ create mode 100644 movie/assets/wonder/model/park-model.js
+ create mode 100644 movie/assets/wonder/park-source/character-friends.js
+ create mode 100644 movie/assets/wonder/park-source/fireworks.js
+ create mode 100644 movie/assets/wonder/park-source/globe.js
+ create mode 100644 movie/assets/wonder/park-source/landmark.js
+ create mode 100644 movie/assets/wonder/park-source/main.js
+ create mode 100644 movie/assets/wonder/park-source/scene.js
+ create mode 100644 movie/output/wonder/source-snapshot.json
+ create mode 100644 movie/scripts/bundle-model.mjs
+ create mode 100644 movie/scripts/hourly-lib.mjs
+ create mode 100644 movie/scripts/hourly.mjs
+ create mode 100644 movie/scripts/schedule.mjs
+ create mode 100644 movie/tests/hourly.test.mjs
+ create mode 100644 park/ROUTER-VERIFICATION.md
+ create mode 100644 park/ROUTER.md
+ create mode 100644 park/playwright.router.config.mjs
+ create mode 100644 park/scripts/report-router.mjs
+ create mode 100644 park/server/apps.mjs
+ create mode 100644 park/server/pages.mjs
+ create mode 100644 park/server/routes.mjs
+ create mode 100644 park/server/trading-proxy.mjs
+ create mode 100644 park/tests/router-e2e/golden/router-directory-mobile.png
+ create mode 100644 park/tests/router-e2e/golden/router-directory.png
+ create mode 100644 park/tests/router-e2e/golden/router-mobility.png
+ create mode 100644 park/tests/router-e2e/router.spec.mjs
+ create mode 100644 park/tests/router-unit/proxy.test.mjs
+ create mode 100644 park/tests/router-unit/routes.test.mjs
+ create mode 100644 park/vitest.router.config.mjs
+ create mode 100644 scripts/build-unified.mjs
+ create mode 100644 src/lib/appPath.ts
+ create mode 100644 tests/vehicle-assets.test.ts

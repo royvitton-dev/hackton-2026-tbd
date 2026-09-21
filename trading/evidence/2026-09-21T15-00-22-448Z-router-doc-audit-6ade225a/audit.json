@@ -1,0 +1,752 @@
+{
+  "at": "2026-09-21T15:01:52.764Z",
+  "method": "Read-only static document/source comparison; file copies and hashes only.",
+  "snapshot_timing": "Source snapshots and hashes are after the parent applied the two document fixes. Before-fix excerpts are preserved from the actual earlier tool reads; no complete before-fix file SHA was captured, and none is asserted.",
+  "scope": [
+    "Root README startup, app routes, and command mappings; no audit of unrelated vehicle data/model claims.",
+    "Park README startup and ROUTER installation, route, backend, origin and auto-start sections.",
+    "Trading README startup/deployment pointers; UI standalone/integration sections; deployment standalone Vercel settings and Park registration paragraph; protocol endpoint/origin scope.",
+    "Actual root npm scripts, map font imports and package/lock ownership, Vite middleware base/define, unified build base/output, API URL selection, proxy routes, launch endpoint and existing startup helper.",
+    "No service, browser, API, dependency install, build, test, Git operation or operational/shared source/document modification."
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "P2",
+      "title": "Park first-run copyable block omits required per-app dependency installation",
+      "document": "park/README.md",
+      "line_start": 7,
+      "line_end": 11,
+      "status": "resolved_by_parent_document_edit_read_back",
+      "before_excerpt": {
+        "tool_chunk_id": "095a29",
+        "text": "저장소 최상위 폴더에서 Node.js 22.12 이상으로 실행합니다.\n\n```sh\nnpm ci\nnpm run park:dev\n```"
+      },
+      "resolution": "Current park/README.md:7 requires the complete ROUTER installation before launch and states root npm ci does not install nested app dependencies; line13 supplies exact npm --prefix map ci troubleshooting for the two font imports. Read-only re-review confirms the documentation gap is closed; no install/browser run performed.",
+      "issue": "The first Park startup block installs only root dependencies before park:dev. Root package.json has no workspaces or install hook for map. map/src/main.js and mobility/main.js import @fontsource-variable/dm-sans and @fontsource-variable/noto-sans-kr, declared only in map package/lock, not the root package/lock. Thus a fresh checkout following only this block leaves these imports uninstalled.",
+      "qualification": "The correct npm --prefix map ci command is already present in park/ROUTER.md:7, and map/README.md:6-8 installs locally. Root README:9 also explicitly points to per-app installs. The problem is the incomplete first Park copy/paste path, not an absent map dependency declaration or total absence of instructions. No fresh-install failure was reproduced in this audit.",
+      "minimum_fix": "Before the first Park launch command, make ROUTER installation a mandatory prerequisite and include its per-app install block, or replace the incomplete block with a direct prerequisite link and a post-install launch-only block. Keep root and Park quickstarts consistent. State that root npm ci does not install nested app packages.",
+      "evidence": [
+        {
+          "file": "park/README.md",
+          "start": 5,
+          "end": 23,
+          "lines": [
+            {
+              "line": 5,
+              "text": "## 실행"
+            },
+            {
+              "line": 6,
+              "text": ""
+            },
+            {
+              "line": 7,
+              "text": "저장소 최상위 폴더에서 Node.js 22.12 이상으로 실행합니다. 처음에는 [통합 서버의 의존성 설치 절차](ROUTER.md)를 모두 마친 뒤 아래 명령을 실행하세요. 루트의 `npm ci`만으로는 `map` 등 하위 앱의 의존성이 설치되지 않습니다."
+            },
+            {
+              "line": 8,
+              "text": ""
+            },
+            {
+              "line": 9,
+              "text": "```sh"
+            },
+            {
+              "line": 10,
+              "text": "npm run park:dev"
+            },
+            {
+              "line": 11,
+              "text": "```"
+            },
+            {
+              "line": 12,
+              "text": ""
+            },
+            {
+              "line": 13,
+              "text": "지도에서 `@fontsource-variable/dm-sans` 또는 `@fontsource-variable/noto-sans-kr` import 오류가 나면 루트에서 `npm --prefix map ci`로 지도의 lockfile에 지정된 의존성을 설치한 뒤 화면을 새로고침하세요."
+            },
+            {
+              "line": 14,
+              "text": ""
+            },
+            {
+              "line": 15,
+              "text": "- 홈페이지: <http://localhost:5190>"
+            },
+            {
+              "line": 16,
+              "text": "- HTML 품질 보고서: <http://localhost:5190/reports/>"
+            },
+            {
+              "line": 17,
+              "text": "- 다른 포트: `PARK_PORT=5195 npm run park:dev`"
+            },
+            {
+              "line": 18,
+              "text": "- 프로덕션: `npm run park:build` 후 `npm run park:preview`"
+            },
+            {
+              "line": 19,
+              "text": ""
+            },
+            {
+              "line": 20,
+              "text": "통합 서버는 localhost의 한 포트에서 모든 웹 화면을 경로로 제공합니다. `/park/`, `/map/`, `/dopamin/`, `/pinball/`, `/movie/`, `/webpage/`, `/battery_health/`, `/trading/`, `/vehicle/`로 바로 접근하거나 `/projects/`에서 선택합니다. 어트랙션 입장도 같은 주소의 경로로 연결합니다."
+            },
+            {
+              "line": 21,
+              "text": ""
+            },
+            {
+              "line": 22,
+              "text": "개발 모드는 Vite 미들웨어와 Next.js를 같은 HTTP 서버에 연결하고, 배포 모드는 통합 빌드 파일과 Next.js를 제공합니다. 영상은 HTTP Range를 지원합니다. `/voice/`는 macOS 네이티브 CLI 안내입니다. 거래소 엔진은 `TRADING_ENGINE_URL`로 지정하며 `/trading/backend/`를 통해 HTTP와 WebSocket을 전달합니다. [거래소 최초 준비](../trading/README.md) 후 기본 로컬 엔진은 파크 시작·거래소 입장 시 엔진·12개 봇·독립 UI를 자동 준비하고, 정상 실행 중이면 재사용합니다. 외부 엔진이나 별도로 지정한 다른 포트는 자동 실행 대상이 아닙니다."
+            },
+            {
+              "line": 23,
+              "text": ""
+            }
+          ]
+        },
+        {
+          "file": "park/ROUTER.md",
+          "start": 3,
+          "end": 13,
+          "lines": [
+            {
+              "line": 3,
+              "text": "Node.js 22.12 이상과 Chrome을 사용합니다. 루트에서 의존성을 설치합니다."
+            },
+            {
+              "line": 4,
+              "text": ""
+            },
+            {
+              "line": 5,
+              "text": "```sh"
+            },
+            {
+              "line": 6,
+              "text": "npm ci"
+            },
+            {
+              "line": 7,
+              "text": "npm --prefix map ci"
+            },
+            {
+              "line": 8,
+              "text": "npm --prefix dopamin ci"
+            },
+            {
+              "line": 9,
+              "text": "npm --prefix webpage ci"
+            },
+            {
+              "line": 10,
+              "text": "npm --prefix battery_health ci"
+            },
+            {
+              "line": 11,
+              "text": "# 기존 pnpm 환경이면 trading/frontend에서 pnpm install --frozen-lockfile 사용 가능"
+            },
+            {
+              "line": 12,
+              "text": "npm --prefix trading/frontend install --package-lock=false"
+            },
+            {
+              "line": 13,
+              "text": "npm run dev"
+            }
+          ]
+        },
+        {
+          "file": "README.md",
+          "start": 5,
+          "end": 12,
+          "lines": [
+            {
+              "line": 5,
+              "text": "## 통합 서버"
+            },
+            {
+              "line": 6,
+              "text": ""
+            },
+            {
+              "line": 7,
+              "text": "```sh"
+            },
+            {
+              "line": 8,
+              "text": "npm ci"
+            },
+            {
+              "line": 9,
+              "text": "# 최초 1회: 각 앱의 의존성 설치는 park/ROUTER.md 참고"
+            },
+            {
+              "line": 10,
+              "text": "npm run dev"
+            },
+            {
+              "line": 11,
+              "text": "# 배포 빌드: npm run build && npm start"
+            },
+            {
+              "line": 12,
+              "text": "```"
+            }
+          ]
+        },
+        {
+          "file": "map/package.json",
+          "start": 19,
+          "end": 26,
+          "lines": [
+            {
+              "line": 19,
+              "text": "  \"dependencies\": {"
+            },
+            {
+              "line": 20,
+              "text": "    \"@fontsource-variable/dm-sans\": \"5.3.0\","
+            },
+            {
+              "line": 21,
+              "text": "    \"@fontsource-variable/noto-sans-kr\": \"5.3.0\","
+            },
+            {
+              "line": 22,
+              "text": "    \"maplibre-gl\": \"6.10.0\","
+            },
+            {
+              "line": 23,
+              "text": "    \"pdfjs-dist\": \"6.3.289\","
+            },
+            {
+              "line": 24,
+              "text": "    \"three\": \"0.180.0\""
+            },
+            {
+              "line": 25,
+              "text": "  },"
+            },
+            {
+              "line": 26,
+              "text": "  \"devDependencies\": {"
+            }
+          ]
+        },
+        {
+          "file": "map/src/main.js",
+          "start": 1,
+          "end": 5,
+          "lines": [
+            {
+              "line": 1,
+              "text": "import {assetPath} from './base.js';"
+            },
+            {
+              "line": 2,
+              "text": "import {mountMobilityEntry} from './mobility/entry.js';"
+            },
+            {
+              "line": 3,
+              "text": "import '@fontsource-variable/dm-sans';"
+            },
+            {
+              "line": 4,
+              "text": "import '@fontsource-variable/noto-sans-kr';"
+            },
+            {
+              "line": 5,
+              "text": "import './style.css';"
+            }
+          ]
+        },
+        {
+          "file": "map/src/mobility/main.js",
+          "start": 1,
+          "end": 4,
+          "lines": [
+            {
+              "line": 1,
+              "text": "import {assetPath} from '../base.js';"
+            },
+            {
+              "line": 2,
+              "text": "import '@fontsource-variable/dm-sans';"
+            },
+            {
+              "line": 3,
+              "text": "import '@fontsource-variable/noto-sans-kr';"
+            },
+            {
+              "line": 4,
+              "text": "import './style.css';"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "priority": "P2",
+      "title": "Deployment instruction to replace attraction.json URL no longer changes integrated Park destination",
+      "document": "trading/docs/deployment.md",
+      "line_start": 114,
+      "line_end": 114,
+      "status": "resolved_by_parent_document_edit_read_back",
+      "before_excerpt": {
+        "tool_chunk_id": "23b972 and initial deployment full read",
+        "text": "Wonder Park에는 `trading/attraction.json`으로 로컬 독립 UI 주소를 등록했다. 후속 사용자 요청에 따라 파크 시작과 거래소 입장 API가 `demo.mjs ensure`를 호출해 로컬 UI·엔진·봇을 자동 준비하거나 기존 실행을 재사용한다. 최초 의존성 준비는 별도로 필요하다. 공개 환경에서는 로컬 프로세스 자동 실행 대신 별도 배포를 구성하고 등록 URL도 실제 HTTPS UI 주소로 교체한다. 다른 호스트용 선택적 React 어댑터와 실제 검증 범위는 `ui.md`에 있다."
+      },
+      "resolution": "Current deployment.md:114-116 explicitly documents same-origin /trading/ and /trading/backend/, then states attraction.json URL changes do not redirect the current Park entry to Vercel. Standalone HTTPS UI/HTTPS-WSS engine and unvalidated public Park routing are separated. Read-back agrees with server and api.ts.",
+      "issue": "The public-deployment paragraph tells the operator to replace the registered URL with the actual HTTPS UI. The current POST /api/launch uses appPath(id) and req.headers.host unconditionally after preparation; it never uses attraction.url for the destination. Changing trading/attraction.json.url therefore cannot send the integrated Park button to a standalone Vercel UI.",
+      "minimum_fix": "Replace this instruction with explicit modes: local Park always uses /trading/ and /trading/backend/; a separately deployed standalone Vercel UI is opened at its own HTTPS origin with VITE_API_URL/VITE_WS_URL. Do not claim attraction.json URL changes the current router destination. If a future external-link mode is wanted, document it only after implementation/validation.",
+      "evidence": [
+        {
+          "file": "trading/docs/deployment.md",
+          "start": 107,
+          "end": 118,
+          "lines": [
+            {
+              "line": 107,
+              "text": "1. 로컬 frontend `pnpm build` 및 엔진 release 빌드가 통과했는지 기록 확인."
+            },
+            {
+              "line": 108,
+              "text": "2. 실제 도메인·TLS·허용 Origin·영속 볼륨을 구체적인 값으로 설정."
+            },
+            {
+              "line": 109,
+              "text": "3. 운영자가 외부 업로드·배포를 명시적으로 승인한 뒤에만 배포 수행."
+            },
+            {
+              "line": 110,
+              "text": "4. 실제 브라우저에서 전체 상태 수신, 주문·취소·체결·잔고 변화, WS 재연결을 검증."
+            },
+            {
+              "line": 111,
+              "text": "5. 엔진 재시작 후 같은 데이터·요청 ID의 조회와 중복 방지 확인."
+            },
+            {
+              "line": 112,
+              "text": "6. 실제 서버에서 12개 봇 실행 및 최소 10개 API 참여·5분 시장 변화를 검증."
+            },
+            {
+              "line": 113,
+              "text": ""
+            },
+            {
+              "line": 114,
+              "text": "Wonder Park에는 `trading/attraction.json`으로 거래소를 등록했다. 현재 통합 서버의 입장 API는 같은 출처의 `/trading/`를 반환하고 HTTP·WebSocket은 `/trading/backend/`로 전달한다. 파크 시작과 거래소 입장 시 준비 함수가 `demo.mjs ensure`로 기본 로컬 UI·엔진·봇을 준비하거나 기존 실행을 재사용한다. 최초 의존성 준비는 별도로 필요하다. [통합 서버 설정](../../park/ROUTER.md)을 따른다."
+            },
+            {
+              "line": 115,
+              "text": ""
+            },
+            {
+              "line": 116,
+              "text": "독립 Vercel UI는 위 절차대로 실제 HTTPS UI 주소와 별도 HTTPS/WSS 엔진 주소를 구성한다. 현재 Park 입장 API는 앱별 경로를 사용하므로 `attraction.json`의 URL만 바꿔도 외부 Vercel 화면으로 이동하는 것은 아니다. 공개 Park 연결은 별도 라우팅·인증·Origin 검토가 필요하며 이번 로컬 연동 검증에 포함되지 않는다. 다른 호스트용 선택적 React 어댑터와 실제 검증 범위는 [UI 문서](ui.md)에 있다."
+            },
+            {
+              "line": 117,
+              "text": ""
+            },
+            {
+              "line": 118,
+              "text": "## 격리된 로컬 production preview"
+            }
+          ]
+        },
+        {
+          "file": "park/server.mjs",
+          "start": 83,
+          "end": 94,
+          "lines": [
+            {
+              "line": 83,
+              "text": "    return await sendFile(req,res,file,path.join(root,id));"
+            },
+            {
+              "line": 84,
+              "text": "   }"
+            },
+            {
+              "line": 85,
+              "text": "   if(url.pathname==='/api/launch'&&req.method==='POST'){"
+            },
+            {
+              "line": 86,
+              "text": "    const id=url.searchParams.get('id'),attraction=(await discoverAttractions(root)).find(a=>a.id===id);"
+            },
+            {
+              "line": 87,
+              "text": "    // Catalog launch remains restricted to visible attractions. The directory also offers /webpage/."
+            },
+            {
+              "line": 88,
+              "text": "    if(!attraction||!safeName(id)||!appPath(id))return json(res,{error:'Unknown attraction'},404);"
+            },
+            {
+              "line": 89,
+              "text": "    if(id==='trading'){"
+            },
+            {
+              "line": 90,
+              "text": "     try{await prepareTrading();}"
+            },
+            {
+              "line": 91,
+              "text": "     catch(error){return json(res,{error:error.message,code:error.code||'TRADING_START_FAILED'},503);}"
+            },
+            {
+              "line": 92,
+              "text": "    }"
+            },
+            {
+              "line": 93,
+              "text": "    return json(res,{url:new URL(appPath(id),`http://${req.headers.host}`).href,path:appPath(id)});"
+            },
+            {
+              "line": 94,
+              "text": "   }"
+            }
+          ]
+        },
+        {
+          "file": "park/server/routes.mjs",
+          "start": 1,
+          "end": 15,
+          "lines": [
+            {
+              "line": 1,
+              "text": "export const APPS = Object.freeze(["
+            },
+            {
+              "line": 2,
+              "text": " {id:'park',name:'Wonder Park',kind:'vite',root:'.',config:'park/vite.config.mjs'},"
+            },
+            {
+              "line": 3,
+              "text": " {id:'map',name:'ATLAS · 도면과 모빌리티',kind:'vite',root:'map',config:'map/vite.config.mjs'},"
+            },
+            {
+              "line": 4,
+              "text": " {id:'dopamin',name:'BREW RACERS',kind:'vite',root:'dopamin',config:'dopamin/vite.config.ts'},"
+            },
+            {
+              "line": 5,
+              "text": " {id:'webpage',name:'DEBUT : ON · VITALIS',kind:'vite',root:'webpage',config:'webpage/vite.config.ts'},"
+            },
+            {
+              "line": 6,
+              "text": " {id:'battery_health',name:'배터리 관리',kind:'vite',root:'battery_health',config:'battery_health/vite.config.ts'},"
+            },
+            {
+              "line": 7,
+              "text": " {id:'trading',name:'휴가 거래소',kind:'vite',root:'trading/frontend',config:'trading/frontend/vite.config.ts'},"
+            },
+            {
+              "line": 8,
+              "text": " {id:'pinball',name:'DROP LAND',kind:'static',root:'pinball'},"
+            },
+            {
+              "line": 9,
+              "text": " {id:'movie',name:'Wonder Park Film',kind:'static',root:'movie'},"
+            },
+            {
+              "line": 10,
+              "text": " {id:'voice',name:'매직 보이스 · 실행 안내',kind:'guide',root:'voice'},"
+            },
+            {
+              "line": 11,
+              "text": " {id:'vehicle',name:'EVision · 차량 인텔리전스',kind:'next',root:'.'},"
+            },
+            {
+              "line": 12,
+              "text": "]);"
+            },
+            {
+              "line": 13,
+              "text": ""
+            },
+            {
+              "line": 14,
+              "text": "export function appPath(id){return APPS.some(app=>app.id===id)?`/${id}/`:null;}"
+            },
+            {
+              "line": 15,
+              "text": "export function matchApp(pathname){return APPS.find(app=>pathname===`/${app.id}`||pathname.startsWith(`/${app.id}/`))||null;}"
+            }
+          ]
+        },
+        {
+          "file": "trading/docs/ui.md",
+          "start": 54,
+          "end": 60,
+          "lines": [
+            {
+              "line": 54,
+              "text": "## Wonder Park 연결"
+            },
+            {
+              "line": 55,
+              "text": ""
+            },
+            {
+              "line": 56,
+              "text": "**현재 소스: 같은 포트의 통합 경로와 로컬 자동 시작.** `trading/attraction.json`은 이름·소개·입장 버튼·독립 UI 주소를 등록한다. 최신 파크 라우터의 입장 버튼은 같은 포트의 `/trading/`로 이동하며 API와 WebSocket은 `/trading/backend/`로 연결한다. 독립 `http://127.0.0.1:5175/` 화면도 계속 사용할 수 있다. 과거의 “연결된 웹 화면이 없습니다” 문제는 중첩된 `trading/frontend`가 자동 발견되지 않아 발생했고 명시적인 등록으로 해결했다."
+            },
+            {
+              "line": 57,
+              "text": ""
+            },
+            {
+              "line": 58,
+              "text": "최초 준비 후 루트 `npm run dev` 또는 `npm run park:dev`로 Wonder Park를 시작하면 `demo.mjs ensure`가 UI·엔진·12개 봇을 자동 준비하고 정상 실행 중이면 재사용한다. UI만 종료된 경우에는 UI만 복원한다. 시작 시 준비가 실패하면 입장 요청에서 다시 시도한다. `TRADING_ENGINE_URL`이 기본 로컬 엔진과 다른 포트·외부·HTTPS 주소를 지정한 경우에는 해당 엔진을 자동 실행하지 않는다. 설정과 Origin 처리 범위는 [통합 서버 안내](../../park/ROUTER.md)에 있다. 독립 실행의 `node scripts/demo.mjs start`도 유지한다. 파크 종료는 거래소를 종료하지 않는다."
+            },
+            {
+              "line": 59,
+              "text": ""
+            },
+            {
+              "line": 60,
+              "text": "기존 등록 API·입장 모달·독립 목적지 화면 증거는 [Wonder Park 연결 검증](../evidence/20260921T123546085Z-wonder-park-link-c489e646/README.md)에 있다. 최신 통합 프록시의 [실제 Rust 엔진 검증](../evidence/2026-09-21T14-25-34-030Z-park-proxy-integration-0b408ce2/README.md)은 주문·체결·잔고·재요청·WebSocket 및 출처 차단을 확인했다. 이 별도 검증은 새 통합 파크 전체의 실제 시작이나 브라우저 검증을 뜻하지 않는다. 프런트엔드 내부에는 `/`, `#market`, `#my-orders`, `#bots` 진입점이 있다."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "matched": [
+    {
+      "area": "Root npm aliases",
+      "result": "dev and park:dev -> node park/server.mjs; build and park:build -> scripts/build-unified.mjs; start and park:preview -> park/server.mjs --production. Current README routing description agrees."
+    },
+    {
+      "area": "Map dependencies",
+      "result": "map/package.json and its lock both declare the two exact variable-font packages; ROUTER has npm --prefix map ci. No missing dependency declaration found."
+    },
+    {
+      "area": "Standalone UI",
+      "result": "frontend pnpm dev binds127.0.0.1:5175; default API8787 and WS8787/ws; docs match. setup.ps1 installs/builds frontend and release engine; demo.mjs supports all documented start/ensure/status/stop/restart actions."
+    },
+    {
+      "area": "Integrated UI",
+      "result": "apps.mjs applies /trading/ base and true VITE_ROUTER_MODE; unified build applies --base /trading/. api.ts derives same-origin /trading/backend and /trading/backend/ws, and proxy strips the prefix. UI.md and trading README agree."
+    },
+    {
+      "area": "Backend selection and auto-start",
+      "result": "TRADING_ENGINE_URL then ENGINE_API_URL then default8787; helper only manages matching local HTTP endpoints, skips external/HTTPS/different port. ROUTER documents this; source shares pending preparation and launch waits for it."
+    },
+    {
+      "area": "Standalone Vercel",
+      "result": "Root Directory trading/frontend, pnpm build, dist, no unified --base flag and no router define; API uses VITE_API_URL/VITE_WS_URL as documented. Public HTTPS/WSS checks and explicit absence of actual external deployment are correctly scoped."
+    },
+    {
+      "area": "Protocol endpoint scope",
+      "result": "protocol.md explicitly describes direct standalone engine /api/* and /ws. It lacks an integrated proxy mapping sentence but is not incorrect about engine endpoints. Optional link-only clarification is not elevated into a required finding."
+    },
+    {
+      "area": "Origin documentation",
+      "result": "Direct engine Origin allowlist in protocol/deployment and same-origin gateway validation then Origin stripping in ROUTER describe different modes consistently."
+    }
+  ],
+  "limitations": [
+    "This audit does not reproduce the user map font error or establish its exact runtime cause; it identifies a concrete fresh-install documentation gap supported by manifests/imports.",
+    "No external official documentation was re-queried; existing Vercel service capability claims are outside this static current-repository consistency audit.",
+    "No full unified-server startup, routing request, external Vercel deployment or command success was inferred from static source."
+  ],
+  "source": [
+    {
+      "path": "README.md",
+      "bytes": 23450,
+      "sha256": "f54e6b34f3aaee72b44192ff510c23ab44d1a3b2db546842ba041b7774fb8126",
+      "snapshot": "sources/README.md"
+    },
+    {
+      "path": "package.json",
+      "bytes": 3121,
+      "sha256": "2be78a8a52346a55fbe3f820cb93f24585de6ed061646ab90c8f9525dfd20664",
+      "snapshot": "sources/package.json"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 310635,
+      "sha256": "fde62f344e4c8e721e69994dfdc45c88a7780a7cea6dd775849c195d7e79138a",
+      "snapshot": "sources/package-lock.json"
+    },
+    {
+      "path": "park/README.md",
+      "bytes": 11297,
+      "sha256": "4d4eb5e6c5e27dcbfc13d88e8b0d819c4a60fc3fb2cb213f92fdb17c2159ff5e",
+      "snapshot": "sources/park/README.md"
+    },
+    {
+      "path": "park/ROUTER.md",
+      "bytes": 4987,
+      "sha256": "8cc71dd823c74532aa0be18e073b46cf08e5068c35d735a292c56a093701fb84",
+      "snapshot": "sources/park/ROUTER.md"
+    },
+    {
+      "path": "park/server.mjs",
+      "bytes": 9955,
+      "sha256": "636d4bbd4a19e6d6b37733543a0687f6965842ccc57fc2f462ba735336842a41",
+      "snapshot": "sources/park/server.mjs"
+    },
+    {
+      "path": "park/server/apps.mjs",
+      "bytes": 1959,
+      "sha256": "62c94e5b85e001263313d91c27e518ef5be9647f96be496b9cc676d695143ffb",
+      "snapshot": "sources/park/server/apps.mjs"
+    },
+    {
+      "path": "park/server/routes.mjs",
+      "bytes": 2160,
+      "sha256": "c39c05919290cc60226edc87509f7c667eca823c945b01ba44581bf30b6d6da9",
+      "snapshot": "sources/park/server/routes.mjs"
+    },
+    {
+      "path": "park/server/trading-proxy.mjs",
+      "bytes": 3678,
+      "sha256": "eddc83f250b23d6214df19ddb55064ee81dd0c5a70fd6d850c1e33075a2410f4",
+      "snapshot": "sources/park/server/trading-proxy.mjs"
+    },
+    {
+      "path": "scripts/build-unified.mjs",
+      "bytes": 1029,
+      "sha256": "e6837b605c5e323184894d2e84c9bd6964ced0fcf1e0b8fffc65ddf602aae071",
+      "snapshot": "sources/scripts/build-unified.mjs"
+    },
+    {
+      "path": "map/README.md",
+      "bytes": 12380,
+      "sha256": "90dd3e353352266f745f6d0970077872477a7edca0038c3423152965ac83b9bf",
+      "snapshot": "sources/map/README.md"
+    },
+    {
+      "path": "map/package.json",
+      "bytes": 989,
+      "sha256": "12228e1e35434935e27505e3fb20443ceba1bb8ee4fa09b843d472168770073f",
+      "snapshot": "sources/map/package.json"
+    },
+    {
+      "path": "map/package-lock.json",
+      "bytes": 81008,
+      "sha256": "518ac4ae31e00a1695521ffda10e34f858c75133288d9ea2f37ec0c56079800a",
+      "snapshot": "sources/map/package-lock.json"
+    },
+    {
+      "path": "map/src/main.js",
+      "bytes": 38027,
+      "sha256": "8ea308c1c34da7495cb6bdb6d2cb6c2b276b6e7c72c8b25e91a69266e9f842a3",
+      "snapshot": "sources/map/src/main.js"
+    },
+    {
+      "path": "map/src/mobility/main.js",
+      "bytes": 16199,
+      "sha256": "f8a7d746c3fc44444cc72f78155d070ef002189b4c632acb8441165affd377f3",
+      "snapshot": "sources/map/src/mobility/main.js"
+    },
+    {
+      "path": "trading/README.md",
+      "bytes": 9976,
+      "sha256": "d55e1219063f3cb14eb6e4cdff9c2469d20406aa70687792fb65b369dffa49ef",
+      "snapshot": "sources/trading/README.md"
+    },
+    {
+      "path": "trading/docs/ui.md",
+      "bytes": 13417,
+      "sha256": "22b9428830401ad88469d56851ccacb052342ca92256365449040cf1505c9aba",
+      "snapshot": "sources/trading/docs/ui.md"
+    },
+    {
+      "path": "trading/docs/deployment.md",
+      "bytes": 14469,
+      "sha256": "e1a9b606ec8ccf0404bc539b5585820e3610edca3f02874d2531048d563d2046",
+      "snapshot": "sources/trading/docs/deployment.md"
+    },
+    {
+      "path": "trading/docs/protocol.md",
+      "bytes": 7717,
+      "sha256": "d8968bc547c6fd2829766f3a54d7fc205f924ca6e2ddc39a8c4e21c4bc51242a",
+      "snapshot": "sources/trading/docs/protocol.md"
+    },
+    {
+      "path": "trading/frontend/src/api.ts",
+      "bytes": 1721,
+      "sha256": "a72116e8ddcc3ef1d3fe019217d3915d3c0ac73202802be8f74e6245a44d6147",
+      "snapshot": "sources/trading/frontend/src/api.ts"
+    },
+    {
+      "path": "trading/frontend/vite.config.ts",
+      "bytes": 196,
+      "sha256": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48",
+      "snapshot": "sources/trading/frontend/vite.config.ts"
+    },
+    {
+      "path": "trading/frontend/package.json",
+      "bytes": 1130,
+      "sha256": "66cae6c771fd553c83cf577bad9c3123bcc221e14f53388049c75aec2e8067dd",
+      "snapshot": "sources/trading/frontend/package.json"
+    },
+    {
+      "path": "trading/frontend/vercel.json",
+      "bytes": 371,
+      "sha256": "55f396790ba82f303d1c6b7bab30c35064f3da833a6e23268ad517862a2fda00",
+      "snapshot": "sources/trading/frontend/vercel.json"
+    },
+    {
+      "path": "trading/frontend/.env.example",
+      "bytes": 70,
+      "sha256": "00f34dab50d6862be333e4d6e4652412e9c50fe695ee0efd243784fb432e99c4",
+      "snapshot": "sources/trading/frontend/.env.example"
+    },
+    {
+      "path": "trading/frontend/.env.production.example",
+      "bytes": 162,
+      "sha256": "dd75a6c3e4c48e454cf49bb1d33808d975d11b34c3fc314839913f85fc7b59b3",
+      "snapshot": "sources/trading/frontend/.env.production.example"
+    },
+    {
+      "path": "trading/frontend/pnpm-workspace.yaml",
+      "bytes": 103,
+      "sha256": "a3ee6d5c2685098dae00941be402cb68cc43a480a136f980806f7223e36efe37",
+      "snapshot": "sources/trading/frontend/pnpm-workspace.yaml"
+    },
+    {
+      "path": "trading/attraction.json",
+      "bytes": 380,
+      "sha256": "2fb2e4f55e6f26db5524a8e1912f1c606242f13161f794742d5295994a031a18",
+      "snapshot": "sources/trading/attraction.json"
+    },
+    {
+      "path": "trading/scripts/park-router-startup.mjs",
+      "bytes": 2722,
+      "sha256": "23acdff2b4d95d86f1117d3a5b5c9ad40ea2e257a274986724bf09b5236af1bc",
+      "snapshot": "sources/trading/scripts/park-router-startup.mjs"
+    },
+    {
+      "path": "trading/scripts/park-launcher.mjs",
+      "bytes": 3378,
+      "sha256": "3febf7d346047cd3077d53f1a4dbeb7abf6148035abf92a33698ae3bd2d661d8",
+      "snapshot": "sources/trading/scripts/park-launcher.mjs"
+    },
+    {
+      "path": "trading/scripts/demo.mjs",
+      "bytes": 23629,
+      "sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19",
+      "snapshot": "sources/trading/scripts/demo.mjs"
+    },
+    {
+      "path": "trading/scripts/setup.ps1",
+      "bytes": 1792,
+      "sha256": "40d83faaa9453d33e1bbd0bbf0ed66ee6aa80655ecc64a9d29d6f26edbe0d2f0",
+      "snapshot": "sources/trading/scripts/setup.ps1"
+    }
+  ]
+}

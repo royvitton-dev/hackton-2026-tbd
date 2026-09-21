@@ -133,3 +133,11 @@ Decoder files under `public/assets/vehicles/decoders` are copied from the instal
 - Distributor attribution: https://shop.americawant.com/atribuciones/
 - 2021 ID.4 대표 외형 · 2026 트림과 다름
 - Original geometry retained; runtime orientation, grounding, material presentation and schematic battery added.
+
+## Project-authored BMW i5, Audi Q4/Q6 and MINI Cooper approximations (2026-09-22)
+
+These four GLBs were authored by this project with `scripts/generate-authored-vehicles.mjs`. They contain curved body panels, glass, interior, lights and four volumetric wheel assemblies; no photograph or textured billboard is used. They are **approximate presentation geometry**, not manufacturer CAD, licensed scans, or photoreal reconstructions. The earlier failed download candidates remain in `model_sources.json` history. `downloaded` is false and `generated` is true.
+
+Overall proportions reference the official BMW i5 technical data, Audi Q4/Q6 press information and MINI Cooper SE brochure; their URLs are recorded per model. Grilles, trim, panel curves and wheel designs are approximations. MINI geometry represents an electric hatchback; the user-supplied Cooper S photo is retained separately as a fixed reference. The model geometry is original project work; manufacturer trademarks and reference photographs retain their respective rights. No manufacturer license is asserted.
+
+The separate battery pack is an interactive location schematic, not vehicle-specific battery CAD. Exterior fidelity remains below the downloaded manufacturer models, even though bounded orbit and internal battery visualization work.

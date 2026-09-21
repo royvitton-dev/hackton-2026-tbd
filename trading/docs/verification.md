@@ -1,14 +1,14 @@
 # 누적 검증과 완료 기준
 
-2026-09-21 23:08 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-22 00:43 KST까지의 실행을 반영한 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
 | 준비 후 한 명령 전체 로컬 시연 | 통과 | `node scripts/demo.mjs start`; [14개 프로세스 기록](../evidence/2026-09-21T08-59-54-120Z-demo-e6520956/processes.json), [setup.ps1 직접 실행](../evidence/20260921T085809407Z-setup-entrypoint-2a96a3dc/run.json) exit0. 설치된 캐시에서 검증했으며 완전히 깨끗한 OS의 다운로드부터 재실행은 미검증 |
 | 독립 UI·Rust API·영속 데이터·12개 봇 | 통과 | localhost UI 5175, API 8787, 12개 독립 Node 프로세스, 데이터 `data/demo` |
 | 최소 10개 봇 실제 API 참여 | 통과 | [5분 관찰](../evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/summary.json): 12개 모두 주문·체결 |
-| 5분 지속 체결·호가·차트 | 통과 | 최초 API관찰309.9초,명령1818개·거래량1353시간 증가,호가62종,WS1848개,누락/단절0. 추가 [실제 브라우저 차트314.615초 표시 관찰](../evidence/browser-reconnect-2026-09-21T09-02-02-365Z/README.md)에서 가격선·거래량·시각 갱신 확인 |
-| 브라우저 수동 주문·취소·체결·잔고 | 통과 | [수동 기록](../evidence/browser-manual-20260921T083933Z/README.md), 확정 체결·취소 DOM/화면. 성공하지 않은 클릭도 구분 기록 |
+| 5분 지속 체결·호가·차트 | 통과 | [최신 실제 화면328.583초 관찰](../evidence/2026-09-21T14-47-05-078Z-browser-five-minute-review-e782abe4/README.md): 같은 뷰의6개 이미지/DOM에서 실제 가격선·막대·호가·체결 변화,EVENT+1919/거래량+1509h/재동기화0. 동시간64개 서버표본과대조. 표본관찰이며모든프레임연속영상은아님 |
+| 브라우저 수동 주문·취소·체결·잔고 | 통과 | [수동 기록](../evidence/browser-manual-20260921T083933Z/README.md), [390px 모바일 실제 매수 체결·별도 주문 취소·예약 해제·새로고침 복원](../evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/README.md). 성공하지 않은 미체결 가정·최초 탭 선택도 구분 기록 |
 | 거래·정산·요청 ID·소유권 | 통과 | 결과 문자열 변경 후 debug22개(규칙19+oracle1+호환성2), release 격리 원본/후보 결과·전체 Core 대조 및 실제 API회귀. [최신 검증](result-allocation.md). 참조 모델3000명령·고정seed 불변조건·legacy snapshot 이후9개 저널 재생 |
 | 12개 동시 주문·취소 | 통과 | [API10개 테스트](../evidence/20260921T091659182Z-api-fill-cancel-race-f9ae26af/output.log), 추가12회 실제 체결/취소 경합·재시작 후24요청 중복 확인. [2500개 동시 큐 포화](stress.md):2144ACK/356QUEUE_FULL,거절356키 동일ID 재시도·조회 전수 통과 |
 | 새 동일 요청의 최초 처리 중 중복 제출 | 통과(클라이언트 관측 중첩) | [새 키 12개 요청 검증](../evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191): 첫 응답 헤더 이전 12개 write 완료, 1회 신규+11중복. 충돌6+6은 신규1·중복5·충돌6. 재시작 후 FULLCore 동일. [독립576개 대조](../evidence/2026-09-21T12-57-07-980Z-inflight-dedup-independent-review-98a146d6/review.md). 서버 내부 접수 시점 계측이나 journal-only 복구 검증은 아님 |
@@ -26,6 +26,7 @@
 | Rust 실행·영속 볼륨·배포 설정 | 준비 / 일부 미검증 | 로컬 Windows 실행 통과, Dockerfile/compose/Caddy 예시. Docker가 없어 실제 Linux 컨테이너 빌드·운영 미검증 |
 | 온라인 봇 위치·접속·실행 절차 | 준비 | [ENGINE_API_URL·독립 봇 인수·12프로세스·정상 종료](deployment.md#봇-위치와-연결)를 현재 bot.mjs와 대조해 보완했다. [PowerShell 예시 4블록 구문 확인](../evidence/20260921T124437701Z-bot-deployment-docs-448f01d4/verification.json). 실제 원격 서버 실행 미실행 |
 | 기존 UI 연동과 적용 여부 | 로컬 등록·자동 시작 적용 | 등록에 이어 사용자 요청으로 Park 서버 시작/입장 API를 연결. [실제 서버 자동 재사용·입장 모달·거래소 화면](../evidence/20260921T125927764Z-park-auto-start-082f6114/README.md), wrapper5/5·ensure8/8·기존lifecycle12/12. 이번 Park 실측은 기존 시장 재사용 경로. 다른 React 호스트용 어댑터 미적용, 외부 배포 미실행 |
+| 통합 경로 production 거래소 부분 | 자산·브라우저 읽기 연결 통과 | [새 `/trading/` 빌드·130개 HTTP 자산 해시·실제 API/WS 연결·새로고침](router-production-preview.md). 기존18프로세스 유지, 임시 fixture 실제exit0. 전체 Park 시작·입장 API나 이번 경로에서의 명령 제출 검증으로 확대하지 않음 |
 | 작업 경계·기존 변경 보존 | 통과(현재 작업 기록 범위) | 구현·증거는trading 내부이며, 사용자 자동 시작 요청에 필요한 root README·park README·park/server.mjs를 추가 수정했다. 별도 작업의 park/vite.config.mjs는 보존·commit 제외. 사용자 지시로 main에서 작업·push한다. 제출 직전 재확인 예정 |
 | 문서·에이전트·체크포인트·마감 인계 | 진행 | [checkpoint](checkpoint.md), [실제 에이전트](agents.jsonl). 마감 2026-09-22 09:00 KST |
 
@@ -83,3 +84,34 @@
 22:42 중간 관찰은2,558표본/13,001.144초,명령75,929·거래량57,538h 증가,12봇·ready·자산보존·WS누락/단절0이었다. 시장 표본 최대 간격6.638초이며6시간 완료는 아니다. 22:28의 기존 UI PID가 `conhost`로 재사용된 표본을 발견해 최초 PID/이름 구성과 다른 메모리·CPU구간을 제외했다. 정정 후 메모리313개/마지막21:44:21,CPU312구간이며 관련17검사·독립 원본 검토를 통과했다. [정정 근거](resource-observation.md#pid-재사용-정정과-보완-수집-분석).
 
 별도 시작 시각 기반 자원 분석은13개 집중 검사와 실제56표본/55구간의 독립 산술 대조를 통과했다. CPU14합계 평균0.8901%/엔진0.5655%(16논리CPU전체)이며 누락된 과거를 복원한 결과가 아니다. [그래프](../evidence/20260921T135027159622Z-resource-coverage-plot-a553d498/resource-coverage.png)는367개 앞뒤 CPU구간 검산과 실제 렌더링 확인을 거쳤고2,018.343초 자원 공백을 표시한다. 조용한 벤치마크·순간 최대·전체6시간 자원 연속성으로 해석하지 않는다.
+
+## 23:33 통합 Park 거래소 자동 준비·Origin 전달 보완
+
+최신 원격 main의 단일 서버 전환 후 거래소는 `/trading/`와 `/trading/backend/`를 사용한다. 기존 자동 시작 호출이 빠진 것을 보완해 서버 시작과 입장에서 동일한 준비 함수를 호출한다. 기본 로컬 백엔드는 기존 `ensure`로 재사용·시작·UI 복원을 수행하고 외부·HTTPS·다른 포트는 자동 실행하지 않는다. [설정](../../park/ROUTER.md)
+
+프록시는 로컬 Host·실제 수신 포트·동일 출처 Origin을 검증한 뒤 Origin을 제외해 전달하며, 모의 세션 검사는 엔진에 유지한다. 거절한 업그레이드는 오류 처리와 제한된 종료 경로를 갖는다. 잘못된 HTTP Origin은 403이며 입장 실패 메시지는 기존 파크 화면의 문자열 계약을 유지한다.
+
+- 준비 함수 검사 8/8: [로그](../evidence/2026-09-21T14-21-47-455Z-park-router-startup-4ab8314f/).
+- 기존 프록시 검사 6/6: [로그](../evidence/20260921T142454218Z-unified-proxy-regression-b6851baf/). 최초 20개 검사 중 raw WS 2개가 실제 포트 없는 Host 때문에 실패한 기록을 보존했고 해당 fixture Host에 동적 포트를 반영했다.
+- [실제 Rust 엔진 통합](../evidence/2026-09-21T14-25-34-030Z-park-proxy-integration-0b408ce2/README.md): 체결·잔고·예약·동일 ID 재요청·조회·취소, WS 101/상태 0·2·3/정상 종료 1000, 잘못된 Origin·Host 11종의 HTTP+WS 22건 차단. 거절 구간의 백엔드 전달 0, 잘못된 세션 401, 소유 엔진 실제 exit0 및 모든 fixture 소켓 종료.
+- [실제 준비 함수 재사용](../evidence/20260921T143031732Z-router-reuse-8bf837b5/proof.json): `reused`, 기존 18개 프로세스의 시작 시각과 시장 manifest 불변. 앞선 PowerShell 사전 점검의 DateTime/문자열 비교 오류를 보존했고 ticks 비교로 수정했다. 그 실패는 helper 호출 전에 발생했다.
+- [독립 최종 검토](../evidence/2026-09-21T14-29-16-872Z-trading-proxy-final-review-cdf1aa26/review.md): 이전 종료·Origin 지적 해결과 원본 전달 기록 교차 확인.
+- [프런트엔드 검증](../evidence/frontend-20260921T142914818Z/): api.ts 형식 정리 후 format, 프로토콜 7개, TypeScript와 Vite build 통과. 주소 선택 5개 시나리오는 오프라인 평가이며 브라우저 네트워크 검증을 뜻하지 않는다.
+
+실행 중인 기본 Park 서버를 다시 시작하지 않았다. 새로운 통합 Park 전체의 cold start·브라우저 경로 검증은 수행하지 않았으며, 기존 자동 승인 검토의 기본 Park 시작 거절을 다른 방식으로 우회하지 않았다.
+
+## 23:50 화면 관찰 보강과 후속 진단 준비
+
+[실제 독립 화면 관찰](../evidence/2026-09-21T14-47-05-078Z-browser-five-minute-review-e782abe4/README.md)은 23:37:43.050–23:43:11.633 KST의6개 고정 뷰 표본을 보존했다. 단순 시계 변화가 아니라 SVG 가격선 좌표, 거래량 막대 높이, 숫자 호가와 체결 가격·수량이 모든 인접 표본에서 달라졌다. 원본 이미지는 확장자와 달리 JPEG이며 바이트를 변경하지 않았다. DOM과 이미지의 순차 수집에77–208ms 차이가 있어 원자적인 동일 시장 상태라고 주장하지 않는다. 같은 시간대64개 서버 표본은12봇·자산 총량·ready·WS누락/단절0과 계속된 체결을 확인했다. 임시 브라우저 탭만 닫았고 시장은 유지했다.
+
+장시간 관찰 완료 후 사용할 [launcher keeper와 실제 실행 순서](quiet-window.md)를 준비했다. 격리 검사8개와 복사한 실제 CLI 프로세스2개는 정상 해제·거절 시 잠금 보존을 통과했고 독립 검토를 마쳤다. 실제 운영 데이터의 keeper, 전체 누적 복구와 최신 A/B/C는 관찰의 실제 종료 이후 수행할 예정이며 이 준비 결과로 대체하지 않는다.
+
+## 00:33 모바일 거래와 큐 적용 범위
+
+[모바일 실제 UI](../evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/README.md)에서390×844 화면의 매수 체결·별도 주문 취소·예약 해제·새로고침 요청 복원을 확인했다. user-03의 두 주문과 한 취소는 각각 durable 명령133026/133569/133574이고 첫 주문은 기존 bot-05가133076에서1P×1h 체결했다. 세 요청 ID가 조회 응답과 복원된 DOM code 원문에 일치하며 최종999,999P·1,001h·예약0, 전체 자산 보존이다. 처음 미체결 가정과 최초 reload 탭 선택은 성공으로 계산하지 않는다. root 보존 자료 검산도 통과했다.
+
+[정확한 큐 소스 감사](../evidence/20260921T152249816Z-bounded-queue-source-audit-7c8e0541/review.md)는 Cargo.lock의 crossbeam-channel0.5.17/utils0.8.23을 crate checksum 및 소스와 대조했다. try_send 성공의 대기자 알림에도 조건부 std mutex가 있으며 빈 recv·가득 찬 종료 send는 park할 수 있다. 순수 Core 측정과 thread 전달·내구성 경계를 분리하며 서비스나 채널 전체 lock-free 목표 달성으로 표시하지 않는다. 운영 코드를 바꾸거나 새 부하를 발생시킨 검증이 아니다.
+
+00:31 중간 분석은 시장3,839표본·19,502초,명령113,899·거래량86,291h 증가,최소12봇·ready·자산보존·WS누락/단절0이다. 봇114,113 durable 응답(accepted114,060/rejected53),p9929.4079ms/max1814.1419ms다. 보완 수집266표본/265유효구간·7,969.087초의14프로세스 평균CPU0.6368%(16논리CPU 전체)를 확인했다. [분석 실행 기록](../evidence/20260921T153400000Z-mobile-queue-checkpoint-41d59baa/started.json)의 실제 시작 시각을 기준으로 하며 run ID의 시각 문자열을 실행 시각으로 사용하지 않는다. 6시간 완료와 과거 자원 공백 해소를 주장하지 않는다.
+
+완료 목록과 요청 결과 탭의 안내2곳은 [형식·프로토콜7개·TypeScript·빌드](../evidence/2026-09-21T15-35-16-339Z-ui-order-scope-copy-6b589a95/README.md)를 통과했고 [실제390px 모바일](../evidence/2026-09-21T15-38-27-184Z-ui-scope-copy-browser-c88bfe61/README.md)에서도 확인했다. 원격main의별도Park입장라우팅변경을fast-forward로보존한뒤관련15개라우트Vitest를통과했다. 최초잘못된node:testrunner호출은실패로보존했으며서비스결함으로집계하지않는다.

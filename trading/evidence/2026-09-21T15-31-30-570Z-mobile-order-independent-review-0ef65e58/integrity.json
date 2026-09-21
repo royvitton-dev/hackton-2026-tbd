@@ -1,0 +1,213 @@
+{
+  "at": "2026-09-21T15:33:28.305Z",
+  "all_inputs_unchanged": true,
+  "checks": [
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/before-dom.json",
+      "expected_sha256": "775812900e787e0b67b304cb39725e91bf55ecc9abc5313f491e528a01eb3c45",
+      "actual_sha256": "775812900e787e0b67b304cb39725e91bf55ecc9abc5313f491e528a01eb3c45"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/before-dom.txt",
+      "expected_sha256": "88cf9270a06333b0d49f8a5ebbdefd767ee4816e5d5e9174196bbadba62693cf",
+      "actual_sha256": "88cf9270a06333b0d49f8a5ebbdefd767ee4816e5d5e9174196bbadba62693cf"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/placed-dom.json",
+      "expected_sha256": "f0a3c7e37bdd7c3d50f3ffb81b3f412de5b139723d01c0002f9e55800d003e91",
+      "actual_sha256": "f0a3c7e37bdd7c3d50f3ffb81b3f412de5b139723d01c0002f9e55800d003e91"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/placed-dom.txt",
+      "expected_sha256": "6078e28ad566feeb32c06f47654d9c10853a7ddb7b4476c27fcef6f94dd9f249",
+      "actual_sha256": "6078e28ad566feeb32c06f47654d9c10853a7ddb7b4476c27fcef6f94dd9f249"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/filled-dom.json",
+      "expected_sha256": "468ef588150c93a6f425c1cadeba03818e1b6fa12861bcdc8c2ead6a27286ae2",
+      "actual_sha256": "468ef588150c93a6f425c1cadeba03818e1b6fa12861bcdc8c2ead6a27286ae2"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/filled-dom.txt",
+      "expected_sha256": "51a99f5ffaabde6c48ccb1381dc17a4af68d9826a607531ffdad36b65e5c5f3a",
+      "actual_sha256": "51a99f5ffaabde6c48ccb1381dc17a4af68d9826a607531ffdad36b65e5c5f3a"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancelled-dom.json",
+      "expected_sha256": "ced3de76c502449ed087f8727f8f42dce2b36dbc0a23d8575b29a4e1cd0bceed",
+      "actual_sha256": "ced3de76c502449ed087f8727f8f42dce2b36dbc0a23d8575b29a4e1cd0bceed"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancelled-dom.txt",
+      "expected_sha256": "d090a7e124733982c211c4db99a37b3cfe474c4e987dcd8cb28d351eb092eef9",
+      "actual_sha256": "d090a7e124733982c211c4db99a37b3cfe474c4e987dcd8cb28d351eb092eef9"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancel-confirmed-dom.json",
+      "expected_sha256": "e66049f87e467dacb27041b75f3faf8b687187bd4caaee5d374e913dd7a546ff",
+      "actual_sha256": "e66049f87e467dacb27041b75f3faf8b687187bd4caaee5d374e913dd7a546ff"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancel-confirmed-dom.txt",
+      "expected_sha256": "06e19c0298837b44ccabd9367796ff2fd5b2b4853d18d6e9da0b94ad99d03baf",
+      "actual_sha256": "06e19c0298837b44ccabd9367796ff2fd5b2b4853d18d6e9da0b94ad99d03baf"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-dom.json",
+      "expected_sha256": "f221840bb5d498caa6e776889340d26d87ab6821e42b2f9a95f37c4f045f8962",
+      "actual_sha256": "f221840bb5d498caa6e776889340d26d87ab6821e42b2f9a95f37c4f045f8962"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-dom.txt",
+      "expected_sha256": "58cf9a485b4876a323f94b3aa2182cfe31b9be120a922434e2d1ba29ac748f98",
+      "actual_sha256": "58cf9a485b4876a323f94b3aa2182cfe31b9be120a922434e2d1ba29ac748f98"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-confirmed-dom.json",
+      "expected_sha256": "19e2ad73c7f0f1cc123db4e8df4b612c43d0dcadd9eca4de5920c47dea2ff5ef",
+      "actual_sha256": "19e2ad73c7f0f1cc123db4e8df4b612c43d0dcadd9eca4de5920c47dea2ff5ef"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-confirmed-dom.txt",
+      "expected_sha256": "405f9e6df3dce51772a1e6d66d4a3df9583db5bc25d19f73acf95ff71f2e24c2",
+      "actual_sha256": "405f9e6df3dce51772a1e6d66d4a3df9583db5bc25d19f73acf95ff71f2e24c2"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-requests-dom.json",
+      "expected_sha256": "58f90a81b3499c739a88ce11e3456f99ee381c7fd0ce6eae99b247fb90217ce1",
+      "actual_sha256": "58f90a81b3499c739a88ce11e3456f99ee381c7fd0ce6eae99b247fb90217ce1"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-requests-dom.txt",
+      "expected_sha256": "473c101215f4485518a56e3b26b6eb6d48ee94de7dc8fac8c05239b4df783851",
+      "actual_sha256": "473c101215f4485518a56e3b26b6eb6d48ee94de7dc8fac8c05239b4df783851"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/second-placed-dom.txt",
+      "expected_sha256": "cefae8d110cf8cfb3016fc663b9fa8bd5fe266bc761b2f68778491c9afc0a595",
+      "actual_sha256": "cefae8d110cf8cfb3016fc663b9fa8bd5fe266bc761b2f68778491c9afc0a595"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/before-state.json",
+      "expected_sha256": "ef90f1c5773c97e0ce49f95b245d6c20277d97847d36f1c2d5c4e143ee43569e",
+      "actual_sha256": "ef90f1c5773c97e0ce49f95b245d6c20277d97847d36f1c2d5c4e143ee43569e"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/placed-state.json",
+      "expected_sha256": "901b472cb5e50cea5f9ea39fd40117e962a2dac3dacb71216606140cf425c7d5",
+      "actual_sha256": "901b472cb5e50cea5f9ea39fd40117e962a2dac3dacb71216606140cf425c7d5"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/final-state.json",
+      "expected_sha256": "0b90431aecb9e2c725a4f3bdae06c53864f7fad643dd2736770f2bfbe1c5a701",
+      "actual_sha256": "0b90431aecb9e2c725a4f3bdae06c53864f7fad643dd2736770f2bfbe1c5a701"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/request-ids.json",
+      "expected_sha256": "c580a6d4e998d26cb6cdf4e4313532a7898087bf94e16606a79b3726aa28be6f",
+      "actual_sha256": "c580a6d4e998d26cb6cdf4e4313532a7898087bf94e16606a79b3726aa28be6f"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/lookup-37ba3596-827e-4a8e-a6ea-fff344185d1f.json",
+      "expected_sha256": "ff56ff2a7f3525d47279bd6fef2f6ca8cfd203336aadb6979656002a14b96478",
+      "actual_sha256": "ff56ff2a7f3525d47279bd6fef2f6ca8cfd203336aadb6979656002a14b96478"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/lookup-8856a37f-c621-494d-aef9-03f5b2280a71.json",
+      "expected_sha256": "21ba6884b0e5d39bbed9881537d32963028ef7c1ae6de0e679d4466da19fc953",
+      "actual_sha256": "21ba6884b0e5d39bbed9881537d32963028ef7c1ae6de0e679d4466da19fc953"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/lookup-58d34c2f-b20f-4d59-9b17-5824e9e46443.json",
+      "expected_sha256": "b7c6d6e24cede6c50b72a785f6e2f56cd1e97de471174e38b1a5054ff7cc4d38",
+      "actual_sha256": "b7c6d6e24cede6c50b72a785f6e2f56cd1e97de471174e38b1a5054ff7cc4d38"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/placed.jpg",
+      "expected_sha256": "6451f919e0b36daa975a5df4dabaf8df549e7ee236cb2310381e0b04531a1308",
+      "actual_sha256": "6451f919e0b36daa975a5df4dabaf8df549e7ee236cb2310381e0b04531a1308"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancel-confirmed.jpg",
+      "expected_sha256": "59415e208923be7d1338e7d0c029ac16437dcbd76e1bcd2166eaeaeddfb1936c",
+      "actual_sha256": "59415e208923be7d1338e7d0c029ac16437dcbd76e1bcd2166eaeaeddfb1936c"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload.jpg",
+      "expected_sha256": "c9bca2fdf6c901fde158a267178f1f20c383d0098e0b06b8b583957301e3915f",
+      "actual_sha256": "c9bca2fdf6c901fde158a267178f1f20c383d0098e0b06b8b583957301e3915f"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-requests.jpg",
+      "expected_sha256": "3a9c4577ca76ebb845065bff5427f4c916882b3ee04fb90b5b341608f83f1355",
+      "actual_sha256": "3a9c4577ca76ebb845065bff5427f4c916882b3ee04fb90b5b341608f83f1355"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/console.json",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-console.json",
+      "expected_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "actual_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/browser-cleanup.json",
+      "expected_sha256": "ecab66c8799fb13b06c9e6c967c4a7173a00d7d1eb5cbfd3f30c1c958632fcb2",
+      "actual_sha256": "ecab66c8799fb13b06c9e6c967c4a7173a00d7d1eb5cbfd3f30c1c958632fcb2"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/requests-dom.txt",
+      "expected_sha256": "daf7fa4a16921ffe05573ed343cbe79b5edaeaa7c962109f4a6c0839ecdff3a2",
+      "actual_sha256": "daf7fa4a16921ffe05573ed343cbe79b5edaeaa7c962109f4a6c0839ecdff3a2"
+    },
+    {
+      "path": "trading/frontend/src/App.tsx",
+      "expected_sha256": "b4520c87c913c4f5af42cdc1560c4211a9703280558913a7399ace589722a0bd",
+      "actual_sha256": "b4520c87c913c4f5af42cdc1560c4211a9703280558913a7399ace589722a0bd"
+    },
+    {
+      "path": "trading/frontend/src/useExchange.ts",
+      "expected_sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37",
+      "actual_sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37"
+    },
+    {
+      "path": "trading/bots/bot.mjs",
+      "expected_sha256": "3d4e635b41bfa3c4a7efac098176ed4f6d0be36b7af5208899740dfaa51f2f7c",
+      "actual_sha256": "3d4e635b41bfa3c4a7efac098176ed4f6d0be36b7af5208899740dfaa51f2f7c"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "balance-and-trade-extract.json",
+      "bytes": 7497,
+      "sha256": "0a2d4d9690b0e63c335e0a8b37445f0f2480e0ca4952d15de9eb369e4a0fe9db"
+    },
+    {
+      "path": "raw-and-source-sha256.json",
+      "bytes": 7388,
+      "sha256": "f9a5063069d524e8ee9b93eddfe39d635d6e1e4fdb7dd74c0e5f3c3de751be4e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8487,
+      "sha256": "b58e18321ef829f394d2a3d7a41c87932211fe2e3e34a55ebf91eeaff7e098bd"
+    },
+    {
+      "path": "recompute-tool-result.json",
+      "bytes": 2156,
+      "sha256": "29aceb3914b74bbbe407391230e571099bc6b66a290e9b4936cf92f3bb750402"
+    },
+    {
+      "path": "recompute.mjs",
+      "bytes": 10565,
+      "sha256": "f0f84c6024e263c68f72c6d9e9f1df79ead3b77696f3fa80a2e43e2f70006faf"
+    },
+    {
+      "path": "review.json",
+      "bytes": 22967,
+      "sha256": "25cad856d7866aff9b682e179f9d93b2b2434968275954d895407d92a34b600a"
+    }
+  ]
+}

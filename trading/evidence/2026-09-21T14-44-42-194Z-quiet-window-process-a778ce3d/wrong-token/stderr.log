@@ -1,0 +1,15 @@
+AssertionError [ERR_ASSERTION]: Wrong release token
++ actual - expected
+
++ 'cbde7477-ae44-4303-818d-230fefa76e47-incorrect'
+- 'cbde7477-ae44-4303-818d-230fefa76e47'
+
+    at Object.poll (file:///C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d/wrong-token/fixture/scripts/quiet-window.mjs:75:16)
+    at main (file:///C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d/wrong-token/fixture/scripts/quiet-window.mjs:128:20) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'cbde7477-ae44-4303-818d-230fefa76e47-incorrect',
+  expected: 'cbde7477-ae44-4303-818d-230fefa76e47',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

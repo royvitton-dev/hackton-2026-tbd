@@ -1,0 +1,13 @@
+# Five-minute browser evidence scope and minimal follow-up
+
+Existing actual chart screen evidence does exist: [start JSON](../browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-start.json), [start PNG](../browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-start.png), [end JSON](../browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-end.json), [end PNG](../browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-end.png). Both PNGs were directly inspected in this review. UTC09:08:04.525 to09:13:19.140 is314.615seconds; the visible240-trade price line and volume bars change, last trade1005P/18:08:04 becomes1025P/18:13:18.
+
+This supports actual chart renders more than five minutes apart. No raw interior screen capture was found within that interval. chart-0905.txt and after-five-minutes.txt are earlier, not middle captures. Both paired PNGs show only the depth panel title/column headings, with bid/ask values below the viewport. They do not by themselves establish continuous intermediate rendering of all three market components.
+
+The coincident existing server observation has63 samples from09:08:04.656 to09:13:18.860,1,840 newevents,1,315hours of volume,63 different book hashes,33prices,maximum5.376s samplegap,12bots and no additional WS gaps/disconnects. Selected original lines are retained in overlapping-server-samples.jsonl. This strengthens market continuity only; it does not create browser frames. Exact calculations and input hashes are in [review.json](./review.json).
+
+Docs scope: ui.md correctly calls the separate08:35 observation API/WS-only. verification.md's linked314.615s visible chart claim is grounded in real files, but its combined pass must be interpreted as sampled market activity plus chart before/after evidence, not uninterrupted browser-frame proof. No document was edited.
+
+Minimal root follow-up: reuse the existing standalone5175 tab/engine/bots. Keep a desktop viewport showing chart and actual depth rows. For at least315actual seconds, record DOM state every15–30s and raw screenshots around0/60/120/180/240/315s. Each observation records actual UTC, EVENT, connection/resync, cumulative volume, latest trade, bid/ask rows and chart trade-time/line+bar signature. Keep UI source stable during this window. Verify updates across the samples; preserve any stalls/reconnects and console issues. No new orders, fixtures, services or restarts are needed. Save exact start/end and a compact sample table. Report sampled browser rendering over the measured window, not every display frame.
+
+This task performed no new browser, tests, service/API calls or source/docs/Git edits. It preserves only a review and a bounded slice of existing raw evidence.

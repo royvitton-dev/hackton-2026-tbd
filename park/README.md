@@ -4,12 +4,13 @@
 
 ## 실행
 
-저장소 최상위 폴더에서 Node.js 22.12 이상으로 실행합니다.
+저장소 최상위 폴더에서 Node.js 22.12 이상으로 실행합니다. 처음에는 [통합 서버의 의존성 설치 절차](ROUTER.md)를 모두 마친 뒤 아래 명령을 실행하세요. 루트의 `npm ci`만으로는 `map` 등 하위 앱의 의존성이 설치되지 않습니다.
 
 ```sh
-npm ci
 npm run park:dev
 ```
+
+지도에서 `@fontsource-variable/dm-sans` 또는 `@fontsource-variable/noto-sans-kr` import 오류가 나면 루트에서 `npm --prefix map ci`로 지도의 lockfile에 지정된 의존성을 설치한 뒤 화면을 새로고침하세요.
 
 - 홈페이지: <http://localhost:5190>
 - HTML 품질 보고서: <http://localhost:5190/reports/>
@@ -18,7 +19,7 @@ npm run park:dev
 
 통합 서버는 localhost의 한 포트에서 모든 웹 화면을 경로로 제공합니다. `/park/`, `/map/`, `/map_new/`, `/dopamin/`, `/pinball/`, `/movie/`, `/webpage/`, `/battery_health/`, `/trading/`, `/vehicle/`로 바로 접근하거나 `/projects/`에서 선택합니다. 어트랙션 입장도 같은 주소의 경로로 연결합니다.
 
-개발 모드는 Vite 미들웨어와 Next.js를 같은 HTTP 서버에 연결하고, 배포 모드는 통합 빌드 파일과 Next.js를 제공합니다. 영상은 HTTP Range를 지원합니다. `/voice/`는 macOS 네이티브 CLI 안내입니다. 거래소 엔진은 `TRADING_ENGINE_URL`로 지정하며 `/trading/backend/`를 통해 HTTP와 WebSocket을 전달합니다. 프런트엔드 서버나 봇을 입장 시 자동 생성하지 않습니다.
+개발 모드는 Vite 미들웨어와 Next.js를 같은 HTTP 서버에 연결하고, 배포 모드는 통합 빌드 파일과 Next.js를 제공합니다. 영상은 HTTP Range를 지원합니다. `/voice/`는 macOS 네이티브 CLI 안내입니다. 거래소 엔진은 `TRADING_ENGINE_URL`로 지정하며 `/trading/backend/`를 통해 HTTP와 WebSocket을 전달합니다. [거래소 최초 준비](../trading/README.md) 후 기본 로컬 엔진은 파크 시작·거래소 입장 시 엔진·12개 봇·독립 UI를 자동 준비하고, 정상 실행 중이면 재사용합니다. 외부 엔진이나 별도로 지정한 다른 포트는 자동 실행 대상이 아닙니다.
 
 [통합 서버 설치·실행·테스트](ROUTER.md)를 참고하세요. 통합 품질 보고서는 <http://localhost:5190/reports/router/>입니다.
 
