@@ -306,6 +306,11 @@
         "reason": {
           "detail": "Authentication credentials were not provided."
         }
+      },
+      {
+        "url": "https://www.audi.nl/nl/web/nl/modellen/q4/q4-e-tron.html",
+        "httpStatus": 403,
+        "reason": "Official 3D configurator link from Audi Nederland returned HTTP 403 on 2026-09-21; no model obtained. Download authorization was not bypassed."
       }
     ]
   },

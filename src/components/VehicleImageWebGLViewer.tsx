@@ -23,6 +23,7 @@ function SceneStatus({vehicleId,isGlb,focused,onReady}:{vehicleId:string;isGlb:b
     model?.traverse(object=>{if(object instanceof Mesh)for(const material of Array.isArray(object.material)?object.material:[object.material])if(material.opacity<material.userData.originalOpacity-.001)faded++;});
     pack?.traverse(object=>{if(object instanceof Mesh)for(const material of Array.isArray(object.material)?object.material:[object.material])if(!material.depthTest)depthTested=false;});
     gl.domElement.setAttribute('data-faded-vehicle-materials',String(faded));
+    gl.domElement.setAttribute('data-charger-visible',String(!!scene.getObjectByName('ev-charger')));
     if(model&&pack){
       gl.domElement.setAttribute('data-pack-inside-vehicle',String(new Box3().setFromObject(model,true).containsBox(new Box3().setFromObject(pack,true))));
       gl.domElement.setAttribute('data-pack-depth-tested',String(depthTested));
@@ -60,8 +61,8 @@ export function VehicleImageWebGLViewer({vehicle,image,focused,onFocus}:{vehicle
         {image.glbPath&&<BatteryFocusController focused={focused} reducedMotion={reducedMotion}/>}
       </Canvas>
     </ViewerBoundary>
-    <div className="scene-top"><span className="scene-badge"><i/>{ready?(focused?'배터리 위치 확인 중':'차량 외형 보기'):'차량 불러오는 중'}</span></div>
+    <div className="scene-top"><span className="scene-badge"><i/>{ready?(image.glbPath?(focused?'배터리 투시 보기':'3D 차량 · 드래그로 시점 조절'):'실차 이미지 · 회전·투시 미지원'):'차량 불러오는 중'}</span></div>
     <div className="scene-caption"><span>{image.glbPath?(image.modelDisplayNote??'대표 연식 3D 모델'):'실차 누끼 이미지 · 고정 시점'} · 배터리는 개략도</span><span>{image.glbPath?'드래그로 시점 조절 · 스크롤로 확대':'배터리 보기 버튼으로 상태 확인'}</span></div>
-    <button className={`hotspot-label ${focused?'active':''}`} onClick={onFocus} aria-label="배터리 위치 보기" aria-pressed={focused} aria-expanded={focused} aria-controls="battery-info-panel"><span aria-hidden="true">{focused?'↶':'◎'}</span> {focused?'차량 외형 보기':'배터리 팩 보기'}</button>
+    <button className={`hotspot-label ${focused?'active':''}`} onClick={onFocus} aria-label="배터리 위치 보기" aria-pressed={focused} aria-expanded={focused} aria-controls="battery-info-panel"><span aria-hidden="true">{focused?'↶':'◎'}</span> {focused?'차량 외형 보기':image.glbPath?'배터리 투시 보기':'배터리 정보 보기'}</button>
   </div>;
 }

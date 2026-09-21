@@ -7,11 +7,11 @@ try{
   const errors=[];page.on('pageerror',error=>errors.push(error.message));
   const prefix=values.name;
   await page.goto(values['base-url']+'/?user='+encodeURIComponent(values.user),{timeout:60000});
-  await page.waitForFunction(()=>Number(document.querySelector('canvas')?.dataset.modelTriangles)>100000,null,{timeout:60000});
+  await page.waitForFunction(()=>{const c=document.querySelector('canvas');return c?.dataset.renderer==='webgl-cutout'?!!c.dataset.cutoutPath:Number(c?.dataset.modelTriangles)>100000;},null,{timeout:60000});
   await page.waitForTimeout(1500);
   await page.screenshot({path:`test-results/${prefix}-desktop.png`,fullPage:true,timeout:60000});
   console.log(await page.locator('canvas').evaluate(c=>({triangles:c.dataset.modelTriangles,vehicle:c.dataset.vehicleId,renderer:c.dataset.renderer})));
-  await page.getByRole('button',{name:/^Battery Info/}).click();await page.waitForTimeout(500);
+  await page.getByRole('button',{name:/^(배터리 정보 보기|Battery Info)/}).click();await page.waitForTimeout(500);
   await page.screenshot({path:`test-results/${prefix}-focus.png`,fullPage:true,timeout:60000});
   if(errors.length)throw new Error(errors.join('\n'));
 }finally{await browser.close();}

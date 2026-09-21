@@ -41,10 +41,6 @@ export function VehicleCutoutMesh({image,focused,reducedMotion}:{image:VehicleIm
     </mesh>
     <group ref={group} position={[0,contactHeight,0]} name="vehicle-cutout">
       <mesh><planeGeometry args={[width,height]}/><meshBasicMaterial map={texture} transparent alphaTest={.025} color={focused?'#dbe5ef':'#ffffff'} toneMapped={false}/></mesh>
-      <mesh position={[spot[0],spot[1],.025]}>
-        <planeGeometry args={[width*hotspot.width,height*hotspot.height]}/>
-        <meshBasicMaterial color="#40efb6" transparent opacity={focused?.18:.06} depthWrite={false} toneMapped={false}/>
-      </mesh>
       <BatteryHotspot position={spot} focused={focused} reducedMotion={reducedMotion}/>
     </group>
   </>;

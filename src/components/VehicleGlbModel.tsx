@@ -52,7 +52,12 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
   },[scene,path]);
   useEffect(()=>{
     model.traverse(o=>{if(o instanceof Mesh) for(const m of Array.isArray(o.material)?o.material:[o.material]){
-      m.transparent=m.userData.originalTransparent;m.opacity=m.userData.originalOpacity;m.depthWrite=m.userData.originalDepthWrite;
+      // Keep tyres and rims grounded; ghost the body so the physical pack is
+      // visible through it. The pack still obeys depth and stays inside the body.
+      const wheel=/wheel|tire|tyre|rim|disk|disc/i.test(o.name+' '+m.name);
+      m.transparent=focused&&!wheel?true:m.userData.originalTransparent;
+      m.opacity=focused&&!wheel?Math.min(m.userData.originalOpacity,.24):m.userData.originalOpacity;
+      m.depthWrite=focused&&!wheel?false:m.userData.originalDepthWrite;
       if(m instanceof MeshStandardMaterial)m.color.copy(m.userData.originalColor).multiplyScalar(focused?.86:1);
     }});
   },[model,focused]);

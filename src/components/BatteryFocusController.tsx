@@ -12,12 +12,12 @@ export function BatteryFocusController({focused,reducedMotion}:{focused:boolean;
   useFrame(({camera,gl,invalidate},dt)=>{
     const c=controls.current;if(!c)return;
     if(animating.current){
-      const target=focused?new Vector3(0,.58,.45):new Vector3(0,.85,0);
+      const target=focused?new Vector3(0,.72,.1):new Vector3(0,.85,0);
       const mobile=size.width/size.height<1.3;
-      const position=mobile?new Vector3(-5.3,3.1,6.5):focused?new Vector3(-3.9,2.5,4.5):new Vector3(-4.2,2.6,5);
+      const position=mobile?new Vector3(-5.3,3.1,6.5):focused?new Vector3(-4.05,2.55,4.85):new Vector3(-4.2,2.6,5);
       const ease=reducedMotion?1:1-Math.exp(-dt*4);
       camera.position.lerp(position,ease);c.target.lerp(target,ease);c.update();
-      if(camera.position.distanceTo(position)<.015)animating.current=false;
+      if(camera.position.distanceTo(position)<.015&&c.target.distanceTo(target)<.015)animating.current=false;
       else invalidate();
     }
     // Observable camera state also makes real browser interaction tests deterministic.
@@ -26,7 +26,7 @@ export function BatteryFocusController({focused,reducedMotion}:{focused:boolean;
     gl.domElement.dataset.distance=String(c.getDistance());
   });
   return <OrbitControls ref={controls} makeDefault enablePan={false} enableZoom enableRotate enableDamping dampingFactor={.08}
-    minPolarAngle={MathUtils.degToRad(CAMERA_LIMITS.minPolar)} maxPolarAngle={MathUtils.degToRad(CAMERA_LIMITS.maxPolar)}
+    minPolarAngle={MathUtils.degToRad(focused?65:CAMERA_LIMITS.minPolar)} maxPolarAngle={MathUtils.degToRad(CAMERA_LIMITS.maxPolar)}
     minAzimuthAngle={MathUtils.degToRad(CAMERA_LIMITS.minAzimuth)} maxAzimuthAngle={MathUtils.degToRad(CAMERA_LIMITS.maxAzimuth)}
     minDistance={CAMERA_LIMITS.minDistance} maxDistance={CAMERA_LIMITS.maxDistance} onStart={()=>{animating.current=false;}}/>;
 }

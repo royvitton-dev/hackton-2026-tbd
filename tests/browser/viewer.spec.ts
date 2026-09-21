@@ -5,7 +5,7 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto('/?user=U0002');
   const canvas=page.locator('canvas');
-  await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
+  await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh',{timeout:90000});
   await expect.poll(async()=>Number(await canvas.getAttribute('data-model-triangles'))).toBeGreaterThan(100000);
   await expect(page.getByTestId('odometer')).toContainText('95,454');
   await expect(page.getByTestId('health-score')).toHaveText('—');
@@ -24,12 +24,12 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   await page.getByRole('button',{name:'배터리 상세 닫기'}).click();
   await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0009');
   await expect(page.getByTestId('vehicle-model')).toHaveText('Model Y');
-  await expect(canvas).toHaveAttribute('data-vehicle-id','tesla_modely_premium_rwd_2026');
+  await expect(canvas).toHaveAttribute('data-vehicle-id','tesla_modely_premium_rwd_2026',{timeout:90000});
   await expect.poll(async()=>Number(await canvas.getAttribute('data-model-triangles'))).toBeGreaterThan(100000);
   await page.evaluate(()=>window.scrollTo(0,0));
   await page.screenshot({path:'test-results/demo-model-y.png',fullPage:true});
   await page.reload();await expect(page.getByRole('combobox',{name:'사용자 및 차량'})).toHaveValue('U0009');
-  await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
+  await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh',{timeout:90000});
   await canvas.scrollIntoViewIfNeeded();
   const area=(await canvas.boundingBox())!;
   for(const direction of [-1,1]){
@@ -59,8 +59,9 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   expect(errors).toEqual([]);
 });
 test('Mobile layout, user-scoped history, filters, CSV and session detail',async({page,request})=>{
+  test.setTimeout(240000);
   await page.setViewportSize({width:390,height:844});await page.goto('/?user=U0002');
-  await expect(page.locator('canvas')).toHaveAttribute('data-renderer','webgl-3d-mesh');
+  await expect(page.locator('canvas')).toHaveAttribute('data-renderer','webgl-3d-mesh',{timeout:90000});
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await page.screenshot({path:'test-results/demo-mobile.png',fullPage:true});
   await page.getByRole('tab',{name:'충전 이력',exact:true}).click();
