@@ -37,64 +37,6 @@ function charger(parent,x,z){
  const plug=box(root,.13,.31,.14,ink,.4,1.05,.34);plug.rotation.z=-.25;
 }
 
-function checkeredFlag(parent,x,z,reverse=false){
- cyl(parent,.038,2.1,'#c7b888',x,4.28,z);
- const flag=group(parent,x,4.75,z);flag.rotation.y=reverse?-.2:.2;
- for(let row=0;row<3;row++)for(let col=0;col<4;col++){
-  box(flag,.22,.22,.035,(row+col)%2?ink:cream,(col+.5)*.22*(reverse?-1:1),-row*.22,0);
- }
-}
-
-export function buildPitStop(parent,color=mint){
- const root=group(parent),animation=[];root.name='EVision service garage';
- const floor=material('#6e807a',{roughness:.94});
- rounded(root,8.6,.34,7,.24,cream,0,.2,0);
- rounded(root,8.12,.1,6.55,.12,floor,0,.42,0);
- // An open service bay keeps the lift, vehicle and workshop visible from above.
- rounded(root,7.3,3.1,.35,.06,cream,-.25,2.02,-2.55);
- box(root,3.55,2.5,.05,ink,-1.65,1.94,-2.35);
- for(const x of [-3.65,.45,3.15]){
-  box(root,.25,3.2,1.85,cream,x,2.05,-1.8);
-  box(root,.27,.48,1.88,color,x,.76,-1.8);
- }
- rounded(root,7.65,.26,2.15,.09,ink,-.25,3.69,-1.69);
- box(root,7.65,.11,2.18,color,-.25,3.86,-1.69);
- box(root,7.65,.56,.2,ink,-.25,3.46,-.58);
- textSign(root,'EVISION · PIT STOP',6.2,.48,cream,ink,-.25,3.49,-.465);
- textSign(root,'01 / SERVICE',2.35,.32,cream,ink,-1.65,2.98,-2.31);
- textSign(root,'CHARGE & GO',1.98,.3,ink,cream,1.8,2.8,-2.34);
- for(const x of [-2.95,-.35])box(root,.055,.015,3.85,cream,x,.48,.15);
- box(root,2.65,.015,.055,cream,-1.65,.48,2.05);
-
- for(const x of [-2.9,-.4]){
-  rounded(root,.24,2.35,.37,.04,color,x,1.64,-.25);
-  box(root,.38,.1,.6,ink,x,.53,-.25);
- }
- const lift=group(root,-1.65,.65,.1);lift.name='Vehicle service lift';lift.userData.dynamic=true;
- for(const x of [-.56,.56])box(lift,.24,.14,2.75,'#b2b7a5',x,0,0);
- box(lift,2.6,.12,.25,ink,0,-.08,-.35);
- const vehicle=car(lift,'#ece7d7');vehicle.position.y=.08;
- animation.push(time=>{lift.position.y=.76+Math.sin(time*.55)*.2;});
-
- const tools=group(root,1.05,.47,-.45);tools.name='Workshop tool trolley';
- rounded(tools,.94,.76,.62,.05,color,0,.48,0);
- box(tools,1.05,.08,.72,ink,0,.91,0);
- for(let i=0;i<3;i++){box(tools,.79,.035,.025,cream,0,.32+i*.2,.32);box(tools,.32,.035,.04,ink,0,.38+i*.2,.34);}
- for(const x of [-.34,.34])for(const z of [-.2,.2]){const wheel=cyl(tools,.09,.09,rubber,x,.09,z);wheel.rotation.z=Math.PI/2;}
- for(let i=0;i<3;i++){const tire=torus(root,.29,.12,rubber,-3.36,.61+i*.25,.85);tire.rotation.x=Math.PI/2;}
- charger(root,2.77,.6);
- rounded(root,1.3,.06,1.7,.04,color,2.7,.5,1.05);
- for(const x of [-3.6,3.6]){
-  box(root,.38,.06,.38,ink,x,.5,2.65);
-  mesh(root,new THREE.ConeGeometry(.15,.4,12),'#c89954',x,.72,2.65);
-  cyl(root,.085,.07,cream,x,.75,2.65);
- }
- for(let i=0;i<20;i++)box(root,.37,.018,.18,i%2?ink:cream,-3.51+i*.37,.49,2.68);
- const lane=textSign(root,'PIT LANE',2.1,.45,cream,'#6e807a',-.2,.485,2.98);lane.rotation.x=-Math.PI/2;
- checkeredFlag(root,-3.5,-1.85);checkeredFlag(root,3,-1.85,true);
- return {root,animation};
-}
-
 export function buildParking(parent,color='#659c88'){
  const root=group(parent),animation=[];root.name='ATLAS parking navigation';
  const road='#71877b';

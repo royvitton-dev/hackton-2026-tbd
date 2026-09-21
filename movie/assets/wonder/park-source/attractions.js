@@ -1,7 +1,8 @@
 import * as THREE from 'three';
 import {box,rounded,sphere,cyl,cone,torus,group,material,textSign,arch} from './materials.js';
 import {disneyCharacter} from './characters.js';
-import {buildPitStop,buildParking} from './vehicle-attractions.js';
+import {buildParking} from './vehicle-attractions.js';
+import {buildPitStop} from './pitstop.js';
 
 export function bumperCar(parent,color='#cf654c'){
  const g=group(parent);g.userData.dynamic=true;

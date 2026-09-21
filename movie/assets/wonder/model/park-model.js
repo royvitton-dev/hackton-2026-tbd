@@ -624,15 +624,15 @@ function createLandscape(parent) {
 }
 
 // assets/wonder/park-source/attractions.js
-import * as THREE6 from "three";
+import * as THREE7 from "three";
 
 // assets/wonder/park-source/character-friends.js
 var ink = "#26282b";
 var cream = "#fff7e7";
-function eyes(body, y, z, spacing = 0.12, white = true) {
+function eyes(body, y, z, spacing = 0.12, white2 = true) {
   for (const side of [-1, 1]) {
-    if (white) sphere(body, 0.082, 0.12, 0.043, cream, side * spacing, y, z);
-    sphere(body, 0.035, 0.054, 0.026, ink, side * spacing, y - 0.015, z + (white ? 0.036 : 0));
+    if (white2) sphere(body, 0.082, 0.12, 0.043, cream, side * spacing, y, z);
+    sphere(body, 0.035, 0.054, 0.026, ink, side * spacing, y - 0.015, z + (white2 ? 0.036 : 0));
   }
 }
 function arm(body, side, y, color, arms, length = 0.25) {
@@ -756,16 +756,16 @@ function buildFriend(body, kind, arms, details) {
     const tuft = cone(body, 0.07, 0.19, dark, 0, 1.36, -0.035);
     tuft.rotation.z = 0.25;
   } else if (kind === "baymax") {
-    const white = "#f4f2e9", seam = "#d8dfdc";
-    sphere(body, 0.48, 0.6, 0.35, white, 0, 0.88, 0);
-    sphere(body, 0.32, 0.34, 0.27, white, 0, 1.32, 0);
-    sphere(body, 0.315, 0.215, 0.235, white, 0, 1.74, 0);
+    const white2 = "#f4f2e9", seam = "#d8dfdc";
+    sphere(body, 0.48, 0.6, 0.35, white2, 0, 0.88, 0);
+    sphere(body, 0.32, 0.34, 0.27, white2, 0, 1.32, 0);
+    sphere(body, 0.315, 0.215, 0.235, white2, 0, 1.74, 0);
     for (const side of [-1, 1]) {
-      sphere(body, 0.17, 0.29, 0.19, white, side * 0.21, 0.32, 0);
-      sphere(body, 0.18, 0.095, 0.22, white, side * 0.21, 0.105, 0.045);
-      const a = arm(body, side, 1.3, white, arms, 0.36);
+      sphere(body, 0.17, 0.29, 0.19, white2, side * 0.21, 0.32, 0);
+      sphere(body, 0.18, 0.095, 0.22, white2, side * 0.21, 0.105, 0.045);
+      const a = arm(body, side, 1.3, white2, arms, 0.36);
       a.position.x = side * 0.37;
-      for (let i = 0; i < 3; i++) sphere(a, 0.032, 0.085, 0.04, white, side * 0.08 + (i - 1) * 0.064, -0.51, 0.025);
+      for (let i = 0; i < 3; i++) sphere(a, 0.032, 0.085, 0.04, white2, side * 0.08 + (i - 1) * 0.064, -0.51, 0.025);
       sphere(body, 0.035, 0.035, 0.015, ink, side * 0.135, 1.77, 0.23);
     }
     box(body, 0.27, 0.018, 0.017, ink, 0, 1.77, 0.238);
@@ -785,22 +785,22 @@ function disneyCharacter(parent, kind = "mickey", scale = 1) {
   root.scale.setScalar(scale);
   root.userData.dynamic = true;
   root.userData.character = kind;
-  const black = "#26282b", white = "#fff7e7", skin = "#f2d1aa", yellow = "#e5b440", red = kind === "minnie" ? "#d95979" : "#cb4640";
+  const black = "#26282b", white2 = "#fff7e7", skin = "#f2d1aa", yellow2 = "#e5b440", red2 = kind === "minnie" ? "#d95979" : "#cb4640";
   const body = group(root);
   const arms = [], details = [];
   if (kind === "olaf") {
-    sphere(body, 0.37, 0.46, 0.32, white, 0, 0.55, 0);
-    sphere(body, 0.27, 0.27, 0.26, white, 0, 1.04, 0);
-    sphere(body, 0.29, 0.4, 0.27, white, 0, 1.54, 0);
+    sphere(body, 0.37, 0.46, 0.32, white2, 0, 0.55, 0);
+    sphere(body, 0.27, 0.27, 0.26, white2, 0, 1.04, 0);
+    sphere(body, 0.29, 0.4, 0.27, white2, 0, 1.54, 0);
     for (let i = 0; i < 3; i++) sphere(body, 0.045, 0.045, 0.035, black, 0, 0.4 + i * 0.24, 0.3);
     for (const x of [-0.095, 0.095]) {
-      sphere(body, 0.072, 0.08, 0.03, white, x, 1.66, 0.25);
+      sphere(body, 0.072, 0.08, 0.03, white2, x, 1.66, 0.25);
       sphere(body, 0.033, 0.038, 0.02, black, x, 1.66, 0.278);
     }
     const nose = cone(body, 0.068, 0.36, "#df8941", 0, 1.5, 0.39);
     nose.rotation.x = Math.PI / 2;
-    sphere(body, 0.2, 0.1, 0.25, white, -0.2, 0.1, 0.08);
-    sphere(body, 0.2, 0.1, 0.25, white, 0.2, 0.1, 0.08);
+    sphere(body, 0.2, 0.1, 0.25, white2, -0.2, 0.1, 0.08);
+    sphere(body, 0.2, 0.1, 0.25, white2, 0.2, 0.1, 0.08);
     for (const side of [-1, 1]) {
       const a = group(body, side * 0.23, 1.05, 0);
       const stick = cyl(a, 0.035, 0.55, "#70503a", side * 0.21, 0.08, 0);
@@ -810,11 +810,11 @@ function disneyCharacter(parent, kind = "mickey", scale = 1) {
   } else if (kind === "donald" || kind === "daisy") {
     const daisy = kind === "daisy";
     sphere(body, 0.29, 0.39, 0.25, daisy ? "#a886bc" : "#416d9b", 0, 0.75, 0);
-    sphere(body, 0.31, 0.34, 0.28, white, 0, 1.29, 0);
-    sphere(body, 0.26, 0.085, 0.25, yellow, 0, 1.15, 0.3);
+    sphere(body, 0.31, 0.34, 0.28, white2, 0, 1.29, 0);
+    sphere(body, 0.26, 0.085, 0.25, yellow2, 0, 1.15, 0.3);
     sphere(body, 0.22, 0.038, 0.19, "#dca340", 0, 1.08, 0.3);
     for (const x of [-0.1, 0.1]) {
-      sphere(body, 0.085, 0.14, 0.04, white, x, 1.37, 0.253);
+      sphere(body, 0.085, 0.14, 0.04, white2, x, 1.37, 0.253);
       sphere(body, 0.033, 0.06, 0.022, "#355271", x, 1.39, 0.29);
     }
     if (daisy) {
@@ -831,10 +831,10 @@ function disneyCharacter(parent, kind = "mickey", scale = 1) {
       sphere(body, 0.22, 0.075, 0.2, "#5787b0", 0, 1.66, 0);
     }
     for (const side of [-1, 1]) {
-      sphere(body, 0.15, 0.065, 0.24, daisy ? "#d87caa" : yellow, side * 0.16, 0.12, 0.1);
-      cyl(body, 0.065, 0.25, yellow, side * 0.13, 0.3, 0);
+      sphere(body, 0.15, 0.065, 0.24, daisy ? "#d87caa" : yellow2, side * 0.16, 0.12, 0.1);
+      cyl(body, 0.065, 0.25, yellow2, side * 0.13, 0.3, 0);
       const a = group(body, side * 0.26, 0.95, 0);
-      sphere(a, 0.085, 0.22, 0.085, white, side * 0.08, -0.1, 0);
+      sphere(a, 0.085, 0.22, 0.085, white2, side * 0.08, -0.1, 0);
       if (daisy) {
         sphere(a, 0.1, 0.1, 0.1, "#a886bc", side * 0.025, 0.025, 0);
         const bracelet = torus(a, 0.085, 0.018, "#dab655", side * 0.08, -0.23, 0);
@@ -858,36 +858,36 @@ function disneyCharacter(parent, kind = "mickey", scale = 1) {
     sphere(body, 0.245, 0.135, 0.13, skin, 0, 1.24, 0.265);
     sphere(body, 0.09, 0.068, 0.07, black, 0, 1.32, 0.394);
     for (const side of [-1, 1]) {
-      sphere(body, 0.058, 0.12, 0.025, white, side * 0.092, 1.46, 0.31);
+      sphere(body, 0.058, 0.12, 0.025, white2, side * 0.092, 1.46, 0.31);
       sphere(body, 0.025, 0.063, 0.016, black, side * 0.083, 1.44, 0.333);
     }
     const smile2 = torus(body, 0.11, 0.014, "#5a372e", 0, 1.24, 0.373);
     smile2.scale.y = 0.43;
     if (kind === "minnie") {
-      cyl(body, 0.38, 0.31, red, 0, 0.53, 0, 0.2);
+      cyl(body, 0.38, 0.31, red2, 0, 0.53, 0, 0.2);
       for (let i = 0; i < 10; i++) {
         const a = i * Math.PI / 5;
-        sphere(body, 0.025, 0.025, 0.025, white, Math.cos(a) * 0.3, 0.51, Math.sin(a) * 0.3);
+        sphere(body, 0.025, 0.025, 0.025, white2, Math.cos(a) * 0.3, 0.51, Math.sin(a) * 0.3);
       }
       for (const side of [-1, 1]) {
-        sphere(body, 0.155, 0.11, 0.06, red, side * 0.12, 1.78, 0.16);
-        sphere(body, 0.025, 0.025, 0.014, white, side * 0.15, 1.81, 0.21);
+        sphere(body, 0.155, 0.11, 0.06, red2, side * 0.12, 1.78, 0.16);
+        sphere(body, 0.025, 0.025, 0.014, white2, side * 0.15, 1.81, 0.21);
       }
-      sphere(body, 0.06, 0.065, 0.055, red, 0, 1.78, 0.21);
+      sphere(body, 0.06, 0.065, 0.055, red2, 0, 1.78, 0.21);
     } else {
-      sphere(body, 0.28, 0.22, 0.24, red, 0, 0.56, 0);
-      for (const side of [-1, 1]) sphere(body, 0.045, 0.065, 0.026, white, side * 0.12, 0.58, 0.235);
+      sphere(body, 0.28, 0.22, 0.24, red2, 0, 0.56, 0);
+      for (const side of [-1, 1]) sphere(body, 0.045, 0.065, 0.026, white2, side * 0.12, 0.58, 0.235);
     }
     for (const side of [-1, 1]) {
       cyl(body, 0.069, 0.32, black, side * 0.145, 0.28, 0);
-      sphere(body, 0.16, 0.115, 0.25, kind === "minnie" ? red : yellow, side * 0.18, 0.115, 0.085);
+      sphere(body, 0.16, 0.115, 0.25, kind === "minnie" ? red2 : yellow2, side * 0.18, 0.115, 0.085);
       const arm2 = group(body, side * 0.235, 1.03, 0);
       arm2.rotation.z = side * 0.35;
       sphere(arm2, 0.075, 0.21, 0.075, black, side * 0.03, -0.15, 0);
       const glove = group(arm2, side * 0.05, -0.36, 0);
-      sphere(glove, 0.115, 0.13, 0.078, white);
-      for (let i = 0; i < 3; i++) sphere(glove, 0.025, 0.062, 0.035, white, -0.07 + i * 0.055, -0.075, 0.02);
-      sphere(glove, 0.06, 0.055, 0.06, white, side * -0.085, 0, 0.04);
+      sphere(glove, 0.115, 0.13, 0.078, white2);
+      for (let i = 0; i < 3; i++) sphere(glove, 0.025, 0.062, 0.035, white2, -0.07 + i * 0.055, -0.075, 0.02);
+      sphere(glove, 0.06, 0.055, 0.06, white2, side * -0.085, 0, 0.04);
       arms.push(arm2);
     }
   }
@@ -961,78 +961,6 @@ function charger(parent, x, z) {
   const plug = box(root, 0.13, 0.31, 0.14, ink2, 0.4, 1.05, 0.34);
   plug.rotation.z = -0.25;
 }
-function checkeredFlag(parent, x, z, reverse = false) {
-  cyl(parent, 0.038, 2.1, "#c7b888", x, 4.28, z);
-  const flag = group(parent, x, 4.75, z);
-  flag.rotation.y = reverse ? -0.2 : 0.2;
-  for (let row = 0; row < 3; row++) for (let col = 0; col < 4; col++) {
-    box(flag, 0.22, 0.22, 0.035, (row + col) % 2 ? ink2 : cream2, (col + 0.5) * 0.22 * (reverse ? -1 : 1), -row * 0.22, 0);
-  }
-}
-function buildPitStop(parent, color = mint) {
-  const root = group(parent), animation = [];
-  root.name = "EVision service garage";
-  const floor = material("#6e807a", { roughness: 0.94 });
-  rounded(root, 8.6, 0.34, 7, 0.24, cream2, 0, 0.2, 0);
-  rounded(root, 8.12, 0.1, 6.55, 0.12, floor, 0, 0.42, 0);
-  rounded(root, 7.3, 3.1, 0.35, 0.06, cream2, -0.25, 2.02, -2.55);
-  box(root, 3.55, 2.5, 0.05, ink2, -1.65, 1.94, -2.35);
-  for (const x of [-3.65, 0.45, 3.15]) {
-    box(root, 0.25, 3.2, 1.85, cream2, x, 2.05, -1.8);
-    box(root, 0.27, 0.48, 1.88, color, x, 0.76, -1.8);
-  }
-  rounded(root, 7.65, 0.26, 2.15, 0.09, ink2, -0.25, 3.69, -1.69);
-  box(root, 7.65, 0.11, 2.18, color, -0.25, 3.86, -1.69);
-  box(root, 7.65, 0.56, 0.2, ink2, -0.25, 3.46, -0.58);
-  textSign(root, "EVISION \xB7 PIT STOP", 6.2, 0.48, cream2, ink2, -0.25, 3.49, -0.465);
-  textSign(root, "01 / SERVICE", 2.35, 0.32, cream2, ink2, -1.65, 2.98, -2.31);
-  textSign(root, "CHARGE & GO", 1.98, 0.3, ink2, cream2, 1.8, 2.8, -2.34);
-  for (const x of [-2.95, -0.35]) box(root, 0.055, 0.015, 3.85, cream2, x, 0.48, 0.15);
-  box(root, 2.65, 0.015, 0.055, cream2, -1.65, 0.48, 2.05);
-  for (const x of [-2.9, -0.4]) {
-    rounded(root, 0.24, 2.35, 0.37, 0.04, color, x, 1.64, -0.25);
-    box(root, 0.38, 0.1, 0.6, ink2, x, 0.53, -0.25);
-  }
-  const lift = group(root, -1.65, 0.65, 0.1);
-  lift.name = "Vehicle service lift";
-  lift.userData.dynamic = true;
-  for (const x of [-0.56, 0.56]) box(lift, 0.24, 0.14, 2.75, "#b2b7a5", x, 0, 0);
-  box(lift, 2.6, 0.12, 0.25, ink2, 0, -0.08, -0.35);
-  const vehicle = car(lift, "#ece7d7");
-  vehicle.position.y = 0.08;
-  animation.push((time) => {
-    lift.position.y = 0.76 + Math.sin(time * 0.55) * 0.2;
-  });
-  const tools = group(root, 1.05, 0.47, -0.45);
-  tools.name = "Workshop tool trolley";
-  rounded(tools, 0.94, 0.76, 0.62, 0.05, color, 0, 0.48, 0);
-  box(tools, 1.05, 0.08, 0.72, ink2, 0, 0.91, 0);
-  for (let i = 0; i < 3; i++) {
-    box(tools, 0.79, 0.035, 0.025, cream2, 0, 0.32 + i * 0.2, 0.32);
-    box(tools, 0.32, 0.035, 0.04, ink2, 0, 0.38 + i * 0.2, 0.34);
-  }
-  for (const x of [-0.34, 0.34]) for (const z of [-0.2, 0.2]) {
-    const wheel = cyl(tools, 0.09, 0.09, rubber, x, 0.09, z);
-    wheel.rotation.z = Math.PI / 2;
-  }
-  for (let i = 0; i < 3; i++) {
-    const tire = torus(root, 0.29, 0.12, rubber, -3.36, 0.61 + i * 0.25, 0.85);
-    tire.rotation.x = Math.PI / 2;
-  }
-  charger(root, 2.77, 0.6);
-  rounded(root, 1.3, 0.06, 1.7, 0.04, color, 2.7, 0.5, 1.05);
-  for (const x of [-3.6, 3.6]) {
-    box(root, 0.38, 0.06, 0.38, ink2, x, 0.5, 2.65);
-    mesh(root, new THREE5.ConeGeometry(0.15, 0.4, 12), "#c89954", x, 0.72, 2.65);
-    cyl(root, 0.085, 0.07, cream2, x, 0.75, 2.65);
-  }
-  for (let i = 0; i < 20; i++) box(root, 0.37, 0.018, 0.18, i % 2 ? ink2 : cream2, -3.51 + i * 0.37, 0.49, 2.68);
-  const lane = textSign(root, "PIT LANE", 2.1, 0.45, cream2, "#6e807a", -0.2, 0.485, 2.98);
-  lane.rotation.x = -Math.PI / 2;
-  checkeredFlag(root, -3.5, -1.85);
-  checkeredFlag(root, 3, -1.85, true);
-  return { root, animation };
-}
 function buildParking(parent, color = "#659c88") {
   const root = group(parent), animation = [];
   root.name = "ATLAS parking navigation";
@@ -1093,6 +1021,228 @@ function buildParking(parent, color = "#659c88") {
   return { root, animation };
 }
 
+// assets/wonder/park-source/pitstop.js
+import * as THREE6 from "three";
+var red = "#cc3934";
+var carbon = "#222b2d";
+var white = "#f1e9d9";
+var yellow = "#e6bd49";
+var steel = "#849190";
+function bar(parent, from, to, radius, color) {
+  const a = new THREE6.Vector3(...from), b = new THREE6.Vector3(...to), direction = b.clone().sub(a);
+  const part = cyl(parent, radius, direction.length(), color, ...a.add(b).multiplyScalar(0.5).toArray());
+  part.quaternion.setFromUnitVectors(new THREE6.Vector3(0, 1, 0), direction.normalize());
+  return part;
+}
+function hose(parent, points, color = carbon, radius = 0.028) {
+  const curve = new THREE6.CatmullRomCurve3(points.map((p) => new THREE6.Vector3(...p)));
+  return mesh(parent, new THREE6.TubeGeometry(curve, 28, radius, 6, false), color);
+}
+function slick(parent) {
+  const root = group(parent);
+  root.name = "Slick racing tyre";
+  const tread = cyl(root, 0.36, 0.34, material("#202527", { roughness: 0.91 }));
+  tread.rotation.z = Math.PI / 2;
+  for (const side of [-1, 1]) {
+    const hub = cyl(root, 0.205, 0.018, material("#525c60", { metalness: 0.65, roughness: 0.4 }), side * 0.18, 0, 0);
+    hub.rotation.z = Math.PI / 2;
+    const stripe = torus(root, 0.292, 0.012, yellow, side * 0.177, 0, 0);
+    stripe.rotation.y = Math.PI / 2;
+    const nut = cyl(root, 0.063, 0.026, "#b5bcba", side * 0.193, 0, 0);
+    nut.rotation.z = Math.PI / 2;
+    for (let i = 0; i < 6; i++) {
+      const angle = i / 6 * Math.PI * 2;
+      bar(root, [side * 0.19, Math.cos(angle) * 0.07, Math.sin(angle) * 0.07], [side * 0.19, Math.cos(angle) * 0.18, Math.sin(angle) * 0.18], 0.015, carbon);
+    }
+  }
+  return root;
+}
+function taperedNose(parent) {
+  const geometry = new THREE6.BoxGeometry(1, 0.18, 1), positions = geometry.attributes.position;
+  for (let i = 0; i < positions.count; i++) {
+    const z = positions.getZ(i), width = THREE6.MathUtils.lerp(0.58, 0.17, z + 0.5);
+    positions.setXYZ(i, positions.getX(i) * width, positions.getY(i) + (z + 0.5) * -0.12, z * 1.65);
+  }
+  geometry.computeVertexNormals();
+  mesh(parent, geometry, material(red, { metalness: 0.25, roughness: 0.34 }), 0, 0.49, 1.26);
+}
+function formulaCar(parent) {
+  const root = group(parent), wheels = [];
+  root.name = "Open-wheel formula race car";
+  root.userData.dynamic = true;
+  const paint = material(red, { metalness: 0.25, roughness: 0.34 });
+  rounded(root, 1.52, 0.1, 3.35, 0.1, carbon, 0, 0.18, -0.3);
+  sphere(root, 0.43, 0.29, 1.37, paint, 0, 0.45, -0.5);
+  taperedNose(root);
+  for (const side of [-1, 1]) {
+    rounded(root, 0.44, 0.29, 1.44, 0.12, paint, side * 0.54, 0.4, -0.43);
+    rounded(root, 0.34, 0.13, 0.05, 0.025, carbon, side * 0.54, 0.45, 0.3);
+    box(root, 0.045, 0.07, 1.04, white, side * 0.77, 0.3, -0.47);
+    for (const z of [-1.42, 1.43]) {
+      bar(root, [side * 0.31, 0.38, z - 0.32], [side * 0.95, 0.36, z], 0.027, carbon);
+      bar(root, [side * 0.31, 0.38, z + 0.3], [side * 0.95, 0.36, z], 0.027, carbon);
+      const wheel = slick(root);
+      wheel.userData.dynamic = true;
+      wheel.position.set(side * 0.98, 0.36, z);
+      wheel.userData.side = side;
+      staticBatch(wheel);
+      wheels.push(wheel);
+    }
+  }
+  sphere(root, 0.295, 0.09, 0.43, carbon, 0, 0.7, -0.35);
+  sphere(root, 0.19, 0.21, 0.19, "#edd071", 0, 0.81, -0.48);
+  sphere(root, 0.17, 0.067, 0.045, "#233540", 0, 0.83, -0.299);
+  hose(root, [[-0.32, 0.74, -0.74], [-0.37, 0.86, -0.3], [0, 0.84, 0.27], [0.37, 0.86, -0.3], [0.32, 0.74, -0.74]], carbon, 0.035);
+  bar(root, [0, 0.83, 0.25], [0, 0.52, 0.51], 0.03, carbon);
+  sphere(root, 0.22, 0.3, 0.7, paint, 0, 0.62, -1.13);
+  const intake = torus(root, 0.095, 0.035, carbon, 0, 0.98, -0.92);
+  intake.scale.y = 1.15;
+  box(root, 0.04, 0.34, 0.77, red, 0, 0.81, -1.49);
+  for (let i = 0; i < 3; i++) rounded(root, 2.02 - i * 0.09, 0.045, 0.18, 0.022, carbon, 0, 0.22 + i * 0.056, 2.12 - i * 0.13);
+  for (const side of [-1, 1]) {
+    box(root, 0.07, 0.28, 0.57, red, side * 0.98, 0.31, 1.98);
+    box(root, 0.065, 0.48, 0.47, red, side * 0.89, 0.91, -1.99);
+    box(root, 0.07, 0.58, 0.12, carbon, side * 0.24, 0.6, -1.96);
+  }
+  rounded(root, 1.83, 0.09, 0.44, 0.025, carbon, 0, 1.14, -1.99);
+  rounded(root, 1.7, 0.08, 0.28, 0.025, carbon, 0, 0.87, -1.98);
+  const brand = textSign(root, "EVISION", 1.51, 0.27, white, carbon, 0, 1.19, -1.99);
+  brand.rotation.x = -Math.PI / 2;
+  const number = textSign(root, "09", 0.37, 0.46, white, red, 0, 0.604, 1.13, 500);
+  number.rotation.x = -Math.PI / 2;
+  staticBatch(root);
+  return { root, wheels };
+}
+function mechanic(parent, { x, z, angle, role, phase = 0 }) {
+  const root = group(parent, x, 0.46, z);
+  root.rotation.y = angle;
+  root.userData.dynamic = true;
+  root.userData.pitCrew = role;
+  root.name = `Pit crew: ${role}`;
+  const kneeling = role === "wheel gun", hip = kneeling ? 0.48 : 0.69;
+  for (const side of [-1, 1]) {
+    const knee = [side * 0.17, kneeling ? 0.2 : 0.35, kneeling ? 0.19 : 0.1];
+    bar(root, [side * 0.12, hip, 0], knee, 0.085, red);
+    bar(root, knee, [side * 0.18, 0.1, -0.14], 0.073, red);
+    rounded(root, 0.18, 0.13, 0.3, 0.055, carbon, side * 0.18, 0.075, -0.09);
+  }
+  rounded(root, 0.34, 0.19, 0.25, 0.06, carbon, 0, hip, 0);
+  const torso = group(root, 0, hip + 0.07, 0);
+  torso.userData.dynamic = true;
+  rounded(torso, 0.38, 0.4, 0.26, 0.075, red, 0, 0.18, 0);
+  rounded(torso, 0.4, 0.1, 0.28, 0.035, carbon, 0, 0.35, 0);
+  box(torso, 0.24, 0.045, 0.015, white, 0, 0.25, -0.142);
+  sphere(torso, 0.225, 0.245, 0.22, red, 0, 0.6, 0.025);
+  sphere(torso, 0.194, 0.081, 0.069, material("#182b35", { metalness: 0.35, roughness: 0.25 }), 0, 0.6, 0.216);
+  box(torso, 0.055, 0.025, 0.34, carbon, 0, 0.841, 0.02);
+  for (const side of [-1, 1]) {
+    bar(torso, [side * 0.22, 0.33, 0], [side * 0.27, 0.09, 0.2], 0.072, red);
+    bar(torso, [side * 0.27, 0.09, 0.2], [side * 0.15, 0.035, 0.43], 0.066, red);
+    sphere(torso, 0.078, 0.07, 0.085, yellow, side * 0.15, 0.035, 0.46);
+  }
+  if (role === "wheel gun") {
+    const gun = cyl(torso, 0.068, 0.28, steel, 0, 0.045, 0.55);
+    gun.rotation.x = Math.PI / 2;
+    box(torso, 0.095, 0.17, 0.09, carbon, 0, -0.02, 0.47);
+    const socket = cyl(torso, 0.04, 0.19, yellow, 0, 0.045, 0.75);
+    socket.rotation.x = Math.PI / 2;
+  } else if (role === "tyre carrier") {
+    const tyre = slick(torso);
+    tyre.position.set(0, -0.015, 0.58);
+    tyre.rotation.y = Math.PI / 2;
+    tyre.scale.setScalar(0.9);
+  }
+  staticBatch(torso);
+  staticBatch(root);
+  return { root, animate: (time) => {
+    torso.rotation.x = (kneeling ? 0.34 : 0.16) + Math.sin(time * 1.7 + phase) * 0.045;
+  } };
+}
+function jack(parent, side) {
+  const root = group(parent, side * 2.43, 0.48, 0);
+  root.name = side > 0 ? "Front racing jack" : "Rear racing jack";
+  bar(root, [0, 0.03, 0], [side * 0.63, 0.04, 0], 0.045, yellow);
+  bar(root, [side * 0.58, 0.04, 0], [side * 0.94, 0.62, 0], 0.036, steel);
+  bar(root, [side * 0.94, 0.62, -0.2], [side * 0.94, 0.62, 0.2], 0.041, carbon);
+  box(root, 0.28, 0.09, 0.23, carbon, 0, 0.04, 0);
+  for (const z of [-0.2, 0.2]) {
+    const wheel = cyl(root, 0.095, 0.075, carbon, side * 0.48, 0.02, z);
+    wheel.rotation.x = Math.PI / 2;
+  }
+}
+function buildPitStop(parent, color = "#43dfb3") {
+  const root = group(parent), animation = [];
+  root.name = "EVision racing pit stop";
+  const concrete = material("#9c9e94", { roughness: 0.97 }), garage = "#354345";
+  rounded(root, 8.7, 0.3, 7.2, 0.2, white, 0, 0.2, 0);
+  rounded(root, 8.35, 0.08, 6.86, 0.1, concrete, 0, 0.4, 0);
+  rounded(root, 8.04, 2.37, 0.3, 0.04, garage, 0, 1.62, -3.14);
+  for (const x of [-3.84, -1.84, 1.84, 3.84]) box(root, 0.14, 2.45, 0.57, white, x, 1.64, -2.97);
+  box(root, 3.5, 1.87, 0.04, "#233034", 0, 1.36, -2.977);
+  for (let i = 0; i < 8; i++) box(root, 3.43, 0.025, 0.03, "#485457", 0, 1.75 + i * 0.1, -2.94);
+  rounded(root, 8.25, 0.16, 0.83, 0.04, carbon, 0, 2.93, -2.97);
+  box(root, 8.26, 0.12, 0.85, red, 0, 3.06, -2.97);
+  textSign(root, "EVISION \xB7 PIT STOP", 6.75, 0.51, white, garage, 0, 2.62, -2.804);
+  box(root, 8, 0.045, 0.05, color, 0, 2.28, -2.795);
+  textSign(root, "BOX 09", 1.44, 0.33, white, garage, -2.84, 1.99, -2.96);
+  textSign(root, "02.4", 1.35, 0.7, yellow, carbon, -2.84, 1.39, -2.959, 260);
+  textSign(root, "RACE ENGINEERING", 1.38, 0.26, white, garage, 2.84, 1.99, -2.96);
+  for (const x of [-2.85, 2.85]) {
+    rounded(root, 1.26, 0.78, 0.52, 0.035, red, x, 0.85, -2.53);
+    box(root, 1.32, 0.075, 0.6, carbon, x, 1.27, -2.53);
+    for (let i = 0; i < 3; i++) box(root, 1.11, 0.025, 0.035, steel, x, 0.65 + i * 0.2, -2.25);
+  }
+  for (const x of [-2.6, 2.6]) {
+    box(root, 0.12, 0.017, 2.48, yellow, x, 0.452, 0);
+    box(root, 0.37, 0.021, 0.12, yellow, x, 0.454, 1.19);
+  }
+  for (const z of [-1.21, 1.21]) box(root, 5.32, 0.017, 0.09, yellow, 0, 0.452, z);
+  box(root, 8.15, 0.018, 0.065, white, 0, 0.453, 1.96);
+  box(root, 8.14, 0.018, 1.1, "#697475", 0, 0.452, 2.7);
+  const lane = textSign(root, "PIT LANE  \u2192", 3.6, 0.4, white, "#697475", 0, 0.467, 2.71);
+  lane.rotation.x = -Math.PI / 2;
+  for (let i = 0; i < 8; i++) box(root, 0.49, 0.02, 0.055, white, -3.6 + i * 0.95, 0.468, 3.2);
+  const vehicle = formulaCar(root);
+  vehicle.root.rotation.y = Math.PI / 2;
+  vehicle.root.position.y = 0.46;
+  animation.push((time) => {
+    const working = (1 - Math.cos(time * 1.2)) * 0.5;
+    vehicle.root.position.y = 0.46 + working * 0.07;
+    for (const wheel of vehicle.wheels) {
+      wheel.position.x = wheel.userData.side * (0.98 + working * 0.12);
+      wheel.rotation.x = Math.sin(time * 5) * 0.16;
+    }
+  });
+  let phase = 0;
+  const addCrew = (x, z, role, target = [x, 0]) => {
+    const crew = mechanic(root, { x, z, role, angle: Math.atan2(target[0] - x, target[1] - z), phase: phase++ });
+    animation.push(crew.animate);
+  };
+  for (const x of [-1.43, 1.43]) for (const side of [-1, 1]) {
+    addCrew(x, side * 1.74, "wheel gun");
+    addCrew(x + Math.sign(x) * 0.63, side * 2.09, "tyre carrier", [x, side * 0.98]);
+    hose(root, [[x, 1.04, side * 1.55], [x + 0.24, 0.58, side * 1.77], [x + 0.43, 0.47, side * 1.95], [x + Math.sign(x) * 0.57, 0.47, side * 2.4]], carbon, 0.023);
+  }
+  for (const side of [-1, 1]) {
+    addCrew(side * 3.51, 0.1, "jack operator", [0, 0]);
+    jack(root, side);
+    addCrew(side * 0.16, side * 1.42, "car stabiliser", [0, 0]);
+  }
+  for (const x of [-3.66, 3.66]) {
+    box(root, 0.095, 2.45, 0.11, steel, x, 1.67, -2.63);
+    box(root, 0.13, 0.12, 2.45, carbon, x, 2.87, -1.47);
+    hose(root, [[x, 2.84, -0.25], [x, 2.2, -0.33], [x * 0.83, 1.41, -0.85], [x * 0.64, 0.49, -1.45]], yellow, 0.021);
+  }
+  const spare = group(root, -3.37, 0.46, -1.3);
+  spare.name = "Spare tyre rack";
+  for (let i = 0; i < 2; i++) {
+    const tyre = slick(spare);
+    tyre.rotation.z = Math.PI / 2;
+    tyre.position.y = 0.19 + i * 0.35;
+  }
+  return { root, animation };
+}
+
 // assets/wonder/park-source/attractions.js
 function bumperCar(parent, color = "#cf654c") {
   const g = group(parent);
@@ -1111,7 +1261,7 @@ function bumperCar(parent, color = "#cf654c") {
 function buildBumper(parent) {
   const root = group(parent);
   const animation = [];
-  const cream3 = "#ecdcc1", red = "#bc6051", gold = "#d4b477";
+  const cream3 = "#ecdcc1", red2 = "#bc6051", gold = "#d4b477";
   rounded(root, 8.5, 0.42, 6.8, 0.3, cream3, 0, 0.22, 0);
   rounded(root, 7.8, 0.08, 5.9, 0.12, material("#7f9ca0", { metalness: 0.35, roughness: 0.3 }), 0, 0.48, 0);
   for (let i = 0; i < 5; i++) {
@@ -1121,13 +1271,13 @@ function buildBumper(parent) {
   }
   for (const x of [-3.7, 3.7]) for (const z of [-2.7, 2.7]) {
     cyl(root, 0.14, 3.4, cream3, x, 2.1, z);
-    for (let j = 0; j < 5; j++) cyl(root, 0.147, 0.2, red, x, 0.8 + j * 0.57, z);
+    for (let j = 0; j < 5; j++) cyl(root, 0.147, 0.2, red2, x, 0.8 + j * 0.57, z);
     cyl(root, 0.25, 0.15, gold, x, 3.74, z);
   }
-  rounded(root, 8.4, 0.22, 2.5, 0.12, red, 0, 3.95, -1.75);
+  rounded(root, 8.4, 0.22, 2.5, 0.12, red2, 0, 3.95, -1.75);
   box(root, 8.5, 0.18, 0.22, gold, 0, 3.76, -0.48);
   for (let i = 0; i < 18; i++) box(root, 0.22, 0.05, 2.5, cream3, -4 + i * 0.47, 4.08, -1.75);
-  box(root, 8.6, 0.48, 0.38, red, 0, 3.66, 2.86);
+  box(root, 8.6, 0.48, 0.38, red2, 0, 3.66, 2.86);
   textSign(root, "DOPAMIN SPEEDWAY", 6.7, 0.58, "#fff1cd", "#ad4e43", 0, 3.67, 3.06);
   for (let i = 0; i < 22; i++) sphere(root, 0.065, 0.065, 0.065, material("#fff0bb", { emissive: "#ffd78a", emissiveIntensity: 0.7 }), -4.02 + i * 0.383, 3.31, 3.08);
   for (const x of [-3.7, 3.7]) box(root, 0.12, 0.5, 5.5, cream3, x, 0.83, 0);
@@ -1172,14 +1322,14 @@ function buildTheater(parent) {
   textSign(root, "NOW SHOWING \xB7 WONDER PARK", 6.6, 0.38, "#635646", "#f8edce", 0, 3.59, 3.98);
   for (let i = 0; i < 24; i++) sphere(root, 0.063, 0.063, 0.063, material("#ffefb0", { emissive: "#f2bb6b", emissiveIntensity: 0.8 }), -3.65 + i * 0.317, 3.23, 3.82);
   for (let i = -2; i <= 2; i++) box(root, 0.14, 0.9 - Math.abs(i) * 0.16, 0.2, gold, i * 0.33, 6.25, 2.52);
-  const star = new THREE6.Shape();
+  const star = new THREE7.Shape();
   for (let i = 0; i < 10; i++) {
     const a = i * Math.PI / 5 - Math.PI / 2, r = i % 2 ? 0.21 : 0.48;
     const x = Math.cos(a) * r, y = Math.sin(a) * r;
     i ? star.lineTo(x, y) : star.moveTo(x, y);
   }
   star.closePath();
-  const m = new THREE6.Mesh(new THREE6.ExtrudeGeometry(star, { depth: 0.08, bevelEnabled: true, bevelSize: 0.03, bevelThickness: 0.03, bevelSegments: 2 }), gold);
+  const m = new THREE7.Mesh(new THREE7.ExtrudeGeometry(star, { depth: 0.08, bevelEnabled: true, bevelSize: 0.03, bevelThickness: 0.03, bevelSegments: 2 }), gold);
   m.position.set(0, 6.2, 2.75);
   root.add(m);
   for (const x of [-3.1, 3.1]) {
@@ -1206,8 +1356,8 @@ function buildMusic(parent) {
   cone(root, 0.16, 1, gold, 0, 6.34, 0);
   for (let i = 0; i < 16; i++) {
     const a = i / 16 * Math.PI * 2;
-    const bar = cyl(root, 0.037, 3.72, cream3, Math.sin(a) * 1.74, 5.12, Math.cos(a) * 1.74);
-    bar.rotation.set(Math.cos(a) * 1.16, 0, -Math.sin(a) * 1.16);
+    const bar2 = cyl(root, 0.037, 3.72, cream3, Math.sin(a) * 1.74, 5.12, Math.cos(a) * 1.74);
+    bar2.rotation.set(Math.cos(a) * 1.16, 0, -Math.sin(a) * 1.16);
   }
   textSign(root, "MAGIC VOICE", 4.3, 0.58, "#fbe8bc", "#406c63", 0, 3.8, 3.05);
   for (let i = 0; i < 4; i++) box(root, 2.5, 0.15, 0.6, cream3, 0, 0.65 - i * 0.14, 3.1 + i * 0.48);
@@ -1364,11 +1514,11 @@ function createAttraction(parent, item, position, index) {
   character.position.set(item.theme === "theater" ? -3.5 : 3.7, 0.55, 4.35);
   const motion = item.theme === "music" ? "dance" : item.theme === "bumper" ? "drive" : "wave";
   built.animation.push((t) => character.userData.animate(t + index, motion));
-  const pick = new THREE6.Mesh(new THREE6.BoxGeometry(9, 7, 8), new THREE6.MeshBasicMaterial({ visible: false }));
+  const pick = new THREE7.Mesh(new THREE7.BoxGeometry(9, 7, 8), new THREE7.MeshBasicMaterial({ visible: false }));
   pick.position.y = 3;
   pick.userData.attraction = item.id;
   outer.add(pick);
-  return { root: outer, animation: built.animation, pick, label: new THREE6.Vector3(position[0], position[1] + 0.6, position[2] + 5.5), character };
+  return { root: outer, animation: built.animation, pick, label: new THREE7.Vector3(position[0], position[1] + 0.6, position[2] + 5.5), character };
 }
 export {
   createAttraction,

@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {fireworkPhase} from '../lib/globe.mjs';
 import {group,seeded} from './materials.js';
+import {createGSFirework} from './gs-firework.js';
 
 export function createFireworks(parent){
  const root=group(parent,0,0,-1);root.name='Castle fireworks';root.userData.dynamic=true;
@@ -9,6 +10,7 @@ export function createFireworks(parent){
  const texture=new THREE.CanvasTexture(canvas),rand=seeded(1908),count=100,trails=5;
  const colors=['#ffd28c','#ed96ce','#86dbff','#b6eea5','#c9b0ff'];
  const bursts=colors.map((color,index)=>{
+  if(index===2){const logo=createGSFirework(texture);root.add(logo.points);return logo;}
   const positions=new Float32Array(count*trails*3),tints=new Float32Array(count*trails*3),directions=[];
   const c=new THREE.Color(color).multiplyScalar(1.35);
   for(let i=0;i<count;i++){
@@ -19,11 +21,13 @@ export function createFireworks(parent){
   const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setAttribute('color',new THREE.BufferAttribute(tints,3));
   const material=new THREE.PointsMaterial({map:texture,vertexColors:true,size:.6,transparent:true,opacity:1,depthWrite:false,blending:THREE.NormalBlending,toneMapped:false});
   const points=new THREE.Points(geometry,material);points.frustumCulled=false;root.add(points);
-  return {points,positions,directions,center:new THREE.Vector3((index-2)*3.4,14.8+(index%2)*2.1,(index%3-1)*2.3)};
+  // Keep the brightest neighbouring burst beside the letters during their hold phase.
+  return {points,positions,directions,center:new THREE.Vector3(index===3?7.6:(index-2)*3.4,14.8+(index%2)*2.1,(index%3-1)*2.3)};
  });
  function animate(time){
   root.userData.time=time;let visible=0;
   bursts.forEach((burst,index)=>{
+   if(burst.pattern==='GS'){burst.animate(time);root.userData.gsStage=burst.points.userData.stage;if(burst.points.visible)visible++;return;}
    const phase=fireworkPhase(time,index);burst.points.visible=phase.stage!=='rest';burst.points.material.opacity=phase.opacity;
    if(!burst.points.visible)return;visible++;
    for(let i=0;i<count;i++)for(let trail=0;trail<trails;trail++){
@@ -43,5 +47,5 @@ export function createFireworks(parent){
    burst.points.geometry.attributes.position.needsUpdate=true;
   });root.userData.activeBursts=visible;
  }
- animate(6);return {root,animate};
+ animate(6);return {root,animate,faceCamera:camera=>bursts[2].faceCamera(camera)};
 }
