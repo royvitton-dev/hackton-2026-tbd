@@ -1,0 +1,24 @@
+[
+  {
+    "name": "valid",
+    "args": [
+      "C:\\project\\hackton-2026-tbd\\trading\\scripts\\summarize-supplementary-resources.mjs",
+      "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-678Z-supplementary-analysis-test-5a60d4ea\\valid"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"evidence\": \"C:\\\\project\\\\hackton-2026-tbd\\\\trading\\\\evidence\\\\2026-09-21T13-45-29-751Z-supplementary-resource-analysis-f3c70983\",\n  \"source_status\": \"running\",\n  \"source_reported_completed\": false,\n  \"parameters\": {\n    \"expected_process_count\": 14,\n    \"logical_processors\": 4,\n    \"source_interval_seconds\": 30,\n    \"max_gap_seconds\": 65,\n    \"max_gap_policy\": \"2 * recorded interval_seconds + 5 seconds\",\n    \"clock_disagreement_tolerance_ms\": 1000,\n    \"cpu_denominator\": \"Adjacent recorded elapsed_ms delta * recorded logical_processors\"\n  },\n  \"coverage\": {\n    \"sample_count\": 2,\n    \"first_at\": \"2026-01-01T00:00:00.000Z\",\n    \"last_at\": \"2026-01-01T00:00:30.000Z\",\n    \"observed_elapsed_span_seconds\": 30,\n    \"complete_membership_samples\": 2,\n    \"incomplete_or_invalid_samples\": 0,\n    \"all_samples_and_intervals_valid\": true,\n    \"completion_note\": \"Sampler status completed means its loop ended; it does not imply complete or valid resource coverage.\"\n  },\n  \"full_group_cpu\": {\n    \"interval_count\": 1,\n    \"excluded_interval_count\": 0,\n    \"covered_interval_seconds\": 30,\n    \"cpu_seconds\": 14,\n    \"mean_percent_total_capacity\": 11.666666666666666\n  },\n  \"excluded_partial_tail_bytes\": 6\n}\n",
+    "stderr": "",
+    "evidence": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-751Z-supplementary-resource-analysis-f3c70983"
+  },
+  {
+    "name": "malformed",
+    "args": [
+      "C:\\project\\hackton-2026-tbd\\trading\\scripts\\summarize-supplementary-resources.mjs",
+      "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-678Z-supplementary-analysis-test-5a60d4ea\\malformed"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "{\"evidence\":\"C:\\\\project\\\\hackton-2026-tbd\\\\trading\\\\evidence\\\\2026-09-21T13-45-29-868Z-supplementary-resource-analysis-2bddd4e1\",\"error\":\"Invalid complete JSONL line 3: Expected property name or '}' in JSON at position 1 (line 1 column 2)\"}\n",
+    "evidence": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-868Z-supplementary-resource-analysis-2bddd4e1"
+  }
+]

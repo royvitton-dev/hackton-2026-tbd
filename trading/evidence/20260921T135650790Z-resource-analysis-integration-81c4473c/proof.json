@@ -1,0 +1,143 @@
+{
+  "health": {
+    "command_seq": 103372,
+    "durability": "journal-sync-all-before-apply",
+    "event_seq": 103372,
+    "mode": "synthetic-demo",
+    "queue_capacity": 2048,
+    "queue_depth": 0,
+    "status": "ready"
+  },
+  "protected_processes": [
+    {
+      "StartTimeUtc": "2026-09-21T10:05:21.4715478Z",
+      "ProcessName": "leave-engine",
+      "Id": 20540
+    },
+    {
+      "StartTimeUtc": "2026-09-21T12:52:39.7804367Z",
+      "ProcessName": "node",
+      "Id": 4220
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.3890023Z",
+      "ProcessName": "node",
+      "Id": 4928
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.5355012Z",
+      "ProcessName": "node",
+      "Id": 5412
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.5945324Z",
+      "ProcessName": "node",
+      "Id": 6128
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.4762676Z",
+      "ProcessName": "node",
+      "Id": 7916
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.3037571Z",
+      "ProcessName": "node",
+      "Id": 7936
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.4485053Z",
+      "ProcessName": "node",
+      "Id": 12172
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.5047340Z",
+      "ProcessName": "node",
+      "Id": 15272
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.3612932Z",
+      "ProcessName": "node",
+      "Id": 16068
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.2784404Z",
+      "ProcessName": "node",
+      "Id": 17444
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:54.8395149Z",
+      "ProcessName": "node",
+      "Id": 18184
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.5665942Z",
+      "ProcessName": "node",
+      "Id": 20484
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.3346242Z",
+      "ProcessName": "node",
+      "Id": 20776
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:22.4216442Z",
+      "ProcessName": "node",
+      "Id": 20940
+    },
+    {
+      "StartTimeUtc": "2026-09-21T10:05:54.9077476Z",
+      "ProcessName": "powershell",
+      "Id": 15744
+    },
+    {
+      "StartTimeUtc": "2026-09-21T13:17:58.3172929Z",
+      "ProcessName": "pwsh",
+      "Id": 16840
+    }
+  ],
+  "manifest_sha256": "99714647EF8C859336B318F0939179A51CDB90439908A160E0A0A2A4561EE53E",
+  "park_vite_sha256": "12E8C26386584B4B238DEB064A8D8EB156D296A2CA699D8F6A65F0D11CE8F0CC",
+  "at": "2026-09-21T13:56:51.3487054+00:00",
+  "source_hashes": [
+    {
+      "sha256": "5BECC13E25C6FDAE437945479123FDAE895BDC9F4D37714C3521D71F9B726DF2",
+      "matches_validation": true,
+      "file": "scripts/resource-memory.mjs"
+    },
+    {
+      "sha256": "05F3C619E271F9844B7E2214691D57E56D0A5D3F99FA0304F202F6C23EC773AA",
+      "matches_validation": true,
+      "file": "scripts/resource-cpu.mjs"
+    },
+    {
+      "sha256": "81FAEA3F4AF3FCEA067A848E947221EFB911A7DC87D78DB4EEAB63817DD1FF5F",
+      "matches_validation": true,
+      "file": "scripts/resource-cpu.test.mjs"
+    },
+    {
+      "sha256": "457F19DAC2E683169ECC579E2300E294CCFCA450A1C98CCA97D7E924849F8459",
+      "matches_validation": true,
+      "file": "scripts/summarize-observation.mjs"
+    },
+    {
+      "sha256": "39FC9659BE45CF2023C393F50B09D11B466CDE0E2129559969E56FB84546494C",
+      "matches_validation": true,
+      "file": "scripts/supplementary-resource-analysis.mjs"
+    },
+    {
+      "sha256": "FF7206A1CC6EE522F13B469D5F88E67BF879393DF6C6856CB7828395DACF6831",
+      "matches_validation": true,
+      "file": "scripts/summarize-supplementary-resources.mjs"
+    },
+    {
+      "sha256": "B6E0750577708A983EA86AD3C1B78DD0088FACFF65FD9D7BED1839C52B00A85D",
+      "matches_validation": true,
+      "file": "scripts/supplementary-resource-analysis.test.mjs"
+    }
+  ],
+  "map_failed_import": false,
+  "doc_local_links": 108,
+  "protected_count": 17,
+  "branch": "main",
+  "map_main_http_status": 200
+}

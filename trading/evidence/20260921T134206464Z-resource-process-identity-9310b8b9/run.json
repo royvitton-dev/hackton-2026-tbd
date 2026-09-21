@@ -1,0 +1,14 @@
+{
+  "command": "node",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "run_id": "20260921T134206464Z-resource-process-identity-9310b8b9",
+  "ended_at": "2026-09-21T13:42:07.5256649Z",
+  "started_at": "2026-09-21T13:42:06.5085224Z",
+  "exit_code": 0,
+  "status": "passed",
+  "args": [
+    "--test",
+    "scripts/resource-cpu.test.mjs",
+    "scripts/observe-resources.test.mjs"
+  ]
+}

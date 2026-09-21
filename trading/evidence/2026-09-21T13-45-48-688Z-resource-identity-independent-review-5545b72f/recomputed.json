@@ -1,0 +1,216 @@
+{
+  "status": "passed",
+  "scope": "Offline recomputation of the frozen2522-row original prefix with frozen reviewed helper copies. No API/service/test workload.",
+  "prefix_rows": 2522,
+  "prefix_sha256": "d87a03738565ac0b39ec117bb3c5fefcf5837438b36426cd2a4b73c86a9aec4e",
+  "first_at": "2026-09-21T10:05:54.979Z",
+  "last_at": "2026-09-21T13:39:30.500Z",
+  "process_identity_baseline": {
+    "at": "2026-09-21T10:05:54.979Z",
+    "processes": [
+      {
+        "pid": 4928,
+        "process_name": "node"
+      },
+      {
+        "pid": 5412,
+        "process_name": "node"
+      },
+      {
+        "pid": 6128,
+        "process_name": "node"
+      },
+      {
+        "pid": 7916,
+        "process_name": "node"
+      },
+      {
+        "pid": 7936,
+        "process_name": "node"
+      },
+      {
+        "pid": 12172,
+        "process_name": "node"
+      },
+      {
+        "pid": 15272,
+        "process_name": "node"
+      },
+      {
+        "pid": 16068,
+        "process_name": "node"
+      },
+      {
+        "pid": 17444,
+        "process_name": "node"
+      },
+      {
+        "pid": 17556,
+        "process_name": "node"
+      },
+      {
+        "pid": 20484,
+        "process_name": "node"
+      },
+      {
+        "pid": 20540,
+        "process_name": "leave-engine"
+      },
+      {
+        "pid": 20776,
+        "process_name": "node"
+      },
+      {
+        "pid": 20940,
+        "process_name": "node"
+      }
+    ]
+  },
+  "memory": {
+    "valid_samples": 313,
+    "last": {
+      "at": "2026-09-21T12:44:21.449Z",
+      "process_count": 14,
+      "working_set_bytes": 719261696,
+      "private_bytes": 1168146432
+    },
+    "observed_max_working_set_bytes": 1026215936,
+    "observed_max_private_bytes": 1170800640,
+    "changed_membership": [
+      {
+        "at": "2026-09-21T13:28:15.297Z",
+        "reason": "process_set_changed_from_initial_sample"
+      }
+    ]
+  },
+  "engine": {
+    "sample_count": 313,
+    "last": {
+      "at": "2026-09-21T12:44:21.449Z",
+      "event_seq": 77969,
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "WorkingSet64": 99266560,
+      "PrivateMemorySize64": 110759936,
+      "CPU": 467.015625,
+      "Handles": 161
+    },
+    "max_private_bytes": 110759936,
+    "private_change_bytes": 76017664
+  },
+  "cpu": {
+    "interval_count": 312,
+    "latest_interval": {
+      "from": "2026-09-21T12:43:51.014Z",
+      "to": "2026-09-21T12:44:21.449Z",
+      "seconds": 30.439695800000802,
+      "process_count": 14,
+      "cpu_seconds": 2.671875,
+      "percent_total_capacity": 0.5486000536838335,
+      "processes": [
+        {
+          "pid": 20540,
+          "process_name": "leave-engine",
+          "cpu_seconds": 1.640625,
+          "percent_total_capacity": 0.33685968208656436
+        },
+        {
+          "pid": 4928,
+          "process_name": "node",
+          "cpu_seconds": 0.046875,
+          "percent_total_capacity": 0.009624562345330412
+        },
+        {
+          "pid": 5412,
+          "process_name": "node",
+          "cpu_seconds": 0.09375,
+          "percent_total_capacity": 0.019249124690660823
+        },
+        {
+          "pid": 6128,
+          "process_name": "node",
+          "cpu_seconds": 0.0625,
+          "percent_total_capacity": 0.012832749793773883
+        },
+        {
+          "pid": 7916,
+          "process_name": "node",
+          "cpu_seconds": 0.046875,
+          "percent_total_capacity": 0.009624562345330412
+        },
+        {
+          "pid": 7936,
+          "process_name": "node",
+          "cpu_seconds": 0.140625,
+          "percent_total_capacity": 0.028873687035991233
+        },
+        {
+          "pid": 12172,
+          "process_name": "node",
+          "cpu_seconds": 0.125,
+          "percent_total_capacity": 0.025665499587547765
+        },
+        {
+          "pid": 15272,
+          "process_name": "node",
+          "cpu_seconds": 0.078125,
+          "percent_total_capacity": 0.016040937242217352
+        },
+        {
+          "pid": 16068,
+          "process_name": "node",
+          "cpu_seconds": 0.109375,
+          "percent_total_capacity": 0.022457312139104294
+        },
+        {
+          "pid": 17444,
+          "process_name": "node",
+          "cpu_seconds": 0.0625,
+          "percent_total_capacity": 0.012832749793773883
+        },
+        {
+          "pid": 17556,
+          "process_name": "node",
+          "cpu_seconds": 0,
+          "percent_total_capacity": 0
+        },
+        {
+          "pid": 20484,
+          "process_name": "node",
+          "cpu_seconds": 0.109375,
+          "percent_total_capacity": 0.022457312139104294
+        },
+        {
+          "pid": 20776,
+          "process_name": "node",
+          "cpu_seconds": 0.015625,
+          "percent_total_capacity": 0.0032081874484434707
+        },
+        {
+          "pid": 20940,
+          "process_name": "node",
+          "cpu_seconds": 0.140625,
+          "percent_total_capacity": 0.028873687035991233
+        }
+      ]
+    },
+    "cpu_seconds": 838.453125,
+    "covered_interval_seconds": 9506.551437600008,
+    "mean_percent_total_capacity": 0.5512337534432945,
+    "max_interval_percent_total_capacity": 2.461070137697884,
+    "accepted_intervals_exactly_equal_original": true,
+    "accepted_intervals_exactly_equal_corrected": true
+  },
+  "corrected_analysis_comparison": {
+    "run_id": "2026-09-21T13-42-39-992Z-observation-analysis-8a1b6dc1",
+    "sample_count": 2558,
+    "cutoff": "2026-09-21T13:42:35.908Z",
+    "memory_last_and_identity_match": true,
+    "cpu_accepted_intervals_match": true
+  },
+  "limitations": [
+    "No new unit tests were run; existing17/17 output was read.",
+    "First-complete PID/name membership is an available historical baseline, not OS start-time proof. Same-name PID reuse cannot be excluded.",
+    "Corrected analysis has its own later live cutoff; comparisons above are only the unchanged accepted memory/CPU fields, not all sample totals."
+  ]
+}

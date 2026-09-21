@@ -1,0 +1,329 @@
+{
+  "reviewed_at_utc": "2026-09-21T13:42:38.523Z",
+  "run_id": "2026-09-21T13-42-38-482Z-observer-pid-reuse-review-3dbd3323",
+  "method": "Read-only original evidence/source review and offline arithmetic. No service/process/browser/Git or source/shared-doc modification; new evidence only.",
+  "scope": {
+    "analysis_id": "2026-09-21T13-39-34-966Z-observation-analysis-db5a171f",
+    "observer_run": "2026-09-21T10-05-54-901Z-observe-0b80d28e",
+    "prefix_rows": 2522,
+    "first_at": "2026-09-21T10:05:54.979Z",
+    "last_at": "2026-09-21T13:39:30.500Z",
+    "prefix_bytes": 1879326,
+    "prefix_sha256": "d87a03738565ac0b39ec117bb3c5fefcf5837438b36426cd2a4b73c86a9aec4e",
+    "source_read_bytes": 1900094,
+    "source_read_sha256": "e42958f138eb2fa9a92b0a07e40d0ebe58410bc7139146f513076307ad81ad92",
+    "analysis_original_sha256": "068a56f5a8d958a88daa6be8ecc29e13705953114c6d273c185437cdf0223c5e",
+    "manifest_at_review_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e"
+  },
+  "raw_index": [
+    {
+      "at": "2026-09-21T10:05:54.979Z",
+      "source_line_number": 1,
+      "source_byte_offset": 0,
+      "raw_byte_length": 2380,
+      "sha256_including_original_line_ending": "b5d200d637a6221ddc619d5fc4946b47979af470409791dea53fea220903676b"
+    },
+    {
+      "at": "2026-09-21T12:44:21.449Z",
+      "source_line_number": 1873,
+      "source_byte_offset": 1500998,
+      "raw_byte_length": 2407,
+      "sha256_including_original_line_ending": "878c9523f891756972f92d33a557843f14be5194ad0f6f02f9bb636335f587cd"
+    },
+    {
+      "at": "2026-09-21T13:27:44.894Z",
+      "source_line_number": 2383,
+      "source_byte_offset": 1796749,
+      "raw_byte_length": 1051,
+      "sha256_including_original_line_ending": "e8025772353b4a81be13e8352ff23a22d0658aa7cf4528a7e3b0ecd435f17e89"
+    },
+    {
+      "at": "2026-09-21T13:28:15.297Z",
+      "source_line_number": 2389,
+      "source_byte_offset": 1800223,
+      "raw_byte_length": 2404,
+      "sha256_including_original_line_ending": "8ee48b5aa95783c2319ed53782a8bd7c4352972501e0095bdb65f37894a03abe"
+    },
+    {
+      "at": "2026-09-21T13:28:45.696Z",
+      "source_line_number": 2395,
+      "source_byte_offset": 1805034,
+      "raw_byte_length": 1050,
+      "sha256_including_original_line_ending": "dcacba3cb190e337f7fdcd93b06f8e4e92c3e86d1eeda359175eec49dc7425d7"
+    }
+  ],
+  "conclusion": "Confirmed wrong-process substitution: the original frontend PID 17556 was reused by conhost and accepted as a complete 14-process memory sample.",
+  "mismatches": [
+    {
+      "at": "2026-09-21T13:28:15.297Z",
+      "processes": [
+        {
+          "pid": 17556,
+          "baseline_name": "node",
+          "observed_name": "conhost",
+          "raw": {
+            "Id": 17556,
+            "ProcessName": "conhost",
+            "WorkingSet64": 7790592,
+            "PrivateMemorySize64": 1658880,
+            "CPU": 0.015625,
+            "Handles": 95
+          }
+        }
+      ]
+    }
+  ],
+  "baseline_frontend": {
+    "Id": 17556,
+    "ProcessName": "node",
+    "WorkingSet64": 97288192,
+    "PrivateMemorySize64": 136019968,
+    "CPU": 1.703125,
+    "Handles": 311
+  },
+  "previous_valid_frontend": {
+    "Id": 17556,
+    "ProcessName": "node",
+    "WorkingSet64": 39272448,
+    "PrivateMemorySize64": 146092032,
+    "CPU": 5.609375,
+    "Handles": 310
+  },
+  "current_manifest_frontend": {
+    "name": "frontend",
+    "pid": 4220,
+    "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "args": [
+      "C:\\project\\hackton-2026-tbd\\trading\\frontend\\node_modules\\vite\\bin\\vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5175",
+      "--strictPort"
+    ],
+    "cwd": "C:\\project\\hackton-2026-tbd\\trading\\frontend",
+    "identity": "vite.js",
+    "started_at": "2026-09-21T12:52:39.790Z",
+    "ready_at": "2026-09-21T12:52:40.339Z",
+    "evidence": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T10-05-21-198Z-demo-3b10627b\\frontend-recovery-2026-09-21T12-52-39-767Z-7c1fadc6",
+    "spawned": true,
+    "exited": false,
+    "exit_code": null,
+    "exit_signal": null,
+    "spawn_error": null
+  },
+  "current_manifest_contains_old_frontend": false,
+  "current_frontend_present_in_target": false,
+  "memory_effect": {
+    "original_valid_count": 314,
+    "baseline_identity_valid_count": 313,
+    "original_last": {
+      "at": "2026-09-21T13:28:15.297Z",
+      "working_set_bytes": 520921088,
+      "private_bytes": 1040408576
+    },
+    "baseline_identity_last": {
+      "at": "2026-09-21T12:44:21.449Z",
+      "working_set_bytes": 719261696,
+      "private_bytes": 1168146432
+    },
+    "original_max_working_set": 1026215936,
+    "baseline_identity_max_working_set": 1026215936,
+    "original_max_private": 1170800640,
+    "baseline_identity_max_private": 1170800640,
+    "unrelated_conhost": {
+      "Id": 17556,
+      "ProcessName": "conhost",
+      "WorkingSet64": 7790592,
+      "PrivateMemorySize64": 1658880,
+      "CPU": 0.015625,
+      "Handles": 95
+    },
+    "interpretation": "The original last aggregate includes conhost and omits the actual UI 4220. It is not current tracked-demo memory. Maximum aggregates happen to remain unchanged in this fixed prefix."
+  },
+  "engine_effect": {
+    "original": {
+      "sample_count": 314,
+      "first": {
+        "at": "2026-09-21T10:05:54.979Z",
+        "event_seq": 22432,
+        "Id": 20540,
+        "ProcessName": "leave-engine",
+        "WorkingSet64": 37859328,
+        "PrivateMemorySize64": 34742272,
+        "CPU": 0.703125,
+        "Handles": 147
+      },
+      "last": {
+        "at": "2026-09-21T13:28:15.297Z",
+        "event_seq": 93330,
+        "Id": 20540,
+        "ProcessName": "leave-engine",
+        "WorkingSet64": 38912000,
+        "PrivateMemorySize64": 123764736,
+        "CPU": 679.296875,
+        "Handles": 162
+      },
+      "max_working_set": 99266560,
+      "max_private": 123764736,
+      "private_change": 89022464,
+      "command_delta": 70898,
+      "private_change_per_additional_command": 1255.6414003215887
+    },
+    "baseline_identity_filtered": {
+      "sample_count": 313,
+      "first": {
+        "at": "2026-09-21T10:05:54.979Z",
+        "event_seq": 22432,
+        "Id": 20540,
+        "ProcessName": "leave-engine",
+        "WorkingSet64": 37859328,
+        "PrivateMemorySize64": 34742272,
+        "CPU": 0.703125,
+        "Handles": 147
+      },
+      "last": {
+        "at": "2026-09-21T12:44:21.449Z",
+        "event_seq": 77969,
+        "Id": 20540,
+        "ProcessName": "leave-engine",
+        "WorkingSet64": 99266560,
+        "PrivateMemorySize64": 110759936,
+        "CPU": 467.015625,
+        "Handles": 161
+      },
+      "max_working_set": 99266560,
+      "max_private": 110759936,
+      "private_change": 76017664,
+      "command_delta": 55537,
+      "private_change_per_additional_command": 1368.7751228910456
+    },
+    "interpretation": "The engine row itself remains PID20540/leave-engine and is not a sum including conhost, so this substitution does not corrupt its raw scalar. The complete-sample gate wrongly admits it as row314; sample count, last timestamp, last/max private, growth and per-command growth provenance change when complete invalid rows are excluded. Per-process salvage requires separate explicit identity and scope, not a restored complete14 claim."
+  },
+  "cpu_effect": {
+    "interval_count": 312,
+    "latest_interval": {
+      "from": "2026-09-21T12:43:51.014Z",
+      "to": "2026-09-21T12:44:21.449Z",
+      "seconds": 30.439695800000802,
+      "process_count": 14,
+      "cpu_seconds": 2.671875,
+      "percent_total_capacity": 0.5486000536838335,
+      "processes": [
+        {
+          "pid": 20540,
+          "process_name": "leave-engine",
+          "cpu_seconds": 1.640625,
+          "percent_total_capacity": 0.33685968208656436
+        },
+        {
+          "pid": 4928,
+          "process_name": "node",
+          "cpu_seconds": 0.046875,
+          "percent_total_capacity": 0.009624562345330412
+        },
+        {
+          "pid": 5412,
+          "process_name": "node",
+          "cpu_seconds": 0.09375,
+          "percent_total_capacity": 0.019249124690660823
+        },
+        {
+          "pid": 6128,
+          "process_name": "node",
+          "cpu_seconds": 0.0625,
+          "percent_total_capacity": 0.012832749793773883
+        },
+        {
+          "pid": 7916,
+          "process_name": "node",
+          "cpu_seconds": 0.046875,
+          "percent_total_capacity": 0.009624562345330412
+        },
+        {
+          "pid": 7936,
+          "process_name": "node",
+          "cpu_seconds": 0.140625,
+          "percent_total_capacity": 0.028873687035991233
+        },
+        {
+          "pid": 12172,
+          "process_name": "node",
+          "cpu_seconds": 0.125,
+          "percent_total_capacity": 0.025665499587547765
+        },
+        {
+          "pid": 15272,
+          "process_name": "node",
+          "cpu_seconds": 0.078125,
+          "percent_total_capacity": 0.016040937242217352
+        },
+        {
+          "pid": 16068,
+          "process_name": "node",
+          "cpu_seconds": 0.109375,
+          "percent_total_capacity": 0.022457312139104294
+        },
+        {
+          "pid": 17444,
+          "process_name": "node",
+          "cpu_seconds": 0.0625,
+          "percent_total_capacity": 0.012832749793773883
+        },
+        {
+          "pid": 17556,
+          "process_name": "node",
+          "cpu_seconds": 0,
+          "percent_total_capacity": 0
+        },
+        {
+          "pid": 20484,
+          "process_name": "node",
+          "cpu_seconds": 0.109375,
+          "percent_total_capacity": 0.022457312139104294
+        },
+        {
+          "pid": 20776,
+          "process_name": "node",
+          "cpu_seconds": 0.015625,
+          "percent_total_capacity": 0.0032081874484434707
+        },
+        {
+          "pid": 20940,
+          "process_name": "node",
+          "cpu_seconds": 0.140625,
+          "percent_total_capacity": 0.028873687035991233
+        }
+      ]
+    },
+    "intervals_touching_target": [],
+    "excluded_touching_target": [
+      {
+        "from": "2026-09-21T13:27:44.894Z",
+        "to": "2026-09-21T13:28:15.297Z",
+        "seconds": 30.40447829999961,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:28:15.297Z",
+        "to": "2026-09-21T13:28:45.696Z",
+        "seconds": 30.39945340000093,
+        "reason": "missing_or_invalid_process_counters"
+      }
+    ],
+    "interpretation": "No CPU interval in this analysis uses the substituted row: adjacent resource samples are errors and both intervals are excluded. Existing312 intervals end12:44:21.449Z. Earlier CPU implementation only compares adjacent valid PID/name pairs, so consecutive substituted rows could have been accepted; root is fixing baseline membership."
+  },
+  "market_effect": {
+    "target_engine_status": "ready",
+    "target_bots": 12,
+    "target_ws_gaps": 0,
+    "target_ws_disconnects": 0,
+    "interpretation": "Resource identity bug does not alter the separately recorded API/WS market fields or establish a market interruption."
+  },
+  "limitations": [
+    "Old observer resources have no StartTimeUtc; same-PID same-name reuse cannot be fully detected historically.",
+    "The new conhost start time/creator is not present in these rows; do not attribute it to a particular command.",
+    "Current manifest differs because the UI was already restored; do not reject old legitimate node17556 baseline rows against newUI4220 membership.",
+    "This fixed2522-row review is not final six-hour completion evidence. No live collector was restarted or changed."
+  ]
+}
