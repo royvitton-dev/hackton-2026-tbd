@@ -33,7 +33,7 @@ export interface VehicleImage {
   vehicleId: string; manufacturer: string; model: string; year: number;
   imagePath: string; cutoutImagePath: string; resourceOriginalPath: string; resourceCutoutPath: string;
   imageSourceUrl: string; license: string; licenseUrl: string; author: string; representativeNote: string;
-  glbPath: string | null; renderMode: 'glb' | 'unavailable'; depthLayerCount: number; extrusionDepth: number;
+  glbPath: string | null; renderMode: 'glb' | 'cutout' | 'unavailable'; depthLayerCount: number; extrusionDepth: number;
   modelDisplayNote: string | null;
   downloaded: boolean; cutoutGenerated: boolean; failureReason: string | null;
   batteryHotspot: { x: number; y: number; width: number; height: number };

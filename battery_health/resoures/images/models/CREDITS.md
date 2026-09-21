@@ -92,3 +92,13 @@ Decoder files under `public/assets/vehicles/decoders` are copied from the instal
 - Converted actual PlayCanvas geometry and compressed scene transforms to glTF; source body/interior/wheel geometry retained, separate shadow plane excluded, PBR translation and texture/Draco compression applied.
 - Original data, source URLs and checksums: `../sources/kia-niro/`.
 - Hong Kong right-hand-drive representative model. Exact workbook year/trim differs; the scene states this limitation.
+
+## Hyundai Casper Electric — official 2026 configurator
+
+- Source: https://casper.hyundai.com/vehicles/making/model
+- Viewer: https://casper.hyundai.com/wcontents/configurator/ax07/pc/index.html
+- Author/copyright: Hyundai Motor Company / Hyundai AutoEver. Public manufacturer asset; **no open redistribution license stated**. This is not a CC model.
+- Source GLBs, original scene/config, FSC parts and color maps, per-file download URL/SHA-256: `battery_health/resoures/images/sources/hyundai-casper/`.
+- Selected LHD FSC `6XS5ZDZ7ZCC069`, SAW exterior, NNB interior. Exact option package may differ from workbook.
+- Original geometry retained; stock showroom shadow plane removed; compatible draw calls merged, opaque textures compressed, Draco compression.
+- Runtime: `hyundai_casper_electric.glb`, 2,653,012 triangles, 15,337,036 bytes.

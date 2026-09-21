@@ -1,9 +1,9 @@
 import { test, expect } from '@playwright/test';
 test.use({contextOptions:{reducedMotion:'reduce'}});
-test('The WebGL hotspot itself responds to a raycast click',async({page})=>{
+test('Vehicle imagery is non-interactive; only the battery button toggles the panel',async({page})=>{
   await page.goto('/?user=U0002');
   const canvas=page.locator('canvas');
-  await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
+  await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh',{timeout:90000});
   await expect.poll(async()=>Number(await canvas.getAttribute('data-model-triangles'))).toBeGreaterThan(100000);
   await canvas.scrollIntoViewIfNeeded();
   await page.waitForTimeout(500);
@@ -12,6 +12,20 @@ test('The WebGL hotspot itself responds to a raycast click',async({page})=>{
   expect(normalized.x).toBeGreaterThan(0);expect(normalized.x).toBeLessThan(1);
   expect(normalized.y).toBeGreaterThan(0);expect(normalized.y).toBeLessThan(1);
   await page.mouse.click(bounds.x+normalized.x*bounds.width,bounds.y+normalized.y*bounds.height);
+  await expect(page.locator('#battery-info-panel')).toHaveCount(0);
+  const toggle=page.getByRole('button',{name:'배터리 위치 보기'});
+  await toggle.click();
   await expect(page.locator('#battery-info-panel')).toBeVisible();
   await expect(page.getByRole('tab',{name:'배터리 정보',exact:true})).toHaveAttribute('aria-selected','true');
+  await expect(toggle).toHaveAttribute('aria-pressed','true');
+  // Clicking the marker must not close an open panel either.
+  const selected=await canvas.evaluate(c=>({x:Number(c.dataset.hotspotX),y:Number(c.dataset.hotspotY)}));
+  const focusedBounds=(await canvas.boundingBox())!;
+  await page.mouse.click(focusedBounds.x+selected.x*focusedBounds.width,focusedBounds.y+selected.y*focusedBounds.height);
+  await expect(page.locator('#battery-info-panel')).toBeVisible();
+  await expect(toggle).toHaveAttribute('aria-pressed','true');
+  await toggle.click();
+  await expect(page.locator('#battery-info-panel')).toHaveCount(0);
+  await expect(toggle).toHaveAttribute('aria-pressed','false');
+  await expect(page.getByRole('tab',{name:'주요 정보',exact:true})).toHaveAttribute('aria-selected','true');
 });

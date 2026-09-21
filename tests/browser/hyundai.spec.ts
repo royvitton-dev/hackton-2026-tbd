@@ -18,13 +18,13 @@ test('Hyundai defaults, real IONIQ 5 and Kona meshes, model-year notice and batt
   await expect(page.getByTestId('odometer')).toContainText('83,805');
   expect(Math.abs(Number(await canvas.getAttribute('data-model-min-y')))).toBeLessThan(.01);
   await page.screenshot({ path: 'test-results/demo-kona.png', fullPage: true });
-  await page.getByRole('button', { name: /^Battery Info/ }).click();
+  await page.getByRole('button', { name: '배터리 정보 보기', exact: true }).click();
   await expect(page.locator('#battery-info-panel')).toBeVisible();
   await page.keyboard.press('Escape');
   await expect(page.locator('#battery-info-panel')).toHaveCount(0);
 
   await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption('U0017');
-  await expect(page.getByTestId('model-unavailable')).toContainText('Ioniq 6 · 3D 모델 미등록');
-  await expect(page.locator('canvas')).toHaveCount(0);
+  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq6_lr_2wd_2026');
+  await expect(canvas).toHaveAttribute('data-renderer','webgl-cutout');
   expect(errors).toEqual([]);
 });

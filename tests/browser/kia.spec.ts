@@ -21,7 +21,7 @@ for (const [user, vehicle, model, triangles, odometer] of [
     expect(height).toBeGreaterThan(1.2);
     expect(height).toBeLessThan(2);
     await page.screenshot({ path: `test-results/demo-${model.toLowerCase().replaceAll(' ', '-')}.png`, fullPage: true });
-    await page.getByRole('button', { name: /^Battery Info/ }).click();
+    await page.getByRole('button', { name: '배터리 정보 보기', exact: true }).click();
     await expect(page.locator('#battery-info-panel')).toBeVisible();
     await page.keyboard.press('Escape');
     await expect(page.locator('#battery-info-panel')).toHaveCount(0);

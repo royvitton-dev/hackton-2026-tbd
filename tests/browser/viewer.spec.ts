@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 test.use({contextOptions:{reducedMotion:'reduce'}});
 test('Reference theme, actual GLB, battery focus, camera bounds and user selection',async({page})=>{
+  test.setTimeout(300000); // Multiple detailed models and captures on the CPU WebGL renderer.
   const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto('/?user=U0002');
   const canvas=page.locator('canvas');
@@ -9,16 +10,16 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   await expect(page.getByTestId('odometer')).toContainText('95,454');
   await expect(page.getByTestId('health-score')).toHaveText('—');
   await expect(page.locator('img')).toHaveCount(0);
-  await expect(page.getByRole('tab')).toHaveCount(6);
+  await expect(page.getByRole('tab')).toHaveCount(4);
   await page.screenshot({path:'test-results/demo-desktop.png',fullPage:true});
-  await page.getByRole('button',{name:/^Battery Info/}).click();
+  await page.getByRole('button',{name:'배터리 정보 보기',exact:true}).click();
   await expect(page.locator('#battery-info-panel')).toBeVisible();
-  await page.getByRole('button',{name:/점수 산정 근거/}).click();
-  await expect(page.locator('#score-attribution')).toContainText('Schmalstieg–Ecker NMC111/Graphite');
-  await expect(page.locator('#score-attribution')).toContainText('검증된 NMC 계열 화학 정보 없음');
+  await page.getByRole('button',{name:'점수는 어떻게 계산하나요?'}).click();
+  await expect(page.locator('#score-attribution').getByRole('link')).toHaveAttribute('href','https://doi.org/10.1016/j.jpowsour.2014.02.012');
+  await expect(page.locator('#score-attribution')).toContainText('배터리 종류를 확인해야');
   await page.screenshot({path:'test-results/demo-battery-focus.png',fullPage:true});
   await page.keyboard.press('Escape');await expect(page.locator('#battery-info-panel')).toHaveCount(0);
-  await page.getByRole('button',{name:'배터리 hotspot 정보 열기'}).click();
+  await page.getByRole('button',{name:'배터리 위치 보기'}).click();
   await expect(page.locator('#battery-info-panel')).toBeVisible();
   await page.getByRole('button',{name:'배터리 상세 닫기'}).click();
   await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0009');
@@ -41,19 +42,20 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   }
   await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0001');
   await expect(page.getByTestId('vehicle-model')).toHaveText('Ioniq 5');
-  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq5_standard_2wd_2026');
+  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq5_standard_2wd_2026',{timeout:90000});
   await expect(canvas).toHaveAttribute('data-model-triangles','105109');
   expect(Math.abs(Number(await canvas.getAttribute('data-model-min-y')))).toBeLessThan(.01);
   expect(Number(await canvas.getAttribute('data-model-height'))).toBeLessThan(2);
   await expect(page.getByTestId('odometer')).toContainText('11,194');
   await page.evaluate(()=>window.scrollTo(0,0));
   await page.screenshot({path:'test-results/demo-ioniq5.png',fullPage:true});
-  await page.getByRole('button',{name:/^Battery Info/}).click();
-  await expect(page.locator('#battery-info-panel')).toContainText('논문 모델 범위 밖 2건');
-  await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0003');
-  await expect(page.getByTestId('model-unavailable')).toContainText('3D 모델 미등록');
-  await expect(page.locator('canvas')).toHaveCount(0);
-  await expect(page.getByTestId('vehicle-model')).toHaveText('Niro EV');
+  await page.getByRole('button',{name:'배터리 정보 보기',exact:true}).click();
+  await page.getByRole('button',{name:'점수는 어떻게 계산하나요?'}).click();
+  await expect(page.locator('#battery-info-panel')).toContainText('평가하기 어려운 충전 기록');
+  await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0017');
+  await expect(canvas).toHaveAttribute('data-renderer','webgl-cutout');
+  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq6_lr_2wd_2026');
+  await expect(page.getByTestId('vehicle-model')).toHaveText('Ioniq 6');
   expect(errors).toEqual([]);
 });
 test('Mobile layout, user-scoped history, filters, CSV and session detail',async({page,request})=>{
@@ -74,8 +76,8 @@ test('Mobile layout, user-scoped history, filters, CSV and session detail',async
   const downloadPromise=page.waitForEvent('download');await page.getByRole('button',{name:'내보내기'}).click();
   expect((await downloadPromise).suggestedFilename()).toBe('U0002-charging-history.csv');
   await page.getByRole('button',{name:/세션 상세$/}).first().click();
-  await expect(page.locator('#session-detail')).toContainText('원본 거래 데이터');
-  await expect(page.locator('#session-detail')).toContainText('Mock 데이터 미제공');
+  await expect(page.locator('#session-detail')).toContainText('이번 충전 기록');
+  await expect(page.locator('#session-detail')).not.toContainText(/미제공|Mock|session_id|Score Attribution/);
   await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
   await page.screenshot({path:'test-results/demo-session-mobile.png',fullPage:true});
   await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0001');

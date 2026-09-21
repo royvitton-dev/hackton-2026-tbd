@@ -66,14 +66,15 @@
     "requestedYear": 2026,
     "glbPath": null,
     "available": false,
-    "sourceUrl": null,
+    "sourceUrl": "https://sketchfab.com/3d-models/hyundai-ioniq-6-64b7bfb50f304e428089f61a63e4dd11",
     "downloadUrl": null,
     "license": null,
     "author": null,
     "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "failureReason": "Sketchfab candidate found; an authenticated licensed download is required. Official design-unveil host failed DNS; no local model obtained.",
+    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
+    "displayNote": null,
+    "researchDate": "2026-09-21"
   },
   {
     "vehicleId": "hyundai_kona_ev_lr_2026",
@@ -98,16 +99,17 @@
     "manufacturer": "Hyundai",
     "model": "Casper Electric",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": null,
-    "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "glbPath": "/assets/vehicles/models/hyundai_casper_electric.glb",
+    "available": true,
+    "sourceUrl": "https://casper.hyundai.com/vehicles/making/model",
+    "downloadUrl": "https://casper.hyundai.com/wcontents/configurator/ax07/pc/files/assets/297592948/1/AX_EV_EXT_3.glb",
+    "license": "Manufacturer copyright; public official configurator asset. Open redistribution permission not stated.",
+    "author": "Hyundai Motor Company / Hyundai AutoEver",
+    "representativeNote": "Official 2026 Casper Electric configurator; stock LHD trim 6XS5ZDZ7ZCC069 with SAW white exterior and NNB interior. Source part geometry and arrangement retained. Workbook trim options may differ.",
+    "failureReason": null,
+    "nextAction": null,
+    "displayNote": "공식 캐스퍼 일렉트릭 2026 외형 · 세부 옵션 차이 있음",
+    "sourceTriangles": 2653012
   },
   {
     "vehicleId": "kia_ev3_standard_2026",
@@ -288,14 +290,24 @@
     "requestedYear": 2026,
     "glbPath": null,
     "available": false,
-    "sourceUrl": null,
-    "downloadUrl": null,
+    "sourceUrl": "https://sketchfab.com/3d-models/2022-audi-q4-e-tron-89d8009af27340d6a63d127e77780751",
+    "downloadUrl": "https://api.sketchfab.com/v3/models/89d8009af27340d6a63d127e77780751/download",
     "license": null,
     "author": null,
     "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "failureReason": "Authenticated download endpoint returned HTTP 401. No file downloaded; the 2022 CC BY candidate remains unconnected.",
+    "nextAction": "Provide a legitimately downloaded Q4 e-tron model and its license/source record; then convert, sync and inspect.",
+    "displayNote": null,
+    "researchDate": "2026-09-21",
+    "failures": [
+      {
+        "url": "https://api.sketchfab.com/v3/models/89d8009af27340d6a63d127e77780751/download",
+        "httpStatus": 401,
+        "reason": {
+          "detail": "Authentication credentials were not provided."
+        }
+      }
+    ]
   },
   {
     "vehicleId": "audi_q6_etron_quattro_2025",
@@ -304,14 +316,15 @@
     "requestedYear": 2025,
     "glbPath": null,
     "available": false,
-    "sourceUrl": null,
+    "sourceUrl": "https://www.blenderkit.com/api/v1/search/?query=Audi%20Q6+asset_type:model",
     "downloadUrl": null,
     "license": null,
     "author": null,
     "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "failureReason": "BlenderKit Audi Q6 e-tron candidate reports isFree=false and royalty_free license. No purchase or paid download was performed.",
+    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
+    "displayNote": null,
+    "researchDate": "2026-09-21"
   },
   {
     "vehicleId": "vw_id4_pro_2026",
@@ -320,14 +333,15 @@
     "requestedYear": 2026,
     "glbPath": null,
     "available": false,
-    "sourceUrl": null,
+    "sourceUrl": "https://sketchfab.com/3d-models/volkswagen-id4-502c1a0c911b4dfbaae57a7b25ec890f",
     "downloadUrl": null,
     "license": null,
     "author": null,
     "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "failureReason": "Sketchfab candidate requires authorized download. Official Japanese ID.4 AR terms explicitly restrict reproduction/publication; that asset was not copied.",
+    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
+    "displayNote": null,
+    "researchDate": "2026-09-21"
   },
   {
     "vehicleId": "bmw_i5_edrive40_2026",
@@ -336,14 +350,15 @@
     "requestedYear": 2026,
     "glbPath": null,
     "available": false,
-    "sourceUrl": null,
+    "sourceUrl": "https://www.blenderkit.com/api/v1/search/?query=BMW%20i5+asset_type:model",
     "downloadUrl": null,
     "license": null,
     "author": null,
     "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "failureReason": "BlenderKit BMW i5 candidate reports isFree=false and royalty_free license. No purchase or paid download was performed.",
+    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
+    "displayNote": null,
+    "researchDate": "2026-09-21"
   },
   {
     "vehicleId": "mini_electric_cooper_2026",
@@ -352,14 +367,15 @@
     "requestedYear": 2026,
     "glbPath": null,
     "available": false,
-    "sourceUrl": null,
+    "sourceUrl": "https://sketchfab.com/3d-models/mini-cooper-electric-b76a08a64ede498e9ee5ce7c0b9079fb",
     "downloadUrl": null,
     "license": null,
     "author": null,
     "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "failureReason": "Electric-model candidate found on Sketchfab; download authorization is not available. Public GitHub Mini Cooper GLB has no verified EV identity and was not substituted.",
+    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
+    "displayNote": null,
+    "researchDate": "2026-09-21"
   },
   {
     "vehicleId": "volvo_ex30_2026",
@@ -368,13 +384,14 @@
     "requestedYear": 2026,
     "glbPath": null,
     "available": false,
-    "sourceUrl": null,
+    "sourceUrl": "https://sketchfab.com/3d-models/volvo-ex30-c5be588ea33d44cc8d2690ffdba389a4",
     "downloadUrl": null,
     "license": null,
     "author": null,
     "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "failureReason": "Author-listed CC BY candidate found; authorized source download unavailable. Manufacturer AR app has no verified reusable web asset.",
+    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
+    "displayNote": null,
+    "researchDate": "2026-09-21"
   }
 ]

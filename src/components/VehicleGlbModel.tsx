@@ -31,14 +31,18 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
             if(/Chrome|Rims|Mirrors/.test(m.name)){m.metalness=.7;m.roughness=.3;}
             if(/Tires/.test(m.name)){m.roughness=.9;}
           }
+          if(path.includes('casper_electric')&&m.name==='E_C_GLASS_BLACK'){
+            m.color.set('#20303c');m.metalness=.12;m.roughness=.18;m.transparent=true;m.opacity=.72;m.depthWrite=false;
+          }
         }
         m.userData.originalOpacity=m.opacity;m.userData.originalTransparent=m.transparent;m.userData.originalDepthWrite=m.depthWrite;
+        if(m instanceof MeshStandardMaterial)m.userData.originalColor=m.color.clone();
       }
     }});
     // Community model length is on Z. Rotate into our X-forward vehicle coordinates.
     clone.updateMatrixWorld(true);const originalSize=new Box3().setFromObject(clone,true).getSize(new Vector3());
     if(originalSize.z>originalSize.x)clone.rotation.y+=Math.PI/2;
-    if(path.includes('model_y')||path.includes('kona_electric'))clone.rotation.y+=Math.PI;
+    if(path.includes('model_y')||path.includes('kona_electric')||path.includes('casper_electric'))clone.rotation.y+=Math.PI;
     clone.updateMatrixWorld(true);
     // Precise bounds exclude oversized cached bounds in manufacturer component meshes.
     const bounds=new Box3().setFromObject(clone,true),size=bounds.getSize(new Vector3()),center=bounds.getCenter(new Vector3());
@@ -47,7 +51,10 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
     return clone;
   },[scene,path]);
   useEffect(()=>{
-    model.traverse(o=>{if(o instanceof Mesh) for(const m of Array.isArray(o.material)?o.material:[o.material]){m.transparent=focused||m.userData.originalTransparent;m.opacity=focused?.35*m.userData.originalOpacity:m.userData.originalOpacity;m.depthWrite=focused?false:m.userData.originalDepthWrite;m.needsUpdate=true;}});
+    model.traverse(o=>{if(o instanceof Mesh) for(const m of Array.isArray(o.material)?o.material:[o.material]){
+      m.transparent=m.userData.originalTransparent;m.opacity=m.userData.originalOpacity;m.depthWrite=m.userData.originalDepthWrite;
+      if(m instanceof MeshStandardMaterial)m.color.copy(m.userData.originalColor).multiplyScalar(focused?.86:1);
+    }});
   },[model,focused]);
   useEffect(()=>()=>model.traverse(o=>{if(o instanceof Mesh){for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();if(o.userData.ownsGeometry)o.geometry.dispose();}}),[model]);
   return <primitive object={model} dispose={null}/>;
