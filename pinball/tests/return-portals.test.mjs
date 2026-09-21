@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {Race,makeConfig,STEP} from '../src/physics.js';import {returnPose} from '../src/return-portals.js';
-const race=(n=2,mapId='orbit')=>new Race({...makeConfig(Array.from({length:n},(_,i)=>`공${i}`).join('\n'),1,'last',1),mapId},94);
+const race=(n=2,mapId='orbit')=>new Race({...makeConfig(Array.from({length:n},(_,i)=>`공${i}`).join(','),1,'last',1),mapId},94);
 test('return throat never ranks or wins; goal throat alone produces an arrival',()=>{
  for(const mapId of ['orbit','split']){const r=race(2,mapId);r.state='racing';r.balls.forEach((b,i)=>Object.assign(b,{x:i?380:240,y:r.map.finish-.1,vx:0,vy:150}));r.step();assert.equal(r.finishOrder.length,1);assert.equal(r.finishOrder[0].id,r.balls[0].id);assert.equal(r.finishOrder[0].exitId,1);assert.equal(r.returnCount,1);assert.equal(r.winner,null);assert.ok(r.balls[1].portal);assert.equal(r.balls[1].finished,false);assert.equal(r.balls[1].rank,null);}
 });

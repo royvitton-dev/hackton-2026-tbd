@@ -1,0 +1,14 @@
+✔ lotto has exactly one identically sized ball per number 1–45, independent of player input (6.725875ms)
+✔ lotto results use actual first six plus seventh, or ranks 39–44 plus unarrived last bonus (26423.097333ms)
+✔ incomplete and invalid lotto rounds never expose winning numbers (0.235083ms)
+✔ comma-separated entries and name*count are explicit, with whitespace and duplicate labels (1.386875ms)
+✔ Parade holds multiple balls independently for 0.8–1.5 seconds and freezes every timer when paused (103.380458ms)
+✔ Parade has one goal, six central cannons and a final gate that physically opens and blocks (2.144667ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 26511.544

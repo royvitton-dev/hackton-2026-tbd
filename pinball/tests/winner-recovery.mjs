@@ -11,7 +11,7 @@ try{
   for(const map of ['neon','orbit','zigzag','split']){
    await p.locator(`[data-map=${map}]`).click();await p.locator('#view').click();await p.locator('#board').screenshot({path:`evidence/park-20260921/05-${device}-${map}-neon.png`});await p.locator('#view').click();
   }
-  await p.locator('[data-map=neon]').click();await p.locator('#participants').fill('첫 번째 친구\n두 번째 친구\n세 번째 친구\n우리의 오늘 주인공');await p.locator('input[value=last]').check();await p.locator('[data-speed="3"]').click();await p.locator('#start').click();
+  await p.locator('[data-map=neon]').click();await p.locator('#participants').fill('첫 번째 친구,두 번째 친구,세 번째 친구,우리의 오늘 주인공');await p.locator('input[name=rule][value=last]').check();await p.locator('[data-speed="3"]').click();await p.locator('#start').click();
   await p.waitForFunction(()=>document.body.dataset.state==='racing');await p.evaluate(()=>window.__failNextDraw=true);await p.waitForFunction(()=>window.pinball.settings().renderFault);
   assert.equal(await p.locator('#render-error').isVisible(),true);const frozen=await p.evaluate(()=>window.pinball.snapshot());assert.equal(frozen.state,'paused');await p.waitForTimeout(200);assert.deepEqual(await p.evaluate(()=>window.pinball.snapshot()),frozen);
   await p.locator('#recover-renderer').click();await p.waitForFunction(()=>!window.pinball.settings().renderFault&&document.querySelector('#render-error').hidden);assert.deepEqual(await p.evaluate(()=>window.pinball.snapshot()),frozen);await p.locator('#pause').click();

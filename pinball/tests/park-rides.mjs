@@ -8,7 +8,7 @@ const browser=await chromium.launch({channel:'chrome'}),report={at:new Date().to
 try{
  const c=await browser.newContext({viewport:{width:1440,height:1000},reducedMotion:'reduce'}),p=await c.newPage(),errors=[];p.on('pageerror',e=>errors.push(e.message));
  await p.goto((process.env.BASE_URL||'http://127.0.0.1:4188'));await p.waitForFunction(()=>window.pinball);assert.match(await p.locator('.camera-angle').textContent(),/상단/);
- await p.locator('#participants').fill(Array.from({length:12},(_,i)=>`탑승객 ${i+1}`).join('\n'));await p.locator('input[value=nth]').check();await p.locator('#nth').fill('12');await p.locator('[data-speed="3"]').click();
+ await p.locator('#participants').fill(Array.from({length:12},(_,i)=>`탑승객 ${i+1}`).join(','));await p.locator('input[name=rule][value=nth]').check();await p.locator('#nth').fill('12');await p.locator('[data-speed="3"]').click();
  for(const map of ['neon','orbit','zigzag','split']){
   await p.locator(`[data-map="${map}"]`).click();assert.equal(await p.locator('body').getAttribute('data-land'),map);
   await p.locator('#view').click();await p.locator('#board').screenshot({path:`evidence/park-20260921/${prefix}-${map}-overview.png`});await p.locator('#view').click();

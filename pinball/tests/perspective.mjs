@@ -11,7 +11,7 @@ for(const mobile of [false,true]){
  await p.goto((process.env.BASE_URL||'http://127.0.0.1:4188'));await p.waitForFunction(()=>window.pinball);
  assert.equal((await p.evaluate(()=>window.pinball.settings())).camera,'PerspectiveCamera');
  await p.locator('#view').click();await p.locator('#board').screenshot({path:`evidence/3d-${mobile?'mobile':'desktop'}-overview.png`});await p.locator('#view').click();
- await p.locator('#participants').fill(Array.from({length:60},(_,i)=>`공 ${i+1}`).join('\n'));await p.locator('[data-speed="3"]').click();await p.locator('input[value=last]').check();await p.locator('#start').click();await p.waitForFunction(()=>document.body.dataset.state==='racing');
+ await p.locator('#participants').fill(Array.from({length:60},(_,i)=>`공 ${i+1}`).join(','));await p.locator('[data-speed="3"]').click();await p.locator('input[name=rule][value=last]').check();await p.locator('#start').click();await p.waitForFunction(()=>document.body.dataset.state==='racing');
  await p.waitForTimeout(1000);await p.locator('#pause').click();const paused=await p.evaluate(()=>window.pinball.snapshot());
  for(const label of ['입체','측면','상단']){await p.locator('.camera-angle').click();assert.match(await p.locator('.camera-angle').textContent(),new RegExp(label));await p.waitForTimeout(80);assert.deepEqual(await p.evaluate(()=>window.pinball.snapshot()),paused);await p.locator('#board').screenshot({path:`evidence/3d-${mobile?'mobile':'desktop'}-${label}.png`});}
  await p.screenshot({path:`evidence/3d-${mobile?'mobile':'desktop'}-racing.png`,fullPage:true});await p.locator('#pause').click();

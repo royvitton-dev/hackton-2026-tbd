@@ -1,0 +1,589 @@
+{
+  "at": "2026-09-21T12:22:08.551Z",
+  "status": "FAIL",
+  "target": 120,
+  "sourceHashes": {
+    "physics.js": "e0489a794928b7b45818fe2d3a5574734fd79939d744c4624e2156103f472012",
+    "devices.js": "576b0f219991f128cd7e45bf71b2c1e887b54e84bba27d70fa2c834d386de9d1",
+    "return-portals.js": "95bf777c3e64ad2ccee645db3955b99b202a71a9cd8eb034c3f738996111cd71",
+    "board-motion.js": "4d6efd35f36526b73143dd1863c5ffa0bc97a2913aa2d27cfce32fa658e7628b"
+  },
+  "cases": [
+    {
+      "map": "split",
+      "n": 1,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 50.76666666666443,
+      "assists": 0
+    },
+    {
+      "map": "split",
+      "n": 1,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 34.758333333332004,
+      "assists": 0
+    },
+    {
+      "map": "split",
+      "n": 2,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 20.783333333332795,
+      "assists": 0
+    },
+    {
+      "map": "split",
+      "n": 2,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 37.98333333333182,
+      "assists": 0
+    },
+    {
+      "map": "split",
+      "n": 7,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 66.93333333333267,
+      "assists": 1
+    },
+    {
+      "map": "split",
+      "n": 7,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 43.649999999998165,
+      "assists": 1
+    }
+  ],
+  "failure": {
+    "map": "split",
+    "n": 20,
+    "seed": 11,
+    "boardMotion": false,
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'invalid'\n- 'complete'\n\n    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/soak.mjs:16:11\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+    "snapshot": {
+      "roundId": "5ce6a957-7910-4ec9-ac82-997f0094180d",
+      "state": "invalid",
+      "seed": 11,
+      "time": 150.0000000000279,
+      "target": 10,
+      "total": 20,
+      "winner": null,
+      "completionReason": null,
+      "finishOrder": [
+        {
+          "id": "p10-b1",
+          "participantId": "p10",
+          "name": "검증 10",
+          "label": "검증 10",
+          "color": "#bca7ff",
+          "number": 1,
+          "rank": 1,
+          "time": 11.596936382414881,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p9-b1",
+          "participantId": "p9",
+          "name": "검증 9",
+          "label": "검증 9",
+          "color": "#c6ff58",
+          "number": 1,
+          "rank": 2,
+          "time": 16.37025568421738,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p14-b1",
+          "participantId": "p14",
+          "name": "검증 14",
+          "label": "검증 14",
+          "color": "#8daaff",
+          "number": 1,
+          "rank": 3,
+          "time": 20.648769439189344,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p4-b1",
+          "participantId": "p4",
+          "name": "검증 4",
+          "label": "검증 4",
+          "color": "#64e4e0",
+          "number": 1,
+          "rank": 4,
+          "time": 21.682596494722095,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p3-b1",
+          "participantId": "p3",
+          "name": "검증 3",
+          "label": "검증 3",
+          "color": "#ff82af",
+          "number": 1,
+          "rank": 5,
+          "time": 23.528557163863827,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p7-b1",
+          "participantId": "p7",
+          "name": "검증 7",
+          "label": "검증 7",
+          "color": "#edeeed",
+          "number": 1,
+          "rank": 6,
+          "time": 24.41756305040233,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p13-b1",
+          "participantId": "p13",
+          "name": "검증 13",
+          "label": "검증 13",
+          "color": "#ffc168",
+          "number": 1,
+          "rank": 7,
+          "time": 25.146023468460818,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p17-b1",
+          "participantId": "p17",
+          "name": "검증 17",
+          "label": "검증 17",
+          "color": "#c6ff58",
+          "number": 1,
+          "rank": 8,
+          "time": 25.226852761693944,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p5-b1",
+          "participantId": "p5",
+          "name": "검증 5",
+          "label": "검증 5",
+          "color": "#ffc168",
+          "number": 1,
+          "rank": 9,
+          "time": 28.040229039967308,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p18-b1",
+          "participantId": "p18",
+          "name": "검증 18",
+          "label": "검증 18",
+          "color": "#bca7ff",
+          "number": 1,
+          "rank": 10,
+          "time": 28.812854756880018,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p11-b1",
+          "participantId": "p11",
+          "name": "검증 11",
+          "label": "검증 11",
+          "color": "#ff82af",
+          "number": 1,
+          "rank": 11,
+          "time": 29.517259627111354,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p16-b1",
+          "participantId": "p16",
+          "name": "검증 16",
+          "label": "검증 16",
+          "color": "#ff826c",
+          "number": 1,
+          "rank": 12,
+          "time": 44.36056789213908,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p12-b1",
+          "participantId": "p12",
+          "name": "검증 12",
+          "label": "검증 12",
+          "color": "#64e4e0",
+          "number": 1,
+          "rank": 13,
+          "time": 45.08580735779951,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p6-b1",
+          "participantId": "p6",
+          "name": "검증 6",
+          "label": "검증 6",
+          "color": "#8daaff",
+          "number": 1,
+          "rank": 14,
+          "time": 46.97495683477927,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p2-b1",
+          "participantId": "p2",
+          "name": "검증 2",
+          "label": "검증 2",
+          "color": "#bca7ff",
+          "number": 1,
+          "rank": 15,
+          "time": 51.8391102246279,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p15-b1",
+          "participantId": "p15",
+          "name": "검증 15",
+          "label": "검증 15",
+          "color": "#edeeed",
+          "number": 1,
+          "rank": 16,
+          "time": 52.77916765199814,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p19-b1",
+          "participantId": "p19",
+          "name": "검증 19",
+          "label": "검증 19",
+          "color": "#ff82af",
+          "number": 1,
+          "rank": 17,
+          "time": 55.838797195231,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p8-b1",
+          "participantId": "p8",
+          "name": "검증 8",
+          "label": "검증 8",
+          "color": "#ff826c",
+          "number": 1,
+          "rank": 18,
+          "time": 75.3046624361529,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p1-b1",
+          "participantId": "p1",
+          "name": "검증 1",
+          "label": "검증 1",
+          "color": "#c6ff58",
+          "number": 1,
+          "rank": 19,
+          "time": 76.78057771954747,
+          "exitId": 1,
+          "exitLabel": "골인"
+        }
+      ],
+      "assists": 11,
+      "returns": 27,
+      "returnClosed": true,
+      "motion": {
+        "enabled": false,
+        "active": false,
+        "axis": null,
+        "cycle": 24,
+        "phase": 0,
+        "roll": 0,
+        "pitch": 0,
+        "offsetX": 0,
+        "offsetY": 0,
+        "forceX": 0,
+        "forceY": 0,
+        "nextIn": 0
+      },
+      "deviceStats": {
+        "captures": 31,
+        "launches": 18,
+        "releases": 13
+      },
+      "devices": [
+        {
+          "id": "split-magnet-0",
+          "kind": "magnet",
+          "x": 310,
+          "y": 875,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.5707963267948966,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "split-magnet-1",
+          "kind": "magnet",
+          "x": 90,
+          "y": 1820,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.5707963267948966,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "split-cannon-2",
+          "kind": "cannon",
+          "x": 310,
+          "y": 1500,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 16.128790742092136,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "split-cannon-3",
+          "kind": "cannon",
+          "x": 310,
+          "y": 1850,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 15.67068818014473,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        }
+      ],
+      "balls": [
+        {
+          "id": "p16-b1",
+          "x": 252.20775923082257,
+          "y": 2150,
+          "finished": true,
+          "rank": 12,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 2
+        },
+        {
+          "id": "p3-b1",
+          "x": 255.43720291678184,
+          "y": 2150,
+          "finished": true,
+          "rank": 5,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 1
+        },
+        {
+          "id": "p15-b1",
+          "x": 260.9330531848848,
+          "y": 2150,
+          "finished": true,
+          "rank": 16,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 3
+        },
+        {
+          "id": "p6-b1",
+          "x": 221.78204456485986,
+          "y": 2150,
+          "finished": true,
+          "rank": 14,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 2
+        },
+        {
+          "id": "p1-b1",
+          "x": 259.7604691326153,
+          "y": 2150,
+          "finished": true,
+          "rank": 19,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 4
+        },
+        {
+          "id": "p13-b1",
+          "x": 245.47477603664285,
+          "y": 2150,
+          "finished": true,
+          "rank": 7,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p10-b1",
+          "x": 254.9059354897573,
+          "y": 2150,
+          "finished": true,
+          "rank": 1,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p4-b1",
+          "x": 222.62316016639545,
+          "y": 2150,
+          "finished": true,
+          "rank": 4,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p12-b1",
+          "x": 247.73005885995076,
+          "y": 2150,
+          "finished": true,
+          "rank": 13,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 1
+        },
+        {
+          "id": "p17-b1",
+          "x": 223.10083968395352,
+          "y": 2150,
+          "finished": true,
+          "rank": 8,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 1
+        },
+        {
+          "id": "p5-b1",
+          "x": 239.2437040302611,
+          "y": 2150,
+          "finished": true,
+          "rank": 9,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p8-b1",
+          "x": 260.1902148132548,
+          "y": 2150,
+          "finished": true,
+          "rank": 18,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 4
+        },
+        {
+          "id": "p7-b1",
+          "x": 247.37502387026527,
+          "y": 2150,
+          "finished": true,
+          "rank": 6,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p2-b1",
+          "x": 221.27282917376672,
+          "y": 2150,
+          "finished": true,
+          "rank": 15,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 2
+        },
+        {
+          "id": "p9-b1",
+          "x": 218.2715249246454,
+          "y": 2150,
+          "finished": true,
+          "rank": 2,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p14-b1",
+          "x": 258.6393776834842,
+          "y": 2150,
+          "finished": true,
+          "rank": 3,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p18-b1",
+          "x": 227.6853245748471,
+          "y": 2150,
+          "finished": true,
+          "rank": 10,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p19-b1",
+          "x": 242.99391959644984,
+          "y": 2150,
+          "finished": true,
+          "rank": 17,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 2
+        },
+        {
+          "id": "p20-b1",
+          "x": 328.25980050378666,
+          "y": 2051.6094379017095,
+          "finished": false,
+          "rank": null,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 4
+        },
+        {
+          "id": "p11-b1",
+          "x": 248.21200690228903,
+          "y": 2150,
+          "finished": true,
+          "rank": 11,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 1
+        }
+      ]
+    }
+  },
+  "elapsedSeconds": 3.1148764580000003
+}

@@ -1,5 +1,5 @@
 import {advanceReturn,beginReturn,returnGateSegments,RETURN_CLOSE_TIME} from './return-portals.js';
-import {deviceDefinitions,devicePose,attractDevices,holdDevices,captureDevices} from './devices.js';
+import {CANNON_REVOLUTION_SECONDS,deviceDefinitions,devicePose,attractDevices,holdDevices,captureDevices} from './devices.js';
 import {boardMotionAt} from './board-motion.js';
 export const MAX_BALLS=60, STEP=1/120, RADIUS=10;
 export const COLORS=['#c6ff58','#bca7ff','#ff82af','#64e4e0','#ffc168','#8daaff','#edeeed','#ff826c'];
@@ -50,9 +50,16 @@ export function rotorPose(rotor,time){
  const phase=rotor.phase+time*rotor.omega;
  return rotor.swing?{angle:Math.sin(phase)*rotor.swing,velocity:Math.cos(phase)*rotor.swing*rotor.omega}:{angle:phase,velocity:rotor.omega};
 }
+// Cannon Parade: an open launch plaza followed by a layered timing finale.
+MAPS.push({...MAP,id:'parade',name:'CANNON PARADE',subtitle:'캐논 퍼레이드',height:2240,finish:2150,accent:'#ffbc75',surface:'#513039',description:'여섯 대포의 연속 발사와 마지막 타이밍 게이트',
+ pins:Array.from({length:3},(_,row)=>Array.from({length:7},(_,i)=>({x:85+i*72+(row%2?20:0),y:305+row*62,r:8}))).flat().concat([{x:100,y:1745,r:10},{x:215,y:1775,r:9},{x:405,y:1775,r:9},{x:520,y:1745,r:10}]),
+ bumpers:[{x:310,y:550,r:40},{x:165,y:610,r:30},{x:455,y:610,r:30},{x:190,y:1510,r:34},{x:430,y:1510,r:34},{x:100,y:1950,r:27},{x:520,y:1950,r:27}].map((b,i)=>({...b,ride:['carousel','ufo','bumper-car'][i%3]})),
+ rails:[{ax:30,ay:1560,bx:140,by:1640,r:9},{ax:590,ay:1560,bx:480,by:1640,r:9},{ax:30,ay:1860,bx:205,by:1950,r:8},{ax:590,ay:1860,bx:415,by:1950,r:8}],
+ rotors:[{x:145,y:735,length:54,omega:.82,phase:.5,ride:'teacups',blades:2},{x:475,y:735,length:54,omega:-1.17,phase:1,ride:'teacups',blades:2},{x:220,y:1060,length:62,omega:1.36,phase:.2,ride:'windmill',blades:4},{x:400,y:1060,length:62,omega:-.93,phase:1.2,ride:'teacups',blades:2},{x:310,y:1635,length:76,omega:-1.41,phase:.4,ride:'windmill',blades:4},{x:310,y:1970,length:56,omega:.68,phase:.7,ride:'flower-gate',blades:2}],
+ sliders:[{x:310,y:1440,length:50,amplitude:130,omega:1.03,phase:1,ride:'train'},{x:310,y:1820,length:62,amplitude:145,omega:-.87,phase:.3,ride:'bumper-shuttle'}]});
 // Every course converges into one real central goal throat.
 for(const map of MAPS){
- const hasReturn=['orbit','split'].includes(map.id);map.timeLimit=hasReturn?150:90;map.returnPoint=hasReturn?{x:map.id==='orbit'?310:170,y:map.id==='orbit'?1200:1120}:null;
+ const hasReturn=['orbit','split'].includes(map.id);map.timeLimit=hasReturn?150:map.id==='parade'?120:90;map.returnPoint=hasReturn?{x:map.id==='orbit'?310:170,y:map.id==='orbit'?1200:1120}:null;
  map.exits=(hasReturn?[240,380]:[310]).map((x,i)=>({id:i+1,x,y:map.finish,width:80,kind:i===1?'return':'throat',label:i===1?'중간 리턴':'골인'}));
  map.rails.push({ax:30,ay:2040,bx:map.exits[0].x-map.exits[0].width/2,by:2120,r:8},{ax:map.exits.at(-1).x+map.exits.at(-1).width/2,ay:2120,bx:590,by:2040,r:8});
  for(let i=0;i<map.exits.length-1;i++){const left=map.exits[i].x+map.exits[i].width/2,right=map.exits[i+1].x-map.exits[i+1].width/2,mid=(left+right)/2;map.rails.push({ax:left,ay:2120,bx:mid,by:2055,r:8},{ax:mid,ay:2055,bx:right,by:2120,r:8});}
@@ -69,8 +76,8 @@ export const SAMPLE_NAMES=['하늘','지우','민준','서연','도윤','수빈'
 export function integer(value,min,max,label){const s=String(value).trim();if(!/^\d+$/.test(s)||!Number.isSafeInteger(+s)||+s<min||+s>max)throw new Error(`${label}: ${min}~${max} 사이 정수를 입력해 주세요.`);return +s;}
 export function parseParticipants(text,defaultCount=1,overrides={}){
  const count=integer(defaultCount,1,10,'기본 공 개수');if(text.length>6000)throw new Error('입력은 전체 6,000자까지 가능합니다.');
- const lines=text.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);if(!lines.length)throw new Error('참가자를 한 명 이상 입력해 주세요.');if(lines.length>60)throw new Error('참가자는 최대 60명입니다.');
- const seen=new Map();const people=lines.map((line,i)=>{const parts=line.split('|');if(parts.length>2)throw new Error(`${i+1}번째 줄: 이름 | 공 개수 형식을 확인해 주세요.`);const name=parts[0].trim();if(!name||[...name].length>40)throw new Error(`${i+1}번째 이름은 1~40자로 입력해 주세요.`);if(/[\u0000-\u001f\u007f]/.test(name))throw new Error('이름에 제어 문자를 사용할 수 없습니다.');const n=integer(overrides[i]??parts[1]?.trim()??count,1,10,`${i+1}번째 공 개수`);const occurrence=(seen.get(name)||0)+1;seen.set(name,occurrence);return {id:`p${i+1}`,name,label:name+(occurrence>1?` (${occurrence})`:''),count:n,color:COLORS[i%COLORS.length]};});
+ const lines=text.split(',').map(s=>s.replace(/[\r\n\t]+/g,' ').trim()).filter(Boolean);if(!lines.length)throw new Error('참가자를 한 명 이상 입력해 주세요.');if(lines.length>60)throw new Error('참가자는 최대 60명입니다.');
+ const seen=new Map();const people=lines.map((line,i)=>{const parts=line.split('*');if(parts.length>2)throw new Error(`${i+1}번째 항목: 이름*공개수 형식을 확인해 주세요.`);const name=parts[0].trim();if(!name||[...name].length>40)throw new Error(`${i+1}번째 이름은 1~40자로 입력해 주세요.`);if(/[\u0000-\u001f\u007f]/.test(name))throw new Error('이름에 제어 문자를 사용할 수 없습니다.');const n=integer(overrides[i]??parts[1]?.trim()??count,1,10,`${i+1}번째 공 개수`);const occurrence=(seen.get(name)||0)+1;seen.set(name,occurrence);return {id:`p${i+1}`,name,label:name+(occurrence>1?` (${occurrence})`:''),count:n,color:COLORS[i%COLORS.length]};});
  const total=people.reduce((s,p)=>s+p.count,0);if(total>MAX_BALLS)throw new Error(`공은 합계 ${MAX_BALLS}개까지 가능합니다. 현재 ${total}개예요.`);return people;
 }
 export function makeConfig(text,defaultCount,rule,nth,overrides){const people=parseParticipants(text,defaultCount,overrides);const total=people.reduce((s,p)=>s+p.count,0);if(!['first','last','nth'].includes(rule))throw new Error('당첨 규칙을 선택해 주세요.');return {people,total,rule,target:rule==='first'?1:rule==='last'?total:integer(nth,1,total,'당첨 순위')};}
@@ -83,7 +90,7 @@ export class Race {
   this.map=MAPS.find(m=>m.id===config.mapId)??MAPS[0];
   this.devices=this.map.devices.map(d=>({...d,holds:[],restAngle:Math.PI/2,releasedAt:-10}));
   this.config=structuredClone(config);this.seed=seed;this.rng=seededRandom(seed);this.state='ready';this.elapsed=0;this.raceTime=0;this.finishOrder=[];this.events=[];this.winner=null;this.assists=0;this.lastMotionCycle=-1;this.returnCount=0;this.roundId=globalThis.crypto?.randomUUID?.()??String(seed);this.phaseTime=0;this.resumeState=null;this.rotationTime=0;this.stats={steps:0,collisions:0,maxPenetration:0,captures:0,launches:0,releases:0};
-  const deviceRng=seededRandom(seed^0x4ca9713f);for(const d of this.devices){d.phase=deviceRng()*Math.PI*2;d.omega=(2+deviceRng()*3)*(deviceRng()<.5?-1:1);d.spinStarted=0;}
+  const deviceRng=seededRandom(seed^0x4ca9713f);for(const d of this.devices){d.phase=deviceRng()*Math.PI*2;const speed=2+deviceRng()*3;d.omega=(d.kind==='cannon'?Math.PI*2/CANNON_REVOLUTION_SECONDS:speed)*(deviceRng()<.5?-1:1);d.spinStarted=0;}
   const entries=[];for(const p of this.config.people)for(let i=0;i<p.count;i++)entries.push({id:`${p.id}-b${i+1}`,participantId:p.id,name:p.name,label:p.label,color:p.color,number:i+1});shuffle(entries,this.rng);
   const slots=shuffle(Array.from({length:60},(_,i)=>({x:62+(i%10)*55,y:54+Math.floor(i/10)*27})),this.rng);
   this.balls=entries.map((b,i)=>({...b,x:slots[i].x,y:slots[i].y,vx:(this.rng()-.5)*100,vy:(this.rng()-.5)*50,r:RADIUS,finished:false,rank:null,stuckTime:0,progressTime:0,progressY:slots[i].y,anchorX:slots[i].x,anchorY:slots[i].y,assistCount:0,tieKey:this.rng()}));

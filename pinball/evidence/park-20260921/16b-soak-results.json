@@ -1,0 +1,601 @@
+{
+  "at": "2026-09-21T12:01:19.997Z",
+  "status": "FAIL",
+  "target": 120,
+  "sourceHashes": {
+    "physics.js": "ade239d012946a0ff6427ff58122603c49a856eff26003f552c8325b06db3a9a",
+    "devices.js": "0b7f4a8a3cbde5f1ae0c2cf552922db12bc313c9dffd6e123aa3e6abe48c5678",
+    "return-portals.js": "1726418c378f7fdaa6b4ed5a4df70c28e7f409af9e33d75a55a58d633a9938f9",
+    "board-motion.js": "4d6efd35f36526b73143dd1863c5ffa0bc97a2913aa2d27cfce32fa658e7628b"
+  },
+  "cases": [
+    {
+      "map": "parade",
+      "n": 1,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 70.55833333333555,
+      "assists": 5
+    },
+    {
+      "map": "parade",
+      "n": 1,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 22.449999999999367,
+      "assists": 0
+    },
+    {
+      "map": "parade",
+      "n": 2,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 30.308333333332254,
+      "assists": 0
+    },
+    {
+      "map": "parade",
+      "n": 2,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 26.07499999999916,
+      "assists": 0
+    },
+    {
+      "map": "parade",
+      "n": 7,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 63.666666666663694,
+      "assists": 13
+    },
+    {
+      "map": "parade",
+      "n": 7,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 60.71666666666386,
+      "assists": 6
+    }
+  ],
+  "failure": {
+    "map": "parade",
+    "n": 20,
+    "seed": 11,
+    "boardMotion": false,
+    "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'invalid'\n- 'complete'\n\n    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/soak.mjs:16:11\n    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)\n    at async node:internal/modules/esm/loader:647:26\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)",
+    "snapshot": {
+      "roundId": "4201e0c5-953b-4f48-8368-c6b607fca8e0",
+      "state": "invalid",
+      "seed": 11,
+      "time": 120.00000000004157,
+      "target": 10,
+      "total": 20,
+      "winner": null,
+      "completionReason": null,
+      "finishOrder": [
+        {
+          "id": "p3-b1",
+          "participantId": "p3",
+          "name": "검증 3",
+          "label": "검증 3",
+          "color": "#ff82af",
+          "number": 1,
+          "rank": 1,
+          "time": 18.68347250642744,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p19-b1",
+          "participantId": "p19",
+          "name": "검증 19",
+          "label": "검증 19",
+          "color": "#ff82af",
+          "number": 1,
+          "rank": 2,
+          "time": 20.988519331893837,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p9-b1",
+          "participantId": "p9",
+          "name": "검증 9",
+          "label": "검증 9",
+          "color": "#c6ff58",
+          "number": 1,
+          "rank": 3,
+          "time": 21.082416214857606,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p11-b1",
+          "participantId": "p11",
+          "name": "검증 11",
+          "label": "검증 11",
+          "color": "#ff82af",
+          "number": 1,
+          "rank": 4,
+          "time": 21.723618173320276,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p15-b1",
+          "participantId": "p15",
+          "name": "검증 15",
+          "label": "검증 15",
+          "color": "#edeeed",
+          "number": 1,
+          "rank": 5,
+          "time": 21.839632282669605,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p14-b1",
+          "participantId": "p14",
+          "name": "검증 14",
+          "label": "검증 14",
+          "color": "#8daaff",
+          "number": 1,
+          "rank": 6,
+          "time": 26.692819067724933,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p7-b1",
+          "participantId": "p7",
+          "name": "검증 7",
+          "label": "검증 7",
+          "color": "#edeeed",
+          "number": 1,
+          "rank": 7,
+          "time": 28.08831896602847,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p2-b1",
+          "participantId": "p2",
+          "name": "검증 2",
+          "label": "검증 2",
+          "color": "#bca7ff",
+          "number": 1,
+          "rank": 8,
+          "time": 28.64565886551548,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p12-b1",
+          "participantId": "p12",
+          "name": "검증 12",
+          "label": "검증 12",
+          "color": "#64e4e0",
+          "number": 1,
+          "rank": 9,
+          "time": 29.174038236470096,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p5-b1",
+          "participantId": "p5",
+          "name": "검증 5",
+          "label": "검증 5",
+          "color": "#ffc168",
+          "number": 1,
+          "rank": 10,
+          "time": 29.671455722769153,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p4-b1",
+          "participantId": "p4",
+          "name": "검증 4",
+          "label": "검증 4",
+          "color": "#64e4e0",
+          "number": 1,
+          "rank": 11,
+          "time": 32.07307076805541,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p18-b1",
+          "participantId": "p18",
+          "name": "검증 18",
+          "label": "검증 18",
+          "color": "#bca7ff",
+          "number": 1,
+          "rank": 12,
+          "time": 33.89883364573598,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p17-b1",
+          "participantId": "p17",
+          "name": "검증 17",
+          "label": "검증 17",
+          "color": "#c6ff58",
+          "number": 1,
+          "rank": 13,
+          "time": 36.2574070286874,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p10-b1",
+          "participantId": "p10",
+          "name": "검증 10",
+          "label": "검증 10",
+          "color": "#bca7ff",
+          "number": 1,
+          "rank": 14,
+          "time": 50.11034509891577,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p8-b1",
+          "participantId": "p8",
+          "name": "검증 8",
+          "label": "검증 8",
+          "color": "#ff826c",
+          "number": 1,
+          "rank": 15,
+          "time": 64.56750430695219,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p20-b1",
+          "participantId": "p20",
+          "name": "검증 20",
+          "label": "검증 20",
+          "color": "#64e4e0",
+          "number": 1,
+          "rank": 16,
+          "time": 88.82707295670856,
+          "exitId": 1,
+          "exitLabel": "골인"
+        }
+      ],
+      "assists": 52,
+      "returns": 0,
+      "returnClosed": false,
+      "motion": {
+        "enabled": false,
+        "active": false,
+        "axis": null,
+        "cycle": 24,
+        "phase": 0,
+        "roll": 0,
+        "pitch": 0,
+        "offsetX": 0,
+        "offsetY": 0,
+        "forceX": 0,
+        "forceY": 0,
+        "nextIn": 0
+      },
+      "deviceStats": {
+        "captures": 35,
+        "launches": 24,
+        "releases": 11
+      },
+      "devices": [
+        {
+          "id": "parade-magnet-0",
+          "kind": "magnet",
+          "x": 90,
+          "y": 650,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.5707963267948966,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "parade-magnet-1",
+          "kind": "magnet",
+          "x": 530,
+          "y": 650,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.5707963267948966,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "parade-cannon-2",
+          "kind": "cannon",
+          "x": 150,
+          "y": 880,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 0.8638270973095664,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "parade-cannon-3",
+          "kind": "cannon",
+          "x": 310,
+          "y": 880,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.0401755511752055,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "parade-cannon-4",
+          "kind": "cannon",
+          "x": 470,
+          "y": 880,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 0.5467166293262946,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "parade-cannon-5",
+          "kind": "cannon",
+          "x": 150,
+          "y": 1280,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 0.7123083318515963,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "parade-cannon-6",
+          "kind": "cannon",
+          "x": 310,
+          "y": 1280,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 0.566646332345845,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "parade-cannon-7",
+          "kind": "cannon",
+          "x": 470,
+          "y": 1280,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.8894101642953676,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        }
+      ],
+      "balls": [
+        {
+          "id": "p16-b1",
+          "x": 272.9398907990539,
+          "y": 2074.1502388154727,
+          "finished": false,
+          "rank": null,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p3-b1",
+          "x": 325.4036673017371,
+          "y": 2150,
+          "finished": true,
+          "rank": 1,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p15-b1",
+          "x": 327.2653153945808,
+          "y": 2150,
+          "finished": true,
+          "rank": 5,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p6-b1",
+          "x": 237.96041565252557,
+          "y": 2090.307814130435,
+          "finished": false,
+          "rank": null,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p1-b1",
+          "x": 217.9492007833341,
+          "y": 2083.6760676334347,
+          "finished": false,
+          "rank": null,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p13-b1",
+          "x": 258.0860401370848,
+          "y": 2089.2220360651513,
+          "finished": false,
+          "rank": null,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p10-b1",
+          "x": 322.29801887581584,
+          "y": 2150,
+          "finished": true,
+          "rank": 14,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p4-b1",
+          "x": 318.73772667625536,
+          "y": 2150,
+          "finished": true,
+          "rank": 11,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p12-b1",
+          "x": 296.44456704332754,
+          "y": 2150,
+          "finished": true,
+          "rank": 9,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p17-b1",
+          "x": 322.61478496492856,
+          "y": 2150,
+          "finished": true,
+          "rank": 13,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p5-b1",
+          "x": 296.9349201778771,
+          "y": 2150,
+          "finished": true,
+          "rank": 10,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p8-b1",
+          "x": 312.2857279929121,
+          "y": 2150,
+          "finished": true,
+          "rank": 15,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p7-b1",
+          "x": 292.273025473802,
+          "y": 2150,
+          "finished": true,
+          "rank": 7,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p2-b1",
+          "x": 292.2317983844684,
+          "y": 2150,
+          "finished": true,
+          "rank": 8,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p9-b1",
+          "x": 298.7133163459159,
+          "y": 2150,
+          "finished": true,
+          "rank": 3,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p14-b1",
+          "x": 318.18207446294497,
+          "y": 2150,
+          "finished": true,
+          "rank": 6,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p18-b1",
+          "x": 311.529200429268,
+          "y": 2150,
+          "finished": true,
+          "rank": 12,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p19-b1",
+          "x": 292.07707771859504,
+          "y": 2150,
+          "finished": true,
+          "rank": 2,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p20-b1",
+          "x": 313.1660187249505,
+          "y": 2150,
+          "finished": true,
+          "rank": 16,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p11-b1",
+          "x": 298.56096002706107,
+          "y": 2150,
+          "finished": true,
+          "rank": 4,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        }
+      ]
+    }
+  },
+  "elapsedSeconds": 2.376380167
+}

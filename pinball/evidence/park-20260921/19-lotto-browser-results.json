@@ -1,0 +1,70 @@
+{
+  "at": "2026-09-21T12:14:04.476Z",
+  "tests": [
+    {
+      "device": "desktop",
+      "order": "first",
+      "status": "PASS",
+      "numbers": [
+        1,
+        19,
+        26,
+        35,
+        43,
+        44
+      ],
+      "bonus": 40,
+      "arrivals": 7,
+      "exactReplay": true
+    },
+    {
+      "device": "desktop",
+      "order": "last",
+      "status": "PASS",
+      "numbers": [
+        5,
+        20,
+        24,
+        28,
+        30,
+        33
+      ],
+      "bonus": 23,
+      "arrivals": 44,
+      "exactReplay": true
+    },
+    {
+      "device": "mobile",
+      "order": "first",
+      "status": "PASS",
+      "numbers": [
+        1,
+        19,
+        26,
+        35,
+        43,
+        44
+      ],
+      "bonus": 40,
+      "arrivals": 7,
+      "exactReplay": true
+    },
+    {
+      "device": "mobile",
+      "order": "last",
+      "status": "PASS",
+      "numbers": [
+        5,
+        20,
+        24,
+        28,
+        30,
+        33
+      ],
+      "bonus": 23,
+      "arrivals": 44,
+      "exactReplay": true
+    }
+  ],
+  "status": "PASS"
+}

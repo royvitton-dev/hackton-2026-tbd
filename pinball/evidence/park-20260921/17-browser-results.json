@@ -1,0 +1,67 @@
+{
+  "at": "2026-09-21T12:07:13.914Z",
+  "browser": "153.0.8010.48",
+  "tests": [
+    {
+      "name": "PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count",
+      "status": "PASS",
+      "ms": 3787,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay",
+      "status": "PASS",
+      "ms": 20044,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "5 map selection and real 60-ball maximum performance, last winner",
+      "status": "FAIL",
+      "ms": 499,
+      "error": "locator.check: Error: strict mode violation: locator('input[value=last]') resolved to 2 elements:\n    1) <input name=\"rule\" type=\"radio\" value=\"last\"/> aka getByRole('radio', { name: '마지막' })\n    2) <input type=\"radio\" value=\"last\" name=\"lotto-rule\"/> aka getByLabel('마지막 6개 + 보너스39~44')\n\nCall log:\n\u001b[2m  - waiting for locator('input[value=last]')\u001b[22m\n\n    at /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:24:131\n    at async run (/Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:8:850)\n    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:23:1",
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Mobile 390x844 touch: per-person balls → Nth → pause → result → replay",
+      "status": "PASS",
+      "ms": 30385,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Mobile maximum: 60 balls, reduced motion and frame timing",
+      "status": "PASS",
+      "ms": 16532,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Responsive, keyboard, mute, visibility pause",
+      "status": "PASS",
+      "ms": 926,
+      "errors": [],
+      "external": []
+    }
+  ],
+  "performance": [
+    {
+      "map": "neon",
+      "device": "mobile emulation 390x844 DPR2",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.9628742514680066,
+      "p95FrameCostMs": 5.100000001490116,
+      "p95FrameIntervalMs": 16.700000000000728,
+      "fps": 60.00179646097188
+    }
+  ],
+  "limitations": [
+    "Mobile Chrome viewport emulation, not a physical phone.",
+    "Synthesized audio scheduling tested without human speaker listening.",
+    "No Safari/Firefox or native WebMCP browser tested.",
+    "Cross-runtime bit-exact replay is not supported: Node vs Chrome floating-point differences can diverge through collisions."
+  ]
+}

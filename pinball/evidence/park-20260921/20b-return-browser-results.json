@@ -1,0 +1,50 @@
+{
+  "at": "2026-09-21T12:22:19.418Z",
+  "tests": [
+    {
+      "device": "desktop",
+      "map": "orbit",
+      "status": "PASS",
+      "returns": 13,
+      "time": 79.30334638438217,
+      "goalOnlyRanks": 20,
+      "pausePreservesTransit": true,
+      "exactBrowserReplay": true,
+      "errors": []
+    },
+    {
+      "device": "desktop",
+      "map": "split",
+      "status": "PASS",
+      "returns": 10,
+      "time": 58.20164330117262,
+      "goalOnlyRanks": 20,
+      "pausePreservesTransit": true,
+      "exactBrowserReplay": true,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "map": "orbit",
+      "status": "PASS",
+      "returns": 13,
+      "time": 79.30334638438217,
+      "goalOnlyRanks": 20,
+      "pausePreservesTransit": true,
+      "exactBrowserReplay": true,
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "map": "split",
+      "status": "PASS",
+      "returns": 10,
+      "time": 58.20164330117262,
+      "goalOnlyRanks": 20,
+      "pausePreservesTransit": true,
+      "exactBrowserReplay": true,
+      "errors": []
+    }
+  ],
+  "status": "PASS"
+}

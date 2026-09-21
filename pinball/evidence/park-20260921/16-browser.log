@@ -1,0 +1,82 @@
+PASS PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count
+PASS PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay
+FAIL 5 map selection and real 60-ball maximum performance, last winner AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'invalid'
+- 'complete'
+
+    at assertGameResult (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/assert-result.mjs:3:9)
+    at finish (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:7:165)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:26:930
+    at async run (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:8:850)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:23:1
+PASS Mobile 390x844 touch: per-person balls → Nth → pause → result → replay
+PASS Mobile maximum: 60 balls, reduced motion and frame timing
+PASS Responsive, keyboard, mute, visibility pause
+{
+  "passed": 5,
+  "failed": 1,
+  "performance": [
+    {
+      "map": "neon",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 3.9719402985119108,
+      "p95FrameCostMs": 4.899999998509884,
+      "p95FrameIntervalMs": 16.700000000000728,
+      "fps": 60.002507567480436
+    },
+    {
+      "map": "orbit",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 337,
+      "meanFrameCostMs": 3.598813056315707,
+      "p95FrameCostMs": 4.699999999254942,
+      "p95FrameIntervalMs": 16.799999999995634,
+      "fps": 60.00284879994301
+    },
+    {
+      "map": "zigzag",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 4.154491017879304,
+      "p95FrameCostMs": 4.5,
+      "p95FrameIntervalMs": 16.70000000001164,
+      "fps": 60.00287438919221
+    },
+    {
+      "map": "split",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 5.062574850239172,
+      "p95FrameCostMs": 5.5,
+      "p95FrameIntervalMs": 16.79999999998836,
+      "fps": 60.00179646097188
+    },
+    {
+      "map": "parade",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 4.821791044700501,
+      "p95FrameCostMs": 5.699999999254942,
+      "p95FrameIntervalMs": 16.79999999998836,
+      "fps": 60.00250756748037
+    },
+    {
+      "map": "neon",
+      "device": "mobile emulation 390x844 DPR2",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 5.204776119407433,
+      "p95FrameCostMs": 7.599999997764826,
+      "p95FrameIntervalMs": 16.800000000000182,
+      "fps": 60.001432870038684
+    }
+  ]
+}

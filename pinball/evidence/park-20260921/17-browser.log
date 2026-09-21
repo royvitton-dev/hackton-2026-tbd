@@ -1,0 +1,31 @@
+PASS PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count
+PASS PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay
+FAIL 5 map selection and real 60-ball maximum performance, last winner locator.check: Error: strict mode violation: locator('input[value=last]') resolved to 2 elements:
+    1) <input name="rule" type="radio" value="last"/> aka getByRole('radio', { name: '마지막' })
+    2) <input type="radio" value="last" name="lotto-rule"/> aka getByLabel('마지막 6개 + 보너스39~44')
+
+Call log:
+[2m  - waiting for locator('input[value=last]')[22m
+
+    at /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:24:131
+    at async run (/Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:8:850)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:23:1
+PASS Mobile 390x844 touch: per-person balls → Nth → pause → result → replay
+PASS Mobile maximum: 60 balls, reduced motion and frame timing
+PASS Responsive, keyboard, mute, visibility pause
+{
+  "passed": 5,
+  "failed": 1,
+  "performance": [
+    {
+      "map": "neon",
+      "device": "mobile emulation 390x844 DPR2",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.9628742514680066,
+      "p95FrameCostMs": 5.100000001490116,
+      "p95FrameIntervalMs": 16.700000000000728,
+      "fps": 60.00179646097188
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+✔ course variety: one or two goals per map, five Cloud ramps, Garden timing gate, Candy side bumpers (1.378583ms)
+✔ Garden final flower gate physically blocks and opens with its rotation (24.740375ms)
+✔ all new rides activate in natural seeded races and finish with contained unique arrivals (92804.941958ms)
+✔ magnet and cannon capture at physical position for 0.5–1 seconds; pause freezes pose and ball (475.250959ms)
+✔ each device stores multiple incoming balls with independent randomized release times (33.50725ms)
+✔ cannon boost cannot tunnel through a pin or boundary (3.895291ms)
+✔ device capture, timing and launch are deterministic and varied across seeds (6.679708ms)
+✔ first/Nth stop at the actual target crossing; last stops with one unfinished ball (36016.859709ms)
+✔ ending rule preserves the prefix of the same physical race and has no chosen winner (17177.346625ms)
+✔ same-substep ties stop by crossing time and seeded priority without extra ranks (1.273417ms)
+✔ 1x and 3x step chunks stop at identical positions, time, winner and ranks (11244.682917ms)
+✔ lotto has exactly one identically sized ball per number 1–45, independent of player input (11.757709ms)
+✔ lotto results use actual first six plus seventh, or ranks 39–44 plus unarrived last bonus (41896.310667ms)
+✔ incomplete and invalid lotto rounds never expose winning numbers (0.324292ms)
+✔ random 3–5 second motion is deterministic, bounded, smooth and independent of participants (25.9575ms)
+✔ shared board force acts equally on identical balls, with actual velocity change (13.575625ms)
+✔ each map has different rotor magnitudes and both directions, with matching surface velocities (3.192875ms)
+✔ pause freezes active board motion and stepping chunks preserve the exact race (5818.435458ms)
+✔ orbit single-ball oscillation is detected and escapes without fabricated finish (502.720208ms)
+✔ windmill blades share an actual perpendicular collider and pirate velocity matches its swing (1.256958ms)
+✔ all four maps with motion: 120 seeded races remain contained and finish with unique real ranks (308360.116459ms)
+✔ comma-separated entries and name*count are explicit, with whitespace and duplicate labels (2.850042ms)
+✔ Parade holds multiple balls independently for 0.8–1.5 seconds and freezes every timer when paused (255.991958ms)
+✔ Parade has one goal, six central cannons and a final gate that physically opens and blocks (1.061959ms)
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (2.878625ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (0.737042ms)
+✔ rule validation and ball-based N range (0.509708ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (22.000375ms)
+✔ finish order is crossing time, not ball list; exact ties use seeded tie key (5.754958ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (6372.621208ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (7448.996167ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (2.398833ms)
+✔ fast wall and pin impacts remain inside the board (6.107583ms)
+✔ all 5 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (308222.071209ms)
+✔ finish requires an exit throat; crossing between holes never ranks (0.463333ms)
+✔ return throat never ranks or wins; goal throat alone produces an arrival (15.369083ms)
+✔ return sink and fall both freeze on pause; landing returns to the actual middle of the board (10.663291ms)
+✔ repeated returns are explicit game events, never duplicate finishes (4.82025ms)
+✔ first target stops with a returning opponent still unfinished; replay does not advance its portal (1.64275ms)
+✔ 60-second finale blocks new return entry while balls already inside can drain without being ranked (0.388459ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 322325.318167
