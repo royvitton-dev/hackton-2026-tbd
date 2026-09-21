@@ -87,3 +87,9 @@ test('mobile charging settings and all drawing information remain reachable',asy
   await expect(page.locator('#charge-count')).toBeVisible();await page.locator('#charge-count').selectOption('1');expect(await page.evaluate(()=>window.__parking.state.charging.selected.length)).toBe(1);
   await screenshot(page,'charging-mobile.png',{fullPage:true});await page.locator('.visual-controls summary').click();await page.locator('#drawing-info').click();await expect(page.locator('.drawing-table').first()).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);
 });
+test('imports an actual PDF and keeps its drawing preview separate from the previously selected source',async({page})=>{
+  await open(page,'10000901-0');await page.locator('#file').setInputFiles(new URL('../../public/sources/park-boramae.pdf',import.meta.url).pathname.replace('/tests/public/','/public/'));
+  await expect(page.locator('#scene-title')).toHaveText('park-boramae.pdf');await expect(page.locator('#source-note')).toContainText('사용자가 가져온');
+  expect(await page.evaluate(()=>window.__parking.state.selected.id)).toBe('import');expect(await page.evaluate(()=>window.__parking.state.radio)).toBeNull();expect(await page.locator('#source-thumb').getAttribute('src')).toMatch(/^data:image\/png/);
+  await expect(page.locator('#source-link')).toBeHidden();await expect(page.locator('#play')).toBeDisabled();await page.evaluate(()=>window.__parking.select('10000901-0'));await expect(page.locator('#source-link')).toBeVisible();
+});
