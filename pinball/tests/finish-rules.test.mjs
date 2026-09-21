@@ -20,7 +20,7 @@ test('ending rule preserves the prefix of the same physical race and has no chos
 });
 test('same-substep ties stop by crossing time and seeded priority without extra ranks',()=>{
  for(const rule of ['first','nth','last']){
-  const r=new Race(cfg(3,rule,2),4);r.state='racing';r.balls.forEach((b,i)=>Object.assign(b,{x:100+i*140,y:r.map.finish-.1,vx:0,vy:100,tieKey:[.8,.2,.5][i]}));r.step(STEP*3);assertGameResult(r.snapshot());
+  const r=new Race(cfg(3,rule,2,'orbit'),4);r.state='racing';r.balls.forEach((b,i)=>Object.assign(b,{x:100+i*140,y:r.map.finish-.1,vx:0,vy:100,tieKey:[.8,.2,.5][i]}));r.step(STEP*3);assertGameResult(r.snapshot());
   assert.equal(r.finishOrder[0].id,r.balls[1].id);assert.equal(r.winner.id,r.balls[rule==='first'?1:rule==='nth'?2:0].id);
  }
 });
