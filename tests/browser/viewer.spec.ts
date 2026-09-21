@@ -24,6 +24,7 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   await expect(page.getByTestId('vehicle-model')).toHaveText('Model Y');
   await expect(canvas).toHaveAttribute('data-vehicle-id','tesla_modely_premium_rwd_2026');
   await expect.poll(async()=>Number(await canvas.getAttribute('data-model-triangles'))).toBeGreaterThan(100000);
+  await page.evaluate(()=>window.scrollTo(0,0));
   await page.screenshot({path:'test-results/demo-model-y.png',fullPage:true});
   await page.reload();await expect(page.getByRole('combobox',{name:'사용자 및 차량'})).toHaveValue('U0009');
   await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
