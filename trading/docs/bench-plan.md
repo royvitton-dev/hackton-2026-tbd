@@ -22,7 +22,7 @@
 
 구현: `scripts/network-bench.mjs`. **측정 전 목표: 100 명령/초 이상, 제출→ACK p99 100ms 이하, 정상 명령 거절률 0%.** 시연 예정 부하 약 6명령/초 대비 16배 이상의 처리량 여유를 확인하는 로컬 목표다. 성능 주장이나 외부 배포 보장이 아니다.
 
-조율된 조용한 측정 시간에 `node scripts/network-bench.mjs --quiet-window --cycles 200 --warmup-cycles 20 --stress12 --label baseline`을 실행한다. 이 스크립트는 빌드하거나 기존 시연 엔진에 접속하지 않는다. `target/release` 엔진을 새로운 `evidence/<run>/bin`으로 복사하고 SHA-256을 기록한다. B/C/선택 stress 각각 별도의 합성 데이터 디렉터리, 임시 localhost 포트, 엔진 프로세스를 사용한다. 원본 바이너리·데이터·이전 증거를 삭제하지 않는다.
+조율된 조용한 측정 시간에 `node scripts/network-bench.mjs --quiet-window --expected-binary-sha256 <검증해-기록한-release의-64자리-SHA256> --cycles 200 --warmup-cycles 20 --stress12 --label baseline`을 실행한다. SHA 고정 옵션은22:29 harness 보완부터 필수이며 사전 목표·입력은 바꾸지 않았다. 이 스크립트는 빌드하거나 기존 시연 엔진에 접속하지 않는다. `target/release` 엔진을 새로운 `evidence/<run>/bin`으로 복사하고 SHA-256을 기록한다. B/C/선택 stress 각각 별도의 합성 데이터 디렉터리, 임시 localhost 포트, 엔진 프로세스를 사용한다. 원본 바이너리·데이터·이전 증거를 삭제하지 않는다.
 
 B에는 WebSocket 구독자가 없다. 기본 warm-up 20사이클=120명령 후, A와 동일한 3계정 순환 6명령 패턴 200사이클=1,200명령을 측정한다. maker 매도 2개, 2건의 maker 가격 체결을 발생시키는 매수(전체+부분 체결), 부분 취소, resting 매수와 취소가 모두 포함된다. 매수 응답의 체결이 `(1000,4시간),(1005,1시간)`인지 검사하고 모든 응답에 fresh `accepted`, `OK`, `durable:true`를 요구한다.
 

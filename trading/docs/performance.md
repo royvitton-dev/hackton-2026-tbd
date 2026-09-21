@@ -25,10 +25,14 @@
 . ./scripts/env.ps1
 node scripts/demo.mjs stop
 ./engine/target/release/examples/core_bench.exe --cycles 20000 --warmup-cycles 1000
-node scripts/network-bench.mjs --quiet-window --cycles 200 --warmup-cycles 20 --stress12 --label comparison
+node scripts/network-bench.mjs --quiet-window --expected-binary-sha256 f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240 --cycles 200 --warmup-cycles 20 --stress12 --label comparison
 ```
 
 네트워크 harness는 고유 증거 디렉터리·복사 바이너리·합성 데이터·임시 포트를 만들고 정상 종료한다. 각 phase의 요청 결과·latency·WS 도착·메모리·설정·hash·환경·저널을 보존한다. A의 stdout도 새 고유 evidence 디렉터리로 저장해야 한다. baseline의 사전 목표를 결과에 맞추어 변경하지 않는다.
+
+현재 명령의 SHA는22:29에 검증한 최신 release를 고정한다. 다른 release를 측정한다면 먼저 검증·기록한 해당 SHA로 명시적으로 바꾼다. 최신 harness는 기록된 데모 엔진·봇이 실행 중이면 거절하며, 소유 엔진의 준비 로그와 엔진·자원 수집기의 실제 종료까지 확인해야 전체 `complete=true`가 된다. [12개 lifecycle 검사](../evidence/2026-09-21T13-27-32-207Z-network-bench-lifecycle-f586eff3/README.md)는 통과했으나 이 변경 후 실제 B/C 측정은 아직 미실행이다. Park 입장·자동 시작, 관찰기, 다른 빌드 등 경쟁 작업도 별도로 조율해야 한다. 위 과거7bc321 성능을 최신 f518 결과로 대체하지 않는다.
+
+[독립 검토](../evidence/2026-09-21T13-33-15-562Z-network-bench-read-review-c632a5e4/README.md)는 최종 소스·바이너리 해시와12개 검사의 원본을 대조했다. 기존15초 정상 종료 대기가 서버의 최대25초 HTTP drain보다 짧아 느린 정상 종료도 실패로 판정할 수 있지만, 강제 종료를 통과로 표시하지는 않는다. 실제 측정에서는 종료 원본을 함께 확인한다.
 
 ## 클라이언트 병목 개선 후 비교
 

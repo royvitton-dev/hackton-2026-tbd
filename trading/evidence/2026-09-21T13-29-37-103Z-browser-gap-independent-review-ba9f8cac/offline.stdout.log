@@ -1,0 +1,47 @@
+{
+  "passed": 59,
+  "failed": 0,
+  "source_hash_mismatches": [],
+  "timeline": {
+    "held_at": "2026-09-21T13:27:18.102Z",
+    "ws4_forwarded_at": "2026-09-21T13:27:18.121Z",
+    "browser_marker_at": "2026-09-21T13:27:18.444Z",
+    "http3_released_at": "2026-09-21T13:27:18.469Z",
+    "held_ms": 367,
+    "marker_before_release_ms": 25,
+    "after_browser_observed_at": "2026-09-21T13:27:39.801Z"
+  },
+  "cleanup": {
+    "status": "stopped",
+    "ended_at": "2026-09-21T13:27:54.886Z",
+    "supervisor_pid": 19992,
+    "children": [
+      {
+        "name": "engine",
+        "pid": 17520,
+        "exited": true,
+        "exit_code": 0,
+        "exit_signal": null
+      },
+      {
+        "name": "frontend",
+        "pid": 16552,
+        "exited": true,
+        "exit_code": null,
+        "exit_signal": "SIGTERM"
+      }
+    ],
+    "still_running": [],
+    "last_ws_close": {
+      "close_reply": null,
+      "connected_ms": 36730,
+      "connection_id": 6,
+      "event": "websocket_closed",
+      "last_event_seq": 4,
+      "reason": "receive_error",
+      "skipped": null,
+      "stage": "receive",
+      "timestamp_ms": 1789997274843
+    }
+  }
+}

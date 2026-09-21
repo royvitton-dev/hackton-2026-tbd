@@ -1,0 +1,104 @@
+{
+  "run_id": "2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02",
+  "run_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02",
+  "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02\\data",
+  "supervisor_pid": 19944,
+  "started_at": "2026-09-21T13:14:03.915Z",
+  "status": "stopped",
+  "ui_url": "http://127.0.0.1:5181",
+  "engine_url": "http://127.0.0.1:8794",
+  "relay_url": "http://127.0.0.1:8795",
+  "ws_url": "ws://127.0.0.1:8795/ws",
+  "control_token": "46de2a95-dae0-4ffd-8c58-07cfc5c2793e",
+  "processes": [
+    {
+      "name": "engine",
+      "pid": 12992,
+      "spawned": true,
+      "exited": true,
+      "exit_code": 0,
+      "exit_signal": null,
+      "spawn_error": null,
+      "executable": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02\\bin\\leave-engine.exe",
+      "args": [],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine",
+      "environment": {
+        "ENGINE_BIND": "127.0.0.1:8794",
+        "ENGINE_DATA_DIR": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02\\data",
+        "ALLOWED_ORIGINS": "http://127.0.0.1:5181"
+      }
+    },
+    {
+      "name": "frontend",
+      "pid": 6832,
+      "spawned": true,
+      "exited": true,
+      "exit_code": null,
+      "exit_signal": "SIGTERM",
+      "spawn_error": null,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02\\fixture-vite.mjs"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading\\frontend",
+      "environment": {
+        "VITE_API_URL": "http://127.0.0.1:8795",
+        "VITE_WS_URL": "ws://127.0.0.1:8795/ws"
+      }
+    }
+  ],
+  "gap": {
+    "id": "bfc3fba3-4d1d-43df-83c9-0b6ab05344e1",
+    "phase": "completed",
+    "connection_id": 1,
+    "baseline_seq": 0,
+    "drop_seq": 1,
+    "resume_seq": 2,
+    "armed_at": "2026-09-21T13:14:23.129Z",
+    "dropped_at": "2026-09-21T13:14:23.149Z",
+    "completed_at": "2026-09-21T13:14:23.161Z"
+  },
+  "node": "v24.19.0",
+  "ws_version": "8.21.3",
+  "bots_started": 0,
+  "data_source": "new empty fixture directory; no live data copied",
+  "binary_sha256": "F518B95FB3EACCDABD40D0EE828E830A2EC6B8D959610FC629043E46856EF240",
+  "source_sha256": {
+    "scripts/browser-gap-demo.mjs": "7332a7e228048cd207511a88cf321a712c5d6411dd783079c1d0fb4e0073fb80",
+    "scripts/demo-lifecycle.mjs": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+    "scripts/fixtures/browser-gap-deps/package.json": "407d4d95f55f1139d328bd5a9d6bc8eab6709737dda0d464a67310207eafac7e",
+    "scripts/fixtures/browser-gap-deps/pnpm-lock.yaml": "40ab3baad1320cd43d98021fdd8c57ab0816d8bb26b813ac9b8188c1e4e21b37",
+    "engine/src/main.rs": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+    "engine/src/ws_frame.rs": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e",
+    "engine/src/model.rs": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+    "frontend/src/useExchange.ts": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37",
+    "frontend/src/protocol.ts": "f4b101c6b1fef86e64535ca54e7bed498114a354ecd886d6f28fd194b0a2dad8",
+    "frontend/src/App.tsx": "b4520c87c913c4f5af42cdc1560c4211a9703280558913a7399ace589722a0bd",
+    "frontend/vite.config.ts": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48",
+    "frontend/node_modules/vite/package.json": "e5ed0f85215f871fe22a48987dcd77fcfbe14064a53c0c9f7f48186a6b7e2cf0",
+    "frontend/node_modules/@vitejs/plugin-react/package.json": "162dae2eb246170739d7899d2ce1715a3e17f775fcd75a674da6be6f681225d6",
+    ".tools/browser-gap-node_modules/ws/package.json": "a56a3fd55945a3ce177e3ca165dafae6f7eb03b7aefd58c092ac723d5741a6fb",
+    ".tools/browser-gap-node_modules/ws/wrapper.mjs": "fe154662301fd558f935f9c217fccbe7a7dac02ff39e648a000589403ff27c7f"
+  },
+  "frontend_isolation": {
+    "entry": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02\\fixture-vite.mjs",
+    "entry_sha256": "d918fe5b4d581cbffe8a42b4facacb41a1e18f969a0cf9050e6c15b0ac800623",
+    "cache_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02\\vite-cache",
+    "config_file": false,
+    "root": "C:\\project\\hackton-2026-tbd\\trading\\frontend",
+    "same_react_source_and_plugin": true
+  },
+  "http_hold": {
+    "id": "4f6c3663-7316-45ef-bea1-160e9c7dcfef",
+    "phase": "released",
+    "armed_at": "2026-09-21T13:14:23.219Z",
+    "request_id": 2,
+    "event_seq": 2,
+    "raw_sha256": "25f8d9b6aee014030cefdb6e5408e33e0cfc66dd047c75ffd30facf41f0cdf38",
+    "raw_file": "raw/http-state-2.json",
+    "captured_at": "2026-09-21T13:14:23.233Z",
+    "released_at": "2026-09-21T13:14:23.370Z"
+  },
+  "still_running": [],
+  "ended_at": "2026-09-21T13:14:52.198Z"
+}

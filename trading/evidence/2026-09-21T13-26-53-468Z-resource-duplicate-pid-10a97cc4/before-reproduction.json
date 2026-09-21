@@ -1,0 +1,63 @@
+{
+  "run_id": "2026-09-21T13-26-53-468Z-resource-duplicate-pid-10a97cc4",
+  "recorded_at": "2026-09-21T13:26:53.477Z",
+  "scope": "Synthetic executor only; no process queries, services or live observer changes.",
+  "sources": [
+    {
+      "path": "scripts/observe-resources.mjs",
+      "sha256": "0bb79056b7a3e5e4e3e3877f5aeef9da6c92acd5f7be3fe85daeac27237bd602"
+    },
+    {
+      "path": "scripts/observe-resources.test.mjs",
+      "sha256": "07af9ed8902e5a498c7465d3048e53fd103e81eafb1c5a7269397dab1f893f57"
+    }
+  ],
+  "requested": [
+    {
+      "name": "engine",
+      "pid": 101
+    },
+    {
+      "name": "frontend",
+      "pid": 101
+    }
+  ],
+  "executor_calls": 1,
+  "result": {
+    "resources": [
+      {
+        "Id": 101,
+        "ProcessName": "node",
+        "CPU": 1,
+        "WorkingSet64": 1000,
+        "PrivateMemorySize64": 800,
+        "Handles": 10
+      }
+    ],
+    "resource_collection": {
+      "started_at": "2026-09-21T13:26:53.477Z",
+      "requested_processes": [
+        {
+          "pid": 101,
+          "name": "engine"
+        },
+        {
+          "pid": 101,
+          "name": "frontend"
+        }
+      ],
+      "requested_pids": [
+        101
+      ],
+      "ended_at": "2026-09-21T13:26:53.477Z",
+      "status": "complete",
+      "complete": true,
+      "returned_pids": [
+        101
+      ],
+      "missing_pids": [],
+      "invalid_counter_pids": []
+    }
+  },
+  "reproduced": true
+}

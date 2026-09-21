@@ -1,0 +1,103 @@
+{
+  "at": "2026-09-21T13:14:23.372Z",
+  "scope": "Node ws relay smoke only; not browser UI resynchronization/dedup/race proof",
+  "armed": {
+    "run_id": "2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02",
+    "status": "ready",
+    "gap": {
+      "id": "bfc3fba3-4d1d-43df-83c9-0b6ab05344e1",
+      "phase": "armed",
+      "connection_id": 1,
+      "baseline_seq": 0,
+      "drop_seq": 1,
+      "resume_seq": 2,
+      "armed_at": "2026-09-21T13:14:23.129Z"
+    },
+    "http_hold": null,
+    "connections": [
+      {
+        "id": 1,
+        "last_delivered_seq": 0
+      }
+    ]
+  },
+  "result": {
+    "run_id": "2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02",
+    "baseline_seq": 0,
+    "final_seq": 2,
+    "gap": {
+      "id": "bfc3fba3-4d1d-43df-83c9-0b6ab05344e1",
+      "phase": "completed",
+      "connection_id": 1,
+      "baseline_seq": 0,
+      "drop_seq": 1,
+      "resume_seq": 2,
+      "armed_at": "2026-09-21T13:14:23.129Z",
+      "dropped_at": "2026-09-21T13:14:23.149Z",
+      "completed_at": "2026-09-21T13:14:23.161Z"
+    }
+  },
+  "duplicate": {
+    "run_id": "2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02",
+    "event": "duplicate_send",
+    "connection_id": 1,
+    "event_seq": 2,
+    "raw_sha256": "7134fa26db3acb1f900539dbb626b7af5f35f49744db4e28420999872b538a86",
+    "raw_file": "raw/ws-3-connection-1-seq-2.json",
+    "decision": "duplicate_exact_original"
+  },
+  "released": {
+    "run_id": "2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02",
+    "status": "ready",
+    "gap": {
+      "id": "bfc3fba3-4d1d-43df-83c9-0b6ab05344e1",
+      "phase": "completed",
+      "connection_id": 1,
+      "baseline_seq": 0,
+      "drop_seq": 1,
+      "resume_seq": 2,
+      "armed_at": "2026-09-21T13:14:23.129Z",
+      "dropped_at": "2026-09-21T13:14:23.149Z",
+      "completed_at": "2026-09-21T13:14:23.161Z"
+    },
+    "http_hold": {
+      "id": "4f6c3663-7316-45ef-bea1-160e9c7dcfef",
+      "phase": "released",
+      "armed_at": "2026-09-21T13:14:23.219Z",
+      "request_id": 2,
+      "event_seq": 2,
+      "raw_sha256": "25f8d9b6aee014030cefdb6e5408e33e0cfc66dd047c75ffd30facf41f0cdf38",
+      "raw_file": "raw/http-state-2.json",
+      "captured_at": "2026-09-21T13:14:23.233Z",
+      "released_at": "2026-09-21T13:14:23.370Z"
+    },
+    "connections": [
+      {
+        "id": 1,
+        "last_delivered_seq": 3
+      }
+    ]
+  },
+  "received": [
+    {
+      "event_seq": 0,
+      "raw_sha256": "6c27dec7f6cbea336d64a9c8260e88e4abce59f44339b1104f8ccd10846f3610"
+    },
+    {
+      "event_seq": 2,
+      "raw_sha256": "7134fa26db3acb1f900539dbb626b7af5f35f49744db4e28420999872b538a86"
+    },
+    {
+      "event_seq": 2,
+      "raw_sha256": "7134fa26db3acb1f900539dbb626b7af5f35f49744db4e28420999872b538a86"
+    },
+    {
+      "event_seq": 3,
+      "raw_sha256": "33a8d56360641743840d30ff2975683b88b4b3d63f1bb969f306195f36ccf2cd"
+    }
+  ],
+  "http_event_seq": 2,
+  "stale_http_event_seq": 2,
+  "newest_ws_event_seq": 3,
+  "passed": true
+}

@@ -1,0 +1,44 @@
+▶ benchmark lifecycle corrections without engine workloads or live service control
+  ✔ expected SHA is required, exact, and case-insensitive (40.1498ms)
+  ✔ quiet guard refuses a live recorded PID without signaling it (124.9969ms)
+  ✔ actual CLI help and preflight refusals cannot create a benchmark run (1746.2148ms)
+  ✔ owned normal exit and close are preserved; dead recorded PID is allowed (233.8827ms)
+  ✔ nonzero and already exited children retain failure codes (182.9324ms)
+  ✔ an unresponsive owned child is reaped and never reported successful (111.9339ms)
+  ✔ missing executable close is recorded without an actual exit success (7.5228ms)
+  ✔ cleanup timeout stays incomplete rather than inventing exit (14.2719ms)
+  ✔ measurement success cannot mask sampler or engine cleanup failure (1.9822ms)
+  ✔ foreign healthy HTTP is never consulted without owned bind/data marker (292.206ms)
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T13-25-10-006Z-network-bench-lifecycle-ad03a49b
+  ✖ owned matching ready marker gates a short-lived HTTP fixture (2504.5453ms)
+✖ benchmark lifecycle corrections without engine workloads or live service control (5281.5769ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 10
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 5632.3452
+
+✖ failing tests:
+
+test at scripts\network-bench-lifecycle.test.mjs:153:13
+✖ owned matching ready marker gates a short-lived HTTP fixture (2504.5453ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  false !== true
+  
+      at TestContext.<anonymous> (file:///C:/project/hackton-2026-tbd/trading/scripts/network-bench-lifecycle.test.mjs:165:16)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async TestContext.<anonymous> (file:///C:/project/hackton-2026-tbd/trading/scripts/network-bench-lifecycle.test.mjs:153:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

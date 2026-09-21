@@ -1,0 +1,22 @@
+▶ benchmark lifecycle corrections without engine workloads or live service control
+  ✔ expected SHA is required, exact, and case-insensitive (6.6083ms)
+  ✔ quiet guard refuses a live recorded PID without signaling it (30.3105ms)
+  ✔ actual CLI help and preflight refusals cannot create a benchmark run (733.4512ms)
+  ✔ owned normal exit and close are preserved; dead recorded PID is allowed (123.4172ms)
+  ✔ nonzero and already exited children retain failure codes (76.4034ms)
+  ✔ an unresponsive owned child is reaped and never reported successful (76.2781ms)
+  ✔ missing executable close is recorded without an actual exit success (2.9772ms)
+  ✔ cleanup timeout stays incomplete rather than inventing exit (19.5129ms)
+  ✔ measurement success cannot mask sampler or engine cleanup failure (0.4612ms)
+  ✔ foreign healthy HTTP is never consulted without owned bind/data marker (253.1884ms)
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T13-26-08-766Z-network-bench-lifecycle-b2aaf5fa
+  ✔ owned matching ready marker gates a short-lived HTTP fixture (193.2058ms)
+✔ benchmark lifecycle corrections without engine workloads or live service control (1523.5952ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1629.4267

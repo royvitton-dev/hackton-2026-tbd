@@ -1,0 +1,47 @@
+{
+  "reviewed_at": "2026-09-21T13:32:01.031Z",
+  "inputs": [
+    {
+      "path": "root-tool-observations.json",
+      "bytes": 1112,
+      "sha256": "55db9d54570f960382fd76cf2417c5ba2dd3a6dbae6d071385f22894fabec6e6"
+    },
+    {
+      "path": "supervisor-exit-tool-result.json",
+      "bytes": 343,
+      "sha256": "9953b55e93a415f7d0e707e0423014aea8a9e28ce624d7ac872a8f83dc2d74a0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3071,
+      "sha256": "8082db9c9854fc649d5b4dd864843b38e68909f442adc872ea3650a417c67d2f"
+    }
+  ],
+  "assertions": 5,
+  "passed": 5,
+  "coordinator_attempt1": {
+    "exit_code": 1,
+    "provenance": "Root transcribed these completed tool results from the current conversation; this is not an automatic session export.",
+    "session": 35212,
+    "chunk": "754dcd"
+  },
+  "coordinator_attempt2": {
+    "exit_code": 0,
+    "provenance": "Root transcribed these completed tool results from the current conversation; this is not an automatic session export.",
+    "session": 22369,
+    "chunk": "959d2c"
+  },
+  "supervisor": {
+    "pid": 19992,
+    "session": 78191,
+    "exit_code": 0,
+    "chunk": "553c03",
+    "source": "Starting agent preserved its completed write_stdin tool result; independently read here."
+  },
+  "resolution": "The supervisor exit-code limitation in initial review.json is resolved by this supplemental tool result. The code0 stop request alone is not used as supervisor exit proof.",
+  "remaining_limits": [
+    "This reviewer did not export or rerun the original CUA calls; browser AX/marker evidence is root-collected.",
+    "The wrong-locator explanation for attempt1 is root-attributed; its missing-before-release marker failure is directly preserved in raw coordinator output.",
+    "Main protected-process continuity is not independently established by run child-exit files; only dedicated fixture ownership and no-main-control source paths were reviewed."
+  ]
+}

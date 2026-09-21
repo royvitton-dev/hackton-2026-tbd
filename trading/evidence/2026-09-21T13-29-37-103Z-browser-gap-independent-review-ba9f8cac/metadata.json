@@ -1,0 +1,176 @@
+{
+  "review_started_at": "2026-09-21T13:29:37.104Z",
+  "source_run": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-15-32-792Z-browser-gap-91b002af",
+  "reviewer": "/root/durability",
+  "scope": "Offline source/raw file review only; no browser, HTTP, service, process-control, source/docs or Git changes.",
+  "inputs": [
+    {
+      "path": "browser-after-duplicate.txt",
+      "bytes": 11120,
+      "sha256": "8e997fad9f672ae938ad47470d05418a5618b9b948e725cb73e764016a4d127d",
+      "mtime": "2026-09-21T13:22:41.388Z"
+    },
+    {
+      "path": "browser-after-gap.txt",
+      "bytes": 1260,
+      "sha256": "97b66f04ae09fc6f99b480f43f7029163f2df13299058f779d928d0c06615754",
+      "mtime": "2026-09-21T13:22:24.135Z"
+    },
+    {
+      "path": "browser-after-stale-release-attempt2.json",
+      "bytes": 146,
+      "sha256": "4a0392a4c32b8e9b8b6fbcf5b24b430c7d8b17cc9db7ac00a76f2a3b743b929e",
+      "mtime": "2026-09-21T13:27:39.805Z"
+    },
+    {
+      "path": "browser-after-stale-release-attempt2.png",
+      "bytes": 58426,
+      "sha256": "974a9b4548045e670099c536a2405cfb500aa71de9d461b3fcf7003a8a856a93",
+      "mtime": "2026-09-21T13:27:39.854Z"
+    },
+    {
+      "path": "browser-after-stale-release-attempt2.txt",
+      "bytes": 11881,
+      "sha256": "0c9a6a3df55ff27b30370a70a03ce1ffb4857cfb19fcc8acf1790d4ad4484eb3",
+      "mtime": "2026-09-21T13:27:39.802Z"
+    },
+    {
+      "path": "browser-baseline.txt",
+      "bytes": 6223,
+      "sha256": "017ddd2ba7e7bdf47d7cc1208a14a1a321afb02df8c8958f375eb797d9d0e553",
+      "mtime": "2026-09-21T13:22:00.754Z"
+    },
+    {
+      "path": "browser-before-stale-release-attempt2.txt",
+      "bytes": 11881,
+      "sha256": "0c9a6a3df55ff27b30370a70a03ce1ffb4857cfb19fcc8acf1790d4ad4484eb3",
+      "mtime": "2026-09-21T13:27:18.444Z"
+    },
+    {
+      "path": "browser-seq4-before-release.json",
+      "bytes": 105,
+      "sha256": "67cf78a12f423080fb5d615f167127de91b4dfbe025618b99a39d1e1ea050a39",
+      "mtime": "2026-09-21T13:27:18.444Z"
+    },
+    {
+      "path": "browser-stale-attempt1-after-failure.txt",
+      "bytes": 11499,
+      "sha256": "9d0eb045c5ff8b71c36379d99b77883dae453ed06d771847e508ebd05774a350",
+      "mtime": "2026-09-21T13:26:32.635Z"
+    },
+    {
+      "path": "engine.stderr.log",
+      "bytes": 1739,
+      "sha256": "300bac5df8bb2f40319e744d0f9ce10b55f9737bc36908d4374fb8af848a5990",
+      "mtime": "2026-09-21T13:27:54.842Z"
+    },
+    {
+      "path": "engine.stdout.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": "2026-09-21T13:15:32.842Z"
+    },
+    {
+      "path": "events.jsonl",
+      "bytes": 4049,
+      "sha256": "f41bb4555cfb1c31dc7b66e445a102a534b8327021b154e987f1b67e59b8ff43",
+      "mtime": "2026-09-21T13:27:54.886Z"
+    },
+    {
+      "path": "fixture-vite.mjs",
+      "bytes": 768,
+      "sha256": "34dcf712dfa18e9df26aff821c6b1a97478e849c217caa27faf3fdc4e66b5fa0",
+      "mtime": "2026-09-21T13:15:33.894Z"
+    },
+    {
+      "path": "frontend.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime": "2026-09-21T13:15:33.894Z"
+    },
+    {
+      "path": "frontend.stdout.log",
+      "bytes": 39,
+      "sha256": "afe934209b16e0a317138080424166b6b68111a86752fe907b08ba210aeb96e2",
+      "mtime": "2026-09-21T13:15:34.663Z"
+    },
+    {
+      "path": "handoff-check.json",
+      "bytes": 1467,
+      "sha256": "64f4a168fbe7d4fcf06648411ed6a44f7ff1d92433766d8a57f493ec4cdaf64e",
+      "mtime": "2026-09-21T13:16:04.977Z"
+    },
+    {
+      "path": "handoff-state.json",
+      "bytes": 4605,
+      "sha256": "2551974609bba8aa6d13c1ae8e8fc2bccd0a3b2026ad2de26519143961e26b41",
+      "mtime": "2026-09-21T13:16:04.977Z"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 3727,
+      "sha256": "abc92b23bf8a5ab97bbb4ed27f21f88cb6ff6809236503f085cb71f4c12f9044",
+      "mtime": "2026-09-21T13:17:30.436Z"
+    },
+    {
+      "path": "http.jsonl",
+      "bytes": 4932,
+      "sha256": "d0a051a3d1b0a07bc798a1639fb3ed1439f7e8504cbc26c5deea731fdae9d70f",
+      "mtime": "2026-09-21T13:27:18.472Z"
+    },
+    {
+      "path": "run.json",
+      "bytes": 5125,
+      "sha256": "ba548b3246c7fefa0d838c84b8ae2260f000b2db98db2909ed8da62de28ccbaf",
+      "mtime": "2026-09-21T13:27:54.894Z"
+    },
+    {
+      "path": "stale-http-coordinator-attempt2.jsonl",
+      "bytes": 1716,
+      "sha256": "9b053c9da17b7d1689897991a0bea558e86156570d69235d3d37409b98ed9064",
+      "mtime": "2026-09-21T13:27:18.474Z"
+    },
+    {
+      "path": "stale-http-coordinator-attempt2.mjs",
+      "bytes": 2969,
+      "sha256": "1d57412bb7891f393a6a5a29eaddb1cf7c49ec52916c207f448259bf43516299",
+      "mtime": "2026-09-21T13:26:59.686Z"
+    },
+    {
+      "path": "stale-http-coordinator.jsonl",
+      "bytes": 2097,
+      "sha256": "2eb285cf4ab4fbf619262d86f82a65afb1fe3fb99b4b3585f9354e1a384fea24",
+      "mtime": "2026-09-21T13:23:42.905Z"
+    },
+    {
+      "path": "stale-http-coordinator.mjs",
+      "bytes": 2923,
+      "sha256": "5df469673edb2a15c71158c8fdd4e6f87e8b97c2d2ffa746451a2e6c377e9385",
+      "mtime": "2026-09-21T13:23:15.289Z"
+    },
+    {
+      "path": "supervisor-exit-tool-result.json",
+      "bytes": 343,
+      "sha256": "9953b55e93a415f7d0e707e0423014aea8a9e28ce624d7ac872a8f83dc2d74a0",
+      "mtime": "2026-09-21T13:29:07.873Z"
+    },
+    {
+      "path": "trigger-result-2f588b59-06fb-4f49-844c-aae045f67d07.json",
+      "bytes": 7656,
+      "sha256": "d1f102fb062045839f0d384b2aa664b23e5ad648750291bb83cc8b82bb82bc70",
+      "mtime": "2026-09-21T13:22:16.048Z"
+    },
+    {
+      "path": "trigger.jsonl",
+      "bytes": 1004,
+      "sha256": "dcb705f707ba1616e77ba89ef0125676d2a3d27bc55be91d88d9413decb3764b",
+      "mtime": "2026-09-21T13:22:16.009Z"
+    },
+    {
+      "path": "ws.jsonl",
+      "bytes": 3506,
+      "sha256": "e23af5b31f5e78eb65298fd1d7885f059bab515bd5326affe66b3bc8b6c11886",
+      "mtime": "2026-09-21T13:27:18.123Z"
+    }
+  ]
+}
