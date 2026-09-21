@@ -29,6 +29,8 @@ test('desktop miniature, real WebGL geometry, excluded project and day-night gol
  expect(await page.evaluate(()=>window.__park.getState().attractions.map(a=>a.id))).toEqual(['dopamin','movie','voice']);
  const details=await page.evaluate(()=>{const v=window.__park.view;let vertices=0,meshes=0;v.scene.traverse(o=>{if(o.isMesh){meshes++;vertices+=o.geometry.attributes.position.count;}});return {webgl:v.renderer.getContext() instanceof WebGL2RenderingContext,vertices,meshes};});
  expect(details.webgl).toBe(true);expect(details.vertices).toBeGreaterThan(100000);expect(details.meshes).toBeGreaterThan(50);
+ const plaza=await page.evaluate(()=>{const v=window.__park.view;const landmark=v.scene.getObjectByName('GS central landmark');return {exists:!!landmark,center:landmark?.getWorldPosition(new v.camera.position.constructor()).toArray(),width:document.querySelector('#world').getBoundingClientRect().width/innerWidth};});
+ expect(plaza.exists).toBe(true);expect(plaza.center[0]).toBe(0);expect(plaza.width).toBeGreaterThan(.95);
  await expect(page).toHaveScreenshot('park-desktop-day.png',{mask:[page.locator('#sync-button')]});
  await page.getByRole('button',{name:'야간 풍경',exact:true}).click();await expect(page.locator('body')).toHaveClass(/night/);await page.waitForTimeout(1200);
  await expect(page).toHaveScreenshot('park-desktop-night.png',{mask:[page.locator('#sync-button')]});

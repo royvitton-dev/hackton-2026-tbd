@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import { box, sphere, cone, cyl, group, torus, material } from './materials.js';
+import { box, sphere, cone, cyl, group, torus, material, staticBatch } from './materials.js';
 export function disneyCharacter(parent,kind='mickey',scale=1){
  const root=group(parent);root.scale.setScalar(scale);root.userData.dynamic=true;
  const black='#26282b',white='#fff7e7',skin='#f2d1aa',yellow='#e5b440',red=kind==='minnie'?'#d95979':'#cb4640';
@@ -37,6 +37,7 @@ export function disneyCharacter(parent,kind='mickey',scale=1){
   }
  }
  const base=group(root);cyl(base,.54,.055,'#d8c4a0',0,.015,0);
+ for(const arm of arms){arm.userData.dynamic=true;staticBatch(arm);}staticBatch(body);staticBatch(base);
  root.userData.animate=(time,motion='wave')=>{
   if(motion==='drive'){body.rotation.z=Math.sin(time*2)*.09;arms.forEach((a,i)=>a.rotation.x=-1.2+Math.sin(time*3+i)*.08);}
   else if(motion==='dance'){body.position.y=Math.max(0,Math.sin(time*3))*.09;body.rotation.y=Math.sin(time*1.5)*.25;arms.forEach((a,i)=>a.rotation.z=(i?1:-1)*(.7+Math.sin(time*3+i)*.3));}

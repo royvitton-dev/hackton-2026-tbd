@@ -42,6 +42,8 @@ async function verifyAttraction(a){
    await park.screenshot({path:path.join(report,'screenshots',a.id+'.png')});result.screenshot=true;await park.locator('#leave-cinema').click();
   }else if(a.hasWebApp||a.hasStaticApp||a.url){
    const link=park.locator('.launch-link');await link.waitFor({timeout:45000});const url=await link.getAttribute('href');assert(/^https?:\/\//.test(url));
+   // A hidden park need not compete with the attraction for the software GPU.
+   await park.evaluate(()=>window.__park.view.renderer.setAnimationLoop(null));
    child=await browser.newPage({viewport:{width:1440,height:960}});child.on('pageerror',e=>errors.push(e.message));
    const response=await child.goto(url,{waitUntil:'domcontentloaded',timeout:45000});assert(response?.ok(),`HTTP ${response?.status()}`);
    await child.waitForFunction(()=>document.body.innerText.trim().length>40,undefined,{timeout:20000});
@@ -54,6 +56,7 @@ async function verifyAttraction(a){
     result.checks.push(a.status==='construction'?'공사 중 미리보기':'지도 프로젝트 화면');
    }
    await child.screenshot({path:path.join(report,'screenshots',a.id+'.png')});result.screenshot=true;
+   await child.close();child=null;await park.bringToFront();
    await park.locator('#modal .modal-close').click();
   }else if(a.id==='voice'){
    assert((await park.locator('.command-box').textContent()).includes('npm start'));assert(await park.locator('.voice-steps>span').count()===3);result.checks.push('음성 스테이지 입장','호출·명령·실행 안내','네이티브 음성 실행 제외');
@@ -61,8 +64,8 @@ async function verifyAttraction(a){
   }else{throw new Error('프로젝트 입장 경로가 아직 준비되지 않았습니다.');}
   assert.equal(errors.length,0,errors.join('\n'));result.checks.push('브라우저 예외 없음');
   if(await park.locator('#detail').isVisible())await park.locator('.detail-close').click();
- }catch(error){result.status='fail';result.error=String(error.message).slice(0,1500);try{await (child||park).screenshot({path:path.join(report,'screenshots',a.id+'.png'),timeout:10000});result.screenshot=true;}catch{}try{await loadPark();}catch{}}
- finally{park.off('pageerror',onError);await child?.close().catch(()=>{});result.duration=+((Date.now()-began)/1000).toFixed(1);}
+ }catch(error){result.status='fail';result.error=[String(error.message),...errors].join('\n').slice(0,1500);try{await (child||park).screenshot({path:path.join(report,'screenshots',a.id+'.png'),timeout:10000});result.screenshot=true;}catch{}try{await loadPark();}catch{}}
+ finally{park.off('pageerror',onError);await child?.close().catch(()=>{});await park.evaluate(()=>window.__park.view.renderer.setAnimationLoop(window.__park.view.frame)).catch(()=>{});result.duration=+((Date.now()-began)/1000).toFixed(1);}
  return result;
 }
 async function stop(){if(stopping)return;stopping=true;state.phase='stopped';state.current=null;clearInterval(heartbeat);await persist().catch(()=>{});await browser?.close().catch(()=>{});await unlink(lock).catch(()=>{});process.exit(0);}
