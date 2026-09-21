@@ -1,3 +1,4 @@
+import {mountMobilityEntry} from './mobility/entry.js';
 import '@fontsource-variable/dm-sans';
 import '@fontsource-variable/noto-sans-kr';
 import './style.css';
@@ -101,3 +102,5 @@ setScreen('map');
 setInterval(()=>{if(scene)$('#render-stats').innerHTML=`WEBGL 2 <b>·</b> ${capture?'—':scene.fps} FPS`;},1200);
 window.__atlas={get state(){return {screen,mode,camera,pose:{...pose},playing,travel,hazards,route:activeRoute,plan,catalog,googleMode:googleView?.mode,audioEnabled:audio.enabled,mapModelCount:googleView?.models?.length,mapMarkerCount:googleView?.markers?.length,charging:charging?.state};},scene,loadLab,showCharging,selectSite,get addressMap(){return googleView;}};
 window.addEventListener('pagehide',()=>{charging?.dispose();scene?.dispose();googleView?.dispose();audio.dispose();});
+
+await mountMobilityEntry({loadLab,showCharging});
