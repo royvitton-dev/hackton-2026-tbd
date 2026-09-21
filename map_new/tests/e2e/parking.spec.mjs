@@ -119,7 +119,7 @@ test('shows detected parking as review candidates while preserving high-resoluti
 });
 test('guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls',async({page})=>{
   await open(page,'parking-131601-0');await expect(page.locator('#destination')).toHaveValue('approach:west-9');await expect(page.locator('#play')).toBeEnabled();
-  await expect(page.locator('#destination option')).toHaveCount(52);await expect(page.locator('#route-message')).toContainText('주차면 앞');
+  await expect(page.locator('#destination option[value^="approach:"]')).toHaveCount(52);await expect(page.locator('#destination option[value^="exit:"]')).toHaveCount(52);await expect(page.locator('#destination option[value^="depart:"]')).toHaveCount(50);await expect(page.locator('#route-message')).toContainText('주차면 앞');
   const click=await page.evaluate(()=>{const scene=window.__parking.scene,p=scene.parkingPickers.find(m=>m.userData.spaceId==='west-5').position.clone().project(scene.camera),r=scene.canvas.getBoundingClientRect();return {x:r.left+(p.x+1)*r.width/2,y:r.top+(1-p.y)*r.height/2};});
   await page.mouse.click(click.x,click.y);await expect(page.locator('#destination')).toHaveValue('approach:west-5');
   expect(await page.evaluate(()=>window.__parking.state.route.approach.spaceId)).toBe('west-5');await screenshot(page,'daecheon-parking-route.png');
