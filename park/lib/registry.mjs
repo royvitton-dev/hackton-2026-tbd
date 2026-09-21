@@ -3,6 +3,7 @@ import path from 'node:path';
 import { createHash } from 'node:crypto';
 import { execFile } from 'node:child_process';
 import { promisify } from 'node:util';
+import { CHARACTERS } from './characters.mjs';
 
 const exec = promisify(execFile);
 export const EXCLUDED = new Set(['webpage', 'park', 'node_modules', 'dist', 'reports', 'coverage', 'test-results', 'playwright-report', 'scripts', 'docs', 'assets']);
@@ -32,7 +33,7 @@ export function normalizeManifest(id, manifest = {}, context = '') {
   for (const key of ['name', 'english', 'description', 'action']) if (typeof manifest[key] === 'string' && manifest[key].trim()) result[key] = manifest[key].trim().slice(0, key === 'description' ? 260 : 80);
   if (['open', 'construction', 'attention'].includes(manifest.status)) result.status = manifest.status;
   if (THEMES.includes(manifest.theme)) result.theme = manifest.theme;
-  if (['mickey', 'minnie', 'donald', 'olaf'].includes(manifest.character)) result.character = manifest.character;
+  if (CHARACTERS.some(character => character.id === manifest.character)) result.character = manifest.character;
   if (/^#[0-9a-f]{6}$/i.test(manifest.color || '')) result.color = manifest.color;
   if (typeof manifest.model === 'string' && !manifest.model.includes('..') && /^[\w/.-]+\.glb$/.test(manifest.model)) result.model = `/api/project-asset/${encodeURIComponent(id)}/${manifest.model}`;
   if (typeof manifest.url === 'string') {
