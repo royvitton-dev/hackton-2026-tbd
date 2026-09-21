@@ -1,5 +1,6 @@
 import * as THREE from '../vendor/three.module.js';
 import {LANDS} from './lands.js';
+import {batchStaticMeshes} from './geometry-batch.js';
 const S=1/60, X=x=>(x-310)*S, Z=y=>y*S;
 const UP=new THREE.Vector3(0,1,0);
 const CAMERA_DIRECTIONS=[new THREE.Vector3(.18,.72,.67).normalize(),new THREE.Vector3(.35,.60,.72).normalize(),new THREE.Vector3(0,.995,.1).normalize()];
@@ -22,6 +23,8 @@ export class Renderer3D {
   this.labels=this.overlay('ball-labels');this.hud=this.overlay('camera-hud');this.progress=this.overlay('course-progress');
   this.angleButton=document.createElement('button');this.angleButton.className='camera-angle';this.angleButton.type='button';this.angleButton.textContent='◈ 상단 시점';this.angleButton.setAttribute('aria-label','3D 카메라 시점 변경');
   this.angleButton.addEventListener('click',()=>{this.angle=(this.angle+1)%3;this.angleButton.textContent=['◈ 입체 시점','◈ 측면 시점','◈ 상단 시점'][this.angle];});canvas.parentElement.append(this.angleButton);
+  this.allLabels=false;this.labelButton=document.createElement('button');this.labelButton.className='label-toggle';this.labelButton.type='button';this.labelButton.textContent='이름 간결하게';this.labelButton.setAttribute('aria-label','공 이름표 모두 표시');this.labelButton.setAttribute('aria-pressed','false');
+  this.labelButton.addEventListener('click',()=>{this.allLabels=!this.allLabels;this.labelButton.textContent=this.allLabels?'이름 모두 보기':'이름 간결하게';this.labelButton.setAttribute('aria-pressed',String(this.allLabels));});canvas.parentElement.append(this.labelButton);
   this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();document.dispatchEvent(new Event('pinball-renderer-lost'));});
  }
@@ -173,12 +176,17 @@ export class Renderer3D {
   for(const h of map.exits){this.ring(X(h.x),Z(map.finish),.51,mat.gold,.08,.085);this.mesh(new THREE.CylinderGeometry(.49,.49,.75,24,1,true),mat.dark,X(h.x),-.4,Z(map.finish));this.mesh(new THREE.CircleGeometry(.49,24),new THREE.MeshBasicMaterial({color:0x24162d}),X(h.x),-.78,Z(map.finish)).rotation.x=-Math.PI/2;}
   this.text('BON VOYAGE!',253,3.9);this.text('A LITTLE WONDER',525,4.5,.4);this.text('EXPECT THE UNEXPECTED',1010,5.6,.35);this.text('YOUR LUCKY MOMENT',2008,5,.45);
   this.scenery(map,mat,theme);
+  // Moving rides keep independent transforms; their internal pieces are batched.
+  for(const g of [...this.rotors,...this.sliders,...this.wheels.map(w=>w.wheel)])batchStaticMeshes(g);
+  const moving=new Set([this.gate,...this.rotors,...this.sliders,...this.carousels.map(c=>c.roof),...this.balloons.map(b=>b.group),...this.wheels.map(w=>w.wheel)]);
+  batchStaticMeshes(this.group,moving);
   const sphere=new THREE.SphereGeometry(10*S,20,14);
   for(const b of race.balls){
    const m=this.mesh(sphere,new THREE.MeshPhysicalMaterial({color:b.color,metalness:.18,roughness:.18,clearcoat:1,clearcoatRoughness:.1}),X(b.x),.19,Z(b.y));
    const label=document.createElement('span');label.className='ball-label';label.textContent=[...b.label].slice(0,5).join('')+([...b.label].length>5?'…':'')+(race.config.people.find(p=>p.id===b.participantId).count>1?`·${b.number}`:'');label.title=b.label;this.labels.append(label);
    const dot=document.createElement('i');dot.style.background=b.color;this.progress.append(dot);this.balls.set(b.id,{m,label,dot,history:[],lastTrail:-1});
   }
+  for(const entry of this.balls.values())entry.labelWidth=entry.label.getBoundingClientRect().width;
   this.impactCursor=0;this.impacts=[];
   const impactGeometry=new THREE.TorusGeometry(.22,.022,4,20);
   for(let i=0;i<18;i++){const material=new THREE.MeshBasicMaterial({color:0xfff3c7,transparent:true,opacity:0,depthWrite:false});const mesh=this.mesh(impactGeometry,material,0,.055,0);mesh.rotation.x=-Math.PI/2;mesh.castShadow=false;mesh.visible=false;this.impacts.push({mesh,born:-10});}
@@ -193,7 +201,7 @@ export class Renderer3D {
  }
  draw(race,reduced=false,selected=null){
   if(this.lastRound!==race.roundId)this.build(race);const map=race.map,aspect=this.aspect||1,direction=CAMERA_DIRECTIONS[this.angle];
-  const distance=Math.max(20,7.2/(Math.tan(THREE.MathUtils.degToRad(20))*aspect));
+  const distance=Math.max(this.angle===2?14.5:20,(this.angle===2?6.2:7.2)/(Math.tan(THREE.MathUtils.degToRad(20))*aspect));
   const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.65)]?.y??map.finish;
   const target=['ready','mixing','countdown'].includes(race.state)?400:Math.max(400,Math.min(map.finish-200,progress+100));
   if(race.state!=='paused')this.cameraCenter=reduced?target:this.cameraCenter+(target-this.cameraCenter)*.08;
@@ -212,20 +220,24 @@ export class Renderer3D {
   const decorTime=reduced?0:race.elapsed;
   this.wheels.forEach(({wheel,rate})=>wheel.rotation.z=decorTime*rate);
   this.balloons.forEach(b=>{b.group.position.y=b.y+Math.sin(decorTime*1.3+b.phase)*.1;b.group.rotation.z=Math.sin(decorTime*.7+b.phase)*.045;});
-  this.carousels.forEach(c=>{c.roof.rotation.y=decorTime*c.rate+c.phase;const hit=decorTime-c.hitAt;c.ride.scale.y=!reduced&&hit>=0&&hit<.32?1-Math.sin(hit/.32*Math.PI)*.18:1;});
+  this.carousels.forEach(c=>{c.roof.rotation.y=decorTime*c.rate+c.phase;const hit=decorTime-c.hitAt,pulse=!reduced&&hit>=0&&hit<.32?Math.sin(hit/.32*Math.PI):0;c.roof.scale.y=1-pulse*.18;c.roof.position.y=.94-pulse*.08;});
   for(const effect of this.impacts){const age=race.elapsed-effect.born;effect.mesh.visible=!reduced&&age>=0&&age<.32;effect.mesh.scale.setScalar(1+Math.max(0,age)*4);effect.mesh.material.opacity=Math.max(0,1-age/.32)*.72;}
   const motion=!reduced&&['racing','paused'].includes(race.state)?race.motion():{roll:0,pitch:0,offsetX:0,offsetY:0};
   this.group.rotation.set(motion.pitch,0,motion.roll);const pivot=new THREE.Vector3(0,0,map.height*S/2);this.group.position.copy(pivot).sub(pivot.clone().applyEuler(this.group.rotation));this.group.position.x+=motion.offsetX*S;this.group.position.z+=motion.offsetY*S;this.group.updateMatrixWorld(true);
   const now=performance.now();
-  this.trails.visible=!reduced&&race.state==='racing';let trailIndex=0;
+  this.trails.visible=!reduced&&race.state==='racing';let trailIndex=0;const labelCandidates=[];
   for(const b of race.balls){
    const entry=this.balls.get(b.id),{m,label,dot,history}=entry;if(b.finished&&!this.finishedAt.has(b.id))this.finishedAt.set(b.id,now);
    const sink=b.finished?Math.min(1,(now-this.finishedAt.get(b.id))/380):0;m.visible=sink<1;m.position.set(X(b.x),.19-sink*.8,Z(b.y));m.scale.setScalar(1-sink*.6);
    m.rotation.x+=b.vy*.00025;m.rotation.z-=b.vx*.00025;dot.style.top=`${b.y/map.height*100}%`;
    if(race.state==='racing'&&race.elapsed-entry.lastTrail>=.035){history.unshift({x:X(b.x),z:Z(b.y)});if(history.length>5)history.pop();entry.lastTrail=race.elapsed;}
    for(let i=0;i<2;i++){const old=history[i*2+2];this.trailTransform.position.set(old?.x??X(b.x),.12,old?.z??Z(b.y));this.trailTransform.scale.setScalar(!b.finished&&old?(i===0?.12:.075):0);this.trailTransform.updateMatrix();this.trails.setMatrixAt(trailIndex++,this.trailTransform.matrix);}
-   const v=new THREE.Vector3(X(b.x),.6,Z(b.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);label.hidden=b.finished||this.overview||Math.abs(v.x)>1||Math.abs(v.y)>.98;label.style.left=`${(v.x*.5+.5)*100}%`;label.style.top=`${(-v.y*.5+.5)*100}%`;
+   const v=new THREE.Vector3(X(b.x),.6,Z(b.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);label.hidden=true;
+   if(!b.finished&&!this.overview&&Math.abs(v.x)<.97&&Math.abs(v.y)<.88){const x=(v.x*.5+.5)*this.width,y=(-v.y*.5+.5)*this.height;labelCandidates.push({label,x,y,progress:b.y,width:entry.labelWidth,id:b.id});}
   }
+  const occupied=[];let shown=0;
+  labelCandidates.sort((a,b)=>(b.id===selected)-(a.id===selected)||b.progress-a.progress);
+  for(const c of labelCandidates){const box={l:c.x-c.width/2,r:c.x+c.width/2,t:c.y-21,b:c.y+3};if(!this.allLabels&&(shown>=(this.width<450?12:20)||occupied.some(o=>box.l<o.r+4&&box.r>o.l-4&&box.t<o.b+3&&box.b>o.t-3)))continue;c.label.hidden=false;c.label.style.left=`${c.x/this.width*100}%`;c.label.style.top=`${c.y/this.height*100}%`;occupied.push(box);shown++;}
   this.trails.instanceMatrix.needsUpdate=true;
   this.hud.textContent=this.overview?'PARK MAP / FOUR LUCKY EXITS':`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`;
   this.webgl.render(this.scene,this.camera);

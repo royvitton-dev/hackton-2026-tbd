@@ -1,0 +1,50 @@
+{
+  "at": "2026-09-21T10:24:28.070Z",
+  "tests": [
+    {
+      "device": "desktop",
+      "balls": 60,
+      "speed": 3,
+      "boardMotion": true,
+      "pauseAndReducedMotion": "PASS",
+      "exactBrowserReplay": "PASS",
+      "switchOff": "PASS",
+      "frames": 224,
+      "fps": 60.00214293367619,
+      "p95IntervalMs": 16.700000000000728,
+      "meanJsMs": 4.94464285714951,
+      "graphics": {
+        "geometries": 100,
+        "textures": 10,
+        "programs": 19,
+        "drawCalls": 95,
+        "triangles": 70050,
+        "pixelRatio": 1
+      },
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "balls": 60,
+      "speed": 3,
+      "boardMotion": true,
+      "pauseAndReducedMotion": "PASS",
+      "exactBrowserReplay": "PASS",
+      "switchOff": "PASS",
+      "frames": 226,
+      "fps": 60.002654984733844,
+      "p95IntervalMs": 16.700000000000728,
+      "meanJsMs": 4.727433628394409,
+      "graphics": {
+        "geometries": 103,
+        "textures": 11,
+        "programs": 19,
+        "drawCalls": 134,
+        "triangles": 82676,
+        "pixelRatio": 1.5
+      },
+      "errors": []
+    }
+  ],
+  "status": "PASS"
+}
