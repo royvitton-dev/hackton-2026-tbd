@@ -1,0 +1,44 @@
+
+ RUN  v4.1.11 /Users/jonghokim/Workspace/hackerton/map_new
+      Coverage enabled with v8
+
+ ✓ tests/unit/camera.test.js (3 tests) 10ms
+ ✓ tests/unit/layers.test.js (5 tests) 30ms
+ ✓ tests/unit/navigation.test.js (10 tests) 92ms
+ ✓ tests/unit/radio-charging.test.js (12 tests) 61ms
+ ✓ tests/unit/analysis.test.js (6 tests) 106ms
+ ✓ tests/unit/parking.test.js (6 tests) 4259ms
+   ✓ reaches a real source bay from the OSM road with a compact vehicle and a continuous radius-constrained maneuver  1438ms
+   ✓ rejects the complete maneuver if a bay obstacle or fire blocks its final position  2227ms
+   ✓ handles the same lane and bay geometry rotated by ninety degrees  546ms
+
+ Test Files  6 passed (6)
+      Tests  42 passed (42)
+   Start at  02:46:36
+   Duration  4.57s (transform 225ms, setup 0ms, import 404ms, tests 4.56s, environment 1ms)
+
+JSON report written to /Users/jonghokim/Workspace/hackerton/map_new/reports/unit.json
+ % Coverage report from v8
+------------------|---------|----------|---------|---------|--------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
+------------------|---------|----------|---------|---------|--------------------
+All files         |   98.95 |    96.19 |     100 |     100 |                    
+ core             |   98.94 |       97 |     100 |     100 |                    
+  analysis.js     |   97.52 |    93.75 |     100 |     100 | 12,26,41,46,56,73  
+  charging.js     |     100 |    98.78 |     100 |     100 | 23                 
+  geometry.js     |     100 |     97.5 |     100 |     100 | 17                 
+  georeference.js |   97.61 |    93.33 |     100 |     100 | 15                 
+  layers.js       |     100 |    90.24 |     100 |     100 | 6-8,19,29          
+  navigation.js   |   99.39 |    99.41 |     100 |     100 | 60                 
+  parking.js      |   98.33 |    95.86 |     100 |     100 | 41,56,67-69,116    
+  radio.js        |     100 |    99.25 |     100 |     100 | 51                 
+ vendor           |      99 |     92.4 |     100 |     100 |                    
+  analysis-v1.js  |      99 |     92.4 |     100 |     100 | ...,55-60,81,83-84 
+------------------|---------|----------|---------|---------|--------------------
+
+=============================== Coverage summary ===============================
+Statements   : 98.95% ( 853/862 )
+Branches     : 96.19% ( 859/893 )
+Functions    : 100% ( 159/159 )
+Lines        : 100% ( 394/394 )
+================================================================================
