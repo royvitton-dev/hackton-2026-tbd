@@ -39,11 +39,20 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
     expect(azimuth).toBeGreaterThanOrEqual(-65.1);expect(azimuth).toBeLessThanOrEqual(-14.9);
   }
   await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0001');
-  await expect(page.getByTestId('model-unavailable')).toContainText('Ioniq 5');
+  await expect(page.getByTestId('vehicle-model')).toHaveText('Ioniq 5');
+  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq5_standard_2wd_2026');
+  await expect(canvas).toHaveAttribute('data-model-triangles','105109');
+  expect(Math.abs(Number(await canvas.getAttribute('data-model-min-y')))).toBeLessThan(.01);
+  expect(Number(await canvas.getAttribute('data-model-height'))).toBeLessThan(2);
   await expect(page.getByTestId('odometer')).toContainText('11,194');
-  await expect(page.locator('canvas')).toHaveCount(0);
+  await page.evaluate(()=>window.scrollTo(0,0));
+  await page.screenshot({path:'test-results/demo-ioniq5.png',fullPage:true});
   await page.getByRole('button',{name:/^Battery Info/}).click();
   await expect(page.locator('#battery-info-panel')).toContainText('42 / 100');
+  await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0003');
+  await expect(page.getByTestId('model-unavailable')).toContainText('3D 모델 미등록');
+  await expect(page.locator('canvas')).toHaveCount(0);
+  await expect(page.getByTestId('vehicle-model')).toHaveText('Niro EV');
   expect(errors).toEqual([]);
 });
 test('Mobile layout, user-scoped history, filters, CSV and session detail',async({page,request})=>{

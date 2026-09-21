@@ -15,7 +15,7 @@ const Viewer=dynamic(()=>import('./VehicleImageWebGLViewer').then(m=>m.VehicleIm
 const tabs=[['overview','주요 정보'],['battery','배터리 정보'],['driving','주행 정보'],['habits','충전 습관'],['history','충전 이력'],['analysis','점수 분석']] as const;
 type Tab=typeof tabs[number][0];
 export function VehicleBatteryDashboard({users}:{users:UserVehicle[]}){
-  const selectedId=useSelectedUser('U0002');
+  const selectedId=useSelectedUser('U0001');
   const [focused,setFocused]=useState(false),[tab,setTab]=useState<Tab>('overview');
   const user=useMemo(()=>users.find(u=>u.userId===selectedId)??users[0],[users,selectedId]);
   const asset=vehicleImageMap.find(v=>v.vehicleId===user.vehicle.vehicleId)!;
@@ -48,7 +48,7 @@ export function VehicleBatteryDashboard({users}:{users:UserVehicle[]}){
           {tab==='history'&&<ChargingHistory key={user.userId} userId={user.userId}/>}
         </div>
       </section>
-      <details className="source-details"><summary>데이터 기준 · 차량 모델 및 이미지 출처</summary><p>사용자 {user.userId}의 충전 기록만 분석합니다. SOC는 마지막 충전 종료 기록이며 실시간 차량 상태가 아닙니다. SOH와 일별 주행 데이터는 제공되지 않았습니다.</p><p>{asset.representativeNote} 원본 사진과 누끼 PNG는 참조 자료로 보관합니다. 화면 차량은 실제 GLB 메시를 WebGL로 렌더링합니다.</p>{asset.glbPath&&<p>3D 외형은 이전 연식의 대표 모델로, 선택한 2026년형 트림과 차이가 있습니다. 배터리 표시는 위치 안내용 개략도입니다. <a href="/assets/vehicles/models/CREDITS.md">3D 모델 출처 · 라이선스</a></p>}<p><a href={asset.imageSourceUrl} target="_blank" rel="noreferrer">{asset.manufacturer} {asset.model} 사진 출처</a> · {asset.author} · <a href={asset.licenseUrl||asset.imageSourceUrl} target="_blank" rel="noreferrer">{asset.license}</a></p><p>원본 {asset.downloaded?'저장됨':'실패'} · 누끼 {asset.cutoutGenerated?'생성됨':'실패'}{asset.failureReason?` · ${asset.failureReason}`:''}</p><a href="/assets/vehicles/image_sources.json">이미지 처리 결과</a> · <a href="/assets/vehicles/model_sources.json">3D 모델 준비 현황</a></details>
+      <details className="source-details"><summary>데이터 기준 · 차량 모델 및 이미지 출처</summary><p>사용자 {user.userId}의 충전 기록만 분석합니다. SOC는 마지막 충전 종료 기록이며 실시간 차량 상태가 아닙니다. SOH와 일별 주행 데이터는 제공되지 않았습니다.</p><p>{asset.representativeNote} 원본 사진과 누끼 PNG는 참조 자료로 보관합니다. 화면 차량은 실제 GLB 메시를 WebGL로 렌더링합니다.</p>{asset.glbPath&&<p>3D 외형은 대표 모델로, 선택한 연식·지역·트림과 차이가 있을 수 있습니다. 배터리 표시는 위치 안내용 개략도입니다. <a href="/assets/vehicles/models/CREDITS.md">3D 모델 출처 · 라이선스</a></p>}<p><a href={asset.imageSourceUrl} target="_blank" rel="noreferrer">{asset.manufacturer} {asset.model} 사진 출처</a> · {asset.author} · <a href={asset.licenseUrl||asset.imageSourceUrl} target="_blank" rel="noreferrer">{asset.license}</a></p><p>원본 {asset.downloaded?'저장됨':'실패'} · 누끼 {asset.cutoutGenerated?'생성됨':'실패'}{asset.failureReason?` · ${asset.failureReason}`:''}</p><a href="/assets/vehicles/image_sources.json">이미지 처리 결과</a> · <a href="/assets/vehicles/model_sources.json">3D 모델 준비 현황</a></details>
       <footer><span>EVision <span>Vehicle Battery Intelligence</span></span><span>충전 기록 기반 분석 · {user.userId}</span></footer>
     </main>
   </div>;

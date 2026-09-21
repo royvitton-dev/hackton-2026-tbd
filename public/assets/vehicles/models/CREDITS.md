@@ -29,3 +29,13 @@ Decoder files under `public/assets/vehicles/decoders` are copied from the instal
 - Source metadata: `../sources/tesla-model-y-glb-metadata.json`.
 - Changes: mesh simplification (2,432,105 → 701,663 triangles), Draco compression, runtime scale/orientation/material adjustment. Original download 85,206,440 bytes; optimized 1,923,088 bytes.
 - This is a 2021 representative model, **not an exact 2026 Model Y**.
+
+## Hyundai IONIQ 5
+
+- Author/rightsholder: Hyundai Motor Company / Hyundai Motor Company Australia.
+- Source: https://www.hyundai.com/au/en/cars/eco/ioniq5
+- Original: https://www.hyundai.com/content/dam/hyundai/au/en/cgi/ioniq5/IONIQ5-7.glb
+- Variant configuration: https://www.hyundai.com/content/dam/hyundai/au/en/cgi/ioniq5/IONIQ5-2026.json
+- License: manufacturer copyright. This is a publicly served configurator model; an open redistribution license is not stated. It is **not** a CC-licensed community model.
+- Modifications: official stock trim and CyberGrey material selection, unused trim parts and configurator lights disabled. Geometry unchanged. Regional trim differences remain.
+- Provenance and checksums: `sources/hyundai-ioniq5-preparation.json`. Original GLB/configuration are retained under `sources/`.

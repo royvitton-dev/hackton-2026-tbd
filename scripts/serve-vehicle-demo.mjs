@@ -45,7 +45,7 @@ try {
   await checkBuildIdle();
   if (id !== await buildId()) throw new Error('Build changed during snapshot. Run the demo command again.');
 
-  console.log(`EVision demo · build ${id}\nhttp://${values.hostname}:${port}/?user=U0002\nSnapshot: ${snapshot}`);
+  console.log(`EVision demo · build ${id}\nhttp://${values.hostname}:${port}/?user=U0001\nSnapshot: ${snapshot}`);
   const child = spawn(process.execPath, [
     join(root, 'node_modules/next/dist/bin/next'), 'start',
     '--hostname', values.hostname, '--port', String(port),

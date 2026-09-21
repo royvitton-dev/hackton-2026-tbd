@@ -8,7 +8,8 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
   const model=useMemo(()=>{
     const clone=scene.clone(true);clone.name='vehicle-gltf';
     clone.traverse(o=>{if(o instanceof Mesh){o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();o.castShadow=true;o.receiveShadow=true;
-      if((Array.isArray(o.material)?o.material:[o.material]).some(m=>m.name.startsWith('glass.'))){o.geometry=toCreasedNormals(o.geometry,Math.PI/2);o.userData.ownsGeometry=true;}
+      const smoothManufacturerSurface=path.includes('ioniq5')&&(Array.isArray(o.material)?o.material:[o.material]).some(m=>['CyberGrey','WINDOW2','CLEARGLASS'].includes(m.name));
+      if(smoothManufacturerSurface||(Array.isArray(o.material)?o.material:[o.material]).some(m=>m.name.startsWith('glass.'))){o.geometry=toCreasedNormals(o.geometry,smoothManufacturerSurface?Math.PI/6:Math.PI/2);o.userData.ownsGeometry=true;}
       for(const m of Array.isArray(o.material)?o.material:[o.material]){
         if(m instanceof MeshStandardMaterial){
           m.envMapIntensity=.85;
@@ -17,16 +18,24 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
           if(m.name==='glass_lights'||m.name==='glass_front_lights'){m.color.set('#b9cddd');m.roughness=.16;m.metalness=.1;m.transparent=true;m.opacity=.3;m.depthWrite=false;}
           if(m.name==='chrome'||m.name==='chrome_dark'||m.name==='wheels'){m.metalness=.8;m.roughness=.3;}
           if(m.name==='tires'){m.color.set('#161a20');m.roughness=.85;}
+          if(path.includes('ioniq5')){
+            if(m.name==='CyberGrey'){m.color.set('#a8b7c4');m.metalness=.45;m.roughness=.3;}
+            if(m.name==='WINDOW2'){m.color.set('#203240');m.metalness=.12;m.roughness=.2;m.opacity=.6;m.depthWrite=false;}
+            if(m.name==='CLEARGLASS'){m.color.set('#c4d2df');m.metalness=.08;m.roughness=.18;m.depthWrite=false;}
+            if(/chrome/i.test(m.name)){m.metalness=.7;m.roughness=.32;}
+            if(/wheels/i.test(o.name)&&m.name==='BLACKBODY'){m.color.set('#14171a');m.roughness=.86;}
+          }
         }
         m.userData.originalOpacity=m.opacity;m.userData.originalTransparent=m.transparent;m.userData.originalDepthWrite=m.depthWrite;
       }
     }});
     // Community model length is on Z. Rotate into our X-forward vehicle coordinates.
-    clone.updateMatrixWorld(true);const originalSize=new Box3().setFromObject(clone).getSize(new Vector3());
+    clone.updateMatrixWorld(true);const originalSize=new Box3().setFromObject(clone,true).getSize(new Vector3());
     if(originalSize.z>originalSize.x)clone.rotation.y+=Math.PI/2;
     if(path.includes('model_y'))clone.rotation.y+=Math.PI;
     clone.updateMatrixWorld(true);
-    const bounds=new Box3().setFromObject(clone),size=bounds.getSize(new Vector3()),center=bounds.getCenter(new Vector3());
+    // Precise bounds exclude oversized cached bounds in manufacturer component meshes.
+    const bounds=new Box3().setFromObject(clone,true),size=bounds.getSize(new Vector3()),center=bounds.getCenter(new Vector3());
     const scale=4.7/Math.max(size.x,size.z);clone.scale.setScalar(scale);
     clone.position.set(-center.x*scale,-bounds.min.y*scale,-center.z*scale);
     return clone;

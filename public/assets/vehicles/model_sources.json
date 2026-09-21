@@ -4,44 +4,58 @@
     "manufacturer": "Hyundai",
     "model": "Ioniq 5",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": null,
-    "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "glbPath": "/assets/vehicles/models/hyundai_ioniq5.glb",
+    "available": true,
+    "sourceUrl": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+    "downloadUrl": "https://www.hyundai.com/content/dam/hyundai/au/en/cgi/ioniq5/IONIQ5-7.glb",
+    "license": "Manufacturer copyright; public configurator asset. Open redistribution permission not stated.",
+    "author": "Hyundai Motor Company / Hyundai Motor Company Australia",
+    "representativeNote": "Official Australian configurator stock IONIQ 5 exterior; regional trim may differ from the workbook. Original geometry retained, stock parts and CyberGrey material selected.",
+    "failureReason": null,
+    "nextAction": null,
     "failures": [
       {
         "url": "https://api.sketchfab.com/v3/models/675e78311e8440d88714bd212cb7a8fb/download",
         "httpStatus": 401,
         "reason": "Download requires authenticated Sketchfab account; access restriction respected."
+      },
+      {
+        "url": "https://experience.hyundai.com.au/assets/models/ioniq5-search.glb",
+        "reason": "curl (6): Could not resolve host.",
+        "recovered": true,
+        "nextAction": "Used the current public official CGI model URL linked by the product page."
       }
-    ]
+    ],
+    "sourceTriangles": 105109
   },
   {
     "vehicleId": "hyundai_ioniq5_standard_2wd_2026",
     "manufacturer": "Hyundai",
     "model": "Ioniq 5",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": null,
-    "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "glbPath": "/assets/vehicles/models/hyundai_ioniq5.glb",
+    "available": true,
+    "sourceUrl": "https://www.hyundai.com/au/en/cars/eco/ioniq5",
+    "downloadUrl": "https://www.hyundai.com/content/dam/hyundai/au/en/cgi/ioniq5/IONIQ5-7.glb",
+    "license": "Manufacturer copyright; public configurator asset. Open redistribution permission not stated.",
+    "author": "Hyundai Motor Company / Hyundai Motor Company Australia",
+    "representativeNote": "Official Australian configurator stock IONIQ 5 exterior; regional trim may differ from the workbook. Original geometry retained, stock parts and CyberGrey material selected.",
+    "failureReason": null,
+    "nextAction": null,
     "failures": [
       {
         "url": "https://api.sketchfab.com/v3/models/675e78311e8440d88714bd212cb7a8fb/download",
         "httpStatus": 401,
         "reason": "Download requires authenticated Sketchfab account; access restriction respected."
+      },
+      {
+        "url": "https://experience.hyundai.com.au/assets/models/ioniq5-search.glb",
+        "reason": "curl (6): Could not resolve host.",
+        "recovered": true,
+        "nextAction": "Used the current public official CGI model URL linked by the product page."
       }
-    ]
+    ],
+    "sourceTriangles": 105109
   },
   {
     "vehicleId": "hyundai_ioniq6_lr_2wd_2026",
@@ -125,13 +139,20 @@
     "requestedYear": 2026,
     "glbPath": null,
     "available": false,
-    "sourceUrl": null,
-    "downloadUrl": null,
+    "sourceUrl": "https://sketchfab.com/3d-models/kia-ev6-49eff30492bb4f8e875f378b41589c26",
+    "downloadUrl": "https://api.sketchfab.com/v3/models/49eff30492bb4f8e875f378b41589c26/download",
     "license": null,
     "author": null,
     "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "failureReason": "HTTP 401: Sketchfab download requires account authentication; no local GLB downloaded.",
+    "nextAction": "Download the CC BY EV6 source using an authorized Sketchfab account, then add and verify the actual GLB.",
+    "failures": [
+      {
+        "url": "https://api.sketchfab.com/v3/models/49eff30492bb4f8e875f378b41589c26/download",
+        "httpStatus": 401,
+        "reason": "HTTP 401: Sketchfab download requires account authentication; no local GLB downloaded."
+      }
+    ]
   },
   {
     "vehicleId": "kia_ev9_lr_2wd_2026",

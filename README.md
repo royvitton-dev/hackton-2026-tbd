@@ -44,7 +44,8 @@ npm install
 npm run dev
 ```
 
-- 기본: http://localhost:3000/?user=U0002 (Model 3)
+- 기본: http://localhost:3000/?user=U0001 (Hyundai IONIQ 5)
+- Model 3: http://localhost:3000/?user=U0002
 - Model Y: http://localhost:3000/?user=U0009
 - 선택한 사용자 ID를 URL과 localStorage에 저장합니다.
 - 사용자 변경 시 차량·점수·주행 정보·충전 이력이 함께 바뀝니다.
@@ -67,7 +68,7 @@ npm run demo
 
 `demo`는 완성된 `.next`, public asset과 설정을 임시 디렉터리에 복사해 실행합니다. 이후 작업 폴더에서 빌드하거나 Git 브랜치를 바꿔도 실행 중인 화면의 JavaScript/GLB 경로가 유지됩니다. 새 결과를 보려면 데모를 종료한 뒤 다시 실행합니다. 의존성은 현재 `node_modules`를 사용하므로 의존성을 변경한 뒤에도 다시 실행해야 합니다. 임시 복사본은 정상 종료할 때 제거합니다.
 
-`npm run start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:3000/?user=U0002 입니다. IONIQ 5 등 GLB 미확보 차량은 로딩을 기다려도 나타나지 않으며, 아래 모델 준비 현황을 확인하세요.
+`npm run start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:3000/?user=U0001 입니다. 선택 목록에는 3D 지원 여부를 표시합니다. EV6 등 GLB 미확보 차량은 명시적으로 `3D 모델 미등록`으로 표시하며, 로딩 대기 상태로 표현하지 않습니다.
 
 ## 데이터 기준
 
@@ -147,10 +148,19 @@ npm run prepare:vehicles
 후속 요구사항에 따라 사진 plane/depth-stack이나 단순 도형 차량 fallback은 사용하지 않습니다. 차량은 **GLB 메시**로 렌더링하며 사진·누끼는 추적 가능한 참조 자료로만 보관합니다.
 
 현재 실제 GLB가 연결된 모델:
+- Hyundai IONIQ 5: 2개 트림. 현대 호주 공식 configurator의 차체·실내·휠 메시 105,109 triangles, 약 3.1 MB. 공식 stock 구성과 CyberGrey 소재를 선택하며 원본 geometry는 유지합니다.
 - Tesla Model 3: 2개 트림. 출처 GLB 약 681,368 triangles, 3.1 MB. 원본 형상을 사용합니다.
 - Tesla Model Y: 2개 트림. 공개 Objaverse 보관본에서 받은 2021 모델을 701,663 triangles / 1.8 MB로 최적화했습니다.
 
-**나머지 14개 모델 / 16개 차량 프로필의 상세 GLB는 아직 미확보입니다.** 해당 차량을 선택하면 준비 상태를 표시하고 배터리/충전 데이터는 계속 제공합니다. 다른 자동차나 저품질 도형을 대신 보여주지 않습니다. IONIQ 5의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았습니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. Model 3/Y도 정확한 2026년형 CAD가 아닌 이전 연식 대표 외형이며 UI에 고지합니다.
+**나머지 13개 모델 / 14개 차량 프로필의 상세 GLB는 아직 미확보입니다.** 해당 차량을 선택하면 준비 상태를 표시하고 배터리/충전 데이터는 계속 제공합니다. 다른 자동차나 저품질 도형을 대신 보여주지 않습니다. IONIQ 5의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았고, 현대 공식 페이지에 공개 연결된 GLB로 대체 확보했습니다. EV6의 Sketchfab 다운로드는 HTTP 401로 미완료입니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. Model 3/Y도 정확한 2026년형 CAD가 아닌 이전 연식 대표 외형이며 UI에 고지합니다.
+
+IONIQ 5 출처는 현대 공식 페이지 및 `model_sources.json`에 기록합니다. **제조사 저작권 자료이며 공개 재배포 라이선스는 확인되지 않았습니다.** CC BY 모델로 표시하지 않습니다. 호주형 기본 트림 외형이므로 원본 데이터의 국내 트림과 차이가 있을 수 있습니다. 원본 GLB와 트림 구성 JSON은 `images/sources/`에 보존합니다. 아래 명령으로 공식 트림 선택 결과를 재생성하고 동기화합니다.
+
+```sh
+node scripts/prepare-hyundai-ioniq5.mjs
+npm run sync:vehicle-assets
+npm run verify:assets
+```
 
 새 GLB 연결:
 

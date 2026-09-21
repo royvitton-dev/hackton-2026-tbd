@@ -1,7 +1,9 @@
 import sources from './vehicleImageSources.json';
 import type { VehicleImage } from '../types/vehicle';
-// Add a licensed model here after copying it into resoures/images/models and syncing.
+// Each model's provenance and license status is recorded in vehicleModelSources.json.
 export const vehicleGlbPaths: Record<string, string> = {
+  hyundai_ioniq5_lr_2wd_2026:'/assets/vehicles/models/hyundai_ioniq5.glb',
+  hyundai_ioniq5_standard_2wd_2026:'/assets/vehicles/models/hyundai_ioniq5.glb',
   tesla_model3_standard_rwd_2026:'/assets/vehicles/models/tesla_model_3.glb',
   tesla_model3_lr_rwd_2026:'/assets/vehicles/models/tesla_model_3.glb',
   tesla_modely_premium_rwd_2026:'/assets/vehicles/models/tesla_model_y_optimized.glb',

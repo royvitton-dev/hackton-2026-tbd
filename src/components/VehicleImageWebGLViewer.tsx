@@ -2,7 +2,7 @@
 import { Component, Suspense, useCallback, useEffect, useState, type ReactNode } from 'react';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
 import { RoundedBox } from '@react-three/drei';
-import { Mesh, PCFShadowMap, Vector3 } from 'three';
+import { Box3, Mesh, PCFShadowMap, Vector3 } from 'three';
 import type { Vehicle, VehicleImage } from '@/types/vehicle';
 import { GarageEnvironment } from './GarageEnvironment';
 import { VehicleGlbModel } from './VehicleGlbModel';
@@ -16,7 +16,7 @@ class ViewerBoundary extends Component<{children:ReactNode},{error:string|null}>
 }
 function SceneStatus({vehicleId,onReady}:{vehicleId:string;onReady:()=>void}){
   const {gl,scene,camera}=useThree();
-  useEffect(()=>{let triangles=0;scene.getObjectByName('vehicle-gltf')?.traverse(o=>{if(o instanceof Mesh)triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;});gl.domElement.setAttribute('data-vehicle-id',vehicleId);gl.domElement.setAttribute('data-renderer','webgl-3d-mesh');gl.domElement.setAttribute('data-model-triangles',String(triangles));onReady();},[vehicleId,gl,scene,onReady]);
+  useEffect(()=>{let triangles=0;const model=scene.getObjectByName('vehicle-gltf');model?.traverse(o=>{if(o instanceof Mesh)triangles+=(o.geometry.index?.count??o.geometry.attributes.position.count)/3;});if(model){const bounds=new Box3().setFromObject(model,true);gl.domElement.setAttribute('data-model-min-y',String(bounds.min.y));gl.domElement.setAttribute('data-model-height',String(bounds.max.y-bounds.min.y));}gl.domElement.setAttribute('data-vehicle-id',vehicleId);gl.domElement.setAttribute('data-renderer','webgl-3d-mesh');gl.domElement.setAttribute('data-model-triangles',String(triangles));onReady();},[vehicleId,gl,scene,onReady]);
   useFrame(()=>{
     const hotspot=scene.getObjectByName('battery-hotspot');
     if(hotspot){const p=hotspot.getWorldPosition(new Vector3()).project(camera);gl.domElement.setAttribute('data-hotspot-x',String((p.x+1)/2));gl.domElement.setAttribute('data-hotspot-y',String((1-p.y)/2));}
@@ -29,7 +29,7 @@ export function VehicleImageWebGLViewer({vehicle,image,focused,onFocus}:{vehicle
   const onReady=useCallback(()=>setReady(true),[]);
   const [reducedMotion,setReducedMotion]=useState(false);
   useEffect(()=>{const media=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>setReducedMotion(media.matches);update();media.addEventListener('change',update);return()=>media.removeEventListener('change',update);},[]);
-  if(!image.glbPath)return <div className="viewer-error" role="status" data-testid="model-unavailable"><strong>{vehicle.model} 3D 모델 준비 중</strong><p>이 차량의 상세 3D 모델이 아직 연결되지 않았습니다.</p><small>선택한 사용자의 차량·주행·충전 정보는 아래에서 확인할 수 있습니다.</small><button onClick={onFocus}>배터리 정보 보기</button></div>;
+  if(!image.glbPath)return <div className="viewer-error" role="status" data-testid="model-unavailable"><strong>{vehicle.model} · 3D 모델 미등록</strong><p>이 차량은 현재 3D 외형을 표시할 수 없습니다.</p><small>선택한 사용자의 차량·주행·충전 정보는 아래에서 확인할 수 있습니다.</small><button onClick={onFocus}>배터리 정보 보기</button></div>;
   return <div className={`webgl-stage ${focused?'is-focused':''}`} data-testid="vehicle-viewer">
     <ViewerBoundary key={vehicle.vehicleId}>
       <Canvas frameloop="demand" shadows={{type:PCFShadowMap}} dpr={[1,1.5]} camera={{position:[-4.2,2.6,5],fov:33,near:.1,far:70}} gl={{antialias:true,alpha:false,powerPreference:'high-performance'}}
