@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-21T13:50:27.691885+00:00",
+  "python": "3.12.14",
+  "matplotlib": "3.11.2",
+  "sources": [
+    {
+      "file": "evidence\\2026-09-21T13-42-38-482Z-observer-pid-reuse-review-3dbd3323\\observer-prefix-2522.raw.jsonl",
+      "sha256": "d87a03738565ac0b39ec117bb3c5fefcf5837438b36426cd2a4b73c86a9aec4e"
+    },
+    {
+      "file": "evidence\\2026-09-21T13-42-39-992Z-observation-analysis-8a1b6dc1\\analysis.json",
+      "sha256": "7f6531a5e39fc658f76fdb665c0f92b3d67e874715df6fac72cff600e91d32a5"
+    },
+    {
+      "file": "evidence\\2026-09-21T13-45-56-887Z-supplementary-resource-analysis-1bb6f8c2\\analysis.json",
+      "sha256": "e7310f9d832daabcb587e01ab502a85530e7bfd8d006b40686888f67d30eaaca"
+    },
+    {
+      "file": "evidence\\2026-09-21T13-45-56-887Z-supplementary-resource-analysis-1bb6f8c2\\samples-prefix.jsonl",
+      "sha256": "8f6f167510c4bd3d194b706cc9d5b1c54bc962ca5424ebca9ff3a3c88e2cd939"
+    }
+  ],
+  "script_sha256": "54bc9331bec62d23872d0612f6fc6ae4cfc307d9cdc62ae03f17b4a79248ef1c",
+  "cpu_intervals_independently_recalculated": 367,
+  "primary_memory_samples": 313,
+  "supplementary_memory_samples": 56,
+  "gap_from": "2026-09-21T21:44:21.449000+09:00",
+  "gap_to": "2026-09-21T22:17:59.792377+09:00",
+  "gap_seconds": 2018.343377,
+  "logical_processors": 16,
+  "limits": [
+    "Two separately collected coverage periods; no missing readings reconstructed",
+    "Primary legacy rows lack process start times; same-PID same-name reuse cannot be excluded",
+    "Supplementary run still in progress"
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "captured_at": "2026-09-21T13:45:56.894Z",
+  "prefix_bytes": 156362,
+  "prefix_sha256": "8f6f167510c4bd3d194b706cc9d5b1c54bc962ca5424ebca9ff3a3c88e2cd939",
+  "source_status": "running",
+  "source_metadata_changed": false,
+  "partial_tail_bytes": 0,
+  "independent_all_valid_endpoint_cpu_seconds": 235.78125,
+  "covered_seconds": 1655.5168512999999,
+  "endpoint_percent": 0.8901345892932622,
+  "max_interval_percent": 2.1769417293615123,
+  "engine_cpu": {
+    "Id": 20540,
+    "StartTimeUtc": "2026-09-21T10:05:21.4715478Z",
+    "role": "engine",
+    "ProcessName": "leave-engine",
+    "available": true,
+    "candidate_interval_count": 55,
+    "interval_count": 55,
+    "excluded_interval_count": 0,
+    "covered_interval_seconds": 1655.5168512999999,
+    "cpu_seconds": 149.78125,
+    "mean_percent_total_capacity": 0.5654625694476615,
+    "max_interval_percent_total_capacity": 1.352097537701504,
+    "first_interval": {
+      "from_index": 0,
+      "to_index": 1,
+      "from": "2026-09-21T13:17:59.7923779+00:00",
+      "to": "2026-09-21T13:18:30.0398891+00:00",
+      "seconds": 30.2460912,
+      "wall_seconds": 30.247,
+      "cpu_seconds": 2.0625,
+      "percent_total_capacity": 0.42619143461420234
+    },
+    "last_interval": {
+      "from_index": 54,
+      "to_index": 55,
+      "from": "2026-09-21T13:45:05.2008659+00:00",
+      "to": "2026-09-21T13:45:35.2698299+00:00",
+      "seconds": 30.069578599999893,
+      "wall_seconds": 30.069,
+      "cpu_seconds": 1.46875,
+      "percent_total_capacity": 0.3052815479096881
+    }
+  },
+  "engine_memory": {
+    "Id": 20540,
+    "StartTimeUtc": "2026-09-21T10:05:21.4715478Z",
+    "role": "engine",
+    "ProcessName": "leave-engine",
+    "candidate_sample_count": 56,
+    "working_set_bytes": {
+      "available": true,
+      "sample_count": 56,
+      "first": {
+        "sample_index": 0,
+        "at": "2026-09-21T13:17:59.7923779+00:00",
+        "elapsed_ms": 10.4285,
+        "bytes": 110637056
+      },
+      "last": {
+        "sample_index": 55,
+        "at": "2026-09-21T13:45:35.2698299+00:00",
+        "elapsed_ms": 1655527.2798,
+        "bytes": 118026240
+      },
+      "observed_min_bytes": 34062336,
+      "observed_max_bytes": 118636544,
+      "first_to_last_change_bytes": 7389184
+    },
+    "private_bytes": {
+      "available": true,
+      "sample_count": 56,
+      "first": {
+        "sample_index": 0,
+        "at": "2026-09-21T13:17:59.7923779+00:00",
+        "elapsed_ms": 10.4285,
+        "bytes": 119873536
+      },
+      "last": {
+        "sample_index": 55,
+        "at": "2026-09-21T13:45:35.2698299+00:00",
+        "elapsed_ms": 1655527.2798,
+        "bytes": 127930368
+      },
+      "observed_min_bytes": 119873536,
+      "observed_max_bytes": 128876544,
+      "first_to_last_change_bytes": 8056832
+    }
+  },
+  "full_group_memory": [
+    {
+      "membership_count": 14,
+      "working_set": {
+        "available": true,
+        "sample_count": 56,
+        "first": {
+          "sample_index": 0,
+          "at": "2026-09-21T13:17:59.7923779+00:00",
+          "elapsed_ms": 10.4285,
+          "bytes": 792780800
+        },
+        "last": {
+          "sample_index": 55,
+          "at": "2026-09-21T13:45:35.2698299+00:00",
+          "elapsed_ms": 1655527.2798,
+          "bytes": 644681728
+        },
+        "observed_min_bytes": 552951808,
+        "observed_max_bytes": 792780800,
+        "first_to_last_change_bytes": -148099072
+      },
+      "private_memory": {
+        "available": true,
+        "sample_count": 56,
+        "first": {
+          "sample_index": 0,
+          "at": "2026-09-21T13:17:59.7923779+00:00",
+          "elapsed_ms": 10.4285,
+          "bytes": 1171521536
+        },
+        "last": {
+          "sample_index": 55,
+          "at": "2026-09-21T13:45:35.2698299+00:00",
+          "elapsed_ms": 1655527.2798,
+          "bytes": 1179230208
+        },
+        "observed_min_bytes": 1170194432,
+        "observed_max_bytes": 1181872128,
+        "first_to_last_change_bytes": 7708672
+      }
+    }
+  ]
+}

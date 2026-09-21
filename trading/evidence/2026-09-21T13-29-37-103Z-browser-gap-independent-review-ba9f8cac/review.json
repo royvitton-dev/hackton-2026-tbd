@@ -1,0 +1,460 @@
+{
+  "reviewed_at": "2026-09-21T13:31:01.792Z",
+  "source_run": "2026-09-21T13-15-32-792Z-browser-gap-91b002af",
+  "checks_passed": 59,
+  "checks_failed": 0,
+  "checks": [
+    {
+      "name": "raw hash upstream_message/raw/ws-1-connection-1-seq-0.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-1-connection-1-seq-0.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-1-connection-1-seq-0.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-2-connection-2-seq-0.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-2-connection-2-seq-0.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-2-connection-2-seq-0.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-3-connection-2-seq-1.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-3-connection-2-seq-1.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-3-connection-2-seq-1.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-4-connection-2-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-4-connection-2-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-4-connection-2-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash duplicate_send/raw/ws-4-connection-2-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence duplicate_send/raw/ws-4-connection-2-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-5-connection-3-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-5-connection-3-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-5-connection-3-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-6-connection-4-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-6-connection-4-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-6-connection-4-seq-2.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-7-connection-4-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-7-connection-4-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-7-connection-4-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-8-connection-5-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-8-connection-5-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-8-connection-5-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-9-connection-6-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-9-connection-6-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-9-connection-6-seq-3.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash upstream_message/raw/ws-10-connection-6-seq-4.json",
+      "passed": true
+    },
+    {
+      "name": "raw length raw/ws-10-connection-6-seq-4.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence upstream_message/raw/ws-10-connection-6-seq-4.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash state_response/raw/http-state-1.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence state_response/raw/http-state-1.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash state_response/raw/http-state-22.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence state_response/raw/http-state-22.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash state_captured_and_held/raw/http-state-77.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence state_captured_and_held/raw/http-state-77.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash state_response/raw/http-state-77.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence state_response/raw/http-state-77.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash state_captured_and_held/raw/http-state-228.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence state_captured_and_held/raw/http-state-228.json",
+      "passed": true
+    },
+    {
+      "name": "raw hash state_response/raw/http-state-228.json",
+      "passed": true
+    },
+    {
+      "name": "raw sequence state_response/raw/http-state-228.json",
+      "passed": true
+    },
+    {
+      "name": "copied engine matches recorded run hash",
+      "passed": true
+    },
+    {
+      "name": "state 0 account totals, order equations, reserves and book",
+      "passed": true
+    },
+    {
+      "name": "state 1 account totals, order equations, reserves and book",
+      "passed": true
+    },
+    {
+      "name": "state 2 account totals, order equations, reserves and book",
+      "passed": true
+    },
+    {
+      "name": "state 3 account totals, order equations, reserves and book",
+      "passed": true
+    },
+    {
+      "name": "state 4 account totals, order equations, reserves and book",
+      "passed": true
+    },
+    {
+      "name": "gap stays on one connection and drops only genuine seq1",
+      "passed": true
+    },
+    {
+      "name": "gap prompts newer HTTP2 with identical complete market",
+      "passed": true
+    },
+    {
+      "name": "actual saved AX witnesses baseline0 -> gap2 with one resync",
+      "passed": true
+    },
+    {
+      "name": "duplicate is exact original seq2 with unchanged AX balances/order count",
+      "passed": true
+    },
+    {
+      "name": "first stale-response attempt remains an explicit missing-marker failure",
+      "passed": true
+    },
+    {
+      "name": "attempt2 preserves HTTP3 bytes while WS4 is delivered before release",
+      "passed": true
+    },
+    {
+      "name": "attempt2 coordinator actually observes marker before issuing release",
+      "passed": true
+    },
+    {
+      "name": "saved browser before and after release stay at seq4/current money/orders",
+      "passed": true
+    },
+    {
+      "name": "actual child exit callbacks establish engine0, frontendSIGTERM and no remaining children",
+      "passed": true
+    }
+  ],
+  "raw_inputs": [
+    {
+      "path": "raw/ws-1-connection-1-seq-0.json",
+      "bytes": 3224,
+      "sha256": "6c27dec7f6cbea336d64a9c8260e88e4abce59f44339b1104f8ccd10846f3610"
+    },
+    {
+      "path": "raw/ws-2-connection-2-seq-0.json",
+      "bytes": 3224,
+      "sha256": "6c27dec7f6cbea336d64a9c8260e88e4abce59f44339b1104f8ccd10846f3610"
+    },
+    {
+      "path": "raw/ws-3-connection-2-seq-1.json",
+      "bytes": 3432,
+      "sha256": "1275a3cf28e1c0d4aa11b93399335417beda16b3340244cc71baf4c29c8cdfe5"
+    },
+    {
+      "path": "raw/ws-4-connection-2-seq-2.json",
+      "bytes": 3641,
+      "sha256": "fab6ab0896cd0e814e577422d2c6e73c1178bd41a09aa7f9be4c5bbe31847362"
+    },
+    {
+      "path": "raw/ws-5-connection-3-seq-2.json",
+      "bytes": 3641,
+      "sha256": "fab6ab0896cd0e814e577422d2c6e73c1178bd41a09aa7f9be4c5bbe31847362"
+    },
+    {
+      "path": "raw/ws-6-connection-4-seq-2.json",
+      "bytes": 3641,
+      "sha256": "fab6ab0896cd0e814e577422d2c6e73c1178bd41a09aa7f9be4c5bbe31847362"
+    },
+    {
+      "path": "raw/ws-7-connection-4-seq-3.json",
+      "bytes": 3849,
+      "sha256": "6a996039b8b449b27a681eccd865e478e8bf7089bee2d0a9c468b946001335bf"
+    },
+    {
+      "path": "raw/ws-8-connection-5-seq-3.json",
+      "bytes": 3849,
+      "sha256": "6a996039b8b449b27a681eccd865e478e8bf7089bee2d0a9c468b946001335bf"
+    },
+    {
+      "path": "raw/ws-9-connection-6-seq-3.json",
+      "bytes": 3849,
+      "sha256": "6a996039b8b449b27a681eccd865e478e8bf7089bee2d0a9c468b946001335bf"
+    },
+    {
+      "path": "raw/ws-10-connection-6-seq-4.json",
+      "bytes": 4057,
+      "sha256": "067ff61554acfc5ea27b4d10c7d0e98db5534ebc7b17a25879f03bc2cb03e340"
+    },
+    {
+      "path": "raw/http-state-1.json",
+      "bytes": 3199,
+      "sha256": "52708d88cab24793f1a1b57269ac0ef7d448a2d2bd912c11d1b14f5d4de3a5d7"
+    },
+    {
+      "path": "raw/http-state-22.json",
+      "bytes": 3616,
+      "sha256": "4bff4cdacdfeb7b757599483f605338891f6aede21a6ea266932c7d6955d6e51"
+    },
+    {
+      "path": "raw/http-state-77.json",
+      "bytes": 3616,
+      "sha256": "4bff4cdacdfeb7b757599483f605338891f6aede21a6ea266932c7d6955d6e51"
+    },
+    {
+      "path": "raw/http-state-228.json",
+      "bytes": 3824,
+      "sha256": "369f664ac4d0430cd2d97716e1f43c89c2ffa9cffdb8ee6ebc9ba899da5fcb7f"
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "scripts/browser-gap-demo.mjs",
+      "recorded_sha256": "ddf5f8bb680a62d5e9ffe9815e58a9a24b82551191ee0abd1971283b586150ad",
+      "current_sha256": "ddf5f8bb680a62d5e9ffe9815e58a9a24b82551191ee0abd1971283b586150ad",
+      "matches": true
+    },
+    {
+      "path": "scripts/demo-lifecycle.mjs",
+      "recorded_sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "current_sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "matches": true
+    },
+    {
+      "path": "scripts/fixtures/browser-gap-deps/package.json",
+      "recorded_sha256": "407d4d95f55f1139d328bd5a9d6bc8eab6709737dda0d464a67310207eafac7e",
+      "current_sha256": "407d4d95f55f1139d328bd5a9d6bc8eab6709737dda0d464a67310207eafac7e",
+      "matches": true
+    },
+    {
+      "path": "scripts/fixtures/browser-gap-deps/pnpm-lock.yaml",
+      "recorded_sha256": "40ab3baad1320cd43d98021fdd8c57ab0816d8bb26b813ac9b8188c1e4e21b37",
+      "current_sha256": "40ab3baad1320cd43d98021fdd8c57ab0816d8bb26b813ac9b8188c1e4e21b37",
+      "matches": true
+    },
+    {
+      "path": "engine/src/main.rs",
+      "recorded_sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "current_sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "matches": true
+    },
+    {
+      "path": "engine/src/ws_frame.rs",
+      "recorded_sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e",
+      "current_sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e",
+      "matches": true
+    },
+    {
+      "path": "engine/src/model.rs",
+      "recorded_sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "current_sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/useExchange.ts",
+      "recorded_sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37",
+      "current_sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/protocol.ts",
+      "recorded_sha256": "f4b101c6b1fef86e64535ca54e7bed498114a354ecd886d6f28fd194b0a2dad8",
+      "current_sha256": "f4b101c6b1fef86e64535ca54e7bed498114a354ecd886d6f28fd194b0a2dad8",
+      "matches": true
+    },
+    {
+      "path": "frontend/src/App.tsx",
+      "recorded_sha256": "b4520c87c913c4f5af42cdc1560c4211a9703280558913a7399ace589722a0bd",
+      "current_sha256": "b4520c87c913c4f5af42cdc1560c4211a9703280558913a7399ace589722a0bd",
+      "matches": true
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "recorded_sha256": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48",
+      "current_sha256": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48",
+      "matches": true
+    },
+    {
+      "path": "frontend/node_modules/vite/package.json",
+      "recorded_sha256": "e5ed0f85215f871fe22a48987dcd77fcfbe14064a53c0c9f7f48186a6b7e2cf0",
+      "current_sha256": "e5ed0f85215f871fe22a48987dcd77fcfbe14064a53c0c9f7f48186a6b7e2cf0",
+      "matches": true
+    },
+    {
+      "path": "frontend/node_modules/@vitejs/plugin-react/package.json",
+      "recorded_sha256": "162dae2eb246170739d7899d2ce1715a3e17f775fcd75a674da6be6f681225d6",
+      "current_sha256": "162dae2eb246170739d7899d2ce1715a3e17f775fcd75a674da6be6f681225d6",
+      "matches": true
+    },
+    {
+      "path": ".tools/browser-gap-node_modules/ws/package.json",
+      "recorded_sha256": "a56a3fd55945a3ce177e3ca165dafae6f7eb03b7aefd58c092ac723d5741a6fb",
+      "current_sha256": "a56a3fd55945a3ce177e3ca165dafae6f7eb03b7aefd58c092ac723d5741a6fb",
+      "matches": true
+    },
+    {
+      "path": ".tools/browser-gap-node_modules/ws/wrapper.mjs",
+      "recorded_sha256": "fe154662301fd558f935f9c217fccbe7a7dac02ff39e648a000589403ff27c7f",
+      "current_sha256": "fe154662301fd558f935f9c217fccbe7a7dac02ff39e648a000589403ff27c7f",
+      "matches": true
+    }
+  ],
+  "timeline": {
+    "held_at": "2026-09-21T13:27:18.102Z",
+    "ws4_forwarded_at": "2026-09-21T13:27:18.121Z",
+    "browser_marker_at": "2026-09-21T13:27:18.444Z",
+    "http3_released_at": "2026-09-21T13:27:18.469Z",
+    "held_ms": 367,
+    "marker_before_release_ms": 25,
+    "after_browser_observed_at": "2026-09-21T13:27:39.801Z"
+  },
+  "cleanup": {
+    "status": "stopped",
+    "ended_at": "2026-09-21T13:27:54.886Z",
+    "supervisor_pid": 19992,
+    "children": [
+      {
+        "name": "engine",
+        "pid": 17520,
+        "exited": true,
+        "exit_code": 0,
+        "exit_signal": null
+      },
+      {
+        "name": "frontend",
+        "pid": 16552,
+        "exited": true,
+        "exit_code": null,
+        "exit_signal": "SIGTERM"
+      }
+    ],
+    "still_running": [],
+    "last_ws_close": {
+      "close_reply": null,
+      "connected_ms": 36730,
+      "connection_id": 6,
+      "event": "websocket_closed",
+      "last_event_seq": 4,
+      "reason": "receive_error",
+      "skipped": null,
+      "stage": "receive",
+      "timestamp_ms": 1789997274843
+    }
+  },
+  "scope": "Offline source and raw evidence review; no browser/test/service/process-control/Git operations.",
+  "limits": [
+    "Saved AX captures and browser witness JSON are root-collected evidence; this reviewer did not operate a browser or export the original CUA transcript.",
+    "Raw coordinator attempt1 proves the missing prerelease witness/failure; the wrong-locator explanation requires the root CUA error record.",
+    "run.json and child callbacks prove cleanup completion for owned children, not the supervisor process exit code by themselves.",
+    "Protected main process liveness/start-time continuity needs separately saved before/after process observations; no live process was queried in this review.",
+    "Four nonmatching limit placements and one duplicate event are bounded cases, not exhaustive UI concurrency or full-history recovery proof.",
+    "Exact duplicate processing may refresh connection/receipt metadata; unchanged trading state is the claim.",
+    "The final engine WS receive_error occurred during fixture relay teardown; it is not claimed as a clean peer-close handshake."
+  ]
+}

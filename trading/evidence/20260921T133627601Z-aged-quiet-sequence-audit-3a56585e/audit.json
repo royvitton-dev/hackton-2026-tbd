@@ -1,0 +1,350 @@
+{
+  "audit_id": "20260921T133627601Z-aged-quiet-sequence-audit-3a56585e",
+  "recorded_at_utc": "2026-09-21T13:36:27.8558326Z",
+  "mode": "read-only source, historical evidence and live filesystem metadata audit",
+  "no_live_data_content_copied_or_hashed": true,
+  "no_recovery_build_benchmark_or_service_control": true,
+  "source_hashes": [
+    {
+      "path": "scripts/aged-recovery.mjs",
+      "sha256": "e7d1b11d88f6887e0e8e08e433a85d5b8f4dc025e8a1cbfeb54fc8a13e4ac68b",
+      "bytes": 3600,
+      "modified_at_utc": "2026-09-21T09:40:01.502235Z"
+    },
+    {
+      "path": "engine/examples/aged_recovery.rs",
+      "sha256": "c911457e8f98c225b1908bd4f2fb99ce3f7c8df2fb6ac7594a2c3f36c6476a43",
+      "bytes": 16955,
+      "modified_at_utc": "2026-09-21T09:42:20.748987Z"
+    },
+    {
+      "path": "engine/target/debug/examples/aged_recovery.exe",
+      "sha256": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e",
+      "bytes": 17325476,
+      "modified_at_utc": "2026-09-21T09:42:23.8373653Z"
+    },
+    {
+      "path": "engine/target/debug/examples/aged_recovery.d",
+      "sha256": "ca5697507a10854f9c5f4a368be6c7cfba747b40b56248d69a2fa9dc0643ec4d",
+      "bytes": 376,
+      "modified_at_utc": "2026-09-21T09:58:36.784599Z"
+    },
+    {
+      "path": "engine/target/debug/.fingerprint/leave-exchange-3648dbc33b63d2b3/example-aged_recovery.json",
+      "sha256": "77208e965f624f2597a21ebf9ecb295b77e96a7a879b62d75c19631833962ec9",
+      "bytes": 1178,
+      "modified_at_utc": "2026-09-21T09:42:24.3465731Z"
+    },
+    {
+      "path": "engine/target/debug/.fingerprint/leave-exchange-6251fc76bef63453/lib-leave_exchange.json",
+      "sha256": "c86639ef565f1462b405f5693562dab115787c64d4624fd01c6c14f75e8ec5ee",
+      "bytes": 1049,
+      "modified_at_utc": "2026-09-21T09:42:22.8520121Z"
+    },
+    {
+      "path": "engine/src/core.rs",
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4",
+      "bytes": 34605,
+      "modified_at_utc": "2026-09-21T09:42:05.3089164Z"
+    },
+    {
+      "path": "engine/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "bytes": 3066,
+      "modified_at_utc": "2026-09-21T08:28:04.708456Z"
+    },
+    {
+      "path": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954,
+      "modified_at_utc": "2026-09-21T08:54:36.4380856Z"
+    },
+    {
+      "path": "engine/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038",
+      "bytes": 46,
+      "modified_at_utc": "2026-09-21T08:06:21.9925434Z"
+    },
+    {
+      "path": "engine/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194,
+      "modified_at_utc": "2026-09-21T08:42:28.1060212Z"
+    },
+    {
+      "path": "scripts/demo.mjs",
+      "sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19",
+      "bytes": 23629,
+      "modified_at_utc": "2026-09-21T13:04:00.5332713Z"
+    },
+    {
+      "path": "scripts/demo-lifecycle.mjs",
+      "sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "bytes": 8852,
+      "modified_at_utc": "2026-09-21T13:04:00.5332713Z"
+    },
+    {
+      "path": "scripts/park-launcher.mjs",
+      "sha256": "3febf7d346047cd3077d53f1a4dbeb7abf6148035abf92a33698ae3bd2d661d8",
+      "bytes": 3378,
+      "modified_at_utc": "2026-09-21T13:04:33.9768887Z"
+    },
+    {
+      "path": "scripts/watch-process-exit.ps1",
+      "sha256": "0318ca7ce60d488f379cca27c781eca03dbf84c6fbcf08dabbd24184cbda63d9",
+      "bytes": 2304,
+      "modified_at_utc": "2026-09-21T09:56:29.0226386Z"
+    },
+    {
+      "path": "scripts/network-bench.mjs",
+      "sha256": "a86b985fb0878affd6cbb04b6157a78a4237ed402065aa0c49f54214a6412e6c",
+      "bytes": 36765,
+      "modified_at_utc": "2026-09-21T13:25:53.6163043Z"
+    },
+    {
+      "path": "scripts/network-bench-lifecycle.mjs",
+      "sha256": "37dd8c8c52953d1153622a5dd655cfc595b8cb5397c0f139c35e506ca701ddf5",
+      "bytes": 4899,
+      "modified_at_utc": "2026-09-21T13:27:31.4050193Z"
+    },
+    {
+      "path": "docs/aged-recovery-plan.md",
+      "sha256": "c2db1f3923161e8fab617a7b8fc44ffef75c12e32e386ab490e0093d3a7c7781",
+      "bytes": 9589,
+      "modified_at_utc": "2026-09-21T10:05:07.9056567Z"
+    },
+    {
+      "path": "data/demo-current.json",
+      "sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+      "bytes": 11501,
+      "modified_at_utc": "2026-09-21T12:52:40.3431888Z"
+    },
+    {
+      "path": "evidence/20260921T094221462Z-aged-recovery-tool-final-build-d576ef45/run.json",
+      "sha256": "811c84b93074efd6adc260274e374b769638884b7db0bdc11381c848187f0588",
+      "bytes": 374,
+      "modified_at_utc": "2026-09-21T09:42:24.3813748Z"
+    },
+    {
+      "path": "evidence/20260921T094221462Z-aged-recovery-tool-final-build-d576ef45/output.log",
+      "sha256": "74839d4ea3a2026ff00913f38e4683b3e687541ee914a6ebaa7619eafdf482da",
+      "bytes": 154,
+      "modified_at_utc": "2026-09-21T09:42:24.3486409Z"
+    },
+    {
+      "path": "evidence/20260921T095836544Z-status-reuse-aged-validator-build-0d048d4c/run.json",
+      "sha256": "b28bea7747023d04324f51ed0db109a69c24b3939f97eff699c97abebbdb5b23",
+      "bytes": 394,
+      "modified_at_utc": "2026-09-21T09:58:36.8447693Z"
+    },
+    {
+      "path": "evidence/20260921T095836544Z-status-reuse-aged-validator-build-0d048d4c/output.log",
+      "sha256": "52f9b17fb347a996475d657f25f62a33b21231ae32d6375da7d69aa57455232e",
+      "bytes": 73,
+      "modified_at_utc": "2026-09-21T09:58:36.8131062Z"
+    },
+    {
+      "path": "evidence/core-20260921T184147624-status-reuse/after/hashes.json",
+      "sha256": "eb47897817c74ad8112f1b1e95e58de8219c6305bba86f38a2a5c81500e2a713",
+      "bytes": 1729,
+      "modified_at_utc": "2026-09-21T09:45:23.3525493Z"
+    },
+    {
+      "path": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/run.json",
+      "sha256": "2d2d78cf3ef5c3508c6586815cd8ec24fb8a597af56208d5f6798fe345899fb0",
+      "bytes": 849,
+      "modified_at_utc": "2026-09-21T10:03:21.9651199Z"
+    },
+    {
+      "path": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/recovery-report.json",
+      "sha256": "4303ff8dd0bb269f1bef6b7a2f60a18bf7705543434991e57fa52e82ebce2c33",
+      "bytes": 5641,
+      "modified_at_utc": "2026-09-21T10:03:21.9583975Z"
+    },
+    {
+      "path": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/sha256.json",
+      "sha256": "3fc8d30eb86b9d878635295879440f90a799f0eabd070895b0957473002ee9eb",
+      "bytes": 5124,
+      "modified_at_utc": "2026-09-21T10:03:22.2405241Z"
+    },
+    {
+      "path": "evidence/2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5/sha256.json",
+      "sha256": "d93b0d87c068fea76dd035db7072e8d32a1e1041af99bfaadd7d7ee7e7e08139",
+      "bytes": 4034,
+      "modified_at_utc": "2026-09-21T09:42:31.1022042Z"
+    }
+  ],
+  "validator": {
+    "profile": "debug",
+    "sha256": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e",
+    "bytes": 17325476,
+    "same_as_0942_selftest_and_1003_actual_copy": true,
+    "source_dependency_files": [
+      "aged_recovery.rs",
+      "core.rs",
+      "model.rs",
+      "storage.rs",
+      "lib.rs"
+    ],
+    "main_and_ws_frame_are_not_library_dependencies": true,
+    "build_at_0942": "cargo build --example aged_recovery exit0,2.77s",
+    "build_recheck_at_0958": "cargo build --locked --example aged_recovery exit0,0.13s",
+    "provenance": "sufficient practical chain to previously validated exact binary and current unchanged library; not a cryptographic build attestation",
+    "cargo_dep_checksum_enabled": false,
+    "expected_hash_cli_present": false,
+    "recommended_future_action": "Record exact validator binary/source/Cargo.lock SHA set before run, pin binary externally and compare sha256.json copied validator afterward. Rebuild only if linked source/binary changes or stronger contemporaneous build evidence is required."
+  },
+  "current_dataset_metadata": {
+    "at_utc": "2026-09-21T13:36:27.6942262Z",
+    "path": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo",
+    "atomic_snapshot": false,
+    "live_contents_read": false,
+    "files": [
+      {
+        "name": "genesis.bin",
+        "bytes": 3606,
+        "modified_at_utc": "2026-09-21T08:35:31.8857287Z"
+      },
+      {
+        "name": "journal.bin",
+        "bytes": 20399277,
+        "modified_at_utc": "2026-09-21T13:36:27.3938922Z"
+      },
+      {
+        "name": "snapshot-00000000000000002226-00000000000001789980114450707500-12856-1.bin",
+        "bytes": 1605243,
+        "modified_at_utc": "2026-09-21T08:41:54.4529186Z"
+      },
+      {
+        "name": "snapshot-00000000000000002226-00000000000001789980114467391000-12856-3.bin",
+        "bytes": 1605243,
+        "modified_at_utc": "2026-09-21T08:41:54.4674671Z"
+      },
+      {
+        "name": "snapshot-00000000000000002996-00000000000001789981326454757300-1996-0.bin",
+        "bytes": 2168423,
+        "modified_at_utc": "2026-09-21T09:02:06.4562066Z"
+      },
+      {
+        "name": "snapshot-00000000000000012758-00000000000001789983354308301000-15804-0.bin",
+        "bytes": 9438818,
+        "modified_at_utc": "2026-09-21T09:35:54.3161373Z"
+      },
+      {
+        "name": "snapshot-00000000000000022233-00000000000001789984975938949000-15804-2.bin",
+        "bytes": 16521683,
+        "modified_at_utc": "2026-09-21T10:02:55.9434172Z"
+      },
+      {
+        "name": "snapshot-00000000000000022233-00000000000001789984976006464800-15804-4.bin",
+        "bytes": 16521683,
+        "modified_at_utc": "2026-09-21T10:02:56.0121254Z"
+      },
+      {
+        "name": "snapshot-00000000000000032781-00000000000001789986921761326900-20540-0.bin",
+        "bytes": 24472791,
+        "modified_at_utc": "2026-09-21T10:35:21.7588768Z"
+      },
+      {
+        "name": "snapshot-00000000000000043290-00000000000001789988722079105100-20540-2.bin",
+        "bytes": 32387464,
+        "modified_at_utc": "2026-09-21T11:05:22.1017411Z"
+      },
+      {
+        "name": "snapshot-00000000000000053800-00000000000001789990522304475000-20540-4.bin",
+        "bytes": 40311291,
+        "modified_at_utc": "2026-09-21T11:35:22.3337608Z"
+      },
+      {
+        "name": "snapshot-00000000000000064338-00000000000001789992322845077000-20540-6.bin",
+        "bytes": 48320486,
+        "modified_at_utc": "2026-09-21T12:05:22.8795646Z"
+      },
+      {
+        "name": "snapshot-00000000000000074813-00000000000001789994123204042200-20540-8.bin",
+        "bytes": 56258024,
+        "modified_at_utc": "2026-09-21T12:35:23.2682465Z"
+      },
+      {
+        "name": "snapshot-00000000000000085319-00000000000001789995923533662000-20540-10.bin",
+        "bytes": 64123344,
+        "modified_at_utc": "2026-09-21T13:05:23.5704615Z"
+      },
+      {
+        "name": "snapshot-00000000000000095842-00000000000001789997724135025300-20540-12.bin",
+        "bytes": 71947049,
+        "modified_at_utc": "2026-09-21T13:35:24.1890365Z"
+      },
+      {
+        "name": "writer.lock",
+        "bytes": 0,
+        "modified_at_utc": "2026-09-21T08:35:31.8857287Z"
+      }
+    ],
+    "bytes": 406084425.0,
+    "gib": 0.3781955922022462,
+    "latest_snapshot": {
+      "name": "snapshot-00000000000000095842-00000000000001789997724135025300-20540-12.bin",
+      "bytes": 71947049,
+      "modified_at_utc": "2026-09-21T13:35:24.1890365Z"
+    },
+    "disk_free_bytes": 244533366784,
+    "disk_free_gib": 227.73944473266602,
+    "minimum_output_formula": "2*S + G + J + 2*F + V, plus logs/reports; S all source regular file bytes, F recovered full Core bytes, V validator bytes",
+    "current_size_proxy_output_bytes": 993791307.0,
+    "proxy_uses_latest_snapshot_for_unknown_current_full_core": true,
+    "future_recheck_required": true,
+    "suggested_free_space_headroom_bytes": 5368709120,
+    "headroom_is_operational_margin_not_measured_final_size": true
+  },
+  "old_execution": {
+    "source_run": "2026-09-21T10-03-16-660Z-aged-recovery-95f90658",
+    "validator_wall_seconds": 5.294,
+    "wrapper_post_hashing_excluded_from_wall": true,
+    "snapshot_recovery_ms": 554.2546000000001,
+    "genesis_replay_ms": 346.0607,
+    "journal_records": 22233,
+    "full_core_bytes": 16521492,
+    "full_core_equal": true,
+    "predictor_of_future_300s_success": false
+  },
+  "timeout": {
+    "validator_timeout_ms": 300000,
+    "limit_applies_to": "spawnSync copied validator: source copy, derived copies, recoveries, full JSON serialization/comparison/report",
+    "excluded": [
+      "copy validator executable before spawn",
+      "wrapper inventory SHA-256 of all artifacts after child return"
+    ],
+    "overall_wrapper_deadline": false,
+    "timeout_run_preserved": true,
+    "automatically_retries": false,
+    "validator_pid_saved_in_run_json": false,
+    "require_before_bc": "validator returned and wrapper SHA inventory finished; preserve nonzero/error/signal/timeout and report failures; verify no owned diagnostic child remains before releasing quiet lock or restart"
+  },
+  "lock_sequence": {
+    "lock": "data/demo-launcher.lock",
+    "owner": "persistent Node process PID plus token, exclusive create; not an OS-held lock descriptor",
+    "acquire_poll_ms": 100,
+    "competing_cli_acquire_timeout_ms": 90000,
+    "auto_stale_removal": false,
+    "already_held_parent_plus_demo_stop_or_start": "not supported: nested reacquire reaches LAUNCHER_BUSY",
+    "safe_current_code_sequence": [
+      "Wait for actual six-hour observer completion and preserve it. Arm exact executable process-handle exit observer before authorized stop.",
+      "Run existing demo stop (takes/releases its own launcher lock), record engine exit0, still_running empty and observer/helper completion.",
+      "Acquire and retain launcher lock in one live keeper. Re-read current manifest and compare expected run/data/stopped state; check all intended market/frontend PIDs absent. If Park ensure won the gap, abort diagnostics without touching newly live services.",
+      "While lock remains owned, run pinned aged validator on explicitly stopped source. Source writer.lock gives separate copy consistency. Await validator plus all wrapper hashing and retain raw copied files/full Core outputs/report.",
+      "On success, run quiet B/C with expected f518 SHA and unchanged fixed settings. Await all engine/sampler exits, summaries, and no competing load.",
+      "Only after diagnostics children finish, owner verifies PID/token and releases its own launcher lock. Resume via demo ensure, allowing a pending Park ensure to win and be reused safely. Preserve new manifest/version."
+    ],
+    "atomic_stop_through_restart_without_source_change": false,
+    "minimal_optional_stronger_change": "One authorized maintenance lifecycle command/function that acquires launcher lock once, calls stop/start internally without nested reacquire, owns aged/B/C tools and releases in finally; no unverified lock-bypass CLI or manual lock overwrite."
+  },
+  "findings": [
+    "The requested stop->hold sequence has a handoff race; post-acquisition manifest/PID revalidation makes it fail closed. Holding first and invoking current stop/start CLI deadlocks to timeout.",
+    "Use ensure after release rather than raw start, because pending Park ensure may start first.",
+    "300 seconds is not an overall wrapper deadline and a historical 22,233-record success does not prove future runtime.",
+    "Existing binary identity and previous library-source/build evidence are adequate practical provenance; source timestamps/dep paths/checksum=false fingerprints are not an independently reproducible cryptographic build receipt.",
+    "Wait for all hashing to finish before quiet B/C; do not overlap copies/checksum work with timing."
+  ],
+  "artifact_generation_note": "Corrected only this artifact after detecting PowerShell Measure-Object does not read ordered-hashtable keys as properties and DateTime string coercion dropped fractional seconds. Recomputed from the already saved metadata and original historical run timestamps; no live contents/recovery/test were read or executed."
+}

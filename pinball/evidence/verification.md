@@ -54,3 +54,8 @@ main789866b의4188실제반영본에서6/6통과했다. PC입력경계·중복/�
 |neon / mobile emulation 390x844 DPR2|60|60.0|4.04|335|
 
 이표는기본1.5배속·연출줄이기의표본이다. 앞선3배속·연출켜짐측정과구분한다. [실제결과](park-20260921/24-live-flow/browser-results.json), [실행로그](park-20260921/24-live-flow.log). 새검사는별도폴더에보존하며이전증거를덮어쓰지않았다.
+
+
+## Mac / Android packages
+
+[Build, execution, signature verification and explicitly untested Android behavior](park-20260921/25-packaging.md).

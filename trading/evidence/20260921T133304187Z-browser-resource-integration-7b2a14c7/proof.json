@@ -1,0 +1,141 @@
+{
+  "at": "2026-09-21T13:33:04.2755142+00:00",
+  "branch": "main",
+  "source_hashes": [
+    {
+      "file": "trading/scripts/observe.mjs",
+      "sha256": "C47E4F39518991B818D8E544A281C80C63A065326ED73C9339AA7C1327F40A00"
+    },
+    {
+      "file": "trading/scripts/observe-resources.mjs",
+      "sha256": "433A56081EA25B4954851AD1F1EF736A96E51929927DFEA87EB186BF56CB8E14"
+    },
+    {
+      "file": "trading/scripts/observe-resources.test.mjs",
+      "sha256": "94ACAB3500BFB1E6101C4AB06C7E51808B657DFE6F9E014B3969EEBDF68B7109"
+    },
+    {
+      "file": "trading/scripts/supplementary-resources.ps1",
+      "sha256": "AED5CCF88C2D73AB120CD4D23973A426F050A266DA855D92A4630341D073E88D"
+    },
+    {
+      "file": "trading/scripts/browser-gap-demo.mjs",
+      "sha256": "DDF5F8BB680A62D5E9FFE9815E58A9A24B82551191EE0ABD1971283B586150AD"
+    },
+    {
+      "file": "trading/scripts/network-bench.mjs",
+      "sha256": "A86B985FB0878AFFD6CBB04B6157A78A4237ED402065AA0C49F54214A6412E6C"
+    },
+    {
+      "file": "trading/scripts/network-bench-lifecycle.mjs",
+      "sha256": "37DD8C8C52953D1153622A5DD655CFC595B8CB5397C0F139C35E506CA701DDF5"
+    },
+    {
+      "file": "trading/scripts/network-bench-lifecycle.test.mjs",
+      "sha256": "CFD2F8F2BA461910C8A636A4A0C988840613E907660DA1BB326B903A3CCECF8D"
+    },
+    {
+      "file": "park/vite.config.mjs",
+      "sha256": "12E8C26386584B4B238DEB064A8D8EB156D296A2CA699D8F6A65F0D11CE8F0CC"
+    }
+  ],
+  "manifest_sha256": "99714647EF8C859336B318F0939179A51CDB90439908A160E0A0A2A4561EE53E",
+  "protected_processes": [
+    {
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "StartTimeUtc": "2026-09-21T10:05:21.4715478Z"
+    },
+    {
+      "Id": 4220,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T12:52:39.7804367Z"
+    },
+    {
+      "Id": 4928,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3890023Z"
+    },
+    {
+      "Id": 5412,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5355012Z"
+    },
+    {
+      "Id": 6128,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5945324Z"
+    },
+    {
+      "Id": 7916,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4762676Z"
+    },
+    {
+      "Id": 7936,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3037571Z"
+    },
+    {
+      "Id": 12172,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4485053Z"
+    },
+    {
+      "Id": 15272,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5047340Z"
+    },
+    {
+      "Id": 16068,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3612932Z"
+    },
+    {
+      "Id": 17444,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.2784404Z"
+    },
+    {
+      "Id": 18184,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:54.8395149Z"
+    },
+    {
+      "Id": 20484,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5665942Z"
+    },
+    {
+      "Id": 20776,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3346242Z"
+    },
+    {
+      "Id": 20940,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4216442Z"
+    },
+    {
+      "Id": 15744,
+      "ProcessName": "powershell",
+      "StartTimeUtc": "2026-09-21T10:05:54.9077476Z"
+    },
+    {
+      "Id": 16840,
+      "ProcessName": "pwsh",
+      "StartTimeUtc": "2026-09-21T13:17:58.3172929Z"
+    }
+  ],
+  "isolated_processes_still_present": [],
+  "engine_health": {
+    "command_seq": 95021,
+    "durability": "journal-sync-all-before-apply",
+    "event_seq": 95021,
+    "mode": "synthetic-demo",
+    "queue_capacity": 2048,
+    "queue_depth": 0,
+    "status": "ready"
+  },
+  "future_tests": "Existing source-hash-specific agent test results referenced; not repeated."
+}

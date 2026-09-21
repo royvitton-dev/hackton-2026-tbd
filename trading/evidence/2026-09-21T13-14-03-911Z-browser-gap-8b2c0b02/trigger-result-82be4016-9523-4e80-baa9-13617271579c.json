@@ -1,0 +1,307 @@
+{
+  "run_id": "2026-09-21T13-14-03-911Z-browser-gap-8b2c0b02",
+  "baseline_seq": 0,
+  "final_seq": 2,
+  "results": [
+    {
+      "event": "direct_engine_command",
+      "session_token": "demo-user-01",
+      "request": {
+        "request_id": "0470468d-66e4-4885-a38d-9a89462d2942",
+        "action": {
+          "type": "place",
+          "side": "buy",
+          "price": 900,
+          "quantity": 2
+        }
+      },
+      "http_status": 200,
+      "result": {
+        "request_id": "0470468d-66e4-4885-a38d-9a89462d2942",
+        "account_id": "user-01",
+        "command_seq": 1,
+        "event_seq": 1,
+        "status": "accepted",
+        "code": "OK",
+        "message": "명령 처리가 완료되었습니다.",
+        "order_id": 1,
+        "trades": [],
+        "duplicate": false,
+        "durable": true
+      }
+    },
+    {
+      "event": "direct_engine_command",
+      "session_token": "demo-user-02",
+      "request": {
+        "request_id": "23862c58-c846-4b4a-b264-c62f6280ed9f",
+        "action": {
+          "type": "place",
+          "side": "sell",
+          "price": 1100,
+          "quantity": 3
+        }
+      },
+      "http_status": 200,
+      "result": {
+        "request_id": "23862c58-c846-4b4a-b264-c62f6280ed9f",
+        "account_id": "user-02",
+        "command_seq": 2,
+        "event_seq": 2,
+        "status": "accepted",
+        "code": "OK",
+        "message": "명령 처리가 완료되었습니다.",
+        "order_id": 2,
+        "trades": [],
+        "duplicate": false,
+        "durable": true
+      }
+    }
+  ],
+  "state": {
+    "engine_status": "ready",
+    "command_seq": 2,
+    "event_seq": 2,
+    "reference_price": 1000,
+    "last_price": 1000,
+    "volume": 0,
+    "accounts": [
+      {
+        "id": "user-01",
+        "name": "시연 임직원 1",
+        "company": "GS리테이",
+        "kind": "user",
+        "points_available": 998200,
+        "points_reserved": 1800,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 1,
+        "trades_count": 0
+      },
+      {
+        "id": "user-02",
+        "name": "시연 임직원 2",
+        "company": "GS칼테스",
+        "kind": "user",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 997,
+        "hours_reserved": 3,
+        "orders_count": 1,
+        "trades_count": 0
+      },
+      {
+        "id": "user-03",
+        "name": "시연 임직원 3",
+        "company": "GS건썰",
+        "kind": "user",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-01",
+        "name": "거래 봇 01",
+        "company": "GS리테이",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-02",
+        "name": "거래 봇 02",
+        "company": "GS칼테스",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-03",
+        "name": "거래 봇 03",
+        "company": "GS건썰",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-04",
+        "name": "거래 봇 04",
+        "company": "GS리테이",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-05",
+        "name": "거래 봇 05",
+        "company": "GS칼테스",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-06",
+        "name": "거래 봇 06",
+        "company": "GS건썰",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-07",
+        "name": "거래 봇 07",
+        "company": "GS리테이",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-08",
+        "name": "거래 봇 08",
+        "company": "GS칼테스",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-09",
+        "name": "거래 봇 09",
+        "company": "GS건썰",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-10",
+        "name": "거래 봇 10",
+        "company": "GS리테이",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-11",
+        "name": "거래 봇 11",
+        "company": "GS칼테스",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      {
+        "id": "bot-12",
+        "name": "거래 봇 12",
+        "company": "GS건썰",
+        "kind": "bot",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      }
+    ],
+    "orders": [
+      {
+        "id": 1,
+        "account_id": "user-01",
+        "side": "buy",
+        "price": 900,
+        "quantity": 2,
+        "filled": 0,
+        "cancelled": 0,
+        "remaining": 2,
+        "status": "open",
+        "command_seq": 1,
+        "timestamp_ms": 1789996463144
+      },
+      {
+        "id": 2,
+        "account_id": "user-02",
+        "side": "sell",
+        "price": 1100,
+        "quantity": 3,
+        "filled": 0,
+        "cancelled": 0,
+        "remaining": 3,
+        "status": "open",
+        "command_seq": 2,
+        "timestamp_ms": 1789996463156
+      }
+    ],
+    "trades": [],
+    "bids": [
+      {
+        "price": 900,
+        "quantity": 2,
+        "orders": 1
+      }
+    ],
+    "asks": [
+      {
+        "price": 1100,
+        "quantity": 3,
+        "orders": 1
+      }
+    ],
+    "total_points": 15000000,
+    "total_hours": 15000
+  },
+  "gap": {
+    "id": "bfc3fba3-4d1d-43df-83c9-0b6ab05344e1",
+    "phase": "completed",
+    "connection_id": 1,
+    "baseline_seq": 0,
+    "drop_seq": 1,
+    "resume_seq": 2,
+    "armed_at": "2026-09-21T13:14:23.129Z",
+    "dropped_at": "2026-09-21T13:14:23.149Z",
+    "completed_at": "2026-09-21T13:14:23.161Z"
+  }
+}

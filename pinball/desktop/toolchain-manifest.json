@@ -1,0 +1,32 @@
+[
+  {
+    "file": "jdk.tar.gz",
+    "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.12.1_1.tar.gz",
+    "sha256": "3623232f33a9c3baadf304480b2535f9a3cba8a58d42ecbb438ba267315d9998",
+    "officialChecksumVerified": true
+  },
+  {
+    "file": "aapt2.jar",
+    "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/aapt2/9.4.1-15978811/aapt2-9.4.1-15978811-osx.jar",
+    "sha256": "eb93ce9d0fa121333f12395b3ab30822c5cdb9155737f20d342fe71809757059",
+    "officialChecksumVerified": false
+  },
+  {
+    "file": "android-all.jar",
+    "url": "https://repo.maven.apache.org/maven2/org/robolectric/android-all/15-robolectric-13954326/android-all-15-robolectric-13954326.jar",
+    "sha256": "e17105f6c432357e6bb278a527f8e848d01fc56ccee01be77725bea23d871990",
+    "officialChecksumVerified": false
+  },
+  {
+    "file": "r8.jar",
+    "url": "https://dl.google.com/dl/android/maven2/com/android/tools/r8/9.4.24/r8-9.4.24.jar",
+    "sha256": "6efd9dacb08001f342d95482ecc15a7b69c634bc261aeb88bbc8e6cd5837f212",
+    "officialChecksumVerified": false
+  },
+  {
+    "file": "apksig.jar",
+    "url": "https://dl.google.com/dl/android/maven2/com/android/tools/build/apksig/9.4.1/apksig-9.4.1.jar",
+    "sha256": "7ae2e5980c77d853e3513074ee7c822bbdcdcde1668889d17faa7fe8bc8aa821",
+    "officialChecksumVerified": false
+  }
+]

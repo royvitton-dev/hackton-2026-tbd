@@ -1,0 +1,8 @@
+/var/folders/pf/4mnnyv7d5q70y0mydryw6nlh0000gn/T/dropland-icon-fnymajdq/AppIcon.iconset:Invalid Iconset.
+/var/folders/pf/4mnnyv7d5q70y0mydryw6nlh0000gn/T/dropland-icon-fnymajdq/AppIcon.iconset:Invalid Iconset.
+Traceback (most recent call last):
+  File "/Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/desktop/build-macos.py", line 14, in <module>
+    subprocess.run(['clang','-fobjc-arc','-framework','Cocoa',str(source/'macos/icon.m'),'-o',str(binary)],check=True);subprocess.run([str(binary),str(iconset)],check=True);subprocess.run(['iconutil','-c','icns',str(iconset),'-o',str(resources/'AppIcon.icns')],check=True)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/subprocess.py", line 528, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['iconutil', '-c', 'icns', '/var/folders/pf/4mnnyv7d5q70y0mydryw6nlh0000gn/T/dropland-icon-fnymajdq/AppIcon.iconset', '-o', '/Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/DROP-LAND-macOS-arm64/DROP LAND.app/Contents/Resources/AppIcon.icns']' returned non-zero exit status 1.

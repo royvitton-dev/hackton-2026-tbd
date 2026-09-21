@@ -1,0 +1,22 @@
+{"synthetic_cli_fixture":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-678Z-supplementary-analysis-test-5a60d4ea","cases":[{"name":"valid","exit_code":0,"evidence":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-751Z-supplementary-resource-analysis-f3c70983"},{"name":"malformed","exit_code":1,"evidence":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-45-29-868Z-supplementary-resource-analysis-2bddd4e1"}]}
+✔ known cumulative counters use actual elapsed deltas, host CPUs and weighted intervals (11.7366ms)
+✔ real zero CPU differs from unavailable CPU and completed is not a validation pass (0.5946ms)
+✔ partial samples retain surviving process CPU/memory without bridging the missing process (0.3652ms)
+✔ resource-only 30s cadence is valid, a 90s gap is excluded, and the bound is recorded (0.2479ms)
+✔ PID reuse, role changes and process-name changes cannot cross an identity boundary (0.4109ms)
+✔ null or invalid CPU does not become zero and does not discard independently valid memory (0.3684ms)
+✔ memory fields are independent and invalid values cannot become fabricated sums (0.2782ms)
+✔ duplicate PID/role rows are all ambiguous; an unrelated process remains measurable (0.3865ms)
+✔ elapsed/wall clock reversal, disagreement and invalid sample timestamps exclude intervals (0.5913ms)
+✔ CPU reset and impossible host utilization are excluded with concrete reasons (0.404ms)
+✔ collection errors, invalid metadata, demo changes and contradictory missing rows stay explicit (0.6384ms)
+✔ complete JSONL prefix rejects malformed lines and preserves exact trailing partial bytes (0.6099ms)
+✔ CLI freezes original bytes/status/hash and preserves a malformed complete record on failure (225.9655ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 348.5639

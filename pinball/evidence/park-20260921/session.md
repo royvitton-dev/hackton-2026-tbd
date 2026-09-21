@@ -176,3 +176,8 @@
 ## 24 — 2026-09-21T22:09:11.375205+09:00 실제반영본흐름
 
 6개그룹모두통과.원더가든을명시제외한4맵60개공실제결과/같은Chrome재현,PC입력/빠른클릭/정지,모바일N/최대수량/재경기,반응형/키보드/음소거/숨김정지확인. 실제입력·경기·결과스크린샷/trace/설정/시드/도착JSON은24-live-flow에보존.
+
+
+## 25 - Desktop and Android delivery
+
+[Actual packaging work, retained failures, tests and untested native Android behavior](25-packaging.md).

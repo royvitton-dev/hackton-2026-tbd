@@ -1,0 +1,58 @@
+warning: in the working copy of 'park/vite.config.mjs', LF will be replaced by CRLF the next time Git touches it
+Merge made by the 'ort' strategy.
+ pinball/evidence/commands.md                       |    5 +
+ pinball/evidence/git-delivery.md                   |    5 +
+ .../evidence/park-20260921/23-preview-publish.log  |    1 +
+ .../evidence/park-20260921/23-pushed-preview.json  |   19 +
+ .../evidence/park-20260921/23-pushed-preview.log   |    1 +
+ pinball/evidence/park-20260921/24-live-flow.log    |   62 +
+ .../24-live-flow/browser-results.json              |  109 ++
+ .../24-live-flow/desktop-first-round.json          |  468 +++++
+ .../park-20260921/24-live-flow/desktop-racing.png  |  Bin 0 -> 483934 bytes
+ .../park-20260921/24-live-flow/desktop-result.png  |  Bin 0 -> 600967 bytes
+ .../park-20260921/24-live-flow/desktop-setup.png   |  Bin 0 -> 442289 bytes
+ .../park-20260921/24-live-flow/desktop-trace.zip   |  Bin 0 -> 13143624 bytes
+ .../park-20260921/24-live-flow/map-neon.png        |  Bin 0 -> 196552 bytes
+ .../park-20260921/24-live-flow/map-orbit.png       |  Bin 0 -> 196996 bytes
+ .../park-20260921/24-live-flow/map-parade.png      |  Bin 0 -> 185982 bytes
+ .../park-20260921/24-live-flow/map-zigzag.png      |  Bin 0 -> 197473 bytes
+ .../park-20260921/24-live-flow/max-neon-round.json | 1841 +++++++++++++++++++
+ .../24-live-flow/max-orbit-round.json              | 1841 +++++++++++++++++++
+ .../24-live-flow/max-parade-round.json             | 1925 ++++++++++++++++++++
+ .../24-live-flow/max-zigzag-round.json             | 1841 +++++++++++++++++++
+ .../24-live-flow/mobile-max-round.json             | 1153 ++++++++++++
+ .../24-live-flow/mobile-nth-round.json             |  211 +++
+ .../park-20260921/24-live-flow/mobile-racing.png   |  Bin 0 -> 694152 bytes
+ .../24-live-flow/mobile-result-detail.png          |  Bin 0 -> 66913 bytes
+ .../park-20260921/24-live-flow/mobile-result.png   |  Bin 0 -> 774349 bytes
+ .../park-20260921/24-live-flow/mobile-setup.png    |  Bin 0 -> 672354 bytes
+ .../park-20260921/24-live-flow/mobile-trace.zip    |  Bin 0 -> 7175817 bytes
+ pinball/evidence/park-20260921/session.md          |    7 +
+ pinball/evidence/verification.md                   |   17 +-
+ pinball/tests/browser.mjs                          |    9 +-
+ 30 files changed, 9510 insertions(+), 5 deletions(-)
+ create mode 100644 pinball/evidence/park-20260921/23-preview-publish.log
+ create mode 100644 pinball/evidence/park-20260921/23-pushed-preview.json
+ create mode 100644 pinball/evidence/park-20260921/23-pushed-preview.log
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow.log
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/desktop-first-round.json
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/desktop-racing.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/desktop-result.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/desktop-setup.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/desktop-trace.zip
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/map-neon.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/map-orbit.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/map-parade.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/map-zigzag.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/max-neon-round.json
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/max-orbit-round.json
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/max-parade-round.json
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/max-zigzag-round.json
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/mobile-max-round.json
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/mobile-nth-round.json
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/mobile-racing.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/mobile-result-detail.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/mobile-result.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/mobile-setup.png
+ create mode 100644 pinball/evidence/park-20260921/24-live-flow/mobile-trace.zip

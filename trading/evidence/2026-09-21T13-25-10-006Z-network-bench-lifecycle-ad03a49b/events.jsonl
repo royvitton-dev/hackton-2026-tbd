@@ -1,0 +1,36 @@
+{"at":"2026-09-21T13:25:10.287Z","event":"child_state","name":"help","pid":18588,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:10.761Z","event":"child_state","name":"help","pid":18588,"spawned":true,"exited":true,"exit_code":0,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:10.762Z","event":"child_close","name":"help","pid":18588,"closed":true,"close_code":0,"close_signal":null,"closed_at":"2026-09-21T13:25:10.762Z"}
+{"at":"2026-09-21T13:25:10.794Z","event":"child_state","name":"missing-sha","pid":3216,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:11.074Z","event":"child_state","name":"missing-sha","pid":3216,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:11.075Z","event":"child_close","name":"missing-sha","pid":3216,"closed":true,"close_code":1,"close_signal":null,"closed_at":"2026-09-21T13:25:11.075Z"}
+{"at":"2026-09-21T13:25:11.106Z","event":"child_state","name":"bad-sha","pid":3084,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:11.356Z","event":"child_state","name":"bad-sha","pid":3084,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:11.357Z","event":"child_close","name":"bad-sha","pid":3084,"closed":true,"close_code":1,"close_signal":null,"closed_at":"2026-09-21T13:25:11.357Z"}
+{"at":"2026-09-21T13:25:11.380Z","event":"child_state","name":"wrong-binary","pid":12508,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:11.641Z","event":"child_state","name":"wrong-binary","pid":12508,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:11.642Z","event":"child_close","name":"wrong-binary","pid":12508,"closed":true,"close_code":1,"close_signal":null,"closed_at":"2026-09-21T13:25:11.642Z"}
+{"at":"2026-09-21T13:25:11.673Z","event":"child_state","name":"active-market","pid":2936,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:11.936Z","event":"child_state","name":"active-market","pid":2936,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:11.937Z","event":"child_close","name":"active-market","pid":2936,"closed":true,"close_code":1,"close_signal":null,"closed_at":"2026-09-21T13:25:11.937Z"}
+{"at":"2026-09-21T13:25:11.971Z","event":"child_state","name":"normal-exit","pid":7200,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:12.140Z","event":"child_state","name":"normal-exit","pid":7200,"spawned":true,"exited":true,"exit_code":0,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:12.141Z","event":"child_close","name":"normal-exit","pid":7200,"closed":true,"close_code":0,"close_signal":null,"closed_at":"2026-09-21T13:25:12.141Z"}
+{"at":"2026-09-21T13:25:12.173Z","event":"normal_exit_verified","result":{"name":"normal-exit","pid":7200,"spawned":true,"exited":true,"exit_code":0,"exit_signal":null,"spawn_error":null,"closed":true,"close_code":0,"close_signal":null,"closed_at":"2026-09-21T13:25:12.141Z","forced":false,"kill_error":null,"diagnostic_errors":[],"success":true}}
+{"at":"2026-09-21T13:25:12.222Z","event":"child_state","name":"nonzero-exit","pid":20012,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:12.357Z","event":"child_state","name":"nonzero-exit","pid":20012,"spawned":true,"exited":true,"exit_code":23,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:12.358Z","event":"child_close","name":"nonzero-exit","pid":20012,"closed":true,"close_code":23,"close_signal":null,"closed_at":"2026-09-21T13:25:12.357Z"}
+{"at":"2026-09-21T13:25:12.358Z","event":"nonzero_exit_verified","result":{"name":"nonzero-exit","pid":20012,"spawned":true,"exited":true,"exit_code":23,"exit_signal":null,"spawn_error":null,"closed":true,"close_code":23,"close_signal":null,"closed_at":"2026-09-21T13:25:12.357Z","forced":false,"kill_error":null,"diagnostic_errors":[],"success":false}}
+{"at":"2026-09-21T13:25:12.402Z","event":"child_state","name":"forced-exit","pid":13368,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:12.467Z","event":"child_state","name":"forced-exit","pid":13368,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGKILL","spawn_error":null}
+{"at":"2026-09-21T13:25:12.468Z","event":"child_close","name":"forced-exit","pid":13368,"closed":true,"close_code":null,"close_signal":"SIGKILL","closed_at":"2026-09-21T13:25:12.468Z"}
+{"at":"2026-09-21T13:25:12.470Z","event":"forced_exit_verified","result":{"name":"forced-exit","pid":13368,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGKILL","spawn_error":null,"closed":true,"close_code":null,"close_signal":"SIGKILL","closed_at":"2026-09-21T13:25:12.468Z","forced":true,"kill_error":null,"diagnostic_errors":[],"success":false}}
+{"at":"2026-09-21T13:25:12.475Z","event":"child_state","name":"spawn-error","spawned":false,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":"spawn C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-25-10-006Z-network-bench-lifecycle-ad03a49b\\missing-executable ENOENT"}
+{"at":"2026-09-21T13:25:12.477Z","event":"child_close","name":"spawn-error","closed":true,"close_code":-4058,"close_signal":null,"closed_at":"2026-09-21T13:25:12.477Z"}
+{"at":"2026-09-21T13:25:12.478Z","event":"spawn_error_verified","result":{"name":"spawn-error","spawned":false,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":"spawn C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-25-10-006Z-network-bench-lifecycle-ad03a49b\\missing-executable ENOENT","closed":true,"close_code":-4058,"close_signal":null,"closed_at":"2026-09-21T13:25:12.477Z","forced":false,"kill_error":null,"diagnostic_errors":[],"success":false}}
+{"at":"2026-09-21T13:25:12.589Z","event":"child_state","name":"wrong-ready","pid":20952,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:12.786Z","event":"child_state","name":"wrong-ready","pid":20952,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGKILL","spawn_error":null}
+{"at":"2026-09-21T13:25:12.787Z","event":"child_close","name":"wrong-ready","pid":20952,"closed":true,"close_code":null,"close_signal":"SIGKILL","closed_at":"2026-09-21T13:25:12.787Z"}
+{"at":"2026-09-21T13:25:12.843Z","event":"child_state","name":"owned-ready","pid":6424,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T13:25:15.292Z","event":"child_state","name":"owned-ready","pid":6424,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGKILL","spawn_error":null}
+{"at":"2026-09-21T13:25:15.294Z","event":"child_close","name":"owned-ready","pid":6424,"closed":true,"close_code":null,"close_signal":"SIGKILL","closed_at":"2026-09-21T13:25:15.294Z"}

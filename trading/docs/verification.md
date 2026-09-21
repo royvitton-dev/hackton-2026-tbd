@@ -1,6 +1,6 @@
 # 누적 검증과 완료 기준
 
-2026-09-21 22:06 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-21 22:29 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
@@ -15,7 +15,7 @@
 | 저널·스냅샷·강제 종료 복구 | 통과(프로세스 장애 범위) | [저장소 19개 테스트](../evidence/20260921T083106130Z-storage-recovery-verified-toolchain-b43a25ff), 추가 [실제 snapshot 저장 중 kill 2경계](../evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md). OS·전원 장애 미검증 |
 | 성공 ACK 복구·응답 유실·재시도 | 통과 | 저장소 실제 child kill + API 응답 차단 proxy·재시작·동일 ID 재시도, 전체 상태 비교 |
 | 브라우저 재연결·재동기화 | 통과 | [동일 탭 엔진 재시작 전후](../evidence/browser-reconnect-2026-09-21T09-02-02-365Z), 수동 reload 없이 EVENT2971→3026, 잔고 유지. [504 뒤 idle시장 재구독·unknown 보존·동일ID 재시도](../evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/README.md)도 통과 |
-| 브라우저 WS 누락·중복·초기 HTTP 경합 | 소스·단위 검증 / 실제 주입 검증 진행 | [UI 요구 감사 8.R3/R4](../evidence/20260921T123354532Z-ui-requirements-audit-c7e4b300/audit.md), [내구성 감사 11-c6](../evidence/2026-09-21T12-40-04-712Z-requirements-durability-audit-28d784b2/audit.md). 기존 재연결과 sequenceDecision 단위검사는 실제 브라우저의 의도적 누락→HTTP 재조회→화면 수렴을 증명하지 않는다. 별도 WS relay fixture 준비 중 |
+| 브라우저 WS 누락·중복·초기 HTTP 경합 | 실제 주입 검증 통과 | [격리 브라우저 원본](../evidence/2026-09-21T13-15-32-792Z-browser-gap-91b002af/README.md): 실제 seq1 누락→seq2→HTTP2 재조회·재동기화1회·잔고 수렴. 동일 seq2 재전송 후 잔고·주문 동일. 초기 HTTP3을 보류하고 WS4/최신 잔고를 화면에서 확인한 뒤 367ms 만에 HTTP3 반환, 화면 seq4·예약3300P·미체결3개 유지. 첫 경합 검증의 locator 실패도 보존 |
 | 느린 수신자 격리 | 통과(이번 호스트·부하 범위) | 초기 [수신 중단 검증](slow-ws-validation.md)에 이어 최신 f518 바이너리의 [진단](ws-serialization.md)에서 정상 289개 상태·416 ACK/조회·16 중복 재시도, 자산/예약 일치와 paused 수신자의 `send_timeout/state`를 확인했다. 이전 고부하 단절의 원인 소급 확정은 아님 |
 | WS 종료 사유·peer 정상 종료 | 수정 후 통과 / 범위 제한 | [종료 진단](ws-diagnostics.md): peer Close응답flush후1000·오류0. 별도paused수신자의실제send_timeout/state확인,정상289frames·416ACK/조회·16중복검증. 서버행정shutdown의1006과이전고부하1005원인미확정은유지 |
 | 빌드·포맷·린트·테스트 | 통과(기록된 소스 범위) | 최신 f518 Rust [release](../evidence/20260921T114620498Z-ws-encoder-release-2aadbde9/run.json), [fmt](../evidence/20260921T114618896Z-ws-encoder-fmt-6b525e16/run.json), [Clippy all-targets](../evidence/20260921T114752406Z-ws-encoder-clippy-ae5df0a9/run.json), [직렬화 unit3](../evidence/20260921T114315186Z-ws-encoder-unit-4ccf2234/run.json), [API10](../evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/run.json). 프런트 변경 없이 기존 [7개 테스트](../evidence/frontend-20260921T090509598Z)·[TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) 근거 유지 |
@@ -78,4 +78,8 @@
 
 [2시간 중간관찰](../evidence/2026-09-21T12-09-28-609Z-two-hour-observation-independent-review-0a64746a/README.md)은1434표본/7266.747초,12봇·ready·자산보존·WSgapdisconnect0이며6시간완료아님. 일부1.814초봇응답과같은구간REST지연을확인했고원인은미확정이다.네번째snapshot의SHA/header/payloadCRC는확인했으나전체누적복구검증은관찰종료후별도로한다.
 
-22:04 중간 관찰: 2106표본/10694.582초 동안 12봇·ready·자산 보존·WS누락/단절0. 단 UI17556이 종료되어21:52에4220으로 복원했다. 21:44:51부터 초기PID를 캐시한 관찰자의 UI 자원 표본이 빠지므로14프로세스 자원 수치는21:44:21까지이며, 연속6시간 UI 운영 통과로 보고하지 않는다. [실제 관찰 분석](../evidence/2026-09-21T13-04-13-664Z-observation-analysis-0b82788b/analysis.json).
+22:04 중간 관찰: 2106표본/10694.582초 동안 12봇·ready·자산 보존·WS누락/단절0. 단 UI17556이 종료되어21:52에4220으로 복원했다. 초기PID를 캐시한 관찰자의 PowerShell 호출이 비정상 종료하면서 일부 stdout도 버려져, 21:44:51부터 UI뿐 아니라 엔진·봇 자원 기록 전체가 없다. 마지막 완전 표본은21:44:21이며 연속6시간 UI 운영이나 자원 수집 통과로 보고하지 않는다. [원래 관찰 분석](../evidence/2026-09-21T13-04-13-664Z-observation-analysis-0b82788b/analysis.json), [원본 공백 검토와 보완 수집](resource-observation.md#누락된-pid와-자원-기록-공백).
+
+22:42 중간 관찰은2,558표본/13,001.144초,명령75,929·거래량57,538h 증가,12봇·ready·자산보존·WS누락/단절0이었다. 시장 표본 최대 간격6.638초이며6시간 완료는 아니다. 22:28의 기존 UI PID가 `conhost`로 재사용된 표본을 발견해 최초 PID/이름 구성과 다른 메모리·CPU구간을 제외했다. 정정 후 메모리313개/마지막21:44:21,CPU312구간이며 관련17검사·독립 원본 검토를 통과했다. [정정 근거](resource-observation.md#pid-재사용-정정과-보완-수집-분석).
+
+별도 시작 시각 기반 자원 분석은13개 집중 검사와 실제56표본/55구간의 독립 산술 대조를 통과했다. CPU14합계 평균0.8901%/엔진0.5655%(16논리CPU전체)이며 누락된 과거를 복원한 결과가 아니다. [그래프](../evidence/20260921T135027159622Z-resource-coverage-plot-a553d498/resource-coverage.png)는367개 앞뒤 CPU구간 검산과 실제 렌더링 확인을 거쳤고2,018.343초 자원 공백을 표시한다. 조용한 벤치마크·순간 최대·전체6시간 자원 연속성으로 해석하지 않는다.

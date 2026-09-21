@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-09-21T13:27:21.776Z",
+  "ended_at": "2026-09-21T13:27:22.308Z",
+  "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+  "args": [
+    "--test",
+    "trading/scripts/observe-resources.test.mjs"
+  ],
+  "cwd": "C:\\project\\hackton-2026-tbd",
+  "node": "v24.19.0",
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "sources": [
+    {
+      "path": "scripts/observe-resources.mjs",
+      "sha256": "433a56081ea25b4954851ad1f1ef736a96e51929927dfea87eb186bf56cb8e14"
+    },
+    {
+      "path": "scripts/observe-resources.test.mjs",
+      "sha256": "94acab3500bfb1e6101c4ab06c7e51808b657dfe6f9e014b3969eebdf68b7109"
+    }
+  ]
+}

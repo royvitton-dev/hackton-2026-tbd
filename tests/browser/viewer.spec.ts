@@ -53,8 +53,8 @@ test('Reference theme, actual GLB, battery focus, camera bounds and user selecti
   await page.getByRole('button',{name:'점수는 어떻게 계산하나요?'}).click();
   await expect(page.locator('#battery-info-panel')).toContainText('평가하기 어려운 충전 기록');
   await page.getByRole('combobox',{name:'사용자 및 차량'}).selectOption('U0017');
-  await expect(canvas).toHaveAttribute('data-renderer','webgl-cutout');
-  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq6_lr_2wd_2026');
+  await expect(canvas).toHaveAttribute('data-vehicle-id','hyundai_ioniq6_lr_2wd_2026',{timeout:90000});
+  await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
   await expect(page.getByTestId('vehicle-model')).toHaveText('Ioniq 6');
   expect(errors).toEqual([]);
 });

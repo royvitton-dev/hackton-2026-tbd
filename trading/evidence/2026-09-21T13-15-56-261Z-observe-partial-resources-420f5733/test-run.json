@@ -1,0 +1,45 @@
+{
+  "started_at": "2026-09-21T13:17:35.826Z",
+  "ended_at": "2026-09-21T13:17:36.666Z",
+  "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+  "args": [
+    "--test",
+    "trading/scripts/observe-resources.test.mjs",
+    "trading/scripts/resource-cpu.test.mjs"
+  ],
+  "cwd": "C:\\project\\hackton-2026-tbd",
+  "node": "v24.19.0",
+  "exit_status": 0,
+  "signal": null,
+  "error": null,
+  "sources": [
+    {
+      "path": "scripts/observe.mjs",
+      "sha256": "c47e4f39518991b818d8e544a281c80c63a065326ed73c9339aa7c1327f40a00"
+    },
+    {
+      "path": "scripts/observe-resources.mjs",
+      "sha256": "0bb79056b7a3e5e4e3e3877f5aeef9da6c92acd5f7be3fe85daeac27237bd602"
+    },
+    {
+      "path": "scripts/observe-resources.test.mjs",
+      "sha256": "07af9ed8902e5a498c7465d3048e53fd103e81eafb1c5a7269397dab1f893f57"
+    },
+    {
+      "path": "scripts/resource-memory.mjs",
+      "sha256": "84cdd22c5a5e9a935b87dcbd168c91f7ea3ac2ef0414767cc6aa07dbbee09943"
+    },
+    {
+      "path": "scripts/resource-cpu.mjs",
+      "sha256": "63b937511c1ef2389af6fe255299d77e46f85bf607932c57f5d3e4150b9b9330"
+    },
+    {
+      "path": "scripts/resource-cpu.test.mjs",
+      "sha256": "c2fb835de5833953ed3365ad49550097b972dd0efa5ca3f63ddac3f2857100f5"
+    },
+    {
+      "path": "scripts/summarize-observation.mjs",
+      "sha256": "a2cda49ab9beac97f0948de70e1477c2c5764dd8fe7b54a3c16c811ede345ea9"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-21",
+  "result": "IONIQ 6 detailed GLB obtained from the default public AutoTrader Pivot viewer; six other vehicle models remain unavailable.",
+  "objaverse": {
+    "indexUrl": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/object-paths.json.gz",
+    "entriesChecked": 798759,
+    "result": "The prior six exact candidate UIDs were absent. Additional Q4/ID.4 candidates were absent too; a Q4 photo impostor and a generic electric concept car were excluded."
+  },
+  "sourceDiscovery": [
+    "https://www.autotrader.ca/explore/hyundai/ioniq-6/build-your-own",
+    "https://configurator.v2.londondynamics.com/iframe_api",
+    "https://configurator.v2.londondynamics.com/by_product_id/e30a2277-db50-4c06-9223-22873d8899c9/hyundai-ioniq6-2025?websdk=1&integrationType=widget"
+  ],
+  "downloadMethod": "Public product page -> public iframe -> embedded src.glb. No login, restricted download endpoint, generated mesh, or alternate car substitution.",
+  "hyundaiAustraliaCandidate": {
+    "url": "https://www.hyundai.com/au/en/cars/eco/ioniq6",
+    "httpStatus": 200,
+    "result": "Redirected to the electric vehicle range page; no IONIQ 6 geometry linked."
+  }
+}

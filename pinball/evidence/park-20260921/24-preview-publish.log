@@ -1,0 +1,11 @@
+file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/scripts/publish-preview.mjs:14
+if(commit!==remote)throw new Error('Remote main does not match HEAD; finish the normal push first.');
+                         ^
+
+Error: Remote main does not match HEAD; finish the normal push first.
+    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/scripts/publish-preview.mjs:14:26
+    at ModuleJob.run (node:internal/modules/esm/module_job:561:25)
+    at async node:internal/modules/esm/loader:647:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5)
+
+Node.js v24.21.0

@@ -1,6 +1,6 @@
 # 작업 체크포인트
 
-갱신: 2026-09-21 22:08 KST. 마감: 2026-09-22 09:00 KST (약10시간52분 남음).
+갱신: 2026-09-21 22:12 KST. 마감: 2026-09-22 09:00 KST (약10시간48분 남음).
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 경계·사용자 지시·Git
@@ -157,3 +157,40 @@
 
 - 22:09 확인에서 기존 Park19636/5190·5290이 이미 종료되어 있었다(원인 미확정, 이 작업에서 종료하지 않음). 거래소20540/4220/관찰자18184는 생존. 기본5190을 새 코드로 시작하려던 Start-Process 명령은 실행 전 자동 승인검토에서 `blocked by policy`로 거절됐다. 더 구체적 이유 없음; 재시도/우회하지 않음. 위5196 검증 서버 실행/종료와 구분하며 기본파크 재실행은 사용자에게 안내한다.
 - 새 원격main에 타 작업 EVision병합이 있어 Wonder Park 명령이 `npm run park:dev` / `npm run park:preview`로 바뀐다. 원격변경을 보존해 병합하고 거래소 문서도 새 명령으로 맞춘다. 루트 `npm run dev`는 이제 EVision이다.
+
+## 22:12 전달 완료와 다음 재개
+- main push완료/원격SHA일치:740710471cf985181b5257746344145e580f9d31. 구현commit23945c4. 원격EVision/핀볼 작업을보존해병합했고2회push경합후3회째성공. rootREADME충돌은원격내용전부보존+거래소row/자동시작안내로해결. npm명령은park:dev/park:preview. park/vite.config.mjs는여전히다른작업미커밋,기존SHA12E8C263...0CC보존.
+- 독립리뷰둘다후속수정확인완료:demo F1 ownedchild쓰기실패정리해결,launcher강제timeout/핸들누수해결. 추가actionable없음. source변경없이검토했고새ensure8/8+wrapper5/5,기존lifecycle12/12증거. root code/docs diffcheck통과;원본evidence CRLF/AX공백은해시보존을위해변경하지않음.
+- 기본Park시작은자동승인검토거절로미실행. 사용자에게별도문단으로사유(blocked by policy,추가설명없음)안내. 다른명령/도구로같은실행을우회하지말것. 현재거래소5175·8787와12봇/6시간observer는계속실행중. UI4220의자원누락범위유지.
+- 현재goalturn의실제진전:새동일키중첩검증/독립576대조,UI단독복원,Park자동준비및브라우저검증,실패정리보완·25검사,mainpush. 전체goal완료선언아님. 다음엔pending브라우저gap/중복/초기HTTP경합fixture검증,observer자원분석coverage보완/01:06누적복구·quiet B/C.
+
+## 22:19 중간 진행·사용자 지도 오류 해결
+- 이전goalturn은자동시작구현·실제검증·mainpush의progress. 현재turn은기존observer20793 실제live출력확인후계속함. 시각22:12 재개,마감09:00유지.
+- 사용자map폰트import오류:원래package/lock에두fonts5.3.0선언됐지만map/node_modules에는Vite캐시뿐. 캐시보존후lock기준156패키지설치,해시불변/소스수정없음. HTTP/src/main.js+두fonts200,실제지도/42목록확인. evidence/20260921T131557773Z-map-dependencies-db6f23fd. Park는사용자측에서새PID19312/5190·5290으로시작된것을관찰;우리의기본Park실행거절을우회하지않음.
+- 자원공백정정:기존observer는누락UI PID때문에PowerShell부분stdout까지버림. 21:44:21.449마지막14개정상,21:44:51.883부터엔진/봇자원도없음(시장/WS는계속). 고정prefix22:15:51에374자원=313정상/61오류. 이전의UI만측정누락이라는설명은불충분해정정. durability futureobserve수정14/14통과(실제누락PID포함),라이브observer는재시작안함.
+- root새읽기전용 scripts/supplementary-resources.ps1로30초자원수집재개. active execsession90617/PID16840,run20260921T131759342Z-supplementary-resources-259339d4,22:17:59부터9/22 01:06까지. 현재manifest14개+각StartTimeUTC/CPU/WS/private를읽고시장요청없음. stop.request로정상중지가능. 초기4초검사는JSON PID가Int64라전부error→수정후실제5샘플모두complete. 실패run131423...c9adc91b보존,정상test131610...b50d68bb. 독립리뷰/문서·push예정.
+- frontend clean browserfixture준비:run2026-09-21T13-15-32-792Z-browser-gap-91b002af,supervisor19992(session78191),engine17520:8794,relay8795,UI16552:5181,초기seq0. Node gap/duplicate/heldHTTP smoke13-14-03...8b2c0b02통과/정상종료. 실제CUA는사용자map수리로아직미실행. HANDOFF.md참조;heldHTTP는8초클라이언트timeout안에실제order3/release해야함.
+- matching_core가quiet B/C 사전감사완료 evidence/20260921T131735790Z-quiet-bc-preflight-audit-203b1d12. 새f518sha확인. 실행전ownedreadiness/실제exit/sampler증거·SHApin보완필요,quiet선언만검사하는기존script한계. 서비스/부하실행없음.
+
+## 22:34 브라우저 경합 검증과 자원 수집 보완
+- 원명세의09:00 마감·전체goal active 유지. 이번goal단위는사용자map폰트수리뒤실제브라우저gap/duplicate/staleHTTP 공백검증,관찰누락원인수정,quiet B/C 하네스종료검증보완의실제진전이다. 의미없는동일테스트반복없음.
+- 브라우저fixture 13-15-32...91b002af: WS1 실제누락→2/HTTP2재조회→재동기화1·잔고수렴, exactWS2중복후잔고동일, HTTP3보류→WS4/실제AXmarker→367ms후HTTP3release→화면4/사용996700/예약3300/미체결3유지. 첫stale시도는잘못된DOMlocator로marker실패/exit1 보존; 두번째수정검증exit0. durability독립59+5검사불일치0 evidence/2026-09-21T13-29-37-103Z-browser-gap-independent-review-ba9f8cac. 소유engine17520exit0/UI16552SIGTERM/supervisor19992exit0·실제PID부재확인,임시tab10닫음.
+- 미래observer helper는PowerShell nonzero의유효stdout/누락PID를보존,중복요청PID는input_error. 최초14/14(새7+기존7),duplicate수정후helper8/8. 원observer재시작없어이후에도자원누락,시장/WS관찰은계속. 보완PS16840/session90617은22:17:59부터01:06까지14개현재manifest/StartTimeUTC를수집한다. 초기실패4개/수정후5정상/독립13개완전prefix근거보존. 자원21:44–22:17공백의전체엔진·봇영향을verification/resource docs에정정.
+- matching_core network-bench lifecycle: requiredexpectedSHA,source/copiedSHA일치,recordedlive engine/bot거절,ownedready exactbind/data,실제engine/samplerexit+close·독립cleanup·강제종료false·후속scenario중단. focused12/12+syntax3,frontend독립검토추가결함0. 실제Rust/PSsampler B/C는아직미실행. 기존15초grace<서버25초drain은falsefail가능한한계이며falsepass아님. evidence/2026-09-21T13-27-32-207Z-network-bench-lifecycle-f586eff3,review13-33-15...c632a5e4.
+- root통합검증 evidence/20260921T133304187Z-browser-resource-integration-7b2a14c7:17개보호프로세스/시작시각,mainmanifestSHA997146...53E동일,격리3PID부재,engine95021ready,source해시시험결과일치. docs106개localtarget존재. park/vite.config.mjs 타작업SHA12E8...0CC동일/stage제외. 현재main7407104,원격b584f07까지타작업추가됨;이번trading-only완료변경commit후비강제병합/push예정.
+- 제외할4개진행중경로: main demo10-05-21...3b10627b,observer10-05-54...0b80d28e,console20260921T100554819Z,보완수집20260921T131759342Z...259339d4. 완료된기존frontend-recovery서브폴더는이미직전commit됨.
+- 다음22:35관찰checkpoint/CPU보완수집분석. 01:05:55observer와01:06sampler실제종료확인후정상demo stop→launcher잠금획득/quiet재검증→누적FULLCore복구→최신f518 B/C→잠금해제→demo ensure로재개. lock획득한채demo stop/start CLI를호출하면자기잠금경합이므로금지. stop→lock사이Park가먼저실행되면quiet/sourcewriterlockguard로중단. matching_core가이순서·진단binary provenance읽기감사진행중. 07/08/08:30/08:55마감gate유지.
+## 22:37 브라우저·자원 보완 main push 완료
+- local/remote main SHA **3e017365d6b0dae59f737eac757d6fa261e43ec0** 일치를22:37:11 ls-remote로확인. 구현commit aee5c364bf33f86d18242e45b14bb110d06748bf,276파일trading-only. 타작업remote main의EVision/지도/Park수정89파일등을비강제merge보존했고1회fetch-first경합뒤재fetch/merge/push exit0. 근거 evidence/20260921T133611418Z-browser-resource-main-push-40ff3bdd.
+- 합친후map5290/src/main.js HTTP200/importresolve오류없음. map폰트설치는로컬의존성복구라소스변경이아니며그검증증거도commit됨. 별도미커밋park/vite.config.mjs SHA12E8...0CC 보존. 메인manifestSHA997146...53E동일/엔진·봇·관찰중단없음. Git index비어있음.
+- 이번goal단위완료·전체goal active. 다음unit은22:35주기중간관찰/보완자원고정prefix분석,agedvalidator·quiet잠금사전감사결과반영. 실제quiet B/C와현재누적FULLCore복구는01:06이후,기존6시간과보완수집4성장경로는계속commit제외한다. 이후push기록/이번push증거는다음완료unit에추가한다.
+## 22:56 자원 분석 정정·그래프와 코어 할당 실험
+- 원명세 다시읽음/SHA BF190C...D5 유지,PROJECT_ROOT C:\project\hackton-2026-tbd/main. 현재시각22:56KST,09:00마감까지약10시간4분. 직전goal단위는실제브라우저검증/자원수집정정/mainpush의progress이며전체goal active. 이번단위는새PID재사용결함수정/보완자원분석/원시367구간그래프검산의progress다.
+- 22:42시장관찰 2026-09-21T13-42-39-992Z-observation-analysis-8a1b6dc1:2558표본/13001.144초,75929명령/57538h증가,12봇·ready·자산보존·WSgapdisconnect0,최대공백6.638초. 봇22:39分析13-39-36...7b589825:75077durable=75043accepted+34rejected,p9930.6084ms/max1814.1419ms,불완전tail0.6시간완료아님.
+- 원observer22:28:15의UI17556은conhost였다. 기존메모리314개/마지막22:28은잘못포함된프로세스라채택취소. resource-memory/resource-cpu/summarize-observation을최초완전PID/name집합으로고정,메모리313/마지막21:44:21.449·CPU312구간/평균0.55123375%로정정. samePID/samename재사용은과거시작시각부재로판별한계. 원잘못된analysis13-39-34...db5a171f도보존. 관련17/17 evidence134206...9310b8b9,frontend독립원prefix검토13-42-38...3dbd3323/소스후속13-45-48...5545b72f불일치없음.
+- durability의새supplementary-resource-analysis.mjs/CLI/test:완전prefix·SHA동결/불완전tail별도보존/잘못된완전행fail,Id+StartTimeUTC+role+name동일성/개별·14합계구분/인접카운터·65초기본maxgap.13/13테스트13-45-29...db65adb1.실제22:17:59–22:45:35 prefix56개/55구간1655.5168513초/CPU14합계0.8901345893%·엔진0.5654625694%(16코어),마지막engineWS118026240/private127930368B,14합WS644681728/private1179230208B. 원run진행중/과거공백보완불가. frontend독립산술13-49-23...095d1add全14동일성·CPU·메모리불일치0.
+- root그래프scripts/plot-resource-coverage.py:원시312+55=367CPU구간독립검산,2,018.343초공백보간없음. 최종evidence20260921T135027159622Z-resource-coverage-plot-a553d498 PNG/SVG/소스/SHA,22:52실제PNG열람/레이아웃확인. 처음PYTHONPATH미설정matplotlib없음실패·첫legend겹침출력보존후기존.tools/plot-libs로해결/ylim수정,최종exit0.문서README/resource/verification업데이트.
+- matching_core 격리Cow CommandResult실험20260921T134615285Z-cow-result-prototype-5d8dd1e4:운영model/core/storage/target수정없음. report중간6000명령baseline14.331333→8.331333 alloc/명령(-6),요청bytes5034232→4446232,타입184B동일. 복구된ownedcache조회감소없음/zeroalloc미달/TPS미측정. 첫Order.status까지자동변환오류build-01실패보존후CommandResult3필드만수정해build-02/run-01exit0. durability독립legacy JSON/checksum-frame양방향호환성검토중. 운영적용전소스diff/최종증거평가필요.
+- aged/quiet사전감사20260921T133627601Z-aged-quiet-sequence-audit-3a56585e 완료:debugagedvalidator49adf4f...b3e는과거22233명령FULL복구검증binary동일,core/model기준변화없음.22:36snapshot95842/71947049B·영속406084425B·여유244533350400B. 최종복구전다시용량/소스확인. Cow운영적용시library가바뀌므로validator다시build/test필요.
+- 메인20540/12봇/UI4220·observer18184/20793·helper15744·보완16840/90617재시작없음. observer실제출력22:38까지handlelive확인,17시작시각일치마지막확인은22:33.다음주기관찰23:05.원6시간01:05:55/보완01:06 실제종료후stop+actualexit→독립launcherlock확보/원14부재→FULLaged복구→최신SHA고정quietB/C→lock해제→demo ensure. lock소유중자식demoCLI중첩금지.07/08/08:30/08:55gate유지.
+- 완료변경을maincommit/push할때park/vite.config.mjs SHA12E8...0CC보존,4개성장경로및진행중Cow실험제외. 新park-start13-38-16...844de92b는외부Parkがensure해현재demo재사용한167B결과뿐,root가defaultPark拒否실행을우회한것아님. 새검토/현재push증거는다음단위보존.

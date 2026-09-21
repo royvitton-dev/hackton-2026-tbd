@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "run_id": "20260921T134945342Z-resource-coverage-plot-c0c2f0c0",
+  "started_at": "2026-09-21T13:49:45.3742029Z",
+  "ended_at": "2026-09-21T13:49:51.2222446Z",
+  "args": [
+    "scripts/plot-resource-coverage.py",
+    "evidence/2026-09-21T13-42-38-482Z-observer-pid-reuse-review-3dbd3323/observer-prefix-2522.raw.jsonl",
+    "evidence/2026-09-21T13-42-39-992Z-observation-analysis-8a1b6dc1/analysis.json",
+    "evidence/2026-09-21T13-45-56-887Z-supplementary-resource-analysis-1bb6f8c2"
+  ],
+  "command": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "exit_code": 0
+}

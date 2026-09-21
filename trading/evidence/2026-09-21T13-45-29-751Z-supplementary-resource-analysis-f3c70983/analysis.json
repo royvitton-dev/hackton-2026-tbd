@@ -1,0 +1,2209 @@
+{
+  "source_run_id": "valid",
+  "source_status": "running",
+  "source_reported_completed": false,
+  "parameters": {
+    "expected_process_count": 14,
+    "logical_processors": 4,
+    "source_interval_seconds": 30,
+    "max_gap_seconds": 65,
+    "max_gap_policy": "2 * recorded interval_seconds + 5 seconds",
+    "clock_disagreement_tolerance_ms": 1000,
+    "cpu_denominator": "Adjacent recorded elapsed_ms delta * recorded logical_processors"
+  },
+  "coverage": {
+    "sample_count": 2,
+    "first_at": "2026-01-01T00:00:00.000Z",
+    "last_at": "2026-01-01T00:00:30.000Z",
+    "observed_elapsed_span_seconds": 30,
+    "complete_membership_samples": 2,
+    "incomplete_or_invalid_samples": 0,
+    "all_samples_and_intervals_valid": true,
+    "completion_note": "Sampler status completed means its loop ended; it does not imply complete or valid resource coverage."
+  },
+  "sample_validation": [
+    {
+      "sample_index": 0,
+      "at": "2026-01-01T00:00:00.000Z",
+      "complete_membership": true,
+      "retained_identity_rows": 14,
+      "collection_duration_ms": 100,
+      "issues": [],
+      "row_issues": [],
+      "missing_processes": [],
+      "collection_error": null
+    },
+    {
+      "sample_index": 1,
+      "at": "2026-01-01T00:00:30.000Z",
+      "complete_membership": true,
+      "retained_identity_rows": 14,
+      "collection_duration_ms": 100,
+      "issues": [],
+      "row_issues": [],
+      "missing_processes": [],
+      "collection_error": null
+    }
+  ],
+  "cpu": {
+    "full_group": {
+      "available": true,
+      "candidate_interval_count": 1,
+      "interval_count": 1,
+      "excluded_interval_count": 0,
+      "covered_interval_seconds": 30,
+      "cpu_seconds": 14,
+      "mean_percent_total_capacity": 11.666666666666666,
+      "max_interval_percent_total_capacity": 11.666666666666666,
+      "first_interval": {
+        "from_index": 0,
+        "to_index": 1,
+        "from": "2026-01-01T00:00:00.000Z",
+        "to": "2026-01-01T00:00:30.000Z",
+        "seconds": 30,
+        "wall_seconds": 30,
+        "process_count": 14,
+        "membership": [
+          {
+            "Id": 101,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "engine",
+            "ProcessName": "leave-engine"
+          },
+          {
+            "Id": 102,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-102",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 103,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-103",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 104,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-104",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 105,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-105",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 106,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-106",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 107,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-107",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 108,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-108",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 109,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-109",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 110,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-110",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 111,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-111",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 112,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-112",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 113,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-113",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 114,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-114",
+            "ProcessName": "node"
+          }
+        ],
+        "cpu_seconds": 14,
+        "percent_total_capacity": 11.666666666666666
+      },
+      "last_interval": {
+        "from_index": 0,
+        "to_index": 1,
+        "from": "2026-01-01T00:00:00.000Z",
+        "to": "2026-01-01T00:00:30.000Z",
+        "seconds": 30,
+        "wall_seconds": 30,
+        "process_count": 14,
+        "membership": [
+          {
+            "Id": 101,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "engine",
+            "ProcessName": "leave-engine"
+          },
+          {
+            "Id": 102,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-102",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 103,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-103",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 104,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-104",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 105,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-105",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 106,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-106",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 107,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-107",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 108,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-108",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 109,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-109",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 110,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-110",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 111,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-111",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 112,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-112",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 113,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-113",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 114,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-114",
+            "ProcessName": "node"
+          }
+        ],
+        "cpu_seconds": 14,
+        "percent_total_capacity": 11.666666666666666
+      },
+      "intervals": [
+        {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "process_count": 14,
+          "membership": [
+            {
+              "Id": 101,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "engine",
+              "ProcessName": "leave-engine"
+            },
+            {
+              "Id": 102,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-102",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 103,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-103",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 104,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-104",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 105,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-105",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 106,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-106",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 107,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-107",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 108,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-108",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 109,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-109",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 110,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-110",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 111,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-111",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 112,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-112",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 113,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-113",
+              "ProcessName": "node"
+            },
+            {
+              "Id": 114,
+              "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+              "role": "bot-114",
+              "ProcessName": "node"
+            }
+          ],
+          "cpu_seconds": 14,
+          "percent_total_capacity": 11.666666666666666
+        }
+      ],
+      "excluded_intervals": []
+    },
+    "per_process": [
+      {
+        "Id": 101,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "engine",
+        "ProcessName": "leave-engine",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 102,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-102",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 103,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-103",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 104,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-104",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 105,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-105",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 106,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-106",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 107,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-107",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 108,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-108",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 109,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-109",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 110,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-110",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 111,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-111",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 112,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-112",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 113,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-113",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      },
+      {
+        "Id": 114,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-114",
+        "ProcessName": "node",
+        "available": true,
+        "candidate_interval_count": 1,
+        "interval_count": 1,
+        "excluded_interval_count": 0,
+        "covered_interval_seconds": 30,
+        "cpu_seconds": 1,
+        "mean_percent_total_capacity": 0.8333333333333334,
+        "max_interval_percent_total_capacity": 0.8333333333333334,
+        "first_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "last_interval": {
+          "from_index": 0,
+          "to_index": 1,
+          "from": "2026-01-01T00:00:00.000Z",
+          "to": "2026-01-01T00:00:30.000Z",
+          "seconds": 30,
+          "wall_seconds": 30,
+          "cpu_seconds": 1,
+          "percent_total_capacity": 0.8333333333333334
+        },
+        "intervals": [
+          {
+            "from_index": 0,
+            "to_index": 1,
+            "from": "2026-01-01T00:00:00.000Z",
+            "to": "2026-01-01T00:00:30.000Z",
+            "seconds": 30,
+            "wall_seconds": 30,
+            "cpu_seconds": 1,
+            "percent_total_capacity": 0.8333333333333334
+          }
+        ],
+        "excluded_intervals": []
+      }
+    ]
+  },
+  "memory": {
+    "candidate_sample_count": 2,
+    "full_group_valid_sample_count": 2,
+    "per_process": [
+      {
+        "Id": 101,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "engine",
+        "ProcessName": "leave-engine",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1101
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1101
+          },
+          "observed_min_bytes": 1101,
+          "observed_max_bytes": 1101,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1101
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1101
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2101
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2101
+          },
+          "observed_min_bytes": 2101,
+          "observed_max_bytes": 2101,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2101
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2101
+            }
+          ]
+        }
+      },
+      {
+        "Id": 102,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-102",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1102
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1102
+          },
+          "observed_min_bytes": 1102,
+          "observed_max_bytes": 1102,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1102
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1102
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2102
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2102
+          },
+          "observed_min_bytes": 2102,
+          "observed_max_bytes": 2102,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2102
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2102
+            }
+          ]
+        }
+      },
+      {
+        "Id": 103,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-103",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1103
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1103
+          },
+          "observed_min_bytes": 1103,
+          "observed_max_bytes": 1103,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1103
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1103
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2103
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2103
+          },
+          "observed_min_bytes": 2103,
+          "observed_max_bytes": 2103,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2103
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2103
+            }
+          ]
+        }
+      },
+      {
+        "Id": 104,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-104",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1104
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1104
+          },
+          "observed_min_bytes": 1104,
+          "observed_max_bytes": 1104,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1104
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1104
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2104
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2104
+          },
+          "observed_min_bytes": 2104,
+          "observed_max_bytes": 2104,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2104
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2104
+            }
+          ]
+        }
+      },
+      {
+        "Id": 105,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-105",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1105
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1105
+          },
+          "observed_min_bytes": 1105,
+          "observed_max_bytes": 1105,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1105
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1105
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2105
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2105
+          },
+          "observed_min_bytes": 2105,
+          "observed_max_bytes": 2105,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2105
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2105
+            }
+          ]
+        }
+      },
+      {
+        "Id": 106,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-106",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1106
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1106
+          },
+          "observed_min_bytes": 1106,
+          "observed_max_bytes": 1106,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1106
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1106
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2106
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2106
+          },
+          "observed_min_bytes": 2106,
+          "observed_max_bytes": 2106,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2106
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2106
+            }
+          ]
+        }
+      },
+      {
+        "Id": 107,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-107",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1107
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1107
+          },
+          "observed_min_bytes": 1107,
+          "observed_max_bytes": 1107,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1107
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1107
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2107
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2107
+          },
+          "observed_min_bytes": 2107,
+          "observed_max_bytes": 2107,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2107
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2107
+            }
+          ]
+        }
+      },
+      {
+        "Id": 108,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-108",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1108
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1108
+          },
+          "observed_min_bytes": 1108,
+          "observed_max_bytes": 1108,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1108
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1108
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2108
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2108
+          },
+          "observed_min_bytes": 2108,
+          "observed_max_bytes": 2108,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2108
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2108
+            }
+          ]
+        }
+      },
+      {
+        "Id": 109,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-109",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1109
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1109
+          },
+          "observed_min_bytes": 1109,
+          "observed_max_bytes": 1109,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1109
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1109
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2109
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2109
+          },
+          "observed_min_bytes": 2109,
+          "observed_max_bytes": 2109,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2109
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2109
+            }
+          ]
+        }
+      },
+      {
+        "Id": 110,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-110",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1110
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1110
+          },
+          "observed_min_bytes": 1110,
+          "observed_max_bytes": 1110,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1110
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1110
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2110
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2110
+          },
+          "observed_min_bytes": 2110,
+          "observed_max_bytes": 2110,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2110
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2110
+            }
+          ]
+        }
+      },
+      {
+        "Id": 111,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-111",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1111
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1111
+          },
+          "observed_min_bytes": 1111,
+          "observed_max_bytes": 1111,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1111
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1111
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2111
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2111
+          },
+          "observed_min_bytes": 2111,
+          "observed_max_bytes": 2111,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2111
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2111
+            }
+          ]
+        }
+      },
+      {
+        "Id": 112,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-112",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1112
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1112
+          },
+          "observed_min_bytes": 1112,
+          "observed_max_bytes": 1112,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1112
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1112
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2112
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2112
+          },
+          "observed_min_bytes": 2112,
+          "observed_max_bytes": 2112,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2112
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2112
+            }
+          ]
+        }
+      },
+      {
+        "Id": 113,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-113",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1113
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1113
+          },
+          "observed_min_bytes": 1113,
+          "observed_max_bytes": 1113,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1113
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1113
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2113
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2113
+          },
+          "observed_min_bytes": 2113,
+          "observed_max_bytes": 2113,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2113
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2113
+            }
+          ]
+        }
+      },
+      {
+        "Id": 114,
+        "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+        "role": "bot-114",
+        "ProcessName": "node",
+        "candidate_sample_count": 2,
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 1114
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 1114
+          },
+          "observed_min_bytes": 1114,
+          "observed_max_bytes": 1114,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 1114
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 1114
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 2114
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 2114
+          },
+          "observed_min_bytes": 2114,
+          "observed_max_bytes": 2114,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 2114
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 2114
+            }
+          ]
+        }
+      }
+    ],
+    "full_groups_by_membership": [
+      {
+        "membership": [
+          {
+            "Id": 101,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "engine",
+            "ProcessName": "leave-engine"
+          },
+          {
+            "Id": 102,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-102",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 103,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-103",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 104,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-104",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 105,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-105",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 106,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-106",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 107,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-107",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 108,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-108",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 109,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-109",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 110,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-110",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 111,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-111",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 112,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-112",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 113,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-113",
+            "ProcessName": "node"
+          },
+          {
+            "Id": 114,
+            "StartTimeUtc": "2025-12-31T23:59:00.1234567Z",
+            "role": "bot-114",
+            "ProcessName": "node"
+          }
+        ],
+        "working_set_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 15505
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 15505
+          },
+          "observed_min_bytes": 15505,
+          "observed_max_bytes": 15505,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 15505
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 15505
+            }
+          ]
+        },
+        "private_bytes": {
+          "available": true,
+          "sample_count": 2,
+          "first": {
+            "sample_index": 0,
+            "at": "2026-01-01T00:00:00.000Z",
+            "elapsed_ms": 0,
+            "bytes": 29505
+          },
+          "last": {
+            "sample_index": 1,
+            "at": "2026-01-01T00:00:30.000Z",
+            "elapsed_ms": 30000,
+            "bytes": 29505
+          },
+          "observed_min_bytes": 29505,
+          "observed_max_bytes": 29505,
+          "first_to_last_change_bytes": 0,
+          "samples": [
+            {
+              "sample_index": 0,
+              "at": "2026-01-01T00:00:00.000Z",
+              "elapsed_ms": 0,
+              "bytes": 29505
+            },
+            {
+              "sample_index": 1,
+              "at": "2026-01-01T00:00:30.000Z",
+              "elapsed_ms": 30000,
+              "bytes": 29505
+            }
+          ]
+        }
+      }
+    ],
+    "excluded_full_samples": [],
+    "excluded_readings": []
+  },
+  "limitations": [
+    "CPU percentages use total host logical-processor capacity; intervals are averages, not instantaneous peaks.",
+    "Only adjacent source samples are paired. Missing, reset, changed-identity and excessive-gap intervals are excluded, never bridged or replaced with zero.",
+    "Counter reads occur sequentially between at and collection_finished_at; elapsed_ms uses the sample start, so collection skew remains.",
+    "Working-set sums can double-count shared pages and are not unique whole-machine physical memory; private bytes are reported separately.",
+    "Memory extrema are sampled observations. First-to-last changes do not prove a leak or continuous coverage.",
+    "Per-process valid readings survive incomplete groups. Full-group CPU requires complete identical membership at both endpoints; memory groups separate memberships.",
+    "This supplementary run does not reconstruct missing counters in the original observer and does not test trading or browser behavior."
+  ]
+}

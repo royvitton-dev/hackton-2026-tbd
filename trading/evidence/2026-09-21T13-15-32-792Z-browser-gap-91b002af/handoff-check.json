@@ -1,0 +1,47 @@
+{
+  "at": "2026-09-21T13:16:04.974Z",
+  "run_id": "2026-09-21T13-15-32-792Z-browser-gap-91b002af",
+  "scope": "HTTP module-loading and fresh isolated state check; no browser or WS execution",
+  "passed": true,
+  "main_status": 200,
+  "main_sha256": "81ce0c37c8eeeb91c651b288dc8c4108ee0fdb564172bf4fab1617292e6ba8b3",
+  "checks": [
+    {
+      "url": "/@fs/C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T13-15-32-792Z-browser-gap-91b002af/bin/node_modules/vite-cache/deps/react_jsx-dev-runtime.js?v=6297b8ce",
+      "status": 200,
+      "content_type": "text/javascript",
+      "bytes": 12945
+    },
+    {
+      "url": "/@fs/C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T13-15-32-792Z-browser-gap-91b002af/bin/node_modules/vite-cache/deps/react.js?v=6297b8ce",
+      "status": 200,
+      "content_type": "text/javascript",
+      "bytes": 1224
+    },
+    {
+      "url": "/@fs/C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T13-15-32-792Z-browser-gap-91b002af/bin/node_modules/vite-cache/deps/react-dom_client.js?v=4ac53371",
+      "status": 200,
+      "content_type": "text/javascript",
+      "bytes": 1113816
+    },
+    {
+      "url": "/src/App.tsx",
+      "status": 200,
+      "content_type": "text/javascript",
+      "bytes": 243993
+    }
+  ],
+  "event_seq": 0,
+  "orders": 0,
+  "supervisor_pid": 19992,
+  "processes": [
+    {
+      "name": "engine",
+      "pid": 17520
+    },
+    {
+      "name": "frontend",
+      "pid": 16552
+    }
+  ]
+}
