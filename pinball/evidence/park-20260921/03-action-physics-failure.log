@@ -1,0 +1,44 @@
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (1.054542ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (0.368ms)
+✔ rule validation and ball-based N range (0.1565ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (5.774208ms)
+✔ finish order is crossing time, not ball list; exact ties use seeded tie key (0.861625ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (974.948541ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (1538.230959ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (0.7285ms)
+✔ fast wall and pin impacts remain inside the board (1.0265ms)
+✖ all 4 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (18757.899ms)
+✔ finish requires an exit throat; crossing between holes never ranks (0.262042ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 10
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 21344.471333
+
+✖ failing tests:
+
+test at tests/physics.test.mjs:13:1
+✖ all 4 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (18757.899ms)
+  AssertionError [ERR_ASSERTION]: orbit 1 5
+  + actual - expected
+  
+  + 'invalid'
+  - 'complete'
+  
+      at TestContext.<anonymous> (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/physics.test.mjs:13:508)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'invalid',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

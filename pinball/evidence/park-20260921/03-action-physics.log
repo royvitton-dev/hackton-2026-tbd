@@ -1,0 +1,25 @@
+✔ gentle motion is bounded, smooth at boundaries, alternates axes and ignores participant state (3.819459ms)
+✔ shared board force acts equally on identical balls, with actual velocity change (2.826333ms)
+✔ each map has different rotor magnitudes and both directions, with matching surface velocities (0.097917ms)
+✔ pause freezes active board motion and stepping chunks preserve the exact race (1100.650375ms)
+✔ orbit single-ball oscillation is detected and escapes without fabricated finish (42.644042ms)
+✔ all four maps with motion: 120 seeded races remain contained and finish with unique real ranks (64267.921208ms)
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (1.096ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (0.559834ms)
+✔ rule validation and ball-based N range (0.225917ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (4.942ms)
+✔ finish order is crossing time, not ball list; exact ties use seeded tie key (0.930791ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (1104.956584ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (1629.481625ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (1.221458ms)
+✔ fast wall and pin impacts remain inside the board (1.812708ms)
+✔ all 4 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (62802.582459ms)
+✔ finish requires an exit throat; crossing between holes never ranks (0.398625ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 65604.061792

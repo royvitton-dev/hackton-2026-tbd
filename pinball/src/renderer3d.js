@@ -51,6 +51,7 @@ export class Renderer3D {
   const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;return t;
  }
  clear(){
+  if(this.ground){this.scene.remove(this.ground);this.ground.geometry.dispose();this.ground.material.dispose();this.ground=null;}
   if(!this.group)return;this.scene.remove(this.group);const geometries=new Set(),materials=new Set(),textures=new Set();
   this.group.traverse(o=>{if(o.isInstancedMesh)o.dispose();if(o.geometry)geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:o.material?[o.material]:[]){materials.add(m);if(m.map)textures.add(m.map);}});
   geometries.forEach(g=>g.dispose());materials.forEach(m=>m.dispose());textures.forEach(t=>t.dispose());
@@ -68,7 +69,7 @@ export class Renderer3D {
    this.mesh(new THREE.CylinderGeometry(.025,.025,.49,6),mat.gold,cx,.56,cz,ride);
    const car=this.mesh(new THREE.SphereGeometry(r*.18,10,8),i%2?mat.pink:mat.mint,cx,.44,cz,ride);car.scale.y=.65;
   }
-  this.carousels.push({roof,ride,phase:p.x*.01});
+  const index=this.carousels.length;this.carousels.push({roof,ride,phase:p.x*.01,rate:(.14+(index%5)*.07)*(index%2?-1:1),key:`${p.x}:${p.y}`,hitAt:-10});
  }
  teacupRotor(r,mat){
   const g=new THREE.Group();g.position.set(X(r.x),.20,Z(r.y));this.group.add(g);const length=r.length*S;
@@ -146,7 +147,7 @@ export class Renderer3D {
    const spoke=this.mesh(new THREE.CylinderGeometry(.022,.022,2.3,5),mat.cream,0,0,0,wheel);spoke.rotation.z=a;
    this.mesh(new THREE.SphereGeometry(.19,8,6),i%2?mat.pink:mat.mint,Math.sin(a)*1.15,Math.cos(a)*1.15,0,wheel);
   }
-  this.mesh(new THREE.SphereGeometry(.17,10,8),mat.gold,0,0,.04,g);this.wheels.push(wheel);
+  this.mesh(new THREE.SphereGeometry(.17,10,8),mat.gold,0,0,.04,g);this.wheels.push({wheel,rate:x<0?.10:-.17});
  }
  build(race){
   this.clear();this.group=new THREE.Group();this.scene.add(this.group);this.labels.replaceChildren();this.progress.replaceChildren();
@@ -159,7 +160,7 @@ export class Renderer3D {
   for(const h of map.exits){const hole=new THREE.Path();hole.absarc(X(h.x),-Z(map.finish),.5,0,Math.PI*2,true);shape.holes.push(hole);}
   const deck=this.material(theme.floor,.03,.65);deck.envMapIntensity=.05;
   const board=this.mesh(new THREE.ExtrudeGeometry(shape,{depth:.8,bevelEnabled:true,bevelSegments:3,steps:1,bevelSize:.055,bevelThickness:.035}),[deck,mat.dark],0,-.81,0);board.rotation.x=-Math.PI/2;
-  const ground=this.mesh(new THREE.PlaneGeometry(70,100),this.material(theme.ground,0,.95),0,-1.55,length/2);ground.rotation.x=-Math.PI/2;ground.castShadow=false;
+  const ground=this.mesh(new THREE.PlaneGeometry(70,100),this.material(theme.ground,0,.95),0,-1.55,length/2);ground.rotation.x=-Math.PI/2;ground.castShadow=false;this.group.remove(ground);this.scene.add(ground);this.ground=ground;
   for(const z of [1.4,length/2,length-1.4])for(const x of [-4.2,4.2])this.mesh(new THREE.CylinderGeometry(.28,.4,.7,10),mat.dark,x,-1.14,z);
   this.rail({ax:24,ay:18,bx:24,by:map.height-20,r:10},mat.cream);this.rail({ax:596,ay:18,bx:596,by:map.height-20,r:10},mat.cream);this.rail({ax:24,ay:18,bx:596,by:18,r:10},mat.cream);
   this.instances(new THREE.CylinderGeometry(1,1,1,8),mat.gold,map.pins.map(p=>({position:[X(p.x),.14,Z(p.y)],scale:[p.r*S*.48,.28,p.r*S*.48]})));
@@ -176,8 +177,19 @@ export class Renderer3D {
   for(const b of race.balls){
    const m=this.mesh(sphere,new THREE.MeshPhysicalMaterial({color:b.color,metalness:.18,roughness:.18,clearcoat:1,clearcoatRoughness:.1}),X(b.x),.19,Z(b.y));
    const label=document.createElement('span');label.className='ball-label';label.textContent=[...b.label].slice(0,5).join('')+([...b.label].length>5?'…':'')+(race.config.people.find(p=>p.id===b.participantId).count>1?`·${b.number}`:'');label.title=b.label;this.labels.append(label);
-   const dot=document.createElement('i');dot.style.background=b.color;this.progress.append(dot);this.balls.set(b.id,{m,label,dot});
+   const dot=document.createElement('i');dot.style.background=b.color;this.progress.append(dot);this.balls.set(b.id,{m,label,dot,history:[],lastTrail:-1});
   }
+  this.impactCursor=0;this.impacts=[];
+  const impactGeometry=new THREE.TorusGeometry(.22,.022,4,20);
+  for(let i=0;i<18;i++){const material=new THREE.MeshBasicMaterial({color:0xfff3c7,transparent:true,opacity:0,depthWrite:false});const mesh=this.mesh(impactGeometry,material,0,.055,0);mesh.rotation.x=-Math.PI/2;mesh.castShadow=false;mesh.visible=false;this.impacts.push({mesh,born:-10});}
+  this.trails=new THREE.InstancedMesh(new THREE.SphereGeometry(1,8,6),new THREE.MeshBasicMaterial({transparent:true,opacity:.19,depthWrite:false}),race.balls.length*2);this.trails.instanceMatrix.setUsage(THREE.DynamicDrawUsage);this.trails.frustumCulled=false;
+  race.balls.forEach((b,i)=>{this.trails.setColorAt(i*2,new THREE.Color(b.color));this.trails.setColorAt(i*2+1,new THREE.Color(b.color));});this.group.add(this.trails);
+  this.trailTransform=new THREE.Object3D();
+ }
+ impact(event,elapsed,reduced){
+  if(reduced||!this.impacts?.length||!Number.isFinite(event.x+event.y))return;
+  const effect=this.impacts[this.impactCursor++%this.impacts.length];effect.born=elapsed;effect.mesh.position.set(X(event.x),.055,Z(event.y));effect.mesh.material.color.set(event.kind==='bumper'?0xffdd88:0xfff5e8);effect.mesh.visible=true;
+  if(event.kind==='bumper'){const ride=this.carousels.find(c=>c.key===`${event.obstacleX}:${event.obstacleY}`);if(ride)ride.hitAt=elapsed;}
  }
  draw(race,reduced=false,selected=null){
   if(this.lastRound!==race.roundId)this.build(race);const map=race.map,aspect=this.aspect||1,direction=CAMERA_DIRECTIONS[this.angle];
@@ -198,16 +210,23 @@ export class Renderer3D {
   race.sliderSegments().forEach((s,i)=>this.sliders[i].position.x=X((s.ax+s.bx)/2));
   this.gate.visible=['ready','mixing','countdown'].includes(race.state)||(race.state==='paused'&&race.resumeState!=='racing');
   const decorTime=reduced?0:race.elapsed;
-  this.wheels.forEach((wheel,i)=>wheel.rotation.z=decorTime*.11*(i%2?-1:1));
+  this.wheels.forEach(({wheel,rate})=>wheel.rotation.z=decorTime*rate);
   this.balloons.forEach(b=>{b.group.position.y=b.y+Math.sin(decorTime*1.3+b.phase)*.1;b.group.rotation.z=Math.sin(decorTime*.7+b.phase)*.045;});
-  this.carousels.forEach(c=>{c.roof.rotation.y=decorTime*.15+c.phase;});
+  this.carousels.forEach(c=>{c.roof.rotation.y=decorTime*c.rate+c.phase;const hit=decorTime-c.hitAt;c.ride.scale.y=!reduced&&hit>=0&&hit<.32?1-Math.sin(hit/.32*Math.PI)*.18:1;});
+  for(const effect of this.impacts){const age=race.elapsed-effect.born;effect.mesh.visible=!reduced&&age>=0&&age<.32;effect.mesh.scale.setScalar(1+Math.max(0,age)*4);effect.mesh.material.opacity=Math.max(0,1-age/.32)*.72;}
+  const motion=!reduced&&['racing','paused'].includes(race.state)?race.motion():{roll:0,pitch:0,offsetX:0,offsetY:0};
+  this.group.rotation.set(motion.pitch,0,motion.roll);const pivot=new THREE.Vector3(0,0,map.height*S/2);this.group.position.copy(pivot).sub(pivot.clone().applyEuler(this.group.rotation));this.group.position.x+=motion.offsetX*S;this.group.position.z+=motion.offsetY*S;this.group.updateMatrixWorld(true);
   const now=performance.now();
+  this.trails.visible=!reduced&&race.state==='racing';let trailIndex=0;
   for(const b of race.balls){
-   const {m,label,dot}=this.balls.get(b.id);if(b.finished&&!this.finishedAt.has(b.id))this.finishedAt.set(b.id,now);
+   const entry=this.balls.get(b.id),{m,label,dot,history}=entry;if(b.finished&&!this.finishedAt.has(b.id))this.finishedAt.set(b.id,now);
    const sink=b.finished?Math.min(1,(now-this.finishedAt.get(b.id))/380):0;m.visible=sink<1;m.position.set(X(b.x),.19-sink*.8,Z(b.y));m.scale.setScalar(1-sink*.6);
    m.rotation.x+=b.vy*.00025;m.rotation.z-=b.vx*.00025;dot.style.top=`${b.y/map.height*100}%`;
-   const v=new THREE.Vector3(X(b.x),.6,Z(b.y)).project(this.camera);label.hidden=b.finished||this.overview||Math.abs(v.x)>1||Math.abs(v.y)>.98;label.style.left=`${(v.x*.5+.5)*100}%`;label.style.top=`${(-v.y*.5+.5)*100}%`;
+   if(race.state==='racing'&&race.elapsed-entry.lastTrail>=.035){history.unshift({x:X(b.x),z:Z(b.y)});if(history.length>5)history.pop();entry.lastTrail=race.elapsed;}
+   for(let i=0;i<2;i++){const old=history[i*2+2];this.trailTransform.position.set(old?.x??X(b.x),.12,old?.z??Z(b.y));this.trailTransform.scale.setScalar(!b.finished&&old?(i===0?.12:.075):0);this.trailTransform.updateMatrix();this.trails.setMatrixAt(trailIndex++,this.trailTransform.matrix);}
+   const v=new THREE.Vector3(X(b.x),.6,Z(b.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);label.hidden=b.finished||this.overview||Math.abs(v.x)>1||Math.abs(v.y)>.98;label.style.left=`${(v.x*.5+.5)*100}%`;label.style.top=`${(-v.y*.5+.5)*100}%`;
   }
+  this.trails.instanceMatrix.needsUpdate=true;
   this.hud.textContent=this.overview?'PARK MAP / FOUR LUCKY EXITS':`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`;
   this.webgl.render(this.scene,this.camera);
  }
