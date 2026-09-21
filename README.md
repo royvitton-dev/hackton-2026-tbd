@@ -235,6 +235,8 @@ node scripts/optimize-vehicle-model.mjs original.glb optimized.glb --preserve-ge
 
 ## 검증
 
+`verify:assets`는 파일·출처·동기화 무결성을 검사하므로 사진만 있어도 통과할 수 있습니다. **전체 차량의 실제 3D 리소스 확보 여부는 `npm run verify:vehicle-3d`로 별도 검사합니다.** 현재 Audi Q4·Q6, BMW i5, MINI Cooper Electric의 GLB가 없어 이 명령은 차량별 원인과 함께 종료 코드 1을 반환합니다. 정지 PNG 표시 테스트 통과는 회전·배터리 투시 완료를 의미하지 않습니다. GLB 확보 후에도 실제 브라우저에서 드래그·투시를 검수해야 합니다.
+
 ```sh
 npm run lint
 npm run typecheck
