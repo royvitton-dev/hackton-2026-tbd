@@ -14,7 +14,7 @@ try{
   await p.locator('#start').click();await p.waitForFunction(()=>document.body.dataset.state==='racing');await p.waitForTimeout(2200);await p.locator('#board').screenshot({path:`evidence/park-20260921/${prefix}-${map}-live.png`});
   const graphics=await p.evaluate(()=>window.pinball.performance().graphics);
   await p.waitForFunction(()=>['complete','invalid'].includes(document.body.dataset.state),null,{timeout:70000});const round=await p.evaluate(()=>window.pinball.exportRound());assert.equal(round.result.state,'complete');assert.equal(round.result.finishOrder.length,12);
-  const replay=await p.evaluate(async round=>{const {Race}=await import('/src/physics.js');const r=new Race(round.config,round.seed);r.start();while(!['complete','invalid'].includes(r.state))r.step();return r.finishOrder;},round);assert.deepEqual(replay,round.result.finishOrder);
+  const replay=await p.evaluate(async round=>{const {Race}=await import(window.pinball.settings().physicsModule||'/src/physics.js');const r=new Race(round.config,round.seed);r.start();while(!['complete','invalid'].includes(r.state))r.step();return r.finishOrder;},round);assert.deepEqual(replay,round.result.finishOrder);
   report.tests.push({map,status:'PASS',graphics});console.log('PASS ride models',map,graphics);await p.locator('#edit').click();
  }
  await p.locator('[data-map=neon]').click();await p.waitForTimeout(150);const before=await p.evaluate(()=>window.pinball.performance().graphics);

@@ -32,7 +32,7 @@ try{
   const frames=perf.samples.filter(s=>s.state==='racing'&&s.delta>0),sorted=frames.map(s=>s.delta).sort((a,b)=>a-b);
   await p.waitForFunction(()=>['complete','invalid'].includes(document.body.dataset.state),null,{timeout:65000});
   const round=await p.evaluate(()=>window.pinball.exportRound());assert.equal(round.result.state,'complete');assert.equal(round.result.finishOrder.length,60);assert.equal(new Set(round.result.finishOrder.map(x=>x.id)).size,60);
-  const replay=await p.evaluate(async r=>{const {Race}=await import('/src/physics.js');const race=new Race(r.config,r.seed);race.start();while(!['complete','invalid'].includes(race.state))race.step();return race.finishOrder;},round);assert.deepEqual(replay,round.result.finishOrder);
+  const replay=await p.evaluate(async r=>{const {Race}=await import(window.pinball.settings().physicsModule||'/src/physics.js');const race=new Race(r.config,r.seed);race.start();while(!['complete','invalid'].includes(race.state))race.step();return race.finishOrder;},round);assert.deepEqual(replay,round.result.finishOrder);
   assert.deepEqual(await p.locator('#ranking li').evaluateAll(es=>es.map(e=>e.dataset.ballId)),replay.map(r=>r.id));assert.equal(round.result.winner.id,replay[59].id);
   await writeFile(`evidence/park-20260921/${prefix}-${device}-round.json`,JSON.stringify(round,null,2));
   await p.locator('#edit').click();await p.locator('#board-motion').uncheck();assert.equal((await p.evaluate(()=>window.pinball.snapshot())).motion.enabled,false);
