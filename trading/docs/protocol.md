@@ -31,7 +31,10 @@ The broadcast queue holds 32 shared snapshots. Slow clients cannot block the wri
 
 The server flushes the automatically queued reply to a peer Close frame with a one-second limit before dropping the connection. Structured `websocket_closed` stderr records distinguish lag, send timeout/error, peer close, receive error and server shutdown, without logging arbitrary peer text or session tokens. `last_event_seq` is the last successful server send, not a client delivery acknowledgement. See [diagnostic fields, actual verification and limits](ws-diagnostics.md). Administrative server shutdown still drops open streams; a clean client-side close code is not promised on that path.
 
+State frames serialize through a borrowed typed wrapper. JSON object key order is not part of the contract; parse named fields instead of comparing raw strings. Field values and array order are preserved. See [measured serialization change and regression evidence](ws-serialization.md).
+
 ## Operational endpoints
+
 
 - `GET /health`: status, sequences, bounded queue occupancy, declared durability mode. HTTP listener starts only after recovery; startup recovery details go to structured stderr logs. `failed_closed` is not healthy trading availability.
 - `GET /api/bots`: configured 12 bots, strategies/seeds, recent heartbeat, sent requests, accepted orders and fills. Connected requires heartbeat age <15 seconds. Telemetry counters from bots are separate from authoritative engine counters.

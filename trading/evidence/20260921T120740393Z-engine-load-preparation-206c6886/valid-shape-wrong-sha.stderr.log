@@ -1,0 +1,23 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Source release binary does not match the explicitly expected SHA256
++ actual - expected
+
++ 'f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240'
+- '0000000000000000000000000000000000000000000000000000000000000000'
+
+    at file:///C:/project/hackton-2026-tbd/trading/scripts/engine-load.mjs:26:8
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240',
+  expected: '0000000000000000000000000000000000000000000000000000000000000000',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

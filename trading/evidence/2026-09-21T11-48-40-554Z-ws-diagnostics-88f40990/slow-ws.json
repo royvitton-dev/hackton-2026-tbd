@@ -1,0 +1,31 @@
+{
+  "connected_ms": 1183.9236,
+  "paused": true,
+  "resumed": true,
+  "local_destroy": false,
+  "frames": [
+    {
+      "opcode": 1,
+      "bytes": 25310,
+      "at_ms": 6208.9644,
+      "event_seq": 128
+    },
+    {
+      "opcode": 9,
+      "bytes": 0,
+      "at_ms": 6209.0645
+    }
+  ],
+  "bytes_after_handshake": 25316,
+  "closed": true,
+  "remote_end": false,
+  "pause_ms": 1185.0802,
+  "bytes_read_at_pause": 243,
+  "resume_ms": 6208.713400000001,
+  "bytes_read_before_resume": 25559,
+  "error": "read ECONNRESET",
+  "had_error": true,
+  "closed_ms": 6209.7771,
+  "pending_bytes": 0,
+  "socket_bytes_read": 25559
+}

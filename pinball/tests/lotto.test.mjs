@@ -1,0 +1,11 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {Race,MAPS} from '../src/physics.js';import {makeLottoConfig,lottoResult} from '../src/lotto.js';
+function run(config,seed){const r=new Race(config,seed);r.start();while(!['complete','invalid'].includes(r.state))r.step();return r;}
+test('lotto has exactly one identically sized ball per number 1–45, independent of player input',()=>{
+ for(const order of ['first','last']){const c=makeLottoConfig(order);assert.equal(c.total,45);assert.equal(c.people.length,45);assert.ok(c.people.every((p,i)=>p.name===String(i+1)&&p.count===1));const r=new Race(c,29);assert.equal(new Set(r.balls.map(b=>b.r)).size,1);assert.equal(c.target,order==='first'?7:45);}assert.throws(()=>makeLottoConfig('nth'));
+});
+test('lotto results use actual first six plus seventh, or ranks 39–44 plus unarrived last bonus',()=>{
+ for(const map of MAPS){const first=run({...makeLottoConfig('first'),mapId:map.id,boardMotion:true},1201),last=run({...makeLottoConfig('last'),mapId:map.id,boardMotion:true},1201);assert.equal(first.state,'complete',map.id);assert.equal(last.state,'complete',map.id);assert.equal(first.finishOrder.length,7);assert.equal(last.finishOrder.length,44);assert.deepEqual(first.finishOrder,last.finishOrder.slice(0,7));
+ for(const r of [first,last]){const s=r.snapshot(),l=lottoResult(r.config,s);assert.equal(l.numbers.length,6);assert.equal(new Set([...l.numbers,l.bonus]).size,7);assert.ok([...l.numbers,l.bonus].every(n=>n>=1&&n<=45));assert.deepEqual(l.numbers,[...l.numbers].sort((a,b)=>a-b));const offset=r===first?0:38;assert.deepEqual(l.numbers,r.finishOrder.slice(offset,offset+6).map(x=>+x.name).sort((a,b)=>a-b));assert.equal(l.bonus,+(r===first?r.finishOrder[6].name:r.winner.name));assert.equal(l.bonusArrived,r===first);assert.equal(l.bonusRank,r===first?7:null);assert.equal(r.balls.filter(b=>!b.finished).length,r===first?38:1);for(let i=0;i<100;i++)r.step();assert.deepEqual(r.snapshot(),s);}
+ }
+});
+test('incomplete and invalid lotto rounds never expose winning numbers',()=>{const c=makeLottoConfig();for(const state of ['ready','racing','paused','invalid'])assert.equal(lottoResult(c,{state,finishOrder:[],winner:null}),null);assert.equal(lottoResult({mode:'player'},{state:'complete'}),null);});

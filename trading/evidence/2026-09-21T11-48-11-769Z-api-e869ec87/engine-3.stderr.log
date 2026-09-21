@@ -1,0 +1,5 @@
+{"data_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T11-48-11-769Z-api-e869ec87\\data","event":"recovering","timestamp_ms":1789991294581}
+{"event":"recovery_complete","report":{"ignored_snapshots":[],"journal_records":131,"preserved_tail":null,"replayed_records":2,"snapshot_used":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T11-48-11-769Z-api-e869ec87\\data\\snapshot-00000000000000000129-00000000000001789991294370450900-13604-2.bin","truncated_bytes":0},"timestamp_ms":1789991294603}
+{"bind":"127.0.0.1:53057","data_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T11-48-11-769Z-api-e869ec87\\data","event":"ready","queue_capacity":2048,"timestamp_ms":1789991294606}
+{"close_reply":"flushed","connected_ms":8,"connection_id":1,"event":"websocket_closed","last_event_seq":70,"reason":"peer_closed","skipped":null,"stage":"receive","timestamp_ms":1789991294714}
+{"close_reply":"flushed","connected_ms":48,"connection_id":2,"event":"websocket_closed","last_event_seq":71,"reason":"peer_closed","skipped":null,"stage":"receive","timestamp_ms":1789991294768}

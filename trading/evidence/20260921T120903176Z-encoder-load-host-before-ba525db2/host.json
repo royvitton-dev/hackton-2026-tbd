@@ -1,0 +1,2259 @@
+{
+  "protected_processes": [
+    {
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "CPU": 315.6875,
+      "WorkingSet64": 90841088,
+      "PrivateMemorySize64": 91271168,
+      "StartTime": "2026-09-21T19:05:21.4715478+09:00"
+    },
+    {
+      "Id": 17556,
+      "ProcessName": "node",
+      "CPU": 4.265625,
+      "WorkingSet64": 57942016,
+      "PrivateMemorySize64": 146558976,
+      "StartTime": "2026-09-21T19:05:21.7348899+09:00"
+    },
+    {
+      "Id": 18184,
+      "ProcessName": "node",
+      "CPU": 76.65625,
+      "WorkingSet64": 69206016,
+      "PrivateMemorySize64": 45461504,
+      "StartTime": "2026-09-21T19:05:54.8395149+09:00"
+    },
+    {
+      "Id": 15744,
+      "ProcessName": "powershell",
+      "CPU": 19.0,
+      "WorkingSet64": 65753088,
+      "PrivateMemorySize64": 64524288,
+      "StartTime": "2026-09-21T19:05:54.9077476+09:00"
+    }
+  ],
+  "cpu_counter_note": "CPU values are lifetime accumulated seconds, not utilization percentages",
+  "classification": "Preflight process inventory; ordinary demo/observer and user workloads remain running",
+  "observed_at": "2026-09-21T12:09:03.2718052Z",
+  "manifest_sha256": "6128D45F26F574EB1DA12EC1B164C2112C4ED3E4E29BB6A5526568563578E69A",
+  "binary_sha256": "F518B95FB3EACCDABD40D0EE828E830A2EC6B8D959610FC629043E46856EF240",
+  "all_processes": [
+    {
+      "Id": 6984,
+      "ProcessName": "AggregatorHost",
+      "CPU": null,
+      "WorkingSet64": 18341888,
+      "PrivateMemorySize64": 5128192,
+      "StartTime": null
+    },
+    {
+      "Id": 11404,
+      "ProcessName": "ApplicationFrameHost",
+      "CPU": 0.59375,
+      "WorkingSet64": 52727808,
+      "PrivateMemorySize64": 40906752,
+      "StartTime": "2026-09-21T12:02:06.8755523+09:00"
+    },
+    {
+      "Id": 4664,
+      "ProcessName": "ChatGPT",
+      "CPU": 64.546875,
+      "WorkingSet64": 51167232,
+      "PrivateMemorySize64": 19333120,
+      "StartTime": "2026-09-21T12:11:36.5950374+09:00"
+    },
+    {
+      "Id": 4956,
+      "ProcessName": "ChatGPT",
+      "CPU": 99.328125,
+      "WorkingSet64": 228917248,
+      "PrivateMemorySize64": 242212864,
+      "StartTime": "2026-09-21T12:11:49.6238986+09:00"
+    },
+    {
+      "Id": 7972,
+      "ProcessName": "ChatGPT",
+      "CPU": 1.71875,
+      "WorkingSet64": 61911040,
+      "PrivateMemorySize64": 26959872,
+      "StartTime": "2026-09-21T12:11:52.9562426+09:00"
+    },
+    {
+      "Id": 10432,
+      "ProcessName": "ChatGPT",
+      "CPU": 2422.4375,
+      "WorkingSet64": 252571648,
+      "PrivateMemorySize64": 312057856,
+      "StartTime": "2026-09-21T12:11:36.5861492+09:00"
+    },
+    {
+      "Id": 13212,
+      "ProcessName": "ChatGPT",
+      "CPU": 1807.40625,
+      "WorkingSet64": 665649152,
+      "PrivateMemorySize64": 733147136,
+      "StartTime": "2026-09-21T12:11:41.9443647+09:00"
+    },
+    {
+      "Id": 13220,
+      "ProcessName": "ChatGPT",
+      "CPU": 13.703125,
+      "WorkingSet64": 90038272,
+      "PrivateMemorySize64": 68067328,
+      "StartTime": "2026-09-21T12:11:41.9450871+09:00"
+    },
+    {
+      "Id": 14308,
+      "ProcessName": "ChatGPT",
+      "CPU": 0.09375,
+      "WorkingSet64": 9207808,
+      "PrivateMemorySize64": 2600960,
+      "StartTime": "2026-09-21T12:11:35.9933086+09:00"
+    },
+    {
+      "Id": 14428,
+      "ProcessName": "ChatGPT",
+      "CPU": 1.484375,
+      "WorkingSet64": 20357120,
+      "PrivateMemorySize64": 19283968,
+      "StartTime": "2026-09-21T12:11:36.6213671+09:00"
+    },
+    {
+      "Id": 15920,
+      "ProcessName": "ChatGPT",
+      "CPU": 0.046875,
+      "WorkingSet64": 11780096,
+      "PrivateMemorySize64": 3072000,
+      "StartTime": "2026-09-21T12:11:35.9565894+09:00"
+    },
+    {
+      "Id": 16084,
+      "ProcessName": "ChatGPT",
+      "CPU": 1187.171875,
+      "WorkingSet64": 394379264,
+      "PrivateMemorySize64": 376545280,
+      "StartTime": "2026-09-21T12:11:35.8113926+09:00"
+    },
+    {
+      "Id": 16464,
+      "ProcessName": "ChatGPT",
+      "CPU": 0.3125,
+      "WorkingSet64": 22265856,
+      "PrivateMemorySize64": 9973760,
+      "StartTime": "2026-09-21T17:11:34.9666125+09:00"
+    },
+    {
+      "Id": 18192,
+      "ProcessName": "ChatGPT",
+      "CPU": 0.125,
+      "WorkingSet64": 37003264,
+      "PrivateMemorySize64": 19591168,
+      "StartTime": "2026-09-21T20:52:33.775187+09:00"
+    },
+    {
+      "Id": 19984,
+      "ProcessName": "ChatGPT",
+      "CPU": 0.546875,
+      "WorkingSet64": 44855296,
+      "PrivateMemorySize64": 41308160,
+      "StartTime": "2026-09-21T17:11:34.9648626+09:00"
+    },
+    {
+      "Id": 3008,
+      "ProcessName": "cmd",
+      "CPU": 0.015625,
+      "WorkingSet64": 6340608,
+      "PrivateMemorySize64": 4091904,
+      "StartTime": "2026-09-21T17:03:18.5772958+09:00"
+    },
+    {
+      "Id": 9108,
+      "ProcessName": "cmd",
+      "CPU": 0.03125,
+      "WorkingSet64": 6344704,
+      "PrivateMemorySize64": 4345856,
+      "StartTime": "2026-09-21T17:33:21.6325236+09:00"
+    },
+    {
+      "Id": 12132,
+      "ProcessName": "cmd",
+      "CPU": 0.015625,
+      "WorkingSet64": 6336512,
+      "PrivateMemorySize64": 4091904,
+      "StartTime": "2026-09-21T18:03:25.8790865+09:00"
+    },
+    {
+      "Id": 13824,
+      "ProcessName": "cmd",
+      "CPU": 0.03125,
+      "WorkingSet64": 8744960,
+      "PrivateMemorySize64": 4345856,
+      "StartTime": "2026-09-21T20:52:25.7202031+09:00"
+    },
+    {
+      "Id": 22356,
+      "ProcessName": "cmd",
+      "CPU": 0.03125,
+      "WorkingSet64": 6340608,
+      "PrivateMemorySize64": 4096000,
+      "StartTime": "2026-09-21T18:36:06.8655183+09:00"
+    },
+    {
+      "Id": 1352,
+      "ProcessName": "Code",
+      "CPU": 1.71875,
+      "WorkingSet64": 102469632,
+      "PrivateMemorySize64": 32165888,
+      "StartTime": "2026-09-21T16:12:56.2013854+09:00"
+    },
+    {
+      "Id": 2856,
+      "ProcessName": "Code",
+      "CPU": 7.515625,
+      "WorkingSet64": 99840000,
+      "PrivateMemorySize64": 141336576,
+      "StartTime": "2026-09-21T14:52:58.6766033+09:00"
+    },
+    {
+      "Id": 3512,
+      "ProcessName": "Code",
+      "CPU": 2.140625,
+      "WorkingSet64": 122802176,
+      "PrivateMemorySize64": 197902336,
+      "StartTime": "2026-09-21T14:52:59.354603+09:00"
+    },
+    {
+      "Id": 4360,
+      "ProcessName": "Code",
+      "CPU": 4.21875,
+      "WorkingSet64": 56422400,
+      "PrivateMemorySize64": 15458304,
+      "StartTime": "2026-09-21T14:52:57.4816325+09:00"
+    },
+    {
+      "Id": 6556,
+      "ProcessName": "Code",
+      "CPU": 286.4375,
+      "WorkingSet64": 368037888,
+      "PrivateMemorySize64": 347123712,
+      "StartTime": "2026-09-21T16:12:53.7657269+09:00"
+    },
+    {
+      "Id": 11000,
+      "ProcessName": "Code",
+      "CPU": 167.453125,
+      "WorkingSet64": 155267072,
+      "PrivateMemorySize64": 110206976,
+      "StartTime": "2026-09-21T16:12:53.6447455+09:00"
+    },
+    {
+      "Id": 13012,
+      "ProcessName": "Code",
+      "CPU": 0.84375,
+      "WorkingSet64": 145289216,
+      "PrivateMemorySize64": 86736896,
+      "StartTime": "2026-09-21T20:51:47.725515+09:00"
+    },
+    {
+      "Id": 13092,
+      "ProcessName": "Code",
+      "CPU": 78.6875,
+      "WorkingSet64": 248213504,
+      "PrivateMemorySize64": 257728512,
+      "StartTime": "2026-09-21T14:52:57.4790622+09:00"
+    },
+    {
+      "Id": 13124,
+      "ProcessName": "Code",
+      "CPU": 8.578125,
+      "WorkingSet64": 118218752,
+      "PrivateMemorySize64": 86339584,
+      "StartTime": "2026-09-21T14:52:59.0177735+09:00"
+    },
+    {
+      "Id": 15044,
+      "ProcessName": "Code",
+      "CPU": 63.859375,
+      "WorkingSet64": 161296384,
+      "PrivateMemorySize64": 109973504,
+      "StartTime": "2026-09-21T14:52:57.3313529+09:00"
+    },
+    {
+      "Id": 17860,
+      "ProcessName": "Code",
+      "CPU": 1041.859375,
+      "WorkingSet64": 353579008,
+      "PrivateMemorySize64": 408952832,
+      "StartTime": "2026-09-21T14:52:57.6847655+09:00"
+    },
+    {
+      "Id": 19204,
+      "ProcessName": "Code",
+      "CPU": 1.75,
+      "WorkingSet64": 106618880,
+      "PrivateMemorySize64": 38760448,
+      "StartTime": "2026-09-21T16:14:34.9825663+09:00"
+    },
+    {
+      "Id": 844,
+      "ProcessName": "codex",
+      "CPU": 245.734375,
+      "WorkingSet64": 238063616,
+      "PrivateMemorySize64": 186331136,
+      "StartTime": "2026-09-21T12:11:42.5743803+09:00"
+    },
+    {
+      "Id": 6924,
+      "ProcessName": "codex",
+      "CPU": 5.75,
+      "WorkingSet64": 103522304,
+      "PrivateMemorySize64": 23097344,
+      "StartTime": "2026-09-21T17:38:46.2409369+09:00"
+    },
+    {
+      "Id": 18268,
+      "ProcessName": "codex",
+      "CPU": 5.109375,
+      "WorkingSet64": 100753408,
+      "PrivateMemorySize64": 21471232,
+      "StartTime": "2026-09-21T17:30:17.6816523+09:00"
+    },
+    {
+      "Id": 20200,
+      "ProcessName": "codex-code-mode-host",
+      "CPU": 4.078125,
+      "WorkingSet64": 42237952,
+      "PrivateMemorySize64": 18636800,
+      "StartTime": "2026-09-21T16:16:15.6117412+09:00"
+    },
+    {
+      "Id": 11904,
+      "ProcessName": "codex-computer-use-swift",
+      "CPU": 3.015625,
+      "WorkingSet64": 56741888,
+      "PrivateMemorySize64": 41394176,
+      "StartTime": "2026-09-21T12:11:47.190399+09:00"
+    },
+    {
+      "Id": 16320,
+      "ProcessName": "codex-windows-sandbox-service",
+      "CPU": null,
+      "WorkingSet64": 30334976,
+      "PrivateMemorySize64": 2842624,
+      "StartTime": null
+    },
+    {
+      "Id": 11884,
+      "ProcessName": "conhost",
+      "CPU": 0.015625,
+      "WorkingSet64": 6963200,
+      "PrivateMemorySize64": 1556480,
+      "StartTime": "2026-09-21T12:11:47.1993164+09:00"
+    },
+    {
+      "Id": 15308,
+      "ProcessName": "conhost",
+      "CPU": 3.625,
+      "WorkingSet64": 7315456,
+      "PrivateMemorySize64": 1658880,
+      "StartTime": "2026-09-21T12:11:42.5875385+09:00"
+    },
+    {
+      "Id": 17616,
+      "ProcessName": "conhost",
+      "CPU": 0.046875,
+      "WorkingSet64": 9461760,
+      "PrivateMemorySize64": 2011136,
+      "StartTime": "2026-09-21T19:05:22.0188834+09:00"
+    },
+    {
+      "Id": 8792,
+      "ProcessName": "CrossDeviceResume",
+      "CPU": 0.71875,
+      "WorkingSet64": 60747776,
+      "PrivateMemorySize64": 22151168,
+      "StartTime": "2026-09-21T12:01:14.010032+09:00"
+    },
+    {
+      "Id": 1112,
+      "ProcessName": "csrss",
+      "CPU": null,
+      "WorkingSet64": 6258688,
+      "PrivateMemorySize64": 2740224,
+      "StartTime": null
+    },
+    {
+      "Id": 1228,
+      "ProcessName": "csrss",
+      "CPU": null,
+      "WorkingSet64": 7520256,
+      "PrivateMemorySize64": 3747840,
+      "StartTime": null
+    },
+    {
+      "Id": 11488,
+      "ProcessName": "ctfmon",
+      "CPU": 25.234375,
+      "WorkingSet64": 39219200,
+      "PrivateMemorySize64": 36622336,
+      "StartTime": "2026-09-21T12:01:19.6898184+09:00"
+    },
+    {
+      "Id": 1900,
+      "ProcessName": "dwm",
+      "CPU": null,
+      "WorkingSet64": 96018432,
+      "PrivateMemorySize64": 191160320,
+      "StartTime": null
+    },
+    {
+      "Id": 14780,
+      "ProcessName": "esbuild",
+      "CPU": 3.03125,
+      "WorkingSet64": 16015360,
+      "PrivateMemorySize64": 56193024,
+      "StartTime": "2026-09-21T19:05:22.0070142+09:00"
+    },
+    {
+      "Id": 8444,
+      "ProcessName": "explorer",
+      "CPU": 120.984375,
+      "WorkingSet64": 306028544,
+      "PrivateMemorySize64": 215904256,
+      "StartTime": "2026-09-21T12:01:13.745678+09:00"
+    },
+    {
+      "Id": 1564,
+      "ProcessName": "fontdrvhost",
+      "CPU": null,
+      "WorkingSet64": 4202496,
+      "PrivateMemorySize64": 2232320,
+      "StartTime": null
+    },
+    {
+      "Id": 1572,
+      "ProcessName": "fontdrvhost",
+      "CPU": null,
+      "WorkingSet64": 11403264,
+      "PrivateMemorySize64": 6086656,
+      "StartTime": null
+    },
+    {
+      "Id": 0,
+      "ProcessName": "Idle",
+      "CPU": null,
+      "WorkingSet64": 8192,
+      "PrivateMemorySize64": 61440,
+      "StartTime": null
+    },
+    {
+      "Id": 4764,
+      "ProcessName": "IntelAudioService",
+      "CPU": null,
+      "WorkingSet64": 30445568,
+      "PrivateMemorySize64": 41697280,
+      "StartTime": null
+    },
+    {
+      "Id": 2532,
+      "ProcessName": "IntelCpHDCPSvc",
+      "CPU": null,
+      "WorkingSet64": 7184384,
+      "PrivateMemorySize64": 1937408,
+      "StartTime": null
+    },
+    {
+      "Id": 4944,
+      "ProcessName": "ipfsvc",
+      "CPU": null,
+      "WorkingSet64": 6848512,
+      "PrivateMemorySize64": 2969600,
+      "StartTime": null
+    },
+    {
+      "Id": 992,
+      "ProcessName": "ipf_helper",
+      "CPU": 342.078125,
+      "WorkingSet64": 8916992,
+      "PrivateMemorySize64": 2101248,
+      "StartTime": "2026-09-21T12:01:13.2527365+09:00"
+    },
+    {
+      "Id": 4992,
+      "ProcessName": "ipf_uf",
+      "CPU": null,
+      "WorkingSet64": 8761344,
+      "PrivateMemorySize64": 2711552,
+      "StartTime": null
+    },
+    {
+      "Id": 4856,
+      "ProcessName": "jhi_service",
+      "CPU": null,
+      "WorkingSet64": 8835072,
+      "PrivateMemorySize64": 1937408,
+      "StartTime": null
+    },
+    {
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "CPU": 315.6875,
+      "WorkingSet64": 90841088,
+      "PrivateMemorySize64": 91271168,
+      "StartTime": "2026-09-21T19:05:21.4715478+09:00"
+    },
+    {
+      "Id": 4836,
+      "ProcessName": "LGUWPService",
+      "CPU": null,
+      "WorkingSet64": 23388160,
+      "PrivateMemorySize64": 10248192,
+      "StartTime": null
+    },
+    {
+      "Id": 1376,
+      "ProcessName": "LsaIso",
+      "CPU": null,
+      "WorkingSet64": 4296704,
+      "PrivateMemorySize64": 1331200,
+      "StartTime": null
+    },
+    {
+      "Id": 1388,
+      "ProcessName": "lsass",
+      "CPU": null,
+      "WorkingSet64": 39759872,
+      "PrivateMemorySize64": 15302656,
+      "StartTime": null
+    },
+    {
+      "Id": 3676,
+      "ProcessName": "Memory Compression",
+      "CPU": null,
+      "WorkingSet64": 206946304,
+      "PrivateMemorySize64": 2994176,
+      "StartTime": null
+    },
+    {
+      "Id": 1588,
+      "ProcessName": "Microsoft.Management.Services.IntuneWindowsAgent",
+      "CPU": null,
+      "WorkingSet64": 94572544,
+      "PrivateMemorySize64": 58314752,
+      "StartTime": null
+    },
+    {
+      "Id": 15616,
+      "ProcessName": "MicrosoftEdgeUpdate",
+      "CPU": null,
+      "WorkingSet64": 5652480,
+      "PrivateMemorySize64": 3919872,
+      "StartTime": null
+    },
+    {
+      "Id": 15716,
+      "ProcessName": "MoUsoCoreWorker",
+      "CPU": null,
+      "WorkingSet64": 45989888,
+      "PrivateMemorySize64": 35557376,
+      "StartTime": null
+    },
+    {
+      "Id": 4920,
+      "ProcessName": "MpDefenderCoreService",
+      "CPU": null,
+      "WorkingSet64": 26492928,
+      "PrivateMemorySize64": 14557184,
+      "StartTime": null
+    },
+    {
+      "Id": 9044,
+      "ProcessName": "msedge",
+      "CPU": 5.265625,
+      "WorkingSet64": 133726208,
+      "PrivateMemorySize64": 53743616,
+      "StartTime": "2026-09-21T20:18:07.1019231+09:00"
+    },
+    {
+      "Id": 12200,
+      "ProcessName": "msedge",
+      "CPU": 0.109375,
+      "WorkingSet64": 13230080,
+      "PrivateMemorySize64": 3379200,
+      "StartTime": "2026-09-21T20:18:07.2170517+09:00"
+    },
+    {
+      "Id": 14740,
+      "ProcessName": "msedge",
+      "CPU": 0.171875,
+      "WorkingSet64": 19001344,
+      "PrivateMemorySize64": 8589312,
+      "StartTime": "2026-09-21T20:18:07.4054309+09:00"
+    },
+    {
+      "Id": 15960,
+      "ProcessName": "msedge",
+      "CPU": 0.515625,
+      "WorkingSet64": 39985152,
+      "PrivateMemorySize64": 52875264,
+      "StartTime": "2026-09-21T20:18:07.3404275+09:00"
+    },
+    {
+      "Id": 16960,
+      "ProcessName": "msedge",
+      "CPU": 0.15625,
+      "WorkingSet64": 31133696,
+      "PrivateMemorySize64": 19107840,
+      "StartTime": "2026-09-21T20:18:08.7614745+09:00"
+    },
+    {
+      "Id": 19556,
+      "ProcessName": "msedge",
+      "CPU": 1.0,
+      "WorkingSet64": 42524672,
+      "PrivateMemorySize64": 14958592,
+      "StartTime": "2026-09-21T20:18:07.3405693+09:00"
+    },
+    {
+      "Id": 20436,
+      "ProcessName": "msedge",
+      "CPU": 6.84375,
+      "WorkingSet64": 112033792,
+      "PrivateMemorySize64": 102055936,
+      "StartTime": "2026-09-21T20:18:08.5504447+09:00"
+    },
+    {
+      "Id": 3484,
+      "ProcessName": "msedgewebview2",
+      "CPU": 56.390625,
+      "WorkingSet64": 4902912,
+      "PrivateMemorySize64": 177754112,
+      "StartTime": "2026-09-21T12:02:18.3228394+09:00"
+    },
+    {
+      "Id": 5600,
+      "ProcessName": "msedgewebview2",
+      "CPU": 0.21875,
+      "WorkingSet64": 13770752,
+      "PrivateMemorySize64": 3457024,
+      "StartTime": "2026-09-21T12:02:18.1779156+09:00"
+    },
+    {
+      "Id": 6972,
+      "ProcessName": "msedgewebview2",
+      "CPU": 8.40625,
+      "WorkingSet64": 540672,
+      "PrivateMemorySize64": 14893056,
+      "StartTime": "2026-09-21T12:02:18.330237+09:00"
+    },
+    {
+      "Id": 9200,
+      "ProcessName": "msedgewebview2",
+      "CPU": 8.171875,
+      "WorkingSet64": 111767552,
+      "PrivateMemorySize64": 41881600,
+      "StartTime": "2026-09-21T12:01:16.3665417+09:00"
+    },
+    {
+      "Id": 9328,
+      "ProcessName": "msedgewebview2",
+      "CPU": 2.234375,
+      "WorkingSet64": 16384,
+      "PrivateMemorySize64": 13004800,
+      "StartTime": "2026-09-21T12:02:18.386964+09:00"
+    },
+    {
+      "Id": 9976,
+      "ProcessName": "msedgewebview2",
+      "CPU": 0.1875,
+      "WorkingSet64": 12926976,
+      "PrivateMemorySize64": 3444736,
+      "StartTime": "2026-09-21T12:01:16.454126+09:00"
+    },
+    {
+      "Id": 10736,
+      "ProcessName": "msedgewebview2",
+      "CPU": 2.34375,
+      "WorkingSet64": 41148416,
+      "PrivateMemorySize64": 14512128,
+      "StartTime": "2026-09-21T12:01:16.7891423+09:00"
+    },
+    {
+      "Id": 10760,
+      "ProcessName": "msedgewebview2",
+      "CPU": 1.984375,
+      "WorkingSet64": 58920960,
+      "PrivateMemorySize64": 84303872,
+      "StartTime": "2026-09-21T12:01:16.7905321+09:00"
+    },
+    {
+      "Id": 10980,
+      "ProcessName": "msedgewebview2",
+      "CPU": 0.203125,
+      "WorkingSet64": 18059264,
+      "PrivateMemorySize64": 8622080,
+      "StartTime": "2026-09-21T12:01:16.8944302+09:00"
+    },
+    {
+      "Id": 11232,
+      "ProcessName": "msedgewebview2",
+      "CPU": 5.8125,
+      "WorkingSet64": 77037568,
+      "PrivateMemorySize64": 95068160,
+      "StartTime": "2026-09-21T12:01:17.0135395+09:00"
+    },
+    {
+      "Id": 13492,
+      "ProcessName": "msedgewebview2",
+      "CPU": 98.359375,
+      "WorkingSet64": 1040384,
+      "PrivateMemorySize64": 223997952,
+      "StartTime": "2026-09-21T12:02:18.4722613+09:00"
+    },
+    {
+      "Id": 14172,
+      "ProcessName": "msedgewebview2",
+      "CPU": 12.6875,
+      "WorkingSet64": 5132288,
+      "PrivateMemorySize64": 43151360,
+      "StartTime": "2026-09-21T12:02:18.1320634+09:00"
+    },
+    {
+      "Id": 4904,
+      "ProcessName": "MsMpEng",
+      "CPU": null,
+      "WorkingSet64": 586739712,
+      "PrivateMemorySize64": 623669248,
+      "StartTime": null
+    },
+    {
+      "Id": 4872,
+      "ProcessName": "NgcIso",
+      "CPU": null,
+      "WorkingSet64": 4681728,
+      "PrivateMemorySize64": 1564672,
+      "StartTime": null
+    },
+    {
+      "Id": 7592,
+      "ProcessName": "NisSrv",
+      "CPU": null,
+      "WorkingSet64": 16470016,
+      "PrivateMemorySize64": 7245824,
+      "StartTime": null
+    },
+    {
+      "Id": 2620,
+      "ProcessName": "node",
+      "CPU": 5.46875,
+      "WorkingSet64": 110419968,
+      "PrivateMemorySize64": 203190272,
+      "StartTime": "2026-09-21T17:38:45.9542368+09:00"
+    },
+    {
+      "Id": 4928,
+      "ProcessName": "node",
+      "CPU": 21.125,
+      "WorkingSet64": 67035136,
+      "PrivateMemorySize64": 75988992,
+      "StartTime": "2026-09-21T19:05:22.3890023+09:00"
+    },
+    {
+      "Id": 5412,
+      "ProcessName": "node",
+      "CPU": 24.3125,
+      "WorkingSet64": 68009984,
+      "PrivateMemorySize64": 76595200,
+      "StartTime": "2026-09-21T19:05:22.5355012+09:00"
+    },
+    {
+      "Id": 6128,
+      "ProcessName": "node",
+      "CPU": 21.90625,
+      "WorkingSet64": 65626112,
+      "PrivateMemorySize64": 74760192,
+      "StartTime": "2026-09-21T19:05:22.5945324+09:00"
+    },
+    {
+      "Id": 7916,
+      "ProcessName": "node",
+      "CPU": 22.265625,
+      "WorkingSet64": 66502656,
+      "PrivateMemorySize64": 75407360,
+      "StartTime": "2026-09-21T19:05:22.4762676+09:00"
+    },
+    {
+      "Id": 7936,
+      "ProcessName": "node",
+      "CPU": 23.265625,
+      "WorkingSet64": 66093056,
+      "PrivateMemorySize64": 74469376,
+      "StartTime": "2026-09-21T19:05:22.3037571+09:00"
+    },
+    {
+      "Id": 9900,
+      "ProcessName": "node",
+      "CPU": 0.140625,
+      "WorkingSet64": 31850496,
+      "PrivateMemorySize64": 21815296,
+      "StartTime": "2026-09-21T17:30:13.8774575+09:00"
+    },
+    {
+      "Id": 11176,
+      "ProcessName": "node",
+      "CPU": 0.109375,
+      "WorkingSet64": 31854592,
+      "PrivateMemorySize64": 22151168,
+      "StartTime": "2026-09-21T17:03:18.5714082+09:00"
+    },
+    {
+      "Id": 11692,
+      "ProcessName": "node",
+      "CPU": 0.1875,
+      "WorkingSet64": 33701888,
+      "PrivateMemorySize64": 31387648,
+      "StartTime": "2026-09-21T17:03:18.5990057+09:00"
+    },
+    {
+      "Id": 12140,
+      "ProcessName": "node",
+      "CPU": 4.53125,
+      "WorkingSet64": 58183680,
+      "PrivateMemorySize64": 185720832,
+      "StartTime": "2026-09-21T17:30:14.4420669+09:00"
+    },
+    {
+      "Id": 12172,
+      "ProcessName": "node",
+      "CPU": 23.6875,
+      "WorkingSet64": 65851392,
+      "PrivateMemorySize64": 74842112,
+      "StartTime": "2026-09-21T19:05:22.4485053+09:00"
+    },
+    {
+      "Id": 12396,
+      "ProcessName": "node",
+      "CPU": 0.203125,
+      "WorkingSet64": 44924928,
+      "PrivateMemorySize64": 30953472,
+      "StartTime": "2026-09-21T18:03:25.9096241+09:00"
+    },
+    {
+      "Id": 13948,
+      "ProcessName": "node",
+      "CPU": 0.125,
+      "WorkingSet64": 43823104,
+      "PrivateMemorySize64": 22003712,
+      "StartTime": "2026-09-21T18:36:06.8608388+09:00"
+    },
+    {
+      "Id": 13988,
+      "ProcessName": "node",
+      "CPU": 0.5625,
+      "WorkingSet64": 38014976,
+      "PrivateMemorySize64": 71417856,
+      "StartTime": "2026-09-21T17:30:14.4255976+09:00"
+    },
+    {
+      "Id": 15272,
+      "ProcessName": "node",
+      "CPU": 23.296875,
+      "WorkingSet64": 67538944,
+      "PrivateMemorySize64": 75616256,
+      "StartTime": "2026-09-21T19:05:22.504734+09:00"
+    },
+    {
+      "Id": 16068,
+      "ProcessName": "node",
+      "CPU": 21.46875,
+      "WorkingSet64": 66637824,
+      "PrivateMemorySize64": 76099584,
+      "StartTime": "2026-09-21T19:05:22.3612932+09:00"
+    },
+    {
+      "Id": 17444,
+      "ProcessName": "node",
+      "CPU": 22.453125,
+      "WorkingSet64": 66666496,
+      "PrivateMemorySize64": 75735040,
+      "StartTime": "2026-09-21T19:05:22.2784404+09:00"
+    },
+    {
+      "Id": 17556,
+      "ProcessName": "node",
+      "CPU": 4.265625,
+      "WorkingSet64": 57942016,
+      "PrivateMemorySize64": 146558976,
+      "StartTime": "2026-09-21T19:05:21.7348899+09:00"
+    },
+    {
+      "Id": 18060,
+      "ProcessName": "node",
+      "CPU": 0.1875,
+      "WorkingSet64": 45350912,
+      "PrivateMemorySize64": 29892608,
+      "StartTime": "2026-09-21T17:33:21.6652879+09:00"
+    },
+    {
+      "Id": 18084,
+      "ProcessName": "node",
+      "CPU": 0.15625,
+      "WorkingSet64": 43565056,
+      "PrivateMemorySize64": 22089728,
+      "StartTime": "2026-09-21T18:00:19.9404899+09:00"
+    },
+    {
+      "Id": 18184,
+      "ProcessName": "node",
+      "CPU": 76.65625,
+      "WorkingSet64": 69206016,
+      "PrivateMemorySize64": 45461504,
+      "StartTime": "2026-09-21T19:05:54.8395149+09:00"
+    },
+    {
+      "Id": 18276,
+      "ProcessName": "node",
+      "CPU": 0.5,
+      "WorkingSet64": 55156736,
+      "PrivateMemorySize64": 73740288,
+      "StartTime": "2026-09-21T17:38:45.9431489+09:00"
+    },
+    {
+      "Id": 19948,
+      "ProcessName": "node",
+      "CPU": 0.25,
+      "WorkingSet64": 45973504,
+      "PrivateMemorySize64": 30388224,
+      "StartTime": "2026-09-21T18:36:06.8996101+09:00"
+    },
+    {
+      "Id": 20152,
+      "ProcessName": "node",
+      "CPU": 0.203125,
+      "WorkingSet64": 62148608,
+      "PrivateMemorySize64": 30736384,
+      "StartTime": "2026-09-21T20:52:25.7432968+09:00"
+    },
+    {
+      "Id": 20484,
+      "ProcessName": "node",
+      "CPU": 23.6875,
+      "WorkingSet64": 66617344,
+      "PrivateMemorySize64": 76410880,
+      "StartTime": "2026-09-21T19:05:22.5665942+09:00"
+    },
+    {
+      "Id": 20776,
+      "ProcessName": "node",
+      "CPU": 22.515625,
+      "WorkingSet64": 66576384,
+      "PrivateMemorySize64": 75726848,
+      "StartTime": "2026-09-21T19:05:22.3346242+09:00"
+    },
+    {
+      "Id": 20940,
+      "ProcessName": "node",
+      "CPU": 23.3125,
+      "WorkingSet64": 65294336,
+      "PrivateMemorySize64": 74645504,
+      "StartTime": "2026-09-21T19:05:22.4216442+09:00"
+    },
+    {
+      "Id": 21212,
+      "ProcessName": "node",
+      "CPU": 0.109375,
+      "WorkingSet64": 54251520,
+      "PrivateMemorySize64": 22163456,
+      "StartTime": "2026-09-21T20:52:25.7134859+09:00"
+    },
+    {
+      "Id": 4436,
+      "ProcessName": "node_repl",
+      "CPU": 0.046875,
+      "WorkingSet64": 9965568,
+      "PrivateMemorySize64": 2936832,
+      "StartTime": "2026-09-21T17:03:18.5742837+09:00"
+    },
+    {
+      "Id": 6772,
+      "ProcessName": "node_repl",
+      "CPU": 1.375,
+      "WorkingSet64": 17342464,
+      "PrivateMemorySize64": 13295616,
+      "StartTime": "2026-09-21T17:30:14.2893617+09:00"
+    },
+    {
+      "Id": 8776,
+      "ProcessName": "node_repl",
+      "CPU": 0.015625,
+      "WorkingSet64": 13586432,
+      "PrivateMemorySize64": 2912256,
+      "StartTime": "2026-09-21T17:33:21.6292267+09:00"
+    },
+    {
+      "Id": 11092,
+      "ProcessName": "node_repl",
+      "CPU": 1.46875,
+      "WorkingSet64": 20131840,
+      "PrivateMemorySize64": 13041664,
+      "StartTime": "2026-09-21T17:03:18.6416052+09:00"
+    },
+    {
+      "Id": 11828,
+      "ProcessName": "node_repl",
+      "CPU": 0.015625,
+      "WorkingSet64": 13578240,
+      "PrivateMemorySize64": 2830336,
+      "StartTime": "2026-09-21T18:00:20.0109239+09:00"
+    },
+    {
+      "Id": 15184,
+      "ProcessName": "node_repl",
+      "CPU": 0.015625,
+      "WorkingSet64": 14614528,
+      "PrivateMemorySize64": 2830336,
+      "StartTime": "2026-09-21T20:52:25.7167604+09:00"
+    },
+    {
+      "Id": 15636,
+      "ProcessName": "node_repl",
+      "CPU": 0.03125,
+      "WorkingSet64": 14565376,
+      "PrivateMemorySize64": 2785280,
+      "StartTime": "2026-09-21T20:52:25.7989561+09:00"
+    },
+    {
+      "Id": 20424,
+      "ProcessName": "node_repl",
+      "CPU": 0.015625,
+      "WorkingSet64": 13635584,
+      "PrivateMemorySize64": 3047424,
+      "StartTime": "2026-09-21T18:03:25.8754735+09:00"
+    },
+    {
+      "Id": 21840,
+      "ProcessName": "node_repl",
+      "CPU": 0.03125,
+      "WorkingSet64": 13733888,
+      "PrivateMemorySize64": 2953216,
+      "StartTime": "2026-09-21T18:36:06.8489508+09:00"
+    },
+    {
+      "Id": 22088,
+      "ProcessName": "node_repl",
+      "CPU": 0.046875,
+      "WorkingSet64": 13635584,
+      "PrivateMemorySize64": 2859008,
+      "StartTime": "2026-09-21T18:36:06.9676236+09:00"
+    },
+    {
+      "Id": 14696,
+      "ProcessName": "Notepad",
+      "CPU": 32.453125,
+      "WorkingSet64": 105644032,
+      "PrivateMemorySize64": 81104896,
+      "StartTime": "2026-09-21T12:09:40.0631633+09:00"
+    },
+    {
+      "Id": 3420,
+      "ProcessName": "NVDisplay.Container",
+      "CPU": null,
+      "WorkingSet64": 24760320,
+      "PrivateMemorySize64": 8540160,
+      "StartTime": null
+    },
+    {
+      "Id": 5628,
+      "ProcessName": "NVDisplay.Container",
+      "CPU": null,
+      "WorkingSet64": 56578048,
+      "PrivateMemorySize64": 47554560,
+      "StartTime": null
+    },
+    {
+      "Id": 4752,
+      "ProcessName": "OneApp.IGCC.WinService",
+      "CPU": null,
+      "WorkingSet64": 50298880,
+      "PrivateMemorySize64": 31653888,
+      "StartTime": null
+    },
+    {
+      "Id": 15544,
+      "ProcessName": "OneDrive.Sync.Service",
+      "CPU": 731.203125,
+      "WorkingSet64": 96059392,
+      "PrivateMemorySize64": 120922112,
+      "StartTime": "2026-09-21T12:03:13.5398018+09:00"
+    },
+    {
+      "Id": 16552,
+      "ProcessName": "OpenConsole",
+      "CPU": 0.046875,
+      "WorkingSet64": 12201984,
+      "PrivateMemorySize64": 2994176,
+      "StartTime": "2026-09-21T20:51:47.9795432+09:00"
+    },
+    {
+      "Id": 4816,
+      "ProcessName": "PlatformMgrService",
+      "CPU": null,
+      "WorkingSet64": 26673152,
+      "PrivateMemorySize64": 17432576,
+      "StartTime": null
+    },
+    {
+      "Id": 5804,
+      "ProcessName": "powershell",
+      "CPU": 1.28125,
+      "WorkingSet64": 80478208,
+      "PrivateMemorySize64": 60694528,
+      "StartTime": "2026-09-21T20:51:48.0240613+09:00"
+    },
+    {
+      "Id": 15744,
+      "ProcessName": "powershell",
+      "CPU": 19.0,
+      "WorkingSet64": 65753088,
+      "PrivateMemorySize64": 64524288,
+      "StartTime": "2026-09-21T19:05:54.9077476+09:00"
+    },
+    {
+      "Id": 12144,
+      "ProcessName": "pwsh",
+      "CPU": 0.71875,
+      "WorkingSet64": 98787328,
+      "PrivateMemorySize64": 35844096,
+      "StartTime": "2026-09-21T21:09:02.6342252+09:00"
+    },
+    {
+      "Id": 20452,
+      "ProcessName": "pwsh",
+      "CPU": 3.015625,
+      "WorkingSet64": 86851584,
+      "PrivateMemorySize64": 34246656,
+      "StartTime": "2026-09-21T19:05:54.1401567+09:00"
+    },
+    {
+      "Id": 276,
+      "ProcessName": "Registry",
+      "CPU": null,
+      "WorkingSet64": 95760384,
+      "PrivateMemorySize64": 8474624,
+      "StartTime": null
+    },
+    {
+      "Id": 4824,
+      "ProcessName": "RtkAudUService64",
+      "CPU": null,
+      "WorkingSet64": 15970304,
+      "PrivateMemorySize64": 4853760,
+      "StartTime": null
+    },
+    {
+      "Id": 10356,
+      "ProcessName": "RtkAudUService64",
+      "CPU": 0.21875,
+      "WorkingSet64": 19886080,
+      "PrivateMemorySize64": 23388160,
+      "StartTime": "2026-09-21T12:01:18.4927262+09:00"
+    },
+    {
+      "Id": 9380,
+      "ProcessName": "RuntimeBroker",
+      "CPU": 10.421875,
+      "WorkingSet64": 73105408,
+      "PrivateMemorySize64": 18477056,
+      "StartTime": "2026-09-21T12:01:15.6352937+09:00"
+    },
+    {
+      "Id": 14404,
+      "ProcessName": "RuntimeBroker",
+      "CPU": 1.75,
+      "WorkingSet64": 37990400,
+      "PrivateMemorySize64": 7884800,
+      "StartTime": "2026-09-21T12:03:12.4508331+09:00"
+    },
+    {
+      "Id": 14604,
+      "ProcessName": "RuntimeBroker",
+      "CPU": 0.328125,
+      "WorkingSet64": 18989056,
+      "PrivateMemorySize64": 3784704,
+      "StartTime": "2026-09-21T12:02:21.7422182+09:00"
+    },
+    {
+      "Id": 16756,
+      "ProcessName": "RuntimeBroker",
+      "CPU": 0.8125,
+      "WorkingSet64": 25251840,
+      "PrivateMemorySize64": 6438912,
+      "StartTime": "2026-09-21T12:08:50.8521156+09:00"
+    },
+    {
+      "Id": 8604,
+      "ProcessName": "SearchHost",
+      "CPU": 11.875,
+      "WorkingSet64": 138465280,
+      "PrivateMemorySize64": 59592704,
+      "StartTime": "2026-09-21T12:01:15.4222686+09:00"
+    },
+    {
+      "Id": 4932,
+      "ProcessName": "SearchIndexer",
+      "CPU": null,
+      "WorkingSet64": 45867008,
+      "PrivateMemorySize64": 38514688,
+      "StartTime": null
+    },
+    {
+      "Id": 236,
+      "ProcessName": "Secure System",
+      "CPU": null,
+      "WorkingSet64": 67321856,
+      "PrivateMemorySize64": 176128,
+      "StartTime": null
+    },
+    {
+      "Id": 4388,
+      "ProcessName": "SecurityHealthService",
+      "CPU": null,
+      "WorkingSet64": 24698880,
+      "PrivateMemorySize64": 9306112,
+      "StartTime": null
+    },
+    {
+      "Id": 11204,
+      "ProcessName": "SecurityHealthSystray",
+      "CPU": 0.171875,
+      "WorkingSet64": 13398016,
+      "PrivateMemorySize64": 2879488,
+      "StartTime": "2026-09-21T12:01:18.1169978+09:00"
+    },
+    {
+      "Id": 1336,
+      "ProcessName": "services",
+      "CPU": null,
+      "WorkingSet64": 20013056,
+      "PrivateMemorySize64": 7729152,
+      "StartTime": null
+    },
+    {
+      "Id": 6124,
+      "ProcessName": "ShellExperienceHost",
+      "CPU": 2.953125,
+      "WorkingSet64": 88690688,
+      "PrivateMemorySize64": 37404672,
+      "StartTime": "2026-09-21T12:03:12.1646857+09:00"
+    },
+    {
+      "Id": 15968,
+      "ProcessName": "ShellHost",
+      "CPU": 0.140625,
+      "WorkingSet64": 51941376,
+      "PrivateMemorySize64": 20439040,
+      "StartTime": "2026-09-21T16:53:48.5427837+09:00"
+    },
+    {
+      "Id": 5096,
+      "ProcessName": "sihost",
+      "CPU": 22.5625,
+      "WorkingSet64": 53846016,
+      "PrivateMemorySize64": 9539584,
+      "StartTime": "2026-09-21T12:01:13.3628894+09:00"
+    },
+    {
+      "Id": 876,
+      "ProcessName": "smss",
+      "CPU": null,
+      "WorkingSet64": 1392640,
+      "PrivateMemorySize64": 1183744,
+      "StartTime": null
+    },
+    {
+      "Id": 4352,
+      "ProcessName": "spoolsv",
+      "CPU": null,
+      "WorkingSet64": 18817024,
+      "PrivateMemorySize64": 6537216,
+      "StartTime": null
+    },
+    {
+      "Id": 8316,
+      "ProcessName": "StartMenuExperienceHost",
+      "CPU": 19.1875,
+      "WorkingSet64": 145461248,
+      "PrivateMemorySize64": 114765824,
+      "StartTime": "2026-09-21T12:01:15.4275663+09:00"
+    },
+    {
+      "Id": 512,
+      "ProcessName": "svchost",
+      "CPU": 0.671875,
+      "WorkingSet64": 18513920,
+      "PrivateMemorySize64": 3026944,
+      "StartTime": "2026-09-21T12:02:12.3160617+09:00"
+    },
+    {
+      "Id": 904,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 26537984,
+      "PrivateMemorySize64": 7237632,
+      "StartTime": null
+    },
+    {
+      "Id": 1016,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 7766016,
+      "PrivateMemorySize64": 2408448,
+      "StartTime": null
+    },
+    {
+      "Id": 1404,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 7315456,
+      "PrivateMemorySize64": 1900544,
+      "StartTime": null
+    },
+    {
+      "Id": 1496,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 10174464,
+      "PrivateMemorySize64": 2990080,
+      "StartTime": null
+    },
+    {
+      "Id": 1536,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 44023808,
+      "PrivateMemorySize64": 15429632,
+      "StartTime": null
+    },
+    {
+      "Id": 1712,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 20197376,
+      "PrivateMemorySize64": 10797056,
+      "StartTime": null
+    },
+    {
+      "Id": 1760,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11935744,
+      "PrivateMemorySize64": 3862528,
+      "StartTime": null
+    },
+    {
+      "Id": 1928,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 10510336,
+      "PrivateMemorySize64": 2707456,
+      "StartTime": null
+    },
+    {
+      "Id": 2024,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 44130304,
+      "PrivateMemorySize64": 12853248,
+      "StartTime": null
+    },
+    {
+      "Id": 2124,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 10006528,
+      "PrivateMemorySize64": 2539520,
+      "StartTime": null
+    },
+    {
+      "Id": 2140,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 12668928,
+      "PrivateMemorySize64": 8376320,
+      "StartTime": null
+    },
+    {
+      "Id": 2152,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 18018304,
+      "PrivateMemorySize64": 3842048,
+      "StartTime": null
+    },
+    {
+      "Id": 2160,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 15990784,
+      "PrivateMemorySize64": 4345856,
+      "StartTime": null
+    },
+    {
+      "Id": 2316,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 15138816,
+      "PrivateMemorySize64": 2744320,
+      "StartTime": null
+    },
+    {
+      "Id": 2324,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 14020608,
+      "PrivateMemorySize64": 3895296,
+      "StartTime": null
+    },
+    {
+      "Id": 2372,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 27340800,
+      "PrivateMemorySize64": 20623360,
+      "StartTime": null
+    },
+    {
+      "Id": 2396,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 12791808,
+      "PrivateMemorySize64": 5439488,
+      "StartTime": null
+    },
+    {
+      "Id": 2436,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 16437248,
+      "PrivateMemorySize64": 7258112,
+      "StartTime": null
+    },
+    {
+      "Id": 2484,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 13901824,
+      "PrivateMemorySize64": 3506176,
+      "StartTime": null
+    },
+    {
+      "Id": 2520,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 10878976,
+      "PrivateMemorySize64": 3805184,
+      "StartTime": null
+    },
+    {
+      "Id": 2556,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11763712,
+      "PrivateMemorySize64": 3715072,
+      "StartTime": null
+    },
+    {
+      "Id": 2700,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 21979136,
+      "PrivateMemorySize64": 8712192,
+      "StartTime": null
+    },
+    {
+      "Id": 2768,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 15921152,
+      "PrivateMemorySize64": 3854336,
+      "StartTime": null
+    },
+    {
+      "Id": 2852,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11227136,
+      "PrivateMemorySize64": 2785280,
+      "StartTime": null
+    },
+    {
+      "Id": 2892,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 10248192,
+      "PrivateMemorySize64": 2957312,
+      "StartTime": null
+    },
+    {
+      "Id": 2928,
+      "ProcessName": "svchost",
+      "CPU": 0.203125,
+      "WorkingSet64": 15171584,
+      "PrivateMemorySize64": 2400256,
+      "StartTime": "2026-09-21T12:02:07.8455957+09:00"
+    },
+    {
+      "Id": 3000,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 14155776,
+      "PrivateMemorySize64": 4259840,
+      "StartTime": null
+    },
+    {
+      "Id": 3188,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 12595200,
+      "PrivateMemorySize64": 2969600,
+      "StartTime": null
+    },
+    {
+      "Id": 3200,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 12742656,
+      "PrivateMemorySize64": 3387392,
+      "StartTime": null
+    },
+    {
+      "Id": 3468,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 19230720,
+      "PrivateMemorySize64": 18108416,
+      "StartTime": null
+    },
+    {
+      "Id": 3492,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 8630272,
+      "PrivateMemorySize64": 2084864,
+      "StartTime": null
+    },
+    {
+      "Id": 3520,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 7835648,
+      "PrivateMemorySize64": 1998848,
+      "StartTime": null
+    },
+    {
+      "Id": 3528,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 19685376,
+      "PrivateMemorySize64": 3674112,
+      "StartTime": null
+    },
+    {
+      "Id": 3536,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 10092544,
+      "PrivateMemorySize64": 2551808,
+      "StartTime": null
+    },
+    {
+      "Id": 3720,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11730944,
+      "PrivateMemorySize64": 2748416,
+      "StartTime": null
+    },
+    {
+      "Id": 3732,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 25726976,
+      "PrivateMemorySize64": 7061504,
+      "StartTime": null
+    },
+    {
+      "Id": 3792,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11653120,
+      "PrivateMemorySize64": 2555904,
+      "StartTime": null
+    },
+    {
+      "Id": 3800,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11485184,
+      "PrivateMemorySize64": 2711552,
+      "StartTime": null
+    },
+    {
+      "Id": 3824,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 13271040,
+      "PrivateMemorySize64": 3973120,
+      "StartTime": null
+    },
+    {
+      "Id": 3916,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 18997248,
+      "PrivateMemorySize64": 3903488,
+      "StartTime": null
+    },
+    {
+      "Id": 3960,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11243520,
+      "PrivateMemorySize64": 2547712,
+      "StartTime": null
+    },
+    {
+      "Id": 4052,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 21286912,
+      "PrivateMemorySize64": 16039936,
+      "StartTime": null
+    },
+    {
+      "Id": 4156,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 26722304,
+      "PrivateMemorySize64": 10797056,
+      "StartTime": null
+    },
+    {
+      "Id": 4184,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 17219584,
+      "PrivateMemorySize64": 3059712,
+      "StartTime": null
+    },
+    {
+      "Id": 4300,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 15732736,
+      "PrivateMemorySize64": 3768320,
+      "StartTime": null
+    },
+    {
+      "Id": 4424,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 20742144,
+      "PrivateMemorySize64": 13275136,
+      "StartTime": null
+    },
+    {
+      "Id": 4468,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 14643200,
+      "PrivateMemorySize64": 4018176,
+      "StartTime": null
+    },
+    {
+      "Id": 4504,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 10760192,
+      "PrivateMemorySize64": 2908160,
+      "StartTime": null
+    },
+    {
+      "Id": 4516,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11485184,
+      "PrivateMemorySize64": 3207168,
+      "StartTime": null
+    },
+    {
+      "Id": 4596,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 15028224,
+      "PrivateMemorySize64": 3964928,
+      "StartTime": null
+    },
+    {
+      "Id": 4676,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 30044160,
+      "PrivateMemorySize64": 12046336,
+      "StartTime": null
+    },
+    {
+      "Id": 4772,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 53424128,
+      "PrivateMemorySize64": 32768000,
+      "StartTime": null
+    },
+    {
+      "Id": 4788,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 25563136,
+      "PrivateMemorySize64": 12390400,
+      "StartTime": null
+    },
+    {
+      "Id": 4800,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 42176512,
+      "PrivateMemorySize64": 35987456,
+      "StartTime": null
+    },
+    {
+      "Id": 4808,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 15998976,
+      "PrivateMemorySize64": 4423680,
+      "StartTime": null
+    },
+    {
+      "Id": 4844,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 8417280,
+      "PrivateMemorySize64": 4485120,
+      "StartTime": null
+    },
+    {
+      "Id": 4876,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 7585792,
+      "PrivateMemorySize64": 1867776,
+      "StartTime": null
+    },
+    {
+      "Id": 4896,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 30363648,
+      "PrivateMemorySize64": 7094272,
+      "StartTime": null
+    },
+    {
+      "Id": 5308,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 17653760,
+      "PrivateMemorySize64": 5353472,
+      "StartTime": null
+    },
+    {
+      "Id": 5664,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 12906496,
+      "PrivateMemorySize64": 3108864,
+      "StartTime": null
+    },
+    {
+      "Id": 5992,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 14929920,
+      "PrivateMemorySize64": 3649536,
+      "StartTime": null
+    },
+    {
+      "Id": 6004,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11337728,
+      "PrivateMemorySize64": 2510848,
+      "StartTime": null
+    },
+    {
+      "Id": 6140,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 30322688,
+      "PrivateMemorySize64": 6791168,
+      "StartTime": null
+    },
+    {
+      "Id": 6540,
+      "ProcessName": "svchost",
+      "CPU": 0.328125,
+      "WorkingSet64": 11964416,
+      "PrivateMemorySize64": 2838528,
+      "StartTime": "2026-09-21T12:01:13.3909321+09:00"
+    },
+    {
+      "Id": 6884,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 26628096,
+      "PrivateMemorySize64": 7032832,
+      "StartTime": null
+    },
+    {
+      "Id": 6960,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 17186816,
+      "PrivateMemorySize64": 3899392,
+      "StartTime": null
+    },
+    {
+      "Id": 7128,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 9912320,
+      "PrivateMemorySize64": 2260992,
+      "StartTime": null
+    },
+    {
+      "Id": 7284,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 13254656,
+      "PrivateMemorySize64": 8224768,
+      "StartTime": null
+    },
+    {
+      "Id": 7736,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 32387072,
+      "PrivateMemorySize64": 20643840,
+      "StartTime": null
+    },
+    {
+      "Id": 7912,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 28712960,
+      "PrivateMemorySize64": 6639616,
+      "StartTime": null
+    },
+    {
+      "Id": 7964,
+      "ProcessName": "svchost",
+      "CPU": 3.90625,
+      "WorkingSet64": 43945984,
+      "PrivateMemorySize64": 9773056,
+      "StartTime": "2026-09-21T12:01:13.4688946+09:00"
+    },
+    {
+      "Id": 7976,
+      "ProcessName": "svchost",
+      "CPU": 5.390625,
+      "WorkingSet64": 38686720,
+      "PrivateMemorySize64": 9490432,
+      "StartTime": "2026-09-21T12:01:13.3925985+09:00"
+    },
+    {
+      "Id": 8116,
+      "ProcessName": "svchost",
+      "CPU": 0.171875,
+      "WorkingSet64": 11481088,
+      "PrivateMemorySize64": 2588672,
+      "StartTime": "2026-09-21T12:01:13.4325641+09:00"
+    },
+    {
+      "Id": 8436,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11649024,
+      "PrivateMemorySize64": 2686976,
+      "StartTime": null
+    },
+    {
+      "Id": 8576,
+      "ProcessName": "svchost",
+      "CPU": 0.828125,
+      "WorkingSet64": 27590656,
+      "PrivateMemorySize64": 4562944,
+      "StartTime": "2026-09-21T12:01:14.9221359+09:00"
+    },
+    {
+      "Id": 8704,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 23674880,
+      "PrivateMemorySize64": 3866624,
+      "StartTime": null
+    },
+    {
+      "Id": 8892,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 26140672,
+      "PrivateMemorySize64": 5066752,
+      "StartTime": null
+    },
+    {
+      "Id": 9428,
+      "ProcessName": "svchost",
+      "CPU": 0.421875,
+      "WorkingSet64": 23986176,
+      "PrivateMemorySize64": 4775936,
+      "StartTime": "2026-09-21T12:01:15.6592491+09:00"
+    },
+    {
+      "Id": 10256,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 11034624,
+      "PrivateMemorySize64": 2600960,
+      "StartTime": null
+    },
+    {
+      "Id": 10828,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 8704000,
+      "PrivateMemorySize64": 1835008,
+      "StartTime": null
+    },
+    {
+      "Id": 14204,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 9388032,
+      "PrivateMemorySize64": 2506752,
+      "StartTime": null
+    },
+    {
+      "Id": 14952,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 9310208,
+      "PrivateMemorySize64": 3100672,
+      "StartTime": null
+    },
+    {
+      "Id": 14984,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 16515072,
+      "PrivateMemorySize64": 6090752,
+      "StartTime": null
+    },
+    {
+      "Id": 15040,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 10637312,
+      "PrivateMemorySize64": 2469888,
+      "StartTime": null
+    },
+    {
+      "Id": 19492,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 21917696,
+      "PrivateMemorySize64": 14249984,
+      "StartTime": null
+    },
+    {
+      "Id": 20312,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 244264960,
+      "PrivateMemorySize64": 60846080,
+      "StartTime": null
+    },
+    {
+      "Id": 22228,
+      "ProcessName": "svchost",
+      "CPU": null,
+      "WorkingSet64": 7544832,
+      "PrivateMemorySize64": 1773568,
+      "StartTime": null
+    },
+    {
+      "Id": 4,
+      "ProcessName": "System",
+      "CPU": null,
+      "WorkingSet64": 172032,
+      "PrivateMemorySize64": 40960,
+      "StartTime": null
+    },
+    {
+      "Id": 7380,
+      "ProcessName": "SystemSettings",
+      "CPU": 1.8125,
+      "WorkingSet64": 5373952,
+      "PrivateMemorySize64": 67211264,
+      "StartTime": "2026-09-21T13:18:06.7069197+09:00"
+    },
+    {
+      "Id": 2880,
+      "ProcessName": "taskhostw",
+      "CPU": 22.1875,
+      "WorkingSet64": 23830528,
+      "PrivateMemorySize64": 9957376,
+      "StartTime": "2026-09-21T12:01:13.5092807+09:00"
+    },
+    {
+      "Id": 4576,
+      "ProcessName": "taskhostw",
+      "CPU": 0.890625,
+      "WorkingSet64": 22466560,
+      "PrivateMemorySize64": 7983104,
+      "StartTime": "2026-09-21T17:01:14.6666685+09:00"
+    },
+    {
+      "Id": 12548,
+      "ProcessName": "TextInputHost",
+      "CPU": 10.8125,
+      "WorkingSet64": 84873216,
+      "PrivateMemorySize64": 31264768,
+      "StartTime": "2026-09-21T12:01:28.7634192+09:00"
+    },
+    {
+      "Id": 17300,
+      "ProcessName": "TiWorker",
+      "CPU": null,
+      "WorkingSet64": 323510272,
+      "PrivateMemorySize64": 17698816,
+      "StartTime": null
+    },
+    {
+      "Id": 22472,
+      "ProcessName": "TrustedInstaller",
+      "CPU": null,
+      "WorkingSet64": 11079680,
+      "PrivateMemorySize64": 2920448,
+      "StartTime": null
+    },
+    {
+      "Id": 8824,
+      "ProcessName": "UserOOBEBroker",
+      "CPU": 0.03125,
+      "WorkingSet64": 11481088,
+      "PrivateMemorySize64": 2502656,
+      "StartTime": "2026-09-21T12:20:41.0748035+09:00"
+    },
+    {
+      "Id": 1784,
+      "ProcessName": "whale",
+      "CPU": 0.171875,
+      "WorkingSet64": 9576448,
+      "PrivateMemorySize64": 3047424,
+      "StartTime": "2026-09-21T12:45:06.286387+09:00"
+    },
+    {
+      "Id": 2576,
+      "ProcessName": "whale",
+      "CPU": 7.703125,
+      "WorkingSet64": 83009536,
+      "PrivateMemorySize64": 69787648,
+      "StartTime": "2026-09-21T12:46:19.6286149+09:00"
+    },
+    {
+      "Id": 8836,
+      "ProcessName": "whale",
+      "CPU": 1.0625,
+      "WorkingSet64": 21962752,
+      "PrivateMemorySize64": 10207232,
+      "StartTime": "2026-09-21T12:54:15.001814+09:00"
+    },
+    {
+      "Id": 9680,
+      "ProcessName": "whale",
+      "CPU": 94.015625,
+      "WorkingSet64": 56492032,
+      "PrivateMemorySize64": 28639232,
+      "StartTime": "2026-09-21T12:45:06.407894+09:00"
+    },
+    {
+      "Id": 11612,
+      "ProcessName": "whale",
+      "CPU": 491.265625,
+      "WorkingSet64": 230793216,
+      "PrivateMemorySize64": 124395520,
+      "StartTime": "2026-09-21T12:45:06.2723706+09:00"
+    },
+    {
+      "Id": 12884,
+      "ProcessName": "whale",
+      "CPU": 72.03125,
+      "WorkingSet64": 123461632,
+      "PrivateMemorySize64": 86306816,
+      "StartTime": "2026-09-21T12:45:06.5734275+09:00"
+    },
+    {
+      "Id": 14156,
+      "ProcessName": "whale",
+      "CPU": 2.734375,
+      "WorkingSet64": 19058688,
+      "PrivateMemorySize64": 12509184,
+      "StartTime": "2026-09-21T12:45:06.4397599+09:00"
+    },
+    {
+      "Id": 14724,
+      "ProcessName": "whale",
+      "CPU": 1.03125,
+      "WorkingSet64": 41775104,
+      "PrivateMemorySize64": 45645824,
+      "StartTime": "2026-09-21T14:23:39.3170044+09:00"
+    },
+    {
+      "Id": 16180,
+      "ProcessName": "whale",
+      "CPU": 719.21875,
+      "WorkingSet64": 285679616,
+      "PrivateMemorySize64": 402878464,
+      "StartTime": "2026-09-21T12:45:06.4031721+09:00"
+    },
+    {
+      "Id": 16272,
+      "ProcessName": "whale",
+      "CPU": 49.265625,
+      "WorkingSet64": 177381376,
+      "PrivateMemorySize64": 179675136,
+      "StartTime": "2026-09-21T12:55:50.4859772+09:00"
+    },
+    {
+      "Id": 18244,
+      "ProcessName": "whale",
+      "CPU": 234.90625,
+      "WorkingSet64": 341778432,
+      "PrivateMemorySize64": 405315584,
+      "StartTime": "2026-09-21T14:20:05.0840217+09:00"
+    },
+    {
+      "Id": 18304,
+      "ProcessName": "whale",
+      "CPU": 16.25,
+      "WorkingSet64": 102883328,
+      "PrivateMemorySize64": 100151296,
+      "StartTime": "2026-09-21T14:28:07.8154928+09:00"
+    },
+    {
+      "Id": 19472,
+      "ProcessName": "whale",
+      "CPU": 5481.90625,
+      "WorkingSet64": 241262592,
+      "PrivateMemorySize64": 211795968,
+      "StartTime": "2026-09-21T16:59:02.062551+09:00"
+    },
+    {
+      "Id": 21852,
+      "ProcessName": "whale",
+      "CPU": 0.078125,
+      "WorkingSet64": 26779648,
+      "PrivateMemorySize64": 17752064,
+      "StartTime": "2026-09-21T20:09:28.2574338+09:00"
+    },
+    {
+      "Id": 9280,
+      "ProcessName": "Widgets",
+      "CPU": 19.375,
+      "WorkingSet64": 82296832,
+      "PrivateMemorySize64": 19025920,
+      "StartTime": "2026-09-21T12:01:15.5373116+09:00"
+    },
+    {
+      "Id": 2612,
+      "ProcessName": "WidgetService",
+      "CPU": 1.0,
+      "WorkingSet64": 27410432,
+      "PrivateMemorySize64": 5799936,
+      "StartTime": "2026-09-21T12:02:16.724024+09:00"
+    },
+    {
+      "Id": 1220,
+      "ProcessName": "wininit",
+      "CPU": null,
+      "WorkingSet64": 9580544,
+      "PrivateMemorySize64": 2125824,
+      "StartTime": null
+    },
+    {
+      "Id": 1316,
+      "ProcessName": "winlogon",
+      "CPU": null,
+      "WorkingSet64": 18272256,
+      "PrivateMemorySize64": 3469312,
+      "StartTime": null
+    },
+    {
+      "Id": 6812,
+      "ProcessName": "wlanext",
+      "CPU": null,
+      "WorkingSet64": 10391552,
+      "PrivateMemorySize64": 2416640,
+      "StartTime": null
+    },
+    {
+      "Id": 6108,
+      "ProcessName": "WmiPrvSE",
+      "CPU": null,
+      "WorkingSet64": 34226176,
+      "PrivateMemorySize64": 26599424,
+      "StartTime": null
+    },
+    {
+      "Id": 8988,
+      "ProcessName": "WmiPrvSE",
+      "CPU": null,
+      "WorkingSet64": 20160512,
+      "PrivateMemorySize64": 9142272,
+      "StartTime": null
+    },
+    {
+      "Id": 4888,
+      "ProcessName": "WMIRegistrationService",
+      "CPU": null,
+      "WorkingSet64": 14606336,
+      "PrivateMemorySize64": 3850240,
+      "StartTime": null
+    },
+    {
+      "Id": 1612,
+      "ProcessName": "WUDFHost",
+      "CPU": null,
+      "WorkingSet64": 20283392,
+      "PrivateMemorySize64": 8871936,
+      "StartTime": null
+    },
+    {
+      "Id": 1832,
+      "ProcessName": "WUDFHost",
+      "CPU": null,
+      "WorkingSet64": 17166336,
+      "PrivateMemorySize64": 9601024,
+      "StartTime": null
+    },
+    {
+      "Id": 1984,
+      "ProcessName": "WUDFHost",
+      "CPU": null,
+      "WorkingSet64": 6922240,
+      "PrivateMemorySize64": 1835008,
+      "StartTime": null
+    }
+  ]
+}

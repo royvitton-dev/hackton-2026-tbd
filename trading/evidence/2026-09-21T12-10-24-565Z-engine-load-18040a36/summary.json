@@ -1,0 +1,1605 @@
+{
+  "run_id": "2026-09-21T12-10-24-565Z-engine-load-18040a36",
+  "classification": "competing-resource stress alongside live normal demo and observer; not quiet A/B/C baseline",
+  "complete": true,
+  "base_url": "http://127.0.0.1:58297",
+  "engine_pid": 22180,
+  "client_pid": 10908,
+  "sampler_pid": 12628,
+  "commands": 17736,
+  "fills": 8868,
+  "http_requests": 17744,
+  "max_active_requests": 96,
+  "elapsed_ms": 40303.6517,
+  "phases": [
+    {
+      "phase": "concurrency-6",
+      "concurrency": 6,
+      "cycles": 250,
+      "begin_ms": 1844.2451999999998,
+      "end_ms": 14891.9136,
+      "elapsed_seconds": 13.047668400000001,
+      "commands": 6000,
+      "fills": 3000,
+      "commands_per_second": 459.85227521570056,
+      "ack_latency_ms": {
+        "count": 6000,
+        "p50": 7.431000000000495,
+        "p95": 12.67739999999958,
+        "p99": 17.16989999999896,
+        "max": 585.8477000000003
+      },
+      "accepted_durable": 6000,
+      "errors_or_rejections": 0,
+      "ws_frames": 6000,
+      "ws_ready_state_at_start": 1,
+      "ws_ready_state_at_end": 1,
+      "stopped_by_command_cap": false,
+      "stopped_by_phase_command_cap": true,
+      "end_reason": "phase_command_cap",
+      "resources": {
+        "sample_count": 25,
+        "intervals": [
+          {
+            "from": "2026-09-21T12:10:26.7499164Z",
+            "to": "2026-09-21T12:10:27.2690752Z",
+            "seconds": 0.5167058999999999,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.125,
+                "percent_total_capacity": 1.5119819611117276
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.21875,
+                "percent_total_capacity": 2.6459684319455232
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:27.2690752Z",
+            "to": "2026-09-21T12:10:27.7914634Z",
+            "seconds": 0.5253318999999999,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.21875,
+                "percent_total_capacity": 2.6025213774377693
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.359375,
+                "percent_total_capacity": 4.275570834362049
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:27.7914634Z",
+            "to": "2026-09-21T12:10:28.3075651Z",
+            "seconds": 0.5087964000000001,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.140625,
+                "percent_total_capacity": 1.7274223048747983
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.40625,
+                "percent_total_capacity": 4.990331102971639
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:28.3075651Z",
+            "to": "2026-09-21T12:10:28.8215580Z",
+            "seconds": 0.5153904000000002,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.1875,
+                "percent_total_capacity": 2.273761793001964
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.375,
+                "percent_total_capacity": 4.547523586003928
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:28.8215580Z",
+            "to": "2026-09-21T12:10:29.3393872Z",
+            "seconds": 0.5166907999999999,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.25,
+                "percent_total_capacity": 3.0240522958798572
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.40625,
+                "percent_total_capacity": 4.914084980804769
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:29.3393872Z",
+            "to": "2026-09-21T12:10:29.8502276Z",
+            "seconds": 0.5162909000000004,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.28125,
+                "percent_total_capacity": 3.404693942891495
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.53125,
+                "percent_total_capacity": 6.431088558795047
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:29.8502276Z",
+            "to": "2026-09-21T12:10:30.3669772Z",
+            "seconds": 0.5166884999999993,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.28125,
+                "percent_total_capacity": 3.402073976873885
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.40625,
+                "percent_total_capacity": 4.9141068554845
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:30.3669772Z",
+            "to": "2026-09-21T12:10:30.8837659Z",
+            "seconds": 0.5160900000000002,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.265625,
+                "percent_total_capacity": 3.216796004572845
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5,
+                "percent_total_capacity": 6.055145420372414
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:30.8837659Z",
+            "to": "2026-09-21T12:10:31.4082562Z",
+            "seconds": 0.5190246999999999,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.328125,
+                "percent_total_capacity": 3.9512209149198494
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5,
+                "percent_total_capacity": 6.020908060830247
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:31.4082562Z",
+            "to": "2026-09-21T12:10:31.9172937Z",
+            "seconds": 0.5145878000000003,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.125,
+                "percent_total_capacity": 1.518205445212653
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.359375,
+                "percent_total_capacity": 4.364840654986377
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:31.9172937Z",
+            "to": "2026-09-21T12:10:32.4392054Z",
+            "seconds": 0.5182978000000003,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.203125,
+                "percent_total_capacity": 2.449424346389275
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.328125,
+                "percent_total_capacity": 3.956762405705753
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:32.4392054Z",
+            "to": "2026-09-21T12:10:32.9541832Z",
+            "seconds": 0.5171206999999994,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.265625,
+                "percent_total_capacity": 3.210384442162152
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.46875,
+                "percent_total_capacity": 5.665384309697917
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:32.9541832Z",
+            "to": "2026-09-21T12:10:33.4678387Z",
+            "seconds": 0.5165551000000005,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.34375,
+                "percent_total_capacity": 4.159164240174955
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.53125,
+                "percent_total_capacity": 6.427799280270385
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:33.4678387Z",
+            "to": "2026-09-21T12:10:33.9882476Z",
+            "seconds": 0.5163576000000003,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.3125,
+                "percent_total_capacity": 3.782504605335525
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.578125,
+                "percent_total_capacity": 6.997633519870722
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:33.9882476Z",
+            "to": "2026-09-21T12:10:34.5018473Z",
+            "seconds": 0.5160463999999992,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.1875,
+                "percent_total_capacity": 2.2708713790077826
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.484375,
+                "percent_total_capacity": 5.866417729103438
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:34.5018473Z",
+            "to": "2026-09-21T12:10:35.0177178Z",
+            "seconds": 0.5147006000000002,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.265625,
+                "percent_total_capacity": 3.2254795312070734
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.484375,
+                "percent_total_capacity": 5.881756792201133
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:35.0177178Z",
+            "to": "2026-09-21T12:10:35.5334715Z",
+            "seconds": 0.5183270000000011,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.21875,
+                "percent_total_capacity": 2.637693000750486
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.390625,
+                "percent_total_capacity": 4.7101660727687245
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:35.5334715Z",
+            "to": "2026-09-21T12:10:36.0351688Z",
+            "seconds": 0.5011062999999994,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.21875,
+                "percent_total_capacity": 2.728338278724497
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.484375,
+                "percent_total_capacity": 6.04132047431853
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:36.0351688Z",
+            "to": "2026-09-21T12:10:36.5508961Z",
+            "seconds": 0.5158917000000002,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.203125,
+                "percent_total_capacity": 2.460848371857891
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.484375,
+                "percent_total_capacity": 5.868176886738048
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:36.5508961Z",
+            "to": "2026-09-21T12:10:37.0676389Z",
+            "seconds": 0.5151265000000003,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.28125,
+                "percent_total_capacity": 3.41238996634807
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.484375,
+                "percent_total_capacity": 5.876893830932787
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:37.0676389Z",
+            "to": "2026-09-21T12:10:37.5678220Z",
+            "seconds": 0.5020101999999989,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.21875,
+                "percent_total_capacity": 2.723425739158294
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.359375,
+                "percent_total_capacity": 4.474199428617197
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:37.5678220Z",
+            "to": "2026-09-21T12:10:38.0700249Z",
+            "seconds": 0.5024776000000002,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.015625,
+                "percent_total_capacity": 0.19434945955799815
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.015625,
+                "percent_total_capacity": 0.19434945955799815
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:38.0700249Z",
+            "to": "2026-09-21T12:10:38.5837061Z",
+            "seconds": 0.5138698999999997,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.1875,
+                "percent_total_capacity": 2.2804896725805515
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.546875,
+                "percent_total_capacity": 6.651428211693275
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:38.5837061Z",
+            "to": "2026-09-21T12:10:39.0894981Z",
+            "seconds": 0.5006208000000006,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.171875,
+                "percent_total_capacity": 2.145773307860957
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.546875,
+                "percent_total_capacity": 6.827460525012135
+              }
+            ]
+          }
+        ],
+        "excluded_intervals": [],
+        "by_process": [
+          {
+            "pid": 22180,
+            "role": "engine",
+            "cpu_covered_seconds": 12.334105500000001,
+            "cpu_seconds": 5.296875,
+            "cpu_mean_percent_total_capacity": 2.6840591520803834,
+            "cpu_max_interval_percent_total_capacity": 4.159164240174955,
+            "memory_samples": 25,
+            "observed_max_working_set_bytes": 17387520,
+            "observed_max_private_bytes": 12005376
+          },
+          {
+            "pid": 10908,
+            "role": "load_client",
+            "cpu_covered_seconds": 12.334105500000001,
+            "cpu_seconds": 10.25,
+            "cpu_mean_percent_total_capacity": 5.193931574527232,
+            "cpu_max_interval_percent_total_capacity": 6.997633519870722,
+            "memory_samples": 25,
+            "observed_max_working_set_bytes": 233607168,
+            "observed_max_private_bytes": 274829312
+          }
+        ]
+      }
+    },
+    {
+      "phase": "concurrency-24",
+      "concurrency": 24,
+      "cycles": 62,
+      "begin_ms": 14903.263099999998,
+      "end_ms": 27947.733099999998,
+      "elapsed_seconds": 13.044469999999999,
+      "commands": 5952,
+      "fills": 2976,
+      "commands_per_second": 456.28530710714966,
+      "ack_latency_ms": {
+        "count": 5952,
+        "p50": 27.35099999999875,
+        "p95": 49.66389999999956,
+        "p99": 92.880799999999,
+        "max": 267.1931999999979
+      },
+      "accepted_durable": 5952,
+      "errors_or_rejections": 0,
+      "ws_frames": 5951,
+      "ws_ready_state_at_start": 1,
+      "ws_ready_state_at_end": 1,
+      "stopped_by_command_cap": false,
+      "stopped_by_phase_command_cap": true,
+      "end_reason": "phase_command_cap",
+      "resources": {
+        "sample_count": 26,
+        "intervals": [
+          {
+            "from": "2026-09-21T12:10:39.6021958Z",
+            "to": "2026-09-21T12:10:40.1165119Z",
+            "seconds": 0.5091795999999995,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.328125,
+                "percent_total_capacity": 4.027618643794845
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.59375,
+                "percent_total_capacity": 7.288071831628769
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:40.1165119Z",
+            "to": "2026-09-21T12:10:40.6179229Z",
+            "seconds": 0.5022844999999998,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.328125,
+                "percent_total_capacity": 4.082907694742722
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5625,
+                "percent_total_capacity": 6.999270333844667
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:40.6179229Z",
+            "to": "2026-09-21T12:10:41.1385124Z",
+            "seconds": 0.5157366000000002,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.328125,
+                "percent_total_capacity": 3.9764120871002744
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.515625,
+                "percent_total_capacity": 6.248647565443288
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:41.1385124Z",
+            "to": "2026-09-21T12:10:41.6562256Z",
+            "seconds": 0.5160856000000004,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.15625,
+                "percent_total_capacity": 1.892249076509787
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.296875,
+                "percent_total_capacity": 3.595273245368595
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:41.6562256Z",
+            "to": "2026-09-21T12:10:42.1741909Z",
+            "seconds": 0.5175142000000015,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.34375,
+                "percent_total_capacity": 4.151456133957279
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.40625,
+                "percent_total_capacity": 4.90626634013133
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:42.1741909Z",
+            "to": "2026-09-21T12:10:42.6847772Z",
+            "seconds": 0.5153619999999973,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.390625,
+                "percent_total_capacity": 4.737264776991731
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.390625,
+                "percent_total_capacity": 4.737264776991731
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:42.6847772Z",
+            "to": "2026-09-21T12:10:43.1849065Z",
+            "seconds": 0.5020744000000014,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.109375,
+                "percent_total_capacity": 1.3615387480421193
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.328125,
+                "percent_total_capacity": 4.084616244126357
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:43.1849065Z",
+            "to": "2026-09-21T12:10:43.7015664Z",
+            "seconds": 0.5155564000000014,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.203125,
+                "percent_total_capacity": 2.462448822282095
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5625,
+                "percent_total_capacity": 6.819089046319647
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:43.7015664Z",
+            "to": "2026-09-21T12:10:44.2016290Z",
+            "seconds": 0.5007258999999976,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.265625,
+                "percent_total_capacity": 3.3154990584669335
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.359375,
+                "percent_total_capacity": 4.485675196749381
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:44.2016290Z",
+            "to": "2026-09-21T12:10:44.7063430Z",
+            "seconds": 0.5018112000000001,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.28125,
+                "percent_total_capacity": 3.502935964761248
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.4375,
+                "percent_total_capacity": 5.4490115007397195
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:44.7063430Z",
+            "to": "2026-09-21T12:10:45.2184569Z",
+            "seconds": 0.5136766000000025,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.171875,
+                "percent_total_capacity": 2.091235516665534
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.375,
+                "percent_total_capacity": 4.562695672724802
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:45.2184569Z",
+            "to": "2026-09-21T12:10:45.7350862Z",
+            "seconds": 0.5161571000000004,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.234375,
+                "percent_total_capacity": 2.8379804327015923
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.53125,
+                "percent_total_capacity": 6.432755647456942
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:45.7350862Z",
+            "to": "2026-09-21T12:10:46.2392244Z",
+            "seconds": 0.5039862999999969,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.421875,
+                "percent_total_capacity": 5.231727033056288
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.4375,
+                "percent_total_capacity": 5.425494700947262
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:46.2392244Z",
+            "to": "2026-09-21T12:10:46.7519674Z",
+            "seconds": 0.5180944000000017,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.265625,
+                "percent_total_capacity": 3.2043508866337764
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.390625,
+                "percent_total_capacity": 4.712280715637906
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:46.7519674Z",
+            "to": "2026-09-21T12:10:47.2755658Z",
+            "seconds": 0.5148054999999986,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.375,
+                "percent_total_capacity": 4.552690287885437
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.578125,
+                "percent_total_capacity": 7.01873086049005
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:47.2755658Z",
+            "to": "2026-09-21T12:10:47.7907792Z",
+            "seconds": 0.5175840000000026,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.375,
+                "percent_total_capacity": 4.52825048687747
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5625,
+                "percent_total_capacity": 6.792375730316204
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:47.7907792Z",
+            "to": "2026-09-21T12:10:48.3050875Z",
+            "seconds": 0.5157398999999968,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.328125,
+                "percent_total_capacity": 3.9763866437326505
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.453125,
+                "percent_total_capacity": 5.49120060324985
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:48.3050875Z",
+            "to": "2026-09-21T12:10:48.8186599Z",
+            "seconds": 0.5145526000000027,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.140625,
+                "percent_total_capacity": 1.708097967049424
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.3125,
+                "percent_total_capacity": 3.795773260109831
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:48.8186599Z",
+            "to": "2026-09-21T12:10:49.3264567Z",
+            "seconds": 0.5013001000000004,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.234375,
+                "percent_total_capacity": 2.9220894829264923
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.421875,
+                "percent_total_capacity": 5.259761069267686
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:49.3264567Z",
+            "to": "2026-09-21T12:10:49.8355575Z",
+            "seconds": 0.5165514999999977,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.421875,
+                "percent_total_capacity": 5.104464414487252
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.640625,
+                "percent_total_capacity": 7.75122374051768
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:49.8355575Z",
+            "to": "2026-09-21T12:10:50.3444989Z",
+            "seconds": 0.5017846000000027,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.296875,
+                "percent_total_capacity": 3.69773952807637
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.484375,
+                "percent_total_capacity": 6.033153966861446
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:50.3444989Z",
+            "to": "2026-09-21T12:10:50.8523194Z",
+            "seconds": 0.5133344999999973,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.421875,
+                "percent_total_capacity": 5.136453423644844
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.484375,
+                "percent_total_capacity": 5.897409486407043
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:50.8523194Z",
+            "to": "2026-09-21T12:10:51.3580629Z",
+            "seconds": 0.5030192000000024,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.40625,
+                "percent_total_capacity": 5.047645298628735
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.671875,
+                "percent_total_capacity": 8.348028763116755
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:51.3580629Z",
+            "to": "2026-09-21T12:10:51.8704823Z",
+            "seconds": 0.5160707999999977,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.34375,
+                "percent_total_capacity": 4.16306735432427
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.59375,
+                "percent_total_capacity": 7.190752702923739
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:51.8704823Z",
+            "to": "2026-09-21T12:10:52.3841261Z",
+            "seconds": 0.5160263000000014,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.359375,
+                "percent_total_capacity": 4.352673012984017
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.53125,
+                "percent_total_capacity": 6.434386193106807
+              }
+            ]
+          }
+        ],
+        "excluded_intervals": [],
+        "by_process": [
+          {
+            "pid": 22180,
+            "role": "engine",
+            "cpu_covered_seconds": 12.7790138,
+            "cpu_seconds": 7.53125,
+            "cpu_mean_percent_total_capacity": 3.6834072829626336,
+            "cpu_max_interval_percent_total_capacity": 5.231727033056288,
+            "memory_samples": 26,
+            "observed_max_working_set_bytes": 25755648,
+            "observed_max_private_bytes": 20701184
+          },
+          {
+            "pid": 10908,
+            "role": "load_client",
+            "cpu_covered_seconds": 12.7790138,
+            "cpu_seconds": 11.921875,
+            "cpu_mean_percent_total_capacity": 5.830787877386908,
+            "cpu_max_interval_percent_total_capacity": 8.348028763116755,
+            "memory_samples": 26,
+            "observed_max_working_set_bytes": 361467904,
+            "observed_max_private_bytes": 349003776
+          }
+        ]
+      }
+    },
+    {
+      "phase": "concurrency-96",
+      "concurrency": 96,
+      "cycles": 15,
+      "begin_ms": 27958.2736,
+      "end_ms": 40129.432,
+      "elapsed_seconds": 12.171158399999996,
+      "commands": 5760,
+      "fills": 2880,
+      "commands_per_second": 473.2499414353199,
+      "ack_latency_ms": {
+        "count": 5760,
+        "p50": 102.50080000000162,
+        "p95": 194.76390000000538,
+        "p99": 288.4216000000015,
+        "max": 372.7357000000047
+      },
+      "accepted_durable": 5760,
+      "errors_or_rejections": 0,
+      "ws_frames": 5761,
+      "ws_ready_state_at_start": 1,
+      "ws_ready_state_at_end": 1,
+      "stopped_by_command_cap": true,
+      "stopped_by_phase_command_cap": true,
+      "end_reason": "overall_command_cap",
+      "resources": {
+        "sample_count": 24,
+        "intervals": [
+          {
+            "from": "2026-09-21T12:10:52.8857958Z",
+            "to": "2026-09-21T12:10:53.3929968Z",
+            "seconds": 0.5022142000000022,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.4375,
+                "percent_total_capacity": 5.444638960825856
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.546875,
+                "percent_total_capacity": 6.805798701032319
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:53.3929968Z",
+            "to": "2026-09-21T12:10:53.9047140Z",
+            "seconds": 0.5163652000000002,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.34375,
+                "percent_total_capacity": 4.1606938267722136
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.4375,
+                "percent_total_capacity": 5.295428506800999
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:53.9047140Z",
+            "to": "2026-09-21T12:10:54.4192725Z",
+            "seconds": 0.5152326999999969,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.265625,
+                "percent_total_capacity": 3.2221484583567968
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.28125,
+                "percent_total_capacity": 3.41168660296602
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:54.4192725Z",
+            "to": "2026-09-21T12:10:54.9422713Z",
+            "seconds": 0.5159503000000004,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.28125,
+                "percent_total_capacity": 3.406941521305441
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.53125,
+                "percent_total_capacity": 6.435333984688055
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:54.9422713Z",
+            "to": "2026-09-21T12:10:55.4558872Z",
+            "seconds": 0.5190228000000024,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.359375,
+                "percent_total_capacity": 4.327543510612616
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.59375,
+                "percent_total_capacity": 7.149854495794757
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:55.4558872Z",
+            "to": "2026-09-21T12:10:55.9694716Z",
+            "seconds": 0.513987799999999,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.171875,
+                "percent_total_capacity": 2.089969353358197
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.453125,
+                "percent_total_capacity": 5.509919204307973
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:55.9694716Z",
+            "to": "2026-09-21T12:10:56.4695103Z",
+            "seconds": 0.5031431000000012,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.359375,
+                "percent_total_capacity": 4.464125116691444
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.640625,
+                "percent_total_capacity": 7.957788251493443
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:56.4695103Z",
+            "to": "2026-09-21T12:10:56.9791086Z",
+            "seconds": 0.5007462999999989,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.5,
+                "percent_total_capacity": 6.240685153340139
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.4375,
+                "percent_total_capacity": 5.460599509172622
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:56.9791086Z",
+            "to": "2026-09-21T12:10:57.4868024Z",
+            "seconds": 0.5150902999999999,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.421875,
+                "percent_total_capacity": 5.118944678243796
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.578125,
+                "percent_total_capacity": 7.014850114630387
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:57.4868024Z",
+            "to": "2026-09-21T12:10:57.9917259Z",
+            "seconds": 0.5007776999999988,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.296875,
+                "percent_total_capacity": 3.705174471626841
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.453125,
+                "percent_total_capacity": 5.655266298798862
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:57.9917259Z",
+            "to": "2026-09-21T12:10:58.5089461Z",
+            "seconds": 0.5154529000000039,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.421875,
+                "percent_total_capacity": 5.115343710356426
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.53125,
+                "percent_total_capacity": 6.441543931559944
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:58.5089461Z",
+            "to": "2026-09-21T12:10:59.0197536Z",
+            "seconds": 0.5166686999999948,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.203125,
+                "percent_total_capacity": 2.45714758799984
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.59375,
+                "percent_total_capacity": 7.182431411076455
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:59.0197536Z",
+            "to": "2026-09-21T12:10:59.5368724Z",
+            "seconds": 0.5155011000000013,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.3125,
+                "percent_total_capacity": 3.7887891994798757
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.578125,
+                "percent_total_capacity": 7.009260019037769
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:10:59.5368724Z",
+            "to": "2026-09-21T12:11:00.0542660Z",
+            "seconds": 0.5174948000000004,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.171875,
+                "percent_total_capacity": 2.0758058824938903
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.3125,
+                "percent_total_capacity": 3.7741925136252554
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:00.0542660Z",
+            "to": "2026-09-21T12:11:00.5746794Z",
+            "seconds": 0.5154644000000044,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.15625,
+                "percent_total_capacity": 1.8945294767203937
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.546875,
+                "percent_total_capacity": 6.630853168521378
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:00.5746794Z",
+            "to": "2026-09-21T12:11:01.0927529Z",
+            "seconds": 0.519094799999999,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.234375,
+                "percent_total_capacity": 2.8219195222144453
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5,
+                "percent_total_capacity": 6.020094980724149
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:01.0927529Z",
+            "to": "2026-09-21T12:11:01.6108372Z",
+            "seconds": 0.5179680999999983,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.25,
+                "percent_total_capacity": 3.016595037416407
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.484375,
+                "percent_total_capacity": 5.8446528849942885
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:01.6108372Z",
+            "to": "2026-09-21T12:11:02.1201131Z",
+            "seconds": 0.5187932999999976,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.359375,
+                "percent_total_capacity": 4.329457897779347
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.546875,
+                "percent_total_capacity": 6.588305496620747
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:02.1201131Z",
+            "to": "2026-09-21T12:11:02.6273817Z",
+            "seconds": 0.4999377999999997,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.6875,
+                "percent_total_capacity": 8.594819195507926
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.625,
+                "percent_total_capacity": 7.813471995916296
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:02.6273817Z",
+            "to": "2026-09-21T12:11:03.1404853Z",
+            "seconds": 0.513435000000005,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.390625,
+                "percent_total_capacity": 4.7550444554811735
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5625,
+                "percent_total_capacity": 6.84726401589289
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:03.1404853Z",
+            "to": "2026-09-21T12:11:03.6535838Z",
+            "seconds": 0.5093709999999991,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.203125,
+                "percent_total_capacity": 2.4923508601785382
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5,
+                "percent_total_capacity": 6.13501750197794
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:03.6535838Z",
+            "to": "2026-09-21T12:11:04.1543880Z",
+            "seconds": 0.5081366999999954,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.3125,
+                "percent_total_capacity": 3.843699933502181
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.515625,
+                "percent_total_capacity": 6.3421048902785975
+              }
+            ]
+          },
+          {
+            "from": "2026-09-21T12:11:04.1543880Z",
+            "to": "2026-09-21T12:11:04.6773536Z",
+            "seconds": 0.515590200000006,
+            "processes": [
+              {
+                "pid": 22180,
+                "cpu_seconds": 0.375,
+                "percent_total_capacity": 4.545761343020043
+              },
+              {
+                "pid": 10908,
+                "cpu_seconds": 0.5,
+                "percent_total_capacity": 6.061015124026724
+              }
+            ]
+          }
+        ],
+        "excluded_intervals": [],
+        "by_process": [
+          {
+            "pid": 22180,
+            "role": "engine",
+            "cpu_covered_seconds": 11.785439200000006,
+            "cpu_seconds": 7.515625,
+            "cpu_mean_percent_total_capacity": 3.9856517396483597,
+            "cpu_max_interval_percent_total_capacity": 8.594819195507926,
+            "memory_samples": 24,
+            "observed_max_working_set_bytes": 37507072,
+            "observed_max_private_bytes": 34611200
+          },
+          {
+            "pid": 10908,
+            "role": "load_client",
+            "cpu_covered_seconds": 11.785439200000006,
+            "cpu_seconds": 11.75,
+            "cpu_mean_percent_total_capacity": 6.231206046186209,
+            "cpu_max_interval_percent_total_capacity": 7.957788251493443,
+            "memory_samples": 24,
+            "observed_max_working_set_bytes": 385011712,
+            "observed_max_private_bytes": 366354432
+          }
+        ]
+      }
+    }
+  ],
+  "planned_phase_coverage": {
+    "planned_concurrencies": [
+      6,
+      24,
+      96
+    ],
+    "executed_concurrencies": [
+      6,
+      24,
+      96
+    ],
+    "all_three_executed": true,
+    "all_three_reached_twenty_seconds": false,
+    "note": "complete means bounded workload correctness/cleanup, not that every planned phase reached20seconds;inspect per-phase elapsed/end_reason"
+  },
+  "resources_available": {
+    "all_executed_phases_have_valid_cpu_and_memory": true,
+    "by_phase": [
+      {
+        "phase": "concurrency-6",
+        "sample_count": 25,
+        "valid_cpu_intervals": 24,
+        "memory_samples_by_process": [
+          {
+            "pid": 22180,
+            "count": 25
+          },
+          {
+            "pid": 10908,
+            "count": 25
+          }
+        ]
+      },
+      {
+        "phase": "concurrency-24",
+        "sample_count": 26,
+        "valid_cpu_intervals": 25,
+        "memory_samples_by_process": [
+          {
+            "pid": 22180,
+            "count": 26
+          },
+          {
+            "pid": 10908,
+            "count": 26
+          }
+        ]
+      },
+      {
+        "phase": "concurrency-96",
+        "sample_count": 24,
+        "valid_cpu_intervals": 23,
+        "memory_samples_by_process": [
+          {
+            "pid": 22180,
+            "count": 24
+          },
+          {
+            "pid": 10908,
+            "count": 24
+          }
+        ]
+      }
+    ]
+  },
+  "websocket": {
+    "consumer_count": 1,
+    "frames": 17737,
+    "sequence_gaps": 0,
+    "unexpected_disconnects": 0,
+    "errors": 0,
+    "latest_event_seq": 17736,
+    "caught_up_to_final_event_seq": true,
+    "browser_rendering_measured": false,
+    "workload_end": {
+      "at": "2026-09-21T12:11:04.708Z",
+      "relative_ms": 40142.7336,
+      "captured_before_intentional_close": true,
+      "workload_verified": true,
+      "socket_created": true,
+      "ready_state": 1,
+      "ready_state_name": "OPEN",
+      "frames": 17737,
+      "sequence_gaps": 0,
+      "unexpected_disconnects": 0,
+      "errors": 0,
+      "latest_event_seq": 17736,
+      "issued_commands": 17736,
+      "expected_final_event_seq": 17736,
+      "caught_up_to_final_event_seq": true,
+      "continuous_through_final_state": true,
+      "continuous_definition": "Before intentional cleanup: verified workload, open socket, at least one state, final sequence caught up, zero observed gaps/errors/unexpected disconnects. Observed WS failure is false; incomplete workload without observed WS failure is null."
+    },
+    "continuous_through_final_state": true
+  },
+  "state_verification": {
+    "full_account_assets_reserves_counts_exact_at_cycle_barriers": true,
+    "full_history_arrays_not_claimed": true,
+    "public_arrays_bounded_to_200_terminal_orders_1000_trades": true
+  },
+  "cleanup": {
+    "engine_exit_code": 0,
+    "engine_signal": null,
+    "sampler_alive": false,
+    "shutdown": {
+      "status": "shutting_down"
+    }
+  },
+  "main_after": {
+    "manifest_sha256": "6128d45f26f574eb1da12ec1b164c2112c4ed3e4e29bb6a5526568563578e69a",
+    "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "name": "frontend",
+        "pid": 17556,
+        "alive": true
+      },
+      {
+        "name": "bot-01",
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "name": "bot-02",
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "name": "bot-03",
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "name": "bot-04",
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "name": "bot-05",
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "name": "bot-06",
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "name": "bot-07",
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "name": "bot-08",
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "name": "bot-09",
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "name": "bot-10",
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "name": "bot-11",
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "name": "bot-12",
+        "pid": 6128,
+        "alive": true
+      }
+    ],
+    "observer": {
+      "pid": 18184,
+      "alive": true
+    }
+  },
+  "main_pids_and_manifest_unchanged": true,
+  "limitations": [
+    "Competing live demo/observer share this host; not a quiet benchmark.",
+    "CPU is direct cumulative process-time delta divided by sample elapsed time and16logical CPUs;invalid/missing/reset/gap intervals excluded.",
+    "About500ms observed memory maxima are not instantaneous OS peaks.",
+    "One WS consumer records callback sequence/gaps;actual connection scope reported perphase;no browser rendering.",
+    "Representative full fills and maker barriers;does not test partial fills,cancels or queue saturation.",
+    "Raw HTTP latency includesqueue/fsync/serialization/clientparsing;perphase throughput includes completecyclebarriers."
+  ]
+}

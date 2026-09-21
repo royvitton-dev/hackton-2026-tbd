@@ -1,0 +1,26 @@
+PASS return portal {
+  device: 'desktop',
+  map: 'orbit',
+  status: 'PASS',
+  returns: 16,
+  time: 86.94471979554406,
+  goalOnlyRanks: 20,
+  pausePreservesTransit: true,
+  exactBrowserReplay: true,
+  errors: []
+}
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'invalid'
+- 'complete'
+
+    at assertGameResult (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/assert-result.mjs:3:9)
+    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/return-browser.mjs:7:181 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'invalid',
+  expected: 'complete',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

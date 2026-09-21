@@ -28,6 +28,8 @@ use tower_http::{
     timeout::{RequestBodyTimeoutLayer, TimeoutLayer},
 };
 
+mod ws_frame;
+
 const QUEUE_CAPACITY: usize = 2048;
 const EVENT_CAPACITY: usize = 32;
 static NEXT_WS_CONNECTION: AtomicU64 = AtomicU64::new(1);
@@ -387,7 +389,7 @@ async fn send_state(
     market: &MarketSnapshot,
     stage: &'static str,
 ) -> Result<(), StreamExit> {
-    let payload = serde_json::to_string(&json!({"type":"state","state":market}))
+    let payload = ws_frame::encode_state(market)
         .map_err(|_| StreamExit::new("serialization_error", stage))?;
     send_message(socket, Message::Text(payload.into()), stage).await
 }

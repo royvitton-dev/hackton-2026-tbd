@@ -1,0 +1,20 @@
+PASS multiple stored balls {
+  device: 'desktop',
+  status: 'PASS',
+  devicesPerMap: { cannon: 2, magnet: 2 },
+  maxSimultaneouslyHeld: { magnet: 3, cannon: 4 },
+  exactSnapshotReplay: true,
+  pausePreservesIndividualHolds: true,
+  arrivals: 60,
+  errors: []
+}
+PASS multiple stored balls {
+  device: 'mobile',
+  status: 'PASS',
+  devicesPerMap: { cannon: 2, magnet: 2 },
+  maxSimultaneouslyHeld: { magnet: 3, cannon: 4 },
+  exactSnapshotReplay: true,
+  pausePreservesIndividualHolds: true,
+  arrivals: 60,
+  errors: []
+}

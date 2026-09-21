@@ -1,0 +1,418 @@
+{
+  "reviewed_at": "2026-09-21T12:13:53.394Z",
+  "source_run": "2026-09-21T12-10-24-565Z-engine-load-18040a36",
+  "scope": "Independent offline recomputation only; no builds, services, tests, network or process control.",
+  "inputs": [
+    {
+      "name": "summary.json",
+      "bytes": 49738,
+      "sha256": "c0ea8f372a4dee9eef24c4b8fc3c44307db0e4d060e9d6b1c153efe6bb77dfc5"
+    },
+    {
+      "name": "metadata.json",
+      "bytes": 3697,
+      "sha256": "753aea5bc1b0e98cbafea58655af298a08135eb5a7d9cf185643487b3df19ea6"
+    },
+    {
+      "name": "requests.json",
+      "bytes": 17657160,
+      "sha256": "b683519ec9ba0cc3d473040a093afa1c3433d447b6489fb7d0fb702b7b82e2a6"
+    },
+    {
+      "name": "states.json",
+      "bytes": 1128100,
+      "sha256": "6eaa32d3e265df92c8fc8b2a7b1671a8cbedc4bffc5f7cb97b74627ef0bf812c"
+    },
+    {
+      "name": "resource-samples.json",
+      "bytes": 39830,
+      "sha256": "94a190d21c53df301bf27faff30762041929b98eac8794540ea88715ba8ab126"
+    },
+    {
+      "name": "ws-events.json",
+      "bytes": 2359597,
+      "sha256": "13c8406b3f14742c44b073dfce5d8b0e0d8a913bbc3be2914e9993daa9af6113"
+    },
+    {
+      "name": "events.json",
+      "bytes": 1248,
+      "sha256": "fdad3b1b22b92a3af86a17d1bb9d148c9a959c5b85e216ba62cadec3314810dc"
+    },
+    {
+      "name": "engine.stderr.log",
+      "bytes": 773,
+      "sha256": "68fbbb288bdb05f5b352491f7271e4f79b6104643c808b00e1a93c9196082eac"
+    }
+  ],
+  "script_sha256": "7c1d4d2d2455dc20bb0950319cd078f68b6cbd0abc2ebf2f979ce4f0eb0412ea",
+  "binary_sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+  "checked_conditions": 292064,
+  "issues": [],
+  "commands": 17736,
+  "trades": 8868,
+  "states": [
+    {
+      "label": "after-warmup",
+      "seq": 24,
+      "trades": 12,
+      "exposed_orders": 24,
+      "exposed_trades": 12,
+      "full_account_ledger_equal": true
+    },
+    {
+      "label": "after-concurrency-6",
+      "seq": 6024,
+      "trades": 3012,
+      "exposed_orders": 200,
+      "exposed_trades": 1000,
+      "full_account_ledger_equal": true
+    },
+    {
+      "label": "after-concurrency-24",
+      "seq": 11976,
+      "trades": 5988,
+      "exposed_orders": 200,
+      "exposed_trades": 1000,
+      "full_account_ledger_equal": true
+    },
+    {
+      "label": "after-concurrency-96",
+      "seq": 17736,
+      "trades": 8868,
+      "exposed_orders": 200,
+      "exposed_trades": 1000,
+      "full_account_ledger_equal": true
+    }
+  ],
+  "phases": [
+    {
+      "phase": "concurrency-6",
+      "commands": 6000,
+      "fills": 3000,
+      "seconds": 13.047668400000001,
+      "ack_latency_ms": {
+        "count": 6000,
+        "p50": 7.431000000000495,
+        "p95": 12.67739999999958,
+        "p99": 17.16989999999896,
+        "max": 585.8477000000003
+      },
+      "throughput": 459.85227521570056,
+      "ws_frames": 6000,
+      "ws_sequence_range": [
+        25,
+        6024
+      ],
+      "resources": [
+        {
+          "pid": 22180,
+          "covered_seconds": 12.334105500000001,
+          "cpu_seconds": 5.296875,
+          "mean_percent_total_capacity": 2.6840591520803834,
+          "max_interval_percent_total_capacity": 4.159164240174955,
+          "max_working_set_bytes": 17387520,
+          "max_private_bytes": 12005376
+        },
+        {
+          "pid": 10908,
+          "covered_seconds": 12.334105500000001,
+          "cpu_seconds": 10.25,
+          "mean_percent_total_capacity": 5.193931574527232,
+          "max_interval_percent_total_capacity": 6.997633519870722,
+          "max_working_set_bytes": 233607168,
+          "max_private_bytes": 274829312
+        }
+      ]
+    },
+    {
+      "phase": "concurrency-24",
+      "commands": 5952,
+      "fills": 2976,
+      "seconds": 13.044469999999999,
+      "ack_latency_ms": {
+        "count": 5952,
+        "p50": 27.35099999999875,
+        "p95": 49.66389999999956,
+        "p99": 92.880799999999,
+        "max": 267.1931999999979
+      },
+      "throughput": 456.28530710714966,
+      "ws_frames": 5951,
+      "ws_sequence_range": [
+        6025,
+        11975
+      ],
+      "resources": [
+        {
+          "pid": 22180,
+          "covered_seconds": 12.7790138,
+          "cpu_seconds": 7.53125,
+          "mean_percent_total_capacity": 3.6834072829626336,
+          "max_interval_percent_total_capacity": 5.231727033056288,
+          "max_working_set_bytes": 25755648,
+          "max_private_bytes": 20701184
+        },
+        {
+          "pid": 10908,
+          "covered_seconds": 12.7790138,
+          "cpu_seconds": 11.921875,
+          "mean_percent_total_capacity": 5.830787877386908,
+          "max_interval_percent_total_capacity": 8.348028763116755,
+          "max_working_set_bytes": 361467904,
+          "max_private_bytes": 349003776
+        }
+      ]
+    },
+    {
+      "phase": "concurrency-96",
+      "commands": 5760,
+      "fills": 2880,
+      "seconds": 12.171158399999996,
+      "ack_latency_ms": {
+        "count": 5760,
+        "p50": 102.50080000000162,
+        "p95": 194.76390000000538,
+        "p99": 288.4216000000015,
+        "max": 372.7357000000047
+      },
+      "throughput": 473.2499414353199,
+      "ws_frames": 5761,
+      "ws_sequence_range": [
+        11976,
+        17736
+      ],
+      "resources": [
+        {
+          "pid": 22180,
+          "covered_seconds": 11.785439200000006,
+          "cpu_seconds": 7.515625,
+          "mean_percent_total_capacity": 3.9856517396483597,
+          "max_interval_percent_total_capacity": 8.594819195507926,
+          "max_working_set_bytes": 37507072,
+          "max_private_bytes": 34611200
+        },
+        {
+          "pid": 10908,
+          "covered_seconds": 11.785439200000006,
+          "cpu_seconds": 11.75,
+          "mean_percent_total_capacity": 6.231206046186209,
+          "max_interval_percent_total_capacity": 7.957788251493443,
+          "max_working_set_bytes": 385011712,
+          "max_private_bytes": 366354432
+        }
+      ]
+    }
+  ],
+  "memory": [
+    {
+      "pid": 22180,
+      "samples": 77,
+      "max_working_set_bytes": 37507072,
+      "max_private_bytes": 34611200
+    },
+    {
+      "pid": 10908,
+      "samples": 77,
+      "max_working_set_bytes": 385011712,
+      "max_private_bytes": 366354432
+    }
+  ],
+  "websocket": {
+    "frames": 17737,
+    "sequence_range": [
+      0,
+      17736
+    ],
+    "last_frame_bytes": 213401,
+    "workload_end": {
+      "at": "2026-09-21T12:11:04.708Z",
+      "relative_ms": 40142.7336,
+      "event": "ws_workload_end",
+      "captured_before_intentional_close": true,
+      "workload_verified": true,
+      "socket_created": true,
+      "ready_state": 1,
+      "ready_state_name": "OPEN",
+      "frames": 17737,
+      "sequence_gaps": 0,
+      "unexpected_disconnects": 0,
+      "errors": 0,
+      "latest_event_seq": 17736,
+      "issued_commands": 17736,
+      "expected_final_event_seq": 17736,
+      "caught_up_to_final_event_seq": true,
+      "continuous_through_final_state": true,
+      "continuous_definition": "Before intentional cleanup: verified workload, open socket, at least one state, final sequence caught up, zero observed gaps/errors/unexpected disconnects. Observed WS failure is false; incomplete workload without observed WS failure is null."
+    },
+    "closes": [
+      {
+        "at": "2026-09-21T12:11:04.727Z",
+        "relative_ms": 40162.216700000004,
+        "event": "ws_closed",
+        "code": 1005,
+        "intentional": true
+      }
+    ],
+    "server_close": {
+      "close_reply": "flushed",
+      "connected_ms": 39299,
+      "connection_id": 1,
+      "event": "websocket_closed",
+      "last_event_seq": 17736,
+      "reason": "peer_closed",
+      "skipped": null,
+      "stage": "receive",
+      "timestamp_ms": 1789992664718
+    },
+    "continuous_through_final_state_confirmed": true
+  },
+  "cleanup": {
+    "engine_exit_code": 0,
+    "engine_signal": null,
+    "sampler_alive": false,
+    "shutdown": {
+      "status": "shutting_down"
+    }
+  },
+  "main_recorded_unchanged": true,
+  "limitations": [
+    "Four API states expose recent200 terminal orders/recent1000 trades; account totals and counters reconstructed from full ACK stream, not full Core recovery.",
+    "Maker order creation timestamps cannot be reconstructed from maker ACK alone; exposed business fields and chronological consistency checked, taker timestamps matched fill timestamps.",
+    "CPU percentages use all16logical processors and covered sample intervals, not whole phase elapsed time.",
+    "Per-phase WS attribution is callback-time; a boundary frame can move to the next phase.",
+    "Single competing-resource run; multiple binary changes prevent single-cause attribution. Prior concurrency96 lacked WS, so direct performance comparison is invalid.",
+    "Summary complete remains bounded workload/cleanup; WS continuity is a separately recomputed field. No phase ran the planned20seconds."
+  ],
+  "startup_readiness_failures": [
+    {
+      "ordinal": 1,
+      "phase": "setup",
+      "route": "/health",
+      "account": "user-01",
+      "dispatch_ms": 741.9128,
+      "error": "connect ECONNREFUSED 127.0.0.1:58297",
+      "error_code": "ECONNREFUSED",
+      "latency_ms": 8.560699999999997,
+      "completed_ms": 750.4792
+    }
+  ],
+  "correction": {
+    "at": "2026-09-21T12:14:36.314Z",
+    "initial_report_preserved": "review.initial.json",
+    "reason": "One expected setup health poll preceded engine bind; unconditional all-HTTP-200 assumption replaced with strict post-setup HTTP validity. Raw check is preserved, not relabeled as a command failure."
+  },
+  "post_verification": {
+    "sha256": "a40fa9be0044f676fd0aaf0e819d5cec509bfbb2310a108dfa42bddb1142f665",
+    "data": {
+      "protected_processes": [
+        {
+          "pid": 20540,
+          "name": "leave-engine",
+          "start_time": "2026-09-21T19:05:21.4715478+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 4928,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.3890023+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 5412,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.5355012+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 6128,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.5945324+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 7916,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.4762676+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 7936,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.3037571+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 12172,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.4485053+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 15272,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.504734+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 16068,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.3612932+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 17444,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.2784404+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 17556,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:21.7348899+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 18184,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:54.8395149+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 20484,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.5665942+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 20776,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.3346242+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 20940,
+          "name": "node",
+          "start_time": "2026-09-21T19:05:22.4216442+09:00",
+          "same_start_time": true
+        },
+        {
+          "pid": 15744,
+          "name": "powershell",
+          "start_time": "2026-09-21T19:05:54.9077476+09:00",
+          "same_start_time": true
+        }
+      ],
+      "isolated_children_remaining": [],
+      "source_script_sha256": "7C1D4D2D2455DC20BB0950319CD078F68B6CBD0ABC2EBF2F979CE4F0EB0412EA",
+      "binary_sha256": "F518B95FB3EACCDABD40D0EE828E830A2EC6B8D959610FC629043E46856EF240",
+      "main_manifest_sha256": "6128D45F26F574EB1DA12EC1B164C2112C4ED3E4E29BB6A5526568563578E69A",
+      "checked_at": "2026-09-21T12:12:22.5449337Z",
+      "all_protected_same_start": true,
+      "manifest_unchanged": true
+    }
+  },
+  "resource_phase_time_crosscheck": {
+    "anchor": "ws_workload_end wall timestamp minus monotonic relative_ms;1ms rounding tolerance",
+    "outside_measured_window": []
+  }
+}

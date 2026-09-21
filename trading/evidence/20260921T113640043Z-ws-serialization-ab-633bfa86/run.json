@@ -1,0 +1,109 @@
+{
+  "started_at": "2026-09-21T11:37:44.5127438Z",
+  "ended_at": "2026-09-21T11:37:47.9110225Z",
+  "elapsed_ms": 3398.2787,
+  "pid": 15068,
+  "exit_code": 0,
+  "forced": false,
+  "protected_after": {
+    "manifest": {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo-current.json",
+      "bytes": 10216,
+      "sha256": "6128d45f26f574eb1da12ec1b164c2112c4ed3e4e29bb6a5526568563578e69a"
+    },
+    "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 20540,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:21.4715478Z"
+      },
+      {
+        "name": "frontend",
+        "pid": 17556,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:21.7348899Z"
+      },
+      {
+        "name": "bot-01",
+        "pid": 17444,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.2784404Z"
+      },
+      {
+        "name": "bot-02",
+        "pid": 7936,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.3037571Z"
+      },
+      {
+        "name": "bot-03",
+        "pid": 20776,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.3346242Z"
+      },
+      {
+        "name": "bot-04",
+        "pid": 16068,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.3612932Z"
+      },
+      {
+        "name": "bot-05",
+        "pid": 4928,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.3890023Z"
+      },
+      {
+        "name": "bot-06",
+        "pid": 20940,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.4216442Z"
+      },
+      {
+        "name": "bot-07",
+        "pid": 12172,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.4485053Z"
+      },
+      {
+        "name": "bot-08",
+        "pid": 7916,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.4762676Z"
+      },
+      {
+        "name": "bot-09",
+        "pid": 15272,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.5047340Z"
+      },
+      {
+        "name": "bot-10",
+        "pid": 5412,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.5355012Z"
+      },
+      {
+        "name": "bot-11",
+        "pid": 20484,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.5665942Z"
+      },
+      {
+        "name": "bot-12",
+        "pid": 6128,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.5945324Z"
+      }
+    ],
+    "observer": {
+      "pid": 18184,
+      "alive": true,
+      "start_time": "2026-09-21T10:05:54.8395149Z"
+    }
+  },
+  "protected_identical": true,
+  "report_exists": true
+}

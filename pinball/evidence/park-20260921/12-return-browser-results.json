@@ -1,0 +1,18 @@
+{
+  "at": "2026-09-21T11:31:52.852Z",
+  "tests": [
+    {
+      "device": "desktop",
+      "map": "orbit",
+      "status": "PASS",
+      "returns": 16,
+      "time": 86.94471979554406,
+      "goalOnlyRanks": 20,
+      "pausePreservesTransit": true,
+      "exactBrowserReplay": true,
+      "errors": []
+    }
+  ],
+  "status": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'invalid'\n- 'complete'\n\n    at assertGameResult (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/assert-result.mjs:3:9)\n    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/return-browser.mjs:7:181"
+}

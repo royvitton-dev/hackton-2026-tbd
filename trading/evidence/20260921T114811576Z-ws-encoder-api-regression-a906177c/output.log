@@ -1,0 +1,21 @@
+▶ API real-process concurrency, durability, response loss and event contract
+  ✔ mock identity, origin and malformed transport never enter sequencer (52.6241ms)
+  ✔ 12 concurrent clients submit, replay and cancel without duplicated effects (130.6212ms)
+  ✔ concurrent fill versus owner cancel follows durable sequence and settles exactly once (1807.4709ms)
+  ✔ maker price, partial fill, reserves and ownership across API (59.4085ms)
+  ✔ snapshot, clean restart and durable request lookup (187.455ms)
+  ✔ network response loss, forced kill, retry has exactly one effect (179.8758ms)
+  ✔ WS subscription initial state, concurrent commands and reconnect converge (64.6252ms)
+  ✔ stalled request body cannot indefinitely block graceful shutdown (5153.6433ms)
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T11-48-11-769Z-api-e869ec87
+✔ API real-process concurrency, durability, response loss and event contract (8183.7568ms)
+Checkpoint failure evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T11-48-11-769Z-api-e869ec87\checkpoint-publication-failure
+✔ checkpoint publication failure returns 503, exits nonzero and preserves durable ACKs (365.2124ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8664.2886

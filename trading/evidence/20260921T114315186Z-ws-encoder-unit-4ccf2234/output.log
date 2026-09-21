@@ -1,0 +1,11 @@
+   Compiling leave-exchange v0.1.0 (C:\project\hackton-2026-tbd\trading\engine)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 10.94s
+     Running unittests src\main.rs (target\debug\deps\leave_engine-2fce65661df2edb7.exe)
+
+running 3 tests
+test ws_frame::tests::preserves_failed_status_at_the_same_trading_revision ... ok
+test ws_frame::tests::preserves_every_field_of_the_recorded_market ... ok
+test ws_frame::tests::preserves_unicode_escaping_and_full_unsigned_integer_values ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

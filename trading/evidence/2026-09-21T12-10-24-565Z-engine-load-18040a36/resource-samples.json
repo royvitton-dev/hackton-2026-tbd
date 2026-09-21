@@ -1,0 +1,1696 @@
+[
+  {
+    "at": "2026-09-21T12:10:25.6901030Z",
+    "elapsed_ms": 87.5453,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 0.015625,
+        "working_set_bytes": 8175616,
+        "private_bytes": 2957312
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 0.21875,
+        "working_set_bytes": 63029248,
+        "private_bytes": 31391744
+      }
+    ],
+    "phase": "setup",
+    "received_ms": 1173.7024000000001
+  },
+  {
+    "at": "2026-09-21T12:10:26.2499082Z",
+    "elapsed_ms": 645.4759,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 0.015625,
+        "working_set_bytes": 8863744,
+        "private_bytes": 2957312
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 0.21875,
+        "working_set_bytes": 63053824,
+        "private_bytes": 31391744
+      }
+    ],
+    "phase": "setup",
+    "received_ms": 1686.9107
+  },
+  {
+    "at": "2026-09-21T12:10:26.7499164Z",
+    "elapsed_ms": 1146.5022000000001,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 0.109375,
+        "working_set_bytes": 9871360,
+        "private_bytes": 3866624
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 0.40625,
+        "working_set_bytes": 71667712,
+        "private_bytes": 39919616
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 2187.7201
+  },
+  {
+    "at": "2026-09-21T12:10:27.2690752Z",
+    "elapsed_ms": 1663.2081,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 0.234375,
+        "working_set_bytes": 10412032,
+        "private_bytes": 4452352
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 0.625,
+        "working_set_bytes": 73367552,
+        "private_bytes": 42610688
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 2704.4603
+  },
+  {
+    "at": "2026-09-21T12:10:27.7914634Z",
+    "elapsed_ms": 2188.54,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 0.453125,
+        "working_set_bytes": 10772480,
+        "private_bytes": 4730880
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 0.984375,
+        "working_set_bytes": 78675968,
+        "private_bytes": 46624768
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 3231.3843
+  },
+  {
+    "at": "2026-09-21T12:10:28.3075651Z",
+    "elapsed_ms": 2697.3364,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 0.59375,
+        "working_set_bytes": 10866688,
+        "private_bytes": 4849664
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 1.390625,
+        "working_set_bytes": 93786112,
+        "private_bytes": 67715072
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 3738.5365
+  },
+  {
+    "at": "2026-09-21T12:10:28.8215580Z",
+    "elapsed_ms": 3212.7268000000004,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 0.78125,
+        "working_set_bytes": 11919360,
+        "private_bytes": 6115328
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 1.765625,
+        "working_set_bytes": 93896704,
+        "private_bytes": 68870144
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 4254.0034000000005
+  },
+  {
+    "at": "2026-09-21T12:10:29.3393872Z",
+    "elapsed_ms": 3729.4176,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 1.03125,
+        "working_set_bytes": 12447744,
+        "private_bytes": 6672384
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 2.171875,
+        "working_set_bytes": 96083968,
+        "private_bytes": 86806528
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 4770.5416000000005
+  },
+  {
+    "at": "2026-09-21T12:10:29.8502276Z",
+    "elapsed_ms": 4245.708500000001,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 1.3125,
+        "working_set_bytes": 12857344,
+        "private_bytes": 7049216
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 2.703125,
+        "working_set_bytes": 114532352,
+        "private_bytes": 99581952
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 5286.8742
+  },
+  {
+    "at": "2026-09-21T12:10:30.3669772Z",
+    "elapsed_ms": 4762.397,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 1.59375,
+        "working_set_bytes": 13340672,
+        "private_bytes": 7634944
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 3.109375,
+        "working_set_bytes": 96366592,
+        "private_bytes": 77987840
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 5803.5557
+  },
+  {
+    "at": "2026-09-21T12:10:30.8837659Z",
+    "elapsed_ms": 5278.487,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 1.859375,
+        "working_set_bytes": 13545472,
+        "private_bytes": 8024064
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 3.609375,
+        "working_set_bytes": 100089856,
+        "private_bytes": 82284544
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 6319.6727
+  },
+  {
+    "at": "2026-09-21T12:10:31.4082562Z",
+    "elapsed_ms": 5797.5117,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 2.1875,
+        "working_set_bytes": 14012416,
+        "private_bytes": 8470528
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 4.109375,
+        "working_set_bytes": 104165376,
+        "private_bytes": 112132096
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 6843.3628
+  },
+  {
+    "at": "2026-09-21T12:10:31.9172937Z",
+    "elapsed_ms": 6312.0995,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 2.3125,
+        "working_set_bytes": 14008320,
+        "private_bytes": 8450048
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 4.46875,
+        "working_set_bytes": 141979648,
+        "private_bytes": 148717568
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 7353.3203
+  },
+  {
+    "at": "2026-09-21T12:10:32.4392054Z",
+    "elapsed_ms": 6830.3973000000005,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 2.515625,
+        "working_set_bytes": 14270464,
+        "private_bytes": 8757248
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 4.796875,
+        "working_set_bytes": 131293184,
+        "private_bytes": 136458240
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 7871.7004
+  },
+  {
+    "at": "2026-09-21T12:10:32.9541832Z",
+    "elapsed_ms": 7347.518,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 2.78125,
+        "working_set_bytes": 14237696,
+        "private_bytes": 8802304
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 5.265625,
+        "working_set_bytes": 137195520,
+        "private_bytes": 142839808
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 8389.81
+  },
+  {
+    "at": "2026-09-21T12:10:33.4678387Z",
+    "elapsed_ms": 7864.0731000000005,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 3.125,
+        "working_set_bytes": 14630912,
+        "private_bytes": 9072640
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 5.796875,
+        "working_set_bytes": 137674752,
+        "private_bytes": 133746688
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 8905.6356
+  },
+  {
+    "at": "2026-09-21T12:10:33.9882476Z",
+    "elapsed_ms": 8380.4307,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 3.4375,
+        "working_set_bytes": 15040512,
+        "private_bytes": 9412608
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 6.375,
+        "working_set_bytes": 166211584,
+        "private_bytes": 163414016
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 9425.1698
+  },
+  {
+    "at": "2026-09-21T12:10:34.5018473Z",
+    "elapsed_ms": 8896.4771,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 3.625,
+        "working_set_bytes": 15212544,
+        "private_bytes": 9543680
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 6.859375,
+        "working_set_bytes": 173760512,
+        "private_bytes": 171106304
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 9938.318
+  },
+  {
+    "at": "2026-09-21T12:10:35.0177178Z",
+    "elapsed_ms": 9411.1777,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 3.890625,
+        "working_set_bytes": 15904768,
+        "private_bytes": 10539008
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 7.34375,
+        "working_set_bytes": 157151232,
+        "private_bytes": 218415104
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 10452.439499999999
+  },
+  {
+    "at": "2026-09-21T12:10:35.5334715Z",
+    "elapsed_ms": 9929.504700000001,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 4.109375,
+        "working_set_bytes": 16347136,
+        "private_bytes": 10940416
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 7.734375,
+        "working_set_bytes": 159682560,
+        "private_bytes": 219877376
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 10970.8175
+  },
+  {
+    "at": "2026-09-21T12:10:36.0351688Z",
+    "elapsed_ms": 10430.611,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 4.328125,
+        "working_set_bytes": 16338944,
+        "private_bytes": 10940416
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 8.21875,
+        "working_set_bytes": 200007680,
+        "private_bytes": 255234048
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 11472.079199999998
+  },
+  {
+    "at": "2026-09-21T12:10:36.5508961Z",
+    "elapsed_ms": 10946.502700000001,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 4.53125,
+        "working_set_bytes": 16191488,
+        "private_bytes": 10928128
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 8.703125,
+        "working_set_bytes": 168951808,
+        "private_bytes": 222478336
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 11988.098999999998
+  },
+  {
+    "at": "2026-09-21T12:10:37.0676389Z",
+    "elapsed_ms": 11461.629200000001,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 4.8125,
+        "working_set_bytes": 16670720,
+        "private_bytes": 11206656
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 9.1875,
+        "working_set_bytes": 233607168,
+        "private_bytes": 274829312
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 12503.2176
+  },
+  {
+    "at": "2026-09-21T12:10:37.5678220Z",
+    "elapsed_ms": 11963.6394,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 5.03125,
+        "working_set_bytes": 16879616,
+        "private_bytes": 11472896
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 9.546875,
+        "working_set_bytes": 217059328,
+        "private_bytes": 258453504
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 13005.019499999999
+  },
+  {
+    "at": "2026-09-21T12:10:38.0700249Z",
+    "elapsed_ms": 12466.117,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 5.046875,
+        "working_set_bytes": 16879616,
+        "private_bytes": 11472896
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 9.5625,
+        "working_set_bytes": 158375936,
+        "private_bytes": 194981888
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 13507.997599999999
+  },
+  {
+    "at": "2026-09-21T12:10:38.5837061Z",
+    "elapsed_ms": 12979.9869,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 5.234375,
+        "working_set_bytes": 16949248,
+        "private_bytes": 11472896
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 10.109375,
+        "working_set_bytes": 185286656,
+        "private_bytes": 224849920
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 14021.118799999998
+  },
+  {
+    "at": "2026-09-21T12:10:39.0894981Z",
+    "elapsed_ms": 13480.6077,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 5.40625,
+        "working_set_bytes": 17387520,
+        "private_bytes": 12005376
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 10.65625,
+        "working_set_bytes": 191066112,
+        "private_bytes": 230477824
+      }
+    ],
+    "phase": "concurrency-6",
+    "received_ms": 14521.6889
+  },
+  {
+    "at": "2026-09-21T12:10:39.6021958Z",
+    "elapsed_ms": 14003.4883,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 5.796875,
+        "working_set_bytes": 18513920,
+        "private_bytes": 13008896
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 11.109375,
+        "working_set_bytes": 181059584,
+        "private_bytes": 223551488
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 15045.352599999998
+  },
+  {
+    "at": "2026-09-21T12:10:40.1165119Z",
+    "elapsed_ms": 14512.6679,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 6.125,
+        "working_set_bytes": 18780160,
+        "private_bytes": 13283328
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 11.703125,
+        "working_set_bytes": 176504832,
+        "private_bytes": 220381184
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 15554.7717
+  },
+  {
+    "at": "2026-09-21T12:10:40.6179229Z",
+    "elapsed_ms": 15014.9524,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 6.453125,
+        "working_set_bytes": 18845696,
+        "private_bytes": 13283328
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 12.265625,
+        "working_set_bytes": 186466304,
+        "private_bytes": 229707776
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 16056.4203
+  },
+  {
+    "at": "2026-09-21T12:10:41.1385124Z",
+    "elapsed_ms": 15530.689,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 6.78125,
+        "working_set_bytes": 19607552,
+        "private_bytes": 13996032
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 12.78125,
+        "working_set_bytes": 198537216,
+        "private_bytes": 241741824
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 16571.914
+  },
+  {
+    "at": "2026-09-21T12:10:41.6562256Z",
+    "elapsed_ms": 16046.7746,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 6.9375,
+        "working_set_bytes": 20381696,
+        "private_bytes": 14794752
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 13.078125,
+        "working_set_bytes": 216137728,
+        "private_bytes": 239587328
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 17088.051199999998
+  },
+  {
+    "at": "2026-09-21T12:10:42.1741909Z",
+    "elapsed_ms": 16564.288800000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 7.28125,
+        "working_set_bytes": 20668416,
+        "private_bytes": 15106048
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 13.484375,
+        "working_set_bytes": 255488000,
+        "private_bytes": 281022464
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 17605.949099999998
+  },
+  {
+    "at": "2026-09-21T12:10:42.6847772Z",
+    "elapsed_ms": 17079.6508,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 7.671875,
+        "working_set_bytes": 21446656,
+        "private_bytes": 15917056
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 13.875,
+        "working_set_bytes": 189173760,
+        "private_bytes": 209260544
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 18120.8222
+  },
+  {
+    "at": "2026-09-21T12:10:43.1849065Z",
+    "elapsed_ms": 17581.7252,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 7.78125,
+        "working_set_bytes": 21479424,
+        "private_bytes": 15917056
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 14.203125,
+        "working_set_bytes": 226541568,
+        "private_bytes": 248705024
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 18622.895099999998
+  },
+  {
+    "at": "2026-09-21T12:10:43.7015664Z",
+    "elapsed_ms": 18097.281600000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 7.984375,
+        "working_set_bytes": 21831680,
+        "private_bytes": 16183296
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 14.765625,
+        "working_set_bytes": 266727424,
+        "private_bytes": 268759040
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 19138.4642
+  },
+  {
+    "at": "2026-09-21T12:10:44.2016290Z",
+    "elapsed_ms": 18598.0075,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 8.25,
+        "working_set_bytes": 21880832,
+        "private_bytes": 16183296
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 15.125,
+        "working_set_bytes": 253988864,
+        "private_bytes": 254111744
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 19639.2679
+  },
+  {
+    "at": "2026-09-21T12:10:44.7063430Z",
+    "elapsed_ms": 19099.8187,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 8.53125,
+        "working_set_bytes": 22630400,
+        "private_bytes": 18432000
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 15.5625,
+        "working_set_bytes": 259342336,
+        "private_bytes": 262909952
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 20144.5111
+  },
+  {
+    "at": "2026-09-21T12:10:45.2184569Z",
+    "elapsed_ms": 19613.495300000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 8.703125,
+        "working_set_bytes": 22765568,
+        "private_bytes": 18432000
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 15.9375,
+        "working_set_bytes": 247283712,
+        "private_bytes": 250343424
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 20654.9091
+  },
+  {
+    "at": "2026-09-21T12:10:45.7350862Z",
+    "elapsed_ms": 20129.652400000003,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 8.9375,
+        "working_set_bytes": 22962176,
+        "private_bytes": 18432000
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 16.46875,
+        "working_set_bytes": 289947648,
+        "private_bytes": 295743488
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 21171.3154
+  },
+  {
+    "at": "2026-09-21T12:10:46.2392244Z",
+    "elapsed_ms": 20633.6387,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 9.359375,
+        "working_set_bytes": 23289856,
+        "private_bytes": 18698240
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 16.90625,
+        "working_set_bytes": 247386112,
+        "private_bytes": 244137984
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 21677.6256
+  },
+  {
+    "at": "2026-09-21T12:10:46.7519674Z",
+    "elapsed_ms": 21151.7331,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 9.625,
+        "working_set_bytes": 23326720,
+        "private_bytes": 18698240
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 17.296875,
+        "working_set_bytes": 239505408,
+        "private_bytes": 239771648
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 22193.4978
+  },
+  {
+    "at": "2026-09-21T12:10:47.2755658Z",
+    "elapsed_ms": 21666.5386,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 10,
+        "working_set_bytes": 23810048,
+        "private_bytes": 19099648
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 17.875,
+        "working_set_bytes": 269479936,
+        "private_bytes": 265883648
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 22708.1257
+  },
+  {
+    "at": "2026-09-21T12:10:47.7907792Z",
+    "elapsed_ms": 22184.122600000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 10.375,
+        "working_set_bytes": 23805952,
+        "private_bytes": 19099648
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 18.4375,
+        "working_set_bytes": 281542656,
+        "private_bytes": 280514560
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 23226.7103
+  },
+  {
+    "at": "2026-09-21T12:10:48.3050875Z",
+    "elapsed_ms": 22699.8625,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 10.703125,
+        "working_set_bytes": 23932928,
+        "private_bytes": 19099648
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 18.890625,
+        "working_set_bytes": 271790080,
+        "private_bytes": 257568768
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 23750.6774
+  },
+  {
+    "at": "2026-09-21T12:10:48.8186599Z",
+    "elapsed_ms": 23214.415100000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 10.84375,
+        "working_set_bytes": 24174592,
+        "private_bytes": 19365888
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 19.203125,
+        "working_set_bytes": 304263168,
+        "private_bytes": 293048320
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 24255.614299999997
+  },
+  {
+    "at": "2026-09-21T12:10:49.3264567Z",
+    "elapsed_ms": 23715.715200000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 11.078125,
+        "working_set_bytes": 24436736,
+        "private_bytes": 19632128
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 19.625,
+        "working_set_bytes": 271867904,
+        "private_bytes": 256651264
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 24756.9221
+  },
+  {
+    "at": "2026-09-21T12:10:49.8355575Z",
+    "elapsed_ms": 24232.2667,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 11.5,
+        "working_set_bytes": 24760320,
+        "private_bytes": 19898368
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 20.265625,
+        "working_set_bytes": 305709056,
+        "private_bytes": 293003264
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 25274.0709
+  },
+  {
+    "at": "2026-09-21T12:10:50.3444989Z",
+    "elapsed_ms": 24734.051300000003,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 11.796875,
+        "working_set_bytes": 24870912,
+        "private_bytes": 20164608
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 20.75,
+        "working_set_bytes": 287989760,
+        "private_bytes": 273567744
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 25775.8595
+  },
+  {
+    "at": "2026-09-21T12:10:50.8523194Z",
+    "elapsed_ms": 25247.3858,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 12.21875,
+        "working_set_bytes": 25276416,
+        "private_bytes": 20430848
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 21.234375,
+        "working_set_bytes": 308649984,
+        "private_bytes": 294944768
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 26289.7045
+  },
+  {
+    "at": "2026-09-21T12:10:51.3580629Z",
+    "elapsed_ms": 25750.405000000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 12.625,
+        "working_set_bytes": 25341952,
+        "private_bytes": 20430848
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 21.90625,
+        "working_set_bytes": 309440512,
+        "private_bytes": 293949440
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 26792.5239
+  },
+  {
+    "at": "2026-09-21T12:10:51.8704823Z",
+    "elapsed_ms": 26266.4758,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 12.96875,
+        "working_set_bytes": 25690112,
+        "private_bytes": 20701184
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 22.5,
+        "working_set_bytes": 361467904,
+        "private_bytes": 349003776
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 27321.522399999998
+  },
+  {
+    "at": "2026-09-21T12:10:52.3841261Z",
+    "elapsed_ms": 26782.5021,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 13.328125,
+        "working_set_bytes": 25755648,
+        "private_bytes": 20701184
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 23.03125,
+        "working_set_bytes": 315392000,
+        "private_bytes": 300838912
+      }
+    ],
+    "phase": "concurrency-24",
+    "received_ms": 27823.8574
+  },
+  {
+    "at": "2026-09-21T12:10:52.8857958Z",
+    "elapsed_ms": 27281.7504,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 13.625,
+        "working_set_bytes": 30126080,
+        "private_bytes": 25878528
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 23.515625,
+        "working_set_bytes": 301989888,
+        "private_bytes": 285085696
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 28322.9532
+  },
+  {
+    "at": "2026-09-21T12:10:53.3929968Z",
+    "elapsed_ms": 27783.964600000003,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 14.0625,
+        "working_set_bytes": 30789632,
+        "private_bytes": 26411008
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 24.0625,
+        "working_set_bytes": 315740160,
+        "private_bytes": 300859392
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 28826.4231
+  },
+  {
+    "at": "2026-09-21T12:10:53.9047140Z",
+    "elapsed_ms": 28300.329800000003,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 14.40625,
+        "working_set_bytes": 30797824,
+        "private_bytes": 26415104
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 24.5,
+        "working_set_bytes": 287641600,
+        "private_bytes": 268173312
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 29358.7793
+  },
+  {
+    "at": "2026-09-21T12:10:54.4192725Z",
+    "elapsed_ms": 28815.5625,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 14.671875,
+        "working_set_bytes": 31145984,
+        "private_bytes": 26681344
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 24.78125,
+        "working_set_bytes": 339468288,
+        "private_bytes": 322752512
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 29857.6531
+  },
+  {
+    "at": "2026-09-21T12:10:54.9422713Z",
+    "elapsed_ms": 29331.5128,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 14.953125,
+        "working_set_bytes": 31408128,
+        "private_bytes": 26947584
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 25.3125,
+        "working_set_bytes": 295530496,
+        "private_bytes": 275296256
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 30373.8212
+  },
+  {
+    "at": "2026-09-21T12:10:55.4558872Z",
+    "elapsed_ms": 29850.535600000003,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 15.3125,
+        "working_set_bytes": 33427456,
+        "private_bytes": 28897280
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 25.90625,
+        "working_set_bytes": 291864576,
+        "private_bytes": 271400960
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 30891.8691
+  },
+  {
+    "at": "2026-09-21T12:10:55.9694716Z",
+    "elapsed_ms": 30364.523400000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 15.484375,
+        "working_set_bytes": 33427456,
+        "private_bytes": 28897280
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 26.359375,
+        "working_set_bytes": 337911808,
+        "private_bytes": 319602688
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 31415.6754
+  },
+  {
+    "at": "2026-09-21T12:10:56.4695103Z",
+    "elapsed_ms": 30867.666500000003,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 15.84375,
+        "working_set_bytes": 33427456,
+        "private_bytes": 28897280
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 27,
+        "working_set_bytes": 385011712,
+        "private_bytes": 366354432
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 31946.8835
+  },
+  {
+    "at": "2026-09-21T12:10:56.9791086Z",
+    "elapsed_ms": 31368.412800000002,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 16.34375,
+        "working_set_bytes": 33554432,
+        "private_bytes": 28897280
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 27.4375,
+        "working_set_bytes": 310001664,
+        "private_bytes": 289574912
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 32409.842699999997
+  },
+  {
+    "at": "2026-09-21T12:10:57.4868024Z",
+    "elapsed_ms": 31883.5031,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 16.765625,
+        "working_set_bytes": 33550336,
+        "private_bytes": 28897280
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 28.015625,
+        "working_set_bytes": 328736768,
+        "private_bytes": 310882304
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 32924.7379
+  },
+  {
+    "at": "2026-09-21T12:10:57.9917259Z",
+    "elapsed_ms": 32384.2808,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 17.0625,
+        "working_set_bytes": 33615872,
+        "private_bytes": 28897280
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 28.46875,
+        "working_set_bytes": 295567360,
+        "private_bytes": 275320832
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 33431.4976
+  },
+  {
+    "at": "2026-09-21T12:10:58.5089461Z",
+    "elapsed_ms": 32899.733700000004,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 17.484375,
+        "working_set_bytes": 33632256,
+        "private_bytes": 28897280
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 29,
+        "working_set_bytes": 334176256,
+        "private_bytes": 315957248
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 33942.2246
+  },
+  {
+    "at": "2026-09-21T12:10:59.0197536Z",
+    "elapsed_ms": 33416.4024,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 17.6875,
+        "working_set_bytes": 35028992,
+        "private_bytes": 30375936
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 29.59375,
+        "working_set_bytes": 254545920,
+        "private_bytes": 237400064
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 34459.0451
+  },
+  {
+    "at": "2026-09-21T12:10:59.5368724Z",
+    "elapsed_ms": 33931.9035,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 18,
+        "working_set_bytes": 34160640,
+        "private_bytes": 29822976
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 30.171875,
+        "working_set_bytes": 331993088,
+        "private_bytes": 314187776
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 34973.7411
+  },
+  {
+    "at": "2026-09-21T12:11:00.0542660Z",
+    "elapsed_ms": 34449.3983,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 18.171875,
+        "working_set_bytes": 34623488,
+        "private_bytes": 30367744
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 30.484375,
+        "working_set_bytes": 288108544,
+        "private_bytes": 272916480
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 35490.5896
+  },
+  {
+    "at": "2026-09-21T12:11:00.5746794Z",
+    "elapsed_ms": 34964.862700000005,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 18.328125,
+        "working_set_bytes": 34992128,
+        "private_bytes": 30375936
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 31.03125,
+        "working_set_bytes": 297553920,
+        "private_bytes": 280727552
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 36006.519400000005
+  },
+  {
+    "at": "2026-09-21T12:11:01.0927529Z",
+    "elapsed_ms": 35483.957500000004,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 18.5625,
+        "working_set_bytes": 35340288,
+        "private_bytes": 30375936
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 31.53125,
+        "working_set_bytes": 344776704,
+        "private_bytes": 326430720
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 36526.4394
+  },
+  {
+    "at": "2026-09-21T12:11:01.6108372Z",
+    "elapsed_ms": 36001.9256,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 18.8125,
+        "working_set_bytes": 35557376,
+        "private_bytes": 30392320
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 32.015625,
+        "working_set_bytes": 373768192,
+        "private_bytes": 353480704
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 37094.4564
+  },
+  {
+    "at": "2026-09-21T12:11:02.1201131Z",
+    "elapsed_ms": 36520.7189,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 19.171875,
+        "working_set_bytes": 35770368,
+        "private_bytes": 33210368
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 32.5625,
+        "working_set_bytes": 332902400,
+        "private_bytes": 313098240
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 37562.055100000005
+  },
+  {
+    "at": "2026-09-21T12:11:02.6273817Z",
+    "elapsed_ms": 37020.6567,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 19.859375,
+        "working_set_bytes": 36638720,
+        "private_bytes": 34340864
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 33.1875,
+        "working_set_bytes": 330993664,
+        "private_bytes": 310784000
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 38092.292700000005
+  },
+  {
+    "at": "2026-09-21T12:11:03.1404853Z",
+    "elapsed_ms": 37534.091700000004,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 20.25,
+        "working_set_bytes": 36716544,
+        "private_bytes": 34344960
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 33.75,
+        "working_set_bytes": 328663040,
+        "private_bytes": 308760576
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 38575.793300000005
+  },
+  {
+    "at": "2026-09-21T12:11:03.6535838Z",
+    "elapsed_ms": 38043.462700000004,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 20.453125,
+        "working_set_bytes": 36806656,
+        "private_bytes": 34344960
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 34.25,
+        "working_set_bytes": 352620544,
+        "private_bytes": 332984320
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 39085.8286
+  },
+  {
+    "at": "2026-09-21T12:11:04.1543880Z",
+    "elapsed_ms": 38551.5994,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 20.765625,
+        "working_set_bytes": 37437440,
+        "private_bytes": 34611200
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 34.765625,
+        "working_set_bytes": 358592512,
+        "private_bytes": 338477056
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 39592.858400000005
+  },
+  {
+    "at": "2026-09-21T12:11:04.6773536Z",
+    "elapsed_ms": 39067.189600000005,
+    "processes": [
+      {
+        "pid": 22180,
+        "name": "leave-engine",
+        "cpu_seconds": 21.140625,
+        "working_set_bytes": 37507072,
+        "private_bytes": 34611200
+      },
+      {
+        "pid": 10908,
+        "name": "node",
+        "cpu_seconds": 35.265625,
+        "working_set_bytes": 341393408,
+        "private_bytes": 320151552
+      }
+    ],
+    "phase": "concurrency-96",
+    "received_ms": 40108.9149
+  }
+]

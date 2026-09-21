@@ -1,0 +1,72 @@
+PASS PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count
+PASS PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay
+PASS 5 map selection and real 60-ball maximum performance, last winner
+PASS Mobile 390x844 touch: per-person balls → Nth → pause → result → replay
+PASS Mobile maximum: 60 balls, reduced motion and frame timing
+PASS Responsive, keyboard, mute, visibility pause
+{
+  "passed": 6,
+  "failed": 0,
+  "performance": [
+    {
+      "map": "neon",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 4.321791044800584,
+      "p95FrameCostMs": 6.600000001490116,
+      "p95FrameIntervalMs": 16.700000000000728,
+      "fps": 60.001432870038684
+    },
+    {
+      "map": "orbit",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.236826347198315,
+      "p95FrameCostMs": 4.099999997764826,
+      "p95FrameIntervalMs": 16.799999999995634,
+      "fps": 60.00179646097188
+    },
+    {
+      "map": "zigzag",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.670958083781029,
+      "p95FrameCostMs": 3.900000002235174,
+      "p95FrameIntervalMs": 16.70000000001164,
+      "fps": 60.003952356143344
+    },
+    {
+      "map": "split",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 4.644610778534573,
+      "p95FrameCostMs": 4.900000002235174,
+      "p95FrameIntervalMs": 16.70000000001164,
+      "fps": 60.00287438919236
+    },
+    {
+      "map": "parade",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 4.665868263557821,
+      "p95FrameCostMs": 5.5,
+      "p95FrameIntervalMs": 16.70000000001164,
+      "fps": 60.00179646097188
+    },
+    {
+      "map": "neon",
+      "device": "mobile emulation 390x844 DPR2",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.62574850304978,
+      "p95FrameCostMs": 4.100000001490116,
+      "p95FrameIntervalMs": 16.700000000000728,
+      "fps": 60.00179646097187
+    }
+  ]
+}

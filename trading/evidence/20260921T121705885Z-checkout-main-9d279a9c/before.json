@@ -1,0 +1,52 @@
+{
+  "local_main": "d249d3d6892d44f588b5651f7b17a44cf8833211",
+  "dirty_files": [
+    {
+      "path": "trading/README.md",
+      "before_sha256": "BF7ADDE8FC901FD076273D0C84A3DF96CE2E2AC74CFA4E59EEC29B69C978B5FE"
+    },
+    {
+      "path": "trading/docs/agents.jsonl",
+      "before_sha256": "AABCE607F6838BABDD3373F03266BE2269F555DD74049CE5800C0D37AF730516"
+    },
+    {
+      "path": "trading/docs/checkpoint.md",
+      "before_sha256": "49906A93FDE2DED548675398DBAD87788F5BE698307951484752CADC91CB3F31"
+    },
+    {
+      "path": "trading/docs/engine-load-test.md",
+      "before_sha256": "B4FC125A0D1240452FA583BD8FC479B102CEF2ED9B4CF7E6CA677F59CAAA20EB"
+    },
+    {
+      "path": "trading/scripts/engine-load.mjs",
+      "before_sha256": "7C1D4D2D2455DC20BB0950319CD078F68B6CBD0ABC2EBF2F979CE4F0EB0412EA"
+    }
+  ],
+  "head": "2ee7bb0330a1a38c4b8ee9f225378e132e485056",
+  "branch": "codex/leave-exchange",
+  "processes": [
+    {
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "StartTime": "2026-09-21T19:05:21.4715478+09:00"
+    },
+    {
+      "Id": 17556,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:21.7348899+09:00"
+    },
+    {
+      "Id": 18184,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:54.8395149+09:00"
+    },
+    {
+      "Id": 15744,
+      "ProcessName": "powershell",
+      "StartTime": "2026-09-21T19:05:54.9077476+09:00"
+    }
+  ],
+  "origin_main": "f6f59147916b2d7f5c1ce3356eeb184f17cabb24",
+  "at": "2026-09-21T12:17:06.6558965Z",
+  "trading_tree": "013dc6e71a5704a333ade233f255c79d3f32d60e"
+}

@@ -1,2 +1,62 @@
 PASS PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count
 PASS PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay
+PASS 4 map selection and real 60-ball maximum performance, last winner
+PASS Mobile 390x844 touch: per-person balls → Nth → pause → result → replay
+PASS Mobile maximum: 60 balls, reduced motion and frame timing
+PASS Responsive, keyboard, mute, visibility pause
+{
+  "passed": 6,
+  "failed": 0,
+  "performance": [
+    {
+      "map": "neon",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 3.767462686604973,
+      "p95FrameCostMs": 5.100000001490116,
+      "p95FrameIntervalMs": 16.799999999999272,
+      "fps": 60.002507567480436
+    },
+    {
+      "map": "orbit",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.3377245509450484,
+      "p95FrameCostMs": 3.899999998509884,
+      "p95FrameIntervalMs": 16.700000000004366,
+      "fps": 60.001796460971846
+    },
+    {
+      "map": "zigzag",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.1943113771629728,
+      "p95FrameCostMs": 3.600000001490116,
+      "p95FrameIntervalMs": 16.80000000000291,
+      "fps": 60.00287438919236
+    },
+    {
+      "map": "split",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 4.160000000037809,
+      "p95FrameCostMs": 4.5,
+      "p95FrameIntervalMs": 16.70000000001164,
+      "fps": 60.00250756748052
+    },
+    {
+      "map": "neon",
+      "device": "mobile emulation 390x844 DPR2",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 3.453432835705245,
+      "p95FrameCostMs": 4.199999999254942,
+      "p95FrameIntervalMs": 16.799999999999272,
+      "fps": 60.002507567480436
+    }
+  ]
+}

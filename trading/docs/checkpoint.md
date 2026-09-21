@@ -1,11 +1,11 @@
 # 작업 체크포인트
 
-갱신: 2026-09-21 20:26 KST. 마감: 2026-09-22 09:00 KST (약12시간34분 남음).
+갱신: 2026-09-21 21:18 KST. 마감: 2026-09-22 09:00 KST (약11시간42분 남음).
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 경계·사용자 지시·Git
 - PROJECT_ROOT `C:\project\hackton-2026-tbd` 사용자 확인. 프로젝트 파일/산출물은 `trading` 내부만. 적용할 AGENTS.md는 처음 검사한 프로젝트/상위 경로에 없었다.
-- 초기Git clean, 기준 `d249d3d6892d44f588b5651f7b17a44cf8833211`. 현재 브랜치 `codex/leave-exchange`, remote `https://github.com/royvitton-dev/hackton-2026-tbd.git`.
+- 초기Git clean, 기준 `d249d3d6892d44f588b5651f7b17a44cf8833211`. **현재 브랜치 `main`**(21:17 사용자 지시로 원래 PROJECT_ROOT checkout 전환), remote `https://github.com/royvitton-dev/hackton-2026-tbd.git`. 앞으로 이 폴더 main에서 직접 작업·커밋·푸시한다. 이전 codex/leave-exchange 기록은 보존한다.
 - 사용자 추가 지시: GS리테이/GS칼테스/GS건썰, 독립 거래소UI, 완성 변경 commit/push 승인. 실제 외부배포 금지. 기존 루트UI 변경 없음, 선택적 링크 adapter만 trading 안에 준비.
 - **앞으로 모든 검증된 후속 변경은 main에 push**하라는 사용자 지시를20:21에받았다. 원격main최신변경보존/강제push금지. 현재sourcecheckout의브랜치이름과무관하게최종push대상은main이다.
 - 안정 소스/완료 증거787파일의 commit `7bc9b56b726bca181938f7f890b1dbcdb2d4a9e5`를 **19:28 KST에 origin/codex/leave-exchange로 push 완료**했다. 사용자 문의에 따라 완성된 구현 체크포인트부터 먼저 전달했다. `git ls-remote`로 원격 SHA와 local HEAD 일치를 확인했다. 진행 중demo/6시간관찰/콘솔과 후속 검증·문서는 별도 추가 commit/push 예정이며 전체 마감 작업 완료 선언이 아니다.
@@ -81,3 +81,44 @@
 - `/root/durability`의c7dd첫실행은harness공유오류배열문제로실패했고 `2026-09-21T11-18-03-976Z-ws-diagnostics-bb871788`에보존했다. peerClose1006도실제로관찰됐다. 이후연결별오류기록·strictpeer1000검증과서버queuedreplyflush를수정했고위20:24재검증/API/Clippy를완료했다. 첫실패를지우거나성공으로바꾸지않았다.
 
 - **사용자 영속 지시 추가:** 앞으로 검증된 후속 변경의 push 대상은 main이다. codex브랜치에만push해서끝내지말것. 원격main최신변경을보존하고강제push없이합친뒤main에반영한다.
+
+## 20:31 최신 main 반영과 다음 작업
+- **main push 완료:** `cee53d24b44ba643fc1246e28d03c2d3aa1c8a5e`, 원격과동일확인. 최신main13e9463을반영하고검증된source commit5037d507cf971b5dedc1257d6c4e6b0b99059319의trading변경만기존격리worktree에적용해push했다. trading tree완전일치,다른main파일차이0,강제push없음. 근거 `evidence/20260921T112950175Z-ws-fix-main-push-e030b7b9`. 원본checkout은codex/leave-exchange의source5037,원격codex는4550그대로다. 이후에도**push대상은main**이다.
+- 이번단위는종료진단/실제peerclose결함수정/검증/독립검토/mainpush를마친progress다. 새모든변경은검증후main반영지시를따른다. 현재미커밋은이push기록과진행중관찰로그이며root외부파일수정없다.
+- 현재메인engine20540/observer18184/helper15744/UI17556와12봇은계속19:05실행분.20:20:51 실제생존+관찰4496.725초/event48729/WS누락·단절0확인. observer session20793,예상끝01:05:55KST. 다음주기확인은20:35snapshot/누적메모리·연속성이다. 관찰끝전새95fa로재시작하지말것.
+- 다음독립성능작업후보: 보존된실제snapshot을사용해현재json!→Value→string과borrowed typed wrapper직렬화의출력동등성·할당/비용을한정계측. 원시WS전송량2.345GB는그대로이며직렬화중간할당만줄이는후보를구분. 계측전production변경/속도개선주장금지. 기존고부하1005는미확정,새logger가판별할수있지만이번paused send_timeout을옛원인으로대체하지말것.
+- 남은전체작업:6시간완료후정상stop/실제exit/FULLCore누적복구/새버전시연재시작,최신binary조용한B/C,최종browser·문서·mainpush·08:55준비/09:00전인계. zeroalloc목표미달/실제Linux컨테이너·외부배포미실행등범위유지. goal complete처리금지.
+
+## 20:54 직렬화 개선 검증과 웹 화면 복원
+- root는 `ws_frame::encode_state`를 main의 초기/후속 state 전송에 연결했다. 기존 JSON Value 트리를 제거하고 borrowed typed wrapper를 직접 직렬화한다. 모델·코어·저널·배열/필드내용·순서보장/전송제한은그대로며객체key순서만달라진다. 상세 [직렬화 결과](ws-serialization.md).
+- matching_core의 실제5state/3쌍/3000계측에서 큰frame alloc+realloc15261→12,요청byte합약63.856%감소,전체15쌍p50감소. wirebytes동일. API/CPU/대역폭/원래WS단절개선주장없음. `evidence/20260921T113640043Z-ws-serialization-ab-633bfa86`. durability가서버/원시3000개산술을,frontend가14개소비자파일을독립검토하여구체적결함없음. 세 agent 모두현재유휴.
+- 새releaseSHA `f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240`. unit3/fmt/release/Clippyalltargets/API10통과. 새WS실제run `2026-09-21T11-48-40-554Z-ws-diagnostics-88f40990`에서416ACK/416조회/16중복/289정상연속frame/자산·예약일치,peer1000/오류0/flushed,paused send_timeout,격리engine18112exit0·sampler2132종료. 메인14/manifest동일. 메인20540은여전히09bc로관찰중이며새binary로교체하지않았다.
+- **20:41 95분 중간관찰:** `2026-09-21T11-41-00-883Z-observation-analysis-829ae40c`,5702.731초/1126표본/최대공백5.996초,명령33332·거래량25309h증가,12봇/ready/자산보존/WS누락·단절0. CPU187유효구간14합평균0.505%,엔진0.269%(16논리CPU전체기준),엔진WS76.88MB/private75.47MB. 로그21.35MB/영속156.82MB.6시간완료아님.
+- 봇33544durable응답=33529accepted+15rejected(전부ORDER_NOT_OPEN),p9928.586ms/max958.159ms. 최대20:29:00.815 seq51579는정상durable승인,주변다수봇지연도보존했으나원인미확정. 표본연속성은subsecond지연이없다는뜻이아니다. snapshot53800=40311291bytes/SHA9d6489e28a317cd830e84170ddc9dadf4369e612dc060719cb2b4858f7719732/mtime20:35:22.3337608확인,주변max201.57ms. rename게시시간/전체복구검증은아님. 상세 `evidence/20260921T114846131Z-95min-checkpoint-offline-b00ee776/checkpoint.md`. 다음주기21:05또는새실패시점.
+- 사용자가“연결된웹화면이없다”고알려브라우저inventory를조회하니탭0개였다. 서버UI200/engine ready 확인후20:52 IAB visible tab4로 http://127.0.0.1:5175/ 열고 markDeliverable했다. 실제화면에서엔진정상EVENT59850/12봇/실제차트·체결표시확인. 이전탭이없어진원인은확정하지않는다. user01표시잔고1009975P/1032h는현재화면관찰값이고이전인계값과다르지만root는이번확인중주문을제출하지않았다. 도구로복원했으며코드결함이라고추정하지않는다.
+- 사용자지시대로완료된trading-only변경을main에push예정. 최신원격main을갱신해다른작업을보존하고격리worktree에적용한다. 미완료demo/observer/console3경로는끝난뒤추가한다. 전체goal active/6시간관찰01:06종료→누적복구·새binary시연·조용한B/C·최종인계계획유지.
+
+## 21:02 main push 완료
+- 원본 source commit `2ee7bb0330a1a38c4b8ee9f225378e132e485056`의검증된89파일을원격최신main `fcb7a006dc9abd653ab0a7ad521ca55efef6ddeb`위에적용했다. 최종main **`f6f59147916b2d7f5c1ce3356eeb184f17cabb24`**,21:02:29 push exit0,21:02:46 ls-remote SHA일치. 다른작업pinball최신커밋을보존했다.
+- source/main의trading tree `013dc6e71a5704a333ade233f255c79d3f32d60e`완전일치,main적용차이중trading외파일0. 근거 `evidence/20260921T120103039Z-ws-serialization-main-push-d163bc69`. 마지막검증후모든완료변경을main에push한다는사용자지시를이행했다.
+- 현재미커밋은이후push상태기록+push증거,아직성장중demo/observer/console3경로다. 별도integrationworktree HEAD f6f5914,원본checkout HEAD2ee7bb0. 다음unit에서완료증거를추가commit하되진행중3경로보존.
+- IAB tab4 http://127.0.0.1:5175/ visible+markDeliverable로사용자에게웹화면을다시연결했다. 다음turn에서탭이필요하면기존browser1를재사용하고deliverable표시를갱신한다.
+- 21:02실제main20540/UI17556/observer18184/helper15744와원래시작시각유지,manifestSHA6128d45f...e69a동일. 6시간관찰종료01:05:55예정;다음주기관찰21:05의새snapshot/상태를확인한다. 전체goalactive이며새구현을위한무의미한반복테스트없음.
+
+## 21:15 2시간 관찰과 새 바이너리 부하 검증
+- 현재시각21:15KST,마감까지11시간45분. 직전goalturn은직렬화실험/통합/회귀/main push/웹화면복원이라는실제progress였다. 이번재개에서원명세/현재Git/observer session20793의실제새출력·생존handle를재확인했다. timeout을종료로보거나관찰을재시작하지않았다.
+- **21:07 2시간 중간관찰:** `2026-09-21T12-07-04-246Z-observation-analysis-c4093158`,7266.747초/1434표본/최대공백6.605초,명령42463·거래량32538h증가,12봇/ready/자산보존/WSgapdisconnect0. CPU238유효구간14합평균0.495%,엔진0.266%(16논리CPU전체),엔진working set88.44MB/private89.23MB,ログ27.18MB/영속207.08MB/최저여유디스크246.50GB. 미완료6시간관찰이다.
+- 봇42677durable=42655accepted+22rejected(모두ORDER_NOT_OPEN),p9928.644ms/max1814.142ms. unknown/reconciled0. 최근부분window2462개p99432.932ms이며>100ms37개중35개가21:06:27.493~36.480에집중. observer같은구간REST도1593/1590ms후정상복귀. 원인미확정,새부하전발생이고최대치는snapshotmtime와67.431초떨어져snapshot직접원인으로단정하지않는다. 독립원본근거 `2026-09-21T12-09-28-609Z-two-hour-observation-independent-review-0a64746a`.
+- 네번째자동snapshot64338/48320486bytes/mtime21:05:22.8795646/SHA7dc3291da944a6b963208cf694b5af7ac4a0a57470f4bdf1403c8a712f08cd2e. header/payloadCRC확인,전체복구와rename게시시간계측은아니다. 다음주기관찰21:35또는새실패시점.
+- matching_core가engine-load의명시expectedSHA/소스SHA/cleanup전WS별도판정을추가하고구문·help·잘못된SHA거절을확인했다. PID20540/18184·16core와모든입력·6/24/96·시간/명령/RSS한도는유지. `20260921T120740393Z-engine-load-preparation-206c6886`. root가diff를확인후한번실행.
+- **21:10:24~21:11:05 새f518부하1회통과:** `2026-09-21T12-10-24-565Z-engine-load-18040a36`,40.304초/17736ACK/8868체결/17744HTTP,정합성true. WS0..17736의17737frame/오류·누락·예상외단절0,cleanup직전OPEN/최종도달true. 이후의의도close1005는기존실패의예상외1005와구분한다. 서버peer_closed/flushed최종seq17736. 단계별459.85/456.29/473.25cmd/s,ACKp9917.17/92.88/288.42ms,엔진CPU평균2.684/3.683/3.986%,max구간4.159/5.232/8.595%,working set최대17.39/25.76/37.51MB. client전체최대385.01MB. 모든phase명령cap으로20초이전종료,quiet성능·최대용량·속도개선인과주장없음.
+- root가72CPU구간을원시카운터재계산하고실제그래프를열어검사했다 `20260921T121156927298Z-engine-load-plot-b06e6b8e`. 격리engine22180exit0/client10908/sampler12628실제종료,일반14+observer/helper16개의PID/시작시각/manifest동일. post-verification.json보존. durability가rawACK원장/CPU/WS독립검토중,중간불일치없음.
+- [새부하결과](engine-load-after-serialization.md) 및README/기존부하문서명령을갱신했다. 최신prod코드는바뀌지않았으므로이미통과한전체Rust/UI검사를반복하지않는다. 완료원본/독립검토까지정리해main에추가push예정.
+- 이번재개에서IAB tab4 markDeliverable을갱신하려했으나해당세션에없고탭목록도비었다. browser재선택/숨은소스조사없이문서지침확인후Codex전용open_in_codex로 http://127.0.0.1:5175/ 오른쪽패널열기를요청했다. 도구결과는queued로현재task가보일때열리는상태다. 이시점에새실제UI검증을한것으로표시하지않는다. 서버/메인시연은그대로다.
+- 6시간관찰종료01:05:55→정상정지/누적전체복구→최신binary재시작/조용한B/C→최종브라우저/문서/08:55제출준비계획유지. 전체goalactive.
+
+## 21:18 사용자 지시: PROJECT_ROOT 자체를 main으로 전환
+- 사용자가“main으로체크아웃해서main에서작업해줘”라고명시했다. 원래checkout `C:\project\hackton-2026-tbd`의현재브랜치는이제 **main**,HEAD f6f59147916b2d7f5c1ce3356eeb184f17cabb24,upstreamorigin/main이다. 앞으로여기서직접작업·커밋·푸시한다. 별도integrationworktree방식은후속push에사용하지않는다.
+- 로컬main d249가origin/main의ancestor임을확인하고비강제`git fetch origin main:main`으로fast-forward한뒤`git switch main`했다. 전환전후trading기준tree동일,미커밋5파일SHA동일,engine/UI/observer/helper PID/시작시각동일. 사용자지시의checkout으로최신main의다른영역파일도현재작업폴더에반영됐고임의편집/덮어쓰기명령은없다. 실제증거 `20260921T121705885Z-checkout-main-9d279a9c`.
+- durability의새부하raw검토완료 `2026-09-21T12-12-35-245Z-engine-load-independent-review-827afcd4`:292064조건재계산거래/자원/WS불일치0. startup첫health ECONNREFUSED1회/readiness재시도성공을명시하고모든HTTP200이라는최초검토가정실패도보존했다. 거래명령오류0과구분한다. 모든개발agent현재유휴.
+- 완료된부하하네스/증거/그래프/2시간관찰/검토/전환기록을현재main에commit/push예정. 최신mainfetch/비강제fast-forward로다른작업을보존한다. 진행중demo/observer/console3경로는계속제외.

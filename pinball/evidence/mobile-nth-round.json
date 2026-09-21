@@ -26,50 +26,35 @@
     "total": 4,
     "rule": "nth",
     "target": 3,
-    "mapId": "orbit"
+    "mode": "player",
+    "mapId": "orbit",
+    "boardMotion": true,
+    "finishMode": "winner"
   },
-  "seed": 2652298243,
+  "seed": 188747526,
   "result": {
-    "roundId": "72046877-1812-4d13-b9c7-992142e6bdce",
+    "roundId": "e9fcea8b-ab32-4d91-92fe-a7d8ce82c3d6",
     "state": "complete",
-    "seed": 2652298243,
-    "time": 33.799999999998725,
+    "seed": 188747526,
+    "time": 68.70470279605979,
     "target": 3,
     "total": 4,
     "winner": {
-      "id": "p3-b1",
-      "participantId": "p3",
-      "name": "모바일 C",
-      "label": "모바일 C",
-      "color": "#ff82af",
+      "id": "p2-b1",
+      "participantId": "p2",
+      "name": "모바일 B",
+      "label": "모바일 B",
+      "color": "#bca7ff",
       "number": 1,
       "rank": 3,
-      "time": 29.17264750489294,
-      "exitId": 4
+      "time": 68.70470279605979,
+      "exitId": 1,
+      "exitLabel": "골인",
+      "criterion": "arrival",
+      "crossedFinish": true
     },
+    "completionReason": "target-arrived",
     "finishOrder": [
-      {
-        "id": "p2-b1",
-        "participantId": "p2",
-        "name": "모바일 B",
-        "label": "모바일 B",
-        "color": "#bca7ff",
-        "number": 1,
-        "rank": 1,
-        "time": 8.986157699246336,
-        "exitId": 4
-      },
-      {
-        "id": "p1-b2",
-        "participantId": "p1",
-        "name": "모바일 A",
-        "label": "모바일 A",
-        "color": "#c6ff58",
-        "number": 2,
-        "rank": 2,
-        "time": 20.093419495992634,
-        "exitId": 4
-      },
       {
         "id": "p3-b1",
         "participantId": "p3",
@@ -77,9 +62,10 @@
         "label": "모바일 C",
         "color": "#ff82af",
         "number": 1,
-        "rank": 3,
-        "time": 29.17264750489294,
-        "exitId": 4
+        "rank": 1,
+        "time": 21.50753731751552,
+        "exitId": 1,
+        "exitLabel": "골인"
       },
       {
         "id": "p1-b1",
@@ -88,41 +74,138 @@
         "label": "모바일 A",
         "color": "#c6ff58",
         "number": 1,
-        "rank": 4,
-        "time": 33.798227070633985,
-        "exitId": 3
-      }
-    ],
-    "assists": 0,
-    "balls": [
-      {
-        "id": "p1-b1",
-        "x": 387.75088450435084,
-        "y": 2150,
-        "finished": true,
-        "rank": 4
-      },
-      {
-        "id": "p1-b2",
-        "x": 507.3700215293585,
-        "y": 2150,
-        "finished": true,
-        "rank": 2
-      },
-      {
-        "id": "p3-b1",
-        "x": 528.8968462750207,
-        "y": 2150,
-        "finished": true,
-        "rank": 3
+        "rank": 2,
+        "time": 23.33511303982722,
+        "exitId": 1,
+        "exitLabel": "골인"
       },
       {
         "id": "p2-b1",
-        "x": 512.0187541467876,
+        "participantId": "p2",
+        "name": "모바일 B",
+        "label": "모바일 B",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 3,
+        "time": 68.70470279605979,
+        "exitId": 1,
+        "exitLabel": "골인"
+      }
+    ],
+    "assists": 4,
+    "returns": 3,
+    "returnClosed": true,
+    "motion": {
+      "enabled": true,
+      "active": false,
+      "axis": null,
+      "cycle": 15,
+      "phase": 0,
+      "roll": 0,
+      "pitch": 0,
+      "offsetX": 0,
+      "offsetY": 0,
+      "forceX": 0,
+      "forceY": 0,
+      "nextIn": 1.1035958057091193
+    },
+    "deviceStats": {
+      "captures": 6,
+      "launches": 4,
+      "releases": 2
+    },
+    "devices": [
+      {
+        "id": "orbit-magnet-0",
+        "kind": "magnet",
+        "x": 310,
+        "y": 1160,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "orbit-magnet-1",
+        "kind": "magnet",
+        "x": 540,
+        "y": 1760,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "orbit-cannon-2",
+        "kind": "cannon",
+        "x": 310,
+        "y": 680,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "orbit-cannon-3",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1730,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -13.226335553262938,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      }
+    ],
+    "balls": [
+      {
+        "id": "p3-b1",
+        "x": 223.37775341239012,
         "y": 2150,
         "finished": true,
-        "rank": 1
+        "rank": 1,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p1-b1",
+        "x": 247.31656824085633,
+        "y": 2150,
+        "finished": true,
+        "rank": 2,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p2-b1",
+        "x": 221.5433102050503,
+        "y": 2150,
+        "finished": true,
+        "rank": 3,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 1
+      },
+      {
+        "id": "p1-b2",
+        "x": 493.28176719285375,
+        "y": 1651.6495616174257,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 2
       }
     ]
-  }
+  },
+  "lotto": null
 }

@@ -1,6 +1,7 @@
 import * as THREE from '../vendor/three.module.js';
 import {LANDS} from './lands.js';
 import {batchStaticMeshes} from './geometry-batch.js';
+import {returnPose,returnGateSegments} from './return-portals.js';
 import {devicePose} from './devices.js';
 import {rotorPose} from './physics.js';
 const S=1/60, X=x=>(x-310)*S, Z=y=>y*S;
@@ -9,7 +10,7 @@ const CAMERA_DIRECTIONS=[new THREE.Vector3(.18,.72,.67).normalize(),new THREE.Ve
 
 export class Renderer3D {
  constructor(canvas){
-  Object.assign(this,{canvas,mode:'webgl',overview:false,angle:2,lastRound:null,cameraCenter:400,finishedAt:new Map()});
+  Object.assign(this,{canvas,mode:'webgl',overview:false,halfView:false,angle:2,lastRound:null,cameraCenter:400,finishedAt:new Map()});
   this.webgl=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'high-performance'});
   this.webgl.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
   this.webgl.shadowMap.enabled=true;this.webgl.shadowMap.type=THREE.PCFShadowMap;
@@ -45,10 +46,10 @@ export class Renderer3D {
   m.quaternion.setFromUnitVectors(UP,new THREE.Vector3(dx,0,dz).normalize());return m;
  }
  ring(x,z,r,material,y=.07,tube=.055,parent=this.group){const m=this.mesh(new THREE.TorusGeometry(r,tube,6,32),material,x,y,z,parent);m.rotation.x=Math.PI/2;return m;}
- text(text,y,size=3.5,opacity=.5){
+ text(text,y,size=3.5,opacity=.5,x=310){
   const c=document.createElement('canvas');c.width=1024;c.height=160;const ctx=c.getContext('2d');ctx.font='800 94px sans-serif';ctx.textAlign='center';ctx.fillStyle=`rgba(255,250,235,${opacity})`;ctx.fillText(text,512,113);
   const t=new THREE.CanvasTexture(c);t.colorSpace=THREE.SRGBColorSpace;
-  const m=this.mesh(new THREE.PlaneGeometry(size,size*160/1024),new THREE.MeshBasicMaterial({map:t,transparent:true,depthWrite:false}),0,.015,Z(y));m.rotation.x=-Math.PI/2;m.castShadow=false;
+  const m=this.mesh(new THREE.PlaneGeometry(size,size*160/1024),new THREE.MeshBasicMaterial({map:t,transparent:true,depthWrite:false}),X(x),.015,Z(y));m.rotation.x=-Math.PI/2;m.castShadow=false;
  }
  stripeTexture(colorA,colorB){
   const c=document.createElement('canvas');c.width=128;c.height=64;const ctx=c.getContext('2d');
@@ -208,7 +209,7 @@ export class Renderer3D {
    for(let i=0;i<4;i++){const cloud=this.mesh(new THREE.SphereGeometry(.65,12,8),mat.cloud,x+(i-1.5)*.5,-.72+(i%2)*.15,z);cloud.scale.set(1,.55,.65);cloud.castShadow=false;}
   }
   for(const h of map.exits){
-   const stars=[];for(let i=0;i<10;i++){const a=i*Math.PI/5;stars.push({position:[X(h.x)+Math.cos(a)*.61,.11,Z(map.finish)+Math.sin(a)*.61],scale:[.035,.035,.035]});}
+   const stars=[];for(let i=0;i<10;i++){const a=i*Math.PI/5;stars.push({position:[X(h.x)+Math.cos(a)*.61,.11,Z(h.y??map.finish)+Math.sin(a)*.61],scale:[.035,.035,.035]});}
    this.instances(new THREE.SphereGeometry(1,6,5),mat.bulb,stars);
   }
  }
@@ -258,7 +259,7 @@ export class Renderer3D {
    for(const side of [-1,1]){const wheel=this.mesh(new THREE.CylinderGeometry(.18,.18,.10,12),mat.dark,-.05,-.25,side*.30,pivot);wheel.rotation.x=Math.PI/2;}
    batchStaticMeshes(pivot);
   }
-  this.deviceRides.push({id:d.id,pivot,glow});
+  const label=document.createElement('span');label.className='device-label';this.labels.append(label);this.deviceRides.push({id:d.id,pivot,glow,label});
  }
  build(race){
   this.clear();this.group=new THREE.Group();this.scene.add(this.group);this.labels.replaceChildren();this.progress.replaceChildren();
@@ -270,7 +271,7 @@ export class Renderer3D {
   this.neonMaterials=[mat.neonPink,mat.neonCyan,mat.neonGold];mat.glass=new THREE.MeshPhysicalMaterial({color:0xa4edf6,metalness:.3,roughness:.1,clearcoat:1});mat.sail=new THREE.MeshStandardMaterial({color:0xfff1cb,side:THREE.DoubleSide,roughness:.6});
   mat.canopy=this.material(0xffffff);mat.canopy.map=this.stripeTexture('#fff2d2','#'+new THREE.Color(theme.secondary).getHexString());
   const shape=new THREE.Shape();shape.moveTo(-5.08,-length+.25);shape.lineTo(-5.08,-.25);shape.quadraticCurveTo(-5.08,0,-4.83,0);shape.lineTo(4.83,0);shape.quadraticCurveTo(5.08,0,5.08,-.25);shape.lineTo(5.08,-length+.25);shape.quadraticCurveTo(5.08,-length,4.83,-length);shape.lineTo(-4.83,-length);shape.quadraticCurveTo(-5.08,-length,-5.08,-length+.25);
-  for(const h of map.exits){const hole=new THREE.Path();hole.absarc(X(h.x),-Z(map.finish),h.width*S/2-.033,0,Math.PI*2,true);shape.holes.push(hole);}
+  for(const h of map.exits){const hole=new THREE.Path();hole.absarc(X(h.x),-Z(h.y??map.finish),h.width*S/2-.033,0,Math.PI*2,true);shape.holes.push(hole);}
   const deck=this.material(theme.floor,.03,.65);deck.envMapIntensity=.05;
   const board=this.mesh(new THREE.ExtrudeGeometry(shape,{depth:.8,bevelEnabled:true,bevelSegments:3,steps:1,bevelSize:.055,bevelThickness:.035}),[deck,mat.dark],0,-.81,0);board.rotation.x=-Math.PI/2;
   const ground=this.mesh(new THREE.PlaneGeometry(70,100),this.material(theme.ground,0,.95),0,-1.55,length/2);ground.rotation.x=-Math.PI/2;ground.castShadow=false;this.group.remove(ground);this.scene.add(ground);this.ground=ground;
@@ -283,14 +284,17 @@ export class Renderer3D {
   for(const r of map.rotors)this.rotors.push(r.ride==='flower-gate'?this.flowerGate(r,mat):r.ride==='windmill'?this.windmill(r,mat):r.ride==='pirate'?this.pirateShip(r,mat):this.teacupRotor(r,mat));
   for(const s of map.sliders)this.sliders.push(s.ride==='bumper-shuttle'?this.bumperShuttle(s,mat):this.train(s,mat));
   this.gate=this.rail({ax:32,ay:map.gate,bx:588,by:map.gate,r:7},mat.pink);
-  for(const h of map.exits){const radius=h.width*S/2-.033;this.ring(X(h.x),Z(map.finish),radius+.01,mat.gold,.08,.085);this.mesh(new THREE.CylinderGeometry(radius-.01,radius-.01,.75,24,1,true),mat.dark,X(h.x),-.4,Z(map.finish));this.mesh(new THREE.CircleGeometry(radius-.01,24),new THREE.MeshBasicMaterial({color:0x24162d}),X(h.x),-.78,Z(map.finish)).rotation.x=-Math.PI/2;}
+  for(const h of map.exits){const radius=h.width*S/2-.033;this.ring(X(h.x),Z(h.y??map.finish),radius+.01,h.kind==='return'?mat.neonPink:mat.gold,.08,.085);this.mesh(new THREE.CylinderGeometry(radius-.01,radius-.01,.75,24,1,true),mat.dark,X(h.x),-.4,Z(h.y??map.finish));this.mesh(new THREE.CircleGeometry(radius-.01,24),new THREE.MeshBasicMaterial({color:0x24162d}),X(h.x),-.78,Z(h.y??map.finish)).rotation.x=-Math.PI/2;}
+  for(const h of map.exits)this.text(h.kind==='return'?'BACK':'GOAL',map.finish+63,1.12,.9,h.x);
+  if(map.returnPoint){const p=map.returnPoint;this.ring(X(p.x),Z(p.y),.46,mat.neonCyan,.025,.027);this.text('BACK AGAIN',p.y+48,1.8,.6,p.x);}
   this.text('BON VOYAGE!',253,3.9);this.text('A LITTLE WONDER',525,4.5,.4);this.text('EXPECT THE UNEXPECTED',1010,5.6,.35);this.text('YOUR LUCKY MOMENT',2008,5,.45);
   this.scenery(map,mat,theme);
   this.neonCourse(map,mat);
+  this.returnGate=new THREE.Group();this.group.add(this.returnGate);for(const s of returnGateSegments(map,Infinity))this.rail(s,mat.neonGold,this.returnGate,.20);this.returnGate.visible=false;
   for(const d of race.devices)this.deviceRide(d,mat);
   // Moving rides keep independent transforms; their internal pieces are batched.
   for(const g of [...this.rotors,...this.sliders,...this.wheels.map(w=>w.wheel)])batchStaticMeshes(g);
-  const moving=new Set([...this.deviceRides.flatMap(d=>[d.pivot,d.glow].filter(Boolean)),this.gate,...this.rotors,...this.sliders,...this.carousels.map(c=>c.roof),...this.balloons.map(b=>b.group),...this.wheels.map(w=>w.wheel)]);
+  const moving=new Set([this.returnGate,...this.deviceRides.flatMap(d=>[d.pivot,d.glow].filter(Boolean)),this.gate,...this.rotors,...this.sliders,...this.carousels.map(c=>c.roof),...this.balloons.map(b=>b.group),...this.wheels.map(w=>w.wheel)]);
   batchStaticMeshes(this.group,moving);
   const sphere=new THREE.SphereGeometry(10*S,20,14);
   for(const b of race.balls){
@@ -318,20 +322,25 @@ export class Renderer3D {
   const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.65)]?.y??map.finish;
   const target=['ready','mixing','countdown'].includes(race.state)?400:Math.max(400,Math.min(map.finish-200,progress+100));
   if(race.state!=='paused')this.cameraCenter=reduced?target:this.cameraCenter+(target-this.cameraCenter)*.08;
-  const center=this.overview?map.height/2:this.cameraCenter;let cameraDistance=this.overview?Math.max(distance,map.height*S*1.55):distance;
+  const span=this.overview?map.height:map.height/2,wide=this.overview||this.halfView;
+  const center=this.overview?map.height/2:this.halfView?Math.max(span/2,Math.min(map.height-span/2,this.cameraCenter)):this.cameraCenter;
+  let cameraDistance=wide?Math.max(distance,span*S*1.44):distance;
   this.camera.aspect=aspect;this.camera.updateProjectionMatrix();
   for(let fit=0;fit<8;fit++){
    this.camera.position.copy(direction).multiplyScalar(cameraDistance).add(new THREE.Vector3(0,0,Z(center)));this.camera.lookAt(0,0,Z(center));this.camera.updateMatrixWorld();
-   if(!this.overview)break;
-   const corners=[[-7.8,-1],[7.8,-1],[-7.8,map.height*S],[7.8,map.height*S]].map(([x,z])=>new THREE.Vector3(x,-.8,z).project(this.camera));
+   if(!wide)break;
+   const low=(center-span/2)*S-.3,high=(center+span/2)*S+.3;
+   const corners=[[-7.8,low],[7.8,low],[-7.8,high],[7.8,high]].map(([x,z])=>new THREE.Vector3(x,-.8,z).project(this.camera));
    if(corners.every(v=>Math.abs(v.x)<.94&&Math.abs(v.y)<.94))break;cameraDistance*=1.1;
   }
   this.light.position.set(-6,16,Z(center)-5);this.light.target.position.set(0,0,Z(center));
   map.rotors.forEach((r,i)=>this.rotors[i].rotation.y=-rotorPose(r,race.rotationTime).angle);
   race.sliderSegments().forEach((s,i)=>this.sliders[i].position.x=X((s.ax+s.bx)/2));
+  this.returnGate.visible=race.returnClosed();
   this.gate.visible=['ready','mixing','countdown'].includes(race.state)||(race.state==='paused'&&race.resumeState!=='racing');
   for(const ride of this.deviceRides){const d=race.devices.find(d=>d.id===ride.id),pose=devicePose(d,race.raceTime);if(ride.pivot)ride.pivot.rotation.y=-pose.angle;
    ride.glow.material.opacity=pose.holding?(reduced?.75:.55+Math.sin(pose.progress*Math.PI*4)*.2):.25;
+   ride.label.hidden=!pose.holding||this.overview;ride.label.textContent=`${d.kind==='cannon'?'대포':'자석'} · ${pose.count}`;
    const pulse=!reduced&&pose.holding?1+Math.sin(pose.progress*Math.PI)*.3:1;ride.glow.scale.setScalar(pulse);
   }
   const decorTime=reduced?0:race.elapsed;
@@ -342,23 +351,25 @@ export class Renderer3D {
   for(const effect of this.impacts){const age=race.elapsed-effect.born;effect.mesh.visible=!reduced&&age>=0&&age<.32;effect.mesh.scale.setScalar(1+Math.max(0,age)*4);effect.mesh.material.opacity=Math.max(0,1-age/.32)*.72;}
   const motion=!reduced&&['racing','paused','complete'].includes(race.state)?race.motion():{roll:0,pitch:0,offsetX:0,offsetY:0};
   this.group.rotation.set(motion.pitch,0,motion.roll);const pivot=new THREE.Vector3(0,0,map.height*S/2);this.group.position.copy(pivot).sub(pivot.clone().applyEuler(this.group.rotation));this.group.position.x+=motion.offsetX*S;this.group.position.z+=motion.offsetY*S;this.group.updateMatrixWorld(true);
+  for(const ride of this.deviceRides){const d=race.devices.find(d=>d.id===ride.id),v=new THREE.Vector3(X(d.x),1.1,Z(d.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);ride.label.hidden=ride.label.hidden||Math.abs(v.x)>.95||Math.abs(v.y)>.9;ride.label.style.left=`${(v.x*.5+.5)*100}%`;ride.label.style.top=`${(-v.y*.5+.5)*100}%`;}
   const now=performance.now();
   this.trails.visible=!reduced&&race.state==='racing';this.winnerHalo.visible=false;let trailIndex=0;const labelCandidates=[];
   for(const b of race.balls){
    const entry=this.balls.get(b.id),{m,label,dot,history}=entry;if(b.finished&&!this.finishedAt.has(b.id))this.finishedAt.set(b.id,now);
-   const sink=b.finished?Math.min(1,(now-this.finishedAt.get(b.id))/380):0;m.visible=sink<1;m.position.set(X(b.x),.19-sink*.8,Z(b.y));m.scale.setScalar(1-sink*.6);
+   const portal=returnPose(b,race.raceTime);const sink=b.finished?Math.min(1,(now-this.finishedAt.get(b.id))/380):0;m.visible=portal?portal.visible:sink<1;m.position.set(X(b.x),portal?.height??.19-sink*.8,Z(b.y));m.scale.setScalar(portal?.scale??1-sink*.6);if(b.hold){if(b.hold.kind==='cannon')m.visible=false;else{const d=race.devices.find(d=>d.id===b.hold.deviceId),slot=d.holds.findIndex(h=>h.ballId===b.id);m.position.y=.6+slot*.13;m.scale.setScalar(.85);}}
    m.rotation.x+=(b.y-entry.lastY)/b.r;m.rotation.z-=(b.x-entry.lastX)/b.r;entry.lastX=b.x;entry.lastY=b.y;dot.style.top=`${b.y/map.height*100}%`;
    if(b.id===selected&&!b.finished){this.winnerHalo.visible=true;this.winnerHalo.position.set(X(b.x),.045,Z(b.y));}
-   if(race.state==='racing'&&race.elapsed-entry.lastTrail>=.035){history.unshift({x:X(b.x),z:Z(b.y)});if(history.length>5)history.pop();entry.lastTrail=race.elapsed;}
+   if(b.portal||b.hold){history.length=0;entry.lastX=b.x;entry.lastY=b.y;}
+   if(!b.portal&&!b.hold&&race.state==='racing'&&race.elapsed-entry.lastTrail>=.035){history.unshift({x:X(b.x),z:Z(b.y)});if(history.length>5)history.pop();entry.lastTrail=race.elapsed;}
    for(let i=0;i<2;i++){const old=history[i*2+2];this.trailTransform.position.set(old?.x??X(b.x),.12,old?.z??Z(b.y));this.trailTransform.scale.setScalar(!b.finished&&old?(i===0?.12:.075):0);this.trailTransform.updateMatrix();this.trails.setMatrixAt(trailIndex++,this.trailTransform.matrix);}
-   const v=new THREE.Vector3(X(b.x),.6,Z(b.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);label.hidden=true;
-   if(!b.finished&&!this.overview&&Math.abs(v.x)<.97&&Math.abs(v.y)<.88){const x=(v.x*.5+.5)*this.width,y=(-v.y*.5+.5)*this.height;labelCandidates.push({label,x,y,progress:b.y,width:entry.labelWidth,id:b.id});}
+   const v=new THREE.Vector3(X(b.x),m.position.y+.41,Z(b.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);label.hidden=true;
+   if(!b.finished&&m.visible&&!this.overview&&Math.abs(v.x)<.97&&Math.abs(v.y)<.88){const x=(v.x*.5+.5)*this.width,y=(-v.y*.5+.5)*this.height;labelCandidates.push({label,x,y,progress:b.y,width:entry.labelWidth,id:b.id});}
   }
   const occupied=[];let shown=0;
   labelCandidates.sort((a,b)=>(b.id===selected)-(a.id===selected)||b.progress-a.progress);
   for(const c of labelCandidates){const box={l:c.x-c.width/2,r:c.x+c.width/2,t:c.y-21,b:c.y+3};if(!this.allLabels&&(shown>=(this.width<450?12:20)||occupied.some(o=>box.l<o.r+4&&box.r>o.l-4&&box.t<o.b+3&&box.b>o.t-3)))continue;c.label.hidden=false;c.label.style.left=`${c.x/this.width*100}%`;c.label.style.top=`${c.y/this.height*100}%`;occupied.push(box);shown++;}
   this.trails.instanceMatrix.needsUpdate=true;
-  this.hud.textContent=this.overview?`PARK MAP / ${map.exits.length===1?'ONE LUCKY EXIT':'FOUR LUCKY EXITS'}`:`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`;
+  this.hud.textContent=this.overview?`PARK MAP / ${map.exits.length===1?'ONE LUCKY GOAL':'ONE GOAL + ONE BACK'}`:this.halfView?`HALF MAP / ${Math.round(Math.max(0,center-span/2)/map.height*100)}–${Math.round(Math.min(map.height,center+span/2)/map.height*100)}%`:`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`;
   this.webgl.render(this.scene,this.camera);
  }
  graphics(){const i=this.webgl.info;return {geometries:i.memory.geometries,textures:i.memory.textures,programs:i.programs.length,drawCalls:i.render.calls,triangles:i.render.triangles,pixelRatio:this.webgl.getPixelRatio()};}

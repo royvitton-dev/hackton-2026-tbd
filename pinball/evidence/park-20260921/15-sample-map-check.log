@@ -1,0 +1,3 @@
+FAIL before fix: samples/maps.json still described four old exits and omitted the new devices/return portals. Live physics and game were current.
+Fix: build now exports MAPS from src/physics.js before bundling.
+PASS: exported sample maps exactly match live physics MAPS.

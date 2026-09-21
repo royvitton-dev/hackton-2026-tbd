@@ -1,0 +1,32 @@
+✖ all new rides activate in natural seeded races and finish with contained unique arrivals (28653.756041ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 28741.543417
+
+✖ failing tests:
+
+test at tests/course-devices.test.mjs:12:1
+✖ all new rides activate in natural seeded races and finish with contained unique arrivals (28653.756041ms)
+  AssertionError [ERR_ASSERTION]: orbit/7: [{"id":"p16-b1","participantId":"p16","name":"R15","label":"R15","color":"#ff826c","number":1,"x":140.32246365178207,"y":1237.0772735643166,"vx":-86.16929630666895,"vy":164.54266161511995,"r":10,"finished":false,"rank":null,"stuckTime":0.016666666666666666,"progressTime":8.091666666666848,"progressY":1421.454641048978,"anchorX":141.75915735033826,"anchorY":1234.35214706493,"assistCount":3,"tieKey":0.5069316639564931,"prevX":141.0405411210043,"prevY":1235.706084717524,"portal":null,"returnCount":6,"deviceCooldownUntil":141.65833333336974,"hold":null,"boostUntil":48.62499999999791}]
+  + actual - expected
+  
+  + 'invalid'
+  - 'complete'
+  
+      at TestContext.<anonymous> (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/course-devices.test.mjs:17:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'invalid',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,1095 @@
+{
+  "at": "2026-09-21T12:05:56.946Z",
+  "status": "PASS",
+  "target": 120,
+  "sourceHashes": {
+    "physics.js": "ef91d6a329dca06eda1e36826561125b1dfd62e0e0f1e1779ed734fff18742f2",
+    "devices.js": "28388855ae51da498ca676666cf927163c76d76e5101e6fdaeaaf782e2694f81",
+    "return-portals.js": "1726418c378f7fdaa6b4ed5a4df70c28e7f409af9e33d75a55a58d633a9938f9",
+    "board-motion.js": "4d6efd35f36526b73143dd1863c5ffa0bc97a2913aa2d27cfce32fa658e7628b"
+  },
+  "cases": [
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 30.049999999998935,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 23.233333333332656,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 27.191666666665764,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 20.891666666666122,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 36.11666666666526,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 35.59999999999862,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 46.90833333333131,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 34.233333333332034,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 40.474999999998346,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 39.17499999999842,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 11,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 44.408333333331456,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 11,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 38.3083333333318,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 12,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 26.816666666665785,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 12,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 26.233333333332485,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 12,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 25.133333333332548,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 12,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 18.633333333332917,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 12,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 40.791666666664995,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 12,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 32.70833333333212,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 12,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 41.608333333331615,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 12,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 39.11666666666509,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 12,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 37.383333333331855,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 12,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 39.26666666666508,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 12,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 37.7499999999985,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 12,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 45.26666666666474,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 13,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 34.34166666666536,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 13,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 39.099999999998424,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 13,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 29.174999999998985,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 13,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 26.733333333332457,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 13,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 36.31666666666525,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 13,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 39.716666666665056,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 13,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 36.84999999999855,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 13,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 36.24166666666525,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 13,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 44.933333333331426,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 13,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 35.3666666666653,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 13,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 37.33333333333186,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 13,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 39.741666666665054,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 14,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 28.558333333332353,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 14,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 27.99999999999905,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 14,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 38.808333333331774,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 14,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 39.391666666665074,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 14,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 42.00833333333159,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 14,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 34.291666666665364,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 14,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 31.533333333332184,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 14,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 34.62499999999868,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 14,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 32.62499999999879,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 14,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 50.74999999999776,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 14,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 42.18333333333158,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 14,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 40.45833333333168,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 15,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 25.72499999999918,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 15,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 22.69166666666602,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 15,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 30.683333333332232,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 15,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 26.641666666665795,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 15,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 37.59999999999851,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 15,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 31.766666666665504,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 15,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 42.341666666664906,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 15,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 34.833333333332,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 15,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 44.491666666664784,
+      "assists": 2
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 15,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 43.80833333333149,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 15,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 35.05833333333199,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 15,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 41.54166666666495,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 16,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 25.383333333332533,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 16,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 32.38333333333214,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 16,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 26.983333333332443,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 16,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 24.90833333333256,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 16,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 35.48333333333196,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 16,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 42.89999999999821,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 16,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 47.62499999999794,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 16,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 38.433333333331795,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 16,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 40.72499999999833,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 16,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 32.77499999999878,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 16,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 38.141666666665145,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 16,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 41.01666666666498,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 17,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 29.883333333332278,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 17,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 40.649999999998336,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 17,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 32.00833333333216,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 17,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 35.9499999999986,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 17,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 38.21666666666514,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 17,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 31.34999999999886,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 17,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 37.616666666665175,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 17,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 41.816666666664936,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 17,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 38.18333333333181,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 17,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 34.233333333332034,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 17,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 38.691666666665114,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 17,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 38.48333333333179,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 18,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 36.31666666666525,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 18,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 38.3083333333318,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 18,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 27.316666666665757,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 18,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 29.441666666665636,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 18,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 42.799999999998214,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 18,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 33.19999999999876,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 18,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 36.799999999998555,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 18,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 36.12499999999859,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 18,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 43.183333333331525,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 18,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 38.15833333333181,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 18,
+      "boardMotion": false,
+      "rule": "first",
+      "time": 40.42499999999835,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 18,
+      "boardMotion": true,
+      "rule": "first",
+      "time": 39.833333333331716,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 19,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 26.783333333332454,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 19,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 43.28333333333152,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 19,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 34.25833333333203,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 19,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 27.7083333333324,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 19,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 31.849999999998833,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 19,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 36.72499999999856,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 19,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 37.24999999999853,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 19,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 34.874999999998664,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 19,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 36.49166666666524,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 19,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 44.33333333333146,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 19,
+      "boardMotion": false,
+      "rule": "last",
+      "time": 31.31666666666553,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 19,
+      "boardMotion": true,
+      "rule": "last",
+      "time": 33.92499999999872,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 20,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 34.33333333333203,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 1,
+      "seed": 20,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 30.816666666665558,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 20,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 29.749999999998952,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 2,
+      "seed": 20,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 32.108333333332155,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 20,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 44.83333333333143,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 7,
+      "seed": 20,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 37.1166666666652,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 20,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 32.64999999999879,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 20,
+      "seed": 20,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 35.70833333333195,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 20,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 33.69999999999873,
+      "assists": 1
+    },
+    {
+      "map": "neon",
+      "n": 40,
+      "seed": 20,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 33.299999999998754,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 20,
+      "boardMotion": false,
+      "rule": "nth",
+      "time": 39.29166666666508,
+      "assists": 0
+    },
+    {
+      "map": "neon",
+      "n": 60,
+      "seed": 20,
+      "boardMotion": true,
+      "rule": "nth",
+      "time": 41.641666666664946,
+      "assists": 0
+    }
+  ],
+  "failure": null,
+  "elapsedSeconds": 152.98645766699997
+}

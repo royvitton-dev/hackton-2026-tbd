@@ -1,0 +1,149 @@
+✔ course variety: one or two goals per map, five Cloud ramps, Garden timing gate, Candy side bumpers (3.12275ms)
+✔ Garden final flower gate physically blocks and opens with its rotation (7.578625ms)
+✖ all new rides activate in natural seeded races and finish with contained unique arrivals (66118.655458ms)
+✔ magnet and cannon capture at physical position for 0.5–1 seconds; pause freezes pose and ball (202.842041ms)
+✔ each device stores multiple incoming balls with independent randomized release times (24.336375ms)
+✔ cannon boost cannot tunnel through a pin or boundary (4.090958ms)
+✔ device capture, timing and launch are deterministic and varied across seeds (6.64625ms)
+✖ first/Nth stop at the actual target crossing; last stops with one unfinished ball (26224.734792ms)
+✖ ending rule preserves the prefix of the same physical race and has no chosen winner (17605.558667ms)
+✔ same-substep ties stop by crossing time and seeded priority without extra ranks (2.371958ms)
+✔ 1x and 3x step chunks stop at identical positions, time, winner and ranks (9710.739417ms)
+✔ random 3–5 second motion is deterministic, bounded, smooth and independent of participants (20.965375ms)
+✔ shared board force acts equally on identical balls, with actual velocity change (6.352125ms)
+✔ each map has different rotor magnitudes and both directions, with matching surface velocities (0.405708ms)
+✔ pause freezes active board motion and stepping chunks preserve the exact race (2971.956709ms)
+✔ orbit single-ball oscillation is detected and escapes without fabricated finish (203.4155ms)
+✔ windmill blades share an actual perpendicular collider and pirate velocity matches its swing (0.359167ms)
+✖ all four maps with motion: 120 seeded races remain contained and finish with unique real ranks (254668.540333ms)
+✔ comma-separated entries and name*count are explicit, with whitespace and duplicate labels (1.728916ms)
+✔ Parade holds multiple balls independently for 0.8–1.5 seconds and freezes every timer when paused (159.748167ms)
+✔ Parade has one goal, six central cannons and a final gate that physically opens and blocks (1.32475ms)
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (1.334625ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (0.56375ms)
+✔ rule validation and ball-based N range (0.353166ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (11.122458ms)
+✔ finish order is crossing time, not ball list; exact ties use seeded tie key (1.775791ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (2979.747ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (3169.837667ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (0.485708ms)
+✔ fast wall and pin impacts remain inside the board (2.251542ms)
+✖ all 5 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (256073.528166ms)
+✔ finish requires an exit throat; crossing between holes never ranks (0.368333ms)
+✔ return throat never ranks or wins; goal throat alone produces an arrival (14.086041ms)
+✔ return sink and fall both freeze on pause; landing returns to the actual middle of the board (10.080416ms)
+✔ repeated returns are explicit game events, never duplicate finishes (4.802166ms)
+✔ first target stops with a returning opponent still unfinished; replay does not advance its portal (1.019ms)
+✔ 60-second finale blocks new return entry while balls already inside can drain without being ranked (0.6115ms)
+ℹ tests 37
+ℹ suites 0
+ℹ pass 32
+ℹ fail 5
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 262371.999834
+
+✖ failing tests:
+
+test at tests/course-devices.test.mjs:12:1
+✖ all new rides activate in natural seeded races and finish with contained unique arrivals (66118.655458ms)
+  AssertionError [ERR_ASSERTION]: parade/1: [{"id":"p18-b1","participantId":"p18","name":"R17","label":"R17","color":"#bca7ff","number":1,"x":263.2182724903803,"y":2082.7647801322687,"vx":37.82090935899886,"vy":2.367022774260787,"r":10,"finished":false,"rank":null,"stuckTime":0.24999999999999997,"progressTime":8.47500000000016,"progressY":2081.4513026078125,"anchorX":253.65945700255708,"anchorY":2089.8973031940823,"assistCount":9,"tieKey":0.865408998914063,"prevX":262.90309824572194,"prevY":2082.745054942483,"hold":null,"deviceCooldownUntil":17.633333333333084,"boostUntil":16.183333333333085},{"id":"p9-b1","participantId":"p9","name":"R8","label":"R8","color":"#c6ff58","number":1,"x":238.70834818234383,"y":2090.5957834331043,"vx":97.4332818690286,"vy":31.719108802523838,"r":10,"finished":false,"rank":null,"stuckTime":0.05833333333333333,"progressTime":5.233333333333383,"progressY":2069.1159285235913,"anchorX":233.13766992694542,"anchorY":2088.738890681305,"assistCount":9,"tieKey":0.8697691259440035,"prevX":237.89830079631966,"prevY":2090.325767637763,"hold":null,"deviceCooldownUntil":14.274999999999944,"boostUntil":12.824999999999944}]
+  + actual - expected
+  
+  + 'invalid'
+  - 'complete'
+  
+      at TestContext.<anonymous> (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/course-devices.test.mjs:17:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'invalid',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/finish-rules.test.mjs:6:1
+✖ first/Nth stop at the actual target crossing; last stops with one unfinished ball (26224.734792ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'invalid'
+  - 'complete'
+  
+      at assertGameResult (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/assert-result.mjs:3:9)
+      at TestContext.<anonymous> (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/finish-rules.test.mjs:8:64)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.start (node:internal/test_runner/test:1262:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'invalid',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/finish-rules.test.mjs:12:1
+✖ ending rule preserves the prefix of the same physical race and has no chosen winner (17605.558667ms)
+  TypeError: Cannot read properties of null (reading 'id')
+      at TestContext.<anonymous> (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/finish-rules.test.mjs:17:90)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/motion.test.mjs:42:1
+✖ all four maps with motion: 120 seeded races remain contained and finish with unique real ranks (254668.540333ms)
+  AssertionError [ERR_ASSERTION]: parade/20/1
+  + actual - expected
+  
+  + 'invalid'
+  - 'complete'
+  
+      at TestContext.<anonymous> (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/motion.test.mjs:47:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'invalid',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/physics.test.mjs:13:1
+✖ all 5 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (256073.528166ms)
+  AssertionError [ERR_ASSERTION]: parade 20 1
+  + actual - expected
+  
+  + 'invalid'
+  - 'complete'
+  
+      at TestContext.<anonymous> (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/physics.test.mjs:13:508)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'invalid',
+    expected: 'complete',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

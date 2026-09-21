@@ -1,0 +1,32 @@
+PASS lotto desktop first {
+  numbers: [ 1, 19, 26, 35, 43, 44 ],
+  bonus: 40,
+  bonusArrived: true,
+  mainRanks: [ 1, 2, 3, 4, 5, 6 ],
+  bonusRank: 7,
+  order: 'first'
+}
+PASS lotto desktop last {
+  numbers: [ 5, 20, 24, 28, 30, 33 ],
+  bonus: 23,
+  bonusArrived: false,
+  mainRanks: [ 39, 40, 41, 42, 43, 44 ],
+  bonusRank: null,
+  order: 'last'
+}
+PASS lotto mobile first {
+  numbers: [ 1, 19, 26, 35, 43, 44 ],
+  bonus: 40,
+  bonusArrived: true,
+  mainRanks: [ 1, 2, 3, 4, 5, 6 ],
+  bonusRank: 7,
+  order: 'first'
+}
+PASS lotto mobile last {
+  numbers: [ 5, 20, 24, 28, 30, 33 ],
+  bonus: 23,
+  bonusArrived: false,
+  mainRanks: [ 39, 40, 41, 42, 43, 44 ],
+  bonusRank: null,
+  order: 'last'
+}

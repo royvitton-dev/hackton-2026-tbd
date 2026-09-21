@@ -1,0 +1,48 @@
+Updating 3912d1a..13e9463
+Fast-forward
+ map/README.md                                  |  15 ++-
+ map/docs/PROGRESS.md                           |   9 ++
+ map/public/plans/catalog.json                  | 149 ++++++++++++++++++++++++-
+ map/public/plans/complex-references.json       |  33 ++++++
+ map/public/plans/locations.json                |  34 +++++-
+ map/public/plans/multilevel-sources.json       | 149 +++++++++++++++++++++++++
+ map/public/plans/multilevel/dogok-b1.png       | Bin 0 -> 756379 bytes
+ map/public/plans/multilevel/dogok-b2.png       | Bin 0 -> 649771 bytes
+ map/public/plans/multilevel/dogok-b3.png       | Bin 0 -> 796493 bytes
+ map/public/plans/multilevel/dogok-b4.png       | Bin 0 -> 781685 bytes
+ map/public/plans/multilevel/onepentas-site.jpg | Bin 0 -> 1228853 bytes
+ map/scripts/acquire-plans.mjs                  |   2 +-
+ map/scripts/report.mjs                         |   4 +-
+ map/src/graphics/address-map.js                |   2 +-
+ map/src/graphics/buildings.js                  |   2 +-
+ map/src/library-details.js                     |  12 ++
+ map/src/main.js                                |  17 +--
+ map/src/style.css                              |   1 +
+ map/tests/e2e/app.spec.mjs                     |  24 +++-
+ map/tests/e2e/golden/basement-b4.png           | Bin 0 -> 485048 bytes
+ map/tests/e2e/golden/charging-mobile.png       | Bin 183078 -> 183882 bytes
+ map/tests/e2e/golden/charging-overview.png     | Bin 354209 -> 356605 bytes
+ map/tests/e2e/golden/evacuation-overview.png   | Bin 357348 -> 354371 bytes
+ map/tests/e2e/golden/parking-first-person.png  | Bin 558081 -> 530841 bytes
+ map/tests/e2e/golden/parking-mobile.png        | Bin 109755 -> 109770 bytes
+ map/tests/e2e/golden/parking-overview.png      | Bin 352014 -> 349103 bytes
+ map/tests/e2e/golden/plan-analysis.png         | Bin 313642 -> 312433 bytes
+ map/tests/e2e/golden/plan-library.png          | Bin 243698 -> 245029 bytes
+ map/tests/unit/catalog.test.js                 |   9 +-
+ park/lib/characters.mjs                        |  13 +++
+ park/lib/registry.mjs                          |   3 +-
+ park/src/character-friends.js                  | 109 ++++++++++++++++++
+ park/src/characters.js                         |  31 +++--
+ park/tests/unit/registry.test.mjs              |   1 +
+ 34 files changed, 585 insertions(+), 34 deletions(-)
+ create mode 100644 map/public/plans/complex-references.json
+ create mode 100644 map/public/plans/multilevel-sources.json
+ create mode 100644 map/public/plans/multilevel/dogok-b1.png
+ create mode 100644 map/public/plans/multilevel/dogok-b2.png
+ create mode 100644 map/public/plans/multilevel/dogok-b3.png
+ create mode 100644 map/public/plans/multilevel/dogok-b4.png
+ create mode 100644 map/public/plans/multilevel/onepentas-site.jpg
+ create mode 100644 map/src/library-details.js
+ create mode 100644 map/tests/e2e/golden/basement-b4.png
+ create mode 100644 park/lib/characters.mjs
+ create mode 100644 park/src/character-friends.js

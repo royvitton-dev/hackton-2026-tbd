@@ -1,0 +1,18 @@
+{
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine",
+  "started_at": "2026-09-21T11:38:51.2125625Z",
+  "run_id": "20260921T113851185Z-ws-serialization-example-clippy-f2a3fc43",
+  "command": "cargo",
+  "args": [
+    "clippy",
+    "--release",
+    "--example",
+    "ws_serialization_bench",
+    "--",
+    "-D",
+    "warnings"
+  ],
+  "status": "passed",
+  "exit_code": 0,
+  "ended_at": "2026-09-21T11:39:10.7227373Z"
+}

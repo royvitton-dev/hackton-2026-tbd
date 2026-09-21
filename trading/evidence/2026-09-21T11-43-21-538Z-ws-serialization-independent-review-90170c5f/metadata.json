@@ -1,0 +1,92 @@
+{
+  "reviewed_at": "2026-09-21T11:43:21.539Z",
+  "scope": "Read-only source inspection and offline arithmetic over existing saved artifacts. No builds, tests, services, process control, or live workload.",
+  "source": [
+    {
+      "path": "engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    {
+      "path": "engine/src/ws_frame.rs",
+      "sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e"
+    },
+    {
+      "path": "engine/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b"
+    },
+    {
+      "path": "engine/examples/ws_serialization_bench.rs",
+      "sha256": "689a1a7fbcd9508efc7265e57aad3a81709504114d62ac8ad5593e938f7c4854"
+    },
+    {
+      "path": "engine/tests/fixtures/ws_legacy_market.json",
+      "sha256": "43525c3729242d984a2d9b5f539f1f1593604537a05ea660453d17ee344876f1"
+    },
+    {
+      "path": "engine/tests/fixtures/ws_legacy_market.provenance.json",
+      "sha256": "d8819b7d3838a1ac14d631607f8881d2dbecda5dcc661a348c00b3d76cd11b9d"
+    },
+    {
+      "path": "frontend/src/protocol.ts",
+      "sha256": "f4b101c6b1fef86e64535ca54e7bed498114a354ecd886d6f28fd194b0a2dad8"
+    },
+    {
+      "path": "frontend/src/useExchange.ts",
+      "sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37"
+    }
+  ],
+  "benchmark_evidence": "evidence\\20260921T113640043Z-ws-serialization-ab-633bfa86",
+  "raw_groups_recomputed": 30,
+  "raw_rows": 3000,
+  "computed": [
+    {
+      "label": "after-warmup",
+      "bytes": 9330,
+      "a_median_of_three_p50_ns": 47000,
+      "b_median_of_three_p50_ns": 8700,
+      "allocation_plus_reallocation_reduction_percent": 98.94875164257556,
+      "requested_bytes_reduction_percent": 56.33912089676021
+    },
+    {
+      "label": "after-concurrency-6",
+      "bytes": 209977,
+      "a_median_of_three_p50_ns": 1244400,
+      "b_median_of_three_p50_ns": 257600,
+      "allocation_plus_reallocation_reduction_percent": 99.92136819343425,
+      "requested_bytes_reduction_percent": 63.85582047066871
+    },
+    {
+      "label": "after-concurrency-24",
+      "bytes": 213347,
+      "a_median_of_three_p50_ns": 1290700,
+      "b_median_of_three_p50_ns": 321700,
+      "allocation_plus_reallocation_reduction_percent": 99.92136819343425,
+      "requested_bytes_reduction_percent": 63.85577062315973
+    },
+    {
+      "label": "after-concurrency-96",
+      "bytes": 213401,
+      "a_median_of_three_p50_ns": 1116900,
+      "b_median_of_three_p50_ns": 190700,
+      "allocation_plus_reallocation_reduction_percent": 99.92136819343425,
+      "requested_bytes_reduction_percent": 63.85577062315973
+    },
+    {
+      "label": "paused-fixture-active-orders",
+      "bytes": 69776,
+      "a_median_of_three_p50_ns": 438200,
+      "b_median_of_three_p50_ns": 73500,
+      "allocation_plus_reallocation_reduction_percent": 99.81763925729443,
+      "requested_bytes_reduction_percent": 54.0657240780835
+    }
+  ],
+  "artifact_mismatches": [],
+  "fixture_exact_saved_wrapper": true,
+  "findings": [],
+  "limits": [
+    "Semantic JSON equality permits key order differences; byte-for-byte equality is not claimed.",
+    "Rust u64 JSON preservation does not make JavaScript Number exact above 2^53-1; current UI rejects unsafe sequence values, unchanged by this serialization change.",
+    "Timing is encode plus output String drop, with allocation counters disabled; no socket, full engine CPU/RSS, core snapshot, API/durability, or client parse conclusion.",
+    "Existing test source was reviewed; this review did not execute tests."
+  ]
+}

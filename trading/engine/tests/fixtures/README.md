@@ -8,3 +8,9 @@ Captured before the `Order.status` buffer reuse optimization from core SHA-256 `
 The test requires only these tracked JSON files; ignored evidence binaries are not inputs. It preserves newly reconstructed datasets under `trading/evidence/status-compat-tests/`.
 
 Run from `trading`: `cargo test --manifest-path engine/Cargo.toml --test core_status_compatibility`. See `docs/allocation-investigation.md` for capture commands, raw evidence, and comparison scope.
+
+## WebSocket serializer compatibility fixture
+
+`ws_legacy_market.json` wraps the recorded `after-warmup` HTTP MarketSnapshot from the earlier engine load run in the existing `{type:"state",state:...}` envelope. Its 15 accounts, 24 orders and 12 trades are unchanged. It is a derived compatibility fixture, not a raw captured WS frame. `ws_legacy_market.provenance.json` records the original evidence path, source SHA, selection and fixture SHA.
+
+The encoder tests compare all parsed JSON values and retain same-revision failed status, Korean/escaped names and full unsigned integers. Object property order is not the protocol contract. These tests do not claim browser support for arbitrary u64 values outside the actual bounded engine sequence range.
