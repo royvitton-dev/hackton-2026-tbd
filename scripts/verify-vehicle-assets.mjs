@@ -5,6 +5,7 @@ import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import { root, publicRoot, manifestPath, readJson } from './vehicle-assets.mjs';
 const entries = await readJson(manifestPath);
+const require3d = process.argv.includes('--require-3d');
 const {vehicles} = await readJson(path.join(root,'src/data/battery/workbook.json'));
 assert.deepEqual(entries.map(e=>e.vehicleId).sort(),vehicles.map(v=>v.vehicleId).sort());
 assert.deepEqual(entries,await readJson(path.join(publicRoot,'image_sources.json')));
@@ -60,8 +61,12 @@ const photoProfiles=models.filter(m=>!m.available);
 for(const model of photoProfiles){
   const image=entries.find(e=>e.vehicleId===model.vehicleId);
   if(!image?.downloaded||!image?.cutoutGenerated)failures.push(`${model.vehicleId}: No GLB or verified PNG is available`);
+  if(require3d)failures.push(`${model.vehicleId}: ${model.manufacturer} ${model.model} has no actual 3D model. Static PNG cannot provide rotation or battery x-ray. ${model.failureReason??'GLB not supplied.'}`);
 }
 if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}else{
   console.log(`PASS: ${entries.length} vehicle mappings / ${new Set(entries.map(e=>e.fileName)).size} originals + alpha cutouts; public copies and provenance match.`);
-  console.log(`GLB: ${models.filter(m=>m.available).length}/${models.length} profiles; fixed WebGL PNG: ${photoProfiles.length}/${models.length}. All ${models.length} profiles have verified vehicle assets. Missing GLB reasons remain recorded.`);
+  console.log(`GLB: ${models.filter(m=>m.available).length}/${models.length} profiles; fixed WebGL PNG: ${photoProfiles.length}/${models.length}. Asset integrity passed; this is not a visual or interaction acceptance test.`);
+}
+if(photoProfiles.length){
+  console.error(`3D INCOMPLETE: ${photoProfiles.map(m=>`${m.manufacturer} ${m.model}`).join(', ')}. Run npm run verify:vehicle-3d for the required 3D asset gate.`);
 }

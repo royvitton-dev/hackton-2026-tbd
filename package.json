@@ -20,6 +20,7 @@
     "cutout:vehicles": "node scripts/generate-vehicle-cutouts.mjs",
     "sync:vehicle-assets": "node scripts/sync-vehicle-assets.mjs",
     "verify:assets": "node scripts/verify-vehicle-assets.mjs",
+    "verify:vehicle-3d": "node scripts/verify-vehicle-assets.mjs --require-3d",
     "prepare:vehicles": "npm run download:vehicles && npm run cutout:vehicles && npm run sync:vehicle-assets && npm run verify:assets",
     "park:dev": "node park/server.mjs",
     "park:build": "node scripts/build-unified.mjs",

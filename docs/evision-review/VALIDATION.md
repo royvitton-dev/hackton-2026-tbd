@@ -176,3 +176,11 @@
 - 최종 정면·재질 보정 후 `npm run test:e2e -- --config .cache/ioniq6.playwright.config.ts tests/browser/volvo-vw.spec.ts tests/browser/cutouts.spec.ts`: **3개 통과 / 3.0분 / exit 0**. 두 GLB의 실제 드래그·투시·경계·재질 복원·전환·모바일과 남은 PNG 4종 표시를 확인했습니다.
 - 최종 육안 검수: [Volvo 외형](volvo_ex30_2026-3d.png), [Volvo 투시](volvo_ex30_2026-battery.png), [ID.4 외형](vw_id4_pro_2026-3d.png), [ID.4 투시](vw_id4_pro_2026-battery.png). 각 차량 드래그/모바일 캡처도 같은 폴더에 보존합니다.
 - MINI의 다른 GitHub GLB 후보는 별도 연구용 브라우저에서 차체를 확인했으나 요청한 전기 Cooper와 다른 5도어 외형이라 제외했습니다. 이 연구 검증은 제품 테스트 통과 수에 포함하지 않습니다.
+
+## BMW / MINI / Audi 미완료 재확인
+
+- 사용자 재신고에 따라 production 데모의 Q4 / Q6 / i5 / MINI 네 차종을 다시 선택해 검수했습니다. `npm run test:e2e -- --config .cache/ioniq6.playwright.config.ts tests/browser/cutouts.spec.ts` 1개 통과(1.3분). 이 테스트는 정지 PNG 표시·선택 전환·정보 패널을 확인하며, 네 차종의 드래그·배터리 투시는 여전히 미완료입니다. BMW 캡처도 직접 확인했습니다.
+- MINI 공식 MINIverse 주소는 sandbox 밖에서도 curl exit 6(DNS 해석 실패)였습니다. Audi Austria Q6 페이지의 QuickCC는 `rotationImages` 기반 뷰어로 확인해 실제 차량 메시 대체 후보에서 제외했습니다. BMW 무료 CC BY 후보는 원본 다운로드 인증이 필요합니다. 신규 차량 GLB를 확보하지 못했으며 성공으로 기록하지 않습니다.
+- `npm run verify:vehicle-3d`를 추가했습니다. 원본 사진·누끼·GLB 무결성을 검증한 뒤, workbook 차량 중 실제 모델이 없는 네 프로필을 열거하고 **exit 1**로 실패합니다. 기존 `verify:assets` 성공과 전체 3D 완료를 혼동하지 않도록 두 검증의 범위를 README와 로그에 명시했습니다.
+- `npm run lint`, `npm run typecheck`, `npm run build` 통과. `npm run test` 13개 통과(사진만 있는 경우 3D 검증 실패를 확인하는 회귀 테스트 포함). 사진·출처·public 동기화 검증은 통과하지만 전체 3D 검증은 실패하는 현재 상태를 그대로 유지합니다.
+- 필요한 후속 리소스: BMW i5, MINI Cooper Electric, Audi Q4/Q6의 정식 다운로드 GLB/GLTF와 출처·라이선스. 다른 차종 모델, 회전 사진 또는 placeholder로 대체하지 않았습니다.
