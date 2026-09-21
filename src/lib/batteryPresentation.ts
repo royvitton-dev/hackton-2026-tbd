@@ -5,13 +5,21 @@ export function scorePendingMessage(user: UserVehicle): string {
   if (user.attribution.basisSessionCount < 5 || user.observationDays < 7 || user.efc < 0.3) {
     return '충전 5회·7일·누적 0.3회분 이상의 기록이 쌓이면 분석을 시작합니다.';
   }
-  if (!['NCM', 'NMC', 'NCMA', 'NMCA'].includes(user.vehicle.chemistry.trim().toUpperCase())) {
-    return '이 차량의 배터리 종류를 확인해야 점수를 계산할 수 있습니다.';
+  if (!Number.isFinite(user.vehicle.batteryCapacityKwh) || user.vehicle.batteryCapacityKwh <= 0) {
+    return '사용 가능한 배터리 용량을 확인해야 점수를 계산할 수 있습니다.';
   }
-  if (user.attribution.modelOutOfRangeSessionCount > 0) {
-    return '현재 분석 모델로 평가하기 어려운 충전 기록이 포함되어 있습니다.';
+  if (user.attribution.scoreSessionCount < 5 || user.attribution.scoreObservationDays < 7 || user.attribution.scoreEstimatedEfc < 0.3) {
+    return `잔량·시간이 확인된 충전 ${user.attribution.scoreSessionCount}건입니다. 평가에 반영할 기록도 5건·7일·누적 0.3회분 이상 필요합니다.`;
   }
-  return '충전 시작·종료 시 배터리 잔량 기록이 더 필요합니다.';
+  return '현재 기록으로 점수 비교 범위를 계산할 수 없습니다.';
+}
+
+export function scoreCoverageMessage(user: UserVehicle): string {
+  const { scoreSessionCount, scoreExcludedSessionCount, basisSessionCount, scoreScope } = user.attribution;
+  const records = scoreExcludedSessionCount > 0
+    ? `전체 ${basisSessionCount}건 중 ${scoreSessionCount}건 반영 · ${scoreExcludedSessionCount}건 제외`
+    : `충전 ${scoreSessionCount}건 반영`;
+  return `${records}${scoreScope === 'REFERENCE' ? ' · 표준셀 가정' : ''}`;
 }
 
 export function nextChargeAdvice(user: UserVehicle): { title: string; description: string } {

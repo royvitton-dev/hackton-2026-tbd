@@ -24,7 +24,7 @@ describe('battery data integration', () => {
     expect(sessions.every((session) => vehicleByUser.get(session.userId) === session.vehicleId)).toBe(true);
   });
 
-  it('withholds scores outside the published model domain', () => {
+  it('shows a labelled reference score whenever valid history meets the minimums', () => {
     const vehicleById = new Map(vehicles.map((vehicle) => [vehicle.vehicleId, vehicle]));
     const sessionsByUser = new Map<string, ChargingSession[]>();
     sessions.forEach((session) => sessionsByUser.set(session.userId, [...(sessionsByUser.get(session.userId) ?? []), session]));
@@ -34,8 +34,8 @@ describe('battery data integration', () => {
       const features = (sessionsByUser.get(user.userId) ?? []).map((session) => deriveSession(session, vehicle, rules));
       if (calculateUserSummary(features, vehicle, rules).eligibleFlag) eligible += 1;
     }
-    expect(eligible).toBe(139);
-    expect(users.length - eligible).toBe(1111);
+    expect(eligible).toBe(1188);
+    expect(users.length - eligible).toBe(62);
   });
 });
 
@@ -67,7 +67,7 @@ describe('session feature calculation', () => {
     expect(summary.eligibleFlag).toBe(false);
     expect(summary.batteryCareScore).toBeNull();
     expect(summary.grade).toBe('INSUFFICIENT');
-    expect(summary.insufficientReasons).toContain('세션 5건 미만');
+    expect(summary.insufficientReasons).toContain('평가 가능한 충전 5건 미만');
   });
 
   it('gives lower stress scores to otherwise identical high-SOC exposure', () => {
@@ -88,7 +88,7 @@ describe('session feature calculation', () => {
       .toBeGreaterThan(calculateUserSummary(high, vehicle, rules).batteryCareScore!);
   });
 
-  it('does not extrapolate beyond the published 1C charge-rate boundary', () => {
+  it('labels high-rate histories as reference-only without claiming their rate-dependent degradation', () => {
     const feature = deriveSession({ ...base, chargedKwh: vehicle.batteryUsableKwh * 1.1 }, vehicle, rules);
     const summary = calculateUserSummary(Array.from({ length: 5 }, (_, index) => ({
       ...feature,
@@ -97,8 +97,12 @@ describe('session feature calculation', () => {
       endedAt: `2026-09-${String(index * 2 + 1).padStart(2, '0')}T01:00:00`,
       unpluggedAt: `2026-09-${String(index * 2 + 1).padStart(2, '0')}T01:10:00`,
     })), vehicle, rules);
-    expect(summary.batteryCareScore).toBeNull();
+    expect(summary.batteryCareScore).not.toBeNull();
+    expect(summary.scoreScope).toBe('REFERENCE');
+    expect(summary.grade).toBe('REFERENCE');
+    expect(summary.scoreSessionCount).toBe(5);
+    expect(summary.scoreExcludedSessionCount).toBe(0);
     expect(summary.modelOutOfRangeSessionCount).toBe(5);
-    expect(summary.insufficientReasons).toContain('논문 모델 범위 밖 5건');
+    expect(summary.referenceReasons.join(' ')).toContain('실제 열화 영향은 포함하지 않습니다');
   });
 });

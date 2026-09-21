@@ -1,5 +1,5 @@
 import type { UserVehicle, Vehicle, BatteryAttribution } from '../types/vehicle';
-import { calculateScientificScore, isNmcReferenceCompatible } from '../../battery_health/src/scientificScore';
+import { assessScientificHistory } from '../../battery_health/src/scoreCoverage';
 
 export interface RawVehicle {
   vehicleId: string; manufacturer: string; modelName: string; modelYear: number; trimName: string;
@@ -53,19 +53,16 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
   const end = sessions.at(-1)?.endedAt ?? null;
   const period = count ? (Date.parse(end!)-Date.parse(sessions[0].startedAt))/day : 0;
   const efc = sessions.reduce((sum,s)=>sum+s.chargedKwh,0)/vehicle.batteryCapacityKwh;
-  const scientific = calculateScientificScore(feature.map((item) => ({
+  const assessment = assessScientificHistory(feature.map((item) => ({
+    startedAt: item.s.startedAt,
+    endedAt: item.s.endedAt,
     startSocPct: item.startSoc,
     endSocPct: item.endSoc,
     chargedKwh: item.s.chargedKwh,
     cRate: item.power / vehicle.batteryCapacityKwh,
     idleMinutes: item.idle,
-  })));
-  const minimumDataEligible = count>=r.minimum_sessions_required && period>=r.minimum_period_days && efc>=r.minimum_total_efc_for_score;
-  const modelEligible = isNmcReferenceCompatible(vehicle.chemistry)
-    && scientific.missingSocSessionCount === 0
-    && scientific.outOfRangeSessionCount === 0
-    && scientific.supportedSessionCount >= r.minimum_sessions_required;
-  const eligible = minimumDataEligible && modelEligible;
+  })), vehicle.chemistry, vehicle.batteryCapacityKwh, r);
+  const { scientific, eligibleFlag: eligible } = assessment;
   const attribution: BatteryAttribution = {
     fastChargePenalty: 0, ultraChargePenalty: 0, longIdlePenalty: 0,
     highSocIdlePenalty: 0, highCRatePenalty: 0, deepDischargePenalty: 0,
@@ -73,8 +70,16 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
     recentHabitDegradation: null, basisSessionCount: count, basisPeriodDays: period,
     scoreModelId: scientific.modelId, scoreModelLabel: scientific.modelLabel,
     referenceTemperatureC: scientific.referenceTemperatureC,
-    modelSupportedSessionCount: scientific.supportedSessionCount,
-    modelOutOfRangeSessionCount: scientific.outOfRangeSessionCount,
+    modelSupportedSessionCount: assessment.modelSupportedSessionCount,
+    modelOutOfRangeSessionCount: assessment.modelOutOfRangeSessionCount,
+    modelMissingSocSessionCount: scientific.missingSocSessionCount,
+    scoreSessionCount: scientific.supportedSessionCount,
+    scoreExcludedSessionCount: assessment.excludedSessionCount,
+    scoreObservationDays: assessment.observationDays,
+    scoreEstimatedEfc: assessment.estimatedEfc,
+    scoreScope: assessment.scoreScope,
+    scorePolicyId: assessment.scorePolicyId,
+    referenceReasons: assessment.referenceReasons,
     modeledCapacityStress: scientific.observedCapacityStress,
     scoreLimitations: scientific.limitations,
   };
@@ -95,18 +100,12 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
   return { userId:user.userId,userName:null,driverProfile:user.driverProfile,vehicle,
     initialOdometerKm:user.initialOdometerKm??null,totalChargedKwh:sessions.reduce((sum,s)=>sum+s.chargedKwh,0),latestChargedKwh:last?.chargedKwh??null,latestChargerType:last?.chargerType??null,
     healthScore:score,estimatedSoh:null,currentSoc:soc,socSource:reported!=null?'사용자 입력 · 마지막 충전 종료':truth!=null?'Mock truth · 마지막 충전 종료':'SOC 데이터 없음',socAsOf:end,
-    confidence,grade:score===null?'INSUFFICIENT':confidence<60?'LOW_CONFIDENCE':score>=85?'EXCELLENT':score>=75?'GOOD':score>=60?'CAUTION':'RISK',
+    confidence,grade:score===null?'INSUFFICIENT':assessment.scoreScope==='REFERENCE'?'REFERENCE':assessment.scoreScope==='PARTIAL'?'PARTIAL':confidence<60?'LOW_CONFIDENCE':score>=85?'EXCELLENT':score>=75?'GOOD':score>=60?'CAUTION':'RISK',
     sessions30d:recent.length,fastChargeRatio30d:recent.length?recent.filter(f=>f.fast).length/recent.length:0,
     highSocIdleCount30d:recent.filter(f=>f.highSocIdle).length,
     deepDischargeCount30d:recent.filter(f=>f.deep).length,averageChargedKwh30d:recent.length?recent.reduce((sum,f)=>sum+f.s.chargedKwh,0)/recent.length:0,
     nightSlowRatio:ratio('slowNight'),slowCount:count-countWhere('fast'),fastCount:countWhere('fast')-countWhere('ultra'),ultraCount:countWhere('ultra'),
     windowStart:end?new Date(cutoff).toISOString():'',windowEnd:end??'',observationDays:period,efc,
     chargingHabitSummary:habits,attribution,
-    insufficientReason:eligible?null:[
-      !minimumDataEligible ? `최소 ${r.minimum_sessions_required}건, ${r.minimum_period_days}일, 누적 ${r.minimum_total_efc_for_score} EFC 필요` : null,
-      !isNmcReferenceCompatible(vehicle.chemistry) ? '검증된 NMC 계열 화학 정보 없음' : null,
-      scientific.missingSocSessionCount ? `SOC 누락 ${scientific.missingSocSessionCount}건` : null,
-      scientific.outOfRangeSessionCount ? `논문 모델 범위 밖 ${scientific.outOfRangeSessionCount}건` : null,
-      scientific.supportedSessionCount < r.minimum_sessions_required ? `모델 적용 가능 세션 ${r.minimum_sessions_required}건 미만` : null,
-    ].filter(Boolean).join(' · ') };
+    insufficientReason:eligible?null:assessment.insufficientReasons.join(' · ') };
 }

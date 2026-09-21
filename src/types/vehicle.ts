@@ -10,6 +10,10 @@ export interface BatteryAttribution {
   basisSessionCount: number; basisPeriodDays: number;
   scoreModelId: string; scoreModelLabel: string; referenceTemperatureC: number;
   modelSupportedSessionCount: number; modelOutOfRangeSessionCount: number;
+  modelMissingSocSessionCount: number; scoreExcludedSessionCount: number;
+  scoreSessionCount: number; scoreObservationDays: number; scoreEstimatedEfc: number;
+  scoreScope: 'FULL' | 'PARTIAL' | 'REFERENCE' | 'NONE';
+  scorePolicyId: string; referenceReasons: string[];
   modeledCapacityStress: number; scoreLimitations: string[];
 }
 export interface UserVehicle {

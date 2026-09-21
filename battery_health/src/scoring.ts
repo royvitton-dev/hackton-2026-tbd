@@ -5,7 +5,7 @@ import type {
   UserSummary,
   Vehicle,
 } from './types';
-import { calculateScientificScore, isNmcReferenceCompatible } from './scientificScore';
+import { assessScientificHistory } from './scoreCoverage';
 
 const REQUIRED_SESSION_FIELDS: (keyof ChargingSession)[] = [
   'sessionId', 'userId', 'vehicleId', 'chargedKwh', 'startedAt', 'endedAt',
@@ -117,23 +117,17 @@ export function calculateUserSummary(
     ? completenessValues.filter((value) => value !== null && value !== undefined && value !== '').length / completenessValues.length * 100
     : 0;
 
-  const scientific = calculateScientificScore(features.map((feature) => ({
+  const assessment = assessScientificHistory(features.map((feature) => ({
+    startedAt: feature.startedAt,
+    endedAt: feature.endedAt,
     startSocPct: feature.mockTruthStartSocPct ?? feature.userReportedStartSocPct,
     endSocPct: feature.mockTruthEndSocPct ?? feature.userReportedEndSocPct,
     chargedKwh: feature.chargedKwh,
-    cRate: feature.cRate,
-    idleMinutes: feature.idleMinutes,
-  })));
-
-  const insufficientReasons: string[] = [];
-  if (sessionCount < rules.minimum_sessions_required) insufficientReasons.push(`세션 ${rules.minimum_sessions_required}건 미만`);
-  if (observationDays < rules.minimum_period_days) insufficientReasons.push(`관측 ${rules.minimum_period_days}일 미만`);
-  if (estimatedEfc < rules.minimum_total_efc_for_score) insufficientReasons.push(`누적 ${rules.minimum_total_efc_for_score}EFC 미만`);
-  if (!isNmcReferenceCompatible(vehicle.batteryChemistry)) insufficientReasons.push('검증된 NMC 계열 화학 정보 없음');
-  if (scientific.missingSocSessionCount > 0) insufficientReasons.push(`SOC 누락 ${scientific.missingSocSessionCount}건`);
-  if (scientific.outOfRangeSessionCount > 0) insufficientReasons.push(`논문 모델 범위 밖 ${scientific.outOfRangeSessionCount}건`);
-  if (scientific.supportedSessionCount < rules.minimum_sessions_required) insufficientReasons.push(`모델 적용 가능 세션 ${rules.minimum_sessions_required}건 미만`);
-  const eligibleFlag = insufficientReasons.length === 0;
+    // Eligibility must use raw precision: rounding 1.0001C to 1C would admit an excluded record.
+    cRate: feature.chargedKwh / ((Date.parse(feature.endedAt) - Date.parse(feature.startedAt)) / 3_600_000) / vehicle.batteryUsableKwh,
+    idleMinutes: (Date.parse(feature.unpluggedAt) - Date.parse(feature.endedAt)) / 60_000,
+  })), vehicle.batteryChemistry, vehicle.batteryUsableKwh, rules);
+  const { scientific, insufficientReasons, eligibleFlag } = assessment;
 
   const socConfidenceScore = Math.round(Math.min(100,
     Math.min(rules.soc_conf_sessions_weight, sessionCount / rules.minimum_sessions_required * rules.soc_conf_sessions_weight)
@@ -144,6 +138,8 @@ export function calculateUserSummary(
 
   const batteryCareScore = eligibleFlag ? scientific.score : null;
   const grade = !eligibleFlag ? 'INSUFFICIENT'
+    : assessment.scoreScope === 'REFERENCE' ? 'REFERENCE'
+    : assessment.scoreScope === 'PARTIAL' ? 'PARTIAL'
     : socConfidenceScore < 60 ? 'LOW_CONFIDENCE'
       : batteryCareScore! >= 85 ? 'EXCELLENT'
         : batteryCareScore! >= 75 ? 'GOOD'
@@ -160,7 +156,9 @@ export function calculateUserSummary(
   if (longIdleCount > 0) cautions.push('충전 완료 후 장시간 연결 상태가 반복되면 고SOC 방치 스트레스가 커질 수 있습니다.');
   if (deepDischargeCount > 0) cautions.push('20% 미만 저SOC 진입이 있습니다. 여유가 있을 때 조금 일찍 충전하세요.');
   if (!cautions.length) cautions.push('현재 기록에서 두드러진 주의 습관은 발견되지 않았습니다.');
-  if (!eligibleFlag) nextActions.push(INSUFFICIENT_MESSAGE);
+  if (!eligibleFlag) nextActions.push(insufficientReasons.join(' · '));
+  if (assessment.scoreScope === 'PARTIAL') cautions.push('일부 충전 기록만 평가한 참고 점수이며, 제외한 급속 충전 등의 영향은 반영하지 않습니다.');
+  cautions.push(...assessment.referenceReasons);
   if (fastChargeRatio > 0.5) nextActions.push('다음 충전은 7~11kW 완속 충전기를 선택해 보세요.');
   else if (longIdleCount > 0) nextActions.push('다음 충전은 완료 알림 후 2시간 안에 분리해 보세요.');
   else nextActions.push('다음 충전도 20~80% 범위와 심야 완속 패턴을 유지하세요.');
@@ -188,8 +186,16 @@ export function calculateUserSummary(
     scoreModelId: scientific.modelId,
     scoreModelLabel: scientific.modelLabel,
     referenceTemperatureC: scientific.referenceTemperatureC,
-    modelSupportedSessionCount: scientific.supportedSessionCount,
-    modelOutOfRangeSessionCount: scientific.outOfRangeSessionCount,
+    modelSupportedSessionCount: assessment.modelSupportedSessionCount,
+    modelOutOfRangeSessionCount: assessment.modelOutOfRangeSessionCount,
+    modelMissingSocSessionCount: scientific.missingSocSessionCount,
+    scoreSessionCount: scientific.supportedSessionCount,
+    scoreExcludedSessionCount: assessment.excludedSessionCount,
+    scoreObservationDays: assessment.observationDays,
+    scoreEstimatedEfc: assessment.estimatedEfc,
+    scoreScope: assessment.scoreScope,
+    scorePolicyId: assessment.scorePolicyId,
+    referenceReasons: assessment.referenceReasons,
     modeledCapacityStress: round(scientific.observedCapacityStress, 6),
     scoreLimitations: scientific.limitations,
     grade,
