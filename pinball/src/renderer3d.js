@@ -3,7 +3,7 @@ const S=1/60, X=x=>(x-310)*S, Z=y=>y*S;
 const THEMES={neon:{floor:0x164ecc,accent:0xd6ff5f},orbit:{floor:0x9c3b26,accent:0xffd797},zigzag:{floor:0x116a66,accent:0xadf8dd},split:{floor:0x5831a0,accent:0xe9c6ff}};
 export class Renderer3D {
  constructor(canvas){
-  this.canvas=canvas;this.mode='webgl';this.overview=false;this.angle=0;this.lastRound=null;this.cameraCenter=400;this.finishedAt=new Map();
+  this.canvas=canvas;this.mode='webgl';this.overview=false;this.angle=2;this.lastRound=null;this.cameraCenter=400;this.finishedAt=new Map();
   this.webgl=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'high-performance'});
   this.webgl.setPixelRatio(Math.min(devicePixelRatio||1,1.5));this.webgl.shadowMap.enabled=true;this.webgl.shadowMap.type=THREE.PCFSoftShadowMap;this.webgl.outputColorSpace=THREE.SRGBColorSpace;this.webgl.toneMapping=THREE.ACESFilmicToneMapping;this.webgl.toneMappingExposure=.92;
   this.scene=new THREE.Scene();this.camera=new THREE.PerspectiveCamera(40,1,.1,180);
@@ -13,7 +13,7 @@ export class Renderer3D {
   const faces=Array.from({length:6},(_,i)=>{const c=document.createElement('canvas');c.width=c.height=64;const ctx=c.getContext('2d'),g=ctx.createLinearGradient(0,0,0,64);g.addColorStop(0,i===2?'#ffffff':'#c9d9f6');g.addColorStop(.5,'#6f8fbd');g.addColorStop(1,'#182642');ctx.fillStyle=g;ctx.fillRect(0,0,64,64);ctx.fillStyle='#ffffff';ctx.fillRect(6,6,44,12);return c;});this.environment=new THREE.CubeTexture(faces);this.environment.needsUpdate=true;this.scene.environment=this.environment;
   this.labels=document.createElement('div');this.labels.className='ball-labels';canvas.parentElement.append(this.labels);this.hud=document.createElement('div');this.hud.className='camera-hud';canvas.parentElement.append(this.hud);
   this.progress=document.createElement('div');this.progress.className='course-progress';canvas.parentElement.append(this.progress);
-  this.angleButton=document.createElement('button');this.angleButton.className='camera-angle';this.angleButton.type='button';this.angleButton.textContent='◈ 입체 시점';this.angleButton.setAttribute('aria-label','3D 카메라 시점 변경');this.angleButton.addEventListener('click',()=>{this.angle=(this.angle+1)%3;this.angleButton.textContent=['◈ 입체 시점','◈ 측면 시점','◈ 상단 시점'][this.angle];});canvas.parentElement.append(this.angleButton);
+  this.angleButton=document.createElement('button');this.angleButton.className='camera-angle';this.angleButton.type='button';this.angleButton.textContent='◈ 상단 시점';this.angleButton.setAttribute('aria-label','3D 카메라 시점 변경');this.angleButton.addEventListener('click',()=>{this.angle=(this.angle+1)%3;this.angleButton.textContent=['◈ 입체 시점','◈ 측면 시점','◈ 상단 시점'][this.angle];});canvas.parentElement.append(this.angleButton);
   this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();document.dispatchEvent(new Event('pinball-renderer-lost'));});
  }
