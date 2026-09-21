@@ -4,12 +4,13 @@
 
 ## 실행
 
-저장소 최상위 폴더에서 Node.js 22.12 이상으로 실행합니다.
+저장소 최상위 폴더에서 Node.js 22.12 이상으로 실행합니다. 처음에는 [통합 서버의 의존성 설치 절차](ROUTER.md)를 모두 마친 뒤 아래 명령을 실행하세요. 루트의 `npm ci`만으로는 `map` 등 하위 앱의 의존성이 설치되지 않습니다.
 
 ```sh
-npm ci
 npm run park:dev
 ```
+
+지도에서 `@fontsource-variable/dm-sans` 또는 `@fontsource-variable/noto-sans-kr` import 오류가 나면 루트에서 `npm --prefix map ci`로 지도의 lockfile에 지정된 의존성을 설치한 뒤 화면을 새로고침하세요.
 
 - 홈페이지: <http://localhost:5190>
 - HTML 품질 보고서: <http://localhost:5190/reports/>

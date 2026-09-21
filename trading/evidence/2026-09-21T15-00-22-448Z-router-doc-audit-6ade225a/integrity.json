@@ -1,0 +1,226 @@
+{
+  "at": "2026-09-21T15:02:47.215Z",
+  "all_sources_match": true,
+  "checks": [
+    {
+      "path": "README.md",
+      "current_sha256": "f54e6b34f3aaee72b44192ff510c23ab44d1a3b2db546842ba041b7774fb8126",
+      "snapshot_sha256": "f54e6b34f3aaee72b44192ff510c23ab44d1a3b2db546842ba041b7774fb8126",
+      "recorded_sha256": "f54e6b34f3aaee72b44192ff510c23ab44d1a3b2db546842ba041b7774fb8126",
+      "identical": true
+    },
+    {
+      "path": "package.json",
+      "current_sha256": "2be78a8a52346a55fbe3f820cb93f24585de6ed061646ab90c8f9525dfd20664",
+      "snapshot_sha256": "2be78a8a52346a55fbe3f820cb93f24585de6ed061646ab90c8f9525dfd20664",
+      "recorded_sha256": "2be78a8a52346a55fbe3f820cb93f24585de6ed061646ab90c8f9525dfd20664",
+      "identical": true
+    },
+    {
+      "path": "package-lock.json",
+      "current_sha256": "fde62f344e4c8e721e69994dfdc45c88a7780a7cea6dd775849c195d7e79138a",
+      "snapshot_sha256": "fde62f344e4c8e721e69994dfdc45c88a7780a7cea6dd775849c195d7e79138a",
+      "recorded_sha256": "fde62f344e4c8e721e69994dfdc45c88a7780a7cea6dd775849c195d7e79138a",
+      "identical": true
+    },
+    {
+      "path": "park/README.md",
+      "current_sha256": "4d4eb5e6c5e27dcbfc13d88e8b0d819c4a60fc3fb2cb213f92fdb17c2159ff5e",
+      "snapshot_sha256": "4d4eb5e6c5e27dcbfc13d88e8b0d819c4a60fc3fb2cb213f92fdb17c2159ff5e",
+      "recorded_sha256": "4d4eb5e6c5e27dcbfc13d88e8b0d819c4a60fc3fb2cb213f92fdb17c2159ff5e",
+      "identical": true
+    },
+    {
+      "path": "park/ROUTER.md",
+      "current_sha256": "8cc71dd823c74532aa0be18e073b46cf08e5068c35d735a292c56a093701fb84",
+      "snapshot_sha256": "8cc71dd823c74532aa0be18e073b46cf08e5068c35d735a292c56a093701fb84",
+      "recorded_sha256": "8cc71dd823c74532aa0be18e073b46cf08e5068c35d735a292c56a093701fb84",
+      "identical": true
+    },
+    {
+      "path": "park/server.mjs",
+      "current_sha256": "636d4bbd4a19e6d6b37733543a0687f6965842ccc57fc2f462ba735336842a41",
+      "snapshot_sha256": "636d4bbd4a19e6d6b37733543a0687f6965842ccc57fc2f462ba735336842a41",
+      "recorded_sha256": "636d4bbd4a19e6d6b37733543a0687f6965842ccc57fc2f462ba735336842a41",
+      "identical": true
+    },
+    {
+      "path": "park/server/apps.mjs",
+      "current_sha256": "62c94e5b85e001263313d91c27e518ef5be9647f96be496b9cc676d695143ffb",
+      "snapshot_sha256": "62c94e5b85e001263313d91c27e518ef5be9647f96be496b9cc676d695143ffb",
+      "recorded_sha256": "62c94e5b85e001263313d91c27e518ef5be9647f96be496b9cc676d695143ffb",
+      "identical": true
+    },
+    {
+      "path": "park/server/routes.mjs",
+      "current_sha256": "c39c05919290cc60226edc87509f7c667eca823c945b01ba44581bf30b6d6da9",
+      "snapshot_sha256": "c39c05919290cc60226edc87509f7c667eca823c945b01ba44581bf30b6d6da9",
+      "recorded_sha256": "c39c05919290cc60226edc87509f7c667eca823c945b01ba44581bf30b6d6da9",
+      "identical": true
+    },
+    {
+      "path": "park/server/trading-proxy.mjs",
+      "current_sha256": "eddc83f250b23d6214df19ddb55064ee81dd0c5a70fd6d850c1e33075a2410f4",
+      "snapshot_sha256": "eddc83f250b23d6214df19ddb55064ee81dd0c5a70fd6d850c1e33075a2410f4",
+      "recorded_sha256": "eddc83f250b23d6214df19ddb55064ee81dd0c5a70fd6d850c1e33075a2410f4",
+      "identical": true
+    },
+    {
+      "path": "scripts/build-unified.mjs",
+      "current_sha256": "e6837b605c5e323184894d2e84c9bd6964ced0fcf1e0b8fffc65ddf602aae071",
+      "snapshot_sha256": "e6837b605c5e323184894d2e84c9bd6964ced0fcf1e0b8fffc65ddf602aae071",
+      "recorded_sha256": "e6837b605c5e323184894d2e84c9bd6964ced0fcf1e0b8fffc65ddf602aae071",
+      "identical": true
+    },
+    {
+      "path": "map/README.md",
+      "current_sha256": "90dd3e353352266f745f6d0970077872477a7edca0038c3423152965ac83b9bf",
+      "snapshot_sha256": "90dd3e353352266f745f6d0970077872477a7edca0038c3423152965ac83b9bf",
+      "recorded_sha256": "90dd3e353352266f745f6d0970077872477a7edca0038c3423152965ac83b9bf",
+      "identical": true
+    },
+    {
+      "path": "map/package.json",
+      "current_sha256": "12228e1e35434935e27505e3fb20443ceba1bb8ee4fa09b843d472168770073f",
+      "snapshot_sha256": "12228e1e35434935e27505e3fb20443ceba1bb8ee4fa09b843d472168770073f",
+      "recorded_sha256": "12228e1e35434935e27505e3fb20443ceba1bb8ee4fa09b843d472168770073f",
+      "identical": true
+    },
+    {
+      "path": "map/package-lock.json",
+      "current_sha256": "518ac4ae31e00a1695521ffda10e34f858c75133288d9ea2f37ec0c56079800a",
+      "snapshot_sha256": "518ac4ae31e00a1695521ffda10e34f858c75133288d9ea2f37ec0c56079800a",
+      "recorded_sha256": "518ac4ae31e00a1695521ffda10e34f858c75133288d9ea2f37ec0c56079800a",
+      "identical": true
+    },
+    {
+      "path": "map/src/main.js",
+      "current_sha256": "8ea308c1c34da7495cb6bdb6d2cb6c2b276b6e7c72c8b25e91a69266e9f842a3",
+      "snapshot_sha256": "8ea308c1c34da7495cb6bdb6d2cb6c2b276b6e7c72c8b25e91a69266e9f842a3",
+      "recorded_sha256": "8ea308c1c34da7495cb6bdb6d2cb6c2b276b6e7c72c8b25e91a69266e9f842a3",
+      "identical": true
+    },
+    {
+      "path": "map/src/mobility/main.js",
+      "current_sha256": "f8a7d746c3fc44444cc72f78155d070ef002189b4c632acb8441165affd377f3",
+      "snapshot_sha256": "f8a7d746c3fc44444cc72f78155d070ef002189b4c632acb8441165affd377f3",
+      "recorded_sha256": "f8a7d746c3fc44444cc72f78155d070ef002189b4c632acb8441165affd377f3",
+      "identical": true
+    },
+    {
+      "path": "trading/README.md",
+      "current_sha256": "d55e1219063f3cb14eb6e4cdff9c2469d20406aa70687792fb65b369dffa49ef",
+      "snapshot_sha256": "d55e1219063f3cb14eb6e4cdff9c2469d20406aa70687792fb65b369dffa49ef",
+      "recorded_sha256": "d55e1219063f3cb14eb6e4cdff9c2469d20406aa70687792fb65b369dffa49ef",
+      "identical": true
+    },
+    {
+      "path": "trading/docs/ui.md",
+      "current_sha256": "22b9428830401ad88469d56851ccacb052342ca92256365449040cf1505c9aba",
+      "snapshot_sha256": "22b9428830401ad88469d56851ccacb052342ca92256365449040cf1505c9aba",
+      "recorded_sha256": "22b9428830401ad88469d56851ccacb052342ca92256365449040cf1505c9aba",
+      "identical": true
+    },
+    {
+      "path": "trading/docs/deployment.md",
+      "current_sha256": "e1a9b606ec8ccf0404bc539b5585820e3610edca3f02874d2531048d563d2046",
+      "snapshot_sha256": "e1a9b606ec8ccf0404bc539b5585820e3610edca3f02874d2531048d563d2046",
+      "recorded_sha256": "e1a9b606ec8ccf0404bc539b5585820e3610edca3f02874d2531048d563d2046",
+      "identical": true
+    },
+    {
+      "path": "trading/docs/protocol.md",
+      "current_sha256": "d8968bc547c6fd2829766f3a54d7fc205f924ca6e2ddc39a8c4e21c4bc51242a",
+      "snapshot_sha256": "d8968bc547c6fd2829766f3a54d7fc205f924ca6e2ddc39a8c4e21c4bc51242a",
+      "recorded_sha256": "d8968bc547c6fd2829766f3a54d7fc205f924ca6e2ddc39a8c4e21c4bc51242a",
+      "identical": true
+    },
+    {
+      "path": "trading/frontend/src/api.ts",
+      "current_sha256": "a72116e8ddcc3ef1d3fe019217d3915d3c0ac73202802be8f74e6245a44d6147",
+      "snapshot_sha256": "a72116e8ddcc3ef1d3fe019217d3915d3c0ac73202802be8f74e6245a44d6147",
+      "recorded_sha256": "a72116e8ddcc3ef1d3fe019217d3915d3c0ac73202802be8f74e6245a44d6147",
+      "identical": true
+    },
+    {
+      "path": "trading/frontend/vite.config.ts",
+      "current_sha256": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48",
+      "snapshot_sha256": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48",
+      "recorded_sha256": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48",
+      "identical": true
+    },
+    {
+      "path": "trading/frontend/package.json",
+      "current_sha256": "66cae6c771fd553c83cf577bad9c3123bcc221e14f53388049c75aec2e8067dd",
+      "snapshot_sha256": "66cae6c771fd553c83cf577bad9c3123bcc221e14f53388049c75aec2e8067dd",
+      "recorded_sha256": "66cae6c771fd553c83cf577bad9c3123bcc221e14f53388049c75aec2e8067dd",
+      "identical": true
+    },
+    {
+      "path": "trading/frontend/vercel.json",
+      "current_sha256": "55f396790ba82f303d1c6b7bab30c35064f3da833a6e23268ad517862a2fda00",
+      "snapshot_sha256": "55f396790ba82f303d1c6b7bab30c35064f3da833a6e23268ad517862a2fda00",
+      "recorded_sha256": "55f396790ba82f303d1c6b7bab30c35064f3da833a6e23268ad517862a2fda00",
+      "identical": true
+    },
+    {
+      "path": "trading/frontend/.env.example",
+      "current_sha256": "00f34dab50d6862be333e4d6e4652412e9c50fe695ee0efd243784fb432e99c4",
+      "snapshot_sha256": "00f34dab50d6862be333e4d6e4652412e9c50fe695ee0efd243784fb432e99c4",
+      "recorded_sha256": "00f34dab50d6862be333e4d6e4652412e9c50fe695ee0efd243784fb432e99c4",
+      "identical": true
+    },
+    {
+      "path": "trading/frontend/.env.production.example",
+      "current_sha256": "dd75a6c3e4c48e454cf49bb1d33808d975d11b34c3fc314839913f85fc7b59b3",
+      "snapshot_sha256": "dd75a6c3e4c48e454cf49bb1d33808d975d11b34c3fc314839913f85fc7b59b3",
+      "recorded_sha256": "dd75a6c3e4c48e454cf49bb1d33808d975d11b34c3fc314839913f85fc7b59b3",
+      "identical": true
+    },
+    {
+      "path": "trading/frontend/pnpm-workspace.yaml",
+      "current_sha256": "a3ee6d5c2685098dae00941be402cb68cc43a480a136f980806f7223e36efe37",
+      "snapshot_sha256": "a3ee6d5c2685098dae00941be402cb68cc43a480a136f980806f7223e36efe37",
+      "recorded_sha256": "a3ee6d5c2685098dae00941be402cb68cc43a480a136f980806f7223e36efe37",
+      "identical": true
+    },
+    {
+      "path": "trading/attraction.json",
+      "current_sha256": "2fb2e4f55e6f26db5524a8e1912f1c606242f13161f794742d5295994a031a18",
+      "snapshot_sha256": "2fb2e4f55e6f26db5524a8e1912f1c606242f13161f794742d5295994a031a18",
+      "recorded_sha256": "2fb2e4f55e6f26db5524a8e1912f1c606242f13161f794742d5295994a031a18",
+      "identical": true
+    },
+    {
+      "path": "trading/scripts/park-router-startup.mjs",
+      "current_sha256": "23acdff2b4d95d86f1117d3a5b5c9ad40ea2e257a274986724bf09b5236af1bc",
+      "snapshot_sha256": "23acdff2b4d95d86f1117d3a5b5c9ad40ea2e257a274986724bf09b5236af1bc",
+      "recorded_sha256": "23acdff2b4d95d86f1117d3a5b5c9ad40ea2e257a274986724bf09b5236af1bc",
+      "identical": true
+    },
+    {
+      "path": "trading/scripts/park-launcher.mjs",
+      "current_sha256": "3febf7d346047cd3077d53f1a4dbeb7abf6148035abf92a33698ae3bd2d661d8",
+      "snapshot_sha256": "3febf7d346047cd3077d53f1a4dbeb7abf6148035abf92a33698ae3bd2d661d8",
+      "recorded_sha256": "3febf7d346047cd3077d53f1a4dbeb7abf6148035abf92a33698ae3bd2d661d8",
+      "identical": true
+    },
+    {
+      "path": "trading/scripts/demo.mjs",
+      "current_sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19",
+      "snapshot_sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19",
+      "recorded_sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19",
+      "identical": true
+    },
+    {
+      "path": "trading/scripts/setup.ps1",
+      "current_sha256": "40d83faaa9453d33e1bbd0bbf0ed66ee6aa80655ecc64a9d29d6f26edbe0d2f0",
+      "snapshot_sha256": "40d83faaa9453d33e1bbd0bbf0ed66ee6aa80655ecc64a9d29d6f26edbe0d2f0",
+      "recorded_sha256": "40d83faaa9453d33e1bbd0bbf0ed66ee6aa80655ecc64a9d29d6f26edbe0d2f0",
+      "identical": true
+    }
+  ],
+  "report_sha256": "f04c1c734caa8730713bbb06d03b0d3161db6f98432e987e4ad5e08e185b4fae",
+  "audit_sha256": "369396c28ea03ac32cd6620b333bf2ca59a91ca3e95e7eded554eacbe6e70011",
+  "report_timestamp_wording_corrected_at": "2026-09-21T15:03:55.057Z"
+}

@@ -1,0 +1,43 @@
+{
+  "scope": "Periodic analyses of growing original logs; outputs are full analysis JSON in each evidence directory, tool stdout may be truncated",
+  "commands": [
+    {
+      "name": "market",
+      "args": [
+        "scripts/summarize-observation.mjs",
+        "2026-09-21T10-05-54-901Z-observe-0b80d28e",
+        "--logical-processors",
+        "16"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "exit_code": 0,
+      "elapsed_seconds": 0.6107374,
+      "evidence": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-02-55-007Z-observation-analysis-29c2bda6",
+      "tool_stdout_truncated": true
+    },
+    {
+      "name": "bots",
+      "args": [
+        "scripts/summarize-bot-latency.mjs",
+        "2026-09-21T10-05-21-198Z-demo-3b10627b"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "exit_code": 0,
+      "elapsed_seconds": 1.5054688999999999,
+      "evidence": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-02-55-951Z-bot-latency-analysis-0bb241b3",
+      "tool_stdout_truncated": true
+    },
+    {
+      "name": "resources",
+      "args": [
+        "scripts/summarize-supplementary-resources.mjs",
+        "20260921T131759342Z-supplementary-resources-259339d4"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "exit_code": 0,
+      "elapsed_seconds": 0.5608077,
+      "evidence": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-02-54-968Z-supplementary-resource-analysis-9bfcf0d4",
+      "tool_stdout_truncated": false
+    }
+  ]
+}

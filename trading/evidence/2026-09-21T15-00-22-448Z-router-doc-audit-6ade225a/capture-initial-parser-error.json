@@ -1,0 +1,7 @@
+{
+  "chunk_id": "55b65f",
+  "wall_time_seconds": 0.3714975,
+  "exit_code": 1,
+  "original_token_count": 223,
+  "output": "file:///C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T15-00-22-448Z-router-doc-audit-6ade225a/capture.mjs:68\r\n\r\n\r\n\r\nSyntaxError: Unexpected end of input\r\n    at compileSourceTextModule (node:internal/modules/esm/utils:318:16)\r\n    at ModuleLoader.moduleStrategy (node:internal/modules/esm/translators:89:18)\r\n    at #translate (node:internal/modules/esm/loader:434:20)\r\n    at afterLoad (node:internal/modules/esm/loader:502:29)\r\n    at ModuleLoader.loadAndTranslate (node:internal/modules/esm/loader:507:12)\r\n    at #getOrCreateModuleJobAfterResolve (node:internal/modules/esm/loader:560:36)\r\n    at afterResolve (node:internal/modules/esm/loader:607:52)\r\n    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:613:12)\r\n    at node:internal/modules/esm/loader:632:32\r\n    at TracingChannel.tracePromise (node:diagnostics_channel:362:14)\r\n\r\nNode.js v24.19.0\r\n"
+}
