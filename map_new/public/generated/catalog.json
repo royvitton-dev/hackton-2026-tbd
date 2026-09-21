@@ -36,10 +36,12 @@
       "objects": 87,
       "accessible": 4,
       "ocrLabels": 14,
-      "triangles": 276
+      "triangles": 276,
+      "detectedParking": 57,
+      "matchedParking": 38
     },
     "routingReady": true,
-    "modelHash": "2697d38e2929648040344fcfc533e05c7184d5ea1c30f676335319e7e1ebbc46"
+    "modelHash": "84e8d693b656d6c338a35139c031f5af53f8fb6a13214dd99d03e169e13331d0"
   },
   {
     "id": "10000901-0",
@@ -212,10 +214,12 @@
       "objects": 6,
       "accessible": 0,
       "ocrLabels": 34,
-      "triangles": 192
+      "triangles": 192,
+      "detectedParking": 3,
+      "matchedParking": 1
     },
     "routingReady": true,
-    "modelHash": "0330ead39962a1ec6e5d24d156841de520295a764bac9ee5c8ee4fef8fcb593f",
+    "modelHash": "87da86f699ae3da862e3f55b3b0b72f62b995f9665b563fd9c2d4d0ee4948384",
     "radio": {
       "file": "generated/radio-10000901.json",
       "count": 48,
@@ -276,10 +280,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 16,
-      "triangles": 84
+      "triangles": 84,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "8bf1ce1eea656bc45c6131f9e83b1268b6952eb6aeced2b9fe72a45f3ebda26c",
+    "modelHash": "d272dde3d7f1573cb7cad23ad3055dec955930b90dd13e07e7d27a4107153f72",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -340,10 +346,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 11,
-      "triangles": 72
+      "triangles": 72,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "6b7c0cd3bb0a6f0622ffc11ecd5d1d8e5bdc123c7c01d1543961d8532bbd872c",
+    "modelHash": "f6bcb2f84eedeba8e97cde3f5f057bd29013e2294519d2ad159185da6e3bebfc",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -404,10 +412,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 15,
-      "triangles": 72
+      "triangles": 72,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "503648c325a8108b2889e9a0e8024d17abc8eb2581fafe3c1b907696cd0df535",
+    "modelHash": "efccabd6b419b78a9146138c7e84adb4417e7265573fef4ff47fceea943ebb37",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -468,10 +478,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 46,
-      "triangles": 468
+      "triangles": 468,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "253b1cda622c399299ca6d19fae6694031c8aa65eec92cfca7f9c04d0eb5399d",
+    "modelHash": "d080ef292a9866967276ff3780c189f49807668ea2b18b4edb1ac7897bcf90b9",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -532,10 +544,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 43,
-      "triangles": 480
+      "triangles": 480,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "044883bfff96dedfddedcab725d1d926b65ebfa583be89be3e1c4ea6662de138",
+    "modelHash": "37e3eeb865676ebdf77a3cb1ec916137eea6b9b0269db67fa62639c6bcdaef94",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -596,10 +610,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 37,
-      "triangles": 336
+      "triangles": 336,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "a6981a921386d604eeef1cbd224f8f321a307905dec52b55d2dfde046739edda",
+    "modelHash": "0b171429b23f6256a11f1c9a97e34f6059fb0e25d2d670a54f19be97631b9ef2",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -618,11 +634,13 @@
     "source": "https://magazine.brique.co/project/noctilux-ciid/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-159344-0.png",
+      "file": "sources/high-resolution/parking-159344-0.png",
       "label": "1층 평면도 ©CIID",
-      "url": "https://media.brique.co/2025/11/1f-floor-plan-905x555.png",
-      "bytes": 29013,
-      "sha256": "899cda554bb68e53f8cf6dbf971f1a01c24ba15b38d31b434e85184d93e027e2"
+      "url": "https://media.brique.co/2025/11/1f-floor-plan-2048x1256.png",
+      "bytes": 83272,
+      "sha256": "fc228b07c1f67abe2a2a508500f3043b55d9dd6989f0cd74a660e17e350294cb",
+      "width": 2048,
+      "height": 1256
     },
     "location": {
       "lat": 37.5088724,
@@ -649,19 +667,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-159344-0.png",
+      "label": "1층 평면도 ©CIID",
+      "url": "https://media.brique.co/2025/11/1f-floor-plan-905x555.png",
+      "bytes": 29013,
+      "sha256": "899cda554bb68e53f8cf6dbf971f1a01c24ba15b38d31b434e85184d93e027e2"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/noctilux-ciid/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "af757e7e1beb36cded2de122e339e86da3a03916958722a811eda53906ac3ef2",
+      "previous": {
+        "file": "sources/parking-159344-0.png",
+        "url": "https://media.brique.co/2025/11/1f-floor-plan-905x555.png",
+        "sha256": "899cda554bb68e53f8cf6dbf971f1a01c24ba15b38d31b434e85184d93e027e2",
+        "width": 905,
+        "height": 555
+      },
+      "selectedWidth": 2048,
+      "selectedHeight": 1256
+    },
     "modelFile": "generated/parking-159344-0.json",
     "statistics": {
-      "walls": 66,
+      "walls": 99,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 7,
-      "triangles": 792
+      "triangles": 1188,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "444e3656e313dfe6a391d4081478f4b03d643088ec090d77bf58fda433bf15cf",
+    "modelHash": "c1af641790565feecf27160982f0d2921b368928f9fe35598da8b22b6329ab61",
     "radio": {
       "file": "generated/radio-parking-159344.json",
       "count": 48,
@@ -729,10 +771,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 1020
+      "triangles": 1020,
+      "detectedParking": 27,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "7ca4d592e32590f75dd4b7b3623af088eb5f85e47a7d6da04015adc3f97d0106",
+    "modelHash": "443a09a0a2766769b8ad6fc0342a7edf71268672bf75a1a83795c2c14b68f857",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -800,10 +844,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 7,
-      "triangles": 756
+      "triangles": 756,
+      "detectedParking": 3,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "0509f1fde426b4810433a70ace8f7e6eca8ba828cb2900463e2fcb42b97fb8c6",
+    "modelHash": "a1e6b64c85bcc4d682fce1e46db1e7e67aa3986aaf1885511653cc37f44e26ad",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -871,10 +917,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 648
+      "triangles": 648,
+      "detectedParking": 3,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "861799209c5db866f271707be1e6c17c41558a1cf6691fe41b3234df0b72c1e2",
+    "modelHash": "55f44b08cdadd3da5b7e7964730bd7551b91ea6cd4ee08371422ec3516235b34",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -942,10 +990,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 516
+      "triangles": 516,
+      "detectedParking": 17,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "676d3d6052c10252202d6a5b1cd77034210d776ed160cd16aedba082f4e76c39",
+    "modelHash": "ae970d2a539599b0af9905322e963ee9d9167e6ee3f18633d3571145d87088a1",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -1006,10 +1056,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 9,
-      "triangles": 228
+      "triangles": 228,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "db2b33d1d802477d679c25e11a8c85d3e33940ea2794d0c1843a8df044b4bba6",
+    "modelHash": "53ddd0285dd9f83a43a1bac4b05568261969607d1a68e5f4736ba3581971e028",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1070,10 +1122,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 17,
-      "triangles": 132
+      "triangles": 132,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "33efce20c9b1e25997619d962efd9733737603d03b7b5fc094a7ce7e24a85e07",
+    "modelHash": "223ea9f220b5066dd2af68694aa46a1ad8e8d51caf8ba9a0d7cc36dbd906a78b",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1134,10 +1188,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 18,
-      "triangles": 216
+      "triangles": 216,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "da1bfa59e61c9bf1255f225675fbc333f985b747b54c33e801fe24e0916edaab",
+    "modelHash": "6c1650bcc0a49a2f74604f9b1736ff46f61bb832a69a1d7eac369f78d29c4082",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1198,10 +1254,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 44,
-      "triangles": 888
+      "triangles": 888,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "079c56ec79cae8338fa91f519bd5385e85107772c9d6e77b16ab151e5be388dd",
+    "modelHash": "47547c600577018eaa3222e8a6dcdae53b346a6f05830561aa4e5497afab641e",
     "radio": {
       "file": "generated/radio-20000474.json",
       "count": 48,
@@ -1262,10 +1320,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 6,
-      "triangles": 276
+      "triangles": 276,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "8b82a029332dc039b7a6a5abb32dd40874da67cd5f90a1105257881a2cf0a503",
+    "modelHash": "ce5a70c684d3b39f7a12e1181e096c720b201a9bfb437a5d13eb3336bf744ca7",
     "radio": {
       "file": "generated/radio-10000921.json",
       "count": 48,
@@ -1326,10 +1386,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 60,
-      "triangles": 204
+      "triangles": 204,
+      "detectedParking": 3,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "56755c00c639eddd62baeea7e1038365d01413247f9f44778e99af1a472d9fca",
+    "modelHash": "1efc14eee1902ab198adec65cdbf50a42b3addd87ba63970861ceeebf884ec66",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1390,10 +1452,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 78,
-      "triangles": 60
+      "triangles": 60,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f0962cdf76538d55162c5d7f435aea21550c8c5b81f34b45f4a21c6bfb5f89bf",
+    "modelHash": "647a8cb55aac62b475f530d3d456ef21b5f3ae6f15f8cfa8b1ed4305a3359171",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1454,10 +1518,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 60,
-      "triangles": 96
+      "triangles": 96,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "19eb1fa27446b6c18a430964dd39a86938da3566e0025a6300ac365ab84be644",
+    "modelHash": "ef2ca4abcc5fcbc94001ff5d495376a5d4ad842b7a782abf96621be1a48e214d",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1518,10 +1584,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 56,
-      "triangles": 1908
+      "triangles": 1908,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "a6df1a25865a09d20b2a98adba1e8b167e35b4a6536684db71b925290f9ba6f2",
+    "modelHash": "2c7e612c4851db13f2b64873c0f0e9ab9f3209739727829899c10f2fea074eb0",
     "radio": {
       "file": "generated/radio-20000536.json",
       "count": 48,
@@ -1582,10 +1650,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 48,
-      "triangles": 2016
+      "triangles": 2016,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "bc48e5bc8e53ceb84753345f30770a139564a53cc099df00e546f12322a12022",
+    "modelHash": "c8ba46be688cfd03bbb5f40e77714f3d1a9fad8e6111dedf66b4df5f99e14f23",
     "radio": {
       "file": "generated/radio-20000536.json",
       "count": 48,
@@ -1646,10 +1716,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 600
+      "triangles": 600,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "43303ea8cd470119bce19545652ff7108048d93dd6e115d5107cdce523acb530",
+    "modelHash": "293fc1e88adcad63bbab9273c07dd58503f96632b02a7cd69e8eb5f141a48dcc",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -1710,10 +1782,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 1008
+      "triangles": 1008,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "297721b301cdf6109699c6d68408f912839e96da279181c01e5713771ddac125",
+    "modelHash": "6750d56320f6e4ee03dc91f9ce0ca9be4be32a235e7ef3b9f330eda700828a40",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -1774,10 +1848,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 420
+      "triangles": 420,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "db1393a673790ed63daf14f316fe4bc3ca5ad2ed5229cb52e549e7e1594eeac3",
+    "modelHash": "3364ade4e72ffe5e3b6726897414b3f0b46f4d4893a68998ac0805958d3a5ae7",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -1838,10 +1914,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 28,
-      "triangles": 240
+      "triangles": 240,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "790273f99e5da5d6806ca1355985f479c6c7c8eb99a6a57ebf524264eb2618b5",
+    "modelHash": "30b8d677716589578a36e6db3a2176fd303d9d4be9b4eb88d408dae94feeaf86",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -1902,10 +1980,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 10,
-      "triangles": 600
+      "triangles": 600,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "779d238c485a933ccc4d0ba1acaee2728c2af99bdc78a33d1c654978dc2d1448",
+    "modelHash": "3808171e8c93692ec6be609123525709a9e4a835d4344306f61e23d19049ff4c",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -1966,10 +2046,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 11,
-      "triangles": 456
+      "triangles": 456,
+      "detectedParking": 3,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "b35f13aec9e9b7830c58cb27163832b09a18ff3b7a4abb0186938a4f2bce0017",
+    "modelHash": "383df0dcb6db7acad45ece59ce1c41c797f5607468f8d6b9670b492ce643efe0",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -1988,11 +2070,13 @@
     "source": "https://magazine.brique.co/project/g-o-architecture_layered-house/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-139632-0.jpg",
+      "file": "sources/high-resolution/parking-139632-0.jpg",
       "label": "1층 평면도 ©G/O Architecture",
-      "url": "https://media.brique.co/2025/02/plan-1F-905x640.jpg",
-      "bytes": 65861,
-      "sha256": "b84a29e7e198f9b62980a54cb2b300214aa52349206f7578223efed020dc3efd"
+      "url": "https://media.brique.co/2025/02/plan-1F.jpg",
+      "bytes": 225811,
+      "sha256": "f1e5489cbede3597c4b38862319d6b3248f0de8851665be5e7a10104cc85d546",
+      "width": 2000,
+      "height": 1414
     },
     "location": {
       "lat": 37.4884513,
@@ -2019,19 +2103,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-139632-0.jpg",
+      "label": "1층 평면도 ©G/O Architecture",
+      "url": "https://media.brique.co/2025/02/plan-1F-905x640.jpg",
+      "bytes": 65861,
+      "sha256": "b84a29e7e198f9b62980a54cb2b300214aa52349206f7578223efed020dc3efd"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/g-o-architecture_layered-house/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "3384258fd7737d83de4ca2ce54b8b634333995fcb3d7827f2785f5253605b533",
+      "previous": {
+        "file": "sources/parking-139632-0.jpg",
+        "url": "https://media.brique.co/2025/02/plan-1F-905x640.jpg",
+        "sha256": "b84a29e7e198f9b62980a54cb2b300214aa52349206f7578223efed020dc3efd",
+        "width": 905,
+        "height": 640
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1414
+    },
     "modelFile": "generated/parking-139632-0.json",
     "statistics": {
-      "walls": 13,
+      "walls": 24,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 7,
-      "triangles": 156
+      "ocrLabels": 10,
+      "triangles": 288,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "cd6607f7fbc0c71dd00523ecdb38414af407d9e4cb6a6b561734986a96aaff45",
+    "modelHash": "997b4817840bd46794e814c7ff4b46e18ad854a6b904d7b04773b87bdb902b71",
     "radio": {
       "file": "generated/radio-parking-139632.json",
       "count": 48,
@@ -2050,11 +2158,13 @@
     "source": "https://magazine.brique.co/project/%ed%9b%84%ec%95%94%eb%8f%99-%eb%b3%b5%ed%95%a9%ec%a3%bc%ea%b1%b0-huam-dong-multiplex/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-27446-0.jpg",
+      "file": "sources/high-resolution/parking-27446-0.jpg",
       "label": "1층 배치도. 근린생활시설과 주차장을 배치했다. ⓒBOUNDLESS",
-      "url": "https://media.brique.co/2019/07/경계없는-작업실-BOUNDLESS-후암동-복합주거-도면-후암동-1층-평면도-700x495.jpg",
-      "bytes": 30235,
-      "sha256": "bd34db963f63932df8ea13dd1d423ac90110938ae6c122729292eee843d61790"
+      "url": "https://media.brique.co/2019/07/경계없는-작업실-BOUNDLESS-후암동-복합주거-도면-후암동-1층-평면도.jpg",
+      "bytes": 98620,
+      "sha256": "0e35665c8e91e436732aca70ed3e4b70330d0a01639f476bd68f28d2782e45a7",
+      "width": 1500,
+      "height": 1060
     },
     "location": {
       "lat": 37.5517514,
@@ -2081,19 +2191,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-27446-0.jpg",
+      "label": "1층 배치도. 근린생활시설과 주차장을 배치했다. ⓒBOUNDLESS",
+      "url": "https://media.brique.co/2019/07/경계없는-작업실-BOUNDLESS-후암동-복합주거-도면-후암동-1층-평면도-700x495.jpg",
+      "bytes": 30235,
+      "sha256": "bd34db963f63932df8ea13dd1d423ac90110938ae6c122729292eee843d61790"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ed%9b%84%ec%95%94%eb%8f%99-%eb%b3%b5%ed%95%a9%ec%a3%bc%ea%b1%b0-huam-dong-multiplex/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "e82cde1e673c36c2157043a1dd772327fdd6a37760c8da90da7ab1c33c3f1e6a",
+      "previous": {
+        "file": "sources/parking-27446-0.jpg",
+        "url": "https://media.brique.co/2019/07/경계없는-작업실-BOUNDLESS-후암동-복합주거-도면-후암동-1층-평면도-700x495.jpg",
+        "sha256": "bd34db963f63932df8ea13dd1d423ac90110938ae6c122729292eee843d61790",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 1500,
+      "selectedHeight": 1060
+    },
     "modelFile": "generated/parking-27446-0.json",
     "statistics": {
-      "walls": 22,
+      "walls": 39,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 264
+      "triangles": 468,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "992a8a33635422b9b97e5c5b8b77c9da42a6272152d5e5e60a8dbe8c02f99cd8",
+    "modelHash": "9d78b5e6ee3f8cf1c518e5da7aaaa91210c05d4f17ce9e22a4336e3fa8ee0886",
     "radio": {
       "file": "generated/radio-parking-27446.json",
       "count": 48,
@@ -2112,12 +2246,14 @@
     "source": "https://magazine.brique.co/project/%ec%84%9c%ec%86%8c%eb%ac%b8%ec%84%b1%ec%a7%80-%ec%97%ad%ec%82%ac%eb%b0%95%eb%ac%bc%ea%b4%80/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-65955-0.jpg",
+      "file": "sources/high-resolution/parking-65955-0.jpg",
       "label": "지상 1층 평면도 ©Interkerd Architects",
-      "url": "https://media.brique.co/2021/05/0e79e408-지상-1층-평면도-700x389.jpg",
-      "bytes": 43279,
-      "sha256": "4adcabb8ecbca5385abd1a7a44597393f0cf1630e6c2e566207bf1cc2415a2bc",
-      "floor": "1F"
+      "url": "https://media.brique.co/2021/05/0e79e408-지상-1층-평면도.jpg",
+      "bytes": 214466,
+      "sha256": "ccb0c235424e6ce9fd39592dbe3f4d3901d0f8a107e87615970fff464db4e898",
+      "floor": "1F",
+      "width": 2000,
+      "height": 1112
     },
     "location": {
       "lat": 37.5597268,
@@ -2144,19 +2280,44 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-65955-0.jpg",
+      "label": "지상 1층 평면도 ©Interkerd Architects",
+      "url": "https://media.brique.co/2021/05/0e79e408-지상-1층-평면도-700x389.jpg",
+      "bytes": 43279,
+      "sha256": "4adcabb8ecbca5385abd1a7a44597393f0cf1630e6c2e566207bf1cc2415a2bc",
+      "floor": "1F"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%84%9c%ec%86%8c%eb%ac%b8%ec%84%b1%ec%a7%80-%ec%97%ad%ec%82%ac%eb%b0%95%eb%ac%bc%ea%b4%80/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "83d8991485ca2aa88b0b548beec0bd863c33ee15f51d5848d84549d8f9a3f2e5",
+      "previous": {
+        "file": "sources/parking-65955-0.jpg",
+        "url": "https://media.brique.co/2021/05/0e79e408-지상-1층-평면도-700x389.jpg",
+        "sha256": "4adcabb8ecbca5385abd1a7a44597393f0cf1630e6c2e566207bf1cc2415a2bc",
+        "width": 700,
+        "height": 389
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1112
+    },
     "modelFile": "generated/parking-65955-0.json",
     "statistics": {
-      "walls": 71,
+      "walls": 18,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 0,
-      "triangles": 852
+      "ocrLabels": 10,
+      "triangles": 216,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "9af79cb8fe909ac2abfad3ba9379737df0cd3c194d8a045420a7512ce28299ad",
+    "modelHash": "cedb622c197dd1634e6c3d1e6d4395450258202cd896278cf9ddaa154cdc584e",
     "radio": {
       "file": "generated/radio-parking-65955.json",
       "count": 48,
@@ -2175,11 +2336,13 @@
     "source": "https://magazine.brique.co/project/%ec%8a%a4%ed%80%98%ec%96%b4-%ec%95%a4-%ed%8a%b8%eb%9d%bc%ec%9d%b4%ec%95%b5%ea%b8%80-%ed%95%98%ec%9a%b0%ec%8a%a4-square-triangle-house/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-57413-0.jpg",
+      "file": "sources/high-resolution/parking-57413-0.jpg",
       "label": "1층 평면도 ⓒStudio LXJX",
-      "url": "https://media.brique.co/2021/02/a0bd7ee5-스튜디오-李心田心-studio-lxjx-square-triangle-house-도면01-905x639.jpg",
-      "bytes": 52651,
-      "sha256": "35192b822696fe0f97fb8a77217dbaa83a11116b60aeb340ccb9a974983917b8"
+      "url": "https://media.brique.co/2021/02/a0bd7ee5-스튜디오-李心田心-studio-lxjx-square-triangle-house-도면01.jpg",
+      "bytes": 181372,
+      "sha256": "03e1017a4c85cc555060b67d4da8241387af2f0b58698ade87c83f32ffa5342b",
+      "width": 2000,
+      "height": 1413
     },
     "location": {
       "lat": 37.57234,
@@ -2206,19 +2369,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-57413-0.jpg",
+      "label": "1층 평면도 ⓒStudio LXJX",
+      "url": "https://media.brique.co/2021/02/a0bd7ee5-스튜디오-李心田心-studio-lxjx-square-triangle-house-도면01-905x639.jpg",
+      "bytes": 52651,
+      "sha256": "35192b822696fe0f97fb8a77217dbaa83a11116b60aeb340ccb9a974983917b8"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%8a%a4%ed%80%98%ec%96%b4-%ec%95%a4-%ed%8a%b8%eb%9d%bc%ec%9d%b4%ec%95%b5%ea%b8%80-%ed%95%98%ec%9a%b0%ec%8a%a4-square-triangle-house/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "1546a724427ca3837c813ce355892bf379518b6d697a9ea5cefbe888f63b7462",
+      "previous": {
+        "file": "sources/parking-57413-0.jpg",
+        "url": "https://media.brique.co/2021/02/a0bd7ee5-스튜디오-李心田心-studio-lxjx-square-triangle-house-도면01-905x639.jpg",
+        "sha256": "35192b822696fe0f97fb8a77217dbaa83a11116b60aeb340ccb9a974983917b8",
+        "width": 905,
+        "height": 639
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1413
+    },
     "modelFile": "generated/parking-57413-0.json",
     "statistics": {
-      "walls": 8,
+      "walls": 26,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 9,
-      "triangles": 96
+      "ocrLabels": 10,
+      "triangles": 312,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "08738e13e5afd665cccc22d11081033f7f106f4f63b04604c46b8cac72ca532e",
+    "modelHash": "c3e3cdfd1839bb29e028805be14b58ff6b95d6e149cbbdf5c77129dcbb2302f5",
     "radio": {
       "file": "generated/radio-parking-57413.json",
       "count": 48,
@@ -2237,11 +2424,13 @@
     "source": "https://magazine.brique.co/project/%ec%9c%a0%ec%b7%a8%ed%97%8c-%e5%b9%bd%e8%b6%a3%e8%bb%92/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-63653-0.jpg",
+      "file": "sources/high-resolution/parking-63653-0.jpg",
       "label": "1층 평면도 ⓒhow architects",
-      "url": "https://media.brique.co/2021/04/b6aba77b--幽趣軒-하우-건축사사무소-how-architects-1층-평면도-700x588.jpg",
-      "bytes": 44353,
-      "sha256": "563f97da9eca3716f457a51d1196244d8c86a45d547d063f5ee71842af0d665e"
+      "url": "https://media.brique.co/2021/04/b6aba77b--幽趣軒-하우-건축사사무소-how-architects-1층-평면도.jpg",
+      "bytes": 215131,
+      "sha256": "d26725fa6b70a1a8d53ebf8f45a2f301094cc3999c9e5272b2430fde1ee8633c",
+      "width": 2000,
+      "height": 1680
     },
     "location": {
       "lat": 37.4647545,
@@ -2268,19 +2457,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-63653-0.jpg",
+      "label": "1층 평면도 ⓒhow architects",
+      "url": "https://media.brique.co/2021/04/b6aba77b--幽趣軒-하우-건축사사무소-how-architects-1층-평면도-700x588.jpg",
+      "bytes": 44353,
+      "sha256": "563f97da9eca3716f457a51d1196244d8c86a45d547d063f5ee71842af0d665e"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%9c%a0%ec%b7%a8%ed%97%8c-%e5%b9%bd%e8%b6%a3%e8%bb%92/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "346545229621ff223af2ec18eeab88ab97a40ce1f3e9976db90e4512d25b5ab2",
+      "previous": {
+        "file": "sources/parking-63653-0.jpg",
+        "url": "https://media.brique.co/2021/04/b6aba77b--幽趣軒-하우-건축사사무소-how-architects-1층-평면도-700x588.jpg",
+        "sha256": "563f97da9eca3716f457a51d1196244d8c86a45d547d063f5ee71842af0d665e",
+        "width": 700,
+        "height": 588
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1680
+    },
     "modelFile": "generated/parking-63653-0.json",
     "statistics": {
-      "walls": 97,
+      "walls": 24,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 15,
-      "triangles": 1164
+      "ocrLabels": 23,
+      "triangles": 288,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "a821ecafcef6c99ac43d5c35ff545762149fd1b944e9185efc0ef5ad45707f1d",
+    "modelHash": "7a48c06e2bc53fe20541ee7e8137659211369498c5b590d0533804811d31260f",
     "radio": {
       "file": "generated/radio-parking-63653.json",
       "count": 48,
@@ -2299,11 +2512,13 @@
     "source": "https://magazine.brique.co/project/%ed%8f%89%ec%b0%bd%eb%8f%99-%ea%b3%b5%eb%8f%99%ec%a3%bc%ed%83%9d/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-52328-0.jpg",
+      "file": "sources/high-resolution/parking-52328-0.jpg",
       "label": "1층 평면도ⓒTERMINAL 7 ARCHITECTS",
-      "url": "https://media.brique.co/2020/10/1a628533-터미널7아키텍츠-건축사사무소-terminal-7-architects-평창동-공동주택-01-지상1층평면도-e1604876010345-700x444.jpg",
-      "bytes": 594468,
-      "sha256": "e12a64cd6591be97b8615127ed0aa4bd83fa4867601bd60b2b7708dad3db2d46"
+      "url": "https://media.brique.co/2020/10/1a628533-터미널7아키텍츠-건축사사무소-terminal-7-architects-평창동-공동주택-01-지상1층평면도-e1604876010345.jpg",
+      "bytes": 735594,
+      "sha256": "2e3ec53856967453ea08ce1672121f764518d0224ab61d32009b37ac18e11ffc",
+      "width": 2000,
+      "height": 1269
     },
     "location": {
       "lat": 37.6159731,
@@ -2330,19 +2545,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-52328-0.jpg",
+      "label": "1층 평면도ⓒTERMINAL 7 ARCHITECTS",
+      "url": "https://media.brique.co/2020/10/1a628533-터미널7아키텍츠-건축사사무소-terminal-7-architects-평창동-공동주택-01-지상1층평면도-e1604876010345-700x444.jpg",
+      "bytes": 594468,
+      "sha256": "e12a64cd6591be97b8615127ed0aa4bd83fa4867601bd60b2b7708dad3db2d46"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ed%8f%89%ec%b0%bd%eb%8f%99-%ea%b3%b5%eb%8f%99%ec%a3%bc%ed%83%9d/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "f4f21a67d69561eaf8aac8adcf7a578d541fd768a4d4a435c184938a6437c20f",
+      "previous": {
+        "file": "sources/parking-52328-0.jpg",
+        "url": "https://media.brique.co/2020/10/1a628533-터미널7아키텍츠-건축사사무소-terminal-7-architects-평창동-공동주택-01-지상1층평면도-e1604876010345-700x444.jpg",
+        "sha256": "e12a64cd6591be97b8615127ed0aa4bd83fa4867601bd60b2b7708dad3db2d46",
+        "width": 700,
+        "height": 444
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1269
+    },
     "modelFile": "generated/parking-52328-0.json",
     "statistics": {
-      "walls": 10,
+      "walls": 73,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 2,
-      "triangles": 120
+      "ocrLabels": 21,
+      "triangles": 876,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "eeb31fab3de1c2c04b1539718c89e3ea84d03fc2f255a434f2e3f5ac5e6f164e",
+    "modelHash": "8ab944ef1ab60ba0ad781523eae4fe3381451f80878d62092eb4de4b0b260316",
     "radio": {
       "file": "generated/radio-parking-52328.json",
       "count": 48,
@@ -2361,11 +2600,13 @@
     "source": "https://magazine.brique.co/project/%ec%84%b1%eb%b6%81%eb%8f%99-%ed%9a%8c%ec%83%89%ec%a7%91/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-49698-0.jpg",
+      "file": "sources/high-resolution/parking-49698-0.jpg",
       "label": "1층 평면도 ⓒmood.a ARCHITECTS",
-      "url": "https://media.brique.co/2020/08/9d52df41--무드에이-mood.a-architects-성북동-회색집-02-1층-평면도-700x483.jpg",
-      "bytes": 31865,
-      "sha256": "c6845bfafbd3482fe803defa7a9bdfca2ca899d1fb03f3327cfde7d64c71d5ab"
+      "url": "https://media.brique.co/2020/08/9d52df41--무드에이-mood.a-architects-성북동-회색집-02-1층-평면도.jpg",
+      "bytes": 201960,
+      "sha256": "b8b99fd271dd7cfd08a19c69e9c0ec42d9b6201fd31345326e9294432350c0db",
+      "width": 2000,
+      "height": 1379
     },
     "location": {
       "lat": 37.593266,
@@ -2392,19 +2633,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-49698-0.jpg",
+      "label": "1층 평면도 ⓒmood.a ARCHITECTS",
+      "url": "https://media.brique.co/2020/08/9d52df41--무드에이-mood.a-architects-성북동-회색집-02-1층-평면도-700x483.jpg",
+      "bytes": 31865,
+      "sha256": "c6845bfafbd3482fe803defa7a9bdfca2ca899d1fb03f3327cfde7d64c71d5ab"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%84%b1%eb%b6%81%eb%8f%99-%ed%9a%8c%ec%83%89%ec%a7%91/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "d58465e1795d307928fe5c7b74fec0a2fcd64c009229990bba85f158885c34c0",
+      "previous": {
+        "file": "sources/parking-49698-0.jpg",
+        "url": "https://media.brique.co/2020/08/9d52df41--무드에이-mood.a-architects-성북동-회색집-02-1층-평면도-700x483.jpg",
+        "sha256": "c6845bfafbd3482fe803defa7a9bdfca2ca899d1fb03f3327cfde7d64c71d5ab",
+        "width": 700,
+        "height": 483
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1379
+    },
     "modelFile": "generated/parking-49698-0.json",
     "statistics": {
-      "walls": 53,
+      "walls": 252,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 9,
-      "triangles": 636
+      "ocrLabels": 13,
+      "triangles": 3024,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "31082a5a94bd761d85ce410f016387baa37e0cb2928b3e981698cfc9c8ff334c",
+    "modelHash": "444ba73a210513a7d1667ab52dec8839f0090ca0ae5fd7307a24689d95491a9d",
     "radio": {
       "file": "generated/radio-parking-49698.json",
       "count": 48,
@@ -2423,11 +2688,13 @@
     "source": "https://magazine.brique.co/project/%e3%84%b9-%eb%a6%ac%ec%9d%84-%ec%a7%91/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-43658-0.jpg",
+      "file": "sources/high-resolution/parking-43658-0.jpg",
       "label": "1층 평면도 ⓒTIUM ARCHITECTS",
-      "url": "https://media.brique.co/2020/05/틔움건축-TIUM-ARCHITECTS-리을집-평면01-905x640.jpg",
-      "bytes": 51020,
-      "sha256": "18d4ac6b97895318a891e214d3968aaedae7686f7ef501c9e749c898868d1ef0"
+      "url": "https://media.brique.co/2020/05/틔움건축-TIUM-ARCHITECTS-리을집-평면01.jpg",
+      "bytes": 168297,
+      "sha256": "a4f68dc5528d6d19ad7d2f6e73e17d3a36038dbfc825b14a7a2fb2b5d35352b7",
+      "width": 2000,
+      "height": 1414
     },
     "location": {
       "lat": 37.5532345,
@@ -2454,19 +2721,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-43658-0.jpg",
+      "label": "1층 평면도 ⓒTIUM ARCHITECTS",
+      "url": "https://media.brique.co/2020/05/틔움건축-TIUM-ARCHITECTS-리을집-평면01-905x640.jpg",
+      "bytes": 51020,
+      "sha256": "18d4ac6b97895318a891e214d3968aaedae7686f7ef501c9e749c898868d1ef0"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%e3%84%b9-%eb%a6%ac%ec%9d%84-%ec%a7%91/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "cab7eb4dfaafcc2e9b6daf7fb7076fb8e1f215e7cf5ec6a9c1d07233f9ad4a74",
+      "previous": {
+        "file": "sources/parking-43658-0.jpg",
+        "url": "https://media.brique.co/2020/05/틔움건축-TIUM-ARCHITECTS-리을집-평면01-905x640.jpg",
+        "sha256": "18d4ac6b97895318a891e214d3968aaedae7686f7ef501c9e749c898868d1ef0",
+        "width": 905,
+        "height": 640
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1414
+    },
     "modelFile": "generated/parking-43658-0.json",
     "statistics": {
-      "walls": 68,
+      "walls": 95,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 4,
-      "triangles": 816
+      "ocrLabels": 18,
+      "triangles": 1140,
+      "detectedParking": 4,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "fe0fe7385477bcd143e7dc7427c5991286913c29bcfa6e6a7fbb9b178e219506",
+    "modelHash": "0f3d569e61511b43759b9dabc1542880077808c9d8b00cf808a3b6b33e47bd84",
     "radio": {
       "file": "generated/radio-parking-43658.json",
       "count": 48,
@@ -2485,11 +2776,13 @@
     "source": "https://magazine.brique.co/project/%ec%8b%a0%ea%b3%b5%eb%8d%95%eb%8f%99-%ed%98%91%ec%86%8c%ec%a3%bc%ed%83%9d-micro-housing-s/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-45519-0.jpg",
+      "file": "sources/high-resolution/parking-45519-0.jpg",
       "label": "1층(왼쪽), 2층 평면도 ⓒArchitects H2L",
-      "url": "https://media.brique.co/2020/06/-H2L-ArchitectsH2L-신공덕동-협소주택-Micro-Hoiusing-S-도면02-e1593472280879-700x586.jpg",
-      "bytes": 40192,
-      "sha256": "d2c4c4722aa625961ea331882b0ac7a0d39250cf0f265d99b05302decae50d2b"
+      "url": "https://media.brique.co/2020/06/-H2L-ArchitectsH2L-신공덕동-협소주택-Micro-Hoiusing-S-도면02-e1593472280879.jpg",
+      "bytes": 218863,
+      "sha256": "6842cfb721d69b850d3bc578fdf6d7b672f5d97c2cc1f361c25ceb1ce130c0a5",
+      "width": 2000,
+      "height": 1675
     },
     "location": {
       "lat": 37.5417265,
@@ -2516,19 +2809,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-45519-0.jpg",
+      "label": "1층(왼쪽), 2층 평면도 ⓒArchitects H2L",
+      "url": "https://media.brique.co/2020/06/-H2L-ArchitectsH2L-신공덕동-협소주택-Micro-Hoiusing-S-도면02-e1593472280879-700x586.jpg",
+      "bytes": 40192,
+      "sha256": "d2c4c4722aa625961ea331882b0ac7a0d39250cf0f265d99b05302decae50d2b"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%8b%a0%ea%b3%b5%eb%8d%95%eb%8f%99-%ed%98%91%ec%86%8c%ec%a3%bc%ed%83%9d-micro-housing-s/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "953180fcb18d5db858a1a7b002283329ff64a04164b017c941f74a3839bcb931",
+      "previous": {
+        "file": "sources/parking-45519-0.jpg",
+        "url": "https://media.brique.co/2020/06/-H2L-ArchitectsH2L-신공덕동-협소주택-Micro-Hoiusing-S-도면02-e1593472280879-700x586.jpg",
+        "sha256": "d2c4c4722aa625961ea331882b0ac7a0d39250cf0f265d99b05302decae50d2b",
+        "width": 700,
+        "height": 586
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1675
+    },
     "modelFile": "generated/parking-45519-0.json",
     "statistics": {
-      "walls": 90,
+      "walls": 23,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 13,
-      "triangles": 1080
+      "ocrLabels": 27,
+      "triangles": 276,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "c8239c6de564785c4225123b7b1d9abd47d4630a447e37f356c795102a7c9178",
+    "modelHash": "b4cce7d3c9db71151310811dfa6803147db82a40510d6e8bd1f37a27f205d600",
     "radio": {
       "file": "generated/radio-parking-45519.json",
       "count": 48,
@@ -2547,11 +2864,13 @@
     "source": "https://magazine.brique.co/project/%ec%9d%b4%ec%98%a4%ec%8a%a4-eos/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-39327-0.jpg",
+      "file": "sources/high-resolution/parking-39327-0.jpg",
       "label": "1층 평면도 ⓒJoHanjun Architects",
-      "url": "https://media.brique.co/2020/03/건축사사무소-더함_이오스_도면03-700x495.jpg",
-      "bytes": 40052,
-      "sha256": "44c9b78cb53d1145d78e4697d56c209e42b03fa55a510a76000ee3435b3eeae3"
+      "url": "https://media.brique.co/2020/03/건축사사무소-더함_이오스_도면03-2048x1448.jpg",
+      "bytes": 210806,
+      "sha256": "9634a2fedaf46148a308cf2f2443c87bdc8afb69d23204ab4ce9904b441b08b6",
+      "width": 2048,
+      "height": 1448
     },
     "location": {
       "lat": 37.53842,
@@ -2578,19 +2897,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-39327-0.jpg",
+      "label": "1층 평면도 ⓒJoHanjun Architects",
+      "url": "https://media.brique.co/2020/03/건축사사무소-더함_이오스_도면03-700x495.jpg",
+      "bytes": 40052,
+      "sha256": "44c9b78cb53d1145d78e4697d56c209e42b03fa55a510a76000ee3435b3eeae3"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%9d%b4%ec%98%a4%ec%8a%a4-eos/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "da3bcc04cc90acfcb72b493b90e8cff4d7d5969c3a3719eca8f9dde15460c6b4",
+      "previous": {
+        "file": "sources/parking-39327-0.jpg",
+        "url": "https://media.brique.co/2020/03/건축사사무소-더함_이오스_도면03-700x495.jpg",
+        "sha256": "44c9b78cb53d1145d78e4697d56c209e42b03fa55a510a76000ee3435b3eeae3",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 2048,
+      "selectedHeight": 1448
+    },
     "modelFile": "generated/parking-39327-0.json",
     "statistics": {
-      "walls": 31,
+      "walls": 9,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 2,
-      "triangles": 372
+      "ocrLabels": 12,
+      "triangles": 108,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "8fa83707e524ceb01a1518d422a4eeac19bbbaced29894c231faef8a762690c0",
+    "modelHash": "f876d1659e246112bd0e05e8baa460dc4a0921f13c82b141d406097e51a0c6d1",
     "radio": {
       "file": "generated/radio-parking-39327.json",
       "count": 48,
@@ -2609,11 +2952,13 @@
     "source": "https://magazine.brique.co/project/%eb%85%bc%ed%98%84-109/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-35314-0.jpg",
+      "file": "sources/high-resolution/parking-35314-0.jpg",
       "label": "1층 평면도 ⓒO5STUDIO",
-      "url": "https://media.brique.co/2020/01/05STUDIO_논현동-109_1층평면도-e1579512441280-700x607.jpg",
-      "bytes": 28275,
-      "sha256": "ee9df744f0592bf86ee2d8a95fcbfb86520dcac4143c39b1d567801369f5a53a"
+      "url": "https://media.brique.co/2020/01/05STUDIO_논현동-109_1층평면도-e1579512441280.jpg",
+      "bytes": 60376,
+      "sha256": "7114fbf6ac39b044aa2a24bd4549d417b031222a11954a501e13226135275e1c",
+      "width": 1072,
+      "height": 930
     },
     "location": {
       "lat": 37.5123018,
@@ -2640,19 +2985,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-35314-0.jpg",
+      "label": "1층 평면도 ⓒO5STUDIO",
+      "url": "https://media.brique.co/2020/01/05STUDIO_논현동-109_1층평면도-e1579512441280-700x607.jpg",
+      "bytes": 28275,
+      "sha256": "ee9df744f0592bf86ee2d8a95fcbfb86520dcac4143c39b1d567801369f5a53a"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%85%bc%ed%98%84-109/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "96f2ab661a2526cd8318be101a8340813a3d93357a38d9815bb4fb03d12b8134",
+      "previous": {
+        "file": "sources/parking-35314-0.jpg",
+        "url": "https://media.brique.co/2020/01/05STUDIO_논현동-109_1층평면도-e1579512441280-700x607.jpg",
+        "sha256": "ee9df744f0592bf86ee2d8a95fcbfb86520dcac4143c39b1d567801369f5a53a",
+        "width": 700,
+        "height": 607
+      },
+      "selectedWidth": 1072,
+      "selectedHeight": 930
+    },
     "modelFile": "generated/parking-35314-0.json",
     "statistics": {
-      "walls": 21,
+      "walls": 24,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 1,
-      "triangles": 252
+      "ocrLabels": 2,
+      "triangles": 288,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "382c6de4e0401158678f4f38e9a2e931f0d4129c5a64542adb65aa8c25faab1b",
+    "modelHash": "626caf9135d627ecddb7e31e5244c7431b0713f1bd3a35f548ae14cceeea0be9",
     "radio": {
       "file": "generated/radio-parking-35314.json",
       "count": 48,
@@ -2671,11 +3040,13 @@
     "source": "https://magazine.brique.co/project/hwang-june-architect_nonhyeon-dong-p-studio/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-146002-0.jpg",
+      "file": "sources/high-resolution/parking-146002-0.jpg",
       "label": "평면도 ©Hwang June Architect & Associates",
-      "url": "https://media.brique.co/2025/05/QokfjDIJ-논현동-빌딩-평면도-905x639.jpg",
-      "bytes": 47977,
-      "sha256": "ce53707e71f2253a5be4cd99074fa90c65ccb9e126a3a978f958de33ac648d85"
+      "url": "https://media.brique.co/2025/05/QokfjDIJ-논현동-빌딩-평면도-1536x1085.jpg",
+      "bytes": 106727,
+      "sha256": "a08a80452693467b79a9394002f1f43874d0f23890acfdc14539631bd1818b32",
+      "width": 1536,
+      "height": 1085
     },
     "location": {
       "lat": 37.5123018,
@@ -2702,19 +3073,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-146002-0.jpg",
+      "label": "평면도 ©Hwang June Architect & Associates",
+      "url": "https://media.brique.co/2025/05/QokfjDIJ-논현동-빌딩-평면도-905x639.jpg",
+      "bytes": 47977,
+      "sha256": "ce53707e71f2253a5be4cd99074fa90c65ccb9e126a3a978f958de33ac648d85"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/hwang-june-architect_nonhyeon-dong-p-studio/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "0df86362d0d18dc3cce0e1077c35dc860c8a1e16c9d8e014cfe6ca704b78ac43",
+      "previous": {
+        "file": "sources/parking-146002-0.jpg",
+        "url": "https://media.brique.co/2025/05/QokfjDIJ-논현동-빌딩-평면도-905x639.jpg",
+        "sha256": "ce53707e71f2253a5be4cd99074fa90c65ccb9e126a3a978f958de33ac648d85",
+        "width": 905,
+        "height": 639
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1085
+    },
     "modelFile": "generated/parking-146002-0.json",
     "statistics": {
-      "walls": 228,
+      "walls": 432,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 8,
-      "triangles": 2736
+      "ocrLabels": 29,
+      "triangles": 5184,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "28cb2ad53f793d3dab1c3a587eeeca84a6d9ca18172e64eea47b76d7f9e143e7",
+    "modelHash": "229cd23bb36534a70f9b3168d49f2fd5f4f9ef770dea3a54d2830bbc8eddd1e6",
     "radio": {
       "file": "generated/radio-parking-146002.json",
       "count": 48,
@@ -2733,11 +3128,13 @@
     "source": "https://magazine.brique.co/project/%ed%9a%a8%ec%b0%bd%eb%8f%99%ec%b2%ab%ec%a7%91-first-house-hyochangdong/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-7128-0.jpg",
+      "file": "sources/high-resolution/parking-7128-0.jpg",
       "label": "PLAN ⓒB.U.S Architecture",
-      "url": "https://media.brique.co/2017/07/PLAN-700x495.jpg",
-      "bytes": 30526,
-      "sha256": "80252a76298cc207cf2f9ebbba9c7693dee3465e2447a56ff1a816b997ee549e"
+      "url": "https://media.brique.co/2017/07/PLAN.jpg",
+      "bytes": 59020,
+      "sha256": "255bc12aec1bfb06bc630ec9c0fed03677c1d8b109af5e287be5dd17a735892d",
+      "width": 1220,
+      "height": 862
     },
     "location": {
       "lat": 37.54341,
@@ -2764,19 +3161,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-7128-0.jpg",
+      "label": "PLAN ⓒB.U.S Architecture",
+      "url": "https://media.brique.co/2017/07/PLAN-700x495.jpg",
+      "bytes": 30526,
+      "sha256": "80252a76298cc207cf2f9ebbba9c7693dee3465e2447a56ff1a816b997ee549e"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ed%9a%a8%ec%b0%bd%eb%8f%99%ec%b2%ab%ec%a7%91-first-house-hyochangdong/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "d2755f7b68b84600ef16269e52d615114d41faf78f563d5bdafec6955c7d2cf3",
+      "previous": {
+        "file": "sources/parking-7128-0.jpg",
+        "url": "https://media.brique.co/2017/07/PLAN-700x495.jpg",
+        "sha256": "80252a76298cc207cf2f9ebbba9c7693dee3465e2447a56ff1a816b997ee549e",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 1220,
+      "selectedHeight": 862
+    },
     "modelFile": "generated/parking-7128-0.json",
     "statistics": {
-      "walls": 73,
+      "walls": 204,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 12,
-      "triangles": 876
+      "ocrLabels": 13,
+      "triangles": 2448,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "03c586f22fc2f2a7c16dbddfe268a26be0b8e1935dbf7a04e1ee243c89e6e1ef",
+    "modelHash": "8237ab2b2f214d349c42aa11ccde48467a6b426e5a267ca782fdf40c5a9beafc",
     "radio": {
       "file": "generated/radio-parking-7128.json",
       "count": 48,
@@ -2795,11 +3216,13 @@
     "source": "https://magazine.brique.co/project/%eb%8a%a5%eb%8f%99%ed%95%98%eb%8a%98%ec%a7%91-sky-house/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-15333-0.jpg",
+      "file": "sources/high-resolution/parking-15333-0.jpg",
       "label": "1,4F planⒸTRU Architects",
-      "url": "https://media.brique.co/2018/08/SH_014-e1533618062266-700x496.jpg",
-      "bytes": 48025,
-      "sha256": "cda8fc5afb4d7eb7b6833a1386bd7ffb4f3a773eb3fede1ce9177a453b81cebd"
+      "url": "https://media.brique.co/2018/08/SH_014-e1533618062266.jpg",
+      "bytes": 89272,
+      "sha256": "f3afdf6089fde033f892a320b16d5ee4c03412f2bf95f9c2928f9a472eed2826",
+      "width": 1220,
+      "height": 864
     },
     "location": {
       "lat": 37.55444,
@@ -2826,19 +3249,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-15333-0.jpg",
+      "label": "1,4F planⒸTRU Architects",
+      "url": "https://media.brique.co/2018/08/SH_014-e1533618062266-700x496.jpg",
+      "bytes": 48025,
+      "sha256": "cda8fc5afb4d7eb7b6833a1386bd7ffb4f3a773eb3fede1ce9177a453b81cebd"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%8a%a5%eb%8f%99%ed%95%98%eb%8a%98%ec%a7%91-sky-house/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "a81dddb4bfc6736c15846d903e70a162daee902cf20f1720c9b421925975843b",
+      "previous": {
+        "file": "sources/parking-15333-0.jpg",
+        "url": "https://media.brique.co/2018/08/SH_014-e1533618062266-700x496.jpg",
+        "sha256": "cda8fc5afb4d7eb7b6833a1386bd7ffb4f3a773eb3fede1ce9177a453b81cebd",
+        "width": 700,
+        "height": 496
+      },
+      "selectedWidth": 1220,
+      "selectedHeight": 864
+    },
     "modelFile": "generated/parking-15333-0.json",
     "statistics": {
-      "walls": 166,
+      "walls": 31,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 1992
+      "triangles": 372,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "ca9b636f012537992b40bf30b2a9db0a2641962bbb18163ede802480ca0689a7",
+    "modelHash": "09182048ba4e84dea1d0e83f2d6c797026bc46e23afbc4e26ab5be8e65fc8d27",
     "radio": {
       "file": "generated/radio-parking-15333.json",
       "count": 48,
@@ -2857,12 +3304,14 @@
     "source": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-168780-0.jpg",
+      "file": "sources/high-resolution/parking-168780-0.jpg",
       "label": "지상 1층 평면도 ©UIA",
-      "url": "https://media.brique.co/2026/04/plan-3-905x484.jpg",
-      "bytes": 94097,
-      "sha256": "6db067d3a866f7fc9630fcf16f4665e56be28f9b5a3dd485cfdc2fc7f6eea6ca",
-      "floor": "1F"
+      "url": "https://media.brique.co/2026/04/plan-3-1536x822.jpg",
+      "bytes": 202413,
+      "sha256": "95a4a81a3a3f8d4744ab89611f9f3fa0890bc5eb69914a95c84894dc4c077632",
+      "floor": "1F",
+      "width": 1536,
+      "height": 822
     },
     "location": {
       "lat": 37.167928,
@@ -2908,19 +3357,44 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 123.73046875,
+    "previewAsset": {
+      "file": "sources/parking-168780-0.jpg",
+      "label": "지상 1층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-3-905x484.jpg",
+      "bytes": 94097,
+      "sha256": "6db067d3a866f7fc9630fcf16f4665e56be28f9b5a3dd485cfdc2fc7f6eea6ca",
+      "floor": "1F"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "5bf20e9cdff62f284c3dda80e3f2358d78ba7da5f114c8f472a3b719e35bd9dc",
+      "previous": {
+        "file": "sources/parking-168780-0.jpg",
+        "url": "https://media.brique.co/2026/04/plan-3-905x484.jpg",
+        "sha256": "6db067d3a866f7fc9630fcf16f4665e56be28f9b5a3dd485cfdc2fc7f6eea6ca",
+        "width": 905,
+        "height": 484
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 822
+    },
     "modelFile": "generated/parking-168780-0.json",
     "statistics": {
-      "walls": 137,
+      "walls": 15,
       "nodes": 0,
       "edges": 0,
       "spaces": 31,
       "objects": 21,
       "accessible": 12,
-      "ocrLabels": 30,
-      "triangles": 1644
+      "ocrLabels": 40,
+      "triangles": 180,
+      "detectedParking": 17,
+      "matchedParking": 9
     },
     "routingReady": false,
-    "modelHash": "9bf083eff3a94066b0438e216018362f57edaf32062973e8b0d09a3849d9b276",
+    "modelHash": "58a17cf461e4adefa24670c0f178c79c5aa2f992c967a7bef174195c3b4ada6c",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -2939,12 +3413,14 @@
     "source": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-168780-1.jpg",
+      "file": "sources/high-resolution/parking-168780-1.jpg",
       "label": "지하 1층 평면도 ©UIA",
-      "url": "https://media.brique.co/2026/04/plan-2-905x441.jpg",
-      "bytes": 80008,
-      "sha256": "a8cba9d40b5305527d30202a79c92103845c3058c19d43f9cf1eadb09d099d43",
-      "floor": "B1"
+      "url": "https://media.brique.co/2026/04/plan-2-1536x748.jpg",
+      "bytes": 179958,
+      "sha256": "30010a1fd374f7abadf0ff94db2190391a7a12c4c6ea3ae3d0511ee21af99f29",
+      "floor": "B1",
+      "width": 1536,
+      "height": 748
     },
     "location": {
       "lat": 37.167928,
@@ -2990,19 +3466,44 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 123.73046875,
+    "previewAsset": {
+      "file": "sources/parking-168780-1.jpg",
+      "label": "지하 1층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-2-905x441.jpg",
+      "bytes": 80008,
+      "sha256": "a8cba9d40b5305527d30202a79c92103845c3058c19d43f9cf1eadb09d099d43",
+      "floor": "B1"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "5bf20e9cdff62f284c3dda80e3f2358d78ba7da5f114c8f472a3b719e35bd9dc",
+      "previous": {
+        "file": "sources/parking-168780-1.jpg",
+        "url": "https://media.brique.co/2026/04/plan-2-905x441.jpg",
+        "sha256": "a8cba9d40b5305527d30202a79c92103845c3058c19d43f9cf1eadb09d099d43",
+        "width": 905,
+        "height": 441
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 748
+    },
     "modelFile": "generated/parking-168780-1.json",
     "statistics": {
-      "walls": 11,
+      "walls": 18,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 8,
       "accessible": 0,
-      "ocrLabels": 21,
-      "triangles": 132
+      "ocrLabels": 30,
+      "triangles": 216,
+      "detectedParking": 4,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "c4f9848789e819ab4da3c78065236d93fd35cccec66358b96896a454459d875b",
+    "modelHash": "58a02a77076d42b10a26e7013303de512365ec0628dd2885641133343ddb7a54",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -3021,12 +3522,14 @@
     "source": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-168780-2.jpg",
+      "file": "sources/high-resolution/parking-168780-2.jpg",
       "label": "지하 2층 평면도 ©UIA",
-      "url": "https://media.brique.co/2026/04/plan-905x438.jpg",
-      "bytes": 99525,
-      "sha256": "72571515cd9d1a90c6bc2bb7b046dc4d45e9d0cb2316812b452aec3479a6e45d",
-      "floor": "B2"
+      "url": "https://media.brique.co/2026/04/plan-1536x743.jpg",
+      "bytes": 235513,
+      "sha256": "82d3be57367acf0d67466457ff8c2ccd6a539f595d188873f3abc0a9fdc55be2",
+      "floor": "B2",
+      "width": 1536,
+      "height": 743
     },
     "location": {
       "lat": 37.167928,
@@ -3072,19 +3575,44 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 123.73046875,
+    "previewAsset": {
+      "file": "sources/parking-168780-2.jpg",
+      "label": "지하 2층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-905x438.jpg",
+      "bytes": 99525,
+      "sha256": "72571515cd9d1a90c6bc2bb7b046dc4d45e9d0cb2316812b452aec3479a6e45d",
+      "floor": "B2"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "5bf20e9cdff62f284c3dda80e3f2358d78ba7da5f114c8f472a3b719e35bd9dc",
+      "previous": {
+        "file": "sources/parking-168780-2.jpg",
+        "url": "https://media.brique.co/2026/04/plan-905x438.jpg",
+        "sha256": "72571515cd9d1a90c6bc2bb7b046dc4d45e9d0cb2316812b452aec3479a6e45d",
+        "width": 905,
+        "height": 438
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 743
+    },
     "modelFile": "generated/parking-168780-2.json",
     "statistics": {
-      "walls": 15,
+      "walls": 38,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 12,
       "accessible": 0,
-      "ocrLabels": 25,
-      "triangles": 180
+      "ocrLabels": 49,
+      "triangles": 456,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "d6d11d0137c9a3c92d9f74d4d0474584c7e6011fccac975d5a94d8f963bd23d6",
+    "modelHash": "df960674acc642e20eed3830a5af288e02099618628a408265866fb9d9f8a950",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -3103,11 +3631,13 @@
     "source": "https://magazine.brique.co/project/ima-architects_cafe-mokjeokji/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-146396-0.jpg",
+      "file": "sources/high-resolution/parking-146396-0.jpg",
       "label": "배치도 ©IMA architects",
-      "url": "https://media.brique.co/2025/05/배치도_900-905x621.jpg",
-      "bytes": 140936,
-      "sha256": "84c0225fd9768252ba12757960f7ce6ebc7ba17554ab6d1670792dae0f678697"
+      "url": "https://media.brique.co/2025/05/배치도_900-1536x1054.jpg",
+      "bytes": 347151,
+      "sha256": "69073516c753c2647f5be0fb586fe9bc02c7294536a43f58ba23363399db86b0",
+      "width": 1536,
+      "height": 1054
     },
     "location": {
       "lat": 37.07156,
@@ -3134,19 +3664,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-146396-0.jpg",
+      "label": "배치도 ©IMA architects",
+      "url": "https://media.brique.co/2025/05/배치도_900-905x621.jpg",
+      "bytes": 140936,
+      "sha256": "84c0225fd9768252ba12757960f7ce6ebc7ba17554ab6d1670792dae0f678697"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/ima-architects_cafe-mokjeokji/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "599eda4a5e684e6277e2666a79532830f22815eb4bc35432b33e5f9c41dcd498",
+      "previous": {
+        "file": "sources/parking-146396-0.jpg",
+        "url": "https://media.brique.co/2025/05/배치도_900-905x621.jpg",
+        "sha256": "84c0225fd9768252ba12757960f7ce6ebc7ba17554ab6d1670792dae0f678697",
+        "width": 905,
+        "height": 621
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1054
+    },
     "modelFile": "generated/parking-146396-0.json",
     "statistics": {
-      "walls": 18,
+      "walls": 36,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 4,
-      "triangles": 216
+      "ocrLabels": 7,
+      "triangles": 432,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "4b67668d9c3fee39e9d165b4eedf469755e8fd9bbd0750814624625a517d56cc",
+    "modelHash": "1fd0c581b0ae26ddf31915c5b1893368e92f7327b7fc4d8e445edd4f5a4e9505",
     "radio": {
       "file": "generated/radio-parking-146396.json",
       "count": 21,
@@ -3165,11 +3719,13 @@
     "source": "https://magazine.brique.co/project/designbug-seo-oh-jae/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-143447-0.jpg",
+      "file": "sources/high-resolution/parking-143447-0.jpg",
       "label": "1층 평면도 ©designbug",
-      "url": "https://media.brique.co/2025/04/서오재-53-905x643.jpg",
-      "bytes": 64876,
-      "sha256": "fbb0020383c561a9896b0092f2fceb72863b023a0b43173bfcce5c6ce830ce9d"
+      "url": "https://media.brique.co/2025/04/서오재-53-1536x1091.jpg",
+      "bytes": 123518,
+      "sha256": "76bff22f7e8200dd2f852296d7514e7219546c20891b5d4a85771e1cf3160c79",
+      "width": 1536,
+      "height": 1091
     },
     "location": {
       "lat": 37.4735389,
@@ -3196,19 +3752,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-143447-0.jpg",
+      "label": "1층 평면도 ©designbug",
+      "url": "https://media.brique.co/2025/04/서오재-53-905x643.jpg",
+      "bytes": 64876,
+      "sha256": "fbb0020383c561a9896b0092f2fceb72863b023a0b43173bfcce5c6ce830ce9d"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/designbug-seo-oh-jae/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "791d5b091c05c6d78c402caea9dba44aa36eef129734f11a6491ef022919d05d",
+      "previous": {
+        "file": "sources/parking-143447-0.jpg",
+        "url": "https://media.brique.co/2025/04/서오재-53-905x643.jpg",
+        "sha256": "fbb0020383c561a9896b0092f2fceb72863b023a0b43173bfcce5c6ce830ce9d",
+        "width": 905,
+        "height": 643
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1091
+    },
     "modelFile": "generated/parking-143447-0.json",
     "statistics": {
-      "walls": 5,
+      "walls": 16,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 14,
-      "triangles": 60
+      "ocrLabels": 19,
+      "triangles": 192,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "fa72fbd55cab3539c67b61405f8b193e648a72d407a478e7d884e7b331c1e2b3",
+    "modelHash": "78296779eef76d5f38da1b22402f41d6235322ba9a197d81e3313630c5f41f11",
     "radio": {
       "file": "generated/radio-parking-143447.json",
       "count": 48,
@@ -3227,11 +3807,13 @@
     "source": "https://magazine.brique.co/project/sml_birye-church/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-140714-0.jpg",
+      "file": "sources/high-resolution/parking-140714-0.jpg",
       "label": "배치도 ©SML",
-      "url": "https://media.brique.co/2025/03/1.Site-Plan1_300-905x543.jpg",
-      "bytes": 37142,
-      "sha256": "e063f2fd9b5d0a35f0bc80d122e6c7ad8683012cc4ef82ca50a897f70f662a21"
+      "url": "https://media.brique.co/2025/03/1.Site-Plan1_300-2048x1229.jpg",
+      "bytes": 118586,
+      "sha256": "f3a3eb5a87eaebfb374cb7ab412c568ef376cf9d9aaddb0b9b517b290eeaf556",
+      "width": 2048,
+      "height": 1229
     },
     "location": {
       "lat": 36.2065355,
@@ -3258,19 +3840,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-140714-0.jpg",
+      "label": "배치도 ©SML",
+      "url": "https://media.brique.co/2025/03/1.Site-Plan1_300-905x543.jpg",
+      "bytes": 37142,
+      "sha256": "e063f2fd9b5d0a35f0bc80d122e6c7ad8683012cc4ef82ca50a897f70f662a21"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/sml_birye-church/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "1de80e5c3192d2c0455067f8bc15ee22a5e4db23534a9879a349d1d20cd7246e",
+      "previous": {
+        "file": "sources/parking-140714-0.jpg",
+        "url": "https://media.brique.co/2025/03/1.Site-Plan1_300-905x543.jpg",
+        "sha256": "e063f2fd9b5d0a35f0bc80d122e6c7ad8683012cc4ef82ca50a897f70f662a21",
+        "width": 905,
+        "height": 543
+      },
+      "selectedWidth": 2048,
+      "selectedHeight": 1229
+    },
     "modelFile": "generated/parking-140714-0.json",
     "statistics": {
-      "walls": 25,
+      "walls": 33,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 0,
-      "triangles": 300
+      "triangles": 396,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "86f426330efa0ae63f375e73c406376125d256ee19f727e39aa4d69b223bae3f",
+    "modelHash": "7cdddaa0fb0468033f7ea2b91e5e2badbae4254e87d456cfa46de706a3ec7e51",
     "radio": {
       "file": "generated/radio-parking-140714.json",
       "count": 15,
@@ -3289,12 +3895,14 @@
     "source": "https://magazine.brique.co/project/kode-architects_public-vessel-office-of-daecheonhang-port/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-131601-0.jpg",
+      "file": "sources/high-resolution/parking-131601-0.jpg",
       "label": "지상 1층 평면도 ©KODE Architects",
-      "url": "https://media.brique.co/2024/09/02.-지상1층-평면도-700x530.jpg",
-      "bytes": 62997,
-      "sha256": "766295e83ac56998063f5e05aba6e6a70a0b303f13c4045f8b1ec221e23391ac",
-      "floor": "1F"
+      "url": "https://media.brique.co/2024/09/02.-지상1층-평면도.jpg",
+      "bytes": 330126,
+      "sha256": "b35a410d896ffae06fd56186b9c37231877598283b5a96524b5a5db52e786d2b",
+      "floor": "1F",
+      "width": 2000,
+      "height": 1513
     },
     "location": {
       "lat": 36.337438,
@@ -3314,26 +3922,49 @@
     },
     "parkingEvidence": {
       "floor": "1F",
-      "note": "상단 및 좌측 차량 구획과 장애인 주차 표기",
-      "method": "원본 평면도 시각 검토",
-      "verifiedAt": "2026-09-21",
-      "currentFacilityStatus": "not-surveyed"
+      "note": "고해상도 원본의 벽체·유리면·문 개구부와 주차 차로를 대조했습니다. 도면 축척 막대 적용 · 현장 출입·현재 장애물 미확인."
     },
     "scaleStatus": "estimated",
     "metersAcross": 70,
+    "previewAsset": {
+      "file": "sources/parking-131601-0.jpg",
+      "label": "지상 1층 평면도 ©KODE Architects",
+      "url": "https://media.brique.co/2024/09/02.-지상1층-평면도-700x530.jpg",
+      "bytes": 62997,
+      "sha256": "766295e83ac56998063f5e05aba6e6a70a0b303f13c4045f8b1ec221e23391ac",
+      "floor": "1F"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/kode-architects_public-vessel-office-of-daecheonhang-port/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "8bda5ef4fa3f0c9ba3bb7546f56786f7c49d4bc73ebdd212388f4c21128ebc25",
+      "previous": {
+        "file": "sources/parking-131601-0.jpg",
+        "url": "https://media.brique.co/2024/09/02.-지상1층-평면도-700x530.jpg",
+        "sha256": "766295e83ac56998063f5e05aba6e6a70a0b303f13c4045f8b1ec221e23391ac",
+        "width": 700,
+        "height": 530
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1513
+    },
+    "annotation": "sources/daecheon-layers.svg",
     "modelFile": "generated/parking-131601-0.json",
     "statistics": {
-      "walls": 47,
-      "nodes": 0,
-      "edges": 0,
-      "spaces": 49,
-      "objects": 0,
+      "walls": 72,
+      "nodes": 52,
+      "edges": 51,
+      "spaces": 52,
+      "objects": 47,
       "accessible": 2,
-      "ocrLabels": 0,
-      "triangles": 564
+      "ocrLabels": 15,
+      "triangles": 864,
+      "detectedParking": 50,
+      "matchedParking": 50
     },
-    "routingReady": false,
-    "modelHash": "fd0f4d326a672cc8c433343cab79bf9bd45980ba6b83e2fd2ffab02d855b3e91",
+    "routingReady": true,
+    "modelHash": "ec1c303d6bb0a8aab29ffa805cbcc79da01cfd8f15076bd80a9396effc14f5df",
     "radio": {
       "file": "generated/radio-parking-131601.json",
       "count": 37,
@@ -3392,10 +4023,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 3,
-      "triangles": 3468
+      "triangles": 3468,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "1af703f98c8e34015c9d8f160b1ef2d3014686de38659022a65af7be7f4eade3",
+    "modelHash": "26f30abdf62530c127d4067d48f4fa408ab3dc8b73419f8b6697e111b40a17ac",
     "radio": {
       "file": "generated/radio-parking-24500.json",
       "count": 48,
@@ -3414,11 +4047,13 @@
     "source": "https://magazine.brique.co/project/skipfloorhouse/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-90014-0.jpg",
+      "file": "sources/high-resolution/parking-90014-0.jpg",
       "label": "1층 평면도 ©DO architects",
-      "url": "https://media.brique.co/2022/08/디오건축사사무소DOarchitects_스킵플로어하우스skipfloorhouse17-700x478.jpg",
-      "bytes": 637347,
-      "sha256": "c0b9d3141cb79799559b689a29013cfef956e6abc81ccb5ddd46c2dabf4b0643"
+      "url": "https://media.brique.co/2022/08/디오건축사사무소DOarchitects_스킵플로어하우스skipfloorhouse17-1536x1049.jpg",
+      "bytes": 862680,
+      "sha256": "12fcb2d1652f4afc4ffd17f41a783a20d91851c0e3990b8a941d3d57278faefc",
+      "width": 1536,
+      "height": 1049
     },
     "location": {
       "lat": 35.570425,
@@ -3445,19 +4080,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-90014-0.jpg",
+      "label": "1층 평면도 ©DO architects",
+      "url": "https://media.brique.co/2022/08/디오건축사사무소DOarchitects_스킵플로어하우스skipfloorhouse17-700x478.jpg",
+      "bytes": 637347,
+      "sha256": "c0b9d3141cb79799559b689a29013cfef956e6abc81ccb5ddd46c2dabf4b0643"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/skipfloorhouse/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "5a6cff2c66b338732d04ff3df1f87b0173a88c55b43c0919a398bd879f302803",
+      "previous": {
+        "file": "sources/parking-90014-0.jpg",
+        "url": "https://media.brique.co/2022/08/디오건축사사무소DOarchitects_스킵플로어하우스skipfloorhouse17-700x478.jpg",
+        "sha256": "c0b9d3141cb79799559b689a29013cfef956e6abc81ccb5ddd46c2dabf4b0643",
+        "width": 700,
+        "height": 478
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1049
+    },
     "modelFile": "generated/parking-90014-0.json",
     "statistics": {
-      "walls": 164,
+      "walls": 26,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 2,
-      "triangles": 1968
+      "ocrLabels": 15,
+      "triangles": 312,
+      "detectedParking": 3,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "9348e2020339551338d89bacff223ce1cfaa72c3e409a6ae3f726ef1262db593",
+    "modelHash": "9d4070cbd0709e0c5517cbaaf6395c9b469c5790af60a30f4c0d5006e40add38",
     "radio": {
       "file": "generated/radio-parking-90014.json",
       "count": 48,
@@ -3476,11 +4135,13 @@
     "source": "https://magazine.brique.co/project/yeyoojae/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-89845-0.jpg",
+      "file": "sources/high-resolution/parking-89845-0.jpg",
       "label": "1층 평면도©KUOTAA",
-      "url": "https://media.brique.co/2022/08/평단입면도-2-905x637.jpg",
-      "bytes": 55044,
-      "sha256": "f1ab20c1410530a52811c5633741882299516a1c5c94496197e11e8780c3a69b"
+      "url": "https://media.brique.co/2022/08/평단입면도-2-2048x1441.jpg",
+      "bytes": 209756,
+      "sha256": "4d4244b4ea8eb2934be5e79fbf2c4bedcabf90c825d2a227a3acf627b8f97804",
+      "width": 2048,
+      "height": 1441
     },
     "location": {
       "lat": 37.7744084,
@@ -3507,19 +4168,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-89845-0.jpg",
+      "label": "1층 평면도©KUOTAA",
+      "url": "https://media.brique.co/2022/08/평단입면도-2-905x637.jpg",
+      "bytes": 55044,
+      "sha256": "f1ab20c1410530a52811c5633741882299516a1c5c94496197e11e8780c3a69b"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/yeyoojae/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "785d02e121ace2436fbbab6ed7fd56d835232ced0f48a7eea7d43cd8483ec93a",
+      "previous": {
+        "file": "sources/parking-89845-0.jpg",
+        "url": "https://media.brique.co/2022/08/평단입면도-2-905x637.jpg",
+        "sha256": "f1ab20c1410530a52811c5633741882299516a1c5c94496197e11e8780c3a69b",
+        "width": 905,
+        "height": 637
+      },
+      "selectedWidth": 2048,
+      "selectedHeight": 1441
+    },
     "modelFile": "generated/parking-89845-0.json",
     "statistics": {
-      "walls": 91,
+      "walls": 19,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 13,
-      "triangles": 1092
+      "ocrLabels": 16,
+      "triangles": 228,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "16bd4a4292c3aa4083f217b8413be58eb481a9e0f1386fdc7fb12a392af8d6be",
+    "modelHash": "1f45eff305fccc4b5ba95fc688ec5c61fff278e925997b396a5508aad4adc4d8",
     "radio": {
       "file": "generated/radio-parking-89845.json",
       "count": 32,
@@ -3538,11 +4223,13 @@
     "source": "https://magazine.brique.co/project/%eb%a7%a4%ea%b3%a1%eb%8f%84%ec%84%9c%ea%b4%80/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-68790-0.jpg",
+      "file": "sources/high-resolution/parking-68790-0.jpg",
       "label": "배치도 ⓒIDR Architects",
-      "url": "https://media.brique.co/2021/07/66100428-아이디알-건축사사무소-idr-architects-매곡도서관-배치도-905x580.jpg",
-      "bytes": 63272,
-      "sha256": "600b3f35a4d5a3a41591f127831945fb109380fa73855f0c23756d703e1657fd"
+      "url": "https://media.brique.co/2021/07/66100428-아이디알-건축사사무소-idr-architects-매곡도서관-배치도.jpg",
+      "bytes": 220887,
+      "sha256": "ada265fc182ab3d17b995957382d73c683d5a4a43ddc6d9dd9db8223a60e3a00",
+      "width": 2000,
+      "height": 1282
     },
     "location": {
       "lat": 35.6561414,
@@ -3569,19 +4256,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-68790-0.jpg",
+      "label": "배치도 ⓒIDR Architects",
+      "url": "https://media.brique.co/2021/07/66100428-아이디알-건축사사무소-idr-architects-매곡도서관-배치도-905x580.jpg",
+      "bytes": 63272,
+      "sha256": "600b3f35a4d5a3a41591f127831945fb109380fa73855f0c23756d703e1657fd"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%a7%a4%ea%b3%a1%eb%8f%84%ec%84%9c%ea%b4%80/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "77ce6e026a6e788a35d5f51d7d9cfaa99e7225acfa9af0847e5b7a0daeca51ef",
+      "previous": {
+        "file": "sources/parking-68790-0.jpg",
+        "url": "https://media.brique.co/2021/07/66100428-아이디알-건축사사무소-idr-architects-매곡도서관-배치도-905x580.jpg",
+        "sha256": "600b3f35a4d5a3a41591f127831945fb109380fa73855f0c23756d703e1657fd",
+        "width": 905,
+        "height": 580
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1282
+    },
     "modelFile": "generated/parking-68790-0.json",
     "statistics": {
-      "walls": 11,
+      "walls": 62,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 1,
-      "triangles": 132
+      "ocrLabels": 2,
+      "triangles": 744,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "65ea67af0308047e5b2a219ec9533a24212ab3f7ef6e39716ab8af532d912469",
+    "modelHash": "bbe909880fadf06754b3a23239815723649376db6f3d8b1024714cdc0d355719",
     "radio": {
       "file": "generated/radio-parking-68790.json",
       "count": 48,
@@ -3600,11 +4311,13 @@
     "source": "https://magazine.brique.co/project/%ec%99%95%ec%9e%90%ea%b6%81-%eb%b0%b1%ec%95%85%ea%b4%80/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-56837-0.jpg",
+      "file": "sources/high-resolution/parking-56837-0.jpg",
       "label": "1층 평면도 ⓒADMOBE Architect",
-      "url": "https://media.brique.co/2021/01/5e124ed0-에이디모베-건축사사무소-admobe-architect-왕자궁-백악관-도면01-905x639.jpg",
-      "bytes": 60606,
-      "sha256": "66fd29ad74c9f5d77c3277d048d11b2a94a0fb3120de2a782343c472b67fb637"
+      "url": "https://media.brique.co/2021/01/5e124ed0-에이디모베-건축사사무소-admobe-architect-왕자궁-백악관-도면01.jpg",
+      "bytes": 191040,
+      "sha256": "63831ac56359b77223e2ad37b66dc79fdefa02851dd5a93a3cd349e0c627aade",
+      "width": 2000,
+      "height": 1413
     },
     "location": {
       "lat": 37.6083349,
@@ -3631,19 +4344,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-56837-0.jpg",
+      "label": "1층 평면도 ⓒADMOBE Architect",
+      "url": "https://media.brique.co/2021/01/5e124ed0-에이디모베-건축사사무소-admobe-architect-왕자궁-백악관-도면01-905x639.jpg",
+      "bytes": 60606,
+      "sha256": "66fd29ad74c9f5d77c3277d048d11b2a94a0fb3120de2a782343c472b67fb637"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%99%95%ec%9e%90%ea%b6%81-%eb%b0%b1%ec%95%85%ea%b4%80/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "e9e166a85ed326b9cd3febfb78fa24c5b088c812551d4879826d584fddced8a2",
+      "previous": {
+        "file": "sources/parking-56837-0.jpg",
+        "url": "https://media.brique.co/2021/01/5e124ed0-에이디모베-건축사사무소-admobe-architect-왕자궁-백악관-도면01-905x639.jpg",
+        "sha256": "66fd29ad74c9f5d77c3277d048d11b2a94a0fb3120de2a782343c472b67fb637",
+        "width": 905,
+        "height": 639
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1413
+    },
     "modelFile": "generated/parking-56837-0.json",
     "statistics": {
-      "walls": 235,
+      "walls": 357,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 6,
-      "triangles": 2820
+      "ocrLabels": 8,
+      "triangles": 4284,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "0a5eb8748810168d12b0af58ed34c28e1bcecf3d009550be1adec866e0e3084f",
+    "modelHash": "b88f78e1963ce236c476c115235f069f85cf21779b1dfd47d46bce9ef60d1e04",
     "radio": {
       "file": "generated/radio-parking-56837.json",
       "count": 48,
@@ -3662,11 +4399,13 @@
     "source": "https://magazine.brique.co/project/%ed%8f%ac%eb%ae%ac%eb%a6%ac%ec%97%90-fomulier/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-52390-0.jpg",
+      "file": "sources/high-resolution/parking-52390-0.jpg",
       "label": "1층 평면도 ⓒArchirie",
-      "url": "https://media.brique.co/2018/08/2-1층-평면도-700x495.jpg",
-      "bytes": 34763,
-      "sha256": "a30a0206164af850c6ba6fc5ac6d4fa4ffe8ac3fba6422907f0642668e405c78"
+      "url": "https://media.brique.co/2018/08/2-1층-평면도.jpg",
+      "bytes": 62844,
+      "sha256": "30939414acc16dd38ec00d2f102e5f4f58c8fccf51ecd905c16bfc21e606cc43",
+      "width": 1220,
+      "height": 862
     },
     "location": {
       "lat": 36.4162285,
@@ -3693,19 +4432,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-52390-0.jpg",
+      "label": "1층 평면도 ⓒArchirie",
+      "url": "https://media.brique.co/2018/08/2-1층-평면도-700x495.jpg",
+      "bytes": 34763,
+      "sha256": "a30a0206164af850c6ba6fc5ac6d4fa4ffe8ac3fba6422907f0642668e405c78"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ed%8f%ac%eb%ae%ac%eb%a6%ac%ec%97%90-fomulier/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "4de97ed19b1b22abe7c66612a6a9130fa84ca55125ddb96991153c4318d4e0fa",
+      "previous": {
+        "file": "sources/parking-52390-0.jpg",
+        "url": "https://media.brique.co/2018/08/2-1층-평면도-700x495.jpg",
+        "sha256": "a30a0206164af850c6ba6fc5ac6d4fa4ffe8ac3fba6422907f0642668e405c78",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 1220,
+      "selectedHeight": 862
+    },
     "modelFile": "generated/parking-52390-0.json",
     "statistics": {
-      "walls": 14,
+      "walls": 16,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 5,
-      "triangles": 168
+      "triangles": 192,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "808290e2f3fcd8350c5183a0c2a92da6172ec8392204ea0c0651d94a3bfc4fd6",
+    "modelHash": "f9e8867fe2ffa45733ab24271c7ff76ba22723e929a65ca9497d5d8235ee8bb0",
     "radio": {
       "file": "generated/radio-parking-52390.json",
       "count": 48,
@@ -3724,11 +4487,13 @@
     "source": "https://magazine.brique.co/project/%ec%9a%b4%ec%96%91%eb%8f%99-%eb%a6%ac%ec%95%84%eb%84%a4-%eb%91%90-%ea%b0%80%ea%b5%ac-%ec%a3%bc%ed%83%9d/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-47946-0.jpg",
+      "file": "sources/high-resolution/parking-47946-0.jpg",
       "label": "1층 평면도 ⓒSeoga Architects",
-      "url": "https://media.brique.co/2020/08/8e573d79-_운양동-리아네-두가구주택-floor-plan-1f-700x495.jpg",
-      "bytes": 32273,
-      "sha256": "73af49972e21d71ad62f438f70ee4e2cf7415a00b61b85f7339ede8a0532f790"
+      "url": "https://media.brique.co/2020/08/8e573d79-_운양동-리아네-두가구주택-floor-plan-1f.jpg",
+      "bytes": 215964,
+      "sha256": "86eb7ebcdaa131640d42d55b335087131efb8b2553eff820f0c7d506e51788c5",
+      "width": 2000,
+      "height": 1414
     },
     "location": {
       "lat": 37.6562562,
@@ -3755,19 +4520,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-47946-0.jpg",
+      "label": "1층 평면도 ⓒSeoga Architects",
+      "url": "https://media.brique.co/2020/08/8e573d79-_운양동-리아네-두가구주택-floor-plan-1f-700x495.jpg",
+      "bytes": 32273,
+      "sha256": "73af49972e21d71ad62f438f70ee4e2cf7415a00b61b85f7339ede8a0532f790"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%9a%b4%ec%96%91%eb%8f%99-%eb%a6%ac%ec%95%84%eb%84%a4-%eb%91%90-%ea%b0%80%ea%b5%ac-%ec%a3%bc%ed%83%9d/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "0ffb1b00aea24444787ece83b9232f42fdea743762779c3eb04460ee783e97c1",
+      "previous": {
+        "file": "sources/parking-47946-0.jpg",
+        "url": "https://media.brique.co/2020/08/8e573d79-_운양동-리아네-두가구주택-floor-plan-1f-700x495.jpg",
+        "sha256": "73af49972e21d71ad62f438f70ee4e2cf7415a00b61b85f7339ede8a0532f790",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1414
+    },
     "modelFile": "generated/parking-47946-0.json",
     "statistics": {
-      "walls": 17,
+      "walls": 24,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 9,
-      "triangles": 204
+      "ocrLabels": 13,
+      "triangles": 288,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "36961b13ba84de350df25c7313e7fc6b04ee53ddba96a17b452cd788f5164c7e",
+    "modelHash": "8489be75ab73588ebf07f32978d4143fc239e89e7f4e8cdd6fc83ad521b27585",
     "radio": {
       "file": "generated/radio-parking-47946.json",
       "count": 48,
@@ -3786,12 +4575,14 @@
     "source": "https://magazine.brique.co/project/%eb%98%90%eb%b0%94%ea%b8%b0-%ec%a7%91/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-46541-0.jpg",
+      "file": "sources/high-resolution/parking-46541-0.jpg",
       "label": "지하1층 평면도ⓒNAAULAB ARCHITECTS",
-      "url": "https://media.brique.co/2020/07/나우랩-아키텍츠-NAAULAB-ARCHITECTS-또바기집-지하층평면-700x495.jpg",
-      "bytes": 27339,
-      "sha256": "814b9273c6e81738320a6fec718f89e835a3637ead73434852449a023ad6c63f",
-      "floor": "B1"
+      "url": "https://media.brique.co/2020/07/나우랩-아키텍츠-NAAULAB-ARCHITECTS-또바기집-지하층평면.jpg",
+      "bytes": 188532,
+      "sha256": "2995f9f57beefe2f505831ca15fabfec8653a1c9f651d3c23c127407000c9690",
+      "floor": "B1",
+      "width": 2000,
+      "height": 1414
     },
     "location": {
       "lat": 37.3292,
@@ -3818,19 +4609,44 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-46541-0.jpg",
+      "label": "지하1층 평면도ⓒNAAULAB ARCHITECTS",
+      "url": "https://media.brique.co/2020/07/나우랩-아키텍츠-NAAULAB-ARCHITECTS-또바기집-지하층평면-700x495.jpg",
+      "bytes": 27339,
+      "sha256": "814b9273c6e81738320a6fec718f89e835a3637ead73434852449a023ad6c63f",
+      "floor": "B1"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%98%90%eb%b0%94%ea%b8%b0-%ec%a7%91/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "281e1b36a9a8688fd607213d7940341920b3e97a145cb8d20a8d96dbc8e29ac5",
+      "previous": {
+        "file": "sources/parking-46541-0.jpg",
+        "url": "https://media.brique.co/2020/07/나우랩-아키텍츠-NAAULAB-ARCHITECTS-또바기집-지하층평면-700x495.jpg",
+        "sha256": "814b9273c6e81738320a6fec718f89e835a3637ead73434852449a023ad6c63f",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1414
+    },
     "modelFile": "generated/parking-46541-0.json",
     "statistics": {
-      "walls": 108,
+      "walls": 4,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 0,
-      "triangles": 1296
+      "ocrLabels": 1,
+      "triangles": 48,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "cc5460c45f6b5a22ca81817c00f49e74c23dd02058b4258a62ceab95484931fc",
+    "modelHash": "47febfd198bff584cc1837a54984093982fa53f0c1176836d73b9804fc86a6c3",
     "radio": {
       "file": "generated/radio-parking-46541.json",
       "count": 48,
@@ -3849,11 +4665,13 @@
     "source": "https://magazine.brique.co/project/%eb%b0%b1%ed%98%84%eb%8f%99-%ec%a3%bc%ed%83%9d%ed%8e%b8%ec%a7%91-%ec%99%84/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-42450-0.jpg",
+      "file": "sources/high-resolution/parking-42450-0.jpg",
       "label": "1층 평면도 ⓒUTTA Company",
-      "url": "https://media.brique.co/2020/05/-UTAA-ARCHITECTS-백현동-주택-Baekhyeon-dong02-e1590049365895-700x558.jpg",
-      "bytes": 41139,
-      "sha256": "7c86ed306f45079ee346fcc13be4064a275dfacd66eec4d93fc60c2bb6d9099a"
+      "url": "https://media.brique.co/2020/05/-UTAA-ARCHITECTS-백현동-주택-Baekhyeon-dong02-e1590049365895.jpg",
+      "bytes": 208041,
+      "sha256": "1efdeaac96f49c486e7a06177bb699358819972cd52083b1f9b7828105056ddc",
+      "width": 1655,
+      "height": 1320
     },
     "location": {
       "lat": 37.3887318,
@@ -3880,19 +4698,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-42450-0.jpg",
+      "label": "1층 평면도 ⓒUTTA Company",
+      "url": "https://media.brique.co/2020/05/-UTAA-ARCHITECTS-백현동-주택-Baekhyeon-dong02-e1590049365895-700x558.jpg",
+      "bytes": 41139,
+      "sha256": "7c86ed306f45079ee346fcc13be4064a275dfacd66eec4d93fc60c2bb6d9099a"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%b0%b1%ed%98%84%eb%8f%99-%ec%a3%bc%ed%83%9d%ed%8e%b8%ec%a7%91-%ec%99%84/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "d146fa13b5c80b499cb6d6902448179efc4fe1b2483e7a90c3bdfce123fefcc0",
+      "previous": {
+        "file": "sources/parking-42450-0.jpg",
+        "url": "https://media.brique.co/2020/05/-UTAA-ARCHITECTS-백현동-주택-Baekhyeon-dong02-e1590049365895-700x558.jpg",
+        "sha256": "7c86ed306f45079ee346fcc13be4064a275dfacd66eec4d93fc60c2bb6d9099a",
+        "width": 700,
+        "height": 558
+      },
+      "selectedWidth": 1655,
+      "selectedHeight": 1320
+    },
     "modelFile": "generated/parking-42450-0.json",
     "statistics": {
-      "walls": 93,
+      "walls": 19,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 9,
-      "triangles": 1116
+      "ocrLabels": 41,
+      "triangles": 228,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "73e52bf637a78155bb1841adfc6663353d8b1d1024cf455f843a60b54f603316",
+    "modelHash": "98c8bb56c3947fa2b339b50cc1600fd93af3f63b97fb9b8b0caf284eea64694d",
     "radio": {
       "file": "generated/radio-parking-42450.json",
       "count": 48,
@@ -3911,11 +4753,13 @@
     "source": "https://magazine.brique.co/project/plan-architects-office-ilgok-white-house/",
     "publisher": "브리크 매거진 · 건축가 제공 도면",
     "sourceAsset": {
-      "file": "sources/parking-170036-0.jpg",
+      "file": "sources/high-resolution/parking-170036-0.jpg",
       "label": "배치도 ©PLAN Architects office",
-      "url": "https://media.brique.co/2026/04/ilgok-white-house-6-905x640.jpg",
-      "bytes": 74090,
-      "sha256": "ab06091a73d0039b5bda385a65189ae3ac78ff5c3eafb3dc8ca579e207006b2d"
+      "url": "https://media.brique.co/2026/04/ilgok-white-house-6-1536x1086.jpg",
+      "bytes": 144111,
+      "sha256": "ea80c6cbdca6339778b8b8c6ea13e10161e73e2adfdbcf7a6c93845dc7a8fb8e",
+      "width": 1536,
+      "height": 1086
     },
     "location": {
       "lat": 35.2093565,
@@ -3942,19 +4786,43 @@
     },
     "scaleStatus": "estimated",
     "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-170036-0.jpg",
+      "label": "배치도 ©PLAN Architects office",
+      "url": "https://media.brique.co/2026/04/ilgok-white-house-6-905x640.jpg",
+      "bytes": 74090,
+      "sha256": "ab06091a73d0039b5bda385a65189ae3ac78ff5c3eafb3dc8ca579e207006b2d"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/plan-architects-office-ilgok-white-house/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "096681941174d774966fdc028a83dae3d8f80e5530be5e876a38f7695a012742",
+      "previous": {
+        "file": "sources/parking-170036-0.jpg",
+        "url": "https://media.brique.co/2026/04/ilgok-white-house-6-905x640.jpg",
+        "sha256": "ab06091a73d0039b5bda385a65189ae3ac78ff5c3eafb3dc8ca579e207006b2d",
+        "width": 905,
+        "height": 640
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1086
+    },
     "modelFile": "generated/parking-170036-0.json",
     "statistics": {
-      "walls": 39,
+      "walls": 57,
       "nodes": 0,
       "edges": 0,
       "spaces": 0,
       "objects": 0,
       "accessible": 0,
-      "ocrLabels": 5,
-      "triangles": 468
+      "ocrLabels": 9,
+      "triangles": 684,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f30a8404ccf5a8596871399458c25e5f37e32594e7a28b2318300d7551485a80",
+    "modelHash": "efee0cb6d63aec56ac11b278d83c8ccef6d8222eafa24c2fde07279459543264",
     "radio": {
       "file": "generated/radio-parking-170036.json",
       "count": 48,
@@ -4009,10 +4877,12 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 132,
-      "triangles": 492
+      "triangles": 492,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "03b838c729b08847b36d9e45c7cacc2d3bc11fc96d8b678a6fb04efbca7230db",
+    "modelHash": "f9b9d34e823fad542c6bb8c956688f0cb6a2ed42b85fc293416d43b1a49c78a7",
     "radio": {
       "file": "generated/radio-complex-onepentas.json",
       "count": 48,
@@ -4087,7 +4957,9 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 174,
-      "triangles": 0
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
     "modelHash": "c06c2d65c78c7a67ed61eb097475464512f59e68c801ac706f65dcb388b9be8f",
@@ -4165,7 +5037,9 @@
       "objects": 0,
       "accessible": 0,
       "ocrLabels": 37,
-      "triangles": 0
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": false,
     "modelHash": "89222b0248d6dfc252bb90c85496306073079228afb8283a915d582797187909",
@@ -4195,7 +5069,9 @@
       "objects": 0,
       "accessible": 1,
       "ocrLabels": 0,
-      "triangles": 0
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
     },
     "routingReady": true,
     "modelHash": "477a7a0e5e1a98fd53849d03faae522319ec584c2232ef7b715961ea78cc8b92"

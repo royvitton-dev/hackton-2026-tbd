@@ -1,9 +1,14 @@
 // The raster detector and explicit annotated-SVG exchange format originate in map/.
 // Keep that source unchanged; all extensions and conversion outputs live here.
-import {analyzeBlueprint,analyzeSvg as parseSvg,validatePlan as validateV1} from '../vendor/analysis-v1.js';
+import {analyzeBlueprint as parseBlueprint,analyzeSvg as parseSvg,validatePlan as validateV1} from '../vendor/analysis-v1.js';
 import {distance,localPosition} from './geometry.js';
 import {graphFromLayers} from './layers.js';
-export {analyzeBlueprint};
+import {detectParking} from './detect-parking.js';
+export function analyzeBlueprint(pixels,options={}){
+  const plan=parseBlueprint(pixels,options);
+  if(options.parkingDetection!==false)plan.parkingDetection=detectParking(pixels,{metersPerPixel:plan.analysis.metersPerPixel});
+  return plan;
+}
 const finite=Number.isFinite;
 export function validatePlan(plan) {
   validateV1(plan);
@@ -28,6 +33,11 @@ export function validatePlan(plan) {
     if(!Array.isArray(plan.parkingAccess))throw Error('주차면과 차로의 연결을 확인하세요.');
     const seen=new Set();for(const a of plan.parkingAccess){if(!a||!spaces.has(a.spaceId)||!nodes.has(a.nodeId)||seen.has(a.spaceId))throw Error('주차면과 차로의 연결을 확인하세요.');seen.add(a.spaceId);}
   }
+  if(plan.parkingDetection!==undefined){
+    const items=plan.parkingDetection?.spaces,ids=new Set();
+    if(!Array.isArray(items)||items.length>400)throw Error('자동 주차 구획 후보가 잘못되었습니다.');
+    for(const s of items){if(typeof s.id!=='string'||!s.id||ids.has(s.id)||![s.x,s.z,s.width,s.depth,s.patternScore].every(finite)||Math.min(s.width,s.depth)<=0||s.patternScore<0||s.patternScore>100)throw Error('자동 주차 구획 후보의 좌표·크기를 확인하세요.');ids.add(s.id);}
+  }
   return plan;
 }
 export function analyzeSvg(text) {
@@ -46,6 +56,7 @@ export function analyzeSvg(text) {
     if(a['data-verified'])item.verified=a['data-verified']==='true';
   }
   for(const match of text.matchAll(/<rect\b[^>]*>/g)){const a=attrs(match[0]),space=plan.spaces.find(s=>s.id===a.id);if(!space)continue;for(const key of ['accessible','reserved'])if(a[`data-${key}`]!==undefined){if(!['true','false'].includes(a[`data-${key}`]))throw Error('주차 전용 구역 값이 잘못되었습니다.');space[key]=a[`data-${key}`]==='true';}}
+  let wallIndex=0;for(const match of text.matchAll(/<line\b[^>]*>/g)){const a=attrs(match[0]);if(a['data-kind']!=='wall')continue;if(a['data-material']==='glazing')plan.walls[wallIndex].material='glazing';wallIndex++;}
   return validatePlan(plan);
 }
 // Indexed cuboids are standalone model data, not just a Three.js rendering hint.
@@ -55,9 +66,9 @@ export function compileMeshes(plan) {
   const meshes=plan.walls.map((w,i)=>{
     const length=Math.hypot(w.x2-w.x1,w.z2-w.z1),nx=length?-(w.z2-w.z1)/length*w.thickness/2:0,nz=length?(w.x2-w.x1)/length*w.thickness/2:0;
     const corners=[[w.x1+nx,w.z1+nz],[w.x2+nx,w.z2+nz],[w.x2-nx,w.z2-nz],[w.x1-nx,w.z1-nz]];
-    return {id:`wall-${i}`,kind:'wall',positions:[0,w.height].flatMap(y=>corners.flatMap(([x,z])=>[x,y+(w.y||0),z])),indices:[...indices]};
+    return {id:`wall-${i}`,kind:'wall',positions:[0,w.height].flatMap(y=>corners.flatMap(([x,z])=>[x,y+(w.y||0),z])),indices:[...indices],...(w.material==='glazing'?{material:'glazing'}:{})};
   });
-  return {version:1,units:'meters',coordinateSystem:'drawing-x-right-y-up-z-down',meshes,objects:plan.objects||[],labels:plan.labels||[],nodes:plan.nodes,graph:plan.edges,spaces:plan.spaces,...(plan.parkingAccess?{parkingAccess:plan.parkingAccess}:{}),source:plan.provenance||null};
+  return {version:1,units:'meters',coordinateSystem:'drawing-x-right-y-up-z-down',meshes,objects:plan.objects||[],labels:plan.labels||[],nodes:plan.nodes,graph:plan.edges,spaces:plan.spaces,...(plan.parkingAccess?{parkingAccess:plan.parkingAccess}:{}),...(plan.parkingDetection?{parkingCandidates:plan.parkingDetection.spaces}:{}),source:plan.provenance||null};
 }
 // Roads retain their source IDs and coordinate provenance. An explicit surveyed
 // portal is mandatory; never infer an entrance from a building centroid.

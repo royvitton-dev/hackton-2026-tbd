@@ -3,7 +3,7 @@
 export function annotateParking(plan,site){
  const definitions=[];let width,height;
  const row=(prefix,count,x,y,w,h,dx,dz,extra={})=>{for(let i=0;i<count;i++)definitions.push({id:`${prefix}-${i+1}`,x:x+i*dx,z:y+i*dz,width:w,depth:h,...extra});};
- if(site.id==='parking-131601-0'){
+ if(site.id==='parking-131601-0'&&plan.layoutType!=='source-traced'){
   width=700;height=530;
   row('north',18,188,51,23,45,24,0);row('front',21,115,155,23,44,24,0);
   row('west',8,76,202,43,23,0,24);

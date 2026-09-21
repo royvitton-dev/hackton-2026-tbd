@@ -1,5 +1,6 @@
 import {distance,project,pointAt} from './geometry.js';
 import {validatePlan} from './analysis.js';
+import {parkingBodyClear} from './collision.js';
 export {pointAt};
 export const DEFAULT_VEHICLE=Object.freeze({width:1.9,length:4.6,height:1.8,turnRadius:5.2,speed:3.5,clearance:.2});
 function settings(options){
@@ -45,6 +46,7 @@ function corners(p,v){
   return [-1,1].flatMap(side=>[-1,0,1].map(end=>({x:p.x+cos*halfW*side+sin*halfL*end,y:p.y||0,z:p.z-sin*halfW*side+cos*halfL*end})));
 }
 function sweptClear(p,plan,nodeMap,o,edges=plan.edges){
+  if(o.mode==='car'&&!parkingBodyClear(plan,p,o.vehicle,o.hazards))return false;
   const footprint=o.mode==='car'?corners(p,o.vehicle):[p];
   const radius=o.mode==='car'?o.vehicle.width/2:.35;
   if(dangerous(p,o,radius))return false;
@@ -52,6 +54,17 @@ function sweptClear(p,plan,nodeMap,o,edges=plan.edges){
 }
 export function route(plan,startId,endId,options={}){
   validatePlan(plan);const o=settings(options),nodes=new Map(plan.nodes.map(n=>[n.id,n]));
+  // A vehicle straddles artificial graph splits on the same physical aisle.
+  // Include adjoining traversable edges, but never unrelated nearby lanes.
+  const adjacent=new Map(plan.nodes.map(n=>[n.id,plan.edges.filter(e=>e.from===n.id||e.to===n.id)])),clearances=new Map();
+  const reach=Math.hypot(o.vehicle.length/2+o.vehicle.clearance,o.vehicle.width/2+o.vehicle.clearance);
+  for(const e of plan.edges){
+    const picked=new Set([e]),queue=[{id:e.from,d:0},{id:e.to,d:0}],seen=new Map(queue.map(n=>[n.id,0]));
+    for(let i=0;i<queue.length;i++){const at=queue[i];for(const other of adjacent.get(at.id)){
+      if(!allowed(other,o))continue;picked.add(other);const next=other.from===at.id?other.to:other.from,d=at.d+distance(nodes.get(at.id),nodes.get(next));
+      if(d<reach&&d<(seen.get(next)??Infinity)){seen.set(next,d);queue.push({id:next,d});}
+    }}clearances.set(e.id,[...picked]);
+  }
   if(!nodes.has(startId)||!nodes.has(endId)||dangerous(nodes.get(startId),o)||dangerous(nodes.get(endId),o))return null;
   if(startId===endId)return {ids:[startId],edges:[],points:[nodes.get(startId)],distance:0,seconds:0,cost:0,destination:nodes.get(endId),mode:o.mode};
   const start={id:startId,previous:null,via:null,cost:0,key:JSON.stringify([null,startId])},open=[start],best=new Map([[start.key,0]]),came=new Map();let finish;
@@ -66,7 +79,7 @@ export function route(plan,startId,endId,options={}){
       if(!Number.isFinite(risk))continue;
       // Even a declared graph edge cannot pass through a wall in the drawing.
       const count=Math.ceil(distance(a,b)/.4);
-      if(Array.from({length:count+1},(_,i)=>({x:a.x+(b.x-a.x)*i/count,y:(a.y||0)+((b.y||0)-(a.y||0))*i/count,z:a.z+(b.z-a.z)*i/count,heading:Math.atan2(b.x-a.x,b.z-a.z)})).some(p=>!sweptClear(p,plan,nodes,o,[e])))continue;
+      if(Array.from({length:count+1},(_,i)=>({x:a.x+(b.x-a.x)*i/count,y:(a.y||0)+((b.y||0)-(a.y||0))*i/count,z:a.z+(b.z-a.z)*i/count,heading:Math.atan2(b.x-a.x,b.z-a.z)})).some(p=>!sweptClear(p,plan,nodes,o,clearances.get(e.id))))continue;
       let bend;
       if(o.mode==='car'&&current.previous){
         bend=turn(nodes.get(current.previous),a,b,o.vehicle.turnRadius,current.bend?.tangent||0);

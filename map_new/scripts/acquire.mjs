@@ -2,6 +2,7 @@ import {readFile,writeFile,mkdir,copyFile,stat} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {applySourceUpgrades} from './source-upgrades.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url)),previous=path.resolve(root,'../map/public');
 export const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const catalog=JSON.parse(await readFile(path.join(previous,'plans/catalog.json'))),locations=JSON.parse(await readFile(path.join(previous,'plans/locations.json')));
@@ -49,5 +50,6 @@ for(const extra of ['parks-catalog.json','precise-locations.json']){
   let data;try{data=JSON.parse(await readFile(path.join(root,'public/sources',extra)));}catch(error){if(error.code==='ENOENT')continue;throw error;}
   if(extra==='parks-catalog.json')output.push(...data);else for(const site of output)if(data[site.siteId])site.location={...data[site.siteId],independentCheck:site.location};
 }
+await applySourceUpgrades(output,path.join(root,'public'));
 await writeFile(path.join(root,'public/sources/catalog.json'),JSON.stringify(output,null,2)+'\n');
 console.log(`Verified ${output.length} source drawings and 1 exterior photograph in map_new/`);

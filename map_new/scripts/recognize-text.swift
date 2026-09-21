@@ -5,7 +5,6 @@ guard args.count == 3 else { fatalError("usage: recognize-text manifest.json out
 let manifest = try JSONSerialization.jsonObject(with: Data(contentsOf: URL(fileURLWithPath: args[1]))) as! [[String: String]]
 for item in manifest {
     let target = URL(fileURLWithPath: args[2]).appendingPathComponent(item["id"]! + ".json")
-    if FileManager.default.fileExists(atPath: target.path) { continue }
     let request = VNRecognizeTextRequest()
     request.recognitionLevel = .accurate
     request.recognitionLanguages = ["ko-KR", "en-US"]
@@ -18,6 +17,6 @@ for item in manifest {
         return ["text": text.string, "confidence": text.confidence, "x": b.midX, "z": 1 - b.midY, "width": b.width, "depth": b.height]
     }
     let data: [String: Any] = ["method": "Apple Vision accurate OCR", "languages": request.recognitionLanguages, "sourceSha256": item["sha256"]!, "labels": labels, "status": "machine-extracted-review-required"]
-    try JSONSerialization.data(withJSONObject: data, options: [.prettyPrinted, .sortedKeys]).write(to: target)
+    try JSONSerialization.data(withJSONObject: data, options: [.prettyPrinted, .sortedKeys]).write(to: target, options: .atomic)
     print(item["id"]!, labels.count, "text regions")
 }

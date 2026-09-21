@@ -102,3 +102,28 @@ test('imports an actual PDF and keeps its drawing preview separate from the prev
   expect(await page.evaluate(()=>window.__parking.state.selected.id)).toBe('import');expect(await page.evaluate(()=>window.__parking.state.radio)).toBeNull();expect(await page.locator('#source-thumb').getAttribute('src')).toMatch(/^data:image\/png/);
   await expect(page.locator('#source-link')).toBeHidden();await expect(page.locator('#play')).toBeDisabled();await page.evaluate(()=>window.__parking.select('10000901-0'));await expect(page.locator('#source-link')).toBeVisible();
 });
+test('shows detected parking as review candidates while preserving high-resolution provenance and charging inputs',async({page})=>{
+  await open(page,'parking-168780-0');const before=await page.evaluate(()=>({spaces:window.__parking.state.plan.spaces,graph:window.__parking.state.plan.edges}));
+  await page.locator('.visual-controls summary').click();await expect(page.locator('#detected-parking')).not.toBeChecked();await page.locator('#detected-parking').check();
+  const found=await page.evaluate(()=>({count:window.__parking.scene.detectedGroup.children.length,candidates:window.__parking.state.plan.parkingDetection.spaces,source:window.__parking.state.selected.sourceResolution}));
+  expect(found.count).toBeGreaterThan(10);expect(found.count).toBe(found.candidates.length);expect(found.candidates.every(s=>s.status==='review-required')).toBe(true);expect(found.source.selectedWidth).toBe(1536);
+  await page.locator('#parked-cars').uncheck();await screenshot(page,'detected-parking.png');
+  await page.locator('#drawing-info').click();await expect(page.locator('#dialog-content')).toContainText('발행처 고해상도 원본 1536 × 822px');await expect(page.locator('#dialog-content')).toContainText('무선 전파 점수가 아닙니다');await page.getByRole('button',{name:'닫기',exact:true}).click();
+  await page.locator('[data-tab=charging]').click();expect(await page.evaluate(()=>window.__parking.state.charging.ranked.length)).toBe(before.spaces.length);
+  expect(await page.evaluate(()=>({spaces:window.__parking.state.plan.spaces,graph:window.__parking.state.plan.edges}))).toEqual(before);
+  await page.locator('#detected-parking').uncheck();expect(await page.evaluate(()=>window.__parking.scene.detectedGroup.children.length)).toBe(0);
+  await page.evaluate(()=>window.__parking.select('park-boramae'));await expect(page.locator('#detected-label')).toBeHidden();
+  await page.evaluate(()=>window.__parking.select('parking-131601-0'));await page.locator('[data-tab=plan]').click();
+  expect(await page.evaluate(()=>window.__parking.state.plan.objects.length)).toBe(47);await page.locator('#parked-cars').check();await page.locator('.visual-controls summary').click();await screenshot(page,'drawing-details.png');
+  await page.locator('.visual-controls summary').click();await page.locator('#drawing-info').click();await expect(page.locator('#dialog-content')).toContainText('① 로비·라운지');await expect(page.locator('#dialog-content')).toContainText('기둥 28개');
+});
+test('guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls',async({page})=>{
+  await open(page,'parking-131601-0');await expect(page.locator('#destination')).toHaveValue('approach:north-8');await expect(page.locator('#play')).toBeEnabled();
+  await expect(page.locator('#destination option')).toHaveCount(50);await expect(page.locator('#route-message')).toContainText('주차면 앞');
+  const click=await page.evaluate(()=>{const scene=window.__parking.scene,p=scene.parkingPickers.find(m=>m.userData.spaceId==='west-5').position.clone().project(scene.camera),r=scene.canvas.getBoundingClientRect();return {x:r.left+(p.x+1)*r.width/2,y:r.top+(1-p.y)*r.height/2};});
+  await page.mouse.click(click.x,click.y);await expect(page.locator('#destination')).toHaveValue('approach:west-5');
+  expect(await page.evaluate(()=>window.__parking.state.route.approach.spaceId)).toBe('west-5');await screenshot(page,'daecheon-parking-route.png');
+  await page.locator('#speed').selectOption('4');await page.locator('#play').click();await expect(page.locator('#play')).toHaveText('✓ 도착했습니다',{timeout:20000});
+  const arrived=await page.evaluate(()=>{const s=window.__parking.state;return {pose:s.pose,destination:s.route.destination};});expect(arrived.pose.x).toBeCloseTo(arrived.destination.x);expect(arrived.pose.z).toBeCloseTo(arrived.destination.z);
+  await page.locator('#car-width').fill('7');await page.locator('#car-width').blur();await expect(page.locator('#play')).toBeDisabled();
+});

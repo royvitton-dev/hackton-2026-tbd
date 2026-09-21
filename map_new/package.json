@@ -12,6 +12,7 @@
     "sources:places": "node scripts/acquire-places.mjs",
     "sources:radio": "node scripts/acquire-radio.mjs",
     "sources:ocr": "node scripts/recognize-text.mjs",
+    "sources:resolution": "node scripts/acquire-resolution.mjs",
     "test": "vitest run",
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",

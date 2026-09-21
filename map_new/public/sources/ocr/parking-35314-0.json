@@ -1,12 +1,20 @@
 {
   "labels" : [
     {
-      "confidence" : 0.30000001192092896,
-      "depth" : 0.625,
-      "text" : "10년",
-      "width" : 0.17428575788225442,
-      "x" : 0.38714285705238094,
-      "z" : 0.50328947264254387
+      "confidence" : 1,
+      "depth" : 0.036559139784946293,
+      "text" : "5-",
+      "width" : 0.0093283608778199634,
+      "x" : 0.76772388050373119,
+      "z" : 0.92795698863799292
+    },
+    {
+      "confidence" : 1,
+      "depth" : 0.015053763440860179,
+      "text" : "0",
+      "width" : 0.011194029850746356,
+      "x" : 0.53171641781716428,
+      "z" : 0.91935483852150535
     }
   ],
   "languages" : [
@@ -14,6 +22,6 @@
     "en-US"
   ],
   "method" : "Apple Vision accurate OCR",
-  "sourceSha256" : "ee9df744f0592bf86ee2d8a95fcbfb86520dcac4143c39b1d567801369f5a53a",
+  "sourceSha256" : "7114fbf6ac39b044aa2a24bd4549d417b031222a11954a501e13226135275e1c",
   "status" : "machine-extracted-review-required"
 }

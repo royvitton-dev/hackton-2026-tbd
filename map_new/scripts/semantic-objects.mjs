@@ -41,6 +41,27 @@ export function enrichObjects(plan,site){
   const at=(x,z)=>({x:(x-500)*.0777777777778,z:(z-170)*.0777777777778});
   for(const [i,p] of [[592,136],[663,136],[592,187],[663,187],[592,244],[663,302]].entries())objects.push({kind:'column',id:'neon-column-'+i,...at(...p),width:.35,depth:.35,height:2.8,label:'기둥 후보',evidence:{source:site.source,location:'source-traced-estimate',height:'assumed'}});
  }
+ if(site.id==='parking-131601-0'){
+  // Positions and numbered room names re-read from the publisher's 2000 px
+  // original. The inspection view was 1818 px wide; retain source-pixel
+  // coordinates as well as local geometry for another visual review.
+  const frameWidth=1818,frameHeight=frameWidth*1513/2000,scale=plan.width/frameWidth;
+  plan.reviewCorrections=[...(plan.reviewCorrections||[]),{source:site.source,asset:site.sourceAsset.file,kind:'source-reviewed-walls-and-bays',note:'도로 경계·차양 점선을 벽에서 제외하고 실제 벽·유리면·문 개구부를 원본에 주석. 북측 20면·건물 앞 21면·서측 9면·장애인 2면을 재검토.'}];
+  const add=(kind,id,x,z,w,d,label,extra={})=>objects.push({kind,id:'daecheon-'+id,x:(x-frameWidth/2)*scale,z:(z-frameHeight/2)*scale,width:w*scale,depth:d*scale,height:kind==='room'?.04:2.8,label,...extra,evidence:{source:site.source,asset:site.sourceAsset.file,sourcePixel:{x:x*2000/frameWidth,y:z*2000/frameWidth},location:'source-traced-estimate',height:'assumed',label:'publisher-numbered-floor-plan-legend'}});
+  const columns=[...[275,480,684,888,1092,1296].map(x=>[x,489]),...[596,698,800,902,991].map(z=>[275,z]),...[378,480,582,684,786,888,990,1092,1194,1296,1398,1500].map(x=>[x,991]),[480,901],[888,739],[888,901],[1092,901],[1296,901]];
+  columns.forEach(([x,z],i)=>add('column','column-'+(i+1),x,z,13,13,'기둥 '+(i+1)));
+  for(const [id,x,z,w,d,label] of [
+   ['lobby',1288,835,392,154,'① 로비·라운지'],['duty',1505,742,114,80,'② 당직실'],['meeting',1505,621,114,140,'③ 회의실'],
+   ['women',1411,659,51,83,'④ 여자 화장실'],['men',1337,659,80,82,'⑤ 남자 화장실'],
+   ['accessible-wc-a',1170,665,48,50,'⑦ 장애인 화장실'],['accessible-wc-b',1170,720,48,51,'⑦ 장애인 화장실'],
+   ['locker-a',1041,592,82,85,'⑧ 탈의실'],['locker-b',1041,700,82,92,'⑧ 탈의실'],
+   ['shower-a',1112,598,42,98,'⑨ 샤워실'],['shower-b',1112,699,42,94,'⑨ 샤워실'],
+   ['multipurpose',888,645,196,195,'⑩ 다목적실'],['storage',627,645,108,183,'⑪ 창고'],
+   ['office',507,853,329,112,'⑫ 사무실 1'],['annex-a',520,604,86,114,'⑬ 부속실'],['annex-b',520,713,86,45,'⑬ 부속실'],
+  ])add('room',id,x,z,w,d,label);
+  add('lift','lift',1169,602,45,51,'⑥ 승강기');
+  add('stairs','stairs-west',758,706,43,74,'서측 계단',{steps:20});add('stairs','stairs-east',1267,706,43,74,'동측 계단',{steps:20});
+ }
  if(site.siteId==='parking-168780'){
   const h=site.id.endsWith('-0')?484:site.id.endsWith('-1')?441:438,scale=plan.width/905;
   const add=(kind,id,x,z,w,d,label,extra={})=>objects.push({kind,id,x:(x-452.5)*scale,z:(z-h/2)*scale,width:w*scale,depth:d*scale,height:kind==='room'?.04:3,label,...extra,evidence:{source:site.source,asset:site.sourceAsset.file,location:'source-traced-estimate',height:'assumed'}});
