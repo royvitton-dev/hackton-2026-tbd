@@ -1,6 +1,6 @@
 # 누적 검증과 완료 기준
 
-2026-09-21 20:26 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-21 21:38 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
@@ -14,16 +14,16 @@
 | 저널·스냅샷·강제 종료 복구 | 통과(프로세스 장애 범위) | [저장소 19개 테스트](../evidence/20260921T083106130Z-storage-recovery-verified-toolchain-b43a25ff), 추가 [실제 snapshot 저장 중 kill 2경계](../evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md). OS·전원 장애 미검증 |
 | 성공 ACK 복구·응답 유실·재시도 | 통과 | 저장소 실제 child kill + API 응답 차단 proxy·재시작·동일 ID 재시도, 전체 상태 비교 |
 | 브라우저 재연결·재동기화 | 통과 | [동일 탭 엔진 재시작 전후](../evidence/browser-reconnect-2026-09-21T09-02-02-365Z), 수동 reload 없이 EVENT2971→3026, 잔고 유지. [504 뒤 idle시장 재구독·unknown 보존·동일ID 재시도](../evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/README.md)도 통과 |
-| 느린 수신자 격리 | 통과(이번 호스트·부하 범위) | [실제 WS 수신 중단](slow-ws-validation.md): 중단 중288명령 처리, 정상289상태 연속 수신, 전체416요청 조회/자산 검사. 느린 연결 reset 후 새 연결 상태 일치. reset 원인이 lag/send timeout 중 어느 것인지는 미확정 |
+| 느린 수신자 격리 | 통과(이번 호스트·부하 범위) | 초기 [수신 중단 검증](slow-ws-validation.md)에 이어 최신 f518 바이너리의 [진단](ws-serialization.md)에서 정상 289개 상태·416 ACK/조회·16 중복 재시도, 자산/예약 일치와 paused 수신자의 `send_timeout/state`를 확인했다. 이전 고부하 단절의 원인 소급 확정은 아님 |
 | WS 종료 사유·peer 정상 종료 | 수정 후 통과 / 범위 제한 | [종료 진단](ws-diagnostics.md): peer Close응답flush후1000·오류0. 별도paused수신자의실제send_timeout/state확인,정상289frames·416ACK/조회·16중복검증. 서버행정shutdown의1006과이전고부하1005원인미확정은유지 |
-| 빌드·포맷·린트·테스트 | 통과 | Rust release 및 fmt, [최신 Clippy all-targets -D warnings](../evidence/20260921T090534849Z-checkpoint-error-format-clippy-e41e5b01), [프런트7개 테스트](../evidence/frontend-20260921T090509598Z), [최신 안내문구 포함 TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) |
+| 빌드·포맷·린트·테스트 | 통과(기록된 소스 범위) | 최신 f518 Rust [release](../evidence/20260921T114620498Z-ws-encoder-release-2aadbde9/run.json), [fmt](../evidence/20260921T114618896Z-ws-encoder-fmt-6b525e16/run.json), [Clippy all-targets](../evidence/20260921T114752406Z-ws-encoder-clippy-ae5df0a9/run.json), [직렬화 unit3](../evidence/20260921T114315186Z-ws-encoder-unit-4ccf2234/run.json), [API10](../evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/run.json). 프런트 변경 없이 기존 [7개 테스트](../evidence/frontend-20260921T090509598Z)·[TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) 근거 유지 |
 | 성능·할당 계측 보존 | 통과 / 목표 일부 미달 | [성능 결과](performance.md). A 통과. B/C 최초 fetch 처리량 미달, 측정된 클라이언트 전송 대기 개선 후 동일 바이너리 node:http 목표 통과. 정상 execute 할당 0 미달 |
-| CPU·메모리 구간 분석 | 계산 검증 통과 / 장시간 관찰 진행 | [사용 방법·실측·독립 검토](resource-observation.md), 알려진 카운터·누락·공백·PID교체 등7검증. 현재41분 CPU평균14프로세스합0.581%,엔진0.307%;6시간최종결과는아님 |
-| 부하 중 CPU·메모리 실측 | 주문 정합성 통과 / WS 연속성 실패 | [6·24·96 동시 요청](engine-load-test.md), 실제17,736명령/8,868체결·오류0·자산보존. 엔진 CPU평균5.84/7.36/1.75%, 관측 working set최대18.0/30.9/33.3MiB. 24단계말WS단절로96단계는WS없는조건이며직접비교불가. 각단계11~13초의짧은cap종료실행 |
+| CPU·메모리 구간 분석 | 계산 검증 통과 / 장시간 관찰 진행 | [분석 방법과 7개 검증](resource-observation.md), [21:07 약2시간 독립 검산](../evidence/2026-09-21T12-09-28-609Z-two-hour-observation-independent-review-0a64746a/README.md). CPU238구간:14개 합계평균0.495%,엔진0.266%. 6시간 최종 결과는 아님 |
+| 부하 중 CPU·메모리 실측 | 최신 실행 정합성·WS 연속성 통과 / 첫 실행 실패 보존 | [새 f518의 6·24·96 부하](engine-load-after-serialization.md):17736명령/8868체결,WS0…17736연속,단절0. 엔진CPU평균2.684/3.683/3.986%,working set최대35.77MiB. [첫 실행](engine-load-test.md)의WS실패/96무WS조건은별도 보존. 두 실행 모두 phase별20초 이전cap종료이며quiet 성능과 구분 |
 | Vercel UI 로컬 빌드·배포 설정 | 통과 | `trading/frontend`, `pnpm build`, `dist`; [배포 검토](review-deployment.md). Production정적130파일HTTP/해시,실제브라우저주문/부분체결/취소/reload통과. 실제 Vercel 빌드·배포 미실행 |
 | Rust 실행·영속 볼륨·배포 설정 | 준비 / 일부 미검증 | 로컬 Windows 실행 통과, Dockerfile/compose/Caddy 예시. Docker가 없어 실제 Linux 컨테이너 빌드·운영 미검증 |
-| 기존 UI 연동과 적용 여부 | 범위 명시 | 기존 루트 UI 읽기만 수행. 독립 UI 완성, 연동 절차 제공, 루트 적용 없음 |
-| 작업 경계·기존 변경 보존 | 통과(현재) | 시작 clean, 기준 commit `d249d3d6892d44f588b5651f7b17a44cf8833211`, 프로젝트 변경 `trading`만. 제출 직전 재확인 예정 |
+| 기존 UI 연동과 적용 여부 | 로컬 등록 적용·확인 | `trading/attraction.json`으로 Wonder Park에 5175 UI 등록. [실행 API·실제 입장 모달·목적지 화면](../evidence/20260921T123546085Z-wonder-park-link-c489e646/README.md) 확인. 파크 소스 변경 없음. 다른 React 호스트용 어댑터는 미적용, 외부 배포 미실행 |
+| 작업 경계·기존 변경 보존 | 통과(현재 작업 기록 범위) | 자체 구현·증거 변경은trading 내부. 사용자 지시로 [PROJECT_ROOT main checkout](../evidence/20260921T121705885Z-checkout-main-9d279a9c/after.json)을 전환하며 미커밋5파일SHA와실행프로세스를보존했다. 최신main의 다른 작업파일 반영은 이 명시적checkout 지시에 따른 것이다. 제출 직전 재확인 예정 |
 | 문서·에이전트·체크포인트·마감 인계 | 진행 | [checkpoint](checkpoint.md), [실제 에이전트](agents.jsonl). 마감 2026-09-22 09:00 KST |
 
 19:08 최신 통합 확인:
