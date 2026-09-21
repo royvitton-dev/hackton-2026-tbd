@@ -53,6 +53,7 @@ node scripts/serve.mjs --dist
 - **일시정지·재개:** 공 위치, 순위, 장애물 위치와 경기 시간을 그대로 보존합니다. 섞기·카운트다운 중에도 동작합니다.
 - **처음부터:** 현재 경기를 폐기하고 같은 설정의 대기 상태로 돌아갑니다. 이전 당첨·순위는 지워집니다.
 - **전체 맵 / 따라가기:** 긴 경기장의 전체 구조를 보거나 자동 카메라로 현재 진행 구간을 봅니다. 카메라는 판정에 관여하지 않습니다.
+- **입체 / 측면 / 상단 시점:** 경기장 우측 상단에서 3D 카메라 각도를 바꿉니다. 원근 카메라와 실제 입체 메시를 사용하며, 두꺼운 보드 측면·받침·그림자를 볼 수 있습니다. 정지 중 시점을 바꿔도 공과 순위는 움직이지 않습니다.
 - **1× / 2× / 3×:** 대기 중·경기 중·일시정지 중 바꿀 수 있습니다. 더 많은 고정 물리 스텝을 실행해 재생만 가속하며, 순위·구멍 판정·경기 시간은 같은 물리 기준을 사용합니다.
 - **소리:** 기본 음소거. 충돌음·출발음·도착음·당첨음을 Web Audio로 합성합니다.
 - **연출 줄이기:** OS 설정을 처음 반영합니다. 축하 조각과 슬로모션을 끄며 카메라 보간을 줄입니다. 경기 물리는 동일합니다.
@@ -76,7 +77,7 @@ node scripts/serve.mjs --dist
 
 - 질량·반지름·반발 계수는 모든 공에 동일합니다. 반지름은 10 물리 단위입니다.
 - 물리는 1/120초 고정 간격의 평면 시뮬레이션입니다. 중력, 공끼리의 충돌, 원형 핀·범퍼, 선분 레일·회전문·이동 장애물을 계산합니다. 속도는 초당 560 단위로 제한하고 각 스텝에서 4회 충돌 보정을 수행합니다.
-- 실제 3D 화면은 Three.js WebGL로 그리며, 보드 두께·구멍·금속 핀·조명·그림자·공의 반사광을 제공합니다. WebGL 초기화가 불가능하면 Canvas 2.5D로 대체합니다. 물리는 두 렌더러가 공유합니다.
+- 실제 3D 화면은 Three.js WebGL의 PerspectiveCamera와 입체 메시로 그립니다. 두께 0.8의 보드·뚫린 구멍·금속 핀·받침·조명·그림자·공의 반사광을 제공합니다. 공의 이동·충돌 계산은 보드 평면에서 이루어지며 자유 낙하하는 3축 강체 물리는 아닙니다. WebGL 초기화가 불가능한 기기에만 Canvas 2.5D 호환 화면을 제공합니다.
 - 출발 위치와 순서는 `crypto.getRandomValues`에서 받은 시드와 Fisher–Yates 섞기로 결정합니다. 경기 중 무작위는 동일한 탈출 보조 규칙에만 사용합니다.
 - 결승 구멍 중심 x는 100·240·380·520, 폭은 64입니다. 각 구멍의 입구와 사이 경사 레일은 실제 충돌 대상입니다.
 - 공 중심이 y=2,150 판정선을 **구멍 안쪽으로** 넘어가야 도착합니다. 같은 물리 스텝 안에서도 선형 보간한 통과 시각으로 순서를 매깁니다. 구멍 사이로 선을 넘는 비정상 경로는 집계하지 않고 되튕깁니다.
@@ -101,6 +102,9 @@ Chrome 및 Playwright가 있는 환경에서 서버를 켜고:
 ```sh
 node tests/browser.mjs
 node tests/speed.mjs
+node tests/perspective.mjs
+node scripts/build.mjs
+node tests/build-smoke.mjs
 # Playwright가 일반 모듈 경로에 없을 때:
 PLAYWRIGHT_MODULE_PATH=/absolute/path/to/playwright/index.mjs node tests/browser.mjs
 ```
@@ -111,6 +115,7 @@ PLAYWRIGHT_MODULE_PATH=/absolute/path/to/playwright/index.mjs node tests/browser
 - [물리 결과](evidence/physics-results.json): 4맵 × 10시드 × 1/20/60개 = 120경기
 - [배속 검증](evidence/speed-results.json): 같은 시드의 1·2·3배속과 경기 중 속도 변경 비교
 - [브라우저 결과](evidence/browser-results.json): PC·모바일 흐름, 실제 렌더링 성능
+- [원근 3D 검증](evidence/perspective-results.json): 시점 전환, PC·모바일 최대 60개 공·3배속, 같은 브라우저 재현 및 성능
 - [명령 기록](evidence/commands.md), [에이전트 세션 로그](evidence/agent-session.md)
 - `evidence/*.png`: PC·모바일·4개 맵 시연 화면
 - `evidence/*-round.json`: 실제 검증 경기 설정·시드·도착 기록·당첨자
