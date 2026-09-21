@@ -14,6 +14,10 @@ const photoHotspots: Record<string, VehicleImage['batteryHotspot']> = {
 };
 // Each model's provenance and license status is recorded in vehicleModelSources.json.
 export const vehicleGlbPaths: Record<string, string> = {
+  bmw_i5_edrive40_2026:'/assets/vehicles/models/bmw_i5_edrive40_2026_authored.glb',
+  audi_q4_45_etron_2026:'/assets/vehicles/models/audi_q4_45_etron_2026_authored.glb',
+  audi_q6_etron_quattro_2025:'/assets/vehicles/models/audi_q6_etron_quattro_2025_authored.glb',
+  mini_electric_cooper_2026:'/assets/vehicles/models/mini_electric_cooper_2026_authored.glb',
   volvo_ex30_2026:'/assets/vehicles/models/volvo_ex30_2023.glb',
   vw_id4_pro_2026:'/assets/vehicles/models/volkswagen_id4_2021.glb',
   hyundai_ioniq5_lr_2wd_2026:'/assets/vehicles/models/hyundai_ioniq5.glb',

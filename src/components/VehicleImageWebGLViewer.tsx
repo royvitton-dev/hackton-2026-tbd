@@ -42,27 +42,32 @@ function SceneStatus({vehicleId,isGlb,focused,onReady}:{vehicleId:string;isGlb:b
 // Detailed GLBs take priority; verified transparent photos cover remaining cars.
 export function VehicleImageWebGLViewer({vehicle,image,focused,onFocus}:{vehicle:Vehicle;image:VehicleImage;focused:boolean;onFocus:()=>void}){
   const [ready,setReady]=useState(false);
+  const [photoMode,setPhotoMode]=useState(false);
+  const authored=Boolean(image.glbPath?.includes('_authored.glb'));
+  const showModel=Boolean(image.glbPath)&&(!photoMode||focused);
   const onReady=useCallback(()=>setReady(true),[]);
   const [reducedMotion,setReducedMotion]=useState(false);
   useEffect(()=>{const media=window.matchMedia('(prefers-reduced-motion: reduce)');const update=()=>setReducedMotion(media.matches);update();media.addEventListener('change',update);return()=>media.removeEventListener('change',update);},[]);
   if(!image.glbPath&&!image.cutoutGenerated)return <div className="viewer-error" role="status" data-testid="model-unavailable"><strong>{vehicle.model} · 차량 리소스 없음</strong><p>{image.failureReason??'모델과 누끼 이미지를 불러올 수 없습니다.'}</p><button onClick={onFocus}>배터리 정보 보기</button></div>;
   return <div className={`webgl-stage ${focused?'is-focused':''}`} data-testid="vehicle-viewer">
-    <ViewerBoundary key={vehicle.vehicleId}>
-      <Canvas orthographic={!image.glbPath} frameloop="demand" shadows={{type:PCFShadowMap}} dpr={[1,1.5]} camera={{position:[-4.2,2.6,5],fov:33,near:.1,far:70}} gl={{antialias:true,alpha:false,powerPreference:'high-performance'}}
-        onCreated={({gl})=>{gl.setClearColor('#050c17');gl.domElement.setAttribute('aria-label',`${vehicle.manufacturer} ${vehicle.model} WebGL ${image.glbPath?'3D 차량':'실차 이미지'}`);}}
+    <ViewerBoundary key={`${vehicle.vehicleId}-${showModel}`}>
+      <Canvas orthographic={!showModel} frameloop="demand" shadows={{type:PCFShadowMap}} dpr={[1,1.5]} camera={{position:[-4.2,2.6,5],fov:33,near:.1,far:70}} gl={{antialias:true,alpha:false,powerPreference:'high-performance'}}
+        onCreated={({gl})=>{gl.setClearColor('#050c17');gl.domElement.setAttribute('aria-label',`${vehicle.manufacturer} ${vehicle.model} WebGL ${showModel?'3D 차량':'실차 이미지'}`);gl.domElement.dataset.modelKind=showModel?(authored?'authored-approximation':'source-model'):'photograph';}}
         fallback={<div className="viewer-error" role="alert">WebGL을 사용할 수 없습니다. 브라우저의 하드웨어 가속을 확인하세요. 배터리 정보는 계속 볼 수 있습니다.</div>}>
         <GarageEnvironment/>
         <Suspense fallback={null}>
-          {image.glbPath?<VehicleGlbModel path={image.glbPath} focused={focused}/>:<VehicleCutoutMesh image={image} focused={focused} reducedMotion={reducedMotion}/>}
-          {image.glbPath&&<BatteryPackMesh focused={focused}/>}
-          {image.glbPath&&<BatteryHotspot focused={focused} reducedMotion={reducedMotion}/>}
-          <SceneStatus vehicleId={vehicle.vehicleId} isGlb={!!image.glbPath} focused={focused} onReady={onReady}/>
+          {showModel&&image.glbPath?<VehicleGlbModel path={image.glbPath} focused={focused}/>:<VehicleCutoutMesh image={image} focused={focused} reducedMotion={reducedMotion}/>}
+          {showModel&&<BatteryPackMesh focused={focused}/>}
+          {showModel&&<BatteryHotspot focused={focused} reducedMotion={reducedMotion}/>}
+          <SceneStatus vehicleId={vehicle.vehicleId} isGlb={showModel} focused={focused} onReady={onReady}/>
         </Suspense>
-        {image.glbPath&&<BatteryFocusController focused={focused} reducedMotion={reducedMotion}/>}
+        {showModel&&<BatteryFocusController focused={focused} reducedMotion={reducedMotion}/>}
       </Canvas>
     </ViewerBoundary>
-    <div className="scene-top"><span className="scene-badge"><i/>{ready?(image.glbPath?(focused?'배터리 투시 보기':'3D 차량 · 드래그로 시점 조절'):'실차 이미지 · 회전·투시 미지원'):'차량 불러오는 중'}</span></div>
-    <div className="scene-caption"><span>{image.glbPath?(image.modelDisplayNote??'대표 연식 3D 모델'):'실차 누끼 이미지 · 고정 시점'} · 배터리는 개략도</span><span>{image.glbPath?'드래그로 시점 조절 · 스크롤로 확대':'배터리 보기 버튼으로 상태 확인'}</span></div>
+    <div className="scene-top"><span className="scene-badge"><i/>{ready?(showModel?(focused?'배터리 투시 보기':authored?'3D 재구성 · 드래그로 시점 조절':'3D 차량 · 드래그로 시점 조절'):'실차 사진 · 고정 시점'):'차량 불러오는 중'}</span>
+      {authored&&<div className="vehicle-render-modes" role="group" aria-label="차량 보기 방식"><button aria-pressed={showModel} onClick={()=>{setReady(false);setPhotoMode(false);}} disabled={showModel}>3D 재구성</button><button aria-pressed={!showModel} onClick={()=>{setReady(false);setPhotoMode(true);}} disabled={focused||!showModel}>실차 사진</button></div>}
+    </div>
+    <div className="scene-caption"><span>{showModel?(image.modelDisplayNote??'대표 연식 3D 모델'):'실차 누끼 이미지 · 고정 시점'} · 배터리는 개략도</span><span>{showModel?'드래그로 시점 조절 · 스크롤로 확대':'배터리 보기로 3D 구조 확인'}</span></div>
     <button className={`hotspot-label ${focused?'active':''}`} onClick={onFocus} aria-label="배터리 위치 보기" aria-pressed={focused} aria-expanded={focused} aria-controls="battery-info-panel"><span aria-hidden="true">{focused?'↶':'◎'}</span> {focused?'차량 외형 보기':image.glbPath?'배터리 투시 보기':'배터리 정보 보기'}</button>
   </div>;
 }

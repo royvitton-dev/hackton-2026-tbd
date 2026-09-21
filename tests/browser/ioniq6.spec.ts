@@ -37,7 +37,7 @@ test('IONIQ 6 uses its detailed GLB, responds to drag and reveals the internal b
   await expect(canvas).toHaveAttribute('data-faded-vehicle-materials', '0');
 
   await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption('U0059');
-  await expect(canvas).toHaveAttribute('data-renderer', 'webgl-cutout');
+  await expect(canvas).toHaveAttribute('data-renderer', 'webgl-3d-mesh');
   await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption('U0017');
   await expect(canvas).toHaveAttribute('data-model-triangles', '783652', { timeout: 90000 });
   await expect(canvas).toHaveAttribute('data-renderer', 'webgl-3d-mesh');

@@ -39,7 +39,7 @@ for (const car of [
     await page.keyboard.press('Escape');
     await expect(canvas).toHaveAttribute('data-faded-vehicle-materials', '0');
     await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption('U0059');
-    await expect(canvas).toHaveAttribute('data-renderer', 'webgl-cutout');
+    await expect(canvas).toHaveAttribute('data-renderer', 'webgl-3d-mesh');
     await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption(car.user);
     await expect(canvas).toHaveAttribute('data-model-triangles', car.triangles, { timeout: 90000 });
     await page.setViewportSize({ width: 390, height: 844 });
