@@ -1,6 +1,6 @@
 # 작업 체크포인트
 
-갱신: 2026-09-21 22:12 KST. 마감: 2026-09-22 09:00 KST (약10시간48분 남음).
+갱신: 2026-09-21 23:49 KST. 마감: 2026-09-22 09:00 KST (약9시간11분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 경계·사용자 지시·Git
@@ -219,3 +219,21 @@
 - frontend api.ts만format정리(최종a72116...d6147),verify전체1회format0/protocol7개/build0 frontend-20260921T142914818Z. 주소선택5오프라인평가전후동일. rootREADME/parkREADME/ROUTER/tradingREADME/ui/verification문서새통합명령·자동준비·외부backend범위로정정. park/vite.config.mjs SHA12E8...0CC 타작업보존/stage금지.
 - quiet A준비최종141355...97da6b86 동결:runner537530...4a39,baseline069c/candidate7cfd/소스동일,3쌍B/A,A/B,B/A·120k측정/6kwarmup. 문법검사만/실제실행아직. 기존benchmark원시commandlatency배열없음/18:45lockhash없음한계.01:06이전실행금지/외부launcherowner/14PID·observer/helper부재guard.
 - root다음은검증완료분mainpush→23:35관찰checkpoint→launcherlock keeper 및 aged→A→B/C→ensure순서준비. 생방시장09bc/observer18184/보완16840연속유지. 4성장경로외에기존commit된frontend복원stdout도HMR로성장하므로main demo경로전체stage제외. 01:06실제종료후에만진단,마감09:00까지goal active.
+
+## 23:33 통합 자동 시작 보완 main push 완료
+- local/remote main **0aa1fad27305431e4159f5c508e122cb0599b55d** 일치를23:33:06에확인,115파일(구현/문서14+완료증거101),비강제push exit0. 원격추가변경없음. evidence20260921T143246967Z-router-main-push-7ccaef7e/{before,verified}.json와commit/fetch/push로그. staged비어있음/park-vite12E8...0CC·manifest997146...53E불변/map5290main200·fontimport오류없음.
+- 이번단위는통합라우터자동준비복원·실제엔진프록시검증·frontend검증·mainpush완료의실제progress. 기본Park19312재시작없음:이전자동승인검토거절을우회하지않았다. 새통합전체coldstart/UI는아직실제검증아님. 다음23:35시장/보완자원중간checkpoint,keeper순서준비,01:06실제관찰종료후진단. goal전체는09:00마감까지active유지.
+
+## 23:49 4시간29분 관찰과 실제 화면·진단 잠금 준비
+- 이번재개는직전통합수정/mainpush의progress로분류. 원본명세전체+9~11절을재독,09:00마감/07·08·08:30·08:55gate유지. 현재main0aa1fad에서작업하며프로젝트는사용자가확인한C:\project\hackton-2026-tbd/trading이다. 23:33:52exec20793/90617모두실제로running응답/PID존재를확인했으며기존시장을재시작하지않았다.
+- 23:35 checkpoint래퍼20260921T143455881Z-periodic-checkpoint-765c1b66,시장14-34-56...68506bbe:3176표본/16138.660초,94262명령/71331h증가,12봇/ready/자산보존/WS누락단절0,maxgap6.638초. 로그60327812B/영속490298589B/최저free243187720192B. 봇14-34-57...3ca537c9 durable94473=accepted94429+rejected44,p9930.7354ms/max1814.1419ms. 보완14-34-57...450dc7fa 154/153표본구간4602.040초전부valid,14CPU평균0.6741236%(16코어). 기존자원공백유지/6hpass아님. 다음주기00:05KST.
+- quiet-window.mjs 신규keeper SHA c54498a51f66a18e9cefd3077e79539eb1e9a770a296a452111a8d206f185d73. stoppedmanifest고정SHA·14명/PID+extras부재·notbefore검사→lock획득→재검사→atomicREADY. READY후비정상종료자동unlock없음,정확token+rootdiagnosticcleanup확인+실제evidence파일로만release. release-intent선기록/해제후쓰기실패lock_already_released표시/abort실제owner상태보완. 격리6/6 144046...08344853→8/8 144135...81cfb2cb→abort상태수정후8/8 144159...7f025b32. 모두합성fixture/실제data lock미접근.
+- durability 설계14-36-35...f57dcd91/초기source14-41-08...48787a89/최종14-43-09...4787ab8a 독립검토완료. matching_core actualCLI2/2 14-44-42...a778ce3d(래퍼144442...07cdc3fe):fixture복사source로normal17040exit0/lock해제,wrongtoken5684exit1/marker보존. 둘실제종료+부재/강제종료없음/원18PID생존. source process.test62a413...323c7;신호·crash/전체aged실행증거아님. docs/quiet-window.md가01:06이후실행순서다.
+- root CUA기존5175에임시tab11(사용자5/7유지),1280×720기본뷰port변경없음. evidence14-37-05...browser-five-minute:00fullpage준비,01..06고정scroll6DOM/PNG를14:37:43.050→14:43:11.633=328.583초관찰. root01/04/06직접시각확인,차트·호가·체결함께보이고갱신,EVENT117682→119601/재동기화0/콘솔0. tool DOM뒤PNG순차라수십~수백ms차이가능/모든frame영상아님. tab11닫음. frontend가원본6PNG·DOM·동시간observer독립분석중,raw수정없음.
+- root통합20260921T144904300Z-quiet-ui-integration-3f408344:18PID birthticks모두23:30과동일,3pinnedbinary및keeper/process-test SHA일치,실제CLI2PID부재,manifest997146...53E·parkvite12E8...0CC불변,20개새doc링크존재. 시장실행09bc/observer18184/helper15744/supp16840 유지. 운영lockkeeper는아직시작하지않았으며5시간/6시간완료주장없음.
+- matching_core 다음독립작업은남은execute할당원인/구조변경필요성read-only지도;빌드·소스·target수정금지,현재653/7cfd/d2c8 pinned측정대상동결. root는화면분석완료후문서/완료분mainpush,01:06전추가명세공백·검증유용성점검.4성장경로+mainfrontendstdout/타작업parkvite+진행중분석은stage제외한다.
+
+## 23:52 화면 근거 독립 검산 완료
+- frontend review14-47-05...e782abe4 완료,analysis SHA243923...e8f4dc/README16a2ad...cfba root대조동일. 6PNG전부직접열람,각인접5쌍의가격선d 좌표·80막대높이·호가숫자·tape가격/수량변경(시계제외),EVENT+1919/volume+1509h. DOM표본최대간격91.014초/328.583초전체,원본과PNG순차77–208ms차이로같은순간이라고주장안함.
+- 원파일확장자png이나JPEG1265×712/DOM1280×720. raw파일/바이트유지,review/rendered/01.jpg~06.jpg byte동일사본+SHA표보존. 실제resize/이미지변환없음. parser첫PNG가정/빈bid공백2실패도원로그보존후수정분석exit0(제품/시장실패아님).
+- 동시간observer원3210–3273행64개/321.431초,seq+1878/volume+1475h/bookhash64종/매interval체결≥10h/maxgap5.595초,12봇/ready/자산/WS0. 앞뒤경계2행포함raw66행+줄offset/SHA복사,6DOMseq·volume모두양끝관찰값사이. docs/ui/verification 5분행에새범위근거적용완료. 실제저장·화면원자료검산이며동일시험불필요반복없음.

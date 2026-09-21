@@ -1,0 +1,15 @@
+Keeper test fixtures: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T14-40-46-650Z-quiet-keeper-tests-4c60e3be
+✔ keeper publishes ready only after acquisition, excludes another launcher, and explicitly releases its own lock (97.3496ms)
+✔ time, active process and process-inspection errors refuse before any lock (46.8771ms)
+✔ requires stopped dataset, expected hash and exactly fourteen distinct roles and PIDs (189.7663ms)
+✔ a market change between preflight and lock acquisition releases only the acquired lock before ready (61.5872ms)
+✔ incorrect release identity, missing cleanup acknowledgment and missing evidence never unlock (373.638ms)
+✔ after ready a changed manifest or owner fails closed, preserving the marker (147.0987ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1073.4643

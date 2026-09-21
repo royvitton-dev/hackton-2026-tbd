@@ -1,0 +1,7 @@
+{
+  "chunk_id": "677837",
+  "wall_time_seconds": 0.4115108,
+  "exit_code": 1,
+  "original_token_count": 173,
+  "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\nAssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\r\n\r\n'���' !== 'PNG'\r\n\r\n    at file:///C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T14-47-05-078Z-browser-five-minute-review-e782abe4/analyze.mjs:34:10\r\n    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)\r\n    at async node:internal/modules/esm/loader:643:26\r\n    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {\r\n  generatedMessage: true,\r\n  code: 'ERR_ASSERTION',\r\n  actual: '���',\r\n  expected: 'PNG',\r\n  operator: 'strictEqual',\r\n  diff: 'simple'\r\n}\r\n\r\nNode.js v24.19.0\r\n"
+}
