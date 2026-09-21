@@ -26,6 +26,7 @@ export function VehicleBatteryDashboard({users}:{users:UserVehicle[]}){
   const toggleFocus=()=>{const next=!focused;setFocused(next);setTab(next?'battery':'overview');};
   useEffect(()=>{const onKey=(e:KeyboardEvent)=>{if(e.key==='Escape')close();};window.addEventListener('keydown',onKey);return()=>window.removeEventListener('keydown',onKey);},[close]);
   const navigate=(target:Tab)=>{setTab(target);setFocused(target==='battery');};
+  const explainScore=()=>{navigate('battery');requestAnimationFrame(()=>{const explanation=document.getElementById('score-walkthrough');explanation?.focus({preventScroll:true});explanation?.scrollIntoView({block:'start'});});};
   return <><PitIntro onActiveChange={setIntroActive}/><div className="app-shell" inert={introActive} aria-hidden={introActive||undefined}>
     <aside className="app-sidebar"><a href={projectHomeUrl} className="brand" aria-label="전체 프로젝트 메인으로 이동" title="전체 프로젝트 메인으로 이동"><span className="brand-mark">E<span/></span><span>EVision<small>BATTERY INTELLIGENCE</small></span></a>
       <div className="nav-caption">내 차량 관리</div><nav aria-label="주 메뉴">
@@ -43,7 +44,7 @@ export function VehicleBatteryDashboard({users}:{users:UserVehicle[]}){
         <div className="dashboard-grid"><div className="vehicle-scene-panel">
           {!introActive&&<Viewer key={user.vehicle.vehicleId} vehicle={user.vehicle} image={asset} focused={focused} onFocus={toggleFocus}/>}
           <div className="scene-data-strip"><span>{focused?'배터리 위치와 충전 습관을 확인하세요 · 버튼을 다시 누르면 차량 보기':'배터리 보기 버튼으로 위치와 충전 습관을 확인하세요'}</span></div>
-        </div><VehicleHealthSummary user={user} focused={focused} onFocus={toggleFocus}/></div>
+        </div><VehicleHealthSummary user={user} focused={focused} onFocus={toggleFocus} onExplain={explainScore}/></div>
         <div className="detail-tabs" role="tablist" aria-label="차량 상세 정보">{tabs.map(([id,label])=><button key={id} id={`tab-${id}`} role="tab" aria-selected={tab===id} aria-controls="vehicle-tab-content" tabIndex={tab===id?0:-1} onClick={()=>navigate(id)} onKeyDown={e=>{const index=tabs.findIndex(t=>t[0]===tab);let next=index;if(e.key==='ArrowRight')next=(index+1)%tabs.length;else if(e.key==='ArrowLeft')next=(index+tabs.length-1)%tabs.length;else if(e.key==='Home')next=0;else if(e.key==='End')next=tabs.length-1;else return;e.preventDefault();navigate(tabs[next][0]);document.getElementById(`tab-${tabs[next][0]}`)?.focus();}}>{label}</button>)}</div>
         <div id="vehicle-tab-content" role="tabpanel" aria-labelledby={`tab-${tab}`} tabIndex={0}>
           {(tab==='overview'||tab==='habits')&&<VehicleDetails user={user} mode={tab}/>}

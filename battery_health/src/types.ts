@@ -1,3 +1,5 @@
+import type { ScoreExplanation } from './scoreExplanation';
+
 export type ChargerType = 'AC_SLOW' | 'DC_FAST' | 'ULTRA_FAST';
 
 export interface Vehicle {
@@ -131,6 +133,7 @@ export interface UserSummary {
   scorePolicyId: string;
   referenceReasons: string[];
   modeledCapacityStress: number;
+  scoreExplanation: ScoreExplanation | null;
   scoreLimitations: string[];
   grade: ScoreGrade;
   goodHabits: string[];

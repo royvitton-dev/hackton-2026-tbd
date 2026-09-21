@@ -35,6 +35,13 @@ export interface ScientificSessionInput {
   idleMinutes: number;
   startedAt?: string;
   endedAt?: string;
+  usesReferenceSoc?: boolean;
+}
+
+export interface StressComponent {
+  observed: number;
+  minimum: number;
+  maximum: number;
 }
 
 export interface ScientificScoreResult {
@@ -42,6 +49,8 @@ export interface ScientificScoreResult {
   observedCapacityStress: number;
   minimumCapacityStress: number;
   maximumCapacityStress: number;
+  cycleStress: StressComponent;
+  idleStress: StressComponent;
   supportedSessionCount: number;
   outOfRangeSessionCount: number;
   missingSocSessionCount: number;
@@ -176,6 +185,8 @@ export function calculateScientificScore(sessions: ScientificSessionInput[], ref
     observedCapacityStress: observed,
     minimumCapacityStress: minimum,
     maximumCapacityStress: maximum,
+    cycleStress: { observed: observedCycle, minimum: minimumCycle, maximum: maximumCycle },
+    idleStress: { observed: observedCalendar, minimum: minimumCalendar, maximum: maximumCalendar },
     supportedSessionCount,
     outOfRangeSessionCount,
     missingSocSessionCount,

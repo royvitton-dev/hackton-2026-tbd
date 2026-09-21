@@ -3,7 +3,7 @@ import { scoreCoverageMessage, scorePendingMessage } from '@/lib/batteryPresenta
 export const formatMetric=(value:number|null,suffix='',digits=0)=>value===null?'데이터 없음':`${value.toFixed(digits)}${suffix}`;
 export const formatDate=(value:string|null)=>value?new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit'}).format(new Date(value)):'—';
 export const gradeLabel=(score:number|null,scope:UserVehicle['attribution']['scoreScope']='FULL')=>score===null?'분석 대기':scope==='REFERENCE'?'참고 평가':scope==='PARTIAL'?'부분 평가':score>=75?'양호':score>=60?'주의':'개선 필요';
-export function VehicleHealthSummary({user,focused,onFocus}:{user:UserVehicle;focused:boolean;onFocus:()=>void}){
+export function VehicleHealthSummary({user,focused,onFocus,onExplain}:{user:UserVehicle;focused:boolean;onFocus:()=>void;onExplain:()=>void}){
   const score=user.healthScore,offset=478*(1-(score??0)/100),scope=user.attribution.scoreScope;
   return <aside className="health-summary" aria-label="배터리 요약">
     <h2>충전 습관 점수</h2>
@@ -19,6 +19,7 @@ export function VehicleHealthSummary({user,focused,onFocus}:{user:UserVehicle;fo
       <div><dt>배터리 용량</dt><dd>{formatMetric(user.vehicle.batteryCapacityKwh,' kWh',1)}</dd></div>
       {user.socAsOf&&<div><dt>마지막 충전일</dt><dd>{formatDate(user.socAsOf)}</dd></div>}
     </dl>
+    <button className="score-explain-link" onClick={onExplain} aria-controls="score-walkthrough">{score===null?'점수가 보류된 이유 보기':`왜 ${score}점인지 보기`} <span aria-hidden="true">↓</span></button>
     <button className="primary-button" onClick={onFocus} aria-expanded={focused} aria-controls="battery-info-panel">{focused?'차량으로 돌아가기':'배터리 정보 보기'}<span aria-hidden="true">↗</span></button>
     <p className="measurement-note">25°C 가정 · 충전 기록 기반 참고 점수</p>
   </aside>;

@@ -85,3 +85,47 @@ states that the cycling model has no temperature/C-rate sensitivity and was
 fitted near 1C and 35 °C. Our 25 °C assumption does not establish real-world
 accuracy. The 0–100 normalization, grades and broadened reference eligibility
 are product choices, **not a score independently validated by that paper**.
+
+## Human-readable explanation (no score change)
+
+The engine now returns the existing cycle and post-charge idle states separately.
+Both dashboards use the same explanation built from **only the valid scored
+records**, not the recent-30-day summary or a different SOC source:
+
+```text
+span = maximumStress - minimumStress
+cyclePoints = 100 * (observedCycle - minimumCycle) / span
+idlePoints  = 100 * (observedIdle - minimumIdle) / span
+rawScore = 100 - cyclePoints - idlePoints
+displayedScore = round(clamp(rawScore, 0, 100))
+```
+
+These are an algebraic decomposition, not new penalties or measured damage.
+The UI lists the actual record count/period, average start/end SOC, number ending
+at >=90%, number also connected for >=120 minutes, and accumulated idle time.
+90% and 120 minutes summarize the history; they are **not point deductions**.
+Fast charging and night charging have no independent point adjustment here.
+Temperature is assumed to be 25°C, not measured. Post-charge SOC is assumed to
+remain at the recorded end value. Driving, intervening parking and actual
+chemistry/rate-dependent degradation remain unobserved.
+
+Reproducible example U0056: 8 sessions over 10.8663 days, mean start/end SOC
+72.9625% / 98.4%, 8 ending at >=90%, 7 also connected for >=120 minutes,
+2,465 minutes (41 hours 5 minutes) of post-charge connection.
+`100 - 66.8614183724 - 25.8887626643 = 7.2498189633`, rounded to **7**.
+The displayed arithmetic uses two decimals; final rounding uses full precision.
+Reference SOC values present in the supplied example records take priority in
+the existing engine. This is disclosed because the history table can instead
+show a user's reported SOC. Neither represents newly measured vehicle data.
+
+The low/high states are computed reference trajectories, not proven global
+bounds for this discrete nonlinear accumulation. Some existing records have a
+negative component difference or a raw score outside 0–100. The explanation
+shows the signed difference and clipping explicitly, with a boundary warning;
+it must not reinterpret this as a scientifically validated bonus. The present
+change makes the existing behavior visible without modifying the algorithm.
+
+Research notes appear **below** the plain-language explanation. They distinguish
+the Schmalstieg capacity-fade model and BLAST-Lite coefficients/lookup table
+from our charging-only adaptation, comparison trajectories, eligibility and
+0–100 conversion. The latter are not validated by the cited paper.
