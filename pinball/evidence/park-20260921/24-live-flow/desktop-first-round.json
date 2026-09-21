@@ -1,0 +1,468 @@
+{
+  "config": {
+    "people": [
+      {
+        "id": "p1",
+        "name": "하늘",
+        "label": "하늘",
+        "count": 1,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p2",
+        "name": "지우",
+        "label": "지우",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p3",
+        "name": "민준",
+        "label": "민준",
+        "count": 1,
+        "color": "#ff82af"
+      },
+      {
+        "id": "p4",
+        "name": "서연",
+        "label": "서연",
+        "count": 1,
+        "color": "#64e4e0"
+      },
+      {
+        "id": "p5",
+        "name": "도윤",
+        "label": "도윤",
+        "count": 1,
+        "color": "#ffc168"
+      },
+      {
+        "id": "p6",
+        "name": "수빈",
+        "label": "수빈",
+        "count": 1,
+        "color": "#8daaff"
+      },
+      {
+        "id": "p7",
+        "name": "지호",
+        "label": "지호",
+        "count": 1,
+        "color": "#edeeed"
+      },
+      {
+        "id": "p8",
+        "name": "예린",
+        "label": "예린",
+        "count": 1,
+        "color": "#ff826c"
+      },
+      {
+        "id": "p9",
+        "name": "우진",
+        "label": "우진",
+        "count": 1,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p10",
+        "name": "다은",
+        "label": "다은",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p11",
+        "name": "시우",
+        "label": "시우",
+        "count": 1,
+        "color": "#ff82af"
+      },
+      {
+        "id": "p12",
+        "name": "소윤",
+        "label": "소윤",
+        "count": 1,
+        "color": "#64e4e0"
+      },
+      {
+        "id": "p13",
+        "name": "준서",
+        "label": "준서",
+        "count": 1,
+        "color": "#ffc168"
+      },
+      {
+        "id": "p14",
+        "name": "하린",
+        "label": "하린",
+        "count": 1,
+        "color": "#8daaff"
+      },
+      {
+        "id": "p15",
+        "name": "건우",
+        "label": "건우",
+        "count": 1,
+        "color": "#edeeed"
+      },
+      {
+        "id": "p16",
+        "name": "유나",
+        "label": "유나",
+        "count": 1,
+        "color": "#ff826c"
+      },
+      {
+        "id": "p17",
+        "name": "현우",
+        "label": "현우",
+        "count": 1,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p18",
+        "name": "채원",
+        "label": "채원",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p19",
+        "name": "지안",
+        "label": "지안",
+        "count": 1,
+        "color": "#ff82af"
+      },
+      {
+        "id": "p20",
+        "name": "태오",
+        "label": "태오",
+        "count": 1,
+        "color": "#64e4e0"
+      }
+    ],
+    "total": 20,
+    "rule": "first",
+    "target": 1,
+    "mode": "player",
+    "mapId": "neon",
+    "boardMotion": true,
+    "finishMode": "winner"
+  },
+  "seed": 364836341,
+  "result": {
+    "roundId": "f202e446-d4a8-4d03-81ee-48c1b212a54d",
+    "state": "complete",
+    "seed": 364836341,
+    "time": 15.356092675295612,
+    "target": 1,
+    "total": 20,
+    "winner": {
+      "id": "p10-b1",
+      "participantId": "p10",
+      "name": "다은",
+      "label": "다은",
+      "color": "#bca7ff",
+      "number": 1,
+      "rank": 1,
+      "time": 15.356092675295612,
+      "exitId": 1,
+      "exitLabel": "골인",
+      "criterion": "arrival",
+      "crossedFinish": true
+    },
+    "completionReason": "target-arrived",
+    "finishOrder": [
+      {
+        "id": "p10-b1",
+        "participantId": "p10",
+        "name": "다은",
+        "label": "다은",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 1,
+        "time": 15.356092675295612,
+        "exitId": 1,
+        "exitLabel": "골인"
+      }
+    ],
+    "assists": 0,
+    "returns": 0,
+    "returnClosed": false,
+    "motion": {
+      "enabled": true,
+      "active": true,
+      "axis": "x",
+      "cycle": 3,
+      "phase": 0.042273629707672254,
+      "roll": -0.0005523266644273673,
+      "pitch": 0,
+      "offsetX": 0.14728711051396462,
+      "offsetY": 0,
+      "forceX": 0.6351756640914724,
+      "forceY": 0,
+      "nextIn": 0
+    },
+    "deviceStats": {
+      "captures": 12,
+      "launches": 6,
+      "releases": 5
+    },
+    "devices": [
+      {
+        "id": "neon-magnet-0",
+        "kind": "magnet",
+        "x": 310,
+        "y": 530,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-magnet-1",
+        "kind": "magnet",
+        "x": 100,
+        "y": 1770,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-cannon-2",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1320,
+        "ballId": "p5-b1",
+        "ballIds": [
+          "p5-b1"
+        ],
+        "angle": 0.759061648809709,
+        "progress": 0.2602686551732636,
+        "holding": true,
+        "count": 1
+      },
+      {
+        "id": "neon-cannon-3",
+        "kind": "cannon",
+        "x": 480,
+        "y": 1630,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      }
+    ],
+    "balls": [
+      {
+        "id": "p13-b1",
+        "x": 182.05001392265987,
+        "y": 1316.8434511283372,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p8-b1",
+        "x": 296.03235898571495,
+        "y": 1372.2063639119535,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p5-b1",
+        "x": 312.9337634721816,
+        "y": 1303.1311720762062,
+        "finished": false,
+        "rank": null,
+        "heldBy": "neon-cannon-2",
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p2-b1",
+        "x": 420.0780535951066,
+        "y": 1318.881023257523,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p12-b1",
+        "x": 533.2676866997396,
+        "y": 1429.6277203419056,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p15-b1",
+        "x": 378.9190585837102,
+        "y": 1377.6203534349963,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p16-b1",
+        "x": 401.27067459932306,
+        "y": 1493.4158740454577,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p20-b1",
+        "x": 442.69102148560296,
+        "y": 790.3199351527505,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p6-b1",
+        "x": 91.57505498009188,
+        "y": 1788.806557174561,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p9-b1",
+        "x": 495.8526193094978,
+        "y": 1355.5359449753646,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p11-b1",
+        "x": 469.386113639979,
+        "y": 1319.8154256059959,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p10-b1",
+        "x": 317.2890560363387,
+        "y": 2150,
+        "finished": true,
+        "rank": 1,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p19-b1",
+        "x": 187.75830410538768,
+        "y": 1152.5597623668457,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p3-b1",
+        "x": 446.7485012172483,
+        "y": 1848.7171856582452,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p7-b1",
+        "x": 113.65130997333888,
+        "y": 1503.8928229175058,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p17-b1",
+        "x": 70.07549887856264,
+        "y": 1296.9182466761054,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p4-b1",
+        "x": 423.33791518841434,
+        "y": 1543.426744815452,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p18-b1",
+        "x": 388.15849434386706,
+        "y": 1043.904668955836,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p14-b1",
+        "x": 229.44842755602753,
+        "y": 1486.5466401953613,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p1-b1",
+        "x": 369.828098535652,
+        "y": 870.3195819890843,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      }
+    ]
+  },
+  "lotto": null
+}

@@ -77,3 +77,8 @@ node tests/browser.mjs
 - 최신이름적용후 `node scripts/build.mjs`, `EVIDENCE_PREFIX=23b node tests/default-names.mjs`:dist21파일과PC모바일2/2.
 - 모든브라우저스크립트에 `PLAYWRIGHT_MODULE_PATH=/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/playwright/index.mjs` 설정.
 - Node실행파일 `/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node`.
+
+
+## 24 실제반영본 (22:04–22:08 KST)
+
+`EXCLUDE_MAPS=split EVIDENCE_DIR=evidence/park-20260921/24-live-flow PLAYWRIGHT_MODULE_PATH=/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/playwright/index.mjs node tests/browser.mjs` — 6/6통과,5개성능표본,외부요청/페이지오류0. 원더가든명시제외.
