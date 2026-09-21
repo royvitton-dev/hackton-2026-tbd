@@ -4,6 +4,19 @@ push 테스트
 
 2026 해커톤 작업 모음입니다. 각 프로젝트는 해당 폴더에서 독립적으로 실행합니다.
 
+## Wonder Park 홈페이지
+
+각 프로젝트를 3D 미니어처 어트랙션으로 연결한 홈페이지입니다. 저장소 최상위에서 실행합니다.
+
+```sh
+npm ci
+npm run dev
+```
+
+[로컬 파크](http://localhost:5190) · [HTML 품질 보고서](http://localhost:5190/reports/) · [홈페이지 안내](park/README.md)
+
+`npm run park:hooks`와 `npm run park:watch`로 Git 훅과 10분 간격 커밋 감시를 실행합니다. `npm run park:circuit`은 모든 어트랙션에 순서대로 실제 입장해 검증하는 무한 순회를 실행합니다. `webpage`는 파크 지도에서 제외합니다.
+
 | 폴더 | 내용 | 실행 안내 |
 | --- | --- | --- |
 | `dopamin/` | 음성 참가자 등록과 3D 커피 내기 레이싱 게임 BREW RACERS | [README](dopamin/README.md) |

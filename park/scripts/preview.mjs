@@ -1,0 +1,14 @@
+import { chromium } from '@playwright/test';
+import { mkdir, writeFile } from 'node:fs/promises';
+await mkdir('.park-runtime/screenshots',{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1600,height:1000},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text());});
+await page.goto('http://localhost:5190/?capture=1',{waitUntil:'domcontentloaded'});
+await page.locator('#world[data-ready=true]').waitFor({timeout:90000});
+await page.waitForFunction(()=>window.__park?.getState().attractions.length>=3);
+await page.waitForTimeout(3000);
+await page.screenshot({path:'.park-runtime/screenshots/park-desktop.png'});
+console.log(JSON.stringify({title:await page.title(),errors,render:await page.evaluate(()=>({calls:window.__park.view.renderer.info.render.calls,triangles:window.__park.view.renderer.info.render.triangles,fps:window.__park.view.fps,attractions:window.__park.getState().attractions.map(a=>a.id)}))},null,2));
+await writeFile('.park-runtime/screenshots/preview.json',JSON.stringify({errors},null,2));
+await browser.close();
