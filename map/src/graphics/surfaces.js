@@ -1,3 +1,4 @@
+import {assetPath} from '../base.js';
 import * as THREE from 'three';
 import {mergeGeometries} from 'three/addons/utils/BufferGeometryUtils.js';
 
@@ -9,7 +10,7 @@ export function concreteMaterial(){
  const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;map.wrapS=map.wrapT=THREE.RepeatWrapping;map.repeat.set(14,9);map.anisotropy=8;
  const material=new THREE.MeshStandardMaterial({color:'#b9c1be',map,roughness:.48,metalness:.08,bumpMap:map,bumpScale:.025});material.userData.persistent=true;
  const loader=new THREE.TextureLoader();
- material.userData.ready=Promise.all([loader.loadAsync('/materials/concrete-diffuse.jpg'),loader.loadAsync('/materials/concrete-normal.jpg'),loader.loadAsync('/materials/concrete-roughness.jpg')]).then(([diffuse,normal,roughness])=>{
+ material.userData.ready=Promise.all([loader.loadAsync(assetPath('/materials/concrete-diffuse.jpg')),loader.loadAsync(assetPath('/materials/concrete-normal.jpg')),loader.loadAsync(assetPath('/materials/concrete-roughness.jpg'))]).then(([diffuse,normal,roughness])=>{
   for(const texture of [diffuse,normal,roughness]){texture.wrapS=texture.wrapT=THREE.RepeatWrapping;texture.repeat.set(28,18);texture.anisotropy=8;}
   // Epoxy seal keeps the concrete variation subtle instead of a tiled gravel appearance.
   const sealed=document.createElement('canvas');sealed.width=sealed.height=1024;const paint=sealed.getContext('2d');

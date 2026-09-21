@@ -1,0 +1,5 @@
+# Park assets
+
+- `gs-group-ci.png`: original GS group symbol and wordmark from the [official GS Retail CI guide](https://hpimg.gsretail.com/gsretail/en/corporation/about-gs-retail/corporate-and-brand-identity/gs-symbol), retrieved 2026-09-21. [Original artwork](https://hpimg.gsretail.com/_ui/desktop/common/images/gsretail/corporation/logo_gs_lg.png). GS trademark, displayed at the user's request. The original orange, green and blue gradients, blue wordmark and proportions are preserved, using an unlit sRGB printed face to avoid recoloring by scene lighting.
+- `kloppenheim-06-sky.hdr`: [Kloppenheim 06 (Pure Sky)](https://polyhaven.com/a/kloppenheim_06_puresky), Greg Zaal and Jarod Guest, Poly Haven, CC0. The 1K HDR source supplies outdoor illumination and reflections; it is bundled locally.
+- Visual direction: first image in [B612 / virtual theme park, 3DG9, 2017](https://lampy4.blogspot.com/2017/06/b612.html), provided by the user. The reference is not bundled or used as a texture. The spherical meadow, lakes, brook, paths and woodland are created in Three.js.

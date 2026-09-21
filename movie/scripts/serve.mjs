@@ -2,7 +2,7 @@ import http from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-const root = path.resolve(fileURLToPath(new URL('..',import.meta.url)));
+const root = path.resolve(process.env.FILM_WORKSPACE || fileURLToPath(new URL('..',import.meta.url)));
 export function serve(port=5180) {
   const types={'.html':'text/html; charset=utf-8','.js':'text/javascript','.json':'application/json','.png':'image/png','.jpg':'image/jpeg','.mp4':'video/mp4','.wav':'audio/wav','.css':'text/css; charset=utf-8','.vtt':'text/vtt; charset=utf-8','.md':'text/plain; charset=utf-8'};
   const server=http.createServer(async(req,res)=>{

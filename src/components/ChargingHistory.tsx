@@ -1,4 +1,5 @@
 'use client';
+import {appPath} from '../lib/appPath';
 import { useEffect, useMemo, useState } from 'react';
 import type { ChargeSession } from '@/types/vehicle';
 import { DashboardIcon } from './DashboardIcon';
@@ -9,7 +10,7 @@ const stationName=(value:string|null)=>value?stationNames[value]??value:'—';
 export function ChargingHistory({userId}:{userId:string}){
   const [sessions,setSessions]=useState<ChargeSession[]|null>(null),[error,setError]=useState('');
   const [type,setType]=useState('all'),[period,setPeriod]=useState('all'),[page,setPage]=useState(1),[selected,setSelected]=useState<ChargeSession|null>(null);
-  useEffect(()=>{const controller=new AbortController();fetch(`/api/users/${encodeURIComponent(userId)}/sessions`,{signal:controller.signal}).then(async r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();}).then(data=>setSessions(data.sessions)).catch(e=>{if(e.name!=='AbortError')setError(`충전 이력을 불러오지 못했습니다: ${e.message}`);});return()=>controller.abort();},[userId]);
+  useEffect(()=>{const controller=new AbortController();fetch(appPath(`/api/users/${encodeURIComponent(userId)}/sessions`),{signal:controller.signal}).then(async r=>{if(!r.ok)throw new Error(`HTTP ${r.status}`);return r.json();}).then(data=>setSessions(data.sessions)).catch(e=>{if(e.name!=='AbortError')setError(`충전 이력을 불러오지 못했습니다: ${e.message}`);});return()=>controller.abort();},[userId]);
   const filtered=useMemo(()=>{const cutoff=sessions?.[0]?Date.parse(sessions[0].endedAt)-Number(period)*86400000:0;return (sessions??[]).filter(s=>(type==='all'||s.chargerType===type)&&(period==='all'||Date.parse(s.endedAt)>=cutoff));},[sessions,type,period]);
   const totalPages=Math.max(1,Math.ceil(filtered.length/5)),visible=filtered.slice((page-1)*5,page*5);
   const exportCsv=()=>{const fields=['sessionId','userId','vehicleId','startedAt','chargerType','chargedKwh','durationMinutes','idleMinutes'] as const;const csv='\uFEFF'+[fields.join(','),...filtered.map(s=>fields.map(f=>JSON.stringify(s[f])).join(','))].join('\r\n');const url=URL.createObjectURL(new Blob([csv],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download=`${userId}-charging-history.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};

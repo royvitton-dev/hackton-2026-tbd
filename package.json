@@ -3,11 +3,13 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "engines": { "node": ">=22.12" },
+  "engines": {
+    "node": ">=22.12"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build --webpack",
-    "start": "next start",
+    "dev": "node park/server.mjs",
+    "build": "node scripts/build-unified.mjs",
+    "start": "node park/server.mjs --production",
     "demo": "node scripts/serve-vehicle-demo.mjs",
     "lint": "eslint src scripts tests",
     "typecheck": "tsc --noEmit",
@@ -18,9 +20,10 @@
     "cutout:vehicles": "node scripts/generate-vehicle-cutouts.mjs",
     "sync:vehicle-assets": "node scripts/sync-vehicle-assets.mjs",
     "verify:assets": "node scripts/verify-vehicle-assets.mjs",
+    "verify:vehicle-3d": "node scripts/verify-vehicle-assets.mjs --require-3d",
     "prepare:vehicles": "npm run download:vehicles && npm run cutout:vehicles && npm run sync:vehicle-assets && npm run verify:assets",
     "park:dev": "node park/server.mjs",
-    "park:build": "vite build --config park/vite.config.mjs",
+    "park:build": "node scripts/build-unified.mjs",
     "park:preview": "node park/server.mjs --production",
     "park:test": "vitest run --config park/vitest.config.mjs",
     "park:test:coverage": "vitest run --coverage --config park/vitest.config.mjs",
@@ -30,7 +33,13 @@
     "park:watch": "node park/scripts/watch.mjs",
     "park:sync": "node park/scripts/watch.mjs --once",
     "park:circuit": "node park/scripts/circuit.mjs",
-    "park:hooks": "node park/scripts/install-hooks.mjs"
+    "park:hooks": "node park/scripts/install-hooks.mjs",
+    "vehicle:dev": "next dev",
+    "vehicle:build": "next build --webpack",
+    "vehicle:start": "next start",
+    "server:test": "vitest run --coverage --config park/vitest.router.config.mjs",
+    "server:test:e2e": "playwright test --config park/playwright.router.config.mjs",
+    "server:reports": "node park/scripts/report-router.mjs"
   },
   "dependencies": {
     "@fontsource/dm-sans": "^5.3.0",

@@ -1,8 +1,5 @@
 import * as THREE from 'three';
-import { createCastle } from './assets/wonder/park-source/castle.js';
-import { createLandscape } from './assets/wonder/park-source/landscape.js';
-import { createAttraction } from './assets/wonder/park-source/attractions.js';
-import { staticBatch } from './assets/wonder/park-source/materials.js';
+import { createCastle, createLandscape, createAttraction, staticBatch } from './assets/wonder/model/park-model.js';
 const clamp=x=>Math.max(0,Math.min(1,x));
 const ease=x=>{x=clamp(x);return x*x*(3-2*x);};
 export async function makeScene(){

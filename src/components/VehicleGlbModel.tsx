@@ -1,10 +1,11 @@
 'use client';
+import {appPath} from '../lib/appPath';
 import { useGLTF } from '@react-three/drei';
 import { useEffect, useMemo } from 'react';
 import { Box3, Mesh, MeshStandardMaterial, Vector3 } from 'three';
 import { toCreasedNormals } from 'three/addons/utils/BufferGeometryUtils.js';
 export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
-  const {scene}=useGLTF(path,'/assets/vehicles/decoders/');
+  const {scene}=useGLTF(path,appPath('/assets/vehicles/decoders/'));
   const model=useMemo(()=>{
     const clone=scene.clone(true);clone.name='vehicle-gltf';
     clone.traverse(o=>{if(o instanceof Mesh){o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();o.castShadow=true;o.receiveShadow=true;

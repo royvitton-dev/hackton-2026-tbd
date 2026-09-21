@@ -1,0 +1,14 @@
+{
+  "endpoint": "https://download.geofabrik.de/asia/south-korea-260920.osm.pbf",
+  "query": "Local bounding-box extraction: highways, buildings, charging_station, barriers and related turn restrictions",
+  "bbox": [
+    35.8004471,
+    127.1075614,
+    35.8134471,
+    127.1235912
+  ],
+  "fetchedAt": "2026-09-21T13:52:10.924226+00:00",
+  "sha256": "5065672cf72dc92efa104b63388d0521c51b882e4859a165566d8d8348005b29",
+  "sourcePbfSha256": "68ed4bbb72e41b73421e28d8282d82e5fc6f4a2cb78a0913b6812d32aa910252",
+  "extractor": "pyosmium 4.3.1"
+}

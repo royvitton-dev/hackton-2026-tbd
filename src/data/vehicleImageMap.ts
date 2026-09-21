@@ -1,3 +1,4 @@
+import {appPath} from '../lib/appPath';
 import sources from './vehicleImageSources.json';
 import models from './vehicleModelSources.json';
 import type { VehicleImage } from '../types/vehicle';
@@ -32,10 +33,10 @@ export const vehicleGlbPaths: Record<string, string> = {
 };
 export const vehicleImageMap: VehicleImage[] = sources.map(source => ({
   vehicleId:source.vehicleId,manufacturer:source.manufacturer,model:source.model,year:source.year,
-  imagePath:source.publicOriginalPath,cutoutImagePath:`${source.publicCutoutPath}?v=${source.cutoutSourceSha256.slice(0,12)}`,
+  imagePath:appPath(source.publicOriginalPath),cutoutImagePath:`${appPath(source.publicCutoutPath)}?v=${source.cutoutSourceSha256.slice(0,12)}`,
   resourceOriginalPath:source.resourceOriginalPath,resourceCutoutPath:source.resourceCutoutPath,
   imageSourceUrl:source.sourceUrl,license:source.license,licenseUrl:source.licenseUrl,author:source.author,
-  representativeNote:source.representativeNote,glbPath:vehicleGlbPaths[source.vehicleId]??null,
+  representativeNote:source.representativeNote,glbPath:vehicleGlbPaths[source.vehicleId]?appPath(vehicleGlbPaths[source.vehicleId]):null,
   modelDisplayNote:models.find(m=>m.vehicleId===source.vehicleId)?.displayNote??null,
   renderMode:vehicleGlbPaths[source.vehicleId]?'glb':source.cutoutGenerated?'cutout':'unavailable',
   // PNG fallback was explicitly requested; it stays fixed, without a photo depth stack.

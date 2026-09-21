@@ -1,9 +1,10 @@
+import {assetPath} from '../base.js';
 import * as THREE from 'three';
 import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
 let template;
 export async function prepareVehicle(){
  try{
-  const gltf=await new GLTFLoader().loadAsync('/models/car-concept.glb');template=gltf.scene;
+  const gltf=await new GLTFLoader().loadAsync(assetPath('/models/car-concept.glb'));template=gltf.scene;
   const bounds=new THREE.Box3().setFromObject(template),size=bounds.getSize(new THREE.Vector3());
   const scale=4.4/size.z;template.scale.setScalar(scale);template.position.y=-bounds.min.y*scale;
   template.traverse(o=>{if(!o.isMesh)return;o.castShadow=true;o.receiveShadow=true;o.geometry.userData.sharedVehicle=true;o.material.userData.persistent=true;

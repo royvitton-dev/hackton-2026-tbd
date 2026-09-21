@@ -16,13 +16,11 @@ npm run park:dev
 - 다른 포트: `PARK_PORT=5195 npm run park:dev`
 - 프로덕션: `npm run park:build` 후 `npm run park:preview`
 
-개발 서버는 localhost에 바인딩합니다. 범퍼카에서 레이스를 선택하면 별도 Vite 서버를 빈 포트에 열고 실행 링크를 제공합니다. 극장의 MP4는 프로젝트 폴더에서 HTTP Range로 제공되며 실제 Three.js `VideoTexture`로 상영합니다. 음성 CLI는 macOS 전용 실행 안내를 제공합니다.
+통합 서버는 localhost의 한 포트에서 모든 웹 화면을 경로로 제공합니다. `/park/`, `/map/`, `/dopamin/`, `/pinball/`, `/movie/`, `/webpage/`, `/battery_health/`, `/trading/`, `/vehicle/`로 바로 접근하거나 `/projects/`에서 선택합니다. 어트랙션 입장도 같은 주소의 경로로 연결합니다.
 
-Wonder Park를 시작하면 **휴가 거래소 UI·Rust 엔진·12개 봇도 자동으로 시작**합니다. 이미 정상 실행 중이면 같은 시장을 재사용하고, 거래소 입장 버튼은 실행 준비가 끝난 뒤 주소를 제공합니다. 거래소 UI만 종료된 경우에는 엔진·봇·데이터를 유지한 채 UI를 복구합니다.
+개발 모드는 Vite 미들웨어와 Next.js를 같은 HTTP 서버에 연결하고, 배포 모드는 통합 빌드 파일과 Next.js를 제공합니다. 영상은 HTTP Range를 지원합니다. `/voice/`는 macOS 네이티브 CLI 안내입니다. 거래소 엔진은 `TRADING_ENGINE_URL`로 지정하며 `/trading/backend/`를 통해 HTTP와 WebSocket을 전달합니다. 프런트엔드 서버나 봇을 입장 시 자동 생성하지 않습니다.
 
-거래소의 최초 준비는 Node 24.x 환경에서 [trading 준비 절차](../trading/README.md)를 한 번 수행합니다. PowerShell에서는 `cd trading`, `./scripts/setup.ps1`, `cd ..` 순서입니다. 이후 평소처럼 루트에서 `npm run park:dev` 또는 `npm run park:preview`를 실행하면 됩니다. 자동 시작이 의존성을 설치하거나 데이터를 초기화하지는 않으며 준비 파일이 없으면 터미널과 입장 안내에 준비 명령을 표시합니다.
-
-거래소 주소는 UI <http://127.0.0.1:5175>, API <http://127.0.0.1:8787>입니다. 파크 종료 후에도 공유 중인 거래소는 유지됩니다. 거래소까지 정상 종료하려면 `trading`에서 `node scripts/demo.mjs stop`을 실행합니다. 실행 로그는 `trading/evidence/`에 보존합니다.
+[통합 서버 설치·실행·테스트](ROUTER.md)를 참고하세요. 통합 품질 보고서는 <http://localhost:5190/reports/router/>입니다.
 
 ## 3D 파크
 

@@ -36,7 +36,9 @@
     "playwright.config.ts",
     "playwright.review.config.ts",
     ".next/types/**/*.ts",
-    ".next/dev/types/**/*.ts"
+    ".next/dev/types/**/*.ts",
+    ".next-unified/types/**/*.ts",
+    ".next-unified/dev/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
