@@ -1,6 +1,30 @@
 # hackton-2026-tbd
 
-2026 해커톤 작업 모음입니다. 각 프로젝트는 독립적으로 실행할 수 있습니다.
+2026 해커톤 작업 모음입니다. `npm run dev` 하나로 모든 웹 프로젝트를 **http://localhost:5190/projects/** 에서 엽니다. 앱을 선택해도 별도 UI 포트나 서버를 만들지 않습니다.
+
+## 통합 서버
+
+```sh
+npm ci
+# 최초 1회: 각 앱의 의존성 설치는 park/ROUTER.md 참고
+npm run dev
+# 배포 빌드: npm run build && npm start
+```
+
+| 주소 | 기능 |
+| --- | --- |
+| `/park/` | 3D Wonder Park (기본 화면) |
+| `/map/`, `/map/mobility.html` | 도면·모빌리티 |
+| `/vehicle/` | EVision 차량·충전 이력 |
+| `/battery_health/` | 배터리 관리 |
+| `/dopamin/`, `/pinball/` | 레이싱·핀볼 |
+| `/webpage/`, `/webpage/health/` | DEBUT : ON·VITALIS |
+| `/movie/` | 영상 재생 |
+| `/trading/` | 거래소 화면·동일 출처 API/WebSocket 연결 |
+| `/voice/` | macOS 음성 CLI 실행 안내 |
+| `/reports/router/` | 통합 라우터 테스트·커버리지·골든 HTML |
+
+거래 엔진은 별도 백엔드 서비스이며 브라우저에서는 같은 5190 포트로 연결합니다. 음성 기능은 기존 네이티브 CLI를 유지합니다. [설치·구조·검증 상세](park/ROUTER.md)를 참고하세요.
 
 ## 프로젝트 안내
 
@@ -17,17 +41,7 @@
 
 ## Wonder Park 홈페이지
 
-루트 의존성을 설치한 뒤 Wonder Park 전용 스크립트를 사용합니다.
-
-```sh
-cd /Users/demonic/object/git/hackton-2026-tbd
-npm ci
-npm run park:dev
-```
-
-빌드와 테스트는 각각 `npm run park:build`, `npm run park:test`로 실행합니다.
-
-Wonder Park 시작 시 휴가 거래소 UI·Rust 엔진·12개 봇도 자동 실행됩니다. 최초 한 번 [거래소 준비 절차](trading/README.md)를 완료하세요. 이미 실행 중인 시장은 재사용하며, 거래소 화면만 종료돼 있으면 화면 서버를 복구합니다. 파크 종료 후에도 공유 거래소는 유지됩니다. 거래소까지 종료하려면 `trading`에서 `node scripts/demo.mjs stop`을 실행합니다.
+통합 서버의 기본 화면은 `/park/`입니다. `npm run park:dev`도 같은 통합 서버를 실행합니다. `npm run park:build`와 `npm run park:preview`는 통합 빌드·실행의 별칭입니다. 파크 단위 테스트는 `npm run park:test`, 통합 검증은 `npm run server:test`와 `npm run server:test:e2e`로 실행합니다.
 
 ---
 
@@ -37,7 +51,7 @@ Wonder Park 시작 시 휴가 거래소 UI·Rust 엔진·12개 봇도 자동 실
 
 ## 설치와 실행
 
-루트의 `package-lock.json`이 통합 의존성 기준입니다. 기본 npm 스크립트는 EVision을 실행하며, Wonder Park는 `park:*` 스크립트로 분리되어 있습니다. `battery_health/`에는 동일한 데이터를 사용하는 독립형 Vite MVP가 있습니다.
+루트의 `package-lock.json`은 Next.js와 통합 서버 의존성 기준입니다. 기본 npm 스크립트는 통합 서버를 실행하며, EVision 단독 실행은 `vehicle:*` 스크립트를 사용합니다. `battery_health/`에는 동일한 데이터를 사용하는 독립형 Vite MVP가 있습니다.
 
 Node.js 22.12 이상이 필요합니다.
 
@@ -47,10 +61,10 @@ npm install
 npm run dev
 ```
 
-- 기본: http://localhost:3000/?user=U0001 (Hyundai IONIQ 5)
-- Model 3: http://localhost:3000/?user=U0002
-- Model Y: http://localhost:3000/?user=U0009
-- Kona Electric: http://localhost:3000/?user=U0010 (2019 대표 외형)
+- 기본: http://localhost:5190/vehicle/?user=U0001 (Hyundai IONIQ 5)
+- Model 3: http://localhost:5190/vehicle/?user=U0002
+- Model Y: http://localhost:5190/vehicle/?user=U0009
+- Kona Electric: http://localhost:5190/vehicle/?user=U0010 (2019 대표 외형)
 - 선택한 사용자 ID를 URL과 localStorage에 저장합니다.
 - 사용자 변경 시 차량·점수·주행 정보·충전 이력이 함께 바뀝니다.
 - 상단 검색은 사용자 ID, 제조사, 모델명, 프로필을 지원합니다.
@@ -65,14 +79,14 @@ npm run start
 작업 중 계속 열어 둘 데모는 빌드 복사본으로 실행합니다.
 
 ```sh
-npm run build
+npm run vehicle:build
 npm run demo
 # 다른 포트: npm run demo -- --port 3103
 ```
 
 `demo`는 완성된 `.next`, public asset과 설정을 임시 디렉터리에 복사해 실행합니다. 이후 작업 폴더에서 빌드하거나 Git 브랜치를 바꿔도 실행 중인 화면의 JavaScript/GLB 경로가 유지됩니다. 새 결과를 보려면 데모를 종료한 뒤 다시 실행합니다. 의존성은 현재 `node_modules`를 사용하므로 의존성을 변경한 뒤에도 다시 실행해야 합니다. 임시 복사본은 정상 종료할 때 제거합니다.
 
-`npm run start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:3000/?user=U0001 입니다. 현재 20개 차량 프로필 모두 표시됩니다. 상세 GLB가 있는 13개는 실제 3D 모델로, 나머지 7개는 실차 투명 PNG를 WebGL에 고정해서 표시합니다. 장면 안내에서 두 방식을 구분합니다.
+`npm run vehicle:start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:5190/vehicle/?user=U0001 입니다. 현재 20개 차량 프로필 모두 표시됩니다. 상세 GLB가 있는 13개는 실제 3D 모델로, 나머지 7개는 실차 투명 PNG를 WebGL에 고정해서 표시합니다. 장면 안내에서 두 방식을 구분합니다.
 
 ## 데이터 기준
 

@@ -1,0 +1,10 @@
+import {describe,it,expect} from 'vitest';
+import {APPS,appPath,matchApp,privatePath,staticPath,redirectPath} from '../../server/routes.mjs';
+
+describe('one server routes',()=>{
+ it('assigns unique paths to every supported project',()=>{expect(APPS).toHaveLength(10);expect(new Set(APPS.map(a=>appPath(a.id))).size).toBe(10);for(const a of APPS){expect(matchApp(appPath(a.id))).toBe(a);expect(matchApp(`/${a.id}`)).toBe(a);expect(matchApp(`${appPath(a.id)}nested/page`)).toBe(a);}expect(appPath('unknown')).toBeNull();expect(matchApp('/mapish/')).toBeNull();});
+ it('preserves query strings through redirects and compatibility links',()=>{expect(redirectPath('/','?capture=1')).toBe('/park/?capture=1');expect(redirectPath('/map','?workspace=source-drive')).toBe('/map/?workspace=source-drive');expect(redirectPath('/apps/pinball/src/app.js','?v=1')).toBe('/pinball/src/app.js?v=1');expect(redirectPath('/apps/unknown/')).toBeNull();expect(redirectPath('/map/')).toBeNull();expect(redirectPath('/unknown')).toBeNull();});
+ it.each(['/map/.env','/movie/.git/config','/movie/%2e%2e/README.md','/voice/private.pem','/park/key.KEY','/map/%00','/movie/..%5Csecret','/%xx'])('blocks private paths %s',p=>expect(privatePath(p)).toBe(true));
+ it.each(['/map/plans/catalog.json','/park/node_modules/.vite/deps/three.js','/park/node_modules/.vite-unified/park/deps/three.js'])('permits public assets and dev module cache %s',p=>expect(privatePath(p)).toBe(false));
+ it('limits static projects to published assets and preserves module paths',()=>{const movie=matchApp('/movie/'),pinball=matchApp('/pinball/');expect(staticPath(movie,'/movie/')).toBe('index.html');expect(staticPath(movie,'/movie/output/wonder-park-30s.mp4')).toBe('output/wonder-park-30s.mp4');expect(staticPath(pinball,'/pinball/vendor/three.module.js')).toBe('vendor/three.module.js');expect(staticPath(movie,'/movie/STORYBOARD.md')).toBe('STORYBOARD.md');for(const p of ['/movie/scripts/serve.mjs','/movie/package.json','/movie/assets/foo.exe','/movie/.env'])expect(staticPath(movie,p)).toBeNull();expect(staticPath(null,'/')).toBeNull();expect(staticPath(APPS[0],'/park/')).toBeNull();});
+});
