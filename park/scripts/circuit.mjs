@@ -74,7 +74,7 @@ await launch();
 do{
  state.round++;state.phase='loading';state.current=null;await persist();
  try{
-  await loadPark();const attractions=await park.evaluate(()=>window.__park.getState().attractions);state.order=attractions.map(a=>a.name);await persist();const roundStart=Date.now();let passed=0,failed=0;
+  await loadPark();await park.evaluate(()=>document.fonts.ready);await park.locator('#loading').waitFor({state:'hidden'});await park.screenshot({path:path.join(report,'screenshots','overview.png')});const attractions=await park.evaluate(()=>window.__park.getState().attractions);state.order=attractions.map(a=>a.name);await persist();const roundStart=Date.now();let passed=0,failed=0;
   for(const attraction of attractions){if(stopping)break;state.phase='checking';state.current={id:attraction.id,name:attraction.name};await persist();const result=await verifyAttraction(attraction);result.status==='pass'?passed++:failed++;state.results.unshift(result);state.results=state.results.slice(0,500);console.log(`[round ${state.round}] ${result.status.toUpperCase()} ${attraction.id}: ${result.checks.join(', ')}${result.error?' · '+result.error.split('\n')[0]:''}`);await persist();}
   state.rounds.unshift({round:state.round,at:new Date().toISOString(),passed,failed,duration:Date.now()-roundStart});state.rounds=state.rounds.slice(0,50);state.phase=once?'complete':'next-round';state.current=null;await persist();
  }catch(error){console.error(error.message);state.phase='retrying';state.error=error.message;await persist();if(!browser.isConnected()){await launch();}}

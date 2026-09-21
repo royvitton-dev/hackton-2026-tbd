@@ -56,10 +56,12 @@ function formalGardens(root){
 export function createLandscape(parent){
  const root=group(parent);const animations=[];const rand=seeded(882);
  const grass=new THREE.MeshStandardMaterial({color:'#a4b979',map:texture('grass'),bumpMap:texture('grass'),bumpScale:.1,roughness:.94});
+ grass.name='park-lawn';
  const paving=new THREE.MeshStandardMaterial({color:'#f3dec0',map:texture('path'),bumpMap:texture('path'),bumpScale:.065,roughness:.86});
- const base=cyl(root,28,1.1,'#c7b999',0,-.66,0);base.scale.z=.79;
- const rim=cyl(root,28.06,.16,'#e8d8b8',0,-.05,0);rim.scale.z=.79;
- const land=cyl(root,27.72,.35,grass,0,.13,0);land.scale.z=.79;
+ const base=cyl(root,28,1.1,'#c7b999',0,-.66,0);base.scale.z*=.79;
+ const rim=cyl(root,28.06,.16,'#e8d8b8',0,-.05,0);rim.scale.z*=.79;
+ const land=cyl(root,27.72,.35,grass,0,.13,0);land.scale.z*=.79;
+ for(const surface of [base,rim,land])surface.geometry=new THREE.CylinderGeometry(1,1,1,128);
  // The pale promenade is an actual continuous ring, inset into the landscaped island.
  const promenade=new THREE.Mesh(new THREE.RingGeometry(23.1,25.4,160),paving);promenade.rotation.x=-Math.PI/2;promenade.scale.y=.77;promenade.position.y=.32;promenade.receiveShadow=true;root.add(promenade);
  const edging=torus(root,25.45,.075,'#eee1c3',0,.34,0);edging.rotation.x=-Math.PI/2;edging.scale.y=.77;

@@ -29,14 +29,16 @@ test('desktop miniature, real WebGL geometry, excluded project and day-night gol
  expect(await page.evaluate(()=>window.__park.getState().attractions.map(a=>a.id))).toEqual(['dopamin','movie','voice']);
  const details=await page.evaluate(()=>{const v=window.__park.view;let vertices=0,meshes=0;v.scene.traverse(o=>{if(o.isMesh){meshes++;vertices+=o.geometry.attributes.position.count;}});return {webgl:v.renderer.getContext() instanceof WebGL2RenderingContext,vertices,meshes};});
  expect(details.webgl).toBe(true);expect(details.vertices).toBeGreaterThan(100000);expect(details.meshes).toBeGreaterThan(50);
+ const lawnDepth=await page.evaluate(()=>{let depth=0;window.__park.view.parkRoot.traverse(o=>{if(o.isMesh&&o.material.name==='park-lawn'){o.geometry.computeBoundingBox();depth=o.geometry.boundingBox.max.z-o.geometry.boundingBox.min.z;}});return depth;});
+ expect(lawnDepth).toBeGreaterThan(40); // The oval lawn must cover the park, not collapse to a strip.
  const plaza=await page.evaluate(()=>{const v=window.__park.view;const landmark=v.scene.getObjectByName('GS central landmark');return {exists:!!landmark,center:landmark?.getWorldPosition(new v.camera.position.constructor()).toArray(),width:document.querySelector('#world').getBoundingClientRect().width/innerWidth};});
  expect(plaza.exists).toBe(true);expect(plaza.center[0]).toBe(0);expect(plaza.width).toBeGreaterThan(.95);
- await expect(page).toHaveScreenshot('park-desktop-day.png',{mask:[page.locator('#sync-button')]});
+ await expect(page).toHaveScreenshot('park-desktop-day.png',{mask:[page.locator('#sync-button')],maskColor:'#f5f2eb'});
  await page.getByRole('button',{name:'야간 풍경',exact:true}).click();await expect(page.locator('body')).toHaveClass(/night/);await page.waitForTimeout(1200);
- await expect(page).toHaveScreenshot('park-desktop-night.png',{mask:[page.locator('#sync-button')]});
+ await expect(page).toHaveScreenshot('park-desktop-night.png',{mask:[page.locator('#sync-button')],maskColor:'#f5f2eb'});
  await page.getByRole('button',{name:'낮 풍경',exact:true}).click();
  await page.locator('.attraction-card[data-id=dopamin]').click();await settled(page);await expect(page.locator('#detail h2')).toHaveText('도파민 범퍼카');
- await expect(page).toHaveScreenshot('bumper-attraction.png',{mask:[page.locator('#sync-button')]});
+ await expect(page).toHaveScreenshot('bumper-attraction.png',{mask:[page.locator('#sync-button')],maskColor:'#f5f2eb'});
  expect(errors).toEqual([]);
 });
 test('cinema shows the real 30-second film on a 3D screen and playback controls work',async({page})=>{
