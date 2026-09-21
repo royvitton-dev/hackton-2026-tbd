@@ -9,14 +9,78 @@ async function installPausedClock(page: Page) {
   await page.clock.pauseAt(new Date('2026-09-21T00:01:00Z'));
 }
 
-async function enterPaused(page: Page) {
+async function enterPaused(page: Page, silentStart = true) {
   await page.goto('/?user=U0004&intro=pitstop');
   await expect.poll(async()=>{
     await page.clock.runFor(32);
     return page.locator('canvas[aria-label="피트 스톱 입장 애니메이션"]').evaluateAll(nodes=>nodes[0]?.getAttribute('data-pit-phase')??null);
   },{timeout:60000}).toBe('racing');
+  if (silentStart && await page.getByRole('button', { name: '무음으로 시작' }).isVisible()) {
+    await page.getByRole('button', { name: '무음으로 시작' }).click();
+  }
   await page.clock.runFor(400);
 }
+
+test('blocked autoplay waits for a click, produces an audio signal, and closes on skip', async ({ page }) => {
+  await page.addInitScript(() => {
+    const contexts: AudioContext[] = [], analysers: AnalyserNode[] = [];
+    const Native = window.AudioContext;
+    window.AudioContext = class extends Native {
+      private resumeCalls = 0;
+      constructor() { super(); contexts.push(this); void this.suspend(); }
+      resume() {
+        // Deterministic autoplay denial: Playwright evaluation itself can mark
+        // a document as user-activated. The actual button resumes the next call.
+        this.resumeCalls++;
+        return this.resumeCalls === 1 ? new Promise<void>(() => {}) : super.resume();
+      }
+    };
+    const connect = AudioNode.prototype.connect;
+    Object.defineProperty(AudioNode.prototype, 'connect', { value: function(this: AudioNode, destination: AudioNode, ...args: unknown[]) {
+      if (destination === this.context.destination) {
+        const analyser = this.context.createAnalyser(); analysers.push(analyser);
+        Reflect.apply(connect, this, [analyser]);
+      }
+      return Reflect.apply(connect, this, [destination, ...args]);
+    } });
+    (window as Window & { pitAudioProbe?: () => { states: string[]; rms: number } }).pitAudioProbe = () => ({
+      states: contexts.map(context => context.state),
+      rms: Math.max(0, ...analysers.map(analyser => {
+        const samples = new Float32Array(analyser.fftSize); analyser.getFloatTimeDomainData(samples);
+        return Math.sqrt(samples.reduce((sum, sample) => sum + sample * sample, 0) / samples.length);
+      })),
+    });
+  });
+  await installPausedClock(page);
+  await enterPaused(page, false);
+  await page.clock.fastForward(8000);
+  await expect(page.getByRole('dialog')).toHaveAttribute('data-phase', 'racing');
+  await expect(page.getByRole('button', { name: '소리와 함께 시작' })).toBeVisible();
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.clock.runFor(32);
+  const skipButton = page.getByRole('button', { name: '건너뛰기 →' });
+  await expect(skipButton).toBeVisible();
+  const skipBounds = await skipButton.boundingBox();
+  expect(skipBounds!.y).toBeLessThan(80);
+  expect(skipBounds!.x + skipBounds!.width).toBeLessThanOrEqual(390);
+  await page.screenshot({ path: 'test-results/pit-stop-sound-start-mobile.png' });
+  await page.setViewportSize({ width: 1440, height: 1050 });
+  await page.clock.runFor(32);
+  await page.getByRole('button', { name: '소리와 함께 시작' }).click();
+  await expect(page.getByRole('button', { name: '소리 끄기', exact: true })).toHaveAttribute('aria-pressed', 'true');
+  await page.clock.runFor(500);
+  const probe = () => page.evaluate(() => (window as Window & { pitAudioProbe?: () => { states: string[]; rms: number } }).pitAudioProbe!());
+  await expect.poll(async () => (await probe()).rms).toBeGreaterThan(0.001);
+  await page.clock.fastForward(3300);
+  await page.clock.runFor(32);
+  await expect(page.getByRole('dialog')).toHaveAttribute('data-phase', 'service');
+  await expect.poll(async () => (await probe()).rms).toBeGreaterThan(0.0001);
+  await page.getByRole('button', { name: '소리 끄기', exact: true }).click();
+  await expect.poll(async () => (await probe()).states).toEqual(['suspended']);
+  await page.getByRole('button', { name: '건너뛰기 →' }).click();
+  await expect.poll(async () => (await probe()).states).toEqual(['closed']);
+  await expect(page.getByRole('dialog')).toHaveCount(0);
+});
 
 test('portal entry plays a finite WebGL sequence then restores the dashboard', async ({ page }) => {
   const errors: string[] = [];

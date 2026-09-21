@@ -24,7 +24,7 @@ export const isPitStopEntry = (search: string) => new URLSearchParams(search).ge
 /** Local synthesized cinematic effects, not vehicle recordings or diagnostic audio. */
 export function createPitStopAudio() {
   const context = new AudioContext();
-  const output = context.createGain(); output.gain.value = .22; output.connect(context.destination);
+  const output = context.createGain(); output.gain.value = .32; output.connect(context.destination);
   const engineGain = context.createGain(); engineGain.gain.value = 0; engineGain.connect(output);
   const filter = context.createBiquadFilter(); filter.type = 'lowpass'; filter.frequency.value = 420; filter.connect(engineGain);
   const engine = context.createOscillator(); engine.type = 'sawtooth'; engine.connect(filter); engine.start();
@@ -38,7 +38,19 @@ export function createPitStopAudio() {
   noise.connect(noiseFilter); noiseFilter.connect(toolGain); toolGain.connect(output); noise.start();
   let disposed = false;
   return {
-    async enable() { if (disposed) return false; try { await context.resume(); return !disposed && context.state === 'running'; } catch { return false; } },
+    async enable() {
+      if (disposed) return false;
+      // Chrome may leave resume() pending when autoplay is blocked. Never hide
+      // the start controls behind a promise that needs another user gesture.
+      let timer: ReturnType<typeof setTimeout> | undefined;
+      try {
+        return await Promise.race([
+          context.resume().then(() => !disposed && context.state === 'running'),
+          new Promise<boolean>(resolve => { timer = setTimeout(() => resolve(false), 1000); }),
+        ]);
+      } catch { return false; }
+      finally { clearTimeout(timer); }
+    },
     mute() { if (!disposed) void context.suspend().catch(() => {}); },
     update(seconds: number) {
       if (disposed || context.state !== 'running') return;
