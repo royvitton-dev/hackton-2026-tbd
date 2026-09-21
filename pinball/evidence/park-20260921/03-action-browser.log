@@ -1,0 +1,44 @@
+PASS physical board motion and impact effects {
+  device: 'desktop',
+  balls: 60,
+  speed: 3,
+  boardMotion: true,
+  pauseAndReducedMotion: 'PASS',
+  exactBrowserReplay: 'PASS',
+  switchOff: 'PASS',
+  frames: 116,
+  fps: 28.999999999999996,
+  p95IntervalMs: 50,
+  meanJsMs: 10.119827586226165,
+  graphics: {
+    geometries: 298,
+    textures: 11,
+    programs: 17,
+    drawCalls: 209,
+    triangles: 70526,
+    pixelRatio: 1
+  },
+  errors: []
+}
+PASS physical board motion and impact effects {
+  device: 'mobile',
+  balls: 60,
+  speed: 3,
+  boardMotion: true,
+  pauseAndReducedMotion: 'PASS',
+  exactBrowserReplay: 'PASS',
+  switchOff: 'PASS',
+  frames: 117,
+  fps: 28.42151289899431,
+  p95IntervalMs: 50.100000000000364,
+  meanJsMs: 11.567521367699673,
+  graphics: {
+    geometries: 300,
+    textures: 11,
+    programs: 18,
+    drawCalls: 268,
+    triangles: 80770,
+    pixelRatio: 1.5
+  },
+  errors: []
+}

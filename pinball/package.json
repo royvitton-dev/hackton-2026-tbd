@@ -1,1 +1,16 @@
-{"name":"pinball-club","version":"1.0.0","private":true,"type":"module","engines":{"node":">=20"},"scripts":{"start":"node scripts/serve.mjs","build":"node scripts/build.mjs","test":"node --test tests/physics.test.mjs","test:browser":"node tests/browser.mjs"}}
+{
+  "name": "drop-land",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/physics.test.mjs tests/motion.test.mjs tests/finish-rules.test.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "test:action": "node tests/action.mjs"
+  }
+}

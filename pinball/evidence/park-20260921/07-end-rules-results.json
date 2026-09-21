@@ -1,0 +1,66 @@
+{
+  "at": "2026-09-21T10:57:26.438Z",
+  "tests": [
+    {
+      "device": "desktop",
+      "rule": "first",
+      "arrivals": 1,
+      "total": 6,
+      "winner": "하늘",
+      "criterion": "arrival",
+      "stopped": "PASS",
+      "replay": "PASS"
+    },
+    {
+      "device": "desktop",
+      "rule": "nth",
+      "arrivals": 3,
+      "total": 6,
+      "winner": "우주선",
+      "criterion": "arrival",
+      "stopped": "PASS",
+      "replay": "PASS"
+    },
+    {
+      "device": "desktop",
+      "rule": "last",
+      "arrivals": 5,
+      "total": 6,
+      "winner": "별",
+      "criterion": "last-remaining",
+      "stopped": "PASS",
+      "replay": "PASS"
+    },
+    {
+      "device": "mobile",
+      "rule": "first",
+      "arrivals": 1,
+      "total": 6,
+      "winner": "하늘 (2)",
+      "criterion": "arrival",
+      "stopped": "PASS",
+      "replay": "PASS"
+    },
+    {
+      "device": "mobile",
+      "rule": "nth",
+      "arrivals": 3,
+      "total": 6,
+      "winner": "하늘",
+      "criterion": "arrival",
+      "stopped": "PASS",
+      "replay": "PASS"
+    },
+    {
+      "device": "mobile",
+      "rule": "last",
+      "arrivals": 5,
+      "total": 6,
+      "winner": "하늘",
+      "criterion": "last-remaining",
+      "stopped": "PASS",
+      "replay": "PASS"
+    }
+  ],
+  "status": "PASS"
+}

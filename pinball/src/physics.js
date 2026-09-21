@@ -1,3 +1,4 @@
+import {boardMotionAt} from './board-motion.js';
 export const MAX_BALLS=60, STEP=1/120, RADIUS=10;
 export const COLORS=['#c6ff58','#bca7ff','#ff82af','#64e4e0','#ffc168','#8daaff','#edeeed','#ff826c'];
 export const MAP={width:620,height:1060,finish:990,left:30,right:590,gate:218,
@@ -21,6 +22,18 @@ const extraCourses={
 for(const map of MAPS){const extra=extraCourses[map.id];map.height=2240;map.finish=2150;map.sliders=extra.sliders;for(const key of ['pins','bumpers','rails','rotors'])map[key].push(...extra[key]);}
 // The short-course rotor in switchback is replaced by its fourth ramp.
 MAPS.find(m=>m.id==='zigzag').rotors=MAPS.find(m=>m.id==='zigzag').rotors.filter(r=>r.y!==893);
+// Distinct, fixed speeds per ride: both directions, no dependence on participants.
+const rideSpeeds={neon:[.79,-1.13,1.49,-.94,1.72],orbit:[1.07,-1.56,.73,-1.31],zigzag:[-.86,1.39],split:[1.42,-.78,1.14,-1.63,.95]};
+for(const map of MAPS)map.rotors.forEach((r,i)=>{r.omega=rideSpeeds[map.id][i];});
+for(const map of MAPS){
+ map.bumpers.forEach((b,i)=>{b.ride=['carousel','ufo','bumper-car'][i%3];});
+ map.rotors.forEach((r,i)=>{r.ride=['teacups','windmill','pirate'][i%3];r.blades=r.ride==='windmill'?4:2;if(r.ride==='pirate')r.swing=.95;});
+ map.sliders.forEach((s,i)=>{s.ride=i%2?'bumper-shuttle':'train';});
+}
+export function rotorPose(rotor,time){
+ const phase=rotor.phase+time*rotor.omega;
+ return rotor.swing?{angle:Math.sin(phase)*rotor.swing,velocity:Math.cos(phase)*rotor.swing*rotor.omega}:{angle:phase,velocity:rotor.omega};
+}
 // Four real exit throats. Sloping divider rails prevent a flat dead zone between holes.
 for(const map of MAPS){
  map.exits=[100,240,380,520].map((x,i)=>({id:i+1,x,width:64}));
@@ -44,30 +57,33 @@ const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 export class Race {
  constructor(config,seed=randomSeed()){
   this.map=MAPS.find(m=>m.id===config.mapId)??MAPS[0];
-  this.config=structuredClone(config);this.seed=seed;this.rng=seededRandom(seed);this.state='ready';this.elapsed=0;this.raceTime=0;this.finishOrder=[];this.events=[];this.winner=null;this.assists=0;this.roundId=globalThis.crypto?.randomUUID?.()??String(seed);this.phaseTime=0;this.resumeState=null;this.rotationTime=0;this.stats={steps:0,collisions:0,maxPenetration:0};
+  this.config=structuredClone(config);this.seed=seed;this.rng=seededRandom(seed);this.state='ready';this.elapsed=0;this.raceTime=0;this.finishOrder=[];this.events=[];this.winner=null;this.assists=0;this.lastMotionCycle=-1;this.roundId=globalThis.crypto?.randomUUID?.()??String(seed);this.phaseTime=0;this.resumeState=null;this.rotationTime=0;this.stats={steps:0,collisions:0,maxPenetration:0};
   const entries=[];for(const p of this.config.people)for(let i=0;i<p.count;i++)entries.push({id:`${p.id}-b${i+1}`,participantId:p.id,name:p.name,label:p.label,color:p.color,number:i+1});shuffle(entries,this.rng);
   const slots=shuffle(Array.from({length:60},(_,i)=>({x:62+(i%10)*55,y:54+Math.floor(i/10)*27})),this.rng);
-  this.balls=entries.map((b,i)=>({...b,x:slots[i].x,y:slots[i].y,vx:(this.rng()-.5)*100,vy:(this.rng()-.5)*50,r:RADIUS,finished:false,rank:null,stuckTime:0,anchorX:slots[i].x,anchorY:slots[i].y,assistCount:0,tieKey:this.rng()}));
+  this.balls=entries.map((b,i)=>({...b,x:slots[i].x,y:slots[i].y,vx:(this.rng()-.5)*100,vy:(this.rng()-.5)*50,r:RADIUS,finished:false,rank:null,stuckTime:0,progressTime:0,progressY:slots[i].y,anchorX:slots[i].x,anchorY:slots[i].y,assistCount:0,tieKey:this.rng()}));
  }
  start(){if(this.state!=='ready')return false;this.state='mixing';this.phaseTime=0;return true;}
  pause(){if(!['mixing','countdown','racing'].includes(this.state))return false;this.resumeState=this.state;this.state='paused';return true;}
  resume(){if(this.state!=='paused')return false;this.state=this.resumeState;this.resumeState=null;return true;}
  emit(event){this.events.push(event);if(this.events.length>200)this.events.shift();}
+ motion(){return boardMotionAt(this.raceTime,this.seed,this.config.boardMotion===true);}
  sliderSegments(){return (this.map.sliders??[]).map(s=>{const phase=this.rotationTime*s.omega+s.phase,x=s.x+Math.sin(phase)*s.amplitude;return {...s,ax:x-s.length,ay:s.y,bx:x+s.length,by:s.y,r:10,svx:Math.cos(phase)*s.amplitude*s.omega,svy:0};});}
- rotorSegments(){return this.map.rotors.map(o=>{const a=o.phase+this.rotationTime*o.omega;return {...o,ax:o.x-Math.cos(a)*o.length,ay:o.y-Math.sin(a)*o.length,bx:o.x+Math.cos(a)*o.length,by:o.y+Math.sin(a)*o.length,r:9};});}
+ rotorSegments(){return this.map.rotors.flatMap(o=>{const pose=rotorPose(o,this.rotationTime);return Array.from({length:(o.blades??2)/2},(_,i)=>{const a=pose.angle+i*Math.PI/2;return {...o,omega:pose.velocity,ax:o.x-Math.cos(a)*o.length,ay:o.y-Math.sin(a)*o.length,bx:o.x+Math.cos(a)*o.length,by:o.y+Math.sin(a)*o.length,r:9};});});}
  step(dt=STEP){
   if(!['mixing','countdown','racing'].includes(this.state))return;
   // Public stepping is bounded too: no giant timestep can tunnel through the board.
-  let remaining=Math.min(Math.max(dt,0),.1);while(remaining>1e-9){const h=Math.min(STEP,remaining);this.integrate(h);remaining-=h;}
+  let remaining=Math.min(Math.max(dt,0),.1);while(remaining>1e-9&&['mixing','countdown','racing'].includes(this.state)){const h=Math.min(STEP,remaining);this.integrate(h);remaining-=h;}
  }
  integrate(dt){
   this.stats.steps++;this.elapsed+=dt;this.phaseTime+=dt;const racing=this.state==='racing';this.rotationTime+=dt;
   if(this.state==='mixing'&&this.phaseTime>=1.8){this.state='countdown';this.phaseTime=0;}
   if(this.state==='countdown'&&this.phaseTime>=3){this.state='racing';this.phaseTime=0;this.emit({type:'gate'});}
   if(racing)this.raceTime+=dt;
+  const motion=this.motion();
+  if(racing&&motion.active&&motion.cycle!==this.lastMotionCycle){this.lastMotionCycle=motion.cycle;this.emit({type:'board-motion',axis:motion.axis,cycle:motion.cycle,time:this.raceTime});}
   const active=this.balls.filter(b=>!b.finished),rotors=this.rotorSegments(),sliders=this.sliderSegments();const crossing=[];
   for(const b of active){b.prevX=b.x;b.prevY=b.y;
-   if(!racing){b.vx+=Math.sin(this.elapsed*5+b.tieKey*18)*430*dt;b.vy+=Math.cos(this.elapsed*4+b.tieKey*13)*290*dt;}else b.vy+=255*dt;
+   if(!racing){b.vx+=Math.sin(this.elapsed*5+b.tieKey*18)*430*dt;b.vy+=Math.cos(this.elapsed*4+b.tieKey*13)*290*dt;}else{b.vx+=motion.forceX*dt;b.vy+=(255+motion.forceY)*dt;}
    b.vx*=Math.exp(-.09*dt);b.vy*=Math.exp(-.04*dt);const speed=Math.hypot(b.vx,b.vy);if(speed>560){b.vx*=560/speed;b.vy*=560/speed;}
    b.x+=b.vx*dt;b.y+=b.vy*dt;
   }
@@ -75,7 +91,7 @@ export class Race {
   for(let iteration=0;iteration<4;iteration++){
    for(const b of active){
     this.boundaries(b,racing);
-    if(racing){for(const p of this.map.pins)this.circle(b,p,.78);for(const p of this.map.bumpers)this.circle(b,p,1.03);for(const s of this.map.rails)this.segment(b,s,.55);for(const s of rotors)this.segment(b,s,.65);for(const s of sliders)this.segment(b,s,.65);}
+    if(racing){for(const p of this.map.pins)this.circle(b,p,.78);for(const p of this.map.bumpers)this.circle(b,p,1.12);for(const s of this.map.rails)this.segment(b,s,.55);for(const s of rotors)this.segment(b,s,.65);for(const s of sliders)this.segment(b,s,.65);}
    }
    for(let i=0;i<active.length;i++)for(let j=i+1;j<active.length;j++)this.pair(active[i],active[j]);
   }
@@ -84,14 +100,36 @@ export class Race {
    if(racing){
     if(b.prevY<this.map.finish&&b.y>=this.map.finish){const fraction=(this.map.finish-b.prevY)/(b.y-b.prevY),crossX=b.prevX+(b.x-b.prevX)*fraction;const exit=this.map.exits.find(h=>Math.abs(crossX-h.x)<=h.width/2-b.r);if(exit)crossing.push({b,time:this.raceTime-dt+dt*fraction,exitId:exit.id});else{b.y=this.map.finish-.01;b.vy=-Math.abs(b.vy)*.55;}}
     const moved=Math.hypot(b.x-b.anchorX,b.y-b.anchorY);if(moved>20){b.anchorX=b.x;b.anchorY=b.y;b.stuckTime=0;}else b.stuckTime+=dt;
-    if(b.stuckTime>4.5){b.vx+=(this.rng()<.5?-1:1)*150;b.vy-=145;b.stuckTime=0;b.assistCount++;this.assists++;this.emit({type:'assist',id:b.id,time:this.raceTime});}
+    if(b.y>b.progressY+24){b.progressY=b.y;b.progressTime=0;}else b.progressTime+=dt;
+    if(b.stuckTime>4.5||b.progressTime>8.5){b.vx+=(this.rng()<.5?-1:1)*150;b.vy-=145;b.stuckTime=0;b.progressTime=0;b.progressY=b.y;b.assistCount++;this.assists++;this.emit({type:'assist',id:b.id,time:this.raceTime});}
    }
   }
   // No pre-selected outcome. Substep crossing time defines order; pre-shuffled key breaks exact ties.
   crossing.sort((a,b)=>a.time-b.time||a.b.tieKey-b.b.tieKey||a.b.id.localeCompare(b.b.id));
-  for(const c of crossing)this.finish(c.b,c.time,c.exitId);
+  for(const c of crossing){
+   this.finish(c.b,c.time,c.exitId);
+   if(this.config.finishMode==='winner'){
+    if(this.config.rule==='last'&&this.finishOrder.length===this.balls.length-1){this.lastRemaining(c.time,dt);break;}
+    if(this.config.rule!=='last'&&this.winner){this.stopAt(c.time,dt,'target-arrived');break;}
+   }
+  }
+  if(this.state==='complete')return;
+  if(this.config.finishMode==='winner'&&this.config.rule==='last'&&this.balls.length===1&&this.state==='racing'){this.lastRemaining(this.raceTime,dt);return;}
   if(this.finishOrder.length===this.balls.length){this.state='complete';this.emit({type:'complete'});}
   else if(this.raceTime>=90){this.state='invalid';this.winner=null;this.emit({type:'invalid',reason:'90초 진행 제한'});}
+ }
+ stopAt(time,dt,reason){
+  // The same substep interpolation used to judge arrivals also freezes the
+  // remaining balls at that instant. Later crossings are never fabricated.
+  const trim=Math.max(0,this.raceTime-time),fraction=clamp(1-trim/dt,0,1);
+  for(const b of this.balls)if(!b.finished){b.x=b.prevX+(b.x-b.prevX)*fraction;b.y=b.prevY+(b.y-b.prevY)*fraction;}
+  this.raceTime=time;this.elapsed-=trim;this.rotationTime-=trim;this.phaseTime-=trim;
+  this.state='complete';this.completionReason=reason;this.emit({type:'complete'});
+ }
+ lastRemaining(time,dt){
+  const b=this.balls.find(b=>!b.finished);if(!b)return;
+  this.winner={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:this.balls.length,time,exitId:null,criterion:'last-remaining',crossedFinish:false};
+  this.emit({type:'winner',result:this.winner});this.stopAt(time,dt,'last-remaining');
  }
  boundaries(b,racing){
   if(b.x<this.map.left+b.r){b.x=this.map.left+b.r;b.vx=Math.abs(b.vx)*.7;}
@@ -99,10 +137,10 @@ export class Race {
   if(b.y<28+b.r){b.y=28+b.r;b.vy=Math.abs(b.vy)*.65;}
   if(!racing&&b.y>this.map.gate-b.r){b.y=this.map.gate-b.r;b.vy=-Math.abs(b.vy)*.7;}
  }
- circle(b,p,e){const dx=b.x-p.x,dy=b.y-p.y,d=Math.hypot(dx,dy),min=b.r+p.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0;this.contact(b,nx,ny,min-d,e,0,0);}
+ circle(b,p,e){const dx=b.x-p.x,dy=b.y-p.y,d=Math.hypot(dx,dy),min=b.r+p.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0;this.contact(b,nx,ny,min-d,e,0,0,p.r>20?'bumper':'pin',p);}
  segment(b,s,e){const dx=s.bx-s.ax,dy=s.by-s.ay,t=clamp(((b.x-s.ax)*dx+(b.y-s.ay)*dy)/(dx*dx+dy*dy),0,1);const x=s.ax+t*dx,y=s.ay+t*dy;const bx=b.x-x,by=b.y-y,d=Math.hypot(bx,by),min=b.r+s.r;if(d>=min)return;const nx=d>1e-7?bx/d:-dy/Math.hypot(dx,dy),ny=d>1e-7?by/d:dx/Math.hypot(dx,dy);this.contact(b,nx,ny,min-d,e,s.svx??(s.omega?-s.omega*(y-s.y):0),s.svy??(s.omega?s.omega*(x-s.x):0));}
- contact(b,nx,ny,penetration,e,svx,svy){b.x+=nx*penetration;b.y+=ny*penetration;const v=(b.vx-svx)*nx+(b.vy-svy)*ny;if(v<0){b.vx-=(1+e)*v*nx;b.vy-=(1+e)*v*ny;this.stats.collisions++;if(-v>80)this.emit({type:'hit',speed:-v});}this.stats.maxPenetration=Math.max(this.stats.maxPenetration,penetration);}
+ contact(b,nx,ny,penetration,e,svx,svy,kind='rail',obstacle=null){b.x+=nx*penetration;b.y+=ny*penetration;const v=(b.vx-svx)*nx+(b.vy-svy)*ny;if(v<0){b.vx-=(1+e)*v*nx;b.vy-=(1+e)*v*ny;this.stats.collisions++;if(-v>80)this.emit({type:'hit',speed:-v,ballId:b.id,x:b.x-nx*b.r,y:b.y-ny*b.r,kind,obstacleX:obstacle?.x,obstacleY:obstacle?.y});}this.stats.maxPenetration=Math.max(this.stats.maxPenetration,penetration);}
  pair(a,b){const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy),min=a.r+b.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0,p=(min-d)/2;a.x-=nx*p;a.y-=ny*p;b.x+=nx*p;b.y+=ny*p;const v=(b.vx-a.vx)*nx+(b.vy-a.vy)*ny;if(v<0){const impulse=-(1+.6)*v/2;a.vx-=impulse*nx;a.vy-=impulse*ny;b.vx+=impulse*nx;b.vy+=impulse*ny;}}
- finish(b,time,exitId=null){if(b.finished)return false;b.finished=true;b.y=this.map.finish;b.rank=this.finishOrder.length+1;b.time=time;b.vx=0;b.vy=0;const result={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:b.rank,time,exitId};this.finishOrder.push(result);if(b.rank===this.config.target){this.winner=result;this.emit({type:'winner',result});}this.emit({type:'finish',result});return true;}
- snapshot(){return {roundId:this.roundId,state:this.state,seed:this.seed,time:this.raceTime,target:this.config.target,total:this.balls.length,winner:this.winner,finishOrder:this.finishOrder.map(r=>({...r})),assists:this.assists,balls:this.balls.map(b=>({id:b.id,x:b.x,y:b.y,finished:b.finished,rank:b.rank}))};}
+ finish(b,time,exitId=null){if(b.finished)return false;b.finished=true;b.y=this.map.finish;b.rank=this.finishOrder.length+1;b.time=time;b.vx=0;b.vy=0;const result={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:b.rank,time,exitId};this.finishOrder.push(result);if(b.rank===this.config.target){this.winner={...result,criterion:'arrival',crossedFinish:true};this.emit({type:'winner',result:this.winner});}this.emit({type:'finish',result});return true;}
+ snapshot(){return {roundId:this.roundId,state:this.state,seed:this.seed,time:this.raceTime,target:this.config.target,total:this.balls.length,winner:this.winner,completionReason:this.completionReason??null,finishOrder:this.finishOrder.map(r=>({...r})),assists:this.assists,motion:this.motion(),balls:this.balls.map(b=>({id:b.id,x:b.x,y:b.y,finished:b.finished,rank:b.rank}))};}
 }

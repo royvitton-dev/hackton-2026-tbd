@@ -1,0 +1,26 @@
+✔ random 3–5 second motion is deterministic, bounded, smooth and independent of participants (6.435458ms)
+✔ shared board force acts equally on identical balls, with actual velocity change (4.2925ms)
+✔ each map has different rotor magnitudes and both directions, with matching surface velocities (0.184625ms)
+✔ pause freezes active board motion and stepping chunks preserve the exact race (1163.530792ms)
+✔ orbit single-ball oscillation is detected and escapes without fabricated finish (71.128ms)
+✔ windmill blades share an actual perpendicular collider and pirate velocity matches its swing (0.486125ms)
+✔ all four maps with motion: 120 seeded races remain contained and finish with unique real ranks (106985.243125ms)
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (1.017125ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (0.356458ms)
+✔ rule validation and ball-based N range (0.171875ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (5.389167ms)
+✔ finish order is crossing time, not ball list; exact ties use seeded tie key (0.903208ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (1166.760833ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (1549.981334ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (0.994292ms)
+✔ fast wall and pin impacts remain inside the board (2.411583ms)
+✔ all 4 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (66894.347791ms)
+✔ finish requires an exit throat; crossing between holes never ranks (0.3345ms)
+ℹ tests 18
+ℹ suites 0
+ℹ pass 18
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 108289.932292
