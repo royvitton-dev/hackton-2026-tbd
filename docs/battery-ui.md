@@ -13,6 +13,7 @@
 ## 피트 스톱 입장
 
 - 통합 서버에서는 `/vehicle/?intro=pitstop`으로 진입합니다. 독립 Next.js 배터리 앱은 루트에서 `npm run vehicle:build` 후 `npm run demo -- --port 3000`으로 실행하며 `http://localhost:3000/?intro=pitstop`에서 확인할 수 있습니다.
+- 메인 라우터의 배터리 입장(`/api/launch?id=battery_health`)과 프로젝트 목록의 배터리/EVision 링크는 같은 서버의 `/vehicle/?intro=pitstop`으로 연결합니다. 별도 포트나 구형 `/battery_health/` 화면으로 이동하지 않습니다. `/vehicle/` 직접 방문과 기존 정적 리소스 경로는 그대로 유지합니다.
 - `intro=pitstop`이 있을 때만 약 6.8초 동안 주행 → 피트 진입 → 정비 → 대시보드 전환을 WebGL로 연출합니다. 처음 렌더링을 기다린 뒤 재생하며, WebGL을 사용할 수 없으면 최대 10초 후 화면을 복원합니다.
 - 주행·저음 배기·정비 소리는 외부 음원 없이 Web Audio로 합성한 연출입니다. 자동 재생이 허용되면 바로 시작하고, 차단되면 애니메이션 시간을 멈춘 채 **소리와 함께 시작** / **무음으로 시작**을 표시합니다. 소리 시작은 클릭/터치 안에서 AudioContext를 재개합니다. 자동 재생 차단으로 resume()가 계속 대기해도 1초 후 실패를 반환해 조작이 멈추지 않습니다. 실제 선택 차량의 녹음이나 진단음은 아니며, OS 음량·탭 음소거는 앱이 해제할 수 없습니다.
 - **오른쪽 위 건너뛰기 →** 또는 Escape로 즉시 종료할 수 있습니다. 소리 시작을 기다리는 중에도 가능합니다. 종료 시 오디오·애니메이션을 정리하고 스크롤 및 대시보드 조작을 복원합니다. 배경 탭에서는 재생 시간과 소리를 멈추며 돌아온 뒤 소리는 사용자가 다시 켭니다.
@@ -28,3 +29,9 @@
 - 수정 후 `npm run test:e2e -- --config=playwright.science.config.ts tests/browser/pit-stop.spec.ts --grep 'blocked autoplay'`: 1개 통과. 시작 클릭 후 실제 출력 신호, 정비 구간, 음소거, 종료, 모바일 오른쪽 위 건너뛰기 위치를 확인했습니다. 위의 다른 7개 통과 결과와 합쳐 8개 시나리오를 검증했으며, 처음 실행이 전부 통과한 것으로 기록하지 않습니다.
 - 데스크톱/모바일 점수 설명 및 소리 시작 화면 캡처는 `test-results/score-explanation-desktop.png`, `test-results/score-explanation-mobile.png`, `test-results/pit-stop-sound-start-mobile.png`에 생성하고 직접 확인했습니다.
 - 저장소 전체 `npm run build`는 별도 `map` 앱의 설치되지 않은 `@fontsource-variable/dm-sans` 의존성에서 실패합니다(`map`의 의존성 전체 미설치 확인). 해당 앱 소스/의존성은 이번 배터리 작업에서 변경하지 않았습니다. 위 차량 앱의 독립 및 `/vehicle` 빌드는 모두 통과했지만, 통합 전체 빌드 성공으로 보고하지 않습니다.
+
+## 메인 라우터 입장 연결 검수 기록
+
+- `npm run server:test`: 테스트 21개는 통과했지만 기존 `trading-proxy.mjs`의 커버리지 부족으로 전체 기준 검사는 실패했습니다. 해당 프록시는 변경하지 않았습니다.
+- `npm run server:test -- --coverage.include=park/server/routes.mjs`: 21개 통과, 이번 변경 대상인 경로 코드의 문장·분기·함수·라인 커버리지 모두 100%입니다. 전체 커버리지 기준을 낮추거나 설정 파일을 바꾸지 않았습니다.
+- 격리한 통합 서버(5195)에서 `ROUTER_TEST_URL=http://127.0.0.1:5195 npm run server:test:e2e -- --grep 'main router battery entry|project directory battery|project directory, shared paths' --update-snapshots`: 3개 통과. 같은 서버의 배터리 입장 URL, 피트스톱 표시, 건너뛰기, 선택 사용자 U0056의 7점 표시, 프로젝트 목록의 두 진입 링크와 데스크톱/모바일 화면을 확인했습니다.

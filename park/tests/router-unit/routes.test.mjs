@@ -1,7 +1,15 @@
 import {describe,it,expect} from 'vitest';
-import {APPS,appPath,matchApp,privatePath,staticPath,redirectPath} from '../../server/routes.mjs';
+import {APPS,appPath,launchPath,matchApp,privatePath,staticPath,redirectPath} from '../../server/routes.mjs';
+import {directory} from '../../server/pages.mjs';
 
 describe('one server routes',()=>{
+ it('launches battery and vehicle entries through the pit stop without changing canonical routes',()=>{
+  for(const id of ['battery_health','vehicle'])expect(launchPath(id)).toBe('/vehicle/?intro=pitstop');
+  expect(appPath('battery_health')).toBe('/battery_health/');expect(appPath('vehicle')).toBe('/vehicle/');
+  for(const app of APPS.filter(a=>!['battery_health','vehicle'].includes(a.id)))expect(launchPath(app.id)).toBe(appPath(app.id));
+  expect(launchPath('unknown')).toBeNull();expect(launchPath(null)).toBeNull();
+  expect(directory().match(/href="\/vehicle\/\?intro=pitstop"/g)).toHaveLength(2);
+ });
  it('assigns unique paths to every supported project',()=>{expect(APPS).toHaveLength(10);expect(new Set(APPS.map(a=>appPath(a.id))).size).toBe(10);for(const a of APPS){expect(matchApp(appPath(a.id))).toBe(a);expect(matchApp(`/${a.id}`)).toBe(a);expect(matchApp(`${appPath(a.id)}nested/page`)).toBe(a);}expect(appPath('unknown')).toBeNull();expect(matchApp('/mapish/')).toBeNull();});
  it('preserves query strings through redirects and compatibility links',()=>{expect(redirectPath('/','?capture=1')).toBe('/park/?capture=1');expect(redirectPath('/map','?workspace=source-drive')).toBe('/map/?workspace=source-drive');expect(redirectPath('/apps/pinball/src/app.js','?v=1')).toBe('/pinball/src/app.js?v=1');expect(redirectPath('/apps/unknown/')).toBeNull();expect(redirectPath('/map/')).toBeNull();expect(redirectPath('/unknown')).toBeNull();});
  it.each(['/map/.env','/movie/.git/config','/movie/%2e%2e/README.md','/voice/private.pem','/park/key.KEY','/map/%00','/movie/..%5Csecret','/%xx'])('blocks private paths %s',p=>expect(privatePath(p)).toBe(true));

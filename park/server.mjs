@@ -5,7 +5,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { discoverAttractions, gitState, resolveAsset, safeName } from './lib/registry.mjs';
 import { readState } from './lib/sync.mjs';
-import { APPS, appPath, matchApp, privatePath, staticPath, redirectPath } from './server/routes.mjs';
+import { APPS, appPath, launchPath, matchApp, privatePath, staticPath, redirectPath } from './server/routes.mjs';
 import { createAppMiddleware } from './server/apps.mjs';
 import { createTradingProxy } from './server/trading-proxy.mjs';
 import { directory, voiceGuide } from './server/pages.mjs';
@@ -90,7 +90,8 @@ const server = http.createServer(async (req,res) => {
      try{await prepareTrading();}
      catch(error){return json(res,{error:error.message,code:error.code||'TRADING_START_FAILED'},503);}
     }
-    return json(res,{url:new URL(appPath(id),`http://${req.headers.host}`).href,path:appPath(id)});
+    const entry=launchPath(id);
+    return json(res,{url:new URL(entry,`http://${req.headers.host}`).href,path:entry});
    }
    return notFound(res);
   }
