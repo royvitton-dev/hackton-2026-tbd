@@ -2,6 +2,8 @@
 
 첨부된 EVision 디자인 시안의 차량 상세 / 충전 이력 / 세션 분석을 기준으로 구현했습니다. 차량 1대와 해당 사용자의 데이터만 표시합니다.
 
+최신 리소스 현황: IONIQ 6의 실제 GLB를 추가해 **10개 모델 / 14개 프로필이 실제 3D**이고, 나머지 **6개 모델 / 6개 프로필은 사진**입니다. 아래의 13/20 및 7종 기록은 추가 이전 검수 이력입니다. 최신 상세는 문서 끝의 IONIQ 6 항목을 참조합니다.
+
 ## 최초 검수 결과 (아래 후속 검수에서 확장)
 
 - npm install 성공. sharp 0.35.4 / esbuild 0.28.1 고정 이후 설치 audit: 0 vulnerabilities.
@@ -134,3 +136,23 @@
 - 최종 실행: `npm run build`, `npm run lint`, `npm run typecheck`, `git diff --check` 모두 exit 0. `npm run test:e2e -- --config .cache/studio.playwright.config.ts tests/browser/audi-q4.spec.ts tests/browser/battery-depth.spec.ts` **2개 통과 / 1.9분 / exit 0**. GLB 테스트에는 실제 드래그 전후 카메라 변경 검증이 포함됩니다.
 - 최종 GLB 캡처: [투시 상단 제한](battery-depth-upper.png), [투시 측면 제한](battery-depth-side.png). 충전기 장식이 없고 배터리 개략도가 반투명 차체 안에 있습니다.
 - 실행 데모는 production build `Iu2ywD3PgVtaoaAgjlp8c`의 별도 복사본을 3000 포트에 적용했습니다. 이 검수 이후 GitHub 인증 상태가 바뀌지 않아 push는 앞서 기록한 인증 오류로 보류 중입니다.
+
+## IONIQ 6 실제 3D 추가
+
+1. AutoTrader Pivot 공개 IONIQ 6 구성기에서 기본 차체·문·네 바퀴·실내를 포함한 완성 GLB를 확보했습니다. 이전 사진 표시를 실제 메시로 교체합니다.
+2. 사용자 U0017 및 동일 차량 사용자는 기존 workbook의 `hyundai_ioniq6_lr_2wd_2026` 매핑과 충전/주행 데이터를 그대로 사용합니다.
+3. 주요 변경은 `vehicleImageMap.ts`, 모델 출처 JSON, `VehicleGlbModel.tsx`, `tests/browser/ioniq6.spec.ts` 및 PNG 회귀 대상 변경입니다.
+4. 원본은 `battery_health/resoures/images/sources/hyundai-ioniq6/`, 런타임 GLB는 `images/models/hyundai_ioniq6_2025.glb`에 보관합니다. `resoures` 경로를 유지합니다.
+5. 완성 GLB HTTP 200, 4,445,368 bytes, SHA-256 `c7c9bfa515225a3101cce74be4841de09867ab0cf537470d94e5e086634e6b9b`. 원본 URL과 구성기 선택값은 `source.json`에 있습니다. 로그인 제한을 우회하지 않았습니다.
+6. public GLB와 출처/크레딧 사본을 동기화했습니다.
+7. 기존 16종 원본 사진·실제 누끼는 추적용으로 유지하며 이미지 placeholder를 생성하지 않았습니다.
+8. 783,652개의 실제 삼각형과 원본 재질/실내 형상을 유지합니다. 어두운 스튜디오에서는 차체만 실버 표시 색상으로 조정합니다. workbook에 차량 색상이 있다는 의미는 아닙니다.
+9. 원본 모델의 정면 축을 기존 카메라에 맞추고 기존 회전·거리 제한을 그대로 적용합니다. 360도 및 하부 시점은 지원하지 않습니다.
+10. 배터리 버튼으로 차체가 반투명해져 내부 팩 개략도를 볼 수 있고, ESC로 원래 재질이 복원됩니다. 사진 ↔ GLB 전환과 모바일도 검증합니다.
+11. 최초 기능 검증: `npm run test:e2e -- --config .cache/ioniq6.playwright.config.ts tests/browser/ioniq6.spec.ts tests/browser/battery-toggle.spec.ts` **4개 통과 / 4.1분 / exit 0**. GLB·PNG 버튼 및 키보드 전환, 포털 링크, IONIQ 6 실제 geometry·드래그·투시·경계·전환·모바일을 확인했습니다.
+12. build 및 lint 통과. 정면/표시 색상 수정 후 별도 production 복사본 `yUx-rpBjQYVCunYwIqdQU`를 데모 3000 포트에 반영했습니다. 중간 build 한 번은 다른 실행 중인 build와 충돌해 거절됐고, 해당 실행 종료 후 성공했습니다.
+13. 2025 캐나다형 대표 모델이므로 workbook의 2026 국내 트림과 외형 차이가 있습니다. 제조사/구성기 저작권 모델이며 공개 재배포 허가는 확인되지 않았고 CC 모델로 표기하지 않습니다. Q4 / Q6 / i5 / MINI Electric / ID.4 / EX30의 실제 GLB는 여전히 미확보입니다.
+
+- 최종 정면/실버 표시 검증: `npm run test:e2e -- --config .cache/ioniq6.playwright.config.ts tests/browser/ioniq6.spec.ts tests/browser/cutouts.spec.ts` **2개 통과 / 3.6분 / exit 0**. IONIQ 6 실제 드래그·투시·차체 내부 배터리·ESC 복원·모델 전환·모바일 및 남은 PNG 6종의 이미지 로드를 확인했습니다. PNG 테스트 통과는 해당 차량의 회전·투시 구현을 의미하지 않습니다.
+- 최종 `npm run lint`, `npm run typecheck`, `npm run verify:assets`, `npm run build` 및 `git diff --check` 통과. 실제 GLB 14개 프로필 / 사진 6개 프로필입니다.
+- 최종 캡처: [IONIQ 6 외형](ioniq6-3d-desktop.png), [드래그](ioniq6-3d-drag.png), [배터리 투시](ioniq6-3d-battery.png), [모바일](ioniq6-3d-mobile.png).

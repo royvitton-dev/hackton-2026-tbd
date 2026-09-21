@@ -34,6 +34,10 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
           if(path.includes('casper_electric')&&m.name==='E_C_GLASS_BLACK'){
             m.color.set('#20303c');m.metalness=.12;m.roughness=.18;m.transparent=true;m.opacity=.72;m.depthWrite=false;
           }
+          if(path.includes('ioniq6')&&m.name==='material-N-krf'){
+            // Silver presentation paint keeps the real panel geometry legible in the dark studio.
+            m.color.set('#a6b5c2');m.metalness=.55;m.roughness=.28;
+          }
         }
         m.userData.originalOpacity=m.opacity;m.userData.originalTransparent=m.transparent;m.userData.originalDepthWrite=m.depthWrite;
         if(m instanceof MeshStandardMaterial)m.userData.originalColor=m.color.clone();
@@ -42,7 +46,7 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
     // Community model length is on Z. Rotate into our X-forward vehicle coordinates.
     clone.updateMatrixWorld(true);const originalSize=new Box3().setFromObject(clone,true).getSize(new Vector3());
     if(originalSize.z>originalSize.x)clone.rotation.y+=Math.PI/2;
-    if(path.includes('model_y')||path.includes('kona_electric')||path.includes('casper_electric'))clone.rotation.y+=Math.PI;
+    if(path.includes('model_y')||path.includes('kona_electric')||path.includes('casper_electric')||path.includes('ioniq6'))clone.rotation.y+=Math.PI;
     clone.updateMatrixWorld(true);
     // Precise bounds exclude oversized cached bounds in manufacturer component meshes.
     const bounds=new Box3().setFromObject(clone,true),size=bounds.getSize(new Vector3()),center=bounds.getCenter(new Vector3());

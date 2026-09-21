@@ -102,3 +102,14 @@ Decoder files under `public/assets/vehicles/decoders` are copied from the instal
 - Selected LHD FSC `6XS5ZDZ7ZCC069`, SAW exterior, NNB interior. Exact option package may differ from workbook.
 - Original geometry retained; stock showroom shadow plane removed; compatible draw calls merged, opaque textures compressed, Draco compression.
 - Runtime: `hyundai_casper_electric.glb`, 2,653,012 triangles, 15,337,036 bytes.
+
+## Hyundai IONIQ 6 — 2025 Canadian Preferred Long Range
+
+- Source: https://www.autotrader.ca/explore/hyundai/ioniq-6/build-your-own
+- Public configurator: https://configurator.v2.londondynamics.com/by_product_id/e30a2277-db50-4c06-9223-22873d8899c9/hyundai-ioniq6-2025
+- Author/rightsholder: Hyundai Motor Company / AutoTrader Pivot / London Dynamics. Public viewer asset; **no open redistribution license stated**. Not a CC model.
+- Unmodified self-contained GLB: original body, doors, four wheels, seats and interior retained. No generated vehicle geometry or photo projection.
+- Source configuration, URL, selected trim, SHA-256 and original GLB: `../sources/hyundai-ioniq6/`.
+- Runtime: `hyundai_ioniq6_2025.glb`, 783,652 rendered triangles, 4,445,368 bytes.
+- Representative 2025 Canadian trim; the UI discloses its difference from the workbook's 2026 vehicle.
+- Runtime presentation uses silver body paint for the dark studio; source GLB remains unchanged. This is a display color, not a paint value from the charging workbook.

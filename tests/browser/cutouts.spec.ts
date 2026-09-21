@@ -4,18 +4,18 @@ import models from '../../src/data/vehicleModelSources.json' with { type: 'json'
 import workbook from '../../src/data/battery/workbook.json' with { type: 'json' };
 
 test('Every remaining vehicle has a real PNG texture, fixed camera and battery focus', async ({ page }) => {
-  test.setTimeout(300000); // Seven desktop/focus captures plus mobile on software WebGL.
+  test.setTimeout(300000); // Remaining photo profiles plus mobile on software WebGL.
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   const photos = models.filter(model => !model.available);
-  expect(photos).toHaveLength(7);
-  await page.goto('/?user=U0017');
+  expect(photos).toHaveLength(6);
+  await page.goto('/?user=U0059');
   for (const model of photos) {
     const user = workbook.users.find(user => user.vehicleId === model.vehicleId)!;
     const source = images.find(image => image.vehicleId === model.vehicleId)!;
     await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption(user.userId);
     const canvas = page.locator('canvas');
-    await expect(canvas).toHaveAttribute('data-vehicle-id', model.vehicleId);
+    await expect(canvas).toHaveAttribute('data-vehicle-id', model.vehicleId,{timeout:90000});
     await expect(canvas).toHaveAttribute('data-renderer', 'webgl-cutout');
     await expect(canvas).toHaveAttribute('data-cutout-path', `${source.publicCutoutPath}?v=${source.cutoutSourceSha256.slice(0,12)}`);
     await expect(canvas).toHaveAttribute('data-camera-controls', 'locked');

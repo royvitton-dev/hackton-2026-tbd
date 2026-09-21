@@ -2,7 +2,7 @@ import { expect, test } from '@playwright/test';
 
 test.use({ contextOptions: { reducedMotion: 'reduce' } });
 
-for (const [userId, renderer] of [['U0004', 'webgl-3d-mesh'], ['U0017', 'webgl-cutout']]) {
+for (const [userId, renderer] of [['U0004', 'webgl-3d-mesh'], ['U0059', 'webgl-cutout']]) {
   test(`battery view toggles and restores the vehicle for ${renderer}`, async ({ page }) => {
     await page.goto(`/?user=${userId}`);
     const canvas = page.locator('canvas');

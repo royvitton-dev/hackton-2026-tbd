@@ -1,0 +1,889 @@
+{
+  "defaultValues": {
+    "trim": "Preferred Long Range",
+    "packages__preferred-AWD": "Standard",
+    "packages__preferred": "Standard",
+    "oemExteriorColor__preferred-AWD": "material-N-krf",
+    "oemExteriorColor__preferred": "material-N-krf",
+    "interior__preferred": "BlackCloth",
+    "interior__awd": "BlackCloth"
+  },
+  "assetsVersionNumber": 1,
+  "bounds": {
+    "center": [],
+    "max": [
+      1.0501746330842652,
+      1.4745263342378043,
+      2.424517626781006
+    ],
+    "min": [
+      -1.0478955721842658,
+      0.0013882164093576566,
+      -2.4242498006375883
+    ],
+    "radius": 0
+  },
+  "createdDate": "2025-10-15T13:40:59.255119Z",
+  "customerId": "e30a2277-db50-4c06-9223-22873d8899c9",
+  "embedConfigHash": "D677F401836970E83FCE0BAA4ABE65D6",
+  "errors": [
+    {
+      "code": "missing_mesh_target",
+      "message": ""
+    },
+    {
+      "code": "missing_mesh_target",
+      "message": "Ioniq6_BodyPaint_2"
+    }
+  ],
+  "hasErrors": true,
+  "id": "8f0959de-8a22-404f-b922-62735dd42cc7",
+  "modifiedDate": "2026-06-29T12:47:29.344707Z",
+  "status": "published",
+  "thumbnails": {
+    "sq_sm": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/8f0959de-8a22-404f-b922-62735dd42cc7/Thumbnails/Hyundai Ioniq6 2025 c1410631ba1d878dced9698d125709aa@sq_sm.jpeg",
+    "md": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/8f0959de-8a22-404f-b922-62735dd42cc7/Thumbnails/Hyundai Ioniq6 2025 c1410631ba1d878dced9698d125709aa@md.jpeg",
+    "sq_md": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/8f0959de-8a22-404f-b922-62735dd42cc7/Thumbnails/Hyundai Ioniq6 2025 c1410631ba1d878dced9698d125709aa@sq_md.jpeg",
+    "lg": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/8f0959de-8a22-404f-b922-62735dd42cc7/Thumbnails/Hyundai Ioniq6 2025 c1410631ba1d878dced9698d125709aa@lg.jpeg",
+    "sq_lg": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/8f0959de-8a22-404f-b922-62735dd42cc7/Thumbnails/Hyundai Ioniq6 2025 c1410631ba1d878dced9698d125709aa@sq_lg.jpeg",
+    "og": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/8f0959de-8a22-404f-b922-62735dd42cc7/Thumbnails/Hyundai Ioniq6 2025 c1410631ba1d878dced9698d125709aa@og.jpeg",
+    "xl": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/8f0959de-8a22-404f-b922-62735dd42cc7/Thumbnails/Hyundai Ioniq6 2025 c1410631ba1d878dced9698d125709aa@xl.jpeg"
+  },
+  "usesAssets": [
+    "3373ddd5-1d69-4fae-aa1b-4ed44b4e0f73",
+    "dba05d45-4916-4520-8bf3-e7d2cabe9a85",
+    "651de8f1-179f-4c82-abbd-095d4d2a93ac",
+    "63b069c1-f98a-4444-b0bc-0e0bc203afbe",
+    "8d7e18d6-2096-4ad4-8878-696a863a7a55",
+    "019368a6-15eb-7f60-b6dc-7d64753e5e0c",
+    "0a9080de-76c1-4572-82fe-e745a1cfc2ac",
+    "95afe179-7914-47d6-83ab-553e19997e3d",
+    "3c8fe6d8-b441-403b-baa6-c498c7bd01c4",
+    "019368a5-ffb3-726c-93eb-099b01b245b3",
+    "a82f8f71-52f4-4e1b-a5ca-2c24a9dd43d4",
+    "fa0870ea-cac6-4255-a16f-514b83708b0b",
+    "9ff5c288-9cba-4202-bea4-5a11fa726064",
+    "aa4652f2-c71f-4e53-a6de-a3a5d15bbba4",
+    "5e7dc2e3-fcf9-45d8-96c0-ca91d345905a",
+    "2b29f48b-4b33-4825-9b9e-83532189b421",
+    "11255f7f-e5b1-43c2-a7b8-fcea19981bd4",
+    "d58631e9-5649-4a78-b6c1-a3a50fca9db0",
+    "00163ddb-d890-4e82-91f2-ca97ed89cb72",
+    "46ec0bb4-37a3-4e02-a5e9-00a50325c17b",
+    "3da23d2e-a7e6-4bb8-9f0a-8f6f40d81cf6",
+    "deec717b-9512-4034-b211-676d83117101",
+    "d7f74826-358f-40d2-a1d9-d344b631dfbc",
+    "4570131c-d837-4538-ae56-c1a4ce8a3919",
+    "2c06c51a-4505-4b2a-adce-0d1f5bb4d313",
+    "a32bf97d-2949-4066-87be-229448a0b7cf",
+    "c4b70b3e-acd7-4326-a1cf-58b5be9c3d6e",
+    "a0d97a62-858a-4f8a-a852-0e686942289d",
+    "7d6ac9c4-380d-4a9f-8710-5ee97e8955d4"
+  ],
+  "usesMaterials": [
+    {
+      "id": "442c7594-4657-4de7-804d-bdde4757f5bb",
+      "mappingKey": "material-n8ned"
+    },
+    {
+      "id": "af96f48b-705d-4dc6-8efa-e070ff680f80",
+      "mappingKey": "material-N-krf"
+    },
+    {
+      "id": "5d62c755-9e89-41bd-a490-cbd7a2d65be2",
+      "mappingKey": "material-7MDZ4"
+    },
+    {
+      "id": "e9a9f7b2-4ab2-4d99-9419-2e3d484a26f3",
+      "mappingKey": "material-IV-Dq"
+    },
+    {
+      "id": "0c7593e4-62c6-4ff0-89da-a57448e9c7b2",
+      "mappingKey": "material-LIg_k"
+    },
+    {
+      "id": "92c9a95a-39af-4b9c-803a-d2c2c442f665",
+      "mappingKey": "material-G5soq"
+    },
+    {
+      "id": "19ce085f-d2e0-431e-800b-5c2ebc8e042a",
+      "mappingKey": "material-qrNy7"
+    }
+  ],
+  "versionNumber": 89,
+  "cmsHidden": false,
+  "cmsHiddenCustomer": false,
+  "cmsReadOnly": false,
+  "cmsReadOnlyCustomer": false,
+  "embedConfig": {
+    "optionGroups": [
+      {
+        "id": "trim-group",
+        "name": "Trim Group",
+        "description": "",
+        "features": [
+          {
+            "type": "geometry",
+            "variants": [
+              {
+                "values": [
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_body.glb",
+                    "_id": "val_92xD5S"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_StandardFrontSeat.glb",
+                    "_id": "val_EAkyQ-"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_StandardFrontSeat.glb",
+                    "transform": {
+                      "values": {
+                        "default": {
+                          "position": [
+                            0.706,
+                            0,
+                            0
+                          ],
+                          "rotation": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "scale": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "_id": "val_kPIe7i"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_StandardRearSeats.glb",
+                    "_id": "val_mnyDe3"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_StandardWheel.glb",
+                    "_id": "val_bgEkFw"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_StandardWheel.glb",
+                    "transform": {
+                      "values": {
+                        "default": {
+                          "position": [
+                            0,
+                            0,
+                            -2.9646999999999997
+                          ],
+                          "rotation": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "scale": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "_id": "val_kIkAXq"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_StandardWheel.glb",
+                    "transform": {
+                      "values": {
+                        "default": {
+                          "position": [
+                            0,
+                            0,
+                            0.057
+                          ],
+                          "rotation": [
+                            0,
+                            3.141592653589793,
+                            0
+                          ],
+                          "scale": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "_id": "val_KNtiS6"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_StandardWheel.glb",
+                    "transform": {
+                      "values": {
+                        "default": {
+                          "position": [
+                            0,
+                            0,
+                            3.0156
+                          ],
+                          "rotation": [
+                            0,
+                            3.141592653589793,
+                            0
+                          ],
+                          "scale": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "_id": "val_RpluOD"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6__StandardPackage.glb",
+                    "_id": "val_l6oXkY"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_Doors.glb",
+                    "_id": "val_fqxDRx"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_Fin.glb",
+                    "_id": "val_jzVKQ_"
+                  }
+                ],
+                "id": "Preferred Long Range",
+                "name": "Preferred Long Range",
+                "swatchImage": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_preferred_long_range.png"
+              },
+              {
+                "values": [
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_Fin.glb",
+                    "_id": "val_jzVKQ_"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_${interior__awd}FrontSeat.glb",
+                    "_id": "val_iWKl-s"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_${interior__awd}FrontSeat.glb",
+                    "transform": {
+                      "values": {
+                        "default": {
+                          "position": [
+                            0.706,
+                            0,
+                            0
+                          ],
+                          "rotation": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "scale": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "_id": "val_sjf6OJ"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_${interior__awd}RearSeats.glb",
+                    "_id": "val_T7X_am"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_${interior__awd}RearSeats.glb",
+                    "_id": "val_mnyDe3"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_${packages__preferred-AWD}Wheel.glb",
+                    "_id": "val_bgEkFw"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_${packages__preferred-AWD}Wheel.glb",
+                    "transform": {
+                      "values": {
+                        "default": {
+                          "position": [
+                            0,
+                            0,
+                            -2.964
+                          ],
+                          "rotation": [
+                            0,
+                            0,
+                            0
+                          ],
+                          "scale": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "_id": "val_8vcnxe"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_${packages__preferred-AWD}Wheel.glb",
+                    "transform": {
+                      "values": {
+                        "default": {
+                          "position": [
+                            0,
+                            0,
+                            0.057
+                          ],
+                          "rotation": [
+                            0,
+                            3.141592653589793,
+                            0
+                          ],
+                          "scale": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "_id": "val_0zamxd"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/56c7dc6b-e709-41f0-9f4d-faa82cd4b778/Ioniq6_${packages__preferred-AWD}Wheel.glb",
+                    "transform": {
+                      "values": {
+                        "default": {
+                          "position": [
+                            0,
+                            0,
+                            3.015
+                          ],
+                          "rotation": [
+                            0,
+                            3.141592653589793,
+                            0
+                          ],
+                          "scale": [
+                            1,
+                            1,
+                            1
+                          ]
+                        }
+                      }
+                    },
+                    "_id": "val_SMemfl"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6__${packages__preferred-AWD}Package.glb",
+                    "_id": "val_l6oXkY"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_AWDbody.glb",
+                    "_id": "val_05XNIa"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_${interior__awd}Doors.glb",
+                    "_id": "val_oVCd1M"
+                  },
+                  {
+                    "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Ioniq6_${interior__awd}Interior.glb",
+                    "_id": "val_oVCd1M"
+                  }
+                ],
+                "id": "Preferred Long Range AWD",
+                "name": "Preferred Long Range AWD",
+                "swatchImage": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/ioniq6_awd.png"
+              }
+            ],
+            "id": "trim",
+            "name": "Trim",
+            "default": "Preferred Long Range"
+          }
+        ]
+      },
+      {
+        "id": "packages",
+        "name": "Packages",
+        "description": "",
+        "features": [
+          {
+            "type": "geometry",
+            "variants": [
+              {
+                "values": [],
+                "id": "Standard",
+                "name": "Standard Package"
+              },
+              {
+                "values": [],
+                "id": "Ultimate",
+                "name": "Ultimate Package"
+              }
+            ],
+            "id": "packages__preferred-AWD",
+            "name": "Packages",
+            "default": "Standard"
+          },
+          {
+            "type": "geometry",
+            "variants": [
+              {
+                "values": [],
+                "id": "Standard",
+                "name": "Standard Package"
+              }
+            ],
+            "id": "packages__preferred",
+            "name": "Packages",
+            "default": "Standard"
+          }
+        ]
+      },
+      {
+        "id": "exterior",
+        "name": "Exterior",
+        "description": "",
+        "features": [
+          {
+            "type": "materialswap",
+            "targets": [
+              "Ioniq6_BodyPaint_2"
+            ],
+            "variants": [
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-n8ned.glb",
+                "mappingKey": "material-n8ned",
+                "id": "material-n8ned",
+                "name": "Transmission Blue",
+                "swatchColor": "#76787f"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-N-krf.glb",
+                "mappingKey": "material-N-krf",
+                "id": "material-N-krf",
+                "name": "Abyss Black",
+                "swatchColor": "#060203",
+                "swatchImage": ""
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-7MDZ4.glb",
+                "mappingKey": "material-7MDZ4",
+                "id": "material-7MDZ4",
+                "name": "Ultimate Red",
+                "swatchColor": "#DC0229"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-IV-Dq.glb",
+                "mappingKey": "material-IV-Dq",
+                "id": "material-IV-Dq",
+                "name": "Nocturne Grey",
+                "swatchColor": "#3D3D40"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-LIg_k.glb",
+                "mappingKey": "material-LIg_k",
+                "id": "material-LIg_k",
+                "name": "Serenity White",
+                "swatchColor": "#f4f4f5"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-G5soq.glb",
+                "mappingKey": "material-G5soq",
+                "id": "material-G5soq",
+                "name": "Biophilic Blue",
+                "swatchColor": "#1c326f"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-qrNy7.glb",
+                "mappingKey": "material-qrNy7",
+                "id": "material-qrNy7",
+                "name": "Nocturne Grey (Matte)",
+                "swatchColor": "#3D3D41"
+              }
+            ],
+            "id": "oemExteriorColor__preferred-AWD",
+            "name": "Exterior",
+            "default": "material-N-krf"
+          },
+          {
+            "type": "materialswap",
+            "targets": [
+              "BodyPaint_1",
+              ""
+            ],
+            "variants": [
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-n8ned.glb",
+                "mappingKey": "material-n8ned",
+                "id": "material-n8ned",
+                "name": "Transmission Blue",
+                "swatchColor": "#76787f"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-N-krf.glb",
+                "mappingKey": "material-N-krf",
+                "id": "material-N-krf",
+                "name": "Abyss Black",
+                "swatchColor": "#060203",
+                "swatchImage": ""
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-7MDZ4.glb",
+                "mappingKey": "material-7MDZ4",
+                "id": "material-7MDZ4",
+                "name": "Ultimate Red",
+                "swatchColor": "#DC0229"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-IV-Dq.glb",
+                "mappingKey": "material-IV-Dq",
+                "id": "material-IV-Dq",
+                "name": "Nocturne Grey",
+                "swatchColor": "#3D3D40"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-LIg_k.glb",
+                "mappingKey": "material-LIg_k",
+                "id": "material-LIg_k",
+                "name": "Serenity White",
+                "swatchColor": "#f4f4f5"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-G5soq.glb",
+                "mappingKey": "material-G5soq",
+                "id": "material-G5soq",
+                "name": "Biophilic Blue",
+                "swatchColor": "#1c326f"
+              },
+              {
+                "file": "e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/Materials/material-qrNy7.glb",
+                "mappingKey": "material-qrNy7",
+                "id": "material-qrNy7",
+                "name": "Nocturne Grey (Matte)",
+                "swatchColor": "#3D3D41"
+              }
+            ],
+            "id": "oemExteriorColor__preferred",
+            "name": "Exterior",
+            "default": "material-N-krf"
+          }
+        ]
+      },
+      {
+        "id": "interior",
+        "name": "Interior",
+        "description": "",
+        "features": [
+          {
+            "type": "geometry",
+            "variants": [
+              {
+                "values": [],
+                "id": "BlackCloth",
+                "name": "Black Cloth",
+                "swatchImage": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/ioniq6_black-cloth.jpg"
+              }
+            ],
+            "id": "interior__preferred",
+            "name": "Interior",
+            "default": "BlackCloth"
+          },
+          {
+            "type": "geometry",
+            "variants": [
+              {
+                "values": [],
+                "id": "BlackCloth",
+                "name": "Black Cloth",
+                "swatchImage": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/ioniq6_black-cloth.jpg"
+              },
+              {
+                "values": [],
+                "id": "BlackLeatherette",
+                "name": "Black Leatherette",
+                "swatchImage": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/ioniq6_ultimate_interior.jpg"
+              },
+              {
+                "values": [],
+                "id": "GreyLeatherette",
+                "name": "Grey Leatherette",
+                "swatchImage": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/ioniq6-grey-leatherette.jpg"
+              }
+            ],
+            "id": "interior__awd",
+            "name": "Interior",
+            "default": "BlackCloth"
+          }
+        ]
+      },
+      {
+        "id": "sdk",
+        "name": "SDK (Internal)",
+        "description": "",
+        "features": [
+          {
+            "type": "multi",
+            "variants": [
+              {
+                "selection": {
+                  "packages__preferred": "Standard",
+                  "packages__preferred-AWD": "Standard"
+                },
+                "id": "standard-package",
+                "name": "Standard Package"
+              },
+              {
+                "selection": {
+                  "packages__preferred": "Ultimate",
+                  "packages__preferred-AWD": "Ultimate"
+                },
+                "id": "ultimate-package",
+                "name": "Ultimate Package"
+              }
+            ],
+            "id": "package",
+            "name": "Package (Internal)",
+            "default": ""
+          },
+          {
+            "type": "multi",
+            "variants": [
+              {
+                "selection": {
+                  "interior__awd": "BlackCloth",
+                  "interior__preferred": "BlackCloth"
+                },
+                "id": "black-cloth",
+                "name": "Black Cloth"
+              },
+              {
+                "selection": {
+                  "interior__awd": "BlackLeatherette"
+                },
+                "id": "black-leatherette",
+                "name": "Black Leatherette"
+              },
+              {
+                "selection": {
+                  "interior__awd": "GreyLeatherette"
+                },
+                "id": "grey-leatherette",
+                "name": "Grey Leatherette"
+              }
+            ],
+            "id": "int",
+            "name": "Interior (Internal)",
+            "default": ""
+          },
+          {
+            "type": "multi",
+            "variants": [
+              {
+                "selection": {
+                  "oemExteriorColor__preferred": "material-7MDZ4",
+                  "oemExteriorColor__preferred-AWD": "material-7MDZ4"
+                },
+                "id": "ultimate-red",
+                "name": "Ultimate Red"
+              },
+              {
+                "selection": {
+                  "oemExteriorColor__preferred": "material-N-krf",
+                  "oemExteriorColor__preferred-AWD": "material-N-krf"
+                },
+                "id": "abyss-black",
+                "name": "Abyss Black"
+              },
+              {
+                "selection": {
+                  "oemExteriorColor__preferred": "material-G5soq",
+                  "oemExteriorColor__preferred-AWD": "material-G5soq"
+                },
+                "id": "biophilic-blue",
+                "name": "Biophilic Blue"
+              },
+              {
+                "selection": {
+                  "oemExteriorColor__preferred": "material-LIg_k",
+                  "oemExteriorColor__preferred-AWD": "material-LIg_k"
+                },
+                "id": "serenity-white",
+                "name": "Serenity White"
+              },
+              {
+                "selection": {
+                  "oemExteriorColor__preferred": "material-qrNy7",
+                  "oemExteriorColor__preferred-AWD": "material-qrNy7"
+                },
+                "id": "nocturne-grey-matte",
+                "name": "Nocturne Grey (Matte)"
+              },
+              {
+                "selection": {
+                  "oemExteriorColor__preferred": "material-n8ned",
+                  "oemExteriorColor__preferred-AWD": "material-n8ned"
+                },
+                "id": "transmission-blue",
+                "name": "Transmission Blue"
+              },
+              {
+                "selection": {
+                  "oemExteriorColor__preferred": "material-IV-Dq",
+                  "oemExteriorColor__preferred-AWD": "material-IV-Dq"
+                },
+                "id": "nocturne-grey",
+                "name": "Nocturne Grey"
+              }
+            ],
+            "id": "ext",
+            "name": "Exterior (Internal)",
+            "default": ""
+          }
+        ],
+        "hidden": true
+      }
+    ],
+    "presets": [
+      {
+        "id": "exterior",
+        "name": "Exterior",
+        "default": true,
+        "camera": {
+          "target": "-3.619825816869593e-8m 0.8814936922781162m 0.00482296533965032m",
+          "orbit": "-0.3746024969032773rad 1.5315179075916137rad 9.924876950114564m",
+          "orbitMax": "auto 90deg auto",
+          "fov": "NaNdeg",
+          "fovMin": "10deg",
+          "fovMax": "NaNdeg"
+        },
+        "environmentImage": "https://d1mepjfmhz5ui7.cloudfront.net/hdr/dancing_hall_2k_desat.hdr",
+        "animation": {
+          "start": "static",
+          "end": "static",
+          "loop": 0
+        },
+        "features": {}
+      },
+      {
+        "id": "interior",
+        "name": "Interior",
+        "default": false,
+        "camera": {
+          "target": "0.0011395304499997039m 0.737957275323581m 0.0001339130717088466m",
+          "orbit": "1.9969756861839616rad 1.38949003750389rad 8.059018311518226m",
+          "fov": "19.97598326047894deg"
+        },
+        "animation": {
+          "start": "door_close",
+          "end": "door_open",
+          "loop": 0
+        },
+        "features": {}
+      }
+    ],
+    "rules": {
+      "trim:Preferred Long Range": {
+        "hide": [
+          "exterior/oemExteriorColor__preferred-AWD",
+          "packages/packages__preferred-AWD",
+          "interior/interior__awd"
+        ]
+      },
+      "trim:Preferred Long Range AWD": {
+        "hide": [
+          "exterior/oemExteriorColor__preferred",
+          "packages/packages__preferred",
+          "interior/interior__preferred"
+        ]
+      },
+      "packages__preferred-AWD:Standard": {
+        "hide": [
+          "interior/interior__awd/BlackLeatherette",
+          "interior/interior__awd/GreyLeatherette"
+        ]
+      },
+      "packages__preferred-AWD:Ultimate": {
+        "hide": [
+          "interior/interior__awd/BlackCloth"
+        ]
+      },
+      "oemExteriorColor__preferred-AWD:material-7MDZ4": {
+        "hide": [
+          "interior/interior__awd/GreyLeatherette"
+        ]
+      },
+      "oemExteriorColor__preferred-AWD:material-G5soq": {
+        "hide": [
+          "interior/interior__awd/GreyLeatherette"
+        ]
+      },
+      "oemExteriorColor__preferred-AWD:material-N-krf": {
+        "hide": [
+          "interior/interior__awd/GreyLeatherette"
+        ]
+      }
+    }
+  },
+  "name": "Hyundai Ioniq6 2025",
+  "production": {
+    "notes": "SDK Swapped",
+    "status": "inproduction",
+    "status360": "notstarted",
+    "statusHighres": "notstarted"
+  },
+  "shortName": "42swg",
+  "sku": "hyundai-ioniq6-2025",
+  "studioEnabled": false,
+  "textureCompression": false,
+  "usePosterImages": false,
+  "agoraVersion": "1",
+  "arPlacement": "floor",
+  "disablePan": false,
+  "disableScrollWheel": false,
+  "darkMode": false,
+  "dracoConfig": {
+    "decodeSpeed": 5,
+    "encodeSpeed": 5,
+    "method": "EDGEBREAKER"
+  },
+  "enableDarkMode": false,
+  "enableDraco": true,
+  "interactionPromptStyle": "",
+  "lights": false,
+  "listBulletLeadingZeros": 1,
+  "listBulletStyle": "numeric",
+  "listBulletAlignment": "right",
+  "logoUrl": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/00000000-0000-0000-0000-000000000000/pivot-loading.svg",
+  "puzzlerEngine": "server",
+  "puzzlerVersion": "1",
+  "puzzlerServerSideUsdz": false,
+  "rulerUnit": "mm",
+  "rulerPrecision": 0,
+  "shadowSoftness": 1,
+  "shadowIntensity": 1,
+  "showARButton": true,
+  "showARButtonLabel": true,
+  "showConfigurator": true,
+  "showFullScreenButton": false,
+  "showHotspots": true,
+  "showInteractionPrompt": false,
+  "showLightSwitch": false,
+  "showMeasurementLines": true,
+  "showPivotButton": false,
+  "showPresets": true,
+  "showResetButton": true,
+  "showRulerButton": false,
+  "styleUrl": "https://customer-autotrader-pivot.m.londondynamics.com/styles/custom.css",
+  "toneMapping": "neutral",
+  "dealerId": null,
+  "formId": null
+}

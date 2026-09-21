@@ -64,17 +64,26 @@
     "manufacturer": "Hyundai",
     "model": "Ioniq 6",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": "https://sketchfab.com/3d-models/hyundai-ioniq-6-64b7bfb50f304e428089f61a63e4dd11",
-    "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "Sketchfab candidate found; an authenticated licensed download is required. Official design-unveil host failed DNS; no local model obtained.",
-    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
-    "displayNote": null,
-    "researchDate": "2026-09-21"
+    "glbPath": "/assets/vehicles/models/hyundai_ioniq6_2025.glb",
+    "available": true,
+    "sourceUrl": "https://www.autotrader.ca/explore/hyundai/ioniq-6/build-your-own",
+    "downloadUrl": "https://assets.v2.londondynamics.com/e30a2277-db50-4c06-9223-22873d8899c9/puzzledefault/8f095_6a2660b8-8589-08a5-b842-0ff06f893368.glb",
+    "license": "Copyright of respective manufacturer and configurator owners; publicly linked viewer asset. Open redistribution permission not stated. Not CC licensed.",
+    "author": "Hyundai Motor Company / AutoTrader Pivot / London Dynamics",
+    "representativeNote": "2025 Canadian Preferred Long Range representative model. Workbook 2026 year/trim differs. Original body, doors, wheels and interior geometry retained.",
+    "failureReason": null,
+    "nextAction": null,
+    "displayNote": "2025 캐나다형 IONIQ 6 대표 외형 · 2026년형과 다름",
+    "researchDate": "2026-09-21",
+    "failures": [
+      {
+        "url": "https://sketchfab.com/3d-models/hyundai-ioniq-6-64b7bfb50f304e428089f61a63e4dd11",
+        "reason": "Sketchfab candidate found; an authenticated licensed download is required. Official design-unveil host failed DNS; no local model obtained.",
+        "recovered": true,
+        "nextAction": "Used the publicly linked AutoTrader Pivot 2025 IONIQ 6 default GLB."
+      }
+    ],
+    "sourceTriangles": 783652
   },
   {
     "vehicleId": "hyundai_kona_ev_lr_2026",
