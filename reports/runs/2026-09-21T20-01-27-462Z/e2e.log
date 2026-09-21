@@ -1,0 +1,28 @@
+[2m[WebServer] [22m(node:79778) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 16 tests using 1 worker
+
+[2m[WebServer] [22m{"event":"trading_start_failed","code":"TRADING_START_FAILED","message":"Demo port 5175 is unavailable on 127.0.0.1 (EADDRINUSE); existing processes were not changed"}
+(node:79781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:79781) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/parking.spec.mjs:8:1 › public B2 source converts to actual WebGL meshes, with original and data export (17.0s)
+  ✓   2 tests/e2e/parking.spec.mjs:15:1 › drives through exterior road and entrance to EV, supports cameras and pauses (7.3s)
+  ✓   3 tests/e2e/parking.spec.mjs:26:1 › fire starts at current position, switches to human and fails closed when exits are blocked (6.7s)
+  ✓   4 tests/e2e/parking.spec.mjs:33:1 › photo-derived facade and mapped buildings preserve geographic source attribution (8.7s)
+  ✓   5 tests/e2e/parking.spec.mjs:39:1 › imports semantic SVG and rejects executable and corrupt input without losing current scene (3.3s)
+  ✓   6 tests/e2e/parking.spec.mjs:44:1 › actual Naver-located building routes from acquired OSM road through the drawn entrance (5.7s)
+  ✓   7 tests/e2e/parking.spec.mjs:48:1 › parks inside a source bay with suitable dimensions and previews a proposed charger destination (9.2s)
+  ✓   8 tests/e2e/parking.spec.mjs:57:1 › mobile source selection and 3D controls remain usable without horizontal overflow (3.1s)
+  ✓   9 tests/e2e/parking.spec.mjs:62:1 › existing park exposes the new attraction, shared launch route and root quality dashboard (20.9s)
+  ✓  10 tests/e2e/parking.spec.mjs:66:1 › real place inventory includes parks and public parking without counting floors as buildings (9.6s)
+  ✓  11 tests/e2e/parking.spec.mjs:74:1 › actual station data drives disclosed green and red screening, filters and export (8.2s)
+  ✓  12 tests/e2e/parking.spec.mjs:85:1 › accessible bays stay visible, realistic objects accept multiple textures and drawing details preserve OCR (13.9s)
+  ✓  13 tests/e2e/parking.spec.mjs:94:1 › mobile charging settings and all drawing information remain reachable (5.9s)
+  ✓  14 tests/e2e/parking.spec.mjs:99:1 › imports an actual PDF and keeps its drawing preview separate from the previously selected source (7.4s)
+  ✓  15 tests/e2e/parking.spec.mjs:105:1 › shows detected parking as review candidates while preserving high-resolution provenance and charging inputs (13.9s)
+  ✓  16 tests/e2e/parking.spec.mjs:120:1 › guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls (11.9s)
+
+  16 passed (2.6m)
