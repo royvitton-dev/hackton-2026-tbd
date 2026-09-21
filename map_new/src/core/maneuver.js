@@ -74,7 +74,7 @@ function searchManeuver(plan,start,space,anchor,vehicle,contains,options){
  return null;
 }
 function finishParking(base,cut,points,space,access,vehicle,method,extra={}){
- const merged=prefix(base,cut);append(merged,points);
+ const merged=prefix(base,cut);append(merged,points);extra={...extra,maneuverStartDistanceM:cut};
  const path=[];for(const p of merged){if(path.length&&distance(path.at(-1),p)<.00001)Object.assign(path.at(-1),p);else path.push(p);}
  let length=0,reverseDistance=0;const shifts=[];
  for(let i=1;i<path.length;i++){const d=distance(path[i-1],path[i]);if(path[i-1].gear===-1)reverseDistance+=d;if(i>1&&path[i-2].gear!==path[i-1].gear)shifts.push({distance:length,gear:path[i-1].gear});length+=d;}

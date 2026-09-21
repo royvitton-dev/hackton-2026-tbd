@@ -1,5 +1,6 @@
 import {route,DEFAULT_VEHICLE} from './navigation.js';
 import {parkingApproachRoute} from './parking.js';
+import {parkingExitRoute} from './departure.js';
 
 export const hasParking=plan=>plan.spaces.some(s=>['parking','ev'].includes(s.kind));
 export function parkingStarts(plan){
@@ -25,5 +26,13 @@ export function parkingCoverage(plan,options={}){
   result.rows.push(best||{...goal,distance:null,reason:'차량 제원·진입 방향·차로 연결 조건에서 경로 없음'});
  }
  result.reachable=result.rows.filter(r=>r.distance!==null).length;
+ for(const row of result.rows){
+  if(!row.spaceId)continue;
+  const out=parkingExitRoute(plan,row.spaceId,options),space=spaces.find(s=>s.id===row.spaceId);
+  row.outbound=out?{distance:out.distance,startId:out.ids[0],exitId:out.departure.exitId,arrival:out.departure.arrival,note:out.departure.note}:null;
+  row.parkingFit=!row.restricted&&Math.min(space.width,space.depth)>=vehicle.width+2*vehicle.clearance&&Math.max(space.width,space.depth)>=vehicle.length+2*vehicle.clearance;
+  row.parkingNote=row.restricted?'장애인·전용 구획':row.parkingFit?'구획 내부 경로는 회전·차체 검사 후 안내':'차량 길이·폭과 여유 공간보다 작은 구획';
+ }
+ result.outboundReachable=result.rows.filter(r=>r.outbound).length;
  return result;
 }

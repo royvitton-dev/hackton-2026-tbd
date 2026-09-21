@@ -37,9 +37,10 @@ export function dongtanSvg(){
  const tags=DONGTAN_WALLS.map(([x1,y1,x2,y2,w,h])=>`<line data-kind="wall" x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke-width="${w}" data-height="${h}"/>`);
  tags.push('<line id="west-deck" data-kind="lane" data-oneway="true" x1="390" y1="268" x2="390" y2="554" data-width="5.8"/>',
   '<line id="west-exit" data-kind="lane" data-oneway="true" x1="390" y1="554" x2="390" y2="704" data-width="3.8"/>',
-  '<line id="east-deck" data-kind="lane" data-oneway="true" x1="1245" y1="252" x2="1245" y2="550" data-width="5.4"/>',
+  '<line id="east-deck" data-kind="lane" data-oneway="true" x1="1245" y1="252" x2="1245" y2="575" data-width="5.4"/>',
   '<circle id="west-deck-start" data-kind="target" data-role="entrance" data-label="서측 1층 차로 · 출구 방향" cx="390" cy="268"/>',
   '<circle id="west-vehicle-exit" data-kind="target" data-role="vehicle-exit" data-label="서측 차량 출구 앞" cx="390" cy="678"/>',
+  '<circle id="east-deck-end" data-kind="target" data-role="junction" data-label="동측 남단 차로 연결부" cx="1245" cy="550"/>',
   '<circle id="east-deck-start" data-kind="target" data-role="entrance" data-label="동측 1층 차로 · 진입 램프 이후" cx="1245" cy="282"/>');
  for(const s of dongtanBays()){
   tags.push(`<rect id="${s.id}" data-kind="space" data-role="parking" data-label="${s.label}" data-accessible="${!!s.accessible}" data-reserved="${!!s.reserved}" x="${s.x-s.width/2}" y="${s.z-s.depth/2}" width="${s.width}" height="${s.depth}"/>`);

@@ -1,5 +1,5 @@
 import {route,turn,DEFAULT_VEHICLE} from './navigation.js';
-import {distance,project} from './geometry.js';
+import {distance,project,pointAt} from './geometry.js';
 
 // A parking maneuver is offered only for a source-reviewed lane/bay connection.
 // The forward solver is also used by the forward/reverse maneuver planner.
@@ -92,8 +92,16 @@ export function parkingRoute(plan,startId,spaceId,options={}){
    }
   }
   if(!clear)continue;
+  let prefixDistance=0,cut=0;
+  for(let i=1;i<points.length;i++){
+   const next=prefixDistance+distance(points[i-1],points[i]),middle={x:(points[i-1].x+points[i].x)/2,y:((points[i-1].y||0)+(points[i].y||0))/2,z:(points[i-1].z+points[i].z)/2};
+   if(distance(middle,pointAt(base,(prefixDistance+next)/2))>.025)break;
+   const at=points[i-1];
+   if(lanes.some(e=>project(at,nodes.get(e.from),nodes.get(e.to)).distance<.0001))cut=prefixDistance;
+   prefixDistance=next;
+  }
   const length=points.slice(1).reduce((sum,p,i)=>sum+distance(points[i],p),0),destination={...goal,id:'parking:'+spaceId,kind:'parking',label:(space.label||space.id)+' 구획 안'};
-  return {...base,ids:[...base.ids,destination.id],edges:[...base.edges,'parking-access:'+spaceId],points,distance:length,cost:length,seconds:length/vehicle.speed,destination,objective:'source-connected-forward-parking-maneuver',parking:{spaceId,centerOffsetM:offset,approachOffsetM:approachOffset,turnRadius:vehicle.turnRadius,method:'forward-circular-fillet',source:access.source,surveyed:false,clearance:vehicle.clearance,samplingStepM:.12}};
+  return {...base,ids:[...base.ids,destination.id],edges:[...base.edges,'parking-access:'+spaceId],points,distance:length,cost:length,seconds:length/vehicle.speed,destination,objective:'source-connected-forward-parking-maneuver',parking:{spaceId,maneuverStartDistanceM:cut,centerOffsetM:offset,approachOffsetM:approachOffset,turnRadius:vehicle.turnRadius,method:'forward-circular-fillet',source:access.source,surveyed:false,clearance:vehicle.clearance,samplingStepM:.12}};
  }
  return null;
 }

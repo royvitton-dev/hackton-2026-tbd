@@ -54,6 +54,7 @@ async function verify(){
     const unit=await readJson(path.join(project,'reports/unit.json')),e2e=await readJson(path.join(project,'reports/e2e.json')),coverage=await readJson(path.join(project,'reports/coverage/coverage-summary.json')),python=await readJson(path.join(project,'reports/vision.json'));
     const inventory=await readJson(path.join(project,'public/generated/inventory.json'));
     const report={id,at,inventory,branch:execFileSync('git',['branch','--show-current'],{cwd:root,encoding:'utf8'}).trim(),git:execFileSync('git',['rev-parse','HEAD'],{cwd:root,encoding:'utf8'}).trim(),sourceDigest:await sourceDigest(),status:steps.every(s=>s.exitCode===0)&&unit?.numTotalTests>0&&e2e?.stats?.expected>0?'passed':'failed',steps,unit:{passed:unit?.numPassedTests||0,failed:unit?.numFailedTests||0,total:unit?.numTotalTests||0},e2e:{passed:e2e?.stats?.expected||0,failed:e2e?.stats?.unexpected||0,total:(e2e?.stats?.expected||0)+(e2e?.stats?.unexpected||0)+(e2e?.stats?.skipped||0)},coverage:coverage?.total||null,previous:previous&&{id:previous.id,status:previous.status},changes:[
+      '187개 주차면의 출구 방향 경로를 추가했습니다. 외부 차로·출구 73면과 도면 경계 114면을 구분하고 구획 내부 출차의 방향·기어 전환·차체 충돌을 검사합니다.',
       '주차 정보가 확인된 4개 도면의 187면 모두에 접근 경로를 연결했습니다. 실제 도면 진입 시 가장 먼 일반 주차면으로 자동 안내하며 주차 정보가 없는 도면에는 차량 경로를 제공하지 않습니다.',
       '1인칭 시점을 차량 정면·경사에 고정하고 속도·기어·남은 거리 대시보드, 자동·수동 조향의 좌우 방향지시등, 정지 후 시선 유지를 추가했습니다.',
       '45개 실제 장소·9개 유형·63장 도면을 해시로 확인하고 공원과 공영주차장을 포함했습니다. 층별 도면을 장소 수에 중복 집계하지 않습니다.',

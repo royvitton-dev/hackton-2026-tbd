@@ -34,3 +34,5 @@ dialog.analysis-dialog{width:1180px;max-width:96vw;padding:28px}.analysis-viewer
 
 @media(min-width:761px){.stage[data-camera=first] #world{width:calc(100% - 310px)}}
 @media(min-width:761px) and (max-width:1100px){.stage[data-camera=first] #world{width:calc(100% - 270px)}}
+
+.coverage-item{border-bottom:1px solid #cbd9c6;padding-bottom:6px}.coverage-actions{display:flex;gap:5px}.route-coverage .coverage-actions button{font-size:9px;border:1px solid #bdceb5;border-radius:3px;padding:5px;justify-content:center;color:#386648}.coverage-item small{display:block;font-size:9px;line-height:1.5;color:#667261;padding:4px 2px}.route-coverage button:disabled{cursor:not-allowed}

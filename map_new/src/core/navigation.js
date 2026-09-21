@@ -97,6 +97,7 @@ export function route(plan,startId,endId,options={}){
       const next=e.from===current.id?e.to:e.to===current.id&&(!e.oneWay||o.mode==='person')?e.from:null;
       if(!next||next===current.previous||!allowed(e,o,nodes))continue;
       const a=nodes.get(current.id),b=nodes.get(next),risk=edgeRisk(a,b,o);
+      if(o.mode==='car'&&!current.previous&&Number.isFinite(o.startHeading)&&Math.cos(Math.atan2(b.x-a.x,b.z-a.z)-o.startHeading)<.999)continue;
       if(!Number.isFinite(risk))continue;
       // Check the actual trimmed straight and circular arc. Checking a car at
       // the unrounded graph corner would reject a valid ramp bend.

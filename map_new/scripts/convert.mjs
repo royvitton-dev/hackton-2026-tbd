@@ -18,6 +18,7 @@ import {dongtanSvg,applyDongtanReview} from './dongtan.mjs';
 import {connectChangdongRamp,multilevelPlan,multilevelSvg} from './ramps.mjs';
 import {parkingCoverage,hasParking} from '../src/core/route-coverage.js';
 import {changdongRoutes} from './changdong-routes.mjs';
+import {addExitPorts} from './exit-ports.mjs';
 import {runVision} from './vision.mjs';
 import {applyRasterEvidence} from '../src/core/raster-evidence.js';
 const root=fileURLToPath(new URL('../public/',import.meta.url)),sha=b=>createHash('sha256').update(b).digest('hex');
@@ -99,7 +100,7 @@ for(const site of sites){
     plan.labels=ocr.labels.filter(t=>t.x>=crop.x&&t.x<=crop.x+crop.width&&t.z>=crop.y&&t.z<=crop.y+crop.height).map(t=>({...t,x:((t.x-crop.x)/crop.width-.5)*plan.width,z:((t.z-crop.y)/crop.height-.5)*plan.depth,width:t.width/crop.width*plan.width,depth:t.depth/crop.height*plan.depth,source:'machine-ocr-review-required'}));
     plan.ocr={method:ocr.method,sourceSha256:ocr.sourceSha256,count:plan.labels.length,status:ocr.status};
   }catch(error){if(error.code!=='ENOENT')throw error;plan.labels=[];}
-  plan.routeCoverage=parkingCoverage(plan);
+  addExitPorts(plan);plan.routeCoverage=parkingCoverage(plan);
   site.parkingRouting=hasParking(plan)&&plan.routeCoverage.reachable>0;
   const model=compileMeshes(plan),result={plan,model};
   const output=JSON.stringify(result),modelFile=`generated/${site.id}.json`;
