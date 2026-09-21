@@ -62,15 +62,20 @@ export function enrichObjects(plan,site){
   add('lift','lift',1169,602,45,51,'⑥ 승강기');
   add('stairs','stairs-west',758,706,43,74,'서측 계단',{steps:20});add('stairs','stairs-east',1267,706,43,74,'동측 계단',{steps:20});
  }
- if(site.siteId==='parking-168780'){
-  const h=site.id.endsWith('-0')?484:site.id.endsWith('-1')?441:438,scale=plan.width/905;
+ if(site.id==='parking-168780-0'){
+  const scale=plan.width/1536;
+  const add=(kind,id,x,z,w,d,label,extra={})=>objects.push({kind,id,x:(x-768)*scale,z:(z-411)*scale,width:w*scale,depth:d*scale,height:kind==='room'?.04:2.8,label,...extra,evidence:{source:site.source,asset:site.sourceAsset.file,sourcePixel:{x,y:z},location:'source-traced-estimate',height:'assumed'}});
+  for(const [i,[x,z]] of [[269,259],[269,495],[1368,259],[1368,495]].entries())add('stairs','dongtan-stairs-'+i,x,z,26,36,'계단',{steps:20});
+  add('lift','dongtan-lift-0',269,585.5,26,25,'서측 승강기');add('lift','dongtan-lift-1',1368,583.5,26,27,'동측 승강기');
+  add('room','dongtan-ps-west',262,434.5,20,59,'서측 PS · 설비 샤프트');add('room','dongtan-ps-east',1374.5,434.5,21,59,'동측 PS · 설비 샤프트');
+  for(const [i,[x,z]] of [370,467].flatMap(z=>[254,340,502,1084,1206,1295,1383].map(x=>[x,z])).entries())add('column','dongtan-column-'+i,x,z,6,6,'기둥 '+(i+1));
+  add('room','dongtan-open',760,421,490,265,'OPEN · 하부 공간 (통행 차로 아님)');
+ }else if(site.siteId==='parking-168780'){
+  const h=site.id.endsWith('-1')?441:438,scale=plan.width/905;
   const add=(kind,id,x,z,w,d,label,extra={})=>objects.push({kind,id,x:(x-452.5)*scale,z:(z-h/2)*scale,width:w*scale,depth:d*scale,height:kind==='room'?.04:3,label,...extra,evidence:{source:site.source,asset:site.sourceAsset.file,location:'source-traced-estimate',height:'assumed'}});
   for(const [i,[x,z]] of [[158,151],[158,290],[805,151],[805,290]].entries())add('stairs','dongtan-stairs-'+i,x,z,14,26,'계단',{steps:20});
   for(const [i,x] of [156,807].entries())add('lift','dongtan-lift-'+i,x,254,12,32,'승강기');
-  if(site.id.endsWith('-0')){
-   for(const [i,[x,z]] of [[155,220],[203,220],[294,220],[639,220],[711,220],[757,220],[804,220],[155,276],[203,276],[294,276],[639,276],[711,276],[757,276],[804,276]].entries())add('column','dongtan-column-'+i,x,z,4,4,'기둥 '+(i+1));
-   add('room','dongtan-open',458,258,290,165,'중앙 공개공지');
-  }else if(site.id.endsWith('-1')){
+  if(site.id.endsWith('-1')){
    add('room','dongtan-west-terrace',246,223,95,112,'퍼블릭 라운지');add('room','dongtan-east-terrace',721,227,94,112,'퍼블릭 라운지');
   }else{
    for(const [i,x,z,w,d,label] of [[0,313,344,100,44,'주차장 운영 사무실'],[1,400,344,89,44,'기계실'],[2,508,344,38,44,'발전기실'],[3,568,344,77,44,'전기실'],[4,658,344,97,44,'매표·대기 공간'],[5,513,165,249,60,'다목적 야외광장']])add('room','dongtan-room-'+i,x,z,w,d,label);

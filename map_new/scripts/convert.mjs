@@ -14,6 +14,7 @@ import {normalizeStation} from '../src/core/radio.js';
 import {enrichObjects} from './semantic-objects.mjs';
 import {detectParking,matchReviewedParking} from '../src/core/detect-parking.js';
 import {daecheonSvg,DAE_SCALE} from './daecheon.mjs';
+import {dongtanSvg,applyDongtanReview} from './dongtan.mjs';
 import {runVision} from './vision.mjs';
 import {applyRasterEvidence} from '../src/core/raster-evidence.js';
 const root=fileURLToPath(new URL('../public/',import.meta.url)),sha=b=>createHash('sha256').update(b).digest('hex');
@@ -21,6 +22,7 @@ await mkdir(path.join(root,'generated'),{recursive:true});
 await writeFile(path.join(root,'sources/integration-lab.svg'),fixtureSvg());
 await writeFile(path.join(root,'sources/neonadeuli-layers.svg'),neonadeuliSvg());
 await writeFile(path.join(root,'sources/daecheon-layers.svg'),daecheonSvg());
+await writeFile(path.join(root,'sources/dongtan-1f-layers.svg'),dongtanSvg());
 execFileSync('python3',[fileURLToPath(new URL('./extract-osm.py',import.meta.url))],{stdio:'inherit'});
 const context=JSON.parse(await readFile(path.join(root,'generated/neonadeuli-context.json')));
 const sites=JSON.parse(await readFile(path.join(root,'sources/catalog.json')));
@@ -30,6 +32,7 @@ sites.push({id:'integration-lab',name:'도로 → 주차·EV · 검증용 시나
 for(const site of sites){
   if(site.siteId==='10000901')site.annotation='sources/neonadeuli-layers.svg';
   if(site.id==='parking-131601-0')site.annotation='sources/daecheon-layers.svg';
+  if(site.id==='parking-168780-0')site.annotation='sources/dongtan-1f-layers.svg';
   const bytes=await readFile(path.join(root,site.sourceAsset.file));
   if(site.sourceAsset.sha256&&sha(bytes)!==site.sourceAsset.sha256)throw Error(`Source hash mismatch: ${site.id}`);
   let plan,pixels;
@@ -53,6 +56,10 @@ for(const site of sites){
   plan.id=site.id;plan.name=site.name;plan.sourceAsset=site.sourceAsset.file;
   plan=annotateParking(plan,site);
   plan=enrichObjects(plan,site);
+  if(site.id==='parking-168780-0'){
+    plan=applyDongtanReview(plan,site);
+    site.parkingEvidence={floor:'1F',note:'도면 치수선으로 축척 보정 · 서측/동측 차로별 일방통행 안내. 주차면 앞 도착까지만 제공하며 층간 램프는 아직 연결하지 않았습니다.'};
+  }
   if(site.siteId==='10000901')plan.parkingAccess=plan.spaces.map((s,i)=>({spaceId:s.id,nodeId:i===0?'entrance':i===1?'P2':'P3',source:site.source,method:'source-reviewed-adjacent-lane',surveyed:false}));
   if(site.id==='parking-131601-0'){
     plan.parkingAccess=plan.spaces.filter(s=>!s.accessible).map(s=>{const x=s.id.startsWith('west')?(70-1000)*DAE_SCALE:s.x,z=s.id.startsWith('west')?s.z:(298.5-1513/2)*DAE_SCALE;const node=plan.nodes.find(n=>Math.hypot(n.x-x,n.z-z)<.0001);return {spaceId:s.id,nodeId:node?.id,source:site.source,method:'source-reviewed-adjacent-lane',arrival:'aisle',surveyed:false};});

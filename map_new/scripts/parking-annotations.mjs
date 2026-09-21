@@ -8,7 +8,7 @@ export function annotateParking(plan,site){
   row('north',18,188,51,23,45,24,0);row('front',21,115,155,23,44,24,0);
   row('west',8,76,202,43,23,0,24);
   row('accessible',2,636,155,28,44,33,0,{accessible:true,label:'장애인 전용 주차'});
- }else if(site.id==='parking-168780-0'){
+ }else if(site.id==='parking-168780-0'&&plan.layoutType!=='source-traced'){
   width=905;height=484;
   for(const [i,y] of [148,163,263,281,297,312].entries())row('west-compact-'+i,1,189,y,26,14,0,0);
   for(const [i,y] of [186,205,225,244].entries())row('west-outer-'+i,1,182,y,36,17,0,0);

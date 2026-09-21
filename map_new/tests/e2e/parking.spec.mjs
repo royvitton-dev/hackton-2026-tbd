@@ -127,6 +127,26 @@ test('guides to a clicked source parking bay through the real drawing aisles and
   const arrived=await page.evaluate(()=>{const s=window.__parking.state;return {pose:s.pose,destination:s.route.destination};});expect(arrived.pose.x).toBeCloseTo(arrived.destination.x);expect(arrived.pose.z).toBeCloseTo(arrived.destination.z);
   await page.locator('#car-width').fill('7');await page.locator('#car-width').blur();await expect(page.locator('#play')).toBeDisabled();
 });
+test('follows Dongtan one-way aisles and offers an explicit origin change for the separate east deck',async({page})=>{
+  await open(page,'parking-168780-0');await expect(page.locator('#play')).toBeEnabled();
+  await expect(page.locator('#start-node')).toHaveValue('west-deck-start');await expect(page.locator('#destination')).toHaveValue('approach:west-inner-8-1');
+  const initial=await page.evaluate(()=>{const {plan,route}=window.__parking.state;return {access:plan.parkingAccess.length,walls:plan.walls.length,objects:plan.objects.length,ids:route.ids,protectedOptions:[...document.querySelector('#destination').options].some(o=>/장애인|전용 표시/.test(o.text))};});
+  expect(initial).toMatchObject({access:13,walls:48,objects:23,protectedOptions:false});
+  await page.locator('#destination').selectOption('approach:east-inner-6-1');await expect(page.locator('#play')).toBeDisabled();
+  await expect(page.locator('#route-message')).toContainText('동측 1층 차로');await expect(page.locator('#route-origin')).toBeVisible();
+  expect(await page.evaluate(()=>window.__parking.state.route)).toBeNull();await expect(page.locator('#start-node')).toHaveValue('west-deck-start');
+  await page.locator('#car-width').fill('6');await page.locator('#car-width').blur();await expect(page.locator('#route-origin')).toBeHidden();await expect(page.locator('#play')).toBeDisabled();
+  await page.locator('#car-width').fill('1.9');await page.locator('#car-width').blur();await expect(page.locator('#route-origin')).toBeVisible();
+  await page.locator('#route-origin').click();await expect(page.locator('#start-node')).toHaveValue('east-deck-start');await expect(page.locator('#route-origin')).toBeHidden();await expect(page.locator('#play')).toBeEnabled();
+  const east=await page.evaluate(()=>window.__parking.state.route);expect(east.approach.spaceId).toBe('east-inner-6-1');expect(east.distance).toBeGreaterThan(19);
+  await screenshot(page,'dongtan-parking-route.png');
+  await page.locator('#speed').selectOption('4');await page.locator('#play').click();await expect(page.locator('#play')).toHaveText('✓ 도착했습니다',{timeout:15000});
+  const arrived=await page.evaluate(()=>{const s=window.__parking.state;return {pose:s.pose,destination:s.route.destination};});expect(arrived.pose.x).toBeCloseTo(arrived.destination.x);expect(arrived.pose.z).toBeCloseTo(arrived.destination.z);
+  await page.locator('#start-node').selectOption('west-vehicle-exit');await page.locator('#destination').selectOption('approach:west-inner-8-1');await expect(page.locator('#play')).toBeDisabled();
+  await page.locator('#route-origin').click();await expect(page.locator('#start-node')).toHaveValue('west-deck-start');await page.locator('#destination').selectOption('west-vehicle-exit');await expect(page.locator('#play')).toBeEnabled();
+  await page.locator('.visual-controls summary').click();await page.locator('#drawing-info').click();await expect(page.locator('#dialog-content')).toContainText('X1–X12');await expect(page.locator('#dialog-content')).toContainText('PS · 설비 샤프트');await expect(page.locator('#dialog-content')).toContainText('원본 기재 주차 87면 / 현재 구획 31면');
+  await page.getByRole('button',{name:'닫기',exact:true}).click();await page.setViewportSize({width:390,height:844});await page.locator('#destination').selectOption('approach:east-inner-6-1');await page.locator('#route-origin').click();await expect(page.locator('#play')).toBeEnabled();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);
+});
 test('compares native drawings, grayscale and overlapping tiles across the entire library',async({page})=>{
   await open(page,'parking-131601-0');const route=await page.evaluate(()=>window.__parking.state.route.ids);
   await page.locator('.visual-controls summary').click();await page.locator('#analysis-open').click();

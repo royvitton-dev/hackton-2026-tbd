@@ -31,7 +31,7 @@ export function validatePlan(plan) {
   if(plan.objects!==undefined){if(!Array.isArray(plan.objects)||plan.objects.length>2000)throw Error('오브젝트 목록이 잘못되었습니다.');const ids=new Set();for(const o of plan.objects){if(!o.id||ids.has(o.id)||!['column','stairs','lift','room','door','ramp'].includes(o.kind)||![o.x,o.z,o.width,o.depth,o.height].every(finite)||Math.min(o.width,o.depth,o.height)<=0)throw Error('오브젝트의 종류·크기·좌표를 확인하세요.');ids.add(o.id);if(o.kind==='stairs'&&(!Number.isInteger(o.steps)||o.steps<2||o.steps>100))throw Error('계단 단수가 잘못되었습니다.');if(o.kind==='ramp'&&(!Array.isArray(o.path)||o.path.length<2||!o.path.every(p=>[p.x,p.y,p.z].every(finite))))throw Error('램프 경로가 잘못되었습니다.');}}
   if(plan.parkingAccess!==undefined){
     if(!Array.isArray(plan.parkingAccess))throw Error('주차면과 차로의 연결을 확인하세요.');
-    const seen=new Set();for(const a of plan.parkingAccess){if(!a||!spaces.has(a.spaceId)||!nodes.has(a.nodeId)||seen.has(a.spaceId))throw Error('주차면과 차로의 연결을 확인하세요.');seen.add(a.spaceId);}
+    const seen=new Set();for(const a of plan.parkingAccess){if(!a||!spaces.has(a.spaceId)||!nodes.has(a.nodeId)||seen.has(a.spaceId)||(a.startNodeId!==undefined&&!nodes.has(a.startNodeId)))throw Error('주차면과 차로의 연결을 확인하세요.');seen.add(a.spaceId);}
   }
   if(plan.parkingDetection!==undefined){
     const items=plan.parkingDetection?.spaces,ids=new Set();

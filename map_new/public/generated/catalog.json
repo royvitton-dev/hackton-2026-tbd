@@ -3780,10 +3780,7 @@
     },
     "parkingEvidence": {
       "floor": "1F",
-      "note": "양쪽 차량 주차 구획과 중앙 램프",
-      "method": "원본 평면도 시각 검토",
-      "verifiedAt": "2026-09-21",
-      "currentFacilityStatus": "not-surveyed"
+      "note": "도면 치수선으로 축척 보정 · 서측/동측 차로별 일방통행 안내. 주차면 앞 도착까지만 제공하며 층간 램프는 아직 연결하지 않았습니다."
     },
     "scaleStatus": "estimated",
     "metersAcross": 123.73046875,
@@ -3810,6 +3807,7 @@
       "selectedWidth": 1536,
       "selectedHeight": 822
     },
+    "annotation": "sources/dongtan-1f-layers.svg",
     "rasterAnalysis": {
       "file": "analysis/parking-168780-0/analysis.json",
       "tileCount": 2,
@@ -3818,23 +3816,23 @@
         "width": 1536,
         "height": 822
       },
-      "modelPolicy": "automatic-structural-strokes"
+      "modelPolicy": "reviewed-preserved"
     },
     "modelFile": "generated/parking-168780-0.json",
     "statistics": {
-      "walls": 120,
-      "nodes": 0,
-      "edges": 0,
+      "walls": 48,
+      "nodes": 19,
+      "edges": 17,
       "spaces": 31,
-      "objects": 21,
+      "objects": 23,
       "accessible": 12,
       "ocrLabels": 40,
-      "triangles": 1440,
+      "triangles": 576,
       "detectedParking": 17,
       "matchedParking": 9
     },
-    "routingReady": false,
-    "modelHash": "8235d8c885af9b0862d16fdd70f9ca2e76aa16aba604b0736b9cb73f97cc6fad",
+    "routingReady": true,
+    "modelHash": "9fd1014a07e1220a5df44fa9d266f762477a33f20e46aaca9256e8eda7678108",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
