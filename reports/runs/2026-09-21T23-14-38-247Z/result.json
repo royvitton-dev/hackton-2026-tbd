@@ -1,6 +1,6 @@
 {
-  "id": "2026-09-21T23-23-42-343Z",
-  "at": "2026-09-21T23:23:42.343Z",
+  "id": "2026-09-21T23-14-38-247Z",
+  "at": "2026-09-21T23:14:38.247Z",
   "inventory": {
     "places": 45,
     "drawings": 63,
@@ -33,9 +33,9 @@
     "contextMaps": 3
   },
   "branch": "atlas/parking-twin-20260922",
-  "git": "90951d4a2c330ed6f38f75f77940ec66eaeddb33",
-  "sourceDigest": "963b1692e5237f68edf4d1968f093439d4d9868133477156f6f8fe6946841dd4",
-  "status": "passed",
+  "git": "e57235e9c77bd5d5abccf5fcb93fad23da6ea49c",
+  "sourceDigest": "eb085da5e9c55530ed448cfc71782abd981885675dde96eeffb092a131fff04b",
+  "status": "failed",
   "steps": [
     {
       "name": "convert",
@@ -62,11 +62,10 @@
       "finishedAt": "2026-09-21T23:15:47.192Z"
     },
     {
-      "name": "e2e-resolved",
-      "exitCode": 0,
+      "name": "e2e",
+      "exitCode": 1,
       "startedAt": "2026-09-21T23:15:47.192Z",
-      "finishedAt": "2026-09-21T23:23:42.343Z",
-      "originalExitCode": 1
+      "finishedAt": "2026-09-21T23:22:12.461Z"
     },
     {
       "name": "router",
@@ -81,8 +80,8 @@
     "total": 84
   },
   "e2e": {
-    "passed": 28,
-    "failed": 0,
+    "passed": 27,
+    "failed": 1,
     "total": 28
   },
   "coverage": {
@@ -118,11 +117,10 @@
     }
   },
   "previous": {
-    "id": "2026-09-21T23-14-38-247Z",
-    "status": "failed"
+    "id": "2026-09-21T22-47-13-195Z",
+    "status": "passed"
   },
   "changes": [
-    "전체 브라우저 실행 27개 통과 후, 추가된 출구·출차 항목을 포함한 목록 개수 가정 1건을 수정해 재실행했습니다. 진입 52개·출구 52개·구획 출차 50개와 주차면 클릭·도착 검증이 통과했습니다. 제품 코드는 전체 실행 이후 변경하지 않았습니다. 원 실패와 재실행 로그를 보존합니다.",
     "187개 주차면의 출구 방향 경로를 추가했습니다. 외부 차로·출구 73면과 도면 경계 114면을 구분하고 구획 내부 출차의 방향·기어 전환·차체 충돌을 검사합니다.",
     "주차 정보가 확인된 4개 도면의 187면 모두에 접근 경로를 연결했습니다. 실제 도면 진입 시 가장 먼 일반 주차면으로 자동 안내하며 주차 정보가 없는 도면에는 차량 경로를 제공하지 않습니다.",
     "1인칭 시점을 차량 정면·경사에 고정하고 속도·기어·남은 거리 대시보드, 자동·수동 조향의 좌우 방향지시등, 정지 후 시선 유지를 추가했습니다.",
@@ -167,12 +165,5 @@
     "skipped": 0,
     "failures": []
   },
-  "sourceBefore": "963b1692e5237f68edf4d1968f093439d4d9868133477156f6f8fe6946841dd4",
-  "verificationMode": "full-baseline-plus-focused-test-correction",
-  "baseline": {
-    "id": "2026-09-21T23-14-38-247Z",
-    "git": "e57235e9c77bd5d5abccf5fcb93fad23da6ea49c",
-    "sourceDigest": "eb085da5e9c55530ed448cfc71782abd981885675dde96eeffb092a131fff04b",
-    "status": "failed"
-  }
+  "sourceBefore": "eb085da5e9c55530ed448cfc71782abd981885675dde96eeffb092a131fff04b"
 }

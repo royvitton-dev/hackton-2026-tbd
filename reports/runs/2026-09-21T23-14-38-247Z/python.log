@@ -1,0 +1,13 @@
+test_contrast_recovers_pale_colored_wall_without_transparent_ink (test_drawing_analysis.DrawingAnalysisTest.test_contrast_recovers_pale_colored_wall_without_transparent_ink) ... ok
+test_detects_diagonal_stroke_and_leaves_blank_and_context_maps_unmodeled (test_drawing_analysis.DrawingAnalysisTest.test_detects_diagonal_stroke_and_leaves_blank_and_context_maps_unmodeled) ... ok
+test_full_resolution_recovers_wall_crossing_multiple_tiles (test_drawing_analysis.DrawingAnalysisTest.test_full_resolution_recovers_wall_crossing_multiple_tiles) ... ok
+test_gray_ground_fill_and_large_title_are_not_structural_walls (test_drawing_analysis.DrawingAnalysisTest.test_gray_ground_fill_and_large_title_are_not_structural_walls) ... ok
+test_merge_keeps_door_opening_and_parallel_walls_separate (test_drawing_analysis.DrawingAnalysisTest.test_merge_keeps_door_opening_and_parallel_walls_separate) ... ok
+test_pairs_hollow_wall_but_not_repeated_stair_treads (test_drawing_analysis.DrawingAnalysisTest.test_pairs_hollow_wall_but_not_repeated_stair_treads) ... ok
+test_text_regions_are_excluded_but_large_ocr_boxes_do_not_erase_plan (test_drawing_analysis.DrawingAnalysisTest.test_text_regions_are_excluded_but_large_ocr_boxes_do_not_erase_plan) ... ok
+test_tiles_cover_original_and_overlap_even_at_partial_edges (test_drawing_analysis.DrawingAnalysisTest.test_tiles_cover_original_and_overlap_even_at_partial_edges) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.176s
+
+OK

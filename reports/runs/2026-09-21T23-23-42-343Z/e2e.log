@@ -1,0 +1,86 @@
+[2m[WebServer] [22m(node:83190) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m{"event":"trading_start_failed","code":"TRADING_START_FAILED","message":"Demo port 5175 is unavailable on 127.0.0.1 (EADDRINUSE); existing processes were not changed"}
+
+Running 28 tests using 1 worker
+
+(node:83193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:83193) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/departure.spec.mjs:3:1 › offers all outbound routes, identifies a drawing boundary and keeps restricted or undersized bays out of internal departure (15.5s)
+  ✓   2 tests/e2e/departure.spec.mjs:9:1 › starts inside the selected bay and animates departure through gear changes to the external aisle (22.9s)
+  ✓   3 tests/e2e/driving.spec.mjs:5:1 › automatically drives the longest feasible route on all parking plans and limits the route library to parking drawings (14.4s)
+  ✓   4 tests/e2e/driving.spec.mjs:14:1 › keeps first person aligned with the nose and incline, renders the dashboard, and preserves heading after manual steering (26.4s)
+  ✓   5 tests/e2e/driving.spec.mjs:30:1 › lists every bay approach, switches source-supported origins and updates coverage for changed vehicle dimensions (5.5s)
+  ✓   6 tests/e2e/maneuver.spec.mjs:5:1 › reverses into an actual Daecheon bay, pauses for shifts and finishes with the nose facing the aisle (15.9s)
+  ✓   7 tests/e2e/maneuver.spec.mjs:15:1 › drives the source ramp with pitch, reports the height assumption and rejects insufficient grade allowance (31.0s)
+  ✓   8 tests/e2e/maneuver.spec.mjs:22:1 › connects two synthetic floors to an elevated bay, isolates floors and keeps all controls reachable on mobile (14.3s)
+  ✓   9 tests/e2e/maneuver.spec.mjs:32:1 › cancels stale parking calculations when the user changes drawings and shows source doors and colored signs (7.5s)
+  ✓  10 tests/e2e/parking.spec.mjs:8:1 › public B2 source converts to actual WebGL meshes, with original and data export (16.7s)
+  ✓  11 tests/e2e/parking.spec.mjs:15:1 › drives through exterior road and entrance to EV, supports cameras and pauses (6.1s)
+  ✓  12 tests/e2e/parking.spec.mjs:26:1 › fire starts at current position, switches to human and fails closed when exits are blocked (5.0s)
+  ✓  13 tests/e2e/parking.spec.mjs:33:1 › photo-derived facade and mapped buildings preserve geographic source attribution (11.9s)
+  ✓  14 tests/e2e/parking.spec.mjs:39:1 › imports semantic SVG and rejects executable and corrupt input without losing current scene (4.5s)
+  ✓  15 tests/e2e/parking.spec.mjs:44:1 › actual Naver-located building routes from acquired OSM road through the drawn entrance (6.8s)
+  ✓  16 tests/e2e/parking.spec.mjs:48:1 › parks inside a source bay with suitable dimensions and previews a proposed charger destination (11.3s)
+  ✓  17 tests/e2e/parking.spec.mjs:57:1 › mobile source selection and 3D controls remain usable without horizontal overflow (4.1s)
+  ✓  18 tests/e2e/parking.spec.mjs:62:1 › existing park exposes the new attraction, shared launch route and root quality dashboard (22.9s)
+  ✓  19 tests/e2e/parking.spec.mjs:66:1 › real place inventory includes parks and public parking without counting floors as buildings (15.1s)
+  ✓  20 tests/e2e/parking.spec.mjs:74:1 › actual station data drives disclosed green and red screening, filters and export (15.7s)
+  ✓  21 tests/e2e/parking.spec.mjs:85:1 › accessible bays stay visible, realistic objects accept multiple textures and drawing details preserve OCR (19.3s)
+  ✓  22 tests/e2e/parking.spec.mjs:94:1 › mobile charging settings and all drawing information remain reachable (6.6s)
+  ✓  23 tests/e2e/parking.spec.mjs:99:1 › imports an actual PDF and keeps its drawing preview separate from the previously selected source (6.8s)
+  ✓  24 tests/e2e/parking.spec.mjs:105:1 › shows detected parking as review candidates while preserving high-resolution provenance and charging inputs (13.5s)
+  ✘  25 tests/e2e/parking.spec.mjs:120:1 › guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls (24.7s)
+(node:96897) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:96897) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  26 tests/e2e/parking.spec.mjs:130:1 › follows Dongtan one-way aisles and offers an explicit origin change for the separate east deck (15.0s)
+  ✓  27 tests/e2e/parking.spec.mjs:150:1 › compares native drawings, grayscale and overlapping tiles across the entire library (14.3s)
+  ✓  28 tests/e2e/parking.spec.mjs:167:1 › serves all native artifacts and provides usable mobile tile zoom without affecting source routes (5.8s)
+
+
+  1) tests/e2e/parking.spec.mjs:120:1 › guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls 
+
+    Error: [2mexpect([22m[31mlocator[39m[2m).[22mtoHaveCount[2m([22m[32mexpected[39m[2m)[22m failed
+
+    Locator:  locator('#destination option')
+    Expected: [32m52[39m
+    Received: [31m154[39m
+    Timeout:  20000ms
+
+    Call log:
+    [2m  - Expect "toHaveCount" with timeout 20000ms[22m
+    [2m  - waiting for locator('#destination option')[22m
+    [2m    23 × locator resolved to 154 elements[22m
+    [2m       - unexpected value "154"[22m
+
+
+      120 | test('guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls',async({page})=>{
+      121 |   await open(page,'parking-131601-0');await expect(page.locator('#destination')).toHaveValue('approach:west-9');await expect(page.locator('#play')).toBeEnabled();
+    > 122 |   await expect(page.locator('#destination option')).toHaveCount(52);await expect(page.locator('#route-message')).toContainText('주차면 앞');
+          |                                                     ^
+      123 |   const click=await page.evaluate(()=>{const scene=window.__parking.scene,p=scene.parkingPickers.find(m=>m.userData.spaceId==='west-5').position.clone().project(scene.camera),r=scene.canvas.getBoundingClientRect();return {x:r.left+(p.x+1)*r.width/2,y:r.top+(1-p.y)*r.height/2};});
+      124 |   await page.mouse.click(click.x,click.y);await expect(page.locator('#destination')).toHaveValue('approach:west-5');
+      125 |   expect(await page.evaluate(()=>window.__parking.state.route.approach.spaceId)).toBe('west-5');await screenshot(page,'daecheon-parking-route.png');
+        at /private/tmp/atlas-parking-publish/map_new/tests/e2e/parking.spec.mjs:122:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/parking-guides-to-a-clicke-f053e-ives-without-crossing-walls/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/parking-guides-to-a-clicke-f053e-ives-without-crossing-walls/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/parking-guides-to-a-clicke-f053e-ives-without-crossing-walls/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/parking-guides-to-a-clicke-f053e-ives-without-crossing-walls/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/parking.spec.mjs:120:1 › guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls 
+  27 passed (6.4m)
