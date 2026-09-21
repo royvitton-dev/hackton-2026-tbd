@@ -1,0 +1,25 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`deterministic two-lap racing > matches the race algorithm golden result 1`] = `
+{
+  "duration": 48.9,
+  "eventCounts": {
+    "blocked": 1,
+    "hit": 20,
+    "item": 27,
+    "overtake": 6,
+  },
+  "finishes": [
+    48.7383,
+    48.3618,
+    47.0446,
+    48.8518,
+  ],
+  "order": [
+    "demo-3",
+    "demo-2",
+    "demo-1",
+    "demo-4",
+  ],
+}
+`;

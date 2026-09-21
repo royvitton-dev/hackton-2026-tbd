@@ -1,0 +1,43 @@
+
+> brew-racers@1.0.0 test:coverage
+> vitest run --coverage
+
+
+ RUN  v4.1.11 /Users/jonghokim/Workspace/hackerton/dopamin
+      Coverage enabled with v8
+
+ ✓ tests/unit/coffee.test.ts (10 tests) 17ms
+ ✓ tests/unit/voice.test.ts (29 tests) 41ms
+ ✓ tests/unit/geometry.test.ts (8 tests) 39ms
+ ✓ tests/unit/audio.test.ts (27 tests) 142ms
+ ✓ tests/unit/presentation.test.ts (15 tests) 53ms
+ ✓ tests/unit/characters.test.ts (9 tests) 199ms
+ ✓ tests/unit/storage.test.ts (6 tests) 530ms
+     ✓ keeps the newest ten races and deduplicates IDs  448ms
+ ✓ tests/unit/race.test.ts (58 tests) 796ms
+
+ Test Files  8 passed (8)
+      Tests  162 passed (162)
+   Start at  10:09:36
+   Duration  1.09s (transform 519ms, setup 0ms, import 925ms, tests 1.82s, environment 1ms)
+
+JSON report written to /Users/jonghokim/Workspace/hackerton/dopamin/reports/unit/results.json
+ % Coverage report from v8
+------------------|---------|----------|---------|---------|-------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------|---------|----------|---------|---------|-------------------
+All files         |   98.88 |    97.72 |   96.75 |     100 |                   
+ audio            |   99.35 |    98.66 |      95 |     100 |                   
+  raceSound.ts    |   98.63 |    97.36 |   90.47 |     100 | 26,59,79          
+ core             |   98.52 |    97.11 |   97.36 |     100 |                   
+  race.ts         |   98.97 |    97.66 |     100 |     100 | 101-106,127,138   
+  storage.ts      |   91.83 |    33.33 |   89.65 |     100 | 24-25             
+  voice.ts        |     100 |       98 |     100 |     100 | 35                
+------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 98.88% ( 709/717 )
+Branches     : 97.72% ( 558/571 )
+Functions    : 96.75% ( 149/154 )
+Lines        : 100% ( 387/387 )
+================================================================================

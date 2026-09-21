@@ -1,0 +1,12 @@
+{
+  "name": "vitalis-hackathon-film",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "capture": "node scripts/capture-demo.mjs",
+    "audio": "node scripts/audio.mjs",
+    "render": "node scripts/render.mjs"
+  }
+}

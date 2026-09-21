@@ -1,0 +1,989 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+      "/Users/jonghokim/Workspace/hackerton/dopamin/node_modules/.bin/playwright",
+      "test",
+      "--config=playwright.production.config.ts",
+      "--grep-invert",
+      "deterministic pause",
+      "--update-snapshots=all",
+      "--max-failures=1"
+    ],
+    "configFile": "/Users/jonghokim/Workspace/hackerton/dopamin/playwright.production.config.ts",
+    "rootDir": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "e2e",
+        "name": "e2e",
+        "testDir": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/(app|audio|characters|podium|coffee)\\.spec\\.ts/"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "golden",
+        "name": "golden",
+        "testDir": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/golden\\.spec\\.ts/"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/e2e",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/e2e/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "all",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "app.spec.ts",
+      "file": "app.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "renders WebGL, all six tracks and responsive lobby without console errors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 23539,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T01:10:14.174Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-23ecd2ba3469ba1b3060",
+          "file": "app.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "registers up to eight racers, rejects duplicate names, persists and deletes profiles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 41409,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T01:10:37.904Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-2c8b95160c83709b6b6f",
+          "file": "app.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "handles denied microphone permissions and supports manual order entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7693,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T01:11:19.323Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-114fa55528441be4f9b9",
+          "file": "app.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "records audio, transcribes nickname, identifies the same local voice and saves its drink",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24351,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T01:11:27.025Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-eaba47009abaf702a1d9",
+          "file": "app.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "runs two laps, celebrates last place, loops highlights, downloads and replays logs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 73239,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T01:11:51.383Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-5a4328d894cef7b10baf",
+          "file": "app.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "imports valid replay JSON and rejects corrupted files with a helpful message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6980,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T01:13:04.629Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-f48e0924d4f616a561ba",
+          "file": "app.spec.ts",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "keyboard closes modal and keeps help reachable on a phone",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4577,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T01:13:11.616Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-fac296db7d12b8eb50e2",
+          "file": "app.spec.ts",
+          "line": 80,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "audio.spec.ts",
+      "file": "audio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "BGM produces real audio, obeys mute/pause/recording and remembers the setting",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 490379,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.0001\u001b[39m\nReceived:   \u001b[31m0.010761458426713943\u001b[39m\n\nCall Log:\n- Timeout 12000ms exceeded while waiting on the predicate",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.0001\u001b[39m\nReceived:   \u001b[31m0.010761458426713943\u001b[39m\n\nCall Log:\n- Timeout 12000ms exceeded while waiting on the predicate\n    at /Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/audio.spec.ts:31:104",
+                    "location": {
+                      "file": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/audio.spec.ts",
+                      "column": 104,
+                      "line": 31
+                    },
+                    "snippet": "  29 |   await page.getByRole('button',{name:'레이서 추가',exact:true}).click();await expect.poll(()=>level(page)).toBeLessThan(.0001);\n  30 |   await page.getByRole('button',{name:'닫기',exact:true}).click();await expect.poll(()=>level(page)).toBeGreaterThan(.002);\n> 31 |   await page.getByRole('button',{name:'사운드 끄기',exact:true}).click();await expect.poll(()=>level(page)).toBeLessThan(.0001);\n     |                                                                                                        ^\n  32 |   await page.reload();await expect(page.getByRole('button',{name:'사운드 켜기',exact:true})).toBeVisible();await expect.poll(()=>level(page)).toBeLessThan(.0001);\n  33 |   await page.getByRole('button',{name:'사운드 켜기',exact:true}).click();await expect.poll(()=>level(page)).toBeGreaterThan(.002);expect(errors).toEqual([]);\n  34 | });"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/audio.spec.ts",
+                        "column": 104,
+                        "line": 31
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeLessThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: < \u001b[32m0.0001\u001b[39m\nReceived:   \u001b[31m0.010761458426713943\u001b[39m\n\nCall Log:\n- Timeout 12000ms exceeded while waiting on the predicate\n\n  29 |   await page.getByRole('button',{name:'레이서 추가',exact:true}).click();await expect.poll(()=>level(page)).toBeLessThan(.0001);\n  30 |   await page.getByRole('button',{name:'닫기',exact:true}).click();await expect.poll(()=>level(page)).toBeGreaterThan(.002);\n> 31 |   await page.getByRole('button',{name:'사운드 끄기',exact:true}).click();await expect.poll(()=>level(page)).toBeLessThan(.0001);\n     |                                                                                                        ^\n  32 |   await page.reload();await expect(page.getByRole('button',{name:'사운드 켜기',exact:true})).toBeVisible();await expect.poll(()=>level(page)).toBeLessThan(.0001);\n  33 |   await page.getByRole('button',{name:'사운드 켜기',exact:true}).click();await expect.poll(()=>level(page)).toBeGreaterThan(.002);expect(errors).toEqual([]);\n  34 | });\n    at /Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/audio.spec.ts:31:104"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T01:13:16.216Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results/audio-BGM-produces-real-au-eb0d6-g-and-remembers-the-setting-e2e/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results/audio-BGM-produces-real-au-eb0d6-g-and-remembers-the-setting-e2e/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results/audio-BGM-produces-real-au-eb0d6-g-and-remembers-the-setting-e2e/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/audio.spec.ts",
+                    "column": 104,
+                    "line": 31
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-3b5cc6da03645f17d2fd",
+          "file": "audio.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "renders non-silent unclipped music and distinct item samples through real Web Audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-ca148503dc1353c6ef6b",
+          "file": "audio.spec.ts",
+          "line": 36,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "characters.spec.ts",
+      "file": "characters.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "shows eight Nintendo heads, persists a selected character and uses it in the race",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "a244eb99ad6097541759-81e7107d66797abb8d0f",
+          "file": "characters.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "coffee.spec.ts",
+      "file": "coffee.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "the coffee hero pours and serves smiling guests during the spoken celebration, then loops highlights",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9da15fd5129258e1c873-a00764638e30e01fb34e",
+          "file": "coffee.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "all seven other racers wait for the eight-player coffee truck on a phone",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "9da15fd5129258e1c873-2c99c267228a37932b6b",
+          "file": "coffee.spec.ts",
+          "line": 25,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "podium.spec.ts",
+      "file": "podium.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "celebrates the true winner with a rising trophy, pauses, and automatically returns to coffee highlights",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "22b0c56165a3a653928f-be7c754854783f7f973c",
+          "file": "podium.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "renders a two-person podium on a phone without inventing third place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "22b0c56165a3a653928f-720e00ae864c4f469cb8",
+          "file": "podium.spec.ts",
+          "line": 20,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "golden.spec.ts",
+      "file": "golden.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop lobby golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-cefaa5dcc404fd30ca85",
+          "file": "golden.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "mobile lobby golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-d105d95ebf7a8f181e42",
+          "file": "golden.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "voice registration dialog golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-8db7b191b2a8cc2fbf7f",
+          "file": "golden.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "item-launch action golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-0319a3736cc65a69a191",
+          "file": "golden.spec.ts",
+          "line": 18,
+          "column": 12
+        },
+        {
+          "title": "ice-impact action golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-2c069fb8fa327e076414",
+          "file": "golden.spec.ts",
+          "line": 18,
+          "column": 12
+        },
+        {
+          "title": "lightning-impact action golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-9ec35b0f5cb6c69fe141",
+          "file": "golden.spec.ts",
+          "line": 18,
+          "column": 12
+        },
+        {
+          "title": "espresso-boost action golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-89d55e9a25ea8e5b5476",
+          "file": "golden.spec.ts",
+          "line": 18,
+          "column": 12
+        },
+        {
+          "title": "mobile racing HUD golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-77894e0cbed8817a5b2b",
+          "file": "golden.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Nintendo character picker desktop golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-bbce3c60e49a3691e509",
+          "file": "golden.spec.ts",
+          "line": 27,
+          "column": 34
+        },
+        {
+          "title": "Nintendo character picker mobile golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-09acd3f7df10a53e091d",
+          "file": "golden.spec.ts",
+          "line": 27,
+          "column": 34
+        },
+        {
+          "title": "winner podium desktop golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-987028ca80aca94122f7",
+          "file": "golden.spec.ts",
+          "line": 34,
+          "column": 34
+        },
+        {
+          "title": "winner podium mobile golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-e632c2bf52a7dc310790",
+          "file": "golden.spec.ts",
+          "line": 34,
+          "column": 34
+        },
+        {
+          "title": "coffee truck desktop golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-fc1d97600241aa3e61c3",
+          "file": "golden.spec.ts",
+          "line": 40,
+          "column": 34
+        },
+        {
+          "title": "coffee truck mobile golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-1095e75a1b1a53b09505",
+          "file": "golden.spec.ts",
+          "line": 40,
+          "column": 34
+        },
+        {
+          "title": "roastery integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-d612b3620b64439accf0",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "coast integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-6b633cc2bc12aabdf0dc",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "forest integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-859015447c38da41e532",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "city integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-a7c03deb1ad12ec63a5b",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "snow integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-e95c05d0313f5619a9c1",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "volcano integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-0645a41695fa436f8e0c",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-09-21T01:10:13.745Z",
+    "duration": 673101.987,
+    "expected": 7,
+    "skipped": 26,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

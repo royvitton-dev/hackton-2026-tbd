@@ -1,0 +1,87 @@
+{
+  "port": {
+    "passed": true,
+    "detail": "5173 점유 상태에서 두 번째 npm run dev가 5174를 자동 선택함. 검사 서버 종료 후 기존 5173 서버 유지."
+  },
+  "audit": {
+    "exitCode": 0,
+    "detail": "npm audit: 알려진 취약점 0개. 최종 설치한 패키지 전체 검사."
+  },
+  "build": {
+    "exitCode": 0,
+    "detail": "최종 음향·Nintendo 캐릭터·시상대·커피차·GS 광고 포함 TypeScript 및 Vite 프로덕션 빌드 통과",
+    "checkedAt": "2026-09-20T22:42:32.507460+00:00"
+  },
+  "scope": "배경음·효과음, Nintendo 캐릭터 8종, 우승 트로피 시상대 · 커피차 제작/손님 축하 장면 · GS 광고/52G 2026 해커톤 스폰서",
+  "knownIssues": [
+    {
+      "test": "replays launch, impact, block and boost effects with deterministic pause and seeking",
+      "detail": "앞선 그래픽 변경에서 정지·되감기 전후 실제 픽셀 비교가 불일치해 같은 장애 3회 중단됨. 이번 기능 검증에서는 해당 검사 1개만 명시적으로 제외. 테스트 코드와 기존 실패 증거 보존.",
+      "requiredUserInput": "중단했던 리플레이 화면 재현성 조사·수정을 재개하라는 지시",
+      "evidence": "replay-debug/index.html"
+    }
+  ],
+  "iterations": [
+    {
+      "number": 1,
+      "detail": "로비·레이스·결과용 음악, 음향 합성기와 사운드 상태 제어, Nintendo 두상 8종 및 선택 화면 구현.",
+      "result": "빌드 및 단위 검사 146개 통과"
+    },
+    {
+      "number": 2,
+      "detail": "실제 Web Audio로 출력 측정. 실드 획득과 공격 방어에 같은 음이 사용된 문제 발견. 두 효과음을 다르게 구성하고 PCM 해시로 구분 검증.",
+      "result": "음량·음소거·일시정지·음성 등록 중 정지 및 10종 음악/효과음 렌더 검사 통과"
+    },
+    {
+      "number": 3,
+      "detail": "캐릭터 버튼 안의 이미지와 체크 SVG가 같은 접근성 역할로 조회됨. 체크를 aria-hidden으로 표시하고 이미지 대체 텍스트로 선택. 시상대의 사용하지 않는 import 제거.",
+      "result": "기존 브라우저 7개·음향 2개 통과. 캐릭터 선택자 수정 및 빌드 통과"
+    },
+    {
+      "number": 4,
+      "detail": "실제 최종 순위의 1·2·3위 시상대, 트로피 상승, 9초 뒤 하이라이트, 일시정지·건너뛰기·다시 보기 구현.",
+      "result": "캐릭터 1개·시상대 2개 브라우저 검사 통과. 신규 골든 4개 생성. 데스크톱 문구와 트로피 겹침을 화면 검토에서 발견"
+    },
+    {
+      "number": 5,
+      "detail": "우승 문구와 3D 시상대의 영역 분리. 최종 단위·커버리지·빌드 검사 후 변경 화면 기준 재생성.",
+      "result": "단위 146/146·빌드 통과. 브라우저 12개 통과 및 골든 기준 12개 갱신. 이 회차는 기준 생성이며 독립 비교가 아님."
+    },
+    {
+      "number": 6,
+      "detail": "추가 요청: 꼴찌 캐릭터가 커피차에서 만들고 나머지가 웃으며 대기. 손님별 따르기·전달·수령 시간축, 대사 동기화, 우승 시상식 → 커피차 → 반복 하이라이트 연결.",
+      "result": "빌드 및 단위 156/156 통과. 커피차·시상대 브라우저 4개 통과, 관련 골든 4개 생성. 8명 모바일 화면 검토."
+    },
+    {
+      "number": 7,
+      "detail": "추가 요청: GS차지비·GS그룹·공식 명칭을 확인한 GS 계열사 6개 배너, 시상대 52G·2026 해커톤 스폰서 패널·3D 보드·조명 적용.",
+      "result": "단위 156/156·빌드·브라우저 14/14 통과. 골든 기준 14개 갱신 및 데스크톱·휴대폰 화면 육안 검토 완료."
+    },
+    {
+      "number": 8,
+      "detail": "소스 변경 없이 갱신한 골든 14개를 독립 Chrome 실행에서 비교. 앞선 브라우저 14개 결과와 별도 JSON/HTML에 보존하여 기준 생성과 비교를 구분.",
+      "result": "골든 14/14 독립 비교 통과. 최종 검증: 단위 156/156, 브라우저 14/14, 골든 14/14, 빌드 통과. 기존 엄격한 리플레이 픽셀 검사 1개는 중단 상태로 보존."
+    }
+  ],
+  "final": {
+    "status": "new-features-passed-project-incomplete",
+    "unitPassed": 156,
+    "coverageStatements": 98.88,
+    "buildPassed": true,
+    "iterations": 8,
+    "browserTarget": "development server http://127.0.0.1:5173",
+    "excludedTests": 1,
+    "fullProjectComplete": false,
+    "baselineCompared": true,
+    "knownIssueExcluded": "replays launch, impact, block and boost effects with deterministic pause and seeking",
+    "e2ePassed": 14,
+    "goldenExpected": 14,
+    "goldenPassed": 14,
+    "coverageBranches": 97.72,
+    "coverageFunctions": 96.75,
+    "coverageLines": 100,
+    "sameBlockerAttemptsThisScope": 0,
+    "checkedAt": "2026-09-20T22:42:32.507460+00:00",
+    "limitation": "앞선 변경에서 같은 장애 3회로 중단한 리플레이 엄격한 픽셀 비교 1건이 미해결. 이번에는 해당 검사만 제외했으며 전체 프로젝트 완료로 표시하지 않음."
+  }
+}

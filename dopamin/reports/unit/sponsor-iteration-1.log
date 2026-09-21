@@ -1,0 +1,61 @@
+
+> brew-racers@1.0.0 test:coverage
+> vitest run --coverage
+
+
+ RUN  v4.1.11 /Users/jonghokim/Workspace/hackerton/dopamin
+      Coverage enabled with v8
+
+ ✓ tests/unit/coffee.test.ts (10 tests) 17ms
+ ✓ tests/unit/voice.test.ts (29 tests) 67ms
+ ❯ tests/unit/geometry.test.ts (8 tests | 2 failed) 47ms
+   ✓ preserves both indexed and non-indexed kart geometry when batching one material 14ms
+   ✓ batches compatible meshes without applying a moving parent transform twice 2ms
+   ✓ keeps all eight roastery sponsor buildings clear of the road and each other 6ms
+   × keeps all eight coast sponsor buildings clear of the road and each other 8ms
+   ✓ keeps all eight forest sponsor buildings clear of the road and each other 3ms
+   ✓ keeps all eight city sponsor buildings clear of the road and each other 3ms
+   ✓ keeps all eight snow sponsor buildings clear of the road and each other 5ms
+   × keeps all eight volcano sponsor buildings clear of the road and each other 5ms
+ ✓ tests/unit/presentation.test.ts (15 tests) 41ms
+ ✓ tests/unit/audio.test.ts (27 tests) 136ms
+ ✓ tests/unit/characters.test.ts (9 tests) 237ms
+ ✓ tests/unit/storage.test.ts (6 tests) 608ms
+     ✓ keeps the newest ten races and deduplicates IDs  479ms
+ ✓ tests/unit/race.test.ts (58 tests) 859ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  tests/unit/geometry.test.ts > keeps all eight coast sponsor buildings clear of the road and each other
+AssertionError: expected 3.0484764157637745 to be greater than 18
+ ❯ tests/unit/geometry.test.ts:29:92
+     27|     expect(lot.position.y).toBe(-.25);expect(Number.isFinite(lot.rotat…
+     28|     expect(Math.min(...road.map(point=>Math.hypot(point.x-lot.position…
+     29|     for(const other of lots.slice(index+1))expect(lot.position.distanc…
+       |                                                                                            ^
+     30|     const front=new THREE.Vector3(0,0,1).applyAxisAngle(new THREE.Vect…
+     31|     expect(front.dot(curve.getPointAt(.035+index*.12).sub(lot.position…
+ ❯ tests/unit/geometry.test.ts:26:8
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  tests/unit/geometry.test.ts > keeps all eight volcano sponsor buildings clear of the road and each other
+AssertionError: expected 10.295571640771715 to be greater than 18
+ ❯ tests/unit/geometry.test.ts:29:92
+     27|     expect(lot.position.y).toBe(-.25);expect(Number.isFinite(lot.rotat…
+     28|     expect(Math.min(...road.map(point=>Math.hypot(point.x-lot.position…
+     29|     for(const other of lots.slice(index+1))expect(lot.position.distanc…
+       |                                                                                            ^
+     30|     const front=new THREE.Vector3(0,0,1).applyAxisAngle(new THREE.Vect…
+     31|     expect(front.dot(curve.getPointAt(.035+index*.12).sub(lot.position…
+ ❯ tests/unit/geometry.test.ts:26:8
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 7 passed (8)
+      Tests  2 failed | 160 passed (162)
+   Start at  09:37:57
+   Duration  1.23s (transform 531ms, setup 0ms, import 968ms, tests 2.01s, environment 1ms)
+
+JSON report written to /Users/jonghokim/Workspace/hackerton/dopamin/reports/unit/results.json

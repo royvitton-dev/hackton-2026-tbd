@@ -1,0 +1,1330 @@
+{
+  "config": {
+    "argv": [
+      "/opt/homebrew/Cellar/node/25.4.0/bin/node",
+      "/Users/jonghokim/Workspace/hackerton/dopamin/node_modules/.bin/playwright",
+      "test",
+      "--grep-invert",
+      "deterministic pause",
+      "--update-snapshots=all",
+      "--max-failures=1"
+    ],
+    "configFile": "/Users/jonghokim/Workspace/hackerton/dopamin/playwright.config.ts",
+    "rootDir": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 1,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "e2e",
+        "name": "e2e",
+        "testDir": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/(app|audio|characters|podium|coffee)\\.spec\\.ts/"
+        ],
+        "timeout": 90000
+      },
+      {
+        "outputDir": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "golden",
+        "name": "golden",
+        "testDir": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "/golden\\.spec\\.ts/"
+        ],
+        "timeout": 90000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "reports/e2e",
+          "open": "never"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/e2e/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "all",
+    "updateSourceMethod": "patch",
+    "version": "1.63.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "app.spec.ts",
+      "file": "app.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "renders WebGL, all six tracks and responsive lobby without console errors",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 22006,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:41:42.829Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-23ecd2ba3469ba1b3060",
+          "file": "app.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "registers up to eight racers, rejects duplicate names, persists and deletes profiles",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 40770,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:42:05.185Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-2c8b95160c83709b6b6f",
+          "file": "app.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "handles denied microphone permissions and supports manual order entry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7691,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:42:45.963Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-114fa55528441be4f9b9",
+          "file": "app.spec.ts",
+          "line": 28,
+          "column": 1
+        },
+        {
+          "title": "records audio, transcribes nickname, identifies the same local voice and saves its drink",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24073,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:42:53.662Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-eaba47009abaf702a1d9",
+          "file": "app.spec.ts",
+          "line": 35,
+          "column": 1
+        },
+        {
+          "title": "runs two laps, celebrates last place, loops highlights, downloads and replays logs",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 75028,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:43:17.741Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-5a4328d894cef7b10baf",
+          "file": "app.spec.ts",
+          "line": 58,
+          "column": 1
+        },
+        {
+          "title": "imports valid replay JSON and rejects corrupted files with a helpful message",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8166,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:44:32.777Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-f48e0924d4f616a561ba",
+          "file": "app.spec.ts",
+          "line": 73,
+          "column": 1
+        },
+        {
+          "title": "keyboard closes modal and keeps help reachable on a phone",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4918,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:44:40.959Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "c31ff144dc4fee3acd0a-fac296db7d12b8eb50e2",
+          "file": "app.spec.ts",
+          "line": 80,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "audio.spec.ts",
+      "file": "audio.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "BGM produces real audio, obeys mute/pause/recording and remembers the setting",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 18031,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:44:45.908Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-3b5cc6da03645f17d2fd",
+          "file": "audio.spec.ts",
+          "line": 23,
+          "column": 1
+        },
+        {
+          "title": "renders non-silent unclipped music and distinct item samples through real Web Audio",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5511,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:45:03.947Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "real-web-audio-levels",
+                      "contentType": "application/json",
+                      "body": "W3sibmFtZSI6ImxvYmJ5Iiwicm1zIjowLjAwODgyMDI1NzQwMDk0NDM2OCwicGVhayI6MC4xMjU3MDg4NDgyMzc5OTEzM30seyJuYW1lIjoicmFjZSIsInJtcyI6MC4wMTY4MjQxOTg1MDMzNDE3NjYsInBlYWsiOjAuMTkzNzkzNTc5OTM2MDI3NTN9LHsibmFtZSI6InJlc3VsdHMiLCJybXMiOjAuMDE1MzE3OTUyMTAyODMwOTQ2LCJwZWFrIjowLjE5NTMwNDIxNDk1NDM3NjIyfSx7Im5hbWUiOiJsYXVuY2gtYmVhbiIsInJtcyI6MC4wMDM4NjI4NDA0NzQ1MDIxOTMsInBlYWsiOjAuMDUyODg1MTUyMzk5NTM5OTV9LHsibmFtZSI6ImhpdC1iZWFuIiwicm1zIjowLjAxOTc2NjA5NDY5NTQ2NjgxNywicGVhayI6MC4yNDA5NzgwNzcwNTQwMjM3NH0seyJuYW1lIjoiaGl0LWljZSIsInJtcyI6MC4wMTkyMzE1MDc1NTQwMDU2LCJwZWFrIjowLjIwNjY0MjAxNjc2ODQ1NTV9LHsibmFtZSI6ImhpdC1zdG9ybSIsInJtcyI6MC4wMTk3MzI4NDU4MjI2NDMxMjMsInBlYWsiOjAuMzEwNDg0MTcwOTEzNjk2M30seyJuYW1lIjoiYmxvY2tlZC1iZWFuIiwicm1zIjowLjAwNzE2NTk2NjQ2ODA5MzY2OCwicGVhayI6MC4xMTgzMzgwMzM1NTY5MzgxN30seyJuYW1lIjoiaXRlbS1ib29zdCIsInJtcyI6MC4wMDc0NDcwODY3MjQwNjI1NjU0LCJwZWFrIjowLjA3ODA0Mzk5NzI4Nzc1MDI0fSx7Im5hbWUiOiJpdGVtLXNoaWVsZCIsInJtcyI6MC4wMTExODkwMTY0NDkyNjExMywicGVhayI6MC4wODEwMTk1NDMxMTEzMjQzMX1d"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "87be2dcdb54c25970a35-ca148503dc1353c6ef6b",
+          "file": "audio.spec.ts",
+          "line": 36,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "characters.spec.ts",
+      "file": "characters.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "shows eight Nintendo heads, persists a selected character and uses it in the race",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 20848,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:45:09.487Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a244eb99ad6097541759-81e7107d66797abb8d0f",
+          "file": "characters.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "coffee.spec.ts",
+      "file": "coffee.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "the coffee hero pours and serves smiling guests during the spoken celebration, then loops highlights",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 34708,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:45:30.355Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9da15fd5129258e1c873-a00764638e30e01fb34e",
+          "file": "coffee.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "all seven other racers wait for the eight-player coffee truck on a phone",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13359,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:46:05.072Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9da15fd5129258e1c873-2c99c267228a37932b6b",
+          "file": "coffee.spec.ts",
+          "line": 25,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "podium.spec.ts",
+      "file": "podium.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "celebrates the true winner with a rising trophy, pauses, and automatically returns to coffee highlights",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 32019,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:46:18.449Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "22b0c56165a3a653928f-be7c754854783f7f973c",
+          "file": "podium.spec.ts",
+          "line": 6,
+          "column": 1
+        },
+        {
+          "title": "renders a two-person podium on a phone without inventing third place",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "e2e",
+              "projectName": "e2e",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 12802,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:46:50.480Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "22b0c56165a3a653928f-720e00ae864c4f469cb8",
+          "file": "podium.spec.ts",
+          "line": 20,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "golden.spec.ts",
+      "file": "golden.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "desktop lobby golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9033,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/lobby-desktop-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/lobby-desktop-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:47:03.974Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-cefaa5dcc404fd30ca85",
+          "file": "golden.spec.ts",
+          "line": 3,
+          "column": 1
+        },
+        {
+          "title": "mobile lobby golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4334,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/lobby-mobile-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/lobby-mobile-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:47:13.262Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-d105d95ebf7a8f181e42",
+          "file": "golden.spec.ts",
+          "line": 7,
+          "column": 1
+        },
+        {
+          "title": "voice registration dialog golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5736,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/voice-registration-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/voice-registration-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:47:17.607Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-8db7b191b2a8cc2fbf7f",
+          "file": "golden.spec.ts",
+          "line": 11,
+          "column": 1
+        },
+        {
+          "title": "item-launch action golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10134,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/item-launch-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/item-launch-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:47:23.352Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-0319a3736cc65a69a191",
+          "file": "golden.spec.ts",
+          "line": 18,
+          "column": 12
+        },
+        {
+          "title": "ice-impact action golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9608,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/ice-impact-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/ice-impact-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:47:33.500Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-2c069fb8fa327e076414",
+          "file": "golden.spec.ts",
+          "line": 18,
+          "column": 12
+        },
+        {
+          "title": "lightning-impact action golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9390,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/lightning-impact-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/lightning-impact-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:47:43.120Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-9ec35b0f5cb6c69fe141",
+          "file": "golden.spec.ts",
+          "line": 18,
+          "column": 12
+        },
+        {
+          "title": "espresso-boost action golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 9420,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/espresso-boost-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/espresso-boost-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:47:52.521Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-89d55e9a25ea8e5b5476",
+          "file": "golden.spec.ts",
+          "line": 18,
+          "column": 12
+        },
+        {
+          "title": "mobile racing HUD golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 6907,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/race-mobile-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/race-mobile-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:48:01.952Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-77894e0cbed8817a5b2b",
+          "file": "golden.spec.ts",
+          "line": 22,
+          "column": 1
+        },
+        {
+          "title": "Nintendo character picker desktop golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5350,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:48:08.868Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-bbce3c60e49a3691e509",
+          "file": "golden.spec.ts",
+          "line": 27,
+          "column": 34
+        },
+        {
+          "title": "Nintendo character picker mobile golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4208,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:48:14.230Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-09acd3f7df10a53e091d",
+          "file": "golden.spec.ts",
+          "line": 27,
+          "column": 34
+        },
+        {
+          "title": "winner podium desktop golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 10984,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/winner-podium-desktop-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/winner-podium-desktop-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:48:18.448Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-987028ca80aca94122f7",
+          "file": "golden.spec.ts",
+          "line": 34,
+          "column": 34
+        },
+        {
+          "title": "winner podium mobile golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 8907,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/winner-podium-mobile-golden-darwin.png is re-generated, writing actual.\n"
+                    },
+                    {
+                      "text": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts-snapshots/winner-podium-mobile-golden-darwin.png is re-generated, writing actual.\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:48:29.443Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-e632c2bf52a7dc310790",
+          "file": "golden.spec.ts",
+          "line": 34,
+          "column": 34
+        },
+        {
+          "title": "coffee truck desktop golden",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 7319,
+                  "error": {
+                    "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation",
+                    "stack": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation\n    at loadReplay (/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/replay.ts:12:115)\n    at finishReplay (/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/replay.ts:23:3)\n    at /Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts:42:3",
+                    "location": {
+                      "file": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/replay.ts",
+                      "column": 115,
+                      "line": 12
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mreplay.ts:12\n\n  10 | }\n  11 | export async function loadReplay(page:Page,log:RaceLog=actionLog){\n> 12 |   await page.goto('/');await expect(page.locator('.race-canvas')).toHaveAttribute('data-ready','true');await page.evaluate(()=>document.fonts.ready);\n     |                                                                                                                   ^\n  13 |   await page.getByRole('button',{name:/^리플레이/}).click();\n  14 |   await page.locator('input[type=file]').setInputFiles({name:'action.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(log))});\n  15 |   await expect(page.getByText('RACE REPLAY',{exact:true})).toBeVisible();await page.getByRole('button',{name:'일시 정지',exact:true}).click();"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/replay.ts",
+                        "column": 115,
+                        "line": 12
+                      },
+                      "message": "Error: page.evaluate: Execution context was destroyed, most likely because of a navigation\n\n   at replay.ts:12\n\n  10 | }\n  11 | export async function loadReplay(page:Page,log:RaceLog=actionLog){\n> 12 |   await page.goto('/');await expect(page.locator('.race-canvas')).toHaveAttribute('data-ready','true');await page.evaluate(()=>document.fonts.ready);\n     |                                                                                                                   ^\n  13 |   await page.getByRole('button',{name:/^리플레이/}).click();\n  14 |   await page.locator('input[type=file]').setInputFiles({name:'action.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(log))});\n  15 |   await expect(page.getByText('RACE REPLAY',{exact:true})).toBeVisible();await page.getByRole('button',{name:'일시 정지',exact:true}).click();\n    at loadReplay (/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/replay.ts:12:115)\n    at finishReplay (/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/replay.ts:23:3)\n    at /Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/golden.spec.ts:42:3"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T00:48:38.359Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results/golden-coffee-truck-desktop-golden-golden/test-failed-1.png"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results/golden-coffee-truck-desktop-golden-golden/error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "/Users/jonghokim/Workspace/hackerton/dopamin/test-results/golden-coffee-truck-desktop-golden-golden/trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "/Users/jonghokim/Workspace/hackerton/dopamin/tests/e2e/replay.ts",
+                    "column": 115,
+                    "line": 12
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "368b625b608da03d5a27-fc1d97600241aa3e61c3",
+          "file": "golden.spec.ts",
+          "line": 40,
+          "column": 34
+        },
+        {
+          "title": "coffee truck mobile golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-1095e75a1b1a53b09505",
+          "file": "golden.spec.ts",
+          "line": 40,
+          "column": 34
+        },
+        {
+          "title": "roastery integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-d612b3620b64439accf0",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "coast integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-6b633cc2bc12aabdf0dc",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "forest integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-859015447c38da41e532",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "city integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-a7c03deb1ad12ec63a5b",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "snow integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-e95c05d0313f5619a9c1",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        },
+        {
+          "title": "volcano integrated sponsor scenery golden",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 90000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "golden",
+              "projectName": "golden",
+              "results": [],
+              "status": "skipped"
+            }
+          ],
+          "id": "368b625b608da03d5a27-0645a41695fa436f8e0c",
+          "file": "golden.spec.ts",
+          "line": 46,
+          "column": 76
+        }
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "message": "\u001b[31mTesting stopped early after 1 maximum allowed failures.\u001b[39m"
+    }
+  ],
+  "stats": {
+    "startTime": "2026-09-21T00:41:42.459Z",
+    "duration": 423330.618,
+    "expected": 26,
+    "skipped": 7,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

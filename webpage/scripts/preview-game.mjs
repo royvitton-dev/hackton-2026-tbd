@@ -1,0 +1,16 @@
+import { chromium } from '@playwright/test';
+import { mkdir } from 'node:fs/promises';
+await mkdir('test-results/game',{recursive:true});
+const browser=await chromium.launch({channel:'chrome',headless:true,args:['--enable-webgl','--use-angle=swiftshader','--enable-unsafe-swiftshader']});
+const page=await browser.newPage({viewport:{width:1440,height:1080},deviceScaleFactor:1});
+const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://localhost:5175');
+await page.locator('.board-canvas[data-ready="true"]').waitFor();
+await page.waitForTimeout(2500);
+await page.screenshot({path:'test-results/game/desktop.png',fullPage:true});
+console.log(JSON.stringify({title:await page.title(),webgl:await page.locator('.board-canvas').getAttribute('data-webgl'),errors,canvas:await page.locator('canvas').count()}));
+await page.setViewportSize({width:390,height:844});
+await page.waitForTimeout(1000);
+await page.screenshot({path:'test-results/game/mobile.png',fullPage:true});
+console.log(JSON.stringify({overflow:await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)}));
+await browser.close();

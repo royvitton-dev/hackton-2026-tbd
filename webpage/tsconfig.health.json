@@ -1,0 +1,5 @@
+{
+  "extends": "./tsconfig.json",
+  "include": ["src/health-main.tsx", "src/vite-env.d.ts", "vite.health.config.ts"],
+  "exclude": ["src/game", "src/main.tsx"]
+}

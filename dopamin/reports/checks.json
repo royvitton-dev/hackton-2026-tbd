@@ -1,0 +1,92 @@
+{
+  "port": {
+    "passed": true,
+    "detail": "5173 점유 상태에서 두 번째 npm run dev가 5174를 자동 선택함. 검사 서버 종료 후 기존 5173 서버 유지."
+  },
+  "audit": {
+    "exitCode": 0,
+    "detail": "npm audit: 알려진 취약점 0개. 최종 설치한 패키지 전체 검사."
+  },
+  "build": {
+    "exitCode": 0,
+    "detail": "회사별 시설 8종·간판 종횡비·맵 부지 이격·시상대 스폰서 월 포함 최종 TypeScript 및 Vite 빌드 통과",
+    "checkedAt": "2026-09-21T01:10:46.281972+00:00"
+  },
+  "scope": "참고 사진 형태의 시상대 스폰서 월 · 6개 맵의 건물 부착형 GS 광고 · 회사별 사업 특성을 표현한 광고 그래픽 · 회사별 3D 사업 시설 8종",
+  "knownIssues": [
+    {
+      "test": "replays launch, impact, block and boost effects with deterministic pause and seeking",
+      "detail": "앞선 그래픽 변경에서 정지·되감기 전후 실제 픽셀 비교가 불일치해 같은 장애 3회 중단됨. 이번 기능 검증에서는 해당 검사 1개만 명시적으로 제외. 테스트 코드와 기존 실패 증거 보존.",
+      "requiredUserInput": "중단했던 리플레이 화면 재현성 조사·수정을 재개하라는 지시",
+      "evidence": "replay-debug/index.html"
+    }
+  ],
+  "iterations": [
+    {
+      "number": 1,
+      "detail": "참고 사진 확인: 행사명 상단과 반복 격자 스폰서 월. 52G·2026 해커톤 월과 맵별 광고 건물, 도로 이격 배치 구현.",
+      "result": "빌드 통과. 단위 160/162: 해변·화산 광고 건물 간격 검사 실패. 신규 화면 기준 8개 생성 후 시상대 문구 가림·모바일 잘림 발견."
+    },
+    {
+      "number": 2,
+      "detail": "도로만 피하던 배치를 기존 광고 건물에서도 20 이상 이격하도록 수정. 시상대 행사명을 트로피 옆으로 옮기고 휴대폰에서도 스폰서 월 전체를 담도록 카메라 조정.",
+      "result": "단위 162/162, 빌드 통과. 6개 맵·시상대 8개 화면 검사 통과. 휴대폰 전체 배경은 보이나 여백이 커서 화면 높이를 줄이기로 함."
+    },
+    {
+      "number": 3,
+      "detail": "휴대폰 시상대 높이 조정. 변경한 시상대와 맵 화면을 포함한 전체 브라우저 회귀 및 모든 골든 기준을 최종 소스로 생성.",
+      "result": "빌드·브라우저 기능 14/14 통과. 골든 기준 12개 생성 후 커피차 캡처 준비 중 Vite 연결 끊김과 자동 탐색 발생. 1개 실패·7개 미실행. Trace에 server connection lost 기록 확인."
+    },
+    {
+      "number": 4,
+      "detail": "기능 결과와 실패 Trace 보존. HMR이 없는 최종 빌드 preview 서버에서 남은 골든 기준을 생성하고 전체 20개를 독립 비교.",
+      "result": "빌드 서버에서 커피차·맵 8개 기준 생성 통과. 전체 독립 비교 직전 추가 요청(회사별 사업 특징 광고)을 받아 최종 비교는 추가 구현 후 진행."
+    },
+    {
+      "number": 5,
+      "detail": "추가 요청: 공식 사업 소개 확인 후 전기차 충전·생활 산업 연결·정유·쇼핑·건축·전력망·LNG/바이오매스 발전·글로벌 무역 그래픽과 회사별 사업 문구 적용.",
+      "result": "단위 162/162·빌드 통과. 실제 Chrome Canvas에서 8종 광고 렌더 및 PNG 저장, 콘솔 오류 없음. 원본 검토 후 건물 창문 대비 보완."
+    },
+    {
+      "number": 6,
+      "detail": "회사별 광고 최종 빌드에서 전체 34개 회귀 진행 중 추가 요청: 건물 외형도 사업별로 구분. 충전소·사옥·주유소·GS25·건설현장·전력 시설·발전소·물류창고 모델, 간판 비율별 렌더, 부지 간격 확대 구현.",
+      "result": "광고까지 반영된 빌드의 브라우저 14개·골든 기준 20개 생성 통과. 추가 건물 모델의 TypeScript·단위 162개·개별 WebGL 8종도 통과. 건물까지 포함한 최종 빌드 회귀는 7회차."
+    },
+    {
+      "number": 7,
+      "detail": "사업별 건물·시설 8종, 간판 종횡비 대응, 확대한 도로·시설 이격 포함 최종 빌드. 전체 브라우저 14개와 골든 기준 20개 생성 후 육안 검토.",
+      "result": "최종 빌드·단위 162개·6개 맵 및 등록·음성·두 바퀴 레이스·결과·로그 등 app.spec 브라우저 7개 통과. 음향 측정기에서 음소거 뒤 마지막 샘플 0.010761458426713943이 반복되어 실패. 당시 오디오 상태/시계는 기록하지 않아 정확한 정지 원인은 미확정. 원본 보존."
+    },
+    {
+      "number": 8,
+      "detail": "앱 변경 없이 음향 검사 프로브에 0 상수 입력을 연결하여 게임 소스가 모두 끊긴 뒤에도 측정 그래프를 유지. 실행 중인 오디오 문맥인지도 확인하며 기존 음량 기준 유지. 통과한 최종 app.spec 7개는 보존하고 나머지 기능 7개·골든 20개 기준 및 독립 비교 실행.",
+      "result": "측정 프로브 보완 후 남은 기능 7/7 및 골든 기준 20개 생성 통과. 같은 최종 빌드에서 앞서 통과한 app 7개와 합쳐 기능 14/14. 별도 Chrome 실행에서 골든 20/20 독립 비교 통과. 최종 단위 162/162·빌드 통과. 기존 엄격한 리플레이 픽셀 1건은 중단 상태 유지."
+    }
+  ],
+  "final": {
+    "status": "new-features-passed-project-incomplete",
+    "fullProjectComplete": false,
+    "baselineCompared": true,
+    "excludedTests": 1,
+    "e2eExpected": 14,
+    "goldenExpected": 20,
+    "unitPassed": 162,
+    "buildPassed": true,
+    "e2ePassed": 14,
+    "coverageStatements": 98.88,
+    "coverageBranches": 97.72,
+    "coverageFunctions": 96.75,
+    "coverageLines": 100,
+    "iterations": 8,
+    "functionalEvidence": [
+      "sponsor-debug/audio-iteration-7/results.json: app.spec 7 passed",
+      "e2e/results.json: audio, characters, coffee, podium 7 passed"
+    ],
+    "goldenPassed": 20,
+    "browserTarget": "production preview http://127.0.0.1:5175; source audio sample test http://127.0.0.1:5173",
+    "knownIssueExcluded": "replays launch, impact, block and boost effects with deterministic pause and seeking",
+    "maxSameBlockerAttemptsThisScope": 1,
+    "checkedAt": "2026-09-21T03:21:18.127570+00:00",
+    "limitation": "앞선 작업에서 같은 장애 3회로 중단한 엄격한 리플레이 픽셀 검사 1개는 별도 미해결. 이번 변경의 모든 실행 대상 검증은 통과했으나 전체 프로젝트 완료로 표시하지 않음."
+  }
+}
