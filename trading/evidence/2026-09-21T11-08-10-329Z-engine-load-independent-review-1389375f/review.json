@@ -1,0 +1,262 @@
+{
+  "reviewed_at": "2026-09-21T11:08:10.471Z",
+  "scope": "Read-only source and saved evidence inspection plus offline arithmetic; no service, test, build, live-data access or process signal",
+  "input_directory": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T11-01-25-875Z-engine-load-8774ce30",
+  "current_source_sha256": "1de9249f15993135173b8700703d4a14c839da777178b7b49cc5c6d30d03c138",
+  "executed_source_sha256": "1de9249f15993135173b8700703d4a14c839da777178b7b49cc5c6d30d03c138",
+  "copied_binary_sha256": "09bcf75b80a2a85c6a52168d2404f23a230e73b958fc6814daa300650fc5ac56",
+  "input_hashes": {
+    "summary.json": "3a9f2cfad5844fe00a27ad508da898ea73227c2f0b9c310c4ea92d28c6d7d7e9",
+    "metadata.json": "04f86e715a1d5106e9cd593846722b45b514965899e987852910f2b341aba77e",
+    "resource-samples.json": "e74d5fa216f815c3eae43ae2a3bff54e7ecf2878022cd6b4b5cdc65832d54899",
+    "events.json": "da352682b78e967372506520ad485d10cb601e477db85e41c968e496c164480e",
+    "requests.json": "25f3b2131b6e71f87bf517955d301a9376d71abfbcc94deadc9e712820a13a98",
+    "states.json": "76f711ce2188b0040e1acbd45dc174e5434545cb6087626d2889bc1571b66d43",
+    "ws-events.json": "2e4f6dd641efb952ee4cc53990eb7c76d93e6bc3aff8129f0b03173cb46f6941",
+    "engine-load.executed.mjs": "1de9249f15993135173b8700703d4a14c839da777178b7b49cc5c6d30d03c138",
+    "post-verification.json": "c4f78c1a78c089ff3eb2ce7f56da2c861c0631a9d2efe66d235bed230e8c8485"
+  },
+  "offline_checks": 165812,
+  "offline_check_failures": [],
+  "phase_counts": {
+    "warmup": {
+      "commands": 24,
+      "fills": 12
+    },
+    "concurrency-6": {
+      "commands": 6000,
+      "fills": 3000
+    },
+    "concurrency-24": {
+      "commands": 5952,
+      "fills": 2976
+    },
+    "concurrency-96": {
+      "commands": 5760,
+      "fills": 2880
+    }
+  },
+  "barrier_reconstruction": [
+    {
+      "label": "after-warmup",
+      "seq": 24,
+      "full_ack_orders": 24,
+      "full_ack_trades": 12,
+      "public_orders": 24,
+      "public_trades": 12,
+      "all_assets_reconstructed": true
+    },
+    {
+      "label": "after-concurrency-6",
+      "seq": 6024,
+      "full_ack_orders": 6024,
+      "full_ack_trades": 3012,
+      "public_orders": 200,
+      "public_trades": 1000,
+      "all_assets_reconstructed": true
+    },
+    {
+      "label": "after-concurrency-24",
+      "seq": 11976,
+      "full_ack_orders": 11976,
+      "full_ack_trades": 5988,
+      "public_orders": 200,
+      "public_trades": 1000,
+      "all_assets_reconstructed": true
+    },
+    {
+      "label": "after-concurrency-96",
+      "seq": 17736,
+      "full_ack_orders": 17736,
+      "full_ack_trades": 8868,
+      "public_orders": 200,
+      "public_trades": 1000,
+      "all_assets_reconstructed": true
+    }
+  ],
+  "phases": [
+    {
+      "phase": "concurrency-6",
+      "commands": 6000,
+      "fills": 3000,
+      "elapsed_seconds": 12.700052900000001,
+      "end_reason": "phase_command_cap",
+      "cpu_sample_count": 24,
+      "capture_samples_outside_phase_bounds": [],
+      "resources": [
+        {
+          "pid": 22032,
+          "role": "engine",
+          "covered_seconds": 11.8654178,
+          "cpu_seconds": 11.078125,
+          "mean_percent_total_capacity": 5.835300738419848,
+          "equivalent_logical_cores": 0.9336481181471756,
+          "max_interval_percent_total_capacity": 7.228132145959695,
+          "max_working_set_bytes": 18886656,
+          "max_private_bytes": 13299712
+        },
+        {
+          "pid": 10036,
+          "role": "load_client",
+          "covered_seconds": 11.8654178,
+          "cpu_seconds": 8.921875,
+          "mean_percent_total_capacity": 4.699515827415703,
+          "equivalent_logical_cores": 0.7519225323865124,
+          "max_interval_percent_total_capacity": 6.0575327988747825,
+          "max_working_set_bytes": 204767232,
+          "max_private_bytes": 262062080
+        }
+      ],
+      "ws_at_start": 1,
+      "ws_at_end": 1,
+      "ws_frames": 6000
+    },
+    {
+      "phase": "concurrency-24",
+      "commands": 5952,
+      "fills": 2976,
+      "elapsed_seconds": 12.333230700000001,
+      "end_reason": "phase_command_cap",
+      "cpu_sample_count": 24,
+      "capture_samples_outside_phase_bounds": [],
+      "resources": [
+        {
+          "pid": 22032,
+          "role": "engine",
+          "covered_seconds": 11.816313500000001,
+          "cpu_seconds": 13.90625,
+          "mean_percent_total_capacity": 7.355429635478103,
+          "equivalent_logical_cores": 1.1768687416764965,
+          "max_interval_percent_total_capacity": 9.658049478688913,
+          "max_working_set_bytes": 32382976,
+          "max_private_bytes": 27340800
+        },
+        {
+          "pid": 10036,
+          "role": "load_client",
+          "covered_seconds": 11.816313500000001,
+          "cpu_seconds": 10.96875,
+          "mean_percent_total_capacity": 5.801698431579358,
+          "equivalent_logical_cores": 0.9282717490526973,
+          "max_interval_percent_total_capacity": 8.122411950213543,
+          "max_working_set_bytes": 341164032,
+          "max_private_bytes": 344788992
+        }
+      ],
+      "ws_at_start": 1,
+      "ws_at_end": 3,
+      "ws_frames": 5911
+    },
+    {
+      "phase": "concurrency-96",
+      "commands": 5760,
+      "fills": 2880,
+      "elapsed_seconds": 11.2909143,
+      "end_reason": "overall_command_cap",
+      "cpu_sample_count": 22,
+      "capture_samples_outside_phase_bounds": [],
+      "resources": [
+        {
+          "pid": 22032,
+          "role": "engine",
+          "covered_seconds": 10.81484,
+          "cpu_seconds": 3.03125,
+          "mean_percent_total_capacity": 1.751788514670582,
+          "equivalent_logical_cores": 0.28028616234729314,
+          "max_interval_percent_total_capacity": 3.843085054051602,
+          "max_working_set_bytes": 34934784,
+          "max_private_bytes": 32288768
+        },
+        {
+          "pid": 10036,
+          "role": "load_client",
+          "covered_seconds": 10.81484,
+          "cpu_seconds": 1.78125,
+          "mean_percent_total_capacity": 1.0294014983115793,
+          "equivalent_logical_cores": 0.16470423972985268,
+          "max_interval_percent_total_capacity": 2.062055519808598,
+          "max_working_set_bytes": 232198144,
+          "max_private_bytes": 218587136
+        }
+      ],
+      "ws_at_start": 3,
+      "ws_at_end": 3,
+      "ws_frames": 0
+    }
+  ],
+  "websocket": {
+    "prefix_frames": 11936,
+    "first": {
+      "received_ms": 793.956,
+      "phase": "setup",
+      "seq": 0,
+      "bytes": 3224,
+      "gap_after": null
+    },
+    "last": {
+      "received_ms": 26709.9768,
+      "phase": "concurrency-24",
+      "seq": 11935,
+      "bytes": 214554,
+      "gap_after": null
+    },
+    "final_command_seq": 17736,
+    "missing_suffix_revisions": 5801,
+    "close": {
+      "at": "2026-09-21T11:01:52.591Z",
+      "relative_ms": 26715.8915,
+      "event": "ws_closed",
+      "code": 1005,
+      "intentional": false
+    },
+    "phase96_no_ws": true
+  },
+  "all_sample_memory_peaks": [
+    {
+      "pid": 22032,
+      "working_set_bytes": 34934784,
+      "private_bytes": 32288768
+    },
+    {
+      "pid": 10036,
+      "working_set_bytes": 341164032,
+      "private_bytes": 344788992
+    }
+  ],
+  "cleanup_evidence": {
+    "engine_exit_code": 0,
+    "engine_signal": null,
+    "sampler_alive": false,
+    "shutdown": {
+      "status": "shutting_down"
+    }
+  },
+  "post_cleanup_evidence": [
+    {
+      "pid": 22032,
+      "still_exists": false
+    },
+    {
+      "pid": 10036,
+      "still_exists": false
+    },
+    {
+      "pid": 3032,
+      "still_exists": false
+    }
+  ],
+  "complete_interpretation": "complete:true covers bounded command/state correctness and cleanup. It does not assert WebSocket continuity/catch-up or twenty-second coverage. WS end-to-end validation did not pass; phase96 ran without an open WS.",
+  "findings": [
+    {
+      "priority": "P2",
+      "topic": "Changed WS conditions confound concurrency comparison",
+      "detail": "WS closes during end of24 phase;96 phase starts and ends CLOSED and receives zero frames. Do not attribute lower96 CPU or higher throughput to concurrency alone; label96 as HTTP-only,24 as partial WS coverage."
+    },
+    {
+      "priority": "P2",
+      "topic": "Zero sequence gaps is only the delivered prefix",
+      "detail": "11936 frames cover0..11935 contiguously, but final17736 leaves5801 revisions undelivered and one unexpected close. complete:true must never be displayed as all-WS-pass."
+    }
+  ],
+  "source_or_numeric_defect_found": false
+}

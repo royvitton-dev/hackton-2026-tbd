@@ -1,0 +1,114 @@
+{
+  "run_id": "2026-09-21T10-21-15-282Z-slow-ws-acfe474d",
+  "complete": true,
+  "classification": "competing-resource slow-WebSocket validation while normal demo/observer remain live; not quiet latency baseline",
+  "base_url": "http://127.0.0.1:53320",
+  "engine_pid": 22180,
+  "sampler_pid": 15872,
+  "http_count": 854,
+  "max_concurrent_http": 2,
+  "unique_commands_acknowledged": 416,
+  "normal_messages": 289,
+  "normal_received_bytes": 14429072,
+  "slow": {
+    "remote_end_observed": false,
+    "closed_before_client_cleanup": true,
+    "close_frame": null,
+    "last_complete_event_seq": 128,
+    "final_event_seq": 416,
+    "pending_partial_frame_bytes": 0,
+    "cause": "Production server does not log WS close reasons; broadcast lag versus send timeout cannot be uniquely attributed from this client trace."
+  },
+  "engine_max_observed_rss_bytes": 13037568,
+  "client_max_observed_rss_bytes": 77385728,
+  "elapsed_ms": 7333.3782,
+  "cleanup": {
+    "shutdown": {
+      "status": 200,
+      "body": {
+        "status": "shutting_down"
+      }
+    },
+    "engine_exit": 0,
+    "engine_signal": null,
+    "forced": false,
+    "engine_alive": false,
+    "sampler_alive": false
+  },
+  "demo_after": {
+    "manifest_sha256": "6128d45f26f574eb1da12ec1b164c2112c4ed3e4e29bb6a5526568563578e69a",
+    "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "name": "frontend",
+        "pid": 17556,
+        "alive": true
+      },
+      {
+        "name": "bot-01",
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "name": "bot-02",
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "name": "bot-03",
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "name": "bot-04",
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "name": "bot-05",
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "name": "bot-06",
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "name": "bot-07",
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "name": "bot-08",
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "name": "bot-09",
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "name": "bot-10",
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "name": "bot-11",
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "name": "bot-12",
+        "pid": 6128,
+        "alive": true
+      }
+    ]
+  }
+}

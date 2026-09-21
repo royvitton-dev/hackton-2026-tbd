@@ -1,0 +1,25 @@
+{
+  "run_id": "2026-09-21T09-02-19-482Z-observe-4abd2bbd",
+  "started_at": "2026-09-21T09:02:19.508Z",
+  "ended_at": "2026-09-21T10:02:21.528Z",
+  "duration_ms": 3596707.4529999997,
+  "samples": 641,
+  "commands_delta": 18944,
+  "volume_delta": 14211,
+  "distinct_book_states": 641,
+  "distinct_trade_prices": 59,
+  "min_connected_bots": 12,
+  "participating_bots": 12,
+  "bots_with_fills": 12,
+  "websocket_events": 18977,
+  "websocket_gaps": 0,
+  "websocket_disconnects": 0,
+  "asset_conservation": true,
+  "continued_trade_intervals": 640,
+  "limitations": [
+    "Public totals and actual trade/event observations; Rust tests check complete accounting invariants.",
+    "WebSocket receipt verified; browser rendering requires separate browser evidence."
+  ],
+  "requested_seconds": 3600,
+  "passed": true
+}

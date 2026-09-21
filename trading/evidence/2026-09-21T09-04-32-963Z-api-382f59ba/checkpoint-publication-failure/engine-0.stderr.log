@@ -1,0 +1,5 @@
+{"data_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-04-32-963Z-api-382f59ba\\checkpoint-publication-failure\\data","event":"recovering","timestamp_ms":1789981479571}
+{"event":"recovery_complete","report":{"ignored_snapshots":[],"journal_records":0,"preserved_tail":null,"replayed_records":0,"snapshot_used":null,"truncated_bytes":0},"timestamp_ms":1789981479580}
+{"bind":"127.0.0.1:52449","data_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-04-32-963Z-api-382f59ba\\checkpoint-publication-failure\\data","event":"ready","queue_capacity":2048,"timestamp_ms":1789981479583}
+{"error":{"code":"DURABILITY_FAILED","durable":false,"message":"storage I/O: 지정된 경로를 찾을 수 없습니다. (os error 3)","status":"error"},"event":"shutdown_checkpoint_error","http_status":503,"timestamp_ms":1789981479681}
+Error: "Shutdown checkpoint was not confirmed: {\"code\":\"DURABILITY_FAILED\",\"durable\":false,\"message\":\"storage I/O: 지정된 경로를 찾을 수 없습니다. (os error 3)\",\"status\":\"error\"}"

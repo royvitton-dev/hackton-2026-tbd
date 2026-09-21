@@ -1,0 +1,17 @@
+{
+  "command": "cargo",
+  "ended_at": "2026-09-21T09:57:56.5335675Z",
+  "exit_code": 0,
+  "started_at": "2026-09-21T09:57:24.2045656Z",
+  "run_id": "20260921T095724177Z-status-reuse-storage-regression-0ba04549",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine",
+  "status": "passed",
+  "args": [
+    "test",
+    "--locked",
+    "--release",
+    "--lib",
+    "--test",
+    "storage_recovery"
+  ]
+}

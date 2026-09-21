@@ -1,0 +1,135 @@
+{
+  "scenario": "C",
+  "expected_commands": 1200,
+  "attempted_commands": 1200,
+  "accepted_durable_commands": 1200,
+  "complete": true,
+  "elapsed_seconds": 19.250709599999997,
+  "accepted_commands_per_second": 62.33536451040746,
+  "attempted_commands_per_second": 62.33536451040746,
+  "error_commands": 0,
+  "rejection_commands": 0,
+  "error_rate": 0,
+  "rejection_rate": 0,
+  "fills": 400,
+  "latency_ms": {
+    "dispatch_to_ack": {
+      "count": 1200,
+      "p50": 15.622400000000198,
+      "p95": 17.90289999999368,
+      "p99": 19.296900000001187,
+      "max": 31.713900000002468
+    },
+    "scheduled_to_ack": {
+      "count": 1200,
+      "p50": 15.623300000006566,
+      "p95": 17.903599999997823,
+      "p99": 19.297700000002806,
+      "max": 31.714500000001863
+    },
+    "client_scheduler_delay": {
+      "count": 1200,
+      "p50": 0.0007000000041443855,
+      "p95": 0.0011000000013154931,
+      "p99": 0.0014000000010128133,
+      "max": 0.033100000000558794
+    },
+    "dispatch_to_event_callback": {
+      "count": 1200,
+      "p50": 16.15129999999772,
+      "p95": 18.563900000001013,
+      "p99": 19.91070000000036,
+      "max": 32.125300000003335
+    },
+    "scheduled_to_event_callback": {
+      "count": 1200,
+      "p50": 16.151899999997113,
+      "p95": 18.564800000000105,
+      "p99": 19.911400000004505,
+      "max": 32.12590000000273
+    },
+    "dispatch_to_parsed_event": {
+      "count": 1200,
+      "p50": 16.363900000000285,
+      "p95": 18.83400000000256,
+      "p99": 20.1675000000032,
+      "max": 32.42610000000059
+    }
+  },
+  "target": {
+    "throughput_min": 100,
+    "p99_ms_max": 150,
+    "measured_metric": "dispatch_to_event_callback",
+    "met": false
+  },
+  "started_at": "2026-09-21T08:47:14.905Z",
+  "ended_at": "2026-09-21T08:47:37.287Z",
+  "concurrency": 1,
+  "websocket_subscribers": 1,
+  "engine_pid": 17472,
+  "client_pid": 9332,
+  "base_url": "http://127.0.0.1:64082",
+  "warmup_commands": 120,
+  "queue_capacity": 2048,
+  "actual_config": {
+    "max_orders": 1000000,
+    "max_requests": 2000000,
+    "max_trades": 2000000,
+    "max_price": 1000000,
+    "max_quantity": 10000
+  },
+  "durability": "journal-sync-all-before-apply",
+  "shutdown": {
+    "method": "admin_shutdown",
+    "response": {
+      "status": 200,
+      "body": {
+        "status": "shutting_down"
+      }
+    },
+    "exit_code": 0,
+    "signal": null
+  },
+  "memory": {
+    "available": true,
+    "samples": 42,
+    "interval_ms": 500,
+    "observed_max_working_set_bytes": 11407360,
+    "observed_max_private_bytes": 6004736,
+    "first": {
+      "pid": 17472,
+      "process_name": "leave-engine",
+      "working_set_bytes": 7942144,
+      "private_bytes": 2445312,
+      "cpu_seconds": 0
+    },
+    "last": {
+      "pid": 17472,
+      "process_name": "leave-engine",
+      "working_set_bytes": 11407360,
+      "private_bytes": 6004736,
+      "cpu_seconds": 2.296875
+    },
+    "note": "Sample maxima only; includes warmup and final checks, excludes other processes."
+  },
+  "retained_data": [
+    {
+      "path": "C\\data\\genesis.bin",
+      "bytes": 3606
+    },
+    {
+      "path": "C\\data\\journal.bin",
+      "bytes": 223027
+    },
+    {
+      "path": "C\\data\\snapshot-00000000000000001320-00000000000001789980457238771000-17472-1.bin",
+      "bytes": 721917
+    },
+    {
+      "path": "C\\data\\writer.lock",
+      "bytes": 0
+    }
+  ],
+  "timing_scope": "closed-loop client load; fetch dispatch through parsed ACK includes loopback HTTP, server queue wait, validation, matching, journal sync_all and response; C callback timestamp precedes JSON parse, parsed-event timestamp follows it; no browser render",
+  "scheduling_scope": "one request in flight; next command scheduled after prior ACK (and C matching event); achieved throughput is this closed-loop workload, not a fixed open-loop offered-rate claim"
+}

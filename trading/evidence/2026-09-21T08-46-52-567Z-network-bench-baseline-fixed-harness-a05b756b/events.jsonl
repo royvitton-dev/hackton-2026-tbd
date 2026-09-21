@@ -1,0 +1,12 @@
+{"at":"2026-09-21T08:46:53.605Z","event":"engine_started","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b\\B","pid":18860,"port":61263}
+{"at":"2026-09-21T08:46:53.993Z","event":"memory_sampler_started","pid":12504,"engine_pid":18860,"interval_ms":500}
+{"at":"2026-09-21T08:47:14.872Z","event":"engine_exit","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b\\B","pid":18860,"code":0,"signal":null}
+{"at":"2026-09-21T08:47:14.904Z","event":"scenario_finished","scenario":"B","complete":true,"accepted":1200,"throughput":64.74239535014938}
+{"at":"2026-09-21T08:47:14.913Z","event":"engine_started","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b\\C","pid":17472,"port":64082}
+{"at":"2026-09-21T08:47:15.349Z","event":"memory_sampler_started","pid":12912,"engine_pid":17472,"interval_ms":500}
+{"at":"2026-09-21T08:47:37.258Z","event":"engine_exit","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b\\C","pid":17472,"code":0,"signal":null}
+{"at":"2026-09-21T08:47:37.289Z","event":"scenario_finished","scenario":"C","complete":true,"accepted":1200,"throughput":62.33536451040746}
+{"at":"2026-09-21T08:47:37.299Z","event":"engine_started","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b\\stress12","pid":8144,"port":52224}
+{"at":"2026-09-21T08:47:37.577Z","event":"memory_sampler_started","pid":17468,"engine_pid":8144,"interval_ms":500}
+{"at":"2026-09-21T08:47:39.950Z","event":"engine_exit","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b\\stress12","pid":8144,"code":0,"signal":null}
+{"at":"2026-09-21T08:47:39.990Z","event":"scenario_finished","scenario":"stress12","complete":true,"accepted":720,"throughput":478.93456217299166}

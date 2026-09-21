@@ -1,0 +1,22 @@
+▶ demo lifecycle safety against unrelated listeners and failed owned children
+  ✔ same loopback port is rejected even under localhost/127 aliases (1.1289ms)
+  ✔ actual start CLI rejects identical ports before spawning services (86.5485ms)
+  ✔ occupied port returning HTTP 404 blocks startup without HTTP/admin requests (133.9246ms)
+  ✔ occupied port returning HTTP 200 blocks startup without HTTP/admin requests (104.5507ms)
+  ✔ IPv6 loopback listener also blocks the same port (3.1792ms)
+  ✔ spawn error is caught without waiting for an unrelated healthy URL (60.0814ms)
+  ✔ early child exit cannot borrow readiness from a healthy unrelated server (79.1026ms)
+  ✔ a living child without its matching ready log cannot use foreign HTTP 200 (331.3068ms)
+  ✔ child exit during a pending health response rejects promptly (215.5372ms)
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T09-59-16-324Z-demo-lifecycle-b45422f8
+  ✔ owned short-lived HTTP child passes only after its own engine ready marker (218.3251ms)
+  ✔ Vite marker is read from the owned log and must match the configured port (2.8005ms)
+✔ demo lifecycle safety against unrelated listeners and failed owned children (1241.9519ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1357.4063

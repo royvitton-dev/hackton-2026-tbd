@@ -1,0 +1,127 @@
+{
+  "run_id": "2026-09-21T08-46-16-528Z-network-bench-baseline-5a717f08",
+  "started_at": "2026-09-21T08:46:16.873Z",
+  "command": [
+    "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "C:\\project\\hackton-2026-tbd\\trading\\scripts\\network-bench.mjs",
+    "--quiet-window",
+    "--cycles",
+    "200",
+    "--warmup-cycles",
+    "20",
+    "--stress12",
+    "--label",
+    "baseline"
+  ],
+  "root": "C:\\project\\hackton-2026-tbd\\trading",
+  "options": {
+    "cycles": 200,
+    "warmupCycles": 20,
+    "stress12": true,
+    "stressRounds": 30,
+    "memoryIntervalMs": 500,
+    "label": "baseline",
+    "quietWindow": true
+  },
+  "quiet_window_operator_confirmed": true,
+  "seed": 20260921,
+  "seed_semantics": "deterministic fixed workload; no claim about reproducing concurrent process scheduling",
+  "binary": {
+    "source": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\release\\leave-engine.exe",
+    "copied": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-46-16-528Z-network-bench-baseline-5a717f08\\bin\\leave-engine.exe",
+    "sha256": "7bc32195300dd9e35c33dde84bf85a24e7903216f5c61af6c43afe7da9e36f4d",
+    "bytes": 2997583,
+    "source_modified_at": "2026-09-21T08:43:00.346Z"
+  },
+  "build": {
+    "profile_path": "engine/target/release",
+    "expected_cargo_profile": {
+      "lto": "thin",
+      "codegen_units": 1
+    },
+    "rustflags": "-C link-self-contained=yes -C dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe",
+    "rustc": {
+      "command": [
+        "rustc",
+        "--version",
+        "--verbose"
+      ],
+      "status": 0,
+      "stdout": "rustc 1.98.1 (48a229cea 2026-09-01)\nbinary: rustc\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\ncommit-date: 2026-09-01\nhost: x86_64-pc-windows-gnu\nrelease: 1.98.1\nLLVM version: 22.1.8",
+      "stderr": ""
+    },
+    "cargo_lock_sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+    "main_source_sha256": "d84853def03e6d7d7f132d17dfa46d28dd1d48a48bd7d2e9a255f0c9fe9aab00"
+  },
+  "host": {
+    "platform": "win32",
+    "release": "10.0.26200",
+    "version": "Windows 11 Pro",
+    "arch": "x64",
+    "node": "v24.19.0",
+    "logical_processors": 16,
+    "cpu_models": [
+      "12th Gen Intel(R) Core(TM) i5-1240P"
+    ],
+    "total_memory_bytes": 16880881664,
+    "free_memory_bytes": 4688977920
+  },
+  "processes_before": {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "Get-Process | Sort-Object CPU -Descending | Select-Object -First 30 Id,ProcessName,CPU,WorkingSet64,PrivateMemorySize64 | ConvertTo-Json -Depth 3"
+    ],
+    "status": 0,
+    "stdout": "[\r\n    {\r\n        \"Id\":  10432,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  749.28125,\r\n        \"WorkingSet64\":  275300352,\r\n        \"PrivateMemorySize64\":  309272576\r\n    },\r\n    {\r\n        \"Id\":  15544,\r\n        \"ProcessName\":  \"OneDrive.Sync.Service\",\r\n        \"CPU\":  618.96875,\r\n        \"WorkingSet64\":  29278208,\r\n        \"PrivateMemorySize64\":  79511552\r\n    },\r\n    {\r\n        \"Id\":  13212,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  612.90625,\r\n        \"WorkingSet64\":  595476480,\r\n        \"PrivateMemorySize64\":  653938688\r\n    },\r\n    {\r\n        \"Id\":  16180,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  588.3125,\r\n        \"WorkingSet64\":  244846592,\r\n        \"PrivateMemorySize64\":  365170688\r\n    },\r\n    {\r\n        \"Id\":  11612,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  383.578125,\r\n        \"WorkingSet64\":  230928384,\r\n        \"PrivateMemorySize64\":  126025728\r\n    },\r\n    {\r\n        \"Id\":  16084,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  369.53125,\r\n        \"WorkingSet64\":  351965184,\r\n        \"PrivateMemorySize64\":  325169152\r\n    },\r\n    {\r\n        \"Id\":  17860,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  271.09375,\r\n        \"WorkingSet64\":  327507968,\r\n        \"PrivateMemorySize64\":  356741120\r\n    },\r\n    {\r\n        \"Id\":  992,\r\n        \"ProcessName\":  \"ipf_helper\",\r\n        \"CPU\":  204.921875,\r\n        \"WorkingSet64\":  8814592,\r\n        \"PrivateMemorySize64\":  2101248\r\n    },\r\n    {\r\n        \"Id\":  18244,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  175.6875,\r\n        \"WorkingSet64\":  347041792,\r\n        \"PrivateMemorySize64\":  418607104\r\n    },\r\n    {\r\n        \"Id\":  6556,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  105.1875,\r\n        \"WorkingSet64\":  324378624,\r\n        \"PrivateMemorySize64\":  358969344\r\n    },\r\n    {\r\n        \"Id\":  19428,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  101.109375,\r\n        \"WorkingSet64\":  953540608,\r\n        \"PrivateMemorySize64\":  1016864768\r\n    },\r\n    {\r\n        \"Id\":  8444,\r\n        \"ProcessName\":  \"explorer\",\r\n        \"CPU\":  98.765625,\r\n        \"WorkingSet64\":  293040128,\r\n        \"PrivateMemorySize64\":  214286336\r\n    },\r\n    {\r\n        \"Id\":  844,\r\n        \"ProcessName\":  \"codex\",\r\n        \"CPU\":  82.78125,\r\n        \"WorkingSet64\":  239120384,\r\n        \"PrivateMemorySize64\":  177741824\r\n    },\r\n    {\r\n        \"Id\":  18600,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  75.1875,\r\n        \"WorkingSet64\":  315879424,\r\n        \"PrivateMemorySize64\":  246185984\r\n    },\r\n    {\r\n        \"Id\":  4956,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  69.671875,\r\n        \"WorkingSet64\":  215457792,\r\n        \"PrivateMemorySize64\":  231485440\r\n    },\r\n    {\r\n        \"Id\":  12884,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  58.125,\r\n        \"WorkingSet64\":  120635392,\r\n        \"PrivateMemorySize64\":  82968576\r\n    },\r\n    {\r\n        \"Id\":  13492,\r\n        \"ProcessName\":  \"msedgewebview2\",\r\n        \"CPU\":  57.546875,\r\n        \"WorkingSet64\":  1073152,\r\n        \"PrivateMemorySize64\":  214204416\r\n    },\r\n    {\r\n        \"Id\":  9680,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  52.21875,\r\n        \"WorkingSet64\":  59490304,\r\n        \"PrivateMemorySize64\":  31121408\r\n    },\r\n    {\r\n        \"Id\":  11000,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  49.546875,\r\n        \"WorkingSet64\":  142184448,\r\n        \"PrivateMemorySize64\":  94609408\r\n    },\r\n    {\r\n        \"Id\":  13092,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  47.9375,\r\n        \"WorkingSet64\":  184086528,\r\n        \"PrivateMemorySize64\":  183296000\r\n    },\r\n    {\r\n        \"Id\":  15044,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  32.421875,\r\n        \"WorkingSet64\":  151896064,\r\n        \"PrivateMemorySize64\":  117882880\r\n    },\r\n    {\r\n        \"Id\":  4664,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  30.625,\r\n        \"WorkingSet64\":  49324032,\r\n        \"PrivateMemorySize64\":  17154048\r\n    },\r\n    {\r\n        \"Id\":  3484,\r\n        \"ProcessName\":  \"msedgewebview2\",\r\n        \"CPU\":  30.59375,\r\n        \"WorkingSet64\":  5357568,\r\n        \"PrivateMemorySize64\":  172761088\r\n    },\r\n    {\r\n        \"Id\":  16272,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  30.296875,\r\n        \"WorkingSet64\":  116867072,\r\n        \"PrivateMemorySize64\":  160591872\r\n    },\r\n    {\r\n        \"Id\":  14696,\r\n        \"ProcessName\":  \"Notepad\",\r\n        \"CPU\":  30.234375,\r\n        \"WorkingSet64\":  104738816,\r\n        \"PrivateMemorySize64\":  81014784\r\n    },\r\n    {\r\n        \"Id\":  11488,\r\n        \"ProcessName\":  \"ctfmon\",\r\n        \"CPU\":  22.03125,\r\n        \"WorkingSet64\":  39215104,\r\n        \"PrivateMemorySize64\":  36700160\r\n    },\r\n    {\r\n        \"Id\":  5096,\r\n        \"ProcessName\":  \"sihost\",\r\n        \"CPU\":  19.046875,\r\n        \"WorkingSet64\":  53665792,\r\n        \"PrivateMemorySize64\":  9715712\r\n    },\r\n    {\r\n        \"Id\":  8316,\r\n        \"ProcessName\":  \"StartMenuExperienceHost\",\r\n        \"CPU\":  16.265625,\r\n        \"WorkingSet64\":  145350656,\r\n        \"PrivateMemorySize64\":  113709056\r\n    },\r\n    {\r\n        \"Id\":  18304,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  15.65625,\r\n        \"WorkingSet64\":  98009088,\r\n        \"PrivateMemorySize64\":  100192256\r\n    },\r\n    {\r\n        \"Id\":  9280,\r\n        \"ProcessName\":  \"Widgets\",\r\n        \"CPU\":  13.484375,\r\n        \"WorkingSet64\":  81551360,\r\n        \"PrivateMemorySize64\":  18239488\r\n    }\r\n]",
+    "stderr": ""
+  },
+  "targets": {
+    "rationale": "Demo planned load about 6 commands/sec; 100 commands/sec provides over 16x throughput margin on this local machine.",
+    "B": {
+      "commands_per_second_min": 100,
+      "ack_p99_ms_max": 100,
+      "rejection_rate_max": 0
+    },
+    "C": {
+      "commands_per_second_min": 100,
+      "event_callback_p99_ms_max": 150,
+      "rejection_rate_max": 0
+    }
+  },
+  "expected_initial_config": {
+    "accounts": 15,
+    "manual_accounts": 3,
+    "bots": 12,
+    "points_per_account": 1000000,
+    "hours_per_account": 1000,
+    "max_orders": 1000000,
+    "max_requests": 2000000,
+    "max_trades": 2000000,
+    "max_price": 1000000,
+    "max_quantity": 10000
+  },
+  "measurement_scope": "local loopback; default sync_all-before-apply durability; no external deployment; B and C use independent fresh datasets and engine processes",
+  "memory_scope": "periodic whole-process engine and Node client memory; Windows sampler is a separate PowerShell process and its overhead is present; maxima are observed sample maxima, not guaranteed OS peak values",
+  "allocation_scope": "network/service allocation counts are not instrumented; see pure-core benchmark A for counted execute allocations",
+  "fatal_error": {
+    "message": "actualConfig is not defined",
+    "stack": "ReferenceError: actualConfig is not defined\n    at measureScenario (file:///C:/project/hackton-2026-tbd/trading/scripts/network-bench.mjs:444:20)\n    at async file:///C:/project/hackton-2026-tbd/trading/scripts/network-bench.mjs:462:20"
+  },
+  "ended_at": "2026-09-21T08:46:17.707Z",
+  "interrupted": false,
+  "processes_after": {
+    "command": [
+      "powershell.exe",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "Get-Process | Sort-Object CPU -Descending | Select-Object -First 30 Id,ProcessName,CPU,WorkingSet64,PrivateMemorySize64 | ConvertTo-Json -Depth 3"
+    ],
+    "status": 0,
+    "stdout": "[\r\n    {\r\n        \"Id\":  10432,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  749.375,\r\n        \"WorkingSet64\":  270344192,\r\n        \"PrivateMemorySize64\":  304209920\r\n    },\r\n    {\r\n        \"Id\":  15544,\r\n        \"ProcessName\":  \"OneDrive.Sync.Service\",\r\n        \"CPU\":  618.96875,\r\n        \"WorkingSet64\":  29298688,\r\n        \"PrivateMemorySize64\":  79511552\r\n    },\r\n    {\r\n        \"Id\":  13212,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  612.953125,\r\n        \"WorkingSet64\":  595705856,\r\n        \"PrivateMemorySize64\":  654159872\r\n    },\r\n    {\r\n        \"Id\":  16180,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  588.3125,\r\n        \"WorkingSet64\":  244838400,\r\n        \"PrivateMemorySize64\":  365170688\r\n    },\r\n    {\r\n        \"Id\":  11612,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  383.59375,\r\n        \"WorkingSet64\":  230928384,\r\n        \"PrivateMemorySize64\":  126025728\r\n    },\r\n    {\r\n        \"Id\":  16084,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  369.5625,\r\n        \"WorkingSet64\":  352989184,\r\n        \"PrivateMemorySize64\":  326164480\r\n    },\r\n    {\r\n        \"Id\":  17860,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  271.09375,\r\n        \"WorkingSet64\":  329412608,\r\n        \"PrivateMemorySize64\":  358674432\r\n    },\r\n    {\r\n        \"Id\":  992,\r\n        \"ProcessName\":  \"ipf_helper\",\r\n        \"CPU\":  204.921875,\r\n        \"WorkingSet64\":  8814592,\r\n        \"PrivateMemorySize64\":  2101248\r\n    },\r\n    {\r\n        \"Id\":  18244,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  175.6875,\r\n        \"WorkingSet64\":  347041792,\r\n        \"PrivateMemorySize64\":  418607104\r\n    },\r\n    {\r\n        \"Id\":  6556,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  105.1875,\r\n        \"WorkingSet64\":  325017600,\r\n        \"PrivateMemorySize64\":  359768064\r\n    },\r\n    {\r\n        \"Id\":  19428,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  101.109375,\r\n        \"WorkingSet64\":  953540608,\r\n        \"PrivateMemorySize64\":  1016864768\r\n    },\r\n    {\r\n        \"Id\":  8444,\r\n        \"ProcessName\":  \"explorer\",\r\n        \"CPU\":  98.765625,\r\n        \"WorkingSet64\":  293040128,\r\n        \"PrivateMemorySize64\":  214286336\r\n    },\r\n    {\r\n        \"Id\":  844,\r\n        \"ProcessName\":  \"codex\",\r\n        \"CPU\":  82.78125,\r\n        \"WorkingSet64\":  239120384,\r\n        \"PrivateMemorySize64\":  177741824\r\n    },\r\n    {\r\n        \"Id\":  18600,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  75.21875,\r\n        \"WorkingSet64\":  317079552,\r\n        \"PrivateMemorySize64\":  247394304\r\n    },\r\n    {\r\n        \"Id\":  4956,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  69.671875,\r\n        \"WorkingSet64\":  215453696,\r\n        \"PrivateMemorySize64\":  231485440\r\n    },\r\n    {\r\n        \"Id\":  12884,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  58.125,\r\n        \"WorkingSet64\":  120635392,\r\n        \"PrivateMemorySize64\":  82968576\r\n    },\r\n    {\r\n        \"Id\":  13492,\r\n        \"ProcessName\":  \"msedgewebview2\",\r\n        \"CPU\":  57.546875,\r\n        \"WorkingSet64\":  1073152,\r\n        \"PrivateMemorySize64\":  214204416\r\n    },\r\n    {\r\n        \"Id\":  9680,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  52.21875,\r\n        \"WorkingSet64\":  59490304,\r\n        \"PrivateMemorySize64\":  31121408\r\n    },\r\n    {\r\n        \"Id\":  11000,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  49.546875,\r\n        \"WorkingSet64\":  142254080,\r\n        \"PrivateMemorySize64\":  94691328\r\n    },\r\n    {\r\n        \"Id\":  13092,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  47.9375,\r\n        \"WorkingSet64\":  184086528,\r\n        \"PrivateMemorySize64\":  183296000\r\n    },\r\n    {\r\n        \"Id\":  15044,\r\n        \"ProcessName\":  \"Code\",\r\n        \"CPU\":  32.421875,\r\n        \"WorkingSet64\":  151896064,\r\n        \"PrivateMemorySize64\":  117882880\r\n    },\r\n    {\r\n        \"Id\":  4664,\r\n        \"ProcessName\":  \"ChatGPT\",\r\n        \"CPU\":  30.625,\r\n        \"WorkingSet64\":  49324032,\r\n        \"PrivateMemorySize64\":  17154048\r\n    },\r\n    {\r\n        \"Id\":  3484,\r\n        \"ProcessName\":  \"msedgewebview2\",\r\n        \"CPU\":  30.59375,\r\n        \"WorkingSet64\":  5357568,\r\n        \"PrivateMemorySize64\":  172761088\r\n    },\r\n    {\r\n        \"Id\":  16272,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  30.296875,\r\n        \"WorkingSet64\":  116867072,\r\n        \"PrivateMemorySize64\":  160591872\r\n    },\r\n    {\r\n        \"Id\":  14696,\r\n        \"ProcessName\":  \"Notepad\",\r\n        \"CPU\":  30.234375,\r\n        \"WorkingSet64\":  104738816,\r\n        \"PrivateMemorySize64\":  81014784\r\n    },\r\n    {\r\n        \"Id\":  11488,\r\n        \"ProcessName\":  \"ctfmon\",\r\n        \"CPU\":  22.03125,\r\n        \"WorkingSet64\":  39215104,\r\n        \"PrivateMemorySize64\":  36700160\r\n    },\r\n    {\r\n        \"Id\":  5096,\r\n        \"ProcessName\":  \"sihost\",\r\n        \"CPU\":  19.046875,\r\n        \"WorkingSet64\":  53665792,\r\n        \"PrivateMemorySize64\":  9715712\r\n    },\r\n    {\r\n        \"Id\":  8316,\r\n        \"ProcessName\":  \"StartMenuExperienceHost\",\r\n        \"CPU\":  16.265625,\r\n        \"WorkingSet64\":  145350656,\r\n        \"PrivateMemorySize64\":  113709056\r\n    },\r\n    {\r\n        \"Id\":  18304,\r\n        \"ProcessName\":  \"whale\",\r\n        \"CPU\":  15.65625,\r\n        \"WorkingSet64\":  98009088,\r\n        \"PrivateMemorySize64\":  100192256\r\n    },\r\n    {\r\n        \"Id\":  9280,\r\n        \"ProcessName\":  \"Widgets\",\r\n        \"CPU\":  13.484375,\r\n        \"WorkingSet64\":  81551360,\r\n        \"PrivateMemorySize64\":  18239488\r\n    }\r\n]",
+    "stderr": ""
+  }
+}

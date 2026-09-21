@@ -1,0 +1,23 @@
+[
+  {
+    "at": "2026-09-21T09:16:18.402Z",
+    "relative_ms": 537.9594000000001,
+    "event": "isolated_engine_started",
+    "pid": 20160,
+    "port": 64822
+  },
+  {
+    "at": "2026-09-21T09:16:18.486Z",
+    "relative_ms": 621.9968,
+    "event": "memory_sampler_started",
+    "pid": 3360
+  },
+  {
+    "at": "2026-09-21T09:16:22.993Z",
+    "relative_ms": 5128.6822999999995,
+    "event": "burst_completed",
+    "accepted": 2144,
+    "queue_full": 356,
+    "uncertain": 0
+  }
+]

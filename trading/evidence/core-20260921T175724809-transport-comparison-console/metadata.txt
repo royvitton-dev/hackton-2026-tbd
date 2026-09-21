@@ -1,0 +1,4 @@
+Started: 2026-09-21T17:57:24.8215070+09:00
+Command: node scripts/network-bench.mjs --quiet-window --cycles 200 --warmup-cycles 20 --stress12 --label node-http-client --transport node-http
+Only measurement client transport changed; server binary/durability/inputs preserved.
+Exit code: 0

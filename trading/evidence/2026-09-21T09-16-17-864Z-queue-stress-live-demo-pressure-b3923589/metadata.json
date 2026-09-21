@@ -1,0 +1,121 @@
+{
+  "run_id": "2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589",
+  "started_at": "2026-09-21T09:16:17.864Z",
+  "command": [
+    "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "C:\\project\\hackton-2026-tbd\\trading\\scripts\\queue-stress.mjs",
+    "--competing-resource-stress",
+    "--burst",
+    "2500",
+    "--label",
+    "live-demo-pressure"
+  ],
+  "options": {
+    "enabled": true,
+    "burst": 2500,
+    "maxHttp": 4000,
+    "maxClients": 2500,
+    "workMs": 45000,
+    "label": "live-demo-pressure"
+  },
+  "classification": "competing-resource stress; normal demo and observer remain live; never substitute for quiet baseline A/B/C",
+  "binary": {
+    "source": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\release\\leave-engine.exe",
+    "copied": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589\\bin\\leave-engine.exe",
+    "sha256": "b3f97fbb5a3cd15eabb8ece422eb53f810967922a5ee74c832d5349cb2e7d080"
+  },
+  "host": {
+    "os": "Windows 11 Pro",
+    "release": "10.0.26200",
+    "node": "v24.19.0",
+    "cpu_model": "12th Gen Intel(R) Core(TM) i5-1240P",
+    "logical_processors": 16,
+    "total_memory_bytes": 16880881664,
+    "free_memory_bytes": 4511862784
+  },
+  "demo_before": {
+    "run_id": "2026-09-21T08-59-54-120Z-demo-e6520956",
+    "manifest": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo-current.json",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 15804,
+        "alive": true
+      },
+      {
+        "name": "frontend",
+        "pid": 18940,
+        "alive": true
+      },
+      {
+        "name": "bot-01",
+        "pid": 18960,
+        "alive": true
+      },
+      {
+        "name": "bot-02",
+        "pid": 2616,
+        "alive": true
+      },
+      {
+        "name": "bot-03",
+        "pid": 18860,
+        "alive": true
+      },
+      {
+        "name": "bot-04",
+        "pid": 4064,
+        "alive": true
+      },
+      {
+        "name": "bot-05",
+        "pid": 14536,
+        "alive": true
+      },
+      {
+        "name": "bot-06",
+        "pid": 2220,
+        "alive": true
+      },
+      {
+        "name": "bot-07",
+        "pid": 3320,
+        "alive": true
+      },
+      {
+        "name": "bot-08",
+        "pid": 17416,
+        "alive": true
+      },
+      {
+        "name": "bot-09",
+        "pid": 20280,
+        "alive": true
+      },
+      {
+        "name": "bot-10",
+        "pid": 20228,
+        "alive": true
+      },
+      {
+        "name": "bot-11",
+        "pid": 19860,
+        "alive": true
+      },
+      {
+        "name": "bot-12",
+        "pid": 15668,
+        "alive": true
+      }
+    ]
+  },
+  "workload": "one simultaneous burst; each unique bot/request places one resting buy at1point for1hour; all retry requests retain the same account/id/action",
+  "resource_limits": {
+    "max_http_requests": 4000,
+    "max_concurrent_http_sockets": 2500,
+    "work_deadline_ms": 45000,
+    "hard_cleanup_deadline_ms": 58000,
+    "client_rss_abort_bytes": 402653184
+  },
+  "ended_at": "2026-09-21T09:16:25.304Z"
+}

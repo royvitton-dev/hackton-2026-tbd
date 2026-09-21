@@ -1,0 +1,70 @@
+{
+  "source_run": "2026-09-21T11-01-25-875Z-engine-load-8774ce30",
+  "source_sha256": {
+    "summary.json": "3a9f2cfad5844fe00a27ad508da898ea73227c2f0b9c310c4ea92d28c6d7d7e9",
+    "metadata.json": "04f86e715a1d5106e9cd593846722b45b514965899e987852910f2b341aba77e",
+    "resource-samples.json": "e74d5fa216f815c3eae43ae2a3bff54e7ecf2878022cd6b4b5cdc65832d54899",
+    "events.json": "da352682b78e967372506520ad485d10cb601e477db85e41c968e496c164480e"
+  },
+  "plot_script_sha256": "3d74c30e77028b7da04cfbafb9a93f4e5997d89c7ce7a6db5ef80d599065c481",
+  "python": "3.12.14",
+  "matplotlib": "3.11.2",
+  "cpu_intervals_independently_recalculated": 67,
+  "memory_samples": 72,
+  "phases": [
+    {
+      "concurrency": 6,
+      "seconds": 12.700052900000001,
+      "commands": 6000,
+      "commands_per_second": 472.4389770061509,
+      "ack_p99_ms": 17.036999999999352,
+      "pid": 22032,
+      "role": "engine",
+      "cpu_covered_seconds": 11.8654178,
+      "cpu_seconds": 11.078125,
+      "cpu_mean_percent_total_capacity": 5.835300738419848,
+      "cpu_max_interval_percent_total_capacity": 7.228132145959695,
+      "memory_samples": 24,
+      "observed_max_working_set_bytes": 18886656,
+      "observed_max_private_bytes": 13299712
+    },
+    {
+      "concurrency": 24,
+      "seconds": 12.333230700000001,
+      "commands": 5952,
+      "commands_per_second": 482.59861059762704,
+      "ack_p99_ms": 56.58329999999842,
+      "pid": 22032,
+      "role": "engine",
+      "cpu_covered_seconds": 11.816313500000001,
+      "cpu_seconds": 13.90625,
+      "cpu_mean_percent_total_capacity": 7.355429635478103,
+      "cpu_max_interval_percent_total_capacity": 9.658049478688913,
+      "memory_samples": 24,
+      "observed_max_working_set_bytes": 32382976,
+      "observed_max_private_bytes": 27340800
+    },
+    {
+      "concurrency": 96,
+      "seconds": 11.2909143,
+      "commands": 5760,
+      "commands_per_second": 510.14469217962267,
+      "ack_p99_ms": 186.65980000000127,
+      "pid": 22032,
+      "role": "engine",
+      "cpu_covered_seconds": 10.81484,
+      "cpu_seconds": 3.03125,
+      "cpu_mean_percent_total_capacity": 1.751788514670582,
+      "cpu_max_interval_percent_total_capacity": 3.843085054051602,
+      "memory_samples": 22,
+      "observed_max_working_set_bytes": 34934784,
+      "observed_max_private_bytes": 32288768
+    }
+  ],
+  "limits": [
+    "CPU percent uses all logical CPUs as 100%; not single-core normalization.",
+    "CPU points are interval means, not instantaneous peaks.",
+    "Memory values are sampled; private bytes and resident working set differ.",
+    "X axis is sample receipt time; cross-phase CPU intervals are excluded."
+  ]
+}

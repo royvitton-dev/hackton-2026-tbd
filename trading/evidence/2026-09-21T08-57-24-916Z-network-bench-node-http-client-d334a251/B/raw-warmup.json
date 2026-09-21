@@ -1,0 +1,4222 @@
+[
+  {
+    "request_id": "bench-0-0",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1544.0986,
+    "dispatch_ms": 1544.2887,
+    "client_scheduler_delay_ms": 0.19010000000002947,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-0-0",
+      "account_id": "user-01",
+      "command_seq": 1,
+      "event_seq": 1,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 1,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": false,
+    "ack_ms": 1554.4419,
+    "dispatch_to_ack_ms": 10.15319999999997,
+    "scheduled_to_ack_ms": 10.3433
+  },
+  {
+    "request_id": "bench-0-1",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1554.4489,
+    "dispatch_ms": 1554.4496,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-0-1",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1559.2763,
+    "dispatch_to_ack_ms": 4.8267000000000735,
+    "scheduled_to_ack_ms": 4.827399999999898
+  },
+  {
+    "request_id": "bench-0-2",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1559.2812,
+    "dispatch_ms": 1559.2818,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-0-2",
+      "account_id": "user-02",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046421,
+          "command_seq": 3
+        },
+        {
+          "id": 2,
+          "maker_order_id": 2,
+          "taker_order_id": 3,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046421,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1563.8039,
+    "dispatch_to_ack_ms": 4.522100000000137,
+    "scheduled_to_ack_ms": 4.5227000000002135
+  },
+  {
+    "request_id": "bench-0-3",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 2
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1564.3772,
+    "dispatch_ms": 1564.3783,
+    "client_scheduler_delay_ms": 0.0011000000001786248,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-0-3",
+      "account_id": "user-01",
+      "command_seq": 4,
+      "event_seq": 4,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1568.8472,
+    "dispatch_to_ack_ms": 4.468899999999849,
+    "scheduled_to_ack_ms": 4.470000000000027
+  },
+  {
+    "request_id": "bench-0-4",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1568.8653,
+    "dispatch_ms": 1568.8661,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-0-4",
+      "account_id": "user-03",
+      "command_seq": 5,
+      "event_seq": 5,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 4,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1571.8068,
+    "dispatch_to_ack_ms": 2.9407000000001062,
+    "scheduled_to_ack_ms": 2.941500000000133
+  },
+  {
+    "request_id": "bench-0-5",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 4
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1571.8116,
+    "dispatch_ms": 1571.8123,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-0-5",
+      "account_id": "user-03",
+      "command_seq": 6,
+      "event_seq": 6,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 4,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1574.7628,
+    "dispatch_to_ack_ms": 2.95049999999992,
+    "scheduled_to_ack_ms": 2.9511999999999716
+  },
+  {
+    "request_id": "bench-1-0",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1574.7679,
+    "dispatch_ms": 1574.7686,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-1-0",
+      "account_id": "user-02",
+      "command_seq": 7,
+      "event_seq": 7,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 5,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1577.6428,
+    "dispatch_to_ack_ms": 2.8741999999999734,
+    "scheduled_to_ack_ms": 2.874900000000025
+  },
+  {
+    "request_id": "bench-1-1",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1577.6479,
+    "dispatch_ms": 1577.6486,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-1-1",
+      "account_id": "user-02",
+      "command_seq": 8,
+      "event_seq": 8,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 6,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1580.5103,
+    "dispatch_to_ack_ms": 2.861699999999928,
+    "scheduled_to_ack_ms": 2.8623999999999796
+  },
+  {
+    "request_id": "bench-1-2",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1580.5154,
+    "dispatch_ms": 1580.516,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-1-2",
+      "account_id": "user-03",
+      "command_seq": 9,
+      "event_seq": 9,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 7,
+      "trades": [
+        {
+          "id": 3,
+          "maker_order_id": 5,
+          "taker_order_id": 7,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046442,
+          "command_seq": 9
+        },
+        {
+          "id": 4,
+          "maker_order_id": 6,
+          "taker_order_id": 7,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046442,
+          "command_seq": 9
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1583.4407,
+    "dispatch_to_ack_ms": 2.92470000000003,
+    "scheduled_to_ack_ms": 2.9253000000001066
+  },
+  {
+    "request_id": "bench-1-3",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 6
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1583.4825,
+    "dispatch_ms": 1583.4845,
+    "client_scheduler_delay_ms": 0.0019999999999527063,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-1-3",
+      "account_id": "user-02",
+      "command_seq": 10,
+      "event_seq": 10,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 6,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1586.3174,
+    "dispatch_to_ack_ms": 2.8328999999998814,
+    "scheduled_to_ack_ms": 2.834899999999834
+  },
+  {
+    "request_id": "bench-1-4",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1586.3256,
+    "dispatch_ms": 1586.3265,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-1-4",
+      "account_id": "user-01",
+      "command_seq": 11,
+      "event_seq": 11,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 8,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1589.0272,
+    "dispatch_to_ack_ms": 2.700700000000097,
+    "scheduled_to_ack_ms": 2.7016000000000986
+  },
+  {
+    "request_id": "bench-1-5",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 8
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1589.033,
+    "dispatch_ms": 1589.0338,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-1-5",
+      "account_id": "user-01",
+      "command_seq": 12,
+      "event_seq": 12,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 8,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1591.5219,
+    "dispatch_to_ack_ms": 2.4881000000000313,
+    "scheduled_to_ack_ms": 2.488900000000058
+  },
+  {
+    "request_id": "bench-2-0",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1591.5272,
+    "dispatch_ms": 1591.5281,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-2-0",
+      "account_id": "user-03",
+      "command_seq": 13,
+      "event_seq": 13,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 9,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1594.3358,
+    "dispatch_to_ack_ms": 2.807700000000068,
+    "scheduled_to_ack_ms": 2.8086000000000695
+  },
+  {
+    "request_id": "bench-2-1",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1594.341,
+    "dispatch_ms": 1594.3417,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-2-1",
+      "account_id": "user-03",
+      "command_seq": 14,
+      "event_seq": 14,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 10,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1596.8214,
+    "dispatch_to_ack_ms": 2.4797000000000935,
+    "scheduled_to_ack_ms": 2.480400000000145
+  },
+  {
+    "request_id": "bench-2-2",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1596.8273,
+    "dispatch_ms": 1596.8282,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-2-2",
+      "account_id": "user-01",
+      "command_seq": 15,
+      "event_seq": 15,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 11,
+      "trades": [
+        {
+          "id": 5,
+          "maker_order_id": 9,
+          "taker_order_id": 11,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046459,
+          "command_seq": 15
+        },
+        {
+          "id": 6,
+          "maker_order_id": 10,
+          "taker_order_id": 11,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046459,
+          "command_seq": 15
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1599.3975,
+    "dispatch_to_ack_ms": 2.569300000000112,
+    "scheduled_to_ack_ms": 2.5702000000001135
+  },
+  {
+    "request_id": "bench-2-3",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 10
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1599.4453,
+    "dispatch_ms": 1599.4457,
+    "client_scheduler_delay_ms": 0.0003999999998995918,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-2-3",
+      "account_id": "user-03",
+      "command_seq": 16,
+      "event_seq": 16,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 10,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1602.2218,
+    "dispatch_to_ack_ms": 2.776100000000042,
+    "scheduled_to_ack_ms": 2.776499999999942
+  },
+  {
+    "request_id": "bench-2-4",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1602.2299,
+    "dispatch_ms": 1602.2307,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-2-4",
+      "account_id": "user-02",
+      "command_seq": 17,
+      "event_seq": 17,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 12,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1604.9998,
+    "dispatch_to_ack_ms": 2.7690999999999804,
+    "scheduled_to_ack_ms": 2.769900000000007
+  },
+  {
+    "request_id": "bench-2-5",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 12
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1605.0069,
+    "dispatch_ms": 1605.0077,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-2-5",
+      "account_id": "user-02",
+      "command_seq": 18,
+      "event_seq": 18,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 12,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1607.5335,
+    "dispatch_to_ack_ms": 2.52579999999989,
+    "scheduled_to_ack_ms": 2.5265999999999167
+  },
+  {
+    "request_id": "bench-3-0",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1607.5408,
+    "dispatch_ms": 1607.5414,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-3-0",
+      "account_id": "user-01",
+      "command_seq": 19,
+      "event_seq": 19,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 13,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1610.3112,
+    "dispatch_to_ack_ms": 2.769800000000032,
+    "scheduled_to_ack_ms": 2.7704000000001088
+  },
+  {
+    "request_id": "bench-3-1",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1610.318,
+    "dispatch_ms": 1610.3187,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-3-1",
+      "account_id": "user-01",
+      "command_seq": 20,
+      "event_seq": 20,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 14,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1612.92,
+    "dispatch_to_ack_ms": 2.6013000000000375,
+    "scheduled_to_ack_ms": 2.602000000000089
+  },
+  {
+    "request_id": "bench-3-2",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1612.9266,
+    "dispatch_ms": 1612.9275,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-3-2",
+      "account_id": "user-02",
+      "command_seq": 21,
+      "event_seq": 21,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 15,
+      "trades": [
+        {
+          "id": 7,
+          "maker_order_id": 13,
+          "taker_order_id": 15,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046475,
+          "command_seq": 21
+        },
+        {
+          "id": 8,
+          "maker_order_id": 14,
+          "taker_order_id": 15,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046475,
+          "command_seq": 21
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1615.5732,
+    "dispatch_to_ack_ms": 2.6457000000000335,
+    "scheduled_to_ack_ms": 2.646600000000035
+  },
+  {
+    "request_id": "bench-3-3",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 14
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1615.5998,
+    "dispatch_ms": 1615.6002,
+    "client_scheduler_delay_ms": 0.00040000000012696546,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-3-3",
+      "account_id": "user-01",
+      "command_seq": 22,
+      "event_seq": 22,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 14,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1618.1814,
+    "dispatch_to_ack_ms": 2.5811999999998534,
+    "scheduled_to_ack_ms": 2.5815999999999804
+  },
+  {
+    "request_id": "bench-3-4",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1618.1882,
+    "dispatch_ms": 1618.1891,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-3-4",
+      "account_id": "user-03",
+      "command_seq": 23,
+      "event_seq": 23,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 16,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1620.7956,
+    "dispatch_to_ack_ms": 2.606499999999869,
+    "scheduled_to_ack_ms": 2.6073999999998705
+  },
+  {
+    "request_id": "bench-3-5",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 16
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1620.8034,
+    "dispatch_ms": 1620.8042,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-3-5",
+      "account_id": "user-03",
+      "command_seq": 24,
+      "event_seq": 24,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 16,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1623.3412,
+    "dispatch_to_ack_ms": 2.5370000000000346,
+    "scheduled_to_ack_ms": 2.537800000000061
+  },
+  {
+    "request_id": "bench-4-0",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1623.3478,
+    "dispatch_ms": 1623.3486,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-4-0",
+      "account_id": "user-02",
+      "command_seq": 25,
+      "event_seq": 25,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 17,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1625.959,
+    "dispatch_to_ack_ms": 2.610400000000027,
+    "scheduled_to_ack_ms": 2.6112000000000535
+  },
+  {
+    "request_id": "bench-4-1",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1625.9652,
+    "dispatch_ms": 1625.9662,
+    "client_scheduler_delay_ms": 0.0009999999999763531,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-4-1",
+      "account_id": "user-02",
+      "command_seq": 26,
+      "event_seq": 26,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 18,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1628.5621,
+    "dispatch_to_ack_ms": 2.5959000000000287,
+    "scheduled_to_ack_ms": 2.596900000000005
+  },
+  {
+    "request_id": "bench-4-2",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1628.569,
+    "dispatch_ms": 1628.5698,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-4-2",
+      "account_id": "user-03",
+      "command_seq": 27,
+      "event_seq": 27,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 19,
+      "trades": [
+        {
+          "id": 9,
+          "maker_order_id": 17,
+          "taker_order_id": 19,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046490,
+          "command_seq": 27
+        },
+        {
+          "id": 10,
+          "maker_order_id": 18,
+          "taker_order_id": 19,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046490,
+          "command_seq": 27
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1631.1225,
+    "dispatch_to_ack_ms": 2.552699999999959,
+    "scheduled_to_ack_ms": 2.5534999999999854
+  },
+  {
+    "request_id": "bench-4-3",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 18
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1631.1537,
+    "dispatch_ms": 1631.1542,
+    "client_scheduler_delay_ms": 0.0004999999998744897,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-4-3",
+      "account_id": "user-02",
+      "command_seq": 28,
+      "event_seq": 28,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 18,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1633.7474,
+    "dispatch_to_ack_ms": 2.5932000000000244,
+    "scheduled_to_ack_ms": 2.593699999999899
+  },
+  {
+    "request_id": "bench-4-4",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1633.7537,
+    "dispatch_ms": 1633.7545,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-4-4",
+      "account_id": "user-01",
+      "command_seq": 29,
+      "event_seq": 29,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 20,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1636.3891,
+    "dispatch_to_ack_ms": 2.6346000000000913,
+    "scheduled_to_ack_ms": 2.635400000000118
+  },
+  {
+    "request_id": "bench-4-5",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 20
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1636.3966,
+    "dispatch_ms": 1636.3974,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-4-5",
+      "account_id": "user-01",
+      "command_seq": 30,
+      "event_seq": 30,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 20,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1638.9218,
+    "dispatch_to_ack_ms": 2.524400000000014,
+    "scheduled_to_ack_ms": 2.5252000000000407
+  },
+  {
+    "request_id": "bench-5-0",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1638.9298,
+    "dispatch_ms": 1638.9308,
+    "client_scheduler_delay_ms": 0.0010000000002037268,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-5-0",
+      "account_id": "user-03",
+      "command_seq": 31,
+      "event_seq": 31,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 21,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1641.5157,
+    "dispatch_to_ack_ms": 2.584899999999834,
+    "scheduled_to_ack_ms": 2.585900000000038
+  },
+  {
+    "request_id": "bench-5-1",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1641.522,
+    "dispatch_ms": 1641.5227,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-5-1",
+      "account_id": "user-03",
+      "command_seq": 32,
+      "event_seq": 32,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 22,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1644.0721,
+    "dispatch_to_ack_ms": 2.549400000000105,
+    "scheduled_to_ack_ms": 2.550100000000157
+  },
+  {
+    "request_id": "bench-5-2",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1644.0781,
+    "dispatch_ms": 1644.0788,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-5-2",
+      "account_id": "user-01",
+      "command_seq": 33,
+      "event_seq": 33,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 23,
+      "trades": [
+        {
+          "id": 11,
+          "maker_order_id": 21,
+          "taker_order_id": 23,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046506,
+          "command_seq": 33
+        },
+        {
+          "id": 12,
+          "maker_order_id": 22,
+          "taker_order_id": 23,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046506,
+          "command_seq": 33
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1646.7954,
+    "dispatch_to_ack_ms": 2.7165999999999713,
+    "scheduled_to_ack_ms": 2.717300000000023
+  },
+  {
+    "request_id": "bench-5-3",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 22
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1646.8141,
+    "dispatch_ms": 1646.8146,
+    "client_scheduler_delay_ms": 0.0004999999998744897,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-5-3",
+      "account_id": "user-03",
+      "command_seq": 34,
+      "event_seq": 34,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 22,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1649.5324,
+    "dispatch_to_ack_ms": 2.717800000000125,
+    "scheduled_to_ack_ms": 2.7182999999999993
+  },
+  {
+    "request_id": "bench-5-4",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1649.539,
+    "dispatch_ms": 1649.5398,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-5-4",
+      "account_id": "user-02",
+      "command_seq": 35,
+      "event_seq": 35,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 24,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1652.0854,
+    "dispatch_to_ack_ms": 2.545599999999922,
+    "scheduled_to_ack_ms": 2.5463999999999487
+  },
+  {
+    "request_id": "bench-5-5",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 24
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1652.0922,
+    "dispatch_ms": 1652.0929,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-5-5",
+      "account_id": "user-02",
+      "command_seq": 36,
+      "event_seq": 36,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 24,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1654.9688,
+    "dispatch_to_ack_ms": 2.8759000000000015,
+    "scheduled_to_ack_ms": 2.876600000000053
+  },
+  {
+    "request_id": "bench-6-0",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1654.9764,
+    "dispatch_ms": 1654.9773,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-6-0",
+      "account_id": "user-01",
+      "command_seq": 37,
+      "event_seq": 37,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 25,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1657.8431,
+    "dispatch_to_ack_ms": 2.8658000000000357,
+    "scheduled_to_ack_ms": 2.866700000000037
+  },
+  {
+    "request_id": "bench-6-1",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1657.8488,
+    "dispatch_ms": 1657.8496,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-6-1",
+      "account_id": "user-01",
+      "command_seq": 38,
+      "event_seq": 38,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 26,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1660.5716,
+    "dispatch_to_ack_ms": 2.72199999999998,
+    "scheduled_to_ack_ms": 2.7228000000000065
+  },
+  {
+    "request_id": "bench-6-2",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1660.5777,
+    "dispatch_ms": 1660.5784,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-6-2",
+      "account_id": "user-02",
+      "command_seq": 39,
+      "event_seq": 39,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 27,
+      "trades": [
+        {
+          "id": 13,
+          "maker_order_id": 25,
+          "taker_order_id": 27,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046522,
+          "command_seq": 39
+        },
+        {
+          "id": 14,
+          "maker_order_id": 26,
+          "taker_order_id": 27,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046522,
+          "command_seq": 39
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1663.2699,
+    "dispatch_to_ack_ms": 2.6914999999999054,
+    "scheduled_to_ack_ms": 2.692199999999957
+  },
+  {
+    "request_id": "bench-6-3",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 26
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1663.2882,
+    "dispatch_ms": 1663.2888,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-6-3",
+      "account_id": "user-01",
+      "command_seq": 40,
+      "event_seq": 40,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 26,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1665.7634,
+    "dispatch_to_ack_ms": 2.4746000000000095,
+    "scheduled_to_ack_ms": 2.475200000000086
+  },
+  {
+    "request_id": "bench-6-4",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1665.7701,
+    "dispatch_ms": 1665.771,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-6-4",
+      "account_id": "user-03",
+      "command_seq": 41,
+      "event_seq": 41,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1668.6101,
+    "dispatch_to_ack_ms": 2.839100000000144,
+    "scheduled_to_ack_ms": 2.8400000000001455
+  },
+  {
+    "request_id": "bench-6-5",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 28
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1668.6169,
+    "dispatch_ms": 1668.6177,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-6-5",
+      "account_id": "user-03",
+      "command_seq": 42,
+      "event_seq": 42,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1671.2643,
+    "dispatch_to_ack_ms": 2.646600000000035,
+    "scheduled_to_ack_ms": 2.6474000000000615
+  },
+  {
+    "request_id": "bench-7-0",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1671.2711,
+    "dispatch_ms": 1671.272,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-7-0",
+      "account_id": "user-02",
+      "command_seq": 43,
+      "event_seq": 43,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 29,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1674.1282,
+    "dispatch_to_ack_ms": 2.8562000000001717,
+    "scheduled_to_ack_ms": 2.857100000000173
+  },
+  {
+    "request_id": "bench-7-1",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1674.1353,
+    "dispatch_ms": 1674.1363,
+    "client_scheduler_delay_ms": 0.0009999999999763531,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-7-1",
+      "account_id": "user-02",
+      "command_seq": 44,
+      "event_seq": 44,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 30,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1676.8564,
+    "dispatch_to_ack_ms": 2.720100000000002,
+    "scheduled_to_ack_ms": 2.7210999999999785
+  },
+  {
+    "request_id": "bench-7-2",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1676.8622,
+    "dispatch_ms": 1676.863,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-7-2",
+      "account_id": "user-03",
+      "command_seq": 45,
+      "event_seq": 45,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 31,
+      "trades": [
+        {
+          "id": 15,
+          "maker_order_id": 29,
+          "taker_order_id": 31,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046539,
+          "command_seq": 45
+        },
+        {
+          "id": 16,
+          "maker_order_id": 30,
+          "taker_order_id": 31,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046539,
+          "command_seq": 45
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1679.2932,
+    "dispatch_to_ack_ms": 2.4302000000000135,
+    "scheduled_to_ack_ms": 2.43100000000004
+  },
+  {
+    "request_id": "bench-7-3",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 30
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1679.3115,
+    "dispatch_ms": 1679.3122,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-7-3",
+      "account_id": "user-02",
+      "command_seq": 46,
+      "event_seq": 46,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 30,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1681.5898,
+    "dispatch_to_ack_ms": 2.277599999999893,
+    "scheduled_to_ack_ms": 2.2782999999999447
+  },
+  {
+    "request_id": "bench-7-4",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1681.597,
+    "dispatch_ms": 1681.5977,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-7-4",
+      "account_id": "user-01",
+      "command_seq": 47,
+      "event_seq": 47,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 32,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1683.9832,
+    "dispatch_to_ack_ms": 2.3854999999998654,
+    "scheduled_to_ack_ms": 2.386199999999917
+  },
+  {
+    "request_id": "bench-7-5",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 32
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1683.9895,
+    "dispatch_ms": 1683.9902,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-7-5",
+      "account_id": "user-01",
+      "command_seq": 48,
+      "event_seq": 48,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 32,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1686.4287,
+    "dispatch_to_ack_ms": 2.4384999999999764,
+    "scheduled_to_ack_ms": 2.439200000000028
+  },
+  {
+    "request_id": "bench-8-0",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1686.4355,
+    "dispatch_ms": 1686.4362,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-8-0",
+      "account_id": "user-03",
+      "command_seq": 49,
+      "event_seq": 49,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 33,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1688.9182,
+    "dispatch_to_ack_ms": 2.481999999999971,
+    "scheduled_to_ack_ms": 2.4827000000000226
+  },
+  {
+    "request_id": "bench-8-1",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1688.9252,
+    "dispatch_ms": 1688.9258,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-8-1",
+      "account_id": "user-03",
+      "command_seq": 50,
+      "event_seq": 50,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 34,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1691.433,
+    "dispatch_to_ack_ms": 2.5072000000000116,
+    "scheduled_to_ack_ms": 2.5078000000000884
+  },
+  {
+    "request_id": "bench-8-2",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1691.4409,
+    "dispatch_ms": 1691.442,
+    "client_scheduler_delay_ms": 0.001099999999951251,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-8-2",
+      "account_id": "user-01",
+      "command_seq": 51,
+      "event_seq": 51,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 35,
+      "trades": [
+        {
+          "id": 17,
+          "maker_order_id": 33,
+          "taker_order_id": 35,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046553,
+          "command_seq": 51
+        },
+        {
+          "id": 18,
+          "maker_order_id": 34,
+          "taker_order_id": 35,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046553,
+          "command_seq": 51
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1693.952,
+    "dispatch_to_ack_ms": 2.509999999999991,
+    "scheduled_to_ack_ms": 2.511099999999942
+  },
+  {
+    "request_id": "bench-8-3",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 34
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1693.976,
+    "dispatch_ms": 1693.9767,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-8-3",
+      "account_id": "user-03",
+      "command_seq": 52,
+      "event_seq": 52,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 34,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1696.4475,
+    "dispatch_to_ack_ms": 2.470800000000054,
+    "scheduled_to_ack_ms": 2.471499999999878
+  },
+  {
+    "request_id": "bench-8-4",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1696.4545,
+    "dispatch_ms": 1696.4553,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-8-4",
+      "account_id": "user-02",
+      "command_seq": 53,
+      "event_seq": 53,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 36,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1698.8578,
+    "dispatch_to_ack_ms": 2.402499999999918,
+    "scheduled_to_ack_ms": 2.4032999999999447
+  },
+  {
+    "request_id": "bench-8-5",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 36
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1698.8648,
+    "dispatch_ms": 1698.8654,
+    "client_scheduler_delay_ms": 0.0005999999998493877,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-8-5",
+      "account_id": "user-02",
+      "command_seq": 54,
+      "event_seq": 54,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 36,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1701.3788,
+    "dispatch_to_ack_ms": 2.513400000000047,
+    "scheduled_to_ack_ms": 2.5139999999998963
+  },
+  {
+    "request_id": "bench-9-0",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1701.3858,
+    "dispatch_ms": 1701.3866,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-9-0",
+      "account_id": "user-01",
+      "command_seq": 55,
+      "event_seq": 55,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 37,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1703.9758,
+    "dispatch_to_ack_ms": 2.5891999999998916,
+    "scheduled_to_ack_ms": 2.589999999999918
+  },
+  {
+    "request_id": "bench-9-1",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1703.9833,
+    "dispatch_ms": 1703.9842,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-9-1",
+      "account_id": "user-01",
+      "command_seq": 56,
+      "event_seq": 56,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 38,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1706.4699,
+    "dispatch_to_ack_ms": 2.4856999999999516,
+    "scheduled_to_ack_ms": 2.486599999999953
+  },
+  {
+    "request_id": "bench-9-2",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1706.4764,
+    "dispatch_ms": 1706.4772,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-9-2",
+      "account_id": "user-02",
+      "command_seq": 57,
+      "event_seq": 57,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 39,
+      "trades": [
+        {
+          "id": 19,
+          "maker_order_id": 37,
+          "taker_order_id": 39,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046568,
+          "command_seq": 57
+        },
+        {
+          "id": 20,
+          "maker_order_id": 38,
+          "taker_order_id": 39,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046568,
+          "command_seq": 57
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1709.2555,
+    "dispatch_to_ack_ms": 2.7782999999999447,
+    "scheduled_to_ack_ms": 2.7790999999999713
+  },
+  {
+    "request_id": "bench-9-3",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 38
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1709.281,
+    "dispatch_ms": 1709.2817,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-9-3",
+      "account_id": "user-01",
+      "command_seq": 58,
+      "event_seq": 58,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 38,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1711.7262,
+    "dispatch_to_ack_ms": 2.444500000000062,
+    "scheduled_to_ack_ms": 2.4452000000001135
+  },
+  {
+    "request_id": "bench-9-4",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1711.7333,
+    "dispatch_ms": 1711.734,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-9-4",
+      "account_id": "user-03",
+      "command_seq": 59,
+      "event_seq": 59,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 40,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1714.5544,
+    "dispatch_to_ack_ms": 2.8204000000000633,
+    "scheduled_to_ack_ms": 2.8210999999998876
+  },
+  {
+    "request_id": "bench-9-5",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 40
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1714.5625,
+    "dispatch_ms": 1714.5634,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-9-5",
+      "account_id": "user-03",
+      "command_seq": 60,
+      "event_seq": 60,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 40,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1716.9909,
+    "dispatch_to_ack_ms": 2.427500000000009,
+    "scheduled_to_ack_ms": 2.4284000000000106
+  },
+  {
+    "request_id": "bench-10-0",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1716.9983,
+    "dispatch_ms": 1716.9991,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-10-0",
+      "account_id": "user-02",
+      "command_seq": 61,
+      "event_seq": 61,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 41,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1719.3472,
+    "dispatch_to_ack_ms": 2.3480999999999312,
+    "scheduled_to_ack_ms": 2.348899999999958
+  },
+  {
+    "request_id": "bench-10-1",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1719.3553,
+    "dispatch_ms": 1719.3561,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-10-1",
+      "account_id": "user-02",
+      "command_seq": 62,
+      "event_seq": 62,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 42,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1721.999,
+    "dispatch_to_ack_ms": 2.642900000000054,
+    "scheduled_to_ack_ms": 2.6437000000000808
+  },
+  {
+    "request_id": "bench-10-2",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1722.0056,
+    "dispatch_ms": 1722.0064,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-10-2",
+      "account_id": "user-03",
+      "command_seq": 63,
+      "event_seq": 63,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 43,
+      "trades": [
+        {
+          "id": 21,
+          "maker_order_id": 41,
+          "taker_order_id": 43,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046584,
+          "command_seq": 63
+        },
+        {
+          "id": 22,
+          "maker_order_id": 42,
+          "taker_order_id": 43,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046584,
+          "command_seq": 63
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1724.7365,
+    "dispatch_to_ack_ms": 2.730099999999993,
+    "scheduled_to_ack_ms": 2.7309000000000196
+  },
+  {
+    "request_id": "bench-10-3",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 42
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1724.7579,
+    "dispatch_ms": 1724.7586,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-10-3",
+      "account_id": "user-02",
+      "command_seq": 64,
+      "event_seq": 64,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 42,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1727.3891,
+    "dispatch_to_ack_ms": 2.630500000000211,
+    "scheduled_to_ack_ms": 2.6312000000000353
+  },
+  {
+    "request_id": "bench-10-4",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1727.3977,
+    "dispatch_ms": 1727.3987,
+    "client_scheduler_delay_ms": 0.0009999999999763531,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-10-4",
+      "account_id": "user-01",
+      "command_seq": 65,
+      "event_seq": 65,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 44,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1730.117,
+    "dispatch_to_ack_ms": 2.7182999999999993,
+    "scheduled_to_ack_ms": 2.7192999999999756
+  },
+  {
+    "request_id": "bench-10-5",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 44
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1730.1249,
+    "dispatch_ms": 1730.1257,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-10-5",
+      "account_id": "user-01",
+      "command_seq": 66,
+      "event_seq": 66,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 44,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1732.7165,
+    "dispatch_to_ack_ms": 2.5907999999999447,
+    "scheduled_to_ack_ms": 2.5915999999999713
+  },
+  {
+    "request_id": "bench-11-0",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1732.7248,
+    "dispatch_ms": 1732.7276,
+    "client_scheduler_delay_ms": 0.0027999999999792635,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-11-0",
+      "account_id": "user-03",
+      "command_seq": 67,
+      "event_seq": 67,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 45,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1735.4332,
+    "dispatch_to_ack_ms": 2.705600000000004,
+    "scheduled_to_ack_ms": 2.7083999999999833
+  },
+  {
+    "request_id": "bench-11-1",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1735.4402,
+    "dispatch_ms": 1735.4409,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-11-1",
+      "account_id": "user-03",
+      "command_seq": 68,
+      "event_seq": 68,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 46,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1737.9265,
+    "dispatch_to_ack_ms": 2.4855999999999767,
+    "scheduled_to_ack_ms": 2.4863000000000284
+  },
+  {
+    "request_id": "bench-11-2",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1737.9338,
+    "dispatch_ms": 1737.9347,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-11-2",
+      "account_id": "user-01",
+      "command_seq": 69,
+      "event_seq": 69,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 47,
+      "trades": [
+        {
+          "id": 23,
+          "maker_order_id": 45,
+          "taker_order_id": 47,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046600,
+          "command_seq": 69
+        },
+        {
+          "id": 24,
+          "maker_order_id": 46,
+          "taker_order_id": 47,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046600,
+          "command_seq": 69
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1740.639,
+    "dispatch_to_ack_ms": 2.7042999999998756,
+    "scheduled_to_ack_ms": 2.705199999999877
+  },
+  {
+    "request_id": "bench-11-3",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 46
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1740.6603,
+    "dispatch_ms": 1740.6609,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-11-3",
+      "account_id": "user-03",
+      "command_seq": 70,
+      "event_seq": 70,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 46,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1743.3259,
+    "dispatch_to_ack_ms": 2.6649999999999636,
+    "scheduled_to_ack_ms": 2.6656000000000404
+  },
+  {
+    "request_id": "bench-11-4",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1743.3337,
+    "dispatch_ms": 1743.3346,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-11-4",
+      "account_id": "user-02",
+      "command_seq": 71,
+      "event_seq": 71,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 48,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1746.079,
+    "dispatch_to_ack_ms": 2.7444000000000415,
+    "scheduled_to_ack_ms": 2.745300000000043
+  },
+  {
+    "request_id": "bench-11-5",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 48
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1746.0869,
+    "dispatch_ms": 1746.0878,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-11-5",
+      "account_id": "user-02",
+      "command_seq": 72,
+      "event_seq": 72,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 48,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1748.6661,
+    "dispatch_to_ack_ms": 2.5782999999998992,
+    "scheduled_to_ack_ms": 2.5791999999999007
+  },
+  {
+    "request_id": "bench-12-0",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1748.6735,
+    "dispatch_ms": 1748.6745,
+    "client_scheduler_delay_ms": 0.0009999999999763531,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-12-0",
+      "account_id": "user-01",
+      "command_seq": 73,
+      "event_seq": 73,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 49,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1751.4254,
+    "dispatch_to_ack_ms": 2.7509000000000015,
+    "scheduled_to_ack_ms": 2.751899999999978
+  },
+  {
+    "request_id": "bench-12-1",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1751.4326,
+    "dispatch_ms": 1751.4333,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-12-1",
+      "account_id": "user-01",
+      "command_seq": 74,
+      "event_seq": 74,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 50,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1754.0678,
+    "dispatch_to_ack_ms": 2.6345000000001164,
+    "scheduled_to_ack_ms": 2.6351999999999407
+  },
+  {
+    "request_id": "bench-12-2",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1754.0755,
+    "dispatch_ms": 1754.0762,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-12-2",
+      "account_id": "user-02",
+      "command_seq": 75,
+      "event_seq": 75,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 51,
+      "trades": [
+        {
+          "id": 25,
+          "maker_order_id": 49,
+          "taker_order_id": 51,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046616,
+          "command_seq": 75
+        },
+        {
+          "id": 26,
+          "maker_order_id": 50,
+          "taker_order_id": 51,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046616,
+          "command_seq": 75
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1756.7646,
+    "dispatch_to_ack_ms": 2.6884000000000015,
+    "scheduled_to_ack_ms": 2.689100000000053
+  },
+  {
+    "request_id": "bench-12-3",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 50
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1756.7839,
+    "dispatch_ms": 1756.7844,
+    "client_scheduler_delay_ms": 0.0005000000001018634,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-12-3",
+      "account_id": "user-01",
+      "command_seq": 76,
+      "event_seq": 76,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 50,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1759.3222,
+    "dispatch_to_ack_ms": 2.537800000000061,
+    "scheduled_to_ack_ms": 2.538300000000163
+  },
+  {
+    "request_id": "bench-12-4",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1759.3294,
+    "dispatch_ms": 1759.3301,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-12-4",
+      "account_id": "user-03",
+      "command_seq": 77,
+      "event_seq": 77,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 52,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1762.2357,
+    "dispatch_to_ack_ms": 2.9056000000000495,
+    "scheduled_to_ack_ms": 2.9062999999998738
+  },
+  {
+    "request_id": "bench-12-5",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 52
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1762.2444,
+    "dispatch_ms": 1762.2452,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-12-5",
+      "account_id": "user-03",
+      "command_seq": 78,
+      "event_seq": 78,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 52,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1764.8497,
+    "dispatch_to_ack_ms": 2.6044999999999163,
+    "scheduled_to_ack_ms": 2.605299999999943
+  },
+  {
+    "request_id": "bench-13-0",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1764.8574,
+    "dispatch_ms": 1764.8581,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-13-0",
+      "account_id": "user-02",
+      "command_seq": 79,
+      "event_seq": 79,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 53,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1767.2326,
+    "dispatch_to_ack_ms": 2.3745000000001255,
+    "scheduled_to_ack_ms": 2.37519999999995
+  },
+  {
+    "request_id": "bench-13-1",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1767.2396,
+    "dispatch_ms": 1767.2405,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-13-1",
+      "account_id": "user-02",
+      "command_seq": 80,
+      "event_seq": 80,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 54,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1769.6853,
+    "dispatch_to_ack_ms": 2.4447999999999865,
+    "scheduled_to_ack_ms": 2.445699999999988
+  },
+  {
+    "request_id": "bench-13-2",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1769.6925,
+    "dispatch_ms": 1769.6932,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-13-2",
+      "account_id": "user-03",
+      "command_seq": 81,
+      "event_seq": 81,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 55,
+      "trades": [
+        {
+          "id": 27,
+          "maker_order_id": 53,
+          "taker_order_id": 55,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046631,
+          "command_seq": 81
+        },
+        {
+          "id": 28,
+          "maker_order_id": 54,
+          "taker_order_id": 55,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046631,
+          "command_seq": 81
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1772.1854,
+    "dispatch_to_ack_ms": 2.492200000000139,
+    "scheduled_to_ack_ms": 2.4928999999999633
+  },
+  {
+    "request_id": "bench-13-3",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 54
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1772.2061,
+    "dispatch_ms": 1772.2066,
+    "client_scheduler_delay_ms": 0.0004999999998744897,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-13-3",
+      "account_id": "user-02",
+      "command_seq": 82,
+      "event_seq": 82,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 54,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1774.6343,
+    "dispatch_to_ack_ms": 2.427699999999959,
+    "scheduled_to_ack_ms": 2.4281999999998334
+  },
+  {
+    "request_id": "bench-13-4",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1774.641,
+    "dispatch_ms": 1774.6417,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-13-4",
+      "account_id": "user-01",
+      "command_seq": 83,
+      "event_seq": 83,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 56,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1777.0577,
+    "dispatch_to_ack_ms": 2.4160000000001673,
+    "scheduled_to_ack_ms": 2.4166999999999916
+  },
+  {
+    "request_id": "bench-13-5",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 56
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1777.0646,
+    "dispatch_ms": 1777.0652,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-13-5",
+      "account_id": "user-01",
+      "command_seq": 84,
+      "event_seq": 84,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 56,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1779.8213,
+    "dispatch_to_ack_ms": 2.7561000000000604,
+    "scheduled_to_ack_ms": 2.756700000000137
+  },
+  {
+    "request_id": "bench-14-0",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1779.8283,
+    "dispatch_ms": 1779.8291,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-14-0",
+      "account_id": "user-03",
+      "command_seq": 85,
+      "event_seq": 85,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 57,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1782.626,
+    "dispatch_to_ack_ms": 2.7969000000000506,
+    "scheduled_to_ack_ms": 2.797700000000077
+  },
+  {
+    "request_id": "bench-14-1",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1782.633,
+    "dispatch_ms": 1782.6336,
+    "client_scheduler_delay_ms": 0.0005999999998493877,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-14-1",
+      "account_id": "user-03",
+      "command_seq": 86,
+      "event_seq": 86,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 58,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1785.272,
+    "dispatch_to_ack_ms": 2.638400000000047,
+    "scheduled_to_ack_ms": 2.6389999999998963
+  },
+  {
+    "request_id": "bench-14-2",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1785.279,
+    "dispatch_ms": 1785.2798,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-14-2",
+      "account_id": "user-01",
+      "command_seq": 87,
+      "event_seq": 87,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 59,
+      "trades": [
+        {
+          "id": 29,
+          "maker_order_id": 57,
+          "taker_order_id": 59,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046647,
+          "command_seq": 87
+        },
+        {
+          "id": 30,
+          "maker_order_id": 58,
+          "taker_order_id": 59,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046647,
+          "command_seq": 87
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1787.8842,
+    "dispatch_to_ack_ms": 2.6043999999999414,
+    "scheduled_to_ack_ms": 2.605199999999968
+  },
+  {
+    "request_id": "bench-14-3",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 58
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1787.9029,
+    "dispatch_ms": 1787.9034,
+    "client_scheduler_delay_ms": 0.0004999999998744897,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-14-3",
+      "account_id": "user-03",
+      "command_seq": 88,
+      "event_seq": 88,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 58,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1790.395,
+    "dispatch_to_ack_ms": 2.491600000000062,
+    "scheduled_to_ack_ms": 2.4920999999999367
+  },
+  {
+    "request_id": "bench-14-4",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1790.4025,
+    "dispatch_ms": 1790.4033,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-14-4",
+      "account_id": "user-02",
+      "command_seq": 89,
+      "event_seq": 89,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 60,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1793.0969,
+    "dispatch_to_ack_ms": 2.6936000000000604,
+    "scheduled_to_ack_ms": 2.694400000000087
+  },
+  {
+    "request_id": "bench-14-5",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 60
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1793.1039,
+    "dispatch_ms": 1793.1045,
+    "client_scheduler_delay_ms": 0.0005999999998493877,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-14-5",
+      "account_id": "user-02",
+      "command_seq": 90,
+      "event_seq": 90,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 60,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1795.5811,
+    "dispatch_to_ack_ms": 2.4766000000001895,
+    "scheduled_to_ack_ms": 2.477200000000039
+  },
+  {
+    "request_id": "bench-15-0",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1795.5886,
+    "dispatch_ms": 1795.5894,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-15-0",
+      "account_id": "user-01",
+      "command_seq": 91,
+      "event_seq": 91,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 61,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1798.1207,
+    "dispatch_to_ack_ms": 2.5312999999998738,
+    "scheduled_to_ack_ms": 2.5320999999999003
+  },
+  {
+    "request_id": "bench-15-1",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1798.1287,
+    "dispatch_ms": 1798.1296,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-15-1",
+      "account_id": "user-01",
+      "command_seq": 92,
+      "event_seq": 92,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 62,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1800.7508,
+    "dispatch_to_ack_ms": 2.6212000000000444,
+    "scheduled_to_ack_ms": 2.622100000000046
+  },
+  {
+    "request_id": "bench-15-2",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1800.7588,
+    "dispatch_ms": 1800.7598,
+    "client_scheduler_delay_ms": 0.0009999999999763531,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-15-2",
+      "account_id": "user-02",
+      "command_seq": 93,
+      "event_seq": 93,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 63,
+      "trades": [
+        {
+          "id": 31,
+          "maker_order_id": 61,
+          "taker_order_id": 63,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046663,
+          "command_seq": 93
+        },
+        {
+          "id": 32,
+          "maker_order_id": 62,
+          "taker_order_id": 63,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046663,
+          "command_seq": 93
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1803.4186,
+    "dispatch_to_ack_ms": 2.6587999999999283,
+    "scheduled_to_ack_ms": 2.6597999999999047
+  },
+  {
+    "request_id": "bench-15-3",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 62
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1803.4519,
+    "dispatch_ms": 1803.4525,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-15-3",
+      "account_id": "user-01",
+      "command_seq": 94,
+      "event_seq": 94,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 62,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1805.658,
+    "dispatch_to_ack_ms": 2.2054999999998017,
+    "scheduled_to_ack_ms": 2.2060999999998785
+  },
+  {
+    "request_id": "bench-15-4",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1805.6641,
+    "dispatch_ms": 1805.6648,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-15-4",
+      "account_id": "user-03",
+      "command_seq": 95,
+      "event_seq": 95,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 64,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1808.3857,
+    "dispatch_to_ack_ms": 2.7209000000000287,
+    "scheduled_to_ack_ms": 2.7216000000000804
+  },
+  {
+    "request_id": "bench-15-5",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 64
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1808.3931,
+    "dispatch_ms": 1808.394,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-15-5",
+      "account_id": "user-03",
+      "command_seq": 96,
+      "event_seq": 96,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 64,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1810.7218,
+    "dispatch_to_ack_ms": 2.3278000000000247,
+    "scheduled_to_ack_ms": 2.328700000000026
+  },
+  {
+    "request_id": "bench-16-0",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1810.7281,
+    "dispatch_ms": 1810.7289,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-16-0",
+      "account_id": "user-02",
+      "command_seq": 97,
+      "event_seq": 97,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 65,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1812.9227,
+    "dispatch_to_ack_ms": 2.19380000000001,
+    "scheduled_to_ack_ms": 2.1946000000000367
+  },
+  {
+    "request_id": "bench-16-1",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1812.9276,
+    "dispatch_ms": 1812.9284,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-16-1",
+      "account_id": "user-02",
+      "command_seq": 98,
+      "event_seq": 98,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 66,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1815.2617,
+    "dispatch_to_ack_ms": 2.3333000000000084,
+    "scheduled_to_ack_ms": 2.334100000000035
+  },
+  {
+    "request_id": "bench-16-2",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1815.2706,
+    "dispatch_ms": 1815.2719,
+    "client_scheduler_delay_ms": 0.001299999999901047,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-16-2",
+      "account_id": "user-03",
+      "command_seq": 99,
+      "event_seq": 99,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 67,
+      "trades": [
+        {
+          "id": 33,
+          "maker_order_id": 65,
+          "taker_order_id": 67,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046677,
+          "command_seq": 99
+        },
+        {
+          "id": 34,
+          "maker_order_id": 66,
+          "taker_order_id": 67,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046677,
+          "command_seq": 99
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1818.0059,
+    "dispatch_to_ack_ms": 2.734000000000151,
+    "scheduled_to_ack_ms": 2.735300000000052
+  },
+  {
+    "request_id": "bench-16-3",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 66
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1818.0248,
+    "dispatch_ms": 1818.0253,
+    "client_scheduler_delay_ms": 0.0005000000001018634,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-16-3",
+      "account_id": "user-02",
+      "command_seq": 100,
+      "event_seq": 100,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 66,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1820.5103,
+    "dispatch_to_ack_ms": 2.4849999999999,
+    "scheduled_to_ack_ms": 2.485500000000002
+  },
+  {
+    "request_id": "bench-16-4",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1820.5168,
+    "dispatch_ms": 1820.5177,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-16-4",
+      "account_id": "user-01",
+      "command_seq": 101,
+      "event_seq": 101,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 68,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1823.2592,
+    "dispatch_to_ack_ms": 2.74149999999986,
+    "scheduled_to_ack_ms": 2.7423999999998614
+  },
+  {
+    "request_id": "bench-16-5",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 68
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1823.2675,
+    "dispatch_ms": 1823.2684,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-16-5",
+      "account_id": "user-01",
+      "command_seq": 102,
+      "event_seq": 102,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 68,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1825.7891,
+    "dispatch_to_ack_ms": 2.5207000000000335,
+    "scheduled_to_ack_ms": 2.521600000000035
+  },
+  {
+    "request_id": "bench-17-0",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1825.7965,
+    "dispatch_ms": 1825.7973,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-17-0",
+      "account_id": "user-03",
+      "command_seq": 103,
+      "event_seq": 103,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 69,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1828.4962,
+    "dispatch_to_ack_ms": 2.6989000000000942,
+    "scheduled_to_ack_ms": 2.699700000000121
+  },
+  {
+    "request_id": "bench-17-1",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1828.5032,
+    "dispatch_ms": 1828.504,
+    "client_scheduler_delay_ms": 0.0007999999997991836,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-17-1",
+      "account_id": "user-03",
+      "command_seq": 104,
+      "event_seq": 104,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 70,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1830.8877,
+    "dispatch_to_ack_ms": 2.38370000000009,
+    "scheduled_to_ack_ms": 2.384499999999889
+  },
+  {
+    "request_id": "bench-17-2",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1830.8939,
+    "dispatch_ms": 1830.8948,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-17-2",
+      "account_id": "user-01",
+      "command_seq": 105,
+      "event_seq": 105,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 71,
+      "trades": [
+        {
+          "id": 35,
+          "maker_order_id": 69,
+          "taker_order_id": 71,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046693,
+          "command_seq": 105
+        },
+        {
+          "id": 36,
+          "maker_order_id": 70,
+          "taker_order_id": 71,
+          "buyer_id": "user-01",
+          "seller_id": "user-03",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046693,
+          "command_seq": 105
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1833.4888,
+    "dispatch_to_ack_ms": 2.594000000000051,
+    "scheduled_to_ack_ms": 2.5949000000000524
+  },
+  {
+    "request_id": "bench-17-3",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 70
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1833.5077,
+    "dispatch_ms": 1833.5082,
+    "client_scheduler_delay_ms": 0.0004999999998744897,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-17-3",
+      "account_id": "user-03",
+      "command_seq": 106,
+      "event_seq": 106,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 70,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1836.0194,
+    "dispatch_to_ack_ms": 2.511199999999917,
+    "scheduled_to_ack_ms": 2.5116999999997915
+  },
+  {
+    "request_id": "bench-17-4",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1836.0261,
+    "dispatch_ms": 1836.0267,
+    "client_scheduler_delay_ms": 0.0005999999998493877,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-17-4",
+      "account_id": "user-02",
+      "command_seq": 107,
+      "event_seq": 107,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 72,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1838.4542,
+    "dispatch_to_ack_ms": 2.427500000000009,
+    "scheduled_to_ack_ms": 2.4280999999998585
+  },
+  {
+    "request_id": "bench-17-5",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 72
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1838.4615,
+    "dispatch_ms": 1838.4626,
+    "client_scheduler_delay_ms": 0.0011000000001786248,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-17-5",
+      "account_id": "user-02",
+      "command_seq": 108,
+      "event_seq": 108,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 72,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1841.1266,
+    "dispatch_to_ack_ms": 2.6639999999999873,
+    "scheduled_to_ack_ms": 2.665100000000166
+  },
+  {
+    "request_id": "bench-18-0",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1841.1339,
+    "dispatch_ms": 1841.1347,
+    "client_scheduler_delay_ms": 0.0008000000000265572,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-18-0",
+      "account_id": "user-01",
+      "command_seq": 109,
+      "event_seq": 109,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 73,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1843.7162,
+    "dispatch_to_ack_ms": 2.5815000000000055,
+    "scheduled_to_ack_ms": 2.582300000000032
+  },
+  {
+    "request_id": "bench-18-1",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1843.722,
+    "dispatch_ms": 1843.7226,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-18-1",
+      "account_id": "user-01",
+      "command_seq": 110,
+      "event_seq": 110,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 74,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1846.3277,
+    "dispatch_to_ack_ms": 2.605099999999993,
+    "scheduled_to_ack_ms": 2.60570000000007
+  },
+  {
+    "request_id": "bench-18-2",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1846.3336,
+    "dispatch_ms": 1846.3342,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-18-2",
+      "account_id": "user-02",
+      "command_seq": 111,
+      "event_seq": 111,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 75,
+      "trades": [
+        {
+          "id": 37,
+          "maker_order_id": 73,
+          "taker_order_id": 75,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046708,
+          "command_seq": 111
+        },
+        {
+          "id": 38,
+          "maker_order_id": 74,
+          "taker_order_id": 75,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046708,
+          "command_seq": 111
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1848.9402,
+    "dispatch_to_ack_ms": 2.6059999999999945,
+    "scheduled_to_ack_ms": 2.6066000000000713
+  },
+  {
+    "request_id": "bench-18-3",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 74
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1848.9896,
+    "dispatch_ms": 1848.9902,
+    "client_scheduler_delay_ms": 0.0005999999998493877,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-18-3",
+      "account_id": "user-01",
+      "command_seq": 112,
+      "event_seq": 112,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 74,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1851.7123,
+    "dispatch_to_ack_ms": 2.722099999999955,
+    "scheduled_to_ack_ms": 2.7226999999998043
+  },
+  {
+    "request_id": "bench-18-4",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1851.7202,
+    "dispatch_ms": 1851.7209,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-18-4",
+      "account_id": "user-03",
+      "command_seq": 113,
+      "event_seq": 113,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 76,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1854.3914,
+    "dispatch_to_ack_ms": 2.6704999999999472,
+    "scheduled_to_ack_ms": 2.671199999999999
+  },
+  {
+    "request_id": "bench-18-5",
+    "account": "user-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 76
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1854.3981,
+    "dispatch_ms": 1854.3988,
+    "client_scheduler_delay_ms": 0.0006999999998242856,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-18-5",
+      "account_id": "user-03",
+      "command_seq": 114,
+      "event_seq": 114,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 76,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1856.8574,
+    "dispatch_to_ack_ms": 2.4586000000001604,
+    "scheduled_to_ack_ms": 2.4592999999999847
+  },
+  {
+    "request_id": "bench-19-0",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1000,
+      "quantity": 4
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1856.8635,
+    "dispatch_ms": 1856.8642,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-19-0",
+      "account_id": "user-02",
+      "command_seq": 115,
+      "event_seq": 115,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 77,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1859.4686,
+    "dispatch_to_ack_ms": 2.6043999999999414,
+    "scheduled_to_ack_ms": 2.605099999999993
+  },
+  {
+    "request_id": "bench-19-1",
+    "account": "user-02",
+    "action": {
+      "type": "place",
+      "side": "sell",
+      "price": 1005,
+      "quantity": 2
+    },
+    "kind": "maker_sell",
+    "scheduled_ms": 1859.4749,
+    "dispatch_ms": 1859.4756,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-19-1",
+      "account_id": "user-02",
+      "command_seq": 116,
+      "event_seq": 116,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 78,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1862.1166,
+    "dispatch_to_ack_ms": 2.6410000000000764,
+    "scheduled_to_ack_ms": 2.641700000000128
+  },
+  {
+    "request_id": "bench-19-2",
+    "account": "user-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 1010,
+      "quantity": 5
+    },
+    "kind": "multi_fill_buy",
+    "scheduled_ms": 1862.1236,
+    "dispatch_ms": 1862.1245,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-19-2",
+      "account_id": "user-03",
+      "command_seq": 117,
+      "event_seq": 117,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 79,
+      "trades": [
+        {
+          "id": 39,
+          "maker_order_id": 77,
+          "taker_order_id": 79,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 4,
+          "timestamp_ms": 1789981046724,
+          "command_seq": 117
+        },
+        {
+          "id": 40,
+          "maker_order_id": 78,
+          "taker_order_id": 79,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1005,
+          "quantity": 1,
+          "timestamp_ms": 1789981046724,
+          "command_seq": 117
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1864.7664,
+    "dispatch_to_ack_ms": 2.641900000000078,
+    "scheduled_to_ack_ms": 2.6428000000000793
+  },
+  {
+    "request_id": "bench-19-3",
+    "account": "user-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 78
+    },
+    "kind": "partial_cancel",
+    "scheduled_ms": 1864.7898,
+    "dispatch_ms": 1864.7904,
+    "client_scheduler_delay_ms": 0.0006000000000767614,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-19-3",
+      "account_id": "user-02",
+      "command_seq": 118,
+      "event_seq": 118,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 78,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1867.3847,
+    "dispatch_to_ack_ms": 2.5942999999999756,
+    "scheduled_to_ack_ms": 2.5949000000000524
+  },
+  {
+    "request_id": "bench-19-4",
+    "account": "user-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 900,
+      "quantity": 3
+    },
+    "kind": "resting_buy",
+    "scheduled_ms": 1867.393,
+    "dispatch_ms": 1867.3939,
+    "client_scheduler_delay_ms": 0.0009000000000014552,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-19-4",
+      "account_id": "user-01",
+      "command_seq": 119,
+      "event_seq": 119,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 80,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1870.1329,
+    "dispatch_to_ack_ms": 2.7390000000000327,
+    "scheduled_to_ack_ms": 2.739900000000034
+  },
+  {
+    "request_id": "bench-19-5",
+    "account": "user-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 80
+    },
+    "kind": "cancel",
+    "scheduled_ms": 1870.1402,
+    "dispatch_ms": 1870.1409,
+    "client_scheduler_delay_ms": 0.0007000000000516593,
+    "http_status": 200,
+    "result": {
+      "request_id": "bench-19-5",
+      "account_id": "user-01",
+      "command_seq": 120,
+      "event_seq": 120,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 80,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "http_reused_socket": true,
+    "ack_ms": 1872.6514,
+    "dispatch_to_ack_ms": 2.5104999999998654,
+    "scheduled_to_ack_ms": 2.511199999999917
+  }
+]

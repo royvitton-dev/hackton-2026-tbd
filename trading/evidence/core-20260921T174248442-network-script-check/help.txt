@@ -1,0 +1,8 @@
+Usage: node scripts/network-bench.mjs --quiet-window [--cycles 200] [--warmup-cycles 20] [--stress12] [--stress-rounds 30] [--label baseline]
+
+B: API submit to parsed durable ACK, without a WebSocket subscriber.
+C: API submit to WebSocket callback/parsed state, with one subscriber; ACK also recorded.
+Optional stress12: twelve concurrent clients placing/cancelling non-crossing orders, a separate dataset.
+All commands/data/logs and the copied release executable remain in a new trading/evidence run.
+Stop demo bots, other builds and tests before --quiet-window. This script never builds or deploys.
+

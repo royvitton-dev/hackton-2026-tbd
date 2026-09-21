@@ -1,0 +1,11 @@
+{
+  "source": "engine-created genesis.bin v1, parsed after engine integrity validation",
+  "genesis_sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d",
+  "config": {
+    "max_orders": 1000000,
+    "max_requests": 2000000,
+    "max_trades": 2000000,
+    "max_price": 1000000,
+    "max_quantity": 10000
+  }
+}

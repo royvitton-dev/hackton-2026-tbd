@@ -1,0 +1,215 @@
+{
+  "source": "Original six JSON results preserved; derived arithmetic only",
+  "labels": {
+    "before": "B",
+    "after": "A"
+  },
+  "pair_order": [
+    "B/A",
+    "A/B",
+    "B/A"
+  ],
+  "pairs": [
+    {
+      "pair": 1,
+      "allocation_calls_reduction": 80000,
+      "allocation_total_reduction_percent": 4.444730882656877,
+      "requested_bytes_change": 120000,
+      "peak_working_set_change_bytes": 663552,
+      "throughput_change_percent": -8.117431016076292
+    },
+    {
+      "pair": 2,
+      "allocation_calls_reduction": 80000,
+      "allocation_total_reduction_percent": 4.444730882656877,
+      "requested_bytes_change": 120000,
+      "peak_working_set_change_bytes": 679936,
+      "throughput_change_percent": 6.752614632895737
+    },
+    {
+      "pair": 3,
+      "allocation_calls_reduction": 80000,
+      "allocation_total_reduction_percent": 4.444730882656877,
+      "requested_bytes_change": 120000,
+      "peak_working_set_change_bytes": 598016,
+      "throughput_change_percent": -3.038213039127835
+    }
+  ],
+  "medians": {
+    "before": {
+      "throughput": 706343.1379647076,
+      "peak_working_set_bytes": 116408320,
+      "requested_bytes": 124644248
+    },
+    "after": {
+      "throughput": 681837.9396221141,
+      "peak_working_set_bytes": 117055488,
+      "requested_bytes": 124764248
+    }
+  },
+  "rows": [
+    {
+      "ordinal": 1,
+      "pair": 1,
+      "label": "before",
+      "exit_code": 0,
+      "allocations": 1799875,
+      "reallocations": 9,
+      "allocation_mean": 14.999033333333333,
+      "allocation_p50": 13,
+      "allocation_p99": 29,
+      "allocation_max": 34,
+      "requested_bytes": 124644248,
+      "throughput": 730748.8775392763,
+      "elapsed_seconds": 0.1642151,
+      "latency_ns": {
+        "max": 1501900,
+        "p50": 900,
+        "p95": 1800,
+        "p99": 3200
+      },
+      "peak_working_set_bytes": 116408320,
+      "private_commit_bytes": 114352128,
+      "fills": 40000,
+      "rejections": 0,
+      "zero_allocation": false,
+      "target_met": true
+    },
+    {
+      "ordinal": 2,
+      "pair": 1,
+      "label": "after",
+      "exit_code": 0,
+      "allocations": 1719875,
+      "reallocations": 9,
+      "allocation_mean": 14.332366666666667,
+      "allocation_p50": 13,
+      "allocation_p99": 27,
+      "allocation_max": 32,
+      "requested_bytes": 124764248,
+      "throughput": 671430.8415042737,
+      "elapsed_seconds": 0.1787228,
+      "latency_ns": {
+        "max": 1837500,
+        "p50": 1000,
+        "p95": 1900,
+        "p99": 4200
+      },
+      "peak_working_set_bytes": 117071872,
+      "private_commit_bytes": 115073024,
+      "fills": 40000,
+      "rejections": 0,
+      "zero_allocation": false,
+      "target_met": true
+    },
+    {
+      "ordinal": 3,
+      "pair": 2,
+      "label": "after",
+      "exit_code": 0,
+      "allocations": 1719875,
+      "reallocations": 9,
+      "allocation_mean": 14.332366666666667,
+      "allocation_p50": 13,
+      "allocation_p99": 27,
+      "allocation_max": 32,
+      "requested_bytes": 124764248,
+      "throughput": 754039.7680573673,
+      "elapsed_seconds": 0.1591428,
+      "latency_ns": {
+        "max": 1606400,
+        "p50": 900,
+        "p95": 1700,
+        "p99": 2500
+      },
+      "peak_working_set_bytes": 117055488,
+      "private_commit_bytes": 115052544,
+      "fills": 40000,
+      "rejections": 0,
+      "zero_allocation": false,
+      "target_met": true
+    },
+    {
+      "ordinal": 4,
+      "pair": 2,
+      "label": "before",
+      "exit_code": 0,
+      "allocations": 1799875,
+      "reallocations": 9,
+      "allocation_mean": 14.999033333333333,
+      "allocation_p50": 13,
+      "allocation_p99": 29,
+      "allocation_max": 34,
+      "requested_bytes": 124644248,
+      "throughput": 706343.1379647076,
+      "elapsed_seconds": 0.1698891,
+      "latency_ns": {
+        "max": 1675700,
+        "p50": 1000,
+        "p95": 1900,
+        "p99": 3400
+      },
+      "peak_working_set_bytes": 116375552,
+      "private_commit_bytes": 114352128,
+      "fills": 40000,
+      "rejections": 0,
+      "zero_allocation": false,
+      "target_met": true
+    },
+    {
+      "ordinal": 5,
+      "pair": 3,
+      "label": "before",
+      "exit_code": 0,
+      "allocations": 1799875,
+      "reallocations": 9,
+      "allocation_mean": 14.999033333333333,
+      "allocation_p50": 13,
+      "allocation_p99": 29,
+      "allocation_max": 34,
+      "requested_bytes": 124644248,
+      "throughput": 703202.7368650519,
+      "elapsed_seconds": 0.1706478,
+      "latency_ns": {
+        "max": 1550000,
+        "p50": 1000,
+        "p95": 1900,
+        "p99": 3500
+      },
+      "peak_working_set_bytes": 116445184,
+      "private_commit_bytes": 114348032,
+      "fills": 40000,
+      "rejections": 0,
+      "zero_allocation": false,
+      "target_met": true
+    },
+    {
+      "ordinal": 6,
+      "pair": 3,
+      "label": "after",
+      "exit_code": 0,
+      "allocations": 1719875,
+      "reallocations": 9,
+      "allocation_mean": 14.332366666666667,
+      "allocation_p50": 13,
+      "allocation_p99": 27,
+      "allocation_max": 32,
+      "requested_bytes": 124764248,
+      "throughput": 681837.9396221141,
+      "elapsed_seconds": 0.1759949,
+      "latency_ns": {
+        "max": 1918500,
+        "p50": 1000,
+        "p95": 1900,
+        "p99": 4000
+      },
+      "peak_working_set_bytes": 117043200,
+      "private_commit_bytes": 115073024,
+      "fills": 40000,
+      "rejections": 0,
+      "zero_allocation": false,
+      "target_met": true
+    }
+  ],
+  "conclusion": "80,000 fewer alloc calls deterministically in every pair,9 reallocs unchanged; retained status capacity increases sampled process memory; paired short-run throughput directions are mixed, no demonstrated speedup;zero allocation remains unmet"
+}

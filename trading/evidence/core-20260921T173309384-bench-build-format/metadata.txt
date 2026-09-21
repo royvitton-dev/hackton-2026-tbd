@@ -1,0 +1,7 @@
+Run started: 2026-09-21T17:33:09.3953206+09:00
+Commands: rustfmt --edition 2024 --check engine/src/core.rs engine/tests/core_rules.rs engine/tests/core_reference.rs engine/examples/core_bench.rs; cargo build --release --manifest-path engine/Cargo.toml --example core_bench
+rustc 1.98.1 (48a229cea 2026-09-01)
+RUSTFLAGS: -C link-self-contained=yes -C dlltool=C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\llvm-dlltool.exe
+Linker: C:\project\hackton-2026-tbd\trading\.tools\rustup\toolchains\stable-x86_64-pc-windows-gnu\lib\rustlib\x86_64-pc-windows-gnu\bin\self-contained\x86_64-w64-mingw32-gcc.exe
+Format exit code: 0
+Build exit code: 0

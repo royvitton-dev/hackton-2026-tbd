@@ -1,0 +1,141 @@
+{
+  "generated_at": "2026-09-21T10:38:39.635Z",
+  "source_run_id": "2026-09-21T10-05-54-901Z-observe-0b80d28e",
+  "source_status": "running",
+  "observation_complete": false,
+  "first_at": "2026-09-21T10:05:54.979Z",
+  "last_at": "2026-09-21T10:38:38.014Z",
+  "observed_interval_seconds": 1963.0354630000002,
+  "requested_seconds": 21600,
+  "sample_count": 388,
+  "sampling_continuity": {
+    "max_allowed_gap_ms": 15000,
+    "max_observed_gap_ms": 5995.507400000002,
+    "gaps": [],
+    "longest_contiguous_sample_span_ms": 1963035.463,
+    "continuous": true
+  },
+  "continuous_demo_pass": null,
+  "state_snapshot_round_trip": {
+    "available": true,
+    "samples": 388,
+    "mean_ms": 5.7567069587612,
+    "p50_ms": 4.615300000004936,
+    "p95_ms": 15.256300000008196,
+    "p99_ms": 22.776600000000002,
+    "max_ms": 43.32330000004731
+  },
+  "bot_status_round_trip": {
+    "available": true,
+    "samples": 388,
+    "mean_ms": 2.95653556700731,
+    "p50_ms": 2.369499999913387,
+    "p95_ms": 5.234399999957532,
+    "p99_ms": 15.351800000062212,
+    "max_ms": 32.39449999993667
+  },
+  "command_delta": 11489,
+  "volume_hours_delta": 8840,
+  "commands_per_second_over_observed_interval": 5.852670630026208,
+  "min_connected_bots": 12,
+  "final_ws_events": 11490,
+  "final_ws_gaps": 0,
+  "final_ws_disconnects": 0,
+  "sampled_asset_totals_conserved": true,
+  "all_sampled_engine_status_ready": true,
+  "intervals_with_new_trades": 387,
+  "fraction_of_intervals_with_new_trades": 1,
+  "tracked_process_total_memory_windows": {
+    "first": {
+      "at": "2026-09-21T10:05:54.979Z",
+      "process_count": 14,
+      "working_set_bytes": 877133824,
+      "private_bytes": 949272576
+    },
+    "last": {
+      "at": "2026-09-21T10:38:22.678Z",
+      "process_count": 14,
+      "working_set_bytes": 1018691584,
+      "private_bytes": 1088704512
+    },
+    "observed_max_working_set_bytes": 1026215936,
+    "observed_max_private_bytes": 1097297920,
+    "note": "Sum of tracked process working sets may count shared pages more than once; this is not whole-machine unique physical memory."
+  },
+  "engine_memory_windows": [
+    {
+      "pid": 20540,
+      "sample_count": 65,
+      "first": {
+        "at": "2026-09-21T10:05:54.979Z",
+        "elapsed_ms": 24.253699999999995,
+        "command_seq": 22432,
+        "pid": 20540,
+        "working_set_bytes": 37859328,
+        "private_bytes": 34742272,
+        "cpu_seconds": 0.703125,
+        "handles": 147
+      },
+      "last": {
+        "at": "2026-09-21T10:38:22.678Z",
+        "elapsed_ms": 1947723.2145,
+        "command_seq": 33832,
+        "pid": 20540,
+        "working_set_bytes": 56381440,
+        "private_bytes": 53133312,
+        "cpu_seconds": 96.3125,
+        "handles": 158
+      },
+      "observed_max_working_set_bytes": 56381440,
+      "observed_max_private_bytes": 53133312,
+      "working_set_change_bytes": 18522112,
+      "private_change_bytes": 18391040,
+      "command_delta_between_memory_samples": 11400,
+      "private_change_bytes_per_additional_command": 1613.2491228070176
+    }
+  ],
+  "demo_logs": {
+    "available": true,
+    "first_at": "2026-09-21T10:05:54.979Z",
+    "last_at": "2026-09-21T10:38:22.678Z",
+    "first": {
+      "bytes": 127289,
+      "files": 40,
+      "disappeared_during_sample": 0
+    },
+    "last": {
+      "bytes": 7401586,
+      "files": 40,
+      "disappeared_during_sample": 0
+    },
+    "delta_bytes": 7274297,
+    "observed_growth_bytes_per_hour": 13445337.152741373
+  },
+  "persisted_data": {
+    "available": true,
+    "first_at": "2026-09-21T10:05:54.979Z",
+    "last_at": "2026-09-21T10:38:22.678Z",
+    "first": {
+      "bytes": 52606130,
+      "files": 9,
+      "disappeared_during_sample": 0
+    },
+    "last": {
+      "bytes": 79489018,
+      "files": 10,
+      "disappeared_during_sample": 0
+    },
+    "delta_bytes": 26882888,
+    "observed_growth_bytes_per_hour": 49688580.60090002
+  },
+  "lowest_observed_disk_available_bytes": 247890522112,
+  "completed_summary": null,
+  "limitations": [
+    "Snapshot samples are not continuous peak memory measurements.",
+    "Retained order/trade/dedup history intentionally grows; memory growth alone neither proves nor excludes a leak.",
+    "Growth per hour is a normalized rate over the observed interval, not a future forecast.",
+    "Full accounting invariants are covered by Rust and API tests; public totals are sampled here.",
+    "Detailed process memory parsing currently covers the verified Windows host only.",
+    "A running observation is not reported as a completed pass."
+  ]
+}

@@ -1,0 +1,12 @@
+{"at":"2026-09-21T08:57:25.943Z","event":"engine_started","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251\\B","pid":20436,"port":53488}
+{"at":"2026-09-21T08:57:26.099Z","event":"memory_sampler_started","pid":16584,"engine_pid":20436,"interval_ms":500}
+{"at":"2026-09-21T08:57:30.073Z","event":"engine_exit","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251\\B","pid":20436,"code":0,"signal":null}
+{"at":"2026-09-21T08:57:30.114Z","event":"scenario_finished","scenario":"B","complete":true,"accepted":1200,"throughput":430.11694628868037}
+{"at":"2026-09-21T08:57:30.127Z","event":"engine_started","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251\\C","pid":5692,"port":62694}
+{"at":"2026-09-21T08:57:30.258Z","event":"memory_sampler_started","pid":19676,"engine_pid":5692,"interval_ms":500}
+{"at":"2026-09-21T08:57:35.227Z","event":"engine_exit","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251\\C","pid":5692,"code":0,"signal":null}
+{"at":"2026-09-21T08:57:35.269Z","event":"scenario_finished","scenario":"C","complete":true,"accepted":1200,"throughput":286.34457785423916}
+{"at":"2026-09-21T08:57:35.281Z","event":"engine_started","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251\\stress12","pid":6428,"port":62181}
+{"at":"2026-09-21T08:57:35.412Z","event":"memory_sampler_started","pid":12856,"engine_pid":6428,"interval_ms":500}
+{"at":"2026-09-21T08:57:37.822Z","event":"engine_exit","phase_dir":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251\\stress12","pid":6428,"code":0,"signal":null}
+{"at":"2026-09-21T08:57:37.857Z","event":"scenario_finished","scenario":"stress12","complete":true,"accepted":720,"throughput":570.0824980635012}

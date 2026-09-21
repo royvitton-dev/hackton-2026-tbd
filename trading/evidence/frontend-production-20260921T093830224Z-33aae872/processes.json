@@ -1,0 +1,67 @@
+{
+    "kind":  "isolated-production-preview",
+    "run_id":  "frontend-production-20260921T093830224Z-33aae872",
+    "started_at":  "2026-09-21T18:38:30.2464096+09:00",
+    "run_dir":  "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872",
+    "ui_url":  "http://127.0.0.1:5177",
+    "api_url":  "http://127.0.0.1:8790",
+    "artifact_dir":  "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872\\dist",
+    "data_dir":  "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872\\engine-data",
+    "node":  "v24.19.0",
+    "engine_sha256":  "B3F97FBB5A3CD15EABB8ECE422EB53F810967922A5EE74C832D5349CB2E7D080",
+    "source_app_sha256":  "B4520C87C913C4F5AF42CDC1560C4211A9703280558913A7399ACE589722A0BD",
+    "client_env":  {
+                       "VITE_WS_URL":  "ws://127.0.0.1:8790/ws",
+                       "VITE_API_URL":  "http://127.0.0.1:8790"
+                   },
+    "engine_env":  {
+                       "ENGINE_BIND":  "127.0.0.1:8790",
+                       "ENGINE_DATA_DIR":  "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872\\engine-data",
+                       "ALLOWED_ORIGINS":  "http://127.0.0.1:5177"
+                   },
+    "processes":  [
+                      {
+                          "args":  [
+
+                                   ],
+                          "pid":  18372,
+                          "name":  "engine",
+                          "identity":  "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872\\bin\\leave-engine.exe",
+                          "executable":  "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872\\bin\\leave-engine.exe"
+                      },
+                      {
+                          "args":  [
+                                       "C:\\project\\hackton-2026-tbd\\trading\\frontend\\node_modules\\vite\\bin\\vite.js",
+                                       "preview",
+                                       "--host",
+                                       "127.0.0.1",
+                                       "--port",
+                                       "5177",
+                                       "--strictPort",
+                                       "--outDir",
+                                       "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872\\dist"
+                                   ],
+                          "pid":  16560,
+                          "name":  "preview",
+                          "identity":  "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872\\dist",
+                          "executable":  "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe"
+                      }
+                  ],
+    "status":  "stopped",
+    "commands":  [
+                     [
+                         "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+                         "C:\\project\\hackton-2026-tbd\\trading\\frontend\\node_modules\\typescript\\bin\\tsc",
+                         "-b"
+                     ],
+                     [
+                         "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+                         "C:\\project\\hackton-2026-tbd\\trading\\frontend\\node_modules\\vite\\bin\\vite.js",
+                         "build",
+                         "--outDir",
+                         "C:\\project\\hackton-2026-tbd\\trading\\evidence\\frontend-production-20260921T093830224Z-33aae872\\dist"
+                     ]
+                 ],
+    "ready_at":  "2026-09-21T18:38:36.7378155+09:00",
+    "stopped_at":  "2026-09-21T18:42:42.7452340+09:00"
+}

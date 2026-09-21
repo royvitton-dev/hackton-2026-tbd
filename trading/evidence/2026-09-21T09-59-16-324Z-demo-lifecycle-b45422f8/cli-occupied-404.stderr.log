@@ -1,0 +1,22 @@
+file:///C:/project/hackton-2026-tbd/trading/scripts/demo-lifecycle.mjs:43
+          throw new Error(`Demo port ${port} is unavailable on ${host} (${error.code}); existing processes were not changed`, { cause: error });
+                ^
+
+Error: Demo port 62228 is unavailable on 127.0.0.1 (EADDRINUSE); existing processes were not changed
+    at reserveLoopbackPorts (file:///C:/project/hackton-2026-tbd/trading/scripts/demo-lifecycle.mjs:43:17)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///C:/project/hackton-2026-tbd/trading/scripts/demo.mjs:133:24 {
+  [cause]: Error: listen EADDRINUSE: address already in use 127.0.0.1:62228
+      at Server.setupListenHandle [as _listen2] (node:net:2167:16)
+      at listenInCluster (node:net:2224:12)
+      at node:net:2448:7
+      at process.processTicksAndRejections (node:internal/process/task_queues:90:21) {
+    code: 'EADDRINUSE',
+    errno: -4091,
+    syscall: 'listen',
+    address: '127.0.0.1',
+    port: 62228
+  }
+}
+
+Node.js v24.19.0

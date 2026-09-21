@@ -1,0 +1,150 @@
+    Blocking waiting for file lock on package cache
+    Blocking waiting for file lock on build directory
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling getrandom v0.3.4
+   Compiling zerocopy v0.8.57
+   Compiling serde_core v1.0.229
+   Compiling httparse v1.10.1
+   Compiling generic-array v0.14.7
+   Compiling thiserror v2.0.20
+   Compiling winapi-x86_64-pc-windows-gnu v0.4.0
+   Compiling serde v1.0.229
+   Compiling http-body v1.1.0
+   Compiling zmij v1.0.23
+   Compiling percent-encoding v2.3.2
+   Compiling data-encoding v2.11.1
+   Compiling serde_json v1.0.151
+   Compiling winapi v0.3.9
+   Compiling http-body-util v0.1.5
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\generic-array-fc867d087c4417f3\\rustcRX4CYA\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\deps/libversion_check-5d7fe9b4c6165ce8.rlib" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\generic-array-fc867d087c4417f3\\build_script_build-fc867d087c4417f3.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `generic-array` (build script) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\quote-77fd950fd7a7c4b5\\rustc9pdNHS\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\quote-77fd950fd7a7c4b5\\build_script_build-77fd950fd7a7c4b5.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `quote` (build script) due to 1 previous error
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\serde_json-a34497f55853a57e\\rustcrurgoG\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\serde_json-a34497f55853a57e\\build_script_build-a34497f55853a57e.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `serde_json` (build script) due to 1 previous error
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\winapi-x86_64-pc-windows-gnu-1475fa2a30eb0afe\\rustcYzCctk\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\winapi-x86_64-pc-windows-gnu-1475fa2a30eb0afe\\build_script_build-1475fa2a30eb0afe.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\proc-macro2-f5e3e717f5fbf6de\\rustcDDEEdz\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\proc-macro2-f5e3e717f5fbf6de\\build_script_build-f5e3e717f5fbf6de.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `winapi-x86_64-pc-windows-gnu` (build script) due to 1 previous error
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\serde-d90a96f062c4acde\\rustcGhKNb3\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\serde-d90a96f062c4acde\\build_script_build-d90a96f062c4acde.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\serde_core-a7e204d2a1c7ddfc\\rustc4npA5h\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\serde_core-a7e204d2a1c7ddfc\\build_script_build-a7e204d2a1c7ddfc.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\getrandom-93a2519eb61dcf59\\rustc5XtO4b\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\getrandom-93a2519eb61dcf59\\build_script_build-93a2519eb61dcf59.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `proc-macro2` (build script) due to 1 previous error
+error: could not compile `serde` (build script) due to 1 previous error
+error: could not compile `getrandom` (build script) due to 1 previous error
+error: could not compile `serde_core` (build script) due to 1 previous error
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\zmij-0ca82a9ff3a9c2b5\\rustciz6NCm\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\zmij-0ca82a9ff3a9c2b5\\build_script_build-0ca82a9ff3a9c2b5.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `zmij` (build script) due to 1 previous error
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\thiserror-b0fab200f6bf98cd\\rustcwEiIXr\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\thiserror-b0fab200f6bf98cd\\build_script_build-b0fab200f6bf98cd.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\httparse-7ffb9ff69ea8f692\\rustcdRrXPm\\symbols.o" "<2 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\httparse-7ffb9ff69ea8f692\\build_script_build-7ffb9ff69ea8f692.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `thiserror` (build script) due to 1 previous error
+error: could not compile `httparse` (build script) due to 1 previous error
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\zerocopy-673ae1715ff64fff\\rustctyD064\\symbols.o" "<3 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\zerocopy-673ae1715ff64fff\\build_script_build-673ae1715ff64fff.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `zerocopy` (build script) due to 1 previous error
+error: linking with `C:\project\hackton-2026-tbd\trading\.tools\llvm-mingw-20260908-ucrt-x86_64\bin\clang.exe` failed: exit code: 1
+  |
+  = note: "C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\clang.exe" "-fno-use-linker-plugin" "-Wl,--dynamicbase" "-Wl,--disable-auto-image-base" "-m64" "-Wl,--high-entropy-va" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\winapi-a51d82e7ec2aeef0\\rustcoxKLEY\\symbols.o" "<3 object files omitted>" "-Wl,-Bstatic" "<sysroot>\\lib\\rustlib\\x86_64-pc-windows-gnu\\lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,libwindows_link-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lkernel32" "-lkernel32" "-lkernel32" "-lntdll" "-luserenv" "-lws2_32" "-ldbghelp" "-lgcc_eh" "-l:libpthread.a" "-lmsvcrt" "-lmingwex" "-lmingw32" "-lgcc" "-lmsvcrt" "-lmingwex" "-luser32" "-lkernel32" "-Wl,--nxcompat" "-o" "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\debug\\build\\winapi-a51d82e7ec2aeef0\\build_script_build-a51d82e7ec2aeef0.exe" "-Wl,--gc-sections" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: lld: error: unable to find library -lgcc_eh
+          lld: error: unable to find library -lgcc
+          clang-23: error: linker command failed with exit code 1 (use -v to see invocation)
+          
+
+error: could not compile `winapi` (build script) due to 1 previous error

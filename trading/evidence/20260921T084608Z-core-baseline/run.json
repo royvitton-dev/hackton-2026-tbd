@@ -1,0 +1,8 @@
+{
+  "conditions": "All14 demo processes stopped; no builds/tests; agents instructed quiet; ordinary user desktop processes retained",
+  "ended_at": "2026-09-21T08:46:09.4753693Z",
+  "exit_code": 0,
+  "command": "engine/target/release/examples/core_bench.exe --cycles 20000 --warmup-cycles 1000",
+  "started_at": "2026-09-21T08:46:08.5033480Z",
+  "rustflags": "-C link-self-contained=yes -C dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe"
+}

@@ -1,0 +1,5 @@
+{"at":"2026-09-21T09:04:38.533Z","event":"withheld_command_response","mode":"gateway_timeout","http_status":200,"result":{"request_id":"23e15a81-0ee9-4ece-b7a9-c9795b28afe8","account_id":"user-01","command_seq":2,"event_seq":2,"status":"accepted","code":"OK","message":"명령 처리가 완료되었습니다.","order_id":2,"trades":[],"duplicate":false,"durable":true},"durable_response":true}
+{"at":"2026-09-21T09:05:44.292Z","event":"withheld_command_response","mode":"gateway_timeout","http_status":200,"result":{"request_id":"9d0f2a82-de0c-4207-8c14-70457eb50b1c","account_id":"user-01","command_seq":3,"event_seq":3,"status":"accepted","code":"OK","message":"명령 처리가 완료되었습니다.","order_id":3,"trades":[],"duplicate":false,"durable":true},"durable_response":true}
+{"at":"2026-09-21T09:06:48.513Z","event":"child_exit","name":"engine","pid":19776,"code":0,"signal":null}
+{"at":"2026-09-21T09:06:48.611Z","event":"owned_child_termination","pid":18352}
+{"at":"2026-09-21T09:06:48.628Z","event":"child_exit","name":"frontend","pid":18352,"code":null,"signal":"SIGTERM"}

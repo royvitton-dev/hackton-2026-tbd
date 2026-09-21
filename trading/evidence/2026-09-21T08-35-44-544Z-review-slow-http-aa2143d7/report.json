@@ -1,0 +1,22 @@
+{
+  "run_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T08-35-44-544Z-review-slow-http-aa2143d7",
+  "started_at": "2026-09-21T08:35:44.548Z",
+  "binary_sha256": "cfa1d67a6c6958d532b423331b8639f73ce19e1ddc3da24acc4bc453d679aac0",
+  "main_source_sha256": "13de2b7ba2b2bd9d3c0b6426ddba62bd7dae650351cc571781aafa491bcfd27c",
+  "pid": 7904,
+  "port": 58491,
+  "shutdown_response": {
+    "status": 200,
+    "body": {
+      "status": "shutting_down"
+    }
+  },
+  "exited_with_stalled_body": false,
+  "checkpoints_with_stalled_body": [],
+  "exited_after_body_socket_closed": true,
+  "exit_code": 0,
+  "final_checkpoints": [
+    "snapshot-00000000000000000000-00000000000001789979748119071800-7904-1.bin"
+  ],
+  "ended_at": "2026-09-21T08:35:48.234Z"
+}

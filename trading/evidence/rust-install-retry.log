@@ -1,0 +1,35 @@
+warn: It looks like you have an existing installation of Rust at:
+warn: C:\project\hackton-2026-tbd\trading\.tools\cargo\bin
+warn: This could mean one of the following:
+warn: - You have already installed rustup: you can quit the installer right now.
+warn: - You haven't installed rustup yet, but have Rust installed from elsewhere.
+warn: In the latter case, rustup can coexist with and adopt your existing Rust.
+warn: To adopt, please reply `yes`, or set RUSTUP_INIT_SKIP_PATH_CHECK to yes,
+warn: or pass `-y` to ignore all ignorable checks, then follow the instructions at:
+warn: <https://rust-lang.github.io/rustup/installation/already-installed-rust.html>
+error: cannot install while Rust is installed
+warn: continuing (because the -y flag is set and the error is ignorable)
+info: profile set to minimal
+info: setting default host tuple to x86_64-pc-windows-gnu
+warn: Updating existing toolchain, profile choice will be ignored
+info: syncing channel updates for stable-x86_64-pc-windows-gnu
+info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+info: recovering from a partially installed toolchain
+info: removing previous version of component rustc
+info: removing previous version of component cargo
+info: removing previous version of component rust-std
+info: removing previous version of component rust-mingw
+info: removing previous version of component rust-docs
+info: removing previous version of component rustfmt
+info: removing previous version of component clippy
+info: downloading 7 components
+
+info: default toolchain set to stable-x86_64-pc-windows-gnu
+  stable-x86_64-pc-windows-gnu installed - rustc 1.98.1 (48a229cea 2026-09-01)
+
+
+Rust is installed now. Great!
+
+To get started you need Cargo's bin directory (C:\project\hackton-2026-tbd
+\trading\.tools\cargo\bin) in your PATH
+environment variable. This has not been done automatically.
