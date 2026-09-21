@@ -1,0 +1,156 @@
+{
+  "reviewed_at_utc": "2026-09-21T13:33:15.570Z",
+  "reviewer": "frontend independent reviewer",
+  "run_id": "2026-09-21T13-33-15-562Z-network-bench-read-review-c632a5e4",
+  "method": "Read-only source, git diff, recorded test output/event/result review; writes restricted to this new evidence directory. No new test/build/workload/service/control/browser/Git mutations.",
+  "source_hashes": [
+    {
+      "path": "scripts/network-bench.mjs",
+      "bytes": 36765,
+      "sha256": "a86b985fb0878affd6cbb04b6157a78a4237ed402065aa0c49f54214a6412e6c"
+    },
+    {
+      "path": "scripts/network-bench-lifecycle.mjs",
+      "bytes": 4899,
+      "sha256": "37dd8c8c52953d1153622a5dd655cfc595b8cb5397c0f139c35e506ca701ddf5"
+    },
+    {
+      "path": "scripts/network-bench-lifecycle.test.mjs",
+      "bytes": 12943,
+      "sha256": "cfd2f8f2ba461910c8a636a4a0c988840613e907660da1bb326b903a3ccecf8d"
+    },
+    {
+      "path": "scripts/demo-lifecycle.mjs",
+      "bytes": 8852,
+      "sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8"
+    },
+    {
+      "path": "engine/src/main.rs",
+      "bytes": 23831,
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    {
+      "path": "engine/target/release/leave-engine.exe",
+      "bytes": 3008428,
+      "sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240"
+    },
+    {
+      "path": "evidence/2026-09-21T13-27-32-207Z-network-bench-lifecycle-f586eff3/README.md",
+      "bytes": 5469,
+      "sha256": "a436aebe7e8d944d020117021462e401a43b450bbcf34e351eb48e77a03a37d3"
+    },
+    {
+      "path": "evidence/2026-09-21T13-27-32-207Z-network-bench-lifecycle-f586eff3/verification.json",
+      "bytes": 2410,
+      "sha256": "6b28c17876f3b5e04ce7be73ef48b3936b7ba0a5e1100e18a861aca309b82a33"
+    },
+    {
+      "path": "evidence/2026-09-21T13-27-32-207Z-network-bench-lifecycle-f586eff3/summary.json",
+      "bytes": 3559,
+      "sha256": "29cf378a260dcd45998dc486edab25656d66e74ccf7abda3820447be4372cbbb"
+    },
+    {
+      "path": "evidence/2026-09-21T13-27-32-207Z-network-bench-lifecycle-f586eff3/events.jsonl",
+      "bytes": 7233,
+      "sha256": "102ec1cbbfc21582e42d5c8c6242b126142e44f2ee71da48557a09fad2b5633a"
+    },
+    {
+      "path": "evidence/20260921T132731996Z-network-bench-lifecycle-final-b65b8d1e/output.log",
+      "bytes": 1341,
+      "sha256": "c38034e5db46d90f56c1241bb98a35bc59663f3b2ff8419b2a3fd99dadb3ad64"
+    },
+    {
+      "path": "evidence/20260921T132731996Z-network-bench-lifecycle-final-b65b8d1e/run.json",
+      "bytes": 374,
+      "sha256": "547f053425befadb80d7a59083a250a036c58f5b791ff29b953674f84cdd8046"
+    }
+  ],
+  "source_verification_comparison": [
+    {
+      "path": "scripts/network-bench.mjs",
+      "recorded_sha256": "a86b985fb0878affd6cbb04b6157a78a4237ed402065aa0c49f54214a6412e6c",
+      "current_sha256": "a86b985fb0878affd6cbb04b6157a78a4237ed402065aa0c49f54214a6412e6c",
+      "matches": true
+    },
+    {
+      "path": "scripts/network-bench-lifecycle.mjs",
+      "recorded_sha256": "37dd8c8c52953d1153622a5dd655cfc595b8cb5397c0f139c35e506ca701ddf5",
+      "current_sha256": "37dd8c8c52953d1153622a5dd655cfc595b8cb5397c0f139c35e506ca701ddf5",
+      "matches": true
+    },
+    {
+      "path": "scripts/network-bench-lifecycle.test.mjs",
+      "recorded_sha256": "cfd2f8f2ba461910c8a636a4a0c988840613e907660da1bb326b903a3ccecf8d",
+      "current_sha256": "cfd2f8f2ba461910c8a636a4a0c988840613e907660da1bb326b903a3ccecf8d",
+      "matches": true
+    },
+    {
+      "path": "scripts/demo-lifecycle.mjs",
+      "recorded_sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "current_sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "matches": true
+    },
+    {
+      "path": "engine/target/release/leave-engine.exe",
+      "recorded_sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+      "current_sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+      "matches": true
+    }
+  ],
+  "findings": [],
+  "conclusion": "No new actionable correctness defect found in the requested narrow lifecycle changes. Actual Rust engine + PowerShell sampler B/C integration remains unverified.",
+  "existing_test_evidence": {
+    "source_run": "2026-09-21T13-27-32-207Z-network-bench-lifecycle-f586eff3",
+    "wrapper_run": "20260921T132731996Z-network-bench-lifecycle-final-b65b8d1e",
+    "wrapper_exit_code": 0,
+    "raw_reports_12_pass_0_fail": true,
+    "test_count_includes_parent": true,
+    "subtests": 11,
+    "child_monitor_records": 11,
+    "actual_spawned_children": 10,
+    "all_monitors_have_close": true,
+    "spawn_error_has_no_invented_exit": true,
+    "verification_claims_manifest_unchanged": true,
+    "tests_not_rerun_in_this_review": true
+  },
+  "checks": [
+    {
+      "topic": "SHA guard",
+      "source": "scripts/network-bench.mjs:50-67; scripts/network-bench-lifecycle.mjs:8-13",
+      "result": "Required 64-hex expected SHA before evidence directory or spawn; source and copied executable both compared again after copy; current release f518 matches recorded final validation.",
+      "evidence": "SHA unit + copied synthetic CLI refusal raw results; no Rust workload."
+    },
+    {
+      "topic": "Owned readiness",
+      "source": "scripts/network-bench.mjs:114-152; scripts/demo-lifecycle.mjs:130-165",
+      "result": "Fresh child monitor, exact ready bind/data_dir, live checks before/after HTTP; not-ready child receives no admin shutdown request. Child creation failure attached for cleanup.",
+      "evidence": "Foreign healthy HTTP fixture got zero requests when own data marker differed; owned Node HTTP fixture closed normally. Actual Rust startup deferred."
+    },
+    {
+      "topic": "Cleanup fail closed",
+      "source": "scripts/network-bench-lifecycle.mjs:38-86; scripts/network-bench.mjs:469-512",
+      "result": "Monitor preserves actual exit and close; forced/nonzero/spawn-error/unclosed/diagnostic failures reject success. Cleanup steps are individually guarded and precede raw writes; both sampler and engine success required for complete.",
+      "evidence": "Actual exit 0, exit 23, SIGKILL, ENOENT, and fake no-process timeout branches; summary combinations checked. No injected full harness filesystem failure test."
+    },
+    {
+      "topic": "Stop next scenario",
+      "source": "scripts/network-bench.mjs:521-540",
+      "result": "An incomplete scenario stops B/C iteration. Missing expected scenario count or interruption yields exit 1; fatal errors recorded separately.",
+      "evidence": "Static source review; real B/C not executed."
+    },
+    {
+      "topic": "Quiet guard",
+      "source": "scripts/network-bench-lifecycle.mjs:15-36; scripts/network-bench.mjs:55,426,489",
+      "result": "Signal 0 only; refuses recorded live engine/bot PIDs, inaccessible PID checks, malformed manifest/row/PID. Checked initially and at scenario boundaries. No global exclusivity claim.",
+      "evidence": "Recorded live self-PID and dead child tests, copied-tree CLI refusal; actual main processes not probed or controlled by this reviewer."
+    }
+  ],
+  "limitations": [
+    "Guard does not inspect arbitrary competing processes, observers, builds, tests, Park startup, or hold a launcher lock. Missing manifest allowed; PID reuse conservatively blocks. Operator coordination remains required.",
+    "The retained 15000ms engine grace is shorter than main.rs 25-second HTTP drain allowance; a slow legitimate drain/checkpoint may be force-killed and fail this benchmark. This is pre-existing, disclosed behavior, not a false-complete path. Actual normal cleanup integration must be checked in the quiet B/C run.",
+    "Actual Rust engine and Windows PowerShell sampler B/C lifecycle not proven by Node-only fixture tests. Live 6h run and services were untouched.",
+    "Resource rows/config assertions and post-workload WebSocket close-handshake continuity are outside these narrow corrections; complete does not certify them.",
+    "A bounded cleanup timeout can report failure while an unkillable owned child remains alive; it never invents an exit, and subsequent benchmark scenarios stop.",
+    "12/12 counts the parent test plus 11 subtests. Eleven monitors represent ten successfully spawned children plus one ENOENT failure, all with close records."
+  ]
+}

@@ -1,0 +1,20 @@
+file:///C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T13-25-10-006Z-network-bench-lifecycle-ad03a49b/cli-fixture/scripts/network-bench-lifecycle.mjs:33
+    const error = new Error(`QUIET_WINDOW_REFUSED: recorded demo market PIDs still run: ${active.map(row => `${row.name}=${row.pid}`).join(', ')}. No process was stopped.`);
+                  ^
+
+Error: QUIET_WINDOW_REFUSED: recorded demo market PIDs still run: engine=5780. No process was stopped.
+    at assertRecordedDemoQuiet (file:///C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T13-25-10-006Z-network-bench-lifecycle-ad03a49b/cli-fixture/scripts/network-bench-lifecycle.mjs:33:19)
+    at file:///C:/project/hackton-2026-tbd/trading/evidence/2026-09-21T13-25-10-006Z-network-bench-lifecycle-ad03a49b/cli-fixture/scripts/network-bench.mjs:55:21
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  quiet_check: {
+    manifest_present: true,
+    manifest_sha256: 'a78487dd89b126c72853e7f3ff93137200a7fdf8afdcf3eb704eac1d3de893bd',
+    run_id: undefined,
+    checked_at: '2026-09-21T13:25:11.913Z',
+    processes: [ { name: 'engine', pid: 5780, running: true } ]
+  }
+}
+
+Node.js v24.19.0

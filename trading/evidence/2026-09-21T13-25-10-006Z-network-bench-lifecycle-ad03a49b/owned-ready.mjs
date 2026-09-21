@@ -1,0 +1,1 @@
+import http from 'node:http';const server=http.createServer((q,r)=>{r.end('ok');if(q.url==='/stop')server.close(()=>process.exit(0));});server.listen(0,'127.0.0.1',()=>console.error(JSON.stringify({event:'ready',bind:'127.0.0.1:'+server.address().port,data_dir:"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T13-25-10-006Z-network-bench-lifecycle-ad03a49b"})));

@@ -1,0 +1,1 @@
+console.error(JSON.stringify({event:'ready',bind:'127.0.0.1:64083',data_dir:'wrong-data'}));setInterval(()=>{},1000);

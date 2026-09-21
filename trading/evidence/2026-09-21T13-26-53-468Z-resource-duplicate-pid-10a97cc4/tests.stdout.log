@@ -1,0 +1,17 @@
+{"fixture":"real_windows_missing_pid","current_test_pid":5388,"exited_fixture_pid":22248,"child_exit_code":0,"result":{"resources":[{"Id":5388,"ProcessName":"node","WorkingSet64":56094720,"PrivateMemorySize64":23613440,"CPU":0.140625,"Handles":214}],"resource_collection":{"started_at":"2026-09-21T13:27:22.007Z","requested_processes":[{"pid":5388,"name":"current-test"},{"pid":22248,"name":"normally-exited-fixture"}],"requested_pids":[5388,22248],"ended_at":"2026-09-21T13:27:22.275Z","status":"partial","complete":false,"returned_pids":[5388],"missing_pids":[22248],"invalid_counter_pids":[],"command_error":{"message":"Command failed: powershell.exe -NoProfile -NonInteractive -Command Get-Process -Id 5388,22248 -ErrorAction SilentlyContinue | Select-Object Id,ProcessName,WorkingSet64,PrivateMemorySize64,CPU,Handles | ConvertTo-Json -Compress","exit_status":1,"signal":null,"code":null},"stdout":"{\"Id\":5388,\"ProcessName\":\"node\",\"WorkingSet64\":56094720,\"PrivateMemorySize64\":23613440,\"CPU\":0.140625,\"Handles\":214}\r\n","stderr":""}}}
+✔ one missing PID preserves the other 13 rows and exact nonzero-exit output (3.247ms)
+✔ successful one-PID JSON objects become normal complete row arrays (0.2907ms)
+✔ zero exit cannot hide missing rows and unavailable counters stay unavailable (0.1782ms)
+✔ malformed or empty failure output retains evidence without zero process readings (0.3542ms)
+✔ nonzero exit stays partial even when every requested row was captured (0.1407ms)
+✔ invalid requested PIDs never reach PowerShell (0.1591ms)
+✔ duplicate requested role PIDs are rejected before executing or claiming completeness (0.1833ms)
+✔ real Windows Get-Process keeps this test process when an owned child PID has exited (347.6851ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 445.1905

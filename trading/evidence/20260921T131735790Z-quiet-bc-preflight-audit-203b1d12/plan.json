@@ -1,0 +1,321 @@
+{
+  "audit_id": "20260921T131735790Z-quiet-bc-preflight-audit-203b1d12",
+  "recorded_at_utc": "2026-09-21T13:17:36.1788634Z",
+  "reviewer": "/root/matching_core",
+  "mode": "read-only preparation; only this new evidence directory written",
+  "benchmark_executed": false,
+  "services_controlled": false,
+  "source_changed": false,
+  "expected_binary_sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+  "source_hashes": [
+    {
+      "path": "scripts/network-bench.mjs",
+      "sha256": "4aebc85edb181daac118edccc9107ad0f1f19dfcb059eda4478258ad76c82837",
+      "bytes": 33874,
+      "modified_at_utc": "2026-09-21T08:56:41.4014963Z"
+    },
+    {
+      "path": "scripts/env.ps1",
+      "sha256": "480f8c3e50fd005dcf9598e413f060c15949ece5035fcb651516c216651609a8",
+      "bytes": 1227,
+      "modified_at_utc": "2026-09-21T08:29:48.1266139Z"
+    },
+    {
+      "path": "scripts/run-evidence.ps1",
+      "sha256": "1687e936cbd038f675e5d4f729434256a2c29a666caad530b594943c196794eb",
+      "bytes": 1541,
+      "modified_at_utc": "2026-09-21T08:16:03.8793464Z"
+    },
+    {
+      "path": "scripts/demo.mjs",
+      "sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19",
+      "bytes": 23629,
+      "modified_at_utc": "2026-09-21T13:04:00.5332713Z"
+    },
+    {
+      "path": "scripts/demo-lifecycle.mjs",
+      "sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "bytes": 8852,
+      "modified_at_utc": "2026-09-21T13:04:00.5332713Z"
+    },
+    {
+      "path": "scripts/park-launcher.mjs",
+      "sha256": "3febf7d346047cd3077d53f1a4dbeb7abf6148035abf92a33698ae3bd2d661d8",
+      "bytes": 3378,
+      "modified_at_utc": "2026-09-21T13:04:33.9768887Z"
+    },
+    {
+      "path": "engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "bytes": 23831,
+      "modified_at_utc": "2026-09-21T11:41:14.1810006Z"
+    },
+    {
+      "path": "engine/src/ws_frame.rs",
+      "sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e",
+      "bytes": 2632,
+      "modified_at_utc": "2026-09-21T11:34:28.4557242Z"
+    },
+    {
+      "path": "engine/src/core.rs",
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4",
+      "bytes": 34605,
+      "modified_at_utc": "2026-09-21T09:42:05.3089164Z"
+    },
+    {
+      "path": "engine/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "bytes": 3066,
+      "modified_at_utc": "2026-09-21T08:28:04.708456Z"
+    },
+    {
+      "path": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954,
+      "modified_at_utc": "2026-09-21T08:54:36.4380856Z"
+    },
+    {
+      "path": "engine/Cargo.toml",
+      "sha256": "9bcaa0b13d35fd5cda66c80f65d46dad64759dddc36a1a1923b7fd0f603c12d6",
+      "bytes": 635,
+      "modified_at_utc": "2026-09-21T08:37:14.8426939Z"
+    },
+    {
+      "path": "engine/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194,
+      "modified_at_utc": "2026-09-21T08:42:28.1060212Z"
+    },
+    {
+      "path": "docs/bench-plan.md",
+      "sha256": "3ce4dade669a8f5b8b9917c78650f257e9706350fee4d99c0d00a1bb5eb79ef7",
+      "bytes": 10105,
+      "modified_at_utc": "2026-09-21T10:29:33.4645794Z"
+    },
+    {
+      "path": "docs/performance.md",
+      "sha256": "16c4505536e2b1cf593dd39b4bdfadffb02463adb15fbb8d538fabd5faafa799",
+      "bytes": 7029,
+      "modified_at_utc": "2026-09-21T10:08:03.4827036Z"
+    },
+    {
+      "path": "docs/performance-investigation.md",
+      "sha256": "7268e1acde696ed56cad25853e32b3555d9f503da7e6d739957944803609b190",
+      "bytes": 8797,
+      "modified_at_utc": "2026-09-21T09:00:11.8221924Z"
+    },
+    {
+      "path": "data/demo-current.json",
+      "sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+      "bytes": 11501,
+      "modified_at_utc": "2026-09-21T12:52:40.3431888Z"
+    },
+    {
+      "path": "engine/target/release/leave-engine.exe",
+      "sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+      "bytes": 3008428,
+      "modified_at_utc": "2026-09-21T11:46:49.6572886Z"
+    },
+    {
+      "path": "../park/server.mjs",
+      "sha256": "1a1dabb1eb8b1fd5136360c742fb35f6a30095c21b1d73e419eeb6035f27a21b",
+      "bytes": 8378,
+      "modified_at_utc": "2026-09-21T12:58:43.2553056Z"
+    },
+    {
+      "path": "evidence/2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251/metadata.json",
+      "sha256": "749a48520a4ae123bd7ef66a82614567648ba3be9c2fbada54528d2ff0375ec3",
+      "bytes": 17373,
+      "modified_at_utc": "2026-09-21T08:57:38.1620340Z"
+    },
+    {
+      "path": "evidence/2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251/summary.json",
+      "sha256": "8126df3e2503126c1ddbbe40c334ef00571fc9dc50707476407c1b065ba7d3a9",
+      "bytes": 13371,
+      "modified_at_utc": "2026-09-21T08:57:38.1630284Z"
+    },
+    {
+      "path": "evidence/2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251/B/actual-config.json",
+      "sha256": "7f9aa4126d9bbd037f7d2d782506138221e3349744b47720655b074997de0eeb",
+      "bytes": 331,
+      "modified_at_utc": "2026-09-21T08:57:26.0746483Z"
+    },
+    {
+      "path": "evidence/2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251/B/health-before.json",
+      "sha256": "8ce551e831de15aa6e7fc1af3520314f01182dcccd6a3b1a5da858d8902e5956",
+      "bytes": 184,
+      "modified_at_utc": "2026-09-21T08:57:26.0756504Z"
+    }
+  ],
+  "protected_current_manifest": {
+    "source": "data/demo-current.json",
+    "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 20540
+      },
+      {
+        "name": "bot-01",
+        "pid": 17444
+      },
+      {
+        "name": "bot-02",
+        "pid": 7936
+      },
+      {
+        "name": "bot-03",
+        "pid": 20776
+      },
+      {
+        "name": "bot-04",
+        "pid": 16068
+      },
+      {
+        "name": "bot-05",
+        "pid": 4928
+      },
+      {
+        "name": "bot-06",
+        "pid": 20940
+      },
+      {
+        "name": "bot-07",
+        "pid": 12172
+      },
+      {
+        "name": "bot-08",
+        "pid": 7916
+      },
+      {
+        "name": "bot-09",
+        "pid": 15272
+      },
+      {
+        "name": "bot-10",
+        "pid": 5412
+      },
+      {
+        "name": "bot-11",
+        "pid": 20484
+      },
+      {
+        "name": "bot-12",
+        "pid": 6128
+      },
+      {
+        "name": "frontend",
+        "pid": 4220
+      }
+    ],
+    "observer_pid_from_parent": 18184,
+    "observer_session_from_parent": 20793,
+    "liveness_checked_in_this_audit": false,
+    "scheduled_finish_kst": "2026-09-22T01:05:55+09:00",
+    "finish_is_not_completion_evidence": true
+  },
+  "planned_command": {
+    "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+    "executable": "node",
+    "args": [
+      "scripts/network-bench.mjs",
+      "--quiet-window",
+      "--transport",
+      "node-http",
+      "--cycles",
+      "200",
+      "--warmup-cycles",
+      "20",
+      "--memory-interval-ms",
+      "500",
+      "--label",
+      "latest-f518-bc"
+    ],
+    "execute_only_after_parent_quiet_signal": true,
+    "optional_stress12_excluded": true
+  },
+  "workload": {
+    "scenarios": [
+      "B",
+      "C"
+    ],
+    "deterministic_seed_label": 20260921,
+    "seed_is_prng_seed": false,
+    "concurrency": 1,
+    "accounts": [
+      "user-01",
+      "user-02",
+      "user-03"
+    ],
+    "operations_per_cycle": 6,
+    "warmup_cycles": 20,
+    "warmup_commands_per_scenario": 120,
+    "measured_cycles": 200,
+    "measured_commands_per_scenario": 1200,
+    "measured_fills_per_scenario": 400,
+    "final_command_seq": 1320,
+    "final_volume": 1100,
+    "final_accepted_orders": 880,
+    "final_trades": 440,
+    "final_sum_account_trades_count": 880,
+    "initial_accounts": 15,
+    "points_per_account": 1000000,
+    "hours_per_account": 1000,
+    "command_queue_capacity": 2048,
+    "ws_broadcast_capacity": 32,
+    "durability": "journal-sync-all-before-apply",
+    "dataset": "fresh unique evidence/<run>/{B,C}/data",
+    "transport": "node:http keep-alive maxSockets=12 maxFreeSockets=12 noDelay=true",
+    "websocket_subscribers_B": 0,
+    "websocket_subscribers_C": 1,
+    "automatic_checkpoint_seconds": 1800,
+    "automatic_checkpoint_expected_in_this_short_run": false
+  },
+  "targets": {
+    "B_commands_per_second_min": 100,
+    "B_ack_p99_ms_max": 100,
+    "C_commands_per_second_min": 100,
+    "C_callback_p99_ms_max": 150,
+    "accepted_expected": 1200,
+    "errors_expected": 0,
+    "rejections_expected": 0,
+    "original_targets_unchanged": true
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "scope": "version and quiet qualification",
+      "source": "network-bench.mjs:38,50-81; park/server.mjs:63-68,104-109",
+      "finding": "quiet-window is an operator assertion only; no demo/PID/observer/Park gating and no expected-binary CLI pin. Copy/source equality is checked, but it is not an f518 pin.",
+      "required_action": "Wait for raw six-hour completion first, then root establishes/stores owned-process quiet shutdown evidence and prohibits Park startup or trading launch calls during measurement. Pin the release SHA before launch, preserve harness/ws_frame/source hashes, then require copied metadata SHA equality. No rebuild during the window."
+    },
+    {
+      "id": "F2",
+      "scope": "cleanup and complete flag",
+      "source": "network-bench.mjs:130-145,178-185,460-523",
+      "finding": "Forced engine/sampler termination is requested without awaiting the actual exit. Sampler exit code is not saved; engine already_exited loses code. Summary complete does not require graceful exit 0, no orphan, or resource availability. A failed B scenario can still be followed by C.",
+      "required_action": "Before the actual run, either harden the harness with exact child exit/close evidence and cleanup-aware outcome or independently record all engine/sampler actual exit results plus no-live-owned-process postcheck. Do not call a complete=true run clean or valid quiet C if B/sampler leftovers or forced cleanup are unresolved."
+    },
+    {
+      "id": "F3",
+      "scope": "startup attribution",
+      "source": "network-bench.mjs:93-130",
+      "finding": "Ephemeral port reservation is released before spawn and readiness accepts any HTTP-OK health response while the spawned child is still running; no owned ready-line/bind/data verification gates measured requests.",
+      "required_action": "Use owned child ready marker with expected ephemeral bind/data and liveness before health/command submission, or explicitly document this unresolved small startup race; do not control a foreign responder. Existing demo-lifecycle ownership pattern can be reused in a separately authorized change."
+    },
+    {
+      "id": "F4",
+      "scope": "configuration and resources",
+      "source": "network-bench.mjs:72-83,160-198,409-425,484-496",
+      "finding": "Actual config/queue/durability are recorded but only ready status is asserted. A nonempty sampler file does not prove valid complete rows; memorySummary drops parse errors, permits missing values as zero and does not defend null rows. Raw CPU is cumulative $_.CPU, no CPU percentage is calculated.",
+      "required_action": "Compare health/config/initial account values to planned settings before accepting the run; validate every resource sample and record missing/excluded samples. Report sampled memory with warmup/final-check scope, not OS peak or CPU percentage. For new CPU claims use actual elapsed deltas and explicit TotalProcessorTime/identity checks in a separately reviewed change."
+    }
+  ],
+  "report_limits": [
+    "No benchmark, version command, test, build, process inventory, service endpoint call, service stop/start, or Git operation was performed in this audit.",
+    "File hashes bind inspected bytes, not a proof that source files were the build inputs of a historical binary.",
+    "Historical node:http B/C used 7bc32195300dd9e35c33dde84bf85a24e7903216f5c61af6c43afe7da9e36f4d. Latest f518 results must be separate and must not overwrite or retroactively relabel that baseline.",
+    "Local loopback closed-loop representative workload, not deployment D, saturation capacity, browser render latency, lock-free or zero-allocation evidence."
+  ],
+  "artifact_generation_note": "Initial artifact write used incorrect PowerShell array-concatenation precedence for four old-evidence paths and emitted read/hash errors; no benchmark ran. Corrected the evidence-only hash list with explicit per-suffix paths. This is not a benchmark/test failure or retry."
+}

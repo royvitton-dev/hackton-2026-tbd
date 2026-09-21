@@ -1,0 +1,387 @@
+{
+  "reviewed_at": "2026-09-21T13:24:10.980Z",
+  "run_id": "2026-09-21T13-24-10-926Z-resource-collector-review-94771b0e",
+  "scope": "Read-only source and existing raw evidence review; no collectors/tests/services/browser/Git executed",
+  "sources": [
+    {
+      "file": "scripts/supplementary-resources.ps1",
+      "sha256": "aed5ccf88c2d73ab120cd4d23973a426f050a266da855d92a4630341d073e88d"
+    },
+    {
+      "file": "scripts/observe.mjs",
+      "sha256": "c47e4f39518991b818d8e544a281c80c63a065326ed73c9339aa7c1327f40a00"
+    },
+    {
+      "file": "scripts/observe-resources.mjs",
+      "sha256": "0bb79056b7a3e5e4e3e3877f5aeef9da6c92acd5f7be3fe85daeac27237bd602"
+    },
+    {
+      "file": "scripts/observe-resources.test.mjs",
+      "sha256": "07af9ed8902e5a498c7465d3048e53fd103e81eafb1c5a7269397dab1f893f57"
+    },
+    {
+      "file": "scripts/resource-cpu.mjs",
+      "sha256": "63b937511c1ef2389af6fe255299d77e46f85bf607932c57f5d3e4150b9b9330"
+    },
+    {
+      "file": "scripts/resource-memory.mjs",
+      "sha256": "84cdd22c5a5e9a935b87dcbd168c91f7ea3ac2ef0414767cc6aa07dbbee09943"
+    }
+  ],
+  "historical": {
+    "file": "evidence/2026-09-21T13-15-56-261Z-observe-partial-resources-420f5733/observer-samples-prefix.jsonl",
+    "sha256": "f81e4fa6ff3574cd589fc0f13e9e62a59732ad554f6a8c975d9a520315cdec38",
+    "market_samples": 2244,
+    "resource_samples": 374,
+    "full_arrays": 313,
+    "error_objects": 61,
+    "last_full_at": "2026-09-21T12:44:21.449Z",
+    "first_error_at": "2026-09-21T12:44:51.883Z",
+    "last_error_at": "2026-09-21T13:15:26.164Z",
+    "all_error_objects_have_only_error": true,
+    "all_error_samples_market_ready": true
+  },
+  "supplementary": [
+    {
+      "run": "20260921T131423187Z-supplementary-resources-c9adc91b",
+      "meta": {
+        "run_id": "20260921T131423187Z-supplementary-resources-c9adc91b",
+        "status": "completed",
+        "sampler_pid": 10260,
+        "started_at": "2026-09-21T13:14:23.1875663+00:00",
+        "until_utc": "2026-09-21T13:14:26.8351350+00:00",
+        "interval_seconds": 1,
+        "logical_processors": 16,
+        "manifest_file": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo-current.json",
+        "source_sha256": "5BB82033F803925D95ECF2D42C992CBDF1320AE542ED2C98A3B380B106CC39CC",
+        "purpose": "Supplementary resource counters; does not fill gaps in the original observer or issue market requests.",
+        "stop_requested": false,
+        "samples": 4,
+        "ended_at": "2026-09-21T13:14:26.8388050+00:00"
+      },
+      "read_sample_count": 4,
+      "prefix_sha256": "626dd88e0a5ff58e7a78d62fea8ab4b681c16220bf3845c7b2983110a4342956",
+      "prefix_bytes": 1100,
+      "complete_count": 0,
+      "incomplete_count": 4,
+      "first_at": "2026-09-21T13:14:23.4433238+00:00",
+      "last_at": "2026-09-21T13:14:26.5545806+00:00",
+      "elapsed_span_ms": 3109.0006,
+      "all_complete_rows_have14distinct_pids": true,
+      "all_complete_rows_have_start_time": true,
+      "identities": [],
+      "collection_errors": [
+        "Invalid tracked process ID."
+      ]
+    },
+    {
+      "run": "20260921T131610120Z-supplementary-resources-b50d68bb",
+      "meta": {
+        "run_id": "20260921T131610120Z-supplementary-resources-b50d68bb",
+        "status": "completed",
+        "sampler_pid": 12544,
+        "started_at": "2026-09-21T13:16:10.1206754+00:00",
+        "until_utc": "2026-09-21T13:16:13.8754792+00:00",
+        "interval_seconds": 1,
+        "logical_processors": 16,
+        "manifest_file": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo-current.json",
+        "source_sha256": "AED5CCF88C2D73AB120CD4D23973A426F050A266DA855D92A4630341D073E88D",
+        "purpose": "Supplementary resource counters; does not fill gaps in the original observer or issue market requests.",
+        "stop_requested": false,
+        "samples": 5,
+        "ended_at": "2026-09-21T13:16:13.9291624+00:00"
+      },
+      "read_sample_count": 5,
+      "prefix_sha256": "63435a599f726ce70ea50800a8e18687ef9d1add0e5048b37573d34ed534e438",
+      "prefix_bytes": 13938,
+      "complete_count": 5,
+      "incomplete_count": 0,
+      "first_at": "2026-09-21T13:16:10.2985903+00:00",
+      "last_at": "2026-09-21T13:16:13.8760845+00:00",
+      "elapsed_span_ms": 3576.2863,
+      "all_complete_rows_have14distinct_pids": true,
+      "all_complete_rows_have_start_time": true,
+      "identities": [
+        {
+          "key": "20540:engine",
+          "start_times": [
+            "2026-09-21T10:05:21.4715478Z"
+          ]
+        },
+        {
+          "key": "17444:bot-01",
+          "start_times": [
+            "2026-09-21T10:05:22.2784404Z"
+          ]
+        },
+        {
+          "key": "7936:bot-02",
+          "start_times": [
+            "2026-09-21T10:05:22.3037571Z"
+          ]
+        },
+        {
+          "key": "20776:bot-03",
+          "start_times": [
+            "2026-09-21T10:05:22.3346242Z"
+          ]
+        },
+        {
+          "key": "16068:bot-04",
+          "start_times": [
+            "2026-09-21T10:05:22.3612932Z"
+          ]
+        },
+        {
+          "key": "4928:bot-05",
+          "start_times": [
+            "2026-09-21T10:05:22.3890023Z"
+          ]
+        },
+        {
+          "key": "20940:bot-06",
+          "start_times": [
+            "2026-09-21T10:05:22.4216442Z"
+          ]
+        },
+        {
+          "key": "12172:bot-07",
+          "start_times": [
+            "2026-09-21T10:05:22.4485053Z"
+          ]
+        },
+        {
+          "key": "7916:bot-08",
+          "start_times": [
+            "2026-09-21T10:05:22.4762676Z"
+          ]
+        },
+        {
+          "key": "15272:bot-09",
+          "start_times": [
+            "2026-09-21T10:05:22.5047340Z"
+          ]
+        },
+        {
+          "key": "5412:bot-10",
+          "start_times": [
+            "2026-09-21T10:05:22.5355012Z"
+          ]
+        },
+        {
+          "key": "20484:bot-11",
+          "start_times": [
+            "2026-09-21T10:05:22.5665942Z"
+          ]
+        },
+        {
+          "key": "6128:bot-12",
+          "start_times": [
+            "2026-09-21T10:05:22.5945324Z"
+          ]
+        },
+        {
+          "key": "4220:frontend",
+          "start_times": [
+            "2026-09-21T12:52:39.7804367Z"
+          ]
+        }
+      ],
+      "collection_errors": []
+    },
+    {
+      "run": "20260921T131759342Z-supplementary-resources-259339d4",
+      "meta": {
+        "run_id": "20260921T131759342Z-supplementary-resources-259339d4",
+        "status": "running",
+        "sampler_pid": 16840,
+        "started_at": "2026-09-21T13:17:59.3427491+00:00",
+        "until_utc": "2026-09-21T16:06:00.0000000+00:00",
+        "interval_seconds": 30,
+        "logical_processors": 16,
+        "manifest_file": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo-current.json",
+        "source_sha256": "AED5CCF88C2D73AB120CD4D23973A426F050A266DA855D92A4630341D073E88D",
+        "purpose": "Supplementary resource counters; does not fill gaps in the original observer or issue market requests."
+      },
+      "read_sample_count": 13,
+      "prefix_sha256": "41fc721e072636f6f5eec58265bcbe2ac21f17a3c54de89a695397a1281438d4",
+      "prefix_bytes": 36292,
+      "complete_count": 13,
+      "incomplete_count": 0,
+      "first_at": "2026-09-21T13:17:59.7923779+00:00",
+      "last_at": "2026-09-21T13:24:01.5936543+00:00",
+      "elapsed_span_ms": 361809.17010000005,
+      "all_complete_rows_have14distinct_pids": true,
+      "all_complete_rows_have_start_time": true,
+      "identities": [
+        {
+          "key": "20540:engine",
+          "start_times": [
+            "2026-09-21T10:05:21.4715478Z"
+          ]
+        },
+        {
+          "key": "17444:bot-01",
+          "start_times": [
+            "2026-09-21T10:05:22.2784404Z"
+          ]
+        },
+        {
+          "key": "7936:bot-02",
+          "start_times": [
+            "2026-09-21T10:05:22.3037571Z"
+          ]
+        },
+        {
+          "key": "20776:bot-03",
+          "start_times": [
+            "2026-09-21T10:05:22.3346242Z"
+          ]
+        },
+        {
+          "key": "16068:bot-04",
+          "start_times": [
+            "2026-09-21T10:05:22.3612932Z"
+          ]
+        },
+        {
+          "key": "4928:bot-05",
+          "start_times": [
+            "2026-09-21T10:05:22.3890023Z"
+          ]
+        },
+        {
+          "key": "20940:bot-06",
+          "start_times": [
+            "2026-09-21T10:05:22.4216442Z"
+          ]
+        },
+        {
+          "key": "12172:bot-07",
+          "start_times": [
+            "2026-09-21T10:05:22.4485053Z"
+          ]
+        },
+        {
+          "key": "7916:bot-08",
+          "start_times": [
+            "2026-09-21T10:05:22.4762676Z"
+          ]
+        },
+        {
+          "key": "15272:bot-09",
+          "start_times": [
+            "2026-09-21T10:05:22.5047340Z"
+          ]
+        },
+        {
+          "key": "5412:bot-10",
+          "start_times": [
+            "2026-09-21T10:05:22.5355012Z"
+          ]
+        },
+        {
+          "key": "20484:bot-11",
+          "start_times": [
+            "2026-09-21T10:05:22.5665942Z"
+          ]
+        },
+        {
+          "key": "6128:bot-12",
+          "start_times": [
+            "2026-09-21T10:05:22.5945324Z"
+          ]
+        },
+        {
+          "key": "4220:frontend",
+          "start_times": [
+            "2026-09-21T12:52:39.7804367Z"
+          ]
+        }
+      ],
+      "collection_errors": []
+    }
+  ],
+  "test_evidence": {
+    "file": "evidence/2026-09-21T13-15-56-261Z-observe-partial-resources-420f5733/tests.stdout.log",
+    "sha256": "b307cc97fc62bf5791bb85dfeae094808dbf0e7797ef2833d0d0dd47d7d653a2",
+    "exit_status": 0,
+    "test14_pass_log": true,
+    "tested_sources_match_current": true,
+    "actual_missing_pid_case": {
+      "fixture": "real_windows_missing_pid",
+      "current_test_pid": 16652,
+      "exited_fixture_pid": 21628,
+      "child_exit_code": 0,
+      "result": {
+        "resources": [
+          {
+            "Id": 16652,
+            "ProcessName": "node",
+            "WorkingSet64": 61038592,
+            "PrivateMemorySize64": 23810048,
+            "CPU": 0.109375,
+            "Handles": 214
+          }
+        ],
+        "resource_collection": {
+          "started_at": "2026-09-21T13:17:36.237Z",
+          "requested_processes": [
+            {
+              "pid": 16652,
+              "name": "current-test"
+            },
+            {
+              "pid": 21628,
+              "name": "normally-exited-fixture"
+            }
+          ],
+          "requested_pids": [
+            16652,
+            21628
+          ],
+          "ended_at": "2026-09-21T13:17:36.631Z",
+          "status": "partial",
+          "complete": false,
+          "returned_pids": [
+            16652
+          ],
+          "missing_pids": [
+            21628
+          ],
+          "invalid_counter_pids": [],
+          "command_error": {
+            "message": "Command failed: powershell.exe -NoProfile -NonInteractive -Command Get-Process -Id 16652,21628 -ErrorAction SilentlyContinue | Select-Object Id,ProcessName,WorkingSet64,PrivateMemorySize64,CPU,Handles | ConvertTo-Json -Compress",
+            "exit_status": 1,
+            "signal": null,
+            "code": null
+          },
+          "stdout": "{\"Id\":16652,\"ProcessName\":\"node\",\"WorkingSet64\":61038592,\"PrivateMemorySize64\":23810048,\"CPU\":0.109375,\"Handles\":214}\r\n",
+          "stderr": ""
+        }
+      }
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "documentation",
+      "file": "docs/verification.md",
+      "line": 81,
+      "message": "At review time this still describes only UI resource loss; fixed prefix shows all resource rows discarded from21:44:51.883KST. checkpoint170 already corrects this."
+    },
+    {
+      "id": "F2",
+      "severity": "minor collector edge",
+      "file": "scripts/observe-resources.mjs",
+      "message": "Input duplicate PIDs are deduplicated before complete calculation. Multiple requested roles sharing one PID can be called complete with fewer rows than requested_processes. Current manifest is distinct and full-group expected-count aggregates reject undersized arrays; current observed runs unaffected."
+    }
+  ],
+  "limits": [
+    "Supplementary run.status=completed means loop termination; sample.complete must be checked separately. Initial4-sample run completed with0valid samples.",
+    "observe collector retains initial manifest and lacks StartTimeUtc. PID/name identity limitations remain; supplementary rows record actual StartTimeUtc but do not assert ownership or compare it to a trusted birth record.",
+    "Supplementary stop.request is polled once per loop; stop latency is up to configured sleep interval plus collection/write time. It sends no signals/market requests.",
+    "Long run is still running at this read; no whole-duration completion or historical backfill is claimed.",
+    "Supplementary samples use30-second cadence and a standalone elapsed clock. The existing market-observation summary helpers are not asserted to accept this stream unchanged."
+  ]
+}

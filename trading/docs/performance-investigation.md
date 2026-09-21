@@ -48,6 +48,8 @@ Node 내장 Undici의 진단 채널 `undici:request:create`, `undici:client:send
 
 비교 실행: `. ./scripts/env.ps1; node scripts/network-bench.mjs --quiet-window --cycles 200 --warmup-cycles 20 --stress12 --label node-http-client --transport node-http`.
 
+위 명령은 당시 실제 실행 기록이다. 현재 harness로 새 실행할 때는 `--expected-binary-sha256 <검증한-release-SHA256>`가 추가로 필요하다. 최신 명령·종료 검증 범위는 [재현 안내](performance.md#재현)를 따른다.
+
 원본: `evidence/2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251/`; 실제 명령·종료코드 0: `evidence/core-20260921T175724809-transport-comparison-console/`.
 
 원래 fetch 실행과 비교 실행의 엔진 SHA-256은 모두 다음과 같다.

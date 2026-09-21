@@ -1,0 +1,346 @@
+Browser tab: 10, Title: "LEAVE PARK — 휴가 거래소", URL: "http://127.0.0.1:5181/".
+0 AXWebArea LEAVE PARK — 휴가 거래소, URL: 127.0.0.1:5181/
+	1 container root
+		2 container
+			3 link Description: LEAVE PARK 휴가 거래소, Value: 127.0.0.1:5181/#market
+			4 container 주요 메뉴
+				5 link Description: 휴가 거래소 LIVE, Value: 127.0.0.1:5181/#market
+				6 link Description: 내 주문, Value: 127.0.0.1:5181/#my-orders
+				7 link Description: 파크 크루, Value: 127.0.0.1:5181/#bots
+			8 text 시장 연결됨
+			9 button 모의 거래 안내
+				10 image
+			11 text 1 로컬 모의 계정
+			12 pop up button (collapsed, settable) Description: 모의 거래 계정 선택, Value: 시연 임직원 1 · GS리테이, ID: session-select, Secondary Actions: Expand
+				13 menu
+					181 (selected) 시연 임직원 1 · GS리테이
+					182 시연 임직원 2 · GS칼테스
+					183 시연 임직원 3 · GS건썰
+			15 image
+		16 container market
+			17 container
+				18 text YOUR NEXT BREAK STARTS HERE
+				19 heading 당신의 다음 쉼표를 거래하세요✳, Value: 1
+					20 text 당신의 다음 
+					21 text 쉼표
+					22 text 를 거래하세요 ✳
+				23 text 바쁜 하루에 여유를 더하는 작은 거래. 오늘은 몇 시간 쉬어갈까요?
+			24 image
+			25 heading 모두의 휴가, Value: 2
+				26 text 모두의 휴가
+			27 text LEAVE-1H
+			28 container
+				29 text 그룹 공통 휴가 시간  ·  1시간부터 거래
+			30 text 현재가
+			31 text 1,000
+			32 text P
+			33 image
+			34 text 0 (0.00%) 기준가
+			35 container
+				36 text 1,000 P
+			37 text 누적 거래량
+			38 container
+				39 text 0 시간
+			40 text SYNTHETIC MARKET
+			41 text 함께 쉬는 시장
+			42 container 실제 체결 가격 차트
+				43 text 01
+				44 heading 시장의 흐름, Value: 2
+					45 text 시장의 흐름
+				46 text 실시간 체결
+				47 checkbox 최근 80건, Value: 1
+					48 text 최근 
+					49 text 80
+					50 text 건
+				51 checkbox 최근 240건, Value: 0
+					52 text 최근 
+					53 text 240
+					54 text 건
+				55 text 체결 가격 거래량
+				56 text 첫 체결을 기다리는 중
+				57 container
+					58 image
+					59 text 거래가 시작되면 선이 이어집니다 사용자와 봇의 실제 체결을 가격·거래량으로 표시해요.
+				60 image
+				61 text 확정 체결 데이터 표시  0 건 · 동일 간격의 체결 순서
+			62 container
+				63 text 02
+				64 heading 호가 보드, Value: 2
+					65 text 호가 보드
+				66 image
+				67 text 가격 (P) 잔량 (시간) 주문
+				329 button 1,100 3 1, Help: 1,100 포인트를 주문 가격에 입력
+					330 text 1,100
+					331 text 3
+					332 text 1
+				333 text 1,000 P 현재가
+				68 image
+				334 button 900 2 1, Help: 900 포인트를 주문 가격에 입력
+					335 text 900
+					336 text 2
+					337 text 1
+				338 text 매도 가격을 누르면 주문에 입력됩니다 매수
+			70 container my-orders
+				71 text 03
+				72 heading 나의 거래, Value: 2
+					73 text 나의 거래
+				74 text GS리테이
+				75 checkbox 미체결 1, Value: 1
+				76 checkbox 최근 완료 주문, Value: 0
+				77 checkbox 요청 결과, Value: 0
+				78 table
+					79 row
+						80 cell
+							81 text 주문
+						82 cell
+							83 text 가격
+						84 cell
+							85 text 체결 / 주문
+						86 cell
+							87 text 상태
+					339 row
+						340 cell
+							341 text 매수
+							342 container
+								343 text # 1
+						344 cell
+							345 text 900 P
+						346 cell
+							347 text 0 /  2  h
+						348 cell
+							349 text 미체결
+						350 cell
+							351 button 주문 1 취소
+			91 container
+				92 text 04
+				93 heading 방금 체결된 거래, Value: 2
+					94 text 방금 체결된 거래
+				95 image
+				96 text 체결 시각 가격 (P) 시간
+				97 image
+				98 text 첫 체결 대기 중
+			99 image
+			100 text 쉬는 시간도, 함께하면 더 즐거우니까. GS리테이 GS칼테스 GS건썰
+			101 container
+				102 text ONE TICKET, MORE TIME
+				103 heading 나의 다음 쉼표, Value: 2
+					104 text 나의 다음 쉼표
+				105 image
+				106 container 거래 방향
+					107 checkbox 휴가 매수, Value: 1
+					108 checkbox 휴가 매도, Value: 0
+				109 container 휴가 지정가 주문
+					110 text 주문 가격
+					111 button 최우선 호가
+						112 text 최우선 호가
+						113 image
+					114 stepper (settable, integer) 주문 가격, Value: 1000, ID: price
+					115 text P / 시간
+					116 text 주문 수량
+					117 text 최소 1시간
+					118 stepper (settable, integer) 주문 수량, Value: 1, ID: quantity
+					119 text 시간
+					120 checkbox 1시간, Value: 1
+					121 checkbox 4시간, Value: 0
+					122 checkbox 하루 · 8시간, Value: 0
+						123 text 하루 · 
+						124 text 8
+						125 text 시간
+					126 text 주문 총액
+					127 container
+						128 text 1,000 P
+					129 text 사용 가능 포인트
+					130 container
+						131 text 998,200 P
+					132 button 휴가 매수하기
+						133 image
+						134 text 휴가 매수하기
+						135 image
+					136 container order-availability
+						137 image
+						138 text 지정가 주문 · 체결 전까지 예약됩니다
+				139 container
+					140 text LEAVE PARK EXCHANGE ADMIT ONE BREAK
+				141 image
+				142 heading 내 보관함, Value: 2
+					143 text 내 보관함
+				144 text 모의 자산
+				145 container
+					146 text 사용 가능한 휴가 1,000 시간
+					147 image
+				148 text 휴가 총 보유
+				149 container
+					150 text 1,000  h
+				151 text 매도 예약
+				152 container
+					153 text 0  h
+				154 text 사용 가능 포인트
+				155 container
+					156 text 998,200  P
+				157 text 매수 예약
+				158 container
+					159 text 1,800  P
+				160 text 포인트 총 보유
+				161 container
+					162 text 1,000,000  P
+			163 container bots
+				164 text PARK CREW
+				165 heading 시장을 움직이는 크루 12, Value: 2
+					166 text 시장을 움직이는 크루  12
+				167 text 0 개 봇 연결 중
+				168 text · 3가지 전략
+				184 container
+					185 text CREW  01 연결 대기
+					186 image
+					187 heading 마켓 메이커, Value: 3
+						188 text 마켓 메이커
+					189 text GS리테이 # 01 주문  0 체결  0
+					190 container heartbeat 없음
+						191 image
+						192 text —
+					193 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						194 text 전략 정보
+						195 text  +
+				196 container
+					197 text CREW  02 연결 대기
+					198 image
+					199 heading 마켓 메이커, Value: 3
+						200 text 마켓 메이커
+					201 text GS칼테스 # 02 주문  0 체결  0
+					202 container heartbeat 없음
+						203 image
+						204 text —
+					205 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						206 text 전략 정보
+						207 text  +
+				208 container
+					209 text CREW  03 연결 대기
+					210 image
+					211 heading 마켓 메이커, Value: 3
+						212 text 마켓 메이커
+					213 text GS건썰 # 03 주문  0 체결  0
+					214 container heartbeat 없음
+						215 image
+						216 text —
+					217 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						218 text 전략 정보
+						219 text  +
+				220 container
+					221 text CREW  04 연결 대기
+					222 image
+					223 heading 마켓 메이커, Value: 3
+						224 text 마켓 메이커
+					225 text GS리테이 # 04 주문  0 체결  0
+					226 container heartbeat 없음
+						227 image
+						228 text —
+					229 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						230 text 전략 정보
+						231 text  +
+				232 container
+					233 text CREW  05 연결 대기
+					234 image
+					235 heading 유동성 소비, Value: 3
+						236 text 유동성 소비
+					237 text GS칼테스 # 05 주문  0 체결  0
+					238 container heartbeat 없음
+						239 image
+						240 text —
+					241 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						242 text 전략 정보
+						243 text  +
+				244 container
+					245 text CREW  06 연결 대기
+					246 image
+					247 heading 유동성 소비, Value: 3
+						248 text 유동성 소비
+					249 text GS건썰 # 06 주문  0 체결  0
+					250 container heartbeat 없음
+						251 image
+						252 text —
+					253 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						254 text 전략 정보
+						255 text  +
+				256 container
+					257 text CREW  07 연결 대기
+					258 image
+					259 heading 유동성 소비, Value: 3
+						260 text 유동성 소비
+					261 text GS리테이 # 07 주문  0 체결  0
+					262 container heartbeat 없음
+						263 image
+						264 text —
+					265 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						266 text 전략 정보
+						267 text  +
+				268 container
+					269 text CREW  08 연결 대기
+					270 image
+					271 heading 유동성 소비, Value: 3
+						272 text 유동성 소비
+					273 text GS칼테스 # 08 주문  0 체결  0
+					274 container heartbeat 없음
+						275 image
+						276 text —
+					277 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						278 text 전략 정보
+						279 text  +
+				280 container
+					281 text CREW  09 연결 대기
+					282 image
+					283 heading 추세 추종, Value: 3
+						284 text 추세 추종
+					285 text GS건썰 # 09 주문  0 체결  0
+					286 container heartbeat 없음
+						287 image
+						288 text —
+					289 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						290 text 전략 정보
+						291 text  +
+				292 container
+					293 text CREW  10 연결 대기
+					294 image
+					295 heading 추세 추종, Value: 3
+						296 text 추세 추종
+					297 text GS리테이 # 10 주문  0 체결  0
+					298 container heartbeat 없음
+						299 image
+						300 text —
+					301 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						302 text 전략 정보
+						303 text  +
+				304 container
+					305 text CREW  11 연결 대기
+					306 image
+					307 heading 추세 추종, Value: 3
+						308 text 추세 추종
+					309 text GS칼테스 # 11 주문  0 체결  0
+					310 container heartbeat 없음
+						311 image
+						312 text —
+					313 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						314 text 전략 정보
+						315 text  +
+				316 container
+					317 text CREW  12 연결 대기
+					318 image
+					319 heading 추세 추종, Value: 3
+						320 text 추세 추종
+					321 text GS건썰 # 12 주문  0 체결  0
+					322 container heartbeat 없음
+						323 image
+						324 text —
+					325 button (collapsed) 전략 정보 +, Secondary Actions: Expand
+						326 text 전략 정보
+						327 text  +
+				172 image
+				173 text 모든 크루는 사용자와 같은 시장, 같은 잔고·체결 규칙으로 거래합니다. 주문·체결 수는 엔진 누적값입니다.
+			174 container
+				175 image
+				176 text LEAVE PARK 모의 휴가 거래소
+				328 image
+				178 text 엔진 정상 운영 EVENT # 2 재동기화 1 수신 22:22:33
+				179 button 엔진 상태 새로고침
+					180 image
+
+The focused UI element is 0 AXWebArea LEAVE PARK — 휴가 거래소, URL: 127.0.0.1:5181/

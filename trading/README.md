@@ -67,6 +67,8 @@ API 통합 테스트는 별도 합성 데이터와 임시 포트의 엔진 프�
 
 이미 수집한 기록에서 [CPU·메모리 사용량 확인](docs/resource-observation.md)도 가능합니다. `node scripts/summarize-observation.mjs <관찰-run-ID> --logical-processors 16`으로 구간별 CPU 평균과 메모리를 새 증거 파일에 저장합니다. `16`은 이번 호스트의 논리 프로세서 수이며 다른 호스트의 기록에는 실제 해당 값을 지정합니다.
 
+[실제 브라우저 이벤트 검증](evidence/2026-09-21T13-15-32-792Z-browser-gap-91b002af/README.md)에서는 격리 relay로 이벤트1개 누락·동일 이벤트 재전송·오래된 초기 HTTP 응답을 주입해 재동기화와 최신 잔고 유지까지 확인했습니다. 자원 관찰에는21:44–22:17 기록 공백이 있어 [공백과 보완 수집 범위](docs/resource-observation.md#누락된-pid와-자원-기록-공백)를 별도로 명시했습니다.
+
 [실제 엔진 부하 테스트](docs/engine-load-test.md)는 동시 요청 6·24·96개에서 처리량·확정 응답 지연과 CPU·메모리를 함께 기록했습니다. 총 17,736개 주문의 정합성 검증을 통과했으며, 24개 단계의 WebSocket 단절과 이후 측정 조건 차이도 원본·그래프에 표시했습니다.
 
 [직렬화 변경 후 같은 부하 검증](docs/engine-load-after-serialization.md)은 17,736개 주문과 최종 순번까지 WebSocket 연속 수신을 모두 통과했습니다. CPU·메모리·지연 원본과 새 그래프, 비교 가능한 범위와 남은 한계를 기록했습니다.

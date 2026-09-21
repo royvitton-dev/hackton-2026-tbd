@@ -1,0 +1,33 @@
+Browser tab: 10, Title: "LEAVE PARK — 휴가 거래소", URL: "http://127.0.0.1:5181/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 69, 88-90
+~				67 text 가격 (P) 잔량 (시간) 주문
++				329 button 1,100 3 1, Help: 1,100 포인트를 주문 가격에 입력
++					330 text 1,100
++					331 text 3
++					332 text 1
++				333 text 1,000 P 현재가
++				334 button 900 2 1, Help: 900 포인트를 주문 가격에 입력
++					335 text 900
++					336 text 2
++					337 text 1
++				338 text 매도 가격을 누르면 주문에 입력됩니다 매수
+~				75 checkbox 미체결 1, Value: 1
++					339 row
++						340 cell
++							341 text 매수
++							342 container
++								343 text # 1
++						344 cell
++							345 text 900 P
++						346 cell
++							347 text 0 /  2  h
++						348 cell
++							349 text 미체결
++						350 cell
++							351 button 주문 1 취소
+~						131 text 998,200 P
+~					156 text 998,200  P
+~					159 text 1,800  P
+~				178 text 엔진 정상 운영 EVENT # 2 재동기화 1 수신 22:22:16
+The focused UI element is 0 AXWebArea LEAVE PARK — 휴가 거래소, URL: 127.0.0.1:5181/

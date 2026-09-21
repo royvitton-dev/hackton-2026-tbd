@@ -1,0 +1,73 @@
+{
+  "recorded_at_utc": "2026-09-21T13:26:51.8169851Z",
+  "source_hashes": [
+    {
+      "path": "scripts/network-bench.mjs",
+      "sha256": "a86b985fb0878affd6cbb04b6157a78a4237ed402065aa0c49f54214a6412e6c",
+      "bytes": 36765
+    },
+    {
+      "path": "scripts/network-bench-lifecycle.mjs",
+      "sha256": "118d6bbbc36cf4bb9d6d3875b771aad02092ddfd4cefc0a5c74bdfeea96db3e8",
+      "bytes": 4735
+    },
+    {
+      "path": "scripts/network-bench-lifecycle.test.mjs",
+      "sha256": "58456fb5ba17fc86269fe79c680fa2adcf02a67dcbb696de041912a41cc7db88",
+      "bytes": 12375
+    },
+    {
+      "path": "scripts/demo-lifecycle.mjs",
+      "sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "bytes": 8852
+    },
+    {
+      "path": "engine/target/release/leave-engine.exe",
+      "sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+      "bytes": 3008428
+    },
+    {
+      "path": "data/demo-current.json",
+      "sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+      "bytes": 11501
+    }
+  ],
+  "syntax_checks": [
+    {
+      "command": [
+        "node",
+        "--check",
+        "scripts/network-bench.mjs"
+      ],
+      "exit_code": 0,
+      "output": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "scripts/network-bench-lifecycle.mjs"
+      ],
+      "exit_code": 0,
+      "output": []
+    },
+    {
+      "command": [
+        "node",
+        "--check",
+        "scripts/network-bench-lifecycle.test.mjs"
+      ],
+      "exit_code": 0,
+      "output": []
+    }
+  ],
+  "focused_test_passes": 12,
+  "focused_test_failures": 0,
+  "counts_include_parent_test": true,
+  "actual_benchmark_run": false,
+  "production_engine_launched": false,
+  "live_service_control": false,
+  "first_attempt": "../2026-09-21T13-25-10-006Z-network-bench-lifecycle-ad03a49b",
+  "first_wrapper": "../20260921T132509416Z-network-bench-lifecycle-corrections-80c8c02e",
+  "successful_wrapper": "../20260921T132608588Z-network-bench-lifecycle-corrections-fixture-close-13fd26e5"
+}

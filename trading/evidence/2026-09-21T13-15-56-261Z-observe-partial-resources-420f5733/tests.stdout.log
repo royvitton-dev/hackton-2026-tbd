@@ -1,0 +1,23 @@
+{"fixture":"real_windows_missing_pid","current_test_pid":16652,"exited_fixture_pid":21628,"child_exit_code":0,"result":{"resources":[{"Id":16652,"ProcessName":"node","WorkingSet64":61038592,"PrivateMemorySize64":23810048,"CPU":0.109375,"Handles":214}],"resource_collection":{"started_at":"2026-09-21T13:17:36.237Z","requested_processes":[{"pid":16652,"name":"current-test"},{"pid":21628,"name":"normally-exited-fixture"}],"requested_pids":[16652,21628],"ended_at":"2026-09-21T13:17:36.631Z","status":"partial","complete":false,"returned_pids":[16652],"missing_pids":[21628],"invalid_counter_pids":[],"command_error":{"message":"Command failed: powershell.exe -NoProfile -NonInteractive -Command Get-Process -Id 16652,21628 -ErrorAction SilentlyContinue | Select-Object Id,ProcessName,WorkingSet64,PrivateMemorySize64,CPU,Handles | ConvertTo-Json -Compress","exit_status":1,"signal":null,"code":null},"stdout":"{\"Id\":16652,\"ProcessName\":\"node\",\"WorkingSet64\":61038592,\"PrivateMemorySize64\":23810048,\"CPU\":0.109375,\"Handles\":214}\r\n","stderr":""}}}
+✔ one missing PID preserves the other 13 rows and exact nonzero-exit output (5.5226ms)
+✔ successful one-PID JSON objects become normal complete row arrays (0.5592ms)
+✔ zero exit cannot hide missing rows and unavailable counters stay unavailable (0.3667ms)
+✔ malformed or empty failure output retains evidence without zero process readings (1.2677ms)
+✔ nonzero exit stays partial even when every requested row was captured (0.5671ms)
+✔ invalid requested PIDs never reach PowerShell (0.3838ms)
+✔ real Windows Get-Process keeps this test process when an owned child PID has exited (505.8271ms)
+✔ CPU deltas are normalized by logical CPUs and weighted by elapsed time (4.3546ms)
+✔ real zero activity is valid while missing and non-finite counters are excluded (1.6822ms)
+✔ standby gaps and backwards timestamps are not included in active CPU means (0.341ms)
+✔ process churn and counter resets cannot turn into fabricated low CPU (0.2076ms)
+✔ missing capacity metadata and impossible CPU deltas remain unavailable (0.176ms)
+✔ null process readings are excluded without aborting the report (0.1451ms)
+✔ incomplete memory samples cannot become zero totals or NaN maxima (0.6289ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 638.0703

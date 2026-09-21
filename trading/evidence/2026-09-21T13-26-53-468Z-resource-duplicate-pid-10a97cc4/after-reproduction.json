@@ -1,0 +1,34 @@
+{
+  "recorded_at": "2026-09-21T13:27:22.307Z",
+  "executor_calls": 0,
+  "result": {
+    "resources": [],
+    "resource_collection": {
+      "started_at": "2026-09-21T13:27:22.307Z",
+      "requested_processes": [
+        {
+          "pid": 101,
+          "name": "engine"
+        },
+        {
+          "pid": 101,
+          "name": "frontend"
+        }
+      ],
+      "requested_pids": [
+        101
+      ],
+      "input_error": "Requested processes must have distinct process IDs",
+      "ended_at": "2026-09-21T13:27:22.307Z",
+      "status": "unavailable",
+      "complete": false,
+      "returned_pids": [],
+      "missing_pids": [
+        101
+      ],
+      "invalid_counter_pids": [],
+      "stdout": "",
+      "stderr": ""
+    }
+  }
+}

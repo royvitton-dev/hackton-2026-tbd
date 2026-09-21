@@ -1,0 +1,32 @@
+{
+  "provenance": "Root transcribed these completed tool results from the current conversation; this is not an automatic session export.",
+  "coordinator_attempt1": {
+    "tool": "write_stdin",
+    "session_id": 35212,
+    "chunk_id": "754dcd",
+    "exit_code": 1,
+    "output": "",
+    "detail_file": "stale-http-coordinator.jsonl"
+  },
+  "coordinator_attempt2": {
+    "tool": "write_stdin",
+    "session_id": 22369,
+    "chunk_id": "959d2c",
+    "exit_code": 0,
+    "output_summary": "released, observed_before_release=true, since_capture_observed_ms=364",
+    "detail_file": "stale-http-coordinator-attempt2.jsonl"
+  },
+  "stop_request": {
+    "tool": "exec_command",
+    "chunk_id": "2aaf67",
+    "command": "node scripts/browser-gap-demo.mjs stop",
+    "exit_code": 0,
+    "output_status": "stop_requested"
+  },
+  "root_supervisor_poll": {
+    "tool": "write_stdin",
+    "session_id": 78191,
+    "error": "Unknown process id 78191",
+    "interpretation": "Root cannot infer a supervisor exit code from this unavailable agent-owned session handle. The starting agent was asked to poll its own handle."
+  }
+}
