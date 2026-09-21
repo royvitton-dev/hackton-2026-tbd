@@ -1,6 +1,6 @@
 # 누적 검증과 완료 기준
 
-2026-09-21 19:49 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-21 20:06 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
@@ -18,6 +18,7 @@
 | 빌드·포맷·린트·테스트 | 통과 | Rust release 및 fmt, [최신 Clippy all-targets -D warnings](../evidence/20260921T090534849Z-checkpoint-error-format-clippy-e41e5b01), [프런트7개 테스트](../evidence/frontend-20260921T090509598Z), [최신 안내문구 포함 TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) |
 | 성능·할당 계측 보존 | 통과 / 목표 일부 미달 | [성능 결과](performance.md). A 통과. B/C 최초 fetch 처리량 미달, 측정된 클라이언트 전송 대기 개선 후 동일 바이너리 node:http 목표 통과. 정상 execute 할당 0 미달 |
 | CPU·메모리 구간 분석 | 계산 검증 통과 / 장시간 관찰 진행 | [사용 방법·실측·독립 검토](resource-observation.md), 알려진 카운터·누락·공백·PID교체 등7검증. 현재41분 CPU평균14프로세스합0.581%,엔진0.307%;6시간최종결과는아님 |
+| 부하 중 CPU·메모리 실측 | 주문 정합성 통과 / WS 연속성 실패 | [6·24·96 동시 요청](engine-load-test.md), 실제17,736명령/8,868체결·오류0·자산보존. 엔진 CPU평균5.84/7.36/1.75%, 관측 working set최대18.0/30.9/33.3MiB. 24단계말WS단절로96단계는WS없는조건이며직접비교불가. 각단계11~13초의짧은cap종료실행 |
 | Vercel UI 로컬 빌드·배포 설정 | 통과 | `trading/frontend`, `pnpm build`, `dist`; [배포 검토](review-deployment.md). Production정적130파일HTTP/해시,실제브라우저주문/부분체결/취소/reload통과. 실제 Vercel 빌드·배포 미실행 |
 | Rust 실행·영속 볼륨·배포 설정 | 준비 / 일부 미검증 | 로컬 Windows 실행 통과, Dockerfile/compose/Caddy 예시. Docker가 없어 실제 Linux 컨테이너 빌드·운영 미검증 |
 | 기존 UI 연동과 적용 여부 | 범위 명시 | 기존 루트 UI 읽기만 수행. 독립 UI 완성, 연동 절차 제공, 루트 적용 없음 |
@@ -37,6 +38,8 @@
 19:38 새 관찰의 [32.7분 중간 분석](../evidence/2026-09-21T10-38-39-637Z-observation-analysis-39decc3a/analysis.json)은388표본,최대간격5.996초,12봇,자산보존,WS누락/단절0이다. [첫 자동 checkpoint32781](../evidence/2026-09-21T10-40-17-904Z-first-periodic-checkpoint-17d364f9/summary.json)은19:35:21에24.47MB로 게시됐다. 그 주변126응답은125accepted/1ORDER_NOT_OPEN,최대75.97ms. [현재 자원 원시계측](../evidence/20260921T103750097Z-live-resources-corrected-11589dd1/README.md)은 거래소14프로세스 합계 CPU0.351%(16논리코어,5.015초),working set1.012GB다. 브라우저·관찰기는제외하며공유메모리중복가능성을명시한다. 관찰은진행중이고6시간최종통과나전체복구검증을대신하지않는다.
 
 ## 실패 이력과 수정
+
+- 사용자 요청의 [부하 테스트](engine-load-test.md)에서 격리 엔진의 WS 소비자 1개가 24동시 단계 말에 close1005로 단절됐다. 수신 중 순번 누락0이지만최종17736까지따라잡지못해연속수신은실패다. 원인분기로그가없어lag/send timeout등을확정하지않는다. 96동시단계의CPU감소·처리량은WS없는조건이므로스케일향상근거로쓰지않는다. 전체durableACK·정산/잔고검사와정상종료는통과했으며, 기존6시간데모의WS는유지됐다.
 
 - [문서 탐색 감사](../evidence/2026-09-21T10-27-23-212Z-doc-navigation-768e335c/README.md): README/docs 25개, 로컬 링크120개 대상 존재. 실제 스크립트와 실행 경로를 대조하여 연속cd, cargo/frontend 위치, preview 종료 manifest 안내와 없는 로그 인용을 바로잡았다. 외부 URL·heading anchor·다른 OS 실행까지 검증한 것은 아니다.
 

@@ -64,6 +64,8 @@ API 통합 테스트는 별도 합성 데이터와 임시 포트의 엔진 프�
 
 이미 수집한 기록에서 [CPU·메모리 사용량 확인](docs/resource-observation.md)도 가능합니다. `node scripts/summarize-observation.mjs <관찰-run-ID> --logical-processors 16`으로 구간별 CPU 평균과 메모리를 새 증거 파일에 저장합니다. `16`은 이번 호스트의 논리 프로세서 수이며 다른 호스트의 기록에는 실제 해당 값을 지정합니다.
 
+[실제 엔진 부하 테스트](docs/engine-load-test.md)는 동시 요청 6·24·96개에서 처리량·확정 응답 지연과 CPU·메모리를 함께 기록했습니다. 총 17,736개 주문의 정합성 검증을 통과했으며, 24개 단계의 WebSocket 단절과 이후 측정 조건 차이도 원본·그래프에 표시했습니다.
+
 성능 코어 예제와 사전 목표: [측정 계획](docs/bench-plan.md), [실제 결과와 한계](docs/performance.md). 실제 측정 전 시연 봇·빌드·테스트를 중지하고 별도 조용한 구간을 사용합니다. A 코어, B 내구성 ACK, C 이벤트 수신과 D 실제 배포 네트워크를 구분합니다.
 
 ## 문서

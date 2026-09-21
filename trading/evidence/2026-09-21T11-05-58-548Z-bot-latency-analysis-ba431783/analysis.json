@@ -1,0 +1,200 @@
+{
+  "analyzed_at": "2026-09-21T11:05:58.523Z",
+  "source_run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+  "files": 12,
+  "records": 21281,
+  "incomplete_tails_skipped": 0,
+  "relevant_records_without_timing": 0,
+  "durable_command_round_trip": {
+    "available": true,
+    "samples": 21269,
+    "mean_ms": 14.517736146505461,
+    "p50_ms": 16.03409999993164,
+    "p95_ms": 26.284100000048056,
+    "p99_ms": 28.395799999998417,
+    "max_ms": 174.2554999999702
+  },
+  "confirmed_accepted": 21260,
+  "confirmed_rejected": 9,
+  "per_bot_and_event": [
+    {
+      "key": "bot-01:command_result",
+      "available": true,
+      "samples": 1778,
+      "mean_ms": 14.419457480316543,
+      "p50_ms": 15.975600000005215,
+      "p95_ms": 26.153599999961443,
+      "p99_ms": 28.55599999986589,
+      "max_ms": 141.85110000008717
+    },
+    {
+      "key": "bot-02:command_result",
+      "available": true,
+      "samples": 1767,
+      "mean_ms": 14.356122014716794,
+      "p50_ms": 15.837099999997008,
+      "p95_ms": 26.323399999644607,
+      "p99_ms": 28.775800000003073,
+      "max_ms": 127.9531999998726
+    },
+    {
+      "key": "bot-03:command_result",
+      "available": true,
+      "samples": 1774,
+      "mean_ms": 14.608032581740279,
+      "p50_ms": 16.070200000191107,
+      "p95_ms": 26.10660000005737,
+      "p99_ms": 28.1535000000149,
+      "max_ms": 112.76520000002347
+    },
+    {
+      "key": "bot-04:command_result",
+      "available": true,
+      "samples": 1767,
+      "mean_ms": 14.569181380867649,
+      "p50_ms": 16.164000000004307,
+      "p95_ms": 26.323900000192225,
+      "p99_ms": 27.68999999994412,
+      "max_ms": 120.7609999999986
+    },
+    {
+      "key": "bot-05:command_result",
+      "available": true,
+      "samples": 1777,
+      "mean_ms": 14.457675633087522,
+      "p50_ms": 16.048600000096485,
+      "p95_ms": 26.393200000049546,
+      "p99_ms": 28.518900000024587,
+      "max_ms": 42.248100000433624
+    },
+    {
+      "key": "bot-06:command_result",
+      "available": true,
+      "samples": 1765,
+      "mean_ms": 14.624673427764897,
+      "p50_ms": 16.01199999999517,
+      "p95_ms": 26.468100000172853,
+      "p99_ms": 28.21929999999702,
+      "max_ms": 76.09420000000682
+    },
+    {
+      "key": "bot-07:command_result",
+      "available": true,
+      "samples": 1772,
+      "mean_ms": 14.799705361173256,
+      "p50_ms": 16.038500000024214,
+      "p95_ms": 26.440299999900162,
+      "p99_ms": 28.7831999999471,
+      "max_ms": 113.05819999985397
+    },
+    {
+      "key": "bot-08:command_result",
+      "available": true,
+      "samples": 1776,
+      "mean_ms": 14.461538569825757,
+      "p50_ms": 16.142399999778718,
+      "p95_ms": 26.212499999906868,
+      "p99_ms": 28.65720000024885,
+      "max_ms": 58.06110000004992
+    },
+    {
+      "key": "bot-09:command_result",
+      "available": true,
+      "samples": 1782,
+      "mean_ms": 14.472257968572984,
+      "p50_ms": 16.103899999987334,
+      "p95_ms": 26.030500000342727,
+      "p99_ms": 28.11349999997765,
+      "max_ms": 174.2554999999702
+    },
+    {
+      "key": "bot-10:command_result",
+      "available": true,
+      "samples": 1778,
+      "mean_ms": 14.465057367831827,
+      "p50_ms": 16.071899999980815,
+      "p95_ms": 26.11089999973774,
+      "p99_ms": 28.101999999955297,
+      "max_ms": 107.66109999991022
+    },
+    {
+      "key": "bot-11:command_result",
+      "available": true,
+      "samples": 1761,
+      "mean_ms": 14.42477194775825,
+      "p50_ms": 15.975900000194088,
+      "p95_ms": 26.302300000097603,
+      "p99_ms": 28.797400000039488,
+      "max_ms": 155.8701000000001
+    },
+    {
+      "key": "bot-12:command_result",
+      "available": true,
+      "samples": 1772,
+      "mean_ms": 14.554856715576632,
+      "p50_ms": 15.912400000263005,
+      "p95_ms": 26.286899999715388,
+      "p99_ms": 28.395799999998417,
+      "max_ms": 89.58860000036657
+    }
+  ],
+  "fifteen_minute_durable_windows": [
+    {
+      "window_start_utc": "2026-09-21T10:00:00.000Z",
+      "available": true,
+      "samples": 3390,
+      "mean_ms": 14.715296047198011,
+      "p50_ms": 15.854599999998754,
+      "p95_ms": 25.83059999998659,
+      "p99_ms": 27.854799999971874,
+      "max_ms": 155.8701000000001
+    },
+    {
+      "window_start_utc": "2026-09-21T10:15:00.000Z",
+      "available": true,
+      "samples": 5263,
+      "mean_ms": 15.116904199127497,
+      "p50_ms": 16.2216999999946,
+      "p95_ms": 26.293999999994412,
+      "p99_ms": 28.781899999943562,
+      "max_ms": 174.2554999999702
+    },
+    {
+      "window_start_utc": "2026-09-21T10:30:00.000Z",
+      "available": true,
+      "samples": 5254,
+      "mean_ms": 14.213751503618255,
+      "p50_ms": 15.712999999988824,
+      "p95_ms": 26.300000000046566,
+      "p99_ms": 28.383200000040233,
+      "max_ms": 75.97240000008605
+    },
+    {
+      "window_start_utc": "2026-09-21T10:45:00.000Z",
+      "available": true,
+      "samples": 5261,
+      "mean_ms": 14.284714331873689,
+      "p50_ms": 16.315900000277907,
+      "p95_ms": 26.433100000023842,
+      "p99_ms": 28.48049999959767,
+      "max_ms": 127.9531999998726
+    },
+    {
+      "window_start_utc": "2026-09-21T11:00:00.000Z",
+      "available": true,
+      "samples": 2101,
+      "mean_ms": 14.041731175639201,
+      "p50_ms": 16.182000000029802,
+      "p95_ms": 26.408499999903142,
+      "p99_ms": 28.11810000007972,
+      "max_ms": 149.315700000152
+    }
+  ],
+  "limitations": [
+    "Passive measurements of ordinary Node fetch bots, including client scheduling, HTTP and response JSON parsing.",
+    "Not an isolated throughput benchmark or pure matching latency.",
+    "Command results include durable domain rejections and duplicate replies; statuses are counted separately.",
+    "A partial last line from a concurrently growing log is excluded and counted.",
+    "No timings are reconstructed for older records without round_trip_ms."
+  ]
+}

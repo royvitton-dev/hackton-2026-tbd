@@ -1,0 +1,116 @@
+{
+  "run_id": "2026-09-21T11-01-25-875Z-engine-load-8774ce30",
+  "started_at": "2026-09-21T11:01:26.213Z",
+  "command": [
+    "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "C:\\project\\hackton-2026-tbd\\trading\\scripts\\engine-load.mjs",
+    "--competing-resource-stress"
+  ],
+  "classification": "competing-resource stress alongside live normal demo and observer; not quiet A/B/C baseline",
+  "binary": {
+    "source": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\release\\leave-engine.exe",
+    "copied": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T11-01-25-875Z-engine-load-8774ce30\\bin\\leave-engine.exe",
+    "sha256": "09bcf75b80a2a85c6a52168d2404f23a230e73b958fc6814daa300650fc5ac56"
+  },
+  "main_before": {
+    "manifest_sha256": "6128d45f26f574eb1da12ec1b164c2112c4ed3e4e29bb6a5526568563578e69a",
+    "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "name": "frontend",
+        "pid": 17556,
+        "alive": true
+      },
+      {
+        "name": "bot-01",
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "name": "bot-02",
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "name": "bot-03",
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "name": "bot-04",
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "name": "bot-05",
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "name": "bot-06",
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "name": "bot-07",
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "name": "bot-08",
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "name": "bot-09",
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "name": "bot-10",
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "name": "bot-11",
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "name": "bot-12",
+        "pid": 6128,
+        "alive": true
+      }
+    ],
+    "observer": {
+      "pid": 18184,
+      "alive": true
+    }
+  },
+  "host": {
+    "os": "Windows 11 Pro",
+    "node": "v24.19.0",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-1240P",
+    "logical_processors": 16,
+    "total_memory_bytes": 16880881664,
+    "free_memory_bytes": 5323169792
+  },
+  "limits": {
+    "commands": 18000,
+    "commands_per_phase": 6000,
+    "http": 20000,
+    "work_ms": 75000,
+    "overall_ms": 90000,
+    "concurrency": 96,
+    "engine_observed_working_set_bytes": 536870912,
+    "client_observed_rss_bytes": 536870912
+  },
+  "workload": "warmup two rounds of6makers+6takers;phases6/24/96;all sell maker ACKs precede equal buy taker batch;alternate two groups of6bots;each phase ends after complete2round cycles restoring per-accountassets",
+  "scope": "node:http keepalive submit-to-parsed-durableACK;one normal WS consumer;Windows sampler ~500ms direct TotalProcessorTime.TotalSeconds;CPU normalized by16logical processors;sampled maxima are not guaranteed peaks",
+  "ended_at": "2026-09-21T11:02:04.242Z"
+}

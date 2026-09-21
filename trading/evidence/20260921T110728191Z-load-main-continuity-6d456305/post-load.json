@@ -1,0 +1,96 @@
+{
+  "generated_at": "2026-09-21T11:07:28.2911706Z",
+  "source_load_run": "2026-09-21T11-01-25-875Z-engine-load-8774ce30",
+  "manifest_sha256": "6128D45F26F574EB1DA12EC1B164C2112C4ED3E4E29BB6A5526568563578E69A",
+  "processes": [
+    {
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "StartTime": "2026-09-21T19:05:21.4715478+09:00"
+    },
+    {
+      "Id": 4928,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.3890023+09:00"
+    },
+    {
+      "Id": 5412,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.5355012+09:00"
+    },
+    {
+      "Id": 6128,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.5945324+09:00"
+    },
+    {
+      "Id": 7916,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.4762676+09:00"
+    },
+    {
+      "Id": 7936,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.3037571+09:00"
+    },
+    {
+      "Id": 12172,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.4485053+09:00"
+    },
+    {
+      "Id": 15272,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.504734+09:00"
+    },
+    {
+      "Id": 16068,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.3612932+09:00"
+    },
+    {
+      "Id": 17444,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.2784404+09:00"
+    },
+    {
+      "Id": 17556,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:21.7348899+09:00"
+    },
+    {
+      "Id": 18184,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:54.8395149+09:00"
+    },
+    {
+      "Id": 20484,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.5665942+09:00"
+    },
+    {
+      "Id": 20776,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.3346242+09:00"
+    },
+    {
+      "Id": 20940,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.4216442+09:00"
+    },
+    {
+      "Id": 15744,
+      "ProcessName": "powershell",
+      "StartTime": "2026-09-21T19:05:54.9077476+09:00"
+    }
+  ],
+  "latest_automatic_snapshot": {
+    "name": "snapshot-00000000000000043290-00000000000001789988722079105100-20540-2.bin",
+    "bytes": 32387464,
+    "last_write_utc": "2026-09-21T11:05:22.1017411Z",
+    "sha256": "038AEAC5C7E7F922B80C77268B78F0FCDE67052DF3CBE0B5CA032A55A1D336E6"
+  },
+  "observation_analysis": "2026-09-21T11-05-58-229Z-observation-analysis-52bf1b7f",
+  "bot_latency_analysis": "2026-09-21T11-05-58-548Z-bot-latency-analysis-ba431783",
+  "limitations": "Process identity and sampled state/continuity only; snapshot existence/hash does not substitute for full offline recovery."
+}
