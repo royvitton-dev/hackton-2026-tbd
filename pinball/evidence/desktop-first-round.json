@@ -149,60 +149,64 @@
     "boardMotion": true,
     "finishMode": "winner"
   },
-  "seed": 3815654113,
+  "seed": 4118776208,
   "result": {
-    "roundId": "d398ace7-0655-44be-94bb-a286f0f9e04c",
+    "roundId": "6f284c26-4ef5-4fb8-b349-448f5a71f106",
     "state": "complete",
-    "seed": 3815654113,
-    "time": 19.29939431976207,
+    "seed": 4118776208,
+    "time": 18.75026777408641,
     "target": 1,
     "total": 20,
     "winner": {
-      "id": "p16-b1",
-      "participantId": "p16",
-      "name": "유나",
-      "label": "유나",
-      "color": "#ff826c",
+      "id": "p4-b1",
+      "participantId": "p4",
+      "name": "서연",
+      "label": "서연",
+      "color": "#64e4e0",
       "number": 1,
       "rank": 1,
-      "time": 19.29939431976207,
+      "time": 18.75026777408641,
       "exitId": 1,
+      "exitLabel": "골인",
       "criterion": "arrival",
       "crossedFinish": true
     },
     "completionReason": "target-arrived",
     "finishOrder": [
       {
-        "id": "p16-b1",
-        "participantId": "p16",
-        "name": "유나",
-        "label": "유나",
-        "color": "#ff826c",
+        "id": "p4-b1",
+        "participantId": "p4",
+        "name": "서연",
+        "label": "서연",
+        "color": "#64e4e0",
         "number": 1,
         "rank": 1,
-        "time": 19.29939431976207,
-        "exitId": 1
+        "time": 18.75026777408641,
+        "exitId": 1,
+        "exitLabel": "골인"
       }
     ],
     "assists": 0,
+    "returns": 0,
+    "returnClosed": false,
     "motion": {
       "enabled": true,
-      "active": false,
-      "axis": null,
-      "cycle": 3,
-      "phase": 0,
-      "roll": 0,
+      "active": true,
+      "axis": "x",
+      "cycle": 4,
+      "phase": 0.14557585184149957,
+      "roll": 0.0061797668619469805,
       "pitch": 0,
-      "offsetX": 0,
+      "offsetX": -0.7724708577433725,
       "offsetY": 0,
-      "forceX": 0,
+      "forceX": -7.106731891239027,
       "forceY": 0,
-      "nextIn": 2.824999838604999
+      "nextIn": 0
     },
     "deviceStats": {
-      "captures": 5,
-      "launches": 5,
-      "releases": 0
+      "captures": 13,
+      "launches": 10,
+      "releases": 1
     },
     "devices": [
       {
@@ -211,181 +215,253 @@
         "x": 310,
         "y": 530,
         "ballId": null,
+        "ballIds": [],
         "angle": 1.5707963267948966,
         "progress": 0,
-        "holding": false
+        "holding": false,
+        "count": 0
       },
       {
-        "id": "neon-cannon-1",
+        "id": "neon-magnet-1",
+        "kind": "magnet",
+        "x": 100,
+        "y": 1770,
+        "ballId": "p17-b1",
+        "ballIds": [
+          "p17-b1"
+        ],
+        "angle": 1.5707963267948966,
+        "progress": 0.13421315728471228,
+        "holding": true,
+        "count": 1
+      },
+      {
+        "id": "neon-cannon-2",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1320,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 0.9842733173194661,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-cannon-3",
         "kind": "cannon",
         "x": 310,
         "y": 1510,
-        "ballId": null,
-        "angle": -3.9350650499203663,
-        "progress": 0,
-        "holding": false
+        "ballId": "p19-b1",
+        "ballIds": [
+          "p19-b1"
+        ],
+        "angle": 2.6128412681289452,
+        "progress": 0.5524748208663859,
+        "holding": true,
+        "count": 1
       }
     ],
     "balls": [
       {
-        "id": "p7-b1",
-        "x": 222.56703955547323,
-        "y": 2057.2759879266896,
+        "id": "p13-b1",
+        "x": 364.5027488441031,
+        "y": 1943.9734478167359,
         "finished": false,
         "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p2-b1",
-        "x": 380.4354804297379,
-        "y": 1337.3863744404198,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p1-b1",
-        "x": 326.46046036065115,
-        "y": 1356.8714410332632,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p11-b1",
-        "x": 405.8201363721252,
-        "y": 1168.1160285962924,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p8-b1",
-        "x": 447.3123051469831,
-        "y": 1865.7276846124714,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p18-b1",
-        "x": 341.17259617383576,
-        "y": 1672.6422067454553,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
       },
       {
         "id": "p5-b1",
-        "x": 128.2359805872736,
-        "y": 1881.9250640445339,
+        "x": 184.14483015098872,
+        "y": 1507.9327462226013,
         "finished": false,
         "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p19-b1",
-        "x": 201.61250223635537,
-        "y": 1590.3186607773073,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p17-b1",
-        "x": 343.0380282656812,
-        "y": 1966.7164672880235,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p13-b1",
-        "x": 482.845133219964,
-        "y": 1796.293187253476,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p16-b1",
-        "x": 316.4530550599908,
-        "y": 2150,
-        "finished": true,
-        "rank": 1,
-        "heldBy": null
-      },
-      {
-        "id": "p12-b1",
-        "x": 220.93849467051405,
-        "y": 1840.4941822427256,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p4-b1",
-        "x": 535.4229125276471,
-        "y": 1814.9793310071796,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p15-b1",
-        "x": 327.06418981141474,
-        "y": 1872.0905874795,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p14-b1",
-        "x": 296.4553179429145,
-        "y": 2077.8646374432024,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p9-b1",
-        "x": 314.21593406527165,
-        "y": 2064.4297292522547,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p20-b1",
-        "x": 149.49199242390128,
-        "y": 1848.7615997523542,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
-      },
-      {
-        "id": "p3-b1",
-        "x": 269.9014209264762,
-        "y": 2095.80229764422,
-        "finished": false,
-        "rank": null,
-        "heldBy": null
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
       },
       {
         "id": "p10-b1",
-        "x": 193.939588281451,
-        "y": 2075.67286346614,
+        "x": 304.3671821971895,
+        "y": 1489.0049412910432,
         "finished": false,
         "rank": null,
-        "heldBy": null
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p1-b1",
+        "x": 229.6992183990879,
+        "y": 1930.4489596318767,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p20-b1",
+        "x": 420.33050598772655,
+        "y": 1756.5356446063586,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p2-b1",
+        "x": 214.98199415012465,
+        "y": 2069.339431701349,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p15-b1",
+        "x": 418.6733352430211,
+        "y": 1909.3241800817634,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p7-b1",
+        "x": 537.2342185519822,
+        "y": 1469.6040622423352,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
       },
       {
         "id": "p6-b1",
-        "x": 405.8274740953667,
-        "y": 1797.3864061336415,
+        "x": 262.8070757004985,
+        "y": 1662.557449912595,
         "finished": false,
         "rank": null,
-        "heldBy": null
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p18-b1",
+        "x": 330.182919380625,
+        "y": 2140.9770239336854,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p16-b1",
+        "x": 375.7473162853293,
+        "y": 1590.5592304590557,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p3-b1",
+        "x": 390.5222516619117,
+        "y": 1169.7672572785273,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p17-b1",
+        "x": 111.35971717191485,
+        "y": 1760.2337267508897,
+        "finished": false,
+        "rank": null,
+        "heldBy": "neon-magnet-1",
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p19-b1",
+        "x": 303.07824029773246,
+        "y": 1496.4336252190149,
+        "finished": false,
+        "rank": null,
+        "heldBy": "neon-cannon-3",
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p11-b1",
+        "x": 174.4490553500993,
+        "y": 1069.636340032365,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p12-b1",
+        "x": 256.85083449960126,
+        "y": 1952.5211228204612,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p8-b1",
+        "x": 551.7500924438526,
+        "y": 1796.992560362964,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p14-b1",
+        "x": 353.0735075723313,
+        "y": 1961.3721484688322,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p4-b1",
+        "x": 311.95069234959163,
+        "y": 2150,
+        "finished": true,
+        "rank": 1,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p9-b1",
+        "x": 334.31432295639485,
+        "y": 1207.9054261150675,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
       }
     ]
   }

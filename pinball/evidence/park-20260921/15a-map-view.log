@@ -1,0 +1,27 @@
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+... Skipped lines
+
+  {
+    assists: 0,
+    balls: [
+      {
+        finished: true,
+...
+    returns: 0,
++   roundId: 'c175d9e2-5d77-4964-84a6-c49670f4399d',
+-   roundId: 'bfb16c34-d5e0-4182-9f78-6db4f3726c96',
+    seed: 230892507,
+    state: 'complete',
+    target: 1,
+    time: 21.359962651513186,
+    total: 6,
+
+    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/map-view.mjs:19:309 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [Object],
+  expected: [Object],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}

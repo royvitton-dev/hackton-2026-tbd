@@ -1,0 +1,6 @@
+{
+  "at": "2026-09-21T11:50:49.274Z",
+  "tests": [],
+  "status": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n... Skipped lines\n\n  {\n    assists: 0,\n    balls: [\n      {\n        finished: true,\n...\n    returns: 0,\n+   roundId: 'c175d9e2-5d77-4964-84a6-c49670f4399d',\n-   roundId: 'bfb16c34-d5e0-4182-9f78-6db4f3726c96',\n    seed: 230892507,\n    state: 'complete',\n    target: 1,\n    time: 21.359962651513186,\n    total: 6,\n\n    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/map-view.mjs:19:309"
+}

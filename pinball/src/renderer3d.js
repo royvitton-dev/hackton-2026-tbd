@@ -10,7 +10,7 @@ const CAMERA_DIRECTIONS=[new THREE.Vector3(.18,.72,.67).normalize(),new THREE.Ve
 
 export class Renderer3D {
  constructor(canvas){
-  Object.assign(this,{canvas,mode:'webgl',overview:false,angle:2,lastRound:null,cameraCenter:400,finishedAt:new Map()});
+  Object.assign(this,{canvas,mode:'webgl',overview:false,halfView:false,angle:2,lastRound:null,cameraCenter:400,finishedAt:new Map()});
   this.webgl=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'high-performance'});
   this.webgl.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
   this.webgl.shadowMap.enabled=true;this.webgl.shadowMap.type=THREE.PCFShadowMap;
@@ -285,7 +285,7 @@ export class Renderer3D {
   for(const s of map.sliders)this.sliders.push(s.ride==='bumper-shuttle'?this.bumperShuttle(s,mat):this.train(s,mat));
   this.gate=this.rail({ax:32,ay:map.gate,bx:588,by:map.gate,r:7},mat.pink);
   for(const h of map.exits){const radius=h.width*S/2-.033;this.ring(X(h.x),Z(h.y??map.finish),radius+.01,h.kind==='return'?mat.neonPink:mat.gold,.08,.085);this.mesh(new THREE.CylinderGeometry(radius-.01,radius-.01,.75,24,1,true),mat.dark,X(h.x),-.4,Z(h.y??map.finish));this.mesh(new THREE.CircleGeometry(radius-.01,24),new THREE.MeshBasicMaterial({color:0x24162d}),X(h.x),-.78,Z(h.y??map.finish)).rotation.x=-Math.PI/2;}
-  for(const h of map.exits)this.text(h.kind==='return'?'RETURN':'GOAL',map.finish+63,1.12,.9,h.x);
+  for(const h of map.exits)this.text(h.kind==='return'?'BACK':'GOAL',map.finish+63,1.12,.9,h.x);
   if(map.returnPoint){const p=map.returnPoint;this.ring(X(p.x),Z(p.y),.46,mat.neonCyan,.025,.027);this.text('BACK AGAIN',p.y+48,1.8,.6,p.x);}
   this.text('BON VOYAGE!',253,3.9);this.text('A LITTLE WONDER',525,4.5,.4);this.text('EXPECT THE UNEXPECTED',1010,5.6,.35);this.text('YOUR LUCKY MOMENT',2008,5,.45);
   this.scenery(map,mat,theme);
@@ -322,12 +322,15 @@ export class Renderer3D {
   const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.65)]?.y??map.finish;
   const target=['ready','mixing','countdown'].includes(race.state)?400:Math.max(400,Math.min(map.finish-200,progress+100));
   if(race.state!=='paused')this.cameraCenter=reduced?target:this.cameraCenter+(target-this.cameraCenter)*.08;
-  const center=this.overview?map.height/2:this.cameraCenter;let cameraDistance=this.overview?Math.max(distance,map.height*S*1.55):distance;
+  const span=this.overview?map.height:map.height/2,wide=this.overview||this.halfView;
+  const center=this.overview?map.height/2:this.halfView?Math.max(span/2,Math.min(map.height-span/2,this.cameraCenter)):this.cameraCenter;
+  let cameraDistance=wide?Math.max(distance,span*S*1.44):distance;
   this.camera.aspect=aspect;this.camera.updateProjectionMatrix();
   for(let fit=0;fit<8;fit++){
    this.camera.position.copy(direction).multiplyScalar(cameraDistance).add(new THREE.Vector3(0,0,Z(center)));this.camera.lookAt(0,0,Z(center));this.camera.updateMatrixWorld();
-   if(!this.overview)break;
-   const corners=[[-7.8,-1],[7.8,-1],[-7.8,map.height*S],[7.8,map.height*S]].map(([x,z])=>new THREE.Vector3(x,-.8,z).project(this.camera));
+   if(!wide)break;
+   const low=(center-span/2)*S-.3,high=(center+span/2)*S+.3;
+   const corners=[[-7.8,low],[7.8,low],[-7.8,high],[7.8,high]].map(([x,z])=>new THREE.Vector3(x,-.8,z).project(this.camera));
    if(corners.every(v=>Math.abs(v.x)<.94&&Math.abs(v.y)<.94))break;cameraDistance*=1.1;
   }
   this.light.position.set(-6,16,Z(center)-5);this.light.target.position.set(0,0,Z(center));
@@ -366,7 +369,7 @@ export class Renderer3D {
   labelCandidates.sort((a,b)=>(b.id===selected)-(a.id===selected)||b.progress-a.progress);
   for(const c of labelCandidates){const box={l:c.x-c.width/2,r:c.x+c.width/2,t:c.y-21,b:c.y+3};if(!this.allLabels&&(shown>=(this.width<450?12:20)||occupied.some(o=>box.l<o.r+4&&box.r>o.l-4&&box.t<o.b+3&&box.b>o.t-3)))continue;c.label.hidden=false;c.label.style.left=`${c.x/this.width*100}%`;c.label.style.top=`${c.y/this.height*100}%`;occupied.push(box);shown++;}
   this.trails.instanceMatrix.needsUpdate=true;
-  this.hud.textContent=this.overview?`PARK MAP / ${map.exits.length===1?'ONE LUCKY GOAL':'ONE GOAL + ONE RETURN'}`:`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`;
+  this.hud.textContent=this.overview?`PARK MAP / ${map.exits.length===1?'ONE LUCKY GOAL':'ONE GOAL + ONE BACK'}`:this.halfView?`HALF MAP / ${Math.round(Math.max(0,center-span/2)/map.height*100)}–${Math.round(Math.min(map.height,center+span/2)/map.height*100)}%`:`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`;
   this.webgl.render(this.scene,this.camera);
  }
  graphics(){const i=this.webgl.info;return {geometries:i.memory.geometries,textures:i.memory.textures,programs:i.programs.length,drawCalls:i.render.calls,triangles:i.render.triangles,pixelRatio:this.webgl.getPixelRatio()};}

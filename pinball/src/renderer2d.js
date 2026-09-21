@@ -2,7 +2,7 @@ import {returnPose} from './return-portals.js';
 import {devicePose} from './devices.js';
 import {MAPS} from './physics.js';
 export class Renderer {
- constructor(canvas){this.canvas=canvas;this.ctx=canvas.getContext('2d');this.width=760;this.height=1100;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=760*dpr;canvas.height=1100*dpr;this.ctx.scale(dpr,dpr);this.map=MAPS[0];this.cameraY=0;this.overview=false;this.lastRound=null;}
+ constructor(canvas){this.canvas=canvas;this.ctx=canvas.getContext('2d');this.width=760;this.height=1100;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=760*dpr;canvas.height=1100*dpr;this.ctx.scale(dpr,dpr);this.map=MAPS[0];this.cameraY=0;this.overview=false;this.halfView=false;canvas.style.objectFit="contain";this.lastRound=null;}
  project(x,y,z=0){return {x:380+(x-310)*(.83+Math.max(0,Math.min(y/this.map.height,1))*.17),y:32+(y-this.cameraY)*.9-z};}
  path(points,fill,stroke,width=1){const c=this.ctx;c.beginPath();points.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));c.closePath();if(fill){c.fillStyle=fill;c.fill();}if(stroke){c.strokeStyle=stroke;c.lineWidth=width;c.stroke();}}
  line(ax,ay,bx,by,color,width,z=0){const c=this.ctx,a=this.project(ax,ay,z),b=this.project(bx,by,z);c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.lineWidth=width;c.lineCap='round';c.strokeStyle=color;c.stroke();}
@@ -15,7 +15,7 @@ export class Renderer {
  const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.7)]?.y??map.finish;
  const target=['ready','mixing','countdown'].includes(race.state)?0:Math.max(0,Math.min(map.height-1080,progress-550));
  if(race.state!=='paused')this.cameraY=reduced?target:this.cameraY+(target-this.cameraY)*.07;
- const savedCamera=this.cameraY;c.save();if(this.overview){this.cameraY=0;const scale=1060/map.height;c.translate(380,0);c.scale(scale,scale);c.translate(-380,0);}
+ const savedCamera=this.cameraY;c.save();if(this.overview){this.cameraY=0;const scale=1060/map.height;c.translate(380,0);c.scale(scale,scale);c.translate(-380,0);}else if(this.halfView){const scale=1060/(map.height*.5*.9);c.translate(380,0);c.scale(scale,scale);c.translate(-380,0);}
 
  c.save();c.fillStyle='#0004';c.filter='blur(18px)';c.beginPath();c.ellipse(391,660,280,390,0,0,Math.PI*2);c.fill();c.restore();
  const corners=[[17,22],[603,22],[603,map.height-25],[17,map.height-25]],top=corners.map(([x,y])=>this.project(x,y)),bottom=corners.map(([x,y])=>this.project(x,y,-24));
@@ -42,7 +42,7 @@ c.textAlign='center';c.font='600 11px sans-serif';c.fillStyle='#a196b5';c.fillTe
  const held=['ready' ,'mixing','countdown'].includes(race.state)||(race.state==='paused'&&race.resumeState!=='racing');
  if(held){this.line(32,map.gate,588,map.gate,'#100e15',15,2);this.line(32,map.gate,588,map.gate,map.accent,8,10);for(let x=50;x<590;x+=27)this.line(x,map.gate-3,x+9,map.gate+3,'#f4ecff',3,13);}
  // Only the physical goal throat can register a finish.
- for(const hole of map.exits){const p=this.project(hole.x,hole.y??map.finish);c.save();c.fillStyle=map.accent;c.shadowColor=map.accent;c.shadowBlur=15;c.beginPath();c.ellipse(p.x,p.y,hole.width/2-1,23,0,0,Math.PI*2);c.fill();c.shadowBlur=0;c.fillStyle='#05050b';c.beginPath();c.ellipse(p.x,p.y+1,hole.width/2-6,18,0,0,Math.PI*2);c.fill();c.fillStyle='#b1a8c4';c.font='700 15px sans-serif';c.textAlign='center';c.fillText(hole.kind==='return'?'RETURN':'GOAL',p.x,p.y+38);c.restore();}
+ for(const hole of map.exits){const p=this.project(hole.x,hole.y??map.finish);c.save();c.fillStyle=map.accent;c.shadowColor=map.accent;c.shadowBlur=15;c.beginPath();c.ellipse(p.x,p.y,hole.width/2-1,23,0,0,Math.PI*2);c.fill();c.shadowBlur=0;c.fillStyle='#05050b';c.beginPath();c.ellipse(p.x,p.y+1,hole.width/2-6,18,0,0,Math.PI*2);c.fill();c.fillStyle='#b1a8c4';c.font='700 15px sans-serif';c.textAlign='center';c.fillText(hole.kind==='return'?'BACK':'GOAL',p.x,p.y+38);c.restore();}
  p=this.project(310,map.finish-135);c.font='italic 800 16px sans-serif';c.fillStyle='#e6dfef';c.textAlign='center';c.fillText('F I N A L   D R O P',p.x,p.y);
  for(const b of [...race.balls].filter(b=>!b.finished).sort((a,b)=>a.y-b.y)){
   if(b.hold?.kind==='cannon')continue;const portal=returnPose(b,race.raceTime);if(portal&&!portal.visible)continue;
@@ -58,6 +58,6 @@ c.textAlign='center';c.font='600 11px sans-serif';c.fillStyle='#a196b5';c.fillTe
  // A progress rail keeps off-screen marbles visible during camera follow.
  c.fillStyle='#30263e';c.beginPath();c.roundRect(730,55,7,940,4);c.fill();c.strokeStyle=map.accent+'aa';c.lineWidth=1;c.strokeRect(723,55+this.cameraY/map.height*940,21,1080/map.height*940);
  for(const b of race.balls){c.fillStyle=b.color;c.beginPath();c.arc(733,55+b.y/map.height*940,3,0,Math.PI*2);c.fill();}
- c.font='500 15px sans-serif';c.fillStyle='#b6a7ca';c.textAlign='center';c.fillText(this.overview?'전체 맵':`${Math.min(3,Math.floor((this.cameraY+500)/750)+1)} / 3 구간`,380,1070);c.textAlign='left';
+ c.font='500 15px sans-serif';c.fillStyle='#b6a7ca';c.textAlign='center';c.fillText(this.overview?'전체 맵':this.halfView?'하프 모드 · 진행 구간 따라가기':`${Math.min(3,Math.floor((this.cameraY+500)/750)+1)} / 3 구간`,380,1070);c.textAlign='left';
  }
 }

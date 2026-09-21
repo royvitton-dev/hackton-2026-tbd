@@ -30,39 +30,41 @@
     "boardMotion": true,
     "finishMode": "winner"
   },
-  "seed": 1668668476,
+  "seed": 2008859775,
   "result": {
-    "roundId": "64abd613-1cdb-46ae-8317-fc6292d31226",
+    "roundId": "3e965848-2c23-428a-8feb-8f3a5e50ac93",
     "state": "complete",
-    "seed": 1668668476,
-    "time": 24.526010774972395,
+    "seed": 2008859775,
+    "time": 37.58885624396658,
     "target": 3,
     "total": 4,
     "winner": {
-      "id": "p1-b2",
-      "participantId": "p1",
-      "name": "모바일 A",
-      "label": "모바일 A",
-      "color": "#c6ff58",
-      "number": 2,
+      "id": "p2-b1",
+      "participantId": "p2",
+      "name": "모바일 B",
+      "label": "모바일 B",
+      "color": "#bca7ff",
+      "number": 1,
       "rank": 3,
-      "time": 24.526010774972395,
-      "exitId": 4,
+      "time": 37.58885624396658,
+      "exitId": 1,
+      "exitLabel": "골인",
       "criterion": "arrival",
       "crossedFinish": true
     },
     "completionReason": "target-arrived",
     "finishOrder": [
       {
-        "id": "p1-b1",
+        "id": "p1-b2",
         "participantId": "p1",
         "name": "모바일 A",
         "label": "모바일 A",
         "color": "#c6ff58",
-        "number": 1,
+        "number": 2,
         "rank": 1,
-        "time": 18.81876200583036,
-        "exitId": 2
+        "time": 28.69937242580135,
+        "exitId": 1,
+        "exitLabel": "골인"
       },
       {
         "id": "p3-b1",
@@ -72,40 +74,44 @@
         "color": "#ff82af",
         "number": 1,
         "rank": 2,
-        "time": 21.23745252754878,
-        "exitId": 3
+        "time": 34.82037206705506,
+        "exitId": 1,
+        "exitLabel": "골인"
       },
       {
-        "id": "p1-b2",
-        "participantId": "p1",
-        "name": "모바일 A",
-        "label": "모바일 A",
-        "color": "#c6ff58",
-        "number": 2,
+        "id": "p2-b1",
+        "participantId": "p2",
+        "name": "모바일 B",
+        "label": "모바일 B",
+        "color": "#bca7ff",
+        "number": 1,
         "rank": 3,
-        "time": 24.526010774972395,
-        "exitId": 4
+        "time": 37.58885624396658,
+        "exitId": 1,
+        "exitLabel": "골인"
       }
     ],
     "assists": 1,
+    "returns": 2,
+    "returnClosed": false,
     "motion": {
       "enabled": true,
       "active": true,
       "axis": "x",
-      "cycle": 5,
-      "phase": 0.42038376777459396,
-      "roll": 0.018010125586164306,
+      "cycle": 8,
+      "phase": 0.9916496768234021,
+      "roll": 0.000001443279891264752,
       "pitch": 0,
-      "offsetX": -2.2512656982705384,
+      "offsetX": -0.000180409986408094,
       "offsetY": 0,
-      "forceX": -20.711644424088952,
+      "forceX": -0.0016597718749544648,
       "forceY": 0,
       "nextIn": 0
     },
     "deviceStats": {
-      "captures": 2,
-      "launches": 2,
-      "releases": 0
+      "captures": 7,
+      "launches": 6,
+      "releases": 1
     },
     "devices": [
       {
@@ -114,53 +120,89 @@
         "x": 310,
         "y": 1160,
         "ballId": null,
+        "ballIds": [],
         "angle": 1.5707963267948966,
         "progress": 0,
-        "holding": false
+        "holding": false,
+        "count": 0
       },
       {
-        "id": "orbit-cannon-1",
-        "kind": "cannon",
-        "x": 105,
-        "y": 1840,
+        "id": "orbit-magnet-1",
+        "kind": "magnet",
+        "x": 540,
+        "y": 1760,
         "ballId": null,
-        "angle": 7.740906029285787,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
         "progress": 0,
-        "holding": false
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "orbit-cannon-2",
+        "kind": "cannon",
+        "x": 310,
+        "y": 680,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 0.7594008964026945,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "orbit-cannon-3",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1730,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.8457040184109494,
+        "progress": 0,
+        "holding": false,
+        "count": 0
       }
     ],
     "balls": [
       {
         "id": "p1-b2",
-        "x": 507.3549048935528,
-        "y": 2150,
-        "finished": true,
-        "rank": 3,
-        "heldBy": null
-      },
-      {
-        "id": "p1-b1",
-        "x": 238.50554970935934,
+        "x": 248.16097090864832,
         "y": 2150,
         "finished": true,
         "rank": 1,
-        "heldBy": null
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
       },
       {
         "id": "p2-b1",
-        "x": 87.34253123990085,
-        "y": 1162.621358286751,
+        "x": 222.1297345432648,
+        "y": 2150,
+        "finished": true,
+        "rank": 3,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p1-b1",
+        "x": 194.73404363401573,
+        "y": 1649.4021292861723,
         "finished": false,
         "rank": null,
-        "heldBy": null
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 1
       },
       {
         "id": "p3-b1",
-        "x": 368.64718146676626,
+        "x": 244.3468500390565,
         "y": 2150,
         "finished": true,
         "rank": 2,
-        "heldBy": null
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 1
       }
     ]
   }
