@@ -1,0 +1,20 @@
+{
+  "name": "atlas-parking-twin",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "공개 도면 기반 3D 주차장 · 도로 연결 · 대피 검증",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5188",
+    "build": "vite build",
+    "convert": "node scripts/convert.mjs",
+    "sources": "node scripts/acquire.mjs",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test",
+    "verify": "node scripts/verify.mjs",
+    "watch": "node scripts/verify.mjs --watch"
+  },
+  "dependencies": {"three": "0.186.0"},
+  "devDependencies": {"vite": "7.3.6", "vitest": "4.1.11", "@vitest/coverage-v8": "4.1.11", "@playwright/test": "1.58.2", "sharp": "0.35.4"}
+}

@@ -1,0 +1,17 @@
+
+Running 8 tests using 1 worker
+
+(node:3807) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:3807) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/parking.spec.mjs:8:1 › public B2 source converts to actual WebGL meshes, with original and data export (6.8s)
+  ✓  2 tests/e2e/parking.spec.mjs:15:1 › drives through exterior road and entrance to EV, supports cameras and pauses (3.4s)
+  ✓  3 tests/e2e/parking.spec.mjs:26:1 › fire starts at current position, switches to human and fails closed when exits are blocked (3.0s)
+  ✓  4 tests/e2e/parking.spec.mjs:33:1 › photo-derived facade and mapped buildings preserve geographic source attribution (3.7s)
+  ✓  5 tests/e2e/parking.spec.mjs:39:1 › imports semantic SVG and rejects executable and corrupt input without losing current scene (1.9s)
+  ✓  6 tests/e2e/parking.spec.mjs:44:1 › actual Naver-located building routes from acquired OSM road through the drawn entrance (4.8s)
+  ✓  7 tests/e2e/parking.spec.mjs:48:1 › mobile source selection and 3D controls remain usable without horizontal overflow (2.3s)
+  ✓  8 tests/e2e/parking.spec.mjs:53:1 › existing park exposes the new attraction, shared launch route and root quality dashboard (19.5s)
+
+  8 passed (46.9s)

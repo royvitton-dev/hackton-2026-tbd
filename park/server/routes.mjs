@@ -1,6 +1,7 @@
 export const APPS = Object.freeze([
  {id:'park',name:'Wonder Park',kind:'vite',root:'.',config:'park/vite.config.mjs'},
  {id:'map',name:'ATLAS · 도면과 모빌리티',kind:'vite',root:'map',config:'map/vite.config.mjs'},
+ {id:'map_new',name:'ATLAS · 3D 주차 내비게이션',kind:'vite',root:'map_new',config:'map_new/vite.config.mjs'},
  {id:'dopamin',name:'BREW RACERS',kind:'vite',root:'dopamin',config:'dopamin/vite.config.ts'},
  {id:'webpage',name:'DEBUT : ON · VITALIS',kind:'vite',root:'webpage',config:'webpage/vite.config.ts'},
  {id:'battery_health',name:'배터리 관리',kind:'vite',root:'battery_health',config:'battery_health/vite.config.ts'},

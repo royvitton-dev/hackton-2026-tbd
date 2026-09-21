@@ -1,0 +1,36 @@
+
+ RUN  v4.1.11 /Users/jonghokim/Workspace/hackerton/map_new
+      Coverage enabled with v8
+
+ ✓ tests/unit/camera.test.js (3 tests) 10ms
+ ✓ tests/unit/layers.test.js (5 tests) 18ms
+ ✓ tests/unit/analysis.test.js (6 tests) 36ms
+ ✓ tests/unit/navigation.test.js (10 tests) 82ms
+
+ Test Files  4 passed (4)
+      Tests  24 passed (24)
+   Start at  01:01:48
+   Duration  302ms (transform 117ms, setup 0ms, import 189ms, tests 145ms, environment 0ms)
+
+JSON report written to /Users/jonghokim/Workspace/hackerton/map_new/reports/unit.json
+ % Coverage report from v8
+------------------|---------|----------|---------|---------|--------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
+------------------|---------|----------|---------|---------|--------------------
+All files         |   98.81 |    95.04 |     100 |     100 |                    
+ core             |   98.77 |    96.25 |     100 |     100 |                    
+  analysis.js     |   96.55 |     92.2 |     100 |     100 | 12,35,40-49,66     
+  geometry.js     |     100 |     97.5 |     100 |     100 | 17                 
+  georeference.js |   97.61 |    93.33 |     100 |     100 | 15                 
+  layers.js       |     100 |    90.24 |     100 |     100 | 6-8,19,29          
+  navigation.js   |   99.39 |    99.41 |     100 |     100 | 60                 
+ vendor           |      99 |     92.4 |     100 |     100 |                    
+  analysis-v1.js  |      99 |     92.4 |     100 |     100 | ...,55-60,81,83-84 
+------------------|---------|----------|---------|---------|--------------------
+
+=============================== Coverage summary ===============================
+Statements   : 98.81% ( 502/508 )
+Branches     : 95.04% ( 480/505 )
+Functions    : 100% ( 101/101 )
+Lines        : 100% ( 250/250 )
+================================================================================

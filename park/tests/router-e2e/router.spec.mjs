@@ -8,8 +8,8 @@ test.beforeEach(async({page,baseURL})=>{
 });
 test.afterEach(async({page})=>{expect(page.__wrongPorts).toEqual([]);expect(page.__routerErrors).toEqual([]);});
 test('project directory, shared paths, redirects and mobile golden',async({page,request})=>{
- const apps=await (await request.get('/api/apps')).json();expect(apps.apps).toHaveLength(10);
- await page.goto('/projects/');await expect(page.locator('nav a')).toHaveCount(10);await expect(page).toHaveScreenshot('router-directory.png');
+ const apps=await (await request.get('/api/apps')).json();expect(apps.apps).toHaveLength(11);
+ await page.goto('/projects/');await expect(page.locator('nav a')).toHaveCount(11);await expect(page).toHaveScreenshot('router-directory.png');
  await page.setViewportSize({width:390,height:844});expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);await expect(page).toHaveScreenshot('router-directory-mobile.png',{fullPage:true});
  const redirect=await request.get('/map?workspace=source-drive',{maxRedirects:0});expect(redirect.headers().location).toBe('/map/?workspace=source-drive');
  for(const id of ['map','dopamin','pinball','trading','movie','voice','battery_health']){const response=await request.post('/api/launch?id='+id);expect(response.status()).toBe(200);const entry=new URL((await response.json()).url);expect(entry.pathname).toBe(id==='battery_health'?'/vehicle/':'/'+id+'/');expect(entry.search).toBe(id==='battery_health'?'?intro=pitstop':'');}
