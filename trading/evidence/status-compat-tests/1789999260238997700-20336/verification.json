@@ -1,0 +1,25 @@
+{
+  "commands": 13,
+  "distinct_restored_requests": 11,
+  "journal_suffix_recovery": {
+    "ignored_snapshots": [],
+    "journal_records": 13,
+    "preserved_tail": null,
+    "replayed_records": 9,
+    "snapshot_used": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\status-compat-tests\\1789999260238997700-20336\\snapshot-00000000000000000004-historical.bin",
+    "truncated_bytes": 0
+  },
+  "legacy_snapshot_recovery": {
+    "ignored_snapshots": [],
+    "journal_records": 4,
+    "preserved_tail": null,
+    "replayed_records": 0,
+    "snapshot_used": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\status-compat-tests\\1789999260238997700-20336\\snapshot-00000000000000000004-historical.bin",
+    "truncated_bytes": 0
+  },
+  "restored_request_results_equal": true,
+  "second_restart_equal": true,
+  "suffix_results_and_full_core_equal": true,
+  "tracked_json_fixtures_only": true,
+  "verified": true
+}

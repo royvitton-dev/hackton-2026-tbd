@@ -1,0 +1,393 @@
+{
+  "reviewed_at": "2026-09-21T13:57:22.823Z",
+  "passed": 60,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "input SHA baseline/Cargo.toml",
+      "passed": true
+    },
+    {
+      "name": "input SHA baseline/src/core.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA baseline/src/lib.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA baseline/src/model.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA baseline/src/storage.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA candidate/Cargo.toml",
+      "passed": true
+    },
+    {
+      "name": "input SHA candidate/src/core.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA candidate/src/lib.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA candidate/src/model.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA candidate/src/storage.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA probe/Cargo.toml",
+      "passed": true
+    },
+    {
+      "name": "input SHA probe/src/main.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA fixtures/status_reuse_before_trace.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA fixtures/status_reuse_legacy_frames.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA Cargo.toml",
+      "passed": true
+    },
+    {
+      "name": "input SHA Cargo.lock",
+      "passed": true
+    },
+    {
+      "name": "input SHA production-Cargo.lock",
+      "passed": true
+    },
+    {
+      "name": "input SHA plan.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA build-01.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA build-01.log",
+      "passed": true
+    },
+    {
+      "name": "input SHA failed-build-01-model.rs",
+      "passed": true
+    },
+    {
+      "name": "input SHA build-02.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA build-02.log",
+      "passed": true
+    },
+    {
+      "name": "input SHA run-01.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA run-01.log",
+      "passed": true
+    },
+    {
+      "name": "input SHA analyze.mjs",
+      "passed": true
+    },
+    {
+      "name": "input SHA target/release/cow-result-probe.exe",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/baseline-full-core.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/candidate-full-core.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/historical-trace-candidate.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-baseline/genesis.bin",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-baseline/journal.bin",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-baseline/snapshot-00000000000000000004-historical.bin",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-baseline/snapshot-00000000000000000013-00000000000001789998686260995200-18660-0.bin",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-baseline/writer.lock",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-candidate/genesis.bin",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-candidate/journal.bin",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-candidate/snapshot-00000000000000000004-historical.bin",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-candidate/snapshot-00000000000000000013-00000000000001789998686263692400-18660-0.bin",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-candidate/writer.lock",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/legacy-recovered-full-core.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/raw-counts-and-results.jsonl",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/summary.json",
+      "passed": true
+    },
+    {
+      "name": "input SHA output-01/unknown-and-escaped-result.json",
+      "passed": true
+    },
+    {
+      "name": "baseline matches production core.rs",
+      "passed": true
+    },
+    {
+      "name": "baseline matches production model.rs",
+      "passed": true
+    },
+    {
+      "name": "baseline matches production storage.rs",
+      "passed": true
+    },
+    {
+      "name": "baseline matches production lib.rs",
+      "passed": true
+    },
+    {
+      "name": "candidate unchanged storage.rs",
+      "passed": true
+    },
+    {
+      "name": "candidate unchanged lib.rs",
+      "passed": true
+    },
+    {
+      "name": "model diff is only Cow import and CommandResult three String fields",
+      "passed": true
+    },
+    {
+      "name": "core diff is only static result construction/rejection lifetime",
+      "passed": true
+    },
+    {
+      "name": "run and successful build identify actual executable and retained first failure",
+      "passed": true
+    },
+    {
+      "name": "actual complete Core JSON bytes match",
+      "passed": true
+    },
+    {
+      "name": "every saved candidate historical command/result/full Core matches old fixture",
+      "passed": true
+    },
+    {
+      "name": "all legacy-baseline actual CRC frames/commands/prefix bindings validate",
+      "passed": true
+    },
+    {
+      "name": "all legacy-candidate actual CRC frames/commands/prefix bindings validate",
+      "passed": true
+    },
+    {
+      "name": "new and historical frame bytes match across both model variants",
+      "passed": true
+    },
+    {
+      "name": "raw allocation totals match summary with alloc and realloc kept distinct",
+      "passed": true
+    },
+    {
+      "name": "unknown and escaped output is retained as string values",
+      "passed": true
+    }
+  ],
+  "full_core": {
+    "bytes": 6684357,
+    "sha256": "18ef7fd9c190d331e33a1dbca7e6741b8dba7c89eae805079a6cda94cf2e16ca"
+  },
+  "historical_trace_entries": 13,
+  "actual_frames": [
+    {
+      "variant": "legacy-baseline",
+      "filename": "snapshot-00000000000000000004-historical.bin",
+      "bytes": 5935,
+      "sha256": "7e3ee4c4cbe6137cee3ccbae450d252974888f7dc1c2021db65604745837de5d",
+      "journal_seq": 4,
+      "command_seq": 4,
+      "event_seq": 4,
+      "prefix_crc": 3150217310
+    },
+    {
+      "variant": "legacy-baseline",
+      "filename": "snapshot-00000000000000000013-00000000000001789998686260995200-18660-0.bin",
+      "bytes": 9785,
+      "sha256": "b4581a61864cb065b290d3a81780ad1e56be2844907863eea8e67ec8db9214d1",
+      "journal_seq": 13,
+      "command_seq": 11,
+      "event_seq": 11,
+      "prefix_crc": 1653584337
+    },
+    {
+      "variant": "legacy-candidate",
+      "filename": "snapshot-00000000000000000004-historical.bin",
+      "bytes": 5935,
+      "sha256": "7e3ee4c4cbe6137cee3ccbae450d252974888f7dc1c2021db65604745837de5d",
+      "journal_seq": 4,
+      "command_seq": 4,
+      "event_seq": 4,
+      "prefix_crc": 3150217310
+    },
+    {
+      "variant": "legacy-candidate",
+      "filename": "snapshot-00000000000000000013-00000000000001789998686263692400-18660-0.bin",
+      "bytes": 9785,
+      "sha256": "b4581a61864cb065b290d3a81780ad1e56be2844907863eea8e67ec8db9214d1",
+      "journal_seq": 13,
+      "command_seq": 11,
+      "event_seq": 11,
+      "prefix_crc": 1653584337
+    }
+  ],
+  "raw_allocation_groups": {
+    "normal_new": {
+      "count": 6000,
+      "baseline_allocations": 85987,
+      "candidate_allocations": 49987,
+      "baseline_reallocations": 1,
+      "candidate_reallocations": 1,
+      "baseline_bytes": 5034232,
+      "candidate_bytes": 4446232,
+      "deltas": {
+        "6": 6000
+      }
+    },
+    "fresh_rejection": {
+      "count": 128,
+      "baseline_allocations": 1300,
+      "candidate_allocations": 532,
+      "baseline_reallocations": 0,
+      "candidate_reallocations": 0,
+      "baseline_bytes": 74628,
+      "candidate_bytes": 57476,
+      "deltas": {
+        "6": 128
+      }
+    },
+    "borrowed_duplicate": {
+      "count": 128,
+      "baseline_allocations": 640,
+      "candidate_allocations": 256,
+      "baseline_reallocations": 0,
+      "candidate_reallocations": 0,
+      "baseline_bytes": 8704,
+      "candidate_bytes": 2432,
+      "deltas": {
+        "3": 128
+      }
+    },
+    "borrowed_lookup": {
+      "count": 128,
+      "baseline_allocations": 640,
+      "candidate_allocations": 256,
+      "baseline_reallocations": 0,
+      "candidate_reallocations": 0,
+      "baseline_bytes": 8704,
+      "candidate_bytes": 2432,
+      "deltas": {
+        "3": 128
+      }
+    },
+    "request_conflict": {
+      "count": 128,
+      "baseline_allocations": 640,
+      "candidate_allocations": 256,
+      "baseline_reallocations": 0,
+      "candidate_reallocations": 0,
+      "baseline_bytes": 14080,
+      "candidate_bytes": 2432,
+      "deltas": {
+        "3": 128
+      }
+    },
+    "invalid_key_unadmitted": {
+      "count": 16,
+      "baseline_allocations": 64,
+      "candidate_allocations": 16,
+      "baseline_reallocations": 0,
+      "candidate_reallocations": 0,
+      "baseline_bytes": 1232,
+      "candidate_bytes": 112,
+      "deltas": {
+        "3": 16
+      }
+    },
+    "restored_owned_duplicate": {
+      "count": 128,
+      "baseline_allocations": 640,
+      "candidate_allocations": 640,
+      "baseline_reallocations": 0,
+      "candidate_reallocations": 0,
+      "baseline_bytes": 8704,
+      "candidate_bytes": 8704,
+      "deltas": {
+        "0": 128
+      }
+    },
+    "restored_owned_lookup": {
+      "count": 128,
+      "baseline_allocations": 640,
+      "candidate_allocations": 640,
+      "baseline_reallocations": 0,
+      "candidate_reallocations": 0,
+      "baseline_bytes": 8704,
+      "candidate_bytes": 8704,
+      "deltas": {
+        "0": 128
+      }
+    }
+  },
+  "scope": "Independent offline hashes, structural comparisons, CRC framing and arithmetic; Rust assertions/cross-open behavior are assessed from probe source plus recorded executable run, not rerun here."
+}

@@ -1,0 +1,2115 @@
+{
+  "evidence": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-06-00-053Z-observation-analysis-124d6944",
+  "generated_at": "2026-09-21T14:06:00.035Z",
+  "source_run_id": "2026-09-21T10-05-54-901Z-observe-0b80d28e",
+  "source_status": "running",
+  "observation_complete": false,
+  "first_at": "2026-09-21T10:05:54.979Z",
+  "last_at": "2026-09-21T14:05:57.753Z",
+  "observed_interval_seconds": 14403.0099696,
+  "requested_seconds": 21600,
+  "sample_count": 2834,
+  "sampling_continuity": {
+    "max_allowed_gap_ms": 15000,
+    "max_observed_gap_ms": 6638.025700001046,
+    "gaps": [],
+    "longest_contiguous_sample_span_ms": 14403009.969600001,
+    "continuous": true
+  },
+  "continuous_demo_pass": null,
+  "state_snapshot_round_trip": {
+    "available": true,
+    "samples": 2834,
+    "mean_ms": 8.367301023274447,
+    "p50_ms": 4.483700000680983,
+    "p95_ms": 19.06099999975413,
+    "p99_ms": 38.95419999957085,
+    "max_ms": 1593.0552000002936
+  },
+  "bot_status_round_trip": {
+    "available": true,
+    "samples": 2834,
+    "mean_ms": 4.914562561756017,
+    "p50_ms": 2.285299999639392,
+    "p95_ms": 7.425000000745058,
+    "p99_ms": 19.202599998563528,
+    "max_ms": 1589.583099999465
+  },
+  "command_delta": 84129,
+  "volume_hours_delta": 63747,
+  "commands_per_second_over_observed_interval": 5.841070732962662,
+  "min_connected_bots": 12,
+  "final_ws_events": 84130,
+  "final_ws_gaps": 0,
+  "final_ws_disconnects": 0,
+  "sampled_asset_totals_conserved": true,
+  "all_sampled_engine_status_ready": true,
+  "intervals_with_new_trades": 2833,
+  "fraction_of_intervals_with_new_trades": 1,
+  "tracked_process_total_memory_windows": {
+    "first": {
+      "at": "2026-09-21T10:05:54.979Z",
+      "process_count": 14,
+      "working_set_bytes": 877133824,
+      "private_bytes": 949272576
+    },
+    "last": {
+      "at": "2026-09-21T12:44:21.449Z",
+      "process_count": 14,
+      "working_set_bytes": 719261696,
+      "private_bytes": 1168146432
+    },
+    "observed_max_working_set_bytes": 1026215936,
+    "observed_max_private_bytes": 1170800640,
+    "note": "Sum of tracked process working sets may count shared pages more than once; this is not whole-machine unique physical memory."
+  },
+  "engine_memory_windows": [
+    {
+      "pid": 20540,
+      "sample_count": 313,
+      "first": {
+        "at": "2026-09-21T10:05:54.979Z",
+        "elapsed_ms": 24.253699999999995,
+        "command_seq": 22432,
+        "pid": 20540,
+        "working_set_bytes": 37859328,
+        "private_bytes": 34742272,
+        "cpu_seconds": 0.703125,
+        "handles": 147
+      },
+      "last": {
+        "at": "2026-09-21T12:44:21.449Z",
+        "elapsed_ms": 9506575.691300001,
+        "command_seq": 77969,
+        "pid": 20540,
+        "working_set_bytes": 99266560,
+        "private_bytes": 110759936,
+        "cpu_seconds": 467.015625,
+        "handles": 161
+      },
+      "observed_max_working_set_bytes": 99266560,
+      "observed_max_private_bytes": 110759936,
+      "working_set_change_bytes": 61407232,
+      "private_change_bytes": 76017664,
+      "command_delta_between_memory_samples": 55537,
+      "private_change_bytes_per_additional_command": 1368.7751228910456
+    }
+  ],
+  "memory_sample_validation": {
+    "expected_process_count": 14,
+    "process_identity_baseline": {
+      "at": "2026-09-21T10:05:54.979Z",
+      "processes": [
+        {
+          "pid": 4928,
+          "process_name": "node"
+        },
+        {
+          "pid": 5412,
+          "process_name": "node"
+        },
+        {
+          "pid": 6128,
+          "process_name": "node"
+        },
+        {
+          "pid": 7916,
+          "process_name": "node"
+        },
+        {
+          "pid": 7936,
+          "process_name": "node"
+        },
+        {
+          "pid": 12172,
+          "process_name": "node"
+        },
+        {
+          "pid": 15272,
+          "process_name": "node"
+        },
+        {
+          "pid": 16068,
+          "process_name": "node"
+        },
+        {
+          "pid": 17444,
+          "process_name": "node"
+        },
+        {
+          "pid": 17556,
+          "process_name": "node"
+        },
+        {
+          "pid": 20484,
+          "process_name": "node"
+        },
+        {
+          "pid": 20540,
+          "process_name": "leave-engine"
+        },
+        {
+          "pid": 20776,
+          "process_name": "node"
+        },
+        {
+          "pid": 20940,
+          "process_name": "node"
+        }
+      ],
+      "basis": "first_complete_resource_membership"
+    },
+    "valid_samples": 313,
+    "excluded_samples": [
+      {
+        "at": "2026-09-21T12:44:51.883Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:45:22.331Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:45:52.701Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:46:23.336Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:46:54.047Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:47:25.638Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:47:56.361Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:48:26.954Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:48:57.531Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:49:28.043Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:49:58.974Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:50:29.430Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:50:59.908Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:51:30.348Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:52:00.950Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:52:32.602Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:53:03.053Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:53:33.941Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:54:04.419Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:54:34.873Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:55:05.338Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:55:36.110Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:56:06.543Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:56:36.931Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:57:07.348Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:57:37.764Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:58:08.139Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:58:38.578Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:59:09.168Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T12:59:40.037Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:00:10.474Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:00:40.889Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:01:11.290Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:01:41.709Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:02:12.124Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:02:42.579Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:03:13.063Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:03:44.032Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:04:14.429Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:04:45.122Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:05:15.506Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:05:45.892Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:06:16.293Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:06:46.703Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:07:17.114Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:07:47.563Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:08:17.993Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:08:49.187Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:09:19.890Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:09:50.306Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:10:20.709Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:10:51.130Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:11:21.546Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:11:51.947Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:12:22.400Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:12:52.849Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:13:23.260Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:13:53.732Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:14:25.305Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:14:55.763Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:15:26.164Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:15:56.877Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:16:27.289Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:16:57.680Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:17:28.090Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:17:58.546Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:18:29.357Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:18:59.957Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:19:30.355Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:20:00.767Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:20:31.274Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:21:02.281Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:21:33.559Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:22:04.950Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:22:36.214Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:23:07.248Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:23:38.229Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:24:08.763Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:24:40.186Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:25:11.248Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:25:42.321Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:26:12.892Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:26:43.659Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:27:14.490Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:27:44.894Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:28:15.297Z",
+        "reason": "process_set_changed_from_initial_sample"
+      },
+      {
+        "at": "2026-09-21T13:28:45.696Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:29:16.063Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:29:46.470Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:30:16.838Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:30:47.238Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:31:17.640Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:31:48.027Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:32:18.408Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:32:48.798Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:33:19.196Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:33:49.616Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:34:20.003Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:34:50.387Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:35:20.765Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:35:51.226Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:36:21.660Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:36:52.029Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:37:22.384Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:37:52.787Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:38:23.207Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:38:53.702Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:39:24.607Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:39:55.728Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:40:26.972Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:40:58.732Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:41:29.370Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:41:59.973Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:42:30.497Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:43:00.983Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:43:31.376Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:44:01.762Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:44:32.168Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:45:02.535Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:45:32.920Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:46:03.374Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:46:33.787Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:47:04.313Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:47:34.730Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:48:05.167Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:48:35.554Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:49:05.957Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:49:36.369Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:50:06.776Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:50:37.207Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:51:07.633Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:51:38.014Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:52:08.385Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:52:38.738Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:53:09.124Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:53:39.539Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:54:09.923Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:54:40.350Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:55:10.747Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:55:41.194Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:56:11.596Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:56:42.043Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:57:12.500Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:57:42.937Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:58:13.374Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:58:43.811Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:59:14.218Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T13:59:44.662Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:00:15.151Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:00:45.643Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:01:16.173Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:01:46.736Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:02:17.249Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:02:47.898Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:03:18.376Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:03:48.944Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:04:19.566Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:04:51.146Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:05:21.743Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      },
+      {
+        "at": "2026-09-21T14:05:52.315Z",
+        "reason": "missing_or_invalid_complete_windows_process_sample"
+      }
+    ]
+  },
+  "cpu_windows": {
+    "available": true,
+    "logical_processors": 16,
+    "expected_process_count": 14,
+    "process_identity_baseline": {
+      "at": "2026-09-21T10:05:54.979Z",
+      "processes": [
+        {
+          "pid": 4928,
+          "process_name": "node"
+        },
+        {
+          "pid": 5412,
+          "process_name": "node"
+        },
+        {
+          "pid": 6128,
+          "process_name": "node"
+        },
+        {
+          "pid": 7916,
+          "process_name": "node"
+        },
+        {
+          "pid": 7936,
+          "process_name": "node"
+        },
+        {
+          "pid": 12172,
+          "process_name": "node"
+        },
+        {
+          "pid": 15272,
+          "process_name": "node"
+        },
+        {
+          "pid": 16068,
+          "process_name": "node"
+        },
+        {
+          "pid": 17444,
+          "process_name": "node"
+        },
+        {
+          "pid": 17556,
+          "process_name": "node"
+        },
+        {
+          "pid": 20484,
+          "process_name": "node"
+        },
+        {
+          "pid": 20540,
+          "process_name": "leave-engine"
+        },
+        {
+          "pid": 20776,
+          "process_name": "node"
+        },
+        {
+          "pid": 20940,
+          "process_name": "node"
+        }
+      ],
+      "basis": "first_complete_resource_membership"
+    },
+    "interval_count": 312,
+    "excluded_intervals": [
+      {
+        "from": "2026-09-21T12:44:21.449Z",
+        "to": "2026-09-21T12:44:51.883Z",
+        "seconds": 30.434155600000175,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:44:51.883Z",
+        "to": "2026-09-21T12:45:22.331Z",
+        "seconds": 30.45243209999986,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:45:22.331Z",
+        "to": "2026-09-21T12:45:52.701Z",
+        "seconds": 30.37000939999893,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:45:52.701Z",
+        "to": "2026-09-21T12:46:23.336Z",
+        "seconds": 30.63637519999966,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:46:23.336Z",
+        "to": "2026-09-21T12:46:54.047Z",
+        "seconds": 30.711161000000313,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:46:54.047Z",
+        "to": "2026-09-21T12:47:25.638Z",
+        "seconds": 31.596229100000112,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:47:25.638Z",
+        "to": "2026-09-21T12:47:56.361Z",
+        "seconds": 30.72231030000001,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:47:56.361Z",
+        "to": "2026-09-21T12:48:26.954Z",
+        "seconds": 30.595193299999462,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:48:26.954Z",
+        "to": "2026-09-21T12:48:57.531Z",
+        "seconds": 30.576637700000777,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:48:57.531Z",
+        "to": "2026-09-21T12:49:28.043Z",
+        "seconds": 30.519262299999596,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:49:28.043Z",
+        "to": "2026-09-21T12:49:58.974Z",
+        "seconds": 30.93104260000028,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:49:58.974Z",
+        "to": "2026-09-21T12:50:29.430Z",
+        "seconds": 30.453750600000845,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:50:29.430Z",
+        "to": "2026-09-21T12:50:59.908Z",
+        "seconds": 30.478120799999683,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:50:59.908Z",
+        "to": "2026-09-21T12:51:30.348Z",
+        "seconds": 30.444762799998745,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:51:30.348Z",
+        "to": "2026-09-21T12:52:00.950Z",
+        "seconds": 30.602441700000316,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:52:00.950Z",
+        "to": "2026-09-21T12:52:32.602Z",
+        "seconds": 31.653944700000807,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:52:32.602Z",
+        "to": "2026-09-21T12:53:03.053Z",
+        "seconds": 30.451794999999926,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:53:03.053Z",
+        "to": "2026-09-21T12:53:33.941Z",
+        "seconds": 30.889502599999307,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:53:33.941Z",
+        "to": "2026-09-21T12:54:04.419Z",
+        "seconds": 30.477949500000104,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:54:04.419Z",
+        "to": "2026-09-21T12:54:34.873Z",
+        "seconds": 30.458998500000686,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:54:34.873Z",
+        "to": "2026-09-21T12:55:05.338Z",
+        "seconds": 30.465631799999624,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:55:05.338Z",
+        "to": "2026-09-21T12:55:36.110Z",
+        "seconds": 30.778055700000376,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:55:36.110Z",
+        "to": "2026-09-21T12:56:06.543Z",
+        "seconds": 30.433424200000243,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:56:06.543Z",
+        "to": "2026-09-21T12:56:36.931Z",
+        "seconds": 30.387322699999437,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:56:36.931Z",
+        "to": "2026-09-21T12:57:07.348Z",
+        "seconds": 30.41758090000041,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:57:07.348Z",
+        "to": "2026-09-21T12:57:37.764Z",
+        "seconds": 30.41959200000018,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:57:37.764Z",
+        "to": "2026-09-21T12:58:08.139Z",
+        "seconds": 30.37405969999917,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:58:08.139Z",
+        "to": "2026-09-21T12:58:38.578Z",
+        "seconds": 30.443538399999962,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:58:38.578Z",
+        "to": "2026-09-21T12:59:09.168Z",
+        "seconds": 30.589699100000782,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:59:09.168Z",
+        "to": "2026-09-21T12:59:40.037Z",
+        "seconds": 30.870862999999897,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T12:59:40.037Z",
+        "to": "2026-09-21T13:00:10.474Z",
+        "seconds": 30.437153400000184,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:00:10.474Z",
+        "to": "2026-09-21T13:00:40.889Z",
+        "seconds": 30.42053859999962,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:00:40.889Z",
+        "to": "2026-09-21T13:01:11.290Z",
+        "seconds": 30.400596599999815,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:01:11.290Z",
+        "to": "2026-09-21T13:01:41.709Z",
+        "seconds": 30.425560599999503,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:01:41.709Z",
+        "to": "2026-09-21T13:02:12.124Z",
+        "seconds": 30.414930300001053,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:02:12.124Z",
+        "to": "2026-09-21T13:02:42.579Z",
+        "seconds": 30.452367599999533,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:02:42.579Z",
+        "to": "2026-09-21T13:03:13.063Z",
+        "seconds": 30.48393720000051,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:03:13.063Z",
+        "to": "2026-09-21T13:03:44.032Z",
+        "seconds": 30.97113269999996,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:03:44.032Z",
+        "to": "2026-09-21T13:04:14.429Z",
+        "seconds": 30.396420399999247,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:04:14.429Z",
+        "to": "2026-09-21T13:04:45.122Z",
+        "seconds": 30.694984899999575,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:04:45.122Z",
+        "to": "2026-09-21T13:05:15.506Z",
+        "seconds": 30.38471760000102,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:05:15.506Z",
+        "to": "2026-09-21T13:05:45.892Z",
+        "seconds": 30.389433499999345,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:05:45.892Z",
+        "to": "2026-09-21T13:06:16.293Z",
+        "seconds": 30.400916999999435,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:06:16.293Z",
+        "to": "2026-09-21T13:06:46.703Z",
+        "seconds": 30.41135000000149,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:06:46.703Z",
+        "to": "2026-09-21T13:07:17.114Z",
+        "seconds": 30.410791999999432,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:07:17.114Z",
+        "to": "2026-09-21T13:07:47.563Z",
+        "seconds": 30.45326659999974,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:07:47.563Z",
+        "to": "2026-09-21T13:08:17.993Z",
+        "seconds": 30.42932520000078,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:08:17.993Z",
+        "to": "2026-09-21T13:08:49.187Z",
+        "seconds": 31.196034399999306,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:08:49.187Z",
+        "to": "2026-09-21T13:09:19.890Z",
+        "seconds": 30.702933000000193,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:09:19.890Z",
+        "to": "2026-09-21T13:09:50.306Z",
+        "seconds": 30.418048499999568,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:09:50.306Z",
+        "to": "2026-09-21T13:10:20.709Z",
+        "seconds": 30.40275700000115,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:10:20.709Z",
+        "to": "2026-09-21T13:10:51.130Z",
+        "seconds": 30.423278099998832,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:10:51.130Z",
+        "to": "2026-09-21T13:11:21.546Z",
+        "seconds": 30.4157126000002,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:11:21.546Z",
+        "to": "2026-09-21T13:11:51.947Z",
+        "seconds": 30.40410559999943,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:11:51.947Z",
+        "to": "2026-09-21T13:12:22.400Z",
+        "seconds": 30.452336600000038,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:12:22.400Z",
+        "to": "2026-09-21T13:12:52.849Z",
+        "seconds": 30.46030340000056,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:12:52.849Z",
+        "to": "2026-09-21T13:13:23.260Z",
+        "seconds": 30.410632400000466,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:13:23.260Z",
+        "to": "2026-09-21T13:13:53.732Z",
+        "seconds": 30.469107499999925,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:13:53.732Z",
+        "to": "2026-09-21T13:14:25.305Z",
+        "seconds": 31.57247790000029,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:14:25.305Z",
+        "to": "2026-09-21T13:14:55.763Z",
+        "seconds": 30.45758459999971,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:14:55.763Z",
+        "to": "2026-09-21T13:15:26.164Z",
+        "seconds": 30.401188300000502,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:15:26.164Z",
+        "to": "2026-09-21T13:15:56.877Z",
+        "seconds": 30.715680399999023,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:15:56.877Z",
+        "to": "2026-09-21T13:16:27.289Z",
+        "seconds": 30.41186219999939,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:16:27.289Z",
+        "to": "2026-09-21T13:16:57.680Z",
+        "seconds": 30.39293200000003,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:16:57.680Z",
+        "to": "2026-09-21T13:17:28.090Z",
+        "seconds": 30.41002710000053,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:17:28.090Z",
+        "to": "2026-09-21T13:17:58.546Z",
+        "seconds": 30.459156300000846,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:17:58.546Z",
+        "to": "2026-09-21T13:18:29.357Z",
+        "seconds": 30.811103199999778,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:18:29.357Z",
+        "to": "2026-09-21T13:18:59.957Z",
+        "seconds": 30.602177500000224,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:18:59.957Z",
+        "to": "2026-09-21T13:19:30.355Z",
+        "seconds": 30.39781839999929,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:19:30.355Z",
+        "to": "2026-09-21T13:20:00.767Z",
+        "seconds": 30.414621799999846,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:20:00.767Z",
+        "to": "2026-09-21T13:20:31.274Z",
+        "seconds": 30.506308299999684,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:20:31.274Z",
+        "to": "2026-09-21T13:21:02.281Z",
+        "seconds": 31.008573800001294,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:21:02.281Z",
+        "to": "2026-09-21T13:21:33.559Z",
+        "seconds": 31.27757629999891,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:21:33.559Z",
+        "to": "2026-09-21T13:22:04.950Z",
+        "seconds": 31.392383500000463,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:22:04.950Z",
+        "to": "2026-09-21T13:22:36.214Z",
+        "seconds": 31.264048900000752,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:22:36.214Z",
+        "to": "2026-09-21T13:23:07.248Z",
+        "seconds": 31.037013499999418,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:23:07.248Z",
+        "to": "2026-09-21T13:23:38.229Z",
+        "seconds": 30.98126630000025,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:23:38.229Z",
+        "to": "2026-09-21T13:24:08.763Z",
+        "seconds": 30.53668809999898,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:24:08.763Z",
+        "to": "2026-09-21T13:24:40.186Z",
+        "seconds": 31.423196499999612,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:24:40.186Z",
+        "to": "2026-09-21T13:25:11.248Z",
+        "seconds": 31.06099380000122,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:25:11.248Z",
+        "to": "2026-09-21T13:25:42.321Z",
+        "seconds": 31.073585999999196,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:25:42.321Z",
+        "to": "2026-09-21T13:26:12.892Z",
+        "seconds": 30.573158999999986,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:26:12.892Z",
+        "to": "2026-09-21T13:26:43.659Z",
+        "seconds": 30.766472900001332,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:26:43.659Z",
+        "to": "2026-09-21T13:27:14.490Z",
+        "seconds": 30.832456499999388,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:27:14.490Z",
+        "to": "2026-09-21T13:27:44.894Z",
+        "seconds": 30.40401669999957,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:27:44.894Z",
+        "to": "2026-09-21T13:28:15.297Z",
+        "seconds": 30.40447829999961,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:28:15.297Z",
+        "to": "2026-09-21T13:28:45.696Z",
+        "seconds": 30.39945340000093,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:28:45.696Z",
+        "to": "2026-09-21T13:29:16.063Z",
+        "seconds": 30.37054609999992,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:29:16.063Z",
+        "to": "2026-09-21T13:29:46.470Z",
+        "seconds": 30.40713089999929,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:29:46.470Z",
+        "to": "2026-09-21T13:30:16.838Z",
+        "seconds": 30.36761660000123,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:30:16.838Z",
+        "to": "2026-09-21T13:30:47.238Z",
+        "seconds": 30.40009289999865,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:30:47.238Z",
+        "to": "2026-09-21T13:31:17.640Z",
+        "seconds": 30.40411890000105,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:31:17.640Z",
+        "to": "2026-09-21T13:31:48.027Z",
+        "seconds": 30.386977799998597,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:31:48.027Z",
+        "to": "2026-09-21T13:32:18.408Z",
+        "seconds": 30.38260870000161,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:32:18.408Z",
+        "to": "2026-09-21T13:32:48.798Z",
+        "seconds": 30.38973379999958,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:32:48.798Z",
+        "to": "2026-09-21T13:33:19.196Z",
+        "seconds": 30.402344299999996,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:33:19.196Z",
+        "to": "2026-09-21T13:33:49.616Z",
+        "seconds": 30.419645600000397,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:33:49.616Z",
+        "to": "2026-09-21T13:34:20.003Z",
+        "seconds": 30.38739779999852,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:34:20.003Z",
+        "to": "2026-09-21T13:34:50.387Z",
+        "seconds": 30.38351099999994,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:34:50.387Z",
+        "to": "2026-09-21T13:35:20.765Z",
+        "seconds": 30.378775000000374,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:35:20.765Z",
+        "to": "2026-09-21T13:35:51.226Z",
+        "seconds": 30.460822100000456,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:35:51.226Z",
+        "to": "2026-09-21T13:36:21.660Z",
+        "seconds": 30.43805120000057,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:36:21.660Z",
+        "to": "2026-09-21T13:36:52.029Z",
+        "seconds": 30.369118999999017,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:36:52.029Z",
+        "to": "2026-09-21T13:37:22.384Z",
+        "seconds": 30.35346810000017,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:37:22.384Z",
+        "to": "2026-09-21T13:37:52.787Z",
+        "seconds": 30.40289870000072,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:37:52.787Z",
+        "to": "2026-09-21T13:38:23.207Z",
+        "seconds": 30.421251000000165,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:38:23.207Z",
+        "to": "2026-09-21T13:38:53.702Z",
+        "seconds": 30.49507089999877,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:38:53.702Z",
+        "to": "2026-09-21T13:39:24.607Z",
+        "seconds": 30.906286900000648,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:39:24.607Z",
+        "to": "2026-09-21T13:39:55.728Z",
+        "seconds": 31.121173499999568,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:39:55.728Z",
+        "to": "2026-09-21T13:40:26.972Z",
+        "seconds": 31.249245500000193,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:40:26.972Z",
+        "to": "2026-09-21T13:40:58.732Z",
+        "seconds": 31.759742800001057,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:40:58.732Z",
+        "to": "2026-09-21T13:41:29.370Z",
+        "seconds": 30.636754099998623,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:41:29.370Z",
+        "to": "2026-09-21T13:41:59.973Z",
+        "seconds": 30.602831800000743,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:41:59.973Z",
+        "to": "2026-09-21T13:42:30.497Z",
+        "seconds": 30.52782409999892,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:42:30.497Z",
+        "to": "2026-09-21T13:43:00.983Z",
+        "seconds": 30.485431500000878,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:43:00.983Z",
+        "to": "2026-09-21T13:43:31.376Z",
+        "seconds": 30.393488199999556,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:43:31.376Z",
+        "to": "2026-09-21T13:44:01.762Z",
+        "seconds": 30.38608050000109,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:44:01.762Z",
+        "to": "2026-09-21T13:44:32.168Z",
+        "seconds": 30.404640799999235,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:44:32.168Z",
+        "to": "2026-09-21T13:45:02.535Z",
+        "seconds": 30.36726080000028,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:45:02.535Z",
+        "to": "2026-09-21T13:45:32.920Z",
+        "seconds": 30.38757340000011,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:45:32.920Z",
+        "to": "2026-09-21T13:46:03.374Z",
+        "seconds": 30.45426919999905,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:46:03.374Z",
+        "to": "2026-09-21T13:46:33.787Z",
+        "seconds": 30.412387400001286,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:46:33.787Z",
+        "to": "2026-09-21T13:47:04.313Z",
+        "seconds": 30.526268299998716,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:47:04.313Z",
+        "to": "2026-09-21T13:47:34.730Z",
+        "seconds": 30.41837980000116,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:47:34.730Z",
+        "to": "2026-09-21T13:48:05.167Z",
+        "seconds": 30.436944099999963,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:48:05.167Z",
+        "to": "2026-09-21T13:48:35.554Z",
+        "seconds": 30.388381199998783,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:48:35.554Z",
+        "to": "2026-09-21T13:49:05.957Z",
+        "seconds": 30.40298540000059,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:49:05.957Z",
+        "to": "2026-09-21T13:49:36.369Z",
+        "seconds": 30.413394899999723,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:49:36.369Z",
+        "to": "2026-09-21T13:50:06.776Z",
+        "seconds": 30.407470100000502,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:50:06.776Z",
+        "to": "2026-09-21T13:50:37.207Z",
+        "seconds": 30.431259099999444,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:50:37.207Z",
+        "to": "2026-09-21T13:51:07.633Z",
+        "seconds": 30.425661299999803,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:51:07.633Z",
+        "to": "2026-09-21T13:51:38.014Z",
+        "seconds": 30.385519500000402,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:51:38.014Z",
+        "to": "2026-09-21T13:52:08.385Z",
+        "seconds": 30.370841500001028,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:52:08.385Z",
+        "to": "2026-09-21T13:52:38.738Z",
+        "seconds": 30.35248949999921,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:52:38.738Z",
+        "to": "2026-09-21T13:53:09.124Z",
+        "seconds": 30.38681780000031,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:53:09.124Z",
+        "to": "2026-09-21T13:53:39.539Z",
+        "seconds": 30.416673299999907,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:53:39.539Z",
+        "to": "2026-09-21T13:54:09.923Z",
+        "seconds": 30.383930900000035,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:54:09.923Z",
+        "to": "2026-09-21T13:54:40.350Z",
+        "seconds": 30.42625840000063,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:54:40.350Z",
+        "to": "2026-09-21T13:55:10.747Z",
+        "seconds": 30.396663999998943,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:55:10.747Z",
+        "to": "2026-09-21T13:55:41.194Z",
+        "seconds": 30.447297399999574,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:55:41.194Z",
+        "to": "2026-09-21T13:56:11.596Z",
+        "seconds": 30.402161199999973,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:56:11.596Z",
+        "to": "2026-09-21T13:56:42.043Z",
+        "seconds": 30.447661800000816,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:56:42.043Z",
+        "to": "2026-09-21T13:57:12.500Z",
+        "seconds": 30.457292400000618,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:57:12.500Z",
+        "to": "2026-09-21T13:57:42.937Z",
+        "seconds": 30.43754979999922,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:57:42.937Z",
+        "to": "2026-09-21T13:58:13.374Z",
+        "seconds": 30.43706750000082,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:58:13.374Z",
+        "to": "2026-09-21T13:58:43.811Z",
+        "seconds": 30.43740279999934,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:58:43.811Z",
+        "to": "2026-09-21T13:59:14.218Z",
+        "seconds": 30.406889100000264,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:59:14.218Z",
+        "to": "2026-09-21T13:59:44.662Z",
+        "seconds": 30.445262299999595,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T13:59:44.662Z",
+        "to": "2026-09-21T14:00:15.151Z",
+        "seconds": 30.489511500000955,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:00:15.151Z",
+        "to": "2026-09-21T14:00:45.643Z",
+        "seconds": 30.492012699998917,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:00:45.643Z",
+        "to": "2026-09-21T14:01:16.173Z",
+        "seconds": 30.52998870000057,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:01:16.173Z",
+        "to": "2026-09-21T14:01:46.736Z",
+        "seconds": 30.564745500000193,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:01:46.736Z",
+        "to": "2026-09-21T14:02:17.249Z",
+        "seconds": 30.51302449999936,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:02:17.249Z",
+        "to": "2026-09-21T14:02:47.898Z",
+        "seconds": 30.6505951000005,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:02:47.898Z",
+        "to": "2026-09-21T14:03:18.376Z",
+        "seconds": 30.4776660999991,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:03:18.376Z",
+        "to": "2026-09-21T14:03:48.944Z",
+        "seconds": 30.56839169999957,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:03:48.944Z",
+        "to": "2026-09-21T14:04:19.566Z",
+        "seconds": 30.622085400000216,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:04:19.566Z",
+        "to": "2026-09-21T14:04:51.146Z",
+        "seconds": 31.58027390000038,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:04:51.146Z",
+        "to": "2026-09-21T14:05:21.743Z",
+        "seconds": 30.597450600000098,
+        "reason": "missing_or_invalid_process_counters"
+      },
+      {
+        "from": "2026-09-21T14:05:21.743Z",
+        "to": "2026-09-21T14:05:52.315Z",
+        "seconds": 30.572721599999817,
+        "reason": "missing_or_invalid_process_counters"
+      }
+    ],
+    "covered_interval_seconds": 9506.551437600008,
+    "cpu_seconds": 838.453125,
+    "mean_percent_total_capacity": 0.5512337534432945,
+    "max_interval_percent_total_capacity": 2.461070137697884,
+    "latest_interval": {
+      "from": "2026-09-21T12:43:51.014Z",
+      "to": "2026-09-21T12:44:21.449Z",
+      "seconds": 30.439695800000802,
+      "process_count": 14,
+      "cpu_seconds": 2.671875,
+      "percent_total_capacity": 0.5486000536838335,
+      "processes": [
+        {
+          "pid": 20540,
+          "process_name": "leave-engine",
+          "cpu_seconds": 1.640625,
+          "percent_total_capacity": 0.33685968208656436
+        },
+        {
+          "pid": 4928,
+          "process_name": "node",
+          "cpu_seconds": 0.046875,
+          "percent_total_capacity": 0.009624562345330412
+        },
+        {
+          "pid": 5412,
+          "process_name": "node",
+          "cpu_seconds": 0.09375,
+          "percent_total_capacity": 0.019249124690660823
+        },
+        {
+          "pid": 6128,
+          "process_name": "node",
+          "cpu_seconds": 0.0625,
+          "percent_total_capacity": 0.012832749793773883
+        },
+        {
+          "pid": 7916,
+          "process_name": "node",
+          "cpu_seconds": 0.046875,
+          "percent_total_capacity": 0.009624562345330412
+        },
+        {
+          "pid": 7936,
+          "process_name": "node",
+          "cpu_seconds": 0.140625,
+          "percent_total_capacity": 0.028873687035991233
+        },
+        {
+          "pid": 12172,
+          "process_name": "node",
+          "cpu_seconds": 0.125,
+          "percent_total_capacity": 0.025665499587547765
+        },
+        {
+          "pid": 15272,
+          "process_name": "node",
+          "cpu_seconds": 0.078125,
+          "percent_total_capacity": 0.016040937242217352
+        },
+        {
+          "pid": 16068,
+          "process_name": "node",
+          "cpu_seconds": 0.109375,
+          "percent_total_capacity": 0.022457312139104294
+        },
+        {
+          "pid": 17444,
+          "process_name": "node",
+          "cpu_seconds": 0.0625,
+          "percent_total_capacity": 0.012832749793773883
+        },
+        {
+          "pid": 17556,
+          "process_name": "node",
+          "cpu_seconds": 0,
+          "percent_total_capacity": 0
+        },
+        {
+          "pid": 20484,
+          "process_name": "node",
+          "cpu_seconds": 0.109375,
+          "percent_total_capacity": 0.022457312139104294
+        },
+        {
+          "pid": 20776,
+          "process_name": "node",
+          "cpu_seconds": 0.015625,
+          "percent_total_capacity": 0.0032081874484434707
+        },
+        {
+          "pid": 20940,
+          "process_name": "node",
+          "cpu_seconds": 0.140625,
+          "percent_total_capacity": 0.028873687035991233
+        }
+      ]
+    },
+    "per_process": [
+      {
+        "pid": 20540,
+        "process_name": "leave-engine",
+        "cpu_seconds": 466.3125,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 1.442155749479015,
+        "mean_percent_total_capacity": 0.306573118983278
+      },
+      {
+        "pid": 4928,
+        "process_name": "node",
+        "cpu_seconds": 28.59375,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.07592382426160746,
+        "mean_percent_total_capacity": 0.018798713568536348
+      },
+      {
+        "pid": 5412,
+        "process_name": "node",
+        "cpu_seconds": 33.21875,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.10345899941914673,
+        "mean_percent_total_capacity": 0.021839379806944413
+      },
+      {
+        "pid": 6128,
+        "process_name": "node",
+        "cpu_seconds": 29.53125,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.08669798509935271,
+        "mean_percent_total_capacity": 0.019415064833078522
+      },
+      {
+        "pid": 7916,
+        "process_name": "node",
+        "cpu_seconds": 30.9375,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.10032387822462713,
+        "mean_percent_total_capacity": 0.020339591729891787
+      },
+      {
+        "pid": 7936,
+        "process_name": "node",
+        "cpu_seconds": 30.5,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.06270242389039196,
+        "mean_percent_total_capacity": 0.020051961139772104
+      },
+      {
+        "pid": 12172,
+        "process_name": "node",
+        "cpu_seconds": 31.625,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.09405363583558793,
+        "mean_percent_total_capacity": 0.020791582657222713
+      },
+      {
+        "pid": 15272,
+        "process_name": "node",
+        "cpu_seconds": 31.09375,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.09414554208439324,
+        "mean_percent_total_capacity": 0.020442316940648814
+      },
+      {
+        "pid": 16068,
+        "process_name": "node",
+        "cpu_seconds": 28.984375,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.08151315105750954,
+        "mean_percent_total_capacity": 0.01905552659542892
+      },
+      {
+        "pid": 17444,
+        "process_name": "node",
+        "cpu_seconds": 30.296875,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.09405363583558793,
+        "mean_percent_total_capacity": 0.019918418365787966
+      },
+      {
+        "pid": 17556,
+        "process_name": "node",
+        "cpu_seconds": 3.90625,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.044993593405943014,
+        "mean_percent_total_capacity": 0.0025681302689257307
+      },
+      {
+        "pid": 20484,
+        "process_name": "node",
+        "cpu_seconds": 31.984375,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.08979434171004387,
+        "mean_percent_total_capacity": 0.021027850641963882
+      },
+      {
+        "pid": 20776,
+        "process_name": "node",
+        "cpu_seconds": 30.265625,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.08778339344654873,
+        "mean_percent_total_capacity": 0.019897873323636562
+      },
+      {
+        "pid": 20940,
+        "process_name": "node",
+        "cpu_seconds": 31.203125,
+        "covered_interval_seconds": 9506.551437600008,
+        "interval_count": 312,
+        "max_interval_percent_total_capacity": 0.07837802986298995,
+        "mean_percent_total_capacity": 0.020514224588178736
+      }
+    ],
+    "limitations": [
+      "Approximately 30-second counter intervals are average CPU utilization, not instantaneous peaks.",
+      "Resource counters are collected shortly after their market-sample timestamp; small collection skew is included.",
+      "The supplied logical processor count must match the observed host; it is not inferred from the machine running this analysis.",
+      "Intervals with observation gaps, missing counters, process changes or counter resets are excluded, not replaced with zero.",
+      "PID/name membership is pinned to the first complete resource reading. Historical samples without start times cannot exclude reuse with the same PID and process name.",
+      "Only manifest-tracked demo processes are included; browsers, observer/helpers and other applications are excluded."
+    ],
+    "interval_details": "See analysis.json in the evidence directory"
+  },
+  "demo_logs": {
+    "available": true,
+    "first_at": "2026-09-21T10:05:54.979Z",
+    "last_at": "2026-09-21T14:05:52.315Z",
+    "first": {
+      "bytes": 127289,
+      "files": 40,
+      "disappeared_during_sample": 0
+    },
+    "last": {
+      "bytes": 53834221,
+      "files": 44,
+      "disappeared_during_sample": 0
+    },
+    "delta_bytes": 53706932,
+    "observed_growth_bytes_per_hour": 13428997.82258467
+  },
+  "persisted_data": {
+    "available": true,
+    "first_at": "2026-09-21T10:05:54.979Z",
+    "last_at": "2026-09-21T14:05:52.315Z",
+    "first": {
+      "bytes": 52606130,
+      "files": 9,
+      "disappeared_during_sample": 0
+    },
+    "last": {
+      "bytes": 488148687,
+      "files": 17,
+      "disappeared_during_sample": 0
+    },
+    "delta_bytes": 435542557,
+    "observed_growth_bytes_per_hour": 108904006.0898649
+  },
+  "lowest_observed_disk_available_bytes": 244007448576,
+  "completed_summary": null,
+  "limitations": [
+    "Snapshot samples are not continuous peak memory measurements.",
+    "Retained order/trade/dedup history intentionally grows; memory growth alone neither proves nor excludes a leak.",
+    "Growth per hour is a normalized rate over the observed interval, not a future forecast.",
+    "Full accounting invariants are covered by Rust and API tests; public totals are sampled here.",
+    "Detailed process memory parsing currently covers the verified Windows host only.",
+    "A running observation is not reported as a completed pass."
+  ]
+}

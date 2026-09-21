@@ -1,0 +1,18 @@
+[package]
+name = "cow-result-suffix-replay-v2"
+version = "0.1.0"
+edition = "2024"
+
+[workspace]
+resolver = "3"
+
+[dependencies]
+baseline = { package = "cow-result-baseline", path = "../baseline" }
+candidate = { package = "cow-result-candidate", path = "../candidate" }
+serde_json = "1"
+serde = { version = "1", features = ["derive"] }
+crc32fast = "1"
+
+[profile.release]
+lto = "thin"
+codegen-units = 1

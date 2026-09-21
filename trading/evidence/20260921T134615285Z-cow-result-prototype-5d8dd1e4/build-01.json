@@ -1,0 +1,23 @@
+{
+  "command": "cargo",
+  "args": [
+    "build",
+    "--offline",
+    "--manifest-path",
+    "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\Cargo.toml",
+    "--target-dir",
+    "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\target",
+    "--jobs",
+    "1",
+    "--release",
+    "-p",
+    "cow-result-probe"
+  ],
+  "started_at": "2026-09-21T13:49:08.7170712Z",
+  "ended_at": "2026-09-21T13:49:54.5966367Z",
+  "exit_code": 101,
+  "target_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\target",
+  "temp_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\tmp",
+  "rustflags": "-C link-self-contained=yes -C dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe",
+  "classification": "isolated compilation only; no production target or service changes"
+}

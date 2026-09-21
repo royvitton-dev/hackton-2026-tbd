@@ -1,0 +1,316 @@
+{
+  "recorded_at": "2026-09-21T13:53:22.954Z",
+  "raw_rows": 6784,
+  "raw_recalculation_matches": true,
+  "groups": {
+    "normal_new": {
+      "commands": 6000,
+      "baseline_ops": 85988,
+      "candidate_ops": 49988,
+      "baseline_bytes": 5034232,
+      "candidate_bytes": 4446232,
+      "delta_histogram": {
+        "6": 6000
+      },
+      "codes": {
+        "OK": 6000
+      },
+      "fills": 2000
+    },
+    "fresh_rejection": {
+      "commands": 128,
+      "baseline_ops": 1300,
+      "candidate_ops": 532,
+      "baseline_bytes": 74628,
+      "candidate_bytes": 57476,
+      "delta_histogram": {
+        "6": 128
+      },
+      "codes": {
+        "INVALID_PRICE": 128
+      },
+      "fills": 0
+    },
+    "borrowed_duplicate": {
+      "commands": 128,
+      "baseline_ops": 640,
+      "candidate_ops": 256,
+      "baseline_bytes": 8704,
+      "candidate_bytes": 2432,
+      "delta_histogram": {
+        "3": 128
+      },
+      "codes": {
+        "OK": 128
+      },
+      "fills": 0
+    },
+    "borrowed_lookup": {
+      "commands": 128,
+      "baseline_ops": 640,
+      "candidate_ops": 256,
+      "baseline_bytes": 8704,
+      "candidate_bytes": 2432,
+      "delta_histogram": {
+        "3": 128
+      },
+      "codes": {
+        "OK": 128
+      },
+      "fills": 0
+    },
+    "request_conflict": {
+      "commands": 128,
+      "baseline_ops": 640,
+      "candidate_ops": 256,
+      "baseline_bytes": 14080,
+      "candidate_bytes": 2432,
+      "delta_histogram": {
+        "3": 128
+      },
+      "codes": {
+        "REQUEST_ID_CONFLICT": 128
+      },
+      "fills": 0
+    },
+    "invalid_key_unadmitted": {
+      "commands": 16,
+      "baseline_ops": 64,
+      "candidate_ops": 16,
+      "baseline_bytes": 1232,
+      "candidate_bytes": 112,
+      "delta_histogram": {
+        "3": 16
+      },
+      "codes": {
+        "INVALID_REQUEST_ID": 16
+      },
+      "fills": 0
+    },
+    "restored_owned_duplicate": {
+      "commands": 128,
+      "baseline_ops": 640,
+      "candidate_ops": 640,
+      "baseline_bytes": 8704,
+      "candidate_bytes": 8704,
+      "delta_histogram": {
+        "0": 128
+      },
+      "codes": {
+        "OK": 128
+      },
+      "fills": 0
+    },
+    "restored_owned_lookup": {
+      "commands": 128,
+      "baseline_ops": 640,
+      "candidate_ops": 640,
+      "baseline_bytes": 8704,
+      "candidate_bytes": 8704,
+      "delta_histogram": {
+        "0": 128
+      },
+      "codes": {
+        "OK": 128
+      },
+      "fills": 0
+    }
+  },
+  "normal_allocation_reduction_percent": 41.86630692654789,
+  "normal_bytes_reduction": 588000,
+  "normal_bytes_reduction_per_command": 98,
+  "full_core_sha256": "18ef7fd9c190d331e33a1dbca7e6741b8dba7c89eae805079a6cda94cf2e16ca",
+  "full_core_bytes": 6684357,
+  "all_production_source_binary_and_manifest_hashes_unchanged": true,
+  "production_hashes": [
+    {
+      "path": "engine/src/core.rs",
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4",
+      "bytes": 34605,
+      "after_sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4"
+    },
+    {
+      "path": "engine/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "bytes": 3066,
+      "after_sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b"
+    },
+    {
+      "path": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954,
+      "after_sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+    },
+    {
+      "path": "engine/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038",
+      "bytes": 46,
+      "after_sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038"
+    },
+    {
+      "path": "engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "bytes": 23831,
+      "after_sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    {
+      "path": "engine/src/ws_frame.rs",
+      "sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e",
+      "bytes": 2632,
+      "after_sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e"
+    },
+    {
+      "path": "engine/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194,
+      "after_sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9"
+    },
+    {
+      "path": "engine/examples/core_bench.rs",
+      "sha256": "1e7551861d1aa12525ac0ee3f246d82d5d18b0329d519d08d868d64da178d786",
+      "bytes": 12236,
+      "after_sha256": "1e7551861d1aa12525ac0ee3f246d82d5d18b0329d519d08d868d64da178d786"
+    },
+    {
+      "path": "engine/target/release/leave-engine.exe",
+      "sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+      "bytes": 3008428,
+      "after_sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240"
+    },
+    {
+      "path": "engine/target/debug/examples/aged_recovery.exe",
+      "sha256": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e",
+      "bytes": 17325476,
+      "after_sha256": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e"
+    },
+    {
+      "path": "data/demo-current.json",
+      "sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+      "bytes": 11501,
+      "after_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e"
+    }
+  ],
+  "only_proposed_source_changes": true,
+  "dependency_versions_match_production_lock": true,
+  "prototype_dependency_packages": [
+    {
+      "name": "bitflags",
+      "version": "2.13.2"
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.5"
+    },
+    {
+      "name": "crc32fast",
+      "version": "1.5.2"
+    },
+    {
+      "name": "errno",
+      "version": "0.3.14"
+    },
+    {
+      "name": "fastrand",
+      "version": "2.5.0"
+    },
+    {
+      "name": "fs2",
+      "version": "0.4.3"
+    },
+    {
+      "name": "getrandom",
+      "version": "0.4.3"
+    },
+    {
+      "name": "itoa",
+      "version": "1.0.18"
+    },
+    {
+      "name": "libc",
+      "version": "0.2.189"
+    },
+    {
+      "name": "linux-raw-sys",
+      "version": "0.12.1"
+    },
+    {
+      "name": "memchr",
+      "version": "2.8.3"
+    },
+    {
+      "name": "once_cell",
+      "version": "1.21.4"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47"
+    },
+    {
+      "name": "r-efi",
+      "version": "6.0.0"
+    },
+    {
+      "name": "rustix",
+      "version": "1.1.5"
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229"
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229"
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229"
+    },
+    {
+      "name": "serde_json",
+      "version": "1.0.151"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.6"
+    },
+    {
+      "name": "tempfile",
+      "version": "3.27.0"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.26"
+    },
+    {
+      "name": "winapi",
+      "version": "0.3.9"
+    },
+    {
+      "name": "winapi-i686-pc-windows-gnu",
+      "version": "0.4.0"
+    },
+    {
+      "name": "winapi-x86_64-pc-windows-gnu",
+      "version": "0.4.0"
+    },
+    {
+      "name": "windows-link",
+      "version": "0.2.1"
+    },
+    {
+      "name": "windows-sys",
+      "version": "0.61.2"
+    },
+    {
+      "name": "zmij",
+      "version": "1.0.23"
+    }
+  ],
+  "wire_format": "JSON and v1 CRC-framed JSON; production has no bincode dependency",
+  "no_latency_or_tps_claim": true,
+  "zero_allocation": false
+}

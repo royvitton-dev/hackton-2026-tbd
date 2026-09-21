@@ -1,0 +1,55 @@
+--- a/trading/engine/src/model.rs
++++ b/trading/engine/src/model.rs
+@@ -1,3 +1,4 @@
++use std::borrow::Cow;
+ use serde::{Deserialize, Serialize};
+ 
+ #[derive(Clone, Debug, Serialize, Deserialize)]
+@@ -95,9 +96,9 @@
+     pub account_id: String,
+     pub command_seq: u64,
+     pub event_seq: u64,
+-    pub status: String,
+-    pub code: String,
+-    pub message: String,
++    pub status: Cow<'static, str>,
++    pub code: Cow<'static, str>,
++    pub message: Cow<'static, str>,
+     pub order_id: Option<u64>,
+     pub trades: Vec<Trade>,
+     pub duplicate: bool,
+--- a/trading/engine/src/core.rs
++++ b/trading/engine/src/core.rs
+@@ -198,9 +198,9 @@
+                 account_id: command.account_id.clone(),
+                 command_seq: self.command_seq,
+                 event_seq: self.event_seq,
+-                status: "accepted".to_owned(),
+-                code: "OK".to_owned(),
+-                message: "명령 처리가 완료되었습니다.".to_owned(),
++                status: "accepted".into(),
++                code: "OK".into(),
++                message: "명령 처리가 완료되었습니다.".into(),
+                 order_id: Some(order_id),
+                 trades,
+                 duplicate: false,
+@@ -219,15 +219,15 @@
+         result
+     }
+ 
+-    fn rejection(&self, command: &Command, code: &str, message: &str) -> CommandResult {
++    fn rejection(&self, command: &Command, code: &'static str, message: &'static str) -> CommandResult {
+         CommandResult {
+             request_id: command.request_id.clone(),
+             account_id: command.account_id.clone(),
+             command_seq: self.command_seq,
+             event_seq: self.event_seq,
+-            status: "rejected".to_owned(),
+-            code: code.to_owned(),
+-            message: message.to_owned(),
++            status: "rejected".into(),
++            code: code.into(),
++            message: message.into(),
+             order_id: None,
+             trades: Vec::new(),
+             duplicate: false,

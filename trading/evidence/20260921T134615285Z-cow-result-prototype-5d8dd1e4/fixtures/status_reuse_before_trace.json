@@ -1,0 +1,6597 @@
+[
+  {
+    "command": {
+      "account_id": "user-01",
+      "request_id": "maker-one",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 1000,
+        "quantity": 5
+      },
+      "timestamp_ms": 1790000000000
+    },
+    "result": {
+      "request_id": "maker-one",
+      "account_id": "user-01",
+      "command_seq": 1,
+      "event_seq": 1,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 1,
+      "trades": [],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 995,
+          "hours_reserved": 5,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1000": [
+          1
+        ]
+      },
+      "bids": {},
+      "command_seq": 1,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 1,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 0,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 5,
+          "side": "sell",
+          "status": "open",
+          "timestamp_ms": 1790000000000
+        }
+      ],
+      "request_count": 1,
+      "requests": {
+        "user-01": {
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [],
+      "volume": 0
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-02",
+      "request_id": "first-taker",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1010,
+        "quantity": 2
+      },
+      "timestamp_ms": 1790000000001
+    },
+    "result": {
+      "request_id": "first-taker",
+      "account_id": "user-02",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1790000000001,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 995,
+          "hours_reserved": 3,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 1,
+          "points_available": 1002000,
+          "points_reserved": 0,
+          "trades_count": 1
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 1,
+          "points_available": 998000,
+          "points_reserved": 0,
+          "trades_count": 1
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1000": [
+          1
+        ]
+      },
+      "bids": {},
+      "command_seq": 2,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 2,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 2,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 3,
+          "side": "sell",
+          "status": "partially_filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        }
+      ],
+      "request_count": 2,
+      "requests": {
+        "user-01": {
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        }
+      ],
+      "volume": 2
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-03",
+      "request_id": "rest-buy",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 990,
+        "quantity": 3
+      },
+      "timestamp_ms": 1790000000002
+    },
+    "result": {
+      "request_id": "rest-buy",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 995,
+          "hours_reserved": 3,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 1,
+          "points_available": 1002000,
+          "points_reserved": 0,
+          "trades_count": 1
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 1,
+          "points_available": 998000,
+          "points_reserved": 0,
+          "trades_count": 1
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 997030,
+          "points_reserved": 2970,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1000": [
+          1
+        ]
+      },
+      "bids": {
+        "990": [
+          3
+        ]
+      },
+      "command_seq": 3,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 3,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 2,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 3,
+          "side": "sell",
+          "status": "partially_filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 0,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 3,
+          "side": "buy",
+          "status": "open",
+          "timestamp_ms": 1790000000002
+        }
+      ],
+      "request_count": 3,
+      "requests": {
+        "user-01": {
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        }
+      ],
+      "volume": 2
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-01",
+      "request_id": "maker-two",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 1050,
+        "quantity": 2
+      },
+      "timestamp_ms": 1790000000003
+    },
+    "result": {
+      "request_id": "maker-two",
+      "account_id": "user-01",
+      "command_seq": 4,
+      "event_seq": 4,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 4,
+      "trades": [],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 993,
+          "hours_reserved": 5,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 2,
+          "points_available": 1002000,
+          "points_reserved": 0,
+          "trades_count": 1
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 1,
+          "points_available": 998000,
+          "points_reserved": 0,
+          "trades_count": 1
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 997030,
+          "points_reserved": 2970,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1000": [
+          1
+        ],
+        "1050": [
+          4
+        ]
+      },
+      "bids": {
+        "990": [
+          3
+        ]
+      },
+      "command_seq": 4,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 4,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 2,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 3,
+          "side": "sell",
+          "status": "partially_filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 0,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 3,
+          "side": "buy",
+          "status": "open",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 4,
+          "filled": 0,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 2,
+          "side": "sell",
+          "status": "open",
+          "timestamp_ms": 1790000000003
+        }
+      ],
+      "request_count": 4,
+      "requests": {
+        "user-01": {
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        }
+      ],
+      "volume": 2
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-02",
+      "request_id": "finish-first",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1000,
+        "quantity": 3
+      },
+      "timestamp_ms": 1790000000004
+    },
+    "result": {
+      "request_id": "finish-first",
+      "account_id": "user-02",
+      "command_seq": 5,
+      "event_seq": 5,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 5,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 5,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 3,
+          "timestamp_ms": 1790000000004,
+          "command_seq": 5
+        }
+      ],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 993,
+          "hours_reserved": 2,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 2,
+          "points_available": 1005000,
+          "points_reserved": 0,
+          "trades_count": 2
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1005,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 2,
+          "points_available": 995000,
+          "points_reserved": 0,
+          "trades_count": 2
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 997030,
+          "points_reserved": 2970,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1050": [
+          4
+        ]
+      },
+      "bids": {
+        "990": [
+          3
+        ]
+      },
+      "command_seq": 5,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 5,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 0,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 3,
+          "side": "buy",
+          "status": "open",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 4,
+          "filled": 0,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 2,
+          "side": "sell",
+          "status": "open",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        }
+      ],
+      "request_count": 5,
+      "requests": {
+        "user-01": {
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        }
+      ],
+      "volume": 5
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-03",
+      "request_id": "cancel-rest",
+      "action": {
+        "type": "cancel",
+        "order_id": 3
+      },
+      "timestamp_ms": 1790000000005
+    },
+    "result": {
+      "request_id": "cancel-rest",
+      "account_id": "user-03",
+      "command_seq": 6,
+      "event_seq": 6,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 993,
+          "hours_reserved": 2,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 2,
+          "points_available": 1005000,
+          "points_reserved": 0,
+          "trades_count": 2
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1005,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 2,
+          "points_available": 995000,
+          "points_reserved": 0,
+          "trades_count": 2
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1050": [
+          4
+        ]
+      },
+      "bids": {},
+      "command_seq": 6,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 6,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 3,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 4,
+          "filled": 0,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 2,
+          "side": "sell",
+          "status": "open",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        }
+      ],
+      "request_count": 6,
+      "requests": {
+        "user-01": {
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "cancel-rest": {
+            "action": {
+              "order_id": 3,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 6,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 6,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "cancel-rest",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        }
+      ],
+      "volume": 5
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-02",
+      "request_id": "partial-second",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1050,
+        "quantity": 1
+      },
+      "timestamp_ms": 1790000000006
+    },
+    "result": {
+      "request_id": "partial-second",
+      "account_id": "user-02",
+      "command_seq": 7,
+      "event_seq": 7,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 6,
+      "trades": [
+        {
+          "id": 3,
+          "maker_order_id": 4,
+          "taker_order_id": 6,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1050,
+          "quantity": 1,
+          "timestamp_ms": 1790000000006,
+          "command_seq": 7
+        }
+      ],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 993,
+          "hours_reserved": 1,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 2,
+          "points_available": 1006050,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1006,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 3,
+          "points_available": 993950,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1050": [
+          4
+        ]
+      },
+      "bids": {},
+      "command_seq": 7,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 7,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 3,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 4,
+          "filled": 1,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 1,
+          "side": "sell",
+          "status": "partially_filled",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 7,
+          "filled": 1,
+          "id": 6,
+          "price": 1050,
+          "quantity": 1,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "request_count": 7,
+      "requests": {
+        "user-01": {
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          },
+          "partial-second": {
+            "action": {
+              "price": 1050,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 7,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 7,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 6,
+              "request_id": "partial-second",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 7,
+                  "id": 3,
+                  "maker_order_id": 4,
+                  "price": 1050,
+                  "quantity": 1,
+                  "seller_id": "user-01",
+                  "taker_order_id": 6,
+                  "timestamp_ms": 1790000000006
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "cancel-rest": {
+            "action": {
+              "order_id": 3,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 6,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 6,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "cancel-rest",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 7,
+          "id": 3,
+          "maker_order_id": 4,
+          "price": 1050,
+          "quantity": 1,
+          "seller_id": "user-01",
+          "taker_order_id": 6,
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "volume": 6
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-01",
+      "request_id": "cancel-partial",
+      "action": {
+        "type": "cancel",
+        "order_id": 4
+      },
+      "timestamp_ms": 1790000000007
+    },
+    "result": {
+      "request_id": "cancel-partial",
+      "account_id": "user-01",
+      "command_seq": 8,
+      "event_seq": 8,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 4,
+      "trades": [],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 994,
+          "hours_reserved": 0,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 2,
+          "points_available": 1006050,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1006,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 3,
+          "points_available": 993950,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {},
+      "bids": {},
+      "command_seq": 8,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 8,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 3,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 1,
+          "command_seq": 4,
+          "filled": 1,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "sell",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 7,
+          "filled": 1,
+          "id": 6,
+          "price": 1050,
+          "quantity": 1,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "request_count": 8,
+      "requests": {
+        "user-01": {
+          "cancel-partial": {
+            "action": {
+              "order_id": 4,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 8,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 8,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "cancel-partial",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          },
+          "partial-second": {
+            "action": {
+              "price": 1050,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 7,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 7,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 6,
+              "request_id": "partial-second",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 7,
+                  "id": 3,
+                  "maker_order_id": 4,
+                  "price": 1050,
+                  "quantity": 1,
+                  "seller_id": "user-01",
+                  "taker_order_id": 6,
+                  "timestamp_ms": 1790000000006
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "cancel-rest": {
+            "action": {
+              "order_id": 3,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 6,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 6,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "cancel-rest",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 7,
+          "id": 3,
+          "maker_order_id": 4,
+          "price": 1050,
+          "quantity": 1,
+          "seller_id": "user-01",
+          "taker_order_id": 6,
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "volume": 6
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-02",
+      "request_id": "first-taker",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1010,
+        "quantity": 2
+      },
+      "timestamp_ms": 1790000000008
+    },
+    "result": {
+      "request_id": "first-taker",
+      "account_id": "user-02",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1790000000001,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 994,
+          "hours_reserved": 0,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 2,
+          "points_available": 1006050,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1006,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 3,
+          "points_available": 993950,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {},
+      "bids": {},
+      "command_seq": 8,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 8,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 3,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 1,
+          "command_seq": 4,
+          "filled": 1,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "sell",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 7,
+          "filled": 1,
+          "id": 6,
+          "price": 1050,
+          "quantity": 1,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "request_count": 8,
+      "requests": {
+        "user-01": {
+          "cancel-partial": {
+            "action": {
+              "order_id": 4,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 8,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 8,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "cancel-partial",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          },
+          "partial-second": {
+            "action": {
+              "price": 1050,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 7,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 7,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 6,
+              "request_id": "partial-second",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 7,
+                  "id": 3,
+                  "maker_order_id": 4,
+                  "price": 1050,
+                  "quantity": 1,
+                  "seller_id": "user-01",
+                  "taker_order_id": 6,
+                  "timestamp_ms": 1790000000006
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "cancel-rest": {
+            "action": {
+              "order_id": 3,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 6,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 6,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "cancel-rest",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 7,
+          "id": 3,
+          "maker_order_id": 4,
+          "price": 1050,
+          "quantity": 1,
+          "seller_id": "user-01",
+          "taker_order_id": 6,
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "volume": 6
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-02",
+      "request_id": "first-taker",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1011,
+        "quantity": 2
+      },
+      "timestamp_ms": 1790000000009
+    },
+    "result": {
+      "request_id": "first-taker",
+      "account_id": "user-02",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "rejected",
+      "code": "REQUEST_ID_CONFLICT",
+      "message": "같은 요청 ID에 다른 명령을 사용할 수 없습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 994,
+          "hours_reserved": 0,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 2,
+          "points_available": 1006050,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1006,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 3,
+          "points_available": 993950,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {},
+      "bids": {},
+      "command_seq": 8,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 8,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 3,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 1,
+          "command_seq": 4,
+          "filled": 1,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "sell",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 7,
+          "filled": 1,
+          "id": 6,
+          "price": 1050,
+          "quantity": 1,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "request_count": 8,
+      "requests": {
+        "user-01": {
+          "cancel-partial": {
+            "action": {
+              "order_id": 4,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 8,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 8,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "cancel-partial",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          },
+          "partial-second": {
+            "action": {
+              "price": 1050,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 7,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 7,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 6,
+              "request_id": "partial-second",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 7,
+                  "id": 3,
+                  "maker_order_id": 4,
+                  "price": 1050,
+                  "quantity": 1,
+                  "seller_id": "user-01",
+                  "taker_order_id": 6,
+                  "timestamp_ms": 1790000000006
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "cancel-rest": {
+            "action": {
+              "order_id": 3,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 6,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 6,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "cancel-rest",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 7,
+          "id": 3,
+          "maker_order_id": 4,
+          "price": 1050,
+          "quantity": 1,
+          "seller_id": "user-01",
+          "taker_order_id": 6,
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "volume": 6
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-01",
+      "request_id": "self-maker",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 1100,
+        "quantity": 2
+      },
+      "timestamp_ms": 1790000000010
+    },
+    "result": {
+      "request_id": "self-maker",
+      "account_id": "user-01",
+      "command_seq": 9,
+      "event_seq": 9,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 7,
+      "trades": [],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 992,
+          "hours_reserved": 2,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 3,
+          "points_available": 1006050,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1006,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 3,
+          "points_available": 993950,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1100": [
+          7
+        ]
+      },
+      "bids": {},
+      "command_seq": 9,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 9,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 3,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 1,
+          "command_seq": 4,
+          "filled": 1,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "sell",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 7,
+          "filled": 1,
+          "id": 6,
+          "price": 1050,
+          "quantity": 1,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000006
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 9,
+          "filled": 0,
+          "id": 7,
+          "price": 1100,
+          "quantity": 2,
+          "remaining": 2,
+          "side": "sell",
+          "status": "open",
+          "timestamp_ms": 1790000000010
+        }
+      ],
+      "request_count": 9,
+      "requests": {
+        "user-01": {
+          "cancel-partial": {
+            "action": {
+              "order_id": 4,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 8,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 8,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "cancel-partial",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "self-maker": {
+            "action": {
+              "price": 1100,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 9,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 9,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 7,
+              "request_id": "self-maker",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          },
+          "partial-second": {
+            "action": {
+              "price": 1050,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 7,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 7,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 6,
+              "request_id": "partial-second",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 7,
+                  "id": 3,
+                  "maker_order_id": 4,
+                  "price": 1050,
+                  "quantity": 1,
+                  "seller_id": "user-01",
+                  "taker_order_id": 6,
+                  "timestamp_ms": 1790000000006
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "cancel-rest": {
+            "action": {
+              "order_id": 3,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 6,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 6,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "cancel-rest",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 7,
+          "id": 3,
+          "maker_order_id": 4,
+          "price": 1050,
+          "quantity": 1,
+          "seller_id": "user-01",
+          "taker_order_id": 6,
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "volume": 6
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-01",
+      "request_id": "self-reject",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      },
+      "timestamp_ms": 1790000000011
+    },
+    "result": {
+      "request_id": "self-reject",
+      "account_id": "user-01",
+      "command_seq": 10,
+      "event_seq": 10,
+      "status": "rejected",
+      "code": "SELF_TRADE",
+      "message": "자기 주문과 체결될 수 있어 전체 주문을 거절했습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 992,
+          "hours_reserved": 2,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 3,
+          "points_available": 1006050,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1006,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 3,
+          "points_available": 993950,
+          "points_reserved": 0,
+          "trades_count": 3
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {
+        "1100": [
+          7
+        ]
+      },
+      "bids": {},
+      "command_seq": 10,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 10,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 3,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 1,
+          "command_seq": 4,
+          "filled": 1,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "sell",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 7,
+          "filled": 1,
+          "id": 6,
+          "price": 1050,
+          "quantity": 1,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000006
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 9,
+          "filled": 0,
+          "id": 7,
+          "price": 1100,
+          "quantity": 2,
+          "remaining": 2,
+          "side": "sell",
+          "status": "open",
+          "timestamp_ms": 1790000000010
+        }
+      ],
+      "request_count": 10,
+      "requests": {
+        "user-01": {
+          "cancel-partial": {
+            "action": {
+              "order_id": 4,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 8,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 8,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "cancel-partial",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "self-maker": {
+            "action": {
+              "price": 1100,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 9,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 9,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 7,
+              "request_id": "self-maker",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "self-reject": {
+            "action": {
+              "price": 1100,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "SELF_TRADE",
+              "command_seq": 10,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 10,
+              "message": "자기 주문과 체결될 수 있어 전체 주문을 거절했습니다.",
+              "order_id": null,
+              "request_id": "self-reject",
+              "status": "rejected",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          },
+          "partial-second": {
+            "action": {
+              "price": 1050,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 7,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 7,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 6,
+              "request_id": "partial-second",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 7,
+                  "id": 3,
+                  "maker_order_id": 4,
+                  "price": 1050,
+                  "quantity": 1,
+                  "seller_id": "user-01",
+                  "taker_order_id": 6,
+                  "timestamp_ms": 1790000000006
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "cancel-rest": {
+            "action": {
+              "order_id": 3,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 6,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 6,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "cancel-rest",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 7,
+          "id": 3,
+          "maker_order_id": 4,
+          "price": 1050,
+          "quantity": 1,
+          "seller_id": "user-01",
+          "taker_order_id": 6,
+          "timestamp_ms": 1790000000006
+        }
+      ],
+      "volume": 6
+    }
+  },
+  {
+    "command": {
+      "account_id": "user-02",
+      "request_id": "final-fill",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      },
+      "timestamp_ms": 1790000000012
+    },
+    "result": {
+      "request_id": "final-fill",
+      "account_id": "user-02",
+      "command_seq": 11,
+      "event_seq": 11,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 8,
+      "trades": [
+        {
+          "id": 4,
+          "maker_order_id": 7,
+          "taker_order_id": 8,
+          "buyer_id": "user-02",
+          "seller_id": "user-01",
+          "price": 1100,
+          "quantity": 2,
+          "timestamp_ms": 1790000000012,
+          "command_seq": 11
+        }
+      ],
+      "duplicate": false,
+      "durable": false
+    },
+    "full_core": {
+      "account_index": {
+        "bot-01": 3,
+        "bot-02": 4,
+        "bot-03": 5,
+        "bot-04": 6,
+        "bot-05": 7,
+        "bot-06": 8,
+        "bot-07": 9,
+        "bot-08": 10,
+        "bot-09": 11,
+        "bot-10": 12,
+        "bot-11": 13,
+        "bot-12": 14,
+        "user-01": 0,
+        "user-02": 1,
+        "user-03": 2
+      },
+      "accounts": [
+        {
+          "company": "GS리테이",
+          "hours_available": 992,
+          "hours_reserved": 0,
+          "id": "user-01",
+          "kind": "user",
+          "name": "시연 임직원 1",
+          "orders_count": 3,
+          "points_available": 1008250,
+          "points_reserved": 0,
+          "trades_count": 4
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1008,
+          "hours_reserved": 0,
+          "id": "user-02",
+          "kind": "user",
+          "name": "시연 임직원 2",
+          "orders_count": 4,
+          "points_available": 991750,
+          "points_reserved": 0,
+          "trades_count": 4
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "user-03",
+          "kind": "user",
+          "name": "시연 임직원 3",
+          "orders_count": 1,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-01",
+          "kind": "bot",
+          "name": "거래 봇 01",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-02",
+          "kind": "bot",
+          "name": "거래 봇 02",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-03",
+          "kind": "bot",
+          "name": "거래 봇 03",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-04",
+          "kind": "bot",
+          "name": "거래 봇 04",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-05",
+          "kind": "bot",
+          "name": "거래 봇 05",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-06",
+          "kind": "bot",
+          "name": "거래 봇 06",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-07",
+          "kind": "bot",
+          "name": "거래 봇 07",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-08",
+          "kind": "bot",
+          "name": "거래 봇 08",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-09",
+          "kind": "bot",
+          "name": "거래 봇 09",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS리테이",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-10",
+          "kind": "bot",
+          "name": "거래 봇 10",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS칼테스",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-11",
+          "kind": "bot",
+          "name": "거래 봇 11",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        },
+        {
+          "company": "GS건썰",
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "id": "bot-12",
+          "kind": "bot",
+          "name": "거래 봇 12",
+          "orders_count": 0,
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "trades_count": 0
+        }
+      ],
+      "asks": {},
+      "bids": {},
+      "command_seq": 11,
+      "config": {
+        "max_orders": 1000000,
+        "max_price": 1000000,
+        "max_quantity": 10000,
+        "max_requests": 2000000,
+        "max_trades": 2000000
+      },
+      "event_seq": 11,
+      "orders": [
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 1,
+          "filled": 5,
+          "id": 1,
+          "price": 1000,
+          "quantity": 5,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000000
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 2,
+          "filled": 2,
+          "id": 2,
+          "price": 1010,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "account_id": "user-03",
+          "cancelled": 3,
+          "command_seq": 3,
+          "filled": 0,
+          "id": 3,
+          "price": 990,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000002
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 1,
+          "command_seq": 4,
+          "filled": 1,
+          "id": 4,
+          "price": 1050,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "sell",
+          "status": "cancelled",
+          "timestamp_ms": 1790000000003
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 5,
+          "filled": 3,
+          "id": 5,
+          "price": 1000,
+          "quantity": 3,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 7,
+          "filled": 1,
+          "id": 6,
+          "price": 1050,
+          "quantity": 1,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000006
+        },
+        {
+          "account_id": "user-01",
+          "cancelled": 0,
+          "command_seq": 9,
+          "filled": 2,
+          "id": 7,
+          "price": 1100,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "sell",
+          "status": "filled",
+          "timestamp_ms": 1790000000010
+        },
+        {
+          "account_id": "user-02",
+          "cancelled": 0,
+          "command_seq": 11,
+          "filled": 2,
+          "id": 8,
+          "price": 1100,
+          "quantity": 2,
+          "remaining": 0,
+          "side": "buy",
+          "status": "filled",
+          "timestamp_ms": 1790000000012
+        }
+      ],
+      "request_count": 11,
+      "requests": {
+        "user-01": {
+          "cancel-partial": {
+            "action": {
+              "order_id": 4,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 8,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 8,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "cancel-partial",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-one": {
+            "action": {
+              "price": 1000,
+              "quantity": 5,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 1,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 1,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 1,
+              "request_id": "maker-one",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "maker-two": {
+            "action": {
+              "price": 1050,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 4,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 4,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 4,
+              "request_id": "maker-two",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "self-maker": {
+            "action": {
+              "price": 1100,
+              "quantity": 2,
+              "side": "sell",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "OK",
+              "command_seq": 9,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 9,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 7,
+              "request_id": "self-maker",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "self-reject": {
+            "action": {
+              "price": 1100,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-01",
+              "code": "SELF_TRADE",
+              "command_seq": 10,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 10,
+              "message": "자기 주문과 체결될 수 있어 전체 주문을 거절했습니다.",
+              "order_id": null,
+              "request_id": "self-reject",
+              "status": "rejected",
+              "trades": []
+            }
+          }
+        },
+        "user-02": {
+          "final-fill": {
+            "action": {
+              "price": 1100,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 11,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 11,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 8,
+              "request_id": "final-fill",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 11,
+                  "id": 4,
+                  "maker_order_id": 7,
+                  "price": 1100,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 8,
+                  "timestamp_ms": 1790000000012
+                }
+              ]
+            }
+          },
+          "finish-first": {
+            "action": {
+              "price": 1000,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 5,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 5,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 5,
+              "request_id": "finish-first",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 5,
+                  "id": 2,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 3,
+                  "seller_id": "user-01",
+                  "taker_order_id": 5,
+                  "timestamp_ms": 1790000000004
+                }
+              ]
+            }
+          },
+          "first-taker": {
+            "action": {
+              "price": 1010,
+              "quantity": 2,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 2,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 2,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 2,
+              "request_id": "first-taker",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 2,
+                  "id": 1,
+                  "maker_order_id": 1,
+                  "price": 1000,
+                  "quantity": 2,
+                  "seller_id": "user-01",
+                  "taker_order_id": 2,
+                  "timestamp_ms": 1790000000001
+                }
+              ]
+            }
+          },
+          "partial-second": {
+            "action": {
+              "price": 1050,
+              "quantity": 1,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-02",
+              "code": "OK",
+              "command_seq": 7,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 7,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 6,
+              "request_id": "partial-second",
+              "status": "accepted",
+              "trades": [
+                {
+                  "buyer_id": "user-02",
+                  "command_seq": 7,
+                  "id": 3,
+                  "maker_order_id": 4,
+                  "price": 1050,
+                  "quantity": 1,
+                  "seller_id": "user-01",
+                  "taker_order_id": 6,
+                  "timestamp_ms": 1790000000006
+                }
+              ]
+            }
+          }
+        },
+        "user-03": {
+          "cancel-rest": {
+            "action": {
+              "order_id": 3,
+              "type": "cancel"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 6,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 6,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "cancel-rest",
+              "status": "accepted",
+              "trades": []
+            }
+          },
+          "rest-buy": {
+            "action": {
+              "price": 990,
+              "quantity": 3,
+              "side": "buy",
+              "type": "place"
+            },
+            "result": {
+              "account_id": "user-03",
+              "code": "OK",
+              "command_seq": 3,
+              "duplicate": false,
+              "durable": false,
+              "event_seq": 3,
+              "message": "명령 처리가 완료되었습니다.",
+              "order_id": 3,
+              "request_id": "rest-buy",
+              "status": "accepted",
+              "trades": []
+            }
+          }
+        }
+      },
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1790000000001
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 5,
+          "id": 2,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 3,
+          "seller_id": "user-01",
+          "taker_order_id": 5,
+          "timestamp_ms": 1790000000004
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 7,
+          "id": 3,
+          "maker_order_id": 4,
+          "price": 1050,
+          "quantity": 1,
+          "seller_id": "user-01",
+          "taker_order_id": 6,
+          "timestamp_ms": 1790000000006
+        },
+        {
+          "buyer_id": "user-02",
+          "command_seq": 11,
+          "id": 4,
+          "maker_order_id": 7,
+          "price": 1100,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 8,
+          "timestamp_ms": 1790000000012
+        }
+      ],
+      "volume": 8
+    }
+  }
+]

@@ -1,0 +1,62 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.26
+   Compiling quote v1.0.47
+   Compiling winapi-x86_64-pc-windows-gnu v0.4.0
+   Compiling serde_core v1.0.229
+   Compiling winapi v0.3.9
+   Compiling zmij v1.0.23
+   Compiling syn v3.0.6
+   Compiling crc32fast v1.5.2
+   Compiling serde_json v1.0.151
+   Compiling serde v1.0.229
+   Compiling serde_derive v1.0.229
+   Compiling cfg-if v1.0.5
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling fs2 v0.4.3
+   Compiling cow-result-baseline v0.1.0 (C:\project\hackton-2026-tbd\trading\evidence\20260921T134615285Z-cow-result-prototype-5d8dd1e4\baseline)
+   Compiling cow-result-candidate v0.1.0 (C:\project\hackton-2026-tbd\trading\evidence\20260921T134615285Z-cow-result-prototype-5d8dd1e4\candidate)
+error[E0308]: mismatched types
+   --> candidate\src\core.rs:394:13
+    |
+394 |             status,
+    |             ^^^^^^ expected `Cow<'_, str>`, found `String`
+    |
+    = note: expected enum `Cow<'static, str>`
+             found struct `std::string::String`
+help: call `Into::into` on this expression to convert `std::string::String` into `Cow<'static, str>`
+    |
+394 |             status: status.into(),
+    |             +++++++       +++++++
+
+error[E0599]: no method named `clear` found for enum `Cow<'static, str>` in the current scope
+   --> candidate\src\core.rs:412:26
+    |
+412 |             maker.status.clear();
+    |                          ^^^^^ method not found in `Cow<'static, str>`
+
+error[E0599]: no method named `push_str` found for enum `Cow<'static, str>` in the current scope
+   --> candidate\src\core.rs:415:18
+    |
+413 | /             maker
+414 | |                 .status
+415 | |                 .push_str(order_status(maker.filled, maker.remaining));
+    | |                 -^^^^^^^^ method not found in `Cow<'static, str>`
+    | |_________________|
+    |
+
+error[E0599]: no method named `clear` found for enum `Cow<'static, str>` in the current scope
+   --> candidate\src\core.rs:513:22
+    |
+513 |         order.status.clear();
+    |                      ^^^^^ method not found in `Cow<'static, str>`
+
+error[E0599]: no method named `push_str` found for enum `Cow<'static, str>` in the current scope
+   --> candidate\src\core.rs:514:22
+    |
+514 |         order.status.push_str("cancelled");
+    |                      ^^^^^^^^ method not found in `Cow<'static, str>`
+
+Some errors have detailed explanations: E0308, E0599.
+For more information about an error, try `rustc --explain E0308`.
+error: could not compile `cow-result-candidate` (lib) due to 5 previous errors

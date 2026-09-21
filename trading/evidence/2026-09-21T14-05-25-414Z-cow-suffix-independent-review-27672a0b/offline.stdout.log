@@ -1,0 +1,38 @@
+{
+  "passed": 67,
+  "failed": 0,
+  "failures": [],
+  "full_core": {
+    "bytes": 9606,
+    "sha256": "d9481cfc59e5538c5162d5debf1e4de39ead4870d9fa9c13356bbc86c5001681",
+    "command_seq": 11,
+    "event_seq": 11,
+    "request_count": 11
+  },
+  "frame_evidence": [
+    {
+      "variant": "baseline-written",
+      "snapshot_sequence": 4,
+      "journal_records": 13,
+      "suffix_records": 9,
+      "journal_bytes": 2251,
+      "journal_sha256": "4ca77590e927e5aaf6f2c6bb4934b72ea7a93f9aca1ecea0e4c08f5cbbbbd1e7",
+      "snapshot_bytes": 5935,
+      "snapshot_sha256": "7e3ee4c4cbe6137cee3ccbae450d252974888f7dc1c2021db65604745837de5d",
+      "snapshot_journal_offset": 702,
+      "snapshot_prefix_crc": 3150217310
+    },
+    {
+      "variant": "candidate-written",
+      "snapshot_sequence": 4,
+      "journal_records": 13,
+      "suffix_records": 9,
+      "journal_bytes": 2251,
+      "journal_sha256": "4ca77590e927e5aaf6f2c6bb4934b72ea7a93f9aca1ecea0e4c08f5cbbbbd1e7",
+      "snapshot_bytes": 5935,
+      "snapshot_sha256": "7e3ee4c4cbe6137cee3ccbae450d252974888f7dc1c2021db65604745837de5d",
+      "snapshot_journal_offset": 702,
+      "snapshot_prefix_crc": 3150217310
+    }
+  ]
+}

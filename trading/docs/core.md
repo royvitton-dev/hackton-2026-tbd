@@ -2,7 +2,9 @@
 
 담당: 실제 하위 에이전트 `/root/matching_core`. 모든 산출물은 `trading` 내부에 작성한다. 초기 구현: 2026-09-21 17:18 KST. 구현 파일은 `engine/src/core.rs`; 계약 타입은 주 에이전트가 소유한 `engine/src/model.rs`다.
 
-현재 검증 상태(2026-09-21 19:04 KST): Order.status buffer 재사용 변경 후 debug/release 각각 코어 규칙 19개·독립 참조 모델 1개·과거 JSON fixture 호환성 2개가 통과했다. all-target clippy, 소유 파일 rustfmt, release main/benchmark 빌드도 통과했다. 조율된 A 비교 3쌍에서 평균 할당 14.999→14.332회/명령을 확인했으며 zero allocation에는 미달한다. [원본·호환성·비교 기록](allocation-investigation.md), [성능과 버전 구분](performance.md).
+19:04 KST 검증: Order.status buffer 재사용 변경 후 debug/release 각각 코어 규칙 19개·독립 참조 모델 1개·과거 JSON fixture 호환성 2개가 통과했다. all-target clippy, 소유 파일 rustfmt, release main/benchmark 빌드도 통과했다. 조율된 A 비교 3쌍에서 평균 할당 14.999→14.332회/명령을 확인했으며 zero allocation에는 미달한다. [원본·호환성·비교 기록](allocation-investigation.md), [성능과 버전 구분](performance.md).
+
+23:08 KST 후속: 결과의 status/code/message에 정적 문자열을 빌리는 [Cow 변경](result-allocation.md)을 적용했다. 같은6,000개 입력의 격리 실험은14.331→8.331회/명령을 확인했고, 양방향 저장 데이터·저널 재생과 운영 Rust48개/API10개 회귀를 통과했다. JSON에서 복원한 기존 문자열은 소유 형태로 유지하며 무할당·처리량 개선을 주장하지 않는다.
 
 ## 상태와 순서
 

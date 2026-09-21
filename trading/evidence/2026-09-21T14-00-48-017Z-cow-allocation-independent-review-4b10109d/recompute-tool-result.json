@@ -1,0 +1,14 @@
+{
+  "tool": "exec_command",
+  "arguments": {
+    "cmd": "node 'trading/evidence/2026-09-21T14-00-48-017Z-cow-allocation-independent-review-4b10109d/recompute.mjs'",
+    "workdir": "C:\\project\\hackton-2026-tbd"
+  },
+  "result": {
+    "chunk_id": "33007e",
+    "wall_time_seconds": 0.8950417,
+    "exit_code": 0,
+    "original_token_count": 390,
+    "output": "{\n  \"status\": \"passed\",\n  \"raw_rows\": 6784,\n  \"raw_sha256\": \"78b644f02b270534b2ac7406e6521ace7a09c1b8df9feab1e523ff2135beea7e\",\n  \"normal\": {\n    \"commands\": 6000,\n    \"baseline_allocations\": 85987,\n    \"baseline_reallocations\": 1,\n    \"candidate_allocations\": 49987,\n    \"candidate_reallocations\": 1,\n    \"baseline_ops\": 85988,\n    \"candidate_ops\": 49988,\n    \"baseline_ops_per_command\": 14.331333333333333,\n    \"candidate_ops_per_command\": 8.331333333333333,\n    \"reduction_ops\": 36000,\n    \"reduction_percent\": 41.86630692654789,\n    \"baseline_requested_bytes\": 5034232,\n    \"candidate_requested_bytes\": 4446232,\n    \"requested_bytes_reduction\": 588000,\n    \"requested_bytes_reduction_per_command\": 98,\n    \"candidate_min_ops\": 4,\n    \"candidate_max_ops\": 23,\n    \"candidate_zero_ops_rows\": 0,\n    \"fills\": 2000,\n    \"trace_request_account_sequence_and_fill_pattern_matches\": true,\n    \"realloc_rows\": [\n      {\n        \"request_id\": \"bench-1024-0\",\n        \"baseline_counts\": {\n          \"allocations\": 13,\n          \"reallocations\": 1,\n          \"requested_bytes\": 983231\n        },\n        \"candidate_counts\": {\n          \"allocations\": 7,\n          \"reallocations\": 1,\n          \"requested_bytes\": 983133\n        }\n      }\n    ]\n  },\n  \"full_core\": {\n    \"byte_equal\": true,\n    \"bytes\": 6684357,\n    \"sha256\": \"18ef7fd9c190d331e33a1dbca7e6741b8dba7c89eae805079a6cda94cf2e16ca\",\n    \"request_count\": 12128,\n    \"fresh_clone_delta_matches_three_per_cached_result\": true,\n    \"clone_measurements_have_no_individual_raw_rows\": true\n  },\n  \"findings\": []\n}\n"
+  }
+}

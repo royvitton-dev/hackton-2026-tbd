@@ -1,0 +1,19 @@
+{
+  "all_13_trace_request_lookup_and_retry_results_equal": true,
+  "all_full_core_json_utf8_bytes_equal": true,
+  "allocation_tps_or_zero_allocation_claim": false,
+  "backward_replayed_records": 9,
+  "classification": "offline isolated library correctness only; no allocation or service timing measurement",
+  "command_seq": 11,
+  "fixture_trace_entries": 13,
+  "format": "v1 CRC framing with JSON payload; not bincode",
+  "forward_replayed_records": 9,
+  "initial_journal_records": 4,
+  "initial_snapshot_sequence": 4,
+  "journal_frames_byte_equal_and_unchanged_after_recovery": true,
+  "journal_records_after_drop_and_recovery": 13,
+  "only_snapshot4_unchanged": true,
+  "service_processes_started_or_controlled": false,
+  "suffix_processed_without_checkpoint_per_variant": 9,
+  "verified": true
+}

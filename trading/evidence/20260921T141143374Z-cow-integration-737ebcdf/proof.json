@@ -1,0 +1,212 @@
+{
+  "park_vite_sha256": "12E8C26386584B4B238DEB064A8D8EB156D296A2CA699D8F6A65F0D11CE8F0CC",
+  "api_fixture_pids_absent": true,
+  "at": "2026-09-21T14:12:22.7140916+00:00",
+  "source_hashes": [
+    {
+      "sha256": "714BA49E06155B3E245DED4DB5A089930B348BEA0348A3E490FBD6AC4CD8E8FA",
+      "file": "engine/src/core.rs"
+    },
+    {
+      "sha256": "B3B042BA9DBC2B0FDA95ECCCCBE29301C7016D143889EF7DEDBFC0D1271A88D7",
+      "file": "engine/src/model.rs"
+    },
+    {
+      "sha256": "4AD009DF92A381897472A9F9A8EC3C0A15DDACF64559212137865F1D4B19202A",
+      "file": "engine/src/storage.rs"
+    },
+    {
+      "sha256": "6794C4A79D29E5A19868B49D98A087D158032C0B2FBF774D2982902CCBEAC038",
+      "file": "engine/src/lib.rs"
+    },
+    {
+      "sha256": "5A548ED11C6A0BAB673E67F02E6C47B6EE332E0111951657611232B88FE71471",
+      "file": "engine/tests/core_status_compatibility.rs"
+    },
+    {
+      "sha256": "CC19627006E8CEF2293C146BC358A5DC7510694CE88D36E797E5B90D97FF7BA9",
+      "file": "engine/Cargo.lock"
+    }
+  ],
+  "manifest_sha256": "99714647EF8C859336B318F0939179A51CDB90439908A160E0A0A2A4561EE53E",
+  "binaries": [
+    {
+      "bytes": 3010798,
+      "file": "engine/target/release/leave-engine.exe",
+      "sha256": "65348C203D3DDF0A29CB3FA19ECA650347E4CD77308F2352F434212063896512"
+    },
+    {
+      "bytes": 600795,
+      "file": "engine/target/release/examples/core_bench.exe",
+      "sha256": "7CFD820A78D0F2CE1CAC442F5DA941E817E23E880E8CF0653A76C7C037DF1A86"
+    },
+    {
+      "bytes": 17369063,
+      "file": "engine/target/debug/examples/aged_recovery.exe",
+      "sha256": "D2C8DD9ED9315D6859BE5350F5B2E8C909594735D6000A4C7A0C30966AD14D43"
+    }
+  ],
+  "protected_processes": [
+    {
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "StartTimeUtc": "2026-09-21T10:05:21.4715478Z"
+    },
+    {
+      "Id": 4220,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T12:52:39.7804367Z"
+    },
+    {
+      "Id": 4928,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3890023Z"
+    },
+    {
+      "Id": 5412,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5355012Z"
+    },
+    {
+      "Id": 6128,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5945324Z"
+    },
+    {
+      "Id": 7916,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4762676Z"
+    },
+    {
+      "Id": 7936,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3037571Z"
+    },
+    {
+      "Id": 12172,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4485053Z"
+    },
+    {
+      "Id": 15272,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5047340Z"
+    },
+    {
+      "Id": 16068,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3612932Z"
+    },
+    {
+      "Id": 17444,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.2784404Z"
+    },
+    {
+      "Id": 18184,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:54.8395149Z"
+    },
+    {
+      "Id": 20484,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5665942Z"
+    },
+    {
+      "Id": 20776,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3346242Z"
+    },
+    {
+      "Id": 20940,
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4216442Z"
+    },
+    {
+      "Id": 15744,
+      "ProcessName": "powershell",
+      "StartTimeUtc": "2026-09-21T10:05:54.9077476Z"
+    },
+    {
+      "Id": 16840,
+      "ProcessName": "pwsh",
+      "StartTimeUtc": "2026-09-21T13:17:58.3172929Z"
+    }
+  ],
+  "status": "passed_after_wrapper_path_fix",
+  "api_engine_exits": [
+    {
+      "at": "2026-09-21T14:07:39.767Z",
+      "event": "engine_exit",
+      "code": 0,
+      "signal": null,
+      "force": false,
+      "fallback": false
+    },
+    {
+      "at": "2026-09-21T14:07:40.407Z",
+      "event": "engine_exit",
+      "code": 0,
+      "signal": null,
+      "force": false,
+      "fallback": false
+    },
+    {
+      "at": "2026-09-21T14:07:40.661Z",
+      "event": "engine_exit",
+      "code": null,
+      "signal": "SIGKILL",
+      "force": true,
+      "fallback": false
+    },
+    {
+      "at": "2026-09-21T14:07:45.971Z",
+      "event": "engine_exit",
+      "code": 0,
+      "signal": null,
+      "force": false,
+      "fallback": false
+    },
+    {
+      "at": "2026-09-21T14:07:46.144Z",
+      "event": "engine_exit",
+      "code": 0,
+      "signal": null,
+      "force": false,
+      "fallback": false
+    }
+  ],
+  "api_fixture_pids": [
+    18076,
+    20668,
+    15620,
+    16232,
+    17112,
+    12848,
+    13624
+  ],
+  "checkpoint_fixture_exits": [
+    {
+      "index": 0,
+      "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-07-37-280Z-api-471e5ffa\\checkpoint-publication-failure\\data",
+      "stdout": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-07-37-280Z-api-471e5ffa\\checkpoint-publication-failure\\engine-0.stdout.log",
+      "stderr": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-07-37-280Z-api-471e5ffa\\checkpoint-publication-failure\\engine-0.stderr.log",
+      "pid": 12848,
+      "code": 1,
+      "signal": null,
+      "closed_at": "2026-09-21T14:07:46.789Z"
+    },
+    {
+      "index": 1,
+      "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-07-37-280Z-api-471e5ffa\\checkpoint-publication-failure\\preserved-data",
+      "stdout": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-07-37-280Z-api-471e5ffa\\checkpoint-publication-failure\\engine-1.stdout.log",
+      "stderr": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-07-37-280Z-api-471e5ffa\\checkpoint-publication-failure\\engine-1.stderr.log",
+      "pid": 13624,
+      "code": 0,
+      "signal": null,
+      "closed_at": "2026-09-21T14:07:46.976Z"
+    }
+  ],
+  "current_branch": "main",
+  "doc_local_links": 134
+}

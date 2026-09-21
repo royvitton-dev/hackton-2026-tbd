@@ -1,0 +1,6 @@
+[workspace]
+members = ["baseline","candidate","probe"]
+resolver = "3"
+[profile.release]
+lto = "thin"
+codegen-units = 1
