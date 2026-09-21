@@ -15,11 +15,13 @@ import {enrichObjects} from './semantic-objects.mjs';
 import {detectParking,matchReviewedParking} from '../src/core/detect-parking.js';
 import {daecheonSvg,DAE_SCALE} from './daecheon.mjs';
 import {dongtanSvg,applyDongtanReview} from './dongtan.mjs';
+import {connectChangdongRamp,multilevelPlan,multilevelSvg} from './ramps.mjs';
 import {runVision} from './vision.mjs';
 import {applyRasterEvidence} from '../src/core/raster-evidence.js';
 const root=fileURLToPath(new URL('../public/',import.meta.url)),sha=b=>createHash('sha256').update(b).digest('hex');
 await mkdir(path.join(root,'generated'),{recursive:true});
 await writeFile(path.join(root,'sources/integration-lab.svg'),fixtureSvg());
+await writeFile(path.join(root,'sources/multilevel-lab.svg'),multilevelSvg());
 await writeFile(path.join(root,'sources/neonadeuli-layers.svg'),neonadeuliSvg());
 await writeFile(path.join(root,'sources/daecheon-layers.svg'),daecheonSvg());
 await writeFile(path.join(root,'sources/dongtan-1f-layers.svg'),dongtanSvg());
@@ -29,6 +31,7 @@ const sites=JSON.parse(await readFile(path.join(root,'sources/catalog.json')));
 runVision(['scripts/analyze_drawings.py']);
 const radioStationIds=new Set();
 sites.push({id:'integration-lab',name:'도로 → 주차·EV · 검증용 시나리오',buildingType:'test',sourceAsset:{file:'sources/integration-lab.svg'},annotation:'sources/integration-lab.svg',synthetic:true});
+sites.push({id:'multilevel-lab',name:'층간 경사로·후진 주차 · 검증용 시나리오',buildingType:'test',sourceAsset:{file:'sources/multilevel-lab.svg'},synthetic:true});
 for(const site of sites){
   if(site.siteId==='10000901')site.annotation='sources/neonadeuli-layers.svg';
   if(site.id==='parking-131601-0')site.annotation='sources/daecheon-layers.svg';
@@ -36,7 +39,8 @@ for(const site of sites){
   const bytes=await readFile(path.join(root,site.sourceAsset.file));
   if(site.sourceAsset.sha256&&sha(bytes)!==site.sourceAsset.sha256)throw Error(`Source hash mismatch: ${site.id}`);
   let plan,pixels;
-  if(site.annotation)plan=analyzeSvg(await readFile(path.join(root,site.annotation),'utf8'));
+  if(site.id==='multilevel-lab')plan=multilevelPlan();
+  else if(site.annotation)plan=analyzeSvg(await readFile(path.join(root,site.annotation),'utf8'));
   else{
     const {data,info}=await sharp(bytes).resize({width:1300,height:1000,fit:'inside',withoutEnlargement:true}).ensureAlpha().raw().toBuffer({resolveWithObject:true});
     pixels={data,width:info.width,height:info.height};
@@ -55,10 +59,11 @@ for(const site of sites){
   }
   plan.id=site.id;plan.name=site.name;plan.sourceAsset=site.sourceAsset.file;
   plan=annotateParking(plan,site);
-  plan=enrichObjects(plan,site);
+  if(site.id!=='multilevel-lab')plan=enrichObjects(plan,site);
+  if(site.id==='changdong-b2')plan=connectChangdongRamp(plan,site);
   if(site.id==='parking-168780-0'){
     plan=applyDongtanReview(plan,site);
-    site.parkingEvidence={floor:'1F',note:'도면 치수선으로 축척 보정 · 서측/동측 차로별 일방통행 안내. 주차면 앞 도착까지만 제공하며 층간 램프는 아직 연결하지 않았습니다.'};
+    site.parkingEvidence={floor:'1F',note:'도면 치수선으로 축척 보정 · 서측/동측 차로별 일방통행 안내. 주차면 앞 안내와 조건에 맞는 구획 내부 주차를 제공합니다. 상층 차량 도면이 없어 동탄 층간 연결은 보류합니다.'};
   }
   if(site.siteId==='10000901')plan.parkingAccess=plan.spaces.map((s,i)=>({spaceId:s.id,nodeId:i===0?'entrance':i===1?'P2':'P3',source:site.source,method:'source-reviewed-adjacent-lane',surveyed:false}));
   if(site.id==='parking-131601-0'){
@@ -69,7 +74,7 @@ for(const site of sites){
     plan.wallEvidence={method:'source-reviewed-solid-and-glazed-wall-segments',source:site.source,sourcePixels:{width:2000,height:1513},solid:plan.walls.filter(w=>w.material!=='glazing').length,glazing:plan.walls.filter(w=>w.material==='glazing').length,doorOpenings:'preserved',surveyed:false};
     site.parkingEvidence={floor:'1F',note:'고해상도 원본의 벽체·유리면·문 개구부와 주차 차로를 대조했습니다. 도면 축척 막대 적용 · 현장 출입·현재 장애물 미확인.'};
   }
-  if(site.synthetic){plan.spaces[1].accessible=true;plan.spaces[1].label='장애인 전용 · 합성 검증';}
+  if(site.id==='integration-lab'){plan.spaces[1].accessible=true;plan.spaces[1].label='장애인 전용 · 합성 검증';}
   if(site.id==='changdong-b2')plan.sourceCrop={x:550/1800,y:330/1350,width:1030/1800,height:830/1350};
   if(!site.synthetic){
     const analysis=JSON.parse(await readFile(path.join(root,'analysis',site.id,'analysis.json')));

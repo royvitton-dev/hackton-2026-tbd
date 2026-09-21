@@ -19,7 +19,7 @@ it('rejects turns a car cannot negotiate instead of rotating in place',()=>{
   const a={x:-20,z:0},b={x:0,z:0},c={x:0,z:20};const t=turn(a,b,c,5);
   expect(t.tangent).toBeCloseTo(5);expect(t.points[0].x).toBeCloseTo(-5);expect(t.points.at(-1).z).toBeCloseTo(5);
   for(let i=1;i<t.points.length;i++)expect(distance(t.points[i-1],t.points[i])).toBeLessThan(.26);
-  expect(turn(a,b,c,21)).toBeNull();expect(turn(a,b,a,5)).toBeNull();expect(turn(a,b,{x:20,z:0},5).points).toEqual([]);expect(turn(a,a,b,5)).toBeNull();expect(turn(a,b,{x:0,y:3,z:20},5)).toBeNull();
+  expect(turn(a,b,c,21)).toBeNull();expect(turn(a,b,a,5)).toBeNull();expect(turn(a,b,{x:20,z:0},5).points).toEqual([]);expect(turn(a,a,b,5)).toBeNull();expect(turn(a,b,{x:0,y:3,z:20},5).points.at(-1).y).toBeCloseTo(.75);
   expect(route(plan(),'road-west','ev',{vehicle:{turnRadius:30}})).toBeNull();
 });
 it('reroutes around fire and never uses a blocked assembly point',()=>{

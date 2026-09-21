@@ -46,7 +46,7 @@ test('actual Naver-located building routes from acquired OSM road through the dr
   await page.locator('#speed').selectOption('4');await page.locator('#play').click();await expect(page.locator('#play')).toHaveText('✓ 도착했습니다',{timeout:15000});expect(await page.evaluate(()=>window.__parking.state.pose.arrived)).toBe(true);
 });
 test('parks inside a source bay with suitable dimensions and previews a proposed charger destination',async({page})=>{
-  await open(page,'10000901-0');await page.locator('#destination').selectOption('parking:bay-P2');await expect(page.locator('#play')).toBeDisabled();await expect(page.locator('#route-message')).toContainText('전진 주차 경로를 찾지 못했습니다');
+  await open(page,'10000901-0');await page.locator('#parking-mode').selectOption('forward');await page.locator('#destination').selectOption('parking:bay-P2');await expect(page.locator('#play')).toBeDisabled();await expect(page.locator('#route-message')).toContainText('구획 내부 경로를 찾지 못했습니다');
   await page.locator('#compact-vehicle').click();await expect(page.locator('#play')).toBeEnabled();expect(await page.evaluate(()=>window.__parking.state.route.parking.spaceId)).toBe('bay-P2');
   expect(await page.evaluate(()=>window.__parking.scene.world.children.filter(o=>o.userData.kind==='parked-car'&&o.visible).length)).toBe(2);await screenshot(page,'parking-bay.png');
   await page.locator('#speed').selectOption('4');await page.locator('#play').click();await expect(page.locator('#play')).toHaveText('✓ 도착했습니다',{timeout:15000});
@@ -131,7 +131,7 @@ test('follows Dongtan one-way aisles and offers an explicit origin change for th
   await open(page,'parking-168780-0');await expect(page.locator('#play')).toBeEnabled();
   await expect(page.locator('#start-node')).toHaveValue('west-deck-start');await expect(page.locator('#destination')).toHaveValue('approach:west-inner-8-1');
   const initial=await page.evaluate(()=>{const {plan,route}=window.__parking.state;return {access:plan.parkingAccess.length,walls:plan.walls.length,objects:plan.objects.length,ids:route.ids,protectedOptions:[...document.querySelector('#destination').options].some(o=>/장애인|전용 표시/.test(o.text))};});
-  expect(initial).toMatchObject({access:13,walls:48,objects:23,protectedOptions:false});
+  expect(initial).toMatchObject({access:13,walls:48,objects:27,protectedOptions:false});
   await page.locator('#destination').selectOption('approach:east-inner-6-1');await expect(page.locator('#play')).toBeDisabled();
   await expect(page.locator('#route-message')).toContainText('동측 1층 차로');await expect(page.locator('#route-origin')).toBeVisible();
   expect(await page.evaluate(()=>window.__parking.state.route)).toBeNull();await expect(page.locator('#start-node')).toHaveValue('west-deck-start');

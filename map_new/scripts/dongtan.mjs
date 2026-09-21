@@ -39,7 +39,7 @@ export function dongtanSvg(){
   '<line id="west-exit" data-kind="lane" data-oneway="true" x1="390" y1="554" x2="390" y2="704" data-width="3.8"/>',
   '<line id="east-deck" data-kind="lane" data-oneway="true" x1="1245" y1="252" x2="1245" y2="550" data-width="5.4"/>',
   '<circle id="west-deck-start" data-kind="target" data-role="entrance" data-label="서측 1층 차로 · 출구 방향" cx="390" cy="268"/>',
-  '<circle id="west-vehicle-exit" data-kind="target" data-role="building" data-label="서측 차량 출구 앞" cx="390" cy="678"/>',
+  '<circle id="west-vehicle-exit" data-kind="target" data-role="vehicle-exit" data-label="서측 차량 출구 앞" cx="390" cy="678"/>',
   '<circle id="east-deck-start" data-kind="target" data-role="entrance" data-label="동측 1층 차로 · 진입 램프 이후" cx="1245" cy="282"/>');
  for(const s of dongtanBays()){
   tags.push(`<rect id="${s.id}" data-kind="space" data-role="parking" data-label="${s.label}" data-accessible="${!!s.accessible}" data-reserved="${!!s.reserved}" x="${s.x-s.width/2}" y="${s.z-s.depth/2}" width="${s.width}" height="${s.depth}"/>`);
@@ -62,8 +62,8 @@ export function applyDongtanReview(plan,site){
  plan.wallEvidence={method:'source-reviewed-core-walls-and-parapets',source,sourcePixels:{width:1536,height:822},solid:plan.walls.length,glazing:0,doorOpenings:'preserved',surveyed:false,note:'계단·PS·승강기 코어와 외곽 벽·난간을 대조했습니다. 벽 높이 2.8m·난간 1.1m는 표현 가정입니다.'};
  plan.routingEvidence={method:'source-reviewed-one-way-arrows',source,starts:['west-deck-start','east-deck-start'],note:'서측·동측 1층 차로의 화살표 방향을 따릅니다. 중앙 OPEN 공간을 가로지르지 않으며 높이가 다른 진입 램프·층간 연결은 아직 안내하지 않습니다.'};
  plan.parkingAnnotation={method:'source-reviewed-native-pixel-rectangles',source,scale:'printed-grid-dimensions',vehicleDisplay:'illustrative-not-live-occupancy'};
- plan.semanticCoverage={drawingDeclaredParking:87,modeledParking:31,method:'source-reviewed-annotations',unresolved:['원본 표기 87대와 이 평면에서 확인한 31구획을 구분','전용 원형 표시 6면의 현재 용도 미확인','층간 경사로 연결·게이트 운영·후진 주차 미검증']};
+ plan.semanticCoverage={drawingDeclaredParking:87,modeledParking:31,method:'source-reviewed-annotations',unresolved:['원본 표기 87대와 이 평면에서 확인한 31구획을 구분','전용 원형 표시 6면의 현재 용도 미확인','상층 차량 도면 미확보·게이트 운영 미확인']};
  plan.reviewCorrections=[{source,asset,kind:'source-reviewed-one-way-aisles-and-core-walls',note:'치수선·주차선·중앙 OPEN 공간의 투영선을 벽에서 제외했습니다. PS는 설비 샤프트로, 남측 승강기 2곳은 실제 코어 위치로 수정했습니다.'}];
- plan.warnings=['도면의 치수선으로 축척을 보정했습니다. 현장 실측·통행 허용·게이트 운영은 미확인입니다.','선택한 주차면 앞 차로까지 안내합니다. 주차 조작과 층간 경사로 이동은 포함하지 않습니다.'];
+ plan.warnings=['도면의 치수선으로 축척을 보정했습니다. 현장 실측·통행 허용·게이트 운영은 미확인입니다.','주차 방식에서 전진·후진 입차를 선택할 수 있습니다. 상층 차량 도면이 없어 동탄 층간 연결은 제공하지 않습니다.'];
  return plan;
 }

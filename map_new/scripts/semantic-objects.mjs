@@ -11,7 +11,7 @@ export function enrichObjects(plan,site){
   for(const [id,x,z,w,d,label] of [['electric',686,451,202,137,'전기실'],['mechanical',684,669,216,64,'기계실'],['management',938,518,159,62,'관리실'],['hvac',1400,567,289,65,'공조실'],['water',691,942,129,110,'저수조 · 소화수조'],['rainwater',719,1051,139,58,'우수조점검층'],['purification',737,1114,109,51,'정화조점검층']])add('room',id,x,z,w,d,label);
   for(const [id,x,z,w,d] of [['stairs-a',738,563,20,33],['stairs-b',705,767,20,35],['stairs-c',1340,777,19,35]])add('stairs',id,x,z,w,d,'계단',{steps:20});
   for(const [id,x,z] of [['lift-a',762,564],['lift-b',740,757],['lift-c',1383,781]])add('lift',id,x,z,25,27,'승강기');
-  for(const [id,x,z,angle] of [['door-a',791,579,0],['door-b',752,811,Math.PI/2],['door-c',1322,812,Math.PI/2]])add('door',id,x,z,13,3,'코어 출입문',{height:2.2,angle});
+  for(const [id,x,z,angle] of [['door-a',791,579,0],['door-b',752,811,Math.PI/2],['door-c',1322,812,Math.PI/2]])add('door',id,x,z,13,3,'코어 출입문',{height:2.2,angle,openAngle:Math.PI/2});
   const rampPath=[[1022,488,3.3],[1116,510,2.2],[1192,535,1.1],[1210,579,0]].map(([x,z,y])=>({...at(x,z),y}));
   objects.push({kind:'ramp',id:'vehicle-ramp',...at(1130,530),width:5.2,depth:12,height:3.3,label:'차량 램프',path:rampPath,evidence:{source:site.source,location:'source-traced',height:'assumed'}});
   const extra=[];const bay=(id,x,z,w=27,d=53,flags={})=>extra.push({id,kind:'parking',...at(x,z),width:w*.09,depth:d*.09,label:id,...flags});
@@ -67,6 +67,7 @@ export function enrichObjects(plan,site){
   const add=(kind,id,x,z,w,d,label,extra={})=>objects.push({kind,id,x:(x-768)*scale,z:(z-411)*scale,width:w*scale,depth:d*scale,height:kind==='room'?.04:2.8,label,...extra,evidence:{source:site.source,asset:site.sourceAsset.file,sourcePixel:{x,y:z},location:'source-traced-estimate',height:'assumed'}});
   for(const [i,[x,z]] of [[269,259],[269,495],[1368,259],[1368,495]].entries())add('stairs','dongtan-stairs-'+i,x,z,26,36,'계단',{steps:20});
   add('lift','dongtan-lift-0',269,585.5,26,25,'서측 승강기');add('lift','dongtan-lift-1',1368,583.5,26,27,'동측 승강기');
+  for(const [i,[x,z]] of [[269,283],[269,515],[1368,283],[1368,515]].entries())add('door','dongtan-door-'+i,x,z,18,1,'계단 출입문',{height:2.2,openAngle:Math.PI/2});
   add('room','dongtan-ps-west',262,434.5,20,59,'서측 PS · 설비 샤프트');add('room','dongtan-ps-east',1374.5,434.5,21,59,'동측 PS · 설비 샤프트');
   for(const [i,[x,z]] of [370,467].flatMap(z=>[254,340,502,1084,1206,1295,1383].map(x=>[x,z])).entries())add('column','dongtan-column-'+i,x,z,6,6,'기둥 '+(i+1));
   add('room','dongtan-open',760,421,490,265,'OPEN · 하부 공간 (통행 차로 아님)');

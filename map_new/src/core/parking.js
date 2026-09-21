@@ -2,7 +2,7 @@ import {route,turn,DEFAULT_VEHICLE} from './navigation.js';
 import {distance,project} from './geometry.js';
 
 // A parking maneuver is offered only for a source-reviewed lane/bay connection.
-// This is a bounded forward maneuver search, not a survey or a reverse planner.
+// The forward solver is also used by the forward/reverse maneuver planner.
 import {parkingBodyClear} from './collision.js';
 export {parkingBodyClear} from './collision.js';
 export function parkingApproachRoute(plan,startId,spaceId,options={}){
@@ -17,6 +17,8 @@ function simplify(points){
   if(result.length&&distance(result.at(-1),p)<.001)continue;
   while(result.length>1){
    const a=result.at(-2),b=result.at(-1),ab=distance(a,b),bc=distance(b,p);
+   const runA=Math.hypot(b.x-a.x,b.z-a.z),runB=Math.hypot(p.x-b.x,p.z-b.z);
+   if(Math.abs(((b.y||0)-(a.y||0))/runA-((p.y||0)-(b.y||0))/runB)>.0001)break;
    if(Math.abs((b.x-a.x)*(p.z-b.z)-(b.z-a.z)*(p.x-b.x))/(ab*bc)>.03||(b.x-a.x)*(p.x-b.x)+(b.z-a.z)*(p.z-b.z)<=0)break;
    result.pop();
   }
@@ -74,7 +76,8 @@ export function parkingRoute(plan,startId,spaceId,options={}){
  // The connector has exactly the bay's short-axis width; it never borrows a
  // neighboring parking bay to make a turning circle appear feasible.
  lo[across]=space[across]-Math.min(space.width,space.depth)/2;hi[across]=space[across]+Math.min(space.width,space.depth)/2;
- const contains=p=>Math.abs((p.y||0)-(space.y||0))<.1&&p.x>=lo.x&&p.x<=hi.x&&p.z>=lo.z&&p.z<=hi.z||lanes.some(e=>project(p,nodes.get(e.from),nodes.get(e.to)).distance<=e.width/2);
+ const otherBays=plan.spaces.filter(s=>s.id!==spaceId&&['parking','ev'].includes(s.kind));
+ const contains=p=>!otherBays.some(s=>Math.abs((s.y||0)-(p.y||0))<.2&&Math.abs(p.x-s.x)<s.width/2-.015&&Math.abs(p.z-s.z)<s.depth/2-.015)&&(Math.abs((p.y||0)-(space.y||0))<.1&&p.x>=lo.x&&p.x<=hi.x&&p.z>=lo.z&&p.z<=hi.z||lanes.some(e=>{const q=project(p,nodes.get(e.from),nodes.get(e.to));return q.distance<=e.width/2&&Math.abs(q.y-(p.y||0))<.65;}));
  const raw=simplify(base.ids.map(id=>nodes.get(id)));
  for(const approachOffset of [0,.3,.6,.9,1.2,1.5,1.8,2.1])for(const offset of [0,slack*.45,-slack*.45,slack*.9,-slack*.9]){
   const goal={x:space.x,y:space.y||0,z:space.z};goal[across]+=offset;

@@ -40,8 +40,8 @@
     "modelFile": "generated/changdong-b2.json",
     "statistics": {
       "walls": 23,
-      "nodes": 11,
-      "edges": 12,
+      "nodes": 16,
+      "edges": 17,
       "spaces": 101,
       "objects": 87,
       "accessible": 4,
@@ -51,7 +51,7 @@
       "matchedParking": 38
     },
     "routingReady": true,
-    "modelHash": "adc726403b4b3fa80bf4a60ca2df96aad5e660be2091d8d66c49576dc824bfab"
+    "modelHash": "ddf48647a7c3e1fe62e7f036c03fc031d41a0371e6a30a016d91d3cbf5c34b04"
   },
   {
     "id": "10000901-0",
@@ -3780,7 +3780,7 @@
     },
     "parkingEvidence": {
       "floor": "1F",
-      "note": "도면 치수선으로 축척 보정 · 서측/동측 차로별 일방통행 안내. 주차면 앞 도착까지만 제공하며 층간 램프는 아직 연결하지 않았습니다."
+      "note": "도면 치수선으로 축척 보정 · 서측/동측 차로별 일방통행 안내. 주차면 앞 안내와 조건에 맞는 구획 내부 주차를 제공합니다. 상층 차량 도면이 없어 동탄 층간 연결은 보류합니다."
     },
     "scaleStatus": "estimated",
     "metersAcross": 123.73046875,
@@ -3824,7 +3824,7 @@
       "nodes": 19,
       "edges": 17,
       "spaces": 31,
-      "objects": 23,
+      "objects": 27,
       "accessible": 12,
       "ocrLabels": 40,
       "triangles": 576,
@@ -3832,7 +3832,7 @@
       "matchedParking": 9
     },
     "routingReady": true,
-    "modelHash": "9fd1014a07e1220a5df44fa9d266f762477a33f20e46aaca9256e8eda7678108",
+    "modelHash": "cc38ac9d7cfab485e71fa0a0edd6f87cc8d9ed0d08e6c19e3b9bcba05c0c9b33",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -5703,5 +5703,29 @@
     },
     "routingReady": true,
     "modelHash": "477a7a0e5e1a98fd53849d03faae522319ec584c2232ef7b715961ea78cc8b92"
+  },
+  {
+    "id": "multilevel-lab",
+    "name": "층간 경사로·후진 주차 · 검증용 시나리오",
+    "buildingType": "test",
+    "sourceAsset": {
+      "file": "sources/multilevel-lab.svg"
+    },
+    "synthetic": true,
+    "modelFile": "generated/multilevel-lab.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 9,
+      "edges": 8,
+      "spaces": 1,
+      "objects": 4,
+      "accessible": 0,
+      "ocrLabels": 0,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": true,
+    "modelHash": "f7c50cf4da7e80981cdebaf3053f6c6d2697361d5e8e50b7a7bb8c59866936c2"
   }
 ]
