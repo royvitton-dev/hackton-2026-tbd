@@ -1,0 +1,211 @@
+{
+  "config": {
+    "people": [
+      {
+        "id": "p1",
+        "name": "모바일 A",
+        "label": "모바일 A",
+        "count": 2,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p2",
+        "name": "모바일 B",
+        "label": "모바일 B",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p3",
+        "name": "모바일 C",
+        "label": "모바일 C",
+        "count": 1,
+        "color": "#ff82af"
+      }
+    ],
+    "total": 4,
+    "rule": "nth",
+    "target": 3,
+    "mode": "player",
+    "mapId": "orbit",
+    "boardMotion": true,
+    "finishMode": "winner"
+  },
+  "seed": 398185868,
+  "result": {
+    "roundId": "c9012111-2755-45ae-a83e-8922de208a62",
+    "state": "complete",
+    "seed": 398185868,
+    "time": 42.59351239036086,
+    "target": 3,
+    "total": 4,
+    "winner": {
+      "id": "p3-b1",
+      "participantId": "p3",
+      "name": "모바일 C",
+      "label": "모바일 C",
+      "color": "#ff82af",
+      "number": 1,
+      "rank": 3,
+      "time": 42.59351239036086,
+      "exitId": 1,
+      "exitLabel": "골인",
+      "criterion": "arrival",
+      "crossedFinish": true
+    },
+    "completionReason": "target-arrived",
+    "finishOrder": [
+      {
+        "id": "p2-b1",
+        "participantId": "p2",
+        "name": "모바일 B",
+        "label": "모바일 B",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 1,
+        "time": 19.571377528860957,
+        "exitId": 1,
+        "exitLabel": "골인"
+      },
+      {
+        "id": "p1-b2",
+        "participantId": "p1",
+        "name": "모바일 A",
+        "label": "모바일 A",
+        "color": "#c6ff58",
+        "number": 2,
+        "rank": 2,
+        "time": 31.142920567488943,
+        "exitId": 1,
+        "exitLabel": "골인"
+      },
+      {
+        "id": "p3-b1",
+        "participantId": "p3",
+        "name": "모바일 C",
+        "label": "모바일 C",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 3,
+        "time": 42.59351239036086,
+        "exitId": 1,
+        "exitLabel": "골인"
+      }
+    ],
+    "assists": 2,
+    "returns": 1,
+    "returnClosed": false,
+    "motion": {
+      "enabled": true,
+      "active": true,
+      "axis": "x",
+      "cycle": 10,
+      "phase": 0.1319552420393598,
+      "roll": -0.014353904270829282,
+      "pitch": 0,
+      "offsetX": 3.8277078055544753,
+      "offsetY": 0,
+      "forceX": 16.506989911453672,
+      "forceY": 0,
+      "nextIn": 0
+    },
+    "deviceStats": {
+      "captures": 5,
+      "launches": 3,
+      "releases": 2
+    },
+    "devices": [
+      {
+        "id": "orbit-magnet-0",
+        "kind": "magnet",
+        "x": 310,
+        "y": 1160,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "orbit-magnet-1",
+        "kind": "magnet",
+        "x": 540,
+        "y": 1760,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "orbit-cannon-2",
+        "kind": "cannon",
+        "x": 310,
+        "y": 680,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "orbit-cannon-3",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1730,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 23.422377568596012,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      }
+    ],
+    "balls": [
+      {
+        "id": "p1-b1",
+        "x": 570.1815402489866,
+        "y": 1623.713736348124,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 1
+      },
+      {
+        "id": "p1-b2",
+        "x": 252.68380220259488,
+        "y": 2150,
+        "finished": true,
+        "rank": 2,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p3-b1",
+        "x": 238.41635848166035,
+        "y": 2150,
+        "finished": true,
+        "rank": 3,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p2-b1",
+        "x": 241.2955548897997,
+        "y": 2150,
+        "finished": true,
+        "rank": 1,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      }
+    ]
+  },
+  "lotto": null
+}
