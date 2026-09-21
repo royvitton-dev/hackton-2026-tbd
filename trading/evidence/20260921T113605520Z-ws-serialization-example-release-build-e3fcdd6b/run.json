@@ -1,0 +1,15 @@
+{
+  "command": "cargo",
+  "exit_code": 0,
+  "run_id": "20260921T113605520Z-ws-serialization-example-release-build-e3fcdd6b",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine",
+  "ended_at": "2026-09-21T11:36:23.1158465Z",
+  "status": "passed",
+  "args": [
+    "build",
+    "--release",
+    "--example",
+    "ws_serialization_bench"
+  ],
+  "started_at": "2026-09-21T11:36:05.5497041Z"
+}

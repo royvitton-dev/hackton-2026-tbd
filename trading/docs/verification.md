@@ -62,3 +62,9 @@
 작성자를 바꾼 [코어 독립 검토](review-core-independent.md)와 [저장소 독립 검토](review-storage-independent.md)에서 검토 범위 내 새 구체적 결함은 발견하지 못했다. 각 문서에 대상 소스 해시와 검토 경로·한계를 기록했으며, 새 부하 시험이나 형식 증명으로 주장하지 않는다.
 
 프로세스 강제 종료 결과로 OS·전원 장애까지 검증했다고 주장하지 않는다. 파일 sync 보장은 운영체제/저장장치의 구현에 의존하며 Windows 디렉터리 게시 내구성은 별도 한계다. 실제 외부 배포·실제 인사/금융 연결·실제 개인정보는 없다. 인터넷 성능(D)은 미실행이다. 화면 캡처는 실제 브라우저이며 가격·체결은 엔진에서만 생성한다.
+
+## 20:54 직렬화 변경 및 장시간 관찰 중간 결과
+
+[WS 직렬화 개선](ws-serialization.md): 중간 Value 제거 후 unit3, fmt, release, Clippy all-targets, 실제 API10 및 bounded WS regression을 통과했다. 새 binary SHA f518b95f…ef240. 416ACK/조회,16중복,289연속state,정상close1000/paused send_timeout 확인. 실험은 큰frame 할당·재할당15261→12를 입증하지만 wirebytes/전체API성능/과거고부하단절 개선은 입증하지 않는다. 독립서버·원시계측·소비자 검토 근거도 문서에 연결했다.
+
+[95분 관찰·세 번째 snapshot·응답 지연 검토](../evidence/20260921T114846131Z-95min-checkpoint-offline-b00ee776/checkpoint.md):1126표본/5702.731초에서12봇·ready·자산보존·WS누락/단절0. 봇ACK33544개 p9928.586ms/max958.159ms,거절15개전부ORDER_NOT_OPEN. 최대지연주변기록보존/원인미확정. snapshot53800 크기·해시·header순번확인은전체복구검증과구분. 메인엔진09bc로수행중이며새f518binary결과도6시간최종pass도아니다.

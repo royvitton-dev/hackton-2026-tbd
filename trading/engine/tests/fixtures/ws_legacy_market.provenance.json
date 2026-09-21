@@ -1,0 +1,9 @@
+{
+  "created_at": "2026-09-21T11:34:29.099Z",
+  "source": "evidence/2026-09-21T11-01-25-875Z-engine-load-8774ce30/states.json",
+  "source_sha256": "76f711ce2188b0040e1acbd45dc174e5434545cb6087626d2889bc1571b66d43",
+  "selected": "after-warmup",
+  "event_seq": 24,
+  "transformation": "Wrap the recorded HTTP MarketSnapshot in the existing state-frame envelope; no market fields changed. This is a protocol compatibility fixture, not a raw captured WS frame.",
+  "fixture_sha256": "43525c3729242d984a2d9b5f539f1f1593604537a05ea660453d17ee344876f1"
+}

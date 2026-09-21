@@ -1,0 +1,77 @@
+{
+  "sources": [
+    {
+      "path": "trading/engine/src/ws_frame.rs",
+      "sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e",
+      "bytes": 2632
+    },
+    {
+      "path": "trading/engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "bytes": 23831
+    },
+    {
+      "path": "trading/engine/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "bytes": 3066
+    },
+    {
+      "path": "trading/engine/tests/fixtures/ws_legacy_market.json",
+      "sha256": "43525c3729242d984a2d9b5f539f1f1593604537a05ea660453d17ee344876f1",
+      "bytes": 15370
+    },
+    {
+      "path": "trading/frontend/src/useExchange.ts",
+      "sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37",
+      "bytes": 10416
+    },
+    {
+      "path": "trading/frontend/src/protocol.ts",
+      "sha256": "f4b101c6b1fef86e64535ca54e7bed498114a354ecd886d6f28fd194b0a2dad8",
+      "bytes": 2893
+    },
+    {
+      "path": "trading/frontend/src/types.ts",
+      "sha256": "b78b5afb2a2e33bc9595fb6610d2fbf469ae9fe0e7abe98793e588170bd7bdb9",
+      "bytes": 2191
+    },
+    {
+      "path": "trading/frontend/src/api.ts",
+      "sha256": "bfde2aadebcc98e10e15df710384c3bc14bf3bb79a4c7f4cd2544602720e1c8a",
+      "bytes": 1434
+    },
+    {
+      "path": "trading/frontend/src/App.tsx",
+      "sha256": "b4520c87c913c4f5af42cdc1560c4211a9703280558913a7399ace589722a0bd",
+      "bytes": 42790
+    },
+    {
+      "path": "trading/frontend/src/protocol.test.ts",
+      "sha256": "befa542297e7502d5d2bacdbccdb4e7b62e1022ac55f3ec7ce5fa8d848c999a6",
+      "bytes": 3972
+    },
+    {
+      "path": "trading/bots/bot.mjs",
+      "sha256": "3d4e635b41bfa3c4a7efac098176ed4f6d0be36b7af5208899740dfaa51f2f7c",
+      "bytes": 5984
+    },
+    {
+      "path": "trading/scripts/observe.mjs",
+      "sha256": "0119804e55a36d9ecf5db33c5a413fd924cf25dba7ffd6c432677a202835b332",
+      "bytes": 9735
+    },
+    {
+      "path": "trading/scripts/observation-continuity.mjs",
+      "sha256": "81fd3c299c86ef284e0bcb6ebcfd5f8573111a0de4dda3c2c1709dacb085d86f",
+      "bytes": 1166
+    },
+    {
+      "path": "trading/scripts/summarize-observation.mjs",
+      "sha256": "a2cda49ab9beac97f0948de70e1477c2c5764dd8fe7b54a3c16c811ede345ea9",
+      "bytes": 8288
+    }
+  ],
+  "recorded_at": "2026-09-21T11:47:30.5057790Z",
+  "git_head": "5037d507cf971b5dedc1257d6c4e6b0b99059319",
+  "scope": "Independent static WS consumer compatibility review; no application execution, browser, builds, tests or service control"
+}

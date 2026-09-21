@@ -1,0 +1,46 @@
+[
+  {
+    "close_reply": "flushed",
+    "connected_ms": 31,
+    "connection_id": 1,
+    "event": "websocket_closed",
+    "last_event_seq": 128,
+    "reason": "peer_closed",
+    "skipped": null,
+    "stage": "receive",
+    "timestamp_ms": 1789991321688
+  },
+  {
+    "close_reply": null,
+    "connected_ms": 3060,
+    "connection_id": 3,
+    "event": "websocket_closed",
+    "last_event_seq": 136,
+    "reason": "send_timeout",
+    "skipped": null,
+    "stage": "state",
+    "timestamp_ms": 1789991324805
+  },
+  {
+    "close_reply": null,
+    "connected_ms": 5117,
+    "connection_id": 2,
+    "event": "websocket_closed",
+    "last_event_seq": 416,
+    "reason": "server_shutdown",
+    "skipped": null,
+    "stage": "shutdown",
+    "timestamp_ms": 1789991326842
+  },
+  {
+    "close_reply": null,
+    "connected_ms": 34,
+    "connection_id": 4,
+    "event": "websocket_closed",
+    "last_event_seq": 416,
+    "reason": "server_shutdown",
+    "skipped": null,
+    "stage": "shutdown",
+    "timestamp_ms": 1789991326842
+  }
+]

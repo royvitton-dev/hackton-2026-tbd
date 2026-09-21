@@ -1,6 +1,6 @@
 # 작업 체크포인트
 
-갱신: 2026-09-21 20:26 KST. 마감: 2026-09-22 09:00 KST (약12시간34분 남음).
+갱신: 2026-09-21 20:54 KST. 마감: 2026-09-22 09:00 KST (약12시간6분 남음).
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 경계·사용자 지시·Git
@@ -81,3 +81,19 @@
 - `/root/durability`의c7dd첫실행은harness공유오류배열문제로실패했고 `2026-09-21T11-18-03-976Z-ws-diagnostics-bb871788`에보존했다. peerClose1006도실제로관찰됐다. 이후연결별오류기록·strictpeer1000검증과서버queuedreplyflush를수정했고위20:24재검증/API/Clippy를완료했다. 첫실패를지우거나성공으로바꾸지않았다.
 
 - **사용자 영속 지시 추가:** 앞으로 검증된 후속 변경의 push 대상은 main이다. codex브랜치에만push해서끝내지말것. 원격main최신변경을보존하고강제push없이합친뒤main에반영한다.
+
+## 20:31 최신 main 반영과 다음 작업
+- **main push 완료:** `cee53d24b44ba643fc1246e28d03c2d3aa1c8a5e`, 원격과동일확인. 최신main13e9463을반영하고검증된source commit5037d507cf971b5dedc1257d6c4e6b0b99059319의trading변경만기존격리worktree에적용해push했다. trading tree완전일치,다른main파일차이0,강제push없음. 근거 `evidence/20260921T112950175Z-ws-fix-main-push-e030b7b9`. 원본checkout은codex/leave-exchange의source5037,원격codex는4550그대로다. 이후에도**push대상은main**이다.
+- 이번단위는종료진단/실제peerclose결함수정/검증/독립검토/mainpush를마친progress다. 새모든변경은검증후main반영지시를따른다. 현재미커밋은이push기록과진행중관찰로그이며root외부파일수정없다.
+- 현재메인engine20540/observer18184/helper15744/UI17556와12봇은계속19:05실행분.20:20:51 실제생존+관찰4496.725초/event48729/WS누락·단절0확인. observer session20793,예상끝01:05:55KST. 다음주기확인은20:35snapshot/누적메모리·연속성이다. 관찰끝전새95fa로재시작하지말것.
+- 다음독립성능작업후보: 보존된실제snapshot을사용해현재json!→Value→string과borrowed typed wrapper직렬화의출력동등성·할당/비용을한정계측. 원시WS전송량2.345GB는그대로이며직렬화중간할당만줄이는후보를구분. 계측전production변경/속도개선주장금지. 기존고부하1005는미확정,새logger가판별할수있지만이번paused send_timeout을옛원인으로대체하지말것.
+- 남은전체작업:6시간완료후정상stop/실제exit/FULLCore누적복구/새버전시연재시작,최신binary조용한B/C,최종browser·문서·mainpush·08:55준비/09:00전인계. zeroalloc목표미달/실제Linux컨테이너·외부배포미실행등범위유지. goal complete처리금지.
+
+## 20:54 직렬화 개선 검증과 웹 화면 복원
+- root는 `ws_frame::encode_state`를 main의 초기/후속 state 전송에 연결했다. 기존 JSON Value 트리를 제거하고 borrowed typed wrapper를 직접 직렬화한다. 모델·코어·저널·배열/필드내용·순서보장/전송제한은그대로며객체key순서만달라진다. 상세 [직렬화 결과](ws-serialization.md).
+- matching_core의 실제5state/3쌍/3000계측에서 큰frame alloc+realloc15261→12,요청byte합약63.856%감소,전체15쌍p50감소. wirebytes동일. API/CPU/대역폭/원래WS단절개선주장없음. `evidence/20260921T113640043Z-ws-serialization-ab-633bfa86`. durability가서버/원시3000개산술을,frontend가14개소비자파일을독립검토하여구체적결함없음. 세 agent 모두현재유휴.
+- 새releaseSHA `f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240`. unit3/fmt/release/Clippyalltargets/API10통과. 새WS실제run `2026-09-21T11-48-40-554Z-ws-diagnostics-88f40990`에서416ACK/416조회/16중복/289정상연속frame/자산·예약일치,peer1000/오류0/flushed,paused send_timeout,격리engine18112exit0·sampler2132종료. 메인14/manifest동일. 메인20540은여전히09bc로관찰중이며새binary로교체하지않았다.
+- **20:41 95분 중간관찰:** `2026-09-21T11-41-00-883Z-observation-analysis-829ae40c`,5702.731초/1126표본/최대공백5.996초,명령33332·거래량25309h증가,12봇/ready/자산보존/WS누락·단절0. CPU187유효구간14합평균0.505%,엔진0.269%(16논리CPU전체기준),엔진WS76.88MB/private75.47MB. 로그21.35MB/영속156.82MB.6시간완료아님.
+- 봇33544durable응답=33529accepted+15rejected(전부ORDER_NOT_OPEN),p9928.586ms/max958.159ms. 최대20:29:00.815 seq51579는정상durable승인,주변다수봇지연도보존했으나원인미확정. 표본연속성은subsecond지연이없다는뜻이아니다. snapshot53800=40311291bytes/SHA9d6489e28a317cd830e84170ddc9dadf4369e612dc060719cb2b4858f7719732/mtime20:35:22.3337608확인,주변max201.57ms. rename게시시간/전체복구검증은아님. 상세 `evidence/20260921T114846131Z-95min-checkpoint-offline-b00ee776/checkpoint.md`. 다음주기21:05또는새실패시점.
+- 사용자가“연결된웹화면이없다”고알려브라우저inventory를조회하니탭0개였다. 서버UI200/engine ready 확인후20:52 IAB visible tab4로 http://127.0.0.1:5175/ 열고 markDeliverable했다. 실제화면에서엔진정상EVENT59850/12봇/실제차트·체결표시확인. 이전탭이없어진원인은확정하지않는다. user01표시잔고1009975P/1032h는현재화면관찰값이고이전인계값과다르지만root는이번확인중주문을제출하지않았다. 도구로복원했으며코드결함이라고추정하지않는다.
+- 사용자지시대로완료된trading-only변경을main에push예정. 최신원격main을갱신해다른작업을보존하고격리worktree에적용한다. 미완료demo/observer/console3경로는끝난뒤추가한다. 전체goal active/6시간관찰01:06종료→누적복구·새binary시연·조용한B/C·최종인계계획유지.

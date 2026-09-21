@@ -1,0 +1,188 @@
+{
+  "prepared_at": "2026-09-21T11:37:44.0851039Z",
+  "classification": "Offline serialization microbenchmark alongside ordinary14-process demo and observer; not quiet service performance",
+  "limits": {
+    "warmup_per_real_state_method": 20,
+    "iterations_per_real_state_method_pair": 100,
+    "counting_first": 50,
+    "timing_only_last": 50,
+    "real_states": 5,
+    "pairs": 3,
+    "pair_order": [
+      "AB",
+      "BA",
+      "AB"
+    ],
+    "planned_encodes": 3212,
+    "maximum_encodes": 5000,
+    "encode_work_seconds": 30,
+    "external_process_timeout_seconds": 40
+  },
+  "source_inputs": [
+    {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T11-01-25-875Z-engine-load-8774ce30\\states.json",
+      "bytes": 1128100,
+      "sha256": "76f711ce2188b0040e1acbd45dc174e5434545cb6087626d2889bc1571b66d43"
+    },
+    {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c\\verified-state.json",
+      "bytes": 108897,
+      "sha256": "0adb027da637a2686de7abd36ddd20c5b27907b69d0e41101e809571febd7103"
+    }
+  ],
+  "copied_inputs": [
+    {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T113640043Z-ws-serialization-ab-633bfa86\\inputs\\states.json",
+      "bytes": 1128100,
+      "sha256": "76f711ce2188b0040e1acbd45dc174e5434545cb6087626d2889bc1571b66d43"
+    },
+    {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T113640043Z-ws-serialization-ab-633bfa86\\inputs\\verified-state.json",
+      "bytes": 108897,
+      "sha256": "0adb027da637a2686de7abd36ddd20c5b27907b69d0e41101e809571febd7103"
+    }
+  ],
+  "source": [
+    {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\engine\\examples\\ws_serialization_bench.rs",
+      "bytes": 15324,
+      "sha256": "689a1a7fbcd9508efc7265e57aad3a81709504114d62ac8ad5593e938f7c4854"
+    },
+    {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\engine\\src\\ws_frame.rs",
+      "bytes": 2632,
+      "sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e"
+    },
+    {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\engine\\Cargo.lock",
+      "bytes": 23194,
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9"
+    }
+  ],
+  "binary": {
+    "path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T113640043Z-ws-serialization-ab-633bfa86\\bin\\ws_serialization_bench.exe",
+    "bytes": 879132,
+    "sha256": "1f9588d3917fab93e77ec8441a8859c564b6543f6abd3373b11575b74ba5afa9"
+  },
+  "rustc": [
+    "rustc 1.98.1 (48a229cea 2026-09-01)",
+    "binary: rustc",
+    "commit-hash: 48a229ceaefd4985c50990b14116b6d856af0985",
+    "commit-date: 2026-09-01",
+    "host: x86_64-pc-windows-gnu",
+    "release: 1.98.1",
+    "LLVM version: 22.1.8"
+  ],
+  "cargo": [
+    "cargo 1.98.1 (797e8a9bc 2026-08-05)"
+  ],
+  "build_evidence": "evidence/20260921T113605520Z-ws-serialization-example-release-build-e3fcdd6b",
+  "host": {
+    "os": "Microsoft Windows NT 10.0.26200.0",
+    "logical_processors": 16,
+    "cpu": {
+      "Name": "12th Gen Intel(R) Core(TM) i5-1240P",
+      "NumberOfLogicalProcessors": 16
+    }
+  },
+  "protected_before": {
+    "manifest": {
+      "path": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo-current.json",
+      "bytes": 10216,
+      "sha256": "6128d45f26f574eb1da12ec1b164c2112c4ed3e4e29bb6a5526568563578e69a"
+    },
+    "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 20540,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:21.4715478Z"
+      },
+      {
+        "name": "frontend",
+        "pid": 17556,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:21.7348899Z"
+      },
+      {
+        "name": "bot-01",
+        "pid": 17444,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.2784404Z"
+      },
+      {
+        "name": "bot-02",
+        "pid": 7936,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.3037571Z"
+      },
+      {
+        "name": "bot-03",
+        "pid": 20776,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.3346242Z"
+      },
+      {
+        "name": "bot-04",
+        "pid": 16068,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.3612932Z"
+      },
+      {
+        "name": "bot-05",
+        "pid": 4928,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.3890023Z"
+      },
+      {
+        "name": "bot-06",
+        "pid": 20940,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.4216442Z"
+      },
+      {
+        "name": "bot-07",
+        "pid": 12172,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.4485053Z"
+      },
+      {
+        "name": "bot-08",
+        "pid": 7916,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.4762676Z"
+      },
+      {
+        "name": "bot-09",
+        "pid": 15272,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.5047340Z"
+      },
+      {
+        "name": "bot-10",
+        "pid": 5412,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.5355012Z"
+      },
+      {
+        "name": "bot-11",
+        "pid": 20484,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.5665942Z"
+      },
+      {
+        "name": "bot-12",
+        "pid": 6128,
+        "alive": true,
+        "start_time": "2026-09-21T10:05:22.5945324Z"
+      }
+    ],
+    "observer": {
+      "pid": 18184,
+      "alive": true,
+      "start_time": "2026-09-21T10:05:54.8395149Z"
+    }
+  },
+  "measurement_note": "Only uncounted rows compare time. Allocation rows have atomic increment overhead. Both retain allocator bool checks and clock/flag overhead. No networking, matching, fsync, snapshot construction or client parse inside measured boundary."
+}
