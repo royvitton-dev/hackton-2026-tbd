@@ -1,0 +1,189 @@
+Browser tab: 6, Title: "LEAVE PARK — 휴가 거래소", URL: "http://127.0.0.1:5175/".
+The following is a diff from the previous accessibility tree with ~ and + representing changed and added elements, respectively. Removed elements are summarized by ID range.
+Removed element IDs: 70-75, 78, 106-115, 193, 198, 203, 208, 213, 218, 223, 228, 233, 238, 243, 248, 255
+~			9 text 시장 연결됨
+~			34 text 973
+~			37 text -27 (-2.70%) 기준가
+~				42 text 57,476 시간
+~					60 text 21:37:51 973  P  ·  1 시간
+~				61 container 최근 80건 실제 체결. 마지막 가격 973 포인트
++				259 button 980 1 1, Help: 980 포인트를 주문 가격에 입력
++					260 text 980
++					261 text 1
++					262 text 1
++				263 button 979 7 3, Help: 979 포인트를 주문 가격에 입력
++					264 text 979
++					265 text 7
++					266 text 3
++				267 button 978 1 1, Help: 978 포인트를 주문 가격에 입력
++					268 text 978
++					269 text 1
++					270 text 1
++				271 button 977 7 5, Help: 977 포인트를 주문 가격에 입력
++					272 text 977
++					273 text 7
++					274 text 5
++				275 button 975 1 1, Help: 975 포인트를 주문 가격에 입력
++					276 text 975
++					277 text 1
++					278 text 1
+~				76 text 973 P 현재가
++				279 button 973 2 1, Help: 973 포인트를 주문 가격에 입력
++					280 text 973
++					281 text 2
++					282 text 1
++				283 button 972 2 1, Help: 972 포인트를 주문 가격에 입력
++					284 text 972
++					285 text 2
++					286 text 1
++				287 text 매도 가격을 누르면 주문에 입력됩니다 매수
+~				105 text 체결 시각 가격 (P) 시간 21:37:51
++				288 text 973
++				289 text 1  h 21:37:51
++				290 text 973
++				291 text 1  h 21:37:50
++				292 text 973
++				293 text 1  h 21:37:50
++				294 text 973
++				295 text 2  h 21:37:50
++				296 text 973
++				297 text 1  h 21:37:50
++				298 text 975
++				299 text 1  h 21:37:49
++				300 text 975
++				301 text 1  h 21:37:49
++				302 text 975
++				303 text 1  h 21:37:48
++				304 text 977
++				305 text 1  h 21:37:48
++				306 text 971
++				307 text 1  h
+~					149 button 휴가 매수하기
+~						155 text 지정가 주문 · 체결 전까지 예약됩니다
++					308 text 주문이 확정되었습니다 주문 #1651 · 1시간 체결
++					309 text 저장 완료 · 명령 # 1908
+~					159 button (collapsed) 요청 ID, Secondary Actions: Expand
++						310 text 요청 ID
++					311 text CREW  01 활동 중
+~					192 heading 마켓 메이커, Value: 3
++						312 text 마켓 메이커
++					313 text GS리테이 # 01 주문  5,061 체결  5,461
++					314 container 21:37:46
++						315 image
++						316 text 4s
+~					194 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						317 text 전략 정보
++						318 text  +
++					319 text CREW  02 활동 중
+~					197 heading 마켓 메이커, Value: 3
++						320 text 마켓 메이커
++					321 text GS칼테스 # 02 주문  5,000 체결  5,302
++					322 container 21:37:47
++						323 image
++						324 text 3s
+~					199 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						325 text 전략 정보
++						326 text  +
++					327 text CREW  03 활동 중
+~					202 heading 마켓 메이커, Value: 3
++						328 text 마켓 메이커
++					329 text GS건썰 # 03 주문  5,033 체결  5,392
++					330 container 21:37:47
++						331 image
++						332 text 4s
+~					204 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						333 text 전략 정보
++						334 text  +
++					335 text CREW  04 활동 중
+~					207 heading 마켓 메이커, Value: 3
++						336 text 마켓 메이커
++					337 text GS리테이 # 04 주문  5,031 체결  5,342
++					338 container 21:37:47
++						339 image
++						340 text 3s
+~					209 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						341 text 전략 정보
++						342 text  +
++					343 text CREW  05 활동 중
+~					212 heading 유동성 소비, Value: 3
++						344 text 유동성 소비
++					345 text GS칼테스 # 05 주문  5,748 체결  7,890
++					346 container 21:37:48
++						347 image
++						348 text 2s
+~					214 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						349 text 전략 정보
++						350 text  +
++					351 text CREW  06 활동 중
+~					217 heading 유동성 소비, Value: 3
++						352 text 유동성 소비
++					353 text GS건썰 # 06 주문  5,751 체결  7,935
++					354 container 21:37:48
++						355 image
++						356 text 2s
+~					219 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						357 text 전략 정보
++						358 text  +
++					359 text CREW  07 활동 중
+~					222 heading 유동성 소비, Value: 3
++						360 text 유동성 소비
++					361 text GS리테이 # 07 주문  5,751 체결  7,892
++					362 container 21:37:49
++						363 image
++						364 text 2s
+~					224 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						365 text 전략 정보
++						366 text  +
++					367 text CREW  08 활동 중
+~					227 heading 유동성 소비, Value: 3
++						368 text 유동성 소비
++					369 text GS칼테스 # 08 주문  5,759 체결  7,954
++					370 container 21:37:48
++						371 image
++						372 text 2s
+~					229 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						373 text 전략 정보
++						374 text  +
++					375 text CREW  09 활동 중
+~					232 heading 추세 추종, Value: 3
++						376 text 추세 추종
++					377 text GS건썰 # 09 주문  5,747 체결  7,832
++					378 container 21:37:47
++						379 image
++						380 text 3s
+~					234 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						381 text 전략 정보
++						382 text  +
++					383 text CREW  10 활동 중
+~					237 heading 추세 추종, Value: 3
++						384 text 추세 추종
++					385 text GS리테이 # 10 주문  5,763 체결  7,921
++					386 container 21:37:47
++						387 image
++						388 text 3s
+~					239 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						389 text 전략 정보
++						390 text  +
++					391 text CREW  11 활동 중
+~					242 heading 추세 추종, Value: 3
++						392 text 추세 추종
++					393 text GS칼테스 # 11 주문  5,765 체결  8,053
++					394 container 21:37:46
++						395 image
++						396 text 4s
+~					244 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						397 text 전략 정보
++						398 text  +
++					399 text CREW  12 활동 중
+~					247 heading 추세 추종, Value: 3
++						400 text 추세 추종
++					401 text GS건썰 # 12 주문  5,720 체결  7,866
++					402 container 21:37:48
++						403 image
++						404 text 2s
+~					249 button (collapsed) 전략 정보 +, Secondary Actions: Expand
++						405 text 전략 정보
++						406 text  +
++				407 image
+~				256 text 엔진 정상 운영 EVENT # 75,690 재동기화 0 수신 21:37:51
+The focused UI element is 1 AXWebArea LEAVE PARK — 휴가 거래소, URL: 127.0.0.1:5175/

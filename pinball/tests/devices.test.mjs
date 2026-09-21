@@ -1,5 +1,5 @@
 import test from 'node:test';import assert from 'node:assert/strict';import {Race,makeConfig,MAPS,STEP} from '../src/physics.js';import {devicePose} from '../src/devices.js';
-const cfg=(n=2,mapId='neon')=>({...makeConfig(Array.from({length:n},(_,i)=>`탑승 ${i}`).join('\n'),1,'last',1),mapId,boardMotion:true});
+const cfg=(n=2,mapId='neon')=>({...makeConfig(Array.from({length:n},(_,i)=>`탑승 ${i}`).join(','),1,'last',1),mapId,boardMotion:true});
 function atDevice(kind,seed=11){const r=new Race(cfg(),seed);r.state='racing';const d=r.devices.find(d=>d.kind===kind),b=r.balls[0];Object.assign(b,{x:d.x,y:d.y-5,vx:0,vy:100});Object.assign(r.balls[1],{x:70,y:240,vx:0,vy:0});r.step();assert.ok(b.hold);return {r,d,b};}
 test('magnet and cannon capture at physical position for 0.5–1 seconds; pause freezes pose and ball',()=>{
  for(const kind of ['magnet','cannon'])for(let seed=1;seed<=20;seed++){
@@ -7,7 +7,7 @@ test('magnet and cannon capture at physical position for 0.5–1 seconds; pause 
   r.pause();const frozen=r.snapshot();for(let i=0;i<30;i++)r.step(.1);assert.deepEqual(r.snapshot(),frozen);r.resume();
   while(b.hold){assert.equal(b.x,x);assert.equal(b.y,y);r.step();}
   const ev=r.events.find(e=>e.type===(kind==='cannon'?'launch':'release'));assert.ok(ev.heldFor>=.5&&ev.heldFor<=1+1e-9);assert.ok(Math.hypot(b.x-x,b.y-y)<7);
-  if(kind==='cannon'){assert.ok(Math.hypot(b.vx,b.vy)>700);assert.ok(Math.abs(Math.atan2(b.vy,b.vx)-Math.atan2(Math.sin(ev.angle),Math.cos(ev.angle)))<.004);assert.ok(Math.sin(ev.angle)>0);assert.equal(devicePose(d,r.raceTime).angle,ev.angle);}
+  if(kind==='cannon'){assert.ok(Math.hypot(b.vx,b.vy)>700);assert.ok(Math.abs(Math.atan2(b.vy,b.vx)-Math.atan2(Math.sin(ev.angle),Math.cos(ev.angle)))<.004);assert.equal(devicePose(d,r.raceTime).angle,ev.angle);}
   else assert.ok(Math.hypot(b.vx,b.vy)<100);
   Object.assign(b,{x:d.x,y:d.y,vx:0,vy:0});r.step();assert.equal(b.hold,null,'cooldown prevents immediate recapture');
  }
@@ -25,4 +25,8 @@ test('cannon boost cannot tunnel through a pin or boundary',()=>{
 });
 test('device capture, timing and launch are deterministic and varied across seeds',()=>{
  const angles=new Set(),durations=new Set();for(let seed=1;seed<=12;seed++){const a=atDevice('cannon',seed),b=atDevice('cannon',seed);assert.deepEqual(a.b.hold,b.b.hold);angles.add(a.d.phase);durations.add(a.b.hold.duration);}assert.equal(angles.size,12);assert.equal(durations.size,12);
+});
+
+test('cannons complete a full revolution every 0.4 physical seconds in either direction',()=>{
+ for(const map of MAPS){const r=new Race(cfg(1,map.id),31);for(const d of r.devices.filter(d=>d.kind==='cannon')){assert.ok(Math.abs(Math.abs(d.omega)-Math.PI*5)<1e-10);d.holds=[{start:0,releaseAt:1,duration:1}];d.spinStarted=0;const a=devicePose(d,0).angle,b=devicePose(d,.4).angle;assert.ok(Math.abs(Math.abs(b-a)-Math.PI*2)<1e-10);}}
 });

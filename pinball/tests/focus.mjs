@@ -7,7 +7,7 @@ try{
  for(const mobile of [false,true]){
   const device=mobile?'mobile':'desktop',c=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1000},isMobile:mobile,hasTouch:mobile,reducedMotion:'reduce'}),p=await c.newPage(),errors=[];
   p.on('pageerror',e=>errors.push(e.message));await p.goto(process.env.BASE_URL||'http://127.0.0.1:4188');await p.waitForFunction(()=>window.pinball);
-  await p.locator('#participants').fill('별빛\n구름\n우주선\n솜사탕\n회전목마\n범퍼카');await p.locator('input[value=last]').check();await p.locator('[data-speed="3"]').click();
+  await p.locator('#participants').fill('별빛,구름,우주선,솜사탕,회전목마,범퍼카');await p.locator('input[name=rule][value=last]').check();await p.locator('[data-speed="3"]').click();
   const ready=await p.evaluate(()=>window.pinball.snapshot());await p.locator('#focus-mode').click();assert.deepEqual(await p.evaluate(()=>window.pinball.snapshot()),ready);await p.waitForTimeout(150);
   assert.equal(await p.locator('.setup').isVisible(),false);assert.equal(await p.locator('#arena-start').isVisible(),true);
   const bounds=await p.locator('.arena-controls').evaluate(e=>({bottom:e.getBoundingClientRect().bottom,height:innerHeight}));assert.ok(bounds.bottom<=bounds.height+2,JSON.stringify(bounds));

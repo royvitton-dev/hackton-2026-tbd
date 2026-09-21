@@ -60,6 +60,6 @@ export function staticBatch(root){
 }
 export function disposeSubtree(root){
  const geometries=new Set(),materials=new Set(),textures=new Set();
- root.traverse(o=>{if(o.isMesh){geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material])if(!m.userData.shared){materials.add(m);for(const value of Object.values(m))if(value?.isTexture)textures.add(value);}if(o.isInstancedMesh)o.dispose();}});
+ root.traverse(o=>{if(o.isMesh||o.isLine||o.isPoints){geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material])if(!m.userData.shared){materials.add(m);for(const value of Object.values(m))if(value?.isTexture)textures.add(value);}if(o.isInstancedMesh)o.dispose();}});
  for(const g of geometries)if(!g.userData.shared)g.dispose();for(const t of textures)t.dispose();for(const m of materials)m.dispose();root.clear();
 }

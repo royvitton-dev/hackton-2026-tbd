@@ -42,3 +42,24 @@ BASE_URL=http://127.0.0.1:4189 node tests/build-smoke.mjs
 ```
 
 브라우저 명령에는 `PLAYWRIGHT_MODULE_PATH=/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/playwright/index.mjs`를 함께 지정했다. 테스트 파일의 기본 증빙 경로는 재실행 시 덮어쓸 수 있으므로 번호별 복사본을 별도 보존했다. Git은main직접커밋, 필요 시 원격변경 일반병합, Fork일반Push, `git ls-remote origin refs/heads/main` 검증 순서였다.
+
+
+## 21시 이후 실제 추가 실행
+
+작업 위치 `work/pinball-candidate`, 후보 서버 `http://127.0.0.1:4189`.
+Node 실행 파일 `/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node`, Playwright 모듈은 같은 bundled runtime의 `lib/node_modules/playwright/index.mjs`.
+
+```sh
+EVIDENCE_PREFIX=19 SEED_FROM=11 SEED_TO=20 node tests/soak.mjs
+MAP_ID=split EVIDENCE_PREFIX=20-garden SEED_FROM=11 SEED_TO=20 node tests/soak.mjs
+MAP_ID=split EVIDENCE_PREFIX=20b-garden SEED_FROM=11 SEED_TO=20 node tests/soak.mjs
+EVIDENCE_PREFIX=19 node tests/lotto-browser.mjs
+EVIDENCE_PREFIX=20 node tests/invalid-ui.mjs
+EVIDENCE_PREFIX=20b node tests/return-browser.mjs
+MAP_ID=parade VIEW_MODE=half EVIDENCE_PREFIX=21-parade-half node tests/action.mjs
+EVIDENCE_PREFIX=21 node --test tests/physics.test.mjs tests/motion.test.mjs tests/finish-rules.test.mjs tests/devices.test.mjs tests/course-devices.test.mjs tests/return-portals.test.mjs tests/parade.test.mjs tests/lotto.test.mjs
+node scripts/build.mjs
+node tests/browser.mjs
+```
+
+위 명령의 성공·실패·진행 중 상태는 `park-20260921`의 번호별 원본 로그와 verification.md를 따른다. 명령을 실행한 것만으로 통과라고 간주하지 않는다. 브라우저 명령은 BASE_URL과PLAYWRIGHT_MODULE_PATH를 위 환경에 맞게 지정했다.

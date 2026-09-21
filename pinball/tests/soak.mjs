@@ -4,11 +4,12 @@ import {createHash} from 'node:crypto';
 import {Race,makeConfig,MAPS} from '../src/physics.js';
 const first=Number(process.env.SEED_FROM||11),last=Number(process.env.SEED_TO||60),prefix=process.env.EVIDENCE_PREFIX||'08';
 const hashes=Object.fromEntries(['physics.js','devices.js','return-portals.js','board-motion.js'].map(f=>[f,createHash('sha256').update(readFileSync('src/'+f)).digest('hex')]));
-const report={at:new Date().toISOString(),status:'RUNNING',target:(last-first+1)*48,sourceHashes:hashes,cases:[],failure:null},started=performance.now();
+const maps=process.env.MAP_ID?MAPS.filter(m=>m.id===process.env.MAP_ID):MAPS;assert.ok(maps.length);
+const report={at:new Date().toISOString(),status:'RUNNING',target:(last-first+1)*maps.length*12,sourceHashes:hashes,cases:[],failure:null},started=performance.now();
 const save=()=>{report.elapsedSeconds=(performance.now()-started)/1000;writeFileSync(`evidence/park-20260921/${prefix}-soak-results.json`,JSON.stringify(report,null,2));};
 try{
- for(let seed=first;seed<=last;seed++)for(const map of MAPS)for(const n of [1,2,7,20,40,60])for(const boardMotion of [false,true]){
-  const rule=['first','last','nth'][seed%3],config={...makeConfig(Array.from({length:n},(_,i)=>`검증 ${i+1}`).join('\n'),1,rule,Math.ceil(n/2)),mapId:map.id,boardMotion};
+ for(let seed=first;seed<=last;seed++)for(const map of maps)for(const n of [1,2,7,20,40,60])for(const boardMotion of [false,true]){
+  const rule=['first','last','nth'][seed%3],config={...makeConfig(Array.from({length:n},(_,i)=>`검증 ${i+1}`).join(','),1,rule,Math.ceil(n/2)),mapId:map.id,boardMotion};
   const r=new Race(config,seed);r.start();let steps=0;
   try{
    while(!['complete','invalid'].includes(r.state)&&steps<20000){r.step();steps++;if(steps%12===0)for(const b of r.balls){assert.ok(Number.isFinite(b.x+b.y+b.vx+b.vy));assert.ok(b.x>=40-1e-5&&b.x<=580+1e-5&&b.y>=38-1e-5&&b.y<=r.map.finish+1e-5);}}
@@ -16,7 +17,7 @@ try{
    assert.ok(r.finishOrder.every((x,i)=>x.rank===i+1&&r.map.exits.some(h=>h.id===x.exitId)&&(!i||x.time>=r.finishOrder[i-1].time)));
   }catch(e){report.failure={map:map.id,n,seed,boardMotion,error:e.stack,snapshot:r.snapshot()};throw e;}
   report.cases.push({map:map.id,n,seed,boardMotion,rule,time:r.raceTime,assists:r.assists});
-  if(report.cases.length%48===0){save();console.log(`PASS ${report.cases.length}/${report.target} races, seed ${seed}, wall ${report.elapsedSeconds.toFixed(1)}s`);}
+  if(report.cases.length%(maps.length*12)===0){save();console.log(`PASS ${report.cases.length}/${report.target} races, seed ${seed}, wall ${report.elapsedSeconds.toFixed(1)}s`);}
  }
  report.status='PASS';console.log('PASS extended physics soak',report.cases.length,'races');
 }catch(e){report.status='FAIL';process.exitCode=1;console.error(report.failure?.map,report.failure?.n,report.failure?.seed,report.failure?.boardMotion,e.message);}finally{save();}

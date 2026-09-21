@@ -1,0 +1,13 @@
+✔ return throat never ranks or wins; goal throat alone produces an arrival (3.834625ms)
+✔ return sink and fall both freeze on pause; landing returns to the actual middle of the board (6.305666ms)
+✔ repeated returns are explicit game events, never duplicate finishes (2.203583ms)
+✔ first target stops with a returning opponent still unfinished; replay does not advance its portal (0.487333ms)
+✔ 60-second finale blocks new return entry while balls already inside can drain without being ranked (0.228959ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 63.568208

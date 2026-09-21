@@ -1,0 +1,107 @@
+{
+  "at": "2026-09-21T12:09:49.617Z",
+  "browser": "153.0.8010.48",
+  "tests": [
+    {
+      "name": "PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count",
+      "status": "PASS",
+      "ms": 2757,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay",
+      "status": "PASS",
+      "ms": 16447,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "5 map selection and real 60-ball maximum performance, last winner",
+      "status": "FAIL",
+      "ms": 229322,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'invalid'\n- 'complete'\n\n    at assertGameResult (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/assert-result.mjs:3:9)\n    at finish (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:7:165)\n    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:26:930\n    at async run (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:8:850)\n    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:23:1",
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Mobile 390x844 touch: per-person balls → Nth → pause → result → replay",
+      "status": "PASS",
+      "ms": 24583,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Mobile maximum: 60 balls, reduced motion and frame timing",
+      "status": "PASS",
+      "ms": 14501,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Responsive, keyboard, mute, visibility pause",
+      "status": "PASS",
+      "ms": 1099,
+      "errors": [],
+      "external": []
+    }
+  ],
+  "performance": [
+    {
+      "map": "neon",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.85928143719267,
+      "p95FrameCostMs": 4.800000000745058,
+      "p95FrameIntervalMs": 16.799999999999272,
+      "fps": 60.00179646097187
+    },
+    {
+      "map": "orbit",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.2526946108074424,
+      "p95FrameCostMs": 3.5,
+      "p95FrameIntervalMs": 16.700000000004366,
+      "fps": 60.00287438919228
+    },
+    {
+      "map": "zigzag",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 3.842814371257485,
+      "p95FrameCostMs": 4.199999999254942,
+      "p95FrameIntervalMs": 16.70000000001164,
+      "fps": 60.00287438919221
+    },
+    {
+      "map": "split",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 4.972754490980042,
+      "p95FrameCostMs": 5.399999998509884,
+      "p95FrameIntervalMs": 16.70000000001164,
+      "fps": 60.00287438919221
+    },
+    {
+      "map": "neon",
+      "device": "mobile emulation 390x844 DPR2",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 4.495820895626919,
+      "p95FrameCostMs": 6.300000000745058,
+      "p95FrameIntervalMs": 16.700000000000728,
+      "fps": 60.003582303421105
+    }
+  ],
+  "limitations": [
+    "Mobile Chrome viewport emulation, not a physical phone.",
+    "Synthesized audio scheduling tested without human speaker listening.",
+    "No Safari/Firefox or native WebMCP browser tested.",
+    "Cross-runtime bit-exact replay is not supported: Node vs Chrome floating-point differences can diverge through collisions."
+  ]
+}

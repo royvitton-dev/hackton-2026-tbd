@@ -1,0 +1,117 @@
+{
+  "at": "2026-09-21T12:00:13.943Z",
+  "browser": "153.0.8010.48",
+  "tests": [
+    {
+      "name": "PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count",
+      "status": "PASS",
+      "ms": 3821,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay",
+      "status": "PASS",
+      "ms": 20908,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "5 map selection and real 60-ball maximum performance, last winner",
+      "status": "FAIL",
+      "ms": 274919,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'invalid'\n- 'complete'\n\n    at assertGameResult (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/assert-result.mjs:3:9)\n    at finish (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:7:165)\n    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:26:930\n    at async run (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:8:850)\n    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/browser.mjs:23:1",
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Mobile 390x844 touch: per-person balls → Nth → pause → result → replay",
+      "status": "PASS",
+      "ms": 41759,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Mobile maximum: 60 balls, reduced motion and frame timing",
+      "status": "PASS",
+      "ms": 16889,
+      "errors": [],
+      "external": []
+    },
+    {
+      "name": "Responsive, keyboard, mute, visibility pause",
+      "status": "PASS",
+      "ms": 1296,
+      "errors": [],
+      "external": []
+    }
+  ],
+  "performance": [
+    {
+      "map": "neon",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 3.9719402985119108,
+      "p95FrameCostMs": 4.899999998509884,
+      "p95FrameIntervalMs": 16.700000000000728,
+      "fps": 60.002507567480436
+    },
+    {
+      "map": "orbit",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 337,
+      "meanFrameCostMs": 3.598813056315707,
+      "p95FrameCostMs": 4.699999999254942,
+      "p95FrameIntervalMs": 16.799999999995634,
+      "fps": 60.00284879994301
+    },
+    {
+      "map": "zigzag",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 4.154491017879304,
+      "p95FrameCostMs": 4.5,
+      "p95FrameIntervalMs": 16.70000000001164,
+      "fps": 60.00287438919221
+    },
+    {
+      "map": "split",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 334,
+      "meanFrameCostMs": 5.062574850239172,
+      "p95FrameCostMs": 5.5,
+      "p95FrameIntervalMs": 16.79999999998836,
+      "fps": 60.00179646097188
+    },
+    {
+      "map": "parade",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 4.821791044700501,
+      "p95FrameCostMs": 5.699999999254942,
+      "p95FrameIntervalMs": 16.79999999998836,
+      "fps": 60.00250756748037
+    },
+    {
+      "map": "neon",
+      "device": "mobile emulation 390x844 DPR2",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 5.204776119407433,
+      "p95FrameCostMs": 7.599999997764826,
+      "p95FrameIntervalMs": 16.800000000000182,
+      "fps": 60.001432870038684
+    }
+  ],
+  "limitations": [
+    "Mobile Chrome viewport emulation, not a physical phone.",
+    "Synthesized audio scheduling tested without human speaker listening.",
+    "No Safari/Firefox or native WebMCP browser tested.",
+    "Cross-runtime bit-exact replay is not supported: Node vs Chrome floating-point differences can diverge through collisions."
+  ]
+}

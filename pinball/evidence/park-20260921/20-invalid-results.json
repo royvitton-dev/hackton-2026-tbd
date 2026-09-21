@@ -1,0 +1,23 @@
+{
+  "at": "2026-09-21T12:16:52.637Z",
+  "method": "Isolated browser response changes the timeout trigger to two actual arrivals. No winner/arrival injection or product debug route.",
+  "tests": [
+    {
+      "mode": "player",
+      "status": "PASS",
+      "actualArrivals": 2,
+      "rankDomPreserved": true,
+      "winnerCleared": true,
+      "resetClears": true
+    },
+    {
+      "mode": "lotto",
+      "status": "PASS",
+      "actualArrivals": 2,
+      "rankDomPreserved": true,
+      "winnerCleared": true,
+      "resetClears": true
+    }
+  ],
+  "status": "PASS"
+}

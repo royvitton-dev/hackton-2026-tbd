@@ -21,6 +21,7 @@ node scripts/demo.mjs start
 ```
 
 - 독립 UI: http://127.0.0.1:5175
+- Wonder Park: 실행 중인 파크의 **휴가 거래소 → 휴가 거래소 입장 → 어트랙션 열기**에서 같은 UI로 연결됩니다. `attraction.json`에 로컬 실행 주소를 등록했습니다. 파크 화면에 이전 안내가 남아 있으면 새로고침합니다.
 - Rust API·WebSocket: http://127.0.0.1:8787 / ws://127.0.0.1:8787/ws
 - 기본 12개의 별도 Node 봇 프로세스가 공개 API로 같은 시장에 참여합니다.
 - 데이터는 `data/demo`, 실행별 로그·프로세스·봇 seed는 `evidence/<고유-run-ID>`에 보존됩니다.
@@ -82,6 +83,6 @@ API 통합 테스트는 별도 합성 데이터와 임시 포트의 엔진 프�
 - [독립 UI·연동 범위](docs/ui.md), [Vercel·별도 엔진 배포 준비](docs/deployment.md)
 - [작업 체크포인트](docs/checkpoint.md), [실제 개발 에이전트 기록](docs/agents.jsonl)
 
-Vercel Root Directory는 `trading/frontend`, 빌드 `pnpm build`, 산출물 `dist`입니다. API 주소는 실제 별도 엔진의 HTTPS/WSS 주소로 지정해야 합니다. Rust 컨테이너/영속 볼륨 예시는 `deploy`에 있으며, Docker가 없는 현재 호스트에서는 컨테이너 빌드를 아직 검증하지 않았습니다. 루트 UI는 수정하지 않았으며 독립 실행 UI와 연동 절차를 제공합니다.
+Vercel Root Directory는 `trading/frontend`, 빌드 `pnpm build`, 산출물 `dist`입니다. API 주소는 실제 별도 엔진의 HTTPS/WSS 주소로 지정해야 합니다. Rust 컨테이너/영속 볼륨 예시는 `deploy`에 있으며, Docker가 없는 현재 호스트에서는 컨테이너 빌드를 아직 검증하지 않았습니다. Wonder Park의 기존 등록 인터페이스에 `trading/attraction.json`을 추가해 독립 UI를 연결했습니다. 파크 소스 수정은 필요하지 않습니다. 공개 배포 시 등록 URL도 실제 HTTPS UI 주소로 바꿔야 합니다.
 
 기본 요청 ID 정책은 데이터셋 수명 동안 보존, 용량 도달 시 신규 접수 거절입니다. 파일/스냅샷/원본 증거를 자동 삭제하지 않습니다. 봇 로그는 파일당 5 MiB에서 새 파일로 분할합니다. OS·전원 장애 검증과 프로세스 강제 종료 검증은 구분합니다.

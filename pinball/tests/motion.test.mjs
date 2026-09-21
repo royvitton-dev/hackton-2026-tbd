@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {writeFile} from 'node:fs/promises';
 import {Race,makeConfig,MAPS,STEP,rotorPose} from '../src/physics.js';
 import {boardMotionAt,motionSchedule,MOTION_MIN_GAP,MOTION_MAX_GAP,MOTION_DURATION} from '../src/board-motion.js';
-const config=(n,mapId='neon',boardMotion=true)=>({...makeConfig(Array.from({length:n},(_,i)=>`공 ${i+1}`).join('\n'),1,'last',n),mapId,boardMotion});
+const config=(n,mapId='neon',boardMotion=true)=>({...makeConfig(Array.from({length:n},(_,i)=>`공 ${i+1}`).join(','),1,'last',n),mapId,boardMotion});
 const run=r=>{r.start();while(!['complete','invalid'].includes(r.state))r.step();return r;};
 test('random 3–5 second motion is deterministic, bounded, smooth and independent of participants',()=>{
  for(const seed of [0,1,2,19,4294967295]){
@@ -28,8 +28,13 @@ test('each map has different rotor magnitudes and both directions, with matching
 test('pause freezes active board motion and stepping chunks preserve the exact race',()=>{
  const a=new Race(config(20),732),b=new Race(config(20),732);a.start();b.start();while(a.raceTime<motionSchedule(732)[0]+.45)a.step();a.pause();const frozen=a.snapshot();for(let i=0;i<200;i++)a.step();assert.deepEqual(a.snapshot(),frozen);a.resume();while(!['complete','invalid'].includes(a.state))a.step();while(!['complete','invalid'].includes(b.state))b.step(STEP*3);assert.equal(a.state,'complete');assert.deepEqual(a.finishOrder,b.finishOrder);
 });
-test('orbit single-ball oscillation is detected and escapes without fabricated finish',()=>{
- const r=new Race(config(1,'orbit',false),5);r.map=structuredClone(r.map);for(const rotor of r.map.rotors){rotor.blades=2;delete rotor.swing;}run(r);assert.equal(r.state,'complete');assert.ok(r.assists>0);assert.equal(r.finishOrder.length,1);assert.ok([1,2,3,4].includes(r.finishOrder[0].exitId));
+test('orbit natural stagnation receives an impulse and finishes through the real goal',()=>{
+ const r=new Race(config(1,'orbit',true),1);r.start();let impulses=0;
+ while(!['complete','invalid'].includes(r.state)){
+  const b=r.balls[0],before={x:b.x,y:b.y,assists:r.assists};r.step();
+  if(r.assists>before.assists){impulses++;assert.ok(Math.hypot(b.x-before.x,b.y-before.y)<12,'escape must move by physical integration, not teleport');assert.equal(b.finished,false);assert.equal(r.finishOrder.length,0);}
+ }
+ assert.equal(r.state,'complete');assert.ok(impulses>0);assert.equal(r.finishOrder.length,1);assert.equal(r.finishOrder[0].exitId,r.map.exits.find(h=>h.kind!=='return').id);
 });
 test('windmill blades share an actual perpendicular collider and pirate velocity matches its swing',()=>{
  const r=new Race(config(1),17);r.rotationTime=1.234;
@@ -39,7 +44,7 @@ test('windmill blades share an actual perpendicular collider and pirate velocity
  for(let t=0;t<8;t+=.11){const h=.00001,approx=(rotorPose(pirate,t+h).angle-rotorPose(pirate,t-h).angle)/(2*h),pose=rotorPose(pirate,t);assert.ok(Math.abs(pose.velocity-approx)<1e-7);assert.ok(Math.abs(pose.angle)<=pirate.swing);}
  const pose=rotorPose(pirate,r.rotationTime),segment=r.rotorSegments().find(s=>s.x===pirate.x&&s.y===pirate.y);assert.equal(segment.omega,pose.velocity);
 });
-test('all four maps with motion: 120 seeded races remain contained and finish with unique real ranks',async()=>{
+test('all five maps with motion: 150 seeded races remain contained and finish with unique real ranks',async()=>{
  const report=[];
  for(const map of MAPS)for(const n of [1,20,60])for(let seed=1;seed<=10;seed++){
   const r=new Race(config(n,map.id),seed);r.start();

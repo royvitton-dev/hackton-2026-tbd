@@ -1,0 +1,19 @@
+✔ magnet and cannon capture at physical position for 0.5–1 seconds; pause freezes pose and ball (146.564625ms)
+✔ each device stores multiple incoming balls with independent randomized release times (21.677791ms)
+✔ cannon boost cannot tunnel through a pin or boundary (6.061791ms)
+✔ device capture, timing and launch are deterministic and varied across seeds (3.820708ms)
+✔ cannons complete a full revolution every 0.2 physical seconds in either direction (0.643333ms)
+✔ lotto has exactly one identically sized ball per number 1–45, independent of player input (5.25975ms)
+✔ lotto results use actual first six plus seventh, or ranks 39–44 plus unarrived last bonus (24831.659333ms)
+✔ incomplete and invalid lotto rounds never expose winning numbers (0.391417ms)
+✔ comma-separated entries and name*count are explicit, with whitespace and duplicate labels (1.647875ms)
+✔ Parade holds multiple balls independently for 0.8–1.5 seconds and freezes every timer when paused (107.902458ms)
+✔ Parade has one goal, six central cannons and a final gate that physically opens and blocks (1.429834ms)
+ℹ tests 11
+ℹ suites 0
+ℹ pass 11
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 24914.664583

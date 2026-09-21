@@ -1,14 +1,16 @@
+export const CANNON_REVOLUTION_SECONDS=.4;
 // All timings are simulation seconds. Devices never inspect identity or rank.
 export const DEVICE_LAYOUT={
- neon:[['magnet',310,530],['magnet',100,1770],['cannon',310,1320],['cannon',310,1510]],
+ neon:[['magnet',310,530],['magnet',100,1770],['cannon',310,1320],['cannon',480,1630]],
  orbit:[['magnet',310,1160],['magnet',540,1760],['cannon',310,680],['cannon',310,1730]],
  zigzag:[['magnet',505,1150],['magnet',110,1750],['cannon',310,780],['cannon',310,1320]],
- split:[['magnet',310,875],['magnet',90,1820],['cannon',310,1500],['cannon',310,1850]]
+ split:[['magnet',310,875],['magnet',90,1820],['cannon',310,1500],['cannon',310,1850]],
+ parade:[['magnet',90,650],['magnet',530,650],... [880,1280].flatMap(y=>[150,310,470].map(x=>['cannon',x,y]))]
 };
-export function deviceDefinitions(mapId){return DEVICE_LAYOUT[mapId].map(([kind,x,y],i)=>({id:`${mapId}-${kind}-${i}`,kind,x,y,captureRadius:kind==='cannon'?18:15}));}
+export function deviceDefinitions(mapId){return DEVICE_LAYOUT[mapId].map(([kind,x,y],i)=>({id:`${mapId}-${kind}-${i}`,kind,x,y,captureRadius:kind==='cannon'?18:15,...(mapId==='parade'&&kind==='cannon'?{holdMin:.8,holdMax:1.5}:{})}));}
 export function devicePose(device,time){
  const holds=device.holds??[],holding=holds.length>0;
- const angle=holding&&device.kind==='cannon'?Math.PI/2+Math.sin((time-device.spinStarted)*device.omega+device.phase)*1.05:device.restAngle??Math.PI/2;
+ const angle=holding&&device.kind==='cannon'?Math.PI/2+(time-device.spinStarted)*device.omega+device.phase:device.restAngle??Math.PI/2;
  const next=holds.reduce((best,h)=>!best||h.releaseAt<best.releaseAt?h:best,null);
  return {angle,progress:next?Math.max(0,Math.min(1,(time-next.start)/next.duration)):0,holding,count:holds.length};
 }
@@ -34,7 +36,8 @@ export function captureDevices(race,ball){
  if(ball.hold||(ball.deviceCooldownUntil??0)>race.raceTime)return;
  for(const d of race.devices){
   if(Math.hypot(ball.x-d.x,ball.y-d.y)>d.captureRadius)continue;
-  const duration=.5+race.rng()*(.5-1/120);
+  const min=d.holdMin??.5,max=d.holdMax??1;
+  const duration=min+race.rng()*(max-min-1/120);
   const h={deviceId:d.id,kind:d.kind,ballId:ball.id,start:race.raceTime,duration,releaseAt:race.raceTime+duration,savedVx:ball.vx,savedVy:ball.vy};
   if(!d.holds.length)d.spinStarted=race.raceTime;
   // Captured balls are suspended or stored above the board plane, so incoming

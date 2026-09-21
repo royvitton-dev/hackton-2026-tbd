@@ -34,7 +34,9 @@
 | `construction` | 골조·타워크레인·안전 펜스가 있는 공사장 |
 | `pinball` | 움직이는 공과 플리퍼를 가진 대형 핀볼 머신 |
 
-캐릭터: `mickey`, `minnie`, `donald`, `olaf`.
+캐릭터: `mickey`, `minnie`, `donald`, `olaf`, `daisy`, `goofy`, `pluto`, `pooh`, `stitch`, `baymax`.
+
+각 어트랙션은 작은 별의 곡면 위에 배치되며, 바닥도 곡률에 맞게 변형됩니다. 새 프로젝트를 추가해도 좌표를 수동으로 지정할 필요는 없습니다. 중앙 광장에는 GS 로고와 10종의 캐릭터가 있고, 위쪽 언덕의 성에서는 불꽃놀이가 계속 반복됩니다.
 
 상태: `open`, `construction`, `attention`. `action`으로 입장 버튼 문구를 지정할 수 있습니다. Vite가 없는 정적 HTML 프로젝트도 프로젝트별 독립 경로로 입장할 수 있습니다.
 

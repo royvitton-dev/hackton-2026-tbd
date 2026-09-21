@@ -1,7 +1,7 @@
 import test from 'node:test';import assert from 'node:assert/strict';
 import {Race,makeConfig,MAPS,STEP} from '../src/physics.js';
 import {assertGameResult} from './assert-result.mjs';
-const cfg=(n,rule,target=1,mapId='neon')=>({...makeConfig(Array.from({length:n},(_,i)=>`공 ${i+1}`).join('\n'),1,rule,target),mapId,boardMotion:true,finishMode:'winner'});
+const cfg=(n,rule,target=1,mapId='neon')=>({...makeConfig(Array.from({length:n},(_,i)=>`공 ${i+1}`).join(','),1,rule,target),mapId,boardMotion:true,finishMode:'winner'});
 const run=(r,dt=STEP)=>{r.start();while(!['complete','invalid'].includes(r.state))r.step(dt);return r;};
 test('first/Nth stop at the actual target crossing; last stops with one unfinished ball',()=>{
  for(const map of MAPS)for(const n of [1,7,20])for(const rule of ['first','nth','last']){
