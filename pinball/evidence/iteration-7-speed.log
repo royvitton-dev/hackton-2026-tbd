@@ -1,0 +1,23 @@
+PASS 1x/2x/3x and mid-race changes preserve exact finish order [
+  {
+    speed: 1,
+    wallSeconds: 31.912512542000005,
+    physicsSeconds: 27.03333333333244,
+    order: [ 'p1-b1', 'p3-b1', 'p2-b1', 'p4-b1' ],
+    winner: 'p1-b1'
+  },
+  {
+    speed: 2,
+    wallSeconds: 16.004898125,
+    physicsSeconds: 27.03333333333244,
+    order: [ 'p1-b1', 'p3-b1', 'p2-b1', 'p4-b1' ],
+    winner: 'p1-b1'
+  },
+  {
+    speed: 3,
+    wallSeconds: 10.667211292,
+    physicsSeconds: 27.03333333333244,
+    order: [ 'p1-b1', 'p3-b1', 'p2-b1', 'p4-b1' ],
+    winner: 'p1-b1'
+  }
+]

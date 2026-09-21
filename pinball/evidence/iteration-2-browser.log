@@ -1,0 +1,2257 @@
+PASS PC inputs: empty/duplicates/long names/counts/N-range/XSS/individual count
+FAIL PC end-to-end: 20 balls, first winner, rapid clicks, pause/resume, replay AssertionError [ERR_ASSERTION]: Recorded seed must reproduce actual physics finishing order
++ actual - expected
+... Skipped lines
+
+  [
+    {
+      color: '#ff82af',
++     id: 'p19-b1',
++     label: '지안',
++     name: '지안',
+-     id: 'p3-b1',
+-     label: '민준',
+-     name: '민준',
+      number: 1,
++     participantId: 'p19',
+-     participantId: 'p3',
+      rank: 1,
++     time: 5.547902440961586
+-     time: 5.599732724249784
+    },
+    {
+      color: '#ff82af',
++     id: 'p3-b1',
++     label: '민준',
++     name: '민준',
+-     id: 'p11-b1',
+-     label: '시우',
+-     name: '시우',
+      number: 1,
++     participantId: 'p3',
+-     participantId: 'p11',
+      rank: 2,
++     time: 5.8258567404893995
+-     time: 5.944725732637043
+    },
+    {
++     color: '#ffc168',
++     id: 'p13-b1',
++     label: '준서',
++     name: '준서',
+-     color: '#edeeed',
+-     id: 'p7-b1',
+-     label: '지호',
+-     name: '지호',
+      number: 1,
++     participantId: 'p13',
+-     participantId: 'p7',
+      rank: 3,
++     time: 6.117363258107705
+-     time: 6.325073935322703
+    },
+    {
++     color: '#8daaff',
++     id: 'p14-b1',
++     label: '하린',
++     name: '하린',
+-     color: '#bca7ff',
+-     id: 'p10-b1',
+-     label: '다은',
+-     name: '다은',
+      number: 1,
++     participantId: 'p14',
+-     participantId: 'p10',
+      rank: 4,
++     time: 6.146314118205886
+-     time: 6.375606276957587
+    },
+    {
++     color: '#64e4e0',
++     id: 'p4-b1',
++     label: '서연',
++     name: '서연',
+-     color: '#ffc168',
+-     id: 'p13-b1',
+-     label: '준서',
+-     name: '준서',
+      number: 1,
++     participantId: 'p4',
+-     participantId: 'p13',
+      rank: 5,
++     time: 6.465658796838786
+-     time: 6.5123207078082554
+    },
+    {
++     color: '#ff82af',
++     id: 'p11-b1',
++     label: '시우',
++     name: '시우',
+-     color: '#c6ff58',
+-     id: 'p1-b1',
+-     label: '하늘',
+-     name: '하늘',
+      number: 1,
++     participantId: 'p11',
+-     participantId: 'p1',
+      rank: 6,
++     time: 6.537016082430045
+-     time: 6.986598921638466
+    },
+    {
++     color: '#ff826c',
++     id: 'p16-b1',
++     label: '유나',
++     name: '유나',
+-     color: '#64e4e0',
+-     id: 'p4-b1',
+-     label: '서연',
+-     name: '서연',
+      number: 1,
++     participantId: 'p16',
+-     participantId: 'p4',
+      rank: 7,
++     time: 7.072449892570876
+-     time: 7.272140322709824
+    },
+    {
+      color: '#edeeed',
++     id: 'p7-b1',
++     label: '지호',
++     name: '지호',
+-     id: 'p15-b1',
+-     label: '건우',
+-     name: '건우',
+      number: 1,
++     participantId: 'p7',
+-     participantId: 'p15',
+      rank: 8,
++     time: 7.079066367132489
+-     time: 7.438998975280121
+    },
+    {
+      color: '#64e4e0',
+      id: 'p20-b1',
+      label: '태오',
+...
+      rank: 9,
++     time: 7.131712191935716
+-     time: 7.531041125494151
+    },
+    {
+      color: '#c6ff58',
++     id: 'p1-b1',
++     label: '하늘',
++     name: '하늘',
+-     id: 'p9-b1',
+-     label: '우진',
+-     name: '우진',
+      number: 1,
++     participantId: 'p1',
+-     participantId: 'p9',
+      rank: 10,
++     time: 7.588910343204592
+-     time: 7.8189916243905335
+    },
+    {
++     color: '#edeeed',
++     id: 'p15-b1',
++     label: '건우',
++     name: '건우',
+-     color: '#8daaff',
+-     id: 'p14-b1',
+-     label: '하린',
+-     name: '하린',
+      number: 1,
++     participantId: 'p15',
+-     participantId: 'p14',
+      rank: 11,
++     time: 7.97712787109151
+-     time: 8.067246064710286
+    },
+    {
+      color: '#bca7ff',
+      id: 'p18-b1',
+      label: '채원',
+...
+      rank: 12,
++     time: 8.290666329325456
+-     time: 8.438900056614166
+    },
+    {
++     color: '#64e4e0',
++     id: 'p12-b1',
++     label: '소윤',
++     name: '소윤',
+-     color: '#ff82af',
+-     id: 'p19-b1',
+-     label: '지안',
+-     name: '지안',
+      number: 1,
++     participantId: 'p12',
+-     participantId: 'p19',
+      rank: 13,
++     time: 8.541974155981993
+-     time: 8.572655009476836
+    },
+    {
++     color: '#bca7ff',
++     id: 'p2-b1',
++     label: '지우',
++     name: '지우',
+-     color: '#ffc168',
+-     id: 'p5-b1',
+-     label: '도윤',
+-     name: '도윤',
+      number: 1,
++     participantId: 'p2',
+-     participantId: 'p5',
+      rank: 14,
++     time: 8.849863404433913
+-     time: 9.541840440173166
+    },
+    {
++     color: '#bca7ff',
++     id: 'p10-b1',
++     label: '다은',
++     name: '다은',
+-     color: '#ff826c',
+-     id: 'p16-b1',
+-     label: '유나',
+-     name: '유나',
+      number: 1,
++     participantId: 'p10',
+-     participantId: 'p16',
+      rank: 15,
++     time: 9.50381972492217
+-     time: 10.050036083773056
+    },
+    {
++     color: '#ffc168',
++     id: 'p5-b1',
++     label: '도윤',
++     name: '도윤',
+-     color: '#bca7ff',
+-     id: 'p2-b1',
+-     label: '지우',
+-     name: '지우',
+      number: 1,
++     participantId: 'p5',
+-     participantId: 'p2',
+      rank: 16,
++     time: 9.540508075629745
+-     time: 10.103368003567876
+    },
+    {
+      color: '#ff826c',
+      id: 'p8-b1',
+      label: '예린',
+...
+      rank: 17,
++     time: 10.172837656156405
+-     time: 10.181353566658364
+    },
+    {
+      color: '#c6ff58',
++     id: 'p9-b1',
++     label: '우진',
++     name: '우진',
+-     id: 'p17-b1',
+-     label: '현우',
+-     name: '현우',
+      number: 1,
++     participantId: 'p9',
+-     participantId: 'p17',
+      rank: 18,
++     time: 10.4544343416011
+-     time: 11.763562088734364
+    },
+    {
+-     color: '#64e4e0',
+-     id: 'p12-b1',
+-     label: '소윤',
+-     name: '소윤',
+-     number: 1,
+-     participantId: 'p12',
+-     rank: 19,
+-     time: 12.180280146451304
+-   },
+-   {
+      color: '#8daaff',
+      id: 'p6-b1',
+      label: '수빈',
+      name: '수빈',
+      number: 1,
+      participantId: 'p6',
++     rank: 19,
++     time: 10.836869527957681
++   },
++   {
++     color: '#c6ff58',
++     id: 'p17-b1',
++     label: '현우',
++     name: '현우',
++     number: 1,
++     participantId: 'p17',
+      rank: 20,
++     time: 12.484641152725526
+-     time: 12.384563789493537
+    }
+  ]
+
+    at finish (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:6:768)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:19:602
+    at async run (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:7:850)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:17:1
+FAIL 4 map selection and real 60-ball maximum performance, last winner AssertionError [ERR_ASSERTION]: Recorded seed must reproduce actual physics finishing order
++ actual - expected
+... Skipped lines
+
+  [
+    {
++     color: '#64e4e0',
++     id: 'p28-b1',
++     label: '번호 28',
++     name: '번호 28',
+-     color: '#c6ff58',
+-     id: 'p49-b1',
+-     label: '번호 49',
+-     name: '번호 49',
+      number: 1,
++     participantId: 'p28',
+-     participantId: 'p49',
+      rank: 1,
++     time: 3.136490617435709
+-     time: 4.0256037976610575
+    },
+    {
++     color: '#8daaff',
++     id: 'p6-b1',
++     label: '번호 6',
++     name: '번호 6',
+-     color: '#ff826c',
+-     id: 'p48-b1',
+-     label: '번호 48',
+-     name: '번호 48',
+      number: 1,
++     participantId: 'p6',
+-     participantId: 'p48',
+      rank: 2,
++     time: 4.045187536908115
+-     time: 4.7325279481566795
+    },
+    {
+      color: '#ff82af',
+      id: 'p43-b1',
+      label: '번호 43',
+...
+      rank: 3,
++     time: 4.676684007019151
+-     time: 5.4969612404397745
+    },
+    {
++     color: '#ff826c',
++     id: 'p48-b1',
++     label: '번호 48',
++     name: '번호 48',
+-     color: '#ff82af',
+-     id: 'p51-b1',
+-     label: '번호 51',
+-     name: '번호 51',
+      number: 1,
++     participantId: 'p48',
+-     participantId: 'p51',
+      rank: 4,
++     time: 5.008572508341205
+-     time: 5.613586346081723
+    },
+    {
++     color: '#ff82af',
++     id: 'p11-b1',
++     label: '번호 11',
++     name: '번호 11',
+-     color: '#edeeed',
+-     id: 'p7-b1',
+-     label: '번호 7',
+-     name: '번호 7',
+      number: 1,
++     participantId: 'p11',
+-     participantId: 'p7',
+      rank: 5,
++     time: 5.151404573263333
+-     time: 5.718769978682123
+    },
+    {
++     color: '#c6ff58',
++     id: 'p49-b1',
++     label: '번호 49',
++     name: '번호 49',
+-     color: '#ff826c',
+-     id: 'p56-b1',
+-     label: '번호 56',
+-     name: '번호 56',
+      number: 1,
++     participantId: 'p49',
+-     participantId: 'p56',
+      rank: 6,
++     time: 5.342138818681798
+-     time: 5.864564491274408
+    },
+    {
++     color: '#bca7ff',
++     id: 'p34-b1',
++     label: '번호 34',
++     name: '번호 34',
+-     color: '#ffc168',
+-     id: 'p53-b1',
+-     label: '번호 53',
+-     name: '번호 53',
+      number: 1,
++     participantId: 'p34',
+-     participantId: 'p53',
+      rank: 7,
++     time: 5.522188063742547
+-     time: 5.874139699397213
+    },
+    {
++     color: '#64e4e0',
++     id: 'p36-b1',
++     label: '번호 36',
++     name: '번호 36',
+-     color: '#ff82af',
+-     id: 'p59-b1',
+-     label: '번호 59',
+-     name: '번호 59',
+      number: 1,
++     participantId: 'p36',
+-     participantId: 'p59',
+      rank: 8,
++     time: 5.536282050350139
+-     time: 6.072593596719162
+    },
+    {
++     color: '#ff82af',
++     id: 'p51-b1',
++     label: '번호 51',
++     name: '번호 51',
+-     color: '#bca7ff',
+-     id: 'p18-b1',
+-     label: '번호 18',
+-     name: '번호 18',
+      number: 1,
++     participantId: 'p51',
+-     participantId: 'p18',
+      rank: 9,
++     time: 5.562313793943718
+-     time: 6.130500553507052
+    },
+    {
+      color: '#c6ff58',
+      id: 'p33-b1',
+      label: '번호 33',
+...
+      rank: 10,
++     time: 5.627369958940976
+-     time: 6.21349896020167
+    },
+    {
++     color: '#ffc168',
++     id: 'p21-b1',
++     label: '번호 21',
++     name: '번호 21',
+-     color: '#64e4e0',
+-     id: 'p28-b1',
+-     label: '번호 28',
+-     name: '번호 28',
+      number: 1,
++     participantId: 'p21',
+-     participantId: 'p28',
+      rank: 11,
++     time: 5.6649062148664395
+-     time: 6.244176739996879
+    },
+    {
++     color: '#bca7ff',
++     id: 'p58-b1',
++     label: '번호 58',
++     name: '번호 58',
+-     color: '#ff826c',
+-     id: 'p40-b1',
+-     label: '번호 40',
+-     name: '번호 40',
+      number: 1,
++     participantId: 'p58',
+-     participantId: 'p40',
+      rank: 12,
++     time: 5.727939915425701
+-     time: 6.322336445922109
+    },
+    {
++     color: '#ffc168',
++     id: 'p45-b1',
++     label: '번호 45',
++     name: '번호 45',
+-     color: '#64e4e0',
+-     id: 'p36-b1',
+-     label: '번호 36',
+-     name: '번호 36',
+      number: 1,
++     participantId: 'p45',
+-     participantId: 'p36',
+      rank: 13,
++     time: 5.7565028062214445
+-     time: 6.3633711173341325
+    },
+    {
++     color: '#edeeed',
++     id: 'p31-b1',
++     label: '번호 31',
++     name: '번호 31',
+-     color: '#ff82af',
+-     id: 'p19-b1',
+-     label: '번호 19',
+-     name: '번호 19',
+      number: 1,
++     participantId: 'p31',
+-     participantId: 'p19',
+      rank: 14,
++     time: 5.843360479190436
+-     time: 6.394535591596258
+    },
+    {
++     color: '#bca7ff',
++     id: 'p18-b1',
++     label: '번호 18',
++     name: '번호 18',
+-     color: '#8daaff',
+-     id: 'p22-b1',
+-     label: '번호 22',
+-     name: '번호 22',
+      number: 1,
++     participantId: 'p18',
+-     participantId: 'p22',
+      rank: 15,
++     time: 5.9832021449920685
+-     time: 6.399285842333234
+    },
+    {
++     color: '#8daaff',
++     id: 'p46-b1',
++     label: '번호 46',
++     name: '번호 46',
+-     color: '#edeeed',
+-     id: 'p31-b1',
+-     label: '번호 31',
+-     name: '번호 31',
+      number: 1,
++     participantId: 'p46',
+-     participantId: 'p31',
+      rank: 16,
++     time: 6.018340790292436
+-     time: 6.526426439205141
+    },
+    {
++     color: '#64e4e0',
++     id: 'p44-b1',
++     label: '번호 44',
++     name: '번호 44',
+-     color: '#ffc168',
+-     id: 'p21-b1',
+-     label: '번호 21',
+-     name: '번호 21',
+      number: 1,
++     participantId: 'p44',
+-     participantId: 'p21',
+      rank: 17,
++     time: 6.053425796860743
+-     time: 6.56074477041439
+    },
+    {
++     color: '#bca7ff',
++     id: 'p50-b1',
++     label: '번호 50',
++     name: '번호 50',
+-     color: '#ffc168',
+-     id: 'p45-b1',
+-     label: '번호 45',
+-     name: '번호 45',
+      number: 1,
++     participantId: 'p50',
+-     participantId: 'p45',
+      rank: 18,
++     time: 6.0671199922944385
+-     time: 6.766439890148435
+    },
+    {
++     color: '#8daaff',
++     id: 'p54-b1',
++     label: '번호 54',
++     name: '번호 54',
+-     color: '#ff82af',
+-     id: 'p11-b1',
+-     label: '번호 11',
+-     name: '번호 11',
+      number: 1,
++     participantId: 'p54',
+-     participantId: 'p11',
+      rank: 19,
++     time: 6.210503966550053
+-     time: 6.8049620418858305
+    },
+    {
++     color: '#8daaff',
++     id: 'p14-b1',
++     label: '번호 14',
++     name: '번호 14',
+-     color: '#edeeed',
+-     id: 'p15-b1',
+-     label: '번호 15',
+-     name: '번호 15',
+      number: 1,
++     participantId: 'p14',
+-     participantId: 'p15',
+      rank: 20,
++     time: 6.393774274939208
+-     time: 6.871704265052987
+    },
+    {
++     color: '#bca7ff',
++     id: 'p26-b1',
++     label: '번호 26',
++     name: '번호 26',
+-     color: '#ffc168',
+-     id: 'p13-b1',
+-     label: '번호 13',
+-     name: '번호 13',
+      number: 1,
++     participantId: 'p26',
+-     participantId: 'p13',
+      rank: 21,
++     time: 6.7198513882969
+-     time: 6.912709263826854
+    },
+    {
+      color: '#edeeed',
+      id: 'p47-b1',
+      label: '번호 47',
+...
+      rank: 22,
++     time: 6.7877903491393035
+-     time: 6.968341127756446
+    },
+    {
+      color: '#c6ff58',
++     id: 'p17-b1',
++     label: '번호 17',
++     name: '번호 17',
+-     id: 'p57-b1',
+-     label: '번호 57',
+-     name: '번호 57',
+      number: 1,
++     participantId: 'p17',
+-     participantId: 'p57',
+      rank: 23,
++     time: 6.910656340662757
+-     time: 7.130704244175471
+    },
+    {
++     color: '#ffc168',
++     id: 'p13-b1',
++     label: '번호 13',
++     name: '번호 13',
+-     color: '#8daaff',
+-     id: 'p38-b1',
+-     label: '번호 38',
+-     name: '번호 38',
+      number: 1,
++     participantId: 'p13',
+-     participantId: 'p38',
+      rank: 24,
++     time: 6.927046485886237
+-     time: 7.145219411169271
+    },
+    {
++     color: '#c6ff58',
++     id: 'p25-b1',
++     label: '번호 25',
++     name: '번호 25',
+-     color: '#8daaff',
+-     id: 'p6-b1',
+-     label: '번호 6',
+-     name: '번호 6',
+      number: 1,
++     participantId: 'p25',
+-     participantId: 'p6',
+      rank: 25,
++     time: 6.9576146920096855
+-     time: 7.202020905286485
+    },
+    {
++     color: '#ff826c',
++     id: 'p24-b1',
++     label: '번호 24',
++     name: '번호 24',
+-     color: '#bca7ff',
+-     id: 'p42-b1',
+-     label: '번호 42',
+-     name: '번호 42',
+      number: 1,
++     participantId: 'p24',
+-     participantId: 'p42',
+      rank: 26,
++     time: 7.204107499896793
+-     time: 7.377288038003685
+    },
+    {
++     color: '#8daaff',
++     id: 'p30-b1',
++     label: '번호 30',
++     name: '번호 30',
+-     color: '#64e4e0',
+-     id: 'p44-b1',
+-     label: '번호 44',
+-     name: '번호 44',
+      number: 1,
++     participantId: 'p30',
+-     participantId: 'p44',
+      rank: 27,
++     time: 7.317758104050987
+-     time: 7.553419371254864
+    },
+    {
++     color: '#bca7ff',
++     id: 'p42-b1',
++     label: '번호 42',
++     name: '번호 42',
+-     color: '#ff82af',
+-     id: 'p27-b1',
+-     label: '번호 27',
+-     name: '번호 27',
+      number: 1,
++     participantId: 'p42',
+-     participantId: 'p27',
+      rank: 28,
++     time: 7.467531975833114
+-     time: 7.5792686501121995
+    },
+    {
++     color: '#ff826c',
++     id: 'p16-b1',
++     label: '번호 16',
++     name: '번호 16',
+-     color: '#c6ff58',
+-     id: 'p25-b1',
+-     label: '번호 25',
+-     name: '번호 25',
+      number: 1,
++     participantId: 'p16',
+-     participantId: 'p25',
+      rank: 29,
++     time: 7.518460382516706
+-     time: 7.605919349460818
+    },
+    {
++     color: '#64e4e0',
++     id: 'p60-b1',
++     label: '번호 60',
++     name: '번호 60',
+-     color: '#c6ff58',
+-     id: 'p17-b1',
+-     label: '번호 17',
+-     name: '번호 17',
+      number: 1,
++     participantId: 'p60',
+-     participantId: 'p17',
+      rank: 30,
++     time: 7.665121122945569
+-     time: 7.607699647674076
+    },
+    {
++     color: '#c6ff58',
++     id: 'p41-b1',
++     label: '번호 41',
++     name: '번호 41',
+-     color: '#bca7ff',
+-     id: 'p50-b1',
+-     label: '번호 50',
+-     name: '번호 50',
+      number: 1,
++     participantId: 'p41',
+-     participantId: 'p50',
+      rank: 31,
++     time: 7.848176191872566
+-     time: 7.773978536465606
+    },
+    {
++     color: '#edeeed',
++     id: 'p7-b1',
++     label: '번호 7',
++     name: '번호 7',
+-     color: '#bca7ff',
+-     id: 'p2-b1',
+-     label: '번호 2',
+-     name: '번호 2',
+      number: 1,
++     participantId: 'p7',
+-     participantId: 'p2',
+      rank: 32,
++     time: 7.9618639750032365
+-     time: 7.823652131032037
+    },
+    {
++     color: '#ff826c',
++     id: 'p8-b1',
++     label: '번호 8',
++     name: '번호 8',
+-     color: '#8daaff',
+-     id: 'p30-b1',
+-     label: '번호 30',
+-     name: '번호 30',
+      number: 1,
++     participantId: 'p8',
+-     participantId: 'p30',
+      rank: 33,
++     time: 7.975830960530248
+-     time: 7.899372656304285
+    },
+    {
++     color: '#c6ff58',
++     id: 'p57-b1',
++     label: '번호 57',
++     name: '번호 57',
+-     color: '#64e4e0',
+-     id: 'p12-b1',
+-     label: '번호 12',
+-     name: '번호 12',
+      number: 1,
++     participantId: 'p57',
+-     participantId: 'p12',
+      rank: 34,
++     time: 8.043123437031591
+-     time: 7.997020788692924
+    },
+    {
++     color: '#64e4e0',
++     id: 'p52-b1',
++     label: '번호 52',
++     name: '번호 52',
+-     color: '#bca7ff',
+-     id: 'p34-b1',
+-     label: '번호 34',
+-     name: '번호 34',
+      number: 1,
++     participantId: 'p52',
+-     participantId: 'p34',
+      rank: 35,
++     time: 8.074957067918273
+-     time: 8.083965519440929
+    },
+    {
++     color: '#8daaff',
++     id: 'p22-b1',
++     label: '번호 22',
++     name: '번호 22',
+-     color: '#edeeed',
+-     id: 'p23-b1',
+-     label: '번호 23',
+-     name: '번호 23',
+      number: 1,
++     participantId: 'p22',
+-     participantId: 'p23',
+      rank: 36,
++     time: 8.458081161544733
+-     time: 8.10634702324199
+    },
+    {
++     color: '#bca7ff',
++     id: 'p2-b1',
++     label: '번호 2',
++     name: '번호 2',
+-     color: '#edeeed',
+-     id: 'p55-b1',
+-     label: '번호 55',
+-     name: '번호 55',
+      number: 1,
++     participantId: 'p2',
+-     participantId: 'p55',
+      rank: 37,
++     time: 8.513801007727727
+-     time: 8.147267999086814
+    },
+    {
++     color: '#ff826c',
++     id: 'p56-b1',
++     label: '번호 56',
++     name: '번호 56',
+-     color: '#c6ff58',
+-     id: 'p9-b1',
+-     label: '번호 9',
+-     name: '번호 9',
+      number: 1,
++     participantId: 'p56',
+-     participantId: 'p9',
+      rank: 38,
++     time: 8.554877492925685
+-     time: 8.37595703196668
+    },
+    {
++     color: '#64e4e0',
++     id: 'p20-b1',
++     label: '번호 20',
++     name: '번호 20',
+-     color: '#8daaff',
+-     id: 'p14-b1',
+-     label: '번호 14',
+-     name: '번호 14',
+      number: 1,
++     participantId: 'p20',
+-     participantId: 'p14',
+      rank: 39,
++     time: 8.99725313127788
+-     time: 8.448838762881111
+    },
+    {
++     color: '#ff82af',
++     id: 'p59-b1',
++     label: '번호 59',
++     name: '번호 59',
+-     color: '#bca7ff',
+-     id: 'p58-b1',
+-     label: '번호 58',
+-     name: '번호 58',
+      number: 1,
++     participantId: 'p59',
+-     participantId: 'p58',
+      rank: 40,
++     time: 9.189339700755284
+-     time: 8.460756264510753
+    },
+    {
++     color: '#ffc168',
++     id: 'p29-b1',
++     label: '번호 29',
++     name: '번호 29',
+-     color: '#ff826c',
+-     id: 'p32-b1',
+-     label: '번호 32',
+-     name: '번호 32',
+      number: 1,
++     participantId: 'p29',
+-     participantId: 'p32',
+      rank: 41,
++     time: 9.24174859511322
+-     time: 8.807328628156123
+    },
+    {
++     color: '#edeeed',
++     id: 'p23-b1',
++     label: '번호 23',
++     name: '번호 23',
+-     color: '#ff82af',
+-     id: 'p35-b1',
+-     label: '번호 35',
+-     name: '번호 35',
+      number: 1,
++     participantId: 'p23',
+-     participantId: 'p35',
+      rank: 42,
++     time: 9.410217125163545
+-     time: 9.004175110579094
+    },
+    {
++     color: '#ffc168',
++     id: 'p37-b1',
++     label: '번호 37',
++     name: '번호 37',
+-     color: '#ff826c',
+-     id: 'p24-b1',
+-     label: '번호 24',
+-     name: '번호 24',
+      number: 1,
++     participantId: 'p37',
+-     participantId: 'p24',
+      rank: 43,
++     time: 9.422607550063823
+-     time: 9.030321582752737
+    },
+    {
++     color: '#bca7ff',
++     id: 'p10-b1',
++     label: '번호 10',
++     name: '번호 10',
+-     color: '#ffc168',
+-     id: 'p29-b1',
+-     label: '번호 29',
+-     name: '번호 29',
+      number: 1,
++     participantId: 'p10',
+-     participantId: 'p29',
+      rank: 44,
++     time: 9.432197803843179
+-     time: 9.427112210779276
+    },
+    {
++     color: '#ffc168',
++     id: 'p53-b1',
++     label: '번호 53',
++     name: '번호 53',
+-     color: '#8daaff',
+-     id: 'p46-b1',
+-     label: '번호 46',
+-     name: '번호 46',
+      number: 1,
++     participantId: 'p53',
+-     participantId: 'p46',
+      rank: 45,
++     time: 9.502220802024157
+-     time: 9.998049234020815
+    },
+    {
++     color: '#ff82af',
++     id: 'p3-b1',
++     label: '번호 3',
++     name: '번호 3',
+-     color: '#c6ff58',
+-     id: 'p41-b1',
+-     label: '번호 41',
+-     name: '번호 41',
+      number: 1,
++     participantId: 'p3',
+-     participantId: 'p41',
+      rank: 46,
++     time: 9.590739491296576
+-     time: 10.12864595161572
+    },
+    {
++     color: '#edeeed',
++     id: 'p15-b1',
++     label: '번호 15',
++     name: '번호 15',
+-     color: '#64e4e0',
+-     id: 'p60-b1',
+-     label: '번호 60',
+-     name: '번호 60',
+      number: 1,
++     participantId: 'p15',
+-     participantId: 'p60',
+      rank: 47,
++     time: 9.635245917942381
+-     time: 10.389743853457217
+    },
+    {
++     color: '#ff826c',
++     id: 'p32-b1',
++     label: '번호 32',
++     name: '번호 32',
+-     color: '#bca7ff',
+-     id: 'p26-b1',
+-     label: '번호 26',
+-     name: '번호 26',
+      number: 1,
++     participantId: 'p32',
+-     participantId: 'p26',
+      rank: 48,
++     time: 9.790949199032093
+-     time: 10.427642430674863
+    },
+    {
++     color: '#ff82af',
++     id: 'p19-b1',
++     label: '번호 19',
++     name: '번호 19',
+-     color: '#ffc168',
+-     id: 'p5-b1',
+-     label: '번호 5',
+-     name: '번호 5',
+      number: 1,
++     participantId: 'p19',
+-     participantId: 'p5',
+      rank: 49,
++     time: 9.886663629291617
+-     time: 10.630246787093823
+    },
+    {
++     color: '#ff82af',
++     id: 'p35-b1',
++     label: '번호 35',
++     name: '번호 35',
+-     color: '#64e4e0',
+-     id: 'p52-b1',
+-     label: '번호 52',
+-     name: '번호 52',
+      number: 1,
++     participantId: 'p35',
+-     participantId: 'p52',
+      rank: 50,
++     time: 10.09144610735884
+-     time: 10.977825132584995
+    },
+    {
++     color: '#c6ff58',
++     id: 'p9-b1',
++     label: '번호 9',
++     name: '번호 9',
+-     color: '#ff82af',
+-     id: 'p3-b1',
+-     label: '번호 3',
+-     name: '번호 3',
+      number: 1,
++     participantId: 'p9',
+-     participantId: 'p3',
+      rank: 51,
++     time: 10.124443472540753
+-     time: 11.240615819993096
+    },
+    {
++     color: '#ff82af',
++     id: 'p27-b1',
++     label: '번호 27',
++     name: '번호 27',
+-     color: '#64e4e0',
+-     id: 'p4-b1',
+-     label: '번호 4',
+-     name: '번호 4',
+      number: 1,
++     participantId: 'p27',
+-     participantId: 'p4',
+      rank: 52,
++     time: 10.272828256095206
+-     time: 11.285140318980783
+    },
+    {
+      color: '#c6ff58',
+      id: 'p1-b1',
+      label: '번호 1',
+...
+      rank: 53,
++     time: 10.462931088133944
+-     time: 11.31223635102086
+    },
+    {
++     color: '#64e4e0',
++     id: 'p4-b1',
++     label: '번호 4',
++     name: '번호 4',
+-     color: '#ff826c',
+-     id: 'p8-b1',
+-     label: '번호 8',
+-     name: '번호 8',
+      number: 1,
++     participantId: 'p4',
+-     participantId: 'p8',
+      rank: 54,
++     time: 10.869183659712634
+-     time: 11.755317643598366
+    },
+    {
++     color: '#edeeed',
++     id: 'p55-b1',
++     label: '번호 55',
++     name: '번호 55',
+-     color: '#8daaff',
+-     id: 'p54-b1',
+-     label: '번호 54',
+-     name: '번호 54',
+      number: 1,
++     participantId: 'p55',
+-     participantId: 'p54',
+      rank: 55,
++     time: 10.968182791909552
+-     time: 11.890109712988703
+    },
+    {
++     color: '#64e4e0',
++     id: 'p12-b1',
++     label: '번호 12',
++     name: '번호 12',
+-     color: '#ffc168',
+-     id: 'p37-b1',
+-     label: '번호 37',
+-     name: '번호 37',
+      number: 1,
++     participantId: 'p12',
+-     participantId: 'p37',
+      rank: 56,
++     time: 11.433677487814892
+-     time: 12.429788397668482
+    },
+    {
+      color: '#ff826c',
++     id: 'p40-b1',
++     label: '번호 40',
++     name: '번호 40',
+-     id: 'p16-b1',
+-     label: '번호 16',
+-     name: '번호 16',
+      number: 1,
++     participantId: 'p40',
+-     participantId: 'p16',
+      rank: 57,
++     time: 12.3823198388911
+-     time: 12.651159113382263
+    },
+    {
++     color: '#8daaff',
++     id: 'p38-b1',
++     label: '번호 38',
++     name: '번호 38',
+-     color: '#edeeed',
+-     id: 'p39-b1',
+-     label: '번호 39',
+-     name: '번호 39',
+      number: 1,
++     participantId: 'p38',
+-     participantId: 'p39',
+      rank: 58,
++     time: 12.572416386578597
+-     time: 13.024364835794453
+    },
+    {
++     color: '#ffc168',
++     id: 'p5-b1',
++     label: '번호 5',
++     name: '번호 5',
+-     color: '#64e4e0',
+-     id: 'p20-b1',
+-     label: '번호 20',
+-     name: '번호 20',
+      number: 1,
++     participantId: 'p5',
+-     participantId: 'p20',
+      rank: 59,
++     time: 12.705257915794808
+-     time: 13.728445535523472
+    },
+    {
++     color: '#edeeed',
++     id: 'p39-b1',
++     label: '번호 39',
++     name: '번호 39',
+-     color: '#bca7ff',
+-     id: 'p10-b1',
+-     label: '번호 10',
+-     name: '번호 10',
+      number: 1,
++     participantId: 'p39',
+-     participantId: 'p10',
+      rank: 60,
++     time: 12.946957887776794
+-     time: 13.825490575397978
+    }
+  ]
+
+    at finish (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:6:768)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:25:864
+    at async run (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:7:850)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:22:1
+FAIL Mobile 390x844 touch: per-person balls → Nth → pause → result → replay AssertionError [ERR_ASSERTION]: Recorded seed must reproduce actual physics finishing order
++ actual - expected
+... Skipped lines
+
+  [
+    {
+      color: '#c6ff58',
+      id: 'p1-b1',
+      label: '모바일 A',
+...
+      rank: 1,
++     time: 6.932988486383706
+-     time: 6.932988486365075
+    },
+    {
+      color: '#bca7ff',
+      id: 'p2-b1',
+      label: '모바일 B',
+...
+      rank: 3,
++     time: 10.106146585894509
+-     time: 10.106146565246963
+    },
+    {
+      color: '#c6ff58',
+      id: 'p1-b2',
+      label: '모바일 A',
+...
+      rank: 4,
++     time: 10.991701109122483
+-     time: 10.991697177425028
+    }
+  ]
+
+    at finish (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:6:768)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:29:569
+    at async run (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:7:850)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:28:1
+FAIL Mobile maximum: 60 balls, reduced motion and frame timing AssertionError [ERR_ASSERTION]: Recorded seed must reproduce actual physics finishing order
++ actual - expected
+... Skipped lines
+
+  [
+    {
++     color: '#ffc168',
++     id: 'p45-b1',
++     label: '공 45',
++     name: '공 45',
+-     color: '#64e4e0',
+-     id: 'p52-b1',
+-     label: '공 52',
+-     name: '공 52',
+      number: 1,
++     participantId: 'p45',
+-     participantId: 'p52',
+      rank: 1,
++     time: 3.260213485508773
+-     time: 3.9858097019880354
+    },
+    {
++     color: '#c6ff58',
++     id: 'p9-b1',
++     label: '공 9',
++     name: '공 9',
+-     color: '#ffc168',
+-     id: 'p21-b1',
+-     label: '공 21',
+-     name: '공 21',
+      number: 1,
++     participantId: 'p9',
+-     participantId: 'p21',
+      rank: 2,
++     time: 3.939059996478412
+-     time: 4.125912304944903
+    },
+    {
++     color: '#64e4e0',
++     id: 'p20-b1',
++     label: '공 20',
++     name: '공 20',
++     number: 1,
++     participantId: 'p20',
++     rank: 3,
++     time: 4.304832205787031
++   },
++   {
+      color: '#bca7ff',
+      id: 'p50-b1',
+      label: '공 50',
+      name: '공 50',
+      number: 1,
+      participantId: 'p50',
++     rank: 4,
++     time: 5.006251994717848
+-     rank: 3,
+-     time: 4.567497585205294
+    },
+    {
+      color: '#edeeed',
+      id: 'p47-b1',
+      label: '공 47',
+...
+      participantId: 'p47',
+-     rank: 4,
+-     time: 4.755827492061314
+-   },
+-   {
+-     color: '#edeeed',
+-     id: 'p31-b1',
+-     label: '공 31',
+-     name: '공 31',
+-     number: 1,
+-     participantId: 'p31',
+      rank: 5,
++     time: 5.157435313060611
+-     time: 4.758319944027923
+    },
+    {
+      color: '#bca7ff',
+      id: 'p10-b1',
+      label: '공 10',
+...
+      rank: 6,
++     time: 5.321327517827223
+-     time: 4.856912837532931
+    },
+    {
++     color: '#bca7ff',
++     id: 'p26-b1',
++     label: '공 26',
++     name: '공 26',
+-     color: '#edeeed',
+-     id: 'p15-b1',
+-     label: '공 15',
+-     name: '공 15',
+      number: 1,
++     participantId: 'p26',
+-     participantId: 'p15',
+      rank: 7,
++     time: 5.363117190425856
+-     time: 4.912827091655869
+    },
+    {
++     color: '#ffc168',
++     id: 'p53-b1',
++     label: '공 53',
++     name: '공 53',
+-     color: '#ff826c',
+-     id: 'p56-b1',
+-     label: '공 56',
+-     name: '공 56',
+      number: 1,
++     participantId: 'p53',
+-     participantId: 'p56',
+      rank: 8,
++     time: 5.387632327746646
+-     time: 5.05605549122471
+    },
+    {
++     color: '#c6ff58',
++     id: 'p41-b1',
++     label: '공 41',
++     name: '공 41',
+-     color: '#ff826c',
+-     id: 'p40-b1',
+-     label: '공 40',
+-     name: '공 40',
+      number: 1,
++     participantId: 'p41',
+-     participantId: 'p40',
+      rank: 9,
++     time: 5.536731069727913
+-     time: 5.065878534738857
+    },
+    {
++     color: '#8daaff',
++     id: 'p6-b1',
++     label: '공 6',
++     name: '공 6',
+-     color: '#edeeed',
+-     id: 'p55-b1',
+-     label: '공 55',
+-     name: '공 55',
+      number: 1,
++     participantId: 'p6',
+-     participantId: 'p55',
+      rank: 10,
++     time: 5.538710638988081
+-     time: 5.086515826874236
+    },
+    {
++     color: '#ffc168',
++     id: 'p21-b1',
++     label: '공 21',
++     name: '공 21',
+-     color: '#edeeed',
+-     id: 'p39-b1',
+-     label: '공 39',
+-     name: '공 39',
+      number: 1,
++     participantId: 'p21',
+-     participantId: 'p39',
+      rank: 11,
++     time: 5.736283748667963
+-     time: 5.306387359202646
+    },
+    {
++     color: '#ff82af',
++     id: 'p3-b1',
++     label: '공 3',
++     name: '공 3',
+-     color: '#8daaff',
+-     id: 'p6-b1',
+-     label: '공 6',
+-     name: '공 6',
+      number: 1,
++     participantId: 'p3',
+-     participantId: 'p6',
+      rank: 12,
++     time: 5.746971372171532
+-     time: 5.517951627838986
+    },
+    {
++     color: '#bca7ff',
++     id: 'p18-b1',
++     label: '공 18',
++     name: '공 18',
+-     color: '#c6ff58',
+-     id: 'p41-b1',
+-     label: '공 41',
+-     name: '공 41',
+      number: 1,
++     participantId: 'p18',
+-     participantId: 'p41',
+      rank: 13,
++     time: 5.948048372137031
+-     time: 5.849800338614322
+    },
+    {
++     color: '#edeeed',
++     id: 'p55-b1',
++     label: '공 55',
++     name: '공 55',
+-     color: '#ffc168',
+-     id: 'p53-b1',
+-     label: '공 53',
+-     name: '공 53',
+      number: 1,
++     participantId: 'p55',
+-     participantId: 'p53',
+      rank: 14,
++     time: 6.093493104165269
+-     time: 5.85601388891955
+    },
+    {
++     color: '#edeeed',
++     id: 'p31-b1',
++     label: '공 31',
++     name: '공 31',
+-     color: '#c6ff58',
+-     id: 'p1-b1',
+-     label: '공 1',
+-     name: '공 1',
+      number: 1,
++     participantId: 'p31',
+-     participantId: 'p1',
+      rank: 15,
++     time: 6.144449755517181
+-     time: 6.144751768561226
+    },
+    {
++     color: '#edeeed',
++     id: 'p23-b1',
++     label: '공 23',
++     name: '공 23',
+-     color: '#c6ff58',
+-     id: 'p33-b1',
+-     label: '공 33',
+-     name: '공 33',
+      number: 1,
++     participantId: 'p23',
+-     participantId: 'p33',
+      rank: 16,
++     time: 6.27317018608467
+-     time: 6.224793107472564
+    },
+    {
++     color: '#ff82af',
++     id: 'p43-b1',
++     label: '공 43',
++     name: '공 43',
+-     color: '#c6ff58',
+-     id: 'p49-b1',
+-     label: '공 49',
+-     name: '공 49',
+      number: 1,
++     participantId: 'p43',
+-     participantId: 'p49',
+      rank: 17,
++     time: 6.350140067968523
+-     time: 6.262304460771486
+    },
+    {
++     color: '#ff826c',
++     id: 'p48-b1',
++     label: '공 48',
++     name: '공 48',
+-     color: '#64e4e0',
+-     id: 'p12-b1',
+-     label: '공 12',
+-     name: '공 12',
+      number: 1,
++     participantId: 'p48',
+-     participantId: 'p12',
+      rank: 18,
++     time: 6.527795606992155
+-     time: 6.364409507507922
+    },
+    {
++     color: '#64e4e0',
++     id: 'p36-b1',
++     label: '공 36',
++     name: '공 36',
+-     color: '#8daaff',
+-     id: 'p46-b1',
+-     label: '공 46',
+-     name: '공 46',
+      number: 1,
++     participantId: 'p36',
+-     participantId: 'p46',
+      rank: 19,
++     time: 6.6708736054533
+-     time: 6.392328456517259
+    },
+    {
++     color: '#ff826c',
++     id: 'p40-b1',
++     label: '공 40',
++     name: '공 40',
+-     color: '#ff82af',
+-     id: 'p43-b1',
+-     label: '공 43',
+-     name: '공 43',
+      number: 1,
++     participantId: 'p40',
+-     participantId: 'p43',
+      rank: 20,
++     time: 6.855516993618844
+-     time: 6.398105861833516
+    },
+    {
++     color: '#ff82af',
++     id: 'p27-b1',
++     label: '공 27',
++     name: '공 27',
+-     color: '#ffc168',
+-     id: 'p29-b1',
+-     label: '공 29',
+-     name: '공 29',
+      number: 1,
++     participantId: 'p27',
+-     participantId: 'p29',
+      rank: 21,
++     time: 6.870168043551206
+-     time: 6.465877179960212
+    },
+    {
++     color: '#64e4e0',
++     id: 'p44-b1',
++     label: '공 44',
++     name: '공 44',
+-     color: '#ff82af',
+-     id: 'p35-b1',
+-     label: '공 35',
+-     name: '공 35',
+      number: 1,
++     participantId: 'p44',
+-     participantId: 'p35',
+      rank: 22,
++     time: 6.947894384581254
+-     time: 6.532135725618333
+    },
+    {
++     color: '#c6ff58',
++     id: 'p33-b1',
++     label: '공 33',
++     name: '공 33',
+-     color: '#ffc168',
+-     id: 'p13-b1',
+-     label: '공 13',
+-     name: '공 13',
+      number: 1,
++     participantId: 'p33',
+-     participantId: 'p13',
+      rank: 23,
++     time: 7.2907873265205545
+-     time: 6.58471922012065
+    },
+    {
++     color: '#c6ff58',
++     id: 'p49-b1',
++     label: '공 49',
++     name: '공 49',
+-     color: '#64e4e0',
+-     id: 'p20-b1',
+-     label: '공 20',
+-     name: '공 20',
+      number: 1,
++     participantId: 'p49',
+-     participantId: 'p20',
+      rank: 24,
++     time: 7.34848343149896
+-     time: 6.600644292281557
+    },
+    {
+      color: '#ffc168',
++     id: 'p13-b1',
++     label: '공 13',
++     name: '공 13',
+-     id: 'p45-b1',
+-     label: '공 45',
+-     name: '공 45',
+      number: 1,
++     participantId: 'p13',
+-     participantId: 'p45',
+      rank: 25,
++     time: 7.366191438413077
+-     time: 6.725920670638324
+    },
+    {
++     color: '#edeeed',
++     id: 'p39-b1',
++     label: '공 39',
++     name: '공 39',
+-     color: '#ff82af',
+-     id: 'p27-b1',
+-     label: '공 27',
+-     name: '공 27',
+      number: 1,
++     participantId: 'p39',
+-     participantId: 'p27',
+      rank: 26,
++     time: 7.529508594873384
+-     time: 6.792374107897266
+    },
+    {
++     color: '#8daaff',
++     id: 'p14-b1',
++     label: '공 14',
++     name: '공 14',
+-     color: '#bca7ff',
+-     id: 'p58-b1',
+-     label: '공 58',
+-     name: '공 58',
+      number: 1,
++     participantId: 'p14',
+-     participantId: 'p58',
+      rank: 27,
++     time: 7.5445209738106085
+-     time: 6.902765817617799
+    },
+    {
++     color: '#64e4e0',
++     id: 'p12-b1',
++     label: '공 12',
++     name: '공 12',
+-     color: '#c6ff58',
+-     id: 'p9-b1',
+-     label: '공 9',
+-     name: '공 9',
+      number: 1,
++     participantId: 'p12',
+-     participantId: 'p9',
+      rank: 28,
++     time: 7.672339907113342
+-     time: 6.91403377473882
+    },
+    {
++     color: '#ff826c',
++     id: 'p24-b1',
++     label: '공 24',
++     name: '공 24',
+-     color: '#64e4e0',
+-     id: 'p44-b1',
+-     label: '공 44',
+-     name: '공 44',
+      number: 1,
++     participantId: 'p24',
+-     participantId: 'p44',
+      rank: 29,
++     time: 7.827065614355143
+-     time: 7.015329922277629
+    },
+    {
++     color: '#ffc168',
++     id: 'p37-b1',
++     label: '공 37',
++     name: '공 37',
+-     color: '#64e4e0',
+-     id: 'p4-b1',
+-     label: '공 4',
+-     name: '공 4',
+      number: 1,
++     participantId: 'p37',
+-     participantId: 'p4',
+      rank: 30,
++     time: 7.996135481395522
+-     time: 7.068065391440894
+    },
+    {
++     color: '#ff826c',
++     id: 'p56-b1',
++     label: '공 56',
++     name: '공 56',
+-     color: '#8daaff',
+-     id: 'p54-b1',
+-     label: '공 54',
+-     name: '공 54',
+      number: 1,
++     participantId: 'p56',
+-     participantId: 'p54',
+      rank: 31,
++     time: 8.18462834724809
+-     time: 7.211165763173547
+    },
+    {
++     color: '#8daaff',
++     id: 'p30-b1',
++     label: '공 30',
++     name: '공 30',
+-     color: '#edeeed',
+-     id: 'p23-b1',
+-     label: '공 23',
+-     name: '공 23',
+      number: 1,
++     participantId: 'p30',
+-     participantId: 'p23',
+      rank: 32,
++     time: 8.40741736088643
+-     time: 7.28053122377953
+    },
+    {
++     color: '#8daaff',
++     id: 'p46-b1',
++     label: '공 46',
++     name: '공 46',
+-     color: '#bca7ff',
+-     id: 'p34-b1',
+-     label: '공 34',
+-     name: '공 34',
+      number: 1,
++     participantId: 'p46',
+-     participantId: 'p34',
+      rank: 33,
++     time: 8.482276816233927
+-     time: 7.697527415207684
+    },
+    {
++     color: '#64e4e0',
++     id: 'p4-b1',
++     label: '공 4',
++     name: '공 4',
+-     color: '#bca7ff',
+-     id: 'p26-b1',
+-     label: '공 26',
+-     name: '공 26',
+      number: 1,
++     participantId: 'p4',
+-     participantId: 'p26',
+      rank: 34,
++     time: 8.552775531679838
+-     time: 7.707501051936115
+    },
+    {
++     color: '#ffc168',
++     id: 'p29-b1',
++     label: '공 29',
++     name: '공 29',
++     number: 1,
++     participantId: 'p29',
++     rank: 35,
++     time: 8.685127324345435
++   },
++   {
+      color: '#c6ff58',
+      id: 'p17-b1',
+      label: '공 17',
+      name: '공 17',
+      number: 1,
+      participantId: 'p17',
++     rank: 36,
++     time: 8.787242539537589
+-     rank: 35,
+-     time: 7.9034127412110635
+    },
+    {
++     color: '#ff82af',
++     id: 'p11-b1',
++     label: '공 11',
++     name: '공 11',
+-     color: '#64e4e0',
+-     id: 'p36-b1',
+-     label: '공 36',
+-     name: '공 36',
+      number: 1,
++     participantId: 'p11',
++     rank: 37,
++     time: 9.037781793911911
+-     participantId: 'p36',
+-     rank: 36,
+-     time: 7.939931178901208
+    },
+    {
+      color: '#c6ff58',
+      id: 'p25-b1',
+      label: '공 25',
+...
+      participantId: 'p25',
++     rank: 38,
++     time: 9.19074411657666
+-     rank: 37,
+-     time: 8.290042960711657
+    },
+    {
+      color: '#bca7ff',
+      id: 'p2-b1',
+      label: '공 2',
+...
+      participantId: 'p2',
+-     rank: 38,
+-     time: 8.494403801671238
+-   },
+-   {
+-     color: '#8daaff',
+-     id: 'p22-b1',
+-     label: '공 22',
+-     name: '공 22',
+-     number: 1,
+-     participantId: 'p22',
+      rank: 39,
++     time: 9.207099721826369
+-     time: 8.560986809395768
+    },
+    {
++     color: '#bca7ff',
++     id: 'p34-b1',
++     label: '공 34',
++     name: '공 34',
+-     color: '#8daaff',
+-     id: 'p14-b1',
+-     label: '공 14',
+-     name: '공 14',
+      number: 1,
++     participantId: 'p34',
+-     participantId: 'p14',
+      rank: 40,
++     time: 9.32626212274934
+-     time: 8.686526058281679
+    },
+    {
++     color: '#ff82af',
++     id: 'p35-b1',
++     label: '공 35',
++     name: '공 35',
+-     color: '#bca7ff',
+-     id: 'p18-b1',
+-     label: '공 18',
+-     name: '공 18',
+      number: 1,
++     participantId: 'p35',
+-     participantId: 'p18',
+      rank: 41,
++     time: 9.590968520795899
+-     time: 8.795216678375985
+    },
+    {
++     color: '#64e4e0',
++     id: 'p52-b1',
++     label: '공 52',
++     name: '공 52',
+-     color: '#ff82af',
+-     id: 'p51-b1',
+-     label: '공 51',
+-     name: '공 51',
+      number: 1,
++     participantId: 'p52',
+-     participantId: 'p51',
+      rank: 42,
++     time: 9.826468888792133
+-     time: 8.956001412531792
+    },
+    {
++     color: '#ff82af',
++     id: 'p19-b1',
++     label: '공 19',
++     name: '공 19',
+-     color: '#8daaff',
+-     id: 'p30-b1',
+-     label: '공 30',
+-     name: '공 30',
+      number: 1,
++     participantId: 'p19',
+-     participantId: 'p30',
+      rank: 43,
++     time: 9.857403366122663
+-     time: 9.093367712057447
+    },
+    {
++     color: '#edeeed',
++     id: 'p15-b1',
++     label: '공 15',
++     name: '공 15',
+-     color: '#ffc168',
+-     id: 'p37-b1',
+-     label: '공 37',
+-     name: '공 37',
+      number: 1,
++     participantId: 'p15',
+-     participantId: 'p37',
+      rank: 44,
++     time: 9.934759033946998
+-     time: 9.615124205623015
+    },
+    {
++     color: '#ffc168',
++     id: 'p5-b1',
++     label: '공 5',
++     name: '공 5',
+-     color: '#ff826c',
+-     id: 'p32-b1',
+-     label: '공 32',
+-     name: '공 32',
+      number: 1,
++     participantId: 'p5',
+-     participantId: 'p32',
+      rank: 45,
++     time: 10.031070988974381
+-     time: 9.682328530339754
+    },
+    {
++     color: '#64e4e0',
++     id: 'p28-b1',
++     label: '공 28',
++     name: '공 28',
+-     color: '#ff82af',
+-     id: 'p3-b1',
+-     label: '공 3',
+-     name: '공 3',
+      number: 1,
++     participantId: 'p28',
+-     participantId: 'p3',
+      rank: 46,
++     time: 10.058744394369144
+-     time: 9.745357426394449
+    },
+    {
+      color: '#ff82af',
++     id: 'p51-b1',
++     label: '공 51',
++     name: '공 51',
+-     id: 'p59-b1',
+-     label: '공 59',
+-     name: '공 59',
+      number: 1,
++     participantId: 'p51',
+-     participantId: 'p59',
+      rank: 47,
++     time: 10.10139917691285
+-     time: 10.180106096649796
+    },
+    {
++     color: '#bca7ff',
++     id: 'p42-b1',
++     label: '공 42',
++     name: '공 42',
+-     color: '#edeeed',
+-     id: 'p7-b1',
+-     label: '공 7',
+-     name: '공 7',
+      number: 1,
++     participantId: 'p42',
+-     participantId: 'p7',
+      rank: 48,
++     time: 10.106159488643973
+-     time: 10.74515410379602
+    },
+    {
++     color: '#ff826c',
++     id: 'p32-b1',
++     label: '공 32',
++     name: '공 32',
+-     color: '#ff82af',
+-     id: 'p11-b1',
+-     label: '공 11',
+-     name: '공 11',
+      number: 1,
++     participantId: 'p32',
+-     participantId: 'p11',
+      rank: 49,
++     time: 10.47429762938628
+-     time: 11.054952644613467
+    },
+    {
++     color: '#8daaff',
++     id: 'p38-b1',
++     label: '공 38',
++     name: '공 38',
+-     color: '#c6ff58',
+-     id: 'p57-b1',
+-     label: '공 57',
+-     name: '공 57',
+      number: 1,
++     participantId: 'p38',
+-     participantId: 'p57',
+      rank: 50,
++     time: 10.609260019187351
+-     time: 11.252778028732
+    },
+    {
++     color: '#bca7ff',
++     id: 'p58-b1',
++     label: '공 58',
++     name: '공 58',
+-     color: '#ff826c',
+-     id: 'p24-b1',
+-     label: '공 24',
+-     name: '공 24',
+      number: 1,
++     participantId: 'p58',
+-     participantId: 'p24',
+      rank: 51,
++     time: 11.1410778270004
+-     time: 11.539995330196758
+    },
+    {
++     color: '#ff826c',
++     id: 'p8-b1',
++     label: '공 8',
++     name: '공 8',
+-     color: '#64e4e0',
+-     id: 'p60-b1',
+-     label: '공 60',
+-     name: '공 60',
+      number: 1,
++     participantId: 'p8',
+-     participantId: 'p60',
+      rank: 52,
++     time: 11.202033745649489
+-     time: 11.62974224614238
+    },
+    {
++     color: '#8daaff',
++     id: 'p54-b1',
++     label: '공 54',
++     name: '공 54',
+-     color: '#ff826c',
+-     id: 'p48-b1',
+-     label: '공 48',
+-     name: '공 48',
+      number: 1,
++     participantId: 'p54',
+-     participantId: 'p48',
+      rank: 53,
++     time: 11.422079557563949
+-     time: 11.65876424814204
+    },
+    {
++     color: '#c6ff58',
++     id: 'p1-b1',
++     label: '공 1',
++     name: '공 1',
+-     color: '#ffc168',
+-     id: 'p5-b1',
+-     label: '공 5',
+-     name: '공 5',
+      number: 1,
++     participantId: 'p1',
+-     participantId: 'p5',
+      rank: 54,
++     time: 11.538918081318052
+-     time: 11.89746846701429
+    },
+    {
++     color: '#edeeed',
++     id: 'p7-b1',
++     label: '공 7',
++     name: '공 7',
+-     color: '#ff826c',
+-     id: 'p8-b1',
+-     label: '공 8',
+-     name: '공 8',
+      number: 1,
++     participantId: 'p7',
+-     participantId: 'p8',
+      rank: 55,
++     time: 12.096280326176645
+-     time: 12.192069856918298
+    },
+    {
++     color: '#ff826c',
++     id: 'p16-b1',
++     label: '공 16',
++     name: '공 16',
+-     color: '#64e4e0',
+-     id: 'p28-b1',
+-     label: '공 28',
+-     name: '공 28',
+      number: 1,
++     participantId: 'p16',
+-     participantId: 'p28',
+      rank: 56,
++     time: 12.120505585902372
+-     time: 12.70018656254029
+    },
+    {
++     color: '#ff82af',
++     id: 'p59-b1',
++     label: '공 59',
++     name: '공 59',
+-     color: '#8daaff',
+-     id: 'p38-b1',
+-     label: '공 38',
+-     name: '공 38',
+      number: 1,
++     participantId: 'p59',
+-     participantId: 'p38',
+      rank: 57,
++     time: 13.18709053109779
+-     time: 13.356288198786006
+    },
+    {
++     color: '#64e4e0',
++     id: 'p60-b1',
++     label: '공 60',
++     name: '공 60',
+-     color: '#ff826c',
+-     id: 'p16-b1',
+-     label: '공 16',
+-     name: '공 16',
+      number: 1,
++     participantId: 'p60',
+-     participantId: 'p16',
+      rank: 58,
++     time: 13.75962973997897
+-     time: 13.690960013743968
+    },
+    {
++     color: '#c6ff58',
++     id: 'p57-b1',
++     label: '공 57',
++     name: '공 57',
+-     color: '#bca7ff',
+-     id: 'p42-b1',
+-     label: '공 42',
+-     name: '공 42',
+      number: 1,
++     participantId: 'p57',
+-     participantId: 'p42',
+      rank: 59,
++     time: 13.8590485957167
+-     time: 15.798028878097492
+    },
+    {
++     color: '#8daaff',
++     id: 'p22-b1',
++     label: '공 22',
++     name: '공 22',
+-     color: '#ff82af',
+-     id: 'p19-b1',
+-     label: '공 19',
+-     name: '공 19',
+      number: 1,
++     participantId: 'p22',
+-     participantId: 'p19',
+      rank: 60,
++     time: 14.638689204312941
+-     time: 15.836878580360056
+    }
+  ]
+
+    at finish (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:6:768)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:32:815
+    at async run (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:7:850)
+    at async file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/browser.mjs:31:1
+PASS Responsive, 200% text, keyboard, mute, visibility pause
+{
+  "passed": 2,
+  "failed": 4,
+  "performance": [
+    {
+      "map": "neon",
+      "device": "desktop 1440x1000",
+      "balls": 60,
+      "samples": 335,
+      "meanFrameCostMs": 1.3116417910959293,
+      "p95FrameCostMs": 2.099999999627471,
+      "p95FrameIntervalMs": 16.799999999999272,
+      "fps": 60.002507567480436
+    },
+    {
+      "map": "neon",
+      "device": "mobile emulation 390x844 DPR2",
+      "balls": 60,
+      "samples": 332,
+      "meanFrameCostMs": 1.8506024096565075,
+      "p95FrameCostMs": 2.400000000372529,
+      "p95FrameIntervalMs": 16.700000000000728,
+      "fps": 60.00144581797151
+    }
+  ]
+}

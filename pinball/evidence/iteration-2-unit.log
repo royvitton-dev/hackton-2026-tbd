@@ -1,0 +1,18 @@
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (1.32ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (0.337709ms)
+✔ rule validation and ball-based N range (0.160958ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (4.244417ms)
+✔ finish order is crossing time, not ball list; exact ties use seeded tie key (0.580209ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (214.861041ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (293.993583ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (0.393709ms)
+✔ fast wall and pin impacts remain inside the board (0.696084ms)
+✔ all 4 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (12573.201375ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13137.184375
