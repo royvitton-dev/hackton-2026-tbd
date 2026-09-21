@@ -3,8 +3,9 @@ import { RoundedBoxGeometry } from 'three/addons/geometries/RoundedBoxGeometry.j
 import { mergeGeometries } from 'three/addons/utils/BufferGeometryUtils.js';
 const cache=new Map();
 export const palette={cream:'#eee0c8',stone:'#c4b59b',pink:'#d78983',blue:'#397b8c',gold:'#c9a459',grass:'#72905c',dark:'#25483d',path:'#e4d8be'};
-export function material(color,options={}) {const key=color+JSON.stringify(options);if(!cache.has(key))cache.set(key,new THREE.MeshStandardMaterial({color,roughness:.72,...options}));return cache.get(key);}
+export function material(color,options={}) {const key=color+JSON.stringify(options);if(!cache.has(key)){const m=new THREE.MeshStandardMaterial({color,roughness:.72,...options});m.userData.shared=true;cache.set(key,m);}return cache.get(key);}
 const boxGeometry=new THREE.BoxGeometry(1,1,1), sphereGeometry=new THREE.SphereGeometry(1,16,12), cylinderGeometry=new THREE.CylinderGeometry(1,1,1,24);
+for(const g of [boxGeometry,sphereGeometry,cylinderGeometry])g.userData.shared=true;
 export function mesh(parent,geometry,mat,x=0,y=0,z=0){const m=new THREE.Mesh(geometry,typeof mat==='string'?material(mat):mat);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
 export function box(parent,w,h,d,color,x=0,y=0,z=0){const m=mesh(parent,boxGeometry,color,x,y,z);m.scale.set(w,h,d);return m;}
 export function rounded(parent,w,h,d,r,color,x=0,y=0,z=0){return mesh(parent,new RoundedBoxGeometry(w,h,d,2,r),color,x,y,z);}
@@ -52,7 +53,13 @@ export function staticBatch(root){
  for(const {material:mat,geometries} of batches.values()){
   // Different geometry primitives can have different attributes; only position/normal/uv are needed here.
   const normalized=geometries.map(g=>{const n=g.index?g.toNonIndexed():g;for(const key of Object.keys(n.attributes))if(!['position','normal','uv'].includes(key))n.deleteAttribute(key);if(!n.attributes.uv)n.setAttribute('uv',new THREE.BufferAttribute(new Float32Array(n.attributes.position.count*2),2));return n;});
-  const merged=mergeGeometries(normalized);if(merged)mesh(root,merged,mat);
+  const merged=mergeGeometries(normalized);if(merged){merged.userData.shared=false;mesh(root,merged,mat);}
   for(const g of new Set([...geometries,...normalized]))g.dispose();
  }
+ for(const geometry of new Set(originals.map(o=>o.geometry)))if(!geometry.userData.shared)geometry.dispose();
+}
+export function disposeSubtree(root){
+ const geometries=new Set(),materials=new Set(),textures=new Set();
+ root.traverse(o=>{if(o.isMesh){geometries.add(o.geometry);for(const m of Array.isArray(o.material)?o.material:[o.material])if(!m.userData.shared){materials.add(m);for(const value of Object.values(m))if(value?.isTexture)textures.add(value);}if(o.isInstancedMesh)o.dispose();}});
+ for(const g of geometries)if(!g.userData.shared)g.dispose();for(const t of textures)t.dispose();for(const m of materials)m.dispose();root.clear();
 }

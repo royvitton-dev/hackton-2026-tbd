@@ -1,12 +1,15 @@
 {
-  "name": "vitalis-hackathon-film",
-  "version": "1.0.0",
+  "name": "wonder-park-film",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
     "capture": "node scripts/capture-demo.mjs",
     "audio": "node scripts/audio.mjs",
-    "render": "node scripts/render.mjs"
+    "stills": "node scripts/render.mjs --stills",
+    "render": "node scripts/render.mjs",
+    "verify": "node scripts/render.mjs --verify",
+    "publish:local": "node scripts/publish-local.mjs"
   }
 }
