@@ -56,13 +56,15 @@ for(const model of models.filter(m=>m.available)){
       for(const child of node.children??[])visit(child);
     };
     for(const node of json.scenes[json.scene??0].nodes)visit(node);
-    assert(triangles>10000,'Detailed vehicle triangle geometry missing');
+    assert(triangles>10000,'Vehicle triangle geometry missing');
     if(model.sourceTriangles)assert.equal(triangles,model.sourceTriangles,'Unexpected vehicle geometry loss');
     assert(source.equals(await readFile(path.join(root,'public',model.glbPath))),'GLB public copy differs');
     assert(model.license&&model.author&&model.sourceUrl,'GLB provenance missing');
   }catch(error){failures.push(`${model.vehicleId}: ${error.message}`);}
 }
 const photoProfiles=models.filter(m=>!m.available);
+const rejectedModels=models.filter(m=>m.visualReview?.status==='rejected');
+if(require3d)for(const model of rejectedModels)failures.push(`${model.vehicleId}: 3D VISUAL REVIEW FAILED. ${model.visualReview.reason} Next: ${model.visualReview.nextAction}`);
 for(const model of photoProfiles){
   const image=entries.find(e=>e.vehicleId===model.vehicleId);
   if(!image?.downloaded||!image?.cutoutGenerated)failures.push(`${model.vehicleId}: No GLB or verified PNG is available`);
@@ -70,7 +72,7 @@ for(const model of photoProfiles){
 }
 if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}else{
   console.log(`PASS: ${entries.length} vehicle mappings / ${new Set(entries.map(e=>e.fileName)).size} originals + alpha cutouts; public copies and provenance match.`);
-  console.log(`GLB: ${models.filter(m=>m.available).length}/${models.length} profiles; fixed WebGL PNG: ${photoProfiles.length}/${models.length}. Asset integrity passed; this is not a visual or interaction acceptance test.`);
+  console.log(`GLB files: ${models.filter(m=>m.available).length}/${models.length}; missing GLB: ${photoProfiles.length}; visual review rejected: ${rejectedModels.length}. Asset integrity passed; this is not a visual or interaction acceptance test.`);
 }
 if(photoProfiles.length){
   console.error(`3D INCOMPLETE: ${photoProfiles.map(m=>`${m.manufacturer} ${m.model}`).join(', ')}. Run npm run verify:vehicle-3d for the required 3D asset gate.`);

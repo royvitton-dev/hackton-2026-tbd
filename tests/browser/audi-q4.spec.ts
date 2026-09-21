@@ -10,7 +10,7 @@ test('Audi Q4 renders its authored 3D body without the floating charger box',asy
   await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
   await expect(canvas).toHaveAttribute('data-charger-visible','false');
   await expect(canvas).toHaveAttribute('data-model-kind','authored-approximation');
-  await expect(page.getByText('3D 재구성 · 드래그로 시점 조절',{exact:true})).toBeVisible();
+  await expect(page.getByText('3D 차량 · 드래그로 시점 조절',{exact:true})).toBeVisible();
   await page.screenshot({path:'test-results/audi-q4-clean-desktop.png',fullPage:true});
   await page.getByRole('button',{name:'배터리 위치 보기'}).click();
   await expect(page.locator('#battery-info-panel')).toBeVisible();

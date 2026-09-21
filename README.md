@@ -168,7 +168,7 @@ MINI Cooper / BMW i5 / Audi Q4·Q6 / Volvo EX30 / Volkswagen ID.4는 제조사 �
 
 ## 실제 WebGL 3D 렌더링
 
-GLB의 입체 geometry를 WebGL에서 렌더링합니다. BMW i5·Audi Q4/Q6·MINI에는 차체·유리·바퀴를 갖춘 자체 제작 개략 GLB를 연결했습니다. 사진을 회전하거나 depth-stack으로 만드는 방식이 아닙니다. 이 4종의 화면에는 **자체 제작 개략 3D · 정밀 CAD 아님**을 표시하며, `실차 사진` 버튼으로 기존 누끼 사진을 비교할 수 있습니다. 사진은 고정 시점이고 배터리 보기에서는 다시 GLB로 전환합니다. 차량을 HTML img 또는 Next Image로 렌더링하지 않습니다.
+GLB의 입체 geometry를 WebGL에서 렌더링합니다. BMW i5·Audi Q4/Q6·MINI에는 차체·유리·바퀴를 갖춘 자체 제작 개략 GLB를 연결했습니다. 사진을 회전하거나 depth-stack으로 만드는 방식이 아닙니다. 이 4종의 화면에는 **자체 제작 개략 3D · 정밀 CAD 아님**을 표시합니다. 실차 사진 비교 버튼은 제거했습니다. 기본 보기와 배터리 보기 모두 동일한 GLB를 사용하며, 4종의 외형 품질은 검수에서 불합격했습니다. 상세 모델 교체가 필요합니다. 차량을 HTML img 또는 Next Image로 렌더링하지 않습니다.
 
 현재 실제 GLB가 연결된 모델:
 - Volvo EX30: LagzDesign의 CC BY 4.0 커뮤니티 모델, 59,354 triangles / 0.33 MB. 실내가 없는 2023 대표 외형이며 정밀 CAD가 아닙니다. 원본 GLB에 제작자·원본 URL·라이선스가 포함되어 있습니다.
@@ -250,7 +250,7 @@ node scripts/optimize-vehicle-model.mjs original.glb optimized.glb --preserve-ge
 
 - WebGL 스튜디오 바닥, 원형 조명 플랫폼, 환경 반사광과 그림자. 차량 옆 네모로 보이던 충전기 장식은 모든 차량 장면에서 제거했습니다.
 - OrbitControls: 수평 이동 금지, polar 55–78°, azimuth −65–−15° (기본 3/4 방향 주변 ±25°), 거리 5.7–10.5. 360도/차량 하부 시점 금지.
-- GLB의 배터리 보기 버튼을 누르면 차체는 반투명해지고 바퀴 재질은 유지되어 내부 배터리 개략도가 보입니다. 배터리 팩은 차체 내부 치수와 depth test를 유지하며, 닫으면 원래 재질로 돌아갑니다. 실차 사진 비교 모드에서 배터리 보기 버튼을 누르면 해당 차량의 개략 GLB로 전환해 투시를 표시합니다. ESC로 닫으면 사진 모드로 돌아갑니다.
+- GLB의 배터리 보기 버튼을 누르면 차체는 반투명해지고 바퀴 재질은 유지되어 내부 배터리 개략도가 보입니다. 배터리 팩은 차체 내부 치수와 depth test를 유지하며, 닫으면 원래 재질로 돌아갑니다. 차량과 배터리 보기 모두 같은 GLB를 사용합니다. ESC로 닫으면 같은 모델의 차체 재질을 복원합니다.
 - ESC/닫기로 포커스 해제. reduced-motion 설정을 따릅니다.
 - 배터리 메시와 hotspot은 위치 설명용 개략도이며 실차의 정확한 팩 CAD가 아닙니다.
 - 배터리 개략도는 차체 내부의 케이스와 12개 모듈로 구성하고 depth test를 적용합니다. 큰 평판을 차량 앞에 강제로 겹쳐 그리지 않습니다. 배터리 보기의 polar angle은 65–78°로 제한해 상단 평판이나 하부가 강조되는 시점을 막습니다.
@@ -270,9 +270,9 @@ npm run verify:assets
 
 실제 alpha가 있는 PNG는 투명도를 보존하고, 체크무늬가 픽셀로 포함된 불투명 이미지는 rembg로 배경을 제거합니다. 교체 시 기존 누끼 캐시를 무효화합니다. 출처 파일 SHA-256, 사용자 제공 여부, 알 수 없는 저작자·라이선스를 기록하며 임의의 인터넷 출처를 만들지 않습니다. `download:vehicles -- --force`도 사용자 파일은 보관된 로컬 원본에서 다시 생성합니다. Q4의 작은 마스크 보정은 원본 해시에 묶인 `sources/*_alpha_corrections.json`으로 재현합니다. 새 파일로 교체할 때는 기존 보정을 재사용하지 않습니다.
 
-2026-09-22 사용자 제공 Q4(2024 표기), MINI Cooper S, BMW i5(최종 선택한 파란색 `4_221_f.webp`) 사진을 연결했습니다. BMW는 이전의 작은 흰색 이미지 대신 999×564 원본을 사용합니다. MINI 사진은 충전 데이터의 전기 MINI와 다른 구동계/세대일 수 있으며 출처 패널에 표시합니다. 이 세 파일은 정지 WebGL 사진이며 실제 3D 회전·배터리 투시 리소스를 대체하지 않습니다.
+2026-09-22 사용자 제공 Q4(2024 표기), MINI Cooper S, BMW i5(최종 선택한 파란색 `4_221_f.webp`) 사진을 연결했습니다. BMW는 이전의 작은 흰색 이미지 대신 999×564 원본을 사용합니다. MINI 사진은 충전 데이터의 전기 MINI와 다른 구동계/세대일 수 있으며 출처 패널에 표시합니다. 이 세 파일은 참조·출처 보관용이며 차량 뷰어에 사진 전환 버튼을 제공하지 않습니다.
 
-`verify:assets`는 파일·출처·동기화 무결성을 검사하므로 사진만 있어도 통과할 수 있습니다. **전체 차량의 실제 3D 리소스 확보 여부는 `npm run verify:vehicle-3d`로 별도 검사합니다.** 현재 20개 프로필의 GLB 무결성 검사는 통과합니다. 이 검사는 자체 제작 개략 GLB도 포함하므로 실차 외형 정확도나 사진 수준의 품질을 보증하지 않습니다. 실제 브라우저의 드래그·투시는 `tests/browser/authored-vehicles.spec.ts`로 별도 검증합니다.
+`verify:assets`는 파일·출처·동기화 무결성을 검사하므로 사진만 있어도 통과할 수 있습니다. **전체 차량의 실제 3D 리소스 확보 여부는 `npm run verify:vehicle-3d`로 별도 검사합니다.** 현재 GLB 파일 무결성 검사는 통과하지만, `verify:vehicle-3d`는 BMW i5·Audi Q4/Q6·MINI의 외형 검수 불합격으로 실패합니다. 파일 존재와 기능 검사를 외형 품질 통과로 처리하지 않습니다. 재작업 시도와 필요한 원본은 `docs/evision-review/VEHICLE-FIDELITY-20260922.md`에 기록합니다. 실제 브라우저의 드래그·투시는 `tests/browser/authored-vehicles.spec.ts`로 별도 검증합니다.
 
 ```sh
 npm run lint
@@ -300,8 +300,8 @@ node scripts/capture-demo.mjs
 핵심 파일:
 - `src/components/VehicleBatteryDashboard.tsx`: 단일 사용자 컨테이너/탭.
 - `VehicleImageWebGLViewer.tsx`, `VehicleGlbModel.tsx`, `GarageEnvironment.tsx`: 실제 3D 렌더링.
-- `VehicleCutoutMesh.tsx`: 실차 사진 비교 모드와 GLB 미확보 차량의 실제 투명 PNG를 WebGL에서 고정 표시.
-- `tests/browser/cutouts.spec.ts`, `authored-vehicles.spec.ts`, `casper.spec.ts`: 사진 비교 전환, 실제 메시 드래그, 배터리 투시와 캐스퍼 메시 검증.
+- `VehicleCutoutMesh.tsx`: 이전 사진 렌더러이며 현재 차량 뷰어에서는 사용하지 않습니다.
+- `tests/browser/user-images.spec.ts`, `authored-vehicles.spec.ts`, `casper.spec.ts`: 사진 출처 보존, 사진 전환 UI 없음, 메시 드래그·배터리 투시 검증.
 - `tests/browser/battery-depth.spec.ts`: 차체 투시와 원래 재질 복원, 배터리 depth test와 차체 경계, 상단·측면 카메라 제한 검증.
 - `BatteryHotspot.tsx`, `BatteryFocusController.tsx`, `BatteryInfoPanel.tsx`: 배터리 포커스.
 - `VehicleDetails.tsx`, `ChargingHistory.tsx`: 리소스 기반 상세 정보.

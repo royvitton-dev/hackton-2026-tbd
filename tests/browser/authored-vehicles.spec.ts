@@ -47,7 +47,8 @@ for (const [user,id] of [
     await expect(canvas).toHaveAttribute('data-faded-vehicle-materials','0');
     await page.setViewportSize({width:390,height:844});
     await expect.poll(()=>page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
-    await expect(page.getByRole('button',{name:'실차 사진',exact:true})).toBeVisible();
+    await expect(page.getByRole('button',{name:'실차 사진',exact:true})).toHaveCount(0);
+    await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
     expect(errors).toEqual([]);
   });
 }

@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import images from '../../src/data/vehicleImageSources.json' with { type: 'json' };
 import { readFile } from 'node:fs/promises';
 
-test('supplied MINI, Q4 and blue BMW images reach the WebGL texture and survive vehicle switching', async ({ page }) => {
+test('supplied photos stay in provenance while every vehicle and battery view uses 3D geometry', async ({ page }) => {
   test.setTimeout(180000);
   const route = process.env.VEHICLE_REVIEW_BASE_PATH ?? '';
   const errors: string[] = [];
@@ -18,16 +18,16 @@ test('supplied MINI, Q4 and blue BMW images reach the WebGL texture and survive 
     await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption(user);
     const canvas = page.locator('canvas');
     await expect(canvas).toHaveAttribute('data-vehicle-id', id, { timeout: 90000 });
-    await page.getByRole('button', { name: '실차 사진', exact: true }).click();
-    await expect(canvas).toHaveAttribute('data-renderer', 'webgl-cutout');
+    await expect(page.getByRole('button', { name: '실차 사진', exact: true })).toHaveCount(0);
+    await expect(canvas).toHaveAttribute('data-renderer', 'webgl-3d-mesh');
     const texturePath = `${route}${source.publicCutoutPath}?v=${(source.cutoutSha256??source.cutoutSourceSha256).slice(0,12)}`;
-    await expect(canvas).toHaveAttribute('data-cutout-path', texturePath);
+    await expect(canvas).not.toHaveAttribute('data-cutout-path');
     const response = await page.request.get(texturePath);
     expect(response.status()).toBe(200);
     expect(createHash('sha256').update(await response.body()).digest('hex'))
       .toBe(createHash('sha256').update(await readFile(source.resourceCutoutPath)).digest('hex'));
     await expect(canvas).toHaveAttribute('data-charger-visible', 'false');
-    await expect(page.getByText('실차 사진 · 고정 시점', { exact: true })).toBeVisible();
+    await expect(page.getByText('3D 차량 · 드래그로 시점 조절', { exact: true })).toBeVisible();
     await expect(page.locator('img')).toHaveCount(0);
     await page.screenshot({ path: `test-results/user-image-${id}.png`, fullPage: true });
     await page.getByRole('button', { name: '배터리 위치 보기' }).click();
