@@ -31,7 +31,7 @@ Run ID: `frontend-production-20260921T093830224Z-33aae872`.
 | 데이터 | `evidence/<run-id>/engine-data` — 새 빈 데이터, 실제 demo 데이터 복사 없음 |
 | 정적 파일 | `evidence/<run-id>/dist` |
 | 환경·명령·PID·해시 | `evidence/<run-id>/processes.json`, `artifact-sha256.json` |
-| 타입·빌드 | `typecheck.log`, `build.log`; exit 0 |
+| 타입·빌드 | `processes.json`의 `tsc -b` 명령·준비 완료 기록과 `build.log`. 타입 검사가 무출력이어서 별도 `typecheck.log`는 생성되지 않음; 시작 스크립트는 타입 검사 실패 시 빌드 전에 중단 |
 | HTTP 정적 검증 | `verify-static.mjs`, `static-verification.json`; passed true |
 | 기존 시연 보존 | `demo-preserved.json`; 기존 engine·frontend·12 bots PID 모두 실행 중, 데이터 경로 분리 |
 | 포트 충돌 보호 | `occupied-port-guard.log`; 재실행은 exit 1로 거절, 두 기존 fixture PID 유지 |
@@ -55,10 +55,10 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-production-pre
 
 기본 포트 5177·8790이 비어 있을 때만 시작한다. 매 실행에 고유 run ID, 새 데이터와 산출물을 사용한다. Windows PowerShell 스크립트이며 다른 OS 실행을 검증하지 않았다. 설정한 환경변수는 스크립트 종료 시 기존 프로세스 값으로 복원한다.
 
-현재 fixture 종료:
+새로 시작한 fixture는 해당 시작 명령이 출력한 `processes.json`의 절대 경로로 종료한다. 위 검증 run은 이미 종료했으므로 그 과거 manifest를 새 실행의 종료 명령에 재사용하지 않는다.
 
 ```powershell
-powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stop-production-preview.ps1 -ManifestPath 'C:\project\hackton-2026-tbd\trading\evidence\frontend-production-20260921T093830224Z-33aae872\processes.json'
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stop-production-preview.ps1 -ManifestPath '<새 실행에서 출력된 절대 processes.json 경로>'
 ```
 
 종료 스크립트는 manifest 종류와 PID 명령줄을 확인한 뒤 엔진 정상 shutdown을 요청하고 preview 프로세스를 종료한다. 데이터나 증거를 삭제하지 않는다. 브라우저 QA 완료 후 실제 종료 명령도 exit 0으로 완료했다. 현재 manifest 상태는 stopped이며 기존 dev/엔진/12개 봇은 유지했다.

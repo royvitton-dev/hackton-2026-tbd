@@ -6,7 +6,9 @@
 
 ## A. 순수 매칭·정산 코어
 
-구현: `engine/examples/core_bench.rs`. 실행: `cargo run --release --example core_bench -- --cycles 20000 --warmup-cycles 1000` (실제 명령에는 설치된 Rust/linker 환경을 적용). 측정 전 목표는 **초당 20,000 명령 이상**, **p99 250µs 이하**, **의도한 정상 명령 거절률 0%**다. 이는 12개 봇과 수동 사용자 시연의 초당 수십 건 수준보다 충분한 여유를 확인하려는 로컬 목표이며, 내구성 ACK·인터넷 성능 목표를 대신하지 않는다.
+구현: `engine/examples/core_bench.rs`. `trading` 디렉터리에서 실행: `cargo run --manifest-path engine/Cargo.toml --release --locked --example core_bench -- --cycles 20000 --warmup-cycles 1000` (실제 명령에는 설치된 Rust/linker 환경을 적용). 측정 전 목표는 **초당 20,000 명령 이상**, **p99 250µs 이하**, **의도한 정상 명령 거절률 0%**다. 이는 12개 봇과 수동 사용자 시연의 초당 수십 건 수준보다 충분한 여유를 확인하려는 로컬 목표이며, 내구성 ACK·인터넷 성능 목표를 대신하지 않는다.
+
+2026-09-21 19:29 KST 보완: 실행 위치와 manifest 경로만 명시했다. 사전 목표·부하·측정 조건은 변경하지 않았으며, 이후 실제 결과는 [성능 보고](performance.md)에 구분하여 보존한다.
 
 한 사이클은 maker 매도 2개 → maker 1개 전체 및 다음 maker 일부 체결하는 지정가 매수 → 남은 maker 취소 → resting 매수 → 취소의 6명령이다. 3개 계정을 순환해 전체 보유량을 되돌리므로 장기 측정에서도 자산 부족에 의존하지 않는다. 초기 상태는 일반 15개 계정 기본 자산이며 동시성 1, 큐 없음, 저널 없음이다. 고정 workload 식별 seed는 20260921이며 난수를 사용하지 않는 결정적인 입력이다. 기본 warm-up은 6,000명령, 측정은 120,000명령이다. 동일 Core에서 warm-up 후 누적 이력을 보존한다.
 

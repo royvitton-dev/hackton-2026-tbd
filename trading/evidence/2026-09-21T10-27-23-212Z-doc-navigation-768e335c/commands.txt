@@ -1,0 +1,63 @@
+trading/README.md:9: 검증 환경: Windows 11, Node 24.19.0, pnpm 11.25.0, Rust 1.98.1 GNU. Node와 pnpm이 PATH에 필요합니다. Rust·링커 도구와 캐시는 이 폴더의 `.tools` 안에 설치합니다.
+trading/README.md:14: ./scripts/setup.ps1
+trading/README.md:20: node scripts/demo.mjs start
+trading/README.md:29: node scripts/demo.mjs status
+trading/README.md:30: node scripts/demo.mjs stop
+trading/README.md:33: UI와 봇을 유지한 엔진 정상 재시작·브라우저 자동 재연결은 `node scripts/demo.mjs restart-engine`으로 확인할 수 있습니다. 기존 엔진의 실제 종료를 기다린 뒤 같은 영속 데이터로 새 프로세스를 시작하고 전후 상태·로그·PID를 기록합니다.
+trading/README.md:37: Linux/macOS에서는 Rust stable, Node 24.x, pnpm 11.25.0을 준비하고 `trading` 디렉터리에서 아래 명령을 순서대로 실행합니다. 해당 OS의 실제 실행은 아직 검증하지 않았습니다.
+trading/README.md:40: cargo build --manifest-path engine/Cargo.toml --release --locked --bin leave-engine
+trading/README.md:41: pnpm --dir frontend install --frozen-lockfile
+trading/README.md:42: pnpm --dir frontend build
+trading/README.md:43: node scripts/demo.mjs start
+trading/README.md:57: . ./scripts/env.ps1
+trading/README.md:58: ./scripts/run-evidence.ps1 -Label rust-tests -Command cargo -CommandArgs @('test','--locked')
+trading/README.md:59: node --test scripts/api.integration.test.mjs
+trading/README.md:60: node scripts/observe.mjs 310
+trading/README.md:75: Vercel Root Directory는 `trading/frontend`, 빌드 `pnpm build`, 산출물 `dist`입니다. API 주소는 실제 별도 엔진의 HTTPS/WSS 주소로 지정해야 합니다. Rust 컨테이너/영속 볼륨 예시는 `deploy`에 있으며, Docker가 없는 현재 호스트에서는 컨테이너 빌드를 아직 검증하지 않았습니다. 루트 UI는 수정하지 않았으며 독립 실행 UI와 연동 절차를 제공합니다.
+trading/docs/aged-recovery-plan.md:28: . .\trading\scripts\env.ps1
+trading/docs/aged-recovery-plan.md:29: cargo build --manifest-path .\trading\engine\Cargo.toml --example aged_recovery
+trading/docs/aged-recovery-plan.md:30: node .\trading\scripts\aged-recovery.mjs --self-test
+trading/docs/aged-recovery-plan.md:50: node .\trading\scripts\aged-recovery.mjs --source C:\project\hackton-2026-tbd\trading\data\demo
+trading/docs/bench-plan.md:9: 구현: `engine/examples/core_bench.rs`. `trading` 디렉터리에서 실행: `cargo run --manifest-path engine/Cargo.toml --release --locked --example core_bench -- --cycles 20000 --warmup-cycles 1000` (실제 명령에는 설치된 Rust/linker 환경을 적용). 측정 전 목표는 **초당 20,000 명령 이상**, **p99 250µs 이하**, **의도한 정상 명령 거절률 0%**다. 이는 12개 봇과 수동 사용자 시연의 초당 수십 건 수준보다 충분한 여유를 확인하려는 로컬 목표이며, 내구성 ACK·인터넷 성능 목표를 대신하지 않는다.
+trading/docs/bench-plan.md:25: 조율된 조용한 측정 시간에 `node scripts/network-bench.mjs --quiet-window --cycles 200 --warmup-cycles 20 --stress12 --label baseline`을 실행한다. 이 스크립트는 빌드하거나 기존 시연 엔진에 접속하지 않는다. `target/release` 엔진을 새로운 `evidence/<run>/bin`으로 복사하고 SHA-256을 기록한다. B/C/선택 stress 각각 별도의 합성 데이터 디렉터리, 임시 localhost 포트, 엔진 프로세스를 사용한다. 원본 바이너리·데이터·이전 증거를 삭제하지 않는다.
+trading/docs/checkpoint.md:11: - Node24.19.0/pnpm11.25.0, portableRust1.98.1GNU+LLVM. Rust명령 전 `. ./scripts/env.ps1`. 도구/캐시/빌드/데이터는로컬보존,Git제외. 큰FULLCore runtimeJSON도로컬보존+해시/비교결과추적. `engine/tests/fixtures/*.json`은추적.
+trading/docs/checkpoint.md:20: - 커밋 `7bc9b56` 소스를 `.tmp/20260921T101847792Z-git-source-repro-ea6a3bd8/trading`으로 export하여 새 target/node_modules에서 setup.ps1 exit0. 설치 도구/의존성 캐시만 기존 `.tools` junction으로 재사용했다. Rust release 및 TS/Vite production build 통과; 원본 미커밋 소스에 의존하지 않는 빌드 진입점 확인. [근거](../evidence/20260921T101847792Z-git-source-repro-ea6a3bd8/README.md).
+trading/docs/checkpoint.md:44: - 중간확인: `node scripts/summarize-observation.mjs 2026-09-21T10-05-54-901Z-observe-0b80d28e`, `node scripts/summarize-bot-latency.mjs 2026-09-21T10-05-21-198Z-demo-3b10627b`. 원본표본/성장/새checkpoint/연속성/지연/디스크를의미있는간격으로확인;같은통과테스트반복금지.
+trading/docs/checkpoint.md:46: - 정상정지 `node scripts/demo.mjs stop`,엔진만정상재시작 `node scripts/demo.mjs restart-engine`. **관찰중불필요한재시작금지**. 실제exitcode가필요하면종료전 `scripts/watch-process-exit.ps1`로handle감시(별도부모selftest에서exit7확인됨).
+trading/docs/core.md:47: 2026-09-21 17:27 KST 첫 실행: Rust 1.98.1, cargo 1.98.1, rustfmt 1.9.0을 확인했고 소유한 네 Rust 파일의 포맷은 성공했다. `cargo test --manifest-path engine/Cargo.toml --test core_rules --test core_reference`는 dependency build-script 링크에서 `-lgcc_eh`, `-lgcc` 탐색 실패로 종료코드 101을 반환했다. 코어 컴파일 및 테스트 assertion 이전 환경 실패이며 테스트 통과나 코어 결함으로 분류하지 않는다. 원본 출력·명령은 `evidence/core-20260921T172751046-debug/`에 보존했다. 필요한 라이브러리는 Rust toolchain의 `lib/self-contained`에 존재하며 주 에이전트가 링크 환경을 조정한다.
+trading/docs/core.md:49: 주 에이전트가 Rust 번들 GCC + `-C link-self-contained=yes` + LLVM dlltool 조합을 `scripts/env.ps1`에 반영한 뒤 재검증했다.
+trading/docs/core.md:60: 재실행은 `trading`에서 `. ./scripts/env.ps1`을 먼저 적용하고 위 cargo 명령을 사용한다. 테스트 실행 시간은 테스트 검증 기록이며 벤치마크 성능으로 사용하지 않는다.
+trading/docs/deployment.md:19: | Install Command | 기본 자동 감지 유지. Corepack 활성화 및 실제 pnpm 버전을 빌드 로그에서 확인 |
+trading/docs/deployment.md:20: | Build Command | `pnpm build` |
+trading/docs/deployment.md:22: | Development Command | `pnpm dev` |
+trading/docs/deployment.md:27: `frontend/vercel.json`은 Vite·빌드·출력 디렉터리와 기본 보안 헤더를 명시한다. Root Directory는 Vercel 프로젝트 설정에 별도로 입력한다. UI 내 탐색은 해시(`#market`, `#my-orders`, `#bots`)를 사용하므로 서버 경로 rewrite가 필요 없다. `pnpm-lock.yaml`과 `package.json`의 버전을 함께 유지한다. 로컬 검증은 Node 24.19.0 / pnpm 11.25.0으로 수행했다. Node 24.x는 현재 Vercel의 지원 기본 버전이며 패치 버전은 서비스에서 관리한다. [Supported Node.js Versions](https://vercel.com/docs/functions/runtimes/node-js/node-js-versions).
+trading/docs/deployment.md:29: `pnpm-workspace.yaml`은 pnpm 11의 설정 파일로 빌드에 필요한 `esbuild` 설치 스크립트만 명시적으로 허용한다. 로컬 저장소 경로는 `../.tools/pnpm-store`이며 `trading` 안에 머문다. 배포 빌드 캐시가 다른 위치여야 한다면 해당 환경에서 `pnpm_config_store_dir`를 지정하고 설치와 빌드 모두 같은 값을 유지한다.
+trading/docs/deployment.md:31: Vercel 공식 기본 제공 목록은 pnpm 6~10이며 로컬 환경은 pnpm 11.25.0이다. 이 차이를 묵인하지 않고 Corepack을 켜서 `packageManager`에 고정한 버전을 사용하도록 준비한다. 공식 문서의 Corepack 선택 동작을 근거로 한 설정이며, 실제 Vercel 빌드에서의 pnpm 11 실행은 아직 미검증이다. 배포 전 빌드 로그의 실제 Node·pnpm 버전을 확인해야 한다. [Package Managers](https://vercel.com/docs/package-managers), [Corepack build configuration](https://vercel.com/docs/builds/configure-a-build#corepack).
+trading/docs/deployment.md:33: 공식 문서는 plain `pnpm install`을 Install Command로 강제하면 빌드 컨테이너의 가장 오래된 pnpm을 선택할 수 있다고 경고한다. 따라서 `vercel.json`에는 installCommand override를 넣지 않고 기본 감지와 Corepack 설정을 함께 사용한다. 로컬 의존성 재현 확인은 `pnpm install --frozen-lockfile`로 실행할 수 있다. 온라인 빌드에서 다른 pnpm 버전이 찍히면 배포 성공으로 간주하기 전에 설정을 수정해야 한다. [Package Managers](https://vercel.com/docs/package-managers).
+trading/docs/deployment.md:71: 1. 로컬 frontend `pnpm build` 및 엔진 release 빌드가 통과했는지 기록 확인.
+trading/docs/deployment.md:82: 개발 서버의 화면 확인과 production 산출물 확인은 다르다. `frontend/scripts/start-production-preview.ps1`은 매번 새 evidence run 아래에 production `dist`, release 엔진 복사본과 빈 합성 데이터 디렉터리를 만든다. 기본 주소는 UI `http://127.0.0.1:5177`, 엔진 `http://127.0.0.1:8790`이며 해당 UI Origin만 허용한다. 기존 개발 UI 5175·엔진 8787·12개 봇·데이터는 변경하지 않는다.
+trading/docs/deployment.md:86: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-production-preview.ps1
+trading/docs/deployment.md:88: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stop-production-preview.ps1 -ManifestPath '<출력된 절대 processes.json 경로>'
+trading/docs/evidence-policy.md:25: Windows 관찰 실행 중에는 `keep-awake.ps1`이 해당 관찰 프로세스 수명 동안 `SetThreadExecutionState`의 SYSTEM_REQUIRED 요청을 유지하고 종료 시 해제한다. 화면 켜짐 요청이나 영구 전원 설정 변경은 없다. 사용자에 의한 명시적 절전·종료를 막는 보장이 아니며 `OBSERVE_ALLOW_IDLE_SLEEP=1`이면 요청하지 않는다. [10초 도구 기능 확인](../evidence/2026-09-21T09-39-51-901Z-observe-b75b75a0/keep-awake.json)에서 시작과 정상 해제를 확인했으며 이는 장시간 시연 통과 근거가 아니다. `powercfg /requests` 목록은 관리자 권한 부재로 조회하지 못했고, API 성공·보조 프로세스 기록 및 이후 표본 연속성만 확인한다.
+trading/docs/performance-investigation.md:17: 실행: `. ./scripts/env.ps1; node scripts/perf-probe.mjs --quiet-window --samples 40 --warmup 10 --label baseline`.
+trading/docs/performance-investigation.md:32: 실행: `. ./scripts/env.ps1; node scripts/perf-probe.mjs --quiet-window --samples 20 --warmup 10 --modes fetch --label fetch-send-timing`.
+trading/docs/performance-investigation.md:49: 비교 실행: `. ./scripts/env.ps1; node scripts/network-bench.mjs --quiet-window --cycles 200 --warmup-cycles 20 --stress12 --label node-http-client --transport node-http`.
+trading/docs/performance.md:25: . ./scripts/env.ps1
+trading/docs/performance.md:26: node scripts/demo.mjs stop
+trading/docs/performance.md:28: node scripts/network-bench.mjs --quiet-window --cycles 200 --warmup-cycles 20 --stress12 --label comparison
+trading/docs/review-demo-lifecycle.md:16: 실행 위치: `trading`. 명령: `node --test scripts/demo-lifecycle.test.mjs`.
+trading/docs/review-deployment.md:16: | Vercel Install Command를 plain pnpm으로 강제하는 지침은 오래된 pnpm 선택 위험이 있음 | 기본 자동 감지 + `ENABLE_EXPERIMENTAL_COREPACK=1` + `packageManager: pnpm@11.25.0`로 문서 정정. 원격 실제 버전은 아직 미검증 |
+trading/docs/review-deployment.md:53: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-production-preview.ps1
+trading/docs/review-deployment.md:61: powershell -NoProfile -ExecutionPolicy Bypass -File scripts/stop-production-preview.ps1 -ManifestPath '<새 실행에서 출력된 절대 processes.json 경로>'
+trading/docs/review-deployment.md:70: 3. 향후 승인된 Vercel 배포에서 Root Directory `trading/frontend`, Node 24.x, 실제 pnpm 11.25.0, `dist`, HTTPS/WSS 공개 주소, 정확한 Origin을 빌드·네트워크 로그로 확인한다. 현재 기본 pnpm 지원 표에 11이 없으므로 Corepack 설정을 실제 원격 빌드 증거로 대체해야 한다.
+trading/docs/slow-ws-validation.md:12: & .\trading\scripts\run-evidence.ps1 -Label 'slow-ws-process-validation' -Subdirectory '.' -Command node -CommandArgs @('scripts/slow-ws.mjs','--competing-resource-stress')
+trading/docs/stress.md:7: `trading`에서 `. ./scripts/env.ps1; node scripts/queue-stress.mjs --competing-resource-stress --burst 2500 --label queue-pressure`.
+trading/docs/stress.md:34: 2026-09-21 18:16:17 KST 시작한 **한 번의** burst에서 실제 queue 포화를 관측했고 모든 정의된 검증을 통과했다. `node --check scripts/queue-stress.mjs`와 `--help`를 실행한 뒤 실제 부하는 1회만 수행했다. 콘솔 종료 코드 0, `summary.complete=true`.
+trading/docs/ui.md:11: pnpm install --store-dir ../.tools/pnpm-store
+trading/docs/ui.md:12: pnpm dev
+trading/docs/ui.md:73: pnpm build
+trading/docs/ui.md:74: pnpm test
+trading/docs/ui.md:75: pnpm format:check
+trading/docs/ui.md:78: 프로토콜 테스트 7개는 중복·역행·누락 순번 처리, 내구성 없는 ACK의 미확인 처리, 계정·요청 ID 일치, 새로고침 요청 복원, 미확인 요청 보존, 같은 순번의 실패 상태 보호, 계정별 조회·재시도 및 연속 제출의 배타 실행을 검증한다. 빌드 검증은 TypeScript strict 검사와 실제 Vite production bundle을 포함한다. `frontend/scripts/verify.ps1`은 형식 검사·프로토콜 테스트·빌드의 원본 로그를 새 evidence run 디렉터리에 보존한다(`trading/frontend`에서는 `./scripts/verify.ps1`). 이 테스트만으로 실제 브라우저 주문·취소·재연결이 검증됐다고 주장하지 않는다.
+trading/docs/verification.md:7: | 준비 후 한 명령 전체 로컬 시연 | 통과 | `node scripts/demo.mjs start`; [14개 프로세스 기록](../evidence/2026-09-21T08-59-54-120Z-demo-e6520956/processes.json), [setup.ps1 직접 실행](../evidence/20260921T085809407Z-setup-entrypoint-2a96a3dc/run.json) exit0. 설치된 캐시에서 검증했으며 완전히 깨끗한 OS의 다운로드부터 재실행은 미검증 |
+trading/docs/verification.md:20: | Vercel UI 로컬 빌드·배포 설정 | 통과 | `trading/frontend`, `pnpm build`, `dist`; [배포 검토](review-deployment.md). Production정적130파일HTTP/해시,실제브라우저주문/부분체결/취소/reload통과. 실제 Vercel 빌드·배포 미실행 |

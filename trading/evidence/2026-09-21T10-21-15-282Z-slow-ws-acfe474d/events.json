@@ -1,0 +1,62 @@
+[
+  {
+    "at": "2026-09-21T10:21:17.447Z",
+    "relative_ms": 2165.5105000000003,
+    "event": "slow_read_paused",
+    "bytes_read": 243,
+    "buffered_after_headers": 0
+  },
+  {
+    "at": "2026-09-21T10:21:22.460Z",
+    "relative_ms": 7178.5699,
+    "event": "paused_receiver_verification_passed",
+    "completed_unique_commands": 288,
+    "normal_event_seq": 416,
+    "all_lookup_results": 416,
+    "unchanged_after_duplicates": true
+  },
+  {
+    "at": "2026-09-21T10:21:22.461Z",
+    "relative_ms": 7179.164400000001,
+    "event": "slow_read_resumed",
+    "paused_ms": 5013.6769,
+    "bytes_read_before_resume": 25559
+  },
+  {
+    "at": "2026-09-21T10:21:22.465Z",
+    "relative_ms": 7183.4056,
+    "event": "slow_error",
+    "message": "read ECONNRESET"
+  },
+  {
+    "at": "2026-09-21T10:21:22.466Z",
+    "relative_ms": 7183.6905,
+    "event": "slow_close",
+    "had_error": true,
+    "local_destroy": false,
+    "resumed": true
+  },
+  {
+    "at": "2026-09-21T10:21:22.550Z",
+    "relative_ms": 7268.1934,
+    "event": "replacement_close",
+    "code": 1006,
+    "reason": "",
+    "cleanup": true
+  },
+  {
+    "at": "2026-09-21T10:21:22.551Z",
+    "relative_ms": 7268.651800000001,
+    "event": "normal_close",
+    "code": 1006,
+    "reason": "",
+    "cleanup": true
+  },
+  {
+    "at": "2026-09-21T10:21:22.580Z",
+    "relative_ms": 7298.5116,
+    "event": "engine_exit",
+    "code": 0,
+    "signal": null
+  }
+]

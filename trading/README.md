@@ -34,7 +34,14 @@ UI와 봇을 유지한 엔진 정상 재시작·브라우저 자동 재연결은
 
 종료는 봇 중지 → 일관된 스냅샷 요청 → 엔진 정상 종료 → 추적된 UI/잔여 프로세스 정리 순서입니다. 데이터와 증거를 삭제하지 않습니다. 재시작하면 같은 `data/demo`의 저널·스냅샷·요청 ID를 복구합니다. 다른 합성 데이터 실행은 `ENGINE_DATA_DIR`에 **새 디렉터리**를 지정하세요.
 
-Linux/macOS에서는 Rust stable, Node 24+, pnpm 11.25+를 준비하고 `cd engine && cargo build --release --locked`, `cd frontend && pnpm install --frozen-lockfile && pnpm build` 후 `trading`에서 동일한 Node 시작 명령을 사용합니다. 해당 OS의 실제 실행은 아직 검증하지 않았습니다.
+Linux/macOS에서는 Rust stable, Node 24.x, pnpm 11.25.0을 준비하고 `trading` 디렉터리에서 아래 명령을 순서대로 실행합니다. 해당 OS의 실제 실행은 아직 검증하지 않았습니다.
+
+```sh
+cargo build --manifest-path engine/Cargo.toml --release --locked --bin leave-engine
+pnpm --dir frontend install --frozen-lockfile
+pnpm --dir frontend build
+node scripts/demo.mjs start
+```
 
 ## 시연 순서
 
