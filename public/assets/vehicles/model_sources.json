@@ -146,39 +146,41 @@
     "manufacturer": "Kia",
     "model": "EV6",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": "https://sketchfab.com/3d-models/kia-ev6-49eff30492bb4f8e875f378b41589c26",
-    "downloadUrl": "https://api.sketchfab.com/v3/models/49eff30492bb4f8e875f378b41589c26/download",
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "HTTP 401: Sketchfab download requires account authentication; no local GLB downloaded.",
-    "nextAction": "Download the CC BY EV6 source using an authorized Sketchfab account, then add and verify the actual GLB.",
+    "glbPath": "/assets/vehicles/models/kia_ev6.glb",
+    "available": true,
+    "sourceUrl": "https://www.kia.com/in/vr/showroom/index.html#/exterior/4",
+    "downloadUrl": "https://www.kia.com/in/vr/showroom/static/models/car4/pc4.json.bin",
+    "license": "Kia Corporation. Public official showroom asset; open redistribution permission not stated.",
+    "author": "Kia Corporation",
+    "representativeNote": "Official facelift EV6 GT-Line showroom exterior; trim and market may differ from the workbook.",
+    "failureReason": null,
+    "nextAction": null,
     "failures": [
       {
         "url": "https://api.sketchfab.com/v3/models/49eff30492bb4f8e875f378b41589c26/download",
         "httpStatus": 401,
-        "reason": "HTTP 401: Sketchfab download requires account authentication; no local GLB downloaded."
+        "reason": "HTTP 401: Sketchfab download requires account authentication; no local GLB downloaded.",
+        "recovered": true,
+        "nextAction": "Used the public official Kia showroom geometry instead of the authenticated Sketchfab download."
       }
     ],
-    "displayNote": null
+    "displayNote": "공식 EV6 GT-Line 대표 외형 · 트림 차이 있음"
   },
   {
     "vehicleId": "kia_ev9_lr_2wd_2026",
     "manufacturer": "Kia",
     "model": "EV9",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": null,
-    "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
-    "displayNote": null
+    "glbPath": "/assets/vehicles/models/kia_ev9.glb",
+    "available": true,
+    "sourceUrl": "https://worldwide.kia.com/int/vr-showroom/mea/ev9/lhd2/index.html",
+    "downloadUrl": "https://worldwide.kia.com/int/vr-showroom/mea/ev9/lhd2/static/models/car0/files/assets/156643779/1/body.json.bin",
+    "license": "Kia Corporation. Public official showroom asset; open redistribution permission not stated.",
+    "author": "Kia Corporation",
+    "representativeNote": "Official EV9 GT-Line showroom exterior; trim and market may differ from the 2026 workbook.",
+    "failureReason": null,
+    "nextAction": null,
+    "displayNote": "공식 EV9 GT-Line 대표 외형 · 트림 차이 있음"
   },
   {
     "vehicleId": "kia_niro_ev_2026",

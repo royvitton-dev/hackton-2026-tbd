@@ -1,0 +1,20 @@
+{
+  "name": "Kia EV6 GT-Line facelift",
+  "sourceUrl": "https://www.kia.com/in/vr/showroom/index.html#/exterior/4",
+  "baseUrl": "https://www.kia.com/in/vr/showroom/static/models/car4/",
+  "configUrl": "pc4.json.bin",
+  "sceneUrl": "1435834.json",
+  "modelAssetIds": [
+    219778096
+  ],
+  "paint": [
+    0.72,
+    0.76,
+    0.79
+  ],
+  "copyright": "Kia Corporation. Public official showroom asset; open redistribution permission not stated.",
+  "outputPath": "battery_health/resoures/images/models/kia_ev6.glb",
+  "excludeNodes": [
+    "CV_Shadow"
+  ]
+}

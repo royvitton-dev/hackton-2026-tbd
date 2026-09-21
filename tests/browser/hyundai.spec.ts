@@ -23,8 +23,8 @@ test('Hyundai defaults, real IONIQ 5 and Kona meshes, model-year notice and batt
   await page.keyboard.press('Escape');
   await expect(page.locator('#battery-info-panel')).toHaveCount(0);
 
-  await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption('U0032');
-  await expect(page.getByTestId('model-unavailable')).toContainText('EV6 · 3D 모델 미등록');
+  await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption('U0003');
+  await expect(page.getByTestId('model-unavailable')).toContainText('Niro EV · 3D 모델 미등록');
   await expect(page.locator('canvas')).toHaveCount(0);
   expect(errors).toEqual([]);
 });

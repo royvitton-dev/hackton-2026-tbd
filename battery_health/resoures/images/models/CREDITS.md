@@ -13,7 +13,7 @@
 - The original GLB is unchanged. A separate optimized derivative was generated with glTF Transform and meshoptimizer (681,368 → 146,003 triangles), but the original mesh is used at runtime to preserve body detail. Runtime orientation, scale, paint and focus transparency are modified.
 - This is a representative pre-refresh Model 3; it is **not an exact 2026 trim/CAD model**.
 
-No manufacturer GLB was bundled without a verifiable source. IONIQ 5 Sketchfab download was blocked by HTTP 401 (login required). Other detailed vehicle models remain to be supplied.
+Manufacturer models below have official source URLs. An open redistribution license is not stated for those assets. Other detailed vehicle models remain to be supplied.
 
 ## Draco decoder
 
@@ -48,3 +48,25 @@ Decoder files under `public/assets/vehicles/decoders` are copied from the instal
 - Original author/license/source are also embedded in the GLB asset metadata.
 - Modifications: deduplication, texture compression, Draco compression; all 248,120 triangles retained. Non-surface construction lines removed; front orientation, smooth normals and studio materials adjusted in the viewer.
 - The asset is the 2019 first-generation electric model. It represents the model name only and differs from the workbook's 2026 generation. This is explicitly labeled in the scene.
+
+## Kia EV6 GT-Line (facelift)
+
+- Runtime file: `kia_ev6.glb` (389,487 rendered triangles, 10,051,168 bytes).
+- Author/rightsholder: Kia Corporation.
+- Official source: https://www.kia.com/in/vr/showroom/index.html#/exterior/4
+- Public showroom assets: https://www.kia.com/in/vr/showroom/static/models/car4/
+- License: manufacturer copyright; public showroom delivery does not state an open redistribution license. **Not CC licensed.**
+- Changes: original PlayCanvas geometry, normals, UVs and part transforms converted to glTF; PBR material translation, texture compression, Draco compression. Non-vehicle `CV_Shadow` plane excluded. Draco removes degenerate faces. No replacement vehicle geometry generated.
+- Original configuration, scene, downloaded assets, source URLs and SHA-256 checksums: `../sources/kia-ev6/`.
+- Representative regional GT-Line exterior; workbook trim details can differ. The scene states this limitation.
+
+## Kia EV9 GT-Line
+
+- Runtime file: `kia_ev9.glb` (228,611 rendered triangles, 1,037,612 bytes).
+- Author/rightsholder: Kia Corporation.
+- Official source: https://worldwide.kia.com/int/vr-showroom/mea/ev9/lhd2/index.html
+- Public showroom assets: https://worldwide.kia.com/int/vr-showroom/mea/ev9/lhd2/static/models/car0/
+- License: manufacturer copyright; an open redistribution license is not stated. **Not CC licensed.**
+- Changes: official exterior and 21-inch wheel geometry converted from PlayCanvas to glTF; source part placement retained, PBR material translation, texture/Draco compression. No replacement vehicle geometry generated.
+- Original configuration, scene, downloaded assets, source URLs and SHA-256 checksums: `../sources/kia-ev9/`.
+- Representative GT-Line exterior; regional/year/trim differences are disclosed in the scene.

@@ -24,6 +24,8 @@
 
 ## 화면
 
+- [차량 상세 — EV6](demo-ev6.png)
+- [차량 상세 — EV9](demo-ev9.png)
 - [차량 상세 — IONIQ 5](demo-ioniq5.png)
 - [차량 상세 — Kona Electric](demo-kona.png)
 
@@ -45,8 +47,16 @@
 
 ## 남은 제약
 
-- GLB는 IONIQ 5, Kona Electric, Model 3, Model Y의 7개 트림을 확보했습니다. 12개 모델 / 13개 프로필의 상세 모델이 미확보여서 전체 차량 3D 완료 조건은 아직 충족하지 못했습니다. 상세 이유는 images/model_sources.json에 있습니다.
-- IONIQ 5 Sketchfab 다운로드는 HTTP 401이었지만 현대 공식 페이지의 공개 GLB를 추가 확보했습니다. EV6는 Sketchfab HTTP 401로 아직 다운로드하지 못했습니다. 다른 차량이나 placeholder로 대체하지 않습니다.
+- GLB는 IONIQ 5, Kona Electric, Model 3, Model Y, EV6, EV9의 9개 트림을 확보했습니다. 10개 모델 / 11개 프로필의 상세 모델이 미확보여서 전체 차량 3D 완료 조건은 아직 충족하지 못했습니다. 상세 이유는 images/model_sources.json에 있습니다.
+- IONIQ 5와 EV6의 Sketchfab 다운로드는 HTTP 401이었지만 제조사 공식 페이지의 공개 모델로 대체 확보했습니다. 다른 차량이나 placeholder로 대체하지 않습니다.
 - IONIQ 5 제조사 GLB의 공개 재배포 라이선스는 확인되지 않았습니다. CC 모델로 표시하지 않으며 출처와 제한을 manifest/크레딧에 기록합니다.
 - 확보 모델도 이전 연식의 대표 외형이며 2026년형 정확한 트림/CAD가 아닙니다.
 - 실제 SOH, 일별 주행거리, 세션 스트레스/점수 기여도, 연속 SOC 시계열은 원본에 없습니다. 시안의 가상 수치를 복사하지 않습니다.
+
+## 기아 차량 추가 검수
+
+- 공식 EV6 GT-Line 페이스리프트, EV9 GT-Line PlayCanvas geometry를 GLB로 변환. EV6 389,487 / EV9 228,611 triangles를 브라우저에서 확인했습니다.
+- EV6 원본의 별도 사각 그림자 평면이 바운딩 박스를 키우던 문제를 수정했습니다. 차량 geometry는 합성하지 않았습니다.
+- `npm run test:e2e -- --config playwright.review.config.ts tests/browser/kia.spec.ts tests/browser/hyundai.spec.ts`: 2개 통과 (1.4분).
+- 차량 전환, 사용자별 주행거리, 지면 정렬, 모델 높이, 배터리 상세 열기/ESC 닫기, pageerror 없음 확인. 최종 EV6/EV9 캡처 육안 검수 완료.
+- `npm run build` 성공. 제조사 모델의 공개 재배포 라이선스는 확인되지 않아 크레딧에 명시했습니다.

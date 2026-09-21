@@ -153,8 +153,10 @@ npm run prepare:vehicles
 - Hyundai Kona Electric: 1개 트림. RADMATTER12의 CC BY 4.0 모델을 공개 Objaverse 보관본에서 확보했습니다. 248,120 triangles를 유지하며 약 14.4 MB → 1.5 MB로 압축했습니다. **2019년형 외형으로 원본 데이터의 2026년형과 다른 세대**라는 안내를 차량 장면에 표시합니다.
 - Tesla Model 3: 2개 트림. 출처 GLB 약 681,368 triangles, 3.1 MB. 원본 형상을 사용합니다.
 - Tesla Model Y: 2개 트림. 공개 Objaverse 보관본에서 받은 2021 모델을 701,663 triangles / 1.8 MB로 최적화했습니다.
+- Kia EV6: 기아 인도 공식 쇼룸의 페이스리프트 GT-Line 모델. 389,487 triangles / 10.1 MB. 원본 차체·실내·휠과 텍스처를 GLB로 변환했습니다.
+- Kia EV9: 기아 공식 글로벌 쇼룸의 GT-Line 모델. 228,611 triangles / 1.0 MB. 21인치 휠이 포함된 대표 외형입니다.
 
-**나머지 12개 모델 / 13개 차량 프로필의 상세 GLB는 아직 미확보입니다.** 해당 차량을 선택하면 준비 상태를 표시하고 배터리/충전 데이터는 계속 제공합니다. 다른 자동차나 저품질 도형을 대신 보여주지 않습니다. IONIQ 5의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았고, 현대 공식 페이지에 공개 연결된 GLB로 대체 확보했습니다. EV6의 Sketchfab 다운로드는 HTTP 401로 미완료입니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. Model 3/Y도 정확한 2026년형 CAD가 아닌 이전 연식 대표 외형이며 UI에 고지합니다.
+**현재 6개 모델 / 9개 차량 프로필이 연결됐으며, 나머지 10개 모델 / 11개 프로필의 상세 GLB는 아직 미확보입니다.** 해당 차량을 선택하면 준비 상태를 표시하고 배터리/충전 데이터는 계속 제공합니다. 다른 자동차나 저품질 도형을 대신 보여주지 않습니다. IONIQ 5와 EV6의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았고, 제조사 공식 페이지에 공개 연결된 모델로 대체 확보했습니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. 확보한 모델은 정확한 2026년형 CAD가 아닌 대표 외형이며 연식·트림 차이를 UI에 고지합니다.
 
 IONIQ 5 출처는 현대 공식 페이지 및 `model_sources.json`에 기록합니다. **제조사 저작권 자료이며 공개 재배포 라이선스는 확인되지 않았습니다.** CC BY 모델로 표시하지 않습니다. 호주형 기본 트림 외형이므로 원본 데이터의 국내 트림과 차이가 있을 수 있습니다. 원본 GLB와 트림 구성 JSON은 `images/sources/`에 보존합니다. 아래 명령으로 공식 트림 선택 결과를 재생성하고 동기화합니다.
 
@@ -163,6 +165,17 @@ node scripts/prepare-hyundai-ioniq5.mjs
 npm run sync:vehicle-assets
 npm run verify:assets
 ```
+
+Kia EV6/EV9의 공식 PlayCanvas 메시를 재생성할 때:
+
+```sh
+node scripts/convert-showroom-model.mjs battery_health/resoures/images/sources/kia-ev6/source.json
+node scripts/convert-showroom-model.mjs battery_health/resoures/images/sources/kia-ev9/source.json
+npm run sync:vehicle-assets
+npm run verify:assets
+```
+
+변환기는 실제 정점·UV·법선·부품 배치를 보존하고 재질을 glTF PBR로 옮깁니다. EV6의 원본 쇼룸 그림자 평면만 제외합니다. Draco가 제거하는 퇴화 삼각형 때문에 원본/출력 삼각형 수를 별도로 기록합니다. 다운로드 URL·파일별 SHA-256·출력 검증은 각 `sources/kia-*/conversion.json`에 있습니다. 기아 모델도 제조사 저작권 자료이며 공개 재배포 라이선스는 확인되지 않았습니다.
 
 새 GLB 연결:
 
