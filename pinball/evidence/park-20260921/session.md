@@ -196,3 +196,13 @@ Existing heartbeat drop-land-23 was updated, not duplicated: every15minutes, unt
 - 최초27/27b탭검사는5초timeout으로실패보존했다. Playwright자체CDP세션이포커스에뮬레이션의capturer를유지하므로별도CDP세션에서false로설정해도해제되지않았다. 번들crPage.js/Chromium소스확인후강제포커스를사용하지않는임시프로필일반Chrome+rawCDP로검사해3/3통과. document.hidden덮어쓰기나visibilitychange합성이아니다. 테스트환경원인이며제품코드는변경하지않았다.
 - 참고: https://playwright.dev/docs/pages#multiple-pages 및 https://chromium.googlesource.com/chromium/src/+/ce37893fc2edd6144ef3e346dc703a5a4f340006/content/browser/devtools/protocol/emulation_handler.cc
 - 이번묶음은검사/증빙/기한문서변경뿐이다. 게임실행파일은2131c72의21파일과동일하며Mac/APK에게임변경은없다. main직접커밋·일반푸시확인은별도전달기록에기록한다.
+
+
+## 28 — 2026-09-21 22:50–22:56 KST 결과 화면 키보드와 즉시 재시작
+
+- 처음 검사에서 당첨 안내가 나타나도 초점이 뒤쪽 half-view 버튼에 남는 것을 재현했다(28-keyboard-results FAIL). 결과 제목과 확정 결과 제목을 프로그램으로 포커스할 수 있도록 하고, 결과가 처음 열릴 때 제목으로 이동한다. Tab으로 두 동작에 접근하고 Escape/순위 보기로 닫으면 확정 결과 제목으로 이동한다. 결과에서 재시작하면 일시정지 버튼으로 이어진다. 경기를 바꾸는 키 입력을 제목 자체에 연결하지 않았다.
+- 초점 수정 뒤 빠른 재시작 검사에서 로또의 다음 경기가 시작되지 않는 경우를 발견했다(28b FAIL). DOM 관찰 결과 실제 state=complete인데 bodyState=racing/startDisabled=true였다(28-state-transition-probe.json). 표시가 최대80ms 늦게 바뀌던 원인이다. 물리 상태 전환 때는 같은 프레임에서 즉시 UI를 갱신하고 일반 타이머·진행 표시만80ms 간격을 유지하도록 수정했다. 종료 이후 안내를 다시 열거나 비활성 버튼에 키 입력이 사라질 가능성도 이 간격 제거로 줄였다.
+- 28c PC/모바일 × 플레이어/로또 4개 흐름이 통과했다. 각2회 실제 경기 종료, 초점·Tab·Escape/Enter닫기·결과보존·즉시재시작의 새경기ID·다시타기·키보드정지/재개 확인. 두 환경의 MutationObserver 기록은 모든 당첨 표시 시점에 complete/complete/startDisabled=false였다. 소스와dist21파일빌드통과, 모바일WebGL/Canvas3배속N번째당첨/재시작2/2도 통과했다.
+- 물리·맵·랜덤·순위판정·렌더러 코드는 수정하지 않았다. 원더가든의 출구 정체는 그대로 미해결이며 새 출구 구조를 시험하지 않았다.
+
+- Mac 앱/APK를work/package-28에 재빌드한 뒤 내장22파일(빌드메타포함)의 바이트 일치를 확인했다. APK resources.arsc는1484offset/4byte정렬, v2/v3서명과추출파일모바일플레이어/로또2/2통과. Mac로컬ad-hoc서명·ZIP CRC·실행권한·Node라이선스보존통과. outputs의MacZIP/APK/앱폴더를 최신으로 갱신했다. Mac은 잠겨 네이티브 창 재실행 미실행이며, Android 실기기도 미실행이다. 상세해시는28-package-results.json.

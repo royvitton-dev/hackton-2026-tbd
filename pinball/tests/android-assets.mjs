@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {readFile,writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
-const root=path.resolve(process.env.APK_ASSETS),out='evidence/park-20260921/25-android-assets';
+const root=path.resolve(process.env.APK_ASSETS),out=process.env.EVIDENCE_PREFIX||'evidence/park-20260921/25-android-assets';
 const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE_PATH).href);
 const browser=await chromium.launch({channel:'chrome'}),report={at:new Date().toISOString(),status:'RUNNING',scope:'APK-extracted assets on emulated mobile Chrome; NOT Android device or WebView execution',tests:[]};
 try{

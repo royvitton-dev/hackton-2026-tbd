@@ -58,3 +58,8 @@ main `789866bb653d285ad7f6149e384223743cfa4054` 직접 커밋. Fork 일반 Push 
 ## 2026-09-21 22:34 KST — Mac / Android packaging
 
 Packaging source commit: `1c857b5811a0f4e18c1b3a28ca7c18400cbba99d`. Two normal push attempts were rejected because other tasks advanced remote main. No pinball conflicts were found. Remote work was preserved with normal merges, including `aea4cba`, `b314b3a`, and `2131c72`. The last fetch/merge was performed after preparing the Fork push dialog, then normal Push succeeded. The remote main hash exactly matched `2131c72f70bfb0e609928b94b7d535d3ba389c41`; worktree clean. The source commit is included. No force push or token extraction occurred. The local preview was switched to main-2131c72f70bf.
+
+
+## 2026-09-21 22:48 KST — 검증 커밋, 푸시 대기
+
+main검증커밋 `fe3203ba21527120b03fc9ed376c0627dc59c832`. 원격다른작업3e01736을정상병합한로컬HEAD는 `c2e38a394aabdde8cf495451b99ce5c73081da2b`. Mac잠금으로Fork접근불가,CLI일반push도username인증정보부재로실패했다. 잠금해제를요청했고푸시완료로표시하지않는다. 게임실행파일변경은없으며현재4188은검증된main-2131c72f70bf를유지한다.

@@ -94,3 +94,12 @@ node tests/browser.mjs
 - `PLAYWRIGHT_MODULE_PATH=/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/playwright/index.mjs node tests/renderer-lifecycle.mjs` — PC/모바일2/2,총50시작정지초기화사이클.
 - `EVIDENCE_PREFIX=27c node tests/tab-lifecycle.mjs` — rawCDP,임시프로필일반Chrome,실제숨김3/3. 기본Chrome경로는macOS이며다른환경은CHROME_PATH로지정한다. Node24내장WebSocket을사용했다.
 - 두검사는 `http://127.0.0.1:4189/dist/index.html`의현재21파일빌드를검사했다. BASE_URL로대상변경가능. 최초27/27b탭실패로그별도보존.
+
+
+## 28 실제 실행
+
+- `node scripts/build.mjs`:28/28c 빌드 각21파일. 제품 수정은index.html/src/app.js.
+- `EVIDENCE_PREFIX=28c node tests/result-keyboard.mjs`: PC/모바일플레이어/로또4흐름과즉시상태갱신관찰통과. 이전28/28b는실패보존.
+- `EVIDENCE_DIR=evidence/park-20260921/28-build-smoke BASE_URL=http://127.0.0.1:4189 node tests/build-smoke.mjs`: WebGL/Canvas2/2와브라우저정리통과.
+- `python3 desktop/build-macos.py --node /Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node --node-license /Applications/ChatGPT.app/Contents/Resources/cua_node/LICENSE --out ../package-28/DROP-LAND-macOS-arm64`: 실제명령은절대경로,로컬서명검증포함.
+- `python3 desktop/build-android.py --tools ../packaging-tools --keystore ../packaging-private/dropland-local.p12 --out ../package-28/DROP-LAND-Android.apk`: 실제명령은절대경로,기존로컬개발키/v2/v3검증. 키파일은제출/커밋에서제외.

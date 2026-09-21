@@ -1,0 +1,12 @@
+{
+  "at": "2026-09-21T13:49:26.456Z",
+  "base": "http://127.0.0.1:4189/dist/index.html",
+  "status": "FAIL",
+  "tests": [],
+  "lastObservedFocus": {
+    "device": "desktop",
+    "mode": "player",
+    "id": "half-view"
+  },
+  "error": "AssertionError [ERR_ASSERTION]: The result heading must receive focus when the winner is shown\n+ actual - expected\n\n+ 'half-view'\n- 'splash-name'\n\n    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/result-keyboard.mjs:16:10"
+}

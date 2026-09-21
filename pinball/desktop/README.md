@@ -32,3 +32,6 @@ python3 desktop/build-android.py --tools /path/to/packaging-tools --keystore /pr
 [실행파일검증기록](../evidence/park-20260921/25-package-results.json)과각빌드로그에통과/실패/미실행을기록한다. Mac실행과종료는실제네이티브앱에서확인했다. Android는빌드·서명·정적구성과패키지파일의모바일Chrome실행검사만수행했다.
 
 참고한공식자료: [Android로컬콘텐츠](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content), [AAPT2 Maven배포](https://developer.android.com/tools/aapt2), [D8/R8](https://r8.googlesource.com/r8), [Robolectric android-all](https://central.sonatype.com/artifact/org.robolectric/android-all), [Adoptium다운로드검증](https://adoptium.net/installation/ci-scripts).
+
+
+후속 결과 화면 수정이 포함된 최신 패키지는 [28 검증](../evidence/park-20260921/28-package-results.json)에 기록했다. Mac 빌드·서명·내장 파일 일치는 재확인했으나 Mac 잠금으로 최신 번들의 네이티브 창 재실행은 미실행이다. 네이티브 런처 소스는25실행검사와 같다. 최신 APK 추출 파일은 모바일 Chrome의 플레이어·로또2흐름을 다시 통과했으며 Android 실기기 실행은 여전히 미검증이다.

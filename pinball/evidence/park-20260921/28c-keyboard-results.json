@@ -1,0 +1,104 @@
+{
+  "at": "2026-09-21T13:53:00.320Z",
+  "base": "http://127.0.0.1:4189/dist/index.html",
+  "status": "PASS",
+  "tests": [
+    {
+      "device": "desktop",
+      "mode": "player",
+      "status": "PASS",
+      "focusOnResult": true,
+      "keyboardActionsReachable": true,
+      "closeMethod": "Escape",
+      "closePreservesResult": true,
+      "replayAndPause": true
+    },
+    {
+      "device": "desktop",
+      "mode": "lotto",
+      "status": "PASS",
+      "focusOnResult": true,
+      "keyboardActionsReachable": true,
+      "closeMethod": "Enter on close button",
+      "closePreservesResult": true,
+      "replayAndPause": true
+    },
+    {
+      "device": "desktop",
+      "status": "PASS",
+      "immediateStateTransitions": [
+        {
+          "state": "complete",
+          "bodyState": "complete",
+          "startDisabled": false
+        },
+        {
+          "state": "complete",
+          "bodyState": "complete",
+          "startDisabled": false
+        },
+        {
+          "state": "complete",
+          "bodyState": "complete",
+          "startDisabled": false
+        },
+        {
+          "state": "complete",
+          "bodyState": "complete",
+          "startDisabled": false
+        }
+      ]
+    },
+    {
+      "device": "mobile-emulation",
+      "mode": "player",
+      "status": "PASS",
+      "focusOnResult": true,
+      "keyboardActionsReachable": true,
+      "closeMethod": "Escape",
+      "closePreservesResult": true,
+      "replayAndPause": true
+    },
+    {
+      "device": "mobile-emulation",
+      "mode": "lotto",
+      "status": "PASS",
+      "focusOnResult": true,
+      "keyboardActionsReachable": true,
+      "closeMethod": "Enter on close button",
+      "closePreservesResult": true,
+      "replayAndPause": true
+    },
+    {
+      "device": "mobile-emulation",
+      "status": "PASS",
+      "immediateStateTransitions": [
+        {
+          "state": "complete",
+          "bodyState": "complete",
+          "startDisabled": false
+        },
+        {
+          "state": "complete",
+          "bodyState": "complete",
+          "startDisabled": false
+        },
+        {
+          "state": "complete",
+          "bodyState": "complete",
+          "startDisabled": false
+        },
+        {
+          "state": "complete",
+          "bodyState": "complete",
+          "startDisabled": false
+        }
+      ]
+    }
+  ],
+  "lastObservedFocus": {
+    "device": "mobile-emulation",
+    "mode": "lotto",
+    "id": "splash-name"
+  }
+}

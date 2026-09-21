@@ -1,0 +1,22 @@
+{
+  "at": "2026-09-21T13:50:23.630Z",
+  "base": "http://127.0.0.1:4189/dist/index.html",
+  "status": "FAIL",
+  "tests": [
+    {
+      "device": "desktop",
+      "mode": "player",
+      "status": "PASS",
+      "focusOnResult": true,
+      "keyboardActionsReachable": true,
+      "escapePreservesResult": true,
+      "replayAndPause": true
+    }
+  ],
+  "lastObservedFocus": {
+    "device": "desktop",
+    "mode": "lotto",
+    "id": "splash-name"
+  },
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'winner-name'\n- 'splash-name'\n\n    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/result-keyboard.mjs:20:284"
+}

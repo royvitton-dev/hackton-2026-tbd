@@ -1,0 +1,32 @@
+{
+  "at": "2026-09-21T22:57:26.072377+09:00",
+  "changes": "Winner keyboard focus, Escape/Enter close, replay focus and synchronous UI state transitions",
+  "macOS": {
+    "build": "PASS",
+    "signature": "PASS local ad-hoc",
+    "assetsMatchDist": "22/22 PASS (including build manifest)",
+    "zipCRCExecutableLicense": "PASS",
+    "latestNativeLaunch": "NOT RUN: Mac locked; launcher source unchanged from phase25 actual native test",
+    "notarized": false
+  },
+  "android": {
+    "build": "PASS",
+    "signature": "PASS v2/v3",
+    "assetsMatchDist": "22/22 PASS (including build manifest)",
+    "resourceOffset": 1484,
+    "resourceAlignment": "PASS",
+    "packagedAssetsMobileChrome": "2/2 PASS",
+    "nativeDeviceExecution": "NOT RUN",
+    "nativeLifecycle": "NOT RUN"
+  },
+  "files": {
+    "DROP-LAND-Android.apk": {
+      "bytes": 489549,
+      "sha256": "af58e79773f2e2185b914560060284eb8dfc538a3e382ad8141c54523bf261b8"
+    },
+    "DROP-LAND-macOS-arm64.zip": {
+      "bytes": 39913844,
+      "sha256": "eeb22bd02ab167e4d9f09299aab7c0728669b61907d57a70d422c52dabcbd700"
+    }
+  }
+}

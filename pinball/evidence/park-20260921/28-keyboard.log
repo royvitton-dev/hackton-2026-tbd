@@ -1,0 +1,14 @@
+AssertionError [ERR_ASSERTION]: The result heading must receive focus when the winner is shown
++ actual - expected
+
++ 'half-view'
+- 'splash-name'
+
+    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/result-keyboard.mjs:16:10 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'half-view',
+  expected: 'splash-name',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

@@ -1,0 +1,15 @@
+PASS result keyboard desktop player
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
++ actual - expected
+
++ 'winner-name'
+- 'splash-name'
+
+    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/result-keyboard.mjs:20:284 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: 'winner-name',
+  expected: 'splash-name',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
