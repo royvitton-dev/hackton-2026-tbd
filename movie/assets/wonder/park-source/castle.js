@@ -1,9 +1,9 @@
 import * as THREE from 'three';
 import {box,rounded,sphere,cyl,cone,torus,group,material,texture,arch,textSign,palette} from './materials.js';
 export function createCastle(parent){
- const root=group(parent,0,0,-7);const stone=new THREE.MeshStandardMaterial({color:'#fff6df',map:texture('stone'),roughness:.84});
- const roof=new THREE.MeshStandardMaterial({color:'#d4eff1',map:texture('roof'),roughness:.48,metalness:.13});
- const ivory='#ecddc3',pink='#d89591',gold=material('#d8b562',{metalness:.6,roughness:.3}),dark='#355967';
+ const root=group(parent,0,0,-9);root.scale.setScalar(1.06);const stoneMap=texture('stone'),roofMap=texture('roof');const stone=new THREE.MeshStandardMaterial({color:'#fff3d5',map:stoneMap,bumpMap:stoneMap,bumpScale:.065,roughness:.84});
+ const roof=new THREE.MeshStandardMaterial({color:'#98dcdf',map:roofMap,bumpMap:roofMap,bumpScale:.08,roughness:.37,metalness:.25});
+ const ivory='#f0dfbb',pink='#d98189',gold=material('#dbb451',{metalness:.78,roughness:.25}),dark=material('#234451',{metalness:.35,roughness:.24,emissive:'#efb26f',emissiveIntensity:.13});
  rounded(root,11,.55,7,.35,stone,0,.38,0);rounded(root,10,.28,6.4,.2,ivory,0,.78,0);
  // Layered central keep, rose-colored walls, and carved masonry buttresses.
  box(root,5.4,4.8,3.8,stone,0,3.05,0);box(root,3.7,3.7,2.7,pink,0,6.05,-.45);
@@ -26,6 +26,7 @@ export function createCastle(parent){
   cyl(g,r*1.18,.37,ivory,0,h+.9,0);
   for(let i=0;i<10;i++){const a=i/10*Math.PI*2;box(g,.16,.34,.18,ivory,Math.sin(a)*r*1.13,h+1.12,Math.cos(a)*r*1.13);}
   cone(g,r*1.38,roofH,roof,0,h+1.16+roofH/2,0);cyl(g,r*1.4,.10,gold,0,h+1.17,0);
+  for(let j=1;j<8;j++){const ring=torus(g,r*1.38*(1-j/8),.019,gold,0,h+1.16+roofH*j/8,0);ring.rotation.x=-Math.PI/2;}
   cone(g,.085,.85,gold,0,h+roofH+1.48,0);sphere(g,.09,.09,.09,gold,0,h+roofH+1.77,0);
   for(const a of [0,Math.PI/2,Math.PI,-Math.PI/2]){const w=group(g,Math.sin(a)*(r+.012),h*.63+.7,Math.cos(a)*(r+.012));w.rotation.y=a;arch(w,r*.62,Math.min(1.3,h*.3),.06,ivory,0,0,0);arch(w,r*.40,Math.min(1.08,h*.23),.04,dark,0,.08,.068);}
   return g;
@@ -42,6 +43,14 @@ export function createCastle(parent){
  const bridge=rounded(root,3.2,.28,3.8,.12,ivory,0,.83,4);for(let i=0;i<4;i++)box(root,3.2,.13,.6,stone,0,.73-i*.13,5.5+i*.45);
  for(const side of [-1,1])for(let i=0;i<5;i++){cyl(root,.065,.55,gold,side*1.42,1.18,2.65+i*.58);sphere(root,.09,.09,.09,ivory,side*1.42,1.48,2.65+i*.58);}
  textSign(root,'WONDER CASTLE',3.1,.44,'#6b5940','#f4e9d0',0,3.33,2.26);
+ // Side galleries, buttresses and lanterns give the silhouette architectural depth.
+ for(const side of [-1,1]){
+  const wing=group(root,side*5.25,0,-.3);box(wing,2.35,2.4,3.1,stone,0,1.65,0);box(wing,2.6,.18,3.4,gold,0,2.96,0);
+  const roofWing=cone(wing,2.2,1.45,roof,0,3.72,0);roofWing.scale.z=.87;roofWing.rotation.y=Math.PI/4;
+  for(const x of [-.72,0,.72]){arch(wing,.52,1.15,.08,ivory,x,1.5,1.6);arch(wing,.32,.92,.08,dark,x,1.62,1.69);}
+  for(const x of [-1.18,1.18])box(wing,.15,2.45,.19,ivory,x,1.7,1.62);
+  for(const x of [side*2.5,side*4.2]){cyl(root,.1,.14,gold,x,2.4,2.85);sphere(root,.13,.19,.13,material('#ffe4a4',{emissive:'#ffba63',emissiveIntensity:1.7}),x,2.62,2.85);}
+ }
  // Tiny pennants at the highest spires.
  for(const [x,y,z] of [[0,15.2,-1.2],[-2.5,12.3,-1.9],[2.3,13.1,-1.7]]){
   cyl(root,.027,1.1,gold,x,y,z);const shape=new THREE.Shape();shape.moveTo(0,0);shape.lineTo(.7,-.2);shape.lineTo(0,-.42);shape.closePath();meshFlag(shape,x,y+.5,z);
