@@ -1,6 +1,6 @@
 import './style.css';
 import { loadBatteryData } from './data';
-import { calculateUserSummary, deriveSession, INSUFFICIENT_MESSAGE, ruleMap } from './scoring';
+import { calculateUserSummary, deriveSession, ruleMap } from './scoring';
 import { batteryStorage } from './storage';
 import type { ChargingSession, SessionFeature, UserProfile, UserSummary, Vehicle, VehicleImage } from './types';
 
@@ -22,6 +22,7 @@ const profileNames: Record<string, string> = {
 const gradeLabels: Record<string, string> = {
   EXCELLENT: '매우 좋음', GOOD: '좋음', CAUTION: '주의', RISK: '개선 필요',
   LOW_CONFIDENCE: '낮은 신뢰도', INSUFFICIENT: '데이터 부족',
+  PARTIAL: '부분 평가', REFERENCE: '참고 평가',
 };
 
 function escapeHtml(value: unknown): string {
@@ -77,8 +78,8 @@ function renderDashboard(
   const careArc = summary.batteryCareScore ?? 0;
   const profile = profileNames[user.driverProfile] ?? user.driverProfile;
   const scoreDescription = summary.eligibleFlag
-    ? `${summary.scoreModelLabel}에서 ${summary.modelSupportedSessionCount}건을 분석했습니다.`
-    : INSUFFICIENT_MESSAGE;
+    ? `전체 ${summary.sessionCount}건 중 ${summary.scoreSessionCount}건의 잔량·연결 시간을 표준셀 조건에서 비교했습니다. 실제 배터리 종류 차이와 급속 충전의 열화 영향은 계산하지 않습니다.`
+    : summary.insufficientReasons.join(' · ');
 
   app.innerHTML = `
     <div class="shell">
@@ -113,13 +114,13 @@ function renderDashboard(
 
         <section class="score-grid">
           <article class="score-card primary">
-            <div class="score-heading"><span>BatteryCareScore</span><span class="pill ${summary.eligibleFlag ? 'eligible' : 'insufficient'}">${summary.eligibleFlag ? '분석 가능' : 'INSUFFICIENT'}</span></div>
+            <div class="score-heading"><span>BatteryCareScore</span><span class="pill ${summary.eligibleFlag ? 'eligible' : 'insufficient'}">${summary.eligibleFlag ? (summary.scoreScope === 'FULL' ? '분석 가능' : gradeLabels[summary.grade]) : 'INSUFFICIENT'}</span></div>
             <div class="score-body">
               <div class="score-ring" style="--score:${careArc}"><div><strong>${careScore}</strong><span>/ 100</span></div></div>
               <div class="score-copy"><small>충전 습관 등급</small><h2>${gradeLabels[summary.grade]}</h2><p>${escapeHtml(scoreDescription)}</p></div>
             </div>
             ${summary.insufficientReasons.length ? `<div class="insufficient-note"><strong>추가 데이터 필요</strong><span>${escapeHtml(summary.insufficientReasons.join(' · '))}</span></div>` : ''}
-            <div class="insufficient-note"><strong>논문 모델</strong><span>${escapeHtml(summary.scoreModelLabel)} · 적용 ${summary.modelSupportedSessionCount}건 · 범위 밖 ${summary.modelOutOfRangeSessionCount}건</span></div>
+            <div class="insufficient-note"><strong>평가 범위</strong><span>반영 ${summary.scoreSessionCount}건 · 제외 ${summary.scoreExcludedSessionCount}건 · ${number.format(summary.scoreObservationDays)}일<br>${escapeHtml(summary.referenceReasons.join(' '))}<br>0–100점 환산과 참고 평가 정책 자체는 논문으로 검증된 진단법이 아닙니다.</span></div>
           </article>
           <article class="score-card confidence">
             <div class="score-heading"><span>SOC 데이터 품질</span><span class="hint">배터리 점수 아님</span></div>

@@ -33,6 +33,8 @@ export interface ScientificSessionInput {
   chargedKwh: number;
   cRate: number;
   idleMinutes: number;
+  startedAt?: string;
+  endedAt?: string;
 }
 
 export interface ScientificScoreResult {
@@ -105,7 +107,25 @@ export function isNmcReferenceCompatible(chemistry: string): boolean {
   return ['NCM', 'NMC', 'NCMA', 'NMCA'].includes(chemistry.trim().toUpperCase());
 }
 
-export function calculateScientificScore(sessions: ScientificSessionInput[]): ScientificScoreResult {
+/** One policy for both the equation and the history-eligibility calculation. */
+export function scientificSessionStatus(session: ScientificSessionInput, referenceConditions = false): 'SUPPORTED' | 'MISSING_SOC' | 'OUT_OF_RANGE' {
+  if (session.startSocPct == null || session.endSocPct == null) return 'MISSING_SOC';
+  const numbers = [session.startSocPct, session.endSocPct, session.chargedKwh, session.cRate, session.idleMinutes];
+  const invalidTime = (session.startedAt !== undefined || session.endedAt !== undefined)
+    && !(Number.isFinite(Date.parse(session.startedAt ?? '')) && Date.parse(session.endedAt ?? '') > Date.parse(session.startedAt ?? ''));
+  if (numbers.some(value => !Number.isFinite(value)) || invalidTime
+    || session.startSocPct < 0 || session.endSocPct > 100 || session.endSocPct <= session.startSocPct
+    || session.chargedKwh <= 0 || session.idleMinutes < 0
+    || session.cRate <= 0 || (!referenceConditions && session.cRate > SCIENTIFIC_MODEL.maxChargeCRate)) return 'OUT_OF_RANGE';
+  return 'SUPPORTED';
+}
+
+/**
+ * referenceConditions compares SOC/idle patterns on a hypothetical reference cell.
+ * It does NOT extrapolate charging-rate degradation or validate another chemistry.
+ * Strict model-domain filtering remains the default for direct callers.
+ */
+export function calculateScientificScore(sessions: ScientificSessionInput[], referenceConditions = false): ScientificScoreResult {
   let observedCycle = 0;
   let minimumCycle = 0;
   let maximumCycle = 0;
@@ -117,16 +137,17 @@ export function calculateScientificScore(sessions: ScientificSessionInput[]): Sc
   let missingSocSessionCount = 0;
 
   for (const session of sessions) {
-    if (session.startSocPct === null || session.endSocPct === null) {
+    const status = scientificSessionStatus(session, referenceConditions);
+    if (status === 'MISSING_SOC') {
       missingSocSessionCount += 1;
       continue;
     }
-    const start = session.startSocPct / 100;
-    const end = session.endSocPct / 100;
-    if (start < 0 || end > 1 || end <= start || session.cRate > SCIENTIFIC_MODEL.maxChargeCRate) {
+    if (status === 'OUT_OF_RANGE') {
       outOfRangeSessionCount += 1;
       continue;
     }
+    const start = session.startSocPct! / 100;
+    const end = session.endSocPct! / 100;
     supportedSessionCount += 1;
     const dod = end - start;
     // For the 2.15 Ah reference cell, a monotonic SOC rise of `dod` transfers
@@ -164,7 +185,10 @@ export function calculateScientificScore(sessions: ScientificSessionInput[]): Sc
     limitations: [
       '온도 미제공으로 25°C 표준 조건을 사용합니다.',
       'NMC111/graphite 기준 셀의 상대 스트레스이며 차량 SOH 예측값이 아닙니다.',
-      '1C 초과 충전은 공개 모델의 검증 범위 밖이므로 점수에서 제외합니다.',
+      referenceConditions
+        ? '1C 초과 충전도 SOC 변화·충전 후 연결 시간만 표준셀에 대입하며, 실제 급속 충전의 열화 영향은 계산하지 않습니다.'
+        : '1C 초과·잔량 누락·유효하지 않은 기록은 점수에서 제외하며, 제외한 충전의 스트레스는 평가하지 않습니다.',
+      '충전 속도·온도에 따른 사이클 열화 차이를 평가하지 않으며, 0–100점과 부분 평가는 제품의 참고 지표입니다.',
     ],
   };
 }

@@ -92,7 +92,7 @@ npm run data:extract
 `scripts/extract-battery-data.py`가 표준 Python 라이브러리만으로 원본을 읽고 SHA-256 및 입력 데이터를 `src/data/battery/workbook.json`에 저장합니다. `src/lib/battery.ts`와 `chargeSessions.ts`에서 가용 용량·시간·전력·C-rate·습관·신뢰도·기여도를 계산합니다.
 
 - BatteryCareScore는 Schmalstieg–Ecker NMC111/graphite 열화식을 이용한 **25°C 기준 상대 충전 스트레스 점수**이며 실제 BMS/SOH 측정값이 아닙니다.
-- 최소 5건 / 7일 / 0.3 EFC뿐 아니라 확정된 NMC 계열, SOC 완전성, 1C 이하라는 논문 적용범위를 모두 만족해야 합니다. 현재 139명은 산정 가능하고 1,111명은 근거 없는 외삽을 막기 위해 보류됩니다.
+- 유효한 기록이 최소 5건 / 7일 / 0.3 EFC를 충족하면 점수를 표시합니다. 화학계 미확정·1C 초과 기록도 표준셀의 SOC/연결 시간 **참고 평가**에 포함하되 실제 화학계 차이·급속 열화는 평가하지 않습니다. 현재 1,188명은 표시하고 62명은 최소 데이터 부족으로 보류합니다. 0–100점 환산과 완화 정책 자체가 논문으로 검증된 진단법은 아닙니다.
 - 이전 Excel 임의 가감점은 점수에서 제거했습니다. 식·계수·정규화와 적용 한계는 `docs/battery-scoring-methodology.md`에 명시합니다.
 - SOC는 마지막 충전의 사용자 입력값을 우선하며, 없으면 명시적으로 표시한 Mock truth를 사용합니다. 세션 상세에는 사용자 입력 SOC만 표시합니다.
 - 최근 30일은 각 사용자의 마지막 Mock 충전 종료일을 기준으로 합니다.

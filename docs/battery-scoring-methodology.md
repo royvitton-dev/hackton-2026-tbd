@@ -48,18 +48,40 @@ The score is therefore:
 This removes the former hand-selected point penalties. Grade boundaries remain
 product presentation bands and must not be interpreted as scientific thresholds.
 
-## Applicability gates
+## Reference comparison and eligibility (SOC_IDLE_REFERENCE_V2)
 
-A score is withheld unless all conditions hold:
+A score is withheld unless the valid records used in the comparison meet all conditions:
 
 - at least 5 sessions, 7 observation days, and 0.3 EFC;
-- chemistry is explicitly NCM/NMC/NCMA/NMCA;
-- every included session has start and end SOC;
-- every included charging session is at or below 1C, the source model boundary;
-- at least five sessions remain inside the model domain.
+- start/end SOC and positive charging energy/rate are finite and valid;
+- timestamps are valid and increasing, with nonnegative post-charge idle time.
+
+Chemistry uncertainty and charging above 1C no longer veto the whole user.
+Instead, all valid SOC trajectories and post-charge idle periods are compared
+on the same hypothetical NMC111 reference cell. Such histories are explicitly
+labelled `REFERENCE`, and the UI explains that actual chemistry differences and
+rate-dependent degradation are **not evaluated**. No charge rate is silently
+clamped to 1C and no unsupported fast-charge penalty is invented.
+
+Missing/invalid records are excluded, not replaced with invented SOC. The scored
+subset itself must meet 5 sessions / 7 days / 0.3 EFC; excluded records cannot
+inflate these minimums. `PARTIAL` indicates omitted records when no additional
+reference-cell assumption is needed. `FULL` means all records were used without
+these additional flags, not scientifically validated vehicle-pack accuracy.
+The direct equation helper retains its strict 1C filter by default; only the
+explicit reference-comparison policy broadens eligibility.
+
+Fixture verification: 1,188 of 1,250 users now receive a score (139 `FULL`,
+1,049 `REFERENCE`); 62 remain below minimum history requirements. Both apps use
+the same policy and parity tests compare every user. Run `npm test` in the repo
+root and `npm test` in `battery_health` to reproduce.
 
 The source experiment used a specific NMC111/graphite cell. Other NMC-family
 vehicles receive a reference-cell comparison, not a vehicle-specific degradation
-prediction. LFP, NCA, ambiguous chemistry, and sessions above 1C are not
-extrapolated. Temperature-dependent real-world degradation cannot be inferred
-until temperature telemetry becomes available.
+prediction. Reference scores for LFP, NCA, ambiguous chemistry or high-rate
+histories are hypothetical SOC/idle comparisons, not degradation predictions
+for those cells or operating conditions. The [source implementation](https://github.com/NatLabRockies/BLAST-Lite/blob/main/blast/models/nmc111_gr_Sanyo2Ah_2014.py)
+states that the cycling model has no temperature/C-rate sensitivity and was
+fitted near 1C and 35 °C. Our 25 °C assumption does not establish real-world
+accuracy. The 0–100 normalization, grades and broadened reference eligibility
+are product choices, **not a score independently validated by that paper**.

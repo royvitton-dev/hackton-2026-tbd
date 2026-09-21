@@ -95,7 +95,7 @@ export interface SessionFeature extends ChargingSession {
   dataIssue: boolean;
 }
 
-export type ScoreGrade = 'EXCELLENT' | 'GOOD' | 'CAUTION' | 'RISK' | 'LOW_CONFIDENCE' | 'INSUFFICIENT';
+export type ScoreGrade = 'EXCELLENT' | 'GOOD' | 'CAUTION' | 'RISK' | 'LOW_CONFIDENCE' | 'INSUFFICIENT' | 'PARTIAL' | 'REFERENCE';
 
 export interface UserSummary {
   sessionCount: number;
@@ -122,6 +122,14 @@ export interface UserSummary {
   referenceTemperatureC: number;
   modelSupportedSessionCount: number;
   modelOutOfRangeSessionCount: number;
+  modelMissingSocSessionCount: number;
+  scoreSessionCount: number;
+  scoreExcludedSessionCount: number;
+  scoreObservationDays: number;
+  scoreEstimatedEfc: number;
+  scoreScope: 'FULL' | 'PARTIAL' | 'REFERENCE' | 'NONE';
+  scorePolicyId: string;
+  referenceReasons: string[];
   modeledCapacityStress: number;
   scoreLimitations: string[];
   grade: ScoreGrade;
