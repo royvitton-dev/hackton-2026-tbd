@@ -1,0 +1,207 @@
+{
+  "at": "2026-09-21T13:22:22.507Z",
+  "base": "http://127.0.0.1:58993",
+  "status": "PASS",
+  "scope": "Actual macOS launcher child server and packaged game in Chrome",
+  "assets": 21,
+  "round": {
+    "config": {
+      "people": [
+        {
+          "id": "p1",
+          "name": "병우",
+          "label": "병우",
+          "count": 2,
+          "color": "#c6ff58"
+        },
+        {
+          "id": "p2",
+          "name": "종호",
+          "label": "종호",
+          "count": 1,
+          "color": "#bca7ff"
+        },
+        {
+          "id": "p3",
+          "name": "동길",
+          "label": "동길",
+          "count": 1,
+          "color": "#ff82af"
+        }
+      ],
+      "total": 4,
+      "rule": "nth",
+      "target": 2,
+      "mode": "player",
+      "mapId": "neon",
+      "boardMotion": true,
+      "finishMode": "winner"
+    },
+    "seed": 1109268155,
+    "result": {
+      "roundId": "8739f8be-e57d-43a1-a6fd-88b12c9a26a5",
+      "state": "complete",
+      "seed": 1109268155,
+      "time": 24.48946814785408,
+      "target": 2,
+      "total": 4,
+      "winner": {
+        "id": "p3-b1",
+        "participantId": "p3",
+        "name": "동길",
+        "label": "동길",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 2,
+        "time": 24.48946814785408,
+        "exitId": 1,
+        "exitLabel": "골인",
+        "criterion": "arrival",
+        "crossedFinish": true
+      },
+      "completionReason": "target-arrived",
+      "finishOrder": [
+        {
+          "id": "p1-b2",
+          "participantId": "p1",
+          "name": "병우",
+          "label": "병우",
+          "color": "#c6ff58",
+          "number": 2,
+          "rank": 1,
+          "time": 20.225482642072368,
+          "exitId": 1,
+          "exitLabel": "골인"
+        },
+        {
+          "id": "p3-b1",
+          "participantId": "p3",
+          "name": "동길",
+          "label": "동길",
+          "color": "#ff82af",
+          "number": 1,
+          "rank": 2,
+          "time": 24.48946814785408,
+          "exitId": 1,
+          "exitLabel": "골인"
+        }
+      ],
+      "assists": 0,
+      "returns": 0,
+      "returnClosed": false,
+      "motion": {
+        "enabled": true,
+        "active": true,
+        "axis": "x",
+        "cycle": 5,
+        "phase": 0.2923709714820097,
+        "roll": 0.07311561524209455,
+        "pitch": 0,
+        "offsetX": -19.49749739789188,
+        "offsetY": 0,
+        "forceX": -84.08295752840873,
+        "forceY": 0,
+        "nextIn": 0
+      },
+      "deviceStats": {
+        "captures": 4,
+        "launches": 2,
+        "releases": 2
+      },
+      "devices": [
+        {
+          "id": "neon-magnet-0",
+          "kind": "magnet",
+          "x": 310,
+          "y": 530,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.5707963267948966,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "neon-magnet-1",
+          "kind": "magnet",
+          "x": 100,
+          "y": 1770,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.5707963267948966,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "neon-cannon-2",
+          "kind": "cannon",
+          "x": 310,
+          "y": 1320,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 20.51405606315288,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        },
+        {
+          "id": "neon-cannon-3",
+          "kind": "cannon",
+          "x": 480,
+          "y": 1630,
+          "ballId": null,
+          "ballIds": [],
+          "angle": 1.5707963267948966,
+          "progress": 0,
+          "holding": false,
+          "count": 0
+        }
+      ],
+      "balls": [
+        {
+          "id": "p1-b1",
+          "x": 423.08164614424027,
+          "y": 1236.2904163798619,
+          "finished": false,
+          "rank": null,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p2-b1",
+          "x": 276.6765781899187,
+          "y": 2049.646999377283,
+          "finished": false,
+          "rank": null,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p3-b1",
+          "x": 327.36684139343123,
+          "y": 2150,
+          "finished": true,
+          "rank": 2,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        },
+        {
+          "id": "p1-b2",
+          "x": 312.1236463900463,
+          "y": 2150,
+          "finished": true,
+          "rank": 1,
+          "heldBy": null,
+          "returning": null,
+          "returnCount": 0
+        }
+      ]
+    },
+    "lotto": null
+  },
+  "errors": []
+}

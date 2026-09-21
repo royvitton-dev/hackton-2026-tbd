@@ -1,0 +1,30 @@
+다음에 대해 유효 기간이 10,000일인 3,072비트 RSA 키 쌍 및 자체 서명된 인증서(SHA384withRSA)를 생성하는 중
+	: CN=DROP LAND Local Build, O=DROP LAND, C=KR
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/desktop/android/src/com/dropland/game/MainActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 warnings
+Warning in /var/folders/pf/4mnnyv7d5q70y0mydryw6nlh0000gn/T/dropland-apk-p5q8p0ow/classes/com/dropland/game/MainActivity.class:
+Superclass `java.lang.Object` of library class `com.dropland.game.MainActivity$$InternalSyntheticLambda$2$ba6ed9bac576d566943cdc32f148585ec666bfd8e66b242ea9a8e5247bf497d6$0` is missing. A superclass of a library class should be a library class. This is required for the desugaring of Lcom/dropland/game/MainActivity$$InternalSyntheticLambda$2$ba6ed9bac576d566943cdc32f148585ec666bfd8e66b242ea9a8e5247bf497d6$0;close()V
+Note: /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/desktop/android/SignApk.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+PASS APK signature v1=false v2=true v3=true
+package: name='com.dropland.game' versionCode='1' versionName='1.0' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+minSdkVersion:'26'
+targetSdkVersion:'35'
+application-label:'DROP LAND'
+application-icon-160:'res/drawable/app_icon.xml'
+application: label='DROP LAND' icon='res/drawable/app_icon.xml'
+launchable-activity: name='com.dropland.game.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-gl-es: '0x30000'
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'
+Built: /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/DROP-LAND-Android.apk

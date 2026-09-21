@@ -30,6 +30,12 @@ node scripts/build.mjs
 node scripts/serve.mjs --dist
 ```
 
+## Mac·Android 실행 파일
+
+macOS용 앱과 Android용 오프라인 APK를 추가했습니다. Mac 앱은 Node 설치 없이 더블클릭하면 기본 브라우저에서 게임을 엽니다. Android APK는 게임 파일을 내장하며 인터넷 권한이 없습니다.
+
+소스·재빌드 방법은 [실행 파일 안내](desktop/README.md), 검사 결과는 [패키지 검증 기록](evidence/park-20260921/25-packaging.md)을 확인하세요. Mac은 Apple Silicon/macOS 13.5 이상에서 실행하도록 만들고 현재 Mac에서 실제 실행했습니다. Android는 Android 8.0 이상 대상으로 빌드·서명·자산 검사했으며 **실제 Android 기기 설치는 미검증**입니다.
+
 ## 커밋·푸시 후 로컬 미리보기
 
 이 작업의4188미리보기는 고정 버전의 실행파일을 사용합니다. `main` 커밋과 일반푸시가 끝난 후 아래 명령으로 반영합니다.
