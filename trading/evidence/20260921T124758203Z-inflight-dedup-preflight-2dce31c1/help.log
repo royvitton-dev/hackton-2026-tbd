@@ -1,0 +1,2 @@
+node scripts/inflight-dedup.mjs --expected-binary-sha256 <64hex>
+Isolated fresh-key 12-request body barrier, identical/conflict settlement, lookup and restart; <64 commands/<160 HTTP, 90s work + bounded cleanup, never controls ordinary demo.

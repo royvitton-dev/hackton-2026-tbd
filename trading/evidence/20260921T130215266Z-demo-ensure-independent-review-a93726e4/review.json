@@ -1,0 +1,169 @@
+{
+  "run_id": "20260921T130215266Z-demo-ensure-independent-review-a93726e4",
+  "reviewed_at": "2026-09-21T13:02:15.2662605Z",
+  "reviewer": "/root/matching_core",
+  "status": "initial_review_complete; one actionable finding; owner preparing fix",
+  "scope": [
+    "demo.mjs ensure/restart-frontend and command-wide launcher lock integration",
+    "demo-lifecycle.mjs lock and decision helpers",
+    "new six-case ensure tests, existing12 reported lifecycle tests, actual concurrent healthy reuse and actual UI-only restoration"
+  ],
+  "excluded": [
+    "park-launcher.mjs and park/server.mjs integration owned by root",
+    "No new tests, services, processes, signals, shared-doc edits or source edits performed by reviewer",
+    "No full cold-market start/stop/restart rerun against live six-hour demo"
+  ],
+  "source_and_evidence_hashes": [
+    {
+      "path": "scripts/demo.mjs",
+      "sha256": "61b5c0774381ba4362c149062210c06d5b14bdab6441dcb22ff24d6f76dc072a",
+      "bytes": 23593
+    },
+    {
+      "path": "scripts/demo-lifecycle.mjs",
+      "sha256": "b3aa067e00444d32cf7fb4821b2842228ecf515219f0d2715f06ca392f2dd7c0",
+      "bytes": 7554
+    },
+    {
+      "path": "scripts/demo-ensure.test.mjs",
+      "sha256": "e2323c1e37feafb2c05c3d37f0b73f0ff564bab06b3950fc11ce9802b26cfc35",
+      "bytes": 7501
+    },
+    {
+      "path": "scripts/demo-lifecycle.test.mjs",
+      "sha256": "570e379a2292af6513fa2c8b43ef93ba662acd99d922dcb6503547072f065656",
+      "bytes": 11268
+    },
+    {
+      "path": "evidence/2026-09-21T12-55-42-685Z-demo-ensure-0b592a61/actual-concurrent-ensure.json",
+      "sha256": "8a7686caec1cbda3ba7f861182e4bd04e709d0d27b0da460aade69a6587355c9",
+      "bytes": 1943
+    },
+    {
+      "path": "evidence/2026-09-21T12-55-42-685Z-demo-ensure-0b592a61/cli-refusal-checks.json",
+      "sha256": "b136129b081381a091dcbc1a36ba2565fc97a2bb9fc9aa24b6490197b8ca2946",
+      "bytes": 684
+    },
+    {
+      "path": "evidence/2026-09-21T12-55-42-685Z-demo-ensure-0b592a61/actual-ensure-a.stdout.log",
+      "sha256": "b2cf007f5b5a84a3f017c25479c7718b1a9a7920f5cfc477e5672db2079fc402",
+      "bytes": 167
+    },
+    {
+      "path": "evidence/2026-09-21T12-55-42-685Z-demo-ensure-0b592a61/actual-ensure-b.stdout.log",
+      "sha256": "b2cf007f5b5a84a3f017c25479c7718b1a9a7920f5cfc477e5672db2079fc402",
+      "bytes": 167
+    },
+    {
+      "path": "evidence/2026-09-21T12-58-28-747Z-demo-ensure-96855aee/test-output.txt",
+      "sha256": "b8a905aa886ac83c0de3b7c82334f0ef680c0b0d2d5f8c0033bc3e80011c4109",
+      "bytes": 863
+    },
+    {
+      "path": "evidence/2026-09-21T12-58-28-747Z-demo-ensure-96855aee/concurrency.json",
+      "sha256": "f96fbfe60462f655a9875fe570298170ac0bb316d29135fa750f40c4dd39d8bf",
+      "bytes": 482
+    },
+    {
+      "path": "evidence/2026-09-21T12-58-28-747Z-demo-ensure-96855aee/unprepared-ensure.stderr.log",
+      "sha256": "f44a96a80eb4dc43c21fd2c4bc09b86c94f33ea3789bae95cd7880ed6795fb51",
+      "bytes": 383
+    },
+    {
+      "path": "evidence/2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c/test-output.txt",
+      "sha256": "17cbd8cb58fedba68305121f45cd8943f787628a332b970a2ee57174042f68b4",
+      "bytes": 1454
+    },
+    {
+      "path": "evidence/2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c/events.jsonl",
+      "sha256": "83ae39014225d30a32087c4278cd5f46c2c42b78190ee8e5be3f23871169ab6a",
+      "bytes": 4121
+    },
+    {
+      "path": "evidence/2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c/run.json",
+      "sha256": "a5ccdaa7688cdd5d83f5908488accb5f04d581567a1c2f3a655c7edfe980370a",
+      "bytes": 506
+    },
+    {
+      "path": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/frontend-recovery-2026-09-21T12-52-39-767Z-7c1fadc6/replacement.json",
+      "sha256": "523f8c6442c51a56b7597902ced0f35a51dfb70eec1384054d66c551924fb63e",
+      "bytes": 972
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "priority": "P2",
+      "status": "open_at_reviewed_sha",
+      "file": "scripts/demo.mjs",
+      "source_sha256": "61b5c0774381ba4362c149062210c06d5b14bdab6441dcb22ff24d6f76dc072a",
+      "start": 176,
+      "end": 193,
+      "title": "Post-spawn record-write failures bypass cleanup of the new frontend",
+      "trigger": "A filesystem write failure at the initial replacement.json write after spawn/unref; or a write failure in the inner error-record write during readiness/manifest failure.",
+      "observed_control_flow": "Initial write lies before the inner try. Its throw reaches outer finally, which only closes port reservations. In the inner catch the diagnostic write precedes child.kill/await; its throw skips cleanup too.",
+      "consequence": "Exact newly spawned UI child can remain running without a successfully published current manifest entry; the launcher exits nonzero and releases its lock, while subsequent ensure sees old/dead frontend plus an occupied UI port and cannot restore automatically.",
+      "minimal_correction": "Guard all operations after obtaining the spawned child; on failure clean up and await only that owned child independently of diagnostic-write success. Preserve original failure and bound the wait. Keep market processes untouched.",
+      "evidence_type": "Static control-flow finding; no failure injected by reviewer and no actual orphan claimed.",
+      "suggested_verification": "Isolated owned short-lived Node child; inject filesystem failure at initial post-spawn publication and after readiness; also fail diagnostic publication; assert original error, actual child exit, no listener/process remains. No main market involvement.",
+      "relevant_original_snippet": [
+        "monitor = monitorChild(child, 'replacement frontend'); child.unref();",
+        "writeJson(path.join(replacementDir, 'replacement.json'), record);",
+        "try { await waitForOwnedReady(...); ... } catch (error) {",
+        "  Object.assign(record, { status: 'failed', error: error.message }); writeJson(...);",
+        "  if (!monitor.state.exited && !monitor.state.spawn_error) { child.kill('SIGTERM'); await monitor.ended; }",
+        "} finally { await reservations.close(); }"
+      ]
+    }
+  ],
+  "verified_areas": [
+    {
+      "area": "Atomic launcher ownership",
+      "source": "scripts/demo-lifecycle.mjs:8-29; demo.mjs:282-290",
+      "assessment": "wx creation serializes mutation commands. ensure reads state inside lock, and calling runCommand(start) does not reacquire the same lock. release checks PID+random token. A live lock times out; a valid dead-owner lock is refused rather than silently stolen.",
+      "evidence": "busy/stale tests + real two-process lock-worker run; concurrent worker plan start/reuse and simulated_starts1."
+    },
+    {
+      "area": "Partial/foreign state policy",
+      "source": "scripts/demo-lifecycle.mjs:32-42; demo.mjs:35-47,207-218",
+      "assessment": "Any tracked live unowned process rejects. Missing engine/bot or unhealthy market rejects. Complete healthy market can only reuse or restore missing frontend. Live unhealthy frontend is not replaced.",
+      "evidence": "Pure helper assertions cover engine/bot missing, foreign flag, unhealthy engine/bots/UI and duplicate names. Actual CLI rejects live frontend replacement and address mismatch with unchanged manifest.",
+      "limit": "Foreign PID/CIM command-line mismatch is code-reviewed and represented in helper inputs; no new actual foreign-PID test performed."
+    },
+    {
+      "area": "No duplicate healthy market",
+      "source": "scripts/demo.mjs:207-218",
+      "assessment": "Two simultaneous real ensure commands both returned reused frontend4220 with exit0 and byte-identical manifest before/after.",
+      "evidence": "actual-concurrent-ensure.json plus both stdout files; before/after SHA99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e.",
+      "limit": "This is healthy-reuse concurrency, not two real concurrent cold 14-process market starts. Cold concurrency test uses a simulated callback."
+    },
+    {
+      "area": "Missing-UI happy path",
+      "source": "scripts/demo.mjs:148-193",
+      "assessment": "Confirms owned engine+12bot identities and health, reserves UI loopback port, requires exact child alive/own Vite ready log/HTTP. Replacement provenance retained and market processes not intentionally controlled.",
+      "evidence": "Actual17556-dead→4220-ready replacement12:52:39.790Z..12:52:40.339Z; ready logLocal127.0.0.1:5175; prior manifest and confirmed13market PIDs in preflight.",
+      "limit": "F1 concerns its failure path, not the observed successful restoration. Observer caches old frontend PID and excludes replacement UI resource attribution, already recorded in preflight."
+    },
+    {
+      "area": "Existing readiness/port safety",
+      "source": "scripts/demo-lifecycle.mjs:45-138; demo-lifecycle.test.mjs",
+      "assessment": "Reported12/12 pass supported by actual events: occupied404/200 CLI exit1; spawn ENOENT; child exits23/29; wrong ready marker refused; ownedready child succeeds.",
+      "evidence": "12:56 lifecycle test output and events; test body verifies no admin/HTTP traffic to unrelated listener before occupancy refusal.",
+      "limit": "Node's12 count includes parent+subtests. No actual Rust shutdown, full12bot cold startup,35s detached grace or restart-engine was rerun here."
+    },
+    {
+      "area": "Unprepared startup",
+      "source": "scripts/demo-ensure.test.mjs:80",
+      "assessment": "Copied isolated ensure entrypoint returned SETUP_REQUIRED/manual build/install instructions; no manifest/evidence/service created and launcherlock released.",
+      "evidence": "New6th test raw stderr and6/6 output from12:58run.",
+      "limit": "Does not validate successful cold startup."
+    }
+  ],
+  "no_additional_actionable_finding_in_reviewed_scope": true,
+  "limits": [
+    "Command-line ownership uses recorded PID and command substrings rather than an OS creation-time handle; no PID-reuse guarantee is claimed.",
+    "Malformed/partially written lock ownership cannot be safely auto-reclaimed; timeout/manual inspection remains fail-closed policy, not tested crash-resilience.",
+    "Normal path source inspection and6+12 tests do not establish all filesystem/process/OS failure paths.",
+    "Legacy restart-engine/start/stop source branches were read for integration regressions but not live-executed; this review is not a successful shutdown/6-hour completion record."
+  ]
+}

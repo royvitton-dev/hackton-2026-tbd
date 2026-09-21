@@ -1,0 +1,1341 @@
+{
+  "audit_id": "2026-09-21T12-40-04-712Z-requirements-durability-audit-28d784b2",
+  "at_utc": "2026-09-21T12:40:28.989Z",
+  "project_root": "C:\\project\\hackton-2026-tbd",
+  "git_head_observed": "24fcd160d0a7f70ce2a918018afe6831e4021662",
+  "scope": "All §7 sequencing/journal/snapshot/recovery/fault bullets and intro/trailing clauses; §11 seven concurrency/recovery/UI bullets; §13 ACK/restart-dedup criterion. Separate six-hour/OS-power scope guards.",
+  "method": "Read-only source/test-body/raw-log/saved-DOM inspection plus offline byte/hash calculations. No build/test/load/service/process control. Only new audit.md/json written.",
+  "status_definitions": {
+    "proven": "Finite inspected local implementation and executed evidence supports exact stated scope, not universal or OS/power proof.",
+    "incomplete": "Some required/followup direct evidence absent or pending.",
+    "unverified": "No direct validation of separately named scope.",
+    "failed": "Observed behavior contradicts requirement."
+  },
+  "counts": {
+    "proven": 33,
+    "incomplete": 2,
+    "unverified": 1
+  },
+  "required_counts": {
+    "proven": 33,
+    "incomplete": 1
+  },
+  "findings": [
+    {
+      "id": "UI-GAP-E2E",
+      "row": "11-c6",
+      "type": "coverage",
+      "detail": "Unit gap and actual reconnect proofs exist; deliberate browser event-gap→refresh→render convergence not found. No production defect established.",
+      "action": "Keep combined row incomplete unless separate direct browser gap evidence is provided."
+    }
+  ],
+  "provenance_limits": [
+    "Storage/core raw tests have commands/exit/assertions but no historical launched test executable SHA. Current source or target hashes cannot replace missing historical executable identity.",
+    "Common API suite lacks per-launch executable SHA. Its checkpoint case retained copied executable, now hashed, but launch-time digest absent.",
+    "Aged recovery retained validator binary with contemporaneous SHA manifest; all27 artifacts checked. Current core/model hashes equal historical source manifest.",
+    "Full recovery claims use full Core images; HTTP MarketSnapshot truncates terminal orders/trades.",
+    "Earlier aged demo recovery cannot be relabeled as pending six-hour cumulative recovery.",
+    "Process kill and software sync seam do not validate real OS/power/storage-controller failure; Windows directory sync limitation persists."
+  ],
+  "evidence": {
+    "S": {
+      "files": [
+        "evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549/run.json",
+        "evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549/output.log"
+      ],
+      "body": "engine/src/storage.rs:753,777,802,824,841,891,1064; engine/tests/storage_recovery.rs:77,103,123,169,187,206,221,236,269,290,302,314,348",
+      "scope": "Release raw output7 unit+13 integration pass0fail. Test bodies cover actual bytes/CRC/failclosed/full Core/dedup. Historical launched test executable SHA not captured."
+    },
+    "K": {
+      "files": [
+        "evidence/storage-tests/1789984676354069600-20856-4-actual-process-kill/crash-report.json",
+        "evidence/storage-tests/1789984676354069600-20856-4-actual-process-kill/child-stdout.log",
+        "evidence/storage-tests/1789984676354069600-20856-4-actual-process-kill/child-stderr.log"
+      ],
+      "body": "engine/tests/storage_recovery.rs:348",
+      "scope": "Actual child killed during trading:25 captured ACKs,27 recovered records, snapshot21+replay6; exact-prefix full Core reference and retries asserted. Process only."
+    },
+    "P": {
+      "files": [
+        "evidence/storage-tests/00000000000001789984670532278900-11672-4-actual-snapshot-kill-partial_write/snapshot-process-crash-report.json",
+        "evidence/storage-tests/00000000000001789984670532278900-11672-4-actual-snapshot-kill-partial_write/child-stdout.log",
+        "evidence/storage-tests/00000000000001789984670532278900-11672-4-actual-snapshot-kill-partial_write/child-core-before-snapshot.json",
+        "evidence/storage-tests/00000000000001789984670675691800-11672-37-actual-snapshot-kill-synced_before_publish/snapshot-process-crash-report.json",
+        "evidence/storage-tests/00000000000001789984670675691800-11672-37-actual-snapshot-kill-synced_before_publish/child-stdout.log",
+        "evidence/storage-tests/00000000000001789984670675691800-11672-37-actual-snapshot-kill-synced_before_publish/child-core-before-snapshot.json"
+      ],
+      "body": "engine/src/storage.rs:604,891",
+      "scope": "Real child/process termination at test-only pauses inside actual snapshot publication.39/6200 partial temp and6200-byte synced unpublished temp;5 ACKs each; snapshot1+4 replay; full Core and duplicate assertions."
+    },
+    "A": {
+      "files": [
+        "evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/run.json",
+        "evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/output.log",
+        "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/events.jsonl",
+        "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/engine-3.stderr.log",
+        "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/checkpoint-publication-failure/report.json",
+        "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/checkpoint-publication-failure/engine-0.stderr.log",
+        "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/checkpoint-publication-failure/engine-1.stderr.log"
+      ],
+      "body": "scripts/api.integration.test.mjs:75,93,207,216,235,272",
+      "scope": "Raw10pass0fail actual engines.12 concurrent clients,12 fill/cancel races, clean restart, dropped durable response+kill, WS reconnect, stalled-body shutdown, checkpoint-path503/shutdown1 then recovery. No common per-launch binary SHA; checkpoint copy retained."
+    },
+    "G": {
+      "files": [
+        "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/run.json",
+        "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/sha256.json",
+        "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/validator.stdout.log",
+        "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/validator.stderr.log",
+        "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/recovery-report.json",
+        "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/aged_recovery.exe",
+        "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/snapshot-recovered-full-core.json",
+        "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/journal-replayed-full-core.json"
+      ],
+      "body": "engine/examples/aged_recovery.rs:85,271,311",
+      "scope": "Earlier real demo offline copy with exclusive writer.lock. Both full Core images+invariants,22233commands/cache,19305orders,12260trades. All27 retained hashes directly verified. Not pending six-hour dataset."
+    },
+    "C": {
+      "files": [
+        "evidence/core-20260921T184147624-status-reuse/after/release-core-run.json",
+        "evidence/core-20260921T184147624-status-reuse/after/release-core-console.log",
+        "evidence/core-20260921T184147624-status-reuse/after/hashes.json"
+      ],
+      "body": "engine/tests/core_rules.rs:641; engine/tests/core_reference.rs:242",
+      "scope": "Release19core+1oracle pass.4seeds×1000commands; independent scan/sort3000. Current core/model hashes match historical source manifest. Historical unit executable SHA unavailable."
+    },
+    "U": {
+      "files": [
+        "evidence/frontend-20260921T090509598Z/protocol.log"
+      ],
+      "body": "frontend/src/protocol.test.ts:35; frontend/src/useExchange.ts:130",
+      "scope": "Raw7/7units:10→14 gap decision=resync. Source refresh branch inspected, not browser gap end-to-end execution."
+    },
+    "B": {
+      "files": [
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/before-engine-restart.txt",
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/after-engine-restart.txt",
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/README.md"
+      ],
+      "body": "frontend/src/useExchange.ts:111,130",
+      "scope": "Actual saved browser DOM: EVENT2971→3026, confirmedorder1651/command1908 and assets998965P/1033h retained after engine restart. No deliberately omitted WS frame evidence."
+    },
+    "F": {
+      "files": [
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/events.jsonl",
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/unknown-after-fix.txt",
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/unknown-restored-after-reload.txt",
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/lookup-confirmed.txt",
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/same-id-retry-confirmed.txt",
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/verified-after-browser-retry.json"
+      ],
+      "body": "scripts/browser-fault-demo.mjs;frontend/src/useExchange.ts",
+      "scope": "Actual browser unknown ACK outcome, reload, lookup and same-key retry raw evidence. HTTP ACK-loss fixture connects WS directly; not gap injection."
+    }
+  },
+  "rows": [
+    {
+      "id": "7-order",
+      "requirement_line": 192,
+      "requirement": "시퀀스 부여, 저널 기록, 내구성 확보, 상태 반영, 응답·이벤트 공개의 순서와 장애 시 의미를 ADR로 고정한다. 구체적인 순서는 선택한 설계에 따르되 보장 사항과 모순되면 안 된다.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:349",
+        "engine/src/main.rs:521",
+        "docs/adr/002-durability.md:7"
+      ],
+      "evidence": [
+        "S",
+        "A"
+      ],
+      "proof": "write_all → sync_all → deterministic apply → durable result/event. Single writer and ADR agree.",
+      "limit": "Finite failure seams/process tests; not every instruction-level interleaving."
+    },
+    {
+      "id": "7-f1",
+      "requirement_line": 196,
+      "requirement": "단조 증가하는 엔진 명령 순번.",
+      "status": "proven",
+      "source": [
+        "engine/src/core.rs:132",
+        "engine/src/core.rs:176",
+        "engine/src/storage.rs:349"
+      ],
+      "evidence": [
+        "S",
+        "C",
+        "A"
+      ],
+      "proof": "Every newly admitted command advances sequence once. Duplicates/conflicts preserve original sequence; non-admission does not advance. Journal sequence is distinct.",
+      "limit": "12 concurrent admitted commands have unique seq; restart/retry no state-seq increase."
+    },
+    {
+      "id": "7-f2",
+      "requirement_line": 197,
+      "requirement": "버전·레코드 경계·길이·무결성 검사를 포함한 저널.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:19",
+        "engine/src/storage.rs:223",
+        "engine/src/storage.rs:554"
+      ],
+      "evidence": [
+        "S"
+      ],
+      "proof": "32-byte framing has version/magic/flags/seq/length/header CRC/payload CRC. Tests corrupt header length, middle payload, complete final CRC and cut every incomplete byte boundary.",
+      "limit": "CRC detects accidental corruption, not adversarial authenticity."
+    },
+    {
+      "id": "7-f3",
+      "requirement_line": 198,
+      "requirement": "재시작 이후에도 보장 기간 안에서 유지되는 요청 중복 방지.",
+      "status": "proven",
+      "source": [
+        "engine/src/core.rs:132",
+        "engine/src/core.rs:211",
+        "engine/src/storage.rs:421",
+        "docs/adr/002-durability.md:55"
+      ],
+      "evidence": [
+        "S",
+        "G",
+        "A"
+      ],
+      "proof": "Full Core includes account/request action+result cache. Dataset lifetime retention, no automatic expiry/eviction. Same-action and conflicting reuse across restart tested; aged 22233-entry cache byte-equal.",
+      "limit": "Capacity exhaustion does not evict prior keys. Dataset reset/deletion outside guarantee."
+    },
+    {
+      "id": "7-f4",
+      "requirement_line": 199,
+      "requirement": "기본 모드에서 성공 ACK한 거래의 복구 보장.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:349",
+        "engine/src/storage.rs:326"
+      ],
+      "evidence": [
+        "S",
+        "K",
+        "P",
+        "A",
+        "G"
+      ],
+      "proof": "Observed durable ACKs survive normal/forced restart and snapshot interruption. Recovered committed prefix equals complete deterministic Core.",
+      "limit": "Conditional on OS/storage honoring sync; real OS/power failure unverified."
+    },
+    {
+      "id": "7-f5",
+      "requirement_line": 200,
+      "requirement": "저널 write·flush·OS 동기화와 ACK의 관계 명시.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:349",
+        "docs/adr/002-durability.md:87"
+      ],
+      "evidence": [
+        "S"
+      ],
+      "proof": "Unbuffered File::write_all is not durability; sync_all precedes apply and ACK. ADR distinguishes OS write, sync and Unix directory sync.",
+      "limit": "Windows directory metadata power-loss guarantee explicitly limited."
+    },
+    {
+      "id": "7-f6",
+      "requirement_line": 201,
+      "requirement": "batching 사용 시 지연·처리량·내구성 영향 명시.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:349",
+        "docs/adr/002-durability.md:18",
+        "docs/adr/002-durability.md:95"
+      ],
+      "evidence": [
+        "S"
+      ],
+      "proof": "Conditional batching requirement not active. One record sync per process call; group commit deferred; simpler durability boundary versus throughput tradeoff documented.",
+      "limit": "No batching benchmark or batching fault-proof claim."
+    },
+    {
+      "id": "7-f7",
+      "requirement_line": 202,
+      "requirement": "내구성 확보에 실패한 요청에 성공 ACK를 반환하지 않는 오류 처리.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:349",
+        "engine/src/main.rs:521"
+      ],
+      "evidence": [
+        "S",
+        "A"
+      ],
+      "proof": "Partial-write, read-only-handle actual write syscall failure, injected sync error and after-sync interruption return errors without success ACK/live apply. API checkpoint failure durable:false/503; shutdown exit1.",
+      "limit": "Sync failure is software seam, not actual device-sync error."
+    },
+    {
+      "id": "7-f8",
+      "requirement_line": 203,
+      "requirement": "저널 I/O 실패 시 후속 주문 접수·처리 정책과 복구 절차.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:349",
+        "engine/src/main.rs:533",
+        "docs/adr/002-durability.md:71"
+      ],
+      "evidence": [
+        "S",
+        "A"
+      ],
+      "proof": "Journal write/sync error fails closed; further process/checkpoint reject without extending suffix. Restart validates/repairs safe tail and syncs before ready. Failed absent lookup is OUTCOME_UNKNOWN.",
+      "limit": "Failed absent live HTTP lookup branch inspected statically; storage failure boundaries directly tested."
+    },
+    {
+      "id": "7-f9",
+      "requirement_line": 204,
+      "requirement": "프로세스 종료, OS 장애, 전원 장애에 대한 보장 범위 구분.",
+      "status": "proven",
+      "source": [
+        "docs/adr/002-durability.md:87"
+      ],
+      "evidence": [
+        "K",
+        "P",
+        "G"
+      ],
+      "proof": "ADR and raw crash reports explicitly distinguish process/offline recovery from OS/power proof.",
+      "limit": "Actual OS/power tests remain unverified."
+    },
+    {
+      "id": "7-f10",
+      "requirement_line": 205,
+      "requirement": "미응답 요청의 처리 여부 조회와 안전한 재시도.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:405",
+        "engine/src/main.rs:533",
+        "docs/protocol.md:20"
+      ],
+      "evidence": [
+        "S",
+        "A",
+        "F"
+      ],
+      "proof": "Unknown after sync seam resolved after restart lookup; actual dropped durable HTTP response then kill/retry has one effect. Browser unknown/reload/lookup/retry preserved.",
+      "limit": "Transient IO errors never establish authoritative rejection."
+    },
+    {
+      "id": "7-s1",
+      "requirement_line": 208,
+      "requirement": "정확한 엔진 순번에 대응하는 일관된 상태를 저장한다.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:421",
+        "engine/src/main.rs:537"
+      ],
+      "evidence": [
+        "S",
+        "P",
+        "G"
+      ],
+      "proof": "Writer checkpoints between commands: full Core, command/event seq, journal seq/offset/prefix CRC. Snapshot1+tail matches child-before state.",
+      "limit": "No concurrent mutation of borrowed Core during save."
+    },
+    {
+      "id": "7-s2",
+      "requirement_line": 209,
+      "requirement": "호가장, 잔고·예약, 주문 상태, ID·순번, 중복 방지 상태를 포함한다.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:77",
+        "engine/src/storage.rs:421",
+        "engine/src/core.rs:55"
+      ],
+      "evidence": [
+        "S",
+        "P",
+        "G"
+      ],
+      "proof": "Full Core includes books/accounts/reserves/all orders/trades/IDs/sequences/cache. 16.5MB full images independently equal.",
+      "limit": "Public HTTP bounded history is not used as full recovery proof."
+    },
+    {
+      "id": "7-s3",
+      "requirement_line": 210,
+      "requirement": "불완전한 스냅샷이 정상 스냅샷으로 선택되지 않도록 저장·게시 절차를 구현한다.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:604",
+        "engine/tests/storage_recovery.rs:236"
+      ],
+      "evidence": [
+        "S",
+        "P"
+      ],
+      "proof": "Unpublished create_new temp → write → sync → immutable rename. Real kill partial/synced-unpublished keeps prior snapshot selected. Invalid latest published snapshot fallback tested.",
+      "limit": "Actual OS/power rename persistence unverified."
+    },
+    {
+      "id": "7-s4",
+      "requirement_line": 211,
+      "requirement": "유효한 스냅샷과 이후 저널로 복구한다.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:223",
+        "engine/src/storage.rs:292"
+      ],
+      "evidence": [
+        "S",
+        "K",
+        "P",
+        "G"
+      ],
+      "proof": "Full journal validation plus snapshot prefix match; replay suffix. Actual kill snapshot21+6; snapshot-save kill snapshot1+4. Image ahead of journal refuses startup.",
+      "limit": "Validated prefix, not blind trust in checkpoint filename."
+    },
+    {
+      "id": "7-s5",
+      "requirement_line": 212,
+      "requirement": "복구 중 신규 주문 접수를 제어하고 복구 완료 상태를 노출한다.",
+      "status": "proven",
+      "source": [
+        "engine/src/main.rs:504",
+        "engine/src/main.rs:607",
+        "docs/protocol.md:39"
+      ],
+      "evidence": [
+        "A",
+        "G"
+      ],
+      "proof": "Store recovery/invariants complete before listener bind. Raw logs recovering → recovery_complete → ready; health/state reports ready.",
+      "limit": "No deliberate recovery hold plus TCP probe test; static listener order enforces admission exclusion."
+    },
+    {
+      "id": "7-v1",
+      "requirement_line": 215,
+      "requirement": "정상 종료 후 재시작.",
+      "status": "proven",
+      "source": [
+        "scripts/api.integration.test.mjs:207",
+        "engine/tests/storage_recovery.rs:77"
+      ],
+      "evidence": [
+        "S",
+        "A",
+        "G"
+      ],
+      "proof": "Checkpoint, graceful exit0 without kill/fallback, restart: same public state, original durable lookup and duplicate. Earlier offline demo compared full Core.",
+      "limit": "Current six-hour dataset recovery pending."
+    },
+    {
+      "id": "7-v2",
+      "requirement_line": 216,
+      "requirement": "거래 중 프로세스 강제 종료 후 재시작.",
+      "status": "proven",
+      "source": [
+        "engine/tests/storage_recovery.rs:348",
+        "scripts/api.integration.test.mjs:216"
+      ],
+      "evidence": [
+        "S",
+        "K",
+        "A"
+      ],
+      "proof": "Actual child.kill during trading and API SIGKILL after response drop; captured ACKs recover and reference replays exact journal prefix.",
+      "limit": "Process only, not kernel/power/controller loss."
+    },
+    {
+      "id": "7-v3",
+      "requirement_line": 217,
+      "requirement": "스냅샷 저장 중 중단.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:891",
+        "engine/src/storage.rs:604"
+      ],
+      "evidence": [
+        "S",
+        "P"
+      ],
+      "proof": "Actual child killed inside real publication helper at partial write and synced-before-publish. 5 ACKs, old snapshot/temp preserved, child-before/reference equality plus retry/re-checkpoint.",
+      "limit": "Controlled cfg(test) pause, not arbitrary instruction timing."
+    },
+    {
+      "id": "7-v4",
+      "requirement_line": 218,
+      "requirement": "저널 마지막 레코드의 부분 기록과 저널 중간 손상.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:1064",
+        "engine/tests/storage_recovery.rs:123",
+        "engine/tests/storage_recovery.rs:187"
+      ],
+      "evidence": [
+        "S"
+      ],
+      "proof": "Every incomplete prefix of one frame recovers prior ACK state and exact suffix. Torn header/payload preserved; middle/complete final/header CRC corruption fails with journal bytes unchanged.",
+      "limit": "Finite frame fixture."
+    },
+    {
+      "id": "7-v5",
+      "requirement_line": 219,
+      "requirement": "ACK 전후 장애, 응답 유실 후 재시도, 저널 쓰기 실패.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:777",
+        "engine/src/storage.rs:802",
+        "engine/src/storage.rs:824",
+        "scripts/api.integration.test.mjs:216"
+      ],
+      "evidence": [
+        "S",
+        "K",
+        "A",
+        "F"
+      ],
+      "proof": "Before-ACK after-sync failure seam, after-ACK actual kill, actual network-response drop, actual read-only-handle write failure, lookup/retry.",
+      "limit": "Software sync-error seam does not exercise failing hardware."
+    },
+    {
+      "id": "7-v6",
+      "requirement_line": 220,
+      "requirement": "원본 실행과 같은 확정 입력 범위를 재생한 결과의 주문·잔고·호가장 비교.",
+      "status": "proven",
+      "source": [
+        "engine/tests/storage_recovery.rs:348",
+        "engine/src/storage.rs:891",
+        "engine/examples/aged_recovery.rs:311"
+      ],
+      "evidence": [
+        "S",
+        "K",
+        "P",
+        "G"
+      ],
+      "proof": "Reference executes exactly recovered journal count, not just observed ACK count. Child-before and aged full Core compare all orders/accounts/books/cache.",
+      "limit": "Aged proof is earlier22233-command dataset."
+    },
+    {
+      "id": "7-tail",
+      "requirement_line": 222,
+      "requirement": "부분 기록과 중간 손상의 정책을 구분한다.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:223",
+        "engine/src/storage.rs:310",
+        "docs/adr/002-durability.md:67"
+      ],
+      "evidence": [
+        "S"
+      ],
+      "proof": "Structurally incomplete final EOF only: preserve then shorten. Complete invalid framing/checksum/seq and middle corruption fatal.",
+      "limit": "No silent skip."
+    },
+    {
+      "id": "7-preserve",
+      "requirement_line": 223,
+      "requirement": "복구할 수 없는 손상을 조용히 무시하거나 증거를 삭제하지 않는다.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:310",
+        "docs/adr/002-durability.md:89"
+      ],
+      "evidence": [
+        "S",
+        "P"
+      ],
+      "proof": "Fatal corrupt journals byte-identical; recoverable suffix saved/synced before set_len. Bad snapshots/unpublished temporary files retained; no automatic pruning.",
+      "limit": "Preservation assertions inspect bytes, not only summary status."
+    },
+    {
+      "id": "7-separate",
+      "requirement_line": 224,
+      "requirement": "성공 ACK한 요청의 복구와 미응답 요청의 상태 확인을 각각 검증한다.",
+      "status": "proven",
+      "source": [
+        "engine/tests/storage_recovery.rs:77",
+        "engine/tests/storage_recovery.rs:103",
+        "engine/src/storage.rs:777"
+      ],
+      "evidence": [
+        "S",
+        "K",
+        "A",
+        "F"
+      ],
+      "proof": "Known durable ACK set and unknown outcome tested separately. Unknown may commit or be absent; lookup and same-key retry reconcile without new effect.",
+      "limit": "Unknown is not synonymous with rejected."
+    },
+    {
+      "id": "7-honest",
+      "requirement_line": 225,
+      "requirement": "프로세스 강제 종료 테스트만으로 OS·전원 장애까지 검증했다고 보고하지 않는다.",
+      "status": "proven",
+      "source": [
+        "docs/adr/002-durability.md:87"
+      ],
+      "evidence": [
+        "K",
+        "P",
+        "G"
+      ],
+      "proof": "Inspected crash reports and ADR explicitly deny OS/power validation from process kill.",
+      "limit": "Scope guard below remains unverified."
+    },
+    {
+      "id": "11-c1",
+      "requirement_line": 320,
+      "requirement": "최소 12개 동시 클라이언트의 주문·취소.",
+      "status": "proven",
+      "source": [
+        "scripts/api.integration.test.mjs:75",
+        "scripts/api.integration.test.mjs:93"
+      ],
+      "evidence": [
+        "A"
+      ],
+      "proof": "Promise.all12 clients place/cancel;12 same-key duplicates; unique seq/restored balances. Additional12 fill/cancel races derive result from durable sequence, check reserves/settlement and replay after restart.",
+      "limit": "Finite actual HTTP schedules; no preferred timing winner asserted."
+    },
+    {
+      "id": "11-c2",
+      "requirement_line": 321,
+      "requirement": "고정 seed 무작위 명령과 불변조건 검사.",
+      "status": "proven",
+      "source": [
+        "engine/tests/core_rules.rs:641"
+      ],
+      "evidence": [
+        "C"
+      ],
+      "proof": "Four fixed seeds×1000 mixed commands, per-command invariants/result replay, periodic dedup/serde and final full Core equality.",
+      "limit": "Finite sample, not exhaustive state proof."
+    },
+    {
+      "id": "11-c3",
+      "requirement_line": 322,
+      "requirement": "가능한 경우 단순 참조 모델과 결과 대조.",
+      "status": "proven",
+      "source": [
+        "engine/tests/core_reference.rs:242"
+      ],
+      "evidence": [
+        "C"
+      ],
+      "proof": "Independent scan/sort oracle3000 seeded commands: result codes/fills/books/reserves/accounts, >100 successful trades/cancels asserted.",
+      "limit": "Oracle tests matching domain, not independent storage implementation."
+    },
+    {
+      "id": "11-c4",
+      "requirement_line": 323,
+      "requirement": "장애 주입 후 같은 확정 입력 범위의 정상 결과와 복구 결과 비교.",
+      "status": "proven",
+      "source": [
+        "engine/tests/storage_recovery.rs:348",
+        "engine/src/storage.rs:891"
+      ],
+      "evidence": [
+        "S",
+        "K",
+        "P",
+        "G"
+      ],
+      "proof": "Faulted state compared to normal exact recovered input-prefix reference and child-before full Core; aged snapshot/full-journal equality.",
+      "limit": "Full state proof does not rely on bounded public snapshot."
+    },
+    {
+      "id": "11-c5",
+      "requirement_line": 324,
+      "requirement": "성공 ACK 보장, 미응답 요청 확인, 재시도 중복 방지.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:777",
+        "engine/tests/storage_recovery.rs:77",
+        "scripts/api.integration.test.mjs:216"
+      ],
+      "evidence": [
+        "S",
+        "A",
+        "F"
+      ],
+      "proof": "Distinct known ACK and unknown-response restart lookup/retry cases preserve original order/trade/state without second effect.",
+      "limit": "Local process/filesystem scope."
+    },
+    {
+      "id": "11-c6",
+      "requirement_line": 325,
+      "requirement": "UI 이벤트 누락, 재연결, 상태 재동기화.",
+      "status": "incomplete",
+      "source": [
+        "frontend/src/protocol.test.ts:35",
+        "frontend/src/useExchange.ts:130",
+        "scripts/api.integration.test.mjs:235",
+        "scripts/browser-fault-demo.mjs"
+      ],
+      "evidence": [
+        "U",
+        "B",
+        "A",
+        "F"
+      ],
+      "proof": "Passing10→14 gap-decision unit; source invokes HTTP refresh. Actual browser restart and API WS reconnect convergence evidenced.",
+      "limit": "No inspected artifact deliberately drops a browser WS event then observes gap detection→HTTP refresh→render convergence. ACK-loss fixture keeps WS direct. No production defect established."
+    },
+    {
+      "id": "11-c7",
+      "requirement_line": 326,
+      "requirement": "채택한 동시성 구조에 적합한 검증 도구 적용.",
+      "status": "proven",
+      "source": [
+        "engine/src/main.rs:515",
+        "engine/tests/storage_recovery.rs:290",
+        "scripts/api.integration.test.mjs:75",
+        "scripts/api.integration.test.mjs:93"
+      ],
+      "evidence": [
+        "S",
+        "A",
+        "C"
+      ],
+      "proof": "Single-writer bounded queue validated via actual parallel clients/sequence oracle, FS2 exclusive dataset lock test, deterministic replay/invariants and subprocess faults.",
+      "limit": "Not exhaustive async model checking; no custom lock-free/unsafe matching proof claimed."
+    },
+    {
+      "id": "13-ack",
+      "requirement_line": 412,
+      "requirement": "성공 ACK 보장과 재시작 후 중복 방지 검증.",
+      "status": "proven",
+      "source": [
+        "engine/src/storage.rs:349",
+        "engine/tests/storage_recovery.rs:77",
+        "scripts/api.integration.test.mjs:216"
+      ],
+      "evidence": [
+        "S",
+        "K",
+        "P",
+        "A",
+        "G"
+      ],
+      "proof": "Successful ACK recovery and restart dedup across normal, forced and save-interruption paths; full-state comparisons.",
+      "limit": "Process guarantee only; latest six-hour cumulative recovery remains separate."
+    },
+    {
+      "id": "scope-six-hour",
+      "requirement_line": null,
+      "requirement": "최근 6시간 관찰 종료 후 해당 누적 데이터의 full Core 복구",
+      "status": "incomplete",
+      "source": [
+        "docs/aged-recovery-plan.md"
+      ],
+      "evidence": [
+        "G"
+      ],
+      "proof": "Earlier offline22233-command dataset recovery proven.",
+      "limit": "Parent reports current six-hour observation/final recovery pending. No live copy/stop/recovery performed by audit."
+    },
+    {
+      "id": "scope-os-power",
+      "requirement_line": null,
+      "requirement": "실제 OS·전원 장애 복구 실증",
+      "status": "unverified",
+      "source": [
+        "docs/adr/002-durability.md:87"
+      ],
+      "evidence": [
+        "K",
+        "P"
+      ],
+      "proof": "File sync boundary and conditional guarantees documented.",
+      "limit": "No actual OS crash/power-cut evidence. Separate scope boundary, not an assertion that §7 demanded a destructive power test."
+    }
+  ],
+  "hashes": [
+    {
+      "file": "docs/requirements.ko.md",
+      "bytes": 29963,
+      "sha256": "bf190c0400db130f8632a5f8a331e0e0f4b07dc9a5ff479281662e122475e3d5"
+    },
+    {
+      "file": "docs/adr/002-durability.md",
+      "bytes": 11749,
+      "sha256": "b6aa0dc7c977524db82fb44a51bf9755e22a4f601368a287cf0979138dd3786a"
+    },
+    {
+      "file": "docs/protocol.md",
+      "bytes": 7717,
+      "sha256": "d8968bc547c6fd2829766f3a54d7fc205f924ca6e2ddc39a8c4e21c4bc51242a"
+    },
+    {
+      "file": "docs/contract.md",
+      "bytes": 6632,
+      "sha256": "822ad080686d15a70bb75d97413b90a9744dea057a99bce4be0af3c15ea13829"
+    },
+    {
+      "file": "docs/aged-recovery-plan.md",
+      "bytes": 9589,
+      "sha256": "c2db1f3923161e8fab617a7b8fc44ffef75c12e32e386ab490e0093d3a7c7781"
+    },
+    {
+      "file": "engine/src/storage.rs",
+      "bytes": 43954,
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+    },
+    {
+      "file": "engine/src/core.rs",
+      "bytes": 34605,
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4"
+    },
+    {
+      "file": "engine/src/model.rs",
+      "bytes": 3066,
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b"
+    },
+    {
+      "file": "engine/src/main.rs",
+      "bytes": 23831,
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    {
+      "file": "engine/tests/storage_recovery.rs",
+      "bytes": 16295,
+      "sha256": "9c432ab76a2abb5e2177d09e09e67ec8f289366f514896755b061fee13984ca0"
+    },
+    {
+      "file": "engine/tests/core_rules.rs",
+      "bytes": 21705,
+      "sha256": "d3d94a8882a733f7e581f3e0e8e809387470fbf0db3308bcb0cc3e43fbdd464c"
+    },
+    {
+      "file": "engine/tests/core_reference.rs",
+      "bytes": 11238,
+      "sha256": "161622c81fe0de5debae30fdec4ccd63c0f5869762686f907a1f3f795e3a5b33"
+    },
+    {
+      "file": "engine/examples/aged_recovery.rs",
+      "bytes": 16955,
+      "sha256": "c911457e8f98c225b1908bd4f2fb99ce3f7c8df2fb6ac7594a2c3f36c6476a43"
+    },
+    {
+      "file": "scripts/api.integration.test.mjs",
+      "bytes": 28789,
+      "sha256": "d458c9e4e064c9fba35213a40e724edce3a946e2c489914e42bf8ee31200d28c"
+    },
+    {
+      "file": "scripts/browser-fault-demo.mjs",
+      "bytes": 8882,
+      "sha256": "3359457c965d7799ff822feedfd64ebf438b4e5fe616bb8aaf99a98d45a922b5"
+    },
+    {
+      "file": "frontend/src/protocol.test.ts",
+      "bytes": 3972,
+      "sha256": "befa542297e7502d5d2bacdbccdb4e7b62e1022ac55f3ec7ce5fa8d848c999a6"
+    },
+    {
+      "file": "frontend/src/useExchange.ts",
+      "bytes": 10416,
+      "sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37"
+    },
+    {
+      "file": "evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549/run.json",
+      "bytes": 423,
+      "sha256": "e20f48e5109844b86b07a6a849611bbdd14bf267f3e0fd2752fb4b32ed6f208e"
+    },
+    {
+      "file": "evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549/output.log",
+      "bytes": 2299,
+      "sha256": "f123f526b38aeef4c00343d5fd9f54f9c87aaeca5851e36d6b99eb240f0a54c8"
+    },
+    {
+      "file": "evidence/storage-tests/1789984676354069600-20856-4-actual-process-kill/crash-report.json",
+      "bytes": 10445,
+      "sha256": "6242e9e3a4b163f1ae636fc8d57f458f23064b290f2aaad000ae2720e5e3e9a2"
+    },
+    {
+      "file": "evidence/storage-tests/1789984676354069600-20856-4-actual-process-kill/child-stdout.log",
+      "bytes": 7326,
+      "sha256": "7023c274b7258250cbf7212364252723d9243f81cacf8fe0b1487a4894d5b6f1"
+    },
+    {
+      "file": "evidence/storage-tests/1789984676354069600-20856-4-actual-process-kill/child-stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "evidence/storage-tests/00000000000001789984670532278900-11672-4-actual-snapshot-kill-partial_write/snapshot-process-crash-report.json",
+      "bytes": 3434,
+      "sha256": "128d62fe51283a8b3dd0fe35f28f1623b6479ca2cdb3d9a4b6ca50278b0fbe6f"
+    },
+    {
+      "file": "evidence/storage-tests/00000000000001789984670532278900-11672-4-actual-snapshot-kill-partial_write/child-stdout.log",
+      "bytes": 1760,
+      "sha256": "9636260af5285f2eebbf3c72a93ea4862ef2020cb532cb4cb5379ec6573eebbc"
+    },
+    {
+      "file": "evidence/storage-tests/00000000000001789984670532278900-11672-4-actual-snapshot-kill-partial_write/child-core-before-snapshot.json",
+      "bytes": 9431,
+      "sha256": "a1e939ced5ad2924e8a46f19c1c73dec2ee777bb2b263d68853273bb7a7ed786"
+    },
+    {
+      "file": "evidence/storage-tests/00000000000001789984670675691800-11672-37-actual-snapshot-kill-synced_before_publish/snapshot-process-crash-report.json",
+      "bytes": 3475,
+      "sha256": "c0a28272788ce418ee95cde829e7a7f6303cf607e39974d17c48668f17ecf3a0"
+    },
+    {
+      "file": "evidence/storage-tests/00000000000001789984670675691800-11672-37-actual-snapshot-kill-synced_before_publish/child-stdout.log",
+      "bytes": 1778,
+      "sha256": "38a7ca97a264eadd8015b19f903c06109f06759424073da4b22e86d09d34614b"
+    },
+    {
+      "file": "evidence/storage-tests/00000000000001789984670675691800-11672-37-actual-snapshot-kill-synced_before_publish/child-core-before-snapshot.json",
+      "bytes": 9431,
+      "sha256": "a1e939ced5ad2924e8a46f19c1c73dec2ee777bb2b263d68853273bb7a7ed786"
+    },
+    {
+      "file": "evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/run.json",
+      "bytes": 362,
+      "sha256": "62fd6ce3fdc6609c4a0b589464352e51a52617c93ec930b2544e692722796339"
+    },
+    {
+      "file": "evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/output.log",
+      "bytes": 1342,
+      "sha256": "f21282aecf8f08d08f94cd745f247ddf4287005e932261db427cec4680e9ccae"
+    },
+    {
+      "file": "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/events.jsonl",
+      "bytes": 125246,
+      "sha256": "14af6f84fc35251e6df99c6e678a9925cee677a2921d5f4ac1349c0c5174c65f"
+    },
+    {
+      "file": "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/engine-3.stderr.log",
+      "bytes": 1113,
+      "sha256": "1d17089e3bdc33df10f5c0d3e4b385fa375e965bf7e8cfa47e15b5704099e02c"
+    },
+    {
+      "file": "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/checkpoint-publication-failure/report.json",
+      "bytes": 11496,
+      "sha256": "e2c0743246c0d35e5c438867afbf07ef192ed49112e009fa26c5c7297f593f02"
+    },
+    {
+      "file": "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/checkpoint-publication-failure/engine-0.stderr.log",
+      "bytes": 1066,
+      "sha256": "654c8da0fa5fa09b911fa1e7e74f1f9f3747b7ce88d0055e92fcc6d1301cb6a1"
+    },
+    {
+      "file": "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/checkpoint-publication-failure/engine-1.stderr.log",
+      "bytes": 641,
+      "sha256": "8c096e618468e032ea7e4fdecf04f1d81a5b1ab4a216ad8de41e6b8b395b6beb"
+    },
+    {
+      "file": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/run.json",
+      "bytes": 849,
+      "sha256": "2d2d78cf3ef5c3508c6586815cd8ec24fb8a597af56208d5f6798fe345899fb0"
+    },
+    {
+      "file": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/sha256.json",
+      "bytes": 5124,
+      "sha256": "3fc8d30eb86b9d878635295879440f90a799f0eabd070895b0957473002ee9eb"
+    },
+    {
+      "file": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/validator.stdout.log",
+      "bytes": 151,
+      "sha256": "219966a8e0853e5618f31de8dd2823512b26c82014049f311a1988ca8ed6f90e"
+    },
+    {
+      "file": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/validator.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/recovery-report.json",
+      "bytes": 5641,
+      "sha256": "4303ff8dd0bb269f1bef6b7a2f60a18bf7705543434991e57fa52e82ebce2c33"
+    },
+    {
+      "file": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/aged_recovery.exe",
+      "bytes": 17325476,
+      "sha256": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e"
+    },
+    {
+      "file": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/snapshot-recovered-full-core.json",
+      "bytes": 16521492,
+      "sha256": "efe8c8359affc85936c7fec399e6b1b852fcf632f160d4457f41a41e4b6d6fc5"
+    },
+    {
+      "file": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/journal-replayed-full-core.json",
+      "bytes": 16521492,
+      "sha256": "efe8c8359affc85936c7fec399e6b1b852fcf632f160d4457f41a41e4b6d6fc5"
+    },
+    {
+      "file": "evidence/core-20260921T184147624-status-reuse/after/release-core-run.json",
+      "bytes": 183,
+      "sha256": "7c31b3f6869c10fded9bf402abd6c81a111f9c3eab9fc909a16e65f0a9493db3"
+    },
+    {
+      "file": "evidence/core-20260921T184147624-status-reuse/after/release-core-console.log",
+      "bytes": 2069,
+      "sha256": "2c910fb2d891cf12ded96df447e66c5c1412314ae6a9a55051bfd2d172089be2"
+    },
+    {
+      "file": "evidence/core-20260921T184147624-status-reuse/after/hashes.json",
+      "bytes": 1729,
+      "sha256": "eb47897817c74ad8112f1b1e95e58de8219c6305bba86f38a2a5c81500e2a713"
+    },
+    {
+      "file": "evidence/frontend-20260921T090509598Z/protocol.log",
+      "bytes": 1584,
+      "sha256": "f5d24f50cd17d925396ac8ce6d7377d592efd6670e8aac1914be286583e5f53a"
+    },
+    {
+      "file": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/before-engine-restart.txt",
+      "bytes": 9523,
+      "sha256": "70bb448ef128f9c0734e1245d63c1548871f89b3220d79ebe63958d92252d73e"
+    },
+    {
+      "file": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/after-engine-restart.txt",
+      "bytes": 9499,
+      "sha256": "85e639e24efc468c6523cc02818d45f5ec802afb452ac6450087c726c07a3068"
+    },
+    {
+      "file": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/README.md",
+      "bytes": 1987,
+      "sha256": "8510017ca482171f740768cf3346d94853f3c2eddef8ff7c9aa3c6b2e4aff765"
+    },
+    {
+      "file": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/events.jsonl",
+      "bytes": 1092,
+      "sha256": "a761b797540a39f06ba1129970223d36eb573e92c20e92b96b490f414e182139"
+    },
+    {
+      "file": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/unknown-after-fix.txt",
+      "bytes": 10200,
+      "sha256": "041600e7c3948459a63e7610f39efc3d08eae68447e0437adcfa41d291fb7755"
+    },
+    {
+      "file": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/unknown-restored-after-reload.txt",
+      "bytes": 10253,
+      "sha256": "a1b6fe11347c85d62742520d7fdd686f758d8c036a52df7b5bd93822a9580abd"
+    },
+    {
+      "file": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/lookup-confirmed.txt",
+      "bytes": 9674,
+      "sha256": "cdd8c54aa1a7710f34c429291e21314a86d31fbac63ee33a28be1114b9559e31"
+    },
+    {
+      "file": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/same-id-retry-confirmed.txt",
+      "bytes": 10135,
+      "sha256": "c9f0b79cd5716fcca09c786861c39520636ba5a6ba90b460a41d32f1d20fd4b7"
+    },
+    {
+      "file": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/verified-after-browser-retry.json",
+      "bytes": 6898,
+      "sha256": "07621cf7a6ddeebdf7be6f0afffc1bbd50b64c6635a452a1eb851b0e1a95eb70"
+    }
+  ],
+  "raw_checks": {
+    "aged": {
+      "manifest_artifacts_verified": 27,
+      "manifest_checks": [
+        {
+          "file": "aged_recovery.exe",
+          "expected": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e",
+          "actual": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e"
+        },
+        {
+          "file": "from-genesis\\genesis.bin",
+          "expected": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d",
+          "actual": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+        },
+        {
+          "file": "from-genesis\\journal.bin",
+          "expected": "a23c88d2cb2377f31cb266058d8bd015faa484852fe5b644105d2dc02a6ad48a",
+          "actual": "a23c88d2cb2377f31cb266058d8bd015faa484852fe5b644105d2dc02a6ad48a"
+        },
+        {
+          "file": "from-genesis\\writer.lock",
+          "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "from-snapshot\\genesis.bin",
+          "expected": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d",
+          "actual": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+        },
+        {
+          "file": "from-snapshot\\journal.bin",
+          "expected": "a23c88d2cb2377f31cb266058d8bd015faa484852fe5b644105d2dc02a6ad48a",
+          "actual": "a23c88d2cb2377f31cb266058d8bd015faa484852fe5b644105d2dc02a6ad48a"
+        },
+        {
+          "file": "from-snapshot\\snapshot-00000000000000002226-00000000000001789980114450707500-12856-1.bin",
+          "expected": "248fae2ca0d3446aadb3f033b0297368ed4de3a84d682c6fb6988794a189e430",
+          "actual": "248fae2ca0d3446aadb3f033b0297368ed4de3a84d682c6fb6988794a189e430"
+        },
+        {
+          "file": "from-snapshot\\snapshot-00000000000000002226-00000000000001789980114467391000-12856-3.bin",
+          "expected": "248fae2ca0d3446aadb3f033b0297368ed4de3a84d682c6fb6988794a189e430",
+          "actual": "248fae2ca0d3446aadb3f033b0297368ed4de3a84d682c6fb6988794a189e430"
+        },
+        {
+          "file": "from-snapshot\\snapshot-00000000000000002996-00000000000001789981326454757300-1996-0.bin",
+          "expected": "a0c2cdaa4362bacbeabc9434029ca8d31769bf0c95d5db9a021c930db2042e24",
+          "actual": "a0c2cdaa4362bacbeabc9434029ca8d31769bf0c95d5db9a021c930db2042e24"
+        },
+        {
+          "file": "from-snapshot\\snapshot-00000000000000012758-00000000000001789983354308301000-15804-0.bin",
+          "expected": "3cf0c665cfccfd188b1ae2a47683f7a1c96c3f515eb0129698cb048dff4f9dba",
+          "actual": "3cf0c665cfccfd188b1ae2a47683f7a1c96c3f515eb0129698cb048dff4f9dba"
+        },
+        {
+          "file": "from-snapshot\\snapshot-00000000000000022233-00000000000001789984975938949000-15804-2.bin",
+          "expected": "eed1cc9b0ba1593cecbca453c0bf5d8041058b7ba607ab6c9054ab91ad1f41a8",
+          "actual": "eed1cc9b0ba1593cecbca453c0bf5d8041058b7ba607ab6c9054ab91ad1f41a8"
+        },
+        {
+          "file": "from-snapshot\\snapshot-00000000000000022233-00000000000001789984976006464800-15804-4.bin",
+          "expected": "eed1cc9b0ba1593cecbca453c0bf5d8041058b7ba607ab6c9054ab91ad1f41a8",
+          "actual": "eed1cc9b0ba1593cecbca453c0bf5d8041058b7ba607ab6c9054ab91ad1f41a8"
+        },
+        {
+          "file": "from-snapshot\\writer.lock",
+          "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "journal-replayed-full-core.json",
+          "expected": "efe8c8359affc85936c7fec399e6b1b852fcf632f160d4457f41a41e4b6d6fc5",
+          "actual": "efe8c8359affc85936c7fec399e6b1b852fcf632f160d4457f41a41e4b6d6fc5"
+        },
+        {
+          "file": "raw-copy\\genesis.bin",
+          "expected": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d",
+          "actual": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+        },
+        {
+          "file": "raw-copy\\journal.bin",
+          "expected": "a23c88d2cb2377f31cb266058d8bd015faa484852fe5b644105d2dc02a6ad48a",
+          "actual": "a23c88d2cb2377f31cb266058d8bd015faa484852fe5b644105d2dc02a6ad48a"
+        },
+        {
+          "file": "raw-copy\\snapshot-00000000000000002226-00000000000001789980114450707500-12856-1.bin",
+          "expected": "248fae2ca0d3446aadb3f033b0297368ed4de3a84d682c6fb6988794a189e430",
+          "actual": "248fae2ca0d3446aadb3f033b0297368ed4de3a84d682c6fb6988794a189e430"
+        },
+        {
+          "file": "raw-copy\\snapshot-00000000000000002226-00000000000001789980114467391000-12856-3.bin",
+          "expected": "248fae2ca0d3446aadb3f033b0297368ed4de3a84d682c6fb6988794a189e430",
+          "actual": "248fae2ca0d3446aadb3f033b0297368ed4de3a84d682c6fb6988794a189e430"
+        },
+        {
+          "file": "raw-copy\\snapshot-00000000000000002996-00000000000001789981326454757300-1996-0.bin",
+          "expected": "a0c2cdaa4362bacbeabc9434029ca8d31769bf0c95d5db9a021c930db2042e24",
+          "actual": "a0c2cdaa4362bacbeabc9434029ca8d31769bf0c95d5db9a021c930db2042e24"
+        },
+        {
+          "file": "raw-copy\\snapshot-00000000000000012758-00000000000001789983354308301000-15804-0.bin",
+          "expected": "3cf0c665cfccfd188b1ae2a47683f7a1c96c3f515eb0129698cb048dff4f9dba",
+          "actual": "3cf0c665cfccfd188b1ae2a47683f7a1c96c3f515eb0129698cb048dff4f9dba"
+        },
+        {
+          "file": "raw-copy\\snapshot-00000000000000022233-00000000000001789984975938949000-15804-2.bin",
+          "expected": "eed1cc9b0ba1593cecbca453c0bf5d8041058b7ba607ab6c9054ab91ad1f41a8",
+          "actual": "eed1cc9b0ba1593cecbca453c0bf5d8041058b7ba607ab6c9054ab91ad1f41a8"
+        },
+        {
+          "file": "raw-copy\\snapshot-00000000000000022233-00000000000001789984976006464800-15804-4.bin",
+          "expected": "eed1cc9b0ba1593cecbca453c0bf5d8041058b7ba607ab6c9054ab91ad1f41a8",
+          "actual": "eed1cc9b0ba1593cecbca453c0bf5d8041058b7ba607ab6c9054ab91ad1f41a8"
+        },
+        {
+          "file": "recovery-report.json",
+          "expected": "4303ff8dd0bb269f1bef6b7a2f60a18bf7705543434991e57fa52e82ebce2c33",
+          "actual": "4303ff8dd0bb269f1bef6b7a2f60a18bf7705543434991e57fa52e82ebce2c33"
+        },
+        {
+          "file": "run.json",
+          "expected": "2d2d78cf3ef5c3508c6586815cd8ec24fb8a597af56208d5f6798fe345899fb0",
+          "actual": "2d2d78cf3ef5c3508c6586815cd8ec24fb8a597af56208d5f6798fe345899fb0"
+        },
+        {
+          "file": "snapshot-recovered-full-core.json",
+          "expected": "efe8c8359affc85936c7fec399e6b1b852fcf632f160d4457f41a41e4b6d6fc5",
+          "actual": "efe8c8359affc85936c7fec399e6b1b852fcf632f160d4457f41a41e4b6d6fc5"
+        },
+        {
+          "file": "validator.stderr.log",
+          "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "file": "validator.stdout.log",
+          "expected": "219966a8e0853e5618f31de8dd2823512b26c82014049f311a1988ca8ed6f90e",
+          "actual": "219966a8e0853e5618f31de8dd2823512b26c82014049f311a1988ca8ed6f90e"
+        }
+      ],
+      "full_core_byte_equal": true,
+      "bytes": 16521492,
+      "sha256": "efe8c8359affc85936c7fec399e6b1b852fcf632f160d4457f41a41e4b6d6fc5",
+      "validator_binary_sha256": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e",
+      "command_seq": 22233,
+      "event_seq": 22233,
+      "orders": 19305,
+      "trades": 12260,
+      "request_cache": 22233
+    },
+    "snapshots": [
+      {
+        "directory": "evidence/storage-tests/00000000000001789984670532278900-11672-4-actual-snapshot-kill-partial_write",
+        "stage": "partial_write",
+        "temporary_bytes": 39,
+        "observed_acks": 5,
+        "each_ack_request_in_raw_stdout": true,
+        "full_core_equal": true,
+        "recovery": {
+          "ignored_snapshots": [],
+          "journal_records": 5,
+          "preserved_tail": null,
+          "replayed_records": 4,
+          "snapshot_used": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\storage-tests\\00000000000001789984670532278900-11672-4-actual-snapshot-kill-partial_write\\snapshot-00000000000000000001-00000000000001789984670578057600-22444-1.bin",
+          "truncated_bytes": 0
+        }
+      },
+      {
+        "directory": "evidence/storage-tests/00000000000001789984670675691800-11672-37-actual-snapshot-kill-synced_before_publish",
+        "stage": "synced_before_publish",
+        "temporary_bytes": 6200,
+        "observed_acks": 5,
+        "each_ack_request_in_raw_stdout": true,
+        "full_core_equal": true,
+        "recovery": {
+          "ignored_snapshots": [],
+          "journal_records": 5,
+          "preserved_tail": null,
+          "replayed_records": 4,
+          "snapshot_used": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\storage-tests\\00000000000001789984670675691800-11672-37-actual-snapshot-kill-synced_before_publish\\snapshot-00000000000000000001-00000000000001789984670705992300-6832-1.bin",
+          "truncated_bytes": 0
+        }
+      }
+    ],
+    "crash": {
+      "observed_acks": 25,
+      "raw_stdout_acks": 26,
+      "all_observed_in_stdout": true,
+      "recovery": {
+        "ignored_snapshots": [],
+        "journal_records": 27,
+        "preserved_tail": null,
+        "replayed_records": 6,
+        "snapshot_used": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\storage-tests\\1789984676354069600-20856-4-actual-process-kill\\snapshot-00000000000000000021-00000000000001789984676472459900-22332-5.bin",
+        "truncated_bytes": 0
+      },
+      "exit": "exit code: 1"
+    },
+    "api": {
+      "event_counts": {
+        "engine_started": 5,
+        "fill_cancel_race_round": 12,
+        "engine_exit": 5,
+        "fill_cancel_race_checks_passed": 1,
+        "proxy_dropped_durable_response": 1,
+        "api_checks_finished_see_node_test_exit_status": 1
+      },
+      "exits": [
+        {
+          "at": "2026-09-21T11:48:13.745Z",
+          "event": "engine_exit",
+          "code": 0,
+          "signal": null,
+          "force": false,
+          "fallback": false
+        },
+        {
+          "at": "2026-09-21T11:48:14.390Z",
+          "event": "engine_exit",
+          "code": 0,
+          "signal": null,
+          "force": false,
+          "fallback": false
+        },
+        {
+          "at": "2026-09-21T11:48:14.565Z",
+          "event": "engine_exit",
+          "code": null,
+          "signal": "SIGKILL",
+          "force": true,
+          "fallback": false
+        },
+        {
+          "at": "2026-09-21T11:48:19.809Z",
+          "event": "engine_exit",
+          "code": 0,
+          "signal": null,
+          "force": false,
+          "fallback": false
+        },
+        {
+          "at": "2026-09-21T11:48:19.956Z",
+          "event": "engine_exit",
+          "code": 0,
+          "signal": null,
+          "force": false,
+          "fallback": false
+        }
+      ],
+      "race_outcomes": {
+        "at": "2026-09-21T11:48:14.275Z",
+        "event": "fill_cancel_race_checks_passed",
+        "rounds": 12,
+        "outcomes": {
+          "fill_before_cancel": 8,
+          "cancel_before_fill": 4,
+          "full_fills": 4,
+          "partial_fills": 4
+        },
+        "durable_replays_after_restart": 24
+      },
+      "lost_response": {
+        "at": "2026-09-21T11:48:14.538Z",
+        "event": "proxy_dropped_durable_response",
+        "response": {
+          "status": 200,
+          "body": {
+            "request_id": "lost-response",
+            "account_id": "user-01",
+            "command_seq": 69,
+            "event_seq": 69,
+            "status": "accepted",
+            "code": "OK",
+            "message": "명령 처리가 완료되었습니다.",
+            "order_id": 39,
+            "trades": [],
+            "duplicate": false,
+            "durable": true
+          }
+        }
+      },
+      "checkpoint_response": {
+        "status": 503,
+        "body": {
+          "code": "DURABILITY_FAILED",
+          "durable": false,
+          "message": "storage I/O: 지정된 경로를 찾을 수 없습니다. (os error 3)",
+          "status": "error"
+        }
+      },
+      "checkpoint_exit_codes": [
+        1,
+        0
+      ],
+      "raw_shutdown_error": true,
+      "original_ack_equals_lookup": true,
+      "retry_duplicate": true,
+      "retained_copy_current_sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240"
+    },
+    "core_source_match": [
+      {
+        "file": "engine/src/core.rs",
+        "match": true
+      },
+      {
+        "file": "engine/src/model.rs",
+        "match": true
+      }
+    ]
+  }
+}

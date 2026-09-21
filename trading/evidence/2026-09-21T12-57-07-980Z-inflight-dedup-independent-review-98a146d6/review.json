@@ -1,0 +1,469 @@
+{
+  "at": "2026-09-21T12:57:07.980Z",
+  "run": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191",
+  "failed_preflight": "evidence/20260921T124845237Z-inflight-dedup-485e8f10",
+  "wrapper": "evidence/20260921T125337216Z-inflight-dedup-restored-frontend-286f7821",
+  "result": "No actionable correctness finding in scoped scenarios",
+  "method": "Read-only source review and independent offline arithmetic/CRC/hash/JSON comparisons on saved raw evidence and already-stopped isolated dataset. No harness run, new test/service/process control or shared file edits.",
+  "comparisons": 576,
+  "source_sha256": "c33e74e5e17163f7290aaa0e165d9db850bbe76e8f8e0854488f5be2b0101e9d",
+  "binary_sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+  "barriers": [
+    {
+      "label": "fresh-identical",
+      "lookup": 5,
+      "connections": 12,
+      "last_prefix_ms": 1149.2871,
+      "first_release_ms": 1149.3968,
+      "last_finish_ms": 1150.3276999999998,
+      "first_response_ms": 1153.5114999999998,
+      "margin_ms": 3.1838000000000193,
+      "new_results": 1,
+      "duplicates": 11,
+      "conflicts": 0,
+      "winner": {
+        "request_id": "fresh-identical",
+        "account_id": "user-01",
+        "command_seq": 2,
+        "event_seq": 2,
+        "status": "accepted",
+        "code": "OK",
+        "message": "명령 처리가 완료되었습니다.",
+        "order_id": 2,
+        "trades": [
+          {
+            "id": 1,
+            "maker_order_id": 1,
+            "taker_order_id": 2,
+            "buyer_id": "user-01",
+            "seller_id": "user-02",
+            "price": 1000,
+            "quantity": 2,
+            "timestamp_ms": 1789995218616,
+            "command_seq": 2
+          }
+        ],
+        "duplicate": false,
+        "durable": true
+      },
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    {
+      "label": "fresh-conflict",
+      "lookup": 20,
+      "connections": 12,
+      "last_prefix_ms": 1192.7587999999998,
+      "first_release_ms": 1192.7886999999998,
+      "last_finish_ms": 1193.2837,
+      "first_response_ms": 1195.2445,
+      "margin_ms": 1.960800000000063,
+      "new_results": 1,
+      "duplicates": 5,
+      "conflicts": 6,
+      "winner": {
+        "request_id": "fresh-conflict",
+        "account_id": "user-03",
+        "command_seq": 3,
+        "event_seq": 3,
+        "status": "accepted",
+        "code": "OK",
+        "message": "명령 처리가 완료되었습니다.",
+        "order_id": 3,
+        "trades": [
+          {
+            "id": 2,
+            "maker_order_id": 1,
+            "taker_order_id": 3,
+            "buyer_id": "user-03",
+            "seller_id": "user-02",
+            "price": 1000,
+            "quantity": 1,
+            "timestamp_ms": 1789995218660,
+            "command_seq": 3
+          }
+        ],
+        "duplicate": false,
+        "durable": true
+      },
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      }
+    }
+  ],
+  "settlement": [
+    {
+      "label": "after-identical",
+      "seq": 2,
+      "orders": 2,
+      "trades": 1,
+      "volume": 2,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 998000,
+          "points_reserved": 0,
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1002000,
+          "points_reserved": 0,
+          "hours_available": 995,
+          "hours_reserved": 3,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        }
+      ]
+    },
+    {
+      "label": "after-conflict",
+      "seq": 3,
+      "orders": 3,
+      "trades": 2,
+      "volume": 3,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 998000,
+          "points_reserved": 0,
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1003000,
+          "points_reserved": 0,
+          "hours_available": 995,
+          "hours_reserved": 2,
+          "orders_count": 1,
+          "trades_count": 2
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 999000,
+          "points_reserved": 0,
+          "hours_available": 1001,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        }
+      ]
+    },
+    {
+      "label": "after-restart",
+      "seq": 3,
+      "orders": 3,
+      "trades": 2,
+      "volume": 3,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 998000,
+          "points_reserved": 0,
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1003000,
+          "points_reserved": 0,
+          "hours_available": 995,
+          "hours_reserved": 2,
+          "orders_count": 1,
+          "trades_count": 2
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 999000,
+          "points_reserved": 0,
+          "hours_available": 1001,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        }
+      ]
+    },
+    {
+      "label": "after-restart-retries",
+      "seq": 3,
+      "orders": 3,
+      "trades": 2,
+      "volume": 3,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 998000,
+          "points_reserved": 0,
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1003000,
+          "points_reserved": 0,
+          "hours_available": 995,
+          "hours_reserved": 2,
+          "orders_count": 1,
+          "trades_count": 2
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 999000,
+          "points_reserved": 0,
+          "hours_available": 1001,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        }
+      ]
+    }
+  ],
+  "checkpoints": [
+    {
+      "file": "evidence\\2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191\\data\\snapshot-00000000000000000025-00000000000001789995218691055800-22024-1.bin",
+      "bytes": 5767,
+      "sha256": "51414546c43fbc36b205de545937402b6b9e3ce2b1f8938c66b0c6c724e709ad",
+      "journal_seq": 25,
+      "core_json_sha256": "3a212266a1375967640684fca780bcf3664c3665f8486e5390cd91e49d4840a8"
+    },
+    {
+      "file": "evidence\\2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191\\data\\snapshot-00000000000000000028-00000000000001789995218810993200-16580-0.bin",
+      "bytes": 5767,
+      "sha256": "11dbe3b4e6aefc2a9a8ae2e48c7327ec0e28085a147584080a06e66b1f0979cd",
+      "journal_seq": 28,
+      "core_json_sha256": "3a212266a1375967640684fca780bcf3664c3665f8486e5390cd91e49d4840a8"
+    }
+  ],
+  "complete_core_equal": true,
+  "request_cache_entries": 3,
+  "journal_records": 28,
+  "command_seq": 3,
+  "http": 45,
+  "commands": 28,
+  "elapsed_ms": 1373.6186,
+  "cleanup": {
+    "owned": [
+      {
+        "incarnation": 0,
+        "started": {
+          "at": "2026-09-21T12:53:38.046Z",
+          "ms": 585.8702000000001
+        },
+        "executable": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191\\bin\\leave-engine.exe",
+        "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191\\data",
+        "port": 64101,
+        "pid": 22024,
+        "closed": {
+          "at": "2026-09-21T12:53:38.709Z",
+          "ms": 1248.1912
+        },
+        "code": 0,
+        "signal": null
+      },
+      {
+        "incarnation": 1,
+        "started": {
+          "at": "2026-09-21T12:53:38.714Z",
+          "ms": 1253.4966
+        },
+        "executable": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191\\bin\\leave-engine.exe",
+        "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191\\data",
+        "port": 64101,
+        "pid": 16580,
+        "closed": {
+          "at": "2026-09-21T12:53:38.826Z",
+          "ms": 1365.5573
+        },
+        "code": 0,
+        "signal": null
+      }
+    ],
+    "recorded_protected_before_after_equal": true,
+    "identity_limit": "Protected baseline records manifest SHA/names/PIDs/signal0 liveness, not starttime or persistent process handles. PID reuse identity is not proven. Separate failed-preflight starttime capture is not a successful-run identity proof."
+  },
+  "first_failure": {
+    "exit": 1,
+    "stage": "precondition line38, before run directory/copy/spawn/HTTP",
+    "preserved": true,
+    "detail": "Old frontend17556 missing. Parent restored UI-only and changed baseline frontend to4220 before successful invocation. UI disappearance cause not established. Earlier preflight did not execute either barrier."
+  },
+  "limits": [
+    "Client prefix/write/finish and first observed response callbacks establish local HTTP in-flight overlap only. They do not prove12 server admissions before first sync or simultaneous Core execution.",
+    "One actual body barrier per scenario; not all interleavings, fairness or throughput/latency benchmark.",
+    "Restart stderr selects snapshot25 with replayed_records0. This proves checkpoint recovery/dedup, not an independent journal-only or forced-crash recovery case.",
+    "Complete serialized Core deep equality includes config/accounts/index/orders/trades/books/sequences/request cache/volume. Snapshot container differs because journal sequence/offset advances25→28.",
+    "Protected baseline records manifest SHA/names/PIDs/signal0 liveness, not starttime or persistent process handles. PID reuse identity is not proven. Separate failed-preflight starttime capture is not a successful-run identity proof.",
+    "No fresh rejected-command same-key case, concurrent cancel, multiple-account identical ID, OS/power failure or exhaustive schedule claim is supported by this fixture."
+  ],
+  "source_refs": {
+    "preflight": "scripts/inflight-dedup.mjs:30-39",
+    "barrier": "scripts/inflight-dedup.mjs:106-118,176-199",
+    "settlement": "scripts/inflight-dedup.mjs:205-234,271-304",
+    "restart": "scripts/inflight-dedup.mjs:305-321",
+    "complete_and_cleanup": "scripts/inflight-dedup.mjs:326-351"
+  },
+  "hashes": [
+    {
+      "file": "scripts/inflight-dedup.mjs",
+      "bytes": 26027,
+      "sha256": "c33e74e5e17163f7290aaa0e165d9db850bbe76e8f8e0854488f5be2b0101e9d"
+    },
+    {
+      "file": "engine/src/main.rs",
+      "bytes": 23831,
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    {
+      "file": "engine/src/core.rs",
+      "bytes": 34605,
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4"
+    },
+    {
+      "file": "engine/src/storage.rs",
+      "bytes": 43954,
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/metadata.json",
+      "bytes": 3861,
+      "sha256": "262eb80f63832a19ac59ce32eaa201b31dbbd239af7082132a73db63ed3c4fb3"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/summary.json",
+      "bytes": 6173,
+      "sha256": "f3687bdf9b4116ec605fc694cec5ba8d359a4f537e09f9c9fa7fb1fa3144f504"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/requests.json",
+      "bytes": 97225,
+      "sha256": "a25f1974ced6b16fd90274c3276b4a9446360884e047de49156fb1c60e72e570"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/events.json",
+      "bytes": 603,
+      "sha256": "01b7ef122bed204ff299efee70c0d0836bc75dbc17d9741b441d84a2beb6b324"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/states.json",
+      "bytes": 33680,
+      "sha256": "5f0eb4cb1b8ed81d295609d803e85673bd532e28c108832304a8b1615b4eeafa"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/checkpoints.json",
+      "bytes": 38999,
+      "sha256": "28fc1c7bfb9796e11a77b20e6bbcab4eee09be2f2ce8f9e299e10ed857d569f7"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/engine-0.stderr.log",
+      "bytes": 579,
+      "sha256": "31189ecfe6f0ee5bd2c6c2b4cf8a203cd039b9e2b86588a9f06db59ffe5fd7fa"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/engine-1.stderr.log",
+      "bytes": 758,
+      "sha256": "2f5cb5d010e9348d9e0e882c69add59ea911d5b2f9eb9a2bce9d8367494a71a7"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/inflight-dedup.mjs",
+      "bytes": 26027,
+      "sha256": "c33e74e5e17163f7290aaa0e165d9db850bbe76e8f8e0854488f5be2b0101e9d"
+    },
+    {
+      "file": "evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191/bin/leave-engine.exe",
+      "bytes": 3008428,
+      "sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240"
+    },
+    {
+      "file": "evidence/20260921T125337216Z-inflight-dedup-restored-frontend-286f7821/run.json",
+      "bytes": 546,
+      "sha256": "691eeb94fd1ec0d9b0f0fa85425ae04b80cfa150aa00d961f8dc9c6c77880a63"
+    },
+    {
+      "file": "evidence/20260921T125337216Z-inflight-dedup-restored-frontend-286f7821/output.log",
+      "bytes": 4702,
+      "sha256": "8520a9d009e921f68a2cb6d5bb9c401c29e526de0a1fb077741ba44e6b2d1c50"
+    },
+    {
+      "file": "evidence/20260921T124845237Z-inflight-dedup-485e8f10/run.json",
+      "bytes": 528,
+      "sha256": "0a0326ade26243d78401133edfe48576741df1abe118f864235e1044c477746e"
+    },
+    {
+      "file": "evidence/20260921T124845237Z-inflight-dedup-485e8f10/output.log",
+      "bytes": 600,
+      "sha256": "68da5ee74ed0f3dc040d1c7cba43652dba4a8282dde9e90d4d7d3b7add1bca1e"
+    },
+    {
+      "file": "evidence/20260921T124845237Z-inflight-dedup-485e8f10/protected-process-readonly-check.json",
+      "bytes": 2779,
+      "sha256": "9c05b4def18d795c0694b1793338409bc61b9a2bc25a961f3503eeaff672c596"
+    },
+    {
+      "file": "evidence/20260921T124845237Z-inflight-dedup-485e8f10/README.md",
+      "bytes": 1047,
+      "sha256": "814ae44f885cbcab9bf1807d398daf56dda28d72a300c6b4b1e08ee758867701"
+    }
+  ]
+}

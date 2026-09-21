@@ -1,0 +1,1 @@
+import http from 'node:http'; http.createServer((q,r)=>r.end('ok')).listen(52894,'127.0.0.1',()=>console.error(JSON.stringify({event:'ready',bind:'127.0.0.1:52894',data_dir:"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c"})));

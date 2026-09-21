@@ -15,6 +15,8 @@ npm run dev
 
 [로컬 파크](http://localhost:5190) · [HTML 품질 보고서](http://localhost:5190/reports/) · [홈페이지 안내](park/README.md)
 
+Wonder Park 시작 시 휴가 거래소 UI·Rust 엔진·12개 봇도 자동으로 실행됩니다. 최초 한 번 [거래소 준비 절차](trading/README.md)를 완료하세요. 이미 실행 중인 시장은 재사용하며, 거래소 화면만 종료돼 있으면 화면 서버를 복구합니다.
+
 `npm run park:hooks`와 `npm run park:watch`로 Git 훅과 10분 간격 커밋 감시를 실행합니다. `npm run park:circuit`은 모든 어트랙션에 순서대로 실제 입장해 검증하는 무한 순회를 실행합니다. `webpage`는 파크 지도에서 제외합니다.
 
 | 폴더 | 내용 | 실행 안내 |
@@ -23,6 +25,7 @@ npm run dev
 | `webpage/` | 아이돌 성장 보드게임 DEBUT : ON (`/`)과 3D 건강 기록 대시보드 VITALIS (`/health/`) | [게임](webpage/GAME.md), [건강 대시보드](webpage/HEALTH.md) |
 | `voice/` | macOS 음성 명령으로 Codex 작업을 실행하는 TBD CLI | [README](voice/README.md) |
 | `movie/` | VITALIS 해커톤 소개 영상, 원본 에셋, 편집·렌더 스크립트 | [README](movie/README.md) |
+| `trading/` | 실시간 모의 휴가 거래소 LEAVE PARK, Rust 엔진과 12개 봇 | [README](trading/README.md) |
 
 ## 빠른 시작
 

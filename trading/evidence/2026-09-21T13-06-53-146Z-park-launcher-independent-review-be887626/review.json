@@ -1,0 +1,196 @@
+{
+  "reviewed_at": "2026-09-21T13:06:53.146Z",
+  "scope": "Bounded independent static review of Park startup/entry launcher, pending promise sharing, readiness contract and owned-child failure paths. Raw provided test/browser evidence inspected; reviewer ran no tests, harness, service, HTTP or process-control action.",
+  "result": "Two concrete findings reported promptly and now source-fixed; no remaining actionable finding in requested wrapper/integration scope.",
+  "findings": [
+    {
+      "id": "PARK-1",
+      "priority": 1,
+      "status": "fixed_in_current_source",
+      "original_source_sha256": "9b82dc270b1f4259674cf38a7377cd36d8f7de4cb1ed8e1c1fea344d33be2a7e",
+      "original_reference": "trading/scripts/park-launcher.mjs:33",
+      "trigger": "Wrapper180s timer kills demo ensure owner during lock-held detached-child preparation.",
+      "impact": "Owner termination bypasses its finally lock release and startup-child cleanup, leaving child market processes and stale launcher lock. Initial timeout fake closed immediately after kill and did not model descendants/lock. Combined subordinate lock90s+engine60s+UI30s+heartbeat15s budgets can exceed180s.",
+      "resolution": "Wrapper timer/timeoutMs/SIGTERM removed. Wrapper retains shared pending promise until actual CLI error/close and leaves transaction cleanup with CLI.",
+      "final_reference": "trading/scripts/park-launcher.mjs:33-40",
+      "validation": "Final5/5 fake-child tests include retaining same pending promise and no wrapper kill before actual child close. Static absence of killing timer inspected. No destructive real timeout test run."
+    },
+    {
+      "id": "PARK-2",
+      "priority": 2,
+      "status": "fixed_in_current_source",
+      "original_reference": "trading/scripts/park-launcher.mjs:21-22",
+      "trigger": "stdout open succeeds but stderr open rejects before try/finally.",
+      "impact": "First FileHandle bypassed deterministic close on second-open failure.",
+      "resolution": "stderr declared before try, opened inside try; finally closes stdout and optional stderr.",
+      "final_reference": "trading/scripts/park-launcher.mjs:21-24,57-59",
+      "validation": "Current cleanup control flow inspected. No direct second-open failure injection in five tests."
+    }
+  ],
+  "observations": [
+    {
+      "topic": "pending concurrency",
+      "source": "trading/scripts/park-launcher.mjs:61-65;park/server.mjs:67,108",
+      "conclusion": "Startup and POST /api/launch?id=trading use one module singleton. Synchronous pending assignment shares exact promise across overlapping calls; finally resets only after launch settles. Separate CLI processes also serialize with demo launcher lock."
+    },
+    {
+      "topic": "successful readiness",
+      "source": "trading/scripts/park-launcher.mjs:36-55;trading/scripts/demo.mjs:205-216,247-271",
+      "conclusion": "Requires CLI exit0, last JSON ok:true, permitted status, valid HTTP loopback UI/API URLs. CLI require owned engine/all12 bots, health/heartbeats, own UI log and HTTP readiness for new children. Source does not turn queue/start request into ready success."
+    },
+    {
+      "topic": "failure response and entry",
+      "source": "park/server.mjs:63-71,104-110",
+      "conclusion": "Trading special case precedes static configured attraction URL; launch failure returns503 with error. Startup logs failure while keeping Park usable; later attraction entry calls ensure again and can retry."
+    },
+    {
+      "topic": "stage deadlines",
+      "source": "trading/scripts/demo-lifecycle.mjs:8,105,143;trading/scripts/demo.mjs:19-24",
+      "conclusion": "Launcher now delegates stage deadlines/cleanup to CLI, not a hard end-to-end wall-clock bound. Current restore cleanup helper is bounded; existing ownedProcess Windows synchronous CIM call still has no timeout. Do not describe all CLI execution paths as hard-bounded."
+    }
+  ],
+  "current_source_hashes": {
+    "trading/scripts/park-launcher.mjs": "3febf7d346047cd3077d53f1a4dbeb7abf6148035abf92a33698ae3bd2d661d8",
+    "trading/scripts/park-launcher.test.mjs": "050b9a28fcd7529e976ed82b97f9731edf32228194b2f8a20e7e6ce69d968a28",
+    "park/server.mjs": "1a1dabb1eb8b1fd5136360c742fb35f6a30095c21b1d73e419eeb6035f27a21b",
+    "trading/scripts/demo.mjs": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19",
+    "trading/scripts/demo-lifecycle.mjs": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8"
+  },
+  "unit_evidence": {
+    "directory": "trading/evidence/20260921T130450249Z-park-launcher-final-59fa1535",
+    "source_sha_matches": true,
+    "tests": 5,
+    "passed": 5,
+    "failed": 0,
+    "result": {
+      "park_exit": 0,
+      "syntax_exit": 0,
+      "source_sha": "3FEBF7D346047CD3077D53F1A4DBEB7ABF6148035ABF92A33698AE3BD2D661D8",
+      "tests_exit": 0,
+      "at": "2026-09-21T13:04:50.6346361Z"
+    },
+    "scope": "Fake child tests; not real process timeout/tree cleanup."
+  },
+  "actual_park_evidence": {
+    "directory": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114",
+    "record": {
+      "started_at": "2026-09-21T12:59:27.901Z",
+      "status": "stopped",
+      "supervisor_pid": 13732,
+      "park_pid": 21732,
+      "url": "http://127.0.0.1:5196",
+      "server_source_sha256": "1a1dabb1eb8b1fd5136360c742fb35f6a30095c21b1d73e419eeb6035f27a21b",
+      "launcher_source_sha256": "9b82dc270b1f4259674cf38a7377cd36d8f7de4cb1ed8e1c1fea344d33be2a7e",
+      "demo_source_sha256": "61b5c0774381ba4362c149062210c06d5b14bdab6441dcb22ff24d6f76dc072a",
+      "ready_at": "2026-09-21T12:59:30.249Z",
+      "exit": {
+        "code": null,
+        "signal": "SIGTERM",
+        "at": "2026-09-21T13:03:35.839Z"
+      },
+      "ended_at": "2026-09-21T13:03:35.865Z",
+      "manifest_unchanged": true
+    },
+    "source_compatibility": {
+      "server_matches_current": true,
+      "launcher_matches_current": false,
+      "demo_matches_current": false
+    },
+    "proven": "Park5196 startup log Trading reused; POST launch200->5175; saved browser launch modal and connected market EVENT84615; owned testPark21732 later signaled/stopped, manifest SHA comparison unchanged.",
+    "limits": "This is existing-market reuse, not a cold full-market start or UI-only restoration via Park. It used pre-fix launcher hash9b82; final changes have newer fake-child unit evidence. Owned Park exit SIGTERM is not a clean exit0; production trading was intentionally preserved."
+  },
+  "limits": [
+    "No claim of a current-source real failure/timeout process-tree test.",
+    "No blanket hard wall-clock limit after removal of unsafe wrapper timer.",
+    "Readiness is a point-in-time CLI ownership/health check; future service liveness is not promised.",
+    "No end-to-end cold Park startup, missing-UI recovery or setup-missing browser flow is established by the inspected reuse fixture.",
+    "Park stop intentionally leaves independent trading market running; this review did not change that lifecycle policy."
+  ],
+  "hashes": [
+    {
+      "file": "trading/scripts/park-launcher.mjs",
+      "bytes": 3378,
+      "sha256": "3febf7d346047cd3077d53f1a4dbeb7abf6148035abf92a33698ae3bd2d661d8"
+    },
+    {
+      "file": "trading/scripts/park-launcher.test.mjs",
+      "bytes": 4397,
+      "sha256": "050b9a28fcd7529e976ed82b97f9731edf32228194b2f8a20e7e6ce69d968a28"
+    },
+    {
+      "file": "park/server.mjs",
+      "bytes": 8378,
+      "sha256": "1a1dabb1eb8b1fd5136360c742fb35f6a30095c21b1d73e419eeb6035f27a21b"
+    },
+    {
+      "file": "trading/scripts/demo.mjs",
+      "bytes": 23629,
+      "sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19"
+    },
+    {
+      "file": "trading/scripts/demo-lifecycle.mjs",
+      "bytes": 8852,
+      "sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8"
+    },
+    {
+      "file": "trading/evidence/20260921T130450249Z-park-launcher-final-59fa1535/tests.log",
+      "bytes": 587,
+      "sha256": "a6fd1251834b8178ffd426f00b99115a35b623be0240f7a013758408a927f9cc"
+    },
+    {
+      "file": "trading/evidence/20260921T130450249Z-park-launcher-final-59fa1535/result.json",
+      "bytes": 191,
+      "sha256": "e8bdffab289dca67cece1adb43587ef10f2890a95e56b3b51edf998a15d065c2"
+    },
+    {
+      "file": "trading/evidence/20260921T125434718Z-park-launcher-tests-18f7232a/output.log",
+      "bytes": 574,
+      "sha256": "380758aa7308dd95b4a562c313b37b8c21f2f52bc5ce4f3d9662715c2ada7843"
+    },
+    {
+      "file": "trading/evidence/20260921T125434718Z-park-launcher-tests-18f7232a/run.json",
+      "bytes": 895,
+      "sha256": "78e60fcaf527a6d78f320127b69a8123301d1a5cadf2926f1b82ac988f9bcef9"
+    },
+    {
+      "file": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114/run.json",
+      "bytes": 644,
+      "sha256": "63db163adc403efa6cf8b421130908a91edfe4db91451cfd2bf302b70d8235cc"
+    },
+    {
+      "file": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114/verify.mjs",
+      "bytes": 3333,
+      "sha256": "1006b49cb9ad97e2612cc1ea66768851d1c2de76022f3c8ac0bf411ffcfca959"
+    },
+    {
+      "file": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114/park.stdout.log",
+      "bytes": 77,
+      "sha256": "e7b4e74bac4fb50ef97cb04bcef20ea7b64411f0c73394167cb13ba33560a6fa"
+    },
+    {
+      "file": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114/park.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114/launch-response.json",
+      "bytes": 71,
+      "sha256": "652c1d37a09c77d28b07de17d1f0ed0a9543c03e587073c594463e2637275102"
+    },
+    {
+      "file": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114/browser-launch.txt",
+      "bytes": 536,
+      "sha256": "a4ec4c593b6d520ab446e9e30588ae1729dd9303ada57f9a30cd6923a45c56f9"
+    },
+    {
+      "file": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114/browser-market.txt",
+      "bytes": 8023,
+      "sha256": "75c4be2bea302c44ebc7bbcd7ee07e9b2bf85806c44338bcbea4d94150b06417"
+    },
+    {
+      "file": "trading/evidence/20260921T125927764Z-park-auto-start-082f6114/manifest-before.json",
+      "bytes": 11501,
+      "sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e"
+    }
+  ]
+}

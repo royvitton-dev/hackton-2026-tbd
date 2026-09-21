@@ -1,0 +1,23 @@
+{"at":"2026-09-21T12:56:14.748Z","event":"cli_state","name":"cli-same-port","pid":21268,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:14.833Z","event":"cli_state","name":"cli-same-port","pid":21268,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:14.869Z","event":"cli_state","name":"cli-occupied-404","pid":19012,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:14.963Z","event":"cli_state","name":"cli-occupied-404","pid":19012,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:14.985Z","event":"occupied_port_rejected","status":404,"occupied":62440,"free_reservation_released":true}
+{"at":"2026-09-21T12:56:15.002Z","event":"cli_state","name":"cli-occupied-200","pid":18676,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:15.108Z","event":"cli_state","name":"cli-occupied-200","pid":18676,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:15.114Z","event":"occupied_port_rejected","status":200,"occupied":62443,"free_reservation_released":true}
+{"at":"2026-09-21T12:56:15.118Z","event":"ipv6_occupied_rejected","port":62446}
+{"at":"2026-09-21T12:56:15.122Z","event":"missing_child","name":"missing-child","spawned":false,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":"spawn C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c\\missing-executable ENOENT"}
+{"at":"2026-09-21T12:56:15.191Z","event":"child_started","name":"exit-before-ready","pid":14536,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c\\exit-before-ready.mjs"}
+{"at":"2026-09-21T12:56:15.192Z","event":"child_state","name":"exit-before-ready","pid":14536,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:15.240Z","event":"child_state","name":"exit-before-ready","pid":14536,"spawned":true,"exited":true,"exit_code":23,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:15.261Z","event":"child_started","name":"wrong-ready-marker","pid":10128,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c\\wrong-ready-marker.mjs"}
+{"at":"2026-09-21T12:56:15.262Z","event":"child_state","name":"wrong-ready-marker","pid":10128,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:15.566Z","event":"child_state","name":"wrong-ready-marker","pid":10128,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGTERM","spawn_error":null}
+{"at":"2026-09-21T12:56:15.586Z","event":"child_started","name":"exit-during-health","pid":11964,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c\\exit-during-health.mjs"}
+{"at":"2026-09-21T12:56:15.586Z","event":"child_state","name":"exit-during-health","pid":11964,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:15.798Z","event":"child_state","name":"exit-during-health","pid":11964,"spawned":true,"exited":true,"exit_code":29,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:15.814Z","event":"child_started","name":"owned-ready","pid":20720,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c\\owned-ready.mjs"}
+{"at":"2026-09-21T12:56:15.814Z","event":"child_state","name":"owned-ready","pid":20720,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T12:56:16.024Z","event":"owned_readiness_confirmed","port":52894,"pid":20720}
+{"at":"2026-09-21T12:56:16.033Z","event":"child_state","name":"owned-ready","pid":20720,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGTERM","spawn_error":null}

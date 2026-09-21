@@ -1,0 +1,260 @@
+Browser tab: 8, Title: "LEAVE PARK — 휴가 거래소", URL: "http://127.0.0.1:5175/".
+1 AXWebArea LEAVE PARK — 휴가 거래소, URL: 127.0.0.1:5175/
+	2 container root
+		3 container
+			4 link Description: LEAVE PARK 휴가 거래소, Value: 127.0.0.1:5175/#market
+			5 container 주요 메뉴
+				6 link Description: 휴가 거래소 LIVE, Value: 127.0.0.1:5175/#market
+				7 link Description: 내 주문, Value: 127.0.0.1:5175/#my-orders
+				8 link Description: 파크 크루, Value: 127.0.0.1:5175/#bots
+			9 text 시장 연결됨
+			10 button 모의 거래 안내
+				11 image
+			12 text 1 로컬 모의 계정
+			13 pop up button (collapsed, settable) Description: 모의 거래 계정 선택, Value: 시연 임직원 1 · GS리테이, ID: session-select, Secondary Actions: Expand
+				14 menu
+					15 (selected) 시연 임직원 1 · GS리테이
+					16 시연 임직원 2 · GS칼테스
+					17 시연 임직원 3 · GS건썰
+			18 image
+		19 container market
+			20 container
+				21 text YOUR NEXT BREAK STARTS HERE
+				22 heading 당신의 다음 쉼표를 거래하세요✳, Value: 1
+					23 text 당신의 다음 
+					24 text 쉼표
+					25 text 를 거래하세요 ✳
+				26 text 바쁜 하루에 여유를 더하는 작은 거래. 오늘은 몇 시간 쉬어갈까요?
+			27 image
+			28 heading 모두의 휴가, Value: 2
+				29 text 모두의 휴가
+			30 text LEAVE-1H
+			31 container
+				32 text 그룹 공통 휴가 시간  ·  1시간부터 거래
+			33 text 현재가
+			34 text 1,003
+			35 text P
+			36 image
+			37 text +3 (+0.30%) 기준가
+			38 container
+				39 text 1,000 P
+			40 text 누적 거래량
+			41 container
+				42 text 64,204 시간
+			43 text SYNTHETIC MARKET
+			44 text 함께 쉬는 시장
+			45 container 실제 체결 가격 차트
+				46 text 01
+				47 heading 시장의 흐름, Value: 2
+					48 text 시장의 흐름
+				49 text 실시간 체결
+				50 checkbox 최근 80건, Value: 1
+					51 text 최근 
+					52 text 80
+					53 text 건
+				54 checkbox 최근 240건, Value: 0
+					55 text 최근 
+					56 text 240
+					57 text 건
+				58 text 체결 가격 거래량
+				59 container
+					60 text 22:03:23 1,003  P  ·  1 시간
+				61 container 최근 80건 실제 체결. 마지막 가격 1,003 포인트
+				62 image
+				63 text 확정 체결 데이터 표시  80 건 · 동일 간격의 체결 순서
+			64 container
+				65 text 02
+				66 heading 호가 보드, Value: 2
+					67 text 호가 보드
+				68 image
+				69 text 가격 (P) 잔량 (시간) 주문 매도 호가 대기 중 1,003 P 현재가
+				70 image
+				71 button 1,003 2 1
+				72 button 1,001 1 1
+				73 button 998 2 1
+				74 button 996 3 1
+				75 button 994 1 1
+				76 button 992 2 1
+				77 text 매도 가격을 누르면 주문에 입력됩니다 매수
+			78 container my-orders
+				79 text 03
+				80 heading 나의 거래, Value: 2
+					81 text 나의 거래
+				82 text GS리테이
+				83 checkbox 미체결 0, Value: 1
+				84 checkbox 최근 완료 주문, Value: 0
+				85 checkbox 요청 결과, Value: 0
+				86 table
+					87 row
+						88 cell
+							89 text 주문
+						90 cell
+							91 text 가격
+						92 cell
+							93 text 체결 / 주문
+						94 cell
+							95 text 상태
+				96 image
+				97 text 기다리는 주문이 없어요
+				98 text 원하는 가격으로 첫 휴가 티켓을 주문해 보세요.
+			99 container
+				100 text 04
+				101 heading 방금 체결된 거래, Value: 2
+					102 text 방금 체결된 거래
+				103 image
+				104 text 체결 시각 가격 (P) 시간 22:03:23
+				105 text 1  h 22:03:22
+				106 text 1  h 22:03:22
+				107 text 1  h 22:03:22
+				108 text 1  h 22:03:21
+				109 text 2  h 22:03:21
+				110 text 1  h 22:03:21
+				111 text 2  h 22:03:20
+				112 text 2  h 22:03:20
+				113 text 1  h 22:03:20
+				114 text 2  h
+			115 image
+			116 text 쉬는 시간도, 함께하면 더 즐거우니까. GS리테이 GS칼테스 GS건썰
+			117 container
+				118 text ONE TICKET, MORE TIME
+				119 heading 나의 다음 쉼표, Value: 2
+					120 text 나의 다음 쉼표
+				121 image
+				122 container 거래 방향
+					123 checkbox 휴가 매수, Value: 1
+					124 checkbox 휴가 매도, Value: 0
+				125 container 휴가 지정가 주문
+					126 text 주문 가격
+					127 button 최우선 호가
+						128 text 최우선 호가
+						129 image
+					130 stepper (settable, integer) 주문 가격, Value: 1000, ID: price
+					131 text P / 시간
+					132 text 주문 수량
+					133 text 최소 1시간
+					134 stepper (settable, integer) 주문 수량, Value: 1, ID: quantity
+					135 text 시간
+					136 checkbox 1시간, Value: 1
+					137 checkbox 4시간, Value: 0
+					138 checkbox 하루 · 8시간, Value: 0
+						139 text 하루 · 
+						140 text 8
+						141 text 시간
+					142 text 주문 총액
+					143 container
+						144 text 1,000 P
+					145 text 사용 가능 포인트
+					146 container
+						147 text 1,009,975 P
+					148 button 휴가 매수하기
+						149 image
+						150 text 휴가 매수하기
+						151 image
+					152 container order-availability
+						153 image
+						154 text 지정가 주문 · 체결 전까지 예약됩니다
+				155 container
+					156 image
+					157 image
+					158 button (collapsed) Secondary Actions: Expand
+				159 container
+					160 text LEAVE PARK EXCHANGE ADMIT ONE BREAK
+				161 image
+				162 heading 내 보관함, Value: 2
+					163 text 내 보관함
+				164 text 모의 자산
+				165 container
+					166 text 사용 가능한 휴가 1,032 시간
+					167 image
+				168 text 휴가 총 보유
+				169 container
+					170 text 1,032  h
+				171 text 매도 예약
+				172 container
+					173 text 0  h
+				174 text 사용 가능 포인트
+				175 container
+					176 text 1,009,975  P
+				177 text 매수 예약
+				178 container
+					179 text 0  P
+				180 text 포인트 총 보유
+				181 container
+					182 text 1,009,975  P
+			183 container bots
+				184 text PARK CREW
+				185 heading 시장을 움직이는 크루 12, Value: 2
+					186 text 시장을 움직이는 크루  12
+				187 text 12 개 봇 연결 중
+				188 text · 3가지 전략
+				189 container
+					190 image
+					191 heading 3
+					192 image
+					193 button (collapsed) Secondary Actions: Expand
+				194 container
+					195 image
+					196 heading 3
+					197 image
+					198 button (collapsed) Secondary Actions: Expand
+				199 container
+					200 image
+					201 heading 3
+					202 image
+					203 button (collapsed) Secondary Actions: Expand
+				204 container
+					205 image
+					206 heading 3
+					207 image
+					208 button (collapsed) Secondary Actions: Expand
+				209 container
+					210 image
+					211 heading 3
+					212 image
+					213 button (collapsed) Secondary Actions: Expand
+				214 container
+					215 image
+					216 heading 3
+					217 image
+					218 button (collapsed) Secondary Actions: Expand
+				219 container
+					220 image
+					221 heading 3
+					222 image
+					223 button (collapsed) Secondary Actions: Expand
+				224 container
+					225 image
+					226 heading 3
+					227 image
+					228 button (collapsed) Secondary Actions: Expand
+				229 container
+					230 image
+					231 heading 3
+					232 image
+					233 button (collapsed) Secondary Actions: Expand
+				234 container
+					235 image
+					236 heading 3
+					237 image
+					238 button (collapsed) Secondary Actions: Expand
+				239 container
+					240 image
+					241 heading 3
+					242 image
+					243 button (collapsed) Secondary Actions: Expand
+				244 container
+					245 image
+					246 heading 3
+					247 image
+					248 button (collapsed) Secondary Actions: Expand
+				249 image
+				250 text 모든 크루는 사용자와 같은 시장, 같은 잔고·체결 규칙으로 거래합니다. 주문·체결 수는 엔진 누적값입니다.
+			251 container
+				252 image
+				253 text LEAVE PARK 모의 휴가 거래소
+				254 image
+				255 text 엔진 정상 운영 EVENT # 84,615 재동기화 0 수신 22:03:23
+				256 button 엔진 상태 새로고침
+					257 image
+
+The focused UI element is 1 AXWebArea LEAVE PARK — 휴가 거래소, URL: 127.0.0.1:5175/

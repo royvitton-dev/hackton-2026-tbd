@@ -1,0 +1,20 @@
+Command: node --check scripts/demo.mjs; node --check scripts/demo-lifecycle.mjs; node --test scripts/demo-ensure.test.mjs
+Captured from exec_command chunk03b1e3; exit_code 0. Both syntax checks were silent.
+
+✔ ensure selects only no-process start, complete reuse, or missing-UI restoration (1.6385ms)
+✔ partial or foreign market and live unhealthy UI fail closed (2.4062ms)
+✔ a busy launcher lock times out without replacing its owner (129.6699ms)
+✔ a stale lock requires explicit inspection and is never silently broken (3.5646ms)
+✔ two separate launcher processes inspect inside the lock and simulate one start (402.9169ms)
+✔ actual ensure CLI in an unprepared isolated tree gives setup instructions without spawning services (352.1633ms)
+✔ owned replacement exits when initial-record write and failure-diagnostic write both fail (24.6708ms)
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T13-04-01-682Z-demo-ensure-ed7e7e26
+✔ owned replacement exits when after-readiness write and failure-diagnostic write both fail (24.4998ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1090.433

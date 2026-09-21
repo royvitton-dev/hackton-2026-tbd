@@ -1,0 +1,23 @@
+{
+  "at": "2026-09-21T12:54:35.0122437Z",
+  "command": "node --test scripts/park-launcher.test.mjs",
+  "exit_code": 0,
+  "hashes": [
+    {
+      "Algorithm": "SHA256",
+      "Hash": "9B82DC270B1F4259674CF38A7377CD36D8F7DE4CB1ED8E1C1FEA344D33BE2A7E",
+      "Path": "C:\\project\\hackton-2026-tbd\\trading\\scripts\\park-launcher.mjs"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "824C4ED37F418EE86A4DC4408E76C5E2BF56E1CD07CB44B306104CB454A7B2D0",
+      "Path": "C:\\project\\hackton-2026-tbd\\trading\\scripts\\park-launcher.test.mjs"
+    },
+    {
+      "Algorithm": "SHA256",
+      "Hash": "49D6FC3B08E9190176F1943D8BD0500CE47861DBB890DAD5FF76BFEF21B61E9A",
+      "Path": "C:\\project\\hackton-2026-tbd\\park\\server.mjs"
+    }
+  ],
+  "scope": "Launcher concurrency, errors and timeout using fake child handles; actual startup integration follows separately"
+}

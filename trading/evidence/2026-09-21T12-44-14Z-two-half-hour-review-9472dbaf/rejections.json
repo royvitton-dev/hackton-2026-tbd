@@ -1,0 +1,782 @@
+[
+  {
+    "file": "bot-02-0000.jsonl",
+    "line": 300,
+    "offset": 166006,
+    "bytes": 541,
+    "timestamp": "2026-09-21T10:15:38.669Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 14.601299999980256,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:299",
+      "action": {
+        "type": "cancel",
+        "order_id": 22447
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:299",
+      "account_id": "bot-02",
+      "command_seq": 25849,
+      "event_seq": 25849,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-02-0000.jsonl",
+    "line": 1057,
+    "offset": 586707,
+    "bytes": 543,
+    "timestamp": "2026-09-21T10:41:31.542Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 10.097199999727309,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:1056",
+      "action": {
+        "type": "cancel",
+        "order_id": 30333
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:1056",
+      "account_id": "bot-02",
+      "command_seq": 34936,
+      "event_seq": 34936,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-03-0000.jsonl",
+    "line": 888,
+    "offset": 492168,
+    "bytes": 541,
+    "timestamp": "2026-09-21T10:35:31.377Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 15.842900000046939,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:887",
+      "action": {
+        "type": "cancel",
+        "order_id": 28580
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:887",
+      "account_id": "bot-03",
+      "command_seq": 32839,
+      "event_seq": 32839,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-05-0000.jsonl",
+    "line": 3356,
+    "offset": 2289580,
+    "bytes": 542,
+    "timestamp": "2026-09-21T11:59:54.847Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 4.884300000034273,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:3355",
+      "action": {
+        "type": "cancel",
+        "order_id": 54436
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:3355",
+      "account_id": "bot-05",
+      "command_seq": 62422,
+      "event_seq": 62422,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-05-0000.jsonl",
+    "line": 3547,
+    "offset": 2420156,
+    "bytes": 542,
+    "timestamp": "2026-09-21T12:06:31.588Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 1272.529699999839,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:3546",
+      "action": {
+        "type": "cancel",
+        "order_id": 56493
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:3546",
+      "account_id": "bot-05",
+      "command_seq": 64728,
+      "event_seq": 64728,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-06-0000.jsonl",
+    "line": 1054,
+    "offset": 713051,
+    "bytes": 542,
+    "timestamp": "2026-09-21T10:41:35.330Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 4.326000000350177,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:1053",
+      "action": {
+        "type": "cancel",
+        "order_id": 30406
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:1053",
+      "account_id": "bot-06",
+      "command_seq": 34958,
+      "event_seq": 34958,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-06-0000.jsonl",
+    "line": 2409,
+    "offset": 1644244,
+    "bytes": 542,
+    "timestamp": "2026-09-21T11:28:07.222Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 5.849600000306964,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:2408",
+      "action": {
+        "type": "cancel",
+        "order_id": 44633
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:2408",
+      "account_id": "bot-06",
+      "command_seq": 51273,
+      "event_seq": 51273,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-06-0000.jsonl",
+    "line": 2499,
+    "offset": 1706836,
+    "bytes": 543,
+    "timestamp": "2026-09-21T11:31:13.437Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 18.025699999183416,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:2498",
+      "action": {
+        "type": "cancel",
+        "order_id": 45580
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:2498",
+      "account_id": "bot-06",
+      "command_seq": 52349,
+      "event_seq": 52349,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-06-0000.jsonl",
+    "line": 2786,
+    "offset": 1900224,
+    "bytes": 543,
+    "timestamp": "2026-09-21T11:41:10.904Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 27.358899999409914,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:2785",
+      "action": {
+        "type": "cancel",
+        "order_id": 48619
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:2785",
+      "account_id": "bot-06",
+      "command_seq": 55840,
+      "event_seq": 55840,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-06-0000.jsonl",
+    "line": 3826,
+    "offset": 2623475,
+    "bytes": 542,
+    "timestamp": "2026-09-21T12:16:53.413Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 6.515300000086427,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:3825",
+      "action": {
+        "type": "cancel",
+        "order_id": 59696
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:3825",
+      "account_id": "bot-06",
+      "command_seq": 68348,
+      "event_seq": 68348,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-07-0000.jsonl",
+    "line": 1903,
+    "offset": 1292355,
+    "bytes": 543,
+    "timestamp": "2026-09-21T11:10:20.004Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 16.356500000227243,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:1902",
+      "action": {
+        "type": "cancel",
+        "order_id": 39253
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:1902",
+      "account_id": "bot-07",
+      "command_seq": 45045,
+      "event_seq": 45045,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-07-0000.jsonl",
+    "line": 2927,
+    "offset": 1983221,
+    "bytes": 541,
+    "timestamp": "2026-09-21T11:45:25.618Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 16.8277000002563,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:2926",
+      "action": {
+        "type": "cancel",
+        "order_id": 49947
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:2926",
+      "account_id": "bot-07",
+      "command_seq": 57332,
+      "event_seq": 57332,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-07-0000.jsonl",
+    "line": 3429,
+    "offset": 2332395,
+    "bytes": 543,
+    "timestamp": "2026-09-21T12:02:36.605Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 17.662900000810623,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:3428",
+      "action": {
+        "type": "cancel",
+        "order_id": 55264
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:3428",
+      "account_id": "bot-07",
+      "command_seq": 63372,
+      "event_seq": 63372,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-08-0000.jsonl",
+    "line": 724,
+    "offset": 495763,
+    "bytes": 541,
+    "timestamp": "2026-09-21T10:30:03.495Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 17.380699999863282,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:723",
+      "action": {
+        "type": "cancel",
+        "order_id": 26837
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:723",
+      "account_id": "bot-08",
+      "command_seq": 30908,
+      "event_seq": 30908,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-08-0000.jsonl",
+    "line": 1686,
+    "offset": 1154420,
+    "bytes": 542,
+    "timestamp": "2026-09-21T11:02:57.466Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 26.97719999961555,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:1685",
+      "action": {
+        "type": "cancel",
+        "order_id": 36942
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:1685",
+      "account_id": "bot-08",
+      "command_seq": 42441,
+      "event_seq": 42441,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-08-0000.jsonl",
+    "line": 2849,
+    "offset": 1949485,
+    "bytes": 543,
+    "timestamp": "2026-09-21T11:42:36.081Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 13.547100000083447,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:2848",
+      "action": {
+        "type": "cancel",
+        "order_id": 49055
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:2848",
+      "account_id": "bot-08",
+      "command_seq": 56341,
+      "event_seq": 56341,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-08-0000.jsonl",
+    "line": 3320,
+    "offset": 2272880,
+    "bytes": 542,
+    "timestamp": "2026-09-21T11:58:41.596Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 6.685100000351667,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:3319",
+      "action": {
+        "type": "cancel",
+        "order_id": 54053
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:3319",
+      "account_id": "bot-08",
+      "command_seq": 61996,
+      "event_seq": 61996,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-09-0000.jsonl",
+    "line": 249,
+    "offset": 169224,
+    "bytes": 541,
+    "timestamp": "2026-09-21T10:13:45.334Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 16.458199999993667,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:248",
+      "action": {
+        "type": "cancel",
+        "order_id": 21924
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:248",
+      "account_id": "bot-09",
+      "command_seq": 25182,
+      "event_seq": 25182,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-09-0000.jsonl",
+    "line": 4031,
+    "offset": 2724003,
+    "bytes": 543,
+    "timestamp": "2026-09-21T12:23:04.779Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 26.852099999785423,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:4030",
+      "action": {
+        "type": "cancel",
+        "order_id": 61584
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:4030",
+      "account_id": "bot-09",
+      "command_seq": 70505,
+      "event_seq": 70505,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-10-0000.jsonl",
+    "line": 3875,
+    "offset": 2620498,
+    "bytes": 542,
+    "timestamp": "2026-09-21T12:17:57.600Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 22.94469999987632,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:3874",
+      "action": {
+        "type": "cancel",
+        "order_id": 59968
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:3874",
+      "account_id": "bot-10",
+      "command_seq": 68720,
+      "event_seq": 68720,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-11-0000.jsonl",
+    "line": 524,
+    "offset": 351546,
+    "bytes": 540,
+    "timestamp": "2026-09-21T10:23:24.958Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 17.59750000014901,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:523",
+      "action": {
+        "type": "cancel",
+        "order_id": 24827
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:523",
+      "account_id": "bot-11",
+      "command_seq": 28588,
+      "event_seq": 28588,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-11-0000.jsonl",
+    "line": 2348,
+    "offset": 1591019,
+    "bytes": 543,
+    "timestamp": "2026-09-21T11:25:53.252Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 14.279400000348687,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:2347",
+      "action": {
+        "type": "cancel",
+        "order_id": 43962
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:2347",
+      "account_id": "bot-11",
+      "command_seq": 50490,
+      "event_seq": 50490,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-11-0000.jsonl",
+    "line": 3824,
+    "offset": 2595468,
+    "bytes": 543,
+    "timestamp": "2026-09-21T12:16:34.615Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 14.841799999587238,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:3823",
+      "action": {
+        "type": "cancel",
+        "order_id": 59594
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:3823",
+      "account_id": "bot-11",
+      "command_seq": 68239,
+      "event_seq": 68239,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-12-0000.jsonl",
+    "line": 1623,
+    "offset": 1094412,
+    "bytes": 543,
+    "timestamp": "2026-09-21T11:00:47.031Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 18.004500000271946,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:1622",
+      "action": {
+        "type": "cancel",
+        "order_id": 36289
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:1622",
+      "account_id": "bot-12",
+      "command_seq": 41682,
+      "event_seq": 41682,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-12-0000.jsonl",
+    "line": 1939,
+    "offset": 1308363,
+    "bytes": 542,
+    "timestamp": "2026-09-21T11:11:37.323Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 19.34609999973327,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:1938",
+      "action": {
+        "type": "cancel",
+        "order_id": 39652
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:1938",
+      "account_id": "bot-12",
+      "command_seq": 45501,
+      "event_seq": 45501,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  },
+  {
+    "file": "bot-12-0000.jsonl",
+    "line": 2149,
+    "offset": 1448694,
+    "bytes": 543,
+    "timestamp": "2026-09-21T11:18:47.701Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 20.273699999786913,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:2148",
+      "action": {
+        "type": "cancel",
+        "order_id": 41769
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:2148",
+      "account_id": "bot-12",
+      "command_seq": 48007,
+      "event_seq": 48007,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  }
+]

@@ -6,10 +6,12 @@ import { fileURLToPath } from 'node:url';
 import { createServer as createVite } from 'vite';
 import { discoverAttractions, gitState, resolveAsset, safeName } from './lib/registry.mjs';
 import { readState } from './lib/sync.mjs';
+import { ensureParkTradingDemo } from '../trading/scripts/park-launcher.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const production = process.argv.includes('--production');
 const port = Number(process.env.PARK_PORT || 5190);
+const serverStateFile = process.env.PARK_SERVER_STATE_FILE || path.join(root, '.park-runtime/server.json');
 const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.json': 'application/json', '.png': 'image/png', '.jpg': 'image/jpeg', '.svg': 'image/svg+xml', '.mp4': 'video/mp4', '.wav': 'audio/wav', '.vtt': 'text/vtt; charset=utf-8', '.glb': 'model/gltf-binary', '.woff2': 'font/woff2' };
 const clients = new Set(), childApps = new Map();
 const app = production ? null : await createVite({ configFile: path.join(root, 'park/vite.config.mjs'), server: { middlewareMode: true, hmr: { port: port + 1 } } });
@@ -61,6 +63,10 @@ const server = http.createServer(async (req, res) => {
       if(url.pathname==='/api/launch' && req.method==='POST') {
         const id=url.searchParams.get('id');const attraction=(await discoverAttractions(root)).find(a=>a.id===id);
         if(!attraction || !safeName(id))return json(res,{error:'Unknown attraction'},404);
+        if(id==='trading') {
+          try { const trading=await ensureParkTradingDemo(); return json(res,{url:trading.ui_url}); }
+          catch(error) { return json(res,{error:error.message},503); }
+        }
         if(attraction.url)return json(res,{url:attraction.url});
         if(!attraction.hasWebApp && attraction.hasStaticApp)return json(res,{url:`http://localhost:${port}/apps/${encodeURIComponent(id)}/`});
         if(!attraction.hasWebApp)return json(res,{error:'This attraction has no web app'},400);
@@ -95,7 +101,13 @@ const server = http.createServer(async (req, res) => {
 });
 let last='';
 const updates=setInterval(async()=>{try { const data=await catalog();const encoded=JSON.stringify(data);if(encoded!==last){last=encoded;for(const client of clients)client.write(`data: ${encoded}\n\n`);}else for(const client of clients)client.write(': heartbeat\n\n');}catch{}},5000);
-server.listen(port,'127.0.0.1',async()=>{await mkdir(path.join(root,'.park-runtime'),{recursive:true});await writeFile(path.join(root,'.park-runtime/server.json'),JSON.stringify({pid:process.pid,port}));console.log(`TBD Wonder Park: http://localhost:${port}`);});
+server.listen(port,'127.0.0.1',async()=>{
+  await mkdir(path.dirname(serverStateFile),{recursive:true});
+  await writeFile(serverStateFile,JSON.stringify({pid:process.pid,port}));
+  console.log(`TBD Wonder Park: http://localhost:${port}`);
+  try { const trading=await ensureParkTradingDemo(); console.log(`Trading ${trading.status}: ${trading.ui_url}`); }
+  catch(error) { console.error(`Trading: ${error.message}`); }
+});
 server.on('error',error=>{console.error(error.message);process.exit(1);});
 async function stop(){clearInterval(updates);for(const client of clients)client.end();await app?.close();await Promise.all([...childApps.values()].map(a=>a.close()));server.close(()=>process.exit(0));}
 process.on('SIGINT',stop);process.on('SIGTERM',stop);

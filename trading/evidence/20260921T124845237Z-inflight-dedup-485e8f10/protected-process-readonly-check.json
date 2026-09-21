@@ -1,0 +1,112 @@
+{
+  "processes": [
+    {
+      "label": "engine",
+      "pid": 20540,
+      "exists": true,
+      "actual_name": "leave-engine",
+      "start_time": "2026-09-21T19:05:21.4715478+09:00"
+    },
+    {
+      "label": "frontend",
+      "pid": 17556,
+      "exists": false,
+      "actual_name": null,
+      "start_time": null
+    },
+    {
+      "label": "bot-01",
+      "pid": 17444,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.2784404+09:00"
+    },
+    {
+      "label": "bot-02",
+      "pid": 7936,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.3037571+09:00"
+    },
+    {
+      "label": "bot-03",
+      "pid": 20776,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.3346242+09:00"
+    },
+    {
+      "label": "bot-04",
+      "pid": 16068,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.3612932+09:00"
+    },
+    {
+      "label": "bot-05",
+      "pid": 4928,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.3890023+09:00"
+    },
+    {
+      "label": "bot-06",
+      "pid": 20940,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.4216442+09:00"
+    },
+    {
+      "label": "bot-07",
+      "pid": 12172,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.4485053+09:00"
+    },
+    {
+      "label": "bot-08",
+      "pid": 7916,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.4762676+09:00"
+    },
+    {
+      "label": "bot-09",
+      "pid": 15272,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.504734+09:00"
+    },
+    {
+      "label": "bot-10",
+      "pid": 5412,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.5355012+09:00"
+    },
+    {
+      "label": "bot-11",
+      "pid": 20484,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.5665942+09:00"
+    },
+    {
+      "label": "bot-12",
+      "pid": 6128,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:22.5945324+09:00"
+    },
+    {
+      "label": "observer",
+      "pid": 18184,
+      "exists": true,
+      "actual_name": "node",
+      "start_time": "2026-09-21T19:05:54.8395149+09:00"
+    }
+  ],
+  "manifest_sha256": "6128d45f26f574eb1da12ec1b164c2112c4ed3e4e29bb6a5526568563578e69a",
+  "manifest_run": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+  "read_at": "2026-09-21T12:49:10.4782714Z"
+}

@@ -1,0 +1,55 @@
+{
+  "reviewed_at": "2026-09-21T12:47:08.642Z",
+  "snapshot_directory_metadata": [
+    {
+      "file": "snapshot-00000000000000032781-00000000000001789986921761326900-20540-0.bin",
+      "size": 24472791,
+      "mtime_utc": "2026-09-21T10:35:21.759Z"
+    },
+    {
+      "file": "snapshot-00000000000000043290-00000000000001789988722079105100-20540-2.bin",
+      "size": 32387464,
+      "mtime_utc": "2026-09-21T11:05:22.102Z"
+    },
+    {
+      "file": "snapshot-00000000000000053800-00000000000001789990522304475000-20540-4.bin",
+      "size": 40311291,
+      "mtime_utc": "2026-09-21T11:35:22.334Z"
+    },
+    {
+      "file": "snapshot-00000000000000064338-00000000000001789992322845077000-20540-6.bin",
+      "size": 48320486,
+      "mtime_utc": "2026-09-21T12:05:22.880Z"
+    },
+    {
+      "file": "snapshot-00000000000000074813-00000000000001789994123204042200-20540-8.bin",
+      "size": 56258024,
+      "mtime_utc": "2026-09-21T12:35:23.268Z"
+    }
+  ],
+  "current_engine_published_snapshot_count": 5,
+  "snapshot_five_neighbor_peak": {
+    "timestamp": "2026-09-21T12:35:23.302Z",
+    "bot_id": "bot-09",
+    "round_trip_ms": 381.4229999985546,
+    "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:4392",
+    "command_seq": 74814,
+    "status": "accepted",
+    "code": "OK",
+    "file": "bot-09-0000.jsonl",
+    "line": 4393,
+    "offset": 2969413,
+    "bytes": 716
+  },
+  "snapshot_neighbor_completion_minus_mtime_ms": 34,
+  "post1207_peak_minus_snapshot_four_mtime_seconds": 214.687,
+  "unknown_events": 0,
+  "reconciled_events": 0,
+  "command": "node trading/evidence/2026-09-21T12-44-14Z-two-half-hour-review-9472dbaf/offline-review.cjs",
+  "observed_tool_exit_code": 0,
+  "observed_tool_wall_seconds": 1.7502354,
+  "script_sha256": "2f83248b2fa9f6572de01d0cd3fe13594ff66d0ca0266407195fb19838e3cbb5",
+  "prefix_files_saved": 14,
+  "total_saved_prefix_bytes": 37462245,
+  "scope": "Only completed immutable snapshot metadata and own captured copies; no live journal read. Last write is not publication time."
+}

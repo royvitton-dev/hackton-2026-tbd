@@ -1,0 +1,14 @@
+{
+  "script_sha256": "c33e74e5e17163f7290aaa0e165d9db850bbe76e8f8e0854488f5be2b0101e9d",
+  "run_id": "20260921T124830853Z-inflight-dedup-explicit-pids-preflight-56865154",
+  "checks": [
+    {
+      "exit_code": 0,
+      "command": "node --check scripts/inflight-dedup.mjs"
+    },
+    {
+      "exit_code": 0,
+      "command": "node scripts/inflight-dedup.mjs --help"
+    }
+  ]
+}

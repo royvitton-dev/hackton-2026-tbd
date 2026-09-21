@@ -1,12 +1,12 @@
 # 작업 체크포인트
 
-갱신: 2026-09-21 21:18 KST. 마감: 2026-09-22 09:00 KST (약11시간42분 남음).
+갱신: 2026-09-21 22:08 KST. 마감: 2026-09-22 09:00 KST (약10시간52분 남음).
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 경계·사용자 지시·Git
-- PROJECT_ROOT `C:\project\hackton-2026-tbd` 사용자 확인. 프로젝트 파일/산출물은 `trading` 내부만. 적용할 AGENTS.md는 처음 검사한 프로젝트/상위 경로에 없었다.
+- PROJECT_ROOT `C:\project\hackton-2026-tbd` 사용자 확인. 기본 작업은 `trading` 내부. 후속 사용자 자동 시작 지시로 필요한 root README·park README·park/server.mjs 수정도 승인됨. 적용할 AGENTS.md는 처음 검사한 프로젝트/상위 경로에 없었다.
 - 초기Git clean, 기준 `d249d3d6892d44f588b5651f7b17a44cf8833211`. **현재 브랜치 `main`**(21:17 사용자 지시로 원래 PROJECT_ROOT checkout 전환), remote `https://github.com/royvitton-dev/hackton-2026-tbd.git`. 앞으로 이 폴더 main에서 직접 작업·커밋·푸시한다. 이전 codex/leave-exchange 기록은 보존한다.
-- 사용자 추가 지시: GS리테이/GS칼테스/GS건썰, 독립 거래소UI, 완성 변경 commit/push 승인. 실제 외부배포 금지. 기존 루트UI 변경 없음, 선택적 링크 adapter만 trading 안에 준비.
+- 사용자 추가 지시: GS리테이/GS칼테스/GS건썰, 독립 거래소UI, 완성 변경 commit/push 승인. 실제 외부배포 금지. Wonder Park 연결 오류를 사용자 제보에 따라 trading/attraction.json으로 수정해 로컬 등록 적용. 후속 자동 시작 요청으로 파크 서버 호출부도 연결함. 이전 push 925477f2b4943671dbd5d9086fcd272fb8776268; 새 변경 검증 후 main push 예정.
 - **앞으로 모든 검증된 후속 변경은 main에 push**하라는 사용자 지시를20:21에받았다. 원격main최신변경보존/강제push금지. 현재sourcecheckout의브랜치이름과무관하게최종push대상은main이다.
 - 안정 소스/완료 증거787파일의 commit `7bc9b56b726bca181938f7f890b1dbcdb2d4a9e5`를 **19:28 KST에 origin/codex/leave-exchange로 push 완료**했다. 사용자 문의에 따라 완성된 구현 체크포인트부터 먼저 전달했다. `git ls-remote`로 원격 SHA와 local HEAD 일치를 확인했다. 진행 중demo/6시간관찰/콘솔과 후속 검증·문서는 별도 추가 commit/push 예정이며 전체 마감 작업 완료 선언이 아니다.
 - **19:33 추가 push 완료:** `2bcfd5545aa3bdb336a0f448bab4a7390f158f76`에 느린WS 실제 검증·커밋 소스 setup 재현·문서 탐색 감사와 구체적 안내 수정을 포함했다. 원격 SHA 동일 확인. 현재 남은 변경은 진행 중 장시간 관찰과 후속 상태 기록이다.
@@ -16,9 +16,9 @@
 
 ## 완료·담당
 - `/root`: 통합, 실제browser/dev+production QA, standby분석/관찰보강, API/저장소최신회귀,누적데이터복구,프로세스관리,문서/Git.
-- `/root/matching_core`: 매칭/정산,참조oracle,성능·할당분석,queue포화,독립저장소검토,status문자열재사용+호환성검증+pairedA 및문서연결완료. 추가CPU/메모리분석의독립검토에서null행/불완전메모리처리2건발견→root수정→19:46재검토완료. 현재유휴.
-- `/root/durability`: 저널/스냅샷/복구,API실제장애·fill/cancel경합,독립코어검토,누적데이터복구도구+검증,작은status변경독립검토완료. 추가 느린WS 수신자 실제 격리 검증을19:21에 완료. 현재 유휴.
-- `/root/frontend`: 독립UI,미확인요청/reload/동일ID재시도,production/Vercel준비,선택적adapter,demo lifecycle보호완료. 19:30 README/docs 25개 로컬 링크120개와 실행 명령 정적 감사를 완료했다. 서비스/빌드/테스트 변경 없음. 현재 유휴.
+- `/root/matching_core`: 매칭·정산·참조oracle·할당·큐 포화와 90행 요구 감사 완료. 현재 새 동일 키 12개 최초 동시 요청/충돌·재시작 후 중복 방지의 격리 검증을 새 scripts/inflight-dedup.mjs에서 구현한다.
+- `/root/durability`: 저널·스냅샷·장애 복구·독립검토와 34개 명시 요구 감사 완료. 현재21:35의2.5시간 CPU·메모리/다섯번째 자동snapshot/봇지연을 원본에서 독립 검산한다. 서비스/원본데이터를 변경하지 않는다.
+- `/root/frontend`: 독립UI·unknown재시도·production/Vercel·lifecycle와68행 요구 감사 완료. 현재 scripts/browser-gap-demo.mjs와격리ws의존성을준비하여 실제브라우저WS gap 검증fixture를구현한다. root가브라우저를검증한다.
 
 ## 최근 검증·정직한 한계
 - **20:24 WS 진단·정상종료 수정 통과:** [새진단문서](ws-diagnostics.md),releaseSHA95fa92425c8dad104cc9b2440c9c6bb00bd985d6d7f58e9dd65d4bf7df7fe781. peerClose뒤queuedreply를최대1초flush하여기존1006→실제1000·오류0확인. 종료원인구조로그에임의peer문구/token미포함. paused수신자의send_timeout/state를이번fixture에서확인했으며이전고부하1005원인은여전히미확정. 성공run `2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c`:416ACK/416조회/16중복/정상289연속frames/자산예약검증/격리engine13996exit0·sampler8656정리. 기존행정shutdown클라이언트1006정책은유지했다.
@@ -41,11 +41,11 @@
 - 19:03 누적데이터복구통과: `evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658`. 최종snapshot22233/replay0 vs genesis22233records전체재생,FULLCore16521492bytes완전일치(SHA efe8c835...b6d6fc5),전체주문19305/체결12260/요청cache22233,자산/예약불변조건통과. 원본삭제없음. `docs/aged-recovery-plan.md`.
 - A원baseline712831.62명령/s,p994.1µs,평균14.999할당. statusString재사용만변경후paired3쌍6회에서정확80000alloc감소→14.332/명령(4.4447%감소),peakWS약0.65MB증가. 속도변화방향혼재로향상입증못함. `docs/allocation-investigation.md`, `evidence/core-20260921T190443560-status-reuse-paired`.
 - 원fetch B64.74/C62.34명령/s처리량목표미달. client전송전대기분석후동일엔진node:http B430.12/C286.34,ACKp992.92ms/eventp994.64ms목표통과. 최신status변경후B/C재측정은아님. zeroallocation여전히미달.
-- Docker없음:설정정적검토만,실제Linux컨테이너/외부배포/TLS/WSS/인터넷D/OS·전원장애미검증. 기존root실제통합미적용. 모두미완료와구분보고.
+- Docker없음:설정정적검토만,실제Linux컨테이너/외부배포/TLS/WSS/인터넷D/OS·전원장애미검증. Wonder Park 로컬 URL 등록은21:38검증·21:41mainpush완료. 선택적React복사어댑터는미적용이며다른검증범위와구분한다.
 
 ## 현재 실행과 다음 확인
 - 최신demo `evidence/2026-09-21T10-05-21-198Z-demo-3b10627b`, persistent `data/demo`.
-- UI http://127.0.0.1:5175 PID17556,API http://127.0.0.1:8787 PID20540. 봇12개PIDs/명령은 `data/demo-current.json` 기준. 최신engineSHA `09bcf75b80a2a85c6a52168d2404f23a230e73b958fc6814daa300650fc5ac56`.
+- UI http://127.0.0.1:5175 PID4220(21:52복원, 이전17556 종료원인미확정),API http://127.0.0.1:8787 PID20540. 봇12개PIDs/명령은 `data/demo-current.json` 기준. 최신engineSHA `09bcf75b80a2a85c6a52168d2404f23a230e73b958fc6814daa300650fc5ac56`.
 - 19:05새start에서12봇연결/자산/기존user01잔고998965P/1033h보존. 기존browser탭도자동재연결EVENT22585,잔고같음확인. `restart-verification.json`,`browser-after-upgrade.txt`.
 - **6시간관찰 실행 중** unifiedexec session20793,observerPID18184,helperPID15744. run `evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e`,시작19:05:54KST,예상종료2026-09-22 01:05:55KST. 콘솔 `evidence/20260921T100554819Z-observe-six-hour-console.log`.
 - 새observer는15초초과표본공백실패,최소10봇연결,자산/WS검사,REST조회RTT도수집. helper는관찰수명동안유휴절전만방지하고종료시해제(영구설정/화면요청없음). 명시적사용자절전은막지않음. 아직6시간pass아님.
@@ -136,3 +136,24 @@
 - 21:35 중간 관찰 evidence/2026-09-21T12-35-11-997Z-observation-analysis-07018e66:8953.462초/1765표본/최대공백6.608초,명령52295·거래량40007h 증가,12봇/자산보존/WS누락·단절0. CPU294유효구간14합평균0.521%/엔진0.284%,엔진working set84.38MB/private96.42MB(최대98.33/97.40MB),로그33.57MB/영속209.20MB. 6시간 전체통과는 아직 아니다. 다음관찰22:05 또는 새 실패 시점.
 - 요구-증거 감사 3agents 진행중. 실제 WS gap 주입→HTTP refresh→브라우저 수렴, 최초 처리 중 동일 키 동시 제출의 구체적 검증 공백을 찾았다. 기존 재연결·완료 키 중복 검증과 구분하고 후속 단위에서 격리된 검증을 보완한다. 온라인 봇 실행/접속 변수 안내도 추가 필요. 감사 파일은 최종화 뒤 별도 반영한다.
 - 장기6시간 종료01:05:55→정상정지/누적전체복구→최신binary조용한B/C→시연/브라우저·문서/mainpush→08:55준비/09:00전 인계 계획은 유지한다. 전체 goal active.
+
+## 21:41 Wonder Park 수정 main push 확인
+- 현재 로컬/원격 main HEAD는 925477f2b4943671dbd5d9086fcd272fb8776268로 동일하다. 원격 pinball 527d4c9를 비강제 fast-forward로 보존한 뒤 trading-only 22파일을 직접 main에서 커밋·push했다. git commit 첫 시도는 일시적 index.lock으로 실패했고 다음 확인에 lock이 사라져 재실행 성공; lock 삭제/강제 git 명령 없음. 근거 evidence/20260921T124100874Z-wonder-park-main-push-72ed55f4. 원더파크 카드 등록/로컬 링크 수정은 사용자에게 완료 보고한다.
+- 이번 goal 단위는 사용자 제보의 실제 root 등록 결함 수정/HTTP·브라우저 검증/증거/문서/main push, 2.5시간 관찰이라는 progress다. 전체 마감 목표는 계속 active이며 아직 6시간 완료·누적복구·최신 quiet B/C·미검증 gap/동시 중복 보완이 남는다.
+- 3개 agent 감사 완료, 모두 현재 유휴. 다음 재개 때 root가 최종 감사 파일을 검토하고 공백 검증을 배정한다. core 90행: proven84/incomplete2/unverified2/failed1/optional1, evidence/20260921T123746758Z-requirements-core-audit-6b8d9e42. frontend 68행: proven61/조건부optional3/incomplete2/unverified2, evidence/20260921T123354532Z-ui-requirements-audit-c7e4b300. durability 34행:proven33/incomplete1,evidence/2026-09-21T12-40-04-712Z-requirements-durability-audit-28d784b2. 아직 root 검토/commit하지 않았다.
+- 새 검증 우선순위: 별도 합성 fixture에서 최초 처리 중 같은 새 키 동시 제출의 정확히 한 번 정산/모든 결과/충돌 확인; 실제 WebSocket 한 frame 누락→다음 실제 frame→HTTP refresh 로그와 브라우저 재동기화 수/잔고 수렴 확인. main 20540/5175 및 observer20793는 보존하며 격리 포트·전용 데이터 사용. 그 뒤 온라인 봇 ENGINE_API_URL 및 실행명령 문서 보완. 불필요한 전체 테스트 반복 없음.
+- 검증용 IAB tab6은 닫았다. 사용자 탭5 및 이후 목록에 나타난 tab7은 둘 다5175이며 보존. tab7 생성시점/주체는 확인하지 않아 native popup 성공으로 소급하지 않았다. 현재 별도 새 UI 시연 주문은 제출하지 않았다.
+
+## 22:08 자동 시작 통합과 관찰 상태
+- 사용자 요청 “wonder park시작하면 거래소도 자동으로 실행되게”를 반영했다. root README·park README·park/server.mjs와 trading launcher만 통합 범위로 수정. 별도 작업의 park/vite.config.mjs 보존·stage 제외.
+- 파크 시작 및 입장이 같은 ensure Promise를 공유하고, 서로 다른 CLI는 data/demo-launcher.lock으로 직렬화한다. 모두 정지면 start, 정상14개면 reuse, UI만 정지면 frontend 복원. 부분 엔진/봇 장애나 다른 소유 PID는 오류로 알려 중복 시장을 만들지 않는다. 최초 setup 필요.
+- 실제 추가 파크5196/PID21732 시작 로그·입장POST200·브라우저 준비 모달·5175시장/12봇 확인. 검증 파크만 SIGTERM 종료, manifest bytes 동일. evidence/20260921T125927764Z-park-auto-start-082f6114. 기존 파크19636/5190(및 그5290서비스) 유지; 이 서버는 다음 시작부터 새코드 적용. 신규 전체 시작은 이번 실제 Park 경로에서 미실행, 기존 start에 연결된 정책/잠금 검사와 구분.
+- frontend가 UI만 복원: 새PID4220, 원래 engine20540/12봇/observer18184 유지. 이전UI17556 종료 원인은 확인 안됨. 21:44:21 마지막 완전14개 자원표본,21:44:51부터 UI자원 누락. observer가 초기PID를 캐시하므로 새UI자원은 측정되지 않음. 엔진/봇/WS 관찰은 계속되지만 연속6시간UI운영으로 보고하면 안됨.
+- 독립리뷰에서 복원 로그쓰기 실패 시 자식 누수 발견→frontend가 owned-child 정리를 진단쓰기보다 먼저 보장. 실제 쓰기 실패+진단 실패2경로 child SIGTERM/ESRCH 확인,ensure8/8. evidence/2026-09-21T13-04-01-682Z-demo-ensure-ed7e7e26. wrapper 강제timeout은 CLI의 detached시장/lock을 남길 수 있어 제거; 하위CLI 단계 준비/정리에 위임. 최종wrapper5/5,기존lifecycle12/12. 독립재리뷰 진행.
+- 새동일키12개 첫응답이전write완료 테스트 통과:1신규+11중복, 충돌6+6→1신규+5중복+6충돌,재시작FULLCore일치. 클라이언트HTTP중첩 검증이고 내부writer접수시점 증명 아님. raw2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191;독립576체크일치. 처음실행은UI17556없어서spawn전중단한실패도보존.
+- 22:04 약3시간 중간분석 2026-09-21T13-04-13-664Z-observation-analysis-0b82788b:2106표본/10694.582초,명령62453·거래량47626h 증가,12봇/ready/자산보존/WSgap0·단절0,max표본공백6.608초. 자원분석은14개모두있는21:44:21까지만 유효하며 이후를0으로채우지않음. 6시간완료아님. 봇62675durable,62645accepted/30rejected,p9930.7365ms/max1814.14ms.
+- 실제브라우저gap/duplicate/초기HTTP경합fixture는자동시작요청우선으로중단. 격리Node WS한개누락 smoke만완료;추가controls구문만확인. scripts/browser-gap-demo.mjs와fixtures는현재push제외,실제UI검증다음차수. 모든fixture프로세스종료됨.
+- 다음: 리뷰반영·mainpush→브라우저gap검증,관찰자원분석을엔진/봇개별샘플도표시하도록보완검토→01:06관찰종료후전체누적복구/quiet B·C. 마감계획유지.
+
+- 22:09 확인에서 기존 Park19636/5190·5290이 이미 종료되어 있었다(원인 미확정, 이 작업에서 종료하지 않음). 거래소20540/4220/관찰자18184는 생존. 기본5190을 새 코드로 시작하려던 Start-Process 명령은 실행 전 자동 승인검토에서 `blocked by policy`로 거절됐다. 더 구체적 이유 없음; 재시도/우회하지 않음. 위5196 검증 서버 실행/종료와 구분하며 기본파크 재실행은 사용자에게 안내한다.
+- 새 원격main에 타 작업 EVision병합이 있어 Wonder Park 명령이 `npm run park:dev` / `npm run park:preview`로 바뀐다. 원격변경을 보존해 병합하고 거래소 문서도 새 명령으로 맞춘다. 루트 `npm run dev`는 이제 EVision이다.

@@ -8,15 +8,21 @@
 
 ```sh
 npm ci
-npm run dev
+npm run park:dev
 ```
 
 - 홈페이지: <http://localhost:5190>
 - HTML 품질 보고서: <http://localhost:5190/reports/>
-- 다른 포트: `PARK_PORT=5195 npm run dev`
-- 프로덕션: `npm run build` 후 `npm run preview`
+- 다른 포트: `PARK_PORT=5195 npm run park:dev`
+- 프로덕션: `npm run park:build` 후 `npm run park:preview`
 
-개발 서버는 localhost에 바인딩합니다. 기존 프로젝트의 파일과 개발 서버를 변경하지 않습니다. 범퍼카에서 레이스를 선택하면 별도 Vite 서버를 빈 포트에 열고 실행 링크를 제공합니다. 극장의 MP4는 프로젝트 폴더에서 HTTP Range로 제공되며 실제 Three.js `VideoTexture`로 상영합니다. 음성 CLI는 macOS 전용 실행 안내를 제공합니다.
+개발 서버는 localhost에 바인딩합니다. 범퍼카에서 레이스를 선택하면 별도 Vite 서버를 빈 포트에 열고 실행 링크를 제공합니다. 극장의 MP4는 프로젝트 폴더에서 HTTP Range로 제공되며 실제 Three.js `VideoTexture`로 상영합니다. 음성 CLI는 macOS 전용 실행 안내를 제공합니다.
+
+Wonder Park를 시작하면 **휴가 거래소 UI·Rust 엔진·12개 봇도 자동으로 시작**합니다. 이미 정상 실행 중이면 같은 시장을 재사용하고, 거래소 입장 버튼은 실행 준비가 끝난 뒤 주소를 제공합니다. 거래소 UI만 종료된 경우에는 엔진·봇·데이터를 유지한 채 UI를 복구합니다.
+
+거래소의 최초 준비는 Node 24.x 환경에서 [trading 준비 절차](../trading/README.md)를 한 번 수행합니다. PowerShell에서는 `cd trading`, `./scripts/setup.ps1`, `cd ..` 순서입니다. 이후 평소처럼 루트에서 `npm run park:dev` 또는 `npm run park:preview`를 실행하면 됩니다. 자동 시작이 의존성을 설치하거나 데이터를 초기화하지는 않으며 준비 파일이 없으면 터미널과 입장 안내에 준비 명령을 표시합니다.
+
+거래소 주소는 UI <http://127.0.0.1:5175>, API <http://127.0.0.1:8787>입니다. 파크 종료 후에도 공유 중인 거래소는 유지됩니다. 거래소까지 정상 종료하려면 `trading`에서 `node scripts/demo.mjs stop`을 실행합니다. 실행 로그는 `trading/evidence/`에 보존합니다.
 
 ## 3D 파크
 
@@ -76,12 +82,12 @@ npm run park:circuit
 개발 서버 실행 후:
 
 ```sh
-npm run test:coverage
-npm run test:golden
-npm run reports
+npm run park:test:coverage
+npm run park:test:golden
+npm run park:reports
 ```
 
-골든 기준을 의도적으로 변경할 때만 `npm run test:golden:update`를 실행하고 생성된 PNG를 직접 검토합니다. 그 다음 **스냅샷 업데이트 옵션 없이** `npm run test:golden`을 실행해야 회귀 검증이 됩니다. Playwright는 설치된 Google Chrome을 사용합니다.
+골든 기준을 의도적으로 변경할 때만 `npm run park:test:golden:update`를 실행하고 생성된 PNG를 직접 검토합니다. 그 다음 **스냅샷 업데이트 옵션 없이** `npm run park:test:golden`을 실행해야 회귀 검증이 됩니다. Playwright는 설치된 Google Chrome을 사용합니다.
 
 기본 골든은 협업 중 새 프로젝트가 추가되어도 비교할 수 있도록 `dopamin`, `movie`, `voice` 세 어트랙션으로 고정한 테스트 카탈로그를 사용합니다. 실제 운영 화면과 무한 순회는 모든 현재 프로젝트를 사용합니다. 새 테마의 모델 생성·교체는 별도 브라우저 검사로 확인합니다.
 
