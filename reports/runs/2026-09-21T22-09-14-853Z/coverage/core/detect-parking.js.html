@@ -1,0 +1,328 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/detect-parking.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">core</a> detect-parking.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>117/117</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">99.14% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>116/117</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>18/18</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>55/55</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">488x</span>
+<span class="cline-any cline-yes">488x</span>
+<span class="cline-any cline-yes">488x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">100x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">97x</span>
+<span class="cline-any cline-yes">4643200x</span>
+<span class="cline-any cline-yes">97x</span>
+<span class="cline-any cline-yes">194x</span>
+<span class="cline-any cline-yes">9375776x</span>
+<span class="cline-any cline-yes">194x</span>
+<span class="cline-any cline-yes">41520x</span>
+<span class="cline-any cline-yes">41520x</span>
+<span class="cline-any cline-yes">9327920x</span>
+<span class="cline-any cline-yes">9327920x</span>
+<span class="cline-any cline-yes">22210x</span>
+<span class="cline-any cline-yes">22210x</span>
+<span class="cline-any cline-yes">414x</span>
+<span class="cline-any cline-yes">414x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22210x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">41520x</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-yes">414x</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-yes">118x</span>
+<span class="cline-any cline-yes">200x</span>
+<span class="cline-any cline-yes">200x</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-yes">200x</span>
+<span class="cline-any cline-yes">200x</span>
+<span class="cline-any cline-yes">200x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">118x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-yes">254x</span>
+<span class="cline-any cline-yes">254x</span>
+<span class="cline-any cline-yes">254x</span>
+<span class="cline-any cline-yes">496x</span>
+<span class="cline-any cline-yes">89376x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">254x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">193x</span>
+<span class="cline-any cline-yes">472x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">28x</span>
+<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const finite=Number.isFinite;
+export function rectangleOverlap(a,b){
+ const w=Math.max(0,Math.min(a.x+a.width/2,b.x+b.width/2)-Math.max(a.x-a.width/2,b.x-b.width/2));
+ const d=Math.max(0,Math.min(a.z+a.depth/2,b.z+b.depth/2)-Math.max(a.z-a.depth/2,b.z-b.depth/2));
+ return w*d/(a.width*a.depth+b.width*b.depth-w*d);
+}
+&nbsp;
+// Repeated parallel stems, plausible bay proportions and a common end line.
+// This detects drawing geometry, not parking permission or accessibility.
+export function detectParking({data,width,height},{metersPerPixel=.05,crop={x:0,y:0,width:1,height:1},thresholds=[85,140,185,220,235,245,250,254]}={}){
+ if(!Number.isInteger(width)||!Number.isInteger(height)||width&lt;1||height&lt;1||width*height&gt;4e6||data?.length!==width*height*4||!finite(metersPerPixel)||metersPerPixel&lt;=0||metersPerPixel&gt;10)throw Error('주차 구획 분석의 이미지·축척을 확인하세요.');
+ if(![crop.x,crop.y,crop.width,crop.height].every(finite)||crop.x&lt;0||crop.y&lt;0||crop.width&lt;=0||crop.height&lt;=0||crop.x+crop.width&gt;1.00001||crop.y+crop.height&gt;1.00001||!Array.isArray(thresholds)||!thresholds.length||thresholds.length&gt;12||thresholds.some(n=&gt;!Number.isInteger(n)||n&lt;1||n&gt;255))throw Error('주차 구획 분석 영역·명암 기준을 확인하세요.');
+ const candidates=[],x0=Math.floor(width*crop.x),x1=Math.min(width,Math.ceil(width*(crop.x+crop.width))),z0=Math.floor(height*crop.y),z1=Math.min(height,Math.ceil(height*(crop.y+crop.height)));
+ const tolerance=Math.max(2,Math.round(.25/metersPerPixel)),merge=Math.max(1,.15/metersPerPixel);
+ for(const threshold of thresholds){
+  const mask=new Uint8Array(width*height);
+  for(let z=z0;z&lt;z1;z++)for(let x=x0;x&lt;x1;x++){const i=z*width+x;mask[i]=data[i*4+3]&gt;100&amp;&amp;Math.max(data[i*4],data[i*4+1],data[i*4+2])&lt;threshold?1:0;}
+  for(const vertical of [true,false]){
+   const major=vertical?height:width,minor=vertical?width:height,groups=[];
+   const ink=(cross,along)=&gt;cross&gt;=0&amp;&amp;along&gt;=0&amp;&amp;cross&lt;minor&amp;&amp;along&lt;major?mask[vertical?along*width+cross:cross*width+along]:<span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
+   for(let cross=vertical?x0:z0;cross&lt;(vertical?x1:z1);cross++){
+    let start=-1;
+    for(let p=vertical?z0:x0;p&lt;=(vertical?z1:x1);p++){
+     const dark=p&lt;(vertical?z1:x1)&amp;&amp;ink(cross,p);if(dark&amp;&amp;start&lt;0)start=p;
+     if(!dark&amp;&amp;start&gt;=0){
+      const length=(p-start)*metersPerPixel;
+      if(length&gt;=3.8&amp;&amp;length&lt;=6.8){
+       let g=groups.find(g=&gt;Math.abs(g.start-start)&lt;=tolerance&amp;&amp;Math.abs(g.end-p)&lt;=tolerance);
+       if(!g){g={start,end:p,stems:[]};groups.push(g);}g.stems.push({cross,start,end:p});
+      }
+      start=-1;
+     }
+    }
+   }
+   for(const g of groups){
+    const stems=[];
+    for(const s of g.stems){const last=stems.at(-1);if(last&amp;&amp;s.cross-last.right&lt;=merge){last.right=s.cross;last.cross=(last.left+last.right)/2;}else stems.push({...s,left:s.cross,right:s.cross});}
+    let row=[];
+    const finish=()=&gt;{
+     if(row.length&gt;=3){
+      const widths=row.map(r=&gt;(r.b-r.a)*metersPerPixel),mean=widths.reduce((a,b)=&gt;a+b,0)/widths.length;
+      const regularity=1-Math.min(1,Math.max(...widths.map(w=&gt;Math.abs(w-mean)))/mean);
+      for(const r of row){
+       const px=vertical?(r.a+r.b)/2:(g.start+g.end)/2,pz=vertical?(g.start+g.end)/2:(r.a+r.b)/2;
+       const pw=vertical?r.b-r.a:g.end-g.start,pd=vertical?g.end-g.start:r.b-r.a;
+       candidates.push({x:(px-width*(crop.x+crop.width/2))*metersPerPixel,z:(pz-height*(crop.y+crop.height/2))*metersPerPixel,width:pw*metersPerPixel,depth:pd*metersPerPixel,pixelBounds:{x:px-pw/2,y:pz-pd/2,width:pw,height:pd},threshold,repeatedBays:row.length,patternScore:Math.round(100*(regularity*.6+r.endSupport*.3+Math.min(1,row.length/8)*.1))});
+      }
+     }
+     row=[];
+    };
+    for(let i=1;i&lt;stems.length;i++){
+     const a=stems[i-1].cross,b=stems[i].cross,span=(b-a)*metersPerPixel,ratio=(g.end-g.start)/(b-a);
+     let support=0;
+     if(span&gt;=1.7&amp;&amp;span&lt;=3.8&amp;&amp;ratio&gt;=1.45&amp;&amp;ratio&lt;=3.2){
+      for(const end of [g.start,g.end-1])for(let p=Math.max(0,end-tolerance);p&lt;=Math.min(major-1,end+tolerance);p++){
+       let count=0,total=0;for(let cross=Math.ceil(a);cross&lt;=Math.floor(b);cross++){count+=ink(cross,p);total++;}support=Math.max(support,count/total);
+      }
+     }
+     if(support&gt;=.5)row.push({a,b,endSupport:support});else finish();
+    }
+    finish();
+   }
+  }
+ }
+ // Multiple contrast levels can identify the same rectangle. Keep the most
+ // regular supported geometry; do not count repeated detections as new bays.
+ candidates.sort((a,b)=&gt;b.patternScore-a.patternScore||a.threshold-b.threshold||a.z-b.z||a.x-b.x);
+ const unique=[];for(const c of candidates)if(!unique.some(s=&gt;rectangleOverlap(c,s)&gt;.6))unique.push(c);
+ unique.sort((a,b)=&gt;a.z-b.z||a.x-b.x);
+ const spaces=unique.slice(0,400).map((s,i)=&gt;({...s,id:'detected-bay-'+(i+1),kind:'parking-candidate',status:'review-required',classification:'unknown',method:'repeated-raster-stems-and-end-line'}));
+ return {spaces,sourcePixels:{width,height},metersPerPixel,crop,thresholds,truncated:unique.length&gt;400,limitations:['평행선·구획 비례에 따른 후보입니다. 빗금·전용 표시·시설 용도는 자동 확정하지 않습니다.','패턴 점수는 선의 반복·정렬 정도이며 실제 주차면일 확률이나 전파 점수가 아닙니다.']};
+}
+&nbsp;
+export function matchReviewedParking(detection,spaces){
+ const used=new Set();
+ return {...detection,spaces:detection.spaces.map(candidate=&gt;{
+  const matches=spaces.filter(s=&gt;['parking','ev'].includes(s.kind)&amp;&amp;!used.has(s.id)).map(s=&gt;({space:s,overlap:rectangleOverlap(candidate,s)})).sort((a,b)=&gt;b.overlap-a.overlap);
+  const match=matches[0];if(!match||match.overlap&lt;.6)return candidate;
+  used.add(match.space.id);return {...candidate,reviewedSpaceId:match.space.id,reviewOverlap:match.overlap,classification:match.space.accessible?'accessible':match.space.reserved?'reserved':match.space.kind==='ev'?'ev':'parking'};
+ })};
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-21T22:09:57.707Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    
