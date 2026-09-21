@@ -29,10 +29,10 @@ test('desktop miniature, real WebGL geometry, excluded project and day-night gol
  expect(await page.evaluate(()=>window.__park.getState().attractions.map(a=>a.id))).toEqual(['dopamin','movie','voice']);
  const details=await page.evaluate(()=>{const v=window.__park.view;let vertices=0,meshes=0;v.scene.traverse(o=>{if(o.isMesh){meshes++;vertices+=o.geometry.attributes.position.count;}});return {webgl:v.renderer.getContext() instanceof WebGL2RenderingContext,vertices,meshes};});
  expect(details.webgl).toBe(true);expect(details.vertices).toBeGreaterThan(100000);expect(details.meshes).toBeGreaterThan(50);
- const lawnDepth=await page.evaluate(()=>{let depth=0;window.__park.view.parkRoot.traverse(o=>{if(o.isMesh&&o.material.name==='park-lawn'){o.geometry.computeBoundingBox();depth=o.geometry.boundingBox.max.z-o.geometry.boundingBox.min.z;}});return depth;});
- expect(lawnDepth).toBeGreaterThan(40); // The oval lawn must cover the park, not collapse to a strip.
+ const meadow=await page.evaluate(()=>{const terrain=window.__park.view.globe.terrain;terrain.geometry.computeBoundingBox();return {depth:terrain.geometry.boundingBox.max.z-terrain.geometry.boundingBox.min.z,procedural:terrain.material.map.isCanvasTexture};});
+ expect(meadow.depth).toBeGreaterThan(40);expect(meadow.procedural).toBe(true);
  const plaza=await page.evaluate(()=>{const v=window.__park.view;const landmark=v.scene.getObjectByName('GS central landmark');return {exists:!!landmark,center:landmark?.getWorldPosition(new v.camera.position.constructor()).toArray(),width:document.querySelector('#world').getBoundingClientRect().width/innerWidth};});
- expect(plaza.exists).toBe(true);expect(plaza.center[0]).toBe(0);expect(plaza.width).toBeGreaterThan(.95);
+ expect(plaza.exists).toBe(true);expect(Math.hypot(...plaza.center)).toBeCloseTo(24.05,2);expect(plaza.width).toBeGreaterThan(.95);
  await expect(page).toHaveScreenshot('park-desktop-day.png',{mask:[page.locator('#sync-button')],maskColor:'#f5f2eb'});
  await page.getByRole('button',{name:'야간 풍경',exact:true}).click();await expect(page.locator('body')).toHaveClass(/night/);await page.waitForTimeout(1200);
  await expect(page).toHaveScreenshot('park-desktop-night.png',{mask:[page.locator('#sync-button')],maskColor:'#f5f2eb'});
@@ -71,6 +71,32 @@ test('manager, rendering controls, camera navigation and real character animatio
  await page.locator('#quality').selectOption('ultra');expect(await page.evaluate(()=>window.__park.view.ao.enabled)).toBe(true);await page.getByRole('button',{name:'닫기',exact:true}).click();
  const before=await page.evaluate(()=>window.__park.view.camera.position.length());await page.getByRole('button',{name:'확대',exact:true}).click();expect(await page.evaluate(()=>window.__park.view.camera.position.length())).toBeLessThan(before);await page.getByRole('button',{name:'전체 지도',exact:true}).click();await settled(page);
  const pose=await page.evaluate(()=>{const v=window.__park.view;const character=v.attractions[2].character;const b=character.children[0];v.setTime(1);v.frame(performance.now());const a=b.position.y;v.setTime(2);v.frame(performance.now());return [a,b.position.y];});expect(pose[0]).not.toBe(pose[1]);
+});
+test('themes hug the storybook sphere and castle fireworks repeat with reduced-motion support',async({page})=>{
+ await ready(page);
+ const globe=await page.evaluate(()=>{const v=window.__park.view;return {procedural:v.globe.terrain.material.map.isCanvasTexture,radius:v.globe.terrain.geometry.parameters.radius,themes:v.attractions.map(a=>{const normal=a.anchor.position.clone().normalize(),up=normal.clone().set(0,1,0).applyQuaternion(a.anchor.quaternion),patch=a.anchor.getObjectByName('Surface inlay'),positions=patch.geometry.attributes.position,point=normal.clone();let maxGap=0;for(let i=0;i<positions.count;i++){point.fromBufferAttribute(positions,i);patch.localToWorld(point);maxGap=Math.max(maxGap,Math.abs(point.length()-24));}return {distance:a.anchor.position.length(),upright:normal.dot(up),maxGap};})};});
+ expect(globe.procedural).toBe(true);expect(globe.radius).toBe(24);
+ for(const theme of globe.themes){expect(theme.distance).toBeCloseTo(24,5);expect(theme.upright).toBeCloseTo(1,5);expect(theme.maxGap).toBeLessThan(.04);}
+ const show=await page.evaluate(()=>{const v=window.__park.view;v.setTime(2);v.frame(performance.now());const a=Array.from(v.fireworks.root.children[0].geometry.attributes.position.array);v.setTime(3);v.frame(performance.now());const b=Array.from(v.fireworks.root.children[0].geometry.attributes.position.array);v.capture=false;v.reduced=true;v.frame(performance.now());const frozen=v.fireworks.root.userData.time;v.frame(performance.now()+4000);const still=v.fireworks.root.userData.time;v.setTime(6);return {changed:a.some((x,i)=>x!==b[i]),frozen,still,bursts:v.fireworks.root.children.length,active:v.fireworks.root.userData.activeBursts};});
+ expect(show.changed).toBe(true);expect(show.still).toBe(show.frozen);expect(show.bursts).toBe(5);expect(show.active).toBeGreaterThan(0);
+ await page.getByRole('button',{name:'성 불꽃놀이 보기',exact:true}).click();await settled(page);await expect(page.locator('body')).toHaveClass(/night/);
+ await expect(page).toHaveScreenshot('castle-fireworks.png',{mask:[page.locator('#sync-button'),page.locator('#toast')],maskColor:'#f5f2eb'});
+ await page.getByRole('button',{name:'전체 지도',exact:true}).click();await settled(page);
+ expect(await page.evaluate(()=>window.__park.view.controls.target.y)).toBeCloseTo(4,4);
+});
+test('ten Disney friends can be selected and six new character models have close-up goldens',async({page})=>{
+ test.setTimeout(240000);const errors=[];page.on('pageerror',e=>errors.push(e.message));await ready(page);
+ await page.getByRole('button',{name:'친구들 만나기'}).click();await expect(page.locator('.character-directory button')).toHaveCount(10);
+ await expect(page).toHaveScreenshot('disney-friends-directory.png',{mask:[page.locator('#sync-button')],maskColor:'#f5f2eb'});
+ const friends=[['daisy','데이지 덕'],['goofy','구피'],['pluto','플루토'],['pooh','곰돌이 푸'],['stitch','스티치'],['baymax','베이맥스']];
+ for(const [id,name] of friends){
+  await page.getByRole('button',{name:`${name} 만나기`,exact:true}).click();await expect(page.locator('#modal')).not.toBeVisible();await settled(page);
+  const model=await page.evaluate(id=>{const v=window.__park.view,c=v.characters.find(c=>c.definition.id===id);let vertices=0;c.root.traverse(o=>{if(o.isMesh)vertices+=o.geometry.attributes.position.count;});return {kind:c.root.userData.character,vertices,distance:v.camera.position.distanceTo(v.controls.target)};},id);
+  expect(model.kind).toBe(id);expect(model.vertices).toBeGreaterThan(10000);expect(model.distance).toBeLessThan(7);
+  await expect(page).toHaveScreenshot(`friend-${id}.png`,{mask:[page.locator('#sync-button'),page.locator('#toast')],maskColor:'#f5f2eb'});
+  if(id!=='baymax')await page.getByRole('button',{name:'친구들 만나기'}).click();
+ }
+ expect(errors).toEqual([]);
 });
 test('new folders and changed themes update the live 3D park without a reload',async({page})=>{
  await ready(page);

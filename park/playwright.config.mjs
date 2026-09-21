@@ -1,6 +1,7 @@
 import {defineConfig} from '@playwright/test';
 import {fileURLToPath} from 'node:url';
 export default defineConfig({
+ globalSetup:'./tests/e2e/coverage-setup.mjs',
  testDir:'./tests/e2e',outputDir:'./test-results',timeout:120000,expect:{timeout:20000,toHaveScreenshot:{maxDiffPixelRatio:.006,threshold:.16,animations:'disabled'}},
  fullyParallel:false,workers:1,retries:0,
  reporter:[['list'],['html',{outputFolder:fileURLToPath(new URL('./reports/golden',import.meta.url)),open:'never'}],['json',{outputFile:fileURLToPath(new URL('./reports/golden/results.json',import.meta.url))}]],

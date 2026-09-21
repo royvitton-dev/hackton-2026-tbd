@@ -38,7 +38,9 @@ async function verifyAttraction(a){
   if(a.id==='movie'){
    await park.locator('#cinema-ui').waitFor();await park.waitForFunction(()=>document.querySelector('#film').currentTime>.5,undefined,{timeout:25000});
    const video=await park.evaluate(()=>({duration:document.querySelector('#film').duration,texture:window.__park.view.cinema.screen.material.map.isVideoTexture}));assert(video.duration>0&&video.texture);result.checks.push('극장 입장','실제 영상 재생','3D VideoTexture');
-   await park.locator('#film-play').click();await park.waitForFunction(()=>document.querySelector('#film').paused);result.checks.push('일시정지');
+   // The clip may already have ended while the software renderer was busy.
+   // Only invoke the pause control when playing, so a finished clip is not restarted.
+   await park.evaluate(()=>{if(!document.querySelector('#film').paused)document.querySelector('#film-play').click();});await park.waitForFunction(()=>document.querySelector('#film').paused);result.checks.push('일시정지');
    await park.screenshot({path:path.join(report,'screenshots',a.id+'.png')});result.screenshot=true;await park.locator('#leave-cinema').click();
   }else if(a.hasWebApp||a.hasStaticApp||a.url){
    const link=park.locator('.launch-link');await link.waitFor({timeout:45000});const url=await link.getAttribute('href');assert(/^https?:\/\//.test(url));
