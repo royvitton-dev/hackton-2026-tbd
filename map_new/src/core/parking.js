@@ -7,7 +7,7 @@ import {parkingBodyClear} from './collision.js';
 export {parkingBodyClear} from './collision.js';
 export function parkingApproachRoute(plan,startId,spaceId,options={}){
  const access=plan.parkingAccess?.find(a=>a.spaceId===spaceId),space=plan.spaces.find(s=>s.id===spaceId);
- if(!access||!space||space.accessible||space.reserved||space.blocked)return null;
+ if(!access||!space||space.blocked)return null;
  const path=route(plan,startId,access.nodeId,options);if(!path)return null;
  return {...path,destination:{...path.destination,label:(space.label||space.id)+' 주차면 앞'},approach:{spaceId,source:access.source,surveyed:false,arrival:'adjacent-aisle'}};
 }

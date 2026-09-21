@@ -16,6 +16,8 @@ import {detectParking,matchReviewedParking} from '../src/core/detect-parking.js'
 import {daecheonSvg,DAE_SCALE} from './daecheon.mjs';
 import {dongtanSvg,applyDongtanReview} from './dongtan.mjs';
 import {connectChangdongRamp,multilevelPlan,multilevelSvg} from './ramps.mjs';
+import {parkingCoverage,hasParking} from '../src/core/route-coverage.js';
+import {changdongRoutes} from './changdong-routes.mjs';
 import {runVision} from './vision.mjs';
 import {applyRasterEvidence} from '../src/core/raster-evidence.js';
 const root=fileURLToPath(new URL('../public/',import.meta.url)),sha=b=>createHash('sha256').update(b).digest('hex');
@@ -60,14 +62,14 @@ for(const site of sites){
   plan.id=site.id;plan.name=site.name;plan.sourceAsset=site.sourceAsset.file;
   plan=annotateParking(plan,site);
   if(site.id!=='multilevel-lab')plan=enrichObjects(plan,site);
-  if(site.id==='changdong-b2')plan=connectChangdongRamp(plan,site);
+  if(site.id==='changdong-b2')plan=connectChangdongRamp(changdongRoutes(plan,site),site);
   if(site.id==='parking-168780-0'){
     plan=applyDongtanReview(plan,site);
     site.parkingEvidence={floor:'1F',note:'도면 치수선으로 축척 보정 · 서측/동측 차로별 일방통행 안내. 주차면 앞 안내와 조건에 맞는 구획 내부 주차를 제공합니다. 상층 차량 도면이 없어 동탄 층간 연결은 보류합니다.'};
   }
   if(site.siteId==='10000901')plan.parkingAccess=plan.spaces.map((s,i)=>({spaceId:s.id,nodeId:i===0?'entrance':i===1?'P2':'P3',source:site.source,method:'source-reviewed-adjacent-lane',surveyed:false}));
   if(site.id==='parking-131601-0'){
-    plan.parkingAccess=plan.spaces.filter(s=>!s.accessible).map(s=>{const x=s.id.startsWith('west')?(70-1000)*DAE_SCALE:s.x,z=s.id.startsWith('west')?s.z:(298.5-1513/2)*DAE_SCALE;const node=plan.nodes.find(n=>Math.hypot(n.x-x,n.z-z)<.0001);return {spaceId:s.id,nodeId:node?.id,source:site.source,method:'source-reviewed-adjacent-lane',arrival:'aisle',surveyed:false};});
+    plan.parkingAccess=plan.spaces.map(s=>{const x=s.id.startsWith('west')?(70-1000)*DAE_SCALE:s.x,z=s.id.startsWith('west')?s.z:(298.5-1513/2)*DAE_SCALE;const node=plan.nodes.find(n=>Math.hypot(n.x-x,n.z-z)<.0001);return {spaceId:s.id,nodeId:node?.id,source:site.source,method:'source-reviewed-adjacent-lane',arrival:'aisle',surveyed:false};});
     plan.scaleEvidence={method:'printed-scale-bar',pixelLength:274,meters:10,metersPerPixel:DAE_SCALE,surveyed:false};
     plan.defaultStart='entry-east';plan.defaultDestination='approach:north-8';
     for(const s of plan.spaces.filter(s=>s.accessible))s.accessibilityEvidence={source:site.source,asset:site.sourceAsset.file,method:'wheelchair-symbol-visual-review',status:'source-confirmed-not-surveyed'};
@@ -97,6 +99,8 @@ for(const site of sites){
     plan.labels=ocr.labels.filter(t=>t.x>=crop.x&&t.x<=crop.x+crop.width&&t.z>=crop.y&&t.z<=crop.y+crop.height).map(t=>({...t,x:((t.x-crop.x)/crop.width-.5)*plan.width,z:((t.z-crop.y)/crop.height-.5)*plan.depth,width:t.width/crop.width*plan.width,depth:t.depth/crop.height*plan.depth,source:'machine-ocr-review-required'}));
     plan.ocr={method:ocr.method,sourceSha256:ocr.sourceSha256,count:plan.labels.length,status:ocr.status};
   }catch(error){if(error.code!=='ENOENT')throw error;plan.labels=[];}
+  plan.routeCoverage=parkingCoverage(plan);
+  site.parkingRouting=hasParking(plan)&&plan.routeCoverage.reachable>0;
   const model=compileMeshes(plan),result={plan,model};
   const output=JSON.stringify(result),modelFile=`generated/${site.id}.json`;
   await writeFile(path.join(root,modelFile),output+'\n');

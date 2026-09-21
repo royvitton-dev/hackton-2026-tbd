@@ -43,14 +43,14 @@ export function dongtanSvg(){
   '<circle id="east-deck-start" data-kind="target" data-role="entrance" data-label="동측 1층 차로 · 진입 램프 이후" cx="1245" cy="282"/>');
  for(const s of dongtanBays()){
   tags.push(`<rect id="${s.id}" data-kind="space" data-role="parking" data-label="${s.label}" data-accessible="${!!s.accessible}" data-reserved="${!!s.reserved}" x="${s.x-s.width/2}" y="${s.z-s.depth/2}" width="${s.width}" height="${s.depth}"/>`);
-  if(!s.accessible&&!s.reserved)tags.push(`<circle id="approach-${s.id}" data-kind="target" data-role="junction" data-label="${s.label} 앞 차로" cx="${s.id.startsWith('west')?390:1245}" cy="${Math.max(280,s.z)}"/>`);
+  tags.push(`<circle id="approach-${s.id}" data-kind="target" data-role="junction" data-label="${s.label} 앞 차로" cx="${s.id.startsWith('west')?390:1245}" cy="${Math.max(s.id.startsWith('west')?280:286,s.z)}"/>`);
  }
  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1536 822" data-meters-per-unit="${DONGTAN_SCALE}" data-source-kind="source-traced" data-name="동탄 1층 · 구역별 일방통행 차로와 벽체">${tags.join('\n')}</svg>\n`;
 }
 export function applyDongtanReview(plan,site){
  const point=(x,z)=>({x:(x-768)*DONGTAN_SCALE,z:(z-411)*DONGTAN_SCALE}),source=site.source,asset=site.sourceAsset.file;
- plan.parkingAccess=dongtanBays().filter(s=>!s.accessible&&!s.reserved).map(s=>{
-  const p=point(s.id.startsWith('west')?390:1245,Math.max(280,s.z));
+ plan.parkingAccess=dongtanBays().map(s=>{
+  const p=point(s.id.startsWith('west')?390:1245,Math.max(s.id.startsWith('west')?280:286,s.z));
   return {spaceId:s.id,nodeId:plan.nodes.find(n=>Math.hypot(n.x-p.x,n.z-p.z)<.0001)?.id,startNodeId:s.id.startsWith('west')?'west-deck-start':'east-deck-start',source,method:'source-reviewed-adjacent-lane',arrival:'aisle',surveyed:false};
  });
  for(const s of plan.spaces){

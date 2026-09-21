@@ -4,14 +4,14 @@ import {parkingApproachRoute,parkingBodyClear} from '../../src/core/parking.js';
 import {route,pointAt,DEFAULT_VEHICLE} from '../../src/core/navigation.js';
 import {validatePlan} from '../../src/core/analysis.js';
 const source=()=>JSON.parse(readFileSync(new URL('../../public/generated/parking-168780-0.json',import.meta.url))).plan;
-it('connects all 13 ordinary Dongtan bays to reviewed one-way deck origins and preserves the 18 protected bays',()=>{
- const p=source();expect(p.spaces).toHaveLength(31);expect(p.parkingAccess).toHaveLength(13);
+it('connects all 31 Dongtan bay fronts to reviewed one-way origins and preserves protected bay labels',()=>{
+ const p=source();expect(p.spaces).toHaveLength(31);expect(p.parkingAccess).toHaveLength(31);
  expect(p.spaces.filter(s=>s.accessible)).toHaveLength(12);expect(p.spaces.filter(s=>s.reserved)).toHaveLength(6);
  for(const a of p.parkingAccess){
   const r=parkingApproachRoute(p,a.startNodeId,a.spaceId);expect(r,a.spaceId).not.toBeNull();expect(r.approach.arrival).toBe('adjacent-aisle');
   for(let d=0;d<=r.distance;d+=.3)expect(parkingBodyClear(p,pointAt(r,d),DEFAULT_VEHICLE)).toBe(true);
  }
- for(const s of p.spaces.filter(s=>s.accessible||s.reserved))expect(parkingApproachRoute(p,'west-deck-start',s.id)).toBeNull();
+ for(const s of p.spaces.filter(s=>s.accessible||s.reserved)){const a=p.parkingAccess.find(a=>a.spaceId===s.id);expect(parkingApproachRoute(p,a.startNodeId,s.id)).not.toBeNull();}
 });
 it('does not reverse source arrows or connect across the central void and unreviewed ramps',()=>{
  const p=source(),west='west-deck-start',east='east-deck-start',end='west-vehicle-exit';

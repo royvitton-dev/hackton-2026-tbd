@@ -4,10 +4,10 @@ import {parkingApproachRoute,parkingBodyClear} from '../../src/core/parking.js';
 import {route,pointAt,DEFAULT_VEHICLE} from '../../src/core/navigation.js';
 import {distance} from '../../src/core/geometry.js';
 const source=()=>JSON.parse(readFileSync(new URL('../../public/generated/parking-131601-0.json',import.meta.url))).plan;
-it('routes from the source entrance to all 50 reviewed ordinary bays while protecting accessible bays',()=>{
- const p=source();expect(p.spaces).toHaveLength(52);expect(p.parkingAccess).toHaveLength(50);
+it('routes to all 52 source bay fronts including accessible bays',()=>{
+ const p=source();expect(p.spaces).toHaveLength(52);expect(p.parkingAccess).toHaveLength(52);
  for(const a of p.parkingAccess){const r=parkingApproachRoute(p,'entry-east',a.spaceId);expect(r, a.spaceId).not.toBeNull();expect(r.approach).toMatchObject({spaceId:a.spaceId,arrival:'adjacent-aisle',surveyed:false});expect(r.destination.label).toContain('주차면 앞');}
- for(const id of ['missing','accessible-1','accessible-2'])expect(parkingApproachRoute(p,'entry-east',id)).toBeNull();
+ for(const id of ['missing'])expect(parkingApproachRoute(p,'entry-east',id)).toBeNull();
  const blocked=source();blocked.spaces.find(s=>s.id==='north-8').blocked=true;expect(parkingApproachRoute(blocked,'entry-east','north-8')).toBeNull();
  expect(parkingApproachRoute(p,'entry-east','north-8',{vehicle:{width:7}})).toBeNull();
  expect(parkingApproachRoute(p,'entry-east','west-5',{mode:'person'})).not.toBeNull();

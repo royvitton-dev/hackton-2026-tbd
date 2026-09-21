@@ -1,9 +1,9 @@
 import {test,expect} from '@playwright/test';
 test.beforeEach(async({page})=>{const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&!r.url().includes('/reports/'))errors.push(r.status()+' '+r.url());});page.__errors=errors;});
 test.afterEach(async({page})=>expect(page.__errors).toEqual([]));
-async function screenshot(page,name,options={}){return expect(page).toHaveScreenshot(name,{...options,mask:[page.locator('#quality-status')],maskColor:'#f6f6ee'});}
+async function screenshot(page,name,options={}){if(await page.evaluate(()=>window.__parking?.state.tab==='plan'&&window.__parking.state.playing))await page.locator('#reset').click();return expect(page).toHaveScreenshot(name,{...options,mask:[page.locator('#quality-status')],maskColor:'#f6f6ee'});}
 async function open(page,site='changdong-b2'){
-  await page.goto(`/map_new/?site=${site}`);await page.waitForFunction(id=>window.__parking?.state.plan?.id===id,site);await expect(page.locator('#world')).toHaveAttribute('data-ready','true');await page.evaluate(()=>document.fonts.ready);
+  await page.goto(`/map_new/?site=${site}`);await page.waitForFunction(id=>window.__parking?.state.plan?.id===id,site);await expect(page.locator('#world')).toHaveAttribute('data-ready','true');await page.waitForFunction(()=>!window.__parking.state.initializing);await page.locator('#reset').click();await page.evaluate(()=>document.fonts.ready);
 }
 test('public B2 source converts to actual WebGL meshes, with original and data export',async({page})=>{
   await open(page);const state=await page.evaluate(()=>({walls:window.__parking.state.model.meshes.length,triangles:window.__parking.scene.renderer.info.render.triangles,provenance:window.__parking.state.plan.provenance}));expect(state.walls).toBe(23);expect(state.triangles).toBeGreaterThan(288);expect(state.provenance.kind).toBe('source-traced');
@@ -42,7 +42,7 @@ test('imports semantic SVG and rejects executable and corrupt input without losi
   await expect(page.locator('#scene-title')).toHaveText('integration-lab.svg');expect(await page.evaluate(()=>window.__parking.state.plan.nodes.length)).toBe(15);
 });
 test('actual Naver-located building routes from acquired OSM road through the drawn entrance',async({page})=>{
-  await open(page,'10000901-0');expect(await page.evaluate(()=>window.__parking.state.route.ids)).toEqual(['road-start','road-portal','entrance','P2']);await expect(page.locator('#route-message')).toContainText('외부 도로 → 건물 진입');await expect(page.locator('#evidence')).toContainText('자동 그래프');await screenshot(page,'neonadeuli-route.png');
+  await open(page,'10000901-0');expect(await page.evaluate(()=>window.__parking.state.route.ids)).toEqual(['road-start','road-portal','entrance','P2','P3']);await expect(page.locator('#route-message')).toContainText('외부 도로 → 건물 진입');await expect(page.locator('#evidence')).toContainText('자동 그래프');await screenshot(page,'neonadeuli-route.png');
   await page.locator('#speed').selectOption('4');await page.locator('#play').click();await expect(page.locator('#play')).toHaveText('✓ 도착했습니다',{timeout:15000});expect(await page.evaluate(()=>window.__parking.state.pose.arrived)).toBe(true);
 });
 test('parks inside a source bay with suitable dimensions and previews a proposed charger destination',async({page})=>{
@@ -118,8 +118,8 @@ test('shows detected parking as review candidates while preserving high-resoluti
   await page.locator('.visual-controls summary').click();await page.locator('#drawing-info').click();await expect(page.locator('#dialog-content')).toContainText('① 로비·라운지');await expect(page.locator('#dialog-content')).toContainText('기둥 28개');
 });
 test('guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls',async({page})=>{
-  await open(page,'parking-131601-0');await expect(page.locator('#destination')).toHaveValue('approach:north-8');await expect(page.locator('#play')).toBeEnabled();
-  await expect(page.locator('#destination option')).toHaveCount(50);await expect(page.locator('#route-message')).toContainText('주차면 앞');
+  await open(page,'parking-131601-0');await expect(page.locator('#destination')).toHaveValue('approach:west-9');await expect(page.locator('#play')).toBeEnabled();
+  await expect(page.locator('#destination option')).toHaveCount(52);await expect(page.locator('#route-message')).toContainText('주차면 앞');
   const click=await page.evaluate(()=>{const scene=window.__parking.scene,p=scene.parkingPickers.find(m=>m.userData.spaceId==='west-5').position.clone().project(scene.camera),r=scene.canvas.getBoundingClientRect();return {x:r.left+(p.x+1)*r.width/2,y:r.top+(1-p.y)*r.height/2};});
   await page.mouse.click(click.x,click.y);await expect(page.locator('#destination')).toHaveValue('approach:west-5');
   expect(await page.evaluate(()=>window.__parking.state.route.approach.spaceId)).toBe('west-5');await screenshot(page,'daecheon-parking-route.png');
@@ -129,9 +129,9 @@ test('guides to a clicked source parking bay through the real drawing aisles and
 });
 test('follows Dongtan one-way aisles and offers an explicit origin change for the separate east deck',async({page})=>{
   await open(page,'parking-168780-0');await expect(page.locator('#play')).toBeEnabled();
-  await expect(page.locator('#start-node')).toHaveValue('west-deck-start');await expect(page.locator('#destination')).toHaveValue('approach:west-inner-8-1');
+  await expect(page.locator('#start-node')).toHaveValue('west-deck-start');await expect(page.locator('#destination')).toHaveValue('approach:west-compact-5-1');
   const initial=await page.evaluate(()=>{const {plan,route}=window.__parking.state;return {access:plan.parkingAccess.length,walls:plan.walls.length,objects:plan.objects.length,ids:route.ids,protectedOptions:[...document.querySelector('#destination').options].some(o=>/장애인|전용 표시/.test(o.text))};});
-  expect(initial).toMatchObject({access:13,walls:48,objects:27,protectedOptions:false});
+  expect(initial).toMatchObject({access:31,walls:48,objects:27,protectedOptions:true});
   await page.locator('#destination').selectOption('approach:east-inner-6-1');await expect(page.locator('#play')).toBeDisabled();
   await expect(page.locator('#route-message')).toContainText('동측 1층 차로');await expect(page.locator('#route-origin')).toBeVisible();
   expect(await page.evaluate(()=>window.__parking.state.route)).toBeNull();await expect(page.locator('#start-node')).toHaveValue('west-deck-start');
@@ -139,7 +139,7 @@ test('follows Dongtan one-way aisles and offers an explicit origin change for th
   await page.locator('#car-width').fill('1.9');await page.locator('#car-width').blur();await expect(page.locator('#route-origin')).toBeVisible();
   await page.locator('#route-origin').click();await expect(page.locator('#start-node')).toHaveValue('east-deck-start');await expect(page.locator('#route-origin')).toBeHidden();await expect(page.locator('#play')).toBeEnabled();
   const east=await page.evaluate(()=>window.__parking.state.route);expect(east.approach.spaceId).toBe('east-inner-6-1');expect(east.distance).toBeGreaterThan(19);
-  await screenshot(page,'dongtan-parking-route.png');
+  await expect(page.locator('#coverage-summary')).toContainText('31/31');await screenshot(page,'dongtan-parking-route.png');
   await page.locator('#speed').selectOption('4');await page.locator('#play').click();await expect(page.locator('#play')).toHaveText('✓ 도착했습니다',{timeout:15000});
   const arrived=await page.evaluate(()=>{const s=window.__parking.state;return {pose:s.pose,destination:s.route.destination};});expect(arrived.pose.x).toBeCloseTo(arrived.destination.x);expect(arrived.pose.z).toBeCloseTo(arrived.destination.z);
   await page.locator('#start-node').selectOption('west-vehicle-exit');await page.locator('#destination').selectOption('approach:west-inner-8-1');await expect(page.locator('#play')).toBeDisabled();

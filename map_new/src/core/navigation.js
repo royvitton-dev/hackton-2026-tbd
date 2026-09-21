@@ -1,6 +1,7 @@
 import {distance,project,pointAt} from './geometry.js';
 import {validatePlan} from './analysis.js';
 import {parkingBodyClear} from './collision.js';
+import {straightGraph} from './route-graph.js';
 export {pointAt};
 export const DEFAULT_VEHICLE=Object.freeze({width:1.9,length:4.6,height:1.8,turnRadius:5.2,speed:3.5,clearance:.2,maxGrade:.2});
 function settings(options){
@@ -65,7 +66,9 @@ function sweptClear(p,plan,nodeMap,o,edges=plan.edges){
   return footprint.every(q=>!dangerous(q,o,o.mode==='person'?.35:0)&&edges.some(e=>allowed(e,o,nodeMap)&&laneContains(q,nodeMap.get(e.from),nodeMap.get(e.to),e.width))&&!plan.walls.some(w=>(w.y||0)<(q.y||0)+.1&&(w.y||0)+w.height>(q.y||0)&&project(q,{x:w.x1,y:q.y,z:w.z1},{x:w.x2,y:q.y,z:w.z2}).distance<=w.thickness/2));
 }
 export function route(plan,startId,endId,options={}){
-  validatePlan(plan);const o=settings(options),nodes=new Map(plan.nodes.map(n=>[n.id,n]));
+  validatePlan(plan);const o=settings(options);
+  if(plan.routingEvidence?.simplifyStraight)plan=straightGraph(plan,startId,endId,o.mode,o.blocked);
+  const nodes=new Map(plan.nodes.map(n=>[n.id,n]));
   // A vehicle straddles artificial graph splits on the same physical aisle.
   // Include adjoining traversable edges, but never unrelated nearby lanes.
   const adjacent=new Map(plan.nodes.map(n=>[n.id,plan.edges.filter(e=>e.from===n.id||e.to===n.id)])),clearances=new Map();
@@ -120,7 +123,9 @@ export function route(plan,startId,endId,options={}){
   }
   points.push(nodes.get(endId));
   const length=points.slice(1).reduce((sum,p,i)=>sum+distance(points[i],p),0);
-  return {ids:states.map(s=>s.id),edges:states.slice(1).map(s=>s.via),points,distance:length,cost:finish.cost,seconds:length/(o.mode==='car'?o.vehicle.speed:options.walkSpeed||1.3),destination:nodes.get(endId),mode:o.mode,objective:'minimum-risk-weighted-graph-distance'};
+  const ids=[startId],edges=[];
+  for(const s of states.slice(1)){const e=plan.edges.find(e=>e.id===s.via),forward=e.to===s.id;ids.push(...(e.chain?(forward?e.chain:[...e.chain].reverse()).slice(1):[s.id]));edges.push(...(e.segments?(forward?e.segments:[...e.segments].reverse()):[e.id]));}
+  return {ids,edges,points,distance:length,cost:finish.cost,seconds:length/(o.mode==='car'?o.vehicle.speed:options.walkSpeed||1.3),destination:nodes.get(endId),mode:o.mode,objective:'minimum-risk-weighted-graph-distance'};
 }
 export function evacuation(plan,startId,options={}){
   return plan.nodes.filter(n=>['shelter','exit'].includes(n.kind)&&n.safe===true).map(n=>route(plan,startId,n.id,{...options,mode:'person'})).filter(Boolean).sort((a,b)=>a.cost-b.cost)[0]||null;

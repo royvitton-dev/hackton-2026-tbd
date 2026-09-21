@@ -37,11 +37,12 @@
       },
       "modelPolicy": "reviewed-preserved"
     },
+    "parkingRouting": true,
     "modelFile": "generated/changdong-b2.json",
     "statistics": {
       "walls": 23,
-      "nodes": 16,
-      "edges": 17,
+      "nodes": 100,
+      "edges": 101,
       "spaces": 101,
       "objects": 87,
       "accessible": 4,
@@ -51,7 +52,7 @@
       "matchedParking": 38
     },
     "routingReady": true,
-    "modelHash": "ddf48647a7c3e1fe62e7f036c03fc031d41a0371e6a30a016d91d3cbf5c34b04"
+    "modelHash": "bf32f3c4ffdea826abe64eba74e8044bc2bc3e4ce9c123960a62287e94ed171d"
   },
   {
     "id": "10000901-0",
@@ -225,6 +226,7 @@
       },
       "modelPolicy": "reviewed-preserved"
     },
+    "parkingRouting": true,
     "modelFile": "generated/10000901-0.json",
     "statistics": {
       "walls": 16,
@@ -239,7 +241,7 @@
       "matchedParking": 1
     },
     "routingReady": true,
-    "modelHash": "80c7545cdfafed67d7413f7d27aea2144c31b8c4dcdbdd20182d3ce9a4d5232a",
+    "modelHash": "603bcbf0eb0b4d878907a7331405ff79ae17c04a818087c04125fd068d7214df",
     "radio": {
       "file": "generated/radio-10000901.json",
       "count": 48,
@@ -301,6 +303,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000555-0.json",
     "statistics": {
       "walls": 17,
@@ -315,7 +318,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "9c17ffd590638860be2447f6f71ae20b879e4b8eeca36cef8f8baeb13bab5590",
+    "modelHash": "d05c0387d88a2d182f1117b3f68186c1963e5a9e5025c2330b0cf58ec3fd4737",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -377,6 +380,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000555-1.json",
     "statistics": {
       "walls": 19,
@@ -391,7 +395,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "3e2a251e14ccd23892dcb99feac4ee8794c5f8577f3fd1ffa8dc6472243210fc",
+    "modelHash": "24d41fb5df6bad6fe70dd6cac5d6b88550bd218d42f53db6978c19ff7447c50c",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -453,6 +457,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000555-2.json",
     "statistics": {
       "walls": 19,
@@ -467,7 +472,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "558121586555487d9efa32612b3984aff5e15bb0d00ef537550fdf4202b82046",
+    "modelHash": "e97baea40196d4eaf0c38ac266c0394ada5dc43e8bff230375f83b065e73b51a",
     "radio": {
       "file": "generated/radio-20000555.json",
       "count": 48,
@@ -529,6 +534,7 @@
       },
       "modelPolicy": "non-plan-drawing"
     },
+    "parkingRouting": false,
     "modelFile": "generated/10002143-0.json",
     "statistics": {
       "walls": 0,
@@ -543,7 +549,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "093adef8d7d047b7e3813b10440ef580d4e3cd90333811f7dd1481c56ec2c4da",
+    "modelHash": "d89367f1191b2710b37723c72bc36e68788e8ec4d2b856c346da6e61f1dca2ff",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -605,6 +611,7 @@
       },
       "modelPolicy": "non-plan-drawing"
     },
+    "parkingRouting": false,
     "modelFile": "generated/10002143-1.json",
     "statistics": {
       "walls": 0,
@@ -619,7 +626,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "0cdf2733860962978ba9ef95ae8d6dcf8702bba64cc304616e00d3a0860c7d6f",
+    "modelHash": "8dbad9b4f8d0f358b07263f45e20a57c507390119820a0996eb70066cf863e81",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -681,6 +688,7 @@
       },
       "modelPolicy": "non-plan-drawing"
     },
+    "parkingRouting": false,
     "modelFile": "generated/10002143-2.json",
     "statistics": {
       "walls": 0,
@@ -695,7 +703,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f3c82365132fca37460bca7776a916251a10cda33061ddf2df2cd309ec4968d9",
+    "modelHash": "4175840eb9e7a17b5be6159efaea0210d113a5a7bdf6cb8877df6358aefe71a1",
     "radio": {
       "file": "generated/radio-10002143.json",
       "count": 48,
@@ -779,6 +787,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-159344-0.json",
     "statistics": {
       "walls": 109,
@@ -793,7 +802,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "a6ca641289e34c352b2cdf7eb3ed86bc0b4dc94baca8cb06aeb6c2e064737cff",
+    "modelHash": "8002b64a6b861ec75909af8b9bd72221842149af665bcb7644ee505287033907",
     "radio": {
       "file": "generated/radio-parking-159344.json",
       "count": 48,
@@ -862,6 +871,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/multilevel-dogok-0.json",
     "statistics": {
       "walls": 143,
@@ -876,7 +886,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "74984e8b66823d6658c36aa446b88c0bacd70d937d1c04e1630b083f8e41cea9",
+    "modelHash": "834ea3badc77e301c6672bbe67e7e9762691cb0ccb48a52d3c2fe8154a583e92",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -945,6 +955,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/multilevel-dogok-1.json",
     "statistics": {
       "walls": 154,
@@ -959,7 +970,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "1d9002f425552b7f432143a2f1d03ef81f9619f9225b604171ab93595f2162f4",
+    "modelHash": "b5ae65098a2933c023c8328c9bbe8c9fd7958bfebce64b4bf389563eb5039e79",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -1028,6 +1039,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/multilevel-dogok-2.json",
     "statistics": {
       "walls": 146,
@@ -1042,7 +1054,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "8e004ba1076cba5de44753f6b8de8607f20832a29d732330b2e9aa21ee54cff4",
+    "modelHash": "c5be65585a9e94e81c33c988eb460a7a85ce33017e8dd931afbab91fc1aec853",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -1111,6 +1123,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/multilevel-dogok-3.json",
     "statistics": {
       "walls": 155,
@@ -1125,7 +1138,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "1ee97c5cc88bd253948e1e86196469f47ca1d2ad569b665941b8daaf8d2b26b3",
+    "modelHash": "3c5700413aa04871fb4fbb1d98f8dc47211ae63f13909300a4af6051cbc38df8",
     "radio": {
       "file": "generated/radio-multilevel-dogok.json",
       "count": 48,
@@ -1187,6 +1200,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000367-0.json",
     "statistics": {
       "walls": 21,
@@ -1201,7 +1215,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "b9b7205caa58075c6d6efe384913ddf992cd0230da1ad95b0d3c611c26ecac5f",
+    "modelHash": "153b8fc3e1f2435fe6516753a8c4e85910f98d113f4e46413c7d8cec09a56c16",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1263,6 +1277,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000367-1.json",
     "statistics": {
       "walls": 13,
@@ -1277,7 +1292,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "4f288a1fcd355bd2b46479e4a45c948db72d4c6d147910373df45ada9e196c02",
+    "modelHash": "e2791c5ff4ef8cc0d65aea30850d0eb031ec98efe17e925f17c52d27d4f0ecc4",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1339,6 +1354,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000367-2.json",
     "statistics": {
       "walls": 22,
@@ -1353,7 +1369,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "c9ff4877f95be1b80088a281494621ac1b6500400ff812836c02df735fc7d139",
+    "modelHash": "a13818229c3607ae1a9d4a233c8305662b89ce21ee34635045df4048469ec8ea",
     "radio": {
       "file": "generated/radio-20000367.json",
       "count": 48,
@@ -1415,6 +1431,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000474-0.json",
     "statistics": {
       "walls": 117,
@@ -1429,7 +1446,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "6825614c2fb3d78ea132c6cf710f91f91301d7ca4a16387819ba709f508a70fc",
+    "modelHash": "3f1750fd1c5f4867a08d46a11fb9012e7816dfcce693f97a3027b54b1578819d",
     "radio": {
       "file": "generated/radio-20000474.json",
       "count": 48,
@@ -1491,6 +1508,7 @@
       },
       "modelPolicy": "non-plan-drawing"
     },
+    "parkingRouting": false,
     "modelFile": "generated/10000921-0.json",
     "statistics": {
       "walls": 0,
@@ -1505,7 +1523,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "19765f0b513b05b65b9e4402d74b5da29423cee14ea0fb814c663db2487e75df",
+    "modelHash": "f1ab3d6393c507748bf85ab63adefaffe9540f4371eab3b8deae5c34897cd55a",
     "radio": {
       "file": "generated/radio-10000921.json",
       "count": 48,
@@ -1567,6 +1585,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000441-0.json",
     "statistics": {
       "walls": 99,
@@ -1581,7 +1600,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "0c46202f78ae6ed9a0d8cf442863e2843d3919d9660df4a2e1753bf67c91e541",
+    "modelHash": "a4b47c5889efb33deac1ef19e02512595e672eaa00c928ea46473b83824e1ae7",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1643,6 +1662,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000441-1.json",
     "statistics": {
       "walls": 64,
@@ -1657,7 +1677,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "ba2d8617ac0444b47633c0a7b25d140f105ba80a0af1a943bf52f548fcafb972",
+    "modelHash": "e2df101118b413613620adb62584c856ffd21591f37b52b48e570002e8b3badc",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1719,6 +1739,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000441-2.json",
     "statistics": {
       "walls": 80,
@@ -1733,7 +1754,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "a5974f058ea542203d26805368df032482641eaf0ef6a686e9ffe3f52f45641f",
+    "modelHash": "1ca0713d5c36c62ea5671dd48e8a2a04fe13174c93cb2cf457f62d4d69a40399",
     "radio": {
       "file": "generated/radio-20000441.json",
       "count": 48,
@@ -1795,6 +1816,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000536-0.json",
     "statistics": {
       "walls": 45,
@@ -1809,7 +1831,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "0fa83c40695c78788f1cf8051e894f4cb87fca0bf4c5938e5d849e1d59bb550a",
+    "modelHash": "cd34d143f2a51f7d39909b102bfb79594273f9faa0ccf03eef19d78bcc731108",
     "radio": {
       "file": "generated/radio-20000536.json",
       "count": 48,
@@ -1871,6 +1893,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000536-1.json",
     "statistics": {
       "walls": 45,
@@ -1885,7 +1908,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "e42484ec169c298565b8229720ebc7eb38a9b90eb63ea92fb3c98387ce04c4c1",
+    "modelHash": "60920c1d4a237bd36fa162e704c3efbc0f4e0f322e4abb8f7d0b8546d1319de1",
     "radio": {
       "file": "generated/radio-20000536.json",
       "count": 48,
@@ -1947,6 +1970,7 @@
       },
       "modelPolicy": "non-plan-drawing"
     },
+    "parkingRouting": false,
     "modelFile": "generated/10002042-0.json",
     "statistics": {
       "walls": 0,
@@ -1961,7 +1985,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "eb89f08e69c57c9ed2373183c5426fdd731347dd449e9af2398032c7f9030ce3",
+    "modelHash": "62629b8fd8f0298725cce096c4d4549f568b1ede701b9e12c7fd7424de5af960",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -2023,6 +2047,7 @@
       },
       "modelPolicy": "non-plan-drawing"
     },
+    "parkingRouting": false,
     "modelFile": "generated/10002042-1.json",
     "statistics": {
       "walls": 0,
@@ -2037,7 +2062,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "98bb360b888a47cdc0c3dd9212e87e85931b8f0cb51f1afa6948e86c8631b91a",
+    "modelHash": "af6be3a0a1eee7b04ae678d65ef9a0e4a5c56bba0a75dbcb724836bd97b17c35",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -2099,6 +2124,7 @@
       },
       "modelPolicy": "non-plan-drawing"
     },
+    "parkingRouting": false,
     "modelFile": "generated/10002042-2.json",
     "statistics": {
       "walls": 0,
@@ -2113,7 +2139,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "1593e7a422978145d37ea7c095e6e74e82c750973c1e649692a575c2511a48b1",
+    "modelHash": "5b9e8f0164c728252917a5dbaea8c7f46d6208889d939091a8bc77c7249b037a",
     "radio": {
       "file": "generated/radio-10002042.json",
       "count": 48,
@@ -2175,6 +2201,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000570-0.json",
     "statistics": {
       "walls": 36,
@@ -2189,7 +2216,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "98c0ecab0f6d15079c5d0231e67d00e3e079a872cc6471ca63802dde86f1ed79",
+    "modelHash": "eff2398dcaf6657e1a0fee437c305e64d373257e4c09d4962dc59918593e5e14",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -2251,6 +2278,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000570-1.json",
     "statistics": {
       "walls": 52,
@@ -2265,7 +2293,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "d3e824efde868364d7cd451070e5b166dd0bd7e5ee57f2104e7daedf35750032",
+    "modelHash": "05e43a1ac05e5141aba2d33adb6fd85cfb2e30f923cd5f0f66e46685d89460be",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -2327,6 +2355,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/20000570-2.json",
     "statistics": {
       "walls": 59,
@@ -2341,7 +2370,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "9125dc325307960b6b081cfb57881ffa568e2bd4209626c0e260fe3f94ed9899",
+    "modelHash": "940acf4ab9941188d1bffb6d2146c5331ad9fe685617f7df08b537ac18225db0",
     "radio": {
       "file": "generated/radio-20000570.json",
       "count": 48,
@@ -2425,6 +2454,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-139632-0.json",
     "statistics": {
       "walls": 37,
@@ -2439,7 +2469,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "23456fb9da2b8af4f7a48752b17e384632ee314f821ae92b2b22603f3f43f303",
+    "modelHash": "fcb71216a26ce4d0e0a4e18120348cacf42cd85267f25cd50ed5c86d4a76637c",
     "radio": {
       "file": "generated/radio-parking-139632.json",
       "count": 48,
@@ -2523,6 +2553,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-27446-0.json",
     "statistics": {
       "walls": 12,
@@ -2537,7 +2568,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "38b78fb0e4b343babdefdd61a09e722d726b876d6f32617ccd51ace104bff2b4",
+    "modelHash": "d33a3f698aa1c87730857c738c77af923362ebbf1ee17b7f8b4ba4a6dab70eb8",
     "radio": {
       "file": "generated/radio-parking-27446.json",
       "count": 48,
@@ -2623,6 +2654,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-65955-0.json",
     "statistics": {
       "walls": 216,
@@ -2637,7 +2669,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "1514eba207b2536d7c9026bc5a2138cb6f8b759f1dd7c8f552e063d569300a78",
+    "modelHash": "d725646c63cc4ff5105b3070ab524d1cae24c179c4d9449c91e318f3adcf55c0",
     "radio": {
       "file": "generated/radio-parking-65955.json",
       "count": 48,
@@ -2721,6 +2753,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-57413-0.json",
     "statistics": {
       "walls": 197,
@@ -2735,7 +2768,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "32b5744109c573608efc27897b30f7a3854bab834249d69de126746840e2ce75",
+    "modelHash": "211c3c3c5af3e40372131ada41ab2ee61d49ab823481a16fba15ec7c55ee0d6d",
     "radio": {
       "file": "generated/radio-parking-57413.json",
       "count": 48,
@@ -2819,6 +2852,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-63653-0.json",
     "statistics": {
       "walls": 61,
@@ -2833,7 +2867,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "7fe49847c431817dbf1ceff57d22f8f735281cfbbcfccb47ee78dc4befd01bff",
+    "modelHash": "8d4efb004ade04b624802e68b096a56f4257549a2ba47c413f1c6f58f0963d07",
     "radio": {
       "file": "generated/radio-parking-63653.json",
       "count": 48,
@@ -2917,6 +2951,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-52328-0.json",
     "statistics": {
       "walls": 31,
@@ -2931,7 +2966,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "7143e4a7037e73dafb0dbbc178056fedc1e94b3bdb22890e878f26008b08b633",
+    "modelHash": "bfc2acd93b306eea771d25903ecb073bb0d97b1dd265a69d7f313aad2cd8fb64",
     "radio": {
       "file": "generated/radio-parking-52328.json",
       "count": 48,
@@ -3015,6 +3050,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-49698-0.json",
     "statistics": {
       "walls": 49,
@@ -3029,7 +3065,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "dc1ae6589c7af2103672a2a0a2b744684205cb0cb67857f8d6d20282e173b155",
+    "modelHash": "162b3f28e3cc64c1ccc77a536ae6c5ddcf5addcc3f6d5786998f79ad9163dbb5",
     "radio": {
       "file": "generated/radio-parking-49698.json",
       "count": 48,
@@ -3113,6 +3149,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-43658-0.json",
     "statistics": {
       "walls": 113,
@@ -3127,7 +3164,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f9c7f55b9a85297d5c7f184decfb03a599016206cebe712963b976839382eeae",
+    "modelHash": "3b4cfe41f8eb5eb2793bd9e4435241c906e4ea8afde6550484b283ab8c8b4444",
     "radio": {
       "file": "generated/radio-parking-43658.json",
       "count": 48,
@@ -3211,6 +3248,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-45519-0.json",
     "statistics": {
       "walls": 52,
@@ -3225,7 +3263,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "331008cf377ea89948b85ef5d0edd3b8894685bc2ab86ba18a7a75db18437c04",
+    "modelHash": "48337f48ad18c43812a0471ad2ece3d45dbd28088babfee32c7a10fcf926c28b",
     "radio": {
       "file": "generated/radio-parking-45519.json",
       "count": 48,
@@ -3309,6 +3347,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-39327-0.json",
     "statistics": {
       "walls": 86,
@@ -3323,7 +3362,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "4f29862a528d1edfb0c2daf3e9dc0a9adae6e6831feff44b79a5be24812435f3",
+    "modelHash": "ea483e47f504ead1ec3691856de1099153f683919160f56d12d4ff21d7a8fddf",
     "radio": {
       "file": "generated/radio-parking-39327.json",
       "count": 48,
@@ -3407,6 +3446,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-35314-0.json",
     "statistics": {
       "walls": 15,
@@ -3421,7 +3461,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "cda3777c38f0328239bb528a78a27ca2949f72563c83e47e63941a712d6d3a1f",
+    "modelHash": "756c63aaa06b0a19c76131b338758ffcb87f575f73dad4d68291a68bc5d683d8",
     "radio": {
       "file": "generated/radio-parking-35314.json",
       "count": 48,
@@ -3505,6 +3545,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-146002-0.json",
     "statistics": {
       "walls": 114,
@@ -3519,7 +3560,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "d0824675387a9ea0d47b1a812a650b6a40a44554faa3416a40a8177031bbdc66",
+    "modelHash": "e01bd3a0f953cc867c4371b443c0fd2c8f332dcd83488c53278690bcc6fbd1a7",
     "radio": {
       "file": "generated/radio-parking-146002.json",
       "count": 48,
@@ -3603,6 +3644,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-7128-0.json",
     "statistics": {
       "walls": 40,
@@ -3617,7 +3659,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "916aaad863a8efeae1e3d0ed8e412842f60614197666cfa9da3c0176a73ef1bb",
+    "modelHash": "d8546584f6b148cbfcf733bd5cf5f7c3df8eaef37f86f81fdb76565728ec29f1",
     "radio": {
       "file": "generated/radio-parking-7128.json",
       "count": 48,
@@ -3701,6 +3743,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-15333-0.json",
     "statistics": {
       "walls": 141,
@@ -3715,7 +3758,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "4fb9b994b0d22a8a569cac5552938056d45bea57df503af2295ca1a015bdb85a",
+    "modelHash": "d9a90413d1b2a9aaa69100ea1abe6eaf6a03d0a15a5502ae1feb5d5c994b6a67",
     "radio": {
       "file": "generated/radio-parking-15333.json",
       "count": 48,
@@ -3818,11 +3861,12 @@
       },
       "modelPolicy": "reviewed-preserved"
     },
+    "parkingRouting": true,
     "modelFile": "generated/parking-168780-0.json",
     "statistics": {
       "walls": 48,
-      "nodes": 19,
-      "edges": 17,
+      "nodes": 35,
+      "edges": 33,
       "spaces": 31,
       "objects": 27,
       "accessible": 12,
@@ -3832,7 +3876,7 @@
       "matchedParking": 9
     },
     "routingReady": true,
-    "modelHash": "cc38ac9d7cfab485e71fa0a0edd6f87cc8d9ed0d08e6c19e3b9bcba05c0c9b33",
+    "modelHash": "36da8ce2c0436d1490d1cbda93c9d07837020ca6b6e4abe1e3b49ddd4ed83431",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -3937,6 +3981,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-168780-1.json",
     "statistics": {
       "walls": 149,
@@ -3951,7 +3996,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "5226e78b865787624f3267f29357baf0f45a7e522f73c1e4ff2d3cdb16174b21",
+    "modelHash": "1f480d40c84a94abbe42c98d63b66811a60053928296eefd770b0776cbd33e6d",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -4056,6 +4101,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-168780-2.json",
     "statistics": {
       "walls": 163,
@@ -4070,7 +4116,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "351311f3c7456e5c6543a9c6457c1e7d984b856b64f65fbb883f1753ccd8f828",
+    "modelHash": "8674670ffd82314bf5f083ed72163d4839484aaeb6077d9d489d1178420d2894",
     "radio": {
       "file": "generated/radio-parking-168780.json",
       "count": 48,
@@ -4154,6 +4200,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-146396-0.json",
     "statistics": {
       "walls": 62,
@@ -4168,7 +4215,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "2fedbc06fd42c942ddc2e92bf58e340285922cfff1f211cca8bb8ae71828ace8",
+    "modelHash": "633b32541537e6623ec61f0ec70e17d9124cc2452a812e340dce0e12e180718e",
     "radio": {
       "file": "generated/radio-parking-146396.json",
       "count": 21,
@@ -4252,6 +4299,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-143447-0.json",
     "statistics": {
       "walls": 135,
@@ -4266,7 +4314,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "09d151e2b352c638c5c15c8fa3038f58b8750e33255aa84c92a6b733ca47c183",
+    "modelHash": "c330c710b7c63097ee573178db6c9baf9dd024c8d0c1433e35ec930b1d907e03",
     "radio": {
       "file": "generated/radio-parking-143447.json",
       "count": 48,
@@ -4350,6 +4398,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-140714-0.json",
     "statistics": {
       "walls": 26,
@@ -4364,7 +4413,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "da25b69de382990be2cfc05106155b6ce89311844c1bb0143ce1344346d842bf",
+    "modelHash": "c22fc4271ace7ce24d2aa75f9c35457efaae028035ce09fffb38fe8715ff2ab1",
     "radio": {
       "file": "generated/radio-parking-140714.json",
       "count": 15,
@@ -4448,11 +4497,12 @@
       },
       "modelPolicy": "reviewed-preserved"
     },
+    "parkingRouting": true,
     "modelFile": "generated/parking-131601-0.json",
     "statistics": {
       "walls": 72,
-      "nodes": 52,
-      "edges": 51,
+      "nodes": 54,
+      "edges": 53,
       "spaces": 52,
       "objects": 47,
       "accessible": 2,
@@ -4462,7 +4512,7 @@
       "matchedParking": 50
     },
     "routingReady": true,
-    "modelHash": "24b77b66adb7daa53a096fa2426fceed5cbd7254da270d56752795b144f73034",
+    "modelHash": "d3abb59d577656e890f6cba95868c926f0b0d413e4d1e9b220cebde3fd41fa4b",
     "radio": {
       "file": "generated/radio-parking-131601.json",
       "count": 37,
@@ -4522,6 +4572,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-24500-0.json",
     "statistics": {
       "walls": 72,
@@ -4536,7 +4587,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "b22ff1581014500fde6bf0ddf01aa7ba9224f4e76c99e8c574a90ba423e4e500",
+    "modelHash": "c7f5d64aa5d040bfdde75b325297c35b5d4bc11e25464c2234c34382e9fca7be",
     "radio": {
       "file": "generated/radio-parking-24500.json",
       "count": 48,
@@ -4620,6 +4671,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-90014-0.json",
     "statistics": {
       "walls": 186,
@@ -4634,7 +4686,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "ff1feef0b0a6572c377ed83de1d858517c74eca4ee1ab4106693e7f94ffc5670",
+    "modelHash": "ad46c3938cd2e50e5d2c223b52d8c9a4681fe0c71551e2b09bc492c598ebd1d7",
     "radio": {
       "file": "generated/radio-parking-90014.json",
       "count": 48,
@@ -4718,6 +4770,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-89845-0.json",
     "statistics": {
       "walls": 97,
@@ -4732,7 +4785,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "520929d1889b194ebca164f07a6bb168d84df28161e8e1864ed6c6b3a0387d31",
+    "modelHash": "3a7add1fbe9da9379b91ba87957fe9f11752f7076c59ab93f66cdd1db10110b2",
     "radio": {
       "file": "generated/radio-parking-89845.json",
       "count": 32,
@@ -4816,6 +4869,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-68790-0.json",
     "statistics": {
       "walls": 64,
@@ -4830,7 +4884,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "3712169aa52ea7c4ee52397b1fcaaf87e48c1b07946dc37a27a3ff299d54bbd5",
+    "modelHash": "460e5104e8f624d522789dc4702cb095944c32a8fa99b42fd5d4665a25066eb6",
     "radio": {
       "file": "generated/radio-parking-68790.json",
       "count": 48,
@@ -4914,6 +4968,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-56837-0.json",
     "statistics": {
       "walls": 104,
@@ -4928,7 +4983,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "9719b59327b8d13d91e5dcca146a16f26d99f9f127f08f7db80530ff095765cd",
+    "modelHash": "655f4e798ca84156b73e857a8f59076f3ad1059c4d2ee596c27ac630e71ea7da",
     "radio": {
       "file": "generated/radio-parking-56837.json",
       "count": 48,
@@ -5012,6 +5067,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-52390-0.json",
     "statistics": {
       "walls": 43,
@@ -5026,7 +5082,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "168614be667dfb1addd02b1feba5b3731e674245bae9cfa3f01e73ea5dfbcc2e",
+    "modelHash": "1c4768dd5c17b789d07bdcc507c21815f85f2eda8c8efbd22bf76b7510fe12f5",
     "radio": {
       "file": "generated/radio-parking-52390.json",
       "count": 48,
@@ -5110,6 +5166,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-47946-0.json",
     "statistics": {
       "walls": 90,
@@ -5124,7 +5181,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "f938348da040ecaedcbf14f8cb2b3e350d3cf4bce56c0e3839a91746bcee656c",
+    "modelHash": "4e16237b471e03376d159fbf4a53dd7dc9476a5245dc0059fe9d6c110a8052a7",
     "radio": {
       "file": "generated/radio-parking-47946.json",
       "count": 48,
@@ -5210,6 +5267,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-46541-0.json",
     "statistics": {
       "walls": 72,
@@ -5224,7 +5282,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "91496a88fc66139399dbe838b3f5147e96248e29c77886054d23a1f72953fc20",
+    "modelHash": "4be343a4cd1304a0add0ab2c98bc4015c2021770cb59157f164224397da61dae",
     "radio": {
       "file": "generated/radio-parking-46541.json",
       "count": 48,
@@ -5308,6 +5366,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-42450-0.json",
     "statistics": {
       "walls": 107,
@@ -5322,7 +5381,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "132b2d5de3e803396f40538f511a17022b508b361003199219685039727eb4e8",
+    "modelHash": "6d3902ccfe1a61815b5420b91bfccfc68cf36deae20c6a0fbb6318e0a88f1a40",
     "radio": {
       "file": "generated/radio-parking-42450.json",
       "count": 48,
@@ -5406,6 +5465,7 @@
       },
       "modelPolicy": "automatic-structural-strokes"
     },
+    "parkingRouting": false,
     "modelFile": "generated/parking-170036-0.json",
     "statistics": {
       "walls": 47,
@@ -5420,7 +5480,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "2e7a5005f93f2afb836907f6e14914d21c0214d78b0cfca34b4d92f990fe17ca",
+    "modelHash": "74c2382bcd4cca330f1e6abaf114121f21a621f0e94df124b92d27fce6132a8a",
     "radio": {
       "file": "generated/radio-parking-170036.json",
       "count": 48,
@@ -5476,6 +5536,7 @@
       },
       "modelPolicy": "context-map"
     },
+    "parkingRouting": false,
     "modelFile": "generated/complex-onepentas-0.json",
     "statistics": {
       "walls": 0,
@@ -5490,7 +5551,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "4f9ed36e3b7c7740324474ad3029c2159f2d152cb961a6f4b1be54ec3e962dcd",
+    "modelHash": "53670b3082b167da8b0ed0292de6382dac7ab379bf528059e3032e65538b34e2",
     "radio": {
       "file": "generated/radio-complex-onepentas.json",
       "count": 48,
@@ -5566,6 +5627,7 @@
       },
       "modelPolicy": "context-map"
     },
+    "parkingRouting": false,
     "modelFile": "generated/park-boramae.json",
     "statistics": {
       "walls": 0,
@@ -5580,7 +5642,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "bc3c2a5c78fed89c79fc0962675e254836a363277ac25f28bf37799417b35015",
+    "modelHash": "e846e1ed5529bbfc6f81329b8ae1701d883a63f934561417d78c3acf20f6faee",
     "radio": {
       "file": "generated/radio-park-boramae.json",
       "count": 48,
@@ -5656,6 +5718,7 @@
       },
       "modelPolicy": "context-map"
     },
+    "parkingRouting": false,
     "modelFile": "generated/park-seoul-forest.json",
     "statistics": {
       "walls": 0,
@@ -5670,7 +5733,7 @@
       "matchedParking": 0
     },
     "routingReady": false,
-    "modelHash": "0e5918cb545e2dadea7a9e8e9d0e766b6ccd9c26ac3ffe44eb4ce198e2ead87f",
+    "modelHash": "4f7ccea1a4690526bea27cdcd7ff400d13699efca20db13be01c2c6ca68ec031",
     "radio": {
       "file": "generated/radio-park-seoul-forest.json",
       "count": 48,
@@ -5688,6 +5751,7 @@
     },
     "annotation": "sources/integration-lab.svg",
     "synthetic": true,
+    "parkingRouting": true,
     "modelFile": "generated/integration-lab.json",
     "statistics": {
       "walls": 0,
@@ -5702,7 +5766,7 @@
       "matchedParking": 0
     },
     "routingReady": true,
-    "modelHash": "477a7a0e5e1a98fd53849d03faae522319ec584c2232ef7b715961ea78cc8b92"
+    "modelHash": "7d28bf4204d46e86fea3d8d98ef62c5d1c16c3f56350d1e2667d6b8f407d20ab"
   },
   {
     "id": "multilevel-lab",
@@ -5712,6 +5776,7 @@
       "file": "sources/multilevel-lab.svg"
     },
     "synthetic": true,
+    "parkingRouting": true,
     "modelFile": "generated/multilevel-lab.json",
     "statistics": {
       "walls": 0,
@@ -5726,6 +5791,6 @@
       "matchedParking": 0
     },
     "routingReady": true,
-    "modelHash": "f7c50cf4da7e80981cdebaf3053f6c6d2697361d5e8e50b7a7bb8c59866936c2"
+    "modelHash": "26beb64cfee72ce9e2426aee0adfa7cfcfd2a6753a0ec0403df028e992f9f27e"
   }
 ]

@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {dampHeading} from '../core/camera.js';
+import {driverView} from '../core/driving.js';
 import {localPosition} from '../core/geometry.js';
 import {surfaceMaterial,worldUV} from './materials.js';
 import {parkedCar,accessibleMark,semanticObject} from './objects.js';
@@ -55,8 +56,8 @@ export class TwinScene {
     this.scene.add(new THREE.HemisphereLight('#fffff4','#708575',2.6));const sun=new THREE.DirectionalLight('#fff3d8',3.2);sun.position.set(-60,150,80);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-120,right:120,top:120,bottom:-120,near:1,far:400});sun.shadow.bias=-.0004;this.scene.add(sun);
     this.world=new THREE.Group();this.routeGroup=new THREE.Group();this.hazardGroup=new THREE.Group();this.chargingGroup=new THREE.Group();this.textGroup=new THREE.Group();this.detectedGroup=new THREE.Group();this.scene.add(this.world,this.routeGroup,this.hazardGroup,this.chargingGroup,this.textGroup,this.detectedGroup);this.finishes={floor:'concrete',wall:'paint',column:'concrete',stairs:'concrete'};this.showCars=true;
     this.actor=new THREE.Group();this.scene.add(this.actor);this.view='orbit';this.heading=0;this.pose={x:0,z:0,heading:0};this.mode='car';
-    this.resize=()=>{const {width,height}=canvas.getBoundingClientRect();if(!width||!height)return;this.camera.aspect=width/height;this.camera.setViewOffset(width,height,width>760&&this.world?.userData.mode==='plan'?Math.min(150,width*.17):0,0,width,height);this.camera.updateProjectionMatrix();this.renderer.setSize(width,height,false);};this.observer=new ResizeObserver(this.resize);this.observer.observe(canvas);
-    let previous=performance.now();this.renderer.setAnimationLoop(now=>{const dt=Math.min(.1,(now-previous)/1000);previous=now;if(document.hidden)return;onFrame(dt);this.follow(dt);this.controls.update();this.renderer.render(this.scene,this.camera);canvas.dataset.ready='true';});
+    this.resize=()=>{const {width,height}=canvas.getBoundingClientRect();if(!width||!height)return;this.camera.aspect=width/height;this.camera.setViewOffset(width,height,width>760&&this.view==='orbit'&&this.world?.userData.mode==='plan'?Math.min(150,width*.17):0,0,width,height);this.camera.updateProjectionMatrix();this.renderer.setSize(width,height,false);};this.observer=new ResizeObserver(this.resize);this.observer.observe(canvas);
+    let previous=performance.now();this.renderer.setAnimationLoop(now=>{const dt=Math.min(.1,(now-previous)/1000);previous=now;if(document.hidden)return;onFrame(dt);this.follow(dt);if(this.view==='orbit')this.controls.update();this.renderer.render(this.scene,this.camera);canvas.dataset.ready='true';});
   }
   clear(){this.sourceOverlay=null;this.floorView='all';dispose(this.world);dispose(this.routeGroup);dispose(this.hazardGroup);dispose(this.chargingGroup);dispose(this.textGroup);dispose(this.detectedGroup);this.actor.visible=false;this.view='orbit';this.controls.enabled=true;this.canvas.dataset.ready='false';}
   frame(width,depth){this.resize();const max=Math.max(width,depth),vertical=max/Math.min(1,this.camera.aspect);this.controls.target.set(0,0,0);this.camera.position.set(max*.62,vertical,vertical*1.18);this.controls.minDistance=5;this.controls.maxDistance=max*4;this.controls.update();}
@@ -100,12 +101,27 @@ export class TwinScene {
         box(this.actor,1.85,.68,4.35,'#f3eee0',0,.65);box(this.actor,1.55,.67,2.25,'#466c6c',0,1.28,-.1);box(this.actor,1.48,.1,1.75,'#dce6dc',0,1.65,-.1);
         for(const x of [-.97,.97])for(const z of [-1.32,1.3]){const wheel=new THREE.Mesh(new THREE.CylinderGeometry(.36,.36,.2,16),new THREE.MeshStandardMaterial({color:'#283633'}));wheel.rotation.z=Math.PI/2;wheel.position.set(x,.38,z);this.actor.add(wheel);}
         box(this.actor,1.4,.12,.05,'#efad65',0,.7,2.19);
+        for(const x of [-.79,.79])for(const z of [-2.2,2.2]){const lamp=box(this.actor,.24,.17,.08,'#633e18',x,.77,z);lamp.userData.indicator=x>0?'left':'right';}
       }else{const body=new THREE.Mesh(new THREE.CapsuleGeometry(.24,.65,4,12),new THREE.MeshStandardMaterial({color:'#d8955c'}));body.position.y=.88;this.actor.add(body);const head=new THREE.Mesh(new THREE.SphereGeometry(.19,16,12),new THREE.MeshStandardMaterial({color:'#eed8b8'}));head.position.y=1.6;this.actor.add(head);for(const x of [-.14,.14])box(this.actor,.18,.6,.2,'#496158',x,.3,0);}
     }
     this.actor.scale.set(mode==='car'?(this.vehicle?.width||1.9)/2.14:1,mode==='car'?(this.vehicle?.height||1.8)/1.7:1,mode==='car'?(this.vehicle?.length||4.6)/4.39:1);this.actor.visible=true;this.actor.position.set(pose.x,pose.y||0,pose.z);this.actor.rotation.set(-(pose.pitch||0),pose.heading||0,0,'YXZ');this.actor.userData.gear=pose.gear||1;
   }
-  setView(view){this.view=view;this.controls.enabled=view==='orbit';this.actor.traverse(o=>{if(o.isMesh)o.visible=view!=='first';});if(view==='orbit'&&this.plan)this.frame(this.plan.width,this.plan.depth);}
-  follow(dt){if(this.view==='orbit'||!this.actor.visible)return;this.heading=dampHeading(this.heading,this.pose.heading||0,dt);const sin=Math.sin(this.heading),cos=Math.cos(this.heading),p=this.actor.position;const first=this.view==='first';this.actor.visible=!first;const y=this.mode==='car'?1.4:1.65;this.camera.position.set(p.x-sin*(first?0:9),p.y+(first?y:6),p.z-cos*(first?0:9));this.camera.lookAt(p.x+sin*10,p.y+(first?y:1),p.z+cos*10);this.actor.visible=true;this.actor.traverse(o=>{if(o.isMesh)o.visible=!first;});}
+  setView(view){this.scene.traverse(o=>{if(!o.isSprite)return;o.userData.overviewScale||=o.scale.clone();o.scale.copy(o.userData.overviewScale).multiplyScalar(view==='first'?.14:1);o.material.depthTest=view==='first';});this.view=view;this.heading=this.pose.heading||0;this.resize();this.controls.enabled=view==='orbit';this.actor.traverse(o=>{if(o.isMesh)o.visible=view!=='first';});if(view==='orbit'&&this.plan)this.frame(this.plan.width,this.plan.depth);}
+  follow(dt){
+    if(this.view==='orbit'||!this.actor.visible)return;
+    if(this.view==='first'){
+      const view=driverView(this.pose);this.heading=this.pose.heading||0;
+      this.camera.position.set(view.position.x,view.position.y,view.position.z);this.camera.lookAt(view.target.x,view.target.y,view.target.z);
+    }else{
+      this.heading=dampHeading(this.heading,this.pose.heading||0,dt);const sin=Math.sin(this.heading),cos=Math.cos(this.heading),p=this.actor.position;
+      this.camera.position.set(p.x-sin*9,p.y+6,p.z-cos*9);this.camera.lookAt(p.x+sin*10,p.y+1,p.z+cos*10);
+    }
+    this.actor.traverse(o=>{if(o.isMesh)o.visible=this.view!=='first';});
+  }
+  setIndicators(signal,lit){
+    this.actor.userData.signal=signal;this.actor.userData.signalLit=lit;
+    this.actor.traverse(o=>{if(!o.userData.indicator)return;const active=lit&&o.userData.indicator===signal;o.material.color.set(active?'#ffb428':'#633e18');o.material.emissive.set(active?'#ff9400':'#000000');o.material.emissiveIntensity=active?2:0;});
+  }
   setFloor(value){
     this.floorView=value;
     this.world.children.forEach(o=>{const y=o.userData.floorY??o.position.y;const kind=o.userData.kind;o.visible=value==='all'||['ramp','stairs','ramp-sign','stairs-sign'].includes(kind)||Math.abs(y-Number(value))<2.5;if(kind==='parked-car')o.visible=o.visible&&this.showCars&&o.userData.spaceId!==this.parkingTarget;});

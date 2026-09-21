@@ -46,7 +46,7 @@ export function daecheonSvg(){
  tags.push('<circle id="entry-east" data-kind="target" data-role="entrance" data-label="동측 주차 차로 진입" cx="1920" cy="298.5"/>','<circle id="entry-west" data-kind="target" data-role="entrance" data-label="서측 주차 차로 진입" cx="70" cy="298.5"/>');
  for(const s of daecheonBays()){
   tags.push(`<rect id="${s.id}" data-kind="space" data-role="parking" data-label="${s.label}" data-accessible="${s.accessible}" x="${s.x-s.width/2}" y="${s.z-s.depth/2}" width="${s.width}" height="${s.depth}"/>`);
-  if(!s.accessible)tags.push(`<circle id="approach-${s.id}" data-kind="target" data-role="junction" data-label="${s.label} 앞 차로" cx="${s.id.startsWith('west')?70:s.x}" cy="${s.id.startsWith('west')?s.z:298.5}"/>`);
+  tags.push(`<circle id="approach-${s.id}" data-kind="target" data-role="junction" data-label="${s.label} 앞 차로" cx="${s.id.startsWith('west')?70:s.x}" cy="${s.id.startsWith('west')?s.z:298.5}"/>`);
  }
  return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2000 1513" data-meters-per-unit="${DAE_SCALE}" data-source-kind="source-traced" data-name="대천항 · 벽체와 주차 차로 분석">${tags.join('\n')}</svg>\n`;
 }
