@@ -9,3 +9,12 @@
 - 통합 홈페이지 주소를 변경하려면 빌드 시 `NEXT_PUBLIC_PROJECT_HOME_URL`을 설정합니다. 변경 후 `npm run build`가 필요합니다.
 
 검증: `npm test`, `npm run lint`, `npm run build`, `npm run test:e2e -- --config=playwright.science.config.ts`.
+
+## 피트 스톱 입장
+
+- 통합 메인의 배터리 항목은 `battery_health/attraction.json`을 읽어 `http://localhost:3000/?intro=pitstop`으로 진입합니다. Next.js 배터리 앱은 루트에서 `npm run build` 후 `npm run demo -- --port 3000`으로 실행합니다.
+- `intro=pitstop`이 있을 때만 약 6.8초 동안 주행 → 피트 진입 → 정비 → 대시보드 전환을 WebGL로 연출합니다. 처음 렌더링을 기다린 뒤 재생하며, WebGL을 사용할 수 없으면 최대 10초 후 화면을 복원합니다.
+- 주행·저음 배기·정비 소리는 외부 음원 없이 Web Audio로 합성한 연출입니다. 브라우저가 자동 재생을 막으면 **소리 켜기** 버튼을 눌러야 들립니다. 실제 선택 차량의 녹음이나 진단음은 아닙니다.
+- 건너뛰기와 Escape로 즉시 종료할 수 있습니다. 종료 시 오디오·애니메이션을 정리하고 스크롤 및 대시보드 조작을 복원합니다. 배경 탭에서는 재생 시간과 소리를 멈추며 돌아온 뒤 소리는 사용자가 다시 켭니다.
+- 모션 줄이기 설정에서는 생략합니다. 입장 파라미터는 제거하므로 새로고침으로 반복 재생되지 않으며, 사용자 선택 파라미터는 유지합니다.
+- 피트 스톱 검증: `EVISION_TEST_PORT=3104 npm run test:e2e -- --config=playwright.science.config.ts tests/browser/pit-stop.spec.ts`. 다른 세션의 빌드가 진행 중이면 완료 후 실행합니다.
