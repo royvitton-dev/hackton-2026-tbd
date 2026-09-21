@@ -51,5 +51,3 @@ keeper는 `release-intent.json`을 먼저 보존하고 자신의 lock만 해제�
 [격리 검사8개](../evidence/20260921T144159354Z-quiet-keeper-abort-record-7f025b32/run.json)는 시간·실행 중PID·검사 오류·불완전 manifest·획득 전후 경쟁·다른 launcher 배제·해제 token·증거 파일·비정상 종료 기록·해제 후 기록 실패를 확인했다. [독립 최종 검토](../evidence/2026-09-21T14-43-09-909Z-quiet-keeper-final-review-4787ab8a/review.md)에서 이전 기록 정합성 지적을 해결했다. 실제 운영 데이터 lock 및 위 전체 진단 순서는 아직 실행하지 않았다.
 
 [실제 CLI 프로세스 검사2개](../evidence/2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d/README.md)는 별도 fixture root에 복사한 동일 소스로 정상 요청의 exit0·소유 잠금 해제, 잘못된 token의 exit1·marker 바이트 보존을 확인했다. 소유한 두 Node 프로세스는 실제 종료됐고 기존18개 프로세스와 시장 manifest는 유지됐다. 이 검사는 실제 거래소 lock에 접근하지 않았으며 신호·crash 또는 전체 aged/A/B/C 조율까지 검증했다는 뜻은 아니다.
-
-[00:36 읽기 전용 실행 전 대조](../evidence/2026-09-21T15-36-17-662Z-aged-preflight-readonly-review-c59f915b/review.md)에서 위 aged 인수와 바이너리 SHA를 확인했다. aged의 단계별 stdout/heartbeat는 없으므로 중간 출력이 없다는 이유만으로 정지했다고 판단하지 않는다. run.json의 passed는 자식 결과가 나온 시점이므로 **후속 sha256.json 완성과 전체 wrapper의 실제 exit0**까지 확인한다. 추가 디스크는 원본 일반 파일 합계D,genesis+journal합계GJ,두 전체Core출력F1/F2에 대해2D+GJ+F1+F2+부가파일이다. 최종 정상stop 뒤 크기를 재계산하며 과거678MB나 최소5GiB만으로 모든 크기에 충분하다고 가정하지 않는다.

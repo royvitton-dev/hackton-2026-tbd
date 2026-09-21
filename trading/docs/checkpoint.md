@@ -1,13 +1,13 @@
 # 작업 체크포인트
 
-갱신: 2026-09-22 00:15 KST. 마감: 2026-09-22 09:00 KST (약8시간45분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
+갱신: 2026-09-22 00:42 KST. 마감: 2026-09-22 09:00 KST (약8시간18분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 재개 시 우선 확인할 현재 상태
 
-- main 마지막 확인된 local/remote 커밋은 `5f532b82f228626c2edfb1f55aad2efce8c4d20b`(00:05). 완료된 후속 변경은 직접 main에 push한다. 별도 작업의 `park/vite.config.mjs`는 보존하고 stage하지 않는다.
+- main은 원격의추가4커밋을보존해 `4234490d8513cdb57779463f85efb92609e29062`로00:40fast-forward했고 이번모바일·안내·감사완료분을commit/push중이다. 완료된 후속 변경은 직접 main에 push한다. 별도 작업의 `park/vite.config.mjs`는 보존하고 stage하지 않는다.
 - 메인 시장은 엔진20540·UI4220·12봇으로 계속 관찰한다. 시장 manifest는 `data/demo-current.json`, 관찰 session20793/PID18184/helper15744, 보완 자원 수집 session90617/PID16840이다. 이전 엔진09bc의 장시간 기록이며 새65348c의 성능으로 표시하지 않는다.
-- 최근 주기 분석은00:03, 다음은00:33. 원 관찰은01:05:55, 보완 수집은01:06 종료 예정이다. 실제 실행 핸들과 PID 종료를 확인한 뒤 [정확한 후속 순서](quiet-window.md)에 따라 정상 stop·실제 exit → keeper → FULL 누적 복구 → A 3쌍 → B/C → keeper 해제 → ensure를 수행한다.
+- 최근 주기 분석은00:31, 다음은01:01. 원 관찰은01:05:55, 보완 수집은01:06 종료 예정이다. 실제 실행 핸들과 PID 종료를 확인한 뒤 [정확한 후속 순서](quiet-window.md)에 따라 정상 stop·실제 exit → keeper → FULL 누적 복구 → A 3쌍 → B/C → keeper 해제 → ensure를 수행한다.
 - 최신 엔진65348c·코어 벤치7cfd820a·복구 도구d2c8dd9e는 비교 측정까지 유지한다. keeper를 소유한 채 demo start/stop/ensure를 호출하지 않는다. 사용자 Park19312는 다시 시작하지 않는다.
 - 현재 남은 작업: 장시간 최종 분석·전체 누적 복구·최신 A/B/C·검증된 바이너리로 시연 재개·마감 검증과 인계. 무할당 목표 미달, 과거 자원 공백, 새 통합 Park 전체 시작의 미검증, Linux/Docker 및 실제 외부 배포 미실행을 유지한다.
 - `/trading/` production 부분은 [빌드·실제 브라우저 읽기 연결·새로고침](router-production-preview.md)을00:11에 검증했다. 임시 fixture19860/session99877은 actual exit0·부재 확인 후 종료 상태이며 전체 Park 시작의 대체 증거로 쓰지 않는다.
@@ -25,9 +25,9 @@
 
 ## 완료·담당
 - `/root`: 통합, 실제browser/dev+production QA, standby분석/관찰보강, API/저장소최신회귀,누적데이터복구,프로세스관리,문서/Git.
-- `/root/matching_core`: 매칭·정산·참조oracle·할당·큐 포화·진행 중 중복 제출 검증 완료. 최신 작업은 남은 할당 지도의 읽기 전용 분석이며23:55에 동결했다. 현재 서비스·빌드 작업 없음.
-- `/root/durability`: 저널·스냅샷·장애 복구·자원 산술·Cow 호환성 및 quiet keeper 독립 검토 완료. 현재 서비스·빌드 작업 없음.
-- `/root/frontend`: 독립UI·unknown 재시도·production/Vercel·실제 브라우저 이벤트 경합과5분 화면 독립 검토 완료. 최신 통합 라우터 문서 감사의 두 지적은 root 수정 후 해결됐으며, 현재 서비스·빌드 작업 없음.
+- `/root/matching_core`: 정확한crossbeam 버전·조건부mutex와 공개 완료 주문200개 범위의 읽기 전용 감사까지 완료·동결. 현재 서비스·빌드 작업 없음.
+- `/root/durability`: 예정된aged CLI/디스크/종료 경계의 읽기 전용 확인까지완료. 새 실행·빌드 없음,현재대기.
+- `/root/frontend`: 실제모바일원본독립검산,App.tsx안내2곳수정,기존format/protocol7/TypeScript/build까지완료. 엔진바이너리변경없음,현재대기.
 
 ## 최근 검증·정직한 한계
 - **20:24 WS 진단·정상종료 수정 통과:** [새진단문서](ws-diagnostics.md),releaseSHA95fa92425c8dad104cc9b2440c9c6bb00bd985d6d7f58e9dd65d4bf7df7fe781. peerClose뒤queuedreply를최대1초flush하여기존1006→실제1000·오류0확인. 종료원인구조로그에임의peer문구/token미포함. paused수신자의send_timeout/state를이번fixture에서확인했으며이전고부하1005원인은여전히미확정. 성공run `2026-09-21T11-23-36-419Z-ws-diagnostics-b338163c`:416ACK/416조회/16중복/정상289연속frames/자산예약검증/격리engine13996exit0·sampler8656정리. 기존행정shutdown클라이언트1006정책은유지했다.
@@ -271,3 +271,21 @@
 - 임시탭닫음15:11:35.284Z,fixture closed15:11:43.593Z/requested/socket0. 실제execsession99877 exit0/PID19860부재/기존18PID·BirthTicks/manifest997146/park-vite12E8보존. 현재18보호프로세스외새fixture실행없음. 데이터·기존시장재시작없음.
 - durability 읽기검토15-11-08...dc54dd21가진단도구rawURL/Origin로그지적. 최초source fcec6d7f...는fixture-as-run.mjs에보존/실제query0·GETHEAD외0. 종료후현재d904871d...로알려진pathname만·미등록표식·Origin존재boolean기록으로수정. node--check0,최종검토15-13-45...1cb75d07 P2해결. 로그변경뒤browser반복실행없고실행소스범위구분.
 - docs/router-production-preview.md와검증표업데이트. 이단위는새prefix production 실제검증/진단로그수정의progress다. 다음00:33주기관찰,01:06실제종료후quiet-window.md계획유지. 최신엔진/bench/aged바이너리동결,별도park-vite보존/4성장경로stage제외.
+
+## 00:17 통합 경로 preview main push 완료
+- 00:16:40 local/remote main SHA9538ff784896ed6dcd2ee269d7f923539b1fce0b 동일,43개trading-only파일620998bytes commit·push0·index empty. 근거 evidence/20260921T151635702Z-router-preview-main-push-c0f21c5a. compiled dist는로컬보존/Git제외,재현명령·자산해시·실제browser증거는추적.
+- 재확인SHA:engine65348c/corebench7cfd/agedd2c8/manifest997146/별도park-vite12E8 유지. fixture19860부재. root생성tab12는닫았고user탭유지. 3개agent 모두새작업완료. 이번goal turn은거래소production통합경로빌드·HTTP·브라우저검증및진단로그보완의progress,goal active.
+- 다음중간관찰00:33. 01:05:55/01:06에관찰session20793/PID18184/helper15744와보완session90617/PID16840의실제종료확인부터수행한다. quiet-window.md의정상stop/actualexit→keeper→FULLaged→A3쌍→B/C→해제→ensure순서와바이너리동결유지. 아직6시간최종pass아님/최신quiet성능미측정.
+
+## 00:36 모바일 실제 거래·독립 검산과5시간25분 중간 관찰
+- root actual mobile run15-20-59...f43f0001,390×844/탭13/user03:1P×1h 주문115979가bot05에실제로체결됐다(trade74196/seq133076). 당초rest가정실패보존. 별도두번째116413/seq133569를즉시UI취소seq133574하여예약0복귀. 최종999999P/1001h/주문2/체결1,총자산15000000P/15000h. 3durable lookup 및 최종reload요청tab의3고유UUID일치. 최초reload탭미유지원본도보존. 탭13닫음/viewport복원/기존시장재시작없음.
+- frontend 독립15-31-30...0ef65e58:원본32+source3SHA/이미지4개직접열람,계정산술·7치수표본·console빈배열·cleanup대조. JPG375×812는DOM390×844와구분,취소확정배너는캡처이미지밖DOM에서증명. root초기PowerShell검산은축약bodytext에서UUID검색해실패→실제code원문배열로수정후별도verify-artifacts.mjs0. 원본거래실패로보고하지않음.
+- matching_core 정확큐감사152249...7c8e0541:channel0.5.17/utils0.8.23 cratechecksum+cached9sources일치. successfultry_send 알림에도waiter가있으면stdMutex,빈recv/종료fullsend는park. 전체lockfree성립주장안함/새성능측정없음. ADR반영. 공개목록감사153044...348f51aa:globalterminal200→usermax20이며ID순서,두수동주문최종범위밖이나lookup/누적잔고/trade유지. 문서정밀화/작은화면안내보완중.
+- 실제00:31분석:시장15-31-00...c7cc6d99 3839표본/19502.0004초,명령+113899/volume+86291h,최소12봇·ready·자산보존·WS누락단절0/maxgap6.638s. 로그72897668B/data678149107B/minfree243187720192B. 봇15-31-01...6fdbadf2 durable114113=accepted114060+rejected53,p9929.4079ms/max1814.1419ms,tail0/missingtiming0.
+- 보완15-31-00...ab48cbe2 266표본/265구간7969.08737초전부유효,14CPU평균0.6367623%(16코어총량),00:30:48engineWS153796608B/private163606528B. 자원공백·메인UI교체한계유지/6h완료아님. 래퍼153400...41d59baa의실제started.json기준시각사용(ID시각은실행시각대체아님). 18PID BirthTicks와5보호SHA불변;초기bench파일명오류는기존verified경로로바로잡음.
+- 사용자폰트오류현재재확인:map5290/src/main.js HTTP200/font해석실패없음,두font패키지설치유지. 원래22:20설치근거131557...db6f23fd와루트명령문서유지. 기본Park19312는자동승인검토거절이후재시작/우회하지않음. 다음01:01중간checkpoint,01:06실제종료후quiet순서. 최신653/7cfd/d2c8동결·4성장경로와타작업parkvite stage금지.
+
+## 00:42 안내 문구 실제 확인·원격 변경 보존
+- frontend15-35-16...6b589a95:App.tsx에완료주문전역200→내20/주문번호기준과요청처리당시결과안내만추가했다. verify frontend-20260921T153528948Z의format/protocol7/type/build모두0. root15-38-27...c88bfe61에서기존5175임시tab14/user03/390×844의두탭실제표시·줄바꿈·375px문서폭/console빈배열확인. 새주문0,tab14닫음/viewport복원. 이전거래원본의증거범위는별도로보존.
+- durability15-36-17...c59f915b:aged정확CLI/300초child한정·최종sha256inventory+wrapper실제종료조건대조,실행불일치없음. 파일stat당시D782399740B/최신snapshot103825784B/free243372380160B,종료뒤재계산필요. 중간stdout없음을hang으로판정않음. 문서quiet에2D+GJ+F1+F2+부가물공간식추가. 새실행/빌드없음.
+- fetch로원격main4커밋발견,로컬dirty와변경파일불충돌확인후ff-only로4234490반영. 원격battery/vehicle작업보존,park-viteSHA12E8유지. remote가Park입장에launchPath추가해관련15개Vitest라우트검사통과. 최초node:testrunner오용실패와정확Vitest실행출력은래퍼153400...41d59baa에모두보존. 실제Park시작/재시작없음. 현재3agents작업완료,quiet순서와바이너리동결유지.

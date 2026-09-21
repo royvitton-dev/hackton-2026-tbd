@@ -1,0 +1,7 @@
+{
+  "at": "2026-09-21T15:40:16.8964371Z",
+  "ended": "2026-09-21T15:40:17.4780042Z",
+  "command": "node --test park/tests/router-unit/routes.test.mjs",
+  "exit_code": 1,
+  "reason": "Remote main changed launchPath routing while integrating this unit; verify existing pure route unit tests without starting Park"
+}

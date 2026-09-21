@@ -773,9 +773,6 @@ export default function App() {
                 </div>
                 {orderTab === 'requests' ? (
                   <div className="requests-list">
-                    <p className="request-status">
-                      요청 처리 당시의 결과입니다. 현재 주문 상태는 미체결·최근 완료 주문에서 확인하세요.
-                    </p>
                     {myRecords.length ? (
                       myRecords.map((r) => (
                         <RequestStatus
@@ -797,11 +794,6 @@ export default function App() {
                   </div>
                 ) : (
                   <div className="orders-table-wrap">
-                    {orderTab === 'closed' && (
-                      <p className="request-status">
-                        시장 전체 완료 주문 중 주문번호 기준 최근 200개에서 내 주문을 최대 20개 표시합니다.
-                      </p>
-                    )}
                     <table className="orders-table">
                       <thead>
                         <tr>

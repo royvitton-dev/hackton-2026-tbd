@@ -1,0 +1,73 @@
+Updating 9538ff7..4234490
+Fast-forward
+ README.md                                          |  13 ++
+ .../images/cutouts/audi_q4_45_e_tron_2026.png      | Bin 337241 -> 929029 bytes
+ .../resoures/images/cutouts/bmw_i5_2026.png        | Bin 181556 -> 257343 bytes
+ .../cutouts/mini_all_electric_mini_cooper_2026.png | Bin 518574 -> 254832 bytes
+ battery_health/resoures/images/image_sources.json  | 225 +++++++++++++++------
+ .../images/originals/audi_q4_45_e_tron_2026.jpg    | Bin 90871 -> 341896 bytes
+ .../resoures/images/originals/bmw_i5_2026.jpg      | Bin 50226 -> 75183 bytes
+ .../mini_all_electric_mini_cooper_2026.jpg         | Bin 252025 -> 71878 bytes
+ .../audi_q4_45_etron_2026_alpha_corrections.json   |  90 +++++++++
+ .../sources/audi_q4_45_etron_2026_user_source.webp | Bin 0 -> 96948 bytes
+ .../bmw_i5_edrive40_2026_user_3cef5cfae5c9.webp    | Bin 0 -> 36562 bytes
+ .../sources/bmw_i5_edrive40_2026_user_source.webp  | Bin 0 -> 28878 bytes
+ .../mini_electric_cooper_2026_user_source.png      | Bin 0 -> 263431 bytes
+ battery_health/src/main.ts                         |  19 ++
+ battery_health/src/scientificScore.ts              |  11 +
+ battery_health/src/scoreCoverage.ts                |   2 +
+ battery_health/src/scoreExplanation.ts             |  63 ++++++
+ battery_health/src/scoring.ts                      |   2 +
+ battery_health/src/style.css                       |   1 +
+ battery_health/src/types.ts                        |   3 +
+ docs/battery-scoring-methodology.md                |  44 ++++
+ docs/battery-ui.md                                 |  27 ++-
+ docs/evision-review/USER-IMAGES-20260922.md        |  30 +++
+ park/server.mjs                                    |   5 +-
+ park/server/pages.mjs                              |   4 +-
+ park/server/routes.mjs                             |   2 +
+ park/tests/router-e2e/battery-entry.spec.mjs       |  32 +++
+ park/tests/router-e2e/router.spec.mjs              |   2 +-
+ park/tests/router-unit/routes.test.mjs             |  10 +-
+ public/assets/vehicles/audi_q4_45_e_tron_2026.jpg  | Bin 90871 -> 341896 bytes
+ public/assets/vehicles/bmw_i5_2026.jpg             | Bin 50226 -> 75183 bytes
+ .../vehicles/cutouts/audi_q4_45_e_tron_2026.png    | Bin 337241 -> 929029 bytes
+ public/assets/vehicles/cutouts/bmw_i5_2026.png     | Bin 181556 -> 257343 bytes
+ .../cutouts/mini_all_electric_mini_cooper_2026.png | Bin 518574 -> 254832 bytes
+ public/assets/vehicles/image_sources.json          | 225 +++++++++++++++------
+ .../mini_all_electric_mini_cooper_2026.jpg         | Bin 252025 -> 71878 bytes
+ scripts/download-vehicle-images.mjs                |   5 +-
+ scripts/import-vehicle-image.mjs                   |  44 ++++
+ scripts/remove-vehicle-backgrounds.py              |  38 +++-
+ scripts/verify-vehicle-assets.mjs                  |   5 +
+ src/app/globals.css                                |   9 +
+ src/components/BatteryInfoPanel.tsx                |   4 +-
+ src/components/BatteryScoreExplanation.tsx         |  55 +++++
+ src/components/PitStopIntro.module.css             |   1 +
+ src/components/PitStopIntro.tsx                    |  31 ++-
+ src/components/VehicleBatteryDashboard.tsx         |   5 +-
+ src/components/VehicleHealthSummary.tsx            |   3 +-
+ src/data/vehicleImageMap.ts                        |   6 +-
+ src/data/vehicleImageSources.json                  | 225 +++++++++++++++------
+ src/lib/battery.ts                                 |   2 +
+ src/lib/pitStop.ts                                 |  16 +-
+ src/types/vehicle.ts                               |   3 +
+ tests/browser/cutouts.spec.ts                      |   2 +-
+ tests/browser/pit-stop.spec.ts                     |  66 +++++-
+ tests/browser/scientific-score.spec.ts             |  38 +++-
+ tests/browser/user-images.spec.ts                  |  47 +++++
+ tests/score-coverage.test.ts                       |   1 +
+ tests/score-explanation.test.ts                    |  59 ++++++
+ 58 files changed, 1236 insertions(+), 239 deletions(-)
+ create mode 100644 battery_health/resoures/images/sources/audi_q4_45_etron_2026_alpha_corrections.json
+ create mode 100644 battery_health/resoures/images/sources/audi_q4_45_etron_2026_user_source.webp
+ create mode 100644 battery_health/resoures/images/sources/bmw_i5_edrive40_2026_user_3cef5cfae5c9.webp
+ create mode 100644 battery_health/resoures/images/sources/bmw_i5_edrive40_2026_user_source.webp
+ create mode 100644 battery_health/resoures/images/sources/mini_electric_cooper_2026_user_source.png
+ create mode 100644 battery_health/src/scoreExplanation.ts
+ create mode 100644 docs/evision-review/USER-IMAGES-20260922.md
+ create mode 100644 park/tests/router-e2e/battery-entry.spec.mjs
+ create mode 100644 scripts/import-vehicle-image.mjs
+ create mode 100644 src/components/BatteryScoreExplanation.tsx
+ create mode 100644 tests/browser/user-images.spec.ts
+ create mode 100644 tests/score-explanation.test.ts
