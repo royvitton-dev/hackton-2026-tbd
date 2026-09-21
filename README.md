@@ -283,7 +283,13 @@ npm run build
 npm run test:e2e
 ```
 
-실행 중인 데모와 분리해 프로덕션 빌드를 검수할 때는 `npm run test:e2e -- --config=playwright.review.config.ts`를 사용합니다(포트 3101, 빌드/리소스 복사본). 먼저 `npm run build`가 필요합니다.
+실행 중인 데모와 분리해 프로덕션 빌드를 검수할 때는 `npm run test:e2e -- --config=playwright.review.config.ts`를 사용합니다(포트 3101, 빌드/리소스 복사본). 먼저 `npm run vehicle:build`가 필요합니다.
+
+실제 통합 주소도 확인하려면 `npm run dev`로 서버를 실행한 후 아래 명령을 사용합니다. GLB URL이 HTTP 200을 반환하더라도 HTML이면 실패하도록 Content-Type과 glTF 헤더까지 검사합니다. 이전 버전의 테마파크 서버가 같은 포트를 점유하면 Vite의 HTML 응답이 모델 요청을 가로챌 수 있으므로, 해당 프로젝트 서버를 종료하고 현재 라우터로 다시 실행해야 합니다.
+
+```sh
+EVISION_BASE_URL=http://127.0.0.1:5190 EVISION_VIEWER_PATH=/vehicle/ npm run test:e2e -- tests/browser/authored-vehicles.spec.ts
+```
 
 E2E는 로컬 Chrome을 사용합니다. macOS 기본 경로 외에는 `PLAYWRIGHT_CHROME_PATH`를 지정하세요. Linux 등에서 설치한 Chromium 실행 파일도 지정할 수 있습니다. 테스트는 실제 WebGL을 SwiftShader로 렌더링합니다. 검증 캡처는 `test-results/`에 생성합니다.
 

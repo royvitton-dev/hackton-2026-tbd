@@ -4,11 +4,18 @@ for (const [user,id] of [
   ['U0007','bmw_i5_edrive40_2026'],['U0059','audi_q4_45_etron_2026'],
   ['U0040','mini_electric_cooper_2026'],['U0018','audi_q6_etron_quattro_2025'],
 ]) {
-  test(`${id}: real geometry, bounded orbit and battery inside transparent body`, async ({ page }) => {
+  test(`${id}: real geometry, bounded orbit and battery inside transparent body`, async ({ page, request }) => {
     test.setTimeout(180000);
     const errors: string[] = [];
     page.on('pageerror',error=>errors.push(error.message));
-    await page.goto(`/?user=${user}`);
+    const viewerPath=process.env.EVISION_VIEWER_PATH??'/';
+    // A stale Vite catch-all can return HTTP 200 with HTML at a GLB URL.
+    // Verify the actual response, not just its status or local file existence.
+    const model=await request.get(`${viewerPath}assets/vehicles/models/${id}_authored.glb`);
+    expect(model.status()).toBe(200);
+    expect(model.headers()['content-type']).toContain('model/gltf-binary');
+    expect((await model.body()).subarray(0,4).toString()).toBe('glTF');
+    await page.goto(`${viewerPath}?user=${user}`);
     const canvas=page.locator('canvas');
     await expect(canvas).toHaveAttribute('data-vehicle-id',id,{timeout:90000});
     await expect(canvas).toHaveAttribute('data-renderer','webgl-3d-mesh');
