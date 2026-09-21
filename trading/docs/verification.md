@@ -1,6 +1,6 @@
 # 누적 검증과 완료 기준
 
-2026-09-22 00:04 KST까지 갱신한 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-22 00:14 KST까지 갱신한 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
@@ -26,6 +26,7 @@
 | Rust 실행·영속 볼륨·배포 설정 | 준비 / 일부 미검증 | 로컬 Windows 실행 통과, Dockerfile/compose/Caddy 예시. Docker가 없어 실제 Linux 컨테이너 빌드·운영 미검증 |
 | 온라인 봇 위치·접속·실행 절차 | 준비 | [ENGINE_API_URL·독립 봇 인수·12프로세스·정상 종료](deployment.md#봇-위치와-연결)를 현재 bot.mjs와 대조해 보완했다. [PowerShell 예시 4블록 구문 확인](../evidence/20260921T124437701Z-bot-deployment-docs-448f01d4/verification.json). 실제 원격 서버 실행 미실행 |
 | 기존 UI 연동과 적용 여부 | 로컬 등록·자동 시작 적용 | 등록에 이어 사용자 요청으로 Park 서버 시작/입장 API를 연결. [실제 서버 자동 재사용·입장 모달·거래소 화면](../evidence/20260921T125927764Z-park-auto-start-082f6114/README.md), wrapper5/5·ensure8/8·기존lifecycle12/12. 이번 Park 실측은 기존 시장 재사용 경로. 다른 React 호스트용 어댑터 미적용, 외부 배포 미실행 |
+| 통합 경로 production 거래소 부분 | 자산·브라우저 읽기 연결 통과 | [새 `/trading/` 빌드·130개 HTTP 자산 해시·실제 API/WS 연결·새로고침](router-production-preview.md). 기존18프로세스 유지, 임시 fixture 실제exit0. 전체 Park 시작·입장 API나 이번 경로에서의 명령 제출 검증으로 확대하지 않음 |
 | 작업 경계·기존 변경 보존 | 통과(현재 작업 기록 범위) | 구현·증거는trading 내부이며, 사용자 자동 시작 요청에 필요한 root README·park README·park/server.mjs를 추가 수정했다. 별도 작업의 park/vite.config.mjs는 보존·commit 제외. 사용자 지시로 main에서 작업·push한다. 제출 직전 재확인 예정 |
 | 문서·에이전트·체크포인트·마감 인계 | 진행 | [checkpoint](checkpoint.md), [실제 에이전트](agents.jsonl). 마감 2026-09-22 09:00 KST |
 

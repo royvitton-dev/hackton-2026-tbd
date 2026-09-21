@@ -1,15 +1,16 @@
 # 작업 체크포인트
 
-갱신: 2026-09-22 00:04 KST. 마감: 2026-09-22 09:00 KST (약8시간56분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
+갱신: 2026-09-22 00:15 KST. 마감: 2026-09-22 09:00 KST (약8시간45분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 재개 시 우선 확인할 현재 상태
 
-- main 마지막 확인된 local/remote 커밋은 `6c181d5fb90f6457cb4b31b64be7a32fee843065`(23:54). 완료된 후속 변경은 직접 main에 push한다. 별도 작업의 `park/vite.config.mjs`는 보존하고 stage하지 않는다.
+- main 마지막 확인된 local/remote 커밋은 `5f532b82f228626c2edfb1f55aad2efce8c4d20b`(00:05). 완료된 후속 변경은 직접 main에 push한다. 별도 작업의 `park/vite.config.mjs`는 보존하고 stage하지 않는다.
 - 메인 시장은 엔진20540·UI4220·12봇으로 계속 관찰한다. 시장 manifest는 `data/demo-current.json`, 관찰 session20793/PID18184/helper15744, 보완 자원 수집 session90617/PID16840이다. 이전 엔진09bc의 장시간 기록이며 새65348c의 성능으로 표시하지 않는다.
 - 최근 주기 분석은00:03, 다음은00:33. 원 관찰은01:05:55, 보완 수집은01:06 종료 예정이다. 실제 실행 핸들과 PID 종료를 확인한 뒤 [정확한 후속 순서](quiet-window.md)에 따라 정상 stop·실제 exit → keeper → FULL 누적 복구 → A 3쌍 → B/C → keeper 해제 → ensure를 수행한다.
 - 최신 엔진65348c·코어 벤치7cfd820a·복구 도구d2c8dd9e는 비교 측정까지 유지한다. keeper를 소유한 채 demo start/stop/ensure를 호출하지 않는다. 사용자 Park19312는 다시 시작하지 않는다.
 - 현재 남은 작업: 장시간 최종 분석·전체 누적 복구·최신 A/B/C·검증된 바이너리로 시연 재개·마감 검증과 인계. 무할당 목표 미달, 과거 자원 공백, 새 통합 Park 전체 시작의 미검증, Linux/Docker 및 실제 외부 배포 미실행을 유지한다.
+- `/trading/` production 부분은 [빌드·실제 브라우저 읽기 연결·새로고침](router-production-preview.md)을00:11에 검증했다. 임시 fixture19860/session99877은 actual exit0·부재 확인 후 종료 상태이며 전체 Park 시작의 대체 증거로 쓰지 않는다.
 
 ## 경계·사용자 지시·Git
 - PROJECT_ROOT `C:\project\hackton-2026-tbd` 사용자 확인. 기본 작업은 `trading` 내부. 후속 사용자 자동 시작 지시로 필요한 root README·park README·park/server.mjs 수정도 승인됨. 적용할 AGENTS.md는 처음 검사한 프로젝트/상위 경로에 없었다.
@@ -257,3 +258,16 @@
 - 00:03 중간 분석 wrapper evidence/20260921T150315339Z-midnight-checkpoint-9bbb1d2d. 시장15-02-55...29c2bda6:3507표본/17818.500초/104061명령·78941h증가,항상12봇/ready/자산보존/WS누락·단절0,maxgap6.638초,모든3506인접구간에체결. 로그66636394B,영속580198427B,최저디스크여유243187720192B. 약4h57분 결과이며6시간 완료 아님.
 - 봇15-02-55...0bb241b3:104268durable=104218accepted+50rejected,p9929.8492ms,max1814.1419ms,미완성tail0. 보완자원15-02-54...9bfcf0d4:210표본/209유효구간/6285.6158464초,14개합계 CPU평균0.6569438820%(16논리코어). 최근engine working set142639104B/private154001408B. 이전 자원 공백은 그대로이며 전체 메모리 누수 부재로 일반화하지 않는다.
 - 다음 주기 확인00:33. 원 관찰/보완 수집의 실제 종료01:05:55/01:06 뒤 quiet-window.md의 종료·복구·A/B/C·재개 순서를 수행한다. agent3명은 현재 작업 완료, 메인 시장/observer/보완 수집은 유지한다. main push는 이번 완료 문서·동결 증거만 포함하고4개 성장 경로와 별도 park/vite.config.mjs는 제외한다.
+
+## 00:06 문서·할당 분석 main push 완료
+- main local/remote SHA 5f532b82f228626c2edfb1f55aad2efce8c4d20b 일치를00:05:42에 확인했다.67파일 약5.61MB, trading 산출물과 승인된 park/README 안내 수정만 포함했다. evidence/20260921T150536973Z-allocation-doc-main-push-c0d1c331에 commit/push exit0·원격일치·index empty·manifest/별도 park-vite SHA 보존을 기록했다.
+- 전체 evidence 대상의 초기 git diff --check는 바이트 보존용 원본 사본과 PowerShell JSON의 CRLF를 trailing whitespace로 보고했다. 원자료는 해시 보존을 위해 변경하지 않았고 유지보수하는 문서6개만 대상으로 검사하여 통과했다. 생산 코드 lint/테스트 실패가 아니다.
+- 실제 실행 핸들 session20793/session90617을00:06에 poll하여 둘 다 running 확인. 관찰·보완 수집·엔진·봇·UI·사용자 Park를 종료/재시작하지 않았다. 다음 정기 분석00:33, 실제 종료01:06 이후 quiet-window.md 순서 유지. 이 단위는 진행 결과이며 전체 goal은 active다.
+
+## 00:15 통합 경로 production 거래소 부분 검증
+- frontend가 실제 통합빌드의trading단계와같은rootVite7.3.6/config/cwd/base=/trading/로새evidence/dist만빌드했다. evidence/2026-09-21T15-07-30-187Z-unified-trading-build-3c4f9b7c:15:08:08.974Z→15:08:13.331Z exit0,40개입력전후동일,130산출물해시. 전체Park/다른앱/Next/tsc/build된서비스실행증거아님.
+- 새읽기전용fixture scripts/router-preview-readonly.mjs는evidence/dist를임시loopback포트51371에제공하고productionproxy로기존8787의state/sessions/bots GET과WS만연결했다. POST전달없음/엔진·Park시작관리없음. run2026-09-21T15-09-51-005Z-router-preview-bd08bc54:정적자산130개HTTP200/SHA일치,HTML/CSS참조129개base경로해결.
+- 실제IAB임시tab12에서초기연결EVENT129214·새로고침뒤129447/시장연결/ready·차트·12봇확인,consolewarn/error0. 브라우저JS/CSS/폰트는/trading/assets,API state2회·sessions26·bots26모두200,WSupgrade요청2회. 명령제출/이번경로수동체결/모든WS프레임무누락/fullParkcoldstart로확대하지않는다. fullPage이미지하단반복부분때문에visual판정은browser-reload.jpg뷰포트캡처를사용했다.
+- 임시탭닫음15:11:35.284Z,fixture closed15:11:43.593Z/requested/socket0. 실제execsession99877 exit0/PID19860부재/기존18PID·BirthTicks/manifest997146/park-vite12E8보존. 현재18보호프로세스외새fixture실행없음. 데이터·기존시장재시작없음.
+- durability 읽기검토15-11-08...dc54dd21가진단도구rawURL/Origin로그지적. 최초source fcec6d7f...는fixture-as-run.mjs에보존/실제query0·GETHEAD외0. 종료후현재d904871d...로알려진pathname만·미등록표식·Origin존재boolean기록으로수정. node--check0,최종검토15-13-45...1cb75d07 P2해결. 로그변경뒤browser반복실행없고실행소스범위구분.
+- docs/router-production-preview.md와검증표업데이트. 이단위는새prefix production 실제검증/진단로그수정의progress다. 다음00:33주기관찰,01:06실제종료후quiet-window.md계획유지. 최신엔진/bench/aged바이너리동결,별도park-vite보존/4성장경로stage제외.

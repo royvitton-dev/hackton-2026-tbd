@@ -1,0 +1,157 @@
+- banner:
+  - link "LEAVE PARK 휴가 거래소":
+    - /url: "#market"
+    - text: LEAVE
+    - text: PARK
+    - generic: ✳
+  - navigation "주요 메뉴":
+    - link "휴가 거래소 LIVE":
+      - /url: "#market"
+      - text: 휴가 거래소
+      - generic: LIVE
+    - link "내 주문":
+      - /url: "#my-orders"
+    - link "파크 크루":
+      - /url: "#bots"
+  - generic: 엔진 연결 중
+  - button "모의 거래 안내":
+  - generic: ··
+  - generic: 로컬 모의 계정
+  - combobox "모의 거래 계정 선택":
+    - option "계정 연결 중" [selected]
+- main:
+  - paragraph: YOUR NEXT BREAK STARTS HERE
+  - heading "당신의 다음 쉼표를 거래하세요✳" [level=1]:
+    - text: 당신의 다음
+    - emphasis: 쉼표
+    - text: 를 거래하세요✳
+  - paragraph: 바쁜 하루에 여유를 더하는 작은 거래. 오늘은 몇 시간 쉬어갈까요?
+  - heading "모두의 휴가" [level=2]
+  - generic: LEAVE-1H
+  - paragraph: 그룹 공통 휴가 시간 · 1시간부터 거래
+  - generic: 현재가
+  - strong: —
+  - generic: P
+  - text: —
+  - generic: 기준가
+  - strong: — P
+  - generic: 누적 거래량
+  - strong: — 시간
+  - text: SYNTHETIC MARKET
+  - generic: 함께 쉬는 시장
+  - region "실제 체결 가격 차트":
+    - generic: "01"
+    - heading "시장의 흐름" [level=2]
+    - generic: 실시간 체결
+    - button "최근 80건" [pressed]
+    - button "최근 240건"
+    - generic: 체결 가격
+    - generic: 거래량
+    - paragraph: 첫 체결을 기다리는 중
+    - strong: 거래가 시작되면 선이 이어집니다
+    - paragraph: 사용자와 봇의 실제 체결을 가격·거래량으로 표시해요.
+    - text: 확정 체결 데이터
+    - generic: 표시 0건 · 동일 간격의 체결 순서
+  - generic: "02"
+  - heading "호가 보드" [level=2]
+  - generic: 가격 (P)
+  - generic: 잔량 (시간)
+  - generic: 주문
+  - paragraph: 매도 호가 대기 중
+  - strong: — P
+  - text: 현재가
+  - paragraph: 매수 호가 대기 중
+  - generic: 매도
+  - generic: 가격을 누르면 주문에 입력됩니다
+  - generic: 매수
+  - generic: "03"
+  - heading "나의 거래" [level=2]
+  - generic: 모의 계정
+  - button "미체결 0" [pressed]:
+    - text: 미체결
+    - generic: "0"
+  - button "최근 완료 주문"
+  - button "요청 결과"
+  - table:
+    - rowgroup:
+      - row "주문 가격 체결 / 주문 상태":
+        - columnheader "주문"
+        - columnheader "가격"
+        - columnheader "체결 / 주문"
+        - columnheader "상태"
+        - columnheader
+    - rowgroup
+  - paragraph: 기다리는 주문이 없어요
+  - generic: 원하는 가격으로 첫 휴가 티켓을 주문해 보세요.
+  - generic: "04"
+  - heading "방금 체결된 거래" [level=2]
+  - generic: 체결 시각
+  - generic: 가격 (P)
+  - generic: 시간
+  - paragraph: 첫 체결 대기 중
+  - generic: 쉬는 시간도, 함께하면 더 즐거우니까.
+  - text: GS리테이
+  - text: GS칼테스
+  - text: GS건썰
+  - complementary:
+    - paragraph: ONE TICKET, MORE TIME
+    - heading "나의 다음 쉼표" [level=2]
+    - group "거래 방향":
+      - button "휴가 매수" [pressed]
+      - button "휴가 매도"
+    - form "휴가 지정가 주문":
+      - generic: 주문 가격
+      - button "최우선 호가":
+        - text: 최우선 호가
+      - spinbutton "주문 가격": "1000"
+      - generic: P / 시간
+      - generic: 주문 수량
+      - generic: 최소 1시간
+      - spinbutton "주문 수량": "1"
+      - generic: 시간
+      - button "1시간" [pressed]
+      - button "4시간"
+      - button "하루 · 8시간"
+      - paragraph
+      - generic: 주문 총액
+      - strong: 1,000P
+      - generic: 사용 가능 포인트
+      - generic: — P
+      - button "휴가 매수하기" [disabled]:
+        - generic: 휴가 매수하기
+      - paragraph:
+        - text: 엔진이 연결되면 주문할 수 있어요
+    - generic: LEAVE PARK EXCHANGE
+    - generic: ADMIT ONE BREAK
+    - heading "내 보관함" [level=2]
+    - generic: 모의 자산
+    - generic: 사용 가능한 휴가
+    - strong: —시간
+    - generic: 휴가 총 보유
+    - generic: — h
+    - generic: 매도 예약
+    - generic: — h
+    - generic: 사용 가능 포인트
+    - generic: — P
+    - generic: 매수 예약
+    - generic: — P
+    - generic: 포인트 총 보유
+    - generic: — P
+  - paragraph: PARK CREW
+  - heading "시장을 움직이는 크루 00" [level=2]
+  - text: 0개 봇 연결 중
+  - generic: · 3가지 전략
+  - strong: 크루가 입장을 준비하고 있어요
+  - paragraph: 봇이 연결되면 실제 주문·체결 횟수와 heartbeat를 표시합니다.
+  - paragraph:
+    - text: 모든 크루는 사용자와 같은 시장, 같은 잔고·체결 규칙으로 거래합니다. 주문·체결 수는 엔진 누적값입니다.
+  - text: LEAVE PARK
+  - text: 모의 휴가 거래소
+  - text: 엔진 연결 대기
+  - text: EVENT
+  - generic: "#—"
+  - text: 재동기화
+  - generic: "0"
+  - text: 수신
+  - generic: —
+  - button "엔진 상태 새로고침":
