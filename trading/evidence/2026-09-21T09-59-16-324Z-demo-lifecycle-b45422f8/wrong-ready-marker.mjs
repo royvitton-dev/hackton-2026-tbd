@@ -1,0 +1,1 @@
+console.error(JSON.stringify({event:'ready',bind:'127.0.0.1:1',data_dir:'another-run'})); setInterval(()=>{},1000);

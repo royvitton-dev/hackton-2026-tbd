@@ -1,0 +1,50 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.13s
+     Running unittests src\lib.rs (target\debug\deps\leave_exchange-7bee789497c12ce2.exe)
+
+running 6 tests
+test storage::tests::storage_sync_error_has_unknown_outcome_and_restart_resolves_it_without_duplicates ... ok
+test storage::tests::storage_actual_write_syscall_failure_does_not_apply_or_ack ... ok
+test storage::tests::storage_interrupted_snapshot_publication_preserves_previous_checkpoint ... ok
+test storage::tests::storage_interruption_after_sync_before_apply_or_ack_recovers_committed_command ... ok
+test storage::tests::storage_partial_write_fails_closed_and_next_write_cannot_extend_bad_suffix ... ok
+test storage::tests::storage_every_incomplete_frame_boundary_preserves_all_acknowledged_state ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.62s
+
+     Running unittests src\main.rs (target\debug\deps\leave_engine-32e052be72c9a8a3.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\core_reference.rs (target\debug\deps\core_reference-32291861488032a2.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+
+     Running tests\core_rules.rs (target\debug\deps\core_rules-40febeb2c124c90a.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 18 filtered out; finished in 0.00s
+
+     Running tests\storage_recovery.rs (target\debug\deps\storage_recovery-c0a6b816a39399a9.exe)
+
+running 13 tests
+test storage_genesis_pins_initialization_and_capacity_configuration ... ok
+test storage_single_writer_lock_releases_when_store_drops ... ok
+test storage_conflicting_request_replays_without_mutating_original ... ok
+test storage_corrupted_header_length_cannot_be_misclassified_as_partial_tail ... ok
+test storage_final_complete_bad_checksum_is_fatal_not_a_torn_suffix ... ok
+test storage_response_loss_retries_without_checkpoint_have_no_second_effect ... ok
+test storage_torn_last_header_is_preserved ... ok
+test storage_partial_snapshot_is_ignored_and_corrupt_latest_falls_back ... ok
+test storage_published_snapshot_with_missing_journal_suffix_refuses_data_loss ... ok
+test storage_middle_corruption_is_fatal_and_evidence_remains_untouched ... ok
+test storage_torn_last_payload_is_preserved_and_prior_ack_state_recovers ... ok
+test storage_acknowledged_commands_full_state_and_dedup_survive_restart ... ok
+test storage_forced_process_exit_recovers_all_observed_acks_and_exact_journal_prefix ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.15s
+

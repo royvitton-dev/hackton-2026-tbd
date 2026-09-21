@@ -1,0 +1,129 @@
+{
+  "run_id": "20260921T105459553Z-engine-load-host-baseline-dff459be",
+  "observed_at": "2026-09-21T10:54:59.5823340Z",
+  "purpose": "Host and ongoing demo baseline before the newly requested isolated engine load test",
+  "manifest_sha256": "6128D45F26F574EB1DA12EC1B164C2112C4ED3E4E29BB6A5526568563578E69A",
+  "demo_run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+  "demo_processes": [
+    {
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "StartTime": "2026-09-21T19:05:21.4715478+09:00",
+      "WorkingSet64": 60350464,
+      "PrivateMemorySize64": 61116416,
+      "CPU": 139.484375
+    },
+    {
+      "Id": 4928,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.3890023+09:00",
+      "WorkingSet64": 67432448,
+      "PrivateMemorySize64": 74883072,
+      "CPU": 10.03125
+    },
+    {
+      "Id": 5412,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.5355012+09:00",
+      "WorkingSet64": 66473984,
+      "PrivateMemorySize64": 74498048,
+      "CPU": 11.0625
+    },
+    {
+      "Id": 6128,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.5945324+09:00",
+      "WorkingSet64": 66142208,
+      "PrivateMemorySize64": 75419648,
+      "CPU": 10.578125
+    },
+    {
+      "Id": 7916,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.4762676+09:00",
+      "WorkingSet64": 65777664,
+      "PrivateMemorySize64": 74526720,
+      "CPU": 10.328125
+    },
+    {
+      "Id": 7936,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.3037571+09:00",
+      "WorkingSet64": 65753088,
+      "PrivateMemorySize64": 73388032,
+      "CPU": 10.734375
+    },
+    {
+      "Id": 12172,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.4485053+09:00",
+      "WorkingSet64": 65626112,
+      "PrivateMemorySize64": 73719808,
+      "CPU": 10.578125
+    },
+    {
+      "Id": 15272,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.504734+09:00",
+      "WorkingSet64": 68272128,
+      "PrivateMemorySize64": 75137024,
+      "CPU": 10.953125
+    },
+    {
+      "Id": 16068,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.3612932+09:00",
+      "WorkingSet64": 67231744,
+      "PrivateMemorySize64": 74485760,
+      "CPU": 9.71875
+    },
+    {
+      "Id": 17444,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.2784404+09:00",
+      "WorkingSet64": 65712128,
+      "PrivateMemorySize64": 74412032,
+      "CPU": 10.21875
+    },
+    {
+      "Id": 17556,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:21.7348899+09:00",
+      "WorkingSet64": 67981312,
+      "PrivateMemorySize64": 146206720,
+      "CPU": 3.046875
+    },
+    {
+      "Id": 20484,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.5665942+09:00",
+      "WorkingSet64": 65892352,
+      "PrivateMemorySize64": 74428416,
+      "CPU": 10.90625
+    },
+    {
+      "Id": 20776,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.3346242+09:00",
+      "WorkingSet64": 67706880,
+      "PrivateMemorySize64": 74645504,
+      "CPU": 9.96875
+    },
+    {
+      "Id": 20940,
+      "ProcessName": "node",
+      "StartTime": "2026-09-21T19:05:22.4216442+09:00",
+      "WorkingSet64": 66686976,
+      "PrivateMemorySize64": 75223040,
+      "CPU": 10.703125
+    }
+  ],
+  "observer_pid": 18184,
+  "observer_start": "2026-09-21T19:05:54.8395149+09:00",
+  "logical_processors": 16,
+  "host_recent_cpu_percent": 9,
+  "host_ram_total_bytes": 16880881664,
+  "host_ram_free_bytes": 5494095872,
+  "engine_sha256": "09BCF75B80A2A85C6A52168D2404F23A230E73B958FC6814DAA300650FC5AC56",
+  "caveat": "CPU property in process rows is cumulative seconds, not utilization; host recent percentage is a separate OS counter"
+}

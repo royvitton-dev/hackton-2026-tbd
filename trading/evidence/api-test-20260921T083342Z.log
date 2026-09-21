@@ -1,0 +1,28 @@
+▶ API real-process concurrency, durability, response loss and event contract
+  ✖ mock identity, origin and malformed transport never enter sequencer (54.2156ms)
+  ✔ 12 concurrent clients submit, replay and cancel without duplicated effects (182.2744ms)
+  ✔ maker price, partial fill, reserves and ownership across API (68.8292ms)
+  ✔ snapshot, clean restart and durable request lookup (199.4567ms)
+  ✔ network response loss, forced kill, retry has exactly one effect (180.1649ms)
+  ✔ WS subscription initial state, concurrent commands and reconnect converge (67.8294ms)
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T08-33-42-924Z-api-3b974b4e
+✖ API real-process concurrency, durability, response loss and event contract (1273.4187ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 5
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 11361.7778
+
+✖ failing tests:
+
+test at scripts\api.integration.test.mjs:59:13
+✖ mock identity, origin and malformed transport never enter sequencer (54.2156ms)
+  SyntaxError: Unexpected token 'F', "Failed to "... is not valid JSON
+      at JSON.parse (<anonymous>)
+      at parseJSONFromBytes (node:internal/deps/undici/undici:4394:19)
+      at successSteps (node:internal/deps/undici/undici:7048:27)
+      at readAllBytes (node:internal/deps/undici/undici:5965:13)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)

@@ -1,0 +1,13 @@
+fetch/direct404: p50=15.272ms, headers=15.214ms, body=0.069ms
+fetch/validation400: p50=15.340ms, headers=15.228ms, body=0.084ms
+fetch/writer_health: p50=15.302ms, headers=15.199ms, body=0.086ms
+fetch/durable_place_cancel: p50=15.458ms, headers=15.355ms, body=0.073ms
+http_keepalive/direct404: p50=0.256ms, headers=0.221ms, body=0.035ms
+http_keepalive/validation400: p50=0.298ms, headers=0.254ms, body=0.040ms
+http_keepalive/writer_health: p50=0.304ms, headers=0.261ms, body=0.041ms
+http_keepalive/durable_place_cancel: p50=2.280ms, headers=2.211ms, body=0.066ms
+http_new_connection/direct404: p50=0.640ms, headers=0.605ms, body=0.039ms
+http_new_connection/validation400: p50=0.723ms, headers=0.672ms, body=0.049ms
+http_new_connection/writer_health: p50=0.764ms, headers=0.706ms, body=0.048ms
+http_new_connection/durable_place_cancel: p50=2.609ms, headers=2.546ms, body=0.059ms
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T08-53-27-544Z-perf-probe-baseline-7efb867f

@@ -1,0 +1,1 @@
+console.error(JSON.stringify({event:'ready',bind:'127.0.0.1:52814',data_dir:"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-56-01-626Z-demo-lifecycle-8a5e2147"})); setTimeout(()=>process.exit(29),150);

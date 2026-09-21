@@ -1,0 +1,137 @@
+[
+  {
+    "timestamp": "2026-09-21T10:15:38.669Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 14.601299999980256,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:299",
+      "action": {
+        "type": "cancel",
+        "order_id": 22447
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:299",
+      "account_id": "bot-02",
+      "command_seq": 25849,
+      "event_seq": 25849,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:31.377Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 15.842900000046939,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:887",
+      "action": {
+        "type": "cancel",
+        "order_id": 28580
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:887",
+      "account_id": "bot-03",
+      "command_seq": 32839,
+      "event_seq": 32839,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:30:03.495Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 17.380699999863282,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:723",
+      "action": {
+        "type": "cancel",
+        "order_id": 26837
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:723",
+      "account_id": "bot-08",
+      "command_seq": 30908,
+      "event_seq": 30908,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:13:45.334Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 16.458199999993667,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:248",
+      "action": {
+        "type": "cancel",
+        "order_id": 21924
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:248",
+      "account_id": "bot-09",
+      "command_seq": 25182,
+      "event_seq": 25182,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:23:24.958Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 17.59750000014901,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:523",
+      "action": {
+        "type": "cancel",
+        "order_id": 24827
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:523",
+      "account_id": "bot-11",
+      "command_seq": 28588,
+      "event_seq": 28588,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  }
+]

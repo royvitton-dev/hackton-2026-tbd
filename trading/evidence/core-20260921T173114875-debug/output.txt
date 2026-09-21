@@ -1,0 +1,32 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.12s
+     Running tests\core_reference.rs (engine\target\debug\deps\core_reference-32291861488032a2.exe)
+
+running 1 test
+test scan_sort_oracle_agrees_on_3000_seeded_commands ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.78s
+
+     Running tests\core_rules.rs (engine\target\debug\deps\core_rules-40febeb2c124c90a.exe)
+
+running 18 tests
+test self_order_beyond_fully_executed_quantity_is_not_encountered ... ok
+test seeded_assets_and_synthetic_companies_are_exact ... ok
+test integer_overflow_and_json_safe_limits_are_explicit ... ok
+test partial_taker_reserve_then_cancel_and_idempotent_cancel ... ok
+test self_trade_found_after_external_liquidity_rejects_every_fill_atomically ... ok
+test cancel_middle_queue_and_owner_checks_preserve_fifo ... ok
+test malformed_request_keys_are_not_admitted_or_allowed_to_consume_capacity ... ok
+test full_audit_detects_balances_shifted_without_changing_global_totals ... ok
+test price_then_time_priority_multi_fill_and_price_improvement ... ok
+test invalid_and_insufficient_commands_change_only_command_metadata ... ok
+test saved_rejection_is_stable_after_balance_changes_make_a_new_request_valid ... ok
+test sell_taker_uses_highest_bid_and_maker_price ... ok
+test sell_self_trade_prevalidation_also_rejects_external_prefix_atomically ... ok
+test duplicate_and_conflict_never_mutate_and_timestamp_is_not_identity ... ok
+test all_capacity_rejections_are_atomic_and_preserve_previous_dedup ... ok
+test many_fills_reject_before_mutation_if_one_exceeds_remaining_trade_capacity ... ok
+test full_serialized_state_retains_history_that_public_snapshot_bounds ... ok
+test seeded_random_commands_preserve_invariants_and_replay_identically ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.46s
+

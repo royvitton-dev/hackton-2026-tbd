@@ -1,0 +1,37 @@
+✔ course variety: one Starlight goal, five Cloud ramps, four Garden timing gates, Candy side bumpers (2.283ms)
+✔ Garden final flower gate physically blocks and opens with its rotation (4.892084ms)
+✔ all new rides activate in natural seeded races and finish with contained unique arrivals (44597.889625ms)
+✔ magnet and cannon capture at physical position for 0.5–1 seconds; pause freezes pose and ball (213.550959ms)
+✔ held ball remains solid, one ball per device, and restart clears holds (0.894625ms)
+✔ cannon boost cannot tunnel through a pin or boundary (4.460875ms)
+✔ device capture, timing and launch are deterministic and varied across seeds (4.71725ms)
+✔ first/Nth stop at the actual target crossing; last stops with one unfinished ball (15880.519334ms)
+✔ ending rule preserves the prefix of the same physical race and has no chosen winner (9877.658042ms)
+✔ same-substep ties stop by crossing time and seeded priority without extra ranks (1.060667ms)
+✔ 1x and 3x step chunks stop at identical positions, time, winner and ranks (6384.29ms)
+✔ random 3–5 second motion is deterministic, bounded, smooth and independent of participants (8.286167ms)
+✔ shared board force acts equally on identical balls, with actual velocity change (10.757459ms)
+✔ each map has different rotor magnitudes and both directions, with matching surface velocities (0.200542ms)
+✔ pause freezes active board motion and stepping chunks preserve the exact race (3030.930375ms)
+✔ orbit single-ball oscillation is detected and escapes without fabricated finish (148.194542ms)
+✔ windmill blades share an actual perpendicular collider and pirate velocity matches its swing (0.685125ms)
+✔ all four maps with motion: 120 seeded races remain contained and finish with unique real ranks (160453.067583ms)
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (3.053458ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (1.1325ms)
+✔ rule validation and ball-based N range (0.432125ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (8.978459ms)
+✔ finish order is crossing time, not ball list; exact ties use seeded tie key (2.378542ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (3189.759542ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (4284.957584ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (0.582084ms)
+✔ fast wall and pin impacts remain inside the board (2.034125ms)
+✔ all 4 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (158878.023084ms)
+✔ finish requires an exit throat; crossing between holes never ranks (0.333708ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 166478.245459

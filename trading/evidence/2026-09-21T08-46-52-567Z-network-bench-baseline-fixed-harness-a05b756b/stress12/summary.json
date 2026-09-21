@@ -1,0 +1,133 @@
+{
+  "scenario": "stress12",
+  "expected_commands": 720,
+  "attempted_commands": 720,
+  "accepted_durable_commands": 720,
+  "complete": true,
+  "elapsed_seconds": 1.5033368999999948,
+  "accepted_commands_per_second": 478.93456217299166,
+  "attempted_commands_per_second": 478.93456217299166,
+  "error_commands": 0,
+  "rejection_commands": 0,
+  "error_rate": 0,
+  "rejection_rate": 0,
+  "fills": 0,
+  "latency_ms": {
+    "dispatch_to_ack": {
+      "count": 720,
+      "p50": 21.25739999999496,
+      "p95": 27.435600000004342,
+      "p99": 30.905399999996007,
+      "max": 34.425900000002
+    },
+    "scheduled_to_ack": {
+      "count": 720,
+      "p50": 21.324200000002747,
+      "p95": 27.921399999999267,
+      "p99": 31.227200000001176,
+      "max": 34.85320000000502
+    },
+    "client_scheduler_delay": {
+      "count": 720,
+      "p50": 0.011800000000221189,
+      "p95": 0.44619999999849824,
+      "p99": 0.526399999995192,
+      "max": 0.558100000002014
+    },
+    "dispatch_to_event_callback": {
+      "count": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "max": null
+    },
+    "scheduled_to_event_callback": {
+      "count": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "max": null
+    },
+    "dispatch_to_parsed_event": {
+      "count": 0,
+      "p50": null,
+      "p95": null,
+      "p99": null,
+      "max": null
+    }
+  },
+  "target": {
+    "predeclared_numeric_target": null,
+    "purpose": "separate 12-client contention/queue observation, not substituted for normal B/C"
+  },
+  "started_at": "2026-09-21T08:47:37.290Z",
+  "ended_at": "2026-09-21T08:47:39.988Z",
+  "concurrency": 12,
+  "websocket_subscribers": 0,
+  "engine_pid": 8144,
+  "client_pid": 9332,
+  "base_url": "http://127.0.0.1:52224",
+  "warmup_commands": 120,
+  "queue_capacity": 2048,
+  "actual_config": {
+    "max_orders": 1000000,
+    "max_requests": 2000000,
+    "max_trades": 2000000,
+    "max_price": 1000000,
+    "max_quantity": 10000
+  },
+  "durability": "journal-sync-all-before-apply",
+  "shutdown": {
+    "method": "admin_shutdown",
+    "response": {
+      "status": 200,
+      "body": {
+        "status": "shutting_down"
+      }
+    },
+    "exit_code": 0,
+    "signal": null
+  },
+  "memory": {
+    "available": true,
+    "samples": 4,
+    "interval_ms": 500,
+    "observed_max_working_set_bytes": 9474048,
+    "observed_max_private_bytes": 4120576,
+    "first": {
+      "pid": 8144,
+      "process_name": "leave-engine",
+      "working_set_bytes": 7913472,
+      "private_bytes": 2449408,
+      "cpu_seconds": 0.03125
+    },
+    "last": {
+      "pid": 8144,
+      "process_name": "leave-engine",
+      "working_set_bytes": 9474048,
+      "private_bytes": 4120576,
+      "cpu_seconds": 0.46875
+    },
+    "note": "Sample maxima only; includes warmup and final checks, excludes other processes."
+  },
+  "retained_data": [
+    {
+      "path": "stress12\\data\\genesis.bin",
+      "bytes": 3606
+    },
+    {
+      "path": "stress12\\data\\journal.bin",
+      "bytes": 143012
+    },
+    {
+      "path": "stress12\\data\\snapshot-00000000000000000840-00000000000001789980459930841600-8144-1.bin",
+      "bytes": 347254
+    },
+    {
+      "path": "stress12\\data\\writer.lock",
+      "bytes": 0
+    }
+  ],
+  "timing_scope": "closed-loop client load; fetch dispatch through parsed ACK includes loopback HTTP, server queue wait, validation, matching, journal sync_all and response; C callback timestamp precedes JSON parse, parsed-event timestamp follows it; no browser render",
+  "scheduling_scope": "twelve clients per round; all place calls share a scheduled round time, each cancel is scheduled only after its place ACK; client delay and server queue wait are included in scheduled-to-ACK"
+}

@@ -1,0 +1,8 @@
+Port 5177 is occupied; existing processes were not changed.
+At C:\project\hackton-2026-tbd\trading\frontend\scripts\start-production-preview.ps1:11 char:9
++         throw "Port $port is occupied; existing processes were not ch ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Port 5177 is oc...re not changed.:String) [], RuntimeException
+    + FullyQualifiedErrorId : Port 5177 is occupied; existing processes were not changed.
+ 
+guard_exit=1

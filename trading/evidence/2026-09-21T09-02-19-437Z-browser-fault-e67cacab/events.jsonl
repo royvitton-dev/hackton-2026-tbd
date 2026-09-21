@@ -1,0 +1,4 @@
+{"at":"2026-09-21T09:02:45.890Z","event":"withheld_command_response","http_status":200,"result":{"request_id":"82cda670-b220-42fd-975f-7d97850434a4","account_id":"user-01","command_seq":1,"event_seq":1,"status":"accepted","code":"OK","message":"명령 처리가 완료되었습니다.","order_id":1,"trades":[],"duplicate":false,"durable":true},"durable_response":true}
+{"at":"2026-09-21T09:03:59.505Z","event":"child_exit","name":"engine","pid":16012,"code":0,"signal":null}
+{"at":"2026-09-21T09:03:59.600Z","event":"owned_child_termination","pid":18324}
+{"at":"2026-09-21T09:03:59.613Z","event":"child_exit","name":"frontend","pid":18324,"code":null,"signal":"SIGTERM"}

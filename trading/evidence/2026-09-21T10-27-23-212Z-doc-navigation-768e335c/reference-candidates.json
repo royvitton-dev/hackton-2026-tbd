@@ -1,0 +1,3345 @@
+[
+  {
+    "document": "trading/README.md",
+    "line": 26,
+    "target": "data/demo",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/README.md",
+    "line": 26,
+    "target": "evidence/<고유-run-ID>",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/README.md",
+    "line": 35,
+    "target": "data/demo",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/README.md",
+    "line": 75,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/adr/001-execution-and-ui.md",
+    "line": 3,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/adr/002-durability.md",
+    "line": 3,
+    "target": "trading/evidence/durability-20260921T082016Z/validation-0832.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/durability-20260921T082016Z/validation-0832.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/durability-20260921T082016Z/validation-0832.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/adr/002-durability.md",
+    "line": 5,
+    "target": "trading/evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/adr/002-durability.md",
+    "line": 6,
+    "target": "/root/durability",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/adr/002-durability.md",
+    "line": 14,
+    "target": "journal.bin",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo/journal.bin"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo/journal.bin",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/adr/002-durability.md",
+    "line": 31,
+    "target": "genesis.bin",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo/genesis.bin"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo/genesis.bin",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/adr/002-durability.md",
+    "line": 32,
+    "target": "journal.bin",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo/journal.bin"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo/journal.bin",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/adr/002-durability.md",
+    "line": 33,
+    "target": "snapshot-{journal_seq:020}-{unique}.bin",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/adr/002-durability.md",
+    "line": 35,
+    "target": "incomplete-tail-{unique}-at-{offset}.bin",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 11,
+    "target": "trading/",
+    "kind": "resolved",
+    "resolved": [
+      "trading"
+    ],
+    "source_control": [
+      {
+        "path": "trading",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 15,
+    "target": "engine/examples/aged_recovery.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/examples/aged_recovery.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/examples/aged_recovery.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 15,
+    "target": "main/core/model/storage",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 16,
+    "target": "scripts/aged-recovery.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/aged-recovery.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/aged-recovery.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 16,
+    "target": "evidence/<UTC>-aged-recovery-<id>",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 17,
+    "target": "raw-copy/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/raw-copy"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/raw-copy",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 17,
+    "target": "from-snapshot/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/from-snapshot"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/from-snapshot",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 17,
+    "target": "from-genesis/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/from-genesis"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/from-genesis",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 19,
+    "target": "snapshot-recovered-full-core.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/snapshot-recovered-full-core.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/snapshot-recovered-full-core.json",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 19,
+    "target": "journal-replayed-full-core.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/journal-replayed-full-core.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/journal-replayed-full-core.json",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 20,
+    "target": "sha256.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5/sha256.json",
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/sha256.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5/sha256.json",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/sha256.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 33,
+    "target": "trading/",
+    "kind": "resolved",
+    "resolved": [
+      "trading"
+    ],
+    "source_control": [
+      {
+        "path": "trading",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 53,
+    "target": "run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5/run.json",
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/run.json",
+      "trading/evidence/20260921T094037913Z-aged-recovery-tool-clippy-cc833adf/run.json",
+      "trading/evidence/20260921T094221462Z-aged-recovery-tool-final-build-d576ef45/run.json",
+      "trading/evidence/20260921T094230079Z-aged-recovery-tool-final-selftest-70ecf825/run.json",
+      "trading/evidence/20260921T100029870Z-demo-normal-stop/run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5/run.json",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/run.json",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/20260921T094037913Z-aged-recovery-tool-clippy-cc833adf/run.json",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/20260921T094221462Z-aged-recovery-tool-final-build-d576ef45/run.json",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/20260921T094230079Z-aged-recovery-tool-final-selftest-70ecf825/run.json",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/20260921T100029870Z-demo-normal-stop/run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/aged-recovery-plan.md",
+    "line": 53,
+    "target": "recovery-report.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5/recovery-report.json",
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/recovery-report.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5/recovery-report.json",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658/recovery-report.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 3,
+    "target": "/root/matching_core",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 9,
+    "target": "engine/examples/core_bench.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/examples/core_bench.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/examples/core_bench.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 71,
+    "target": "engine/src/core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 72,
+    "target": "engine/src/model.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/model.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/model.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 73,
+    "target": "engine/examples/core_bench.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/examples/core_bench.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/examples/core_bench.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 77,
+    "target": "core_bench.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/examples/core_bench.rs",
+      "trading/evidence/core-20260921T184147624-status-reuse/before/core_bench.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/examples/core_bench.rs",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/before/core_bench.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 79,
+    "target": "before/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/before"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/before",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 81,
+    "target": ".bin",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 83,
+    "target": "engine/tests/fixtures/status_reuse_before_trace.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/fixtures/status_reuse_before_trace.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/fixtures/status_reuse_before_trace.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 84,
+    "target": "engine/tests/fixtures/status_reuse_legacy_frames.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/fixtures/status_reuse_legacy_frames.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/fixtures/status_reuse_legacy_frames.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 85,
+    "target": "engine/tests/core_status_compatibility.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/core_status_compatibility.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/core_status_compatibility.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 90,
+    "target": "before/capture-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/before/capture-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/before/capture-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 90,
+    "target": "after/compat-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/compat-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/compat-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 90,
+    "target": "verification-dataset-7904/verification.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/verification-dataset-7904/verification.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/verification-dataset-7904/verification.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 91,
+    "target": "after/debug-core-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/debug-core-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/debug-core-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 92,
+    "target": "after/release-core-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/release-core-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/release-core-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 93,
+    "target": "after/tracked-fixture-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/tracked-fixture-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/tracked-fixture-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 93,
+    "target": "after/release-tracked-fixture-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/release-tracked-fixture-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/release-tracked-fixture-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 94,
+    "target": "after/clippy-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/clippy-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/clippy-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 95,
+    "target": "after/format-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/format-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/format-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 96,
+    "target": "after/release-build-run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/release-build-run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/release-build-run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 96,
+    "target": "after/hashes.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/hashes.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/hashes.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 104,
+    "target": "before/core_bench.exe",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/before/core_bench.exe"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/before/core_bench.exe",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 105,
+    "target": "after/core_bench.exe",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/core_bench.exe"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/core_bench.exe",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/allocation-investigation.md",
+    "line": 106,
+    "target": "after/leave-engine.exe",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/after/leave-engine.exe"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/after/leave-engine.exe",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 5,
+    "target": "engine/target/release/examples/core_bench.exe",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/target/release/examples/core_bench.exe"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/target/release/examples/core_bench.exe",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 5,
+    "target": "evidence/core-20260921T173309384-bench-build-format/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T173309384-bench-build-format"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T173309384-bench-build-format",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 9,
+    "target": "engine/examples/core_bench.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/examples/core_bench.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/examples/core_bench.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 23,
+    "target": "scripts/network-bench.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/network-bench.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/network-bench.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 25,
+    "target": "target/release",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/target/release"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/target/release",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 25,
+    "target": "evidence/<run>/bin",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 39,
+    "target": "ws-arrivals.json",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 51,
+    "target": "raw-commands.json",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 51,
+    "target": "raw-latencies.json",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 51,
+    "target": "raw-warmup.json",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 51,
+    "target": "summary.json",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/bench-plan.md",
+    "line": 51,
+    "target": "memory.jsonl",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 7,
+    "target": "C:\\project\\hackton-2026-tbd",
+    "kind": "resolved",
+    "resolved": [
+      ""
+    ],
+    "source_control": [
+      {
+        "path": "",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 8,
+    "target": "codex/leave-exchange",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 11,
+    "target": "engine/tests/fixtures/*.json",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 14,
+    "target": "/root",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 15,
+    "target": "/root/matching_core",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 16,
+    "target": "/root/durability",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 17,
+    "target": "/root/frontend",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 20,
+    "target": ".tmp/20260921T101847792Z-git-source-repro-ea6a3bd8/trading",
+    "kind": "resolved",
+    "resolved": [
+      "trading/.tmp/20260921T101847792Z-git-source-repro-ea6a3bd8/trading"
+    ],
+    "source_control": [
+      {
+        "path": "trading/.tmp/20260921T101847792Z-git-source-repro-ea6a3bd8/trading",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 23,
+    "target": "evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 23,
+    "target": "evidence/20260921T095812318Z-status-reuse-api-regression-f407af96",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/20260921T095812318Z-status-reuse-api-regression-f407af96"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/20260921T095812318Z-status-reuse-api-regression-f407af96",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 26,
+    "target": "docs/review-deployment.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/docs/review-deployment.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/docs/review-deployment.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 28,
+    "target": "docs/review-demo-lifecycle.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/docs/review-demo-lifecycle.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/docs/review-demo-lifecycle.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 29,
+    "target": "evidence/20260921T100029870Z-demo-normal-stop/process-exit.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/20260921T100029870Z-demo-normal-stop/process-exit.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/20260921T100029870Z-demo-normal-stop/process-exit.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 30,
+    "target": "evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-03-16-660Z-aged-recovery-95f90658",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 30,
+    "target": "docs/aged-recovery-plan.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/docs/aged-recovery-plan.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/docs/aged-recovery-plan.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 31,
+    "target": "docs/allocation-investigation.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/docs/allocation-investigation.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/docs/allocation-investigation.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 31,
+    "target": "evidence/core-20260921T190443560-status-reuse-paired",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T190443560-status-reuse-paired"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T190443560-status-reuse-paired",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 36,
+    "target": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-05-21-198Z-demo-3b10627b"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-05-21-198Z-demo-3b10627b",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 36,
+    "target": "data/demo",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 37,
+    "target": "data/demo-current.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo-current.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo-current.json",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 38,
+    "target": "restart-verification.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/restart-verification.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/restart-verification.json",
+        "state": "not_tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 39,
+    "target": "evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 39,
+    "target": "evidence/20260921T100554819Z-observe-six-hour-console.log",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/20260921T100554819Z-observe-six-hour-console.log"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/20260921T100554819Z-observe-six-hour-console.log",
+        "state": "not_tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 46,
+    "target": "scripts/watch-process-exit.ps1",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/watch-process-exit.ps1"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/watch-process-exit.ps1",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 50,
+    "target": "/goal",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 52,
+    "target": "evidence/20260921T093839163Z-host-standby",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/20260921T093839163Z-host-standby"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/20260921T093839163Z-host-standby",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/checkpoint.md",
+    "line": 53,
+    "target": "evidence/2026-09-21T10-03-08-381Z-observation-analysis-5360a05c",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-03-08-381Z-observation-analysis-5360a05c"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-03-08-381Z-observation-analysis-5360a05c",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/contract.md",
+    "line": 3,
+    "target": "trading/",
+    "kind": "resolved",
+    "resolved": [
+      "trading"
+    ],
+    "source_control": [
+      {
+        "path": "trading",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 3,
+    "target": "/root/matching_core",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 3,
+    "target": "engine/src/core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 3,
+    "target": "engine/src/model.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/model.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/model.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 43,
+    "target": "engine/tests/core_rules.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/core_rules.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/core_rules.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 43,
+    "target": "core_reference.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/core_reference.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/core_reference.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 47,
+    "target": "evidence/core-20260921T172751046-debug/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T172751046-debug"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T172751046-debug",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 47,
+    "target": "lib/self-contained",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 49,
+    "target": "scripts/env.ps1",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/env.ps1"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/env.ps1",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 53,
+    "target": "evidence/core-20260921T173114875-debug/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T173114875-debug"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T173114875-debug",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 54,
+    "target": "evidence/core-20260921T173139227-release/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T173139227-release"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T173139227-release",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 55,
+    "target": "evidence/core-20260921T173309384-bench-build-format/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T173309384-bench-build-format"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T173309384-bench-build-format",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/core.md",
+    "line": 58,
+    "target": ".bin",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 7,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 17,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 23,
+    "target": "package.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/package.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/package.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 27,
+    "target": "frontend/vercel.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/vercel.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/vercel.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 27,
+    "target": "pnpm-lock.yaml",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/pnpm-lock.yaml"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/pnpm-lock.yaml",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 27,
+    "target": "package.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/package.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/package.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 29,
+    "target": "pnpm-workspace.yaml",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/pnpm-workspace.yaml"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/pnpm-workspace.yaml",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 29,
+    "target": "../.tools/pnpm-store",
+    "kind": "resolved",
+    "resolved": [
+      "trading/.tools/pnpm-store"
+    ],
+    "source_control": [
+      {
+        "path": "trading/.tools/pnpm-store",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 33,
+    "target": "vercel.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/vercel.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/vercel.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 35,
+    "target": "frontend/.env.production.example",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/.env.production.example"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/.env.production.example",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 48,
+    "target": "trading/README.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/README.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/README.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 78,
+    "target": "ui.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/docs/ui.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/docs/ui.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/deployment.md",
+    "line": 82,
+    "target": "frontend/scripts/start-production-preview.ps1",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/scripts/start-production-preview.ps1"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/scripts/start-production-preview.ps1",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/evidence-policy.md",
+    "line": 3,
+    "target": "latest-state.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-39-51-901Z-observe-b75b75a0/latest-state.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-39-51-901Z-observe-b75b75a0/latest-state.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/evidence-policy.md",
+    "line": 5,
+    "target": "trading/.gitattributes",
+    "kind": "resolved",
+    "resolved": [
+      "trading/.gitattributes"
+    ],
+    "source_control": [
+      {
+        "path": "trading/.gitattributes",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/evidence-policy.md",
+    "line": 9,
+    "target": "snapshot-recovered-full-core.json",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/evidence-policy.md",
+    "line": 9,
+    "target": "journal-replayed-full-core.json",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/evidence-policy.md",
+    "line": 9,
+    "target": "engine/tests/fixtures/*.json",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/evidence-policy.md",
+    "line": 15,
+    "target": "docs/agents.jsonl",
+    "kind": "resolved",
+    "resolved": [
+      "trading/docs/agents.jsonl"
+    ],
+    "source_control": [
+      {
+        "path": "trading/docs/agents.jsonl",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/evidence-policy.md",
+    "line": 25,
+    "target": "keep-awake.ps1",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/keep-awake.ps1"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/keep-awake.ps1",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/integration-adapter.md",
+    "line": 3,
+    "target": "frontend/src/integration/ExchangeLink.tsx",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/src/integration/ExchangeLink.tsx"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/src/integration/ExchangeLink.tsx",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/integration-adapter.md",
+    "line": 3,
+    "target": "App.tsx",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/src/App.tsx"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/src/App.tsx",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/integration-adapter.md",
+    "line": 5,
+    "target": "dopamin/src/App.tsx",
+    "kind": "resolved",
+    "resolved": [
+      "dopamin/src/App.tsx"
+    ],
+    "source_control": [
+      {
+        "path": "dopamin/src/App.tsx",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 3,
+    "target": "/root/matching_core",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 9,
+    "target": "evidence/2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T08-46-52-567Z-network-bench-baseline-fixed-harness-a05b756b",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 11,
+    "target": "main.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 11,
+    "target": "storage.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/storage.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/storage.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 11,
+    "target": "core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 15,
+    "target": "scripts/perf-probe.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/perf-probe.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/perf-probe.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 26,
+    "target": "evidence/2026-09-21T08-53-27-544Z-perf-probe-baseline-7efb867f/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T08-53-27-544Z-perf-probe-baseline-7efb867f"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T08-53-27-544Z-perf-probe-baseline-7efb867f",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 26,
+    "target": "evidence/core-20260921T175327447-perf-probe-console/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T175327447-perf-probe-console"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T175327447-perf-probe-console",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 41,
+    "target": "evidence/2026-09-21T08-56-56-753Z-perf-probe-fetch-send-timing-38434331/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T08-56-56-753Z-perf-probe-fetch-send-timing-38434331"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T08-56-56-753Z-perf-probe-fetch-send-timing-38434331",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 43,
+    "target": "evidence/core-20260921T175901520-undici-source/source-inspection.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T175901520-undici-source/source-inspection.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T175901520-undici-source/source-inspection.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 47,
+    "target": "scripts/network-bench.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/network-bench.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/network-bench.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 51,
+    "target": "evidence/2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T08-57-24-916Z-network-bench-node-http-client-d334a251",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance-investigation.md",
+    "line": 51,
+    "target": "evidence/core-20260921T175724809-transport-comparison-console/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T175724809-transport-comparison-console"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T175724809-transport-comparison-console",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/performance.md",
+    "line": 56,
+    "target": "engine/src/core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 3,
+    "target": "/root/durability",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 3,
+    "target": "engine/src/main.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 3,
+    "target": "scripts/demo.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/demo.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/demo.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 3,
+    "target": "scripts/api.integration.test.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/api.integration.test.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/api.integration.test.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 9,
+    "target": "../evidence/2026-09-21T08-43-15-688Z-api-d1308294/run.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T08-43-15-688Z-api-d1308294/run.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T08-43-15-688Z-api-d1308294/run.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 9,
+    "target": "events.jsonl",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T08-43-15-688Z-api-d1308294/events.jsonl",
+      "trading/evidence/2026-09-21T09-04-32-963Z-api-382f59ba/events.jsonl"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T08-43-15-688Z-api-d1308294/events.jsonl",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/2026-09-21T09-04-32-963Z-api-382f59ba/events.jsonl",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 15,
+    "target": "engine/src/main.rs:544–552",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 15,
+    "target": "scripts/api.integration.test.mjs:168",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/api.integration.test.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/api.integration.test.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 21,
+    "target": "checkpoint-publication-failure/report.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-04-32-963Z-api-382f59ba/checkpoint-publication-failure/report.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-04-32-963Z-api-382f59ba/checkpoint-publication-failure/report.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 25,
+    "target": "engine/src/main.rs:514–545",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 27,
+    "target": "engine/src/main.rs:504",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 27,
+    "target": "engine/src/main.rs:512–518",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 33,
+    "target": "evidence/2026-09-21T08-35-44-544Z-review-slow-http-aa2143d7/report.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T08-35-44-544Z-review-slow-http-aa2143d7/report.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T08-35-44-544Z-review-slow-http-aa2143d7/report.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 39,
+    "target": "scripts/api.integration.test.mjs:49–56",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/api.integration.test.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/api.integration.test.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 41,
+    "target": "scripts/api.integration.test.mjs:46–54",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/api.integration.test.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/api.integration.test.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 49,
+    "target": "engine/src/main.rs:370–380",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 51,
+    "target": "engine/src/main.rs:339–341",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 51,
+    "target": "engine/src/main.rs:367–374",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 53,
+    "target": "watch.rs",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 59,
+    "target": "scripts/demo.mjs:35–65",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/demo.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/demo.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 61,
+    "target": "scripts/demo.mjs:35–50",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/demo.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/demo.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 92,
+    "target": "deploy/Dockerfile",
+    "kind": "resolved",
+    "resolved": [
+      "trading/deploy/Dockerfile"
+    ],
+    "source_control": [
+      {
+        "path": "trading/deploy/Dockerfile",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-api-storage.md",
+    "line": 100,
+    "target": "validation-snapshot-process-0855.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 3,
+    "target": "/root/durability",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 3,
+    "target": "engine/src/core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 3,
+    "target": "engine/src/model.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/model.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/model.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 11,
+    "target": "engine/src/core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 12,
+    "target": "engine/src/model.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/model.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/model.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 26,
+    "target": "model.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/model.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/model.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 38,
+    "target": "before/core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T184147624-status-reuse/before/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/before/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 38,
+    "target": "engine/src/core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 38,
+    "target": "engine/tests/core_status_compatibility.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/core_status_compatibility.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/core_status_compatibility.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 42,
+    "target": "core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs",
+      "trading/evidence/core-20260921T184147624-status-reuse/before/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/before/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 43,
+    "target": "core.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/core.rs",
+      "trading/evidence/core-20260921T184147624-status-reuse/before/core.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/core.rs",
+        "state": "tracked"
+      },
+      {
+        "path": "trading/evidence/core-20260921T184147624-status-reuse/before/core.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 44,
+    "target": "core_status_compatibility.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/core_status_compatibility.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/core_status_compatibility.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 45,
+    "target": "status_reuse_before_trace.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/fixtures/status_reuse_before_trace.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/fixtures/status_reuse_before_trace.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 46,
+    "target": "status_reuse_legacy_frames.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/fixtures/status_reuse_legacy_frames.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/fixtures/status_reuse_legacy_frames.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-core-independent.md",
+    "line": 52,
+    "target": ".bin",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/review-demo-lifecycle.md",
+    "line": 3,
+    "target": "scripts/demo.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/demo.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/demo.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-demo-lifecycle.md",
+    "line": 3,
+    "target": "scripts/demo-lifecycle.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/demo-lifecycle.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/demo-lifecycle.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-demo-lifecycle.md",
+    "line": 24,
+    "target": "data/demo-current.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo-current.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo-current.json",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 3,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 3,
+    "target": "trading/deploy",
+    "kind": "resolved",
+    "resolved": [
+      "trading/deploy"
+    ],
+    "source_control": [
+      {
+        "path": "trading/deploy",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 13,
+    "target": "frontend/dist",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/dist"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/dist",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 15,
+    "target": "frontend/src/integration/ExchangeLink.tsx",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/src/integration/ExchangeLink.tsx"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/src/integration/ExchangeLink.tsx",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 17,
+    "target": "vercel.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/vercel.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/vercel.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 31,
+    "target": "evidence/<run-id>/engine-data",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 32,
+    "target": "evidence/<run-id>/dist",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 33,
+    "target": "evidence/<run-id>/processes.json",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 33,
+    "target": "artifact-sha256.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/artifact-sha256.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/artifact-sha256.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 34,
+    "target": "processes.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/processes.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/processes.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 34,
+    "target": "build.log",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/build.log"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/build.log",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 34,
+    "target": "typecheck.log",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 35,
+    "target": "verify-static.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/verify-static.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/verify-static.mjs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 35,
+    "target": "static-verification.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/static-verification.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/static-verification.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 36,
+    "target": "demo-preserved.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/demo-preserved.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/demo-preserved.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 37,
+    "target": "occupied-port-guard.log",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/occupied-port-guard.log"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/occupied-port-guard.log",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 38,
+    "target": "browser/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 38,
+    "target": "verified-state.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser/verified-state.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser/verified-state.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 38,
+    "target": "browser-console.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser/browser-console.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser/browser-console.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 39,
+    "target": "shutdown-verification.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/shutdown-verification.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/shutdown-verification.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 43,
+    "target": "dist/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/dist",
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/dist"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/dist",
+        "state": "ignored_local_runtime"
+      },
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/dist",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 43,
+    "target": "frontend/.gitignore",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/.gitignore"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/.gitignore",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 47,
+    "target": "browser/verified-state.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser/verified-state.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser/verified-state.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 58,
+    "target": "processes.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/processes.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/processes.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 68,
+    "target": "browser/",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-production-20260921T093830224Z-33aae872/browser",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-deployment.md",
+    "line": 70,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-storage-independent.md",
+    "line": 3,
+    "target": "/root/matching_core",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/review-storage-independent.md",
+    "line": 3,
+    "target": "storage.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/storage.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/storage.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-storage-independent.md",
+    "line": 26,
+    "target": "engine/src/storage.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/storage.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/storage.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-storage-independent.md",
+    "line": 27,
+    "target": "docs/adr/002-durability.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/docs/adr/002-durability.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/docs/adr/002-durability.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-storage-independent.md",
+    "line": 28,
+    "target": "engine/tests/storage_recovery.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/tests/storage_recovery.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/tests/storage_recovery.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/review-storage-independent.md",
+    "line": 29,
+    "target": "engine/src/main.rs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/engine/src/main.rs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/engine/src/main.rs",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/slow-ws-validation.md",
+    "line": 15,
+    "target": "scripts/slow-ws.mjs",
+    "kind": "resolved",
+    "resolved": [
+      "trading/scripts/slow-ws.mjs"
+    ],
+    "source_control": [
+      {
+        "path": "trading/scripts/slow-ws.mjs",
+        "state": "not_tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/slow-ws-validation.md",
+    "line": 15,
+    "target": "metadata.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-21-15-282Z-slow-ws-acfe474d/metadata.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-21-15-282Z-slow-ws-acfe474d/metadata.json",
+        "state": "not_tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/stress.md",
+    "line": 3,
+    "target": "/root/matching_core",
+    "kind": "needs_context_review",
+    "resolved": [],
+    "source_control": []
+  },
+  {
+    "document": "trading/docs/stress.md",
+    "line": 18,
+    "target": "evidence/<unique-run>/bin",
+    "kind": "template_or_glob"
+  },
+  {
+    "document": "trading/docs/stress.md",
+    "line": 30,
+    "target": "raw-requests.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/raw-requests.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/raw-requests.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/stress.md",
+    "line": 30,
+    "target": "snapshots.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/snapshots.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/snapshots.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/stress.md",
+    "line": 30,
+    "target": "memory.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/memory.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/memory.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/stress.md",
+    "line": 30,
+    "target": "summary.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/summary.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/summary.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/stress.md",
+    "line": 36,
+    "target": "../evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/summary.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/summary.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/summary.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/stress.md",
+    "line": 37,
+    "target": "../evidence/core-20260921T181617761-queue-stress-console/checkpoint.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/core-20260921T181617761-queue-stress-console/checkpoint.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/core-20260921T181617761-queue-stress-console/checkpoint.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 3,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 7,
+    "target": "trading/README.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/README.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/README.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 50,
+    "target": "trading/evidence",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 56,
+    "target": "/",
+    "kind": "resolved",
+    "resolved": [
+      "../.."
+    ],
+    "source_control": [
+      {
+        "path": "../..",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 58,
+    "target": "frontend/src/integration/ExchangeLink.tsx",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/src/integration/ExchangeLink.tsx"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/src/integration/ExchangeLink.tsx",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 70,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 78,
+    "target": "frontend/scripts/verify.ps1",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/scripts/verify.ps1"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/scripts/verify.ps1",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 78,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 78,
+    "target": "./scripts/verify.ps1",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend/scripts/verify.ps1"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend/scripts/verify.ps1",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 80,
+    "target": "evidence/frontend-20260921T083739Z-visual",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/frontend-20260921T083739Z-visual"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/frontend-20260921T083739Z-visual",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 82,
+    "target": "evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/summary.json",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/summary.json"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/summary.json",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/ui.md",
+    "line": 84,
+    "target": "evidence/browser-manual-20260921T083933Z/README.md",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/browser-manual-20260921T083933Z/README.md"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/browser-manual-20260921T083933Z/README.md",
+        "state": "tracked"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/verification.md",
+    "line": 8,
+    "target": "data/demo",
+    "kind": "resolved",
+    "resolved": [
+      "trading/data/demo"
+    ],
+    "source_control": [
+      {
+        "path": "trading/data/demo",
+        "state": "ignored_local_runtime"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/verification.md",
+    "line": 20,
+    "target": "trading/frontend",
+    "kind": "resolved",
+    "resolved": [
+      "trading/frontend"
+    ],
+    "source_control": [
+      {
+        "path": "trading/frontend",
+        "state": "directory"
+      }
+    ]
+  },
+  {
+    "document": "trading/docs/verification.md",
+    "line": 32,
+    "target": "evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e",
+    "kind": "resolved",
+    "resolved": [
+      "trading/evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e"
+    ],
+    "source_control": [
+      {
+        "path": "trading/evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e",
+        "state": "directory"
+      }
+    ]
+  }
+]

@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-09-21T11:04:31.125Z",
+  "script_sha256": "1de9249f15993135173b8700703d4a14c839da777178b7b49cc5c6d30d03c138",
+  "source_release_sha256": "09bcf75b80a2a85c6a52168d2404f23a230e73b958fc6814daa300650fc5ac56",
+  "raw_command_rows": 17736,
+  "all_command_rows_accepted_durable": true,
+  "http_json_rows": 17743,
+  "one_additional_websocket_upgrade": true,
+  "http_total_matches": true,
+  "resource_samples": 73,
+  "owned_pids": [
+    {
+      "pid": 22032,
+      "still_exists": false
+    },
+    {
+      "pid": 10036,
+      "still_exists": false
+    },
+    {
+      "pid": 3032,
+      "still_exists": false
+    }
+  ],
+  "observed_all_sample_peaks": [
+    {
+      "pid": 22032,
+      "working_set_bytes": 34934784,
+      "private_bytes": 32288768
+    },
+    {
+      "pid": 10036,
+      "working_set_bytes": 341164032,
+      "private_bytes": 344788992
+    }
+  ]
+}

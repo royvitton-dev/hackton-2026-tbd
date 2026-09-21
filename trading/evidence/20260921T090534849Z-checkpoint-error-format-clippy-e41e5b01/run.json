@@ -1,0 +1,17 @@
+{
+  "exit_code": 0,
+  "run_id": "20260921T090534849Z-checkpoint-error-format-clippy-e41e5b01",
+  "command": "cargo",
+  "args": [
+    "clippy",
+    "--locked",
+    "--all-targets",
+    "--",
+    "-D",
+    "warnings"
+  ],
+  "ended_at": "2026-09-21T09:05:36.0027347Z",
+  "started_at": "2026-09-21T09:05:34.8831748Z",
+  "status": "passed",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine"
+}

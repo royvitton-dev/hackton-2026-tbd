@@ -1,0 +1,17 @@
+{"at":"2026-09-21T09:56:01.668Z","event":"occupied_port_rejected","status":404,"occupied":52802,"free_reservation_released":true}
+{"at":"2026-09-21T09:56:01.681Z","event":"occupied_port_rejected","status":200,"occupied":52805,"free_reservation_released":true}
+{"at":"2026-09-21T09:56:01.685Z","event":"ipv6_occupied_rejected","port":52808}
+{"at":"2026-09-21T09:56:01.690Z","event":"missing_child","name":"missing-child","spawned":false,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":"spawn C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-56-01-626Z-demo-lifecycle-8a5e2147\\missing-executable ENOENT"}
+{"at":"2026-09-21T09:56:01.760Z","event":"child_started","name":"exit-before-ready","pid":19928,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-56-01-626Z-demo-lifecycle-8a5e2147\\exit-before-ready.mjs"}
+{"at":"2026-09-21T09:56:01.761Z","event":"child_state","name":"exit-before-ready","pid":19928,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:56:01.813Z","event":"child_state","name":"exit-before-ready","pid":19928,"spawned":true,"exited":true,"exit_code":23,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:56:01.833Z","event":"child_started","name":"wrong-ready-marker","pid":14664,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-56-01-626Z-demo-lifecycle-8a5e2147\\wrong-ready-marker.mjs"}
+{"at":"2026-09-21T09:56:01.834Z","event":"child_state","name":"wrong-ready-marker","pid":14664,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:56:02.139Z","event":"child_state","name":"wrong-ready-marker","pid":14664,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGTERM","spawn_error":null}
+{"at":"2026-09-21T09:56:02.158Z","event":"child_started","name":"exit-during-health","pid":8144,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-56-01-626Z-demo-lifecycle-8a5e2147\\exit-during-health.mjs"}
+{"at":"2026-09-21T09:56:02.158Z","event":"child_state","name":"exit-during-health","pid":8144,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:56:02.371Z","event":"child_state","name":"exit-during-health","pid":8144,"spawned":true,"exited":true,"exit_code":29,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:56:02.391Z","event":"child_started","name":"owned-ready","pid":12764,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-56-01-626Z-demo-lifecycle-8a5e2147\\owned-ready.mjs"}
+{"at":"2026-09-21T09:56:02.391Z","event":"child_state","name":"owned-ready","pid":12764,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:56:02.582Z","event":"owned_readiness_confirmed","port":52816,"pid":12764}
+{"at":"2026-09-21T09:56:02.589Z","event":"child_state","name":"owned-ready","pid":12764,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGTERM","spawn_error":null}

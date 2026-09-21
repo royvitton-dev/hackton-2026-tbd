@@ -1,0 +1,128 @@
+{
+  "run_id": "2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589",
+  "classification": "competing-resource stress; normal demo and observer remain live; never substitute for quiet baseline A/B/C",
+  "complete": true,
+  "engine_pid": 20160,
+  "sampler_pid": 3360,
+  "sampler_alive_at_end": false,
+  "base_url": "http://127.0.0.1:64822",
+  "configured_queue_capacity": 2048,
+  "http_requests_total": 3673,
+  "client_maximum_active_requests": 2500,
+  "initial_burst": {
+    "attempted": 2500,
+    "accepted_durable": 2144,
+    "queue_full": 356,
+    "unknown_or_other": 0,
+    "dispatch_span_ms": 219.02379999999994,
+    "completion_ms": 4501.1717,
+    "admitted_latency_ms": {
+      "count": 2144,
+      "p50": 2443.1817,
+      "p95": 4126.694799999999,
+      "p99": 4268.7228,
+      "max": 4282.5707
+    },
+    "queue_full_latency_ms": {
+      "count": 356,
+      "p50": 566.8959,
+      "p95": 567.6954000000001,
+      "p99": 567.7506000000001,
+      "max": 567.8018999999999
+    }
+  },
+  "verification": {
+    "before_retry_no_hidden_effects": true,
+    "all_queue_full_same_id_retry_duplicate_lookup_count": 356,
+    "originally_admitted_duplicate_lookup_sample_count": 50,
+    "unknown_resolved": 0,
+    "all_unique_admitted_requests": 2500,
+    "final_assets_reserves_orders_sequence_exact": true,
+    "scope": "All acknowledged unique orders compared against authoritative full active orderbook and exact per-account reservations. Every QUEUE_FULL key is retried, duplicate-retried and looked up. Initially admitted duplicate/lookup checks are a stated bounded sample, not every key."
+  },
+  "shutdown": {
+    "response": {
+      "status": "shutting_down"
+    },
+    "exit_code": 0,
+    "signal": null
+  },
+  "elapsed_ms": 7439.6281,
+  "client_max_observed_rss_bytes": 171352064,
+  "demo_after": {
+    "run_id": "2026-09-21T08-59-54-120Z-demo-e6520956",
+    "manifest": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo-current.json",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 15804,
+        "alive": true
+      },
+      {
+        "name": "frontend",
+        "pid": 18940,
+        "alive": true
+      },
+      {
+        "name": "bot-01",
+        "pid": 18960,
+        "alive": true
+      },
+      {
+        "name": "bot-02",
+        "pid": 2616,
+        "alive": true
+      },
+      {
+        "name": "bot-03",
+        "pid": 18860,
+        "alive": true
+      },
+      {
+        "name": "bot-04",
+        "pid": 4064,
+        "alive": true
+      },
+      {
+        "name": "bot-05",
+        "pid": 14536,
+        "alive": true
+      },
+      {
+        "name": "bot-06",
+        "pid": 2220,
+        "alive": true
+      },
+      {
+        "name": "bot-07",
+        "pid": 3320,
+        "alive": true
+      },
+      {
+        "name": "bot-08",
+        "pid": 17416,
+        "alive": true
+      },
+      {
+        "name": "bot-09",
+        "pid": 20280,
+        "alive": true
+      },
+      {
+        "name": "bot-10",
+        "pid": 20228,
+        "alive": true
+      },
+      {
+        "name": "bot-11",
+        "pid": 19860,
+        "alive": true
+      },
+      {
+        "name": "bot-12",
+        "pid": 15668,
+        "alive": true
+      }
+    ]
+  }
+}

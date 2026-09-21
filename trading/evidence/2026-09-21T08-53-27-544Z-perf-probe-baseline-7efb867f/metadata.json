@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-09-21T08:53:27.876Z",
+  "run_id": "2026-09-21T08-53-27-544Z-perf-probe-baseline-7efb867f",
+  "command": [
+    "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "C:\\project\\hackton-2026-tbd\\trading\\scripts\\perf-probe.mjs",
+    "--quiet-window",
+    "--samples",
+    "40",
+    "--warmup",
+    "10",
+    "--label",
+    "baseline"
+  ],
+  "options": {
+    "quiet": true,
+    "samples": 40,
+    "warmup": 10,
+    "label": "baseline",
+    "engine": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\release\\leave-engine.exe"
+  },
+  "source_binary_sha256": "7bc32195300dd9e35c33dde84bf85a24e7903216f5c61af6c43afe7da9e36f4d",
+  "host": {
+    "os": "Windows 11 Pro",
+    "release": "10.0.26200",
+    "node": "v24.19.0",
+    "cpus": 16,
+    "model": "12th Gen Intel(R) Core(TM) i5-1240P"
+  },
+  "intent": "Diagnose transport/body framing, writer handoff and sync costs with bounded probes; diagnostic ordering is fixed and results are not B/C target measurements.",
+  "input": "40 samples per transport/route by default, 10 warmups, 3 transports, direct404/validation400/health/durable place-cancel; fixed inputs; no random seed required",
+  "ended_at": "2026-09-21T08:53:31.505Z"
+}

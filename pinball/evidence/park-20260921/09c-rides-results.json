@@ -1,0 +1,75 @@
+{
+  "at": "2026-09-21T11:14:47.113Z",
+  "tests": [
+    {
+      "map": "neon",
+      "status": "PASS",
+      "graphics": {
+        "geometries": 114,
+        "textures": 11,
+        "programs": 23,
+        "drawCalls": 71,
+        "triangles": 46573,
+        "pixelRatio": 1
+      }
+    },
+    {
+      "map": "orbit",
+      "status": "PASS",
+      "graphics": {
+        "geometries": 141,
+        "textures": 11,
+        "programs": 24,
+        "drawCalls": 55,
+        "triangles": 51174,
+        "pixelRatio": 1
+      }
+    },
+    {
+      "map": "zigzag",
+      "status": "PASS",
+      "graphics": {
+        "geometries": 93,
+        "textures": 11,
+        "programs": 22,
+        "drawCalls": 54,
+        "triangles": 45222,
+        "pixelRatio": 1
+      }
+    },
+    {
+      "map": "split",
+      "status": "PASS",
+      "graphics": {
+        "geometries": 122,
+        "textures": 11,
+        "programs": 24,
+        "drawCalls": 57,
+        "triangles": 43987,
+        "pixelRatio": 1
+      }
+    }
+  ],
+  "memory": {
+    "switches": 40,
+    "before": {
+      "geometries": 76,
+      "textures": 10,
+      "programs": 24,
+      "drawCalls": 57,
+      "triangles": 45360,
+      "pixelRatio": 1
+    },
+    "after": {
+      "geometries": 76,
+      "textures": 10,
+      "programs": 24,
+      "drawCalls": 58,
+      "triangles": 45880,
+      "pixelRatio": 1
+    },
+    "status": "PASS"
+  },
+  "errors": [],
+  "status": "PASS"
+}

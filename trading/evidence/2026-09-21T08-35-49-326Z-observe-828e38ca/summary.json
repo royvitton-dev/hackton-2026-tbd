@@ -1,0 +1,24 @@
+{
+  "run_id": "2026-09-21T08-35-49-326Z-observe-828e38ca",
+  "started_at": "2026-09-21T08:35:49.346Z",
+  "ended_at": "2026-09-21T08:41:04.301Z",
+  "duration_ms": 309945,
+  "samples": 62,
+  "commands_delta": 1818,
+  "volume_delta": 1353,
+  "distinct_book_states": 62,
+  "distinct_trade_prices": 32,
+  "min_connected_bots": 12,
+  "participating_bots": 12,
+  "bots_with_fills": 12,
+  "websocket_events": 1848,
+  "websocket_gaps": 0,
+  "websocket_disconnects": 0,
+  "asset_conservation": true,
+  "continued_trade_intervals": 61,
+  "limitations": [
+    "Public totals and actual trade/event observations; Rust tests check complete accounting invariants.",
+    "WebSocket receipt verified; browser rendering requires separate browser evidence."
+  ],
+  "passed": true
+}

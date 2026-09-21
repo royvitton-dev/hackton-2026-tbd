@@ -1,0 +1,23 @@
+{
+  "analyzed_at": "2026-09-21T09:53:45.163Z",
+  "source_run_id": "2026-09-21T08-59-54-120Z-demo-e6520956",
+  "files": 12,
+  "records": 16811,
+  "incomplete_tails_skipped": 0,
+  "relevant_records_without_timing": 16794,
+  "durable_command_round_trip": {
+    "available": false,
+    "samples": 0
+  },
+  "confirmed_accepted": 0,
+  "confirmed_rejected": 0,
+  "per_bot_and_event": [],
+  "fifteen_minute_durable_windows": [],
+  "limitations": [
+    "Passive measurements of ordinary Node fetch bots, including client scheduling, HTTP and response JSON parsing.",
+    "Not an isolated throughput benchmark or pure matching latency.",
+    "Command results include durable domain rejections and duplicate replies; statuses are counted separately.",
+    "A partial last line from a concurrently growing log is excluded and counted.",
+    "No timings are reconstructed for older records without round_trip_ms."
+  ]
+}

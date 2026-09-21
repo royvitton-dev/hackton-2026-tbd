@@ -1,0 +1,10 @@
+   Compiling leave-exchange v0.1.0 (C:\project\hackton-2026-tbd\trading\engine)
+    Finished `release` profile [optimized] target(s) in 16.41s
+     Running tests\core_status_compatibility.rs (engine\target\release\deps\core_status_compatibility-9d37f6e5364876a3.exe)
+
+running 2 tests
+test historical_trace_results_and_full_core_remain_identical ... ok
+test historical_snapshot_reconstructed_from_tracked_json_preserves_transitions ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+

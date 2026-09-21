@@ -1,0 +1,25 @@
+{
+  "source_kind": "Selected code/config/README paths exported from local Git commit",
+  "status": "setup_passed",
+  "started_at": "2026-09-21T10:18:48.7671346Z",
+  "source_commit": "7bc9b56b726bca181938f7f890b1dbcdb2d4a9e5",
+  "evidence_path": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T101847792Z-git-source-repro-ea6a3bd8",
+  "cargo_build_jobs": 2,
+  "limitations": [
+    "Not a clean operating-system install or toolchain download test",
+    "Concurrent with normal six-hour demonstration; not a quiet performance benchmark"
+  ],
+  "toolchain_junction": "C:\\project\\hackton-2026-tbd\\trading\\.tmp\\20260921T101847792Z-git-source-repro-ea6a3bd8\\trading\\.tools",
+  "toolchain_target": "C:\\project\\hackton-2026-tbd\\trading\\.tools",
+  "fresh_source_root": "C:\\project\\hackton-2026-tbd\\trading\\.tmp\\20260921T101847792Z-git-source-repro-ea6a3bd8\\trading",
+  "run_id": "20260921T101847792Z-git-source-repro-ea6a3bd8",
+  "dependency_cache_reused": true,
+  "setup_exit_code": 0,
+  "additional_runtime_validation": {
+    "status": "not_executed_automatic_approval_rejection",
+    "action": "Start exported demo on API 8792/UI 5178",
+    "tool_reason": "rejected: blocked by policy",
+    "more_specific_reason_available": false,
+    "retried_or_bypassed": false
+  }
+}

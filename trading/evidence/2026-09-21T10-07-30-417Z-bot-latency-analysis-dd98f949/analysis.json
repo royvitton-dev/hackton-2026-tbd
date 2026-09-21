@@ -1,0 +1,160 @@
+{
+  "analyzed_at": "2026-09-21T10:07:30.416Z",
+  "source_run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+  "files": 12,
+  "records": 770,
+  "incomplete_tails_skipped": 0,
+  "relevant_records_without_timing": 0,
+  "durable_command_round_trip": {
+    "available": true,
+    "samples": 758,
+    "mean_ms": 13.730705540897425,
+    "p50_ms": 15.535799999999654,
+    "p95_ms": 17.027699999991455,
+    "p99_ms": 18.718299999993178,
+    "max_ms": 76.09420000000682
+  },
+  "confirmed_accepted": 758,
+  "confirmed_rejected": 0,
+  "per_bot_and_event": [
+    {
+      "key": "bot-01:command_result",
+      "available": true,
+      "samples": 63,
+      "mean_ms": 13.598652380953151,
+      "p50_ms": 15.325699999993958,
+      "p95_ms": 16.60220000000845,
+      "p99_ms": 17.23619999999937,
+      "max_ms": 17.23619999999937
+    },
+    {
+      "key": "bot-02:command_result",
+      "available": true,
+      "samples": 63,
+      "mean_ms": 13.20730000000034,
+      "p50_ms": 15.438800000003539,
+      "p95_ms": 17.047500000000582,
+      "p99_ms": 17.60710000000836,
+      "max_ms": 17.60710000000836
+    },
+    {
+      "key": "bot-03:command_result",
+      "available": true,
+      "samples": 63,
+      "mean_ms": 13.752401587301438,
+      "p50_ms": 15.501499999998487,
+      "p95_ms": 16.94340000000375,
+      "p99_ms": 18.166700000001583,
+      "max_ms": 18.166700000001583
+    },
+    {
+      "key": "bot-04:command_result",
+      "available": true,
+      "samples": 64,
+      "mean_ms": 13.430817187499239,
+      "p50_ms": 15.607399999998961,
+      "p95_ms": 16.699399999997695,
+      "p99_ms": 16.918899999989662,
+      "max_ms": 16.918899999989662
+    },
+    {
+      "key": "bot-05:command_result",
+      "available": true,
+      "samples": 64,
+      "mean_ms": 13.842582812500964,
+      "p50_ms": 15.658100000000559,
+      "p95_ms": 16.866800000003423,
+      "p99_ms": 19.82680000000073,
+      "max_ms": 19.82680000000073
+    },
+    {
+      "key": "bot-06:command_result",
+      "available": true,
+      "samples": 61,
+      "mean_ms": 14.619552459017191,
+      "p50_ms": 15.789700000001176,
+      "p95_ms": 16.67609999999695,
+      "p99_ms": 76.09420000000682,
+      "max_ms": 76.09420000000682
+    },
+    {
+      "key": "bot-07:command_result",
+      "available": true,
+      "samples": 64,
+      "mean_ms": 14.114571874999864,
+      "p50_ms": 15.517899999991641,
+      "p95_ms": 17.19220000000496,
+      "p99_ms": 24.696199999991222,
+      "max_ms": 24.696199999991222
+    },
+    {
+      "key": "bot-08:command_result",
+      "available": true,
+      "samples": 63,
+      "mean_ms": 14.10800952380987,
+      "p50_ms": 15.8125,
+      "p95_ms": 17.66370000000461,
+      "p99_ms": 18.718299999993178,
+      "max_ms": 18.718299999993178
+    },
+    {
+      "key": "bot-09:command_result",
+      "available": true,
+      "samples": 65,
+      "mean_ms": 14.039166153846919,
+      "p50_ms": 15.489100000006147,
+      "p95_ms": 17.331999999998516,
+      "p99_ms": 41.322699999996985,
+      "max_ms": 41.322699999996985
+    },
+    {
+      "key": "bot-10:command_result",
+      "available": true,
+      "samples": 63,
+      "mean_ms": 14.607333333333731,
+      "p50_ms": 15.820999999996275,
+      "p95_ms": 17.1987999999983,
+      "p99_ms": 17.988900000000285,
+      "max_ms": 17.988900000000285
+    },
+    {
+      "key": "bot-11:command_result",
+      "available": true,
+      "samples": 62,
+      "mean_ms": 12.820241935485011,
+      "p50_ms": 15.417199999996228,
+      "p95_ms": 17.174400000003516,
+      "p99_ms": 19.289399999999887,
+      "max_ms": 19.289399999999887
+    },
+    {
+      "key": "bot-12:command_result",
+      "available": true,
+      "samples": 63,
+      "mean_ms": 12.628701587301098,
+      "p50_ms": 15.308900000003632,
+      "p95_ms": 16.972499999999854,
+      "p99_ms": 18.960399999996298,
+      "max_ms": 18.960399999996298
+    }
+  ],
+  "fifteen_minute_durable_windows": [
+    {
+      "window_start_utc": "2026-09-21T10:00:00.000Z",
+      "available": true,
+      "samples": 758,
+      "mean_ms": 13.730705540897425,
+      "p50_ms": 15.535799999999654,
+      "p95_ms": 17.027699999991455,
+      "p99_ms": 18.718299999993178,
+      "max_ms": 76.09420000000682
+    }
+  ],
+  "limitations": [
+    "Passive measurements of ordinary Node fetch bots, including client scheduling, HTTP and response JSON parsing.",
+    "Not an isolated throughput benchmark or pure matching latency.",
+    "Command results include durable domain rejections and duplicate replies; statuses are counted separately.",
+    "A partial last line from a concurrently growing log is excluded and counted.",
+    "No timings are reconstructed for older records without round_trip_ms."
+  ]
+}

@@ -1,0 +1,15 @@
+✔ CPU deltas are normalized by logical CPUs and weighted by elapsed time (2.0369ms)
+✔ real zero activity is valid while missing and non-finite counters are excluded (0.9371ms)
+✔ standby gaps and backwards timestamps are not included in active CPU means (0.2024ms)
+✔ process churn and counter resets cannot turn into fabricated low CPU (0.1445ms)
+✔ missing capacity metadata and impossible CPU deltas remain unavailable (0.1245ms)
+✔ null process readings are excluded without aborting the report (0.1021ms)
+✔ incomplete memory samples cannot become zero totals or NaN maxima (0.4467ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 93.2707

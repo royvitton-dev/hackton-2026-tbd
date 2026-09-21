@@ -1,0 +1,120 @@
+{
+  "algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "file": "aged_recovery.exe",
+      "bytes": 17323151,
+      "sha256": "5ec946ae73705a779fce0e168b48f9983d644b31df5886bc8fe5b6ad1fd9a204"
+    },
+    {
+      "file": "intentional-mismatch.json",
+      "bytes": 4972,
+      "sha256": "f0e40a7becb7dd66b6aebaa7e15a6123b06112ec3e7acb38fe7e5a84853f9639"
+    },
+    {
+      "file": "recovery-report.json",
+      "bytes": 5177,
+      "sha256": "03a27bba6cb3e07bf2d14c3d8e8fffabdf4675432818cb61ad84ee7bcb88198d"
+    },
+    {
+      "file": "run.json",
+      "bytes": 746,
+      "sha256": "5bf0d1dcf139ed53aa7e1b94e6836d231f8fa6aa2f416836a74d28ec1a574f95"
+    },
+    {
+      "file": "synthetic-live-full-core.json",
+      "bytes": 4971,
+      "sha256": "d80a934800193d58922a51851602087704e1990e6a44dc2820939b00e8fc7901"
+    },
+    {
+      "file": "synthetic-source\\genesis.bin",
+      "bytes": 3606,
+      "sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+    },
+    {
+      "file": "synthetic-source\\journal.bin",
+      "bytes": 601,
+      "sha256": "8514ae77cd5e3ab5ad8cf8307a89f9faf0540a2750ecadaa6a962caf2340be6e"
+    },
+    {
+      "file": "synthetic-source\\snapshot-00000000000000000002-00000000000001789983615621890200-19600-1.bin",
+      "bytes": 4883,
+      "sha256": "621648ce973b7055e330cbbbd0c39291d1061e6f6d3b8080e786670fbbf2fc07"
+    },
+    {
+      "file": "synthetic-source\\writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "validation\\from-genesis\\genesis.bin",
+      "bytes": 3606,
+      "sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+    },
+    {
+      "file": "validation\\from-genesis\\journal.bin",
+      "bytes": 601,
+      "sha256": "8514ae77cd5e3ab5ad8cf8307a89f9faf0540a2750ecadaa6a962caf2340be6e"
+    },
+    {
+      "file": "validation\\from-genesis\\writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "validation\\from-snapshot\\genesis.bin",
+      "bytes": 3606,
+      "sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+    },
+    {
+      "file": "validation\\from-snapshot\\journal.bin",
+      "bytes": 601,
+      "sha256": "8514ae77cd5e3ab5ad8cf8307a89f9faf0540a2750ecadaa6a962caf2340be6e"
+    },
+    {
+      "file": "validation\\from-snapshot\\snapshot-00000000000000000002-00000000000001789983615621890200-19600-1.bin",
+      "bytes": 4883,
+      "sha256": "621648ce973b7055e330cbbbd0c39291d1061e6f6d3b8080e786670fbbf2fc07"
+    },
+    {
+      "file": "validation\\from-snapshot\\writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "validation\\journal-replayed-full-core.json",
+      "bytes": 4971,
+      "sha256": "d80a934800193d58922a51851602087704e1990e6a44dc2820939b00e8fc7901"
+    },
+    {
+      "file": "validation\\raw-copy\\genesis.bin",
+      "bytes": 3606,
+      "sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+    },
+    {
+      "file": "validation\\raw-copy\\journal.bin",
+      "bytes": 601,
+      "sha256": "8514ae77cd5e3ab5ad8cf8307a89f9faf0540a2750ecadaa6a962caf2340be6e"
+    },
+    {
+      "file": "validation\\raw-copy\\snapshot-00000000000000000002-00000000000001789983615621890200-19600-1.bin",
+      "bytes": 4883,
+      "sha256": "621648ce973b7055e330cbbbd0c39291d1061e6f6d3b8080e786670fbbf2fc07"
+    },
+    {
+      "file": "validation\\snapshot-recovered-full-core.json",
+      "bytes": 4971,
+      "sha256": "d80a934800193d58922a51851602087704e1990e6a44dc2820939b00e8fc7901"
+    },
+    {
+      "file": "validator.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "validator.stdout.log",
+      "bytes": 151,
+      "sha256": "2d5e338422e2f939ebed934ed14865ad4b2a8046bbf31d2d3348f9390de4617b"
+    }
+  ]
+}

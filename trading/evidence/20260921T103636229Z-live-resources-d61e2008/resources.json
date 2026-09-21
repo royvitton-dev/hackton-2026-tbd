@@ -1,0 +1,143 @@
+{
+  "run_id": "20260921T103636229Z-live-resources-d61e2008",
+  "measured_at": "2026-09-21T10:36:36.2489005Z",
+  "interval_seconds": 5.0174817,
+  "logical_processors": 16,
+  "cpu_definition": "Process CPU delta divided by elapsed seconds and logical processor count; percent of total host capacity",
+  "system_cpu_recent_sample_percent": 15,
+  "system_physical_total_bytes": 16880881664,
+  "system_physical_free_bytes": 4959653888,
+  "tracked_processes": 14,
+  "groups": [
+    {
+      "name": "engine",
+      "processes": 1,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 55812096.0,
+      "private_commit_bytes": 52719616.0
+    },
+    {
+      "name": "frontend",
+      "processes": 1,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 105914368.0,
+      "private_commit_bytes": 145743872.0
+    },
+    {
+      "name": "bots",
+      "processes": 12,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 852152320.0,
+      "private_commit_bytes": 888541184.0
+    }
+  ],
+  "total_cpu_percent_total_capacity": 0.0,
+  "total_working_set_bytes": 1013878784.0,
+  "total_private_commit_bytes": 1087004672.0,
+  "processes": [
+    {
+      "name": "engine",
+      "pid": 20540,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 55812096,
+      "private_commit_bytes": 52719616
+    },
+    {
+      "name": "frontend",
+      "pid": 17556,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 105914368,
+      "private_commit_bytes": 145743872
+    },
+    {
+      "name": "bot-01",
+      "pid": 17444,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 71176192,
+      "private_commit_bytes": 73363456
+    },
+    {
+      "name": "bot-02",
+      "pid": 7936,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 69107712,
+      "private_commit_bytes": 70959104
+    },
+    {
+      "name": "bot-03",
+      "pid": 20776,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 69935104,
+      "private_commit_bytes": 73351168
+    },
+    {
+      "name": "bot-04",
+      "pid": 16068,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 70135808,
+      "private_commit_bytes": 72486912
+    },
+    {
+      "name": "bot-05",
+      "pid": 4928,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 73416704,
+      "private_commit_bytes": 76804096
+    },
+    {
+      "name": "bot-06",
+      "pid": 20940,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 69656576,
+      "private_commit_bytes": 71790592
+    },
+    {
+      "name": "bot-07",
+      "pid": 12172,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 69963776,
+      "private_commit_bytes": 74067968
+    },
+    {
+      "name": "bot-08",
+      "pid": 7916,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 70168576,
+      "private_commit_bytes": 72290304
+    },
+    {
+      "name": "bot-09",
+      "pid": 15272,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 71282688,
+      "private_commit_bytes": 74739712
+    },
+    {
+      "name": "bot-10",
+      "pid": 5412,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 70848512,
+      "private_commit_bytes": 74096640
+    },
+    {
+      "name": "bot-11",
+      "pid": 20484,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 75051008,
+      "private_commit_bytes": 78843904
+    },
+    {
+      "name": "bot-12",
+      "pid": 6128,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 71409664,
+      "private_commit_bytes": 75747328
+    }
+  ],
+  "limitations": [
+    "Process working set sums may double-count shared pages",
+    "Private commit is not physical resident RAM",
+    "Host CPU is a separate recent OS counter sample, not the five-second process interval",
+    "Browser and observer/helper are excluded from14 demo processes"
+  ]
+}

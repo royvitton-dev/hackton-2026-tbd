@@ -1,0 +1,34 @@
+✔ magnet and cannon capture at physical position for 0.5–1 seconds; pause freezes pose and ball (157.335834ms)
+✔ held ball remains solid, one ball per device, and restart clears holds (0.595291ms)
+✔ cannon boost cannot tunnel through a pin or boundary (4.336708ms)
+✔ device capture, timing and launch are deterministic and varied across seeds (2.926916ms)
+✔ first/Nth stop at the actual target crossing; last stops with one unfinished ball (11311.011792ms)
+✔ ending rule preserves the prefix of the same physical race and has no chosen winner (8243.815208ms)
+✔ same-substep ties stop by crossing time and seeded priority without extra ranks (2.006291ms)
+✔ 1x and 3x step chunks stop at identical positions, time, winner and ranks (5177.053709ms)
+✔ random 3–5 second motion is deterministic, bounded, smooth and independent of participants (10.646292ms)
+✔ shared board force acts equally on identical balls, with actual velocity change (7.33675ms)
+✔ each map has different rotor magnitudes and both directions, with matching surface velocities (0.797334ms)
+✔ pause freezes active board motion and stepping chunks preserve the exact race (1685.12275ms)
+✔ orbit single-ball oscillation is detected and escapes without fabricated finish (118.792875ms)
+✔ windmill blades share an actual perpendicular collider and pirate velocity matches its swing (0.380208ms)
+✔ all four maps with motion: 120 seeded races remain contained and finish with unique real ranks (165492.270416ms)
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (1.098875ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (1.708792ms)
+✔ rule validation and ball-based N range (0.393083ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (7.897166ms)
+✔ finish order is crossing time, not ball list; exact ties use seeded tie key (2.402167ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (1910.736417ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (2464.504875ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (0.530583ms)
+✔ fast wall and pin impacts remain inside the board (2.891375ms)
+✔ all 4 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (163172.471708ms)
+✔ finish requires an exit throat; crossing between holes never ranks (1.056917ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 167637.013125

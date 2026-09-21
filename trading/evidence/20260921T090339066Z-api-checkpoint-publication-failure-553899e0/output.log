@@ -1,0 +1,27 @@
+Checkpoint failure evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T09-03-39-259Z-api-9a0e8401\checkpoint-publication-failure
+✖ checkpoint publication failure returns 503, exits nonzero and preserves durable ACKs (464.567ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 584.9618
+
+✖ failing tests:
+
+test at scripts\api.integration.test.mjs:168:1
+✖ checkpoint publication failure returns 503, exits nonzero and preserves durable ACKs (464.567ms)
+  Error: EPERM: operation not permitted, rename 'C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T09-03-39-259Z-api-9a0e8401\checkpoint-publication-failure\data' -> 'C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T09-03-39-259Z-api-9a0e8401\checkpoint-publication-failure\preserved-data'
+      at Object.renameSync (node:fs:1074:11)
+      at TestContext.<anonymous> (file:///C:/project/hackton-2026-tbd/trading/scripts/api.integration.test.mjs:242:8)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    errno: -4048,
+    code: 'EPERM',
+    syscall: 'rename',
+    path: 'C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-03-39-259Z-api-9a0e8401\\checkpoint-publication-failure\\data',
+    dest: 'C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-03-39-259Z-api-9a0e8401\\checkpoint-publication-failure\\preserved-data'
+  }

@@ -1,0 +1,16 @@
+{
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "status": "passed",
+  "command": "powershell.exe",
+  "exit_code": 0,
+  "args": [
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "scripts/setup.ps1"
+  ],
+  "ended_at": "2026-09-21T08:58:48.7412024Z",
+  "started_at": "2026-09-21T08:58:09.4303706Z",
+  "run_id": "20260921T085809407Z-setup-entrypoint-2a96a3dc"
+}
