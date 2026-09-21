@@ -1,4 +1,12 @@
-# 선택적 루트 UI 연결 어댑터 — 미적용
+# Wonder Park 등록과 선택적 React 연결 어댑터
+
+## Wonder Park — 로컬 등록 적용
+
+`trading/attraction.json`의 `url`은 `http://127.0.0.1:5175/`다. 기존 `park/lib/registry.mjs`가 이를 발견하고 `/api/launch?id=trading`이 이 주소를 반환한다. 파크 소스 변경 없이 **휴가 거래소 → 휴가 거래소 입장 → 어트랙션 열기**로 연결된다. 별도로 `node scripts/demo.mjs start`로 전체 시연을 실행해야 하며, 등록 파일만으로 프로세스를 시작하지는 않는다.
+
+2026-09-21 21:37 KST 로컬 파크의 등록·실행 API와 실제 입장 안내/목적지 화면을 확인했다. [원본과 검증 범위](../evidence/20260921T123546085Z-wonder-park-link-c489e646/README.md). 공개 시에는 URL을 실제 HTTPS UI 주소로 변경한다. 외부 배포는 수행하지 않았다.
+
+## 다른 React 호스트 — 선택적 어댑터 미적용
 
 독립 UI를 다른 화면에 합치는 대신 기존 앱에서 새 탭으로 열 수 있는 최소 링크 컴포넌트를 준비했다. 구현은 `frontend/src/integration/ExchangeLink.tsx`다. 독립 거래소의 `App.tsx`에는 import하지 않으며 기존 루트 파일에도 적용하지 않았다. React 19 및 현재 TypeScript strict 빌드로 타입을 확인했다.
 

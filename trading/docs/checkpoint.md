@@ -122,3 +122,17 @@
 - 로컬main d249가origin/main의ancestor임을확인하고비강제`git fetch origin main:main`으로fast-forward한뒤`git switch main`했다. 전환전후trading기준tree동일,미커밋5파일SHA동일,engine/UI/observer/helper PID/시작시각동일. 사용자지시의checkout으로최신main의다른영역파일도현재작업폴더에반영됐고임의편집/덮어쓰기명령은없다. 실제증거 `20260921T121705885Z-checkout-main-9d279a9c`.
 - durability의새부하raw검토완료 `2026-09-21T12-12-35-245Z-engine-load-independent-review-827afcd4`:292064조건재계산거래/자원/WS불일치0. startup첫health ECONNREFUSED1회/readiness재시도성공을명시하고모든HTTP200이라는최초검토가정실패도보존했다. 거래명령오류0과구분한다. 모든개발agent현재유휴.
 - 완료된부하하네스/증거/그래프/2시간관찰/검토/전환기록을현재main에commit/push예정. 최신mainfetch/비강제fast-forward로다른작업을보존한다. 진행중demo/observer/console3경로는계속제외.
+
+## 직접 main 작업·push 완료
+- 현재 PROJECT_ROOT 브랜치는 **main**,local/remote HEAD **24fcd160d0a7f70ce2a918018afe6831e4021662** 일치를ls-remote로확인했다. 69파일의후속부하/CPU·메모리/그래프/독립검토/2시간관찰/직접main전환기록을현재main에서커밋하고`git push origin main`exit0으로반영했다. 근거 `evidence/20260921T122151342Z-direct-main-load-push-82a7b6ed`.
+- 이제별도sourcebranch/cherry-pick흐름을사용하지않고이폴더main에서직접작업한다. 다른작업main변경을fetch/비강제merge로보존한다. 이전codex브랜치와integrationworktree는역사자료로보존했으며삭제하지않았다.
+- 미커밋은이후push기록과이번push증거,진행중demo/observer/console3경로만이다. 다음관찰체크21:35/전체01:05:55종료계획을유지하며전체goalactive. 새성능시험을반복하지않는다.
+- 사용자ambientUI정보가이작업의IAB http://127.0.0.1:5175/ 탭1개를확인했다. 이는앞서open_in_codex의queued요청이후현재UI상태로제공됐으며새브라우저거래QA를한것으로표시하지않는다.
+
+## 21:38 Wonder Park 연결 오류 수정
+- 사용자 오류의 실제 위치가 Wonder Park의 trading 카드임을 확인했다. 앞선 Codex 탭 복원은 이 등록 누락을 고치지 못했다. 기존 park registry는 최상위 package/index 또는 attraction.json URL만 검사하므로 중첩 trading/frontend가 canLaunch=false였다.
+- trading/attraction.json으로 휴가 거래소 이름·소개·입장 버튼·http://127.0.0.1:5175/ 등록. 파크 원본 수정 없이 GET catalog와 POST launch의 예상 URL, 실제 카드→입장 모달→목적지 시장 연결/12봇/EVENT75690 확인. IAB target=_blank 클릭으로 새탭은 관찰되지 않아 확인된 href로 테스트 탭을 직접 이동했으며 새창생성 성공으로 표시하지 않는다. 근거 evidence/20260921T123546085Z-wonder-park-link-c489e646. 기존 다른 작업의 park/vite.config.mjs 수정 SHA 보존.
+- 현재 PROJECT_ROOT main에서 이 수정·연동 문서·완료 증거를 commit/push한다. engine20540/UI17556/observer18184/helper15744와 시연은 재시작하지 않았다. 임시 테스트탭 정리, 사용자 거래소탭 유지.
+- 21:35 중간 관찰 evidence/2026-09-21T12-35-11-997Z-observation-analysis-07018e66:8953.462초/1765표본/최대공백6.608초,명령52295·거래량40007h 증가,12봇/자산보존/WS누락·단절0. CPU294유효구간14합평균0.521%/엔진0.284%,엔진working set84.38MB/private96.42MB(최대98.33/97.40MB),로그33.57MB/영속209.20MB. 6시간 전체통과는 아직 아니다. 다음관찰22:05 또는 새 실패 시점.
+- 요구-증거 감사 3agents 진행중. 실제 WS gap 주입→HTTP refresh→브라우저 수렴, 최초 처리 중 동일 키 동시 제출의 구체적 검증 공백을 찾았다. 기존 재연결·완료 키 중복 검증과 구분하고 후속 단위에서 격리된 검증을 보완한다. 온라인 봇 실행/접속 변수 안내도 추가 필요. 감사 파일은 최종화 뒤 별도 반영한다.
+- 장기6시간 종료01:05:55→정상정지/누적전체복구→최신binary조용한B/C→시연/브라우저·문서/mainpush→08:55준비/09:00전 인계 계획은 유지한다. 전체 goal active.
