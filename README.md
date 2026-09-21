@@ -47,6 +47,7 @@ npm run dev
 - 기본: http://localhost:3000/?user=U0001 (Hyundai IONIQ 5)
 - Model 3: http://localhost:3000/?user=U0002
 - Model Y: http://localhost:3000/?user=U0009
+- Kona Electric: http://localhost:3000/?user=U0010 (2019 대표 외형)
 - 선택한 사용자 ID를 URL과 localStorage에 저장합니다.
 - 사용자 변경 시 차량·점수·주행 정보·충전 이력이 함께 바뀝니다.
 - 상단 검색은 사용자 ID, 제조사, 모델명, 프로필을 지원합니다.
@@ -149,10 +150,11 @@ npm run prepare:vehicles
 
 현재 실제 GLB가 연결된 모델:
 - Hyundai IONIQ 5: 2개 트림. 현대 호주 공식 configurator의 차체·실내·휠 메시 105,109 triangles, 약 3.1 MB. 공식 stock 구성과 CyberGrey 소재를 선택하며 원본 geometry는 유지합니다.
+- Hyundai Kona Electric: 1개 트림. RADMATTER12의 CC BY 4.0 모델을 공개 Objaverse 보관본에서 확보했습니다. 248,120 triangles를 유지하며 약 14.4 MB → 1.5 MB로 압축했습니다. **2019년형 외형으로 원본 데이터의 2026년형과 다른 세대**라는 안내를 차량 장면에 표시합니다.
 - Tesla Model 3: 2개 트림. 출처 GLB 약 681,368 triangles, 3.1 MB. 원본 형상을 사용합니다.
 - Tesla Model Y: 2개 트림. 공개 Objaverse 보관본에서 받은 2021 모델을 701,663 triangles / 1.8 MB로 최적화했습니다.
 
-**나머지 13개 모델 / 14개 차량 프로필의 상세 GLB는 아직 미확보입니다.** 해당 차량을 선택하면 준비 상태를 표시하고 배터리/충전 데이터는 계속 제공합니다. 다른 자동차나 저품질 도형을 대신 보여주지 않습니다. IONIQ 5의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았고, 현대 공식 페이지에 공개 연결된 GLB로 대체 확보했습니다. EV6의 Sketchfab 다운로드는 HTTP 401로 미완료입니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. Model 3/Y도 정확한 2026년형 CAD가 아닌 이전 연식 대표 외형이며 UI에 고지합니다.
+**나머지 12개 모델 / 13개 차량 프로필의 상세 GLB는 아직 미확보입니다.** 해당 차량을 선택하면 준비 상태를 표시하고 배터리/충전 데이터는 계속 제공합니다. 다른 자동차나 저품질 도형을 대신 보여주지 않습니다. IONIQ 5의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았고, 현대 공식 페이지에 공개 연결된 GLB로 대체 확보했습니다. EV6의 Sketchfab 다운로드는 HTTP 401로 미완료입니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. Model 3/Y도 정확한 2026년형 CAD가 아닌 이전 연식 대표 외형이며 UI에 고지합니다.
 
 IONIQ 5 출처는 현대 공식 페이지 및 `model_sources.json`에 기록합니다. **제조사 저작권 자료이며 공개 재배포 라이선스는 확인되지 않았습니다.** CC BY 모델로 표시하지 않습니다. 호주형 기본 트림 외형이므로 원본 데이터의 국내 트림과 차이가 있을 수 있습니다. 원본 GLB와 트림 구성 JSON은 `images/sources/`에 보존합니다. 아래 명령으로 공식 트림 선택 결과를 재생성하고 동기화합니다.
 
@@ -174,6 +176,9 @@ npm run verify:assets
 
 ```sh
 node scripts/optimize-vehicle-model.mjs original.glb optimized.glb
+# 형상을 줄이지 않고 텍스처/Draco 압축만 적용:
+node scripts/optimize-vehicle-model.mjs original.glb optimized.glb --preserve-geometry
+# SketchUp 작업용 선이 포함된 차량은 --surface-only 추가
 ```
 
 최적화는 외관을 훼손할 수 있어 결과를 검수해야 합니다. Model 3 최적화본은 반사면 품질 때문에 런타임에 채택하지 않았습니다. 최종 크레딧: `battery_health/resoures/images/models/CREDITS.md`.
@@ -199,7 +204,7 @@ npm run build
 npm run test:e2e
 ```
 
-실행 중인 데모와 분리해 프로덕션 빌드를 검수할 때는 `npm run test:e2e -- --config=playwright.review.config.ts`를 사용합니다(포트 3101). 먼저 `npm run build`가 필요합니다.
+실행 중인 데모와 분리해 프로덕션 빌드를 검수할 때는 `npm run test:e2e -- --config=playwright.review.config.ts`를 사용합니다(포트 3101, 빌드/리소스 복사본). 먼저 `npm run build`가 필요합니다.
 
 E2E는 로컬 Chrome을 사용합니다. macOS 기본 경로 외에는 `PLAYWRIGHT_CHROME_PATH`를 지정하세요. Linux 등에서 설치한 Chromium 실행 파일도 지정할 수 있습니다. 테스트는 실제 WebGL을 SwiftShader로 렌더링합니다. 검증 캡처는 `test-results/`에 생성합니다.
 

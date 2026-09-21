@@ -48,7 +48,7 @@ export function VehicleImageWebGLViewer({vehicle,image,focused,onFocus}:{vehicle
       </Canvas>
     </ViewerBoundary>
     <div className="scene-top"><span className="scene-badge"><i/>{ready?'LIVE 3D GARAGE':'LOADING 3D'}</span><span className="scene-number">BAY 01 / ELECTRIC</span></div>
-    <div className="scene-caption"><span>대표 연식 GLB · 배터리 위치는 개략도</span><span>드래그로 시점 조절 · 스크롤로 확대</span></div>
+    <div className="scene-caption"><span>{image.modelDisplayNote??'대표 연식 GLB'} · 배터리는 개략도</span><span>드래그로 시점 조절 · 스크롤로 확대</span></div>
     <button className={`hotspot-label ${focused?'active':''}`} onClick={onFocus} aria-label="배터리 hotspot 정보 열기"><span>◎</span> BATTERY PACK <span>↗</span></button>
   </div>;
 }

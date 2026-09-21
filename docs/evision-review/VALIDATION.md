@@ -15,7 +15,17 @@
 - 차량용 HTML img / Next Image 사용 없음.
 - Model 3는 원본 메시 유지, Model Y는 앞쪽 시점/유리/휠 재질 보정. 이미지를 회전하는 방식과 단순 도형 fallback은 제거.
 
+## 현대 차량 추가 검수
+
+- IONIQ 5: 현대 공식 GLB에서 기본 트림을 선택해 105,109 triangles를 유지. 실제 정점 기반 경계 계산으로 바닥 정렬 수정.
+- Kona Electric: CC BY 4.0, RADMATTER12, 2019 모델. 248,120 triangles 유지, 작업용 선 제거 및 앞쪽 시점 보정, 압축 후 1.5 MB. 2026 데이터와 외형 차이를 장면에 표시.
+- 기본 사용자 U0001 / IONIQ 5. 선택 목록에 3D 지원 여부 표시; 미등록 차량은 로딩 대기처럼 표현하지 않음.
+- 브라우저 첫 재검수: hotspot 및 차량 전환 통과, 모바일에서 GLB 요청 HTTP 500으로 실패. 검수 서버도 `npm run demo` 복사본을 사용하도록 분리. 복사본 검수에서 전체 4개 테스트 통과 (4.0분). 코나 작업선 제거·앞쪽 시점 보정 후 현대 차량 테스트를 다시 실행해 1개 통과 (49.9초).
+
 ## 화면
+
+- [차량 상세 — IONIQ 5](demo-ioniq5.png)
+- [차량 상세 — Kona Electric](demo-kona.png)
 
 - [차량 상세 — Model 3](demo-desktop.png)
 - [차량 상세 — Model Y](demo-model-y.png)
@@ -35,7 +45,7 @@
 
 ## 남은 제약
 
-- GLB는 IONIQ 5, Model 3, Model Y의 6개 트림을 확보했습니다. 13개 모델 / 14개 프로필의 상세 모델이 미확보여서 전체 차량 3D 완료 조건은 아직 충족하지 못했습니다. 상세 이유는 images/model_sources.json에 있습니다.
+- GLB는 IONIQ 5, Kona Electric, Model 3, Model Y의 7개 트림을 확보했습니다. 12개 모델 / 13개 프로필의 상세 모델이 미확보여서 전체 차량 3D 완료 조건은 아직 충족하지 못했습니다. 상세 이유는 images/model_sources.json에 있습니다.
 - IONIQ 5 Sketchfab 다운로드는 HTTP 401이었지만 현대 공식 페이지의 공개 GLB를 추가 확보했습니다. EV6는 Sketchfab HTTP 401로 아직 다운로드하지 못했습니다. 다른 차량이나 placeholder로 대체하지 않습니다.
 - IONIQ 5 제조사 GLB의 공개 재배포 라이선스는 확인되지 않았습니다. CC 모델로 표시하지 않으며 출처와 제한을 manifest/크레딧에 기록합니다.
 - 확보 모델도 이전 연식의 대표 외형이며 2026년형 정확한 트림/CAD가 아닙니다.

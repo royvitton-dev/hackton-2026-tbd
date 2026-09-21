@@ -8,7 +8,7 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
   const model=useMemo(()=>{
     const clone=scene.clone(true);clone.name='vehicle-gltf';
     clone.traverse(o=>{if(o instanceof Mesh){o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();o.castShadow=true;o.receiveShadow=true;
-      const smoothManufacturerSurface=path.includes('ioniq5')&&(Array.isArray(o.material)?o.material:[o.material]).some(m=>['CyberGrey','WINDOW2','CLEARGLASS'].includes(m.name));
+      const smoothManufacturerSurface=(Array.isArray(o.material)?o.material:[o.material]).some(m=>(path.includes('ioniq5')&&['CyberGrey','WINDOW2','CLEARGLASS'].includes(m.name))||(path.includes('kona_electric')&&/CeramicBlue|Windows|Doors/.test(m.name)));
       if(smoothManufacturerSurface||(Array.isArray(o.material)?o.material:[o.material]).some(m=>m.name.startsWith('glass.'))){o.geometry=toCreasedNormals(o.geometry,smoothManufacturerSurface?Math.PI/6:Math.PI/2);o.userData.ownsGeometry=true;}
       for(const m of Array.isArray(o.material)?o.material:[o.material]){
         if(m instanceof MeshStandardMaterial){
@@ -25,6 +25,12 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
             if(/chrome/i.test(m.name)){m.metalness=.7;m.roughness=.32;}
             if(/wheels/i.test(o.name)&&m.name==='BLACKBODY'){m.color.set('#14171a');m.roughness=.86;}
           }
+          if(path.includes('kona_electric')){
+            if(/CeramicBlue|Doors/.test(m.name)){m.metalness=.35;m.roughness=.32;}
+            if(/Windows/.test(m.name)){m.color.set('#182c3b');m.metalness=.1;m.roughness=.18;m.depthWrite=false;}
+            if(/Chrome|Rims|Mirrors/.test(m.name)){m.metalness=.7;m.roughness=.3;}
+            if(/Tires/.test(m.name)){m.roughness=.9;}
+          }
         }
         m.userData.originalOpacity=m.opacity;m.userData.originalTransparent=m.transparent;m.userData.originalDepthWrite=m.depthWrite;
       }
@@ -32,7 +38,7 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
     // Community model length is on Z. Rotate into our X-forward vehicle coordinates.
     clone.updateMatrixWorld(true);const originalSize=new Box3().setFromObject(clone,true).getSize(new Vector3());
     if(originalSize.z>originalSize.x)clone.rotation.y+=Math.PI/2;
-    if(path.includes('model_y'))clone.rotation.y+=Math.PI;
+    if(path.includes('model_y')||path.includes('kona_electric'))clone.rotation.y+=Math.PI;
     clone.updateMatrixWorld(true);
     // Precise bounds exclude oversized cached bounds in manufacturer component meshes.
     const bounds=new Box3().setFromObject(clone,true),size=bounds.getSize(new Vector3()),center=bounds.getCenter(new Vector3());

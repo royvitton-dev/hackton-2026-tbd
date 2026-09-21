@@ -26,7 +26,8 @@
         "nextAction": "Used the current public official CGI model URL linked by the product page."
       }
     ],
-    "sourceTriangles": 105109
+    "sourceTriangles": 105109,
+    "displayNote": "공식 IONIQ 5 호주형 외형"
   },
   {
     "vehicleId": "hyundai_ioniq5_standard_2wd_2026",
@@ -55,7 +56,8 @@
         "nextAction": "Used the current public official CGI model URL linked by the product page."
       }
     ],
-    "sourceTriangles": 105109
+    "sourceTriangles": 105109,
+    "displayNote": "공식 IONIQ 5 호주형 외형"
   },
   {
     "vehicleId": "hyundai_ioniq6_lr_2wd_2026",
@@ -70,22 +72,26 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "hyundai_kona_ev_lr_2026",
     "manufacturer": "Hyundai",
     "model": "Kona Electric",
     "requestedYear": 2026.0,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": null,
-    "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "glbPath": "/assets/vehicles/models/hyundai_kona_electric_2019.glb",
+    "available": true,
+    "sourceUrl": "https://sketchfab.com/3d-models/2019-hyundai-kona-20896e8928d943dabcaaf67dbb53c9da",
+    "downloadUrl": "https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-024/20896e8928d943dabcaaf67dbb53c9da.glb",
+    "license": "CC BY 4.0",
+    "author": "RADMATTER12",
+    "representativeNote": "2019 first-generation Kona Electric representative exterior. The workbook specifies 2026, which has a different generation/body. This is not an exact 2026 exterior.",
+    "failureReason": null,
+    "nextAction": null,
+    "displayNote": "2019 코나 EV 대표 외형 · 2026년형과 다름",
+    "sourceTriangles": 248120,
+    "surfaceOnly": true
   },
   {
     "vehicleId": "hyundai_casper_ev_lr_2026",
@@ -100,7 +106,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "kia_ev3_standard_2026",
@@ -115,7 +122,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "kia_ev3_lr_2wd_2026",
@@ -130,7 +138,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "kia_ev6_lr_2wd_2026",
@@ -152,7 +161,8 @@
         "httpStatus": 401,
         "reason": "HTTP 401: Sketchfab download requires account authentication; no local GLB downloaded."
       }
-    ]
+    ],
+    "displayNote": null
   },
   {
     "vehicleId": "kia_ev9_lr_2wd_2026",
@@ -167,7 +177,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "kia_niro_ev_2026",
@@ -182,7 +193,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "tesla_model3_standard_rwd_2026",
@@ -197,7 +209,8 @@
     "author": "aarajesh; distributor also credits ChoochooLi",
     "representativeNote": "Representative earlier generation, not exact requested model year/trim",
     "failureReason": null,
-    "nextAction": null
+    "nextAction": null,
+    "displayNote": "이전 연식 대표 외형"
   },
   {
     "vehicleId": "tesla_model3_lr_rwd_2026",
@@ -212,7 +225,8 @@
     "author": "aarajesh; distributor also credits ChoochooLi",
     "representativeNote": "Representative earlier generation, not exact requested model year/trim",
     "failureReason": null,
-    "nextAction": null
+    "nextAction": null,
+    "displayNote": "이전 연식 대표 외형"
   },
   {
     "vehicleId": "tesla_modely_premium_rwd_2026",
@@ -235,7 +249,8 @@
         "recovered": true,
         "nextAction": "Resumed download, checked GLB length, then optimized successfully."
       }
-    ]
+    ],
+    "displayNote": "이전 연식 대표 외형"
   },
   {
     "vehicleId": "tesla_modely_lr_awd_2026",
@@ -258,7 +273,8 @@
         "recovered": true,
         "nextAction": "Resumed download, checked GLB length, then optimized successfully."
       }
-    ]
+    ],
+    "displayNote": "이전 연식 대표 외형"
   },
   {
     "vehicleId": "audi_q4_45_etron_2026",
@@ -273,7 +289,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "audi_q6_etron_quattro_2025",
@@ -288,7 +305,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "vw_id4_pro_2026",
@@ -303,7 +321,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "bmw_i5_edrive40_2026",
@@ -318,7 +337,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "mini_electric_cooper_2026",
@@ -333,7 +353,8 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   },
   {
     "vehicleId": "volvo_ex30_2026",
@@ -348,6 +369,7 @@
     "author": null,
     "representativeNote": null,
     "failureReason": "No verified, reusable detailed GLB available locally. No substitute vehicle generated.",
-    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect."
+    "nextAction": "Obtain a licensed model for this exact vehicle; add GLB and source, then sync and inspect.",
+    "displayNote": null
   }
 ]

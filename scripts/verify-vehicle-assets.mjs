@@ -35,7 +35,19 @@ for(const model of models.filter(m=>m.available)){
     const name=path.basename(model.glbPath),source=await readFile(path.join(root,'battery_health/resoures/images/models',name));
     assert.equal(source.toString('ascii',0,4),'glTF');assert.equal(source.readUInt32LE(8),source.length,'Partial GLB download');
     const json=JSON.parse(source.toString('utf8',20,20+source.readUInt32LE(12)));
-    assert(json.meshes.length>10,'Expected detailed model meshes');
+    let triangles=0;
+    const visit=index=>{
+      const node=json.nodes[index];
+      if(node.mesh!==undefined)for(const primitive of json.meshes[node.mesh].primitives){
+        const mode=primitive.mode??4;
+        if(model.surfaceOnly)assert.equal(mode,4,'Construction lines must not overlay vehicle surfaces');
+        if(mode===4)triangles+=json.accessors[primitive.indices??primitive.attributes.POSITION].count/3;
+      }
+      for(const child of node.children??[])visit(child);
+    };
+    for(const node of json.scenes[json.scene??0].nodes)visit(node);
+    assert(triangles>10000,'Detailed vehicle triangle geometry missing');
+    if(model.sourceTriangles)assert.equal(triangles,model.sourceTriangles,'Unexpected vehicle geometry loss');
     assert(source.equals(await readFile(path.join(root,'public',model.glbPath))),'GLB public copy differs');
     assert(model.license&&model.author&&model.sourceUrl,'GLB provenance missing');
   }catch(error){failures.push(`${model.vehicleId}: ${error.message}`);}

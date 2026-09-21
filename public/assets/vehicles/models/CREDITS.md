@@ -39,3 +39,12 @@ Decoder files under `public/assets/vehicles/decoders` are copied from the instal
 - License: manufacturer copyright. This is a publicly served configurator model; an open redistribution license is not stated. It is **not** a CC-licensed community model.
 - Modifications: official stock trim and CyberGrey material selection, unused trim parts and configurator lights disabled. Geometry unchanged. Regional trim differences remain.
 - Provenance and checksums: `sources/hyundai-ioniq5-preparation.json`. Original GLB/configuration are retained under `sources/`.
+
+## Hyundai Kona Electric (2019)
+
+- Author: RADMATTER12. License: CC BY 4.0, https://creativecommons.org/licenses/by/4.0/
+- Source: https://sketchfab.com/3d-models/2019-hyundai-kona-20896e8928d943dabcaaf67dbb53c9da
+- Public archive: https://huggingface.co/datasets/allenai/objaverse/resolve/main/glbs/000-024/20896e8928d943dabcaaf67dbb53c9da.glb
+- Original author/license/source are also embedded in the GLB asset metadata.
+- Modifications: deduplication, texture compression, Draco compression; all 248,120 triangles retained. Non-surface construction lines removed; front orientation, smooth normals and studio materials adjusted in the viewer.
+- The asset is the 2019 first-generation electric model. It represents the model name only and differs from the workbook's 2026 generation. This is explicitly labeled in the scene.
