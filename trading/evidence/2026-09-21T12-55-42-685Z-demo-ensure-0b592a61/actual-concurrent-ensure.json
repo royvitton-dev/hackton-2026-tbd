@@ -1,0 +1,98 @@
+{
+  "at": "2026-09-21T12:56:18.008Z",
+  "scope": "Actual simultaneous ensure CLI invocations against already healthy live demo: read-only reuse only",
+  "passed": true,
+  "results": [
+    {
+      "name": "actual-ensure-a",
+      "pid": 4272,
+      "code": 0,
+      "signal": null,
+      "result": {
+        "ok": true,
+        "status": "reused",
+        "ui_url": "http://127.0.0.1:5175",
+        "api_url": "http://127.0.0.1:8787",
+        "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+        "frontend_pid": 4220
+      },
+      "stderr": ""
+    },
+    {
+      "name": "actual-ensure-b",
+      "pid": 18284,
+      "code": 0,
+      "signal": null,
+      "result": {
+        "ok": true,
+        "status": "reused",
+        "ui_url": "http://127.0.0.1:5175",
+        "api_url": "http://127.0.0.1:8787",
+        "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+        "frontend_pid": 4220
+      },
+      "stderr": ""
+    }
+  ],
+  "manifest_unchanged": true,
+  "before_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+  "after_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+  "market_pids": [
+    {
+      "name": "engine",
+      "pid": 20540
+    },
+    {
+      "name": "bot-01",
+      "pid": 17444
+    },
+    {
+      "name": "bot-02",
+      "pid": 7936
+    },
+    {
+      "name": "bot-03",
+      "pid": 20776
+    },
+    {
+      "name": "bot-04",
+      "pid": 16068
+    },
+    {
+      "name": "bot-05",
+      "pid": 4928
+    },
+    {
+      "name": "bot-06",
+      "pid": 20940
+    },
+    {
+      "name": "bot-07",
+      "pid": 12172
+    },
+    {
+      "name": "bot-08",
+      "pid": 7916
+    },
+    {
+      "name": "bot-09",
+      "pid": 15272
+    },
+    {
+      "name": "bot-10",
+      "pid": 5412
+    },
+    {
+      "name": "bot-11",
+      "pid": 20484
+    },
+    {
+      "name": "bot-12",
+      "pid": 6128
+    },
+    {
+      "name": "frontend",
+      "pid": 4220
+    }
+  ]
+}

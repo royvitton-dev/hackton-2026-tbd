@@ -2,9 +2,9 @@
 
 ## Wonder Park — 로컬 등록 적용
 
-`trading/attraction.json`의 `url`은 `http://127.0.0.1:5175/`다. 기존 `park/lib/registry.mjs`가 이를 발견하고 `/api/launch?id=trading`이 이 주소를 반환한다. 파크 소스 변경 없이 **휴가 거래소 → 휴가 거래소 입장 → 어트랙션 열기**로 연결된다. 별도로 `node scripts/demo.mjs start`로 전체 시연을 실행해야 하며, 등록 파일만으로 프로세스를 시작하지는 않는다.
+`trading/attraction.json`의 `url`은 `http://127.0.0.1:5175/`다. 기존 `park/lib/registry.mjs`가 이를 발견한다. 후속 사용자 지시로 `park/server.mjs`에서 `trading/scripts/park-launcher.mjs`를 연결해 파크 시작 시 전체 거래소를 자동 준비한다. 입장 API도 같은 준비 함수를 기다린 뒤 실제 UI 주소를 반환한다. **휴가 거래소 → 휴가 거래소 입장 → 어트랙션 열기**로 연결되며 기존 시장은 재사용한다. 최초 setup은 필요하다.
 
-2026-09-21 21:37 KST 로컬 파크의 등록·실행 API와 실제 입장 안내/목적지 화면을 확인했다. [원본과 검증 범위](../evidence/20260921T123546085Z-wonder-park-link-c489e646/README.md). 공개 시에는 URL을 실제 HTTPS UI 주소로 변경한다. 외부 배포는 수행하지 않았다.
+2026-09-21 21:37 KST의 [최초 등록·입장 안내/목적지 확인](../evidence/20260921T123546085Z-wonder-park-link-c489e646/README.md)은 파크 소스 변경 없이 수행한 이전 검증이다. 이후 [실제 파크 시작·재사용·입장 연결 검증](../evidence/20260921T125927764Z-park-auto-start-082f6114/README.md)을 완료했다. 공개 배포는 로컬 자동 시작과 분리하며 실제 HTTPS UI 주소와 별도 엔진 환경이 필요하다. 외부 배포는 수행하지 않았다.
 
 ## 다른 React 호스트 — 선택적 어댑터 미적용
 

@@ -1,6 +1,6 @@
 # 누적 검증과 완료 기준
 
-2026-09-21 21:38 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-21 22:06 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
@@ -11,9 +11,11 @@
 | 브라우저 수동 주문·취소·체결·잔고 | 통과 | [수동 기록](../evidence/browser-manual-20260921T083933Z/README.md), 확정 체결·취소 DOM/화면. 성공하지 않은 클릭도 구분 기록 |
 | 거래·정산·요청 ID·소유권 | 통과 | 최신 코어 debug/release 각22개(규칙19+oracle1+호환성2), 변경 전13단계 결과/FULLCore 및 legacy snapshot 호환. [검증 기록](allocation-investigation.md). 참조 모델3000명령·고정seed 불변조건 |
 | 12개 동시 주문·취소 | 통과 | [API10개 테스트](../evidence/20260921T091659182Z-api-fill-cancel-race-f9ae26af/output.log), 추가12회 실제 체결/취소 경합·재시작 후24요청 중복 확인. [2500개 동시 큐 포화](stress.md):2144ACK/356QUEUE_FULL,거절356키 동일ID 재시도·조회 전수 통과 |
+| 새 동일 요청의 최초 처리 중 중복 제출 | 통과(클라이언트 관측 중첩) | [새 키 12개 요청 검증](../evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191): 첫 응답 헤더 이전 12개 write 완료, 1회 신규+11중복. 충돌6+6은 신규1·중복5·충돌6. 재시작 후 FULLCore 동일. [독립576개 대조](../evidence/2026-09-21T12-57-07-980Z-inflight-dedup-independent-review-98a146d6/review.md). 서버 내부 접수 시점 계측이나 journal-only 복구 검증은 아님 |
 | 저널·스냅샷·강제 종료 복구 | 통과(프로세스 장애 범위) | [저장소 19개 테스트](../evidence/20260921T083106130Z-storage-recovery-verified-toolchain-b43a25ff), 추가 [실제 snapshot 저장 중 kill 2경계](../evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md). OS·전원 장애 미검증 |
 | 성공 ACK 복구·응답 유실·재시도 | 통과 | 저장소 실제 child kill + API 응답 차단 proxy·재시작·동일 ID 재시도, 전체 상태 비교 |
 | 브라우저 재연결·재동기화 | 통과 | [동일 탭 엔진 재시작 전후](../evidence/browser-reconnect-2026-09-21T09-02-02-365Z), 수동 reload 없이 EVENT2971→3026, 잔고 유지. [504 뒤 idle시장 재구독·unknown 보존·동일ID 재시도](../evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/README.md)도 통과 |
+| 브라우저 WS 누락·중복·초기 HTTP 경합 | 소스·단위 검증 / 실제 주입 검증 진행 | [UI 요구 감사 8.R3/R4](../evidence/20260921T123354532Z-ui-requirements-audit-c7e4b300/audit.md), [내구성 감사 11-c6](../evidence/2026-09-21T12-40-04-712Z-requirements-durability-audit-28d784b2/audit.md). 기존 재연결과 sequenceDecision 단위검사는 실제 브라우저의 의도적 누락→HTTP 재조회→화면 수렴을 증명하지 않는다. 별도 WS relay fixture 준비 중 |
 | 느린 수신자 격리 | 통과(이번 호스트·부하 범위) | 초기 [수신 중단 검증](slow-ws-validation.md)에 이어 최신 f518 바이너리의 [진단](ws-serialization.md)에서 정상 289개 상태·416 ACK/조회·16 중복 재시도, 자산/예약 일치와 paused 수신자의 `send_timeout/state`를 확인했다. 이전 고부하 단절의 원인 소급 확정은 아님 |
 | WS 종료 사유·peer 정상 종료 | 수정 후 통과 / 범위 제한 | [종료 진단](ws-diagnostics.md): peer Close응답flush후1000·오류0. 별도paused수신자의실제send_timeout/state확인,정상289frames·416ACK/조회·16중복검증. 서버행정shutdown의1006과이전고부하1005원인미확정은유지 |
 | 빌드·포맷·린트·테스트 | 통과(기록된 소스 범위) | 최신 f518 Rust [release](../evidence/20260921T114620498Z-ws-encoder-release-2aadbde9/run.json), [fmt](../evidence/20260921T114618896Z-ws-encoder-fmt-6b525e16/run.json), [Clippy all-targets](../evidence/20260921T114752406Z-ws-encoder-clippy-ae5df0a9/run.json), [직렬화 unit3](../evidence/20260921T114315186Z-ws-encoder-unit-4ccf2234/run.json), [API10](../evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/run.json). 프런트 변경 없이 기존 [7개 테스트](../evidence/frontend-20260921T090509598Z)·[TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) 근거 유지 |
@@ -22,8 +24,9 @@
 | 부하 중 CPU·메모리 실측 | 최신 실행 정합성·WS 연속성 통과 / 첫 실행 실패 보존 | [새 f518의 6·24·96 부하](engine-load-after-serialization.md):17736명령/8868체결,WS0…17736연속,단절0. 엔진CPU평균2.684/3.683/3.986%,working set최대35.77MiB. [첫 실행](engine-load-test.md)의WS실패/96무WS조건은별도 보존. 두 실행 모두 phase별20초 이전cap종료이며quiet 성능과 구분 |
 | Vercel UI 로컬 빌드·배포 설정 | 통과 | `trading/frontend`, `pnpm build`, `dist`; [배포 검토](review-deployment.md). Production정적130파일HTTP/해시,실제브라우저주문/부분체결/취소/reload통과. 실제 Vercel 빌드·배포 미실행 |
 | Rust 실행·영속 볼륨·배포 설정 | 준비 / 일부 미검증 | 로컬 Windows 실행 통과, Dockerfile/compose/Caddy 예시. Docker가 없어 실제 Linux 컨테이너 빌드·운영 미검증 |
-| 기존 UI 연동과 적용 여부 | 로컬 등록 적용·확인 | `trading/attraction.json`으로 Wonder Park에 5175 UI 등록. [실행 API·실제 입장 모달·목적지 화면](../evidence/20260921T123546085Z-wonder-park-link-c489e646/README.md) 확인. 파크 소스 변경 없음. 다른 React 호스트용 어댑터는 미적용, 외부 배포 미실행 |
-| 작업 경계·기존 변경 보존 | 통과(현재 작업 기록 범위) | 자체 구현·증거 변경은trading 내부. 사용자 지시로 [PROJECT_ROOT main checkout](../evidence/20260921T121705885Z-checkout-main-9d279a9c/after.json)을 전환하며 미커밋5파일SHA와실행프로세스를보존했다. 최신main의 다른 작업파일 반영은 이 명시적checkout 지시에 따른 것이다. 제출 직전 재확인 예정 |
+| 온라인 봇 위치·접속·실행 절차 | 준비 | [ENGINE_API_URL·독립 봇 인수·12프로세스·정상 종료](deployment.md#봇-위치와-연결)를 현재 bot.mjs와 대조해 보완했다. [PowerShell 예시 4블록 구문 확인](../evidence/20260921T124437701Z-bot-deployment-docs-448f01d4/verification.json). 실제 원격 서버 실행 미실행 |
+| 기존 UI 연동과 적용 여부 | 로컬 등록·자동 시작 적용 | 등록에 이어 사용자 요청으로 Park 서버 시작/입장 API를 연결. [실제 서버 자동 재사용·입장 모달·거래소 화면](../evidence/20260921T125927764Z-park-auto-start-082f6114/README.md), wrapper5/5·ensure8/8·기존lifecycle12/12. 이번 Park 실측은 기존 시장 재사용 경로. 다른 React 호스트용 어댑터 미적용, 외부 배포 미실행 |
+| 작업 경계·기존 변경 보존 | 통과(현재 작업 기록 범위) | 구현·증거는trading 내부이며, 사용자 자동 시작 요청에 필요한 root README·park README·park/server.mjs를 추가 수정했다. 별도 작업의 park/vite.config.mjs는 보존·commit 제외. 사용자 지시로 main에서 작업·push한다. 제출 직전 재확인 예정 |
 | 문서·에이전트·체크포인트·마감 인계 | 진행 | [checkpoint](checkpoint.md), [실제 에이전트](agents.jsonl). 마감 2026-09-22 09:00 KST |
 
 19:08 최신 통합 확인:
@@ -74,3 +77,5 @@
 [후속 부하](engine-load-after-serialization.md)는같은6/24/96입력·한도에서1회실행했다.17,736durableACK·8,868체결정합성과WS0…17,736연속수신을통과했고최종cleanup직전OPEN이었다.새f518binary의CPU평균2.684/3.683/3.986%,엔진최대working set37.51MB,72구간검산과실제PNG시각확인,독립raw검토까지완료했다. 이전96무WS구간과직접비교하지않으며처리량/tail지연개선인과주장없음.격리프로세스종료/보호16개시작시각·manifest동일.
 
 [2시간 중간관찰](../evidence/2026-09-21T12-09-28-609Z-two-hour-observation-independent-review-0a64746a/README.md)은1434표본/7266.747초,12봇·ready·자산보존·WSgapdisconnect0이며6시간완료아님. 일부1.814초봇응답과같은구간REST지연을확인했고원인은미확정이다.네번째snapshot의SHA/header/payloadCRC는확인했으나전체누적복구검증은관찰종료후별도로한다.
+
+22:04 중간 관찰: 2106표본/10694.582초 동안 12봇·ready·자산 보존·WS누락/단절0. 단 UI17556이 종료되어21:52에4220으로 복원했다. 21:44:51부터 초기PID를 캐시한 관찰자의 UI 자원 표본이 빠지므로14프로세스 자원 수치는21:44:21까지이며, 연속6시간 UI 운영 통과로 보고하지 않는다. [실제 관찰 분석](../evidence/2026-09-21T13-04-13-664Z-observation-analysis-0b82788b/analysis.json).

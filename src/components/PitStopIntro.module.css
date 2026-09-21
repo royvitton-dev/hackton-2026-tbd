@@ -1,0 +1,12 @@
+.overlay{position:fixed;inset:0;z-index:1000;background:#050a12;color:#effffb;isolation:isolate;opacity:0;overflow:hidden}
+.overlay::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#050a1270,transparent 28%,transparent 45%,#050a12 100%);pointer-events:none;z-index:1}
+.header{position:absolute;inset:30px 40px auto;z-index:2;display:flex;justify-content:space-between;align-items:center;gap:20px}
+.header>span{font-size:25px;font-weight:700;letter-spacing:-1px}.header small{display:block;font-size:9px;font-weight:400;letter-spacing:4px;color:#79bbaa;margin-top:5px}
+.header>div{display:flex;gap:10px}.header button{border:1px solid #8bb9aa55;color:#d3eee7;background:#061712b8;padding:10px 15px;border-radius:7px;font-size:12px;cursor:pointer}
+.header button:focus-visible{outline:2px solid #85ffd8;outline-offset:4px}.header button[aria-pressed=true]{border-color:#65edbd;color:#65edbd}
+.copy{position:absolute;left:9%;bottom:13%;right:8%;z-index:2;pointer-events:none}
+.eyebrow{font-size:10px;letter-spacing:3px;color:#62dbb3}.copy h1{font-size:clamp(28px,4.6vw,60px);line-height:1.2;letter-spacing:-2px;margin:18px 0 13px;word-break:keep-all}.copy p{font-size:15px;line-height:1.7;color:#a3bfb8}
+.progress{width:220px;height:2px;background:#537b6d66;margin:27px 0 13px;overflow:hidden}.progress>div{height:100%;width:100%;background:#70f0c2;transform:scaleX(0);transform-origin:left}.copy>small{color:#668b7e;font-size:10px;letter-spacing:1px}
+.soundNote{position:absolute;left:9%;bottom:35px;z-index:2;font-size:11px;color:#77978c}
+.fallback{position:absolute;inset:0;display:grid;place-items:center;color:#79bbaa;font-size:14px}
+@media(max-width:700px){.header{inset:22px 20px auto;align-items:flex-start}.header>span{font-size:21px}.header button{padding:9px 10px;font-size:11px}.header>div{gap:6px}.copy{left:7%;bottom:16%;right:7%}.copy h1{font-size:32px;letter-spacing:-1px}.copy p{font-size:13px}.eyebrow{font-size:8px;letter-spacing:1.8px}.soundNote{left:7%;right:7%;bottom:26px;font-size:10px;line-height:1.7}}

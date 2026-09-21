@@ -1,0 +1,30 @@
+{
+  "name": "Hyundai Casper Electric official 2026 configurator",
+  "sourceUrl": "https://casper.hyundai.com/vehicles/making/model",
+  "baseUrl": "https://casper.hyundai.com/wcontents/configurator/ax07/pc/",
+  "copyright": "Hyundai Motor Company / Hyundai AutoEver. Public configurator asset; no open redistribution license stated.",
+  "configUrl": "config.json",
+  "sceneUrl": "2542928.json",
+  "fsc": "6XS5ZDZ7ZCC069",
+  "fscUrl": "files/assets/297592914/1/fsc_json.json",
+  "partsUrl": "files/assets/297592915/1/fsc_map.json",
+  "colorsUrl": "files/assets/297594695/1/color_json.json",
+  "colorMapUrl": "files/assets/297593591/1/color_map.json",
+  "colors": [
+    "SAW",
+    "NNB",
+    "DRL"
+  ],
+  "seatColor": "NNB",
+  "renderRoots": [
+    "AX_EV_EXT",
+    "AX_EV_INT",
+    "AX_EV_DUMMY"
+  ],
+  "variantRoots": [
+    "AX_EV_EXT",
+    "AX_EV_INT"
+  ],
+  "outputPath": "battery_health/resoures/images/models/hyundai_casper_electric.glb",
+  "excludeNamePattern": "shadow"
+}

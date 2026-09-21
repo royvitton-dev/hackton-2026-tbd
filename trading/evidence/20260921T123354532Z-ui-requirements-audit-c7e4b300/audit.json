@@ -1,0 +1,1513 @@
+{
+  "audit_started_at": "2026-09-21T21:28:44+09:00",
+  "project_root": "C:\\project\\hackton-2026-tbd",
+  "root_reported_head": "24fcd160",
+  "scope": "Requirements §3 frontend/deployment structure (all explicit stack/principle/run bullets), §8 all24 bullets, §9 all12 bullets, §13 UI/deployment-related11 criteria. Read-only sources/existing artifacts; only audit.md/audit.json created.",
+  "status_definitions": {
+    "proven": "소스와기존실제원본으로적힌범위를입증;무제한/최신모든조합완료가아님",
+    "incomplete": "범위내요구의구체적산출물보완필요",
+    "unverified": "구현/부분검증은있으나명시한실제검증증거미확인",
+    "optional": "조건미발생또는이번납품범위밖실행"
+  },
+  "excluded_section13": [
+    "13.6 거래불변조건/중복/소유권 세부",
+    "13.7 동시요청",
+    "13.8 장애복구",
+    "13.9 ACK/재시작dedup",
+    "13.12 성능/할당",
+    "13.17 전체변경경계",
+    "13.18 전체문서/에이전트최신화",
+    "13.19 장시간관찰/마감인계"
+  ],
+  "sources": {
+    "S1": [
+      "frontend/package.json",
+      "frontend/vite.config.ts",
+      "frontend/src/api.ts"
+    ],
+    "S2": [
+      "frontend/src/App.tsx",
+      "frontend/src/styles.css"
+    ],
+    "S3": [
+      "frontend/src/useExchange.ts",
+      "frontend/src/protocol.ts",
+      "frontend/src/protocol.test.ts"
+    ],
+    "S4": [
+      "bots/bot.mjs"
+    ],
+    "S5": [
+      "scripts/demo.mjs",
+      "scripts/demo-lifecycle.mjs",
+      "scripts/setup.ps1"
+    ],
+    "S6": [
+      "engine/src/lib.rs",
+      "engine/src/main.rs",
+      "engine/src/model.rs"
+    ],
+    "S7": [
+      "deploy/Dockerfile",
+      "deploy/compose.yaml",
+      "deploy/Caddyfile.example",
+      "deploy/engine.env.example",
+      "docs/deployment.md"
+    ],
+    "S8": [
+      "frontend/vercel.json",
+      "frontend/.env.production.example",
+      "frontend/package.json",
+      "frontend/pnpm-workspace.yaml"
+    ],
+    "S9": [
+      "frontend/src/integration/ExchangeLink.tsx",
+      "docs/integration-adapter.md",
+      "docs/ui.md",
+      "attraction.json"
+    ],
+    "S10": [
+      "../dopamin/package.json",
+      "../dopamin/src/styles.css"
+    ],
+    "S11": [
+      "scripts/observe.mjs",
+      "scripts/browser-fault-demo.mjs"
+    ],
+    "S12": [
+      "docs/contract.md",
+      "docs/adr/002-durability.md",
+      "docs/evidence-policy.md"
+    ]
+  },
+  "evidence": {
+    "E1": {
+      "files": [
+        "evidence/frontend-20260921T083739Z-visual/desktop-live-1440.png",
+        "evidence/frontend-20260921T083739Z-visual/mobile-live-390.png",
+        "evidence/frontend-20260921T083739Z-visual/desktop-bots-1440.png",
+        "evidence/frontend-20260921T083739Z-visual/mobile-chart-390.png"
+      ],
+      "review": "첫 두 PNG를 이번 감사에서 직접 시각 검사. 나머지 두 파일 존재와 당시 기록 확인; 모바일 주문 제출을 검증했다는 의미 아님."
+    },
+    "E2": {
+      "files": [
+        "evidence/browser-manual-20260921T083933Z/keyboard-fill-confirmed.txt",
+        "evidence/browser-manual-20260921T083933Z/after-cancel.txt",
+        "evidence/browser-manual-20260921T083933Z/engine-stopped.txt"
+      ],
+      "review": "실제 DOM의 주문1651 체결완료, 취소와 연결단절 안내 확인. 한 번 무반응 클릭은 기존 기록대로 성공 증거에서 제외."
+    },
+    "E3": {
+      "files": [
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/before-engine-restart.txt",
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/after-engine-restart.txt",
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-start.json",
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-end.json",
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-start.png",
+        "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-end.png"
+      ],
+      "review": "DOM EVENT2971→3026, 재동기화값은 둘다1. 차트 JSON 시작09:08:04.525/끝09:13:19.140 UTC,314615ms 및 가격/시각 변화 직접 확인. 연속 영상 아님. 두 chart-visible PNG도 직접 시각 검사하여 동일 화면의 가격선·거래량 막대 모양이 바뀐 것을 확인했다."
+    },
+    "E4": {
+      "files": [
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/unknown-after-fix.txt",
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/unknown-restored-ready.txt",
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/same-id-retry-confirmed.txt",
+        "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/verified-after-browser-retry.json"
+      ],
+      "review": "504 결과 미확인→reload 복원→같은ID 기존주문3 결과 DOM과 예약2575 유지. WS gap 주입이 아닌 HTTP ACK 유실 fixture."
+    },
+    "E5": {
+      "files": [
+        "evidence/frontend-production-20260921T093830224Z-33aae872/build.log",
+        "evidence/frontend-production-20260921T093830224Z-33aae872/processes.json",
+        "evidence/frontend-production-20260921T093830224Z-33aae872/static-verification.json",
+        "evidence/frontend-production-20260921T093830224Z-33aae872/browser/buyer-partial.txt",
+        "evidence/frontend-production-20260921T093830224Z-33aae872/browser/cancelled.txt",
+        "evidence/frontend-production-20260921T093830224Z-33aae872/browser/reloaded.txt",
+        "evidence/frontend-production-20260921T093830224Z-33aae872/browser/verified-state.json",
+        "evidence/frontend-production-20260921T093830224Z-33aae872/browser/browser-console.json",
+        "evidence/frontend-production-20260921T093830224Z-33aae872/browser/production-market.png"
+      ],
+      "review": "직접 PNG 시각검사, raw build의 built in2.10s, 실제 DOM 부분2/4→취소, seq3/order2/trade1/양계정 잔고와 console[] 확인. Vercel/TLS 재현 아님."
+    },
+    "E6": {
+      "files": [
+        "evidence/frontend-20260921T090509598Z/protocol.log",
+        "evidence/frontend-20260921T090509598Z/format.log",
+        "evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab/output.log",
+        "evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab/run.json"
+      ],
+      "review": "실제 protocol7/7 출력, prettier 정상, tsc/Vite build원본과 exit0 확인. 새 실행 없음."
+    },
+    "E7": {
+      "files": [
+        "evidence/2026-09-21T08-35-31-851Z-demo-e1ae3e2f/processes.json",
+        "evidence/2026-09-21T08-35-31-851Z-demo-e1ae3e2f/bots/bot-01-0000.jsonl",
+        "evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/samples.jsonl",
+        "evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/latest-bots.json",
+        "evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/latest-state.json"
+      ],
+      "review": "14프로세스 manifest/개별botargs, bot01 실제 durable명령 원문,62표본 첫끝309945ms·seq97→1915·volume73→1426·다른book_hash,12봇각실제주문/체결, user01↔bot06 등 실제trade를 직접 확인."
+    },
+    "E8": {
+      "files": [
+        "evidence/2026-09-21T11-48-40-554Z-ws-diagnostics-88f40990/engine.stderr.log",
+        "evidence/2026-09-21T11-48-40-554Z-ws-diagnostics-88f40990/summary.json"
+      ],
+      "review": "raw engine로그 connection3 send_timeout/state/seq136, 정상receiver289frames 및416ACK 요약을 대조. 이번 호스트의 격리 느린 수신자 사례."
+    },
+    "E9": {
+      "files": [
+        "docs/deployment.md",
+        "docs/review-deployment.md"
+      ],
+      "review": "2026-09-21 공식 Vercel Vite/빌드/Corepack/Node/WS/환경변수 URL 인용과 조회일 기록 존재. 이번 감사는 과거 조회 출처범위 확인만 했으며 페이지 재조회·응답 원문 독립 재검증은 하지 않음."
+    },
+    "E10": {
+      "review": "이번 감사에서 before.canLaunch=false→after.true,launch URL5175,launch AX링크와destination AX의시장연결/EVENT75690을읽고park-launch PNG를직접시각검사. root가IAB새탭생성은관찰못해확인한href로같은시험탭이동;native새탭성공으로주장안함.",
+      "files": [
+        "evidence/20260921T123546085Z-wonder-park-link-c489e646/before.json",
+        "evidence/20260921T123546085Z-wonder-park-link-c489e646/after.json",
+        "evidence/20260921T123546085Z-wonder-park-link-c489e646/launch.json",
+        "evidence/20260921T123546085Z-wonder-park-link-c489e646/http-verification.json",
+        "evidence/20260921T123546085Z-wonder-park-link-c489e646/launch-ax.txt",
+        "evidence/20260921T123546085Z-wonder-park-link-c489e646/destination-ax.txt",
+        "evidence/20260921T123546085Z-wonder-park-link-c489e646/park-launch.png"
+      ]
+    }
+  },
+  "rows": [
+    {
+      "id": "3.T1",
+      "requirement": "프런트엔드는 기존 스택 우선, 신규면 TypeScript+Next.js",
+      "status": "proven",
+      "sources": [
+        "S1",
+        "S10"
+      ],
+      "evidence": [
+        "E6"
+      ],
+      "verification_scope": "기존 dopamin의 React19/TS5.9/Vite7 재사용. 기존 프로젝트이므로 Next 신규 조건 비적용."
+    },
+    {
+      "id": "3.T2",
+      "requirement": "프런트엔드 배포 대상 Vercel",
+      "status": "proven",
+      "sources": [
+        "S8",
+        "S7"
+      ],
+      "evidence": [
+        "E5",
+        "E9"
+      ],
+      "verification_scope": "설정·로컬 산출물 준비 입증; 원격 배포 완료가 아님."
+    },
+    {
+      "id": "3.T3",
+      "requirement": "매칭·검증·정산·시퀀싱·저널·스냅샷·복구 Rust",
+      "status": "proven",
+      "sources": [
+        "S6",
+        "S12"
+      ],
+      "evidence": [
+        "E5",
+        "E7"
+      ],
+      "verification_scope": "Rust 모듈/API 구조와 브라우저 거래 연결 확인. 내부 코어·저장소 전체 검증은 root 별도 감사."
+    },
+    {
+      "id": "3.T4",
+      "requirement": "상시 실행 별도 VM/컨테이너 엔진 배포 대상",
+      "status": "proven",
+      "sources": [
+        "S7"
+      ],
+      "evidence": [
+        "E5"
+      ],
+      "verification_scope": "독립 엔진 실행 및 Docker/Compose 준비. 실제 컨테이너·VM는 미실행."
+    },
+    {
+      "id": "3.T5",
+      "requirement": "재시작·재배포 후 보존할 저널·스냅샷 저장소",
+      "status": "proven",
+      "sources": [
+        "S7",
+        "S12"
+      ],
+      "evidence": [
+        "E3",
+        "E7"
+      ],
+      "verification_scope": "로컬 동일 데이터 재시작 및 영속 볼륨 설정 범위. 원격 재배포 복구는 미검증."
+    },
+    {
+      "id": "3.T6",
+      "requirement": "실시간 이벤트 스트림",
+      "status": "proven",
+      "sources": [
+        "S3",
+        "S6"
+      ],
+      "evidence": [
+        "E3",
+        "E7"
+      ],
+      "verification_scope": "실제 WS 증가 순번/차트 갱신과 소스 확인."
+    },
+    {
+      "id": "3.P1",
+      "requirement": "Rust 코어를 네트워크·파일I/O·UI에서 분리",
+      "status": "proven",
+      "sources": [
+        "S6",
+        "S12"
+      ],
+      "evidence": [],
+      "verification_scope": "core/model/storage 모듈과 별도 frontend/API 연결 정적 범위; 내부 성능 검토 대체 아님."
+    },
+    {
+      "id": "3.P2",
+      "requirement": "권위 있는 서버 상태와 사용자·봇 동일 시장",
+      "status": "proven",
+      "sources": [
+        "S3",
+        "S4",
+        "S6"
+      ],
+      "evidence": [
+        "E2",
+        "E7"
+      ],
+      "verification_scope": "user01↔bot 거래 원문 및 공통 /api/commands 경로."
+    },
+    {
+      "id": "3.P3",
+      "requirement": "Vercel Functions 메모리를 영속 호가장·잔고로 사용하지 않음",
+      "status": "proven",
+      "sources": [
+        "S7",
+        "S8",
+        "S6"
+      ],
+      "evidence": [],
+      "verification_scope": "정적 Vite 설정과 별도 Rust 상태 소유; Vercel backend 없음."
+    },
+    {
+      "id": "3.P4",
+      "requirement": "Vercel 현재 공식 문서로 런타임·빌드·실행 제약 확인",
+      "status": "proven",
+      "sources": [
+        "S7"
+      ],
+      "evidence": [
+        "E9"
+      ],
+      "verification_scope": "이전 조회일·공식 출처와 Corepack/실행시간 경계 기록 존재. 이번 감사는 재조회 아님."
+    },
+    {
+      "id": "3.P5",
+      "requirement": "로컬·배포의 주문/이벤트 계약 동일",
+      "status": "proven",
+      "sources": [
+        "S1",
+        "S3",
+        "S8"
+      ],
+      "evidence": [
+        "E5"
+      ],
+      "verification_scope": "동일 bundle 코드에 env URL만 주입, production5177 실제 거래. 원격 네트워크 미검증."
+    },
+    {
+      "id": "3.P6",
+      "requirement": "API/WS 환경변수, 클라이언트 번들에 서버 비밀 없음",
+      "status": "proven",
+      "sources": [
+        "S1",
+        "S8"
+      ],
+      "evidence": [
+        "E5"
+      ],
+      "verification_scope": "VITE_API_URL/WS_URL과 공개 URL 예시·합성 세션. 실제 운영 비밀은 설정하지 않음."
+    },
+    {
+      "id": "3.P7",
+      "requirement": "로컬 기본 localhost 바인딩",
+      "status": "proven",
+      "sources": [
+        "S1",
+        "S5",
+        "S6"
+      ],
+      "evidence": [
+        "E5",
+        "E7"
+      ],
+      "verification_scope": "Vite127.0.0.1:5175/엔진8787 및 preview5177/8790 기록."
+    },
+    {
+      "id": "3.P8a",
+      "requirement": "배포 HTTPS/WSS와 허용 Origin 명시",
+      "status": "proven",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "evidence": [
+        "E5"
+      ],
+      "verification_scope": "placeholder·Caddy TLS 구성과 정확한 Origin 환경 설정. preview허용5177/다른origin거절 기록."
+    },
+    {
+      "id": "3.P8b",
+      "requirement": "온라인 시연 엔진에 실제 접근 가능한 주소 사용",
+      "status": "optional",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "evidence": [],
+      "verification_scope": "온라인 실행은 납품 범위 밖이며 미실행. example.com은 명시적 교체값이고 실접속 주소로 주장하지 않음."
+    },
+    {
+      "id": "3.P9",
+      "requirement": "배포 화면의 localhost 의미 고려",
+      "status": "proven",
+      "sources": [
+        "S1",
+        "S7"
+      ],
+      "evidence": [],
+      "verification_scope": "비로컬 UI에서 누락/HTTP/localhost API설정 차단 구현. 실제 공개 호스트 브라우저 검증 미실행."
+    },
+    {
+      "id": "3.A",
+      "requirement": "UI+Rust API+영속 데이터+12봇 전체 로컬 실행",
+      "status": "proven",
+      "sources": [
+        "S5"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "독립14프로세스 manifest와 실제 주문/표본. 과거 로컬 실행 증거이지 현재PID liveness 조회 아님."
+    },
+    {
+      "id": "3.B",
+      "requirement": "Vercel UI+별도 엔진+영속 저장소 설정/절차 준비",
+      "status": "proven",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "evidence": [
+        "E5",
+        "E9"
+      ],
+      "verification_scope": "준비 산출물 및 production 로컬 검증; Docker·외부 배포 제외."
+    },
+    {
+      "id": "3.C",
+      "requirement": "온라인 봇 위치와 엔진 연결 방법 문서화",
+      "status": "incomplete",
+      "sources": [
+        "S4",
+        "S7"
+      ],
+      "evidence": [],
+      "verification_scope": "위치·API URL 개념 설명은 있음. ENGINE_API_URL 및 bot.mjs 인수/새run-dir 실제 호출 안내가 README/docs/deploy에 없음."
+    },
+    {
+      "id": "3.X1",
+      "requirement": "가입·결제·외부 배포 미수행, 사업자 비종속 엔진 설정",
+      "status": "proven",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "evidence": [
+        "E9"
+      ],
+      "verification_scope": "Docker/일반 VM/Caddy 준비와 미배포 명시. 금융/실인사 연결 없음."
+    },
+    {
+      "id": "3.X2",
+      "requirement": "Vercel Root Directory와 실제 빌드 명령 명시",
+      "status": "proven",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "evidence": [
+        "E5",
+        "E6"
+      ],
+      "verification_scope": "trading/frontend, pnpm build, dist 명시."
+    },
+    {
+      "id": "8.U1",
+      "requirement": "기존 UI·실행구조·토큰·자산 먼저 확인",
+      "status": "proven",
+      "sources": [
+        "S10",
+        "S1",
+        "S2"
+      ],
+      "evidence": [],
+      "verification_scope": "기존 package와 DM Sans/Noto Sans·cream/ink/orange 토큰 일치. 최초 읽기 시점은 작업기록 범위."
+    },
+    {
+      "id": "8.U2",
+      "requirement": "기존 놀이공원 테마 활용, 구현·어댑터 trading 내부",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S9"
+      ],
+      "evidence": [
+        "E1",
+        "E5",
+        "E10"
+      ],
+      "verification_scope": "기존토큰/티켓/SVG와거래소·어댑터·WonderPark등록metadata모두trading내부."
+    },
+    {
+      "id": "8.U3",
+      "requirement": "기존 UI 없으면 최소 테마와 연결 인터페이스",
+      "status": "optional",
+      "sources": [
+        "S9",
+        "S10"
+      ],
+      "evidence": [],
+      "verification_scope": "기존 dopamin이 있어 조건 비적용. 별도 어댑터는 제공."
+    },
+    {
+      "id": "8.U4",
+      "requirement": "루트 수정 필수면 내부에 적용 패치·절차 준비",
+      "status": "optional",
+      "sources": [
+        "S9"
+      ],
+      "evidence": [
+        "E10"
+      ],
+      "verification_scope": "루트소스수정필수조건은없음. 기존registry가trading/attraction.json을읽어실제링크등록. 별도React삽입어댑터는선택적미적용."
+    },
+    {
+      "id": "8.U5",
+      "requirement": "외부 임의수정 금지, 미적용이면 준비로 보고",
+      "status": "proven",
+      "sources": [
+        "S9"
+      ],
+      "evidence": [
+        "E9",
+        "E10"
+      ],
+      "verification_scope": "WonderPark등록은trading/attraction.json으로적용;다른React앱anchor미적용을분리표기. 파크소스변경없음은root기록범위."
+    },
+    {
+      "id": "8.U6",
+      "requirement": "루트 적용과 무관한 독립 실행·시연",
+      "status": "proven",
+      "sources": [
+        "S1",
+        "S5"
+      ],
+      "evidence": [
+        "E1",
+        "E5",
+        "E7"
+      ],
+      "verification_scope": "로그인/루트앱 없이5175 및5177 실제 화면·거래."
+    },
+    {
+      "id": "8.U7",
+      "requirement": "한국어·티켓/전광판/어트랙션 테마와 가독성",
+      "status": "proven",
+      "sources": [
+        "S2"
+      ],
+      "evidence": [
+        "E1",
+        "E5"
+      ],
+      "verification_scope": "실제PNG를직접 확인. 데이터 패널·티켓 주문폼·한국어."
+    },
+    {
+      "id": "8.U8",
+      "requirement": "데스크톱 핵심 정보와 작은 화면 조작",
+      "status": "proven",
+      "sources": [
+        "S2"
+      ],
+      "evidence": [
+        "E1"
+      ],
+      "verification_scope": "1440/390 PNG직접확인, 당시390 차트범위 조작 기록. 모바일에서 모든 주문 시나리오를 실행한 것은 아님."
+    },
+    {
+      "id": "8.F1",
+      "requirement": "현재가·기준가 대비 등락·거래량",
+      "status": "proven",
+      "sources": [
+        "S2"
+      ],
+      "evidence": [
+        "E1",
+        "E5"
+      ],
+      "verification_scope": "1027P/+27(+2.70%)/574h와 production1000/2h 직접확인."
+    },
+    {
+      "id": "8.F2",
+      "requirement": "매수/매도 호가와 가격별 잔량",
+      "status": "proven",
+      "sources": [
+        "S2"
+      ],
+      "evidence": [
+        "E1",
+        "E5"
+      ],
+      "verification_scope": "호가보드 버튼과 부분체결 후1000P/2h 잔량 DOM."
+    },
+    {
+      "id": "8.F3",
+      "requirement": "실제 체결 기반 가격/거래량 차트",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "evidence": [
+        "E1",
+        "E3",
+        "E5"
+      ],
+      "verification_scope": "trades로SVG 생성,314.615초 전후 체결시각·가격·막대 변화. 균등한 체결 순서축 명시."
+    },
+    {
+      "id": "8.F4",
+      "requirement": "최근 체결 내역",
+      "status": "proven",
+      "sources": [
+        "S2"
+      ],
+      "evidence": [
+        "E1",
+        "E2",
+        "E5"
+      ],
+      "verification_scope": "실제 최근체결 DOM/PNG, state.trades 최근10 사용."
+    },
+    {
+      "id": "8.F5",
+      "requirement": "주문입력·결과·미체결·취소",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "evidence": [
+        "E2",
+        "E4",
+        "E5"
+      ],
+      "verification_scope": "production4h buy→2h partial→잔여취소 DOM와 상태. fault unknown→동일ID기존결과."
+    },
+    {
+      "id": "8.F6",
+      "requirement": "보유·예약·사용 가능 휴가/포인트",
+      "status": "proven",
+      "sources": [
+        "S2"
+      ],
+      "evidence": [
+        "E5"
+      ],
+      "verification_scope": "부분체결 buyer총998000/사용996000/예약2000,1002h. 취소 후예약0."
+    },
+    {
+      "id": "8.F7",
+      "requirement": "봇 전략·연결/heartbeat·주문/체결수",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S4"
+      ],
+      "evidence": [
+        "E7",
+        "E2"
+      ],
+      "verification_scope": "12봇API계정확정카운트+heartbeat표시 소스와 raw counts. 시도수와누적확정수를분리."
+    },
+    {
+      "id": "8.F8",
+      "requirement": "연결·엔진 상태·마지막 이벤트순번",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "evidence": [
+        "E2",
+        "E3",
+        "E4",
+        "E5"
+      ],
+      "verification_scope": "정상/단절 DOM, EVENT2971→3026 및production3."
+    },
+    {
+      "id": "8.R1",
+      "requirement": "사용자/봇 동일 검증·매칭 경로",
+      "status": "proven",
+      "sources": [
+        "S3",
+        "S4",
+        "S6"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "모두 /api/commands, session매핑후동일Work::Command. 실제교차체결."
+    },
+    {
+      "id": "8.R2",
+      "requirement": "UI 타이머로 가격·체결 조작 금지",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "evidence": [],
+      "verification_scope": "1초시계heartbeat,3초APIpoll,재연결timer만있음; 가격/차트는수신state. 정적소스범위."
+    },
+    {
+      "id": "8.R3",
+      "requirement": "초기 조회와 구독 사이 누락·중복 처리",
+      "status": "unverified",
+      "sources": [
+        "S3"
+      ],
+      "evidence": [
+        "E3",
+        "E6"
+      ],
+      "verification_scope": "소스·seq unit및일반재연결은확인. 의도적초기경합/WSgap 주입→HTTP refresh→UI수렴 실제browser원본 미확인."
+    },
+    {
+      "id": "8.R4",
+      "requirement": "이벤트 순번으로 중복 제거·누락 감지",
+      "status": "unverified",
+      "sources": [
+        "S3"
+      ],
+      "evidence": [
+        "E6"
+      ],
+      "verification_scope": "10→14=resync 및중복/역행unit7개기존통과. 실제브라우저강제gap와refresh요청증거없음."
+    },
+    {
+      "id": "8.R5",
+      "requirement": "재연결 시 상태와 구독 복원",
+      "status": "proven",
+      "sources": [
+        "S3"
+      ],
+      "evidence": [
+        "E3",
+        "E4"
+      ],
+      "verification_scope": "수동reload없이엔진restart후동일잔고와EVENT복원;idle504후새구독/unknown보존."
+    },
+    {
+      "id": "8.R6",
+      "requirement": "느린 클라이언트가 엔진 전체를 막지 않음",
+      "status": "proven",
+      "sources": [
+        "S6"
+      ],
+      "evidence": [
+        "E8"
+      ],
+      "verification_scope": "격리send_timeout 원문과정상receiver/명령계속처리. 이번호스트·부하범위."
+    },
+    {
+      "id": "8.R7",
+      "requirement": "접수·확정·거절·미확인·단절 구분",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "evidence": [
+        "E2",
+        "E4",
+        "E5",
+        "E6"
+      ],
+      "verification_scope": "모든상태labels와durable분기;success/unknown/disconnect실제DOM. backend거절화면별도browser캡처는없음."
+    },
+    {
+      "id": "8.R8",
+      "requirement": "브라우저 실제 주문·취소·체결·잔고 검증",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "evidence": [
+        "E2",
+        "E5"
+      ],
+      "verification_scope": "수동키보드주문+production부분체결/취소/reload 및state일치. CUA새실행안함."
+    },
+    {
+      "id": "9.1",
+      "requirement": "독립12봇·최소10개 실제 거래 참여",
+      "status": "proven",
+      "sources": [
+        "S4",
+        "S5"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "각PID,args12개,각봇accepted126~149/trades124~212."
+    },
+    {
+      "id": "9.2",
+      "requirement": "봇별 고유 계정·ID·전략·seed·로그",
+      "status": "proven",
+      "sources": [
+        "S4"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "bot01~12/seed2026092201..12/고유JSONL과manifest."
+    },
+    {
+      "id": "9.3",
+      "requirement": "마켓메이킹·유동성소비·추세추종",
+      "status": "proven",
+      "sources": [
+        "S4"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "4개씩3전략 소스분기와실제latest-bots."
+    },
+    {
+      "id": "9.4",
+      "requirement": "상태 직접수정 대신 공개 주문 API",
+      "status": "proven",
+      "sources": [
+        "S4",
+        "S6"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "fetch /api/state,/api/commands,/api/requests;엔진파일 접근 없음."
+    },
+    {
+      "id": "9.5",
+      "requirement": "동일 잔고·예약·자기체결 정책",
+      "status": "proven",
+      "sources": [
+        "S4",
+        "S6"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "공통서버handler로반드시검증. 봇은셀프교차예측시취소요청만수행. 정책정확성세부는코어감사."
+    },
+    {
+      "id": "9.6",
+      "requirement": "지속 매수·매도·체결·취소 관찰",
+      "status": "proven",
+      "sources": [
+        "S4",
+        "S11"
+      ],
+      "evidence": [
+        "E2",
+        "E7"
+      ],
+      "verification_scope": "5분seq1818증가·volume1353·호가hash변화/실제로그. 샘플관찰,모든순간영상아님."
+    },
+    {
+      "id": "9.7",
+      "requirement": "봇 시작·중지·상태 조회",
+      "status": "proven",
+      "sources": [
+        "S5",
+        "S4"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "demo start/stop/status,stop.request와/api/bots. 로컬그룹제어이며온라인개별운영법문서부족은9.12."
+    },
+    {
+      "id": "9.8",
+      "requirement": "수동 사용자와 봇 동일 시장 체결",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S4"
+      ],
+      "evidence": [
+        "E2",
+        "E7"
+      ],
+      "verification_scope": "trade682 user01 buyer/bot06 seller 등실제원문."
+    },
+    {
+      "id": "9.9",
+      "requirement": "활동 표시만 아닌 실제 주문",
+      "status": "proven",
+      "sources": [
+        "S4"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "bot01durableACK commandseq1/17과12봇server누적카운트."
+    },
+    {
+      "id": "9.10",
+      "requirement": "seed·초기자산·전략·실행정보 보존",
+      "status": "proven",
+      "sources": [
+        "S4",
+        "S5"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "started로그seed/1000000P/1000h와API주소,PID기록."
+    },
+    {
+      "id": "9.11",
+      "requirement": "동시재현은 기록 입력순서,seed로스케줄링재현 주장 금지",
+      "status": "proven",
+      "sources": [
+        "S4",
+        "S12"
+      ],
+      "evidence": [],
+      "verification_scope": "seq/journal정책과botseed설명. 실제fullreplay검증은root의저장소감사."
+    },
+    {
+      "id": "9.12",
+      "requirement": "온라인 봇 실행 위치·연결법 문서화,미실행을완료로보고금지",
+      "status": "incomplete",
+      "sources": [
+        "S4",
+        "S7"
+      ],
+      "evidence": [],
+      "verification_scope": "위치와미실행경계는명시. ENGINE_API_URL/실제bot명령/새run-dir안내미기재."
+    },
+    {
+      "id": "13.1",
+      "requirement": "README 준비 후 한 명령 전체 로컬 시작",
+      "status": "proven",
+      "sources": [
+        "S5"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "준비후node scripts/demo.mjs start와14프로세스기록. 새실행안함."
+    },
+    {
+      "id": "13.2",
+      "requirement": "UI·Rust API·영속데이터·12봇 실행",
+      "status": "proven",
+      "sources": [
+        "S5",
+        "S6"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "역사적실행·데이터경로확인. 현재liveness감사아님."
+    },
+    {
+      "id": "13.3",
+      "requirement": "최소10봇 실제 주문 API 참여",
+      "status": "proven",
+      "sources": [
+        "S4"
+      ],
+      "evidence": [
+        "E7"
+      ],
+      "verification_scope": "12개각실제accepted/trade."
+    },
+    {
+      "id": "13.4",
+      "requirement": "5분 지속 체결·호가·차트 갱신",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S11"
+      ],
+      "evidence": [
+        "E3",
+        "E7"
+      ],
+      "verification_scope": "API309945ms+브라우저visible314615ms의별도기록. full-frame연속영상아님."
+    },
+    {
+      "id": "13.5",
+      "requirement": "수동 거래·취소·잔고 브라우저 검증",
+      "status": "proven",
+      "sources": [
+        "S2",
+        "S3"
+      ],
+      "evidence": [
+        "E2",
+        "E5"
+      ],
+      "verification_scope": "DOM/서버state/PNG대표확인."
+    },
+    {
+      "id": "13.10",
+      "requirement": "브라우저 재연결 후 재동기화",
+      "status": "proven",
+      "sources": [
+        "S3"
+      ],
+      "evidence": [
+        "E3",
+        "E4"
+      ],
+      "verification_scope": "실제재연결/idle504회복. 열린WS에서강제gap는별도미검증8.R3/R4."
+    },
+    {
+      "id": "13.11",
+      "requirement": "관련 빌드·포맷·린트·테스트",
+      "status": "proven",
+      "sources": [
+        "S1",
+        "S3"
+      ],
+      "evidence": [
+        "E6"
+      ],
+      "verification_scope": "frontend TypeScript/Vite/prettier/protocol7 raw통과. 엔진전체checks는root감사."
+    },
+    {
+      "id": "13.13",
+      "requirement": "Vercel UI 로컬 빌드·배포 설정",
+      "status": "proven",
+      "sources": [
+        "S7",
+        "S8"
+      ],
+      "evidence": [
+        "E5",
+        "E6",
+        "E9"
+      ],
+      "verification_scope": "production130파일HTTP/해시와브라우저검증,원격Vercel은미실행."
+    },
+    {
+      "id": "13.14",
+      "requirement": "별도Rust실행·영속저장소·배포준비",
+      "status": "proven",
+      "sources": [
+        "S6",
+        "S7"
+      ],
+      "evidence": [
+        "E3",
+        "E5"
+      ],
+      "verification_scope": "독립로컬과볼륨/Origin/TLS설정. Docker/Linux/TLS실행미검증."
+    },
+    {
+      "id": "13.15",
+      "requirement": "루트UI연동방식·실제적용여부 명시",
+      "status": "proven",
+      "sources": [
+        "S9"
+      ],
+      "evidence": [
+        "E10"
+      ],
+      "verification_scope": "WonderPark기존registry연결은실제등록/launch/목적지확인. 별도Reactanchor미적용. native새탭자동생성은입증안함."
+    },
+    {
+      "id": "13.16",
+      "requirement": "로컬·배포준비·실제배포 범위구분",
+      "status": "proven",
+      "sources": [
+        "S7",
+        "S9"
+      ],
+      "evidence": [
+        "E9"
+      ],
+      "verification_scope": "로컬production과외부배포/Docker/루트미적용분리."
+    }
+  ],
+  "findings": [
+    {
+      "id": "F1",
+      "status": "unverified",
+      "requirements": [
+        "8.R3",
+        "8.R4"
+      ],
+      "description": "실제브라우저에서 의도적으로 WS seq를 건너뛰고 HTTP /api/state 재조회와화면수렴을입증한원본없음. 기존restart counter전후1로증가증거아니며HTTP ACKdropfixture는WS직결.",
+      "next_step": "새독립fixture에서실제엔진seq프레임1개를 relay에서만drop,다음실제snapshot전달,HTTP조회로그/DOMcounter증가/최종state대조.현재시연불변."
+    },
+    {
+      "id": "F2",
+      "status": "incomplete",
+      "requirements": [
+        "3.C",
+        "9.12"
+      ],
+      "description": "온라인봇위치개념은있지만실제접속변수 ENGINE_API_URL,bot실행인수와새로그run-dir절차가README/docs/deploy에없음.",
+      "next_step": "root가명시적온라인준비예시를문서화;외부실행/배포하지않음."
+    }
+  ],
+  "minimal_gap_fixture_proposal": [
+    "현재 browser-fault-demo.mjs는 UI5176/API proxy8789/격리engine8788, 새evidence data이며 VITE_WS_URL은8788직결이다. 기존run을재사용하지않고새run·빈데이터·봇0개로시작한다.",
+    "기존HTTP proxy에 /ws upgrade relay를추가하고 UI의 VITE_WS_URL만 relay로지정한다. 검증된 WS 라이브러리를이용해upstreamOrigin을5176으로유지한다. mainengine코드/프런트코드는바꾸지않는다.",
+    "arm-gap은특정연결의다음실제 state frame N+1 한개만전달하지않고 seq/원문hash/전달결정을append기록한다. 숫자를위조하지않는다. 다음실제 N+2 frame은정상전달한다.",
+    "초기seqN표시후브라우저와다른계정/직접격리API에서두개의 resting 지정가명령을넣는다. UI자체제출후HTTP refresh가gap를미리메우는우회를피한다.",
+    "proxy에서 /api/state의요청시각/수신seq를기록한다. 브라우저의gapCount가정확히1증가하고실제HTTP조회가발생하며DOM seq/order/balance/depth가engine최종state와같은지확인한다.",
+    "중복프레임1회재전송은선택추가사례다. 상태/잔고/seq가변하지않는지확인하며초기HTTP/WS경합은명시적지연1회로별도분리할수있다. fixture의소유PID만종료·자료보존.",
+    "이감사에서는위제안을구현·실행하지않았으며신규포트/서비스/브라우저/빌드/테스트/부하를만들지않았다."
+  ],
+  "limitations": [
+    "외부배포·Docker·TLS·실제원격봇은미실행이며§0에따라완료요구로확대하지않음.",
+    "이전Vercel공식조회출처범위만감사했고새조회하지않음.",
+    "현재App.tsx SHA256 B4520C87C913C4F5AF42CDC1560C4211A9703280558913A7399ACE589722A0BD가production기록의source_app_sha256와일치. 최신Rust바이너리에대한새browser실행은아님.",
+    "대표기존DOM/PNG/rawbuild를직접확인했으나모든화면조합·모바일거래오류화면을실행검증한것은아님.",
+    "자료탐색중추정파일명README/deploycompose.example/typecheck경로의readmiss는실제구현결함이아니며실제compose.yaml/protocol.log등으로정정해읽었다."
+  ],
+  "audited_inputs_sha256": [
+    {
+      "bytes": 1139,
+      "path": "../dopamin/package.json",
+      "sha256": "0aa3a89f6962c591ddd7eeecc1c7c1880f948bc758f7c5e2d7d0ceea60297ee4"
+    },
+    {
+      "bytes": 55350,
+      "path": "../dopamin/src/styles.css",
+      "sha256": "ef3f5fa9e479fff80317b702c1f4a047377d4b55e37043b78659d28504f186cc"
+    },
+    {
+      "bytes": 380,
+      "path": "attraction.json",
+      "sha256": "2fb2e4f55e6f26db5524a8e1912f1c606242f13161f794742d5295994a031a18"
+    },
+    {
+      "bytes": 5984,
+      "path": "bots/bot.mjs",
+      "sha256": "3d4e635b41bfa3c4a7efac098176ed4f6d0be36b7af5208899740dfaa51f2f7c"
+    },
+    {
+      "bytes": 125,
+      "path": "deploy/Caddyfile.example",
+      "sha256": "2ad741058931fa21efc2e9c03fccb612abeb0b412fc4798d5a145e0df4574c52"
+    },
+    {
+      "bytes": 710,
+      "path": "deploy/compose.yaml",
+      "sha256": "8f8597960b00723ea3eeab231d6121cb381a1727180943d6d0ae9c4422b63f9e"
+    },
+    {
+      "bytes": 565,
+      "path": "deploy/Dockerfile",
+      "sha256": "0618dc80b345a2c04995a168719f7e9c425ebd0db998ebcccc89d54270f5cc04"
+    },
+    {
+      "bytes": 296,
+      "path": "deploy/engine.env.example",
+      "sha256": "f1fde14d2173476f45ba3a693dd7052af8e072bd5075ed303d970fa208d89526"
+    },
+    {
+      "bytes": 11749,
+      "path": "docs/adr/002-durability.md",
+      "sha256": "b6aa0dc7c977524db82fb44a51bf9755e22a4f601368a287cf0979138dd3786a"
+    },
+    {
+      "bytes": 6632,
+      "path": "docs/contract.md",
+      "sha256": "822ad080686d15a70bb75d97413b90a9744dea057a99bce4be0af3c15ea13829"
+    },
+    {
+      "bytes": 10364,
+      "path": "docs/deployment.md",
+      "sha256": "022ec0b87e36e3783fac76607c681043cfd53b25e8cf0ff8a92137870c5886da"
+    },
+    {
+      "bytes": 6066,
+      "path": "docs/evidence-policy.md",
+      "sha256": "64e8eaefea6cc49eebb2dab1c0052dbff619e7744d65ee5b9e00021797410419"
+    },
+    {
+      "bytes": 2912,
+      "path": "docs/integration-adapter.md",
+      "sha256": "9106127253b29b8c0bee3a3303b253b18eba06c9b6002e7e99fb79fccbb971ac"
+    },
+    {
+      "bytes": 29963,
+      "path": "docs/requirements.ko.md",
+      "sha256": "bf190c0400db130f8632a5f8a331e0e0f4b07dc9a5ff479281662e122475e3d5"
+    },
+    {
+      "bytes": 8894,
+      "path": "docs/review-deployment.md",
+      "sha256": "b8a0356c17aa9b374d530dfac17b0f52f3cadd50faa212e3ff0eb19c9f8de4a2"
+    },
+    {
+      "bytes": 12107,
+      "path": "docs/ui.md",
+      "sha256": "4856c2cd288be0768732e9fe285efa9eb15fa62814d2f02fc10ca2d4d8460bca"
+    },
+    {
+      "bytes": 46,
+      "path": "engine/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038"
+    },
+    {
+      "bytes": 23831,
+      "path": "engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    {
+      "bytes": 3066,
+      "path": "engine/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b"
+    },
+    {
+      "bytes": 98503,
+      "path": "evidence/2026-09-21T08-35-31-851Z-demo-e1ae3e2f/bots/bot-01-0000.jsonl",
+      "sha256": "78203c4b878b187960f265527a49356e0afe764f767a09b3af1b7560abaff683"
+    },
+    {
+      "bytes": 8666,
+      "path": "evidence/2026-09-21T08-35-31-851Z-demo-e1ae3e2f/processes.json",
+      "sha256": "e955c82d396eca4583f80ab6a04634b13a1230e42343db318f811efe5acd70d6"
+    },
+    {
+      "bytes": 3386,
+      "path": "evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/latest-bots.json",
+      "sha256": "c939cbb7e037ff4551aac721eec0f450e26bf4302b706895605416c7aff6afa3"
+    },
+    {
+      "bytes": 210706,
+      "path": "evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/latest-state.json",
+      "sha256": "98aad32f02337c59b8f42ac37608006b1a09fb5577bcddaf36f9cd3b81d1ede3"
+    },
+    {
+      "bytes": 42273,
+      "path": "evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/samples.jsonl",
+      "sha256": "4dd5be9e9fcd2bb59a471c5a66dac7bacd3e24f6da8292b8b7bdfdbdd4bc76a8"
+    },
+    {
+      "bytes": 10135,
+      "path": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/same-id-retry-confirmed.txt",
+      "sha256": "c9f0b79cd5716fcca09c786861c39520636ba5a6ba90b460a41d32f1d20fd4b7"
+    },
+    {
+      "bytes": 10200,
+      "path": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/unknown-after-fix.txt",
+      "sha256": "041600e7c3948459a63e7610f39efc3d08eae68447e0437adcfa41d291fb7755"
+    },
+    {
+      "bytes": 10203,
+      "path": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/unknown-restored-ready.txt",
+      "sha256": "d36e49dad076dbb52a5d85b9fffab324602c3bd6b0bd8fbff3f3124bcf6b85f9"
+    },
+    {
+      "bytes": 6898,
+      "path": "evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/verified-after-browser-retry.json",
+      "sha256": "07621cf7a6ddeebdf7be6f0afffc1bbd50b64c6635a452a1eb851b0e1a95eb70"
+    },
+    {
+      "bytes": 1357,
+      "path": "evidence/2026-09-21T11-48-40-554Z-ws-diagnostics-88f40990/engine.stderr.log",
+      "sha256": "f673e7df9233faf564ad22f3376292ade3e597205ac1e87ff9781b08645d3a60"
+    },
+    {
+      "bytes": 4083,
+      "path": "evidence/2026-09-21T11-48-40-554Z-ws-diagnostics-88f40990/summary.json",
+      "sha256": "5e5cbf87390fa724c75ff7c736f081d91e1ff937c5080e74b03a74ba1f9d1cb2"
+    },
+    {
+      "bytes": 9928,
+      "path": "evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab/output.log",
+      "sha256": "80fd08b174660a76ef20966318c7d1f479e329d4bd4bd17338a1810979fec676"
+    },
+    {
+      "bytes": 332,
+      "path": "evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab/run.json",
+      "sha256": "9c9a957332fcbfa782e66a859d1b60ed577139cb186f092342f8252a54d22095"
+    },
+    {
+      "bytes": 557,
+      "path": "evidence/20260921T123546085Z-wonder-park-link-c489e646/after.json",
+      "sha256": "df3e21c9e208396ccc2f1c7691a9f63ad52634b386d7041371ffb0c677c9984e"
+    },
+    {
+      "bytes": 496,
+      "path": "evidence/20260921T123546085Z-wonder-park-link-c489e646/before.json",
+      "sha256": "8ee9015008129c94372212c3a2e65d95d2ae24360c90dff2bd87b245986a10da"
+    },
+    {
+      "bytes": 6860,
+      "path": "evidence/20260921T123546085Z-wonder-park-link-c489e646/destination-ax.txt",
+      "sha256": "4ffe17c69be349ea9f31a830b8a3efcc647615178b9bad847040fb5c3875d385"
+    },
+    {
+      "bytes": 490,
+      "path": "evidence/20260921T123546085Z-wonder-park-link-c489e646/http-verification.json",
+      "sha256": "dc6583b6bd740ecc62fa21ded32f6eecd905e324aee0c001ece2f792faf6de5b"
+    },
+    {
+      "bytes": 536,
+      "path": "evidence/20260921T123546085Z-wonder-park-link-c489e646/launch-ax.txt",
+      "sha256": "e43394a616db9e4497ba57d678c6eeb34d70d0166d4ece0ae962f124f494655a"
+    },
+    {
+      "bytes": 41,
+      "path": "evidence/20260921T123546085Z-wonder-park-link-c489e646/launch.json",
+      "sha256": "ee3368fb2458587ab63e061240b364b2ab2a9ea61e8453ef9f34fbf58a1aea47"
+    },
+    {
+      "bytes": 40430,
+      "path": "evidence/20260921T123546085Z-wonder-park-link-c489e646/park-launch.png",
+      "sha256": "9aeefe8280d14d2f109e1e31a467ae15b55cb821a393701faea9ce04418055d8"
+    },
+    {
+      "bytes": 9346,
+      "path": "evidence/browser-manual-20260921T083933Z/after-cancel.txt",
+      "sha256": "81ad308a7a7748feed672195cf06d10157bf4cda11b4c8951fc0a08ff19bf551"
+    },
+    {
+      "bytes": 9474,
+      "path": "evidence/browser-manual-20260921T083933Z/engine-stopped.txt",
+      "sha256": "0b8708b657174e1f0e14cbae911b3b4a52b7441ca8d0b55086f15efde380db64"
+    },
+    {
+      "bytes": 9577,
+      "path": "evidence/browser-manual-20260921T083933Z/keyboard-fill-confirmed.txt",
+      "sha256": "eca6195f130c843b5297064e6cc9fbdc9099d42e7dfea9a85681db3717251b0c"
+    },
+    {
+      "bytes": 9499,
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/after-engine-restart.txt",
+      "sha256": "85e639e24efc468c6523cc02818d45f5ec802afb452ac6450087c726c07a3068"
+    },
+    {
+      "bytes": 9523,
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/before-engine-restart.txt",
+      "sha256": "70bb448ef128f9c0734e1245d63c1548871f89b3220d79ebe63958d92252d73e"
+    },
+    {
+      "bytes": 380,
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-end.json",
+      "sha256": "169eb3f21964e5daa72d761307dbac1c8d9d644aba608784f2a580df12afb8eb"
+    },
+    {
+      "bytes": 36968,
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-end.png",
+      "sha256": "5f4722184e6f617ea7afbd32cc72596876951ddc0cc3c55d6bced8aa85bd9825"
+    },
+    {
+      "bytes": 303,
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-start.json",
+      "sha256": "e501b8986e1c11cb3a372ff3cec3d3b4c7550784ba7e0630f15bd5d2288c2ea3"
+    },
+    {
+      "bytes": 37153,
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-start.png",
+      "sha256": "c5832cee0ddb23c02e189962f593accacd59c5984e8b356d8ad6c9c4e85ebdf3"
+    },
+    {
+      "bytes": 83983,
+      "path": "evidence/frontend-20260921T083739Z-visual/desktop-bots-1440.png",
+      "sha256": "0eaed660430f1881d5741e926fd34bff3c64d1a6c2253679ccd081283911bf65"
+    },
+    {
+      "bytes": 92143,
+      "path": "evidence/frontend-20260921T083739Z-visual/desktop-live-1440.png",
+      "sha256": "fec4bbbf3976a8bc211450361ca4d267c62cba1b86b6e518f1594e249343ba35"
+    },
+    {
+      "bytes": 26222,
+      "path": "evidence/frontend-20260921T083739Z-visual/mobile-chart-390.png",
+      "sha256": "7b01370f32586cfed8b19a2434a13ed34c064df24032c5da7c44938376e86aec"
+    },
+    {
+      "bytes": 28027,
+      "path": "evidence/frontend-20260921T083739Z-visual/mobile-live-390.png",
+      "sha256": "00615f2d3b7b13b8bfa36505ff2a53244492d8b6b2036de484be3d2a48d4e5f2"
+    },
+    {
+      "bytes": 356,
+      "path": "evidence/frontend-20260921T090509598Z/format.log",
+      "sha256": "980f18124b547d11b042a2d5e207af0b66385a1a88d341a1b3f012907ea7db23"
+    },
+    {
+      "bytes": 1584,
+      "path": "evidence/frontend-20260921T090509598Z/protocol.log",
+      "sha256": "f5d24f50cd17d925396ac8ce6d7377d592efd6670e8aac1914be286583e5f53a"
+    },
+    {
+      "bytes": 2,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/browser/browser-console.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "bytes": 9412,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/browser/buyer-partial.txt",
+      "sha256": "7121be21307a409d63e68e88fca832d227f75a7f83247bf4ca87da3e3915c206"
+    },
+    {
+      "bytes": 9126,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/browser/cancelled.txt",
+      "sha256": "195621dc69b223d2c6ea3f5fad889479d1f4e3cce4fcc317571df1631193c34c"
+    },
+    {
+      "bytes": 58890,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/browser/production-market.png",
+      "sha256": "322b90777032439e3f32d9884c2f218436963163029dbd9886dfbf840f7130af"
+    },
+    {
+      "bytes": 9134,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/browser/reloaded.txt",
+      "sha256": "30722557afafd29b37fb2555c7c4ef8bb28ac62301d496314b3c27b0ba1233dc"
+    },
+    {
+      "bytes": 5940,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/browser/verified-state.json",
+      "sha256": "de52b17fe4ca1254ccf060c5065d6b5aab4ce2c1f17ae098d5d705a06380150f"
+    },
+    {
+      "bytes": 36102,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/build.log",
+      "sha256": "11a877dac444553fca4c603407daa1b8374a1d349591ca8492eddc233841e2fb"
+    },
+    {
+      "bytes": 4086,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/processes.json",
+      "sha256": "ea9f551913ac5d9a9a6703645426f30666b8accf9b50f50f667d7ee2674c8783"
+    },
+    {
+      "bytes": 36457,
+      "path": "evidence/frontend-production-20260921T093830224Z-33aae872/static-verification.json",
+      "sha256": "c807d02098b22c6971ace69e6e6cb69328d5fc3312444dd31730ae0bc637003c"
+    },
+    {
+      "bytes": 162,
+      "path": "frontend/.env.production.example",
+      "sha256": "dd75a6c3e4c48e454cf49bb1d33808d975d11b34c3fc314839913f85fc7b59b3"
+    },
+    {
+      "bytes": 1130,
+      "path": "frontend/package.json",
+      "sha256": "66cae6c771fd553c83cf577bad9c3123bcc221e14f53388049c75aec2e8067dd"
+    },
+    {
+      "bytes": 103,
+      "path": "frontend/pnpm-workspace.yaml",
+      "sha256": "a3ee6d5c2685098dae00941be402cb68cc43a480a136f980806f7223e36efe37"
+    },
+    {
+      "bytes": 1434,
+      "path": "frontend/src/api.ts",
+      "sha256": "bfde2aadebcc98e10e15df710384c3bc14bf3bb79a4c7f4cd2544602720e1c8a"
+    },
+    {
+      "bytes": 42790,
+      "path": "frontend/src/App.tsx",
+      "sha256": "b4520c87c913c4f5af42cdc1560c4211a9703280558913a7399ace589722a0bd"
+    },
+    {
+      "bytes": 591,
+      "path": "frontend/src/integration/ExchangeLink.tsx",
+      "sha256": "511a0eb95ea8587ef9db8b7c5ee73f4f92038f2d621611906856c2699b740f93"
+    },
+    {
+      "bytes": 3972,
+      "path": "frontend/src/protocol.test.ts",
+      "sha256": "befa542297e7502d5d2bacdbccdb4e7b62e1022ac55f3ec7ce5fa8d848c999a6"
+    },
+    {
+      "bytes": 2893,
+      "path": "frontend/src/protocol.ts",
+      "sha256": "f4b101c6b1fef86e64535ca54e7bed498114a354ecd886d6f28fd194b0a2dad8"
+    },
+    {
+      "bytes": 50457,
+      "path": "frontend/src/styles.css",
+      "sha256": "a33e8dcb1bb6eda85a78080c8960e740825eaeb53b36cf45a1ea10ef84d1031b"
+    },
+    {
+      "bytes": 10416,
+      "path": "frontend/src/useExchange.ts",
+      "sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37"
+    },
+    {
+      "bytes": 371,
+      "path": "frontend/vercel.json",
+      "sha256": "55f396790ba82f303d1c6b7bab30c35064f3da833a6e23268ad517862a2fda00"
+    },
+    {
+      "bytes": 196,
+      "path": "frontend/vite.config.ts",
+      "sha256": "9c7b4c743dd190086c60a321df044477aca19600465e0c75213823d04537cf48"
+    },
+    {
+      "bytes": 8882,
+      "path": "scripts/browser-fault-demo.mjs",
+      "sha256": "3359457c965d7799ff822feedfd64ebf438b4e5fe616bb8aaf99a98d45a922b5"
+    },
+    {
+      "bytes": 4850,
+      "path": "scripts/demo-lifecycle.mjs",
+      "sha256": "6c47dd47a1a3e503bbda1378ba5a2e43f76921c56d2ef29d9a3c0098092ec5c2"
+    },
+    {
+      "bytes": 13932,
+      "path": "scripts/demo.mjs",
+      "sha256": "bdc945341e9058037c86416f53f4c76dd5e57388a054da306bd9c2ccfdf36085"
+    },
+    {
+      "bytes": 9735,
+      "path": "scripts/observe.mjs",
+      "sha256": "0119804e55a36d9ecf5db33c5a413fd924cf25dba7ffd6c432677a202835b332"
+    },
+    {
+      "bytes": 1792,
+      "path": "scripts/setup.ps1",
+      "sha256": "40d83faaa9453d33e1bbd0bbf0ed66ee6aa80655ecc64a9d29d6f26edbe0d2f0"
+    }
+  ],
+  "audit_finished_at": "2026-09-21T12:39:29.1348611Z",
+  "concurrent_root_followup": "Wonder Park 링크 수정의 기존 원본을 후속 확인했다. trading/attraction.json 등록으로 canLaunch false→true와 /api/launch의5175주소 반환이 확인되었고, 실제 입장 모달 링크 및 해당 목적지 정상 시장 AX/PNG가 있다. 새 탭 자동 생성은 IAB에서 입증되지 않았고 root는 확인한 href로 같은 시험 탭을 이동했다. 별도 React anchor 어댑터는 여전히 미적용이다."
+}

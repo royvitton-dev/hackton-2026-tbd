@@ -1,0 +1,128 @@
+{
+  "run_id": "2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191",
+  "started_at": "2026-09-21T12:53:38.010Z",
+  "command": [
+    "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "C:\\project\\hackton-2026-tbd\\trading\\scripts\\inflight-dedup.mjs",
+    "--expected-binary-sha256",
+    "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+    "--protected-engine-pid",
+    "20540",
+    "--protected-observer-pid",
+    "18184"
+  ],
+  "limits": {
+    "commands": 64,
+    "http_requests": 160,
+    "concurrent_requests": 12,
+    "work_ms": 90000,
+    "cleanup_ms": 10000,
+    "overall_ms": 120000
+  },
+  "binary": {
+    "source": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\release\\leave-engine.exe",
+    "copied": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191\\bin\\leave-engine.exe",
+    "sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240"
+  },
+  "main_before": {
+    "manifest_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+    "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "name": "bot-01",
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "name": "bot-02",
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "name": "bot-03",
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "name": "bot-04",
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "name": "bot-05",
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "name": "bot-06",
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "name": "bot-07",
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "name": "bot-08",
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "name": "bot-09",
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "name": "bot-10",
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "name": "bot-11",
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "name": "bot-12",
+        "pid": 6128,
+        "alive": true
+      },
+      {
+        "name": "frontend",
+        "pid": 4220,
+        "alive": true
+      }
+    ],
+    "observer": {
+      "pid": 18184,
+      "alive": true
+    }
+  },
+  "source_sha256": {
+    "script": "c33e74e5e17163f7290aaa0e165d9db850bbe76e8f8e0854488f5be2b0101e9d",
+    "main": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+    "core": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4",
+    "storage": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+  },
+  "host": {
+    "node": "v24.19.0",
+    "os": "Windows 11 Pro",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-1240P",
+    "logical_processors": 16
+  },
+  "classification": "Bounded correctness integration alongside live ordinary demo; not a latency benchmark",
+  "planned_cases": [
+    "12 fresh identical-key requests, all full-request writes flushed before first observed response headers",
+    "fresh shared-key two actions,6 requests each, same body barrier",
+    "exact settlement/order/sequence/dedup state and lookup",
+    "graceful checkpoint/restart, original results/retries and complete checkpoint Core equality"
+  ],
+  "overlap_scope": "Client-observed HTTP in-flight overlap. Prefix callbacks confirm all12 connections wrote incomplete bodies; final byte is released in one synchronous loop. finish callbacks must precede the first response-header callback. This does not claim12 simultaneous Core executions, all12 server admissions before first journal sync, or packet capture/kernel arrival times.",
+  "port": 64101
+}

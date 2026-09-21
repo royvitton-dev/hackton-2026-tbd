@@ -1,0 +1,21 @@
+{
+  "scope": "Two real Node launcher-lock workers with simulated start callback; no market processes started",
+  "results": [
+    {
+      "name": "concurrent-a",
+      "pid": 11816,
+      "code": 0,
+      "signal": null,
+      "stdout": "{\"plan\":\"start\",\"pid\":11816}\n",
+      "stderr": ""
+    },
+    {
+      "name": "concurrent-b",
+      "pid": 7984,
+      "code": 0,
+      "signal": null,
+      "stdout": "{\"plan\":\"reuse\",\"pid\":7984}\n",
+      "stderr": ""
+    }
+  ]
+}

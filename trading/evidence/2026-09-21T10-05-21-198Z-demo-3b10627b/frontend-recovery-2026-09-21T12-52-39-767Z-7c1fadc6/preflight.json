@@ -1,0 +1,83 @@
+{
+  "at": "2026-09-21T12:52:39.773Z",
+  "previous_frontend": {
+    "name": "frontend",
+    "pid": 17556,
+    "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "args": [
+      "C:\\project\\hackton-2026-tbd\\trading\\frontend\\node_modules\\vite\\bin\\vite.js",
+      "--host",
+      "127.0.0.1",
+      "--port",
+      "5175",
+      "--strictPort"
+    ],
+    "cwd": "C:\\project\\hackton-2026-tbd\\trading\\frontend",
+    "identity": "vite.js",
+    "started_at": "2026-09-21T10:05:21.744Z",
+    "spawned": true,
+    "exited": false,
+    "exit_code": null,
+    "exit_signal": null,
+    "spawn_error": null,
+    "ready_at": "2026-09-21T10:05:22.274Z"
+  },
+  "previous_pid_running": false,
+  "ui_loopback_port_reserved": 5175,
+  "engine_health_ok": true,
+  "confirmed_market": [
+    {
+      "name": "engine",
+      "pid": 20540
+    },
+    {
+      "name": "bot-01",
+      "pid": 17444
+    },
+    {
+      "name": "bot-02",
+      "pid": 7936
+    },
+    {
+      "name": "bot-03",
+      "pid": 20776
+    },
+    {
+      "name": "bot-04",
+      "pid": 16068
+    },
+    {
+      "name": "bot-05",
+      "pid": 4928
+    },
+    {
+      "name": "bot-06",
+      "pid": 20940
+    },
+    {
+      "name": "bot-07",
+      "pid": 12172
+    },
+    {
+      "name": "bot-08",
+      "pid": 7916
+    },
+    {
+      "name": "bot-09",
+      "pid": 15272
+    },
+    {
+      "name": "bot-10",
+      "pid": 5412
+    },
+    {
+      "name": "bot-11",
+      "pid": 20484
+    },
+    {
+      "name": "bot-12",
+      "pid": 6128
+    }
+  ],
+  "observer_limitation": "A running observer caches its initial manifest. It keeps the old frontend PID and will omit replacement UI resources; engine/bot samples remain attributable to their unchanged PIDs."
+}

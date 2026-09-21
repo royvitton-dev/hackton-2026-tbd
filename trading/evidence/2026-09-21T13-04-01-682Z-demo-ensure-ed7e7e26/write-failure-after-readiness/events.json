@@ -1,0 +1,58 @@
+{
+  "scope": "Only this isolated Node child; no market services",
+  "phase": "after-readiness",
+  "child_pid": 12848,
+  "state": {
+    "name": "isolated-write-failure",
+    "pid": 12848,
+    "spawned": true,
+    "exited": true,
+    "exit_code": null,
+    "exit_signal": "SIGTERM",
+    "spawn_error": null
+  },
+  "events": [
+    {
+      "event": "lifecycle",
+      "at": "2026-09-21T13:04:02.635Z",
+      "name": "isolated-write-failure",
+      "pid": 12848,
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "event": "simulated_readiness_reached",
+      "at": "2026-09-21T13:04:02.636Z"
+    },
+    {
+      "event": "operation_write_failed",
+      "code": "ENOENT"
+    },
+    {
+      "event": "lifecycle",
+      "at": "2026-09-21T13:04:02.639Z",
+      "name": "isolated-write-failure",
+      "pid": 12848,
+      "spawned": true,
+      "exited": true,
+      "exit_code": null,
+      "exit_signal": "SIGTERM",
+      "spawn_error": null
+    },
+    {
+      "event": "diagnostic_write_attempted_after_exit",
+      "exit": {
+        "name": "isolated-write-failure",
+        "pid": 12848,
+        "spawned": true,
+        "exited": true,
+        "exit_code": null,
+        "exit_signal": "SIGTERM",
+        "spawn_error": null
+      }
+    }
+  ]
+}

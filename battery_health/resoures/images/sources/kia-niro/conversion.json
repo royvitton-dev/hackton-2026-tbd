@@ -1,0 +1,354 @@
+{
+  "name": "Kia Niro EV",
+  "sourceUrl": "https://www.kia.com/hk/en/showroom/niro-ev/vr-showroom.html",
+  "license": "Kia Corporation; official public showroom asset. Open redistribution permission not stated.",
+  "sourceTriangles": 446217,
+  "renderedTriangles": 445929,
+  "outputPath": "battery_health/resoures/images/models/kia_niro_ev.glb",
+  "bytes": 4007512,
+  "sha256": "610f981bb1875188577108f82110e62bf36ffa34b27b272eabf9fbf399a74e06",
+  "downloads": [
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/pc.json.bin",
+      "file": "config.source",
+      "bytes": 20885,
+      "sha256": "c58f4c9d2ad906856aea33ca2e7c60cc96b94b4d705ea67385020f377d0ebe5b"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/1873937.json",
+      "file": "scene.source",
+      "bytes": 20378,
+      "sha256": "b7cba6aa0ea89a6b95ec621123336270de3b9b360373b07e71420c468e919870"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/154224080/1/body.json.bin",
+      "file": "assets/154224080.source",
+      "bytes": 10420826,
+      "sha256": "742c20a92b333e2c31f1947234b06bc0eb9b7b7ea175e3400558ab58666a07bc"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152842925/1/accelator.jpg",
+      "file": "assets/152842925-accelator.jpg",
+      "bytes": 2549,
+      "sha256": "b5dd2bd28e625115a2bf766354a88c477126e7b652b22a9b8ea3089ccb4aca27"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843119/1/aircon_button.jpg",
+      "file": "assets/152843119-aircon_button.jpg",
+      "bytes": 9444,
+      "sha256": "c95ba8d9377189f75b2c85a9e2f0e54de4d7618f008287c7e21df13edb70d166"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843482/1/brake.jpg",
+      "file": "assets/152843482-brake.jpg",
+      "bytes": 2502,
+      "sha256": "3583b0f6938540a20f7a17a063cb52e080be762e981a909b22a466f6ca1ed281"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843484/1/cluster_navigation.jpg",
+      "file": "assets/152843484-cluster_navigation.jpg",
+      "bytes": 25390,
+      "sha256": "60cb6258f9049a5a4eaca1016aa9cf04047c8e7934f4de684a1a6e09adeede7d"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843579/1/drivemode_button.jpg",
+      "file": "assets/152843579-drivemode_button.jpg",
+      "bytes": 2848,
+      "sha256": "085b6bbf8baa49f982593702fa00ecf9d0767ff18894c571816771d3ed0af2bb"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843580/1/emergency_button.jpg",
+      "file": "assets/152843580-emergency_button.jpg",
+      "bytes": 3685,
+      "sha256": "fc9c43535c57fbb970be8ef122c0bd083fa444aac5c5e0c0c46dee475a3350e3"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152844124/1/SG2MESH.jpg",
+      "file": "assets/152844124-SG2MESH.jpg",
+      "bytes": 104979,
+      "sha256": "f0cf8ebf1c0ac641e2e1cedece7465afdc66ef541395c1585154e45ab0ae7461"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152845734/1/CLOTH_FELT.jpg",
+      "file": "assets/152845734-CLOTH_FELT.jpg",
+      "bytes": 71573,
+      "sha256": "71e301e335e0a1b41b0a69b033f8437a2473393037af781a70bb042dffe149a9"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153238617/1/floor_carpet.jpg",
+      "file": "assets/153238617-floor_carpet.jpg",
+      "bytes": 63282,
+      "sha256": "733e0010c75c878923fcdd344bbbeb80b0bd9f66f288d20f368f68ba74572078"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843651/1/front_usb_port.jpg",
+      "file": "assets/152843651-front_usb_port.jpg",
+      "bytes": 6482,
+      "sha256": "1adc24a8fe2f04fe9b28df03f17e233d4c1f1839829faff0ce1bf77c485de081"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843665/1/gear_box.jpg",
+      "file": "assets/152843665-gear_box.jpg",
+      "bytes": 49374,
+      "sha256": "820062cb1438c14a8808a0864a6a4429e69387c2ce0b342ee8138dbd11ec40b0"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843700/1/indicator.jpg",
+      "file": "assets/152843700-indicator.jpg",
+      "bytes": 15966,
+      "sha256": "6d9271f0c750b9684234c2d80866c287c3879890eb6e39a9d880cd377ae0f381"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848781/1/marble_pattern.jpg",
+      "file": "assets/152848781-marble_pattern.jpg",
+      "bytes": 56888,
+      "sha256": "bdaec0692d90c5ed121dbf9ced66bed05e15a0aece7c8d7c081b91ae45d2b376"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843763/1/overhead_console.jpg",
+      "file": "assets/152843763-overhead_console.jpg",
+      "bytes": 9212,
+      "sha256": "f7854663d148b6e345e865942213f2570bf92b3a996425dfd3f51972ebf34b0c"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848785/1/plastic_leather.jpg",
+      "file": "assets/152848785-plastic_leather.jpg",
+      "bytes": 74591,
+      "sha256": "48225f6bfcb3c07c3266599db4584ce7c1e1f916d340e818698143757eaf06b1"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848786/1/plastic_n.jpg",
+      "file": "assets/152848786-plastic_n.jpg",
+      "bytes": 190046,
+      "sha256": "b44999b6c6bb22ca216529c85ec0d47d11225d7a8768f5358976ed9a1ad1254a"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843785/1/roof_light.jpg",
+      "file": "assets/152843785-roof_light.jpg",
+      "bytes": 5730,
+      "sha256": "581baa53bd78a49650003c680c486ce6f1066901508f06e0fad8b050d3e5fc0a"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152849013/1/Seatbelt.jpg",
+      "file": "assets/152849013-Seatbelt.jpg",
+      "bytes": 97640,
+      "sha256": "66762f9d170c26dd99107e7e9f24fdd8dd1c4f0d37876cc80e0f9ca5032cd84c"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152849121/1/seat_leather.jpg",
+      "file": "assets/152849121-seat_leather.jpg",
+      "bytes": 64393,
+      "sha256": "fa66abaeae89efbf06afc98b990660d90014abfa0f2ba7c6f3af494fd3e53ca0"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153238576/1/712B.jpg",
+      "file": "assets/153238576-712B.jpg",
+      "bytes": 31970,
+      "sha256": "ea79a813605907656274d37f2e2c8669ea7b6e217b68bf2b29cc049b0ed9458a"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153238575/1/714B.jpg",
+      "file": "assets/153238575-714B.jpg",
+      "bytes": 81054,
+      "sha256": "b609028d94defc1de2897eb4771db0823b45b0791bd1fa0b90050ca328cc9d83"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152849527/1/seat_pattern_03.jpg",
+      "file": "assets/152849527-seat_pattern_03.jpg",
+      "bytes": 86199,
+      "sha256": "d7a8dbabe9e8ff4bde4b17360dc06bf734db26902457402baea23627ed89c314"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153238662/1/press.jpg",
+      "file": "assets/153238662-press.jpg",
+      "bytes": 5008,
+      "sha256": "ef7461d7f93cc6d634e6f1a8fe5b87c5b5579443b89f3c099bd101acea2df2d9"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843793/1/steering_wheel.jpg",
+      "file": "assets/152843793-steering_wheel.jpg",
+      "bytes": 12280,
+      "sha256": "045f8db7b3c6eab6225a2d4f2eccef114e948ac41fe8f0a89a150e270669dd3e"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843837/1/steering_wheel_button_left.jpg",
+      "file": "assets/152843837-steering_wheel_button_left.jpg",
+      "bytes": 6328,
+      "sha256": "c9ccc3d4de12247fdee2eca6b150e89cbb879460c429d76081ef5fc4ee504528"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843836/1/steering_wheel_button_right.jpg",
+      "file": "assets/152843836-steering_wheel_button_right.jpg",
+      "bytes": 6127,
+      "sha256": "21eee678557b02831d6c14a2b454f8798d5e0b8f9aff555dbc241a4ccf63aef9"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843848/1/trunk_button.jpg",
+      "file": "assets/152843848-trunk_button.jpg",
+      "bytes": 8291,
+      "sha256": "037dda14705eb91ed9d335e54c1b994246e208cc3f8cb406a680641797aaab46"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152849937/1/CLOTH_TRICOT03_DIFFUSE.jpg",
+      "file": "assets/152849937-CLOTH_TRICOT03_DIFFUSE.jpg",
+      "bytes": 150902,
+      "sha256": "9e018a86a5e5a9e100c51e7c5f07be90f312608d474d7983653ef8e58571d6e3"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848667/1/kint_pattern.jpg",
+      "file": "assets/152848667-kint_pattern.jpg",
+      "bytes": 3712,
+      "sha256": "f202439fa596ce2a1022d88a1c5e4c9eca6ce541db5ae9b6130a79bd308c1f13"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843773/1/r_door_speaker.jpg",
+      "file": "assets/152843773-r_door_speaker.jpg",
+      "bytes": 11053,
+      "sha256": "e9c0ac2b70a4a27cfe8965228c3f02db1e516401e18fe6435afe956920a3a67b"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843858/1/window_button.jpg",
+      "file": "assets/152843858-window_button.jpg",
+      "bytes": 2171,
+      "sha256": "80e00058b784641ec64bf654ecd6602c85edc858e7394904ffc96f2f9b85e1c0"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843481/1/AO.jpg",
+      "file": "assets/152843481-AO.jpg",
+      "bytes": 200211,
+      "sha256": "6d7d4e586e0ecf71624e9516cc322595ebeee37a16d317ba3b5945e013e21689"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843645/1/f_door_speaker.jpg",
+      "file": "assets/152843645-f_door_speaker.jpg",
+      "bytes": 10662,
+      "sha256": "3e03942ea25288437f79abd2471c4c92e4b9a130291dd523cb80cbaa542252c2"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843646/1/f_door_up_speacker.jpg",
+      "file": "assets/152843646-f_door_up_speacker.jpg",
+      "bytes": 9656,
+      "sha256": "1e8bd2658fc2f8cfe1c3f468aaffbea4518492ccd01836ee11807374c8557773"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848986/1/repeater.jpg",
+      "file": "assets/152848986-repeater.jpg",
+      "bytes": 5191,
+      "sha256": "8fb66de83341a407720fa9f6c7cd8448cf1fb1f8e6ab1f4d35db95f9ea08dba5"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843740/1/memory_seat_button.jpg",
+      "file": "assets/152843740-memory_seat_button.jpg",
+      "bytes": 3888,
+      "sha256": "75e9931f978313ca0613c453d6312201879973be3e25d9d21bf2737d15788ef6"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843642/1/f_door_button.jpg",
+      "file": "assets/152843642-f_door_button.jpg",
+      "bytes": 7961,
+      "sha256": "b18ce3b7f991aed5aa266c83f15a21f9d24419dde16637e68f9b9e0eda8563c6"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153021185/1/brake_disk.jpg",
+      "file": "assets/153021185-brake_disk.jpg",
+      "bytes": 101039,
+      "sha256": "d8785be5e8761dfb1c222900b2d3f0bda8b7d64b123536d14b9196decfe65f05"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153021707/1/brake.jpg",
+      "file": "assets/153021707-brake.jpg",
+      "bytes": 21211,
+      "sha256": "663e4208d66cabc1c6d57a1c512262f13eb8b7b1ab210cfde4bf4d9ae06d8af8"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153023016/1/tire_tile3.jpg",
+      "file": "assets/153023016-tire_tile3.jpg",
+      "bytes": 5966,
+      "sha256": "f28bd657504f331821285bd70b98ce9079c85529419192158a8542fd33c4b4d3"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153023010/1/tire_side5.jpg",
+      "file": "assets/153023010-tire_side5.jpg",
+      "bytes": 57715,
+      "sha256": "68e423c82d5b0a8195e6dd10ea036e82f677c45316926955beaf2edfd015bc3d"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153023009/1/tire_side_NRM.jpg",
+      "file": "assets/153023009-tire_side_NRM.jpg",
+      "bytes": 556183,
+      "sha256": "af583e2fe903889256923f300bc87d870eb50bf7b084649d754b14467cfdb060"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848734/1/kia_logo.jpg",
+      "file": "assets/152848734-kia_logo.jpg",
+      "bytes": 6260,
+      "sha256": "980e5a3e863cf11ade2c3bba93895def294647031ba1d3c82b0ec42b0b8cbb3e"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848620/1/headlamp_reflect.jpg",
+      "file": "assets/152848620-headlamp_reflect.jpg",
+      "bytes": 8974,
+      "sha256": "47f3da2c1321f496bdbb92e17dabe48fb47d6a14fad7787485e267f805c01763"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848397/1/front_lamp_lens.jpg",
+      "file": "assets/152848397-front_lamp_lens.jpg",
+      "bytes": 8725,
+      "sha256": "ebc71ea67d6103eebea8f34857d595287654e8ca9364d6e013543fd476001c88"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152845902/1/grill.jpg",
+      "file": "assets/152845902-grill.jpg",
+      "bytes": 1498,
+      "sha256": "5d843124acc22b9ba0d6e179db61437c8d3909d7b5f5f7820e8c2fad34d6fd98"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152845903/1/grill_n.jpg",
+      "file": "assets/152845903-grill_n.jpg",
+      "bytes": 1668,
+      "sha256": "ad3a59e8af0b8bdbe6476993d82f2d2f73d355cabb4cbf58415e27018619a96d"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152848892/1/lamp_rearside.jpg",
+      "file": "assets/152848892-lamp_rearside.jpg",
+      "bytes": 22962,
+      "sha256": "7c2a46b0302376c886d1444a38181f4f88394defded72d883da5f8e7a6a4d123"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152849919/1/spoiler_off.jpg",
+      "file": "assets/152849919-spoiler_off.jpg",
+      "bytes": 8393,
+      "sha256": "cfba5911b789b8446e8d4c372b8f8a8daf08ce430d645ab37bb77b2eedd55b7c"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152845807/1/fog_off.jpg",
+      "file": "assets/152845807-fog_off.jpg",
+      "bytes": 10667,
+      "sha256": "0aa4c8467a3077d9a94c6c68206387c7346875282c9ccac862e2bcc83e841efc"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/152843741/1/nameplate.jpg",
+      "file": "assets/152843741-nameplate.jpg",
+      "bytes": 7961,
+      "sha256": "d727cbb3da1328196e5aa5b2a2031e368cc8074d4b1f22f63208921da484577c"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153431673/1/silver_metal_ao.jpg",
+      "file": "assets/153431673-silver_metal_ao.jpg",
+      "bytes": 72750,
+      "sha256": "7b570c76b5b3783db94f93c3a7b24979984bb511637923ab3b2b3f8b92e35602"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/153431601/1/black_hgs_plastic_ao.jpg",
+      "file": "assets/153431601-black_hgs_plastic_ao.jpg",
+      "bytes": 64533,
+      "sha256": "86e469849852937de816067f09ecae8168a0208e1203c061a81c80aa914cfcac"
+    },
+    {
+      "url": "https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/static/models/car0/files/assets/154128303/1/metalic_front.jpg",
+      "file": "assets/154128303-metalic_front.jpg",
+      "bytes": 65735,
+      "sha256": "42806bc36bc2f43a05eee2c2df93d2840273c1369ac22d518d652ac2e71cbb4f"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+✔ simultaneous startup and attraction entry share one pending ensure process (12.9101ms)
+✔ failed preparation exposes the actionable CLI error and a later attempt can retry (9.1829ms)
+✔ spawn errors reject instead of leaving the park startup pending (4.01ms)
+✔ malformed or non-local successful launcher output is not used as an attraction URL (6.7385ms)
+✔ the CLI retains ownership until completion, without a wrapper termination deadline (3.9587ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 145.7554

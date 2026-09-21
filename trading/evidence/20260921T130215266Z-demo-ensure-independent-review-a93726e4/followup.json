@@ -1,0 +1,85 @@
+{
+  "reviewer": "/root/matching_core",
+  "reviewed_at": "2026-09-21T13:06:29.4846664Z",
+  "initial_review": "review.json",
+  "status": "F1 resolved in reviewed source; no additional actionable finding in bounded scope",
+  "read_only": true,
+  "source_and_evidence_hashes": [
+    {
+      "path": "scripts/demo.mjs",
+      "sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19",
+      "bytes": 23629
+    },
+    {
+      "path": "scripts/demo-lifecycle.mjs",
+      "sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "bytes": 8852
+    },
+    {
+      "path": "scripts/demo-ensure.test.mjs",
+      "sha256": "346b97203c6b601069a1e721791930ae8eaeab95793c9bf5bae8f9221d80100d",
+      "bytes": 10102
+    },
+    {
+      "path": "evidence/2026-09-21T13-04-01-682Z-demo-ensure-ed7e7e26/test-output.txt",
+      "sha256": "a8771fc0f074d5718587675cf49a5c35b2ead3a7e98b00d388e335dca754b14a",
+      "bytes": 1178
+    },
+    {
+      "path": "evidence/2026-09-21T13-04-01-682Z-demo-ensure-ed7e7e26/write-failure-initial-record/events.json",
+      "sha256": "d170021c4298e5df4f2b4710d631591e4c337b434d317501c482158f0577c533",
+      "bytes": 1233
+    },
+    {
+      "path": "evidence/2026-09-21T13-04-01-682Z-demo-ensure-ed7e7e26/write-failure-after-readiness/events.json",
+      "sha256": "5a1cebfa7ec67d0bba550b27ba6536b7856589d37073cfabac0cf40cc02b2612",
+      "bytes": 1332
+    },
+    {
+      "path": "evidence/2026-09-21T13-04-01-682Z-demo-ensure-ed7e7e26/source-sha256.json",
+      "sha256": "2d140f15f5bde53231aff103a6c19acce6239ed43014fdce3f7538ed2a7962f2",
+      "bytes": 405
+    }
+  ],
+  "resolved_finding": {
+    "id": "F1",
+    "source": "scripts/demo.mjs:174-192; scripts/demo-lifecycle.mjs:105-128",
+    "evidence": "evidence/2026-09-21T13-04-01-682Z-demo-ensure-ed7e7e26",
+    "assessment": "All operations after monitor creation now run within withOwnedChildCleanup: unref, descriptor closes, initial record, readiness, replacement record and both manifest writes. The shared guard refs/signals exact child, waits monitor.ended with5s cap, and only then attempts best-effort diagnose. Diagnostic failure is attached while original operation error is rethrown; cleanup timeout/error is explicit OWNED_CHILD_CLEANUP_FAILED with original cause.",
+    "actual_focused_cases": [
+      {
+        "phase": "initial-record",
+        "pid": 13240,
+        "operation_error": "ENOENT",
+        "exit_signal": "SIGTERM",
+        "exit_event_before_diagnostic": true,
+        "original_error_and_diagnostic_error_asserted": true,
+        "esrch_asserted_by_passing_test": true
+      },
+      {
+        "phase": "after-readiness",
+        "pid": 12848,
+        "operation_error": "ENOENT",
+        "exit_signal": "SIGTERM",
+        "exit_event_before_diagnostic": true,
+        "original_error_and_diagnostic_error_asserted": true,
+        "esrch_asserted_by_passing_test": true
+      }
+    ],
+    "test_result": {
+      "reported_tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "exit_code": 0,
+      "source_of_output": "Owner-preserved actual exec_command output chunk03b1e3; read together with test bodies and per-child raw events. Reviewer did not rerun."
+    }
+  },
+  "verified_other_behaviors": "Existing ensure decision/lock/unprepared-entrypoint6 cases remain passing in same8-case output. Prior actual concurrent ensure was healthy reuse; no new market launch or live UI restart was performed for this fix. Original12 readiness/port tests unchanged and not rerun, correctly reported.",
+  "limitations": [
+    "Focused guard tests use real isolated Node children and real invalid filesystem writes, but readiness is simulated and no actual Vite restoration is run.",
+    "5-second timeout bounds the wait and reports failure; it is not a guarantee that OS termination always succeeds.",
+    "Kill-error/cleanup-timeout branch is source reviewed, not exercised by these two cases.",
+    "The review does not cover atomic manifest publication under filesystem failure, arbitrary PID reuse, every OS failure, Park integration or six-hour observation completion.",
+    "No additional test/process/service/control/source/Git action was performed by reviewer; only existing files were read/hashed and review artifacts written."
+  ]
+}

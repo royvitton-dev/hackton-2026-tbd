@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-21",
+  "result": "No additional detailed GLB obtained. PNG viewing does not implement rotation or battery x-ray.",
+  "candidates": [
+    {
+      "vehicleId": "hyundai_ioniq6_lr_2wd_2026",
+      "sourceUrl": "https://sketchfab.com/3d-models/hyundai-ioniq-6-64b7bfb50f304e428089f61a63e4dd11",
+      "failureReason": "Sketchfab candidate found; an authenticated licensed download is required. Official design-unveil host failed DNS; no local model obtained.",
+      "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+    },
+    {
+      "vehicleId": "audi_q4_45_etron_2026",
+      "sourceUrl": "https://sketchfab.com/3d-models/2022-audi-q4-e-tron-89d8009af27340d6a63d127e77780751",
+      "failureReason": "Authenticated download endpoint returned HTTP 401. No file downloaded; the 2022 CC BY candidate remains unconnected.",
+      "nextAction": "Provide a legitimately downloaded Q4 e-tron model and its license/source record; then convert, sync and inspect."
+    },
+    {
+      "vehicleId": "audi_q6_etron_quattro_2025",
+      "sourceUrl": "https://www.blenderkit.com/api/v1/search/?query=Audi%20Q6+asset_type:model",
+      "failureReason": "BlenderKit Audi Q6 e-tron candidate reports isFree=false and royalty_free license. No purchase or paid download was performed.",
+      "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+    },
+    {
+      "vehicleId": "vw_id4_pro_2026",
+      "sourceUrl": "https://sketchfab.com/3d-models/volkswagen-id4-502c1a0c911b4dfbaae57a7b25ec890f",
+      "failureReason": "Sketchfab candidate requires authorized download. Official Japanese ID.4 AR terms explicitly restrict reproduction/publication; that asset was not copied.",
+      "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+    },
+    {
+      "vehicleId": "bmw_i5_edrive40_2026",
+      "sourceUrl": "https://www.blenderkit.com/api/v1/search/?query=BMW%20i5+asset_type:model",
+      "failureReason": "BlenderKit BMW i5 candidate reports isFree=false and royalty_free license. No purchase or paid download was performed.",
+      "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+    },
+    {
+      "vehicleId": "mini_electric_cooper_2026",
+      "sourceUrl": "https://sketchfab.com/3d-models/mini-cooper-electric-b76a08a64ede498e9ee5ce7c0b9079fb",
+      "failureReason": "Electric-model candidate found on Sketchfab; download authorization is not available. Public GitHub Mini Cooper GLB has no verified EV identity and was not substituted.",
+      "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+    },
+    {
+      "vehicleId": "volvo_ex30_2026",
+      "sourceUrl": "https://sketchfab.com/3d-models/volvo-ex30-c5be588ea33d44cc8d2690ffdba389a4",
+      "failureReason": "Author-listed CC BY candidate found; authorized source download unavailable. Manufacturer AR app has no verified reusable web asset.",
+      "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle."
+    }
+  ],
+  "officialQ4": {
+    "url": "https://bit.ly/Q4-etron-NL",
+    "redirect": "https://www.audi.nl/nl/web/nl/modellen/q4/q4-e-tron.html",
+    "httpStatus": 403
+  }
+}

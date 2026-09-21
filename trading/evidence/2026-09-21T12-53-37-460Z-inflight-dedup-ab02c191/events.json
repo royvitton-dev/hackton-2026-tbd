@@ -1,0 +1,30 @@
+[
+  {
+    "at": "2026-09-21T12:53:38.509Z",
+    "ms": 1048.6219999999998,
+    "event": "owned_engine_started",
+    "pid": 22024
+  },
+  {
+    "at": "2026-09-21T12:53:38.728Z",
+    "ms": 1267.1464999999998,
+    "event": "owned_engine_started",
+    "pid": 16580
+  },
+  {
+    "at": "2026-09-21T12:53:38.833Z",
+    "ms": 1372.7379999999998,
+    "event": "all_correctness_checks_passed",
+    "fresh_identical": {
+      "first": 1,
+      "duplicate": 11
+    },
+    "fresh_conflict": {
+      "first": 1,
+      "duplicate": 5,
+      "conflict": 6
+    },
+    "core_command_seq": 3,
+    "journal_records": 28
+  }
+]

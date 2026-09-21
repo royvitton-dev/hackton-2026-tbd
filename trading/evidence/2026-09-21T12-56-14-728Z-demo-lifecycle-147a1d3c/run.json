@@ -1,0 +1,11 @@
+{
+  "run_id": "2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c",
+  "ended_at": "2026-09-21T12:56:16.044Z",
+  "command": "node --test scripts/demo-lifecycle.test.mjs",
+  "live_manifest_unchanged": true,
+  "scope": "Loopback test listeners and short-lived Node fixtures only; no Rust engine, real demo launch or bots.",
+  "limitations": [
+    "Does not run the full 12-bot start command.",
+    "The 35-second detached shutdown grace is a reviewed configuration change; no live shutdown was performed."
+  ]
+}

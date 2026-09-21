@@ -63,3 +63,22 @@ node tests/browser.mjs
 ```
 
 위 명령의 성공·실패·진행 중 상태는 `park-20260921`의 번호별 원본 로그와 verification.md를 따른다. 명령을 실행한 것만으로 통과라고 간주하지 않는다. 브라우저 명령은 BASE_URL과PLAYWRIGHT_MODULE_PATH를 위 환경에 맞게 지정했다.
+
+
+## 22–23 실제 실행 (2026-09-21 21:42–22:00 KST)
+
+- `node --test tests/physics.test.mjs tests/motion.test.mjs tests/finish-rules.test.mjs tests/devices.test.mjs tests/course-devices.test.mjs tests/return-portals.test.mjs tests/parade.test.mjs tests/lotto.test.mjs`: 22-physics.log,41/41.
+- `EVIDENCE_PREFIX=22 SEED_FROM=11 SEED_TO=20 node tests/soak.mjs`:405통과뒤원더가든실패.
+- `EVIDENCE_PREFIX=22c-parade MAP_ID=parade SEED_FROM=17 SEED_TO=20 node tests/soak.mjs`:48/48.
+- `EVIDENCE_PREFIX=22c-neon MAP_ID=neon SEED_FROM=18 SEED_TO=20 node tests/soak.mjs` 및orbit/zigzag각36/36.
+- `EVIDENCE_PREFIX=22 node tests/lotto-browser.mjs`:4/4. `EVIDENCE_PREFIX=22 node tests/map-view.mjs`:5/5.
+- `EVIDENCE_PREFIX=22b-parade-half MAP_ID=parade VIEW_MODE=half node tests/action.mjs`:2/2.
+- `node scripts/build.mjs`, `BASE_URL=http://127.0.0.1:4189 node tests/build-smoke.mjs`:22b2/2.
+- 최신이름적용후 `node scripts/build.mjs`, `EVIDENCE_PREFIX=23b node tests/default-names.mjs`:dist21파일과PC모바일2/2.
+- 모든브라우저스크립트에 `PLAYWRIGHT_MODULE_PATH=/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/playwright/index.mjs` 설정.
+- Node실행파일 `/Applications/ChatGPT.app/Contents/Resources/cua_node/bin/node`.
+
+
+## 24 실제반영본 (22:04–22:08 KST)
+
+`EXCLUDE_MAPS=split EVIDENCE_DIR=evidence/park-20260921/24-live-flow PLAYWRIGHT_MODULE_PATH=/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/playwright/index.mjs node tests/browser.mjs` — 6/6통과,5개성능표본,외부요청/페이지오류0. 원더가든명시제외.

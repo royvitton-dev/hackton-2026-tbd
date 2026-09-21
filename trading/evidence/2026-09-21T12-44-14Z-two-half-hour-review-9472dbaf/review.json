@@ -1,0 +1,686 @@
+{
+  "started_at": "2026-09-21T12:45:43.400Z",
+  "completed_at": "2026-09-21T12:45:44.634Z",
+  "scope": "Offline read-only review; original1765-sample cutoff and separately frozen later bot/observer prefixes. No journal read, Store open, full recovery, build/test/new service or process control. Six-hour run remains incomplete.",
+  "source_analysis": {
+    "path": "evidence/2026-09-21T12-35-11-997Z-observation-analysis-07018e66/analysis.json",
+    "sha256": "6724844bee4ed93d893e10b01bd4212bec66349d308c3f969376fbffd417847b"
+  },
+  "source_hashes": [
+    {
+      "file": "scripts/summarize-observation.mjs",
+      "sha256": "a2cda49ab9beac97f0948de70e1477c2c5764dd8fe7b54a3c16c811ede345ea9"
+    },
+    {
+      "file": "scripts/resource-cpu.mjs",
+      "sha256": "63b937511c1ef2389af6fe255299d77e46f85bf607932c57f5d3e4150b9b9330"
+    },
+    {
+      "file": "scripts/resource-memory.mjs",
+      "sha256": "84cdd22c5a5e9a935b87dcbd168c91f7ea3ac2ef0414767cc6aa07dbbee09943"
+    },
+    {
+      "file": "scripts/observe.mjs",
+      "sha256": "0119804e55a36d9ecf5db33c5a413fd924cf25dba7ffd6c432677a202835b332"
+    },
+    {
+      "file": "scripts/summarize-bot-latency.mjs",
+      "sha256": "59bfe5b4e6d6fbc22e6a8b0703eda14ec88586872a403d873eedabaeb5bea52e"
+    },
+    {
+      "file": "scripts/latency-summary.mjs",
+      "sha256": "707ea37802cddc4c2b7ccc1df37399ae13c2252898e4bf955f21a3021652c3fd"
+    },
+    {
+      "file": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+    }
+  ],
+  "checks_passed": 959,
+  "source_summary_matches_raw_prefix": true,
+  "observation": {
+    "samples": 1765,
+    "interval_seconds": 8953.4620596,
+    "resource_samples": 295,
+    "cpu_intervals": 294,
+    "logical_processors": 16,
+    "tracked_processes": 14,
+    "total_cpu_seconds": 746.546875,
+    "weighted_mean_cpu_percent_total_capacity": 0.5211300319016987,
+    "max_cpu_interval_percent_total_capacity": 1.9315020892152936,
+    "engine_cpu": {
+      "pid": 20540,
+      "cpu_seconds": 407.53125,
+      "seconds": 8953.462059600006,
+      "max_percent": 1.0959342387480353
+    },
+    "maximum_sample_gap_ms": 6608.454700000584,
+    "latest_original_sample": {
+      "at": "2026-09-21T12:35:08.404Z",
+      "elapsed_ms": 8953486.3133,
+      "event_seq": 74727,
+      "price": 990,
+      "volume": 56744,
+      "total_points": 15000000,
+      "total_hours": 15000,
+      "engine_status": "ready",
+      "book_hash": "377ad84d20251d3da85a0c559e3e63320838883e5ceddeb64868606a85bb0318",
+      "bots_connected": 12,
+      "bots_with_orders": 12,
+      "bots_with_trades": 12,
+      "websocket_events": 52296,
+      "websocket_gaps": 0,
+      "websocket_disconnects": 0,
+      "state_snapshot_round_trip_ms": 5.77900000102818,
+      "bot_status_round_trip_ms": 3.0359000004827976,
+      "resources": [
+        {
+          "Id": 20540,
+          "ProcessName": "leave-engine",
+          "WorkingSet64": 84381696,
+          "PrivateMemorySize64": 96419840,
+          "CPU": 408.234375,
+          "Handles": 155
+        },
+        {
+          "Id": 4928,
+          "ProcessName": "node",
+          "WorkingSet64": 66539520,
+          "PrivateMemorySize64": 76120064,
+          "CPU": 26.625,
+          "Handles": 195
+        },
+        {
+          "Id": 5412,
+          "ProcessName": "node",
+          "WorkingSet64": 67174400,
+          "PrivateMemorySize64": 76300288,
+          "CPU": 30.484375,
+          "Handles": 195
+        },
+        {
+          "Id": 6128,
+          "ProcessName": "node",
+          "WorkingSet64": 66658304,
+          "PrivateMemorySize64": 75636736,
+          "CPU": 27.09375,
+          "Handles": 195
+        },
+        {
+          "Id": 7916,
+          "ProcessName": "node",
+          "WorkingSet64": 65798144,
+          "PrivateMemorySize64": 74842112,
+          "CPU": 28.09375,
+          "Handles": 195
+        },
+        {
+          "Id": 7936,
+          "ProcessName": "node",
+          "WorkingSet64": 66478080,
+          "PrivateMemorySize64": 74977280,
+          "CPU": 28.390625,
+          "Handles": 195
+        },
+        {
+          "Id": 12172,
+          "ProcessName": "node",
+          "WorkingSet64": 64086016,
+          "PrivateMemorySize64": 72794112,
+          "CPU": 29.4375,
+          "Handles": 195
+        },
+        {
+          "Id": 15272,
+          "ProcessName": "node",
+          "WorkingSet64": 67645440,
+          "PrivateMemorySize64": 75927552,
+          "CPU": 28.96875,
+          "Handles": 195
+        },
+        {
+          "Id": 16068,
+          "ProcessName": "node",
+          "WorkingSet64": 66732032,
+          "PrivateMemorySize64": 76382208,
+          "CPU": 26.671875,
+          "Handles": 195
+        },
+        {
+          "Id": 17444,
+          "ProcessName": "node",
+          "WorkingSet64": 64507904,
+          "PrivateMemorySize64": 73867264,
+          "CPU": 27.890625,
+          "Handles": 195
+        },
+        {
+          "Id": 17556,
+          "ProcessName": "node",
+          "WorkingSet64": 57847808,
+          "PrivateMemorySize64": 146087936,
+          "CPU": 4.96875,
+          "Handles": 310
+        },
+        {
+          "Id": 20484,
+          "ProcessName": "node",
+          "WorkingSet64": 67313664,
+          "PrivateMemorySize64": 76931072,
+          "CPU": 29.375,
+          "Handles": 195
+        },
+        {
+          "Id": 20776,
+          "ProcessName": "node",
+          "WorkingSet64": 66646016,
+          "PrivateMemorySize64": 75677696,
+          "CPU": 27.9375,
+          "Handles": 195
+        },
+        {
+          "Id": 20940,
+          "ProcessName": "node",
+          "WorkingSet64": 66723840,
+          "PrivateMemorySize64": 75993088,
+          "CPU": 28.921875,
+          "Handles": 195
+        }
+      ],
+      "demo_files": {
+        "bytes": 36610479,
+        "files": 44,
+        "disappeared_during_sample": 0
+      },
+      "demo_logs": {
+        "bytes": 33573713,
+        "files": 40,
+        "disappeared_during_sample": 0
+      },
+      "data": {
+        "bytes": 209199911,
+        "files": 13,
+        "disappeared_during_sample": 0
+      },
+      "disk_available_bytes": 245969309696
+    }
+  },
+  "memory": {
+    "engine_max_working_set": 98332672,
+    "engine_max_private": 97398784,
+    "engine_first": {
+      "at": "2026-09-21T10:05:54.979Z",
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "WorkingSet64": 37859328,
+      "PrivateMemorySize64": 34742272,
+      "CPU": 0.703125,
+      "Handles": 147
+    },
+    "engine_last": {
+      "at": "2026-09-21T12:35:08.404Z",
+      "Id": 20540,
+      "ProcessName": "leave-engine",
+      "WorkingSet64": 84381696,
+      "PrivateMemorySize64": 96419840,
+      "CPU": 408.234375,
+      "Handles": 155
+    },
+    "tracked_max_working_set": 1026215936,
+    "tracked_max_private": 1157365760
+  },
+  "snapshot": {
+    "file": "data/demo/snapshot-00000000000000074813-00000000000001789994123204042200-20540-8.bin",
+    "observed_existing_at": "2026-09-21T12:45:43.998Z",
+    "verified_at": "2026-09-21T12:45:44.510Z",
+    "size": 56258024,
+    "sha256": "58a7c0295621691e782cf8a6e4dc7974ada8243cf65fa33f38fb5db333c9e30f",
+    "header": {
+      "magic": "LVSNAP01",
+      "version": 1,
+      "flags": 0,
+      "payload_bytes": 56257992,
+      "journal_sequence": 74813,
+      "payload_crc32": 3679278838,
+      "header_crc32": 1507777779
+    },
+    "state_metadata": {
+      "state_version": 1,
+      "genesis_crc": 2234408485,
+      "journal_seq": 74813,
+      "journal_offset": 15860354,
+      "prefix_crc": 1751707949,
+      "command_seq": 74813,
+      "event_seq": 74813
+    },
+    "last_write_time_utc": "2026-09-21T12:35:23.268Z",
+    "creation_time_utc": "2026-09-21T12:35:23.201Z",
+    "metadata_unchanged_during_read": true,
+    "header_crc_valid": true,
+    "payload_crc_valid": true,
+    "full_recovery_performed": false,
+    "publication_time": null,
+    "time_limit": "Existence under final immutable name with complete valid frame proves it was published by observed_existing_at. mtime/creation time and filename timestamp are not rename/publication time. Engine log has no successful checkpoint publication timestamp."
+  },
+  "latency": {
+    "cutoff_for_original_analysis": "2026-09-21T12:35:08.404Z",
+    "durable_commands_at_cutoff": 52490,
+    "stats_at_cutoff": {
+      "samples": 52490,
+      "mean_ms": 14.43314877691196,
+      "p50_ms": 15.74349999986589,
+      "p95_ms": 26.019300000043586,
+      "p99_ms": 29.101299999980256,
+      "max_ms": 1814.1419000001624
+    },
+    "post_1207_at_cutoff_peak": {
+      "timestamp": "2026-09-21T12:08:57.567Z",
+      "bot_id": "bot-04",
+      "round_trip_ms": 782.5103000001982,
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:3608",
+      "command_seq": 65570,
+      "status": "accepted",
+      "code": "OK",
+      "file": "bot-04-0000.jsonl",
+      "line": 3609,
+      "offset": 2015840,
+      "bytes": 545
+    },
+    "frozen_bot_latest_timestamp": "2026-09-21T12:45:43.815Z",
+    "all_frozen_durable_commands": 56215,
+    "frozen_stats": {
+      "samples": 56215,
+      "mean_ms": 14.293418687184822,
+      "p50_ms": 15.652999999932945,
+      "p95_ms": 25.958300000056624,
+      "p99_ms": 29.144100001081824,
+      "max_ms": 1814.1419000001624
+    },
+    "after_1207_stats": {
+      "samples": 13565,
+      "mean_ms": 12.787881813487852,
+      "p50_ms": 13.518499999307096,
+      "p95_ms": 20.701700000092387,
+      "p99_ms": 37.538200000301,
+      "max_ms": 782.5103000001982
+    },
+    "after_1207_peak": {
+      "timestamp": "2026-09-21T12:08:57.567Z",
+      "bot_id": "bot-04",
+      "round_trip_ms": 782.5103000001982,
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:3608",
+      "command_seq": 65570,
+      "status": "accepted",
+      "code": "OK",
+      "file": "bot-04-0000.jsonl",
+      "line": 3609,
+      "offset": 2015840,
+      "bytes": 545
+    },
+    "event_counts": {
+      "started": 12,
+      "command_result": 56215
+    },
+    "rejections_by_code": {
+      "ORDER_NOT_OPEN": 26
+    },
+    "fifteen_minute_windows": [
+      {
+        "start": "2026-09-21T10:00:00.000Z",
+        "samples": 3390,
+        "mean_ms": 14.715296047198011,
+        "p50_ms": 15.854599999998754,
+        "p95_ms": 25.83059999998659,
+        "p99_ms": 27.854799999971874,
+        "max_ms": 155.8701000000001
+      },
+      {
+        "start": "2026-09-21T10:15:00.000Z",
+        "samples": 5263,
+        "mean_ms": 15.116904199127497,
+        "p50_ms": 16.2216999999946,
+        "p95_ms": 26.293999999994412,
+        "p99_ms": 28.781899999943562,
+        "max_ms": 174.2554999999702
+      },
+      {
+        "start": "2026-09-21T10:30:00.000Z",
+        "samples": 5254,
+        "mean_ms": 14.213751503618255,
+        "p50_ms": 15.712999999988824,
+        "p95_ms": 26.300000000046566,
+        "p99_ms": 28.383200000040233,
+        "max_ms": 75.97240000008605
+      },
+      {
+        "start": "2026-09-21T10:45:00.000Z",
+        "samples": 5261,
+        "mean_ms": 14.284714331873689,
+        "p50_ms": 16.315900000277907,
+        "p95_ms": 26.433100000023842,
+        "p99_ms": 28.48049999959767,
+        "max_ms": 127.9531999998726
+      },
+      {
+        "start": "2026-09-21T11:00:00.000Z",
+        "samples": 5275,
+        "mean_ms": 13.984383810433908,
+        "p50_ms": 16.0246000001207,
+        "p95_ms": 26.510299999732524,
+        "p99_ms": 28.11489999992773,
+        "max_ms": 149.315700000152
+      },
+      {
+        "start": "2026-09-21T11:15:00.000Z",
+        "samples": 5246,
+        "mean_ms": 15.710002287466212,
+        "p50_ms": 16.1437999997288,
+        "p95_ms": 26.424800000153482,
+        "p99_ms": 43.847000000067055,
+        "max_ms": 958.158900000155
+      },
+      {
+        "start": "2026-09-21T11:30:00.000Z",
+        "samples": 5256,
+        "mean_ms": 13.182786301373223,
+        "p50_ms": 15.914900000207126,
+        "p95_ms": 23.98849999997765,
+        "p99_ms": 28.846999999135733,
+        "max_ms": 353.74760000035167
+      },
+      {
+        "start": "2026-09-21T11:45:00.000Z",
+        "samples": 5270,
+        "mean_ms": 13.154946926002173,
+        "p50_ms": 16.00430000014603,
+        "p95_ms": 25.80599999986589,
+        "p99_ms": 28.052099999971688,
+        "max_ms": 57.11340000014752
+      },
+      {
+        "start": "2026-09-21T12:00:00.000Z",
+        "samples": 5228,
+        "mean_ms": 19.048196289205407,
+        "p50_ms": 15.402900000102818,
+        "p95_ms": 26.23020000010729,
+        "p99_ms": 162.56080000009388,
+        "max_ms": 1814.1419000001624
+      },
+      {
+        "start": "2026-09-21T12:15:00.000Z",
+        "samples": 5259,
+        "mean_ms": 11.441886575386972,
+        "p50_ms": 13.378599999472499,
+        "p95_ms": 19.054400000721216,
+        "p99_ms": 25.69979999959469,
+        "max_ms": 258.7247000001371
+      },
+      {
+        "start": "2026-09-21T12:30:00.000Z",
+        "samples": 5258,
+        "mean_ms": 12.67678231267296,
+        "p50_ms": 12.365299999713898,
+        "p95_ms": 22.430200001224875,
+        "p99_ms": 39.46059999987483,
+        "max_ms": 381.4229999985546
+      },
+      {
+        "start": "2026-09-21T12:45:00.000Z",
+        "samples": 255,
+        "mean_ms": 11.841230588194493,
+        "p50_ms": 14.578699998557568,
+        "p95_ms": 18.91110000014305,
+        "p99_ms": 27.09210000000894,
+        "max_ms": 31.942999999970198
+      }
+    ],
+    "peak_completed_minus_snapshot_mtime_seconds": -1585.701,
+    "causality": "No cause assigned. Completion timestamps and snapshot file mtime are different observables; no successful checkpoint duration/publication event exists in this engine log. Client latency includes scheduling, network and JSON parse."
+  },
+  "prefixes": [
+    {
+      "file": "evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e/samples.jsonl",
+      "captured_at": "2026-09-21T12:45:43.408Z",
+      "read_limit_bytes": 1512281,
+      "captured_complete_prefix_bytes": 1512281,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 1512281,
+      "prefix_sha256": "8c839c440acc8fc7b3ae4dde2f13f3e1907917af9b715246e68a79306d1505f0",
+      "saved_as": "raw-prefixes/observer-samples.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-01-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.443Z",
+      "read_limit_bytes": 2614125,
+      "captured_complete_prefix_bytes": 2614125,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 2614125,
+      "prefix_sha256": "c1c36e209478fe667b7a9cd8b5e63624fb6eca09414b5baf52a99e451472a905",
+      "saved_as": "raw-prefixes/bot-01-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-02-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.484Z",
+      "read_limit_bytes": 2612095,
+      "captured_complete_prefix_bytes": 2612095,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 2612095,
+      "prefix_sha256": "eb07acf895b55637b089500fec44ab8f5fd3dd4847186d25a5e9fd6f605d2792",
+      "saved_as": "raw-prefixes/bot-02-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-03-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.522Z",
+      "read_limit_bytes": 2617409,
+      "captured_complete_prefix_bytes": 2617409,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 2617409,
+      "prefix_sha256": "41c39057261cb4152c4e68423222a318997f79e4502259b80079d8eddebee262",
+      "saved_as": "raw-prefixes/bot-03-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-04-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.566Z",
+      "read_limit_bytes": 2616074,
+      "captured_complete_prefix_bytes": 2616074,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 2616074,
+      "prefix_sha256": "01281c8a33fe98214f81f70088b02ad9f48c1e89531fe868c6d02c8b166cc89e",
+      "saved_as": "raw-prefixes/bot-04-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-05-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.603Z",
+      "read_limit_bytes": 3192733,
+      "captured_complete_prefix_bytes": 3192733,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 3192733,
+      "prefix_sha256": "539e94b5dc7ee3059408824e0a930609422a94ca7fc40f735621ef2b6ad10afd",
+      "saved_as": "raw-prefixes/bot-05-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-06-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.651Z",
+      "read_limit_bytes": 3202171,
+      "captured_complete_prefix_bytes": 3202171,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 3202171,
+      "prefix_sha256": "700923d7fdae64769c0d11ea051ddcadbc39a9404a4a885fb419fde30c12ba48",
+      "saved_as": "raw-prefixes/bot-06-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-07-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.689Z",
+      "read_limit_bytes": 3185989,
+      "captured_complete_prefix_bytes": 3185989,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 3185989,
+      "prefix_sha256": "9eb338feec885109d530575105928555b12d3b3ec985607b250936b0cd996007",
+      "saved_as": "raw-prefixes/bot-07-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-08-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.726Z",
+      "read_limit_bytes": 3205841,
+      "captured_complete_prefix_bytes": 3205841,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 3205841,
+      "prefix_sha256": "144d82fd9029fb06fe6bd479a665052bfe6b667fc15ba929ef43be749989d1a2",
+      "saved_as": "raw-prefixes/bot-08-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-09-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.767Z",
+      "read_limit_bytes": 3176517,
+      "captured_complete_prefix_bytes": 3176517,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 3176517,
+      "prefix_sha256": "c321dbaf888af8d952814da6b20fea5c6cc2eaf4a54ba450a90e44c6c5638eaf",
+      "saved_as": "raw-prefixes/bot-09-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-10-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.813Z",
+      "read_limit_bytes": 3177554,
+      "captured_complete_prefix_bytes": 3177554,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 3177554,
+      "prefix_sha256": "ce71393add645d270d43a7a0294739f728adba809623d07ecdd1686f84849294",
+      "saved_as": "raw-prefixes/bot-10-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-11-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.846Z",
+      "read_limit_bytes": 3175491,
+      "captured_complete_prefix_bytes": 3175491,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 3175491,
+      "prefix_sha256": "fbdc20311371d5932e07a2df9f03fc06774056eed172c67b7b0262a388ceffc5",
+      "saved_as": "raw-prefixes/bot-11-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/bots/bot-12-0000.jsonl",
+      "captured_at": "2026-09-21T12:45:43.889Z",
+      "read_limit_bytes": 3173367,
+      "captured_complete_prefix_bytes": 3173367,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 3173367,
+      "prefix_sha256": "3d9b116d566826cd6a954e65e887b66d02b1ae2c158a2fe308459511ed2c0d2f",
+      "saved_as": "raw-prefixes/bot-12-0000.jsonl"
+    },
+    {
+      "file": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/engine.stderr.log",
+      "captured_at": "2026-09-21T12:45:44.547Z",
+      "read_limit_bytes": 598,
+      "captured_complete_prefix_bytes": 598,
+      "excluded_partial_tail_bytes": 0,
+      "after_size_bytes": 598,
+      "prefix_sha256": "56983af17f70f291ef7521cd72a9a1203d1e49aa1b2077f87022b25ef2955ec4",
+      "saved_as": "raw-prefixes/engine.stderr.log"
+    }
+  ],
+  "botRead": [
+    {
+      "file": "bot-01-0000.jsonl",
+      "lines": 4694,
+      "last_timestamp": "2026-09-21T12:45:42.475Z"
+    },
+    {
+      "file": "bot-02-0000.jsonl",
+      "lines": 4695,
+      "last_timestamp": "2026-09-21T12:45:43.266Z"
+    },
+    {
+      "file": "bot-03-0000.jsonl",
+      "lines": 4690,
+      "last_timestamp": "2026-09-21T12:45:43.166Z"
+    },
+    {
+      "file": "bot-04-0000.jsonl",
+      "lines": 4685,
+      "last_timestamp": "2026-09-21T12:45:42.000Z"
+    },
+    {
+      "file": "bot-05-0000.jsonl",
+      "lines": 4682,
+      "last_timestamp": "2026-09-21T12:45:41.536Z"
+    },
+    {
+      "file": "bot-06-0000.jsonl",
+      "lines": 4667,
+      "last_timestamp": "2026-09-21T12:45:41.430Z"
+    },
+    {
+      "file": "bot-07-0000.jsonl",
+      "lines": 4679,
+      "last_timestamp": "2026-09-21T12:45:42.054Z"
+    },
+    {
+      "file": "bot-08-0000.jsonl",
+      "lines": 4688,
+      "last_timestamp": "2026-09-21T12:45:42.443Z"
+    },
+    {
+      "file": "bot-09-0000.jsonl",
+      "lines": 4697,
+      "last_timestamp": "2026-09-21T12:45:43.107Z"
+    },
+    {
+      "file": "bot-10-0000.jsonl",
+      "lines": 4690,
+      "last_timestamp": "2026-09-21T12:45:43.123Z"
+    },
+    {
+      "file": "bot-11-0000.jsonl",
+      "lines": 4678,
+      "last_timestamp": "2026-09-21T12:45:42.491Z"
+    },
+    {
+      "file": "bot-12-0000.jsonl",
+      "lines": 4682,
+      "last_timestamp": "2026-09-21T12:45:43.815Z"
+    }
+  ],
+  "engine_events": [
+    {
+      "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo",
+      "event": "recovering",
+      "timestamp_ms": 1789985121488
+    },
+    {
+      "event": "recovery_complete",
+      "report": {
+        "ignored_snapshots": [],
+        "journal_records": 22233,
+        "preserved_tail": null,
+        "replayed_records": 0,
+        "snapshot_used": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo\\snapshot-00000000000000022233-00000000000001789984976006464800-15804-4.bin",
+        "truncated_bytes": 0
+      },
+      "timestamp_ms": 1789985121617
+    },
+    {
+      "bind": "127.0.0.1:8787",
+      "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo",
+      "event": "ready",
+      "queue_capacity": 2048,
+      "timestamp_ms": 1789985121625
+    }
+  ],
+  "limitations": [
+    "No six-hour completion/recovery claim.",
+    "295 sampled memory readings and294 average CPU intervals are not instantaneous peaks or whole-machine usage. PID/name identity cannot rule out undetected same-PID reuse.",
+    "Working-set sums can double-count shared pages. Retained history memory growth alone cannot prove/exclude leak.",
+    "Published snapshot frame integrity is not full Core invariant validation or journal-consistency recovery.",
+    "Snapshot publication happened before final-name observation; exact time cannot be inferred from mtime.",
+    "Fixed read sizes plus saved complete-line prefixes/byte offsets/hash freeze growing log inputs; bot files were captured sequentially, not as an atomic whole-market snapshot.",
+    "No causal attribution of latency to snapshots/resource contention without additional instrumentation."
+  ],
+  "diagnostic_memory_at_end": {
+    "rss": 204869632,
+    "heapTotal": 97857536,
+    "heapUsed": 56598512,
+    "external": 59357136,
+    "arrayBuffers": 57289921
+  }
+}

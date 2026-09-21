@@ -4,12 +4,12 @@ test('comma-separated entries and name*count are explicit, with whitespace and d
 });
 test('Parade holds multiple balls independently for 0.8–1.5 seconds and freezes every timer when paused',()=>{
  for(let seed=1;seed<=12;seed++){
-  const r=new Race({...makeConfig('A,B,C,D,E,F',1,'last',1),mapId:'parade'},seed);r.state='racing';const d=r.devices.find(d=>d.kind==='cannon');assert.equal(r.devices.filter(d=>d.kind==='cannon').length,6);
+  const r=new Race({...makeConfig('A,B,C,D,E,F',1,'last',1),mapId:'parade'},seed);r.state='racing';const d=r.devices.find(d=>d.kind==='cannon');assert.equal(r.devices.filter(d=>d.kind==='cannon').length,9);
   for(const b of r.balls){Object.assign(b,{x:d.x,y:d.y,vx:0,vy:0});captureDevices(r,b);assert.ok(b.hold.duration>=.8&&b.hold.duration<=1.5);}
   assert.equal(d.holds.length,6);assert.equal(new Set(d.holds.map(h=>h.releaseAt)).size,6);r.pause();const frozen=r.snapshot();for(let i=0;i<100;i++)r.step();assert.deepEqual(r.snapshot(),frozen);r.resume();while(d.holds.length)r.step();const launches=r.events.filter(e=>e.type==='launch');assert.equal(launches.length,6);assert.ok(launches.every(e=>e.heldFor>=.8&&e.heldFor<=1.5+1e-9));assert.ok(new Set(launches.map(e=>e.time)).size>2);
  }
 });
-test('Parade has one goal, six central cannons and a final gate that physically opens and blocks',()=>{
+test('Parade has one goal, nine central cannons and a final gate that physically opens and blocks',()=>{
  const map=MAPS.find(m=>m.id==='parade');assert.equal(map.exits.length,1);assert.equal(map.exits[0].kind,'throat');assert.equal(map.returnPoint,null);const gate=map.rotors.at(-1);
  const contact=phase=>{const r=new Race({...makeConfig('A',1,'first',1),mapId:'parade'},8);r.map=structuredClone(map);r.map.rotors=[{...gate,phase,omega:0}];r.rotationTime=0;const b=r.balls[0];Object.assign(b,{x:gate.x+40,y:gate.y-11,vx:0,vy:250});r.segment(b,r.rotorSegments()[0],.65);return b;};assert.ok(contact(0).vy<0);assert.equal(contact(Math.PI/2).vy,250);
 });

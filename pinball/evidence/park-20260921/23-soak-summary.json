@@ -1,0 +1,67 @@
+{
+  "at": "2026-09-21T13:00:25.792368+00:00",
+  "status": "PARTIAL_WITH_KNOWN_FAILURE",
+  "sourceHashes": {
+    "physics.js": "f40a7a61cd8407725e945f9937509946eb23f5590a728e2a6b077079234f572f",
+    "devices.js": "078a4f45820e61b91e40ba7731740911222e925101f32c33d6b216567ea64ffc",
+    "return-portals.js": "1726418c378f7fdaa6b4ed5a4df70c28e7f409af9e33d75a55a58d633a9938f9",
+    "board-motion.js": "9f1e1237e60c098aeb4cf1e8e6732a78969386a360c680313f8b721d956f1762"
+  },
+  "sources": [
+    "22-soak-results.json",
+    "22c-parade-soak-results.json",
+    "22c-neon-soak-results.json",
+    "22c-orbit-soak-results.json",
+    "22c-zigzag-soak-results.json"
+  ],
+  "pass": 561,
+  "fail": 1,
+  "notRun": 38,
+  "maps": [
+    {
+      "map": "neon",
+      "pass": 120,
+      "fail": 0,
+      "notRun": 0,
+      "minSeconds": 23.42499999999931,
+      "medianSeconds": 38.48333333333179,
+      "maxSeconds": 58.799999999997304
+    },
+    {
+      "map": "orbit",
+      "pass": 120,
+      "fail": 0,
+      "notRun": 0,
+      "minSeconds": 13.34166666666655,
+      "medianSeconds": 79.96666666667637,
+      "maxSeconds": 126.60833333338016
+    },
+    {
+      "map": "zigzag",
+      "pass": 120,
+      "fail": 0,
+      "notRun": 0,
+      "minSeconds": 20.991666666666116,
+      "medianSeconds": 41.68333333333161,
+      "maxSeconds": 59.85833333333058
+    },
+    {
+      "map": "split",
+      "pass": 81,
+      "fail": 1,
+      "notRun": 38,
+      "minSeconds": 13.358333333333215,
+      "medianSeconds": 75.60833333333957,
+      "maxSeconds": 132.64166666671036
+    },
+    {
+      "map": "parade",
+      "pass": 120,
+      "fail": 0,
+      "notRun": 0,
+      "minSeconds": 16.07499999999973,
+      "medianSeconds": 52.32083333333101,
+      "maxSeconds": 113.55833333336977
+    }
+  ]
+}

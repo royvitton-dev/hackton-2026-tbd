@@ -1,0 +1,3903 @@
+[
+  {
+    "ordinal": 1,
+    "route": "/health",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.509Z",
+      "ms": 1048.9769999999999
+    },
+    "error": "connect ECONNREFUSED 127.0.0.1:64101",
+    "error_code": "ECONNREFUSED",
+    "completed": {
+      "at": "2026-09-21T12:53:38.521Z",
+      "ms": 1060.3501999999999
+    }
+  },
+  {
+    "ordinal": 2,
+    "route": "/health",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.579Z",
+      "ms": 1118.6854999999998
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.581Z",
+      "ms": 1120.7994999999999,
+      "local_port": 64103,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.582Z",
+      "ms": 1121.6204,
+      "socket_bytes_written": 97,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.584Z",
+      "ms": 1124.0109
+    },
+    "status": 200,
+    "body": {
+      "command_seq": 0,
+      "durability": "journal-sync-all-before-apply",
+      "event_seq": 0,
+      "mode": "synthetic-demo",
+      "queue_capacity": 2048,
+      "queue_depth": 0,
+      "status": "ready"
+    },
+    "response_bytes": 155,
+    "completed": {
+      "at": "2026-09-21T12:53:38.586Z",
+      "ms": 1125.8913
+    }
+  },
+  {
+    "ordinal": 3,
+    "route": "/api/state",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.587Z",
+      "ms": 1126.2006
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.589Z",
+      "ms": 1128.4942999999998,
+      "local_port": 64104,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.589Z",
+      "ms": 1128.7216999999998,
+      "socket_bytes_written": 100,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.590Z",
+      "ms": 1129.2418
+    },
+    "status": 200,
+    "body": {
+      "engine_status": "ready",
+      "command_seq": 0,
+      "event_seq": 0,
+      "reference_price": 1000,
+      "last_price": 1000,
+      "volume": 0,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-01",
+          "name": "거래 봇 01",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-02",
+          "name": "거래 봇 02",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-03",
+          "name": "거래 봇 03",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-04",
+          "name": "거래 봇 04",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-05",
+          "name": "거래 봇 05",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-06",
+          "name": "거래 봇 06",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-07",
+          "name": "거래 봇 07",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-08",
+          "name": "거래 봇 08",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-09",
+          "name": "거래 봇 09",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-10",
+          "name": "거래 봇 10",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-11",
+          "name": "거래 봇 11",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-12",
+          "name": "거래 봇 12",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        }
+      ],
+      "orders": [],
+      "trades": [],
+      "bids": [],
+      "asks": [],
+      "total_points": 15000000,
+      "total_hours": 15000
+    },
+    "response_bytes": 3199,
+    "completed": {
+      "at": "2026-09-21T12:53:38.590Z",
+      "ms": 1129.4999
+    }
+  },
+  {
+    "ordinal": 4,
+    "route": "/api/commands",
+    "account": "user-02",
+    "request": {
+      "request_id": "maker",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 1000,
+        "quantity": 5
+      }
+    },
+    "created": {
+      "at": "2026-09-21T12:53:38.590Z",
+      "ms": 1129.7157
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.592Z",
+      "ms": 1131.5252,
+      "local_port": 64105,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.592Z",
+      "ms": 1131.8466999999998,
+      "socket_bytes_written": 244,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.597Z",
+      "ms": 1136.1919
+    },
+    "status": 200,
+    "body": {
+      "request_id": "maker",
+      "account_id": "user-02",
+      "command_seq": 1,
+      "event_seq": 1,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 1,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 217,
+    "completed": {
+      "at": "2026-09-21T12:53:38.597Z",
+      "ms": 1136.5864
+    }
+  },
+  {
+    "ordinal": 5,
+    "route": "/api/requests/fresh-identical",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.598Z",
+      "ms": 1137.3989
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.600Z",
+      "ms": 1139.0636,
+      "local_port": 64106,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.600Z",
+      "ms": 1139.2213,
+      "socket_bytes_written": 119,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.600Z",
+      "ms": 1139.8482
+    },
+    "status": 404,
+    "body": {
+      "code": "REQUEST_NOT_FOUND",
+      "durable": false,
+      "message": "No durable result recorded; safely retry the same request ID",
+      "status": "error"
+    },
+    "response_bytes": 134,
+    "completed": {
+      "at": "2026-09-21T12:53:38.601Z",
+      "ms": 1140.0758999999998
+    }
+  },
+  {
+    "ordinal": 6,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.601Z",
+      "ms": 1140.2465
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.608Z",
+      "ms": 1147.8546999999999,
+      "local_port": 64107,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.0979,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.3968
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.202,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.614Z",
+      "ms": 1153.5114999999998
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 387,
+    "completed": {
+      "at": "2026-09-21T12:53:38.614Z",
+      "ms": 1153.9426999999998
+    }
+  },
+  {
+    "ordinal": 7,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.601Z",
+      "ms": 1140.8228
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.1707999999999,
+      "local_port": 64108,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.2668999999999,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.5865999999999
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.2225999999998,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.617Z",
+      "ms": 1156.9429
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.618Z",
+      "ms": 1157.1609999999998
+    }
+  },
+  {
+    "ordinal": 8,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.602Z",
+      "ms": 1141.3396
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.3104999999998,
+      "local_port": 64109,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.3836,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.6476
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.2306999999998,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.621Z",
+      "ms": 1160.1916999999999
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.621Z",
+      "ms": 1160.4134999999999
+    }
+  },
+  {
+    "ordinal": 9,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.602Z",
+      "ms": 1141.8267999999998
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.4298999999999,
+      "local_port": 64110,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.499,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.6966
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.2370999999998,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.623Z",
+      "ms": 1162.1403
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.623Z",
+      "ms": 1162.3328
+    }
+  },
+  {
+    "ordinal": 10,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.603Z",
+      "ms": 1142.2696999999998
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.5486999999998,
+      "local_port": 64111,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.627,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.7985999999999
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.2477,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.624Z",
+      "ms": 1163.8402999999998
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.625Z",
+      "ms": 1164.0787
+    }
+  },
+  {
+    "ordinal": 11,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.603Z",
+      "ms": 1142.6976
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.6806,
+      "local_port": 64112,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.7865,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.8625
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.2558,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.626Z",
+      "ms": 1165.9225
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.627Z",
+      "ms": 1166.1741
+    }
+  },
+  {
+    "ordinal": 12,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.604Z",
+      "ms": 1143.0467999999998
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.8328,
+      "local_port": 64113,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.8907,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.9121
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.2672,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.628Z",
+      "ms": 1167.6136
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.628Z",
+      "ms": 1167.7921999999999
+    }
+  },
+  {
+    "ordinal": 13,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.604Z",
+      "ms": 1143.2791
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.9175,
+      "local_port": 64114,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.9682,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.9522
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.2731999999999,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.630Z",
+      "ms": 1169.5509
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.630Z",
+      "ms": 1169.9492
+    }
+  },
+  {
+    "ordinal": 14,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.604Z",
+      "ms": 1143.4874
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.609Z",
+      "ms": 1148.9992,
+      "local_port": 64115,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.0483,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.9867
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.31,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.632Z",
+      "ms": 1171.3651
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.632Z",
+      "ms": 1171.6227999999999
+    }
+  },
+  {
+    "ordinal": 15,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.604Z",
+      "ms": 1143.6726999999998
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.0811999999999,
+      "local_port": 64116,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.1345999999999,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.0221
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.3162,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.634Z",
+      "ms": 1173.1480999999999
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.634Z",
+      "ms": 1173.3052
+    }
+  },
+  {
+    "ordinal": 16,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.604Z",
+      "ms": 1143.8265
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.1668,
+      "local_port": 64117,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.2187999999999,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.0551
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.322,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.635Z",
+      "ms": 1175.0203
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.636Z",
+      "ms": 1175.1841
+    }
+  },
+  {
+    "ordinal": 17,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "barrier": "fresh-identical",
+    "created": {
+      "at": "2026-09-21T12:53:38.604Z",
+      "ms": 1143.9743999999998
+    },
+    "body_bytes": 97,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.2411,
+      "local_port": 64118,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.610Z",
+      "ms": 1149.2871,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.0846
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.611Z",
+      "ms": 1150.3276999999998,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.637Z",
+      "ms": 1176.7035999999998
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.637Z",
+      "ms": 1176.8364
+    }
+  },
+  {
+    "ordinal": 18,
+    "route": "/api/state",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.640Z",
+      "ms": 1179.5493
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.642Z",
+      "ms": 1181.4807999999998,
+      "local_port": 64119,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.642Z",
+      "ms": 1181.6434,
+      "socket_bytes_written": 100,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.643Z",
+      "ms": 1182.0184
+    },
+    "status": 200,
+    "body": {
+      "engine_status": "ready",
+      "command_seq": 2,
+      "event_seq": 2,
+      "reference_price": 1000,
+      "last_price": 1000,
+      "volume": 2,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 998000,
+          "points_reserved": 0,
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1002000,
+          "points_reserved": 0,
+          "hours_available": 995,
+          "hours_reserved": 3,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-01",
+          "name": "거래 봇 01",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-02",
+          "name": "거래 봇 02",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-03",
+          "name": "거래 봇 03",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-04",
+          "name": "거래 봇 04",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-05",
+          "name": "거래 봇 05",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-06",
+          "name": "거래 봇 06",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-07",
+          "name": "거래 봇 07",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-08",
+          "name": "거래 봇 08",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-09",
+          "name": "거래 봇 09",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-10",
+          "name": "거래 봇 10",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-11",
+          "name": "거래 봇 11",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-12",
+          "name": "거래 봇 12",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        }
+      ],
+      "orders": [
+        {
+          "id": 1,
+          "account_id": "user-02",
+          "side": "sell",
+          "price": 1000,
+          "quantity": 5,
+          "filled": 2,
+          "cancelled": 0,
+          "remaining": 3,
+          "status": "partially_filled",
+          "command_seq": 1,
+          "timestamp_ms": 1789995218599
+        },
+        {
+          "id": 2,
+          "account_id": "user-01",
+          "side": "buy",
+          "price": 1100,
+          "quantity": 2,
+          "filled": 2,
+          "cancelled": 0,
+          "remaining": 0,
+          "status": "filled",
+          "command_seq": 2,
+          "timestamp_ms": 1789995218616
+        }
+      ],
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "bids": [],
+      "asks": [
+        {
+          "price": 1000,
+          "quantity": 3,
+          "orders": 1
+        }
+      ],
+      "total_points": 15000000,
+      "total_hours": 15000
+    },
+    "response_bytes": 3751,
+    "completed": {
+      "at": "2026-09-21T12:53:38.643Z",
+      "ms": 1182.2450999999999
+    }
+  },
+  {
+    "ordinal": 19,
+    "route": "/api/requests/fresh-identical",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.643Z",
+      "ms": 1182.8789
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.644Z",
+      "ms": 1183.9506999999999,
+      "local_port": 64120,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.645Z",
+      "ms": 1184.0757999999998,
+      "socket_bytes_written": 119,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.645Z",
+      "ms": 1184.4198999999999
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 387,
+    "completed": {
+      "at": "2026-09-21T12:53:38.645Z",
+      "ms": 1184.577
+    }
+  },
+  {
+    "ordinal": 20,
+    "route": "/api/requests/fresh-conflict",
+    "account": "user-03",
+    "created": {
+      "at": "2026-09-21T12:53:38.645Z",
+      "ms": 1184.8008
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.646Z",
+      "ms": 1185.9754,
+      "local_port": 64121,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.647Z",
+      "ms": 1186.1802,
+      "socket_bytes_written": 118,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.647Z",
+      "ms": 1186.6783
+    },
+    "status": 404,
+    "body": {
+      "code": "REQUEST_NOT_FOUND",
+      "durable": false,
+      "message": "No durable result recorded; safely retry the same request ID",
+      "status": "error"
+    },
+    "response_bytes": 134,
+    "completed": {
+      "at": "2026-09-21T12:53:38.647Z",
+      "ms": 1186.8508
+    }
+  },
+  {
+    "ordinal": 21,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.647Z",
+      "ms": 1186.9118999999998
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.652Z",
+      "ms": 1191.8546999999999,
+      "local_port": 64122,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.652Z",
+      "ms": 1191.9849,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.7886999999998
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2233999999999,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.656Z",
+      "ms": 1195.2445
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.656Z",
+      "ms": 1195.4187
+    }
+  },
+  {
+    "ordinal": 22,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1200,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.648Z",
+      "ms": 1187.2583
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.03,
+      "local_port": 64123,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.097,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.8762
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2341,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.658Z",
+      "ms": 1197.1198
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "rejected",
+      "code": "REQUEST_ID_CONFLICT",
+      "message": "같은 요청 ID에 다른 명령을 사용할 수 없습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 271,
+    "completed": {
+      "at": "2026-09-21T12:53:38.658Z",
+      "ms": 1197.2641999999998
+    }
+  },
+  {
+    "ordinal": 23,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.648Z",
+      "ms": 1187.4546
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.1219999999998,
+      "local_port": 64124,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.1715,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.9124
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2395,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.659Z",
+      "ms": 1198.8994
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 385,
+    "completed": {
+      "at": "2026-09-21T12:53:38.660Z",
+      "ms": 1199.0584999999999
+    }
+  },
+  {
+    "ordinal": 24,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1200,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.648Z",
+      "ms": 1187.5964
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.1924999999999,
+      "local_port": 64125,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.2368999999999,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.9405
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2442999999998,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.661Z",
+      "ms": 1200.6272
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "rejected",
+      "code": "REQUEST_ID_CONFLICT",
+      "message": "같은 요청 ID에 다른 명령을 사용할 수 없습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 271,
+    "completed": {
+      "at": "2026-09-21T12:53:38.661Z",
+      "ms": 1200.7929
+    }
+  },
+  {
+    "ordinal": 25,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.648Z",
+      "ms": 1187.7752
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.2567999999999,
+      "local_port": 64126,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.3,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.974
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2488999999998,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.665Z",
+      "ms": 1204.3201999999999
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 385,
+    "completed": {
+      "at": "2026-09-21T12:53:38.665Z",
+      "ms": 1204.5338
+    }
+  },
+  {
+    "ordinal": 26,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1200,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.648Z",
+      "ms": 1187.9462999999998
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.3348999999998,
+      "local_port": 64127,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.3832,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1193.0029
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2537,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.663Z",
+      "ms": 1202.3158999999998
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "rejected",
+      "code": "REQUEST_ID_CONFLICT",
+      "message": "같은 요청 ID에 다른 명령을 사용할 수 없습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 271,
+    "completed": {
+      "at": "2026-09-21T12:53:38.663Z",
+      "ms": 1202.4861999999998
+    }
+  },
+  {
+    "ordinal": 27,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.649Z",
+      "ms": 1188.0933
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.4026999999999,
+      "local_port": 64128,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.4497999999999,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.03
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.259,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.669Z",
+      "ms": 1208.1700999999998
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 385,
+    "completed": {
+      "at": "2026-09-21T12:53:38.669Z",
+      "ms": 1208.3461
+    }
+  },
+  {
+    "ordinal": 28,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1200,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.649Z",
+      "ms": 1188.2212
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.47,
+      "local_port": 64129,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.5123999999998,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.0566
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2637,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.667Z",
+      "ms": 1206.2563
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "rejected",
+      "code": "REQUEST_ID_CONFLICT",
+      "message": "같은 요청 ID에 다른 명령을 사용할 수 없습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 271,
+    "completed": {
+      "at": "2026-09-21T12:53:38.667Z",
+      "ms": 1206.3944999999999
+    }
+  },
+  {
+    "ordinal": 29,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.649Z",
+      "ms": 1188.3510999999999
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.5319,
+      "local_port": 64130,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.5739999999998,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.0827
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2686999999999,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.671Z",
+      "ms": 1210.1970999999999
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 385,
+    "completed": {
+      "at": "2026-09-21T12:53:38.671Z",
+      "ms": 1210.3747999999998
+    }
+  },
+  {
+    "ordinal": 30,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1200,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.649Z",
+      "ms": 1188.4546
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.5937999999999,
+      "local_port": 64131,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.6342,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.1088
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2737,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.674Z",
+      "ms": 1213.9251
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "rejected",
+      "code": "REQUEST_ID_CONFLICT",
+      "message": "같은 요청 ID에 다른 명령을 사용할 수 없습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 271,
+    "completed": {
+      "at": "2026-09-21T12:53:38.675Z",
+      "ms": 1214.1028
+    }
+  },
+  {
+    "ordinal": 31,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.649Z",
+      "ms": 1188.5511
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.653,
+      "local_port": 64132,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.6967,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.136
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2785,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.672Z",
+      "ms": 1211.9071999999999
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 385,
+    "completed": {
+      "at": "2026-09-21T12:53:38.673Z",
+      "ms": 1212.1494
+    }
+  },
+  {
+    "ordinal": 32,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1200,
+        "quantity": 1
+      }
+    },
+    "barrier": "fresh-conflict",
+    "created": {
+      "at": "2026-09-21T12:53:38.649Z",
+      "ms": 1188.7033999999999
+    },
+    "body_bytes": 96,
+    "held_back_bytes": 1,
+    "connected": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.715,
+      "local_port": 64133,
+      "remote_port": 64101
+    },
+    "prefix_flushed": {
+      "at": "2026-09-21T12:53:38.653Z",
+      "ms": 1192.7587999999998,
+      "socket_bytes_written": 251,
+      "socket_writable_length": 0
+    },
+    "final_byte_released": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.1625
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.654Z",
+      "ms": 1193.2837,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.676Z",
+      "ms": 1215.7214999999999
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "rejected",
+      "code": "REQUEST_ID_CONFLICT",
+      "message": "같은 요청 ID에 다른 명령을 사용할 수 없습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 271,
+    "completed": {
+      "at": "2026-09-21T12:53:38.676Z",
+      "ms": 1215.8799999999999
+    }
+  },
+  {
+    "ordinal": 33,
+    "route": "/api/state",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.677Z",
+      "ms": 1216.436
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.678Z",
+      "ms": 1217.6335,
+      "local_port": 64134,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.678Z",
+      "ms": 1217.7563,
+      "socket_bytes_written": 100,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.679Z",
+      "ms": 1218.0738
+    },
+    "status": 200,
+    "body": {
+      "engine_status": "ready",
+      "command_seq": 3,
+      "event_seq": 3,
+      "reference_price": 1000,
+      "last_price": 1000,
+      "volume": 3,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 998000,
+          "points_reserved": 0,
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1003000,
+          "points_reserved": 0,
+          "hours_available": 995,
+          "hours_reserved": 2,
+          "orders_count": 1,
+          "trades_count": 2
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 999000,
+          "points_reserved": 0,
+          "hours_available": 1001,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "bot-01",
+          "name": "거래 봇 01",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-02",
+          "name": "거래 봇 02",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-03",
+          "name": "거래 봇 03",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-04",
+          "name": "거래 봇 04",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-05",
+          "name": "거래 봇 05",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-06",
+          "name": "거래 봇 06",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-07",
+          "name": "거래 봇 07",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-08",
+          "name": "거래 봇 08",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-09",
+          "name": "거래 봇 09",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-10",
+          "name": "거래 봇 10",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-11",
+          "name": "거래 봇 11",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-12",
+          "name": "거래 봇 12",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        }
+      ],
+      "orders": [
+        {
+          "id": 1,
+          "account_id": "user-02",
+          "side": "sell",
+          "price": 1000,
+          "quantity": 5,
+          "filled": 3,
+          "cancelled": 0,
+          "remaining": 2,
+          "status": "partially_filled",
+          "command_seq": 1,
+          "timestamp_ms": 1789995218599
+        },
+        {
+          "id": 2,
+          "account_id": "user-01",
+          "side": "buy",
+          "price": 1100,
+          "quantity": 2,
+          "filled": 2,
+          "cancelled": 0,
+          "remaining": 0,
+          "status": "filled",
+          "command_seq": 2,
+          "timestamp_ms": 1789995218616
+        },
+        {
+          "id": 3,
+          "account_id": "user-03",
+          "side": "buy",
+          "price": 1100,
+          "quantity": 1,
+          "filled": 1,
+          "cancelled": 0,
+          "remaining": 0,
+          "status": "filled",
+          "command_seq": 3,
+          "timestamp_ms": 1789995218660
+        }
+      ],
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        },
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "bids": [],
+      "asks": [
+        {
+          "price": 1000,
+          "quantity": 2,
+          "orders": 1
+        }
+      ],
+      "total_points": 15000000,
+      "total_hours": 15000
+    },
+    "response_bytes": 4084,
+    "completed": {
+      "at": "2026-09-21T12:53:38.679Z",
+      "ms": 1218.3285999999998
+    }
+  },
+  {
+    "ordinal": 34,
+    "route": "/api/requests/fresh-conflict",
+    "account": "user-03",
+    "created": {
+      "at": "2026-09-21T12:53:38.679Z",
+      "ms": 1218.6352
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.681Z",
+      "ms": 1220.2225999999998,
+      "local_port": 64135,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.681Z",
+      "ms": 1220.4960999999998,
+      "socket_bytes_written": 118,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.682Z",
+      "ms": 1221.0941
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.682Z",
+      "ms": 1221.3718999999999
+    }
+  },
+  {
+    "ordinal": 35,
+    "route": "/api/admin/shutdown",
+    "account": "user-01",
+    "request": {},
+    "created": {
+      "at": "2026-09-21T12:53:38.682Z",
+      "ms": 1221.6748
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.683Z",
+      "ms": 1222.9773,
+      "local_port": 64136,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.684Z",
+      "ms": 1223.1265999999998,
+      "socket_bytes_written": 163,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.684Z",
+      "ms": 1223.5226
+    },
+    "status": 200,
+    "body": {
+      "status": "shutting_down"
+    },
+    "response_bytes": 26,
+    "completed": {
+      "at": "2026-09-21T12:53:38.684Z",
+      "ms": 1223.6668
+    }
+  },
+  {
+    "ordinal": 36,
+    "route": "/health",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.728Z",
+      "ms": 1267.1677
+    },
+    "error": "connect ECONNREFUSED 127.0.0.1:64101",
+    "error_code": "ECONNREFUSED",
+    "completed": {
+      "at": "2026-09-21T12:53:38.729Z",
+      "ms": 1268.604
+    }
+  },
+  {
+    "ordinal": 37,
+    "route": "/health",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.780Z",
+      "ms": 1319.7801
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.782Z",
+      "ms": 1321.0729,
+      "local_port": 64138,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.782Z",
+      "ms": 1321.2548,
+      "socket_bytes_written": 97,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.782Z",
+      "ms": 1322.0087999999998
+    },
+    "status": 200,
+    "body": {
+      "command_seq": 3,
+      "durability": "journal-sync-all-before-apply",
+      "event_seq": 3,
+      "mode": "synthetic-demo",
+      "queue_capacity": 2048,
+      "queue_depth": 0,
+      "status": "ready"
+    },
+    "response_bytes": 155,
+    "completed": {
+      "at": "2026-09-21T12:53:38.783Z",
+      "ms": 1322.1485
+    }
+  },
+  {
+    "ordinal": 38,
+    "route": "/api/state",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.783Z",
+      "ms": 1322.1926999999998
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.784Z",
+      "ms": 1323.264,
+      "local_port": 64139,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.784Z",
+      "ms": 1323.3999999999999,
+      "socket_bytes_written": 100,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.784Z",
+      "ms": 1323.9268
+    },
+    "status": 200,
+    "body": {
+      "engine_status": "ready",
+      "command_seq": 3,
+      "event_seq": 3,
+      "reference_price": 1000,
+      "last_price": 1000,
+      "volume": 3,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 998000,
+          "points_reserved": 0,
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1003000,
+          "points_reserved": 0,
+          "hours_available": 995,
+          "hours_reserved": 2,
+          "orders_count": 1,
+          "trades_count": 2
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 999000,
+          "points_reserved": 0,
+          "hours_available": 1001,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "bot-01",
+          "name": "거래 봇 01",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-02",
+          "name": "거래 봇 02",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-03",
+          "name": "거래 봇 03",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-04",
+          "name": "거래 봇 04",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-05",
+          "name": "거래 봇 05",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-06",
+          "name": "거래 봇 06",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-07",
+          "name": "거래 봇 07",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-08",
+          "name": "거래 봇 08",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-09",
+          "name": "거래 봇 09",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-10",
+          "name": "거래 봇 10",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-11",
+          "name": "거래 봇 11",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-12",
+          "name": "거래 봇 12",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        }
+      ],
+      "orders": [
+        {
+          "id": 1,
+          "account_id": "user-02",
+          "side": "sell",
+          "price": 1000,
+          "quantity": 5,
+          "filled": 3,
+          "cancelled": 0,
+          "remaining": 2,
+          "status": "partially_filled",
+          "command_seq": 1,
+          "timestamp_ms": 1789995218599
+        },
+        {
+          "id": 2,
+          "account_id": "user-01",
+          "side": "buy",
+          "price": 1100,
+          "quantity": 2,
+          "filled": 2,
+          "cancelled": 0,
+          "remaining": 0,
+          "status": "filled",
+          "command_seq": 2,
+          "timestamp_ms": 1789995218616
+        },
+        {
+          "id": 3,
+          "account_id": "user-03",
+          "side": "buy",
+          "price": 1100,
+          "quantity": 1,
+          "filled": 1,
+          "cancelled": 0,
+          "remaining": 0,
+          "status": "filled",
+          "command_seq": 3,
+          "timestamp_ms": 1789995218660
+        }
+      ],
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        },
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "bids": [],
+      "asks": [
+        {
+          "price": 1000,
+          "quantity": 2,
+          "orders": 1
+        }
+      ],
+      "total_points": 15000000,
+      "total_hours": 15000
+    },
+    "response_bytes": 4084,
+    "completed": {
+      "at": "2026-09-21T12:53:38.785Z",
+      "ms": 1324.0846999999999
+    }
+  },
+  {
+    "ordinal": 39,
+    "route": "/api/requests/fresh-identical",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.785Z",
+      "ms": 1324.2957999999999
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.786Z",
+      "ms": 1325.2139,
+      "local_port": 64140,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.786Z",
+      "ms": 1325.3354,
+      "socket_bytes_written": 119,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.786Z",
+      "ms": 1325.6738
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 387,
+    "completed": {
+      "at": "2026-09-21T12:53:38.786Z",
+      "ms": 1325.7952
+    }
+  },
+  {
+    "ordinal": 40,
+    "route": "/api/commands",
+    "account": "user-01",
+    "request": {
+      "request_id": "fresh-identical",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 2
+      }
+    },
+    "created": {
+      "at": "2026-09-21T12:53:38.786Z",
+      "ms": 1325.9005
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.787Z",
+      "ms": 1326.8298,
+      "local_port": 64141,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.787Z",
+      "ms": 1326.9575,
+      "socket_bytes_written": 253,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.790Z",
+      "ms": 1329.5656
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-identical",
+      "account_id": "user-01",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.790Z",
+      "ms": 1329.7236
+    }
+  },
+  {
+    "ordinal": 41,
+    "route": "/api/requests/fresh-conflict",
+    "account": "user-03",
+    "created": {
+      "at": "2026-09-21T12:53:38.790Z",
+      "ms": 1329.8302999999999
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.791Z",
+      "ms": 1330.8735,
+      "local_port": 64142,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.791Z",
+      "ms": 1331.001,
+      "socket_bytes_written": 118,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.792Z",
+      "ms": 1331.2341
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 386,
+    "completed": {
+      "at": "2026-09-21T12:53:38.792Z",
+      "ms": 1331.3620999999998
+    }
+  },
+  {
+    "ordinal": 42,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1100,
+        "quantity": 1
+      }
+    },
+    "created": {
+      "at": "2026-09-21T12:53:38.792Z",
+      "ms": 1331.4566
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.793Z",
+      "ms": 1332.3999999999999,
+      "local_port": 64143,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.793Z",
+      "ms": 1332.53,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.795Z",
+      "ms": 1334.7522
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "duplicate": true,
+      "durable": true
+    },
+    "response_bytes": 385,
+    "completed": {
+      "at": "2026-09-21T12:53:38.795Z",
+      "ms": 1334.8735
+    }
+  },
+  {
+    "ordinal": 43,
+    "route": "/api/commands",
+    "account": "user-03",
+    "request": {
+      "request_id": "fresh-conflict",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 1200,
+        "quantity": 1
+      }
+    },
+    "created": {
+      "at": "2026-09-21T12:53:38.796Z",
+      "ms": 1335.0552
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.797Z",
+      "ms": 1336.4528,
+      "local_port": 64144,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.797Z",
+      "ms": 1336.6805,
+      "socket_bytes_written": 252,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.800Z",
+      "ms": 1339.8556999999998
+    },
+    "status": 200,
+    "body": {
+      "request_id": "fresh-conflict",
+      "account_id": "user-03",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "rejected",
+      "code": "REQUEST_ID_CONFLICT",
+      "message": "같은 요청 ID에 다른 명령을 사용할 수 없습니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "response_bytes": 271,
+    "completed": {
+      "at": "2026-09-21T12:53:38.800Z",
+      "ms": 1340.0132999999998
+    }
+  },
+  {
+    "ordinal": 44,
+    "route": "/api/state",
+    "account": "user-01",
+    "created": {
+      "at": "2026-09-21T12:53:38.801Z",
+      "ms": 1340.0868
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.802Z",
+      "ms": 1341.1675,
+      "local_port": 64145,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.802Z",
+      "ms": 1341.3292999999999,
+      "socket_bytes_written": 100,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.802Z",
+      "ms": 1341.7701
+    },
+    "status": 200,
+    "body": {
+      "engine_status": "ready",
+      "command_seq": 3,
+      "event_seq": 3,
+      "reference_price": 1000,
+      "last_price": 1000,
+      "volume": 3,
+      "accounts": [
+        {
+          "id": "user-01",
+          "name": "시연 임직원 1",
+          "company": "GS리테이",
+          "kind": "user",
+          "points_available": 998000,
+          "points_reserved": 0,
+          "hours_available": 1002,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "user-02",
+          "name": "시연 임직원 2",
+          "company": "GS칼테스",
+          "kind": "user",
+          "points_available": 1003000,
+          "points_reserved": 0,
+          "hours_available": 995,
+          "hours_reserved": 2,
+          "orders_count": 1,
+          "trades_count": 2
+        },
+        {
+          "id": "user-03",
+          "name": "시연 임직원 3",
+          "company": "GS건썰",
+          "kind": "user",
+          "points_available": 999000,
+          "points_reserved": 0,
+          "hours_available": 1001,
+          "hours_reserved": 0,
+          "orders_count": 1,
+          "trades_count": 1
+        },
+        {
+          "id": "bot-01",
+          "name": "거래 봇 01",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-02",
+          "name": "거래 봇 02",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-03",
+          "name": "거래 봇 03",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-04",
+          "name": "거래 봇 04",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-05",
+          "name": "거래 봇 05",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-06",
+          "name": "거래 봇 06",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-07",
+          "name": "거래 봇 07",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-08",
+          "name": "거래 봇 08",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-09",
+          "name": "거래 봇 09",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-10",
+          "name": "거래 봇 10",
+          "company": "GS리테이",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-11",
+          "name": "거래 봇 11",
+          "company": "GS칼테스",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        },
+        {
+          "id": "bot-12",
+          "name": "거래 봇 12",
+          "company": "GS건썰",
+          "kind": "bot",
+          "points_available": 1000000,
+          "points_reserved": 0,
+          "hours_available": 1000,
+          "hours_reserved": 0,
+          "orders_count": 0,
+          "trades_count": 0
+        }
+      ],
+      "orders": [
+        {
+          "id": 1,
+          "account_id": "user-02",
+          "side": "sell",
+          "price": 1000,
+          "quantity": 5,
+          "filled": 3,
+          "cancelled": 0,
+          "remaining": 2,
+          "status": "partially_filled",
+          "command_seq": 1,
+          "timestamp_ms": 1789995218599
+        },
+        {
+          "id": 2,
+          "account_id": "user-01",
+          "side": "buy",
+          "price": 1100,
+          "quantity": 2,
+          "filled": 2,
+          "cancelled": 0,
+          "remaining": 0,
+          "status": "filled",
+          "command_seq": 2,
+          "timestamp_ms": 1789995218616
+        },
+        {
+          "id": 3,
+          "account_id": "user-03",
+          "side": "buy",
+          "price": 1100,
+          "quantity": 1,
+          "filled": 1,
+          "cancelled": 0,
+          "remaining": 0,
+          "status": "filled",
+          "command_seq": 3,
+          "timestamp_ms": 1789995218660
+        }
+      ],
+      "trades": [
+        {
+          "id": 1,
+          "maker_order_id": 1,
+          "taker_order_id": 2,
+          "buyer_id": "user-01",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 2,
+          "timestamp_ms": 1789995218616,
+          "command_seq": 2
+        },
+        {
+          "id": 2,
+          "maker_order_id": 1,
+          "taker_order_id": 3,
+          "buyer_id": "user-03",
+          "seller_id": "user-02",
+          "price": 1000,
+          "quantity": 1,
+          "timestamp_ms": 1789995218660,
+          "command_seq": 3
+        }
+      ],
+      "bids": [],
+      "asks": [
+        {
+          "price": 1000,
+          "quantity": 2,
+          "orders": 1
+        }
+      ],
+      "total_points": 15000000,
+      "total_hours": 15000
+    },
+    "response_bytes": 4084,
+    "completed": {
+      "at": "2026-09-21T12:53:38.802Z",
+      "ms": 1341.9363999999998
+    }
+  },
+  {
+    "ordinal": 45,
+    "route": "/api/admin/shutdown",
+    "account": "user-01",
+    "request": {},
+    "created": {
+      "at": "2026-09-21T12:53:38.803Z",
+      "ms": 1342.1181
+    },
+    "connected": {
+      "at": "2026-09-21T12:53:38.804Z",
+      "ms": 1343.1042,
+      "local_port": 64146,
+      "remote_port": 64101
+    },
+    "request_finished": {
+      "at": "2026-09-21T12:53:38.804Z",
+      "ms": 1343.2323999999999,
+      "socket_bytes_written": 163,
+      "socket_writable_length": 0
+    },
+    "response_headers": {
+      "at": "2026-09-21T12:53:38.804Z",
+      "ms": 1343.5055
+    },
+    "status": 200,
+    "body": {
+      "status": "shutting_down"
+    },
+    "response_bytes": 26,
+    "completed": {
+      "at": "2026-09-21T12:53:38.804Z",
+      "ms": 1343.6278
+    }
+  }
+]

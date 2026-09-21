@@ -1,0 +1,29 @@
+{
+  "at": "2026-09-21T12:57:44.505Z",
+  "passed": true,
+  "manifest_unchanged": true,
+  "results": [
+    {
+      "name": "refuse-live-frontend",
+      "code": 1,
+      "signal": null,
+      "stdout": "",
+      "result": {
+        "ok": false,
+        "code": "DEMO_NOT_READY",
+        "message": "Tracked frontend PID is still alive; refusing to replace it."
+      }
+    },
+    {
+      "name": "refuse-address-mismatch",
+      "code": 1,
+      "signal": null,
+      "stdout": "",
+      "result": {
+        "ok": false,
+        "code": "ADDRESS_MISMATCH",
+        "message": "ADDRESS_MISMATCH: tracked live demo uses different addresses; no processes were changed."
+      }
+    }
+  ]
+}

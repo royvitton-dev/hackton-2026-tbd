@@ -1,0 +1,3119 @@
+{
+  "version": 1,
+  "run_id": "20260921T123746758Z-requirements-core-audit-6b8d9e42",
+  "author": "/root/matching_core",
+  "generated_at": "2026-09-21T12:37:46.7587727Z",
+  "classification": "Bounded read-only requirements traceability audit; no new build/test/service/load/process control or Git mutation",
+  "repository": {
+    "root": "C:\\project\\hackton-2026-tbd",
+    "subdirectory": "trading",
+    "branch": "main",
+    "head": "24fcd160d0a7f70ce2a918018afe6831e4021662",
+    "head_observed_during_audit": true
+  },
+  "scope": {
+    "included": [
+      "§5 explicit trading/request/invariant bullets; grouped bullet153 split into in-flight/response-loss/restart",
+      "§6 explicit architecture/concurrency/memory bullets",
+      "§11 trading scenarios individually split; core-related concurrency/recovery crosschecks; A benchmark methodology and reporting"
+    ],
+    "excluded": [
+      "§5 introductory original-domain-discovery process (root's repository/operations audit)",
+      "§11 line325 UI event-gap/reconnect/resync acceptance (root/UI audit); no new judgment here",
+      "§11 B/C/D target acceptance and current end-to-end performance (root audit); only separation/reporting is checked",
+      "§7 full storage integrity audit, deployment, long-soak completion and overall goal completion"
+    ],
+    "limitations": [
+      "proven means direct source/test-body/raw-output support for a bounded requirement, not mathematical proof or universal fault coverage",
+      "90 rows are requirement/scenario rows, not 90 separately executed tests",
+      "Current core/model/core_bench SHA matches status-reuse measured source; later main/WS changes do not turn old B/C figures into latest-version measurements",
+      "Source/evidence hashes are as read. Ongoing demo logs are not frozen by this audit. Only previously saved artifacts and a two-line bot prefix were read for resume evidence",
+      "No automated rerun was performed to fill newly found test gaps"
+    ]
+  },
+  "status_legend": {
+    "proven": "인용된 현재 소스·실제 기존 실행 범위에서 직접 확인",
+    "incomplete": "일부 범위만 충족; 넓은 요구에는 남은 구현/구조 한계",
+    "unverified": "구조상 예상과 별개로 직접 검증/진행보장 증거 없음",
+    "failed": "명시 목표를 실제 측정이 충족하지 못함",
+    "optional-not-implemented": "명세가 선택으로 지정한 기능 미구현"
+  },
+  "status_counts": {
+    "proven": 84,
+    "optional-not-implemented": 1,
+    "unverified": 2,
+    "incomplete": 2,
+    "failed": 1
+  },
+  "headline_findings": [
+    {
+      "id": "F1",
+      "severity": "measured_goal_miss",
+      "rows": [
+        "6.P05"
+      ],
+      "finding": "정상 execute allocation은 14.3323666667회/명령이며 zero-allocation 목표 미달.",
+      "support": "3 after raw stdout 모두1719875alloc+9realloc/120000commands.",
+      "next_step": "현재 미달을 유지해 보고. 더 큰 pool/모델 변경은 이번 감사의 승인 범위 밖."
+    },
+    {
+      "id": "F2",
+      "severity": "test_coverage_gap",
+      "rows": [
+        "5.R05a"
+      ],
+      "finding": "최초의 같은 새 account/request key를 처리 중에 겹쳐 제출한 기존 직접 실험 증거 없음.",
+      "support": "API test awaits first distinct 12 placements before concurrent replay of already-completed concurrent-0.",
+      "next_step": "필요 시 별도 승인 범위에서 fresh same-key overlapping submission과 conflict·restart exact-once를 실제 검증. 현재는 unverified."
+    },
+    {
+      "id": "F3",
+      "severity": "partial_design_goal",
+      "rows": [
+        "6.P01",
+        "6.P04"
+      ],
+      "finding": "순수Core는mutex/IO없지만durablewriter는sync_all/recv/checkpoint수행;초기Vec/scratch/status만부분재사용,fullpool/payloadpool없음.",
+      "next_step": "Core와durability범위를분리하며sync-before-ACK를성능목표충족용으로약화하지않음."
+    },
+    {
+      "id": "F4",
+      "severity": "unclaimed_unverified_property",
+      "rows": [
+        "6.P03"
+      ],
+      "finding": "전체채널/서비스lock-free진행보장은검증·주장하지않음.",
+      "next_step": "singlewriter/lock부재를lock-free보장으로표기하지않음."
+    }
+  ],
+  "directly_recomputed_evidence": {
+    "queue_raw_counts": {
+      "queue_full": 356,
+      "burst": 2500,
+      "durable_accepted": 2144
+    },
+    "api_raw_race": {
+      "cancel_before_fill": 4,
+      "hours_ok": 12,
+      "points_ok": 12,
+      "rounds": 12,
+      "fill_before_cancel": 8
+    },
+    "paired_a": [
+      {
+        "file": "01-before-result.json",
+        "commands": 120000,
+        "warmup_commands": 6000,
+        "elapsed_seconds": 0.1642151,
+        "throughput": 730748.8775392763,
+        "latency_ns": {
+          "max": 1501900,
+          "p50": 900,
+          "p95": 1800,
+          "p99": 3200
+        },
+        "alloc": 1799875,
+        "realloc": 9,
+        "alloc_per_command": 14.999033333333333,
+        "requested_bytes": 124644248,
+        "peak_working_set": 116408320,
+        "fills": 40000,
+        "reject": 0
+      },
+      {
+        "file": "02-after-result.json",
+        "commands": 120000,
+        "warmup_commands": 6000,
+        "elapsed_seconds": 0.1787228,
+        "throughput": 671430.8415042737,
+        "latency_ns": {
+          "max": 1837500,
+          "p50": 1000,
+          "p95": 1900,
+          "p99": 4200
+        },
+        "alloc": 1719875,
+        "realloc": 9,
+        "alloc_per_command": 14.332366666666667,
+        "requested_bytes": 124764248,
+        "peak_working_set": 117071872,
+        "fills": 40000,
+        "reject": 0
+      },
+      {
+        "file": "03-after-result.json",
+        "commands": 120000,
+        "warmup_commands": 6000,
+        "elapsed_seconds": 0.1591428,
+        "throughput": 754039.7680573673,
+        "latency_ns": {
+          "max": 1606400,
+          "p50": 900,
+          "p95": 1700,
+          "p99": 2500
+        },
+        "alloc": 1719875,
+        "realloc": 9,
+        "alloc_per_command": 14.332366666666667,
+        "requested_bytes": 124764248,
+        "peak_working_set": 117055488,
+        "fills": 40000,
+        "reject": 0
+      },
+      {
+        "file": "04-before-result.json",
+        "commands": 120000,
+        "warmup_commands": 6000,
+        "elapsed_seconds": 0.1698891,
+        "throughput": 706343.1379647076,
+        "latency_ns": {
+          "max": 1675700,
+          "p50": 1000,
+          "p95": 1900,
+          "p99": 3400
+        },
+        "alloc": 1799875,
+        "realloc": 9,
+        "alloc_per_command": 14.999033333333333,
+        "requested_bytes": 124644248,
+        "peak_working_set": 116375552,
+        "fills": 40000,
+        "reject": 0
+      },
+      {
+        "file": "05-before-result.json",
+        "commands": 120000,
+        "warmup_commands": 6000,
+        "elapsed_seconds": 0.1706478,
+        "throughput": 703202.7368650519,
+        "latency_ns": {
+          "max": 1550000,
+          "p50": 1000,
+          "p95": 1900,
+          "p99": 3500
+        },
+        "alloc": 1799875,
+        "realloc": 9,
+        "alloc_per_command": 14.999033333333333,
+        "requested_bytes": 124644248,
+        "peak_working_set": 116445184,
+        "fills": 40000,
+        "reject": 0
+      },
+      {
+        "file": "06-after-result.json",
+        "commands": 120000,
+        "warmup_commands": 6000,
+        "elapsed_seconds": 0.1759949,
+        "throughput": 681837.9396221141,
+        "latency_ns": {
+          "max": 1918500,
+          "p50": 1000,
+          "p95": 1900,
+          "p99": 4000
+        },
+        "alloc": 1719875,
+        "realloc": 9,
+        "alloc_per_command": 14.332366666666667,
+        "requested_bytes": 124764248,
+        "peak_working_set": 117043200,
+        "fills": 40000,
+        "reject": 0
+      }
+    ],
+    "paired_differences": [
+      {
+        "pair": 1,
+        "before": "01-before-result.json",
+        "after": "02-after-result.json",
+        "allocation_operations_reduction": 80000,
+        "allocation_reduction_percent": 4.4447308826568825,
+        "requested_bytes_change": 120000,
+        "peak_working_set_change": 663552,
+        "throughput_change_percent": -8.117431016076292
+      },
+      {
+        "pair": 2,
+        "before": "04-before-result.json",
+        "after": "03-after-result.json",
+        "allocation_operations_reduction": 80000,
+        "allocation_reduction_percent": 4.4447308826568825,
+        "requested_bytes_change": 120000,
+        "peak_working_set_change": 679936,
+        "throughput_change_percent": 6.752614632895737
+      },
+      {
+        "pair": 3,
+        "before": "05-before-result.json",
+        "after": "06-after-result.json",
+        "allocation_operations_reduction": 80000,
+        "allocation_reduction_percent": 4.4447308826568825,
+        "requested_bytes_change": 120000,
+        "peak_working_set_change": 598016,
+        "throughput_change_percent": -3.038213039127835
+      }
+    ]
+  },
+  "source_catalog": {
+    "C": {
+      "path": "engine/src/core.rs",
+      "bytes": 34605,
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4"
+    },
+    "M": {
+      "path": "engine/src/model.rs",
+      "bytes": 3066,
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b"
+    },
+    "N": {
+      "path": "engine/src/main.rs",
+      "bytes": 23831,
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    "S": {
+      "path": "engine/src/storage.rs",
+      "bytes": 43954,
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+    },
+    "R": {
+      "path": "engine/tests/core_rules.rs",
+      "bytes": 21705,
+      "sha256": "d3d94a8882a733f7e581f3e0e8e809387470fbf0db3308bcb0cc3e43fbdd464c"
+    },
+    "O": {
+      "path": "engine/tests/core_reference.rs",
+      "bytes": 11238,
+      "sha256": "161622c81fe0de5debae30fdec4ccd63c0f5869762686f907a1f3f795e3a5b33"
+    },
+    "H": {
+      "path": "engine/tests/core_status_compatibility.rs",
+      "bytes": 4252,
+      "sha256": "f1448ed32f26a1a2575f1895cf65efe14023f6a01911244956996b336515d41d"
+    },
+    "T": {
+      "path": "engine/tests/storage_recovery.rs",
+      "bytes": 16295,
+      "sha256": "9c432ab76a2abb5e2177d09e09e67ec8f289366f514896755b061fee13984ca0"
+    },
+    "I": {
+      "path": "scripts/api.integration.test.mjs",
+      "bytes": 28789,
+      "sha256": "d458c9e4e064c9fba35213a40e724edce3a946e2c489914e42bf8ee31200d28c"
+    },
+    "Q": {
+      "path": "scripts/queue-stress.mjs",
+      "bytes": 22416,
+      "sha256": "08ab96008d371b6da283325bb67238f5475820ca7017538b277e8e4be3d81544"
+    },
+    "B": {
+      "path": "engine/examples/core_bench.rs",
+      "bytes": 12236,
+      "sha256": "1e7551861d1aa12525ac0ee3f246d82d5d18b0329d519d08d868d64da178d786"
+    },
+    "D": {
+      "path": "docs/core.md",
+      "bytes": 11000,
+      "sha256": "1322c4e266a3e4ee392512f9b1007c602455e4e78476cf992562fe824fe99369"
+    },
+    "A": {
+      "path": "docs/adr/001-execution-and-ui.md",
+      "bytes": 4009,
+      "sha256": "a07f4fcc5d88289af6c7d2d7cd64cee5a9743e7249ffdf8aae721421d50b3d74"
+    },
+    "K": {
+      "path": "docs/contract.md",
+      "bytes": 6632,
+      "sha256": "822ad080686d15a70bb75d97413b90a9744dea057a99bce4be0af3c15ea13829"
+    },
+    "P": {
+      "path": "docs/bench-plan.md",
+      "bytes": 10105,
+      "sha256": "3ce4dade669a8f5b8b9917c78650f257e9706350fee4d99c0d00a1bb5eb79ef7"
+    },
+    "F": {
+      "path": "docs/performance.md",
+      "bytes": 7029,
+      "sha256": "16c4505536e2b1cf593dd39b4bdfadffb02463adb15fbb8d538fabd5faafa799"
+    },
+    "L": {
+      "path": "engine/Cargo.lock",
+      "bytes": 23194,
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9"
+    },
+    "G": {
+      "path": "engine/Cargo.toml",
+      "bytes": 635,
+      "sha256": "9bcaa0b13d35fd5cda66c80f65d46dad64759dddc36a1a1923b7fd0f603c12d6"
+    },
+    "REQ": {
+      "path": "docs/requirements.ko.md",
+      "bytes": 29963,
+      "sha256": "bf190c0400db130f8632a5f8a331e0e0f4b07dc9a5ff479281662e122475e3d5"
+    }
+  },
+  "evidence_catalog": {
+    "R": {
+      "path": "evidence/core-20260921T184147624-status-reuse/after/release-core-console.log",
+      "bytes": 2069,
+      "sha256": "2c910fb2d891cf12ded96df447e66c5c1412314ae6a9a55051bfd2d172089be2",
+      "scope": "Release core rules 19 + independent oracle 1 passed; actual test names/output, not checklist."
+    },
+    "RD": {
+      "path": "evidence/core-20260921T184147624-status-reuse/after/debug-core-console.log",
+      "bytes": 2077,
+      "sha256": "82303bbe6a3f06057cbe5daf43900cac0febe04f50a70539fdf1272c2cca32ac",
+      "scope": "Debug same 19+1 tests passed."
+    },
+    "H": {
+      "path": "evidence/core-20260921T184147624-status-reuse/after/release-tracked-fixture-console.log",
+      "bytes": 544,
+      "sha256": "f62e77d72f157a2288e8d7c78ef5a1fc287fbe586bf2bfa599e09c66106124de",
+      "scope": "2 tracked legacy JSON fixture/full-Core compatibility tests passed."
+    },
+    "ST": {
+      "path": "evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549/output.log",
+      "bytes": 2299,
+      "sha256": "f123f526b38aeef4c00343d5fd9f54f9c87aaeca5851e36d6b99eb240f0a54c8",
+      "scope": "7 unit fault tests +13 storage recovery tests passed."
+    },
+    "STRUN": {
+      "path": "evidence/20260921T095724177Z-status-reuse-storage-regression-0ba04549/run.json",
+      "bytes": 423,
+      "sha256": "e20f48e5109844b86b07a6a849611bbdd14bf267f3e0fd2752fb4b32ed6f208e",
+      "scope": "Actual cargo release command/time/exit 0."
+    },
+    "API": {
+      "path": "evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/output.log",
+      "bytes": 1342,
+      "sha256": "f21282aecf8f08d08f94cd745f247ddf4287005e932261db427cec4680e9ccae",
+      "scope": "Actual node:test output, 10 passed, 0 failed."
+    },
+    "APIRUN": {
+      "path": "evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/run.json",
+      "bytes": 362,
+      "sha256": "62fd6ce3fdc6609c4a0b589464352e51a52617c93ec930b2544e692722796339",
+      "scope": "API command/time/exit 0."
+    },
+    "APIRAW": {
+      "path": "evidence/2026-09-21T11-48-11-769Z-api-e869ec87/events.jsonl",
+      "bytes": 125246,
+      "sha256": "14af6f84fc35251e6df99c6e678a9925cee677a2921d5f4ac1349c0c5174c65f",
+      "scope": "12 actual race records, 8 fill-first/4 cancel-first, 4 full/4 partial,24 replay results; response dropped then SIGKILL."
+    },
+    "QUEUE": {
+      "path": "evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/raw-requests.json",
+      "bytes": 4192018,
+      "sha256": "e568756ac7b0b8d81d733c5eeb9cda9a5b75661c0d805186ea6a3b8bf3efe049",
+      "scope": "Actual queue saturation raw HTTP rows. ordinal2249 has503 QUEUE_FULL durable:false; readiness errors remain preserved."
+    },
+    "QUEUES": {
+      "path": "evidence/2026-09-21T09-16-17-864Z-queue-stress-live-demo-pressure-b3923589/summary.json",
+      "bytes": 3202,
+      "sha256": "bfb23b154ddf65d53f4b12f6b98cea35215bf1b86c4c6e021405202ea0a3b58c",
+      "scope": "Derived2500 burst:2144 ACK/356 QUEUE_FULL/0 unknown; all356 same-key retries,dup,lookup; final2500 unique orders."
+    },
+    "A0": {
+      "path": "evidence/20260921T084608Z-core-baseline/result.json",
+      "bytes": 2254,
+      "sha256": "6f46029c7362ad0eb4e692ffea2caf6888a4aa62dfc20f2d3e7f7caeef13223d",
+      "scope": "Original A stdout:120000 commands,6000 warmup,712831.62/s,p99 4100ns,0rejections,14.999033allocops/command."
+    },
+    "A0RUN": {
+      "path": "evidence/20260921T084608Z-core-baseline/run.json",
+      "bytes": 512,
+      "sha256": "a24bccb9cf6cd296f6f1336128228b9f958333cbcfa51f5cd39daa98683da249",
+      "scope": "Original A command,quiet conditions,time,exit0."
+    },
+    "A02": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/02-after-result.json",
+      "bytes": 2255,
+      "sha256": "953ee272bf29d8002df8edeead1d2b72ce4b1bb7a1300492307a63b6a4a74c38",
+      "scope": "First optimized A stdout:120000commands,40k fills,0reject,1719875alloc+9realloc,14.3323667/command."
+    },
+    "A03": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/03-after-result.json",
+      "bytes": 2254,
+      "sha256": "925cb66a3a6877b47b20493278bbcdbcf67e096e4998099b98625f61e54fd247",
+      "scope": "Second optimized A stdout, same allocation counts."
+    },
+    "A06": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/06-after-result.json",
+      "bytes": 2255,
+      "sha256": "f5b9ae237da0bafbd4a7b85f8707510e4e27e96ed831152b5aa5f640b4f2ff3e",
+      "scope": "Third optimized A stdout, same allocation counts."
+    },
+    "A01": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/01-before-result.json",
+      "bytes": 2254,
+      "sha256": "003f96dbac22537087dc4ebdbdd76a45d40d9dd0ca7a934cc95a0b20c57eb89b",
+      "scope": "Paired original A stdout1."
+    },
+    "A04": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/04-before-result.json",
+      "bytes": 2255,
+      "sha256": "2cb39039ab03e647c9af6d3d1a93982028e2567bbfcfbd284b69ddefdf61ad95",
+      "scope": "Paired original A stdout2."
+    },
+    "A05": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/05-before-result.json",
+      "bytes": 2255,
+      "sha256": "ca0e9e63f8e04ad781b3be3358b1fd8c5c5b454e9a953ea0cd6bd582dc50aa53",
+      "scope": "Paired original A stdout3."
+    },
+    "AMETA": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/metadata.json",
+      "bytes": 1566,
+      "sha256": "514292d4e5b48ee07e0e3e3dbe3d3898d5de7b00165570546a1becdbc5fce5b8",
+      "scope": "Fixed B/A,A/B,B/A order,host/compiler/flags,copied binary hashes,quiet coordination."
+    },
+    "ARUNS": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/runs.json",
+      "bytes": 2663,
+      "sha256": "2300e4a560b1e3b1712d5290e982d7fa8031f41561d87673e4dec1b8a9d8a648",
+      "scope": "6 actual executable invocations/times/exit0."
+    },
+    "APROC": {
+      "path": "evidence/core-20260921T190443560-status-reuse-paired/processes-before.json",
+      "bytes": 43739,
+      "sha256": "4270614b947d0ed5e213777471550880c44979360ba460b417e0f58c3686ef83",
+      "scope": "Major ordinary desktop process inventory; cumulative CPU is not instantaneous utilization."
+    },
+    "AHASH": {
+      "path": "evidence/core-20260921T184147624-status-reuse/after/hashes.json",
+      "bytes": 1729,
+      "sha256": "eb47897817c74ad8112f1b1e95e58de8219c6305bba86f38a2a5c81500e2a713",
+      "scope": "Current core/model/benchmark source SHA matches paired A build source; main has subsequent WS-only changes."
+    },
+    "STOP": {
+      "path": "evidence/20260921T100029870Z-demo-normal-stop/process-exit.json",
+      "bytes": 493,
+      "sha256": "c52d714c3b78701e39b298c72b7d1b266dc180961866153d45999d391dfff57b",
+      "scope": "Actual original engine15804 exit0 at10:02:56Z before paired A at10:04:44Z."
+    },
+    "RESUME": {
+      "path": "evidence/2026-09-21T10-05-21-198Z-demo-3b10627b/processes.json",
+      "bytes": 10216,
+      "sha256": "6128d45f26f574eb1da12ec1b164c2112c4ed3e4e29bb6a5526568563578e69a",
+      "scope": "Post-A demo process manifest; bot first two log lines separately inspected,10:05:22Z accepted durable command."
+    }
+  },
+  "rows": [
+    {
+      "id": "5.T01",
+      "spec_line": 133,
+      "requirement": "최소 3개 그룹사의 합성 임직원 계정",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 71
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 56
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "15계정=수동3+봇12; GS리테이·GS칼테스·GS건썰 3회사; 테스트가 계정 수·kind·회사 집합 검증.",
+      "limit": "모의 계정이며 실제 임직원·기업 데이터를 검증하지 않는다."
+    },
+    {
+      "id": "5.T02",
+      "spec_line": 134,
+      "requirement": "최초 상품은 동일 조건의 모의 휴가 시간 1종",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 23
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 9
+        },
+        {
+          "id": "K",
+          "path": "docs/contract.md",
+          "line": 27
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "Action은 단일 시장의 buy/sell 가격·정수 quantity만 가지며 상품별 분기나 날짜가 없다; 계약 LEAVE-1H.",
+      "limit": "상품 ID를 주문마다 받는 다중상품 엔진은 아니다."
+    },
+    {
+      "id": "5.T03",
+      "spec_line": 135,
+      "requirement": "최소 거래 수량 1시간, 가격은 정수형 모의 포인트",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 23
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 245
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 349
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "u64 가격·수량;0수량/0가격 INVALID_*;1 이상 유효 주문 체결.",
+      "limit": "API 음수는 serde/422로 sequencer 이전 거절."
+    },
+    {
+      "id": "5.T04",
+      "spec_line": 136,
+      "requirement": "실제 연차 권리 이전·날짜별 휴가 승인·배정 제외",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 23
+        },
+        {
+          "id": "K",
+          "path": "docs/contract.md",
+          "line": 27
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "모델·Action에 승인/날짜별 권리이전 없음; 합성 초기시간 거래만 구현.",
+      "limit": "실제 HR 시스템이나 법적 연차 이전에 대한 보장이 아니다."
+    },
+    {
+      "id": "5.T05",
+      "spec_line": 137,
+      "requirement": "가격·수량·잔고는 정수 또는 명시적 고정소수점",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 23
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 245
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 383
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "u64와 checked arithmetic, JSON_SAFE=2^53−1 경계 검사.",
+      "limit": "명령/상태 숫자는 JS 정확정수 범위 제한; 무한정수 아님."
+    },
+    {
+      "id": "5.T06",
+      "spec_line": 138,
+      "requirement": "초기 지급 이후 포인트·휴가 총량 보존",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 574
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 56
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 641
+        },
+        {
+          "id": "O",
+          "path": "engine/tests/core_reference.rs",
+          "line": 242
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD",
+        "APIRAW"
+      ],
+      "proof": "15,000,000points/15,000hours;각 random step 전체 불변조건,oracle 잔고 비교;12 race후 총량도 동일.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.T07",
+      "spec_line": 139,
+      "requirement": "지정가·취소·부분 체결·여러 상대 주문 체결",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 238
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 456
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        }
+      ],
+      "evidence": [
+        "R",
+        "APIRAW"
+      ],
+      "proof": "900×2,900×2,1000×1 다중 maker 체결,부분잔량 및 취소/예약해제 검증.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.T08",
+      "spec_line": 140,
+      "requirement": "가격 우선, 동일 가격은 엔진 접수 순번 우선",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 284
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 211
+        },
+        {
+          "id": "O",
+          "path": "engine/tests/core_reference.rs",
+          "line": 242
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "ordered BTreeMap price traversal + VecDeque FIFO;중간취소 뒤 FIFO 유지;oracle scan/sort 결과 대조.",
+      "limit": "네트워크 송신/도착 시각 순서를 FIFO 기준으로 보장하지 않음."
+    },
+    {
+      "id": "5.T09",
+      "spec_line": 141,
+      "requirement": "체결 가격은 기존 상대 maker 주문 가격",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 347
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 137
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 197
+        }
+      ],
+      "evidence": [
+        "R",
+        "API",
+        "APIRAW"
+      ],
+      "proof": "buy/sell taker 양방향에서 maker price 검증;공격가 개선 차액 반영.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.T10",
+      "spec_line": 142,
+      "requirement": "매수 포인트·매도 휴가 예약",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 265
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 197
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "미체결 매수 limit×remaining 포인트,미체결 매도 remaining시간 예약.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.T11",
+      "spec_line": 143,
+      "requirement": "체결·취소·거절 예약·정산·해제 및 가격 개선 차액",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 347
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 456
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 349
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "부분 maker/부분 taker 체결·취소 잔고와 reserved 정확값 비교;거절 전후 거래상태 동일.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.T12",
+      "spec_line": 144,
+      "requirement": "잔고 부족·잘못된 가격/수량·정수 오버플로 처리",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 245
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 349
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 383
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "INSUFFICIENT_POINTS/HOURS,INVALID_PRICE/QUANTITY,ARITHMETIC_OVERFLOW,VALUE_RANGE,INVALID_TIMESTAMP 검증.",
+      "limit": "실제 메모리 할당 실패/OOM은 도메인 오류로 복구하는 범위 아님."
+    },
+    {
+      "id": "5.T13",
+      "spec_line": 145,
+      "requirement": "자기 체결 방지 정책 명시·구현",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "K",
+          "path": "docs/contract.md",
+          "line": 27
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 284
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 277
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 291
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 302
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "실행될 자기 maker를 만나면 전체 incoming주문 SELF_TRADE;앞선 외부 fill도 적용하지 않음;수량 소진 후 자기주문은 미검출이 맞음을 테스트.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.T14",
+      "spec_line": 146,
+      "requirement": "주문 정정은 선택 기능; 구현하면 우선순위 규칙",
+      "status": "optional-not-implemented",
+      "source_references": [
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 23
+        },
+        {
+          "id": "K",
+          "path": "docs/contract.md",
+          "line": 27
+        }
+      ],
+      "evidence": [],
+      "proof": "Action은 Place/Cancel만 지원,정정 API 없음.",
+      "limit": "선택 기능 미구현을 필수 완료로 세지 않는다."
+    },
+    {
+      "id": "5.R01",
+      "spec_line": 149,
+      "requirement": "클라이언트 요청 ID·주문 ID·명령 순번·이벤트 순번 구분",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 39
+        },
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 86
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 132
+        },
+        {
+          "id": "K",
+          "path": "docs/contract.md",
+          "line": 24
+        }
+      ],
+      "evidence": [
+        "R",
+        "APIRAW"
+      ],
+      "proof": "request string/order u64/command_seq/event_seq 별도필드;접수 거절은 명령·이벤트만 진행,dup/conflict 원래순번.",
+      "limit": "현재 신규접수 command_seq와event_seq는 같은 값으로 증가하나 역할은 분리;저널순번은 중복저널로 별도."
+    },
+    {
+      "id": "5.R02",
+      "spec_line": 150,
+      "requirement": "중복 방지 키=(계정ID,클라이언트 요청ID)",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 123
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 132
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 248
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "중첩 account→request BTreeMap;같은 requestID 다른 계정 허용.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.R03",
+      "spec_line": 151,
+      "requirement": "동일 키·동일 내용=최초 상태·결과,부작용 없음",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 132
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 248
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 323
+        }
+      ],
+      "evidence": [
+        "R",
+        "API",
+        "ST"
+      ],
+      "proof": "Action 동일성(timestamp 제외),original result clone duplicate=true;전체CoreJSON 불변;저장된 거절도 나중 상태와 무관하게 유지.",
+      "limit": "처리 중 겹침 자체의 실제 실행 증거는 별도5.R05a 미검증."
+    },
+    {
+      "id": "5.R04",
+      "spec_line": 152,
+      "requirement": "동일 키·다른 내용 충돌 거절",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 144
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 248
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 314
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 84
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST",
+        "API"
+      ],
+      "proof": "REQUEST_ID_CONFLICT,최초순번·결과 보존,신규 이벤트/거래 효과 없음.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.R05a",
+      "spec_line": 153,
+      "requirement": "진행 중인 동일 새 요청의 중복 제출 처리",
+      "status": "unverified",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 132
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 514
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 75
+        }
+      ],
+      "evidence": [
+        "API"
+      ],
+      "proof": "single writer의 첫 execute 후 dedup이 다음 명령에 적용되는 구조는 확인. 하지만 API 테스트는 최초 ACK들을 모두 기다린 후 이미 완료된 키를12회 replay한다.",
+      "limit": "검토한 기존 테스트/원본에는 새 동일키를 최초결과 확정 전 동시에 제출한 직접 시나리오 없음. 완료후 concurrent replay를 in-flight 최초중복 증거로 쓰면 과장."
+    },
+    {
+      "id": "5.R05b",
+      "spec_line": 153,
+      "requirement": "응답 유실 처리",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 216
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 103
+        }
+      ],
+      "evidence": [
+        "API",
+        "APIRAW",
+        "ST"
+      ],
+      "proof": "proxy가 durable=true seq69/order39 응답을 실제 파기,클라이언트 fetch 실패 후 엔진 SIGKILL,동일ID retry가 원래order만 반환.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.R05c",
+      "spec_line": 153,
+      "requirement": "재시작 후 재시도 처리",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 77
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 208
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 187
+        }
+      ],
+      "evidence": [
+        "ST",
+        "API",
+        "APIRAW"
+      ],
+      "proof": "snapshot/replay 후 fullCore equal 및 durable lookup/dup;race24요청 재시작후 원래결과 정확 일치.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.R06",
+      "spec_line": 154,
+      "requirement": "요청ID 보존 기간·용량·만료 및 복구 보장",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 25
+        },
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 27
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 160
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 430
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 77
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST",
+        "H"
+      ],
+      "proof": "데이터셋 수명 전체,만료/축출 없음;기본2Mrequests;새키 용량초과 비접수/seq불변,기존키 dedup가능;fullCore snapshot에 dedup포함.",
+      "limit": "2M 실제 전체 포화 실험 아님: 축소Config 경계 테스트. 이력 메모리는 수명에 따라 증가."
+    },
+    {
+      "id": "5.R07",
+      "spec_line": 155,
+      "requirement": "취소는 소유 계정만",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 456
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 211
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 85
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "다른 계정 NOT_ORDER_OWNER + trading state unchanged.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.R08",
+      "spec_line": 156,
+      "requirement": "명시적 로컬 mock session/account 및 봇·수동 계정 구분",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 118
+        },
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 47
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 71
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 67
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "demo-user-01..03/demo-bot-01..12 token allowlist에서 account 결정;bogus401,caller 임의 account 필드 거절.",
+      "limit": "로컬 mock인증;실제 사용자 보안/SSO 증명이 아니다."
+    },
+    {
+      "id": "5.R09",
+      "spec_line": 157,
+      "requirement": "큐 접수와 durable 성공 ACK 구분",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 145
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 160
+        },
+        {
+          "id": "S",
+          "path": "engine/src/storage.rs",
+          "line": 351
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 216
+        }
+      ],
+      "evidence": [
+        "API",
+        "ST",
+        "QUEUE"
+      ],
+      "proof": "try_send실패503 durable:false;sync_all→Core→durable:true→oneshot;15초 대기실패OUTCOME_UNKNOWN. rawQUEUE_FULL durablefalse 확인.",
+      "limit": "durable=true 도메인거절도 확정된 거절 결과이며 accepted와 구분. OS/전원실험 보장으로 확대하지 않는다."
+    },
+    {
+      "id": "5.I01",
+      "spec_line": 160,
+      "requirement": "사용 가능·예약 잔고 비음수",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 265
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 574
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 641
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "checked_sub/u64와 per-command invariant 검사.",
+      "limit": "u64 타입만으로 underflow 안전을 주장하지 않고 checked arithmetic과 테스트를 근거로 함."
+    },
+    {
+      "id": "5.I02",
+      "spec_line": 161,
+      "requirement": "원수량=체결+취소+미체결",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 574
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 126
+        }
+      ],
+      "evidence": [
+        "R",
+        "APIRAW"
+      ],
+      "proof": "Core auditor 각order 수량합검증;부분2+취소3=5,실제race주문수량 검증.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.I03",
+      "spec_line": 162,
+      "requirement": "전체 포인트·휴가 총량 불변",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 574
+        },
+        {
+          "id": "O",
+          "path": "engine/tests/core_reference.rs",
+          "line": 242
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 75
+        }
+      ],
+      "evidence": [
+        "R",
+        "APIRAW"
+      ],
+      "proof": "seeded random 각step/독립oracle/12clients 및 race 각round 총량 검사.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.I04",
+      "spec_line": 163,
+      "requirement": "중복 요청 주문·체결·정산 부작용 없음",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 132
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 248
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 641
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 77
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST",
+        "API"
+      ],
+      "proof": "fullCore serialization 전후 동일+same orderID/trades결과,복구후 retry도 동일.",
+      "limit": "최초 처리중 중복의 별도실험 공백은5.R05a."
+    },
+    {
+      "id": "5.I05",
+      "spec_line": 164,
+      "requirement": "호가장·주문상태·체결기록·잔고/예약 일치",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 574
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 548
+        },
+        {
+          "id": "O",
+          "path": "engine/tests/core_reference.rs",
+          "line": 242
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "전체이력에서잔고/예약재구성,order queue/FIFO/crossedbook audit;총량만 유지하며잔고이동시킨손상도 탐지.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "5.I06",
+      "spec_line": 165,
+      "requirement": "거절은 부분 거래 상태 변경을 남기지 않음",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 238
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 277
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 430
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 462
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "자기체결·잔고·overflow·capacity를변경전검증;거절전후 trading_state exact equal.",
+      "limit": "접수된거절은 dedup/command/event metadata를남김;불변은 거래상태. OOM/프로세스중단은 메모리내 rollback범위 아님."
+    },
+    {
+      "id": "6.S01",
+      "spec_line": 170,
+      "requirement": "단일 writer 결정적 상태 머신 우선 검토",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 1
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 514
+        },
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 9
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST",
+        "API"
+      ],
+      "proof": "전용OS thread가 Store/Core 단독소유;async측 Work 메시지전달.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "6.S02",
+      "spec_line": 171,
+      "requirement": "다중 제출과 일관된 상태 변경 순서",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 514
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 75
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 97
+        }
+      ],
+      "evidence": [
+        "API",
+        "APIRAW"
+      ],
+      "proof": "12고유 동시명령 유일순번,12fill/cancel race 연속두순번으로 결과결정.",
+      "limit": "모든OS interleaving을 열거하지 않음;클라이언트 송신시간 순서보장은 아님."
+    },
+    {
+      "id": "6.S03",
+      "spec_line": 172,
+      "requirement": "같은 초기상태+정렬입력=같은 결과",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 132
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 641
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 348
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD",
+        "ST"
+      ],
+      "proof": "4seed×1000command dualCore 결과/fullserialized equality,저널확정prefix 실제kill후 재생 동일.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "6.S04",
+      "spec_line": 173,
+      "requirement": "시계·난수 외부입력 재생값 기록",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 39
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 132
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 231
+        },
+        {
+          "id": "S",
+          "path": "engine/src/storage.rs",
+          "line": 358
+        },
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 29
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST"
+      ],
+      "proof": "서버timestamp가 Command와함께 저널에 기록;Core 내부시계/난수없음;봇의 최종Action 및 확정입력순서를재생.",
+      "limit": "seed만으로다중프로세스스케줄 재현주장없음."
+    },
+    {
+      "id": "6.S05",
+      "spec_line": 174,
+      "requirement": "원자 변경 범위·외부 관찰 시점 정의",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 9
+        },
+        {
+          "id": "K",
+          "path": "docs/contract.md",
+          "line": 16
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 238
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 519
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST",
+        "APIRAW"
+      ],
+      "proof": "1 execute의 접수/취소/모든fill/예약/정산이경계;사전검증후singlewriter mutate,post-sync/post-apply snapshot과ACK.",
+      "limit": "HTTP와WS 네트워크 도착순서 상호보장없음;allocator abort는이범위밖."
+    },
+    {
+      "id": "6.S06",
+      "spec_line": 175,
+      "requirement": "async 네트워크와 코어 실행 경계",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 201
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 514
+        },
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 9
+        }
+      ],
+      "evidence": [
+        "API",
+        "QUEUE"
+      ],
+      "proof": "Axum async→boundedcrossbeam→OSwriter→oneshot/event;Core는 동기순수함수.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "6.P01",
+      "spec_line": 178,
+      "requirement": "엔진 hot path mutex/blocking I/O 제거 목표",
+      "status": "incomplete",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 1
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 519
+        },
+        {
+          "id": "S",
+          "path": "engine/src/storage.rs",
+          "line": 351
+        },
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 35
+        }
+      ],
+      "evidence": [
+        "A02",
+        "ST"
+      ],
+      "proof": "순수Core에는lock/I/O없다. durable writer경로는 blockingrecv,write_all,sync_all 및checkpoint를 수행.",
+      "limit": "목표가 순수Core에 한정되면 충족;내구성 포함 전체엔진 hot path 제거는 미달이며 의도적sync-before-ACK를 제거하는 수정은 제안하지 않음."
+    },
+    {
+      "id": "6.P02",
+      "spec_line": 179,
+      "requirement": "검증된 bounded queue 우선 검토",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 33
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 514
+        },
+        {
+          "id": "L",
+          "path": "engine/Cargo.lock",
+          "line": 118
+        },
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 35
+        }
+      ],
+      "evidence": [
+        "QUEUE",
+        "QUEUES",
+        "API"
+      ],
+      "proof": "crossbeam-channel0.5 bounded2048 채택;2500burst2144admit/356QUEUE_FULL;full상태영향없음 검증.",
+      "limit": "queue 라이브러리 내부알고리즘의독자형식증명을수행한것은아님."
+    },
+    {
+      "id": "6.P03",
+      "spec_line": 180,
+      "requirement": "lock-free 보장은 자료구조·적용구간 확인",
+      "status": "unverified",
+      "source_references": [
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 35
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 514
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 1
+        }
+      ],
+      "evidence": [],
+      "proof": "문서는 채널/서비스전체lock-free·wait-free를주장하지않는다;Core의mutex부재는소스로확인.",
+      "limit": "crossbeam/tokio/allocator 포함 lock-free진행보장 자체는 이프로젝트에서 증명/검증하지않음. singlewriter를 lock-free와동일시하면안됨."
+    },
+    {
+      "id": "6.P04",
+      "spec_line": 181,
+      "requirement": "주문저장소·이벤트버퍼 사전할당·재사용",
+      "status": "incomplete",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 106
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 58
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 515
+        },
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 33
+        }
+      ],
+      "evidence": [
+        "A02",
+        "AHASH"
+      ],
+      "proof": "order/tradeVec최대4096·fill scratch최대256초기reserve;fill clear재사용;status16byte재사용;eventchannel32bounded.",
+      "limit": "fullconfigured1M/2Mpool아님;성장/문자열/dedup/BTreeMap/결과/Arc snapshot할당유지. 이벤트payload pool/reuse미구현."
+    },
+    {
+      "id": "6.P05",
+      "spec_line": 182,
+      "requirement": "정상 hot path allocation 0 목표·실제계측",
+      "status": "failed",
+      "source_references": [
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 228
+        },
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 33
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 50
+        }
+      ],
+      "evidence": [
+        "A0",
+        "A02",
+        "A03",
+        "A06"
+      ],
+      "proof": "120000command당1719875alloc+9realloc=14.3323667회/명령. 3after모두동일;0목표 미달.",
+      "limit": "allocation count측정 자체는 수행;String/status최적화로80000회감소했어도zero아님.계측범위execute한정."
+    },
+    {
+      "id": "6.P06",
+      "spec_line": 183,
+      "requirement": "전체 서비스 할당과 코어 할당 구분",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 14
+        },
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 263
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 18
+        }
+      ],
+      "evidence": [
+        "A02"
+      ],
+      "proof": "A는 execute만,Command생성/snapshot/serde/log/network/recovery제외;전체서비스할당미계측명시.",
+      "limit": "전체서비스allocation수치가 필요한추가질문에는 unknown;WSserializer microbench도전체서비스값아님."
+    },
+    {
+      "id": "6.P07",
+      "spec_line": 184,
+      "requirement": "큐·주문·가격·이벤트 버퍼 용량 설정/문서",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "M",
+          "path": "engine/src/model.rs",
+          "line": 3
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 33
+        },
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 27
+        },
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 35
+        }
+      ],
+      "evidence": [
+        "R",
+        "QUEUE"
+      ],
+      "proof": "Config orders1M/requests2M/trades2M,price1..1M,qty1..10000;sourceconstants queue2048/event32,healthqueue노출.",
+      "limit": "queue/event는 runtime env변수가아닌 compile-time상수;운영중상한동적변경없음."
+    },
+    {
+      "id": "6.P08",
+      "spec_line": 185,
+      "requirement": "용량초과 명시거절/backpressure",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 160
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 260
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 331
+        },
+        {
+          "id": "N",
+          "path": "engine/src/main.rs",
+          "line": 145
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 430
+        },
+        {
+          "id": "Q",
+          "path": "scripts/queue-stress.mjs",
+          "line": 270
+        }
+      ],
+      "evidence": [
+        "R",
+        "QUEUE",
+        "QUEUES"
+      ],
+      "proof": "REQUEST/ORDER/TRADE/SEQUENCE_CAPACITY명시;실제QUEUE_FULL503 durablefalse;356sameID retry후효과1개씩.",
+      "limit": "실제1Morders/2Mrequests전체load아님;작은Config경계+2500queueburst대표검증."
+    },
+    {
+      "id": "6.P09",
+      "spec_line": 186,
+      "requirement": "많은fill·버퍼부족에도 부분상태 비노출",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 284
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 331
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 462
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "300maker·maxtrades299:buy300전체reject상태동일;buy299는299fillsaccepted,전체invariants.",
+      "limit": "scratch256에서성장하는299fills까지실제테스트.메모리OOM복구보장/전체가능최대분포검증아님."
+    },
+    {
+      "id": "6.P10",
+      "spec_line": 187,
+      "requirement": "unsafe/custom lock-free 필요성·검증방법",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 1
+        },
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 17
+        },
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 121
+        },
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 16
+        }
+      ],
+      "evidence": [
+        "A02",
+        "ARUNS"
+      ],
+      "proof": "productionCore에unsafe/customlockfree없음.벤치GlobalAlloc은System위임,WindowsFFI메모리조회에한정하고범위설명.",
+      "limit": "의존라이브러리전체unsafe감사나형식증명범위아님."
+    },
+    {
+      "id": "6.P11",
+      "spec_line": 188,
+      "requirement": "언어선택만으로 원자성/결정성/무할당/무장애 주장 금지",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 35
+        },
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 33
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 50
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST",
+        "A02"
+      ],
+      "proof": "구조·prevalidation·journal·실측근거와한계명시;Rust만으로zero/무장애주장없음.",
+      "limit": "통과는 인용한 유한 테스트·입력 범위이며 모든 가능한 입력의 수학적 증명은 아니다."
+    },
+    {
+      "id": "11.T01a",
+      "spec_line": 313,
+      "requirement": "거래 테스트: 가격 우선순위",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 137
+        },
+        {
+          "id": "O",
+          "path": "engine/tests/core_reference.rs",
+          "line": 242
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "최저ask/최고bid선택 및독립scan/sortoracle대조.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T01b",
+      "spec_line": 313,
+      "requirement": "거래 테스트: 동일 가격 시간 우선순위",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 211
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "같은900가격의선행maker부터체결,중간취소후FIFO유지.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T01c",
+      "spec_line": 313,
+      "requirement": "거래 테스트: 부분 체결",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 97
+        }
+      ],
+      "evidence": [
+        "R",
+        "API",
+        "APIRAW"
+      ],
+      "proof": "maker/taker부분체결잔량·reserve;실제race부분fill4회.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T01d",
+      "spec_line": 313,
+      "requirement": "거래 테스트: 여러 호가 소진",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 137
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 462
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "buy1100qty5→900qty2+900qty2+1000qty1;299makerfill경계검증.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T02a",
+      "spec_line": 314,
+      "requirement": "거래 테스트: 취소",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 211
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 75
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "미체결·부분체결취소잔량0/reserve해제;12동시취소.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T02b",
+      "spec_line": 314,
+      "requirement": "거래 테스트: 재취소",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 211
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "같은ID재취소originaldup;새ID이미종료취소ORDER_NOT_OPEN.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T02c",
+      "spec_line": 314,
+      "requirement": "거래 테스트: 체결·취소 경합",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 97
+        }
+      ],
+      "evidence": [
+        "API",
+        "APIRAW"
+      ],
+      "proof": "12실제동시HTTP race:8fillfirst/4cancelfirst;full4/partial4;동일seq순서정산+24durablereplaysafterrestart.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T02d",
+      "spec_line": 314,
+      "requirement": "거래 테스트: 다른 계정 취소 거절",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 211
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 85
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "NOT_ORDER_OWNER 및거래상태불변.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T03a",
+      "spec_line": 315,
+      "requirement": "거래 테스트: 잔고 부족",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 349
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "매수포인트·매도시간각부족,거래상태변경없음.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T03b",
+      "spec_line": 315,
+      "requirement": "거래 테스트: 잘못된 입력",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 349
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 532
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 67
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "0/범위밖가격수량/없는계정/잘못된키/음수HTTP422검증.",
+      "limit": "문법무작위fuzzer전체탐색은수행하지않음."
+    },
+    {
+      "id": "11.T03c",
+      "spec_line": 315,
+      "requirement": "거래 테스트: 중복 요청",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 248
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 323
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 75
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 103
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST",
+        "API"
+      ],
+      "proof": "동일성·완료후12동시retry·응답유실재시도검증.",
+      "limit": "새동일키첫실행중중복직접실험은5.R05a 미검증."
+    },
+    {
+      "id": "11.T03d",
+      "spec_line": 315,
+      "requirement": "거래 테스트: 같은 ID 다른 내용 충돌",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 248
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 314
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 84
+        }
+      ],
+      "evidence": [
+        "R",
+        "ST",
+        "API"
+      ],
+      "proof": "REQUEST_ID_CONFLICT 원래결과/seq보존,fullstate불변.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T04a",
+      "spec_line": 316,
+      "requirement": "거래 테스트: 자기 체결 방지",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 277
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 291
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 302
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "양방향자기체결전체거절,외부prefix취소원자성,뒤쪽도달안한자기호가조건.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T04b",
+      "spec_line": 316,
+      "requirement": "거래 테스트: 용량 한계",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 430
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 462
+        },
+        {
+          "id": "Q",
+          "path": "scripts/queue-stress.mjs",
+          "line": 270
+        }
+      ],
+      "evidence": [
+        "R",
+        "QUEUE",
+        "QUEUES"
+      ],
+      "proof": "축소Configorder/trade/request한도+299/300fills+2500burstqueue2048포화.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T04c",
+      "spec_line": 316,
+      "requirement": "거래 테스트: 정수 경계·오버플로",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 383
+        },
+        {
+          "id": "C",
+          "path": "engine/src/core.rs",
+          "line": 852
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "checkedmuloverflow,u64MAX,JSON_SAFE금액/timestamp경계expliciterrors.",
+      "limit": "모든u64값열거아님;자산고정총량보다큰중간정산종류는구조상제약."
+    },
+    {
+      "id": "11.T05a",
+      "spec_line": 317,
+      "requirement": "거래 테스트: 예약",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "resting/부분체결 buy금액과sell시간예약정확값.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T05b",
+      "spec_line": 317,
+      "requirement": "거래 테스트: 해제",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 75
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "취소전/후available,reserved정확값;12취소후예약0.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T05c",
+      "spec_line": 317,
+      "requirement": "거래 테스트: 정산",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 137
+        },
+        {
+          "id": "O",
+          "path": "engine/tests/core_reference.rs",
+          "line": 242
+        }
+      ],
+      "evidence": [
+        "R"
+      ],
+      "proof": "buyer/seller포인트·시간이동+독립oracle잔고재계산대조.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T05d",
+      "spec_line": 317,
+      "requirement": "거래 테스트: 가격 개선",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 88
+        },
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 164
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 197
+        }
+      ],
+      "evidence": [
+        "R",
+        "API"
+      ],
+      "proof": "1100buy가1000maker체결시남은100차액환급;다중price도검증.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.T05e",
+      "spec_line": 317,
+      "requirement": "거래 테스트: 전체 자산 보존",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 641
+        },
+        {
+          "id": "O",
+          "path": "engine/tests/core_reference.rs",
+          "line": 242
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 126
+        }
+      ],
+      "evidence": [
+        "R",
+        "APIRAW"
+      ],
+      "proof": "4×1000seedcommands+3000oraclecommands매번invariants,12race총량확인.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.C01",
+      "spec_line": 320,
+      "requirement": "최소12개 동시 클라이언트 주문·취소",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 75
+        },
+        {
+          "id": "Q",
+          "path": "scripts/queue-stress.mjs",
+          "line": 246
+        }
+      ],
+      "evidence": [
+        "API",
+        "QUEUE",
+        "QUEUES"
+      ],
+      "proof": "Promise.all12계정고유place,이후12cancel;추가boundedburst2500클라이언트증거.",
+      "limit": "동시성은별도HTTP요청/계정;테스트클라이언트가12독립OSprocess라는주장아님."
+    },
+    {
+      "id": "11.C02",
+      "spec_line": 321,
+      "requirement": "고정seed 무작위 명령·불변조건 검사",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "R",
+          "path": "engine/tests/core_rules.rs",
+          "line": 641
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "seeds1,42,0x5eed_f00d,0xdead_beef 각1000;step마다invariant,11step마다duplicate,127step마다serde복원.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.C03",
+      "spec_line": 322,
+      "requirement": "가능하면 단순 참조 모델 대조",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "O",
+          "path": "engine/tests/core_reference.rs",
+          "line": 242
+        }
+      ],
+      "evidence": [
+        "R",
+        "RD"
+      ],
+      "proof": "별도scan/sort와잔고재구성oracle3000commands;code,fill(maker/price/qty),order/book/account대조;성공fills>100/cancels>100assert.",
+      "limit": "같은도메인규칙구현이므로독립형식spec증명아님;oracle은정상용량범위중심."
+    },
+    {
+      "id": "11.C04",
+      "spec_line": 323,
+      "requirement": "장애주입 후 동일 확정입력범위 정상/복구 비교",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 348
+        },
+        {
+          "id": "S",
+          "path": "engine/src/storage.rs",
+          "line": 891
+        }
+      ],
+      "evidence": [
+        "ST",
+        "STRUN"
+      ],
+      "proof": "실제childkill후recoveredjournal_seq만큼정상Coreexecute,fullserdeCore equality;관측ACK모두lookup exact;스냅샷저장중두시점실제kill도테스트.",
+      "limit": "프로세스강제종료·fault hook 수준;OScrash/전원단절실측아님."
+    },
+    {
+      "id": "11.C05",
+      "spec_line": 324,
+      "requirement": "성공ACK보장·미응답조회·재시도dedup",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "S",
+          "path": "engine/src/storage.rs",
+          "line": 351
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 103
+        },
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 216
+        }
+      ],
+      "evidence": [
+        "ST",
+        "API",
+        "APIRAW"
+      ],
+      "proof": "syncbeforeACK,실제response-dropseq69→SIGKILL→원order/상태복구;fullresult lookup.",
+      "limit": "내구성계층전체§7별도감사는parent담당;이행은거래/요청요건관련교차증거."
+    },
+    {
+      "id": "11.C07",
+      "spec_line": 326,
+      "requirement": "채택 동시성 구조에 적합한 검증 도구",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "I",
+          "path": "scripts/api.integration.test.mjs",
+          "line": 60
+        },
+        {
+          "id": "T",
+          "path": "engine/tests/storage_recovery.rs",
+          "line": 348
+        },
+        {
+          "id": "G",
+          "path": "engine/Cargo.toml",
+          "line": 22
+        }
+      ],
+      "evidence": [
+        "API",
+        "ST",
+        "QUEUE"
+      ],
+      "proof": "Node node:test실제HTTP/WS+Rusttest실제childprocess로singlewriter 메시지전달/순번/경합/회복검증.",
+      "limit": "Loom/Miri/TSAN 또는모든scheduler상태탐색없음;이요구는특정도구를지정하지않으며lock-free형식증명으로확대하지않음."
+    },
+    {
+      "id": "11.A01",
+      "spec_line": 329,
+      "requirement": "release 빌드·warm-up 이후 측정",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 190
+        },
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 215
+        },
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 8
+        }
+      ],
+      "evidence": [
+        "A0",
+        "A02",
+        "ARUNS",
+        "AMETA"
+      ],
+      "proof": "debug실행거절guard;releasecopiedbinary,6000warmup뒤120000measured commands.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.A02",
+      "spec_line": 330,
+      "requirement": "CPU·OS·Rust·build·seed·규모·분포·동시성·queue·journal 기록",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 257
+        },
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 8
+        }
+      ],
+      "evidence": [
+        "AMETA",
+        "A02",
+        "AHASH"
+      ],
+      "proof": "16logicalIntelmodel154Windows26200,Rust1.98.1GNU,thinLTO/codegen1/RUSTFLAGS;seed20260921고정6cycle,concurrency1,queue없음/journal없음명시.",
+      "limit": "seed는난수샘플링seed아닌고정workload식별자;단일호스트대표분포."
+    },
+    {
+      "id": "11.A03",
+      "spec_line": 331,
+      "requirement": "성공주문·취소·부분·다중체결 대표부하",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 47
+        },
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 282
+        },
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 12
+        }
+      ],
+      "evidence": [
+        "A02",
+        "A03",
+        "A06"
+      ],
+      "proof": "6commands사이클(2makersell,multifillbuy,partialcancel,restbuy,cancel),각120kcommands/40kfills/0reject.",
+      "limit": "인용한 테스트 입력·실행 버전에 한정하며 모든 interleaving/입력의 보편 증명이 아니다."
+    },
+    {
+      "id": "11.A04",
+      "spec_line": 332,
+      "requirement": "측정 전 목표 부하·목표·근거",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 8
+        },
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 276
+        }
+      ],
+      "evidence": [
+        "A0RUN",
+        "AMETA"
+      ],
+      "proof": "계획17:23KST:>=20kcommands/s,p99<=250µs,validreject0;12bots+manual초당수십건여유근거;첫A17:46KST.",
+      "limit": "계획의작성시각은보존문서선언과실행시각대조;공증된외부timestamp아님.목표를결과에따라완화하지않음."
+    },
+    {
+      "id": "11.A05",
+      "spec_line": 333,
+      "requirement": "A/B/C/D 결과 구간 분리",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 280
+        },
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 8
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 7
+        }
+      ],
+      "evidence": [
+        "A0",
+        "A02"
+      ],
+      "proof": "Aexecute만durability_or_network_measured=false;BdurableACK,CWScallback,D미실행별도표기.",
+      "limit": "이번감사는A의실측을감사;B/C/D재검증·UIpaint성능은parent범위.현재main버전의새B/Ctiming으로기존값재라벨금지."
+    },
+    {
+      "id": "11.A06",
+      "spec_line": 338,
+      "requirement": "처리량·p50/p95/p99/max·오류/거절·메모리·alloc 측정",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 228
+        },
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 257
+        }
+      ],
+      "evidence": [
+        "A0",
+        "A02",
+        "A03",
+        "A06",
+        "ARUNS"
+      ],
+      "proof": "A02:671430.84/s,p50/p95/p99/max=1000/1900/4200/1837500ns,0reject,peakWS117071872bytes,1719875alloc+9realloc;다른run도전체지표보존.",
+      "limit": "max가p99목표보다크다고목표실패는아님.메모리는전체벤치프로세스,requestedbytes는누적요청volume;percommand원시latency배열은파일출력하지않음."
+    },
+    {
+      "id": "11.A07",
+      "spec_line": 339,
+      "requirement": "측정 구간·발생방식·큐대기 포함 여부",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 228
+        },
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 14
+        }
+      ],
+      "evidence": [
+        "A02"
+      ],
+      "proof": "prebuiltCommand→execute반환까지개별timing/counting.결과생성/allocatomic포함;Command준비,UI snapshot,serde,IO제외;queuewait없음.",
+      "limit": "throughput은결과drop/timers/histogram기록도포함;개별latency구간에는결과drop없음.allocatorbool/atomic계측부하있음."
+    },
+    {
+      "id": "11.A08",
+      "spec_line": 340,
+      "requirement": "정상 벤치에서 불필요한 bots/build/tests 중지",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 3
+        }
+      ],
+      "evidence": [
+        "STOP",
+        "AMETA",
+        "APROC",
+        "ARUNS"
+      ],
+      "proof": "부모조율정지·engineactualexit0(10:02:56Z),A6run10:04:44..47Z;프로세스목록과동시작업금지조건보존.",
+      "limit": "일반desktopOSbackground는유지,프로세스snapshot은측정내내system-idle증명아님."
+    },
+    {
+      "id": "11.A09",
+      "spec_line": 341,
+      "requirement": "주요 프로세스·부하조건 기록, 경쟁stress 별도",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 46
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 48
+        }
+      ],
+      "evidence": [
+        "APROC",
+        "AMETA",
+        "QUEUE",
+        "QUEUES"
+      ],
+      "proof": "Aquiet조건과processsnapshot;2500queueburst는normaldemo와병행한별도evidence,정상A성능으로합치지않음.",
+      "limit": "기록된누적CPU를순간CPU%로해석하지않음."
+    },
+    {
+      "id": "11.A10",
+      "spec_line": 342,
+      "requirement": "측정 뒤 개발·시연 재개",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 3
+        }
+      ],
+      "evidence": [
+        "ARUNS",
+        "RESUME"
+      ],
+      "proof": "A끝10:04:47Z후demo10:05:21Z;bot01 raw첫command10:05:22.542Z durableaccepted seq22234를직접읽음.",
+      "limit": "개발전체활동감사는parent소관;이행은시연재개실증,6시간완주판정아님."
+    },
+    {
+      "id": "11.A11",
+      "spec_line": 343,
+      "requirement": "동일조건 baseline/최적화 비교,측정된병목 개선",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "B",
+          "path": "engine/examples/core_bench.rs",
+          "line": 47
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 48
+        },
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 35
+        }
+      ],
+      "evidence": [
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06",
+        "AMETA",
+        "AHASH"
+      ],
+      "proof": "고정3쌍B/A,A/B,B/A 동일입력/컴파일/경계. status재사용에서alloc80000회(4.4447%)감소,메모리tradeoff별도보존.",
+      "limit": "요청bytes+120000,peakWS+598016..679936;throughput방향혼재(-8.12/+6.75/-3.04%)라속도개선또는회귀없음미입증."
+    },
+    {
+      "id": "11.H01",
+      "spec_line": 346,
+      "requirement": "코어·내구성·화면 지연 혼동 금지",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 14
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 18
+        }
+      ],
+      "evidence": [
+        "A02"
+      ],
+      "proof": "Aexecute,BCseparate;Ccallback은UIpaint아니며브라우저렌더지연미계측명시.",
+      "limit": "Aµs수치로사용자화면latency예측불가."
+    },
+    {
+      "id": "11.H02",
+      "spec_line": 347,
+      "requirement": "로컬 성능을 인터넷 배포 성능으로 표시 금지",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 3
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 18
+        },
+        {
+          "id": "P",
+          "path": "docs/bench-plan.md",
+          "line": 58
+        }
+      ],
+      "evidence": [
+        "A02"
+      ],
+      "proof": "Windowslocalhost범위와D미실행명시.",
+      "limit": "외부배포실행여부에대한별도운영감사는parent범위."
+    },
+    {
+      "id": "11.H03",
+      "spec_line": 348,
+      "requirement": "실측하지 않은 수치 생성 금지",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 16
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 50
+        }
+      ],
+      "evidence": [
+        "A0",
+        "A01",
+        "A02",
+        "A03",
+        "A04",
+        "A05",
+        "A06"
+      ],
+      "proof": "A주요발표값은실제stdoutJSON과일치;할당감소량은원시카운트차이로재계산가능.",
+      "limit": "전체프로젝트모든문장에대한무오류증명이아닌선정A숫자대조."
+    },
+    {
+      "id": "11.H04",
+      "spec_line": 349,
+      "requirement": "zero allocation·lock-free 확인범위만 주장",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "A",
+          "path": "docs/adr/001-execution-and-ui.md",
+          "line": 35
+        },
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 33
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 50
+        }
+      ],
+      "evidence": [
+        "A02"
+      ],
+      "proof": "zero목표미달14.332와채널/서비스lockfree미주장분명.",
+      "limit": "실제lockfree보장없음은6.P03 unverified;정직한보고충족이성능목표충족은아님."
+    },
+    {
+      "id": "11.H05",
+      "spec_line": 350,
+      "requirement": "실패·미달·미실행 원인·실제 검증범위",
+      "status": "proven",
+      "source_references": [
+        {
+          "id": "D",
+          "path": "docs/core.md",
+          "line": 33
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 18
+        },
+        {
+          "id": "F",
+          "path": "docs/performance.md",
+          "line": 50
+        }
+      ],
+      "evidence": [
+        "A0",
+        "A02"
+      ],
+      "proof": "문자열/dedup/결과할당잔존,0목표미달,전체서비스alloc/UIpaint/D미계측,짧은microbench/noisytiming한계명시.",
+      "limit": "이번감사에서새로확인된5.R05a는원자료의검증범위를좁혀기록.후속실험전완료로승격하지않음."
+    }
+  ]
+}

@@ -15,7 +15,9 @@ test('random 3–5 second motion is deterministic, bounded, smooth and independe
  }
  assert.notDeepEqual(motionSchedule(1),motionSchedule(2));
  const start=motionSchedule(2)[0];assert.equal(boardMotionAt(start+.4,2,true).axis,'x');assert.equal(boardMotionAt(start+.4,2,false).active,false);
- for(let t=0;t<90;t+=.013){const m=boardMotionAt(t,19,true);assert.ok(Math.abs(m.forceX)<=30&&m.forceY===0);assert.ok(Math.abs(m.roll)<.027&&m.pitch===0);}
+ assert.ok(motionSchedule(19).at(-1)>150);let peakForce=0,peakShift=0;
+ for(let t=0;t<150;t+=.013){const m=boardMotionAt(t,19,true);peakForce=Math.max(peakForce,Math.abs(m.forceX));peakShift=Math.max(peakShift,Math.abs(m.offsetX));assert.ok(Math.abs(m.forceX)<=90&&m.forceY===0);assert.ok(Math.abs(m.roll)<.078&&m.pitch===0);}
+ assert.ok(peakForce>80&&peakShift>20,'strong sway must visibly move the board and accelerate every ball');
 });
 test('shared board force acts equally on identical balls, with actual velocity change',()=>{
  const a=new Race(config(2),2),b=new Race(config(2,'neon',false),2);
@@ -29,7 +31,7 @@ test('pause freezes active board motion and stepping chunks preserve the exact r
  const a=new Race(config(20),732),b=new Race(config(20),732);a.start();b.start();while(a.raceTime<motionSchedule(732)[0]+.45)a.step();a.pause();const frozen=a.snapshot();for(let i=0;i<200;i++)a.step();assert.deepEqual(a.snapshot(),frozen);a.resume();while(!['complete','invalid'].includes(a.state))a.step();while(!['complete','invalid'].includes(b.state))b.step(STEP*3);assert.equal(a.state,'complete');assert.deepEqual(a.finishOrder,b.finishOrder);
 });
 test('orbit natural stagnation receives an impulse and finishes through the real goal',()=>{
- const r=new Race(config(1,'orbit',true),1);r.start();let impulses=0;
+ const r=new Race(config(1,'orbit',false),18);r.start();let impulses=0;
  while(!['complete','invalid'].includes(r.state)){
   const b=r.balls[0],before={x:b.x,y:b.y,assists:r.assists};r.step();
   if(r.assists>before.assists){impulses++;assert.ok(Math.hypot(b.x-before.x,b.y-before.y)<12,'escape must move by physical integration, not teleport');assert.equal(b.finished,false);assert.equal(r.finishOrder.length,0);}

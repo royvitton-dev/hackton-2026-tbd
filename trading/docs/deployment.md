@@ -66,6 +66,42 @@ TLS 프록시는 HTTPS 요청과 `/ws`의 WebSocket upgrade를 엔진으로 전�
 
 로컬에서 봇을 실행해 원격 엔진을 시연할 수도 있으나 해당 PC 프로세스 종료·네트워크 단절이 시연 중단 원인이 된다. 본 납품의 기본 검증은 localhost 전체 시연이며 실제 원격 서버·TLS·Origin·Vercel 호스팅 상태는 별도 검증 대상이다.
 
+봇 실행 파일은 `bots/bot.mjs`, 접속 변수는 **`ENGINE_API_URL`**이다. 값을 생략하면 `http://127.0.0.1:8787`에 연결한다. 원격 시연에서는 엔진에 실제로 접근할 수 있는 HTTPS 주소를 지정하며 끝의 `/`는 생략한다. `VITE_API_URL`은 브라우저 빌드용이므로 봇 접속 주소를 바꾸지 않는다. 엔진과 같은 서버에서 봇을 실행하면 TLS 프록시를 거치지 않는 `http://127.0.0.1:8787`도 사용할 수 있다.
+
+Node 24.x가 있는 호스트의 `trading` 디렉터리에서 봇 하나의 실행 형식은 다음과 같다. 인덱스 1~12는 각각 `bot-01`~`bot-12` 계정에 대응한다. 모든 봇이 공유하는 실행 디렉터리는 매번 새로 만들고, 같은 실행 디렉터리에서 같은 인덱스를 두 번 실행하지 않는다. 로그는 기존 파일을 덮어쓰지 않는 `wx` 방식이며 요청 ID에는 실행 디렉터리 이름이 포함된다.
+
+```powershell
+# 원격 서버 주소를 실제 값으로 바꾼 뒤 실행한다.
+$env:ENGINE_API_URL = 'https://<실제-엔진-도메인>'
+$tradingBotRun = Join-Path (Get-Location) ('evidence/bots-' + [DateTime]::UtcNow.ToString('yyyyMMddTHHmmssfffZ') + '-' + [guid]::NewGuid().ToString('N'))
+New-Item -ItemType Directory -Path $tradingBotRun | Out-Null
+node bots/bot.mjs 1 $tradingBotRun
+```
+
+12개 독립 프로세스는 위의 새 실행 디렉터리를 준비한 뒤 **마지막 단일 봇 명령 대신** 아래처럼 실행할 수 있다. 이미 해당 엔진에서 같은 12개 계정의 봇이 돌고 있다면 기존 실행의 정상 종료를 먼저 확인한다.
+
+```powershell
+$tradingBotNode = (Get-Command node).Source
+$tradingBotProcesses = @(1..12 | ForEach-Object {
+  $tradingBotIndex = $_
+  $tradingBotProcess = Start-Process -FilePath $tradingBotNode -ArgumentList @('bots/bot.mjs', "$tradingBotIndex", ('"' + $tradingBotRun + '"')) -WorkingDirectory (Get-Location).Path -WindowStyle Hidden -PassThru -RedirectStandardOutput (Join-Path $tradingBotRun "bot-$tradingBotIndex.stdout.log") -RedirectStandardError (Join-Path $tradingBotRun "bot-$tradingBotIndex.stderr.log")
+  [pscustomobject]@{ index = $tradingBotIndex; pid = $tradingBotProcess.Id }
+})
+$tradingBotProcesses | ConvertTo-Json | Set-Content (Join-Path $tradingBotRun 'processes.json')
+Invoke-RestMethod "$env:ENGINE_API_URL/api/bots"
+```
+
+시연을 마칠 때 같은 실행 디렉터리에 정상 종료 요청을 만든다.
+
+```powershell
+# 정상 종료 요청. 봇은 진행 중 요청을 마친 뒤 stopped 로그를 남긴다.
+Set-Content (Join-Path $tradingBotRun 'stop.request') ([DateTime]::UtcNow.ToString('o'))
+```
+
+기록한 PID의 실제 종료와 `bots/bot-XX-*.jsonl`의 `stopped`를 확인한다. `started` 로그에 API 주소·전략·seed·PID가 기록되고 명령 응답·미확인 요청·조회 결과도 보존된다. 1~4는 마켓 메이커, 5~8은 유동성 소비, 9~12는 추세 추종이며 seed는 `2026092200 + 인덱스`로 고정한다. seed만으로 동시 실행 순서를 재현할 수는 없고 엔진 저널 순서가 권위 있는 재생 입력이다.
+
+이 명령은 현재 소스의 실행 인자·환경변수·정상 종료 계약을 설명한다. 실제 원격 서버에서 실행하지 않았으며, 이번 호스트의 전체 로컬 12봇 실행 검증은 `node scripts/demo.mjs start`의 별도 증거를 따른다. 새 PowerShell 예시는 구문 확인만 수행하며 원격 실행 성공으로 표시하지 않는다.
+
 ## 실행 전 검토 순서
 
 1. 로컬 frontend `pnpm build` 및 엔진 release 빌드가 통과했는지 기록 확인.
@@ -75,7 +111,7 @@ TLS 프록시는 HTTPS 요청과 `/ws`의 WebSocket upgrade를 엔진으로 전�
 5. 엔진 재시작 후 같은 데이터·요청 ID의 조회와 중복 방지 확인.
 6. 실제 서버에서 12개 봇 실행 및 최소 10개 API 참여·5분 시장 변화를 검증.
 
-Wonder Park에는 `trading/attraction.json`으로 로컬 독립 UI 주소를 등록했다. 기존 파크 소스 수정 없이 입장 링크가 연결되며, 전체 시연 프로세스는 별도로 시작해야 한다. 공개 환경에서는 등록 URL도 실제 HTTPS UI 주소로 교체한다. 다른 호스트용 선택적 React 어댑터와 실제 검증 범위는 `ui.md`에 있다.
+Wonder Park에는 `trading/attraction.json`으로 로컬 독립 UI 주소를 등록했다. 후속 사용자 요청에 따라 파크 시작과 거래소 입장 API가 `demo.mjs ensure`를 호출해 로컬 UI·엔진·봇을 자동 준비하거나 기존 실행을 재사용한다. 최초 의존성 준비는 별도로 필요하다. 공개 환경에서는 로컬 프로세스 자동 실행 대신 별도 배포를 구성하고 등록 URL도 실제 HTTPS UI 주소로 교체한다. 다른 호스트용 선택적 React 어댑터와 실제 검증 범위는 `ui.md`에 있다.
 
 ## 격리된 로컬 production preview
 

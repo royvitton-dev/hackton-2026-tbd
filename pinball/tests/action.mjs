@@ -24,6 +24,8 @@ try{
    const smart=await p.locator('.ball-label:visible').count();
    const boxes=await p.locator('.ball-label:visible').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom};}));
    for(let i=0;i<boxes.length;i++)for(let j=i+1;j<boxes.length;j++){const a=boxes[i],b=boxes[j];assert.equal(a.x<b.right&&a.right>b.x&&a.y<b.bottom&&a.bottom>b.y,false,'smart name labels overlap');}
+   const counters=await p.locator('.device-label:visible').evaluateAll(es=>es.map(e=>{const r=e.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom};}));
+   for(const a of boxes)for(const b of counters)assert.equal(a.x<b.right&&a.right>b.x&&a.y<b.bottom&&a.bottom>b.y,false,'smart name label overlaps ride counter');
    await p.locator('.label-toggle').click();await p.waitForTimeout(80);assert.ok(await p.locator('.ball-label:visible').count()>=smart);
    assert.deepEqual(await p.evaluate(()=>window.pinball.snapshot()),paused);await p.locator('.label-toggle').click();
   }

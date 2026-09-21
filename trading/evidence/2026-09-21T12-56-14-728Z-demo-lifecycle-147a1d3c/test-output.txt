@@ -1,0 +1,25 @@
+Command: node --test scripts/demo-lifecycle.test.mjs
+Captured from exec_command chunkb7c9c3; exit_code 0.
+
+▶ demo lifecycle safety against unrelated listeners and failed owned children
+  ✔ same loopback port is rejected even under localhost/127 aliases (0.7331ms)
+  ✔ actual start CLI rejects identical ports before spawning services (98.8295ms)
+  ✔ occupied port returning HTTP 404 blocks startup without HTTP/admin requests (153.0989ms)
+  ✔ occupied port returning HTTP 200 blocks startup without HTTP/admin requests (127.8545ms)
+  ✔ IPv6 loopback listener also blocks the same port (3.159ms)
+  ✔ spawn error is caught without waiting for an unrelated healthy URL (57.248ms)
+  ✔ early child exit cannot borrow readiness from a healthy unrelated server (67.9289ms)
+  ✔ a living child without its matching ready log cannot use foreign HTTP 200 (324.8991ms)
+  ✔ child exit during a pending health response rejects promptly (229.2714ms)
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T12-56-14-728Z-demo-lifecycle-147a1d3c
+  ✔ owned short-lived HTTP child passes only after its own engine ready marker (234.1886ms)
+  ✔ Vite marker is read from the owned log and must match the configured port (9.2004ms)
+✔ demo lifecycle safety against unrelated listeners and failed owned children (1311.0488ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1417.8843
