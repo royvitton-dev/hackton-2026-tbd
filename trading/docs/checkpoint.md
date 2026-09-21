@@ -1,11 +1,11 @@
 # 작업 체크포인트
 
-갱신: 2026-09-22 00:42 KST. 마감: 2026-09-22 09:00 KST (약8시간18분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
+갱신: 2026-09-22 00:56 KST. 마감: 2026-09-22 09:00 KST (약8시간4분 남음). 아래 기록은 누적 이력이며 마지막 항목이 최신 상태다.
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 재개 시 우선 확인할 현재 상태
 
-- main은 원격의추가4커밋을보존해 `4234490d8513cdb57779463f85efb92609e29062`로00:40fast-forward했고 이번모바일·안내·감사완료분을commit/push중이다. 완료된 후속 변경은 직접 main에 push한다. 별도 작업의 `park/vite.config.mjs`는 보존하고 stage하지 않는다.
+- main 마지막확인 local/remote는 `ca8c6117576cc595705b3150b0b5146a7439fc2c`(00:43)다. 이번모바일·안내·감사완료분390fde8과동시에추가된원격차량변경4d2427b를비강제merge/push했다. 완료된 후속 변경은 직접 main에 push한다. 별도 작업의 `park/vite.config.mjs`는 보존하고 stage하지 않는다.
 - 메인 시장은 엔진20540·UI4220·12봇으로 계속 관찰한다. 시장 manifest는 `data/demo-current.json`, 관찰 session20793/PID18184/helper15744, 보완 자원 수집 session90617/PID16840이다. 이전 엔진09bc의 장시간 기록이며 새65348c의 성능으로 표시하지 않는다.
 - 최근 주기 분석은00:31, 다음은01:01. 원 관찰은01:05:55, 보완 수집은01:06 종료 예정이다. 실제 실행 핸들과 PID 종료를 확인한 뒤 [정확한 후속 순서](quiet-window.md)에 따라 정상 stop·실제 exit → keeper → FULL 누적 복구 → A 3쌍 → B/C → keeper 해제 → ensure를 수행한다.
 - 최신 엔진65348c·코어 벤치7cfd820a·복구 도구d2c8dd9e는 비교 측정까지 유지한다. keeper를 소유한 채 demo start/stop/ensure를 호출하지 않는다. 사용자 Park19312는 다시 시작하지 않는다.
@@ -289,3 +289,15 @@
 - frontend15-35-16...6b589a95:App.tsx에완료주문전역200→내20/주문번호기준과요청처리당시결과안내만추가했다. verify frontend-20260921T153528948Z의format/protocol7/type/build모두0. root15-38-27...c88bfe61에서기존5175임시tab14/user03/390×844의두탭실제표시·줄바꿈·375px문서폭/console빈배열확인. 새주문0,tab14닫음/viewport복원. 이전거래원본의증거범위는별도로보존.
 - durability15-36-17...c59f915b:aged정확CLI/300초child한정·최종sha256inventory+wrapper실제종료조건대조,실행불일치없음. 파일stat당시D782399740B/최신snapshot103825784B/free243372380160B,종료뒤재계산필요. 중간stdout없음을hang으로판정않음. 문서quiet에2D+GJ+F1+F2+부가물공간식추가. 새실행/빌드없음.
 - fetch로원격main4커밋발견,로컬dirty와변경파일불충돌확인후ff-only로4234490반영. 원격battery/vehicle작업보존,park-viteSHA12E8유지. remote가Park입장에launchPath추가해관련15개Vitest라우트검사통과. 최초node:testrunner오용실패와정확Vitest실행출력은래퍼153400...41d59baa에모두보존. 실제Park시작/재시작없음. 현재3agents작업완료,quiet순서와바이너리동결유지.
+
+## 00:44 완료 단위 main push·실행 핸들 재확인
+- 구현commit390fde83e600ac2403ac4545615080ec9e9aa90e,122개trading파일7277416B. 첫push는원격추가4d2427b 때문에fetch-first거절. 새원격은차량3D모델관련파일뿐임을확인하고정상merge후push0,local/remote ca8c6117576cc595705b3150b0b5146a7439fc2c 일치. evidence20260921T154217393Z-mobile-queue-main-push-0f13ffd4에최초거절/merge/성공로그와verified.json보존. indexempty,5보호SHA와App d9b097d9불변. 증거122파일은푸시됐고현재push기록·이checkpoint는다음작업단위에포함한다.
+- 00:43:28 actualexec session20793/90617모두running응답확인. 원observer콘솔은00:06이후누적분이라도구출력19k가일부잘렸으나원본파일은그대로보존된다. 마지막표시00:43:17 event140652/12봇/ready/자산총량보존/gap0disconnect0,이는주기분석대체아님. 보완sampler는새stdout없이running이다. 예정종료전어느서비스도재시작하지않았다.
+- 이번goal turn은실제모바일거래·독립검산·작은안내수정/실제모바일표시·정확큐소스경계·정기자원분석·원격통합과push의구체적progress다. 전체goal은09:00마감까지active이며완료처리하지않는다. 다음01:01주기관찰,01:06실제두관찰종료후quiet-window.md순서. 세agent는현재완료/추가작업없음,최신엔진/bench/aged동결. UI탭13/14닫고viewport복원,사용자5/7유지.
+
+## 00:56 다음 단계 최소 패치 준비와 quiet 전 대기
+- 직전goal turn은모바일수행·소스안내변경·push의progress였다. 이번재개원본명세SHA BF190...E3D5불변,main ca8c611확인. Order.status Cow 후보154523...6dbe824f를matching_core가준비:3파일5hunk,prototype patch SHA5fd68f1e...aaf64/delivery187ab4d9...daf0b. 메모리내hunk검사만/운영적용·compile·test·측정없음. 새place4000상태버퍼경로만영향가설로분리했고zeroallocation·속도향상주장없다.
+- durability15-52-08...92325c80 독립소스검토:legacyJSON는Owned,성공전환만Borrowed,unknownstatus는기존invariant실패,가격/정산/순번범위불변. 새결함발견없음은정적결론이며실행증거아님. quiet완료후격리candidate에서기존trace·복원전이·alltargets·String/Cow양방향snapshot4+suffix9(finaljournal13/seq11)·새checkpoint경계·할당검증필요. 이명세의기존검증허용범위로진행하며새user승인요청은필요없다.
+- 최종resource그래프script의고정in-progress표시를발견했다. frontend는00:55cutoff를지켜원본+입력해시15-55-12...98605d59만보존하고수정/AST/plot없이대기. quiet후 scripts/plot-resource-coverage.py의subtitle/마지막limits를실제primary.observation_complete 및supp.source_status+source_reported_completed로교체해야한다. 과거자원공백·계산·선연결은그대로유지. 최종분석후그림을새evidence에렌더링할때수행한다.
+- 00:53공개예정live비ignored파일67개합83280230B,최대약5.24MB/50MiB초과0 확인. 아직실행중이므로stage하지않았다. 실제engine경로는demo run/bin/leave-engine.exe(PID20540). 현재5.8h데모에는이전09bc가사용된다. 최신653/7cfd/d2c8는기존계획대로동결.
+- 00:54:37 session20793실제running,00:54:26event144553/12봇/ready/gap0/disconnect0. 00:55:30 session90617도actualrunning(새stdout없음). 모든agent는00:55까지/직후read-only기록만남기고idle,추가빌드·테스트·브라우저작업없음. 다음01:01분석,01:05:55/01:06실제종료후quiet순서. 그전에는소유시장을재시작하지않으며관찰자종료만으로6시간자원연속성/UI연속성통과주장않는다.

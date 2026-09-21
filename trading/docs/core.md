@@ -34,7 +34,7 @@ Serde 직렬화한 `Core`는 전체 주문·체결 이력, 가격 큐, 계정, �
 
 초기 주문/체결 Vec는 설정 상한 중 최대 4,096개, fill 임시 버퍼는 최대 256개를 사전 할당한다. Vec의 필요 용량 증가, 문자열/결과/중복 이력/가격 큐의 생성은 할당한다. 따라서 현 구현의 정상 hot path는 **zero allocation이 아니다**. 매칭 경로는 전체 종료 이력을 순회하지 않으며 실행 대상 가격 큐만 방문한다. 결과 직렬화·공개 스냅샷·I/O 비용은 순수 매칭 벤치마크와 별도로 측정해야 한다.
 
-Order.status는 생성 시 최장 상태 문자열 길이인 16-byte capacity를 확보하고, 체결·취소 때 `clear`/`push_str`로 재사용한다. 복구한 기존 문자열의 capacity가 작으면 필요한 만큼 확장하며 저장 JSON·중복 결과·정산 의미는 유지한다. 동일 120,000명령 비교에서 할당 80,000회(4.4447%)를 줄였지만 요청 byte 합과 peak working set은 증가했고 속도 향상은 입증하지 못했다. 결과 String 및 dedup 깊은 복사는 여전히 할당한다. [정확한 측정 경계와 tradeoff](allocation-investigation.md)를 참조한다.
+Order.status는 생성 시 최장 상태 문자열 길이인 16-byte capacity를 확보하고, 체결·취소 때 `clear`/`push_str`로 재사용한다. 복구한 기존 문자열의 capacity가 작으면 필요한 만큼 확장하며 저장 JSON·중복 결과·정산 의미는 유지한다. 동일 120,000명령 비교에서 할당 80,000회(4.4447%)를 줄였지만 요청 byte 합과 peak working set은 증가했고 속도 향상은 입증하지 못했다. 이후 CommandResult의 status/code/message는 정적 Cow로 바뀌었지만, 결과의 요청·계정 ID 문자열과 dedup 깊은 복사, 복구한 Owned 문자열은 여전히 할당한다. [정확한 측정 경계와 tradeoff](allocation-investigation.md)를 참조한다.
 
 최소 체결 수량이 1이므로 한 명령의 fill 수는 해당 주문 수량 이하이며, 기본 설정에서 최대 10,000개다. 전체 체결 보존 용량도 적용한다. 임시 fill 및 응답 버퍼는 필요하면 이 검증된 수량까지 성장한다. 체결 보존 용량 부족은 모든 fill과 정산을 적용하기 전에 거절한다.
 

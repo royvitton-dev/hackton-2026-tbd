@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-09-21T15:52:08.127Z",
+  "reviewer": "durability",
+  "scope": "static read-only Order.status proposal review",
+  "candidate_executed": false,
+  "production_sources_modified": false,
+  "service_operations": false,
+  "files": [
+    {
+      "file": "evidence/20260921T154523346Z-order-status-cow-proposal-6dbe824f/proposal.patch",
+      "bytes": 2724,
+      "sha256": "5fd68f1e90262296c20a5515c41936348e5d606dbfa2fe9c9afd1b370ebaaf64"
+    },
+    {
+      "file": "evidence/20260921T154523346Z-order-status-cow-proposal-6dbe824f/review.md",
+      "bytes": 11376,
+      "sha256": "fa016d023e48eaee29b1031bb4ec0b024e2a6f3f040dafc9701568866a323dc8"
+    },
+    {
+      "file": "evidence/20260921T154523346Z-order-status-cow-proposal-6dbe824f/analysis.json",
+      "bytes": 4219,
+      "sha256": "5cc106fa68296f178b583ddcd02242060e7eb0aaa9aa55485af28cc5431aac78"
+    },
+    {
+      "file": "engine/src/model.rs",
+      "bytes": 3121,
+      "sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7"
+    },
+    {
+      "file": "engine/src/core.rs",
+      "bytes": 34636,
+      "sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa"
+    },
+    {
+      "file": "engine/tests/core_rules.rs",
+      "bytes": 21705,
+      "sha256": "d3d94a8882a733f7e581f3e0e8e809387470fbf0db3308bcb0cc3e43fbdd464c"
+    },
+    {
+      "file": "engine/tests/core_status_compatibility.rs",
+      "bytes": 5573,
+      "sha256": "5a548ed11c6a0bab673e67f02e6c47b6ee332e0111951657611232b88fe71471"
+    },
+    {
+      "file": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/de/impls.rs",
+      "bytes": 97134,
+      "sha256": "2f8e2ef9d343875bb996319e69feae0dee2287e2548cedd8d3c752b64812331c"
+    },
+    {
+      "file": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/impls.rs",
+      "bytes": 29535,
+      "sha256": "5ee7efc439345e8665da0bd79bc06c02a0506e5fd0f3a4cf11af0c7197eaa643"
+    }
+  ],
+  "preimage_comparison": [
+    {
+      "file": "engine/src/model.rs",
+      "expected": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "actual": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "match": true
+    },
+    {
+      "file": "engine/src/core.rs",
+      "expected": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "actual": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "match": true
+    },
+    {
+      "file": "engine/tests/core_rules.rs",
+      "expected": "d3d94a8882a733f7e581f3e0e8e809387470fbf0db3308bcb0cc3e43fbdd464c",
+      "actual": "d3d94a8882a733f7e581f3e0e8e809387470fbf0db3308bcb0cc3e43fbdd464c",
+      "match": true
+    }
+  ],
+  "findings": [],
+  "notes": [
+    {
+      "priority": "documentation-clarification",
+      "source": "proposal review.md:55",
+      "detail": "Distinguish initial checkpoint boundary4 from final post-suffix checkpoint boundary13 in future actual evidence."
+    }
+  ],
+  "review_sha256": "8cb17d5a0df72e076f9ec44d58958e2d50753a99b52a8df8bf321aa7fc6a42f3"
+}
