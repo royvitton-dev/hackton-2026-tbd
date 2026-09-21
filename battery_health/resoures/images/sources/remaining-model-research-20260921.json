@@ -1,0 +1,53 @@
+{
+  "date": "2026-09-21",
+  "resolved": [
+    {
+      "vehicle": "Volvo EX30",
+      "downloadUrl": "https://shop.americawant.com/wp-content/uploads/2026/08/volvo-ex30.glb",
+      "result": "HTTP 200; embedded CC BY 4.0 attribution matches the original creator and public distributor credits; 59,354 rendered triangles."
+    },
+    {
+      "vehicle": "Volkswagen ID.4",
+      "downloadUrl": "https://shop.americawant.com/wp-content/uploads/2026/08/volkswagen-id4.glb",
+      "result": "HTTP 200; embedded CC BY 4.0 attribution matches creator and distributor credits; 224,854 rendered triangles."
+    }
+  ],
+  "pending": [
+    {
+      "vehicle": "BMW i5",
+      "url": "https://www.freecreat.com/detail/16469.html",
+      "result": "HTTP 200 page, but both preview and download require login and Creat Coins unlock. No model downloaded from this site."
+    },
+    {
+      "vehicle": "BMW i5",
+      "url": "https://sketchfab.com/3d-models/2023-bmw-i5-m60-207fd872d28b4cafa7fefe061ae98e26",
+      "result": "Public metadata confirms Nazh Design and CC BY 4.0. Direct original download needs authenticated access; no authorized model file obtained."
+    },
+    {
+      "vehicle": "MINI Cooper Electric",
+      "url": "https://sketchfab.com/3d-models/mini-cooper-electric-b76a08a64ede498e9ee5ce7c0b9079fb",
+      "result": "Public metadata confirms Nieve5677 and CC BY 4.0. Original source download requires authenticated access. No original downloaded."
+    },
+    {
+      "vehicle": "MINI Cooper SE",
+      "url": "https://api.sketchfab.com/v3/models/eafb57c1943c42e7947c668b8c5618d9",
+      "result": "Public metadata HTTP 200, but UID is absent from public Objaverse object-paths. No file obtained."
+    },
+    {
+      "vehicle": "MINI Cooper SE",
+      "url": "https://www.cgtrader.com/free-3d-models/car/sport-car/mini-cooper-se-2024",
+      "result": "Search candidate only; curl returned an empty body. No license/download package could be verified."
+    },
+    {
+      "vehicle": "BMW i5 / Volvo EX30",
+      "url": "https://www.autotrader.ca/explore/bmw/i5/build-your-own",
+      "result": "Candidate path redirects to the generic AutoTrader listing, not a public 3D configurator."
+    },
+    {
+      "vehicle": "MINI Cooper Electric",
+      "url": "https://github.com/Natashaaak/mini-viewer/blob/main/public/Mini_Cooper.glb",
+      "result": "HTTP 200 public GLB downloaded to ignored research cache only. Browser inspection showed a different five-door MINI body, not the requested Cooper Electric. Rejected; never connected to production."
+    }
+  ],
+  "nextAction": "BMW i5 and MINI require a legitimately downloadable exact EV model with its source/license, or further verified public CC distribution. Do not mark their static PNG display as interactive 3D. No placeholders or wrong vehicle substitutions."
+}
