@@ -1,0 +1,2 @@
+node scripts/engine-load.mjs --competing-resource-stress --expected-binary-sha256 <64hex>
+Isolated explicitly verified release;6/24/96 concurrency,~20s each,18000commands/20000HTTP/90s cap; engine/client512MiB observed RSS guard;500ms Windows CPU/memory;one WS consumer.

@@ -1,0 +1,42 @@
+[
+  {
+    "at": "2026-09-21T12:10:25.307Z",
+    "relative_ms": 741.6938,
+    "event": "engine_started",
+    "pid": 22180,
+    "port": 58297
+  },
+  {
+    "at": "2026-09-21T12:10:25.405Z",
+    "relative_ms": 839.513,
+    "event": "sampler_started",
+    "pid": 12628
+  },
+  {
+    "at": "2026-09-21T12:11:04.708Z",
+    "relative_ms": 40142.7336,
+    "event": "ws_workload_end",
+    "captured_before_intentional_close": true,
+    "workload_verified": true,
+    "socket_created": true,
+    "ready_state": 1,
+    "ready_state_name": "OPEN",
+    "frames": 17737,
+    "sequence_gaps": 0,
+    "unexpected_disconnects": 0,
+    "errors": 0,
+    "latest_event_seq": 17736,
+    "issued_commands": 17736,
+    "expected_final_event_seq": 17736,
+    "caught_up_to_final_event_seq": true,
+    "continuous_through_final_state": true,
+    "continuous_definition": "Before intentional cleanup: verified workload, open socket, at least one state, final sequence caught up, zero observed gaps/errors/unexpected disconnects. Observed WS failure is false; incomplete workload without observed WS failure is null."
+  },
+  {
+    "at": "2026-09-21T12:11:04.727Z",
+    "relative_ms": 40162.216700000004,
+    "event": "ws_closed",
+    "code": 1005,
+    "intentional": true
+  }
+]

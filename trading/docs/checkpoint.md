@@ -1,11 +1,11 @@
 # 작업 체크포인트
 
-갱신: 2026-09-21 20:54 KST. 마감: 2026-09-22 09:00 KST (약12시간6분 남음).
+갱신: 2026-09-21 21:18 KST. 마감: 2026-09-22 09:00 KST (약11시간42분 남음).
 범위: [원본 명세](requirements.ko.md), [누적 검증](verification.md), [성능](performance.md).
 
 ## 경계·사용자 지시·Git
 - PROJECT_ROOT `C:\project\hackton-2026-tbd` 사용자 확인. 프로젝트 파일/산출물은 `trading` 내부만. 적용할 AGENTS.md는 처음 검사한 프로젝트/상위 경로에 없었다.
-- 초기Git clean, 기준 `d249d3d6892d44f588b5651f7b17a44cf8833211`. 현재 브랜치 `codex/leave-exchange`, remote `https://github.com/royvitton-dev/hackton-2026-tbd.git`.
+- 초기Git clean, 기준 `d249d3d6892d44f588b5651f7b17a44cf8833211`. **현재 브랜치 `main`**(21:17 사용자 지시로 원래 PROJECT_ROOT checkout 전환), remote `https://github.com/royvitton-dev/hackton-2026-tbd.git`. 앞으로 이 폴더 main에서 직접 작업·커밋·푸시한다. 이전 codex/leave-exchange 기록은 보존한다.
 - 사용자 추가 지시: GS리테이/GS칼테스/GS건썰, 독립 거래소UI, 완성 변경 commit/push 승인. 실제 외부배포 금지. 기존 루트UI 변경 없음, 선택적 링크 adapter만 trading 안에 준비.
 - **앞으로 모든 검증된 후속 변경은 main에 push**하라는 사용자 지시를20:21에받았다. 원격main최신변경보존/강제push금지. 현재sourcecheckout의브랜치이름과무관하게최종push대상은main이다.
 - 안정 소스/완료 증거787파일의 commit `7bc9b56b726bca181938f7f890b1dbcdb2d4a9e5`를 **19:28 KST에 origin/codex/leave-exchange로 push 완료**했다. 사용자 문의에 따라 완성된 구현 체크포인트부터 먼저 전달했다. `git ls-remote`로 원격 SHA와 local HEAD 일치를 확인했다. 진행 중demo/6시간관찰/콘솔과 후속 검증·문서는 별도 추가 commit/push 예정이며 전체 마감 작업 완료 선언이 아니다.
@@ -97,3 +97,28 @@
 - 봇33544durable응답=33529accepted+15rejected(전부ORDER_NOT_OPEN),p9928.586ms/max958.159ms. 최대20:29:00.815 seq51579는정상durable승인,주변다수봇지연도보존했으나원인미확정. 표본연속성은subsecond지연이없다는뜻이아니다. snapshot53800=40311291bytes/SHA9d6489e28a317cd830e84170ddc9dadf4369e612dc060719cb2b4858f7719732/mtime20:35:22.3337608확인,주변max201.57ms. rename게시시간/전체복구검증은아님. 상세 `evidence/20260921T114846131Z-95min-checkpoint-offline-b00ee776/checkpoint.md`. 다음주기21:05또는새실패시점.
 - 사용자가“연결된웹화면이없다”고알려브라우저inventory를조회하니탭0개였다. 서버UI200/engine ready 확인후20:52 IAB visible tab4로 http://127.0.0.1:5175/ 열고 markDeliverable했다. 실제화면에서엔진정상EVENT59850/12봇/실제차트·체결표시확인. 이전탭이없어진원인은확정하지않는다. user01표시잔고1009975P/1032h는현재화면관찰값이고이전인계값과다르지만root는이번확인중주문을제출하지않았다. 도구로복원했으며코드결함이라고추정하지않는다.
 - 사용자지시대로완료된trading-only변경을main에push예정. 최신원격main을갱신해다른작업을보존하고격리worktree에적용한다. 미완료demo/observer/console3경로는끝난뒤추가한다. 전체goal active/6시간관찰01:06종료→누적복구·새binary시연·조용한B/C·최종인계계획유지.
+
+## 21:02 main push 완료
+- 원본 source commit `2ee7bb0330a1a38c4b8ee9f225378e132e485056`의검증된89파일을원격최신main `fcb7a006dc9abd653ab0a7ad521ca55efef6ddeb`위에적용했다. 최종main **`f6f59147916b2d7f5c1ce3356eeb184f17cabb24`**,21:02:29 push exit0,21:02:46 ls-remote SHA일치. 다른작업pinball최신커밋을보존했다.
+- source/main의trading tree `013dc6e71a5704a333ade233f255c79d3f32d60e`완전일치,main적용차이중trading외파일0. 근거 `evidence/20260921T120103039Z-ws-serialization-main-push-d163bc69`. 마지막검증후모든완료변경을main에push한다는사용자지시를이행했다.
+- 현재미커밋은이후push상태기록+push증거,아직성장중demo/observer/console3경로다. 별도integrationworktree HEAD f6f5914,원본checkout HEAD2ee7bb0. 다음unit에서완료증거를추가commit하되진행중3경로보존.
+- IAB tab4 http://127.0.0.1:5175/ visible+markDeliverable로사용자에게웹화면을다시연결했다. 다음turn에서탭이필요하면기존browser1를재사용하고deliverable표시를갱신한다.
+- 21:02실제main20540/UI17556/observer18184/helper15744와원래시작시각유지,manifestSHA6128d45f...e69a동일. 6시간관찰종료01:05:55예정;다음주기관찰21:05의새snapshot/상태를확인한다. 전체goalactive이며새구현을위한무의미한반복테스트없음.
+
+## 21:15 2시간 관찰과 새 바이너리 부하 검증
+- 현재시각21:15KST,마감까지11시간45분. 직전goalturn은직렬화실험/통합/회귀/main push/웹화면복원이라는실제progress였다. 이번재개에서원명세/현재Git/observer session20793의실제새출력·생존handle를재확인했다. timeout을종료로보거나관찰을재시작하지않았다.
+- **21:07 2시간 중간관찰:** `2026-09-21T12-07-04-246Z-observation-analysis-c4093158`,7266.747초/1434표본/최대공백6.605초,명령42463·거래량32538h증가,12봇/ready/자산보존/WSgapdisconnect0. CPU238유효구간14합평균0.495%,엔진0.266%(16논리CPU전체),엔진working set88.44MB/private89.23MB,ログ27.18MB/영속207.08MB/최저여유디스크246.50GB. 미완료6시간관찰이다.
+- 봇42677durable=42655accepted+22rejected(모두ORDER_NOT_OPEN),p9928.644ms/max1814.142ms. unknown/reconciled0. 최근부분window2462개p99432.932ms이며>100ms37개중35개가21:06:27.493~36.480에집중. observer같은구간REST도1593/1590ms후정상복귀. 원인미확정,새부하전발생이고최대치는snapshotmtime와67.431초떨어져snapshot직접원인으로단정하지않는다. 독립원본근거 `2026-09-21T12-09-28-609Z-two-hour-observation-independent-review-0a64746a`.
+- 네번째자동snapshot64338/48320486bytes/mtime21:05:22.8795646/SHA7dc3291da944a6b963208cf694b5af7ac4a0a57470f4bdf1403c8a712f08cd2e. header/payloadCRC확인,전체복구와rename게시시간계측은아니다. 다음주기관찰21:35또는새실패시점.
+- matching_core가engine-load의명시expectedSHA/소스SHA/cleanup전WS별도판정을추가하고구문·help·잘못된SHA거절을확인했다. PID20540/18184·16core와모든입력·6/24/96·시간/명령/RSS한도는유지. `20260921T120740393Z-engine-load-preparation-206c6886`. root가diff를확인후한번실행.
+- **21:10:24~21:11:05 새f518부하1회통과:** `2026-09-21T12-10-24-565Z-engine-load-18040a36`,40.304초/17736ACK/8868체결/17744HTTP,정합성true. WS0..17736의17737frame/오류·누락·예상외단절0,cleanup직전OPEN/최종도달true. 이후의의도close1005는기존실패의예상외1005와구분한다. 서버peer_closed/flushed최종seq17736. 단계별459.85/456.29/473.25cmd/s,ACKp9917.17/92.88/288.42ms,엔진CPU평균2.684/3.683/3.986%,max구간4.159/5.232/8.595%,working set최대17.39/25.76/37.51MB. client전체최대385.01MB. 모든phase명령cap으로20초이전종료,quiet성능·최대용량·속도개선인과주장없음.
+- root가72CPU구간을원시카운터재계산하고실제그래프를열어검사했다 `20260921T121156927298Z-engine-load-plot-b06e6b8e`. 격리engine22180exit0/client10908/sampler12628실제종료,일반14+observer/helper16개의PID/시작시각/manifest동일. post-verification.json보존. durability가rawACK원장/CPU/WS독립검토중,중간불일치없음.
+- [새부하결과](engine-load-after-serialization.md) 및README/기존부하문서명령을갱신했다. 최신prod코드는바뀌지않았으므로이미통과한전체Rust/UI검사를반복하지않는다. 완료원본/독립검토까지정리해main에추가push예정.
+- 이번재개에서IAB tab4 markDeliverable을갱신하려했으나해당세션에없고탭목록도비었다. browser재선택/숨은소스조사없이문서지침확인후Codex전용open_in_codex로 http://127.0.0.1:5175/ 오른쪽패널열기를요청했다. 도구결과는queued로현재task가보일때열리는상태다. 이시점에새실제UI검증을한것으로표시하지않는다. 서버/메인시연은그대로다.
+- 6시간관찰종료01:05:55→정상정지/누적전체복구→최신binary재시작/조용한B/C→최종브라우저/문서/08:55제출준비계획유지. 전체goalactive.
+
+## 21:18 사용자 지시: PROJECT_ROOT 자체를 main으로 전환
+- 사용자가“main으로체크아웃해서main에서작업해줘”라고명시했다. 원래checkout `C:\project\hackton-2026-tbd`의현재브랜치는이제 **main**,HEAD f6f59147916b2d7f5c1ce3356eeb184f17cabb24,upstreamorigin/main이다. 앞으로여기서직접작업·커밋·푸시한다. 별도integrationworktree방식은후속push에사용하지않는다.
+- 로컬main d249가origin/main의ancestor임을확인하고비강제`git fetch origin main:main`으로fast-forward한뒤`git switch main`했다. 전환전후trading기준tree동일,미커밋5파일SHA동일,engine/UI/observer/helper PID/시작시각동일. 사용자지시의checkout으로최신main의다른영역파일도현재작업폴더에반영됐고임의편집/덮어쓰기명령은없다. 실제증거 `20260921T121705885Z-checkout-main-9d279a9c`.
+- durability의새부하raw검토완료 `2026-09-21T12-12-35-245Z-engine-load-independent-review-827afcd4`:292064조건재계산거래/자원/WS불일치0. startup첫health ECONNREFUSED1회/readiness재시도성공을명시하고모든HTTP200이라는최초검토가정실패도보존했다. 거래명령오류0과구분한다. 모든개발agent현재유휴.
+- 완료된부하하네스/증거/그래프/2시간관찰/검토/전환기록을현재main에commit/push예정. 최신mainfetch/비강제fast-forward로다른작업을보존한다. 진행중demo/observer/console3경로는계속제외.

@@ -1,0 +1,124 @@
+{
+  "run_id": "2026-09-21T12-10-24-565Z-engine-load-18040a36",
+  "started_at": "2026-09-21T12:10:24.935Z",
+  "command": [
+    "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+    "C:\\project\\hackton-2026-tbd\\trading\\scripts\\engine-load.mjs",
+    "--competing-resource-stress",
+    "--expected-binary-sha256",
+    "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240"
+  ],
+  "classification": "competing-resource stress alongside live normal demo and observer; not quiet A/B/C baseline",
+  "binary": {
+    "source": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\release\\leave-engine.exe",
+    "copied": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T12-10-24-565Z-engine-load-18040a36\\bin\\leave-engine.exe",
+    "sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+    "expected_sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240"
+  },
+  "main_before": {
+    "manifest_sha256": "6128d45f26f574eb1da12ec1b164c2112c4ed3e4e29bb6a5526568563578e69a",
+    "run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+    "processes": [
+      {
+        "name": "engine",
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "name": "frontend",
+        "pid": 17556,
+        "alive": true
+      },
+      {
+        "name": "bot-01",
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "name": "bot-02",
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "name": "bot-03",
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "name": "bot-04",
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "name": "bot-05",
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "name": "bot-06",
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "name": "bot-07",
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "name": "bot-08",
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "name": "bot-09",
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "name": "bot-10",
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "name": "bot-11",
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "name": "bot-12",
+        "pid": 6128,
+        "alive": true
+      }
+    ],
+    "observer": {
+      "pid": 18184,
+      "alive": true
+    }
+  },
+  "source_sha256": {
+    "script": "7c1d4d2d2455dc20bb0950319cd078f68b6cbd0abc2ebf2f979ce4f0eb0412ea",
+    "main": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+    "ws_frame": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e"
+  },
+  "host": {
+    "os": "Windows 11 Pro",
+    "node": "v24.19.0",
+    "cpu": "12th Gen Intel(R) Core(TM) i5-1240P",
+    "logical_processors": 16,
+    "total_memory_bytes": 16880881664,
+    "free_memory_bytes": 4263178240
+  },
+  "limits": {
+    "commands": 18000,
+    "commands_per_phase": 6000,
+    "http": 20000,
+    "work_ms": 75000,
+    "overall_ms": 90000,
+    "concurrency": 96,
+    "engine_observed_working_set_bytes": 536870912,
+    "client_observed_rss_bytes": 536870912
+  },
+  "workload": "warmup two rounds of6makers+6takers;phases6/24/96;all sell maker ACKs precede equal buy taker batch;alternate two groups of6bots;each phase ends after complete2round cycles restoring per-accountassets",
+  "scope": "node:http keepalive submit-to-parsed-durableACK;one normal WS consumer;Windows sampler ~500ms direct TotalProcessorTime.TotalSeconds;CPU normalized by16logical processors;sampled maxima are not guaranteed peaks",
+  "ended_at": "2026-09-21T12:11:05.024Z"
+}

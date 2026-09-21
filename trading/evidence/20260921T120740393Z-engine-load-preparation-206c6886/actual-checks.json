@@ -1,0 +1,128 @@
+{
+  "generated_at": "2026-09-21T12:08:30.492Z",
+  "complete": true,
+  "scope": "Offline node parser/help and intentionally rejected CLI only. Never passed the actual valid SHA to executable workload path. No engine, sampler, network listener or command load launched.",
+  "script_sha256": "7c1d4d2d2455dc20bb0950319cd078f68b6cbd0abc2ebf2f979ce4f0eb0412ea",
+  "source_binary_sha256_read_only": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+  "engine_load_directories_before": [
+    "2026-09-21T11-01-25-875Z-engine-load-8774ce30",
+    "2026-09-21T11-08-10-329Z-engine-load-independent-review-1389375f",
+    "20260921T105459553Z-engine-load-host-baseline-dff459be",
+    "20260921T110252023359Z-engine-load-plot-bbb045e3",
+    "20260921T120740393Z-engine-load-preparation-206c6886",
+    "core-20260921T200125744-engine-load-console"
+  ],
+  "engine_load_directories_after": [
+    "2026-09-21T11-01-25-875Z-engine-load-8774ce30",
+    "2026-09-21T11-08-10-329Z-engine-load-independent-review-1389375f",
+    "20260921T105459553Z-engine-load-host-baseline-dff459be",
+    "20260921T110252023359Z-engine-load-plot-bbb045e3",
+    "20260921T120740393Z-engine-load-preparation-206c6886",
+    "core-20260921T200125744-engine-load-console"
+  ],
+  "no_new_engine_load_directory": true,
+  "results": [
+    {
+      "label": "syntax",
+      "command": [
+        "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "--check",
+        "C:\\project\\hackton-2026-tbd\\trading\\scripts\\engine-load.mjs"
+      ],
+      "started_at": "2026-09-21T12:08:29.850Z",
+      "ended_at": "2026-09-21T12:08:29.937Z",
+      "exit_code": 0,
+      "signal": null,
+      "expected_exit_code": 0,
+      "error": null,
+      "expected_message_matched": null,
+      "passed": true
+    },
+    {
+      "label": "help",
+      "command": [
+        "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "C:\\project\\hackton-2026-tbd\\trading\\scripts\\engine-load.mjs",
+        "--help"
+      ],
+      "started_at": "2026-09-21T12:08:29.937Z",
+      "ended_at": "2026-09-21T12:08:30.043Z",
+      "exit_code": 0,
+      "signal": null,
+      "expected_exit_code": 0,
+      "error": null,
+      "expected_message_matched": true,
+      "passed": true
+    },
+    {
+      "label": "missing-required-sha-option",
+      "command": [
+        "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "C:\\project\\hackton-2026-tbd\\trading\\scripts\\engine-load.mjs",
+        "--competing-resource-stress"
+      ],
+      "started_at": "2026-09-21T12:08:30.043Z",
+      "ended_at": "2026-09-21T12:08:30.149Z",
+      "exit_code": 1,
+      "signal": null,
+      "expected_exit_code": 1,
+      "error": null,
+      "expected_message_matched": true,
+      "passed": true
+    },
+    {
+      "label": "malformed-sha",
+      "command": [
+        "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "C:\\project\\hackton-2026-tbd\\trading\\scripts\\engine-load.mjs",
+        "--competing-resource-stress",
+        "--expected-binary-sha256",
+        "not-a-sha"
+      ],
+      "started_at": "2026-09-21T12:08:30.149Z",
+      "ended_at": "2026-09-21T12:08:30.258Z",
+      "exit_code": 1,
+      "signal": null,
+      "expected_exit_code": 1,
+      "error": null,
+      "expected_message_matched": true,
+      "passed": true
+    },
+    {
+      "label": "64-nonhex-sha",
+      "command": [
+        "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "C:\\project\\hackton-2026-tbd\\trading\\scripts\\engine-load.mjs",
+        "--competing-resource-stress",
+        "--expected-binary-sha256",
+        "gggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggggg"
+      ],
+      "started_at": "2026-09-21T12:08:30.258Z",
+      "ended_at": "2026-09-21T12:08:30.375Z",
+      "exit_code": 1,
+      "signal": null,
+      "expected_exit_code": 1,
+      "error": null,
+      "expected_message_matched": true,
+      "passed": true
+    },
+    {
+      "label": "valid-shape-wrong-sha",
+      "command": [
+        "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+        "C:\\project\\hackton-2026-tbd\\trading\\scripts\\engine-load.mjs",
+        "--competing-resource-stress",
+        "--expected-binary-sha256",
+        "0000000000000000000000000000000000000000000000000000000000000000"
+      ],
+      "started_at": "2026-09-21T12:08:30.375Z",
+      "ended_at": "2026-09-21T12:08:30.491Z",
+      "exit_code": 1,
+      "signal": null,
+      "expected_exit_code": 1,
+      "error": null,
+      "expected_message_matched": true,
+      "passed": true
+    }
+  ]
+}

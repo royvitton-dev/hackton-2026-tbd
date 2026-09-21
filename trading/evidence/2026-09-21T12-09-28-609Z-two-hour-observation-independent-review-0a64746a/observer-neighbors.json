@@ -1,0 +1,452 @@
+[
+  {
+    "at": "2026-09-21T12:05:12.639Z",
+    "elapsed_ms": 7157684.0911,
+    "event_seq": 64280,
+    "price": 998,
+    "volume": 48783,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "cfd6ace8cb19d0ef2b6009be75901276b5016483e544bffae949c9482872c566",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 41849,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 3.692500000819564,
+    "bot_status_round_trip_ms": 1.7698999997228384
+  },
+  {
+    "at": "2026-09-21T12:05:17.656Z",
+    "elapsed_ms": 7162700.9213000005,
+    "event_seq": 64309,
+    "price": 988,
+    "volume": 48805,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "40f6e438fe838cbc0417c3c4a1a40d8b5c4a3f02b3ebd482792c42db1fe77392",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 41878,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 3.893000000156462,
+    "bot_status_round_trip_ms": 1.9593000002205372
+  },
+  {
+    "at": "2026-09-21T12:05:22.903Z",
+    "elapsed_ms": 7167947.8698,
+    "event_seq": 64338,
+    "price": 999,
+    "volume": 48830,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "5ecee5efc7259138bc52e19bdb1c87361d99758aa680e32a244b925518e22483",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 41907,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 3.9849999994039536,
+    "bot_status_round_trip_ms": 228.90340000018477
+  },
+  {
+    "at": "2026-09-21T12:05:27.922Z",
+    "elapsed_ms": 7172967.753500001,
+    "event_seq": 64366,
+    "price": 1001,
+    "volume": 48858,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "575664881145cd283626ac082df4f8a6b8c3a0a532c865af3dd83da12989a19c",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 41935,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 3.425400000065565,
+    "bot_status_round_trip_ms": 2.0861999997869134
+  },
+  {
+    "at": "2026-09-21T12:05:32.938Z",
+    "elapsed_ms": 7177983.093400001,
+    "event_seq": 64397,
+    "price": 1003,
+    "volume": 48884,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "c64e802e7e4021474c14ba4f402f29ddf04d11ba5562a9857af049f3b88f49d5",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 41966,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 3.610399999655783,
+    "bot_status_round_trip_ms": 1.5830000005662441,
+    "resources": [
+      {
+        "Id": 20540,
+        "ProcessName": "leave-engine",
+        "WorkingSet64": 87461888,
+        "PrivateMemorySize64": 89022464,
+        "CPU": 306.921875,
+        "Handles": 155
+      },
+      {
+        "Id": 4928,
+        "ProcessName": "node",
+        "WorkingSet64": 66969600,
+        "PrivateMemorySize64": 75988992,
+        "CPU": 20.4375,
+        "Handles": 195
+      },
+      {
+        "Id": 5412,
+        "ProcessName": "node",
+        "WorkingSet64": 67649536,
+        "PrivateMemorySize64": 76349440,
+        "CPU": 23.484375,
+        "Handles": 195
+      },
+      {
+        "Id": 6128,
+        "ProcessName": "node",
+        "WorkingSet64": 65740800,
+        "PrivateMemorySize64": 74846208,
+        "CPU": 21.09375,
+        "Handles": 195
+      },
+      {
+        "Id": 7916,
+        "ProcessName": "node",
+        "WorkingSet64": 65990656,
+        "PrivateMemorySize64": 74682368,
+        "CPU": 21.640625,
+        "Handles": 195
+      },
+      {
+        "Id": 7936,
+        "ProcessName": "node",
+        "WorkingSet64": 63971328,
+        "PrivateMemorySize64": 72499200,
+        "CPU": 22.375,
+        "Handles": 195
+      },
+      {
+        "Id": 12172,
+        "ProcessName": "node",
+        "WorkingSet64": 65777664,
+        "PrivateMemorySize64": 74809344,
+        "CPU": 22.9375,
+        "Handles": 195
+      },
+      {
+        "Id": 15272,
+        "ProcessName": "node",
+        "WorkingSet64": 67698688,
+        "PrivateMemorySize64": 76070912,
+        "CPU": 22.546875,
+        "Handles": 195
+      },
+      {
+        "Id": 16068,
+        "ProcessName": "node",
+        "WorkingSet64": 63815680,
+        "PrivateMemorySize64": 73170944,
+        "CPU": 20.625,
+        "Handles": 195
+      },
+      {
+        "Id": 17444,
+        "ProcessName": "node",
+        "WorkingSet64": 64602112,
+        "PrivateMemorySize64": 73379840,
+        "CPU": 21.625,
+        "Handles": 195
+      },
+      {
+        "Id": 17556,
+        "ProcessName": "node",
+        "WorkingSet64": 57942016,
+        "PrivateMemorySize64": 146558976,
+        "CPU": 4.234375,
+        "Handles": 309
+      },
+      {
+        "Id": 20484,
+        "ProcessName": "node",
+        "WorkingSet64": 66396160,
+        "PrivateMemorySize64": 75837440,
+        "CPU": 23.015625,
+        "Handles": 195
+      },
+      {
+        "Id": 20776,
+        "ProcessName": "node",
+        "WorkingSet64": 63954944,
+        "PrivateMemorySize64": 72740864,
+        "CPU": 21.9375,
+        "Handles": 195
+      },
+      {
+        "Id": 20940,
+        "ProcessName": "node",
+        "WorkingSet64": 63578112,
+        "PrivateMemorySize64": 72871936,
+        "CPU": 22.546875,
+        "Handles": 195
+      }
+    ],
+    "demo_files": {
+      "bytes": 29993870,
+      "files": 44,
+      "disappeared_during_sample": 0
+    },
+    "demo_logs": {
+      "bytes": 26957104,
+      "files": 40,
+      "disappeared_during_sample": 0
+    },
+    "data": {
+      "bytes": 207003117,
+      "files": 13,
+      "disappeared_during_sample": 0
+    },
+    "disk_available_bytes": 246509654016
+  },
+  {
+    "at": "2026-09-21T12:06:18.693Z",
+    "elapsed_ms": 7223737.399900001,
+    "event_seq": 64665,
+    "price": 1027,
+    "volume": 49073,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "2b82402e36e83f1af31a386e62913fdc1749eae6cab3efe1b1560f63e0331f2e",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 42234,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 3.8049999997019768,
+    "bot_status_round_trip_ms": 1.6584000000730157
+  },
+  {
+    "at": "2026-09-21T12:06:23.712Z",
+    "elapsed_ms": 7228757.0646,
+    "event_seq": 64697,
+    "price": 1027,
+    "volume": 49107,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "f6c816d1cb62db3805ef3c7cac44d368738f1b22c76839ef88d7f40ebec373f9",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 42266,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 6.571999999694526,
+    "bot_status_round_trip_ms": 3.026099999435246
+  },
+  {
+    "at": "2026-09-21T12:06:30.317Z",
+    "elapsed_ms": 7235361.5866,
+    "event_seq": 64724,
+    "price": 1025,
+    "volume": 49122,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "2a13e5e0c80d264a3064d66f49a195e99bcd6f737cd48281a532f8f6a348c579",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 42292,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 1593.0552000002936,
+    "bot_status_round_trip_ms": 1589.583099999465
+  },
+  {
+    "at": "2026-09-21T12:06:36.207Z",
+    "elapsed_ms": 7241253.0277,
+    "event_seq": 64745,
+    "price": 1027,
+    "volume": 49139,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "2763dd835944aac69519a68ffecad13ed78630a62e4439694e87911315866794",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 42313,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 882.2915000002831,
+    "bot_status_round_trip_ms": 879.7233000006527,
+    "resources": [
+      {
+        "Id": 20540,
+        "ProcessName": "leave-engine",
+        "WorkingSet64": 88440832,
+        "PrivateMemorySize64": 89231360,
+        "CPU": 309.015625,
+        "Handles": 157
+      },
+      {
+        "Id": 4928,
+        "ProcessName": "node",
+        "WorkingSet64": 64237568,
+        "PrivateMemorySize64": 72757248,
+        "CPU": 20.65625,
+        "Handles": 195
+      },
+      {
+        "Id": 5412,
+        "ProcessName": "node",
+        "WorkingSet64": 67428352,
+        "PrivateMemorySize64": 75829248,
+        "CPU": 23.75,
+        "Handles": 195
+      },
+      {
+        "Id": 6128,
+        "ProcessName": "node",
+        "WorkingSet64": 66002944,
+        "PrivateMemorySize64": 75157504,
+        "CPU": 21.390625,
+        "Handles": 195
+      },
+      {
+        "Id": 7916,
+        "ProcessName": "node",
+        "WorkingSet64": 66895872,
+        "PrivateMemorySize64": 75845632,
+        "CPU": 21.75,
+        "Handles": 195
+      },
+      {
+        "Id": 7936,
+        "ProcessName": "node",
+        "WorkingSet64": 66379776,
+        "PrivateMemorySize64": 74919936,
+        "CPU": 22.65625,
+        "Handles": 195
+      },
+      {
+        "Id": 12172,
+        "ProcessName": "node",
+        "WorkingSet64": 66469888,
+        "PrivateMemorySize64": 75370496,
+        "CPU": 23.140625,
+        "Handles": 195
+      },
+      {
+        "Id": 15272,
+        "ProcessName": "node",
+        "WorkingSet64": 67440640,
+        "PrivateMemorySize64": 75628544,
+        "CPU": 22.71875,
+        "Handles": 195
+      },
+      {
+        "Id": 16068,
+        "ProcessName": "node",
+        "WorkingSet64": 64684032,
+        "PrivateMemorySize64": 74551296,
+        "CPU": 20.828125,
+        "Handles": 195
+      },
+      {
+        "Id": 17444,
+        "ProcessName": "node",
+        "WorkingSet64": 67158016,
+        "PrivateMemorySize64": 76189696,
+        "CPU": 21.796875,
+        "Handles": 195
+      },
+      {
+        "Id": 17556,
+        "ProcessName": "node",
+        "WorkingSet64": 57942016,
+        "PrivateMemorySize64": 146558976,
+        "CPU": 4.25,
+        "Handles": 309
+      },
+      {
+        "Id": 20484,
+        "ProcessName": "node",
+        "WorkingSet64": 66879488,
+        "PrivateMemorySize64": 76148736,
+        "CPU": 23.328125,
+        "Handles": 195
+      },
+      {
+        "Id": 20776,
+        "ProcessName": "node",
+        "WorkingSet64": 66658304,
+        "PrivateMemorySize64": 76115968,
+        "CPU": 22.125,
+        "Handles": 195
+      },
+      {
+        "Id": 20940,
+        "ProcessName": "node",
+        "WorkingSet64": 65982464,
+        "PrivateMemorySize64": 75509760,
+        "CPU": 22.6875,
+        "Handles": 195
+      }
+    ],
+    "demo_files": {
+      "bytes": 30216218,
+      "files": 44,
+      "disappeared_during_sample": 0
+    },
+    "demo_logs": {
+      "bytes": 27179452,
+      "files": 40,
+      "disappeared_during_sample": 0
+    },
+    "data": {
+      "bytes": 207077276,
+      "files": 13,
+      "disappeared_during_sample": 0
+    },
+    "disk_available_bytes": 246592217088
+  },
+  {
+    "at": "2026-09-21T12:06:41.630Z",
+    "elapsed_ms": 7246676.4167,
+    "event_seq": 64778,
+    "price": 1027,
+    "volume": 49173,
+    "total_points": 15000000,
+    "total_hours": 15000,
+    "engine_status": "ready",
+    "book_hash": "db02a40d95ee900085b88141f67b2d2ae9a7be2561a63bb4e97504bddb926857",
+    "bots_connected": 12,
+    "bots_with_orders": 12,
+    "bots_with_trades": 12,
+    "websocket_events": 42347,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "state_snapshot_round_trip_ms": 4.910799999721348,
+    "bot_status_round_trip_ms": 2.990799999795854
+  }
+]

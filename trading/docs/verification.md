@@ -68,3 +68,9 @@
 [WS 직렬화 개선](ws-serialization.md): 중간 Value 제거 후 unit3, fmt, release, Clippy all-targets, 실제 API10 및 bounded WS regression을 통과했다. 새 binary SHA f518b95f…ef240. 416ACK/조회,16중복,289연속state,정상close1000/paused send_timeout 확인. 실험은 큰frame 할당·재할당15261→12를 입증하지만 wirebytes/전체API성능/과거고부하단절 개선은 입증하지 않는다. 독립서버·원시계측·소비자 검토 근거도 문서에 연결했다.
 
 [95분 관찰·세 번째 snapshot·응답 지연 검토](../evidence/20260921T114846131Z-95min-checkpoint-offline-b00ee776/checkpoint.md):1126표본/5702.731초에서12봇·ready·자산보존·WS누락/단절0. 봇ACK33544개 p9928.586ms/max958.159ms,거절15개전부ORDER_NOT_OPEN. 최대지연주변기록보존/원인미확정. snapshot53800 크기·해시·header순번확인은전체복구검증과구분. 메인엔진09bc로수행중이며새f518binary결과도6시간최종pass도아니다.
+
+## 21:18 새 바이너리의 실제 부하 재검증
+
+[후속 부하](engine-load-after-serialization.md)는같은6/24/96입력·한도에서1회실행했다.17,736durableACK·8,868체결정합성과WS0…17,736연속수신을통과했고최종cleanup직전OPEN이었다.새f518binary의CPU평균2.684/3.683/3.986%,엔진최대working set37.51MB,72구간검산과실제PNG시각확인,독립raw검토까지완료했다. 이전96무WS구간과직접비교하지않으며처리량/tail지연개선인과주장없음.격리프로세스종료/보호16개시작시각·manifest동일.
+
+[2시간 중간관찰](../evidence/2026-09-21T12-09-28-609Z-two-hour-observation-independent-review-0a64746a/README.md)은1434표본/7266.747초,12봇·ready·자산보존·WSgapdisconnect0이며6시간완료아님. 일부1.814초봇응답과같은구간REST지연을확인했고원인은미확정이다.네번째snapshot의SHA/header/payloadCRC는확인했으나전체누적복구검증은관찰종료후별도로한다.

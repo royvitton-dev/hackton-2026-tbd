@@ -1,0 +1,271 @@
+Updating cee53d2..fcb7a00
+Fast-forward
+ pinball/README.md                                  |   37 +-
+ pinball/evidence/agent-session.md                  |    4 +
+ pinball/evidence/browser-results.json              |   87 +-
+ pinball/evidence/build-smoke.json                  |    4 +-
+ pinball/evidence/commands.md                       |   20 +
+ pinball/evidence/desktop-first-round.json          |  308 +-
+ pinball/evidence/desktop-racing.png                |  Bin 486978 -> 483992 bytes
+ pinball/evidence/desktop-result.png                |  Bin 537530 -> 547093 bytes
+ pinball/evidence/desktop-setup.png                 |  Bin 454643 -> 455353 bytes
+ pinball/evidence/desktop-trace.zip                 |  Bin 11856731 -> 13278656 bytes
+ pinball/evidence/fallback-2d.png                   |  Bin 327163 -> 336432 bytes
+ pinball/evidence/fallback-mobile.png               |  Bin 715512 -> 730204 bytes
+ pinball/evidence/git-delivery.md                   |   11 +
+ pinball/evidence/map-neon.png                      |  Bin 342649 -> 345131 bytes
+ pinball/evidence/map-orbit.png                     |  Bin 347041 -> 350973 bytes
+ pinball/evidence/map-split.png                     |  Bin 304090 -> 350291 bytes
+ pinball/evidence/map-zigzag.png                    |  Bin 300439 -> 341059 bytes
+ pinball/evidence/max-neon-round.json               | 1579 +++----
+ pinball/evidence/max-orbit-round.json              | 1510 ++++---
+ pinball/evidence/max-split-round.json              | 1528 ++++---
+ pinball/evidence/max-zigzag-round.json             | 1524 ++++---
+ pinball/evidence/mobile-final-3x.png               |  Bin 720289 -> 728999 bytes
+ pinball/evidence/mobile-finish-holes.png           |  Bin 322475 -> 327118 bytes
+ pinball/evidence/mobile-max-round.json             | 1533 +++----
+ pinball/evidence/mobile-nth-round.json             |  185 +-
+ pinball/evidence/mobile-racing.png                 |  Bin 592530 -> 736054 bytes
+ pinball/evidence/mobile-result-detail.png          |  Bin 66412 -> 67197 bytes
+ pinball/evidence/mobile-result.png                 |  Bin 588967 -> 755895 bytes
+ pinball/evidence/mobile-setup.png                  |  Bin 572408 -> 664616 bytes
+ pinball/evidence/mobile-trace.zip                  |  Bin 6285844 -> 6650863 bytes
+ .../park-20260921/09-build-smoke-results.json      |   22 +
+ .../park-20260921/09-full-browser-results.json     |  106 +
+ pinball/evidence/park-20260921/09-full-browser.log |   60 +
+ .../park-20260921/10-action-browser-results.json   |   50 +
+ .../park-20260921/10-action-desktop-live.png       |  Bin 0 -> 274475 bytes
+ .../park-20260921/10-action-desktop-round.json     | 1630 ++++++++
+ .../park-20260921/10-action-mobile-live.png        |  Bin 0 -> 436232 bytes
+ .../park-20260921/10-action-mobile-round.json      | 1630 ++++++++
+ pinball/evidence/park-20260921/10-action.log       |   44 +
+ pinball/evidence/park-20260921/10-pause-1440.png   |  Bin 0 -> 336602 bytes
+ pinball/evidence/park-20260921/10-pause-320.png    |  Bin 0 -> 135316 bytes
+ pinball/evidence/park-20260921/10-pause-390.png    |  Bin 0 -> 162750 bytes
+ .../evidence/park-20260921/10-pause-results.json   |   33 +
+ pinball/evidence/park-20260921/10-pause.log        |    3 +
+ .../park-20260921/11-course-diagnostic.log         |   32 +
+ .../park-20260921/11-orbit-desktop-return.png      |  Bin 0 -> 129674 bytes
+ .../park-20260921/11-orbit-desktop-winner.png      |  Bin 0 -> 448783 bytes
+ .../park-20260921/11-orbit-mobile-return.png       |  Bin 0 -> 91237 bytes
+ .../park-20260921/11-orbit-mobile-winner.png       |  Bin 0 -> 144162 bytes
+ pinball/evidence/park-20260921/11-physics.log      |  133 +
+ .../park-20260921/11-return-browser-results.json   |   50 +
+ .../evidence/park-20260921/11-return-browser.log   |   44 +
+ .../park-20260921/11-split-desktop-return.png      |  Bin 0 -> 128194 bytes
+ .../park-20260921/11-split-desktop-winner.png      |  Bin 0 -> 452889 bytes
+ .../park-20260921/11-split-mobile-return.png       |  Bin 0 -> 89715 bytes
+ .../park-20260921/11-split-mobile-winner.png       |  Bin 0 -> 145507 bytes
+ pinball/evidence/park-20260921/12-build.log        |    1 +
+ pinball/evidence/park-20260921/12-neon-live.png    |  Bin 0 -> 204707 bytes
+ .../evidence/park-20260921/12-neon-overview.png    |  Bin 0 -> 95409 bytes
+ .../park-20260921/12-orbit-desktop-return.png      |  Bin 0 -> 133187 bytes
+ .../park-20260921/12-orbit-desktop-winner.png      |  Bin 0 -> 464459 bytes
+ pinball/evidence/park-20260921/12-orbit-live.png   |  Bin 0 -> 219753 bytes
+ .../evidence/park-20260921/12-orbit-overview.png   |  Bin 0 -> 98826 bytes
+ pinball/evidence/park-20260921/12-physics.log      |  124 +
+ .../park-20260921/12-return-browser-results.json   |   18 +
+ .../evidence/park-20260921/12-return-browser.log   |   26 +
+ .../evidence/park-20260921/12-rides-results.json   |   75 +
+ pinball/evidence/park-20260921/12-rides.log        |   52 +
+ .../park-20260921/12-split-desktop-return.png      |  Bin 0 -> 129861 bytes
+ pinball/evidence/park-20260921/12-split-live.png   |  Bin 0 -> 207719 bytes
+ .../evidence/park-20260921/12-split-overview.png   |  Bin 0 -> 97136 bytes
+ pinball/evidence/park-20260921/12-zigzag-live.png  |  Bin 0 -> 204060 bytes
+ .../evidence/park-20260921/12-zigzag-overview.png  |  Bin 0 -> 89177 bytes
+ pinball/evidence/park-20260921/12b-build-smoke.log |    2 +
+ pinball/evidence/park-20260921/12b-build.log       |    1 +
+ .../park-20260921/12b-course-device-results.json   |  325 ++
+ .../park-20260921/12b-desktop-multi-capture.png    |  Bin 0 -> 375551 bytes
+ .../park-20260921/12b-mobile-multi-capture.png     |  Bin 0 -> 164902 bytes
+ .../park-20260921/12b-motion-physics-results.json  |  842 ++++
+ .../12b-multi-device-browser-results.json          |   38 +
+ .../park-20260921/12b-multi-device-browser.log     |   20 +
+ .../park-20260921/12b-orbit-desktop-return.png     |  Bin 0 -> 133187 bytes
+ .../park-20260921/12b-orbit-desktop-winner.png     |  Bin 0 -> 464515 bytes
+ .../park-20260921/12b-orbit-mobile-return.png      |  Bin 0 -> 93327 bytes
+ .../park-20260921/12b-orbit-mobile-winner.png      |  Bin 0 -> 144190 bytes
+ pinball/evidence/park-20260921/12b-physics.log     |   42 +
+ .../park-20260921/12b-return-browser-results.json  |   50 +
+ .../evidence/park-20260921/12b-return-browser.log  |   44 +
+ .../park-20260921/12b-split-desktop-return.png     |  Bin 0 -> 129861 bytes
+ .../park-20260921/12b-split-desktop-winner.png     |  Bin 0 -> 454085 bytes
+ .../park-20260921/12b-split-mobile-return.png      |  Bin 0 -> 90861 bytes
+ .../park-20260921/12b-split-mobile-winner.png      |  Bin 0 -> 147768 bytes
+ .../13-live-full-browser-results.json              |  106 +
+ .../park-20260921/13-live-full-browser.log         |   62 +
+ .../evidence/park-20260921/13-soak-results.json    | 4335 ++++++++++++++++++++
+ pinball/evidence/park-20260921/13-soak.log         |   11 +
+ .../evidence/park-20260921/13-speed-results.json   |   45 +
+ pinball/evidence/park-20260921/13-speed.log        |   30 +
+ pinball/evidence/park-20260921/14-build-smoke.log  |    2 +
+ pinball/evidence/park-20260921/14-build.log        |    1 +
+ .../park-20260921/14-read-only-results.json        |    7 +
+ pinball/evidence/park-20260921/14-read-only.log    |    1 +
+ .../evidence/park-20260921/15-1440x1000-full.png   |  Bin 0 -> 186551 bytes
+ .../evidence/park-20260921/15-1440x1000-half.png   |  Bin 0 -> 224842 bytes
+ pinball/evidence/park-20260921/15-320x700-full.png |  Bin 0 -> 86641 bytes
+ pinball/evidence/park-20260921/15-320x700-half.png |  Bin 0 -> 88065 bytes
+ .../evidence/park-20260921/15-390x844-fallback.png |  Bin 0 -> 140768 bytes
+ pinball/evidence/park-20260921/15-390x844-full.png |  Bin 0 -> 113712 bytes
+ pinball/evidence/park-20260921/15-390x844-half.png |  Bin 0 -> 116539 bytes
+ pinball/evidence/park-20260921/15-844x390-full.png |  Bin 0 -> 80206 bytes
+ pinball/evidence/park-20260921/15-844x390-half.png |  Bin 0 -> 63744 bytes
+ .../park-20260921/15-action-browser-results.json   |   50 +
+ .../park-20260921/15-action-desktop-live.png       |  Bin 0 -> 287187 bytes
+ .../park-20260921/15-action-desktop-round.json     | 1839 +++++++++
+ .../park-20260921/15-action-mobile-live.png        |  Bin 0 -> 442371 bytes
+ .../park-20260921/15-action-mobile-round.json      | 1839 +++++++++
+ pinball/evidence/park-20260921/15-action.log       |   44 +
+ pinball/evidence/park-20260921/15-build.log        |    1 +
+ .../15-half-action-browser-results.json            |    6 +
+ .../park-20260921/15-half-action-desktop-live.png  |  Bin 0 -> 274399 bytes
+ pinball/evidence/park-20260921/15-half-action.log  |    0
+ .../park-20260921/15-map-view-results.json         |  461 +++
+ pinball/evidence/park-20260921/15-map-view.log     |    5 +
+ .../evidence/park-20260921/15-sample-map-check.log |    3 +
+ .../15a-half-action-browser-results.json           |    6 +
+ pinball/evidence/park-20260921/15a-half-action.log |   21 +
+ .../park-20260921/15a-map-view-results.json        |    6 +
+ pinball/evidence/park-20260921/15a-map-view.log    |   27 +
+ pinball/evidence/park-20260921/session.md          |   26 +-
+ pinball/evidence/physics-results.json              | 1070 ++---
+ pinball/evidence/speed-1.5x.png                    |  Bin 0 -> 548793 bytes
+ pinball/evidence/speed-1x.png                      |  Bin 322278 -> 548673 bytes
+ pinball/evidence/speed-2x.png                      |  Bin 322410 -> 548645 bytes
+ pinball/evidence/speed-3x.png                      |  Bin 322735 -> 548647 bytes
+ pinball/evidence/speed-results.json                |   38 +-
+ pinball/evidence/verification-initial-1739.md      |   56 +
+ pinball/evidence/verification.md                   |   79 +-
+ pinball/index.html                                 |    8 +-
+ pinball/package.json                               |    2 +-
+ pinball/samples/maps.json                          |  778 ++--
+ pinball/scripts/build.mjs                          |    2 +
+ pinball/src/app.js                                 |   22 +-
+ pinball/src/devices.js                             |   35 +-
+ pinball/src/lands.js                               |    6 +-
+ pinball/src/physics.js                             |   42 +-
+ pinball/src/renderer2d.js                          |   17 +-
+ pinball/src/renderer3d.js                          |   43 +-
+ pinball/src/return-portals.js                      |   27 +
+ pinball/src/style.css                              |    9 +
+ pinball/tests/action.mjs                           |    9 +-
+ pinball/tests/course-devices.test.mjs              |    8 +-
+ pinball/tests/devices-browser.mjs                  |    9 +-
+ pinball/tests/devices.test.mjs                     |   13 +-
+ pinball/tests/finish-rules.test.mjs                |    2 +-
+ pinball/tests/map-view.mjs                         |   21 +
+ pinball/tests/multi-device-browser.mjs             |    9 +
+ pinball/tests/physics.test.mjs                     |    4 +-
+ pinball/tests/read-only.mjs                        |    4 +
+ pinball/tests/readable-pause.mjs                   |   11 +
+ pinball/tests/return-browser.mjs                   |    9 +
+ pinball/tests/return-portals.test.mjs              |   21 +
+ pinball/tests/soak.mjs                             |   15 +-
+ 162 files changed, 20444 insertions(+), 4686 deletions(-)
+ create mode 100644 pinball/evidence/park-20260921/09-build-smoke-results.json
+ create mode 100644 pinball/evidence/park-20260921/09-full-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/10-action-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/10-action-desktop-live.png
+ create mode 100644 pinball/evidence/park-20260921/10-action-desktop-round.json
+ create mode 100644 pinball/evidence/park-20260921/10-action-mobile-live.png
+ create mode 100644 pinball/evidence/park-20260921/10-action-mobile-round.json
+ create mode 100644 pinball/evidence/park-20260921/10-action.log
+ create mode 100644 pinball/evidence/park-20260921/10-pause-1440.png
+ create mode 100644 pinball/evidence/park-20260921/10-pause-320.png
+ create mode 100644 pinball/evidence/park-20260921/10-pause-390.png
+ create mode 100644 pinball/evidence/park-20260921/10-pause-results.json
+ create mode 100644 pinball/evidence/park-20260921/10-pause.log
+ create mode 100644 pinball/evidence/park-20260921/11-course-diagnostic.log
+ create mode 100644 pinball/evidence/park-20260921/11-orbit-desktop-return.png
+ create mode 100644 pinball/evidence/park-20260921/11-orbit-desktop-winner.png
+ create mode 100644 pinball/evidence/park-20260921/11-orbit-mobile-return.png
+ create mode 100644 pinball/evidence/park-20260921/11-orbit-mobile-winner.png
+ create mode 100644 pinball/evidence/park-20260921/11-physics.log
+ create mode 100644 pinball/evidence/park-20260921/11-return-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/11-return-browser.log
+ create mode 100644 pinball/evidence/park-20260921/11-split-desktop-return.png
+ create mode 100644 pinball/evidence/park-20260921/11-split-desktop-winner.png
+ create mode 100644 pinball/evidence/park-20260921/11-split-mobile-return.png
+ create mode 100644 pinball/evidence/park-20260921/11-split-mobile-winner.png
+ create mode 100644 pinball/evidence/park-20260921/12-build.log
+ create mode 100644 pinball/evidence/park-20260921/12-neon-live.png
+ create mode 100644 pinball/evidence/park-20260921/12-neon-overview.png
+ create mode 100644 pinball/evidence/park-20260921/12-orbit-desktop-return.png
+ create mode 100644 pinball/evidence/park-20260921/12-orbit-desktop-winner.png
+ create mode 100644 pinball/evidence/park-20260921/12-orbit-live.png
+ create mode 100644 pinball/evidence/park-20260921/12-orbit-overview.png
+ create mode 100644 pinball/evidence/park-20260921/12-physics.log
+ create mode 100644 pinball/evidence/park-20260921/12-return-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/12-return-browser.log
+ create mode 100644 pinball/evidence/park-20260921/12-rides-results.json
+ create mode 100644 pinball/evidence/park-20260921/12-rides.log
+ create mode 100644 pinball/evidence/park-20260921/12-split-desktop-return.png
+ create mode 100644 pinball/evidence/park-20260921/12-split-live.png
+ create mode 100644 pinball/evidence/park-20260921/12-split-overview.png
+ create mode 100644 pinball/evidence/park-20260921/12-zigzag-live.png
+ create mode 100644 pinball/evidence/park-20260921/12-zigzag-overview.png
+ create mode 100644 pinball/evidence/park-20260921/12b-build-smoke.log
+ create mode 100644 pinball/evidence/park-20260921/12b-build.log
+ create mode 100644 pinball/evidence/park-20260921/12b-course-device-results.json
+ create mode 100644 pinball/evidence/park-20260921/12b-desktop-multi-capture.png
+ create mode 100644 pinball/evidence/park-20260921/12b-mobile-multi-capture.png
+ create mode 100644 pinball/evidence/park-20260921/12b-motion-physics-results.json
+ create mode 100644 pinball/evidence/park-20260921/12b-multi-device-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/12b-multi-device-browser.log
+ create mode 100644 pinball/evidence/park-20260921/12b-orbit-desktop-return.png
+ create mode 100644 pinball/evidence/park-20260921/12b-orbit-desktop-winner.png
+ create mode 100644 pinball/evidence/park-20260921/12b-orbit-mobile-return.png
+ create mode 100644 pinball/evidence/park-20260921/12b-orbit-mobile-winner.png
+ create mode 100644 pinball/evidence/park-20260921/12b-physics.log
+ create mode 100644 pinball/evidence/park-20260921/12b-return-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/12b-return-browser.log
+ create mode 100644 pinball/evidence/park-20260921/12b-split-desktop-return.png
+ create mode 100644 pinball/evidence/park-20260921/12b-split-desktop-winner.png
+ create mode 100644 pinball/evidence/park-20260921/12b-split-mobile-return.png
+ create mode 100644 pinball/evidence/park-20260921/12b-split-mobile-winner.png
+ create mode 100644 pinball/evidence/park-20260921/13-live-full-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/13-live-full-browser.log
+ create mode 100644 pinball/evidence/park-20260921/13-soak-results.json
+ create mode 100644 pinball/evidence/park-20260921/13-soak.log
+ create mode 100644 pinball/evidence/park-20260921/13-speed-results.json
+ create mode 100644 pinball/evidence/park-20260921/13-speed.log
+ create mode 100644 pinball/evidence/park-20260921/14-build-smoke.log
+ create mode 100644 pinball/evidence/park-20260921/14-build.log
+ create mode 100644 pinball/evidence/park-20260921/14-read-only-results.json
+ create mode 100644 pinball/evidence/park-20260921/14-read-only.log
+ create mode 100644 pinball/evidence/park-20260921/15-1440x1000-full.png
+ create mode 100644 pinball/evidence/park-20260921/15-1440x1000-half.png
+ create mode 100644 pinball/evidence/park-20260921/15-320x700-full.png
+ create mode 100644 pinball/evidence/park-20260921/15-320x700-half.png
+ create mode 100644 pinball/evidence/park-20260921/15-390x844-fallback.png
+ create mode 100644 pinball/evidence/park-20260921/15-390x844-full.png
+ create mode 100644 pinball/evidence/park-20260921/15-390x844-half.png
+ create mode 100644 pinball/evidence/park-20260921/15-844x390-full.png
+ create mode 100644 pinball/evidence/park-20260921/15-844x390-half.png
+ create mode 100644 pinball/evidence/park-20260921/15-action-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/15-action-desktop-live.png
+ create mode 100644 pinball/evidence/park-20260921/15-action-desktop-round.json
+ create mode 100644 pinball/evidence/park-20260921/15-action-mobile-live.png
+ create mode 100644 pinball/evidence/park-20260921/15-action-mobile-round.json
+ create mode 100644 pinball/evidence/park-20260921/15-action.log
+ create mode 100644 pinball/evidence/park-20260921/15-build.log
+ create mode 100644 pinball/evidence/park-20260921/15-half-action-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/15-half-action-desktop-live.png
+ create mode 100644 pinball/evidence/park-20260921/15-half-action.log
+ create mode 100644 pinball/evidence/park-20260921/15-map-view-results.json
+ create mode 100644 pinball/evidence/park-20260921/15-map-view.log
+ create mode 100644 pinball/evidence/park-20260921/15-sample-map-check.log
+ create mode 100644 pinball/evidence/park-20260921/15a-half-action-browser-results.json
+ create mode 100644 pinball/evidence/park-20260921/15a-half-action.log
+ create mode 100644 pinball/evidence/park-20260921/15a-map-view-results.json
+ create mode 100644 pinball/evidence/park-20260921/15a-map-view.log
+ create mode 100644 pinball/evidence/speed-1.5x.png
+ create mode 100644 pinball/evidence/verification-initial-1739.md
+ create mode 100644 pinball/src/return-portals.js
+ create mode 100644 pinball/tests/map-view.mjs
+ create mode 100644 pinball/tests/multi-device-browser.mjs
+ create mode 100644 pinball/tests/read-only.mjs
+ create mode 100644 pinball/tests/readable-pause.mjs
+ create mode 100644 pinball/tests/return-browser.mjs
+ create mode 100644 pinball/tests/return-portals.test.mjs

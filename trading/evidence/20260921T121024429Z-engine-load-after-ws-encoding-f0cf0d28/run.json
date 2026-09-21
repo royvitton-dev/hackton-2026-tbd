@@ -1,0 +1,15 @@
+{
+  "exit_code": 0,
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "started_at": "2026-09-21T12:10:24.4581360Z",
+  "command": "node",
+  "run_id": "20260921T121024429Z-engine-load-after-ws-encoding-f0cf0d28",
+  "ended_at": "2026-09-21T12:11:05.0756513Z",
+  "args": [
+    "scripts/engine-load.mjs",
+    "--competing-resource-stress",
+    "--expected-binary-sha256",
+    "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240"
+  ],
+  "status": "passed"
+}

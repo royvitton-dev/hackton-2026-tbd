@@ -63,4 +63,4 @@ MB는 1,000,000 bytes다. 각 프로세스의 512MiB(536,870,912 bytes) 관측 c
 
 격리 엔진 PID 22032/포트 62445는 관리자 shutdown 후 실제 exit 0, sampler PID 3032와 부하 client PID 10036도 종료를 확인했다. 정상 데모 manifest SHA·14개 PID·observer PID 18184는 전후 동일하고 생존했다. [후속 확인과 실행 스크립트 hash](../evidence/2026-09-21T11-01-25-875Z-engine-load-8774ce30/post-verification.json)를 보존했다. 정상 데모의 전체 관찰 결과는 root의 별도 장기 기록이며 이 짧은 부하 결과만으로 정상 데모 무영향을 단정하지 않는다.
 
-이번 스크립트는 보호를 위해 **정상 engine PID 20540, observer PID 18184 및 release binary SHA에 명시적으로 고정**되어 있다. 데모 재시작이나 새 빌드 뒤 그대로 재사용하면 사전 검증에서 중단한다. 재실행하려면 당시 manifest/PID·바이너리와 실행 조건을 다시 검토해야 하며 자동으로 현재 프로세스를 선택하거나 제한을 완화하지 않는다. 이번 요청에서는 단 한 번의 실제 부하만 실행했다.
+첫 실행 당시 스크립트는 **정상 engine PID 20540, observer PID 18184 및 release binary SHA에 명시적으로 고정**되어 있었다. 이후 검증된 직렬화 변경을 확인하기 위해 예상 SHA를 `--expected-binary-sha256 <64hex>`로 명시하도록 개선했고, 현재도 두 보호 PID와 16논리CPU 조건은 유지한다. 현재 명령은 `node scripts/engine-load.mjs --competing-resource-stress --expected-binary-sha256 <검증한 release SHA>`다. 데모 재시작 뒤에는 당시 manifest/PID·바이너리를 다시 검토해야 한다. 위 첫 실행 원본은 유지하며, 새 바이너리의 1회 후속 부하와 별도의 WS 연속성 판정은 [후속 검증](engine-load-after-serialization.md)에 기록했다.

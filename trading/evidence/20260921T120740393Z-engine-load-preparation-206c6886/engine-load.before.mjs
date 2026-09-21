@@ -12,23 +12,18 @@ import { setTimeout as sleep } from 'node:timers/promises';
 import { fileURLToPath } from 'node:url';
 
 if (process.argv.includes('--help')) {
-  console.log('node scripts/engine-load.mjs --competing-resource-stress --expected-binary-sha256 <64hex>\nIsolated explicitly verified release;6/24/96 concurrency,~20s each,18000commands/20000HTTP/90s cap; engine/client512MiB observed RSS guard;500ms Windows CPU/memory;one WS consumer.');
+  console.log('node scripts/engine-load.mjs --competing-resource-stress\nIsolated latest release;6/24/96 concurrency,~20s each,18000commands/20000HTTP/90s cap; engine/client512MiB observed RSS guard;500ms Windows CPU/memory;one WS consumer.');
   process.exit(0);
 }
-const arguments_ = process.argv.slice(2);
-assert.ok(arguments_.length === 3 && arguments_[0] === '--competing-resource-stress' && arguments_[1] === '--expected-binary-sha256', 'Usage: node scripts/engine-load.mjs --competing-resource-stress --expected-binary-sha256 <64hex>');
-assert.match(arguments_[2], /^[a-fA-F0-9]{64}$/, 'Expected binary SHA256 must contain exactly64hex characters');
-const expectedBinarySha256 = arguments_[2].toLowerCase();
+assert.deepEqual(process.argv.slice(2), ['--competing-resource-stress']);
 assert.equal(process.platform, 'win32', 'This monitoring implementation is explicitly Windows only');
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
-const source = path.join(root, 'engine', 'target', 'release', 'leave-engine.exe');
-assert.equal(hash(source), expectedBinarySha256, 'Source release binary does not match the explicitly expected SHA256');
 const started = performance.now();
 const runId = `${new Date().toISOString().replace(/[:.]/g, '-')}-engine-load-${crypto.randomUUID().slice(0, 8)}`;
 const directory = path.join(root, 'evidence', runId);
 fs.mkdirSync(path.join(directory, 'bin'), { recursive: true });
 const save = (name, value) => fs.writeFileSync(path.join(directory, name), JSON.stringify(value, null, 2));
+const hash = file => crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
 const exists = pid => { try { process.kill(pid, 0); return true; } catch { return false; } };
 const alive = child => child && child.exitCode === null && child.signalCode === null;
 const manifestPath = path.join(root, 'data', 'demo-current.json');
@@ -37,16 +32,16 @@ function mainProcesses() {
   return { manifest_sha256: hash(manifestPath), run_id: manifest.run_id, processes: manifest.processes.map(row => ({ name: row.name, pid: row.pid, alive: exists(row.pid) })), observer: { pid: 18184, alive: exists(18184) } };
 }
 const binary = path.join(directory, 'bin', 'leave-engine.exe');
+const source = path.join(root, 'engine', 'target', 'release', 'leave-engine.exe');
+assert.equal(hash(source), '09bcf75b80a2a85c6a52168d2404f23a230e73b958fc6814daa300650fc5ac56');
 fs.copyFileSync(source, binary, fs.constants.COPYFILE_EXCL);
-assert.equal(hash(binary), expectedBinarySha256, 'Copied release binary does not match the explicitly expected SHA256');
-assert.equal(hash(source), expectedBinarySha256, 'Source release changed while copying');
+assert.equal(hash(source), hash(binary));
 assert.equal(os.cpus().length, 16, 'This run explicitly normalizes by the observed16logical CPUs');
 const mainBefore = mainProcesses();
 assert.equal(mainBefore.processes.find(row => row.name === 'engine').pid, 20540);
 assert.ok(mainBefore.processes.every(row => row.alive) && mainBefore.observer.alive);
 const metadata = { run_id: runId, started_at: new Date().toISOString(), command: process.argv, classification: 'competing-resource stress alongside live normal demo and observer; not quiet A/B/C baseline',
-  binary: { source, copied: binary, sha256: hash(binary), expected_sha256: expectedBinarySha256 }, main_before: mainBefore,
-  source_sha256: { script: hash(fileURLToPath(import.meta.url)), main: hash(path.join(root, 'engine', 'src', 'main.rs')), ws_frame: hash(path.join(root, 'engine', 'src', 'ws_frame.rs')) },
+  binary: { source, copied: binary, sha256: hash(binary) }, main_before: mainBefore,
   host: { os: os.version(), node: process.version, cpu: os.cpus()[0].model, logical_processors: 16, total_memory_bytes: os.totalmem(), free_memory_bytes: os.freemem() },
   limits: { commands: 18_000, commands_per_phase: 6_000, http: 20_000, work_ms: 75_000, overall_ms: 90_000, concurrency: 96, engine_observed_working_set_bytes: 512 * 1024 * 1024, client_observed_rss_bytes: 512 * 1024 * 1024 },
   workload: 'warmup two rounds of6makers+6takers;phases6/24/96;all sell maker ACKs precede equal buy taker batch;alternate two groups of6bots;each phase ends after complete2round cycles restoring per-accountassets',
@@ -231,20 +226,6 @@ try {
   verified = true;
 } catch (error) { failure = { message: error.message, stack: error.stack }; process.exitCode = 1; event({ event: 'failure', ...failure }); }
 finally {
-  // Freeze workload observation before intentional close or administrative shutdown.
-  // An incomplete workload without an observed WS failure is unknown (null), not a pass.
-  const knownWsFailure = wsGaps > 0 || wsErrors > 0 || wsDisconnects > 0 || Boolean(socket && socket.readyState >= WebSocket.CLOSING);
-  const workloadWs = { at: new Date().toISOString(), relative_ms: performance.now() - started,
-    captured_before_intentional_close: !wsIntentionalClose, workload_verified: verified,
-    socket_created: Boolean(socket), ready_state: socket?.readyState ?? null,
-    ready_state_name: socket ? ['CONNECTING', 'OPEN', 'CLOSING', 'CLOSED'][socket.readyState] : null,
-    frames: wsEvents.length, sequence_gaps: wsGaps, unexpected_disconnects: wsDisconnects, errors: wsErrors,
-    latest_event_seq: wsLast, issued_commands: commandCount,
-    expected_final_event_seq: verified ? commandCount : null,
-    caught_up_to_final_event_seq: verified ? wsLast === commandCount : null,
-    continuous_through_final_state: knownWsFailure ? false : !verified ? null : Boolean(socket?.readyState === WebSocket.OPEN && wsEvents.length > 0 && wsLast === commandCount),
-    continuous_definition: 'Before intentional cleanup: verified workload, open socket, at least one state, final sequence caught up, zero observed gaps/errors/unexpected disconnects. Observed WS failure is false; incomplete workload without observed WS failure is null.' };
-  event({ event: 'ws_workload_end', ...workloadWs });
   phase = 'cleanup'; clearTimeout(deadline); clearInterval(guard); agent.destroy();
   if (socket) { wsIntentionalClose = true; socket.close(); }
   if (alive(engine)) { try { shutdown = await request('/api/admin/shutdown', { body: {}, cleanup: true }); } catch (error) { shutdown = { error: error.message }; }
@@ -261,8 +242,7 @@ finally {
     phases: measuredPhases,
     planned_phase_coverage: { planned_concurrencies: [6, 24, 96], executed_concurrencies: phases.filter(row => row.commands > 0).map(row => row.concurrency), all_three_executed: [6, 24, 96].every(value => phases.some(row => row.concurrency === value && row.commands > 0)), all_three_reached_twenty_seconds: phases.length === 3 && phases.every(row => row.elapsed_seconds >= 20), note: 'complete means bounded workload correctness/cleanup, not that every planned phase reached20seconds;inspect per-phase elapsed/end_reason' },
     resources_available: { all_executed_phases_have_valid_cpu_and_memory: measuredPhases.length > 0 && measuredPhases.every(row => row.resources.intervals.length > 0 && row.resources.by_process.every(process => process.memory_samples > 0)), by_phase: measuredPhases.map(row => ({ phase: row.phase, sample_count: row.resources.sample_count, valid_cpu_intervals: row.resources.intervals.length, memory_samples_by_process: row.resources.by_process.map(process => ({ pid: process.pid, count: process.memory_samples })) })) },
-    websocket: { consumer_count: 1, frames: wsEvents.length, sequence_gaps: wsGaps, unexpected_disconnects: wsDisconnects, errors: wsErrors, latest_event_seq: wsLast, caught_up_to_final_event_seq: wsLast === commandCount, browser_rendering_measured: false,
-      workload_end: workloadWs, continuous_through_final_state: workloadWs.continuous_through_final_state },
+    websocket: { consumer_count: 1, frames: wsEvents.length, sequence_gaps: wsGaps, unexpected_disconnects: wsDisconnects, errors: wsErrors, latest_event_seq: wsLast, caught_up_to_final_event_seq: wsLast === commandCount, browser_rendering_measured: false },
     state_verification: { full_account_assets_reserves_counts_exact_at_cycle_barriers: verified, full_history_arrays_not_claimed: true, public_arrays_bounded_to_200_terminal_orders_1000_trades: true },
     cleanup: { engine_exit_code: engine?.exitCode, engine_signal: engine?.signalCode, sampler_alive: Boolean(alive(sampler)), shutdown: shutdown?.body ?? shutdown }, main_after: after, main_pids_and_manifest_unchanged: mainUnchanged,
     limitations: ['Competing live demo/observer share this host; not a quiet benchmark.', 'CPU is direct cumulative process-time delta divided by sample elapsed time and16logical CPUs;invalid/missing/reset/gap intervals excluded.', 'About500ms observed memory maxima are not instantaneous OS peaks.', 'One WS consumer records callback sequence/gaps;actual connection scope reported perphase;no browser rendering.', 'Representative full fills and maker barriers;does not test partial fills,cancels or queue saturation.', 'Raw HTTP latency includesqueue/fsync/serialization/clientparsing;perphase throughput includes completecyclebarriers.'] };
