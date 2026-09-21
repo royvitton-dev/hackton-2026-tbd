@@ -1,0 +1,186 @@
+[
+  {
+    "parameter": "minimum_sessions_required",
+    "value": 5,
+    "unit": "sessions",
+    "category": "Eligibility",
+    "basis": "한 건 충전으로는 신뢰도 낮음. 최소 5건부터 계산.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "minimum_period_days",
+    "value": 7,
+    "unit": "days",
+    "category": "Eligibility",
+    "basis": "최소 1주일 이상 관측.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "target_period_days",
+    "value": 14,
+    "unit": "days",
+    "category": "Eligibility",
+    "basis": "MVP 추천 관측기간 1~2주.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "charge_efficiency",
+    "value": 0.92,
+    "unit": "ratio",
+    "category": "SOC",
+    "basis": "충전기 계량 kWh에서 배터리 저장 에너지 근사 보정.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "long_idle_threshold_min",
+    "value": 120,
+    "unit": "minutes",
+    "category": "Behavior",
+    "basis": "충전 완료 후 2시간 이상 미분리부터 패널티.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "extreme_idle_threshold_min",
+    "value": 360,
+    "unit": "minutes",
+    "category": "Behavior",
+    "basis": "6시간 이상 미분리는 강한 패널티.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "deep_start_soc_threshold_pct",
+    "value": 20,
+    "unit": "%SOC",
+    "category": "Behavior",
+    "basis": "20% 미만 저SOC 진입은 리스크 신호.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "high_end_soc_threshold_pct",
+    "value": 90,
+    "unit": "%SOC",
+    "category": "Behavior",
+    "basis": "90% 이상 고SOC 장시간 방치 리스크.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "high_c_rate_threshold",
+    "value": 1,
+    "unit": "C",
+    "category": "Stress",
+    "basis": "평균 충전 C-rate 1C 이상은 스트레스 가중.",
+    "sourceUrl": "https://docs.nlr.gov/docs/fy22osti/79499.pdf"
+  },
+  {
+    "parameter": "ultra_power_threshold_kw",
+    "value": 150,
+    "unit": "kW",
+    "category": "Stress",
+    "basis": "초급속 세션 분류 기준.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "fast_charge_weight",
+    "value": 20,
+    "unit": "points",
+    "category": "Score",
+    "basis": "급속 비율이 높을수록 감점.",
+    "sourceUrl": "https://docs.nlr.gov/docs/fy22osti/79499.pdf"
+  },
+  {
+    "parameter": "ultra_charge_weight",
+    "value": 15,
+    "unit": "points",
+    "category": "Score",
+    "basis": "초급속 비율 추가 감점.",
+    "sourceUrl": "https://docs.nlr.gov/docs/fy22osti/79499.pdf"
+  },
+  {
+    "parameter": "long_idle_weight",
+    "value": 4,
+    "unit": "points/count",
+    "category": "Score",
+    "basis": "충전 완료 후 장시간 미분리 감점.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "high_soc_idle_weight",
+    "value": 8,
+    "unit": "points/count",
+    "category": "Score",
+    "basis": "고SOC + 장시간 미분리 동시 발생 감점.",
+    "sourceUrl": "https://www.mdpi.com/1996-1073/16/10/4232"
+  },
+  {
+    "parameter": "high_c_rate_weight",
+    "value": 12,
+    "unit": "points",
+    "category": "Score",
+    "basis": "고 C-rate 비중 감점.",
+    "sourceUrl": "https://docs.nlr.gov/docs/fy22osti/79499.pdf"
+  },
+  {
+    "parameter": "deep_discharge_weight",
+    "value": 8,
+    "unit": "points",
+    "category": "Score",
+    "basis": "저SOC 시작 세션 반복 감점.",
+    "sourceUrl": "https://www.mdpi.com/1996-1073/16/10/4232"
+  },
+  {
+    "parameter": "slow_night_bonus_weight",
+    "value": 6,
+    "unit": "points",
+    "category": "Score",
+    "basis": "심야 완속 충전 비중 보너스.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "efc_penalty_weight",
+    "value": 2,
+    "unit": "points/EFC",
+    "category": "Score",
+    "basis": "짧은 기간에는 작게 반영. 장기 SOH 모델에서 확대.",
+    "sourceUrl": "https://www.mdpi.com/1996-1073/16/10/4232"
+  },
+  {
+    "parameter": "minimum_total_efc_for_score",
+    "value": 0.3,
+    "unit": "EFC",
+    "category": "Eligibility",
+    "basis": "충전량 자체가 너무 작으면 습관 판단 신뢰도 낮음.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "soc_conf_sessions_weight",
+    "value": 35,
+    "unit": "points",
+    "category": "Confidence",
+    "basis": "세션 수 기반 신뢰도.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "soc_conf_days_weight",
+    "value": 20,
+    "unit": "points",
+    "category": "Confidence",
+    "basis": "관측 기간 기반 신뢰도.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "soc_conf_anchor_weight",
+    "value": 25,
+    "unit": "points",
+    "category": "Confidence",
+    "basis": "완충/테이퍼/사용자 SOC anchor 기반.",
+    "sourceUrl": "internal_rule"
+  },
+  {
+    "parameter": "soc_conf_quality_weight",
+    "value": 20,
+    "unit": "points",
+    "category": "Confidence",
+    "basis": "이상치/결측 없는 데이터 품질.",
+    "sourceUrl": "internal_rule"
+  }
+]

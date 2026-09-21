@@ -5,7 +5,7 @@ export const DEVICE_LAYOUT={
  orbit:[['magnet',310,1160],['magnet',540,1760],['cannon',310,680],['cannon',310,1730]],
  zigzag:[['magnet',505,1150],['magnet',110,1750],['cannon',310,780],['cannon',310,1320]],
  split:[['magnet',310,875],['magnet',90,1820],['cannon',310,1500],['cannon',310,1850]],
- parade:[['magnet',90,650],['magnet',530,650],... [880,1280].flatMap(y=>[150,310,470].map(x=>['cannon',x,y]))]
+ parade:[['magnet',90,650],['magnet',530,650],... [880,1080,1280].flatMap(y=>[150,310,470].map(x=>['cannon',x,y]))]
 };
 export function deviceDefinitions(mapId){return DEVICE_LAYOUT[mapId].map(([kind,x,y],i)=>({id:`${mapId}-${kind}-${i}`,kind,x,y,captureRadius:kind==='cannon'?18:15,...(mapId==='parade'&&kind==='cannon'?{holdMin:.8,holdMax:1.5}:{})}));}
 export function devicePose(device,time){

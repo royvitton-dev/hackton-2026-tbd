@@ -1,0 +1,32 @@
+[
+  {
+    "category": "데이터 유효성",
+    "criteria": "5건 이상 + 7일 이상 + EFC 0.3 이상",
+    "message": "한두 번 충전만으로 습관을 판단하지 않는다.",
+    "algorithm": "eligibleFlag"
+  },
+  {
+    "category": "SOC 신뢰도",
+    "criteria": "세션 수, 기간, SOC anchor, 이상치 없음",
+    "message": "초기 SOC 입력 또는 완충/테이퍼 anchor가 많을수록 SOC 추적 신뢰도가 올라간다.",
+    "algorithm": "SOCConfidenceScore"
+  },
+  {
+    "category": "권장 습관",
+    "criteria": "20~80% 중심 + 심야 완속 + 충전 완료 후 분리",
+    "message": "일상 충전은 완속/심야 위주, 고SOC 장시간 방치와 저SOC 반복 진입을 줄인다.",
+    "algorithm": "BatteryCareScore"
+  },
+  {
+    "category": "주의 습관",
+    "criteria": "초급속 반복, 90% 이상 방치, 20% 미만 출발",
+    "message": "필요할 때만 급속/초급속 사용하고, 완충 후 장시간 미분리하지 않는다.",
+    "algorithm": "penalty rules"
+  },
+  {
+    "category": "점수 의미",
+    "criteria": "BMS SOH 직접값 아님",
+    "message": "차량 내부 BMS 없이 결제/충전 로그 기반으로 만든 battery stress proxy다.",
+    "algorithm": "disclaimer"
+  }
+]

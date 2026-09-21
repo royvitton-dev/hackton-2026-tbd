@@ -1,0 +1,160 @@
+{
+  "source": "ev_battery_health_mock_data_10000_v2.xlsx",
+  "generatedAt": "2026-09-21T18:42:47+09:00",
+  "sheets": {
+    "01_Vehicle_Master": {
+      "rowCount": 20,
+      "columns": [
+        "vehicleId",
+        "manufacturer",
+        "modelName",
+        "modelYear",
+        "trimName",
+        "batteryGrossKwh",
+        "usableFactor",
+        "batteryUsableKwh",
+        "packVoltage",
+        "batteryAh",
+        "batteryChemistry",
+        "packVoltageClass",
+        "batteryCellMaker",
+        "cellFormFactor",
+        "motorPowerKw",
+        "maxAcChargeKw",
+        "maxDcChargeKw",
+        "certifiedRangeKm",
+        "efficiencyKmPerKwh",
+        "sourceType",
+        "dataConfidence",
+        "sourceUrl",
+        "notes"
+      ],
+      "runtimeUsage": "static-json"
+    },
+    "02_Score_Rules": {
+      "rowCount": 23,
+      "columns": [
+        "parameter",
+        "value",
+        "unit",
+        "category",
+        "basis",
+        "sourceUrl"
+      ],
+      "runtimeUsage": "static-json"
+    },
+    "03_User_Profile_Mock": {
+      "rowCount": 1250,
+      "columns": [
+        "userId",
+        "vehicleId",
+        "driverProfile",
+        "initialSocPct",
+        "initialOdometerKm",
+        "mockStartDate",
+        "mockEndDate",
+        "plannedSessions",
+        "profileNote"
+      ],
+      "runtimeUsage": "static-json"
+    },
+    "04_Charge_Sessions_Raw": {
+      "rowCount": 10000,
+      "columns": [
+        "sessionId",
+        "userId",
+        "vehicleId",
+        "startedAt",
+        "endedAt",
+        "unpluggedAt",
+        "chargerType",
+        "chargedKwh",
+        "paymentAmountKrw",
+        "stationType",
+        "taperDetected",
+        "userReportedStartSocPct",
+        "userReportedEndSocPct",
+        "mockTruthStartSocPct",
+        "mockTruthEndSocPct",
+        "note"
+      ],
+      "runtimeUsage": "static-json"
+    },
+    "05_Feature_Sessions": {
+      "rowCount": 10000,
+      "columns": [
+        "sessionId",
+        "userId",
+        "vehicleId",
+        "chargerType",
+        "chargedKwh",
+        "startedAt",
+        "endedAt",
+        "unpluggedAt",
+        "batteryUsableKwh",
+        "maxAcChargeKw",
+        "maxDcChargeKw",
+        "durationHours",
+        "avgPowerKw",
+        "idleMinutes",
+        "deltaSocPct",
+        "cRate",
+        "isFast",
+        "isUltra",
+        "isSlowNight",
+        "isLongIdle",
+        "isExtremeIdle",
+        "isTaperAnchor",
+        "hasUserSocAnchor",
+        "highEndSocRisk",
+        "deepStartRisk",
+        "highCRateFlag",
+        "highSocIdleFlag",
+        "sessionStressPenalty",
+        "sessionHabitBonus",
+        "dataIssueFlag"
+      ],
+      "runtimeUsage": "derived-at-runtime"
+    },
+    "06_User_Summary": {
+      "rowCount": 1250,
+      "columns": [
+        "userId",
+        "vehicleId",
+        "driverProfile",
+        "batteryUsableKwh",
+        "sessionCount",
+        "daysCovered",
+        "totalChargedKwh",
+        "estimatedEFC",
+        "fastRatio",
+        "ultraRatio",
+        "slowNightRatio",
+        "longIdleCount",
+        "highSocIdleCount",
+        "highCRateRatio",
+        "deepStartCount",
+        "anchorCount",
+        "dataIssueCount",
+        "eligibleFlag",
+        "SOCConfidenceScore",
+        "BatteryCareScore",
+        "ScoreGrade",
+        "Recommendation1",
+        "Recommendation2",
+        "DataQualityNote"
+      ],
+      "runtimeUsage": "derived-at-runtime"
+    },
+    "07_Guide": {
+      "rowCount": 5,
+      "columns": [
+        "구분",
+        "기준",
+        "사용자 가이드",
+        "알고리즘 반영"
+      ],
+      "runtimeUsage": "static-json"
+    }
+  }
+}

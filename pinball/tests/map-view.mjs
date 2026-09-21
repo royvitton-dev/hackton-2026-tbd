@@ -2,6 +2,7 @@ import assert from 'node:assert/strict';
 import {writeFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 const {chromium}=await import(process.env.PLAYWRIGHT_MODULE_PATH?pathToFileURL(process.env.PLAYWRIGHT_MODULE_PATH).href:'playwright');
+const prefix=process.env.EVIDENCE_PREFIX||'15';
 const browser=await chromium.launch({channel:'chrome'}),report={at:new Date().toISOString(),tests:[],status:'RUNNING'};
 try{for(const [width,height,fallback] of [[1440,1000,false],[390,844,false],[320,700,false],[844,390,false],[390,844,true]]){
  const c=await browser.newContext({viewport:{width,height},reducedMotion:'reduce',isMobile:width<900,hasTouch:width<900});
@@ -12,10 +13,10 @@ try{for(const [width,height,fallback] of [[1440,1000,false],[390,844,false],[320
   await p.locator('#'+id).click();await p.waitForTimeout(120);assert.equal((await p.evaluate(()=>window.pinball.settings())).viewMode,mode);assert.deepEqual(await p.evaluate(()=>window.pinball.snapshot()),frozen);
   const dimensions=await p.evaluate(()=>{const r=document.querySelector('.arena').getBoundingClientRect(),b=document.querySelector('#board').getBoundingClientRect();return {width:r.width,height:r.height,vw:innerWidth,vh:innerHeight,canvasWidth:b.width,canvasHeight:b.height,overflow:document.documentElement.scrollWidth>innerWidth,controls:[...document.querySelectorAll('.arena-controls button')].filter(e=>e.getBoundingClientRect().width).map(e=>{const r=e.getBoundingClientRect();return {id:e.id,left:r.left,right:r.right,top:r.top,bottom:r.bottom};})};});
   assert.equal(dimensions.width,width);assert.equal(dimensions.height,height);assert.ok(dimensions.canvasHeight>=height-151);assert.equal(dimensions.overflow,false);for(const b of dimensions.controls){assert.ok(b.left>=0&&b.right<=width+1&&b.top>=0&&b.bottom<=height+1,JSON.stringify(b));}views.push({mode,...dimensions});
-  await p.screenshot({path:`evidence/park-20260921/15-${width}x${height}-${fallback?'fallback':mode}.png`});
+  await p.screenshot({path:`evidence/park-20260921/${prefix}-${width}x${height}-${fallback?'fallback':mode}.png`});
  }
  await p.keyboard.press('Escape');assert.equal((await p.evaluate(()=>window.pinball.settings())).focusMode,false);assert.deepEqual(await p.evaluate(()=>window.pinball.snapshot()),frozen);
  await p.locator('#half-view').click();assert.equal((await p.evaluate(()=>window.pinball.settings())).viewMode,'follow');await p.locator('#half-view').click();await p.locator('#pause').click();await p.waitForFunction(()=>document.body.dataset.state==='complete',null,{timeout:65000});
  const round=await p.evaluate(()=>window.pinball.exportRound());const replay=await p.evaluate(async r=>{const {Race}=await import(window.pinball.settings().physicsModule);const x=new Race(r.config,r.seed);x.start();while(!['complete','invalid'].includes(x.state))x.step();return x.snapshot();},round);delete replay.roundId;delete round.result.roundId;assert.deepEqual(replay,round.result);assert.equal(await p.locator('#winner-splash').isVisible(),true);await p.locator('#splash-close').click();assert.equal((await p.evaluate(()=>window.pinball.settings())).focusMode,false);assert.equal(await p.locator('#winner-card').isVisible(),true);assert.deepEqual(errors,[]);
  report.tests.push({width,height,fallback,status:'PASS',views,pauseStatePreserved:true,exactReplay:true,errors});console.log('PASS map view',width,height,fallback);await c.close();
-}report.status='PASS';}catch(e){report.status='FAIL';report.error=e.stack;process.exitCode=1;console.error(e);}finally{await writeFile('evidence/park-20260921/15-map-view-results.json',JSON.stringify(report,null,2));await browser.close();}
+}report.status='PASS';}catch(e){report.status='FAIL';report.error=e.stack;process.exitCode=1;console.error(e);}finally{await writeFile(`evidence/park-20260921/${prefix}-map-view-results.json`,JSON.stringify(report,null,2));await browser.close();}

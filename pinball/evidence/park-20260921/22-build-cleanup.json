@@ -1,0 +1,10 @@
+{
+  "at": "2026-09-21T12:52:48.200645+00:00",
+  "status": "INCOMPLETE",
+  "observedChecks": [
+    "PASS build mobile 3x WebGL",
+    "PASS build mobile 3x Canvas fallback"
+  ],
+  "reason": "Node remained alive for more than 3 minutes after both UI checks; owned test processes were terminated. The final report was not produced.",
+  "log": "22-build-smoke.log"
+}

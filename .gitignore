@@ -1,9 +1,14 @@
 # Dependencies and generated build files
 node_modules/
+.next/
 dist/
 dist-health/
 .build/
 *.tsbuildinfo
+
+# Python and local caches
+.venv/
+.cache/
 
 # Temporary test and media files
 test-results/

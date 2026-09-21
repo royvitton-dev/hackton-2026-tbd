@@ -1,0 +1,30 @@
+# Cellwise EV Battery Care MVP
+
+차량 제원과 충전 세션 로그로 `BatteryCareScore`와 `SOCConfidenceScore`를 계산하는 정적 웹 대시보드입니다. DB나 외부 API를 사용하지 않으며, 제공된 엑셀을 JSON으로 변환해 사용합니다. BatteryCareScore는 Schmalstieg–Ecker NMC111/graphite 열화식을 적용한 25°C 기준 상대 스트레스 점수이며 실제 BMS SOH 진단값이 아닙니다.
+
+## 실행
+
+Node.js 20.19 이상을 사용합니다.
+
+```bash
+npm install
+npm run convert:data
+npm run dev
+```
+
+데이터 검증과 품질 확인:
+
+```bash
+npm run validate:data
+npm run lint
+npm test
+npm run build
+```
+
+변환 스크립트는 `resoures/ev_battery_health_mock_data_10000_v2.xlsx`의 필수 7개 시트를 읽습니다. 원본 시트 `05_Feature_Sessions`와 `06_User_Summary`의 수식 결과는 브라우저 점수 엔진에서 다시 계산하며, 변환한 시트 구조와 행 수는 `public/data/battery/workbookSchema.json`에 남깁니다. `resoures/images/image_sources.json`이 있으면 20종의 `vehicleId`별 대표 이미지와 출처도 정적 자산으로 동기화하며, 사용자 전환 시 차량 제원과 함께 갱신합니다.
+
+임의 점수 가중치는 사용하지 않습니다. NMC 화학계, SOC가 완전한 1C 이하 세션, 최소 5건·7일·0.3EFC 조건을 모두 만족할 때만 점수를 표시합니다. 온도가 제공되지 않으므로 25°C 표준 조건으로만 비교하며 상세 식과 한계는 `../docs/battery-scoring-methodology.md`를 참고합니다.
+
+## 저장 정책
+
+전체 10,000건은 정적 JSON에서 한 번 로드한 뒤 사용자별로 메모리 인덱싱합니다. localStorage에는 선택 사용자/차량, 해당 사용자의 원본 세션, 최근 계산 결과와 UI 설정만 저장합니다. 최근 세션 표는 기본 20건만 렌더링합니다.

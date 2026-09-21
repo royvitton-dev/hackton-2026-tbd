@@ -1,0 +1,38 @@
+{
+  "path": "/mnt/data/ev_battery_health_mock_data_10000_v2.xlsx",
+  "errors": [],
+  "warnings": [],
+  "metrics": {
+    "vehicle_count": 20,
+    "user_count": 1250,
+    "session_count": 10000,
+    "duplicate_vehicle_ids": 0,
+    "duplicate_user_ids": 0,
+    "duplicate_session_ids": 0,
+    "blank_vehicle_mandatory": 0,
+    "unknown_user": 0,
+    "unknown_vehicle": 0,
+    "user_vehicle_mismatch": 0,
+    "invalid_time_order": 0,
+    "overlap_before_prev_end": 0,
+    "overlap_before_prev_unplug": 0,
+    "invalid_charged": 0,
+    "soc_bounds": 0,
+    "c_rate_gt_4_warning": 0,
+    "charger_counts": {
+      "AC_SLOW": 4125,
+      "DC_FAST": 4153,
+      "ULTRA_FAST": 1722
+    },
+    "eligible_users_calc": 1188,
+    "insufficient_users_calc": 62,
+    "sessions_per_user_min": 2,
+    "sessions_per_user_max": 12,
+    "sessions_per_user_avg": 8.0,
+    "period_days_avg": 10.301,
+    "efc_avg": 2.804,
+    "formula_count": 328820,
+    "dynamic_formula_count": 0,
+    "ref_formula_count": 0
+  }
+}

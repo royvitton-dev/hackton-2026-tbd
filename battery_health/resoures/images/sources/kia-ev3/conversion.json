@@ -1,0 +1,243 @@
+{
+  "name": "Kia EV3 Air 2025",
+  "sourceUrl": "https://www.kia.com/nl/kies-je-kia/online-showroom/",
+  "license": "Kia Corporation / Kia Netherlands; official public showroom asset; open redistribution permission not stated.",
+  "sourceTriangles": 472123,
+  "renderedTriangles": 472105,
+  "outputPath": "battery_health/resoures/images/models/kia_ev3.glb",
+  "bytes": 7368648,
+  "sha256": "26da917f4c4e398d92be0e5e30bdd6c2b445cded3612ad6b04353a07c10a3862",
+  "sourceReports": [
+    {
+      "label": "body",
+      "meshCount": 290
+    },
+    {
+      "label": "rim",
+      "instances": [
+        "Wheel_RR",
+        "Wheel_FR",
+        "Wheel_FL",
+        "Wheel_RL"
+      ]
+    }
+  ],
+  "downloads": [
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/mq.json",
+      "file": "body.json",
+      "bytes": 640823,
+      "sha256": "c8ef7e882c5469b4cb55f2a103344ead3290a3a388aacaeab60935c5aa3a3101"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/mq.bin",
+      "file": "body.bin",
+      "bytes": 26315491,
+      "sha256": "a2d233c58958981ab07e3e67d494dd71329b939b96965ae8b52291d0cab21cfe"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/shared/defaults/rgb255.png",
+      "file": "assets/39964b2489a7-rgb255.png",
+      "bytes": 2802,
+      "sha256": "22067ea4ca01ce5c8c655ca6956f10480257250e06babd1facc32b095f78d1c1"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/shared/defaults/normal.png",
+      "file": "assets/f1cc89e2829b-normal.png",
+      "bytes": 2808,
+      "sha256": "a43d3a76ffda239b127a5929b4e0130439978feaae1c0f891c94d0efe703aa4a"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/shared/defaults/rgb0.png",
+      "file": "assets/9555a0d0c151-rgb0.png",
+      "bytes": 2801,
+      "sha256": "dbd93bd1fcaf02e5b4d94c20e7fac843480ab675530c5f3c664d3abd601ac47d"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/ev3_icons_colour.png",
+      "file": "assets/537ccc173f58-ev3_icons_colour.png",
+      "bytes": 351767,
+      "sha256": "2f1d2be77d8be71f85ff23d52a5b1c01f7fcb75cdca26615301ba714049fe78e"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/white_colour.jpg",
+      "file": "assets/48cc7af39064-white_colour.jpg",
+      "bytes": 10846,
+      "sha256": "aa0bbd676f558e407026791a832f43f5afc77595a98d6ebe290e2efa9078ef0a"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/shared/defaults/rgb44.png",
+      "file": "assets/d0cafbbe6288-rgb44.png",
+      "bytes": 2801,
+      "sha256": "222be2d6814e707174cad000050b805ce1fed086a1b9a30f7f4f3531dde0188d"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/ev3_pedals_normal.jpg",
+      "file": "assets/6fc2f0a8998b-ev3_pedals_normal.jpg",
+      "bytes": 385413,
+      "sha256": "c37f526a09611d4814762ff4793bdc44b83d7601567eab226d141780ef787217"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/light_grey.png",
+      "file": "assets/8cbaf0a1ffc0-light_grey.png",
+      "bytes": 4375,
+      "sha256": "7263b7e7527e1394cf7365c0b2d427e56328d11c44201a00f52504d6acbebe62"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/fabric_seat_ao.png",
+      "file": "assets/ecb6c7e8977f-fabric_seat_ao.png",
+      "bytes": 1950,
+      "sha256": "f148852f15d115c81956908447dc36cc629cbbc7f0faf78582e6e09e8135d201"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/interior_fabric_normal.jpg",
+      "file": "assets/8bd1df2f6c3a-interior_fabric_normal.jpg",
+      "bytes": 587158,
+      "sha256": "7565affa2080cc8019b839ce9bdb6aaae3afa3d375b31af9a1fe3ac4b1661524"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/MY22_stitch_colour.png",
+      "file": "assets/8ae78dc20fdc-MY22_stitch_colour.png",
+      "bytes": 4485,
+      "sha256": "88dac34f229ebdd3bd773f5982b8f25a917a7d5bc3b7dba67eff5c10511b39fd"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/red_colour.jpg",
+      "file": "assets/3bbdbc9b4a39-red_colour.jpg",
+      "bytes": 11528,
+      "sha256": "5a0418927aee51d3c32ca8af0046dbadac2d47c53d292a06f102234ec3be086b"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/kia_leather_normal.jpg",
+      "file": "assets/9c918ad782a0-kia_leather_normal.jpg",
+      "bytes": 2098882,
+      "sha256": "92341a33c18ca6b245068b2cb3b3b03995e1bb3d2f9193f200705c5194509481"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/seat_belt_colour.png",
+      "file": "assets/6c0336d2049f-seat_belt_colour.png",
+      "bytes": 125933,
+      "sha256": "898fa58572d534b0f25df90962680374a665e5e578bd819946268446a6b40d6c"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/airbag_steringwheel_normal.png",
+      "file": "assets/e31ad688dbba-airbag_steringwheel_normal.png",
+      "bytes": 17063,
+      "sha256": "ac2150c88c67c2e37fbed67225629f1747ce69cfc703f9ed189779cdd14a9a41"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/sensor_cap_ao.png",
+      "file": "assets/8584782ae1d1-sensor_cap_ao.png",
+      "bytes": 3126,
+      "sha256": "0d969e1b0d01ba8cae62837bdd633ab5a11c10303c777ae87e77a2f18db7e24d"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/sensor_cap_normal.png",
+      "file": "assets/10981ee44f2b-sensor_cap_normal.png",
+      "bytes": 3210,
+      "sha256": "378baf61ecea6b47b09e8fb4ff05564c20ea158e283ce54d2c673528a2f0fa6f"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/kia_stitchessteeringwheel_colour.png",
+      "file": "assets/c4ebaa5f0415-kia_stitchessteeringwheel_colour.png",
+      "bytes": 3294,
+      "sha256": "b368438549b42f4b54944443e8af771c9cd9291e31fa3fc55e883da77e21e69e"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/square_pattern_normal.png",
+      "file": "assets/ed7cc012d418-square_pattern_normal.png",
+      "bytes": 4235,
+      "sha256": "eea6adf3b1269ea2010f5ddd7ae2ebc45f76598de64ad9c120a0a9dc46d8ac52"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/airbag_floater_colour.png",
+      "file": "assets/567325e7644b-airbag_floater_colour.png",
+      "bytes": 9151,
+      "sha256": "5795d2824ea9f312530a93d94b7783ffeadc139a35e1460c55b008b5083f33b5"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/airbag_floater_normal.png",
+      "file": "assets/20e371d26fe0-airbag_floater_normal.png",
+      "bytes": 9465,
+      "sha256": "7a46f5b53b0c1c5e750fa97488121817dd9651e9e50717ab25772022a9077311"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/MY25_ev3_cluster_colour.jpg",
+      "file": "assets/8f332e0e3c62-MY25_ev3_cluster_colour.jpg",
+      "bytes": 101474,
+      "sha256": "6f26e5891d535f100bffd01f0e8dd430e644201f5973698baffa4948763368b6"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/Kia_plates_colour.png",
+      "file": "assets/5a04c225fc16-Kia_plates_colour.png",
+      "bytes": 10251,
+      "sha256": "bd38939d3750d7d14cb3227be4157afe05b1cbade83256a3ed278694ae811cf5"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/shared/materials/metals/aluminium.png",
+      "file": "assets/7748d3b64654-aluminium.png",
+      "bytes": 17251,
+      "sha256": "756b3e94f6c7ecd44b0446dec4280e7561f49e25088b0120d2da572295cc8ff5"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/ext_discbrake_colour.jpg",
+      "file": "assets/e79093e14895-ext_discbrake_colour.jpg",
+      "bytes": 55993,
+      "sha256": "b8c7637fc44bb60df0bf4da19f5fd28c60e5f529e39e075e1271f4f7da4f17fb"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/ambient_lighting_colour.min50.jpg",
+      "file": "assets/cdeb0c6b8670-ambient_lighting_colour.min50.jpg",
+      "bytes": 78062,
+      "sha256": "57cac5609e22e94b1f5e9bc60867c4c2c8f8958108d8ef1c296f3b117c75ed8d"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/speaker_ao.jpg",
+      "file": "assets/30f940dd5b08-speaker_ao.jpg",
+      "bytes": 5130,
+      "sha256": "41248f9e54279fc6763758b8bdb5f4a02d847a267e1bf9171415f1f9b9ae5701"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/speaker_normal.jpg",
+      "file": "assets/d6c7311738a6-speaker_normal.jpg",
+      "bytes": 7728,
+      "sha256": "448d1dfe9f41a61e9920d98a2658728277b14d10f5972dea5cbb761e68df251c"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/carpet_darker_colour.jpg",
+      "file": "assets/223e6940e3cf-carpet_darker_colour.jpg",
+      "bytes": 1076123,
+      "sha256": "3331c45e2ba27226042aa3a50fb52e78f0180d68d28cc9651329b420968c2eff"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/carpet_white_colour.jpg",
+      "file": "assets/dc70bd2d6bb0-carpet_white_colour.jpg",
+      "bytes": 544369,
+      "sha256": "6a58f354704b3cb2262d34cf0eacc1cfddc3a49ac9763c638f25f36cee045c9e"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/rims/17inch_Air_Default/mq.json",
+      "file": "rim.json",
+      "bytes": 209150,
+      "sha256": "8d65f29b16cdb3680604e76ca092e7e87f57cba8d6a29a6a986994649a02fb54"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/rims/17inch_Air_Default/mq.bin",
+      "file": "rim.bin",
+      "bytes": 317117,
+      "sha256": "e6a46b370160d7a63b5a9487edc31935b2ece176874be8a7d06c976324da67b7"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/gforces_ATG_primary_tyre_colour.png",
+      "file": "assets/8a30b54dfd66-gforces_ATG_primary_tyre_colour.png",
+      "bytes": 785832,
+      "sha256": "3735bf6c0e0c183c226e4b7b2b27e447ea8eca91e85509856caa2878054c9a8b"
+    },
+    {
+      "url": "https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/textures/gforces_ATG_primary_tyre_normal.png",
+      "file": "assets/ca677765c928-gforces_ATG_primary_tyre_normal.png",
+      "bytes": 363399,
+      "sha256": "e033ccea0720ae730e21e77f0bc677587c49d423f705c9dd8fd6b48d149f30da"
+    }
+  ]
+}
