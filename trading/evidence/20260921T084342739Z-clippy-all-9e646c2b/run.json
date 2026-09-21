@@ -1,0 +1,17 @@
+{
+  "started_at": "2026-09-21T08:43:42.7610399Z",
+  "command": "cargo",
+  "ended_at": "2026-09-21T08:43:58.2088906Z",
+  "exit_code": 101,
+  "args": [
+    "clippy",
+    "--all-targets",
+    "--locked",
+    "--",
+    "-D",
+    "warnings"
+  ],
+  "status": "failed",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine",
+  "run_id": "20260921T084342739Z-clippy-all-9e646c2b"
+}

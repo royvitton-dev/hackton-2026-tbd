@@ -1,0 +1,14 @@
+{
+  "command": "node",
+  "status": "failed",
+  "exit_code": 1,
+  "ended_at": "2026-09-21T09:03:39.7709230Z",
+  "args": [
+    "--test",
+    "--test-name-pattern=checkpoint publication failure",
+    "scripts/api.integration.test.mjs"
+  ],
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "started_at": "2026-09-21T09:03:39.0908715Z",
+  "run_id": "20260921T090339066Z-api-checkpoint-publication-failure-553899e0"
+}

@@ -1,0 +1,64 @@
+{
+  "allocation_calls": 1719875,
+  "allocation_calls_per_command": {
+    "max": 32,
+    "mean": 14.332366666666667,
+    "p50": 13,
+    "p99": 27
+  },
+  "allocation_requested_bytes": 124764248,
+  "allocation_scope": "alloc/alloc_zeroed/realloc during Core::execute only; byte sum is requested allocation volume, not live or peak memory",
+  "arch": "x86_64",
+  "benchmark": "A_pure_core",
+  "commands": 120000,
+  "commands_per_second": 754039.7680573673,
+  "concurrency": 1,
+  "cycles": 20000,
+  "durability_or_network_measured": false,
+  "elapsed_seconds": 0.1591428,
+  "fills": 40000,
+  "includes_queue_wait": false,
+  "journal": "none",
+  "latency_ns": {
+    "max": 1606400,
+    "p50": 900,
+    "p95": 1700,
+    "p99": 2500
+  },
+  "logical_processors": 16,
+  "memory_scope": "whole benchmark process including prebuilt commands, retained core history, measurement vectors and runtime",
+  "os": "windows",
+  "predeclared_target": {
+    "commands_per_second_min": 20000,
+    "met": true,
+    "p99_ns_max": 250000
+  },
+  "process_memory_after": {
+    "available": true,
+    "peak_private_commit_bytes": 124665856,
+    "peak_working_set_bytes": 117055488,
+    "private_commit_bytes": 115052544,
+    "source": "K32GetProcessMemoryInfo",
+    "working_set_bytes": 107454464
+  },
+  "process_memory_before": {
+    "available": true,
+    "peak_private_commit_bytes": 25047040,
+    "peak_working_set_bytes": 26066944,
+    "private_commit_bytes": 25047040,
+    "source": "K32GetProcessMemoryInfo",
+    "working_set_bytes": 26066944
+  },
+  "processor_identifier": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "profile": "release; Cargo profile lto=thin, codegen-units=1",
+  "queue": null,
+  "reallocation_calls": 9,
+  "rejected_commands": 0,
+  "rejection_rate": 0.0,
+  "seed": 20260921,
+  "timing_scope": "per-command Core::execute including result construction and allocation-count atomic overhead; aggregate throughput also includes timers, result drops and histogram recording; prebuilt Command strings excluded",
+  "version": 1,
+  "warmup_commands": 6000,
+  "workload": "fixed 6-command cycle: two maker sells, price-improved multi-fill buy (one partial maker), partial cancel, resting buy, cancel; 3 rotating accounts",
+  "zero_allocation": false
+}

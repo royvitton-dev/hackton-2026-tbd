@@ -1,0 +1,120 @@
+{
+  "algorithm": "SHA-256",
+  "artifacts": [
+    {
+      "file": "aged_recovery.exe",
+      "bytes": 17325476,
+      "sha256": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e"
+    },
+    {
+      "file": "intentional-mismatch.json",
+      "bytes": 4972,
+      "sha256": "f0e40a7becb7dd66b6aebaa7e15a6123b06112ec3e7acb38fe7e5a84853f9639"
+    },
+    {
+      "file": "recovery-report.json",
+      "bytes": 5177,
+      "sha256": "a41e68c5859e27d67044d1cf9f46e0a13a6b98b42fa6e61dce5005ebf4e06a84"
+    },
+    {
+      "file": "run.json",
+      "bytes": 746,
+      "sha256": "a04e3d195d32d091f00ca944b63edbc2d1c44e19339fdb1e4896226b0b7dae1c"
+    },
+    {
+      "file": "synthetic-live-full-core.json",
+      "bytes": 4971,
+      "sha256": "d80a934800193d58922a51851602087704e1990e6a44dc2820939b00e8fc7901"
+    },
+    {
+      "file": "synthetic-source\\genesis.bin",
+      "bytes": 3606,
+      "sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+    },
+    {
+      "file": "synthetic-source\\journal.bin",
+      "bytes": 601,
+      "sha256": "8514ae77cd5e3ab5ad8cf8307a89f9faf0540a2750ecadaa6a962caf2340be6e"
+    },
+    {
+      "file": "synthetic-source\\snapshot-00000000000000000002-00000000000001789983750986695600-20656-1.bin",
+      "bytes": 4883,
+      "sha256": "621648ce973b7055e330cbbbd0c39291d1061e6f6d3b8080e786670fbbf2fc07"
+    },
+    {
+      "file": "synthetic-source\\writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "validation\\from-genesis\\genesis.bin",
+      "bytes": 3606,
+      "sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+    },
+    {
+      "file": "validation\\from-genesis\\journal.bin",
+      "bytes": 601,
+      "sha256": "8514ae77cd5e3ab5ad8cf8307a89f9faf0540a2750ecadaa6a962caf2340be6e"
+    },
+    {
+      "file": "validation\\from-genesis\\writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "validation\\from-snapshot\\genesis.bin",
+      "bytes": 3606,
+      "sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+    },
+    {
+      "file": "validation\\from-snapshot\\journal.bin",
+      "bytes": 601,
+      "sha256": "8514ae77cd5e3ab5ad8cf8307a89f9faf0540a2750ecadaa6a962caf2340be6e"
+    },
+    {
+      "file": "validation\\from-snapshot\\snapshot-00000000000000000002-00000000000001789983750986695600-20656-1.bin",
+      "bytes": 4883,
+      "sha256": "621648ce973b7055e330cbbbd0c39291d1061e6f6d3b8080e786670fbbf2fc07"
+    },
+    {
+      "file": "validation\\from-snapshot\\writer.lock",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "validation\\journal-replayed-full-core.json",
+      "bytes": 4971,
+      "sha256": "d80a934800193d58922a51851602087704e1990e6a44dc2820939b00e8fc7901"
+    },
+    {
+      "file": "validation\\raw-copy\\genesis.bin",
+      "bytes": 3606,
+      "sha256": "1da0df5784c4b0f0432bedc0eae92d69bd35a237122d949a5f24b75b53dbf11d"
+    },
+    {
+      "file": "validation\\raw-copy\\journal.bin",
+      "bytes": 601,
+      "sha256": "8514ae77cd5e3ab5ad8cf8307a89f9faf0540a2750ecadaa6a962caf2340be6e"
+    },
+    {
+      "file": "validation\\raw-copy\\snapshot-00000000000000000002-00000000000001789983750986695600-20656-1.bin",
+      "bytes": 4883,
+      "sha256": "621648ce973b7055e330cbbbd0c39291d1061e6f6d3b8080e786670fbbf2fc07"
+    },
+    {
+      "file": "validation\\snapshot-recovered-full-core.json",
+      "bytes": 4971,
+      "sha256": "d80a934800193d58922a51851602087704e1990e6a44dc2820939b00e8fc7901"
+    },
+    {
+      "file": "validator.stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "validator.stdout.log",
+      "bytes": 151,
+      "sha256": "781f3866a4e08625fd23dd28959ab4e100aefabc54c82d4fca784b557d0c63b7"
+    }
+  ]
+}

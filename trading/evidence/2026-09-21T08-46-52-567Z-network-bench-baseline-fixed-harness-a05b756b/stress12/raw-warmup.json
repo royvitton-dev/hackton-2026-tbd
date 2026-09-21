@@ -1,0 +1,3602 @@
+[
+  {
+    "request_id": "stress-0-2-place",
+    "account": "bot-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 702,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45324.56,
+    "client_scheduler_delay_ms": 0.46860000000015134,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-2-place",
+      "account_id": "bot-03",
+      "command_seq": 1,
+      "event_seq": 1,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 1,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45334.5468,
+    "dispatch_to_ack_ms": 9.986799999998766,
+    "scheduled_to_ack_ms": 10.455399999998917
+  },
+  {
+    "request_id": "stress-0-3-place",
+    "account": "bot-04",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 703,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45324.792,
+    "client_scheduler_delay_ms": 0.7006000000037602,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-3-place",
+      "account_id": "bot-04",
+      "command_seq": 2,
+      "event_seq": 2,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45337.4783,
+    "dispatch_to_ack_ms": 12.68630000000121,
+    "scheduled_to_ack_ms": 13.386900000004971
+  },
+  {
+    "request_id": "stress-0-4-place",
+    "account": "bot-05",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 704,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45324.8784,
+    "client_scheduler_delay_ms": 0.7870000000038999,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-4-place",
+      "account_id": "bot-05",
+      "command_seq": 3,
+      "event_seq": 3,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45340.7793,
+    "dispatch_to_ack_ms": 15.900900000000547,
+    "scheduled_to_ack_ms": 16.687900000004447
+  },
+  {
+    "request_id": "stress-0-5-place",
+    "account": "bot-06",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 705,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45324.9274,
+    "client_scheduler_delay_ms": 0.8360000000029686,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-5-place",
+      "account_id": "bot-06",
+      "command_seq": 4,
+      "event_seq": 4,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 4,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45343.9191,
+    "dispatch_to_ack_ms": 18.991699999998673,
+    "scheduled_to_ack_ms": 19.82770000000164
+  },
+  {
+    "request_id": "stress-0-6-place",
+    "account": "bot-07",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 706,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45324.9832,
+    "client_scheduler_delay_ms": 0.8918000000048778,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-6-place",
+      "account_id": "bot-07",
+      "command_seq": 5,
+      "event_seq": 5,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 5,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45345.5658,
+    "dispatch_to_ack_ms": 20.582599999994272,
+    "scheduled_to_ack_ms": 21.47439999999915
+  },
+  {
+    "request_id": "stress-0-7-place",
+    "account": "bot-08",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 707,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45325.086,
+    "client_scheduler_delay_ms": 0.9946000000054482,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-7-place",
+      "account_id": "bot-08",
+      "command_seq": 6,
+      "event_seq": 6,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 6,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45347.3778,
+    "dispatch_to_ack_ms": 22.291799999999057,
+    "scheduled_to_ack_ms": 23.286400000004505
+  },
+  {
+    "request_id": "stress-0-8-place",
+    "account": "bot-09",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 708,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45325.1429,
+    "client_scheduler_delay_ms": 1.051500000001397,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-8-place",
+      "account_id": "bot-09",
+      "command_seq": 7,
+      "event_seq": 7,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 7,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45349.0686,
+    "dispatch_to_ack_ms": 23.92569999999978,
+    "scheduled_to_ack_ms": 24.977200000001176
+  },
+  {
+    "request_id": "stress-0-9-place",
+    "account": "bot-10",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 709,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45325.1893,
+    "client_scheduler_delay_ms": 1.0979000000006636,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-9-place",
+      "account_id": "bot-10",
+      "command_seq": 8,
+      "event_seq": 8,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 8,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45350.7976,
+    "dispatch_to_ack_ms": 25.608299999999872,
+    "scheduled_to_ack_ms": 26.706200000000536
+  },
+  {
+    "request_id": "stress-0-10-place",
+    "account": "bot-11",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 710,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45325.2297,
+    "client_scheduler_delay_ms": 1.1383000000059837,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-10-place",
+      "account_id": "bot-11",
+      "command_seq": 9,
+      "event_seq": 9,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 9,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45352.5014,
+    "dispatch_to_ack_ms": 27.27169999999751,
+    "scheduled_to_ack_ms": 28.410000000003492
+  },
+  {
+    "request_id": "stress-0-11-place",
+    "account": "bot-12",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 711,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45325.2675,
+    "client_scheduler_delay_ms": 1.1761000000042259,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-11-place",
+      "account_id": "bot-12",
+      "command_seq": 10,
+      "event_seq": 10,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 10,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45354.222,
+    "dispatch_to_ack_ms": 28.954499999999825,
+    "scheduled_to_ack_ms": 30.13060000000405
+  },
+  {
+    "request_id": "stress-0-0-place",
+    "account": "bot-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 700,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45324.1944,
+    "client_scheduler_delay_ms": 0.10300000000279397,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-0-place",
+      "account_id": "bot-01",
+      "command_seq": 11,
+      "event_seq": 11,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 11,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45356.2486,
+    "dispatch_to_ack_ms": 32.05419999999867,
+    "scheduled_to_ack_ms": 32.15720000000147
+  },
+  {
+    "request_id": "stress-0-1-place",
+    "account": "bot-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 701,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45324.0914,
+    "dispatch_ms": 45324.4667,
+    "client_scheduler_delay_ms": 0.3752999999996973,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-1-place",
+      "account_id": "bot-02",
+      "command_seq": 12,
+      "event_seq": 12,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 12,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45357.9185,
+    "dispatch_to_ack_ms": 33.45180000000255,
+    "scheduled_to_ack_ms": 33.82710000000225
+  },
+  {
+    "request_id": "stress-0-2-cancel",
+    "account": "bot-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 1
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45334.5674,
+    "dispatch_ms": 45334.5681,
+    "client_scheduler_delay_ms": 0.0006999999968684278,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-2-cancel",
+      "account_id": "bot-03",
+      "command_seq": 13,
+      "event_seq": 13,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 1,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45359.4477,
+    "dispatch_to_ack_ms": 24.87960000000021,
+    "scheduled_to_ack_ms": 24.880299999997078
+  },
+  {
+    "request_id": "stress-0-3-cancel",
+    "account": "bot-04",
+    "action": {
+      "type": "cancel",
+      "order_id": 2
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45337.4943,
+    "dispatch_ms": 45337.495,
+    "client_scheduler_delay_ms": 0.0007000000041443855,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-3-cancel",
+      "account_id": "bot-04",
+      "command_seq": 14,
+      "event_seq": 14,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45361.48,
+    "dispatch_to_ack_ms": 23.985000000000582,
+    "scheduled_to_ack_ms": 23.985700000004726
+  },
+  {
+    "request_id": "stress-0-4-cancel",
+    "account": "bot-05",
+    "action": {
+      "type": "cancel",
+      "order_id": 3
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45340.8002,
+    "dispatch_ms": 45340.8007,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-4-cancel",
+      "account_id": "bot-05",
+      "command_seq": 15,
+      "event_seq": 15,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45363.1084,
+    "dispatch_to_ack_ms": 22.307699999997567,
+    "scheduled_to_ack_ms": 22.308199999999488
+  },
+  {
+    "request_id": "stress-0-5-cancel",
+    "account": "bot-06",
+    "action": {
+      "type": "cancel",
+      "order_id": 4
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45343.9482,
+    "dispatch_ms": 45343.9488,
+    "client_scheduler_delay_ms": 0.0005999999993946403,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-5-cancel",
+      "account_id": "bot-06",
+      "command_seq": 16,
+      "event_seq": 16,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 4,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45365.0525,
+    "dispatch_to_ack_ms": 21.103699999999662,
+    "scheduled_to_ack_ms": 21.104299999999057
+  },
+  {
+    "request_id": "stress-0-6-cancel",
+    "account": "bot-07",
+    "action": {
+      "type": "cancel",
+      "order_id": 5
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45345.5786,
+    "dispatch_ms": 45345.579,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-6-cancel",
+      "account_id": "bot-07",
+      "command_seq": 17,
+      "event_seq": 17,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 5,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45366.7077,
+    "dispatch_to_ack_ms": 21.128700000001118,
+    "scheduled_to_ack_ms": 21.12909999999829
+  },
+  {
+    "request_id": "stress-0-7-cancel",
+    "account": "bot-08",
+    "action": {
+      "type": "cancel",
+      "order_id": 6
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45347.3943,
+    "dispatch_ms": 45347.3947,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-7-cancel",
+      "account_id": "bot-08",
+      "command_seq": 18,
+      "event_seq": 18,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 6,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45368.5345,
+    "dispatch_to_ack_ms": 21.13980000000447,
+    "scheduled_to_ack_ms": 21.14020000000164
+  },
+  {
+    "request_id": "stress-0-8-cancel",
+    "account": "bot-09",
+    "action": {
+      "type": "cancel",
+      "order_id": 7
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45349.0843,
+    "dispatch_ms": 45349.0848,
+    "client_scheduler_delay_ms": 0.0004999999946448952,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-8-cancel",
+      "account_id": "bot-09",
+      "command_seq": 19,
+      "event_seq": 19,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 7,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45370.2799,
+    "dispatch_to_ack_ms": 21.19510000000446,
+    "scheduled_to_ack_ms": 21.195599999999104
+  },
+  {
+    "request_id": "stress-0-9-cancel",
+    "account": "bot-10",
+    "action": {
+      "type": "cancel",
+      "order_id": 8
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45350.8219,
+    "dispatch_ms": 45350.8223,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-9-cancel",
+      "account_id": "bot-10",
+      "command_seq": 20,
+      "event_seq": 20,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 8,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45372.3728,
+    "dispatch_to_ack_ms": 21.550499999997555,
+    "scheduled_to_ack_ms": 21.550899999994726
+  },
+  {
+    "request_id": "stress-0-10-cancel",
+    "account": "bot-11",
+    "action": {
+      "type": "cancel",
+      "order_id": 9
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45352.5138,
+    "dispatch_ms": 45352.5143,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-10-cancel",
+      "account_id": "bot-11",
+      "command_seq": 21,
+      "event_seq": 21,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 9,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45374.0347,
+    "dispatch_to_ack_ms": 21.52039999999397,
+    "scheduled_to_ack_ms": 21.52089999999589
+  },
+  {
+    "request_id": "stress-0-11-cancel",
+    "account": "bot-12",
+    "action": {
+      "type": "cancel",
+      "order_id": 10
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45354.2351,
+    "dispatch_ms": 45354.2356,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-11-cancel",
+      "account_id": "bot-12",
+      "command_seq": 22,
+      "event_seq": 22,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 10,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45375.8102,
+    "dispatch_to_ack_ms": 21.57459999999992,
+    "scheduled_to_ack_ms": 21.57510000000184
+  },
+  {
+    "request_id": "stress-0-0-cancel",
+    "account": "bot-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 11
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45356.3563,
+    "dispatch_ms": 45356.3571,
+    "client_scheduler_delay_ms": 0.000800000001618173,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-0-cancel",
+      "account_id": "bot-01",
+      "command_seq": 23,
+      "event_seq": 23,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 11,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45377.8475,
+    "dispatch_to_ack_ms": 21.49040000000241,
+    "scheduled_to_ack_ms": 21.491200000004028
+  },
+  {
+    "request_id": "stress-0-1-cancel",
+    "account": "bot-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 12
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45357.9371,
+    "dispatch_ms": 45357.9378,
+    "client_scheduler_delay_ms": 0.0006999999968684278,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-0-1-cancel",
+      "account_id": "bot-02",
+      "command_seq": 24,
+      "event_seq": 24,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 12,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45379.6679,
+    "dispatch_to_ack_ms": 21.730100000000675,
+    "scheduled_to_ack_ms": 21.730799999997544
+  },
+  {
+    "request_id": "stress-1-0-place",
+    "account": "bot-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 700,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45379.7787,
+    "client_scheduler_delay_ms": 0.023400000005494803,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-0-place",
+      "account_id": "bot-01",
+      "command_seq": 25,
+      "event_seq": 25,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 13,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45390.4959,
+    "dispatch_to_ack_ms": 10.717199999999139,
+    "scheduled_to_ack_ms": 10.740600000004633
+  },
+  {
+    "request_id": "stress-1-1-place",
+    "account": "bot-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 701,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45379.9792,
+    "client_scheduler_delay_ms": 0.22390000000450527,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-1-place",
+      "account_id": "bot-02",
+      "command_seq": 26,
+      "event_seq": 26,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 14,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45392.2969,
+    "dispatch_to_ack_ms": 12.317699999999604,
+    "scheduled_to_ack_ms": 12.54160000000411
+  },
+  {
+    "request_id": "stress-1-2-place",
+    "account": "bot-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 702,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.0635,
+    "client_scheduler_delay_ms": 0.3081999999994878,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-2-place",
+      "account_id": "bot-03",
+      "command_seq": 27,
+      "event_seq": 27,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 15,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45393.966,
+    "dispatch_to_ack_ms": 13.902500000003783,
+    "scheduled_to_ack_ms": 14.210700000003271
+  },
+  {
+    "request_id": "stress-1-3-place",
+    "account": "bot-04",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 703,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.1067,
+    "client_scheduler_delay_ms": 0.3513999999995576,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-3-place",
+      "account_id": "bot-04",
+      "command_seq": 28,
+      "event_seq": 28,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 16,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45395.8016,
+    "dispatch_to_ack_ms": 15.694900000002235,
+    "scheduled_to_ack_ms": 16.046300000001793
+  },
+  {
+    "request_id": "stress-1-5-place",
+    "account": "bot-06",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 705,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.2222,
+    "client_scheduler_delay_ms": 0.4668999999994412,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-5-place",
+      "account_id": "bot-06",
+      "command_seq": 29,
+      "event_seq": 29,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 17,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45397.6698,
+    "dispatch_to_ack_ms": 17.447600000006787,
+    "scheduled_to_ack_ms": 17.914500000006228
+  },
+  {
+    "request_id": "stress-1-6-place",
+    "account": "bot-07",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 706,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.2558,
+    "client_scheduler_delay_ms": 0.5005000000019209,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-6-place",
+      "account_id": "bot-07",
+      "command_seq": 30,
+      "event_seq": 30,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 18,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45399.3738,
+    "dispatch_to_ack_ms": 19.118000000002212,
+    "scheduled_to_ack_ms": 19.618500000004133
+  },
+  {
+    "request_id": "stress-1-4-place",
+    "account": "bot-05",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 704,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.1788,
+    "client_scheduler_delay_ms": 0.4235000000044238,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-4-place",
+      "account_id": "bot-05",
+      "command_seq": 31,
+      "event_seq": 31,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 19,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45400.9667,
+    "dispatch_to_ack_ms": 20.787899999995716,
+    "scheduled_to_ack_ms": 21.21140000000014
+  },
+  {
+    "request_id": "stress-1-7-place",
+    "account": "bot-08",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 707,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.2837,
+    "client_scheduler_delay_ms": 0.5284000000028755,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-7-place",
+      "account_id": "bot-08",
+      "command_seq": 32,
+      "event_seq": 32,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 20,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45402.6477,
+    "dispatch_to_ack_ms": 22.364000000001397,
+    "scheduled_to_ack_ms": 22.892400000004272
+  },
+  {
+    "request_id": "stress-1-9-place",
+    "account": "bot-10",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 709,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.3405,
+    "client_scheduler_delay_ms": 0.5852000000013504,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-9-place",
+      "account_id": "bot-10",
+      "command_seq": 33,
+      "event_seq": 33,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 21,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45404.4024,
+    "dispatch_to_ack_ms": 24.061900000000605,
+    "scheduled_to_ack_ms": 24.647100000001956
+  },
+  {
+    "request_id": "stress-1-8-place",
+    "account": "bot-09",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 708,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.3114,
+    "client_scheduler_delay_ms": 0.5561000000016065,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-8-place",
+      "account_id": "bot-09",
+      "command_seq": 34,
+      "event_seq": 34,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 22,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45406.2473,
+    "dispatch_to_ack_ms": 25.93590000000404,
+    "scheduled_to_ack_ms": 26.492000000005646
+  },
+  {
+    "request_id": "stress-1-10-place",
+    "account": "bot-11",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 710,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.3664,
+    "client_scheduler_delay_ms": 0.6111000000018976,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-10-place",
+      "account_id": "bot-11",
+      "command_seq": 35,
+      "event_seq": 35,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 23,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45408.2411,
+    "dispatch_to_ack_ms": 27.874700000000303,
+    "scheduled_to_ack_ms": 28.4858000000022
+  },
+  {
+    "request_id": "stress-1-11-place",
+    "account": "bot-12",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 711,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45379.7553,
+    "dispatch_ms": 45380.3909,
+    "client_scheduler_delay_ms": 0.6356000000014319,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-11-place",
+      "account_id": "bot-12",
+      "command_seq": 36,
+      "event_seq": 36,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 24,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45409.9503,
+    "dispatch_to_ack_ms": 29.559399999998277,
+    "scheduled_to_ack_ms": 30.19499999999971
+  },
+  {
+    "request_id": "stress-1-0-cancel",
+    "account": "bot-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 13
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45390.5158,
+    "dispatch_ms": 45390.5165,
+    "client_scheduler_delay_ms": 0.0006999999968684278,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-0-cancel",
+      "account_id": "bot-01",
+      "command_seq": 37,
+      "event_seq": 37,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 13,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45411.5365,
+    "dispatch_to_ack_ms": 21.020000000004075,
+    "scheduled_to_ack_ms": 21.020700000000943
+  },
+  {
+    "request_id": "stress-1-1-cancel",
+    "account": "bot-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 14
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45392.3267,
+    "dispatch_ms": 45392.3272,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-1-cancel",
+      "account_id": "bot-02",
+      "command_seq": 38,
+      "event_seq": 38,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 14,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45413.3385,
+    "dispatch_to_ack_ms": 21.0112999999983,
+    "scheduled_to_ack_ms": 21.01180000000022
+  },
+  {
+    "request_id": "stress-1-2-cancel",
+    "account": "bot-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 15
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45393.9742,
+    "dispatch_ms": 45393.9747,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-2-cancel",
+      "account_id": "bot-03",
+      "command_seq": 39,
+      "event_seq": 39,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 15,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45414.9703,
+    "dispatch_to_ack_ms": 20.995600000002014,
+    "scheduled_to_ack_ms": 20.996100000003935
+  },
+  {
+    "request_id": "stress-1-3-cancel",
+    "account": "bot-04",
+    "action": {
+      "type": "cancel",
+      "order_id": 16
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45395.8087,
+    "dispatch_ms": 45395.8092,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-3-cancel",
+      "account_id": "bot-04",
+      "command_seq": 40,
+      "event_seq": 40,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 16,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45416.6766,
+    "dispatch_to_ack_ms": 20.86739999999554,
+    "scheduled_to_ack_ms": 20.867899999997462
+  },
+  {
+    "request_id": "stress-1-5-cancel",
+    "account": "bot-06",
+    "action": {
+      "type": "cancel",
+      "order_id": 17
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45397.6793,
+    "dispatch_ms": 45397.6797,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-5-cancel",
+      "account_id": "bot-06",
+      "command_seq": 41,
+      "event_seq": 41,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 17,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45418.3155,
+    "dispatch_to_ack_ms": 20.63579999999638,
+    "scheduled_to_ack_ms": 20.63619999999355
+  },
+  {
+    "request_id": "stress-1-6-cancel",
+    "account": "bot-07",
+    "action": {
+      "type": "cancel",
+      "order_id": 18
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45399.3837,
+    "dispatch_ms": 45399.3841,
+    "client_scheduler_delay_ms": 0.0004000000044470653,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-6-cancel",
+      "account_id": "bot-07",
+      "command_seq": 42,
+      "event_seq": 42,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 18,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45419.9405,
+    "dispatch_to_ack_ms": 20.556399999994028,
+    "scheduled_to_ack_ms": 20.556799999998475
+  },
+  {
+    "request_id": "stress-1-4-cancel",
+    "account": "bot-05",
+    "action": {
+      "type": "cancel",
+      "order_id": 19
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45400.9898,
+    "dispatch_ms": 45400.9903,
+    "client_scheduler_delay_ms": 0.0004999999946448952,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-4-cancel",
+      "account_id": "bot-05",
+      "command_seq": 43,
+      "event_seq": 43,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 19,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45421.6005,
+    "dispatch_to_ack_ms": 20.610200000002806,
+    "scheduled_to_ack_ms": 20.61069999999745
+  },
+  {
+    "request_id": "stress-1-7-cancel",
+    "account": "bot-08",
+    "action": {
+      "type": "cancel",
+      "order_id": 20
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45402.6573,
+    "dispatch_ms": 45402.6577,
+    "client_scheduler_delay_ms": 0.0004000000044470653,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-7-cancel",
+      "account_id": "bot-08",
+      "command_seq": 44,
+      "event_seq": 44,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 20,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45423.5703,
+    "dispatch_to_ack_ms": 20.91259999999602,
+    "scheduled_to_ack_ms": 20.913000000000466
+  },
+  {
+    "request_id": "stress-1-9-cancel",
+    "account": "bot-10",
+    "action": {
+      "type": "cancel",
+      "order_id": 21
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45404.4133,
+    "dispatch_ms": 45404.4139,
+    "client_scheduler_delay_ms": 0.0005999999993946403,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-9-cancel",
+      "account_id": "bot-10",
+      "command_seq": 45,
+      "event_seq": 45,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 21,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45425.5868,
+    "dispatch_to_ack_ms": 21.172899999997753,
+    "scheduled_to_ack_ms": 21.173499999997148
+  },
+  {
+    "request_id": "stress-1-8-cancel",
+    "account": "bot-09",
+    "action": {
+      "type": "cancel",
+      "order_id": 22
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45406.2595,
+    "dispatch_ms": 45406.2601,
+    "client_scheduler_delay_ms": 0.0005999999993946403,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-8-cancel",
+      "account_id": "bot-09",
+      "command_seq": 46,
+      "event_seq": 46,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 22,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45427.209,
+    "dispatch_to_ack_ms": 20.94890000000305,
+    "scheduled_to_ack_ms": 20.949500000002445
+  },
+  {
+    "request_id": "stress-1-10-cancel",
+    "account": "bot-11",
+    "action": {
+      "type": "cancel",
+      "order_id": 23
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45408.252,
+    "dispatch_ms": 45408.2522,
+    "client_scheduler_delay_ms": 0.00020000000222353265,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-10-cancel",
+      "account_id": "bot-11",
+      "command_seq": 47,
+      "event_seq": 47,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 23,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45428.8878,
+    "dispatch_to_ack_ms": 20.635599999994156,
+    "scheduled_to_ack_ms": 20.63579999999638
+  },
+  {
+    "request_id": "stress-1-11-cancel",
+    "account": "bot-12",
+    "action": {
+      "type": "cancel",
+      "order_id": 24
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45409.9614,
+    "dispatch_ms": 45409.9658,
+    "client_scheduler_delay_ms": 0.004399999997986015,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-1-11-cancel",
+      "account_id": "bot-12",
+      "command_seq": 48,
+      "event_seq": 48,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 24,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45430.5476,
+    "dispatch_to_ack_ms": 20.58179999999993,
+    "scheduled_to_ack_ms": 20.586199999997916
+  },
+  {
+    "request_id": "stress-2-1-place",
+    "account": "bot-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 701,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.7443,
+    "client_scheduler_delay_ms": 0.1797999999980675,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-1-place",
+      "account_id": "bot-02",
+      "command_seq": 49,
+      "event_seq": 49,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 25,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45433.9863,
+    "dispatch_to_ack_ms": 3.24199999999837,
+    "scheduled_to_ack_ms": 3.4217999999964377
+  },
+  {
+    "request_id": "stress-2-0-place",
+    "account": "bot-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 700,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.5815,
+    "client_scheduler_delay_ms": 0.016999999999825377,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-0-place",
+      "account_id": "bot-01",
+      "command_seq": 50,
+      "event_seq": 50,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 26,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45435.7955,
+    "dispatch_to_ack_ms": 5.213999999999942,
+    "scheduled_to_ack_ms": 5.230999999999767
+  },
+  {
+    "request_id": "stress-2-4-place",
+    "account": "bot-05",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 704,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.8541,
+    "client_scheduler_delay_ms": 0.28959999999642605,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-4-place",
+      "account_id": "bot-05",
+      "command_seq": 51,
+      "event_seq": 51,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 27,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45437.5346,
+    "dispatch_to_ack_ms": 6.680500000002212,
+    "scheduled_to_ack_ms": 6.970099999998638
+  },
+  {
+    "request_id": "stress-2-2-place",
+    "account": "bot-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 702,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.7982,
+    "client_scheduler_delay_ms": 0.23369999999704305,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-2-place",
+      "account_id": "bot-03",
+      "command_seq": 52,
+      "event_seq": 52,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45439.3631,
+    "dispatch_to_ack_ms": 8.564900000004855,
+    "scheduled_to_ack_ms": 8.798600000001898
+  },
+  {
+    "request_id": "stress-2-6-place",
+    "account": "bot-07",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 706,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.9449,
+    "client_scheduler_delay_ms": 0.3804000000018277,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-6-place",
+      "account_id": "bot-07",
+      "command_seq": 53,
+      "event_seq": 53,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 29,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45441.4064,
+    "dispatch_to_ack_ms": 10.461499999997613,
+    "scheduled_to_ack_ms": 10.841899999999441
+  },
+  {
+    "request_id": "stress-2-5-place",
+    "account": "bot-06",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 705,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.9184,
+    "client_scheduler_delay_ms": 0.35390000000188593,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-5-place",
+      "account_id": "bot-06",
+      "command_seq": 54,
+      "event_seq": 54,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 30,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45443.2527,
+    "dispatch_to_ack_ms": 12.334299999994982,
+    "scheduled_to_ack_ms": 12.688199999996868
+  },
+  {
+    "request_id": "stress-2-3-place",
+    "account": "bot-04",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 703,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.8292,
+    "client_scheduler_delay_ms": 0.2646999999997206,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-3-place",
+      "account_id": "bot-04",
+      "command_seq": 55,
+      "event_seq": 55,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 31,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45444.9037,
+    "dispatch_to_ack_ms": 14.074500000002445,
+    "scheduled_to_ack_ms": 14.339200000002165
+  },
+  {
+    "request_id": "stress-2-8-place",
+    "account": "bot-09",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 708,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.9906,
+    "client_scheduler_delay_ms": 0.4260999999969499,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-8-place",
+      "account_id": "bot-09",
+      "command_seq": 56,
+      "event_seq": 56,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 32,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45446.818,
+    "dispatch_to_ack_ms": 15.827400000001944,
+    "scheduled_to_ack_ms": 16.253499999998894
+  },
+  {
+    "request_id": "stress-2-9-place",
+    "account": "bot-10",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 709,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45431.0137,
+    "client_scheduler_delay_ms": 0.4492000000027474,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-9-place",
+      "account_id": "bot-10",
+      "command_seq": 57,
+      "event_seq": 57,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 33,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45448.5112,
+    "dispatch_to_ack_ms": 17.49749999999767,
+    "scheduled_to_ack_ms": 17.94670000000042
+  },
+  {
+    "request_id": "stress-2-7-place",
+    "account": "bot-08",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 707,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45430.9681,
+    "client_scheduler_delay_ms": 0.40359999999782303,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-7-place",
+      "account_id": "bot-08",
+      "command_seq": 58,
+      "event_seq": 58,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 34,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45450.2646,
+    "dispatch_to_ack_ms": 19.296500000004016,
+    "scheduled_to_ack_ms": 19.70010000000184
+  },
+  {
+    "request_id": "stress-2-10-place",
+    "account": "bot-11",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 710,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45431.0364,
+    "client_scheduler_delay_ms": 0.47189999999682186,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-10-place",
+      "account_id": "bot-11",
+      "command_seq": 59,
+      "event_seq": 59,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 35,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45451.8687,
+    "dispatch_to_ack_ms": 20.83230000000185,
+    "scheduled_to_ack_ms": 21.304199999998673
+  },
+  {
+    "request_id": "stress-2-11-place",
+    "account": "bot-12",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 711,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45430.5645,
+    "dispatch_ms": 45431.0643,
+    "client_scheduler_delay_ms": 0.49979999999777647,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-11-place",
+      "account_id": "bot-12",
+      "command_seq": 60,
+      "event_seq": 60,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 36,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45453.5776,
+    "dispatch_to_ack_ms": 22.513299999998708,
+    "scheduled_to_ack_ms": 23.013099999996484
+  },
+  {
+    "request_id": "stress-2-1-cancel",
+    "account": "bot-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 25
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45433.998,
+    "dispatch_ms": 45433.9985,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-1-cancel",
+      "account_id": "bot-02",
+      "command_seq": 61,
+      "event_seq": 61,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 25,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45455.2067,
+    "dispatch_to_ack_ms": 21.208200000000943,
+    "scheduled_to_ack_ms": 21.208700000002864
+  },
+  {
+    "request_id": "stress-2-0-cancel",
+    "account": "bot-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 26
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45435.8058,
+    "dispatch_ms": 45435.8064,
+    "client_scheduler_delay_ms": 0.0005999999993946403,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-0-cancel",
+      "account_id": "bot-01",
+      "command_seq": 62,
+      "event_seq": 62,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 26,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45457.0926,
+    "dispatch_to_ack_ms": 21.28620000000228,
+    "scheduled_to_ack_ms": 21.286800000001676
+  },
+  {
+    "request_id": "stress-2-4-cancel",
+    "account": "bot-05",
+    "action": {
+      "type": "cancel",
+      "order_id": 27
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45437.5435,
+    "dispatch_ms": 45437.5441,
+    "client_scheduler_delay_ms": 0.0005999999993946403,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-4-cancel",
+      "account_id": "bot-05",
+      "command_seq": 63,
+      "event_seq": 63,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 27,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45458.8886,
+    "dispatch_to_ack_ms": 21.344499999999243,
+    "scheduled_to_ack_ms": 21.345099999998638
+  },
+  {
+    "request_id": "stress-2-2-cancel",
+    "account": "bot-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 28
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45439.3757,
+    "dispatch_ms": 45439.3762,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-2-cancel",
+      "account_id": "bot-03",
+      "command_seq": 64,
+      "event_seq": 64,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45460.6008,
+    "dispatch_to_ack_ms": 21.224600000001374,
+    "scheduled_to_ack_ms": 21.225100000003295
+  },
+  {
+    "request_id": "stress-2-6-cancel",
+    "account": "bot-07",
+    "action": {
+      "type": "cancel",
+      "order_id": 29
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45441.4171,
+    "dispatch_ms": 45441.4176,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-6-cancel",
+      "account_id": "bot-07",
+      "command_seq": 65,
+      "event_seq": 65,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 29,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45462.3855,
+    "dispatch_to_ack_ms": 20.967899999996007,
+    "scheduled_to_ack_ms": 20.968399999997928
+  },
+  {
+    "request_id": "stress-2-5-cancel",
+    "account": "bot-06",
+    "action": {
+      "type": "cancel",
+      "order_id": 30
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45443.2618,
+    "dispatch_ms": 45443.2623,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-5-cancel",
+      "account_id": "bot-06",
+      "command_seq": 66,
+      "event_seq": 66,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 30,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45464.1233,
+    "dispatch_to_ack_ms": 20.860999999997148,
+    "scheduled_to_ack_ms": 20.86149999999907
+  },
+  {
+    "request_id": "stress-2-3-cancel",
+    "account": "bot-04",
+    "action": {
+      "type": "cancel",
+      "order_id": 31
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45444.9135,
+    "dispatch_ms": 45444.914,
+    "client_scheduler_delay_ms": 0.0004999999946448952,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-3-cancel",
+      "account_id": "bot-04",
+      "command_seq": 67,
+      "event_seq": 67,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 31,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45465.8996,
+    "dispatch_to_ack_ms": 20.985599999999977,
+    "scheduled_to_ack_ms": 20.98609999999462
+  },
+  {
+    "request_id": "stress-2-8-cancel",
+    "account": "bot-09",
+    "action": {
+      "type": "cancel",
+      "order_id": 32
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45446.8278,
+    "dispatch_ms": 45446.8283,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-8-cancel",
+      "account_id": "bot-09",
+      "command_seq": 68,
+      "event_seq": 68,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 32,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45467.5253,
+    "dispatch_to_ack_ms": 20.697000000000116,
+    "scheduled_to_ack_ms": 20.697500000002037
+  },
+  {
+    "request_id": "stress-2-9-cancel",
+    "account": "bot-10",
+    "action": {
+      "type": "cancel",
+      "order_id": 33
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45448.5221,
+    "dispatch_ms": 45448.5225,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-9-cancel",
+      "account_id": "bot-10",
+      "command_seq": 69,
+      "event_seq": 69,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 33,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45469.2998,
+    "dispatch_to_ack_ms": 20.77730000000156,
+    "scheduled_to_ack_ms": 20.77769999999873
+  },
+  {
+    "request_id": "stress-2-7-cancel",
+    "account": "bot-08",
+    "action": {
+      "type": "cancel",
+      "order_id": 34
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45450.2744,
+    "dispatch_ms": 45450.2747,
+    "client_scheduler_delay_ms": 0.00029999999969732016,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-7-cancel",
+      "account_id": "bot-08",
+      "command_seq": 70,
+      "event_seq": 70,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 34,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45470.9972,
+    "dispatch_to_ack_ms": 20.722499999996217,
+    "scheduled_to_ack_ms": 20.722799999995914
+  },
+  {
+    "request_id": "stress-2-10-cancel",
+    "account": "bot-11",
+    "action": {
+      "type": "cancel",
+      "order_id": 35
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45451.8784,
+    "dispatch_ms": 45451.8788,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-10-cancel",
+      "account_id": "bot-11",
+      "command_seq": 71,
+      "event_seq": 71,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 35,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45472.9374,
+    "dispatch_to_ack_ms": 21.058600000003935,
+    "scheduled_to_ack_ms": 21.059000000001106
+  },
+  {
+    "request_id": "stress-2-11-cancel",
+    "account": "bot-12",
+    "action": {
+      "type": "cancel",
+      "order_id": 36
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45453.591,
+    "dispatch_ms": 45453.5914,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-2-11-cancel",
+      "account_id": "bot-12",
+      "command_seq": 72,
+      "event_seq": 72,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 36,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45474.5514,
+    "dispatch_to_ack_ms": 20.959999999999127,
+    "scheduled_to_ack_ms": 20.960399999996298
+  },
+  {
+    "request_id": "stress-3-0-place",
+    "account": "bot-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 700,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45474.5852,
+    "client_scheduler_delay_ms": 0.01810000000114087,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-0-place",
+      "account_id": "bot-01",
+      "command_seq": 73,
+      "event_seq": 73,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 37,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45491.3244,
+    "dispatch_to_ack_ms": 16.739199999996345,
+    "scheduled_to_ack_ms": 16.757299999997485
+  },
+  {
+    "request_id": "stress-3-1-place",
+    "account": "bot-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 701,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45474.7422,
+    "client_scheduler_delay_ms": 0.17510000000038417,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-1-place",
+      "account_id": "bot-02",
+      "command_seq": 74,
+      "event_seq": 74,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 38,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45492.9921,
+    "dispatch_to_ack_ms": 18.249900000002526,
+    "scheduled_to_ack_ms": 18.42500000000291
+  },
+  {
+    "request_id": "stress-3-2-place",
+    "account": "bot-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 702,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45474.8003,
+    "client_scheduler_delay_ms": 0.23320000000239816,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-2-place",
+      "account_id": "bot-03",
+      "command_seq": 75,
+      "event_seq": 75,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 39,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45494.6745,
+    "dispatch_to_ack_ms": 19.874199999998382,
+    "scheduled_to_ack_ms": 20.10740000000078
+  },
+  {
+    "request_id": "stress-3-3-place",
+    "account": "bot-04",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 703,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45474.8399,
+    "client_scheduler_delay_ms": 0.2727999999988242,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-3-place",
+      "account_id": "bot-04",
+      "command_seq": 76,
+      "event_seq": 76,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 40,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45496.4024,
+    "dispatch_to_ack_ms": 21.5625,
+    "scheduled_to_ack_ms": 21.835299999998824
+  },
+  {
+    "request_id": "stress-3-4-place",
+    "account": "bot-05",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 704,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45474.8686,
+    "client_scheduler_delay_ms": 0.301500000001397,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-4-place",
+      "account_id": "bot-05",
+      "command_seq": 77,
+      "event_seq": 77,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 41,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45497.8801,
+    "dispatch_to_ack_ms": 23.011500000000524,
+    "scheduled_to_ack_ms": 23.31300000000192
+  },
+  {
+    "request_id": "stress-3-5-place",
+    "account": "bot-06",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 705,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45474.9011,
+    "client_scheduler_delay_ms": 0.33400000000256114,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-5-place",
+      "account_id": "bot-06",
+      "command_seq": 78,
+      "event_seq": 78,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 42,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45499.5993,
+    "dispatch_to_ack_ms": 24.698199999998906,
+    "scheduled_to_ack_ms": 25.032200000001467
+  },
+  {
+    "request_id": "stress-3-6-place",
+    "account": "bot-07",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 706,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45474.9653,
+    "client_scheduler_delay_ms": 0.39820000000327127,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-6-place",
+      "account_id": "bot-07",
+      "command_seq": 79,
+      "event_seq": 79,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 43,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45501.3128,
+    "dispatch_to_ack_ms": 26.347499999996217,
+    "scheduled_to_ack_ms": 26.745699999999488
+  },
+  {
+    "request_id": "stress-3-7-place",
+    "account": "bot-08",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 707,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45475.0169,
+    "client_scheduler_delay_ms": 0.44980000000214204,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-7-place",
+      "account_id": "bot-08",
+      "command_seq": 80,
+      "event_seq": 80,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 44,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45503.0664,
+    "dispatch_to_ack_ms": 28.04950000000099,
+    "scheduled_to_ack_ms": 28.49930000000313
+  },
+  {
+    "request_id": "stress-3-8-place",
+    "account": "bot-09",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 708,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45475.0455,
+    "client_scheduler_delay_ms": 0.4783999999999651,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-8-place",
+      "account_id": "bot-09",
+      "command_seq": 81,
+      "event_seq": 81,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 45,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45504.5556,
+    "dispatch_to_ack_ms": 29.51009999999951,
+    "scheduled_to_ack_ms": 29.988499999999476
+  },
+  {
+    "request_id": "stress-3-9-place",
+    "account": "bot-10",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 709,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45475.0747,
+    "client_scheduler_delay_ms": 0.5075999999971827,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-9-place",
+      "account_id": "bot-10",
+      "command_seq": 82,
+      "event_seq": 82,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 46,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45506.2645,
+    "dispatch_to_ack_ms": 31.189800000000105,
+    "scheduled_to_ack_ms": 31.697399999997288
+  },
+  {
+    "request_id": "stress-3-10-place",
+    "account": "bot-11",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 710,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45475.1049,
+    "client_scheduler_delay_ms": 0.5377999999982421,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-10-place",
+      "account_id": "bot-11",
+      "command_seq": 83,
+      "event_seq": 83,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 47,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45507.9522,
+    "dispatch_to_ack_ms": 32.84730000000127,
+    "scheduled_to_ack_ms": 33.38509999999951
+  },
+  {
+    "request_id": "stress-3-11-place",
+    "account": "bot-12",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 711,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45474.5671,
+    "dispatch_ms": 45475.1329,
+    "client_scheduler_delay_ms": 0.5657999999966705,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-11-place",
+      "account_id": "bot-12",
+      "command_seq": 84,
+      "event_seq": 84,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 48,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45509.5504,
+    "dispatch_to_ack_ms": 34.4175000000032,
+    "scheduled_to_ack_ms": 34.98329999999987
+  },
+  {
+    "request_id": "stress-3-0-cancel",
+    "account": "bot-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 37
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45491.3352,
+    "dispatch_ms": 45491.3356,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-0-cancel",
+      "account_id": "bot-01",
+      "command_seq": 85,
+      "event_seq": 85,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 37,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45511.1254,
+    "dispatch_to_ack_ms": 19.78979999999865,
+    "scheduled_to_ack_ms": 19.79019999999582
+  },
+  {
+    "request_id": "stress-3-1-cancel",
+    "account": "bot-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 38
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45493.0013,
+    "dispatch_ms": 45493.0016,
+    "client_scheduler_delay_ms": 0.00029999999969732016,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-1-cancel",
+      "account_id": "bot-02",
+      "command_seq": 86,
+      "event_seq": 86,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 38,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45512.6264,
+    "dispatch_to_ack_ms": 19.624799999997776,
+    "scheduled_to_ack_ms": 19.625099999997474
+  },
+  {
+    "request_id": "stress-3-2-cancel",
+    "account": "bot-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 39
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45494.6837,
+    "dispatch_ms": 45494.684,
+    "client_scheduler_delay_ms": 0.00029999999969732016,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-2-cancel",
+      "account_id": "bot-03",
+      "command_seq": 87,
+      "event_seq": 87,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 39,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45514.2047,
+    "dispatch_to_ack_ms": 19.520700000000943,
+    "scheduled_to_ack_ms": 19.52100000000064
+  },
+  {
+    "request_id": "stress-3-3-cancel",
+    "account": "bot-04",
+    "action": {
+      "type": "cancel",
+      "order_id": 40
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45496.4109,
+    "dispatch_ms": 45496.4113,
+    "client_scheduler_delay_ms": 0.0003999999971711077,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-3-cancel",
+      "account_id": "bot-04",
+      "command_seq": 88,
+      "event_seq": 88,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 40,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45515.9496,
+    "dispatch_to_ack_ms": 19.538300000000163,
+    "scheduled_to_ack_ms": 19.538699999997334
+  },
+  {
+    "request_id": "stress-3-4-cancel",
+    "account": "bot-05",
+    "action": {
+      "type": "cancel",
+      "order_id": 41
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45497.888,
+    "dispatch_ms": 45497.8883,
+    "client_scheduler_delay_ms": 0.00029999999969732016,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-4-cancel",
+      "account_id": "bot-05",
+      "command_seq": 89,
+      "event_seq": 89,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 41,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45517.4467,
+    "dispatch_to_ack_ms": 19.55840000000171,
+    "scheduled_to_ack_ms": 19.55870000000141
+  },
+  {
+    "request_id": "stress-3-5-cancel",
+    "account": "bot-06",
+    "action": {
+      "type": "cancel",
+      "order_id": 42
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45499.6089,
+    "dispatch_ms": 45499.6094,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-5-cancel",
+      "account_id": "bot-06",
+      "command_seq": 90,
+      "event_seq": 90,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 42,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45518.9868,
+    "dispatch_to_ack_ms": 19.37739999999758,
+    "scheduled_to_ack_ms": 19.3778999999995
+  },
+  {
+    "request_id": "stress-3-6-cancel",
+    "account": "bot-07",
+    "action": {
+      "type": "cancel",
+      "order_id": 43
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45501.3216,
+    "dispatch_ms": 45501.3222,
+    "client_scheduler_delay_ms": 0.0005999999993946403,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-6-cancel",
+      "account_id": "bot-07",
+      "command_seq": 91,
+      "event_seq": 91,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 43,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45520.6194,
+    "dispatch_to_ack_ms": 19.297200000000885,
+    "scheduled_to_ack_ms": 19.29780000000028
+  },
+  {
+    "request_id": "stress-3-7-cancel",
+    "account": "bot-08",
+    "action": {
+      "type": "cancel",
+      "order_id": 44
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45503.0775,
+    "dispatch_ms": 45503.078,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-7-cancel",
+      "account_id": "bot-08",
+      "command_seq": 92,
+      "event_seq": 92,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 44,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45522.6279,
+    "dispatch_to_ack_ms": 19.54989999999816,
+    "scheduled_to_ack_ms": 19.55040000000008
+  },
+  {
+    "request_id": "stress-3-8-cancel",
+    "account": "bot-09",
+    "action": {
+      "type": "cancel",
+      "order_id": 45
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45504.5664,
+    "dispatch_ms": 45504.5671,
+    "client_scheduler_delay_ms": 0.0006999999968684278,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-8-cancel",
+      "account_id": "bot-09",
+      "command_seq": 93,
+      "event_seq": 93,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 45,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45523.9198,
+    "dispatch_to_ack_ms": 19.352700000003097,
+    "scheduled_to_ack_ms": 19.353399999999965
+  },
+  {
+    "request_id": "stress-3-9-cancel",
+    "account": "bot-10",
+    "action": {
+      "type": "cancel",
+      "order_id": 46
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45506.2762,
+    "dispatch_ms": 45506.2767,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-9-cancel",
+      "account_id": "bot-10",
+      "command_seq": 94,
+      "event_seq": 94,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 46,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45525.5135,
+    "dispatch_to_ack_ms": 19.236799999998766,
+    "scheduled_to_ack_ms": 19.237300000000687
+  },
+  {
+    "request_id": "stress-3-10-cancel",
+    "account": "bot-11",
+    "action": {
+      "type": "cancel",
+      "order_id": 47
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45507.9622,
+    "dispatch_ms": 45507.9625,
+    "client_scheduler_delay_ms": 0.00029999999969732016,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-10-cancel",
+      "account_id": "bot-11",
+      "command_seq": 95,
+      "event_seq": 95,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 47,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45527.0625,
+    "dispatch_to_ack_ms": 19.099999999998545,
+    "scheduled_to_ack_ms": 19.100299999998242
+  },
+  {
+    "request_id": "stress-3-11-cancel",
+    "account": "bot-12",
+    "action": {
+      "type": "cancel",
+      "order_id": 48
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45509.5575,
+    "dispatch_ms": 45509.5578,
+    "client_scheduler_delay_ms": 0.00029999999969732016,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-3-11-cancel",
+      "account_id": "bot-12",
+      "command_seq": 96,
+      "event_seq": 96,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 48,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45528.5396,
+    "dispatch_to_ack_ms": 18.98179999999411,
+    "scheduled_to_ack_ms": 18.982099999993807
+  },
+  {
+    "request_id": "stress-4-0-place",
+    "account": "bot-01",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 700,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.5706,
+    "client_scheduler_delay_ms": 0.018299999996088445,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-0-place",
+      "account_id": "bot-01",
+      "command_seq": 97,
+      "event_seq": 97,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 49,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45539.8491,
+    "dispatch_to_ack_ms": 11.27850000000035,
+    "scheduled_to_ack_ms": 11.296799999996438
+  },
+  {
+    "request_id": "stress-4-1-place",
+    "account": "bot-02",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 701,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.7155,
+    "client_scheduler_delay_ms": 0.16319999999541324,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-1-place",
+      "account_id": "bot-02",
+      "command_seq": 98,
+      "event_seq": 98,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 50,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45542.0102,
+    "dispatch_to_ack_ms": 13.294699999998556,
+    "scheduled_to_ack_ms": 13.45789999999397
+  },
+  {
+    "request_id": "stress-4-2-place",
+    "account": "bot-03",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 702,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.7682,
+    "client_scheduler_delay_ms": 0.2158999999955995,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-2-place",
+      "account_id": "bot-03",
+      "command_seq": 99,
+      "event_seq": 99,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 51,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45543.6588,
+    "dispatch_to_ack_ms": 14.890599999998813,
+    "scheduled_to_ack_ms": 15.106499999994412
+  },
+  {
+    "request_id": "stress-4-3-place",
+    "account": "bot-04",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 703,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.8036,
+    "client_scheduler_delay_ms": 0.25129999999626307,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-3-place",
+      "account_id": "bot-04",
+      "command_seq": 100,
+      "event_seq": 100,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 52,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45545.2884,
+    "dispatch_to_ack_ms": 16.48479999999836,
+    "scheduled_to_ack_ms": 16.73609999999462
+  },
+  {
+    "request_id": "stress-4-4-place",
+    "account": "bot-05",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 704,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.8404,
+    "client_scheduler_delay_ms": 0.28809999999793945,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-4-place",
+      "account_id": "bot-05",
+      "command_seq": 101,
+      "event_seq": 101,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 53,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45546.9954,
+    "dispatch_to_ack_ms": 18.154999999998836,
+    "scheduled_to_ack_ms": 18.443099999996775
+  },
+  {
+    "request_id": "stress-4-5-place",
+    "account": "bot-06",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 705,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.8681,
+    "client_scheduler_delay_ms": 0.3157999999966705,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-5-place",
+      "account_id": "bot-06",
+      "command_seq": 102,
+      "event_seq": 102,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 54,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45548.7331,
+    "dispatch_to_ack_ms": 19.864999999997963,
+    "scheduled_to_ack_ms": 20.180799999994633
+  },
+  {
+    "request_id": "stress-4-6-place",
+    "account": "bot-07",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 706,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.8944,
+    "client_scheduler_delay_ms": 0.3420999999943888,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-6-place",
+      "account_id": "bot-07",
+      "command_seq": 103,
+      "event_seq": 103,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 55,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45550.6972,
+    "dispatch_to_ack_ms": 21.802800000004936,
+    "scheduled_to_ack_ms": 22.144899999999325
+  },
+  {
+    "request_id": "stress-4-7-place",
+    "account": "bot-08",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 707,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.9193,
+    "client_scheduler_delay_ms": 0.3669999999983702,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-7-place",
+      "account_id": "bot-08",
+      "command_seq": 104,
+      "event_seq": 104,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 56,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45552.3537,
+    "dispatch_to_ack_ms": 23.434399999998277,
+    "scheduled_to_ack_ms": 23.801399999996647
+  },
+  {
+    "request_id": "stress-4-8-place",
+    "account": "bot-09",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 708,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.9464,
+    "client_scheduler_delay_ms": 0.3940999999977066,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-8-place",
+      "account_id": "bot-09",
+      "command_seq": 105,
+      "event_seq": 105,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 57,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45554.1903,
+    "dispatch_to_ack_ms": 25.243900000001304,
+    "scheduled_to_ack_ms": 25.63799999999901
+  },
+  {
+    "request_id": "stress-4-9-place",
+    "account": "bot-10",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 709,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.9724,
+    "client_scheduler_delay_ms": 0.42009999999572756,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-9-place",
+      "account_id": "bot-10",
+      "command_seq": 106,
+      "event_seq": 106,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 58,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45555.7709,
+    "dispatch_to_ack_ms": 26.798500000004424,
+    "scheduled_to_ack_ms": 27.21860000000015
+  },
+  {
+    "request_id": "stress-4-10-place",
+    "account": "bot-11",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 710,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45528.9997,
+    "client_scheduler_delay_ms": 0.4473999999972875,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-10-place",
+      "account_id": "bot-11",
+      "command_seq": 107,
+      "event_seq": 107,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 59,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45557.9886,
+    "dispatch_to_ack_ms": 28.988899999996647,
+    "scheduled_to_ack_ms": 29.436299999993935
+  },
+  {
+    "request_id": "stress-4-11-place",
+    "account": "bot-12",
+    "action": {
+      "type": "place",
+      "side": "buy",
+      "price": 711,
+      "quantity": 2
+    },
+    "kind": "stress_resting_buy",
+    "scheduled_ms": 45528.5523,
+    "dispatch_ms": 45529.0254,
+    "client_scheduler_delay_ms": 0.47309999999561114,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-11-place",
+      "account_id": "bot-12",
+      "command_seq": 108,
+      "event_seq": 108,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 60,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45559.6331,
+    "dispatch_to_ack_ms": 30.607700000000477,
+    "scheduled_to_ack_ms": 31.08079999999609
+  },
+  {
+    "request_id": "stress-4-0-cancel",
+    "account": "bot-01",
+    "action": {
+      "type": "cancel",
+      "order_id": 49
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45539.8605,
+    "dispatch_ms": 45539.861,
+    "client_scheduler_delay_ms": 0.0004999999946448952,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-0-cancel",
+      "account_id": "bot-01",
+      "command_seq": 109,
+      "event_seq": 109,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 49,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45561.28,
+    "dispatch_to_ack_ms": 21.419000000001688,
+    "scheduled_to_ack_ms": 21.419499999996333
+  },
+  {
+    "request_id": "stress-4-1-cancel",
+    "account": "bot-02",
+    "action": {
+      "type": "cancel",
+      "order_id": 50
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45542.0273,
+    "dispatch_ms": 45542.0284,
+    "client_scheduler_delay_ms": 0.0011000000013154931,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-1-cancel",
+      "account_id": "bot-02",
+      "command_seq": 110,
+      "event_seq": 110,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 50,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45563.0912,
+    "dispatch_to_ack_ms": 21.062799999999697,
+    "scheduled_to_ack_ms": 21.063900000001013
+  },
+  {
+    "request_id": "stress-4-2-cancel",
+    "account": "bot-03",
+    "action": {
+      "type": "cancel",
+      "order_id": 51
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45543.6659,
+    "dispatch_ms": 45543.6662,
+    "client_scheduler_delay_ms": 0.00029999999969732016,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-2-cancel",
+      "account_id": "bot-03",
+      "command_seq": 111,
+      "event_seq": 111,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 51,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45564.7781,
+    "dispatch_to_ack_ms": 21.111900000003516,
+    "scheduled_to_ack_ms": 21.112200000003213
+  },
+  {
+    "request_id": "stress-4-3-cancel",
+    "account": "bot-04",
+    "action": {
+      "type": "cancel",
+      "order_id": 52
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45545.2953,
+    "dispatch_ms": 45545.2955,
+    "client_scheduler_delay_ms": 0.00020000000222353265,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-3-cancel",
+      "account_id": "bot-04",
+      "command_seq": 112,
+      "event_seq": 112,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 52,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45566.6462,
+    "dispatch_to_ack_ms": 21.35070000000269,
+    "scheduled_to_ack_ms": 21.350900000004913
+  },
+  {
+    "request_id": "stress-4-4-cancel",
+    "account": "bot-05",
+    "action": {
+      "type": "cancel",
+      "order_id": 53
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45547.0025,
+    "dispatch_ms": 45547.0027,
+    "client_scheduler_delay_ms": 0.00019999999494757503,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-4-cancel",
+      "account_id": "bot-05",
+      "command_seq": 113,
+      "event_seq": 113,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 53,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45568.4188,
+    "dispatch_to_ack_ms": 21.41610000000219,
+    "scheduled_to_ack_ms": 21.416299999997136
+  },
+  {
+    "request_id": "stress-4-5-cancel",
+    "account": "bot-06",
+    "action": {
+      "type": "cancel",
+      "order_id": 54
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45548.7407,
+    "dispatch_ms": 45548.741,
+    "client_scheduler_delay_ms": 0.00029999999969732016,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-5-cancel",
+      "account_id": "bot-06",
+      "command_seq": 114,
+      "event_seq": 114,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 54,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45570.1689,
+    "dispatch_to_ack_ms": 21.427899999995134,
+    "scheduled_to_ack_ms": 21.42819999999483
+  },
+  {
+    "request_id": "stress-4-6-cancel",
+    "account": "bot-07",
+    "action": {
+      "type": "cancel",
+      "order_id": 55
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45550.71,
+    "dispatch_ms": 45550.7105,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-6-cancel",
+      "account_id": "bot-07",
+      "command_seq": 115,
+      "event_seq": 115,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 55,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45571.9436,
+    "dispatch_to_ack_ms": 21.23309999999765,
+    "scheduled_to_ack_ms": 21.23359999999957
+  },
+  {
+    "request_id": "stress-4-7-cancel",
+    "account": "bot-08",
+    "action": {
+      "type": "cancel",
+      "order_id": 56
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45552.3599,
+    "dispatch_ms": 45552.3601,
+    "client_scheduler_delay_ms": 0.00019999999494757503,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-7-cancel",
+      "account_id": "bot-08",
+      "command_seq": 116,
+      "event_seq": 116,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 56,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45574.0514,
+    "dispatch_to_ack_ms": 21.69129999999859,
+    "scheduled_to_ack_ms": 21.69149999999354
+  },
+  {
+    "request_id": "stress-4-8-cancel",
+    "account": "bot-09",
+    "action": {
+      "type": "cancel",
+      "order_id": 57
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45554.2108,
+    "dispatch_ms": 45554.211,
+    "client_scheduler_delay_ms": 0.00020000000222353265,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-8-cancel",
+      "account_id": "bot-09",
+      "command_seq": 117,
+      "event_seq": 117,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 57,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45575.9012,
+    "dispatch_to_ack_ms": 21.690199999997276,
+    "scheduled_to_ack_ms": 21.6903999999995
+  },
+  {
+    "request_id": "stress-4-9-cancel",
+    "account": "bot-10",
+    "action": {
+      "type": "cancel",
+      "order_id": 58
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45555.7809,
+    "dispatch_ms": 45555.7814,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-9-cancel",
+      "account_id": "bot-10",
+      "command_seq": 118,
+      "event_seq": 118,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 58,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45577.5951,
+    "dispatch_to_ack_ms": 21.81369999999879,
+    "scheduled_to_ack_ms": 21.81420000000071
+  },
+  {
+    "request_id": "stress-4-10-cancel",
+    "account": "bot-11",
+    "action": {
+      "type": "cancel",
+      "order_id": 59
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45558.0119,
+    "dispatch_ms": 45558.0124,
+    "client_scheduler_delay_ms": 0.0005000000019208528,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-10-cancel",
+      "account_id": "bot-11",
+      "command_seq": 119,
+      "event_seq": 119,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 59,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45579.3635,
+    "dispatch_to_ack_ms": 21.35109999999986,
+    "scheduled_to_ack_ms": 21.35160000000178
+  },
+  {
+    "request_id": "stress-4-11-cancel",
+    "account": "bot-12",
+    "action": {
+      "type": "cancel",
+      "order_id": 60
+    },
+    "kind": "stress_cancel",
+    "scheduled_ms": 45559.6401,
+    "dispatch_ms": 45559.6403,
+    "client_scheduler_delay_ms": 0.00020000000222353265,
+    "http_status": 200,
+    "result": {
+      "request_id": "stress-4-11-cancel",
+      "account_id": "bot-12",
+      "command_seq": 120,
+      "event_seq": 120,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 60,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "ack_ms": 45580.9283,
+    "dispatch_to_ack_ms": 21.288000000000466,
+    "scheduled_to_ack_ms": 21.28820000000269
+  }
+]

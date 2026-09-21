@@ -1,0 +1,34 @@
+{
+  "run_id": "2026-09-21T09-04-20-029Z-browser-fault-ade34c84",
+  "run_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-04-20-029Z-browser-fault-ade34c84",
+  "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-02-19-437Z-browser-fault-e67cacab\\data",
+  "supervisor_pid": 460,
+  "started_at": "2026-09-21T09:04:20.034Z",
+  "status": "stopped",
+  "engine_url": "http://127.0.0.1:8788",
+  "proxy_url": "http://127.0.0.1:8789",
+  "ui_url": "http://127.0.0.1:5176",
+  "processes": [
+    {
+      "name": "engine",
+      "pid": 19776,
+      "executable": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-04-20-029Z-browser-fault-ade34c84\\bin\\leave-engine.exe",
+      "args": []
+    },
+    {
+      "name": "frontend",
+      "pid": 18352,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\frontend\\node_modules\\vite\\bin\\vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5176",
+        "--strictPort"
+      ]
+    }
+  ],
+  "still_running": [],
+  "ended_at": "2026-09-21T09:06:48.718Z"
+}

@@ -1,0 +1,16 @@
+{
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine",
+  "run_id": "20260921T083129385Z-storage-format-181b21f1",
+  "command": "rustfmt",
+  "started_at": "2026-09-21T08:31:29.4138223Z",
+  "exit_code": 0,
+  "ended_at": "2026-09-21T08:31:29.5267295Z",
+  "status": "passed",
+  "args": [
+    "--edition",
+    "2024",
+    "--check",
+    "src/storage.rs",
+    "tests/storage_recovery.rs"
+  ]
+}

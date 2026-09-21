@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-09-21T10:04:44.5707637Z",
+  "conditions": "Root confirmed all14 demo processes normal-stop, observer/helper and production fixture stopped, no builds/tests/agent loads; root read-only docs; ordinary desktop processes retained",
+  "labels": {
+    "A": "after",
+    "B": "before"
+  },
+  "fixed_pair_order": [
+    "B/A",
+    "A/B",
+    "B/A"
+  ],
+  "cycles": 20000,
+  "warmup_cycles": 1000,
+  "commands": 120000,
+  "before_binary": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\before\\core_bench.exe",
+  "before_sha256": "5f2516488cc7b461c210b37e55a6b0fce27089410865689f1fdd3db3afa11833",
+  "after_binary": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\after\\core_bench.exe",
+  "after_sha256": "069c1a336a7470122f3769dc2080d8472b72bf6290d3dbb2661893ce7fb63bb6",
+  "processor": "Intel64 Family 6 Model 154 Stepping 3, GenuineIntel",
+  "logical_processors": 16,
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "rustflags": "-C link-self-contained=yes -C dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)\r\nbinary: rustc\r\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\r\ncommit-date: 2026-09-01\r\nhost: x86_64-pc-windows-gnu\r\nrelease: 1.98.1\r\nLLVM version: 22.1.8",
+  "allocation_hypothesis": "80000 fewer allocation calls per120000commands; no zero-allocation claim; RSS may increase; timing short/noisy"
+}

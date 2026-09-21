@@ -1,0 +1,17 @@
+▶ API real-process concurrency, durability, response loss and event contract
+  ✔ mock identity, origin and malformed transport never enter sequencer (48.8115ms)
+  ✔ 12 concurrent clients submit, replay and cancel without duplicated effects (159.8033ms)
+  ✔ maker price, partial fill, reserves and ownership across API (67.3157ms)
+  ✔ snapshot, clean restart and durable request lookup (205.8481ms)
+  ✔ network response loss, forced kill, retry has exactly one effect (175.1309ms)
+  ✔ WS subscription initial state, concurrent commands and reconnect converge (66.9728ms)
+Evidence: C:\project\hackton-2026-tbd\trading\evidence\2026-09-21T08-35-12-548Z-api-b868e487
+✔ API real-process concurrency, durability, response loss and event contract (1269.66ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1376.0858

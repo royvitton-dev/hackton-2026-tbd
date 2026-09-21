@@ -1,0 +1,2 @@
+# Keep the public deployment URL template despite the repository's .env.* rule.
+!.env.production.example

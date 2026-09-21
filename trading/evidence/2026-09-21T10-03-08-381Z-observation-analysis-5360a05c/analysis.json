@@ -1,0 +1,158 @@
+{
+  "generated_at": "2026-09-21T10:03:08.379Z",
+  "source_run_id": "2026-09-21T09-02-19-482Z-observe-4abd2bbd",
+  "source_status": "passed",
+  "observation_complete": true,
+  "first_at": "2026-09-21T09:02:19.528Z",
+  "last_at": "2026-09-21T10:02:16.216Z",
+  "observed_interval_seconds": 3596.6871114999994,
+  "requested_seconds": 3600,
+  "sample_count": 641,
+  "sampling_continuity": {
+    "max_allowed_gap_ms": 15000,
+    "max_observed_gap_ms": 356738.5818999999,
+    "gaps": [
+      {
+        "from": "2026-09-21T09:29:57.697Z",
+        "to": "2026-09-21T09:35:54.436Z",
+        "elapsed_ms": 356738.5818999999,
+        "command_delta": 8
+      }
+    ],
+    "longest_contiguous_sample_span_ms": 1658170.0187,
+    "continuous": false
+  },
+  "continuous_demo_pass": false,
+  "state_snapshot_round_trip": {
+    "available": false,
+    "samples": 0
+  },
+  "bot_status_round_trip": {
+    "available": false,
+    "samples": 0
+  },
+  "command_delta": 18944,
+  "volume_hours_delta": 14211,
+  "commands_per_second_over_observed_interval": 5.267069225851953,
+  "min_connected_bots": 12,
+  "final_ws_events": 18945,
+  "final_ws_gaps": 0,
+  "final_ws_disconnects": 0,
+  "sampled_asset_totals_conserved": true,
+  "all_sampled_engine_status_ready": true,
+  "intervals_with_new_trades": 640,
+  "fraction_of_intervals_with_new_trades": 1,
+  "tracked_process_total_memory_windows": {
+    "first": {
+      "at": "2026-09-21T09:02:19.528Z",
+      "process_count": 14,
+      "working_set_bytes": 908341248,
+      "private_bytes": 980574208
+    },
+    "last": {
+      "at": "2026-09-21T10:02:16.216Z",
+      "process_count": 14,
+      "working_set_bytes": 1038614528,
+      "private_bytes": 1098858496
+    },
+    "observed_max_working_set_bytes": 1042878464,
+    "observed_max_private_bytes": 1102999552,
+    "note": "Sum of tracked process working sets may count shared pages more than once; this is not whole-machine unique physical memory."
+  },
+  "engine_memory_windows": [
+    {
+      "pid": 15804,
+      "sample_count": 108,
+      "first": {
+        "at": "2026-09-21T09:02:19.528Z",
+        "elapsed_ms": 20.341500000000003,
+        "command_seq": 3068,
+        "pid": 15804,
+        "working_set_bytes": 15929344,
+        "private_bytes": 10506240,
+        "cpu_seconds": 0.390625,
+        "handles": 146
+      },
+      "last": {
+        "at": "2026-09-21T10:02:16.216Z",
+        "elapsed_ms": 3596707.4529999997,
+        "command_seq": 22012,
+        "pid": 15804,
+        "working_set_bytes": 40775680,
+        "private_bytes": 36966400,
+        "cpu_seconds": 120.53125,
+        "handles": 152
+      },
+      "observed_max_working_set_bytes": 40775680,
+      "observed_max_private_bytes": 36966400,
+      "working_set_change_bytes": 24846336,
+      "private_change_bytes": 26460160,
+      "command_delta_between_memory_samples": 18944,
+      "private_change_bytes_per_additional_command": 1396.7567567567567
+    }
+  ],
+  "demo_logs": {
+    "available": true,
+    "first_at": "2026-09-21T09:02:19.528Z",
+    "last_at": "2026-09-21T10:02:16.216Z",
+    "first": {
+      "bytes": 502522,
+      "files": 42
+    },
+    "last": {
+      "bytes": 11875485,
+      "files": 42
+    },
+    "delta_bytes": 11372963,
+    "observed_growth_bytes_per_hour": 11383438.572983027
+  },
+  "persisted_data": {
+    "available": true,
+    "first_at": "2026-09-21T09:02:19.528Z",
+    "last_at": "2026-09-21T10:02:16.216Z",
+    "first": {
+      "bytes": 6027385,
+      "files": 6
+    },
+    "last": {
+      "bytes": 19475222,
+      "files": 7
+    },
+    "delta_bytes": 13447837,
+    "observed_growth_bytes_per_hour": 13460223.727887653
+  },
+  "lowest_observed_disk_available_bytes": 248402956288,
+  "completed_summary": {
+    "run_id": "2026-09-21T09-02-19-482Z-observe-4abd2bbd",
+    "started_at": "2026-09-21T09:02:19.508Z",
+    "ended_at": "2026-09-21T10:02:21.528Z",
+    "duration_ms": 3596707.4529999997,
+    "samples": 641,
+    "commands_delta": 18944,
+    "volume_delta": 14211,
+    "distinct_book_states": 641,
+    "distinct_trade_prices": 59,
+    "min_connected_bots": 12,
+    "participating_bots": 12,
+    "bots_with_fills": 12,
+    "websocket_events": 18977,
+    "websocket_gaps": 0,
+    "websocket_disconnects": 0,
+    "asset_conservation": true,
+    "continued_trade_intervals": 640,
+    "limitations": [
+      "Public totals and actual trade/event observations; Rust tests check complete accounting invariants.",
+      "WebSocket receipt verified; browser rendering requires separate browser evidence."
+    ],
+    "requested_seconds": 3600,
+    "passed": true
+  },
+  "limitations": [
+    "Snapshot samples are not continuous peak memory measurements.",
+    "Retained order/trade/dedup history intentionally grows; memory growth alone neither proves nor excludes a leak.",
+    "Growth per hour is a normalized rate over the observed interval, not a future forecast.",
+    "Full accounting invariants are covered by Rust and API tests; public totals are sampled here.",
+    "Detailed process memory parsing currently covers the verified Windows host only.",
+    "A running observation is not reported as a completed pass."
+  ]
+}

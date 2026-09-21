@@ -1,0 +1,68 @@
+[
+  {
+    "ordinal": 1,
+    "pair": 1,
+    "label": "before",
+    "command": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\before\\core_bench.exe --cycles 20000 --warmup-cycles 1000",
+    "exit_code": 0,
+    "started_at": "2026-09-21T10:04:44.6667940Z",
+    "ended_at": "2026-09-21T10:04:45.6377910Z",
+    "result_file": "01-before-result.json",
+    "stderr_file": "01-before-stderr.log"
+  },
+  {
+    "ordinal": 2,
+    "pair": 1,
+    "label": "after",
+    "command": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\after\\core_bench.exe --cycles 20000 --warmup-cycles 1000",
+    "exit_code": 0,
+    "started_at": "2026-09-21T10:04:45.6728384Z",
+    "ended_at": "2026-09-21T10:04:46.4893014Z",
+    "result_file": "02-after-result.json",
+    "stderr_file": "02-after-stderr.log"
+  },
+  {
+    "ordinal": 3,
+    "pair": 2,
+    "label": "after",
+    "command": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\after\\core_bench.exe --cycles 20000 --warmup-cycles 1000",
+    "exit_code": 0,
+    "started_at": "2026-09-21T10:04:46.4995431Z",
+    "ended_at": "2026-09-21T10:04:46.7669980Z",
+    "result_file": "03-after-result.json",
+    "stderr_file": "03-after-stderr.log"
+  },
+  {
+    "ordinal": 4,
+    "pair": 2,
+    "label": "before",
+    "command": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\before\\core_bench.exe --cycles 20000 --warmup-cycles 1000",
+    "exit_code": 0,
+    "started_at": "2026-09-21T10:04:46.7755839Z",
+    "ended_at": "2026-09-21T10:04:47.0526523Z",
+    "result_file": "04-before-result.json",
+    "stderr_file": "04-before-stderr.log"
+  },
+  {
+    "ordinal": 5,
+    "pair": 3,
+    "label": "before",
+    "command": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\before\\core_bench.exe --cycles 20000 --warmup-cycles 1000",
+    "exit_code": 0,
+    "started_at": "2026-09-21T10:04:47.0629112Z",
+    "ended_at": "2026-09-21T10:04:47.3369706Z",
+    "result_file": "05-before-result.json",
+    "stderr_file": "05-before-stderr.log"
+  },
+  {
+    "ordinal": 6,
+    "pair": 3,
+    "label": "after",
+    "command": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\after\\core_bench.exe --cycles 20000 --warmup-cycles 1000",
+    "exit_code": 0,
+    "started_at": "2026-09-21T10:04:47.3453073Z",
+    "ended_at": "2026-09-21T10:04:47.6337521Z",
+    "result_file": "06-after-result.json",
+    "stderr_file": "06-after-stderr.log"
+  }
+]

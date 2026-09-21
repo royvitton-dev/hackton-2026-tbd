@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-09-21T09:39:51.835Z",
+  "passed": true,
+  "evidence_scope": "Reanalysis of actual clean and host-standby raw samples",
+  "uninterrupted": {
+    "max_allowed_gap_ms": 15000,
+    "max_observed_gap_ms": 5812,
+    "gaps": [],
+    "longest_contiguous_sample_span_ms": 309931,
+    "continuous": true
+  },
+  "interrupted": {
+    "max_allowed_gap_ms": 15000,
+    "max_observed_gap_ms": 356738.5818999999,
+    "gaps": [
+      {
+        "from": "2026-09-21T09:29:57.697Z",
+        "to": "2026-09-21T09:35:54.436Z",
+        "elapsed_ms": 356738.5818999999,
+        "command_delta": 8
+      }
+    ],
+    "longest_contiguous_sample_span_ms": 1658170.0187,
+    "continuous": false
+  }
+}

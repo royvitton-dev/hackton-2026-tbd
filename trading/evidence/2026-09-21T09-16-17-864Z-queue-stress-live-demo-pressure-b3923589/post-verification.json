@@ -1,0 +1,7 @@
+{
+  "checked_at": "2026-09-21T09:17:24.1302748Z",
+  "script_sha256": "08ab96008d371b6da283325bb67238f5475820ca7017538b277e8e4be3d81544",
+  "syntax_check_exit_code": 0,
+  "owned_processes_remaining": [],
+  "note": "Earlier Get-Process absence check returned shell exit1 because both expected-stopped processes were absent; no stress failure. All raw stress evidence preserved."
+}

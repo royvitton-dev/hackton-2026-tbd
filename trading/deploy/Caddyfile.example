@@ -1,0 +1,4 @@
+# Replace this hostname and UI env URLs with the ACTUAL engine host.
+engine.example.com {
+    reverse_proxy 127.0.0.1:8787
+}

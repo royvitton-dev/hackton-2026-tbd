@@ -1,0 +1,20 @@
+   Compiling leave-exchange v0.1.0 (C:\project\hackton-2026-tbd\trading\engine)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.67s
+     Running `engine\target\debug\examples\status_reuse_compat.exe verify C:\project\hackton-2026-tbd\trading\evidence\core-20260921T184147624-status-reuse`
+{
+  "commands": 13,
+  "durable_results_equal_after_every_suffix_command": true,
+  "full_core_equal_after_every_command": true,
+  "legacy_snapshot_recovery": {
+    "ignored_snapshots": [],
+    "journal_records": 4,
+    "preserved_tail": null,
+    "replayed_records": 0,
+    "snapshot_used": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\verification-dataset-7904\\snapshot-00000000000000000004-00000000000001789983711608664600-6304-1.bin",
+    "truncated_bytes": 0
+  },
+  "scope": "semantic and historical snapshot compatibility; no performance measurement",
+  "second_restart_equal": true,
+  "snapshot_prefix_commands": 4,
+  "verified": true
+}

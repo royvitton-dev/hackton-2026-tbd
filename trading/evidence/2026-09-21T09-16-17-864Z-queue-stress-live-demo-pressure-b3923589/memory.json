@@ -1,0 +1,522 @@
+[
+  {
+    "at": "2026-09-21T09:16:18.409Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 72548352,
+    "heapTotal": 12836864,
+    "heapUsed": 9816592,
+    "external": 13169270,
+    "arrayBuffers": 9166269
+  },
+  {
+    "at": "2026-09-21T09:16:19.074Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 147238912,
+    "heapTotal": 101650432,
+    "heapUsed": 51877904,
+    "external": 4150718,
+    "arrayBuffers": 147677
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:18.7740480Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 14381056,
+        "private_bytes": 8912896,
+        "cpu_seconds": 0.0625
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 127422464,
+        "private_bytes": 128663552,
+        "cpu_seconds": 0.578125
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:19.324Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 156778496,
+    "heapTotal": 102961152,
+    "heapUsed": 60295280,
+    "external": 4455284,
+    "arrayBuffers": 452243
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:19.3325395Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 128532480,
+        "private_bytes": 139628544,
+        "cpu_seconds": 0.5625
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 156811264,
+        "private_bytes": 158375936,
+        "cpu_seconds": 1.109375
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:19.575Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 160784384,
+    "heapTotal": 106893312,
+    "heapUsed": 44284272,
+    "external": 4328548,
+    "arrayBuffers": 325507
+  },
+  {
+    "at": "2026-09-21T09:16:19.825Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 160964608,
+    "heapTotal": 106893312,
+    "heapUsed": 45795712,
+    "external": 4484042,
+    "arrayBuffers": 481001
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:19.8507201Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 128610304,
+        "private_bytes": 139694080,
+        "cpu_seconds": 0.75
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 160964608,
+        "private_bytes": 164110336,
+        "cpu_seconds": 1.1875
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:20.076Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 161099776,
+    "heapTotal": 106893312,
+    "heapUsed": 47055888,
+    "external": 4557681,
+    "arrayBuffers": 554640
+  },
+  {
+    "at": "2026-09-21T09:16:20.326Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 161935360,
+    "heapTotal": 106893312,
+    "heapUsed": 48418816,
+    "external": 4706157,
+    "arrayBuffers": 703116
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:20.3683495Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 128643072,
+        "private_bytes": 139694080,
+        "cpu_seconds": 0.84375
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 162000896,
+        "private_bytes": 164208640,
+        "cpu_seconds": 1.25
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:20.577Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 159944704,
+    "heapTotal": 106893312,
+    "heapUsed": 49633656,
+    "external": 4794471,
+    "arrayBuffers": 791430
+  },
+  {
+    "at": "2026-09-21T09:16:20.828Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 160296960,
+    "heapTotal": 107417600,
+    "heapUsed": 50779128,
+    "external": 4946137,
+    "arrayBuffers": 943096
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:20.8849351Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 128643072,
+        "private_bytes": 139694080,
+        "cpu_seconds": 1.046875
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 160428032,
+        "private_bytes": 160120832,
+        "cpu_seconds": 1.28125
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:21.078Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 159305728,
+    "heapTotal": 107679744,
+    "heapUsed": 51909240,
+    "external": 5034503,
+    "arrayBuffers": 1031462
+  },
+  {
+    "at": "2026-09-21T09:16:21.329Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 160243712,
+    "heapTotal": 107941888,
+    "heapUsed": 53040288,
+    "external": 5187895,
+    "arrayBuffers": 1184854
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:21.4169649Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 128790528,
+        "private_bytes": 139943936,
+        "cpu_seconds": 1.125
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 160145408,
+        "private_bytes": 158654464,
+        "cpu_seconds": 1.359375
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:21.580Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 159014912,
+    "heapTotal": 108204032,
+    "heapUsed": 54231688,
+    "external": 5279253,
+    "arrayBuffers": 1276212
+  },
+  {
+    "at": "2026-09-21T09:16:21.830Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 157913088,
+    "heapTotal": 108466176,
+    "heapUsed": 55385072,
+    "external": 5435875,
+    "arrayBuffers": 1432834
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:21.9329110Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 128790528,
+        "private_bytes": 139943936,
+        "cpu_seconds": 1.296875
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 157741056,
+        "private_bytes": 154968064,
+        "cpu_seconds": 1.453125
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:22.081Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 157433856,
+    "heapTotal": 108728320,
+    "heapUsed": 56554920,
+    "external": 5524652,
+    "arrayBuffers": 1521611
+  },
+  {
+    "at": "2026-09-21T09:16:22.332Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 157323264,
+    "heapTotal": 108990464,
+    "heapUsed": 57676432,
+    "external": 5678044,
+    "arrayBuffers": 1675003
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:22.4455411Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 128806912,
+        "private_bytes": 139943936,
+        "cpu_seconds": 1.390625
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 157851648,
+        "private_bytes": 153354240,
+        "cpu_seconds": 1.46875
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:22.582Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 157249536,
+    "heapTotal": 109252608,
+    "heapUsed": 58806896,
+    "external": 5767466,
+    "arrayBuffers": 1764425
+  },
+  {
+    "at": "2026-09-21T09:16:22.833Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 157782016,
+    "heapTotal": 109514752,
+    "heapUsed": 59944904,
+    "external": 5922796,
+    "arrayBuffers": 1919755
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:22.9547563Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 129118208,
+        "private_bytes": 140443648,
+        "cpu_seconds": 1.421875
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 158384128,
+        "private_bytes": 151166976,
+        "cpu_seconds": 1.546875
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:23.083Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 166387712,
+    "heapTotal": 111046656,
+    "heapUsed": 66907232,
+    "external": 7155712,
+    "arrayBuffers": 3121400
+  },
+  {
+    "at": "2026-09-21T09:16:23.333Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 171147264,
+    "heapTotal": 114851840,
+    "heapUsed": 24195520,
+    "external": 4268349,
+    "arrayBuffers": 234037
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:23.4675588Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 129507328,
+        "private_bytes": 140972032,
+        "cpu_seconds": 1.515625
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 171343872,
+        "private_bytes": 158269440,
+        "cpu_seconds": 1.84375
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:23.583Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 171343872,
+    "heapTotal": 114987008,
+    "heapUsed": 28727048,
+    "external": 4352517,
+    "arrayBuffers": 318205
+  },
+  {
+    "at": "2026-09-21T09:16:23.833Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 171352064,
+    "heapTotal": 114987008,
+    "heapUsed": 33233592,
+    "external": 4503881,
+    "arrayBuffers": 469569
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:23.9844540Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 129507328,
+        "private_bytes": 140972032,
+        "cpu_seconds": 1.609375
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 170848256,
+        "private_bytes": 155611136,
+        "cpu_seconds": 1.953125
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:24.083Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 170852352,
+    "heapTotal": 114987008,
+    "heapUsed": 37770296,
+    "external": 4587404,
+    "arrayBuffers": 553092
+  },
+  {
+    "at": "2026-09-21T09:16:24.333Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 170926080,
+    "heapTotal": 114987008,
+    "heapUsed": 42304936,
+    "external": 4740706,
+    "arrayBuffers": 706394
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:24.5030981Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 129511424,
+        "private_bytes": 140972032,
+        "cpu_seconds": 1.6875
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 171008000,
+        "private_bytes": 155746304,
+        "cpu_seconds": 1.984375
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:24.585Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 171016192,
+    "heapTotal": 114987008,
+    "heapUsed": 46665528,
+    "external": 4824873,
+    "arrayBuffers": 790561
+  },
+  {
+    "at": "2026-09-21T09:16:24.836Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 171081728,
+    "heapTotal": 114987008,
+    "heapUsed": 50983272,
+    "external": 4909411,
+    "arrayBuffers": 875099
+  },
+  {
+    "source": "windows_sampler",
+    "at": "2026-09-21T09:16:25.0181262Z",
+    "processes": [
+      {
+        "pid": 20160,
+        "name": "leave-engine",
+        "working_set_bytes": 129523712,
+        "private_bytes": 140972032,
+        "cpu_seconds": 1.8125
+      },
+      {
+        "pid": 20828,
+        "name": "node",
+        "working_set_bytes": 171081728,
+        "private_bytes": 155807744,
+        "cpu_seconds": 2.15625
+      }
+    ]
+  },
+  {
+    "at": "2026-09-21T09:16:25.086Z",
+    "source": "node_process",
+    "pid": 20828,
+    "rss": 171110400,
+    "heapTotal": 114987008,
+    "heapUsed": 36157832,
+    "external": 4564122,
+    "arrayBuffers": 529810
+  }
+]

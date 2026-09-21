@@ -1,0 +1,16 @@
+{
+  "command": "cargo",
+  "run_id": "20260921T084220834Z-bounded-shutdown-build-87bc2305",
+  "ended_at": "2026-09-21T08:42:21.0579977Z",
+  "exit_code": 101,
+  "status": "failed",
+  "started_at": "2026-09-21T08:42:20.8595736Z",
+  "args": [
+    "build",
+    "--release",
+    "--locked",
+    "--bin",
+    "leave-engine"
+  ],
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine"
+}

@@ -1,0 +1,10 @@
+   Compiling tower-http v0.6.11
+   Compiling leave-exchange v0.1.0 (C:\project\hackton-2026-tbd\trading\engine)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.37s
+     Running unittests src\lib.rs (target\debug\deps\leave_exchange-7ddcb9c050707818.exe)
+
+running 1 test
+test storage::tests::storage_process_kill_during_snapshot_save_recovers_acknowledged_state ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 6 filtered out; finished in 0.22s
+

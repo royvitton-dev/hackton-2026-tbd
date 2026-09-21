@@ -1,0 +1,31 @@
+services:
+  engine:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    init: true
+    restart: unless-stopped
+    stop_grace_period: 30s
+    ports:
+      - "127.0.0.1:8787:8787"
+    environment:
+      ENGINE_BIND: "0.0.0.0:8787"
+      ENGINE_DATA_DIR: "/var/lib/leave-engine"
+      ALLOW_REMOTE_DEMO: "true"
+      ALLOWED_ORIGINS: "${PUBLIC_UI_ORIGIN:?Set the actual HTTPS frontend origin}"
+    volumes:
+      - engine-data:/var/lib/leave-engine
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    logging:
+      driver: local
+      options:
+        max-size: "10m"
+        max-file: "5"
+volumes:
+  engine-data:

@@ -1,0 +1,23 @@
+{"at":"2026-09-21T09:59:16.349Z","event":"cli_state","name":"cli-same-port","pid":17808,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:16.419Z","event":"cli_state","name":"cli-same-port","pid":17808,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:16.447Z","event":"cli_state","name":"cli-occupied-404","pid":16292,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:16.532Z","event":"cli_state","name":"cli-occupied-404","pid":16292,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:16.553Z","event":"occupied_port_rejected","status":404,"occupied":62228,"free_reservation_released":true}
+{"at":"2026-09-21T09:59:16.565Z","event":"cli_state","name":"cli-occupied-200","pid":18824,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:16.653Z","event":"cli_state","name":"cli-occupied-200","pid":18824,"spawned":true,"exited":true,"exit_code":1,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:16.658Z","event":"occupied_port_rejected","status":200,"occupied":62231,"free_reservation_released":true}
+{"at":"2026-09-21T09:59:16.661Z","event":"ipv6_occupied_rejected","port":62234}
+{"at":"2026-09-21T09:59:16.665Z","event":"missing_child","name":"missing-child","spawned":false,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":"spawn C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-59-16-324Z-demo-lifecycle-b45422f8\\missing-executable ENOENT"}
+{"at":"2026-09-21T09:59:16.737Z","event":"child_started","name":"exit-before-ready","pid":8188,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-59-16-324Z-demo-lifecycle-b45422f8\\exit-before-ready.mjs"}
+{"at":"2026-09-21T09:59:16.738Z","event":"child_state","name":"exit-before-ready","pid":8188,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:16.786Z","event":"child_state","name":"exit-before-ready","pid":8188,"spawned":true,"exited":true,"exit_code":23,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:16.816Z","event":"child_started","name":"wrong-ready-marker","pid":12200,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-59-16-324Z-demo-lifecycle-b45422f8\\wrong-ready-marker.mjs"}
+{"at":"2026-09-21T09:59:16.816Z","event":"child_state","name":"wrong-ready-marker","pid":12200,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:17.130Z","event":"child_state","name":"wrong-ready-marker","pid":12200,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGTERM","spawn_error":null}
+{"at":"2026-09-21T09:59:17.147Z","event":"child_started","name":"exit-during-health","pid":11420,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-59-16-324Z-demo-lifecycle-b45422f8\\exit-during-health.mjs"}
+{"at":"2026-09-21T09:59:17.147Z","event":"child_state","name":"exit-during-health","pid":11420,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:17.348Z","event":"child_state","name":"exit-during-health","pid":11420,"spawned":true,"exited":true,"exit_code":29,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:17.365Z","event":"child_started","name":"owned-ready","pid":18840,"script":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-59-16-324Z-demo-lifecycle-b45422f8\\owned-ready.mjs"}
+{"at":"2026-09-21T09:59:17.365Z","event":"child_state","name":"owned-ready","pid":18840,"spawned":true,"exited":false,"exit_code":null,"exit_signal":null,"spawn_error":null}
+{"at":"2026-09-21T09:59:17.558Z","event":"owned_readiness_confirmed","port":62242,"pid":18840}
+{"at":"2026-09-21T09:59:17.567Z","event":"child_state","name":"owned-ready","pid":18840,"spawned":true,"exited":true,"exit_code":null,"exit_signal":"SIGTERM","spawn_error":null}

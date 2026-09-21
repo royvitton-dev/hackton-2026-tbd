@@ -1,0 +1,8 @@
+
+running 1 test
+test storage::tests::storage_process_kill_during_snapshot_save_recovers_acknowledged_state ... SNAPSHOT_ACK {"request_id":"snapshot-maker","account_id":"user-01","command_seq":1,"event_seq":1,"status":"accepted","code":"OK","message":"명령 처리가 완료되었습니다.","order_id":1,"trades":[],"duplicate":false,"durable":true}
+SNAPSHOT_ACK {"request_id":"snapshot-taker","account_id":"user-02","command_seq":2,"event_seq":2,"status":"accepted","code":"OK","message":"명령 처리가 완료되었습니다.","order_id":2,"trades":[{"id":1,"maker_order_id":1,"taker_order_id":2,"buyer_id":"user-02","seller_id":"user-01","price":1000,"quantity":2,"timestamp_ms":1234,"command_seq":2}],"duplicate":false,"durable":true}
+SNAPSHOT_ACK {"request_id":"snapshot-reserve","account_id":"user-03","command_seq":3,"event_seq":3,"status":"accepted","code":"OK","message":"명령 처리가 완료되었습니다.","order_id":3,"trades":[],"duplicate":false,"durable":true}
+SNAPSHOT_ACK {"request_id":"snapshot-cancel","account_id":"user-03","command_seq":4,"event_seq":4,"status":"accepted","code":"OK","message":"명령 처리가 완료되었습니다.","order_id":3,"trades":[],"duplicate":false,"durable":true}
+SNAPSHOT_ACK {"request_id":"snapshot-open","account_id":"user-02","command_seq":5,"event_seq":5,"status":"accepted","code":"OK","message":"명령 처리가 완료되었습니다.","order_id":4,"trades":[],"duplicate":false,"durable":true}
+SNAPSHOT_PAUSED {"complete_bytes":6200,"stage":"synced_before_publish","temporary":"C:\\project\\hackton-2026-tbd\\trading\\evidence\\storage-tests\\00000000000001789980884328767900-17804-3-actual-snapshot-kill-synced_before_publish\\unpublished-00000000000001789980884374233900-20428-4.tmp","written_bytes":6200}

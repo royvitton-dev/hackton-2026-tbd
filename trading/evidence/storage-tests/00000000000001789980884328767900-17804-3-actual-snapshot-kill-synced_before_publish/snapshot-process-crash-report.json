@@ -1,0 +1,108 @@
+{
+  "child_pid": 20428,
+  "forced_exit_status": "exit code: 1",
+  "journal_unchanged_by_recovery": true,
+  "observed_durable_acks": [
+    {
+      "account_id": "user-01",
+      "code": "OK",
+      "command_seq": 1,
+      "duplicate": false,
+      "durable": true,
+      "event_seq": 1,
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 1,
+      "request_id": "snapshot-maker",
+      "status": "accepted",
+      "trades": []
+    },
+    {
+      "account_id": "user-02",
+      "code": "OK",
+      "command_seq": 2,
+      "duplicate": false,
+      "durable": true,
+      "event_seq": 2,
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 2,
+      "request_id": "snapshot-taker",
+      "status": "accepted",
+      "trades": [
+        {
+          "buyer_id": "user-02",
+          "command_seq": 2,
+          "id": 1,
+          "maker_order_id": 1,
+          "price": 1000,
+          "quantity": 2,
+          "seller_id": "user-01",
+          "taker_order_id": 2,
+          "timestamp_ms": 1234
+        }
+      ]
+    },
+    {
+      "account_id": "user-03",
+      "code": "OK",
+      "command_seq": 3,
+      "duplicate": false,
+      "durable": true,
+      "event_seq": 3,
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "request_id": "snapshot-reserve",
+      "status": "accepted",
+      "trades": []
+    },
+    {
+      "account_id": "user-03",
+      "code": "OK",
+      "command_seq": 4,
+      "duplicate": false,
+      "durable": true,
+      "event_seq": 4,
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 3,
+      "request_id": "snapshot-cancel",
+      "status": "accepted",
+      "trades": []
+    },
+    {
+      "account_id": "user-02",
+      "code": "OK",
+      "command_seq": 5,
+      "duplicate": false,
+      "durable": true,
+      "event_seq": 5,
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 4,
+      "request_id": "snapshot-open",
+      "status": "accepted",
+      "trades": []
+    }
+  ],
+  "pause": {
+    "complete_bytes": 6200,
+    "stage": "synced_before_publish",
+    "temporary": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\storage-tests\\00000000000001789980884328767900-17804-3-actual-snapshot-kill-synced_before_publish\\unpublished-00000000000001789980884374233900-20428-4.tmp",
+    "written_bytes": 6200
+  },
+  "post_recovery_checkpoint_and_restart": true,
+  "prior_snapshot_and_unpublished_file_preserved": true,
+  "published_snapshots_at_kill": [
+    "C:\\project\\hackton-2026-tbd\\trading\\evidence\\storage-tests\\00000000000001789980884328767900-17804-3-actual-snapshot-kill-synced_before_publish\\snapshot-00000000000000000001-00000000000001789980884355714300-20428-1.bin"
+  ],
+  "recovery": {
+    "ignored_snapshots": [],
+    "journal_records": 5,
+    "preserved_tail": null,
+    "replayed_records": 4,
+    "snapshot_used": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\storage-tests\\00000000000001789980884328767900-17804-3-actual-snapshot-kill-synced_before_publish\\snapshot-00000000000000000001-00000000000001789980884355714300-20428-1.bin",
+    "truncated_bytes": 0
+  },
+  "same_id_retry_has_no_duplicate_effect": true,
+  "scope": "test-only controlled pause in real snapshot publication helper followed by OS process termination; not OS/power interruption",
+  "stage": "synced_before_publish",
+  "state_matches_child_before_save": true,
+  "state_matches_reference_replay": true
+}
