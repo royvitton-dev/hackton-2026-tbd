@@ -18,3 +18,9 @@ playwright-report/
 !.env.sample
 *.pem
 *.key
+
+# Theme park runtime and generated test reports
+.park-runtime/
+/park/reports/
+/park/test-results/
+/park/park/reports/

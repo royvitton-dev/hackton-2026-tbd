@@ -1,0 +1,2 @@
+import {defineConfig} from 'vitest/config';
+export default defineConfig({test:{include:['park/tests/unit/**/*.test.mjs'],reporters:['default','json'],outputFile:{json:'park/reports/unit/results.json'},coverage:{provider:'v8',include:['park/lib/**/*.mjs'],reporter:['text','html','json-summary'],reportsDirectory:'park/reports/coverage',thresholds:{statements:90,branches:80,functions:95,lines:90}}}});
