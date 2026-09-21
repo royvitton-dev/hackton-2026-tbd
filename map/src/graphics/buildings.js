@@ -1,6 +1,6 @@
 import * as THREE from 'three';
 export const buildingTypes={apartment:{label:'아파트·공동주택',color:'#4f9272'},office:{label:'빌딩',color:'#4d83a5'},large:{label:'대형건물',color:'#bc8a50'},house:{label:'주택',color:'#a48175'}};
-export function buildingType(site){return site.buildingType||(/박물관|도서관|주차장|교회/.test(site.name)?'large':/스튜디오|녹틸럭스|카페|포뮬리에/.test(site.name)?'office':site.kind==='public-residential-plan'||/공동|복합|다가구|다세대|하늘집/.test(site.name)?'apartment':'house');}
+export function buildingType(site){return site.buildingType||(/박물관|도서관|주차장|교회/.test(site.name)?'large':/스튜디오|녹틸럭스|카페|포뮬리에|사무실|논현109/.test(site.name)?'office':site.kind==='public-residential-plan'||/공동|복합|다가구|다세대|하늘집/.test(site.name)?'apartment':'house');}
 // Geographic markers communicate building use, not surveyed facade or height.
 export function buildingModel(type){
  const root=new THREE.Group();root.userData.buildingType=type;

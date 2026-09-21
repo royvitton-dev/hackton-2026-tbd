@@ -38,5 +38,5 @@ for (const id of candidates) {
     console.log(`${catalog.length}/10 ${catalog.at(-1).name}: ${assets.length} plans`);
   } catch (error) { console.error(id, error.message); }
 }
-if(catalog.length===10){const parking=JSON.parse(await readFile(new URL('parking-sources.json',target),'utf8').catch(()=>'[]'));await writeFile(new URL('catalog.json', target), JSON.stringify([...catalog,...parking], null, 2));}
+if(catalog.length===10){const parking=JSON.parse(await readFile(new URL('parking-sources.json',target),'utf8').catch(()=>'[]'));await writeFile(new URL('catalog.json', target), JSON.stringify([...catalog,...parking,...JSON.parse(await readFile(new URL('multilevel-sources.json',target),'utf8').catch(()=>'[]'))], null, 2));}
 if (catalog.length !== 10) { console.error(`Only ${catalog.length}/10 sites acquired`); process.exitCode = 1; }

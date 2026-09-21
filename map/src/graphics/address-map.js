@@ -21,7 +21,7 @@ export function createAddressMap(element,sites,onSelect){
  map.on('style.load',()=>{map.addLayer(layer);element.dataset.mapReady='true';});
  map.on('zoomend',()=>element.classList.toggle('map-close',map.getZoom()>14));
  const observer=new ResizeObserver(()=>map.resize());observer.observe(element);
- const legend=document.createElement('div');legend.className='building-legend';legend.innerHTML=Object.entries(buildingTypes).map(([key,v])=>`<span style="--marker-color:${v.color}"><i></i>${v.label}</span>`).join('')+'<button class="map-all">전체 40곳</button><a href="https://maps.google.com/maps?q=South+Korea" target="_blank" rel="noopener">Google 지도 ↗</a>';element.append(legend);
+ const legend=document.createElement('div');legend.className='building-legend';legend.innerHTML=Object.entries(buildingTypes).map(([key,v])=>`<span style="--marker-color:${v.color}"><i></i>${v.label}</span>`).join('')+`<button class="map-all">전체 ${valid.length}곳</button><a href="https://maps.google.com/maps?q=South+Korea" target="_blank" rel="noopener">Google 지도 ↗</a>`;element.append(legend);
  legend.querySelector('button').onclick=()=>{const points=valid.map(s=>[s.mapLocation.lng,s.mapLocation.lat]);map.fitBounds([[Math.min(...points.map(p=>p[0])),Math.min(...points.map(p=>p[1]))],[Math.max(...points.map(p=>p[0])),Math.max(...points.map(p=>p[1]))]],{padding:100,pitch:30,duration:700});card.hidden=true;};
  return {mode:'address-map',map,models,markers,focus,resize:()=>map.resize(),dispose:()=>{observer.disconnect();map.remove();}};
 }

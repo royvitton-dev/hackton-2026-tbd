@@ -1,0 +1,149 @@
+[
+  {
+    "id": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "addressKey": "서울강남구도곡동541-2",
+    "lat": null,
+    "lng": null,
+    "coordinateStatus": "address-result",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "kind": "public-multilevel-plan",
+    "buildingType": "large",
+    "scaleStatus": "uncalibrated",
+    "parkingStatus": "verified-in-published-plan",
+    "basementFloors": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "documentStatus": "공개 계획도 · 현재 시공 상태 미확인",
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "assets": [
+      {
+        "file": "/plans/multilevel/dogok-b1.png",
+        "label": "지하 1층 · 학교 주차장·특별교실",
+        "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+        "bytes": 756379,
+        "sha256": "ec1281817d5c39212f55d8763042286b40ec4d4d70e58d96b0b5ed2effea77fc",
+        "floor": "B1",
+        "kind": "parking-plan",
+        "sourcePage": 17,
+        "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+        "cropNormalized": [
+          0.502,
+          0.44,
+          0.395,
+          0.225
+        ]
+      },
+      {
+        "file": "/plans/multilevel/dogok-b2.png",
+        "label": "지하 2층 · 병원 측 주차장",
+        "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+        "bytes": 649771,
+        "sha256": "4b701b475eb5814c8c779f40b5a87230ae53f259fce99d96918864cb7f7876e8",
+        "floor": "B2",
+        "kind": "parking-plan",
+        "sourcePage": 17,
+        "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+        "cropNormalized": [
+          0.102,
+          0.44,
+          0.395,
+          0.225
+        ]
+      },
+      {
+        "file": "/plans/multilevel/dogok-b3.png",
+        "label": "지하 3층 · 병원 측 주차장",
+        "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+        "bytes": 796493,
+        "sha256": "450c734e12e3e1675509694f75cb3c48e603e608e17f115e5f120ef95b600e42",
+        "floor": "B3",
+        "kind": "parking-plan",
+        "sourcePage": 17,
+        "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+        "cropNormalized": [
+          0.502,
+          0.196,
+          0.395,
+          0.241
+        ]
+      },
+      {
+        "file": "/plans/multilevel/dogok-b4.png",
+        "label": "지하 4층 · 병원 측 주차장",
+        "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+        "bytes": 781685,
+        "sha256": "68cffede0c299507ac72bfb9a5ca76be2401d514f5b22f9e034760aa3cf93fd4",
+        "floor": "B4",
+        "kind": "parking-plan",
+        "sourcePage": 17,
+        "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+        "cropNormalized": [
+          0.102,
+          0.196,
+          0.395,
+          0.241
+        ]
+      }
+    ],
+    "sourceDocument": {
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf",
+      "sha256": "be294b910d50a0d81567d6c304d6f3c207a840330c344ff978e2374b84a35737",
+      "bytes": 2034895,
+      "pageCount": 79
+    }
+  },
+  {
+    "id": "complex-onepentas",
+    "name": "래미안 원펜타스 · 단지 배치도",
+    "address": "서울특별시 서초구 반포동 12번지 일대",
+    "addressKey": "서울서초구반포동12",
+    "lat": null,
+    "lng": null,
+    "coordinateStatus": "address-area",
+    "source": "https://www.raemian.co.kr/sales/sub/s/onepentas?menuSeq=10051",
+    "publisher": "삼성물산 래미안",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "kind": "public-complex-site-plan",
+    "buildingType": "apartment",
+    "scaleStatus": "uncalibrated",
+    "parkingStatus": "basement-plans-not-acquired",
+    "basementFloors": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "documentStatus": "공식 단지 배치도 · 지하층 주차 평면도 미확보",
+    "complexInfo": {
+      "households": 641,
+      "buildingCount": 6,
+      "highestFloor": 35,
+      "parkingSpaces": null,
+      "source": "https://www.raemian.co.kr/sales/s/onepentas",
+      "notes": "지하 4층 규모는 공식 단지 개요에서 확인했습니다. 배치도의 전기실·통신 인입 표기는 계획 위치이며 회로 용량·콘센트·실내 신호는 미확인입니다."
+    },
+    "assets": [
+      {
+        "file": "/plans/multilevel/onepentas-site.jpg",
+        "label": "단지 전체 배치도 · 지하층 주차 평면도 아님",
+        "url": "https://www.raemian.co.kr/upload/editor/image/images/000280/01_01_baechido.jpg",
+        "bytes": 1228853,
+        "sha256": "2e12f643ae043634c1c225c2f68b3841f167b3e00dab856edb3d14f26800df04",
+        "floor": "SITE",
+        "kind": "site-plan"
+      }
+    ]
+  }
+]
