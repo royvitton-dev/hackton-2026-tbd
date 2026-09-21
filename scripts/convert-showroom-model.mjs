@@ -41,6 +41,22 @@ async function readSourceJson(url, name) {
 }
 const config = await readSourceJson(spec.configUrl, 'config.source');
 const sourceScene = await readSourceJson(spec.sceneUrl, 'scene.source');
+if (sourceScene.compressedFormat) {
+  const format = sourceScene.compressedFormat;
+  const expand = value => {
+    if (Array.isArray(value)) return value.map(expand);
+    if (!value || typeof value !== 'object') return value;
+    return Object.fromEntries(Object.entries(value).map(([key, item]) => {
+      const index = [...key].reduce((n, c) => n * format.fieldCodeBase + c.charCodeAt(0) - format.fieldFirstCode, 0);
+      return [key.length <= 2 ? format.fieldArray[index] : key, expand(item)];
+    }));
+  };
+  sourceScene.entities = expand(sourceScene.entities);
+  for (const entity of Object.values(sourceScene.entities)) {
+    const offsets = entity.___1 ?? format.tripleVecs.slice(entity.___2, entity.___2 + 3);
+    [entity.position, entity.rotation, entity.scale] = offsets.map(offset => format.singleVecs.slice(offset, offset + 3));
+  }
+}
 const document = new Document();
 const buffer = document.createBuffer();
 const scene = document.createScene(spec.name);

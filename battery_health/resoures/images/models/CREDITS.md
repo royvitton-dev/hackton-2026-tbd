@@ -70,3 +70,25 @@ Decoder files under `public/assets/vehicles/decoders` are copied from the instal
 - Changes: official exterior and 21-inch wheel geometry converted from PlayCanvas to glTF; source part placement retained, PBR material translation, texture/Draco compression. No replacement vehicle geometry generated.
 - Original configuration, scene, downloaded assets, source URLs and SHA-256 checksums: `../sources/kia-ev9/`.
 - Representative GT-Line exterior; regional/year/trim differences are disclosed in the scene.
+
+## Kia EV3 Air (2025)
+
+- Runtime file: `kia_ev3.glb` (472,105 rendered triangles, 7,368,648 bytes).
+- Author/rightsholder: Kia Corporation / Kia Netherlands.
+- Official source: https://www.kia.com/nl/kies-je-kia/online-showroom/
+- Public geometry: https://dmz7vryp5nloi.cloudfront.net/viscircle/trunk/vehicles/Kia/EV3/nl_air_2025/mq.json
+- License: manufacturer copyright; an open redistribution license is not stated. **Not CC licensed.**
+- Converted original Blend4Web 6.01 vertices, signed-short normals, UVs and scene transforms to glTF. Original 17-inch wheel meshes are placed at the four source wheel anchors. Aventurine Green source color selected, shader channels translated to PBR, glass adapted to studio lighting, texture/Draco compression applied. Source shadow plane excluded. No body or wheel geometry generated.
+- Source files, binary geometry, textures, URLs and checksums: `../sources/kia-ev3/`.
+- Representative Netherlands Air 2025 exterior; year and trim differences are disclosed in the scene.
+
+## Kia Niro EV (second generation)
+
+- Runtime file: `kia_niro_ev.glb` (445,929 rendered triangles, 4,007,512 bytes).
+- Author/rightsholder: Kia Corporation.
+- Official source: https://www.kia.com/hk/en/showroom/niro-ev/vr-showroom.html
+- Redirected showroom: https://worldwide.kia.com/int/vr-showroom/apac/sg2ev/rhd/index.html
+- License: manufacturer copyright; an open redistribution license is not stated. **Not CC licensed.**
+- Converted actual PlayCanvas geometry and compressed scene transforms to glTF; source body/interior/wheel geometry retained, separate shadow plane excluded, PBR translation and texture/Draco compression applied.
+- Original data, source URLs and checksums: `../sources/kia-niro/`.
+- Hong Kong right-hand-drive representative model. Exact workbook year/trim differs; the scene states this limitation.

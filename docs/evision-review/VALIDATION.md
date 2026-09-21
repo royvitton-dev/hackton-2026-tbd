@@ -24,6 +24,8 @@
 
 ## 화면
 
+- [차량 상세 — EV3](demo-ev3.png)
+- [차량 상세 — Niro EV](demo-niro-ev.png)
 - [차량 상세 — EV6](demo-ev6.png)
 - [차량 상세 — EV9](demo-ev9.png)
 - [차량 상세 — IONIQ 5](demo-ioniq5.png)
@@ -47,7 +49,7 @@
 
 ## 남은 제약
 
-- GLB는 IONIQ 5, Kona Electric, Model 3, Model Y, EV6, EV9의 9개 트림을 확보했습니다. 10개 모델 / 11개 프로필의 상세 모델이 미확보여서 전체 차량 3D 완료 조건은 아직 충족하지 못했습니다. 상세 이유는 images/model_sources.json에 있습니다.
+- GLB는 IONIQ 5, Kona Electric, Model 3, Model Y, EV6, EV9, EV3, Niro EV의 12개 트림을 확보했습니다. 8개 모델 / 8개 프로필의 상세 모델이 미확보여서 전체 차량 3D 완료 조건은 아직 충족하지 못했습니다. 상세 이유는 images/model_sources.json에 있습니다.
 - IONIQ 5와 EV6의 Sketchfab 다운로드는 HTTP 401이었지만 제조사 공식 페이지의 공개 모델로 대체 확보했습니다. 다른 차량이나 placeholder로 대체하지 않습니다.
 - IONIQ 5 제조사 GLB의 공개 재배포 라이선스는 확인되지 않았습니다. CC 모델로 표시하지 않으며 출처와 제한을 manifest/크레딧에 기록합니다.
 - 확보 모델도 이전 연식의 대표 외형이며 2026년형 정확한 트림/CAD가 아닙니다.
@@ -60,3 +62,12 @@
 - `npm run test:e2e -- --config playwright.review.config.ts tests/browser/kia.spec.ts tests/browser/hyundai.spec.ts`: 2개 통과 (1.4분).
 - 차량 전환, 사용자별 주행거리, 지면 정렬, 모델 높이, 배터리 상세 열기/ESC 닫기, pageerror 없음 확인. 최종 EV6/EV9 캡처 육안 검수 완료.
 - `npm run build` 성공. 제조사 모델의 공개 재배포 라이선스는 확인되지 않아 크레딧에 명시했습니다.
+
+## EV3 / Niro EV 및 초기 선택 처리 검수
+
+- EV3: 공식 네덜란드 2025 Air 차체와 17인치 휠의 원본 Blend4Web geometry를 조립. 472,105 triangles. 두 트림은 각각 사용자 충전/주행 데이터로 전환됩니다.
+- Niro EV: 공식 홍콩 2세대 EV 원본 PlayCanvas 메시를 변환. 445,929 triangles. 별도 사각 그림자 평면 제거, 우핸들/연식 차이 고지.
+- 첫 통합 실행 4/6 통과, 2건은 React 준비 전 선택이 초기값으로 돌아가는 문제. 준비 전 native select/input을 비활성화해 수정했습니다.
+- 수정 후 `npm run test:e2e -- --config playwright.review.config.ts --output .cache/kia-review tests/browser/kia.spec.ts tests/browser/hyundai.spec.ts`: **6개 통과 (6.7분)**. 실제 GLB 로드, 지면 정렬, 사용자별 주행거리, 모델 전환, Battery Info 및 ESC, pageerror 없음 확인.
+- `npm run lint`, `npm run test` (4개), `npm run verify:assets` (12/20 GLB), `npm run build` (TypeScript 포함) 통과.
+- 별도 작업의 점수 산정 방식 변경이 현재 화면에 포함되어 있으며 이번 변경은 차량 모델과 초기 선택 처리에 한정합니다.
