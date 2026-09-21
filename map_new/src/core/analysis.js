@@ -20,8 +20,10 @@ export function validatePlan(plan) {
   const spaces=new Set();
   for(const s of plan.spaces){
     if(!s.id||spaces.has(s.id)||![s.x,s.z,s.width,s.depth].every(finite)||s.width<=0||s.depth<=0)throw Error('주차 구역 좌표가 올바르지 않습니다.');
+    for(const key of ['accessible','reserved','blocked'])if(s[key]!==undefined&&typeof s[key]!=='boolean')throw Error('주차 구역 전용·차단 값은 boolean이어야 합니다.');
     spaces.add(s.id);
   }
+  if(plan.objects!==undefined){if(!Array.isArray(plan.objects)||plan.objects.length>2000)throw Error('오브젝트 목록이 잘못되었습니다.');const ids=new Set();for(const o of plan.objects){if(!o.id||ids.has(o.id)||!['column','stairs','lift','room','door','ramp'].includes(o.kind)||![o.x,o.z,o.width,o.depth,o.height].every(finite)||Math.min(o.width,o.depth,o.height)<=0)throw Error('오브젝트의 종류·크기·좌표를 확인하세요.');ids.add(o.id);if(o.kind==='stairs'&&(!Number.isInteger(o.steps)||o.steps<2||o.steps>100))throw Error('계단 단수가 잘못되었습니다.');if(o.kind==='ramp'&&(!Array.isArray(o.path)||o.path.length<2||!o.path.every(p=>[p.x,p.y,p.z].every(finite))))throw Error('램프 경로가 잘못되었습니다.');}}
   return plan;
 }
 export function analyzeSvg(text) {
@@ -39,6 +41,7 @@ export function analyzeSvg(text) {
     if(a['data-height']&&a['data-kind']==='edge')item.height=Number(a['data-height']);
     if(a['data-verified'])item.verified=a['data-verified']==='true';
   }
+  for(const match of text.matchAll(/<rect\b[^>]*>/g)){const a=attrs(match[0]),space=plan.spaces.find(s=>s.id===a.id);if(!space)continue;for(const key of ['accessible','reserved'])if(a[`data-${key}`]!==undefined){if(!['true','false'].includes(a[`data-${key}`]))throw Error('주차 전용 구역 값이 잘못되었습니다.');space[key]=a[`data-${key}`]==='true';}}
   return validatePlan(plan);
 }
 // Indexed cuboids are standalone model data, not just a Three.js rendering hint.
@@ -50,7 +53,7 @@ export function compileMeshes(plan) {
     const corners=[[w.x1+nx,w.z1+nz],[w.x2+nx,w.z2+nz],[w.x2-nx,w.z2-nz],[w.x1-nx,w.z1-nz]];
     return {id:`wall-${i}`,kind:'wall',positions:[0,w.height].flatMap(y=>corners.flatMap(([x,z])=>[x,y+(w.y||0),z])),indices:[...indices]};
   });
-  return {version:1,units:'meters',coordinateSystem:'drawing-x-right-y-up-z-down',meshes,nodes:plan.nodes,graph:plan.edges,spaces:plan.spaces,source:plan.provenance||null};
+  return {version:1,units:'meters',coordinateSystem:'drawing-x-right-y-up-z-down',meshes,objects:plan.objects||[],labels:plan.labels||[],nodes:plan.nodes,graph:plan.edges,spaces:plan.spaces,source:plan.provenance||null};
 }
 // Roads retain their source IDs and coordinate provenance. An explicit surveyed
 // portal is mandatory; never infer an entrance from a building centroid.

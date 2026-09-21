@@ -1,0 +1,16 @@
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const names={column:'기둥',stairs:'계단',lift:'승강기',room:'실·공간',door:'문',ramp:'램프'};
+const m=n=>Number(n).toFixed(2);
+export function drawingInfo(plan,site,radio){
+ const objects=plan.objects||[],parking=plan.spaces.filter(s=>['parking','ev'].includes(s.kind)),text=plan.documentLabels||plan.labels||[],coverage=plan.semanticCoverage;
+ const rows=objects.map(o=>`<tr><td>${esc(o.label||o.id)}</td><td>${names[o.kind]}</td><td>${m(o.width)} × ${m(o.depth)}</td><td>${m(o.height)}</td><td>${m(o.x)}, ${m(o.z)}</td></tr>`).join('');
+ return `<h2>${esc(site.name)} · 도면 정보</h2>
+ <div class="drawing-totals"><span><b>${plan.walls.length}</b>벽체</span><span><b>${parking.length}</b>주차 구획</span><span><b>${parking.filter(s=>s.accessible).length}</b>장애인 구획</span><span><b>${objects.length}</b>공간 오브젝트</span><span><b>${text.length}</b>원본 추출 글자</span></div>
+ <p>${esc(site.address||'주소 미확인')}</p>
+ ${coverage?`<p class="drawing-note">원본 기재 주차 ${coverage.drawingDeclaredParking}면 / 현재 구획 ${coverage.modeledParking}면. 작은 표기와 경계가 불명확한 부분은 원본에서 함께 확인하세요.</p>`:''}
+ <p>기둥·계단·문의 평면 위치는 원본을 참고했습니다. 높이·마감재·계단 단수는 미리보기 가정이며, ${plan.scaleStatus==='user-calibrated'?'사용자가 입력한 축척입니다.':'치수는 추정 축척 기준입니다.'} 차량은 예시 표시입니다. 장애인 표식 위에는 차량을 표시하지 않습니다.</p>
+ <details open><summary>공간별 구성 · ${objects.length}개</summary><p>${Object.entries(names).map(([id,name])=>`${name} ${objects.filter(o=>o.kind===id).length}개`).join(' · ')}</p><div class="drawing-table"><table><thead><tr><th>이름</th><th>종류</th><th>평면 크기 (m)</th><th>가정 높이 (m)</th><th>도면 좌표 (m)</th></tr></thead><tbody>${rows||'<tr><td colspan="5">원본에 구조선과 글자만 추출된 도면입니다. 개별 오브젝트의 의미는 아직 확인되지 않았습니다.</td></tr>'}</tbody></table></div></details>
+ <details><summary>주차 구획 전체 · ${parking.length}면</summary><div class="drawing-table"><table><thead><tr><th>구획</th><th>용도</th><th>평면 크기 (m)</th><th>도면 좌표 (m)</th></tr></thead><tbody>${parking.map(s=>`<tr><td>${esc(s.label||s.id)}</td><td>${s.accessible?'장애인 전용':s.reserved?'전용·보호':s.kind==='ev'?'기존 EV':'일반'}</td><td>${m(s.width)} × ${m(s.depth)}</td><td>${m(s.x)}, ${m(s.z)}</td></tr>`).join('')}</tbody></table></div></details>
+ <details><summary>자동 추출한 원본 글자 전체 · ${text.length}개</summary><p>한국어·영어 OCR 결과입니다. 인식 신뢰도가 높아도 오인식이 있을 수 있으므로 원본과 대조하세요.</p><div class="drawing-text">${text.map(t=>`<p>${esc(t.text)} <small>인식 신뢰도 ${Math.round(t.confidence*100)}%</small></p>`).join('')||'<p>추출된 글자가 없습니다.</p>'}</div></details>
+ <details><summary>도면·기지국 출처와 확인 상태</summary><p>도면: ${esc(site.publisher||'사용자 제공')} · <a href="${esc(site.source||'#')}" target="_blank" rel="noopener">원본 페이지 ↗</a></p><p>좌표: ${site.location?(site.location.precision==='address-area'?'주소 권역 중심 · 전파 점수 계산 보류':'공개 지도·발행처 위치 · 도면 방위 정합 별도'):'미확보'}</p><p>주변 기지국: ${radio?.stations.length||0}개 공개 제원${radio?' · '+esc(radio.acquiredAt.slice(0,10)):''} · 실내 전파 실측 자료 없음</p><p>${esc((plan.warnings||[]).join(' '))}</p></details>`;
+}
