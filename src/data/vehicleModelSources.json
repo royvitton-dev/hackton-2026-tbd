@@ -345,17 +345,27 @@
     "manufacturer": "Volkswagen",
     "model": "ID.4",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
-    "sourceUrl": "https://sketchfab.com/3d-models/volkswagen-id4-502c1a0c911b4dfbaae57a7b25ec890f",
-    "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "Sketchfab candidate requires authorized download. Official Japanese ID.4 AR terms explicitly restrict reproduction/publication; that asset was not copied.",
-    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
-    "displayNote": null,
-    "researchDate": "2026-09-21"
+    "glbPath": "/assets/vehicles/models/volkswagen_id4_2021.glb",
+    "available": true,
+    "sourceUrl": "https://sketchfab.com/3d-models/volkswagen-id4-2021-502c1a0c911b4dfbaae57a7b25ec890f",
+    "downloadUrl": "https://shop.americawant.com/wp-content/uploads/2026/08/volkswagen-id4.glb",
+    "license": "CC BY 4.0",
+    "author": "ItsDiyor",
+    "representativeNote": "2021 ID.4 대표 외형 · 2026 트림과 다름",
+    "failureReason": null,
+    "nextAction": null,
+    "displayNote": "2021 ID.4 대표 외형 · 2026 트림과 다름",
+    "researchDate": "2026-09-21",
+    "failures": [
+      {
+        "url": "https://sketchfab.com/3d-models/volkswagen-id4-502c1a0c911b4dfbaae57a7b25ec890f",
+        "reason": "Sketchfab candidate requires authorized download. Official Japanese ID.4 AR terms explicitly restrict reproduction/publication; that asset was not copied.",
+        "recovered": true,
+        "nextAction": "Used public CC BY 4.0 redistribution with embedded author attribution."
+      }
+    ],
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceTriangles": 224854
   },
   {
     "vehicleId": "bmw_i5_edrive40_2026",
@@ -396,16 +406,26 @@
     "manufacturer": "Volvo",
     "model": "EX30",
     "requestedYear": 2026,
-    "glbPath": null,
-    "available": false,
+    "glbPath": "/assets/vehicles/models/volvo_ex30_2023.glb",
+    "available": true,
     "sourceUrl": "https://sketchfab.com/3d-models/volvo-ex30-c5be588ea33d44cc8d2690ffdba389a4",
-    "downloadUrl": null,
-    "license": null,
-    "author": null,
-    "representativeNote": null,
-    "failureReason": "Author-listed CC BY candidate found; authorized source download unavailable. Manufacturer AR app has no verified reusable web asset.",
-    "nextAction": "Provide a legitimately downloaded model and its license/source record; then convert, sync and verify this exact vehicle.",
-    "displayNote": null,
-    "researchDate": "2026-09-21"
+    "downloadUrl": "https://shop.americawant.com/wp-content/uploads/2026/08/volvo-ex30.glb",
+    "license": "CC BY 4.0",
+    "author": "LagzDesign / LAGZ26",
+    "representativeNote": "2023 EX30 커뮤니티 외형 · 실내 미포함 · 2026 트림과 다름",
+    "failureReason": null,
+    "nextAction": null,
+    "displayNote": "2023 EX30 커뮤니티 외형 · 실내 미포함 · 2026 트림과 다름",
+    "researchDate": "2026-09-21",
+    "failures": [
+      {
+        "url": "https://sketchfab.com/3d-models/volvo-ex30-c5be588ea33d44cc8d2690ffdba389a4",
+        "reason": "Author-listed CC BY candidate found; authorized source download unavailable. Manufacturer AR app has no verified reusable web asset.",
+        "recovered": true,
+        "nextAction": "Used public CC BY 4.0 redistribution with embedded author attribution."
+      }
+    ],
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "sourceTriangles": 59354
   }
 ]

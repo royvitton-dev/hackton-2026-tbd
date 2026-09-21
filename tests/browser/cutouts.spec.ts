@@ -8,7 +8,7 @@ test('Every remaining vehicle has a real PNG texture, fixed camera and battery f
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   const photos = models.filter(model => !model.available);
-  expect(photos).toHaveLength(6);
+  expect(photos).toHaveLength(4);
   await page.goto('/?user=U0059');
   for (const model of photos) {
     const user = workbook.users.find(user => user.vehicleId === model.vehicleId)!;

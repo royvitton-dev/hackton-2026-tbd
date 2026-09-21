@@ -2,7 +2,7 @@
 
 첨부된 EVision 디자인 시안의 차량 상세 / 충전 이력 / 세션 분석을 기준으로 구현했습니다. 차량 1대와 해당 사용자의 데이터만 표시합니다.
 
-최신 리소스 현황: IONIQ 6의 실제 GLB를 추가해 **10개 모델 / 14개 프로필이 실제 3D**이고, 나머지 **6개 모델 / 6개 프로필은 사진**입니다. 아래의 13/20 및 7종 기록은 추가 이전 검수 이력입니다. 최신 상세는 문서 끝의 IONIQ 6 항목을 참조합니다.
+최신 리소스 현황: IONIQ 6·Volvo EX30·Volkswagen ID.4의 실제 GLB를 추가해 **12개 모델 / 16개 프로필이 실제 3D**이고, 나머지 **4개 모델 / 4개 프로필은 사진**입니다. 아래의 이전 수치는 검수 이력입니다. 최신 상세는 문서 끝의 Volvo / Volkswagen 항목을 참조합니다.
 
 ## 최초 검수 결과 (아래 후속 검수에서 확장)
 
@@ -156,3 +156,23 @@
 - 최종 정면/실버 표시 검증: `npm run test:e2e -- --config .cache/ioniq6.playwright.config.ts tests/browser/ioniq6.spec.ts tests/browser/cutouts.spec.ts` **2개 통과 / 3.6분 / exit 0**. IONIQ 6 실제 드래그·투시·차체 내부 배터리·ESC 복원·모델 전환·모바일 및 남은 PNG 6종의 이미지 로드를 확인했습니다. PNG 테스트 통과는 해당 차량의 회전·투시 구현을 의미하지 않습니다.
 - 최종 `npm run lint`, `npm run typecheck`, `npm run verify:assets`, `npm run build` 및 `git diff --check` 통과. 실제 GLB 14개 프로필 / 사진 6개 프로필입니다.
 - 최종 캡처: [IONIQ 6 외형](ioniq6-3d-desktop.png), [드래그](ioniq6-3d-drag.png), [배터리 투시](ioniq6-3d-battery.png), [모바일](ioniq6-3d-mobile.png).
+
+## Volvo / Volkswagen 실제 3D 교체
+
+1. Volvo EX30와 Volkswagen ID.4의 공개 CC BY 4.0 GLB를 확보해 기존 고정 PNG 대신 실제 메시를 연결했습니다. IONIQ 6를 포함해 실제 3D는 12개 모델 / 16개 프로필이며, Q4 / Q6 / BMW i5 / MINI 4종은 미완료입니다.
+2. workbook의 `volvo_ex30_2026` / U0006, `vw_id4_pro_2026` / U0076를 그대로 매핑했습니다. 사용자 충전·주행·점수 데이터를 변경하지 않았습니다.
+3. 주요 변경: `vehicleImageMap.ts`, `VehicleGlbModel.tsx`, 모델 출처/크레딧, `tests/browser/volvo-vw.spec.ts`, PNG 회귀 대상과 README.
+4. 원본은 `battery_health/resoures/images/sources/volvo-ex30/`와 `sources/volkswagen-id4/`, 런타임 GLB는 `images/models/`에 보존했습니다.
+5. EX30 326,860 bytes / 59,354 triangles, ID.4 3,729,496 bytes / 224,854 triangles. 모두 HTTP 200. 제작자 LagzDesign / ItsDiyor, 원본 Sketchfab URL과 공개 배포 URL·SHA-256은 각 source.json에 기록했습니다. GLB 내부의 제작자/CC BY 4.0 메타데이터도 확인했습니다.
+6. public GLB·모델 JSON·CREDITS 및 프론트엔드 manifest 동기화 완료.
+7. 기존 실제 누끼 PNG는 보존하며 새 placeholder를 만들지 않았습니다.
+8. R3F Canvas에서 원본 GLB 메시를 렌더링하고 차체 표시 색상/재질을 보정했습니다. Volvo 차체 법선을 보정하고 원본 휠 재질은 투시 중에도 유지합니다. ID.4는 실제 전면이 기본 카메라를 향하도록 정렬했습니다.
+9. 기존 polar/azimuth/거리 제한을 유지해 360도 및 차체 하부 시점을 차단합니다.
+10. 버튼 클릭 시 차체 재질을 반투명하게 전환하고 차체 내부에 depth-tested 배터리 개략도를 표시합니다. ESC로 원래 재질 복원.
+11. 최초 기능 검증 `npm run test:e2e -- --config .cache/volvo-vw.playwright.config.ts tests/browser/volvo-vw.spec.ts`: **2개 통과 / 1.6분 / exit 0**. 실제 geometry·드래그·카메라 범위·배터리 내부 경계·depth test·복원·PNG/GLB 왕복 전환·모바일·pageerror 없음 확인. 이후 정면/재질을 보정해 최종 검증을 별도로 실행합니다.
+12. `npm run lint`, `npm run typecheck`, `npm run verify:assets`, `npm run build` 통과. 데모는 production build `IA7EFWHQve_nQhsdcAud_`를 별도 복사해 3000 포트에 반영했습니다.
+13. Volvo는 실내 없는 커뮤니티 외형이며 사진 수준의 정밀 모델/CAD로 주장하지 않습니다. ID.4는 2021 대표 외형입니다. BMW·MINI의 신규 대체 후보도 조사했으나 무료 공개 원본은 아직 확보하지 못했습니다. 유료/로그인 후보와 실패 이유는 `sources/remaining-model-research-20260921.json`에 기록했습니다.
+
+- 최종 정면·재질 보정 후 `npm run test:e2e -- --config .cache/ioniq6.playwright.config.ts tests/browser/volvo-vw.spec.ts tests/browser/cutouts.spec.ts`: **3개 통과 / 3.0분 / exit 0**. 두 GLB의 실제 드래그·투시·경계·재질 복원·전환·모바일과 남은 PNG 4종 표시를 확인했습니다.
+- 최종 육안 검수: [Volvo 외형](volvo_ex30_2026-3d.png), [Volvo 투시](volvo_ex30_2026-battery.png), [ID.4 외형](vw_id4_pro_2026-3d.png), [ID.4 투시](vw_id4_pro_2026-battery.png). 각 차량 드래그/모바일 캡처도 같은 폴더에 보존합니다.
+- MINI의 다른 GitHub GLB 후보는 별도 연구용 브라우저에서 차체를 확인했으나 요청한 전기 Cooper와 다른 5도어 외형이라 제외했습니다. 이 연구 검증은 제품 테스트 통과 수에 포함하지 않습니다.

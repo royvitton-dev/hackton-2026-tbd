@@ -113,3 +113,23 @@ Decoder files under `public/assets/vehicles/decoders` are copied from the instal
 - Runtime: `hyundai_ioniq6_2025.glb`, 783,652 rendered triangles, 4,445,368 bytes.
 - Representative 2025 Canadian trim; the UI discloses its difference from the workbook's 2026 vehicle.
 - Runtime presentation uses silver body paint for the dark studio; source GLB remains unchanged. This is a display color, not a paint value from the charging workbook.
+
+## Volvo EX30
+
+- Author: LagzDesign / LAGZ26
+- Original: https://sketchfab.com/3d-models/volvo-ex30-c5be588ea33d44cc8d2690ffdba389a4
+- License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+- Public redistribution: https://shop.americawant.com/wp-content/uploads/2026/08/volvo-ex30.glb
+- Distributor attribution: https://shop.americawant.com/atribuciones/
+- 2023 EX30 커뮤니티 외형 · 실내 미포함 · 2026 트림과 다름
+- Original geometry retained; runtime orientation, grounding, material presentation and schematic battery added.
+
+## Volkswagen ID.4
+
+- Author: ItsDiyor
+- Original: https://sketchfab.com/3d-models/volkswagen-id4-2021-502c1a0c911b4dfbaae57a7b25ec890f
+- License: CC BY 4.0 — https://creativecommons.org/licenses/by/4.0/
+- Public redistribution: https://shop.americawant.com/wp-content/uploads/2026/08/volkswagen-id4.glb
+- Distributor attribution: https://shop.americawant.com/atribuciones/
+- 2021 ID.4 대표 외형 · 2026 트림과 다름
+- Original geometry retained; runtime orientation, grounding, material presentation and schematic battery added.

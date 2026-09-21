@@ -8,7 +8,7 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
   const model=useMemo(()=>{
     const clone=scene.clone(true);clone.name='vehicle-gltf';
     clone.traverse(o=>{if(o instanceof Mesh){o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();o.castShadow=true;o.receiveShadow=true;
-      const smoothManufacturerSurface=(Array.isArray(o.material)?o.material:[o.material]).some(m=>(path.includes('ioniq5')&&['CyberGrey','WINDOW2','CLEARGLASS'].includes(m.name))||(path.includes('kona_electric')&&/CeramicBlue|Windows|Doors/.test(m.name)));
+      const smoothManufacturerSurface=(Array.isArray(o.material)?o.material:[o.material]).some(m=>(path.includes('ioniq5')&&['CyberGrey','WINDOW2','CLEARGLASS'].includes(m.name))||(path.includes('kona_electric')&&/CeramicBlue|Windows|Doors/.test(m.name))||(path.includes('volvo_ex30')&&m.name==='Material.003'));
       if(smoothManufacturerSurface||(Array.isArray(o.material)?o.material:[o.material]).some(m=>m.name.startsWith('glass.'))){o.geometry=toCreasedNormals(o.geometry,smoothManufacturerSurface?Math.PI/6:Math.PI/2);o.userData.ownsGeometry=true;}
       for(const m of Array.isArray(o.material)?o.material:[o.material]){
         if(m instanceof MeshStandardMaterial){
@@ -38,6 +38,15 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
             // Silver presentation paint keeps the real panel geometry legible in the dark studio.
             m.color.set('#a6b5c2');m.metalness=.55;m.roughness=.28;
           }
+          if(path.includes('volvo_ex30')&&m.name==='Material.003'){
+            m.color.set('#b2c0cb');m.metalness=.3;m.roughness=.4;
+          }
+          if(path.includes('volvo_ex30')&&['Material.005','Material.006'].includes(m.name)){
+            m.color.set('#132330');m.metalness=.25;m.roughness=.22;
+          }
+          if(path.includes('volkswagen_id4')&&m.name==='Paint_Color'){
+            m.color.set('#91a7b9');m.metalness=.45;m.roughness=.3;
+          }
         }
         m.userData.originalOpacity=m.opacity;m.userData.originalTransparent=m.transparent;m.userData.originalDepthWrite=m.depthWrite;
         if(m instanceof MeshStandardMaterial)m.userData.originalColor=m.color.clone();
@@ -46,7 +55,7 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
     // Community model length is on Z. Rotate into our X-forward vehicle coordinates.
     clone.updateMatrixWorld(true);const originalSize=new Box3().setFromObject(clone,true).getSize(new Vector3());
     if(originalSize.z>originalSize.x)clone.rotation.y+=Math.PI/2;
-    if(path.includes('model_y')||path.includes('kona_electric')||path.includes('casper_electric')||path.includes('ioniq6'))clone.rotation.y+=Math.PI;
+    if(path.includes('model_y')||path.includes('kona_electric')||path.includes('casper_electric')||path.includes('ioniq6')||path.includes('volvo_ex30')||path.includes('volkswagen_id4'))clone.rotation.y+=Math.PI;
     clone.updateMatrixWorld(true);
     // Precise bounds exclude oversized cached bounds in manufacturer component meshes.
     const bounds=new Box3().setFromObject(clone,true),size=bounds.getSize(new Vector3()),center=bounds.getCenter(new Vector3());
@@ -58,13 +67,14 @@ export function VehicleGlbModel({path,focused}:{path:string;focused:boolean}) {
     model.traverse(o=>{if(o instanceof Mesh) for(const m of Array.isArray(o.material)?o.material:[o.material]){
       // Keep tyres and rims grounded; ghost the body so the physical pack is
       // visible through it. The pack still obeys depth and stays inside the body.
-      const wheel=/wheel|tire|tyre|rim|disk|disc/i.test(o.name+' '+m.name);
+      const wheel=/wheel|tire|tyre|rim|disk|disc/i.test(o.name+' '+m.name)
+        ||(path.includes('volvo_ex30')&&['Material.011','Material.012'].includes(m.name));
       m.transparent=focused&&!wheel?true:m.userData.originalTransparent;
       m.opacity=focused&&!wheel?Math.min(m.userData.originalOpacity,.24):m.userData.originalOpacity;
       m.depthWrite=focused&&!wheel?false:m.userData.originalDepthWrite;
       if(m instanceof MeshStandardMaterial)m.color.copy(m.userData.originalColor).multiplyScalar(focused?.86:1);
     }});
-  },[model,focused]);
+  },[model,focused,path]);
   useEffect(()=>()=>model.traverse(o=>{if(o instanceof Mesh){for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();if(o.userData.ownsGeometry)o.geometry.dispose();}}),[model]);
   return <primitive object={model} dispose={null}/>;
 }
