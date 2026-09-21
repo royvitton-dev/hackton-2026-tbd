@@ -1,0 +1,80 @@
+{
+  "reviewed_at": "2026-09-21T14:29:16.885Z",
+  "reviewer": "/root/durability",
+  "scope": "Final targeted static review and existing raw arithmetic only. No additional test/service/build/API/process-control/source/Git changes.",
+  "inputs": [
+    {
+      "file": "park/server/trading-proxy.mjs",
+      "bytes": 3678,
+      "sha256": "eddc83f250b23d6214df19ddb55064ee81dd0c5a70fd6d850c1e33075a2410f4"
+    },
+    {
+      "file": "park/server.mjs",
+      "bytes": 9955,
+      "sha256": "636d4bbd4a19e6d6b37733543a0687f6965842ccc57fc2f462ba735336842a41"
+    },
+    {
+      "file": "trading/scripts/park-router-startup.mjs",
+      "bytes": 2722,
+      "sha256": "23acdff2b4d95d86f1117d3a5b5c9ad40ea2e257a274986724bf09b5236af1bc"
+    },
+    {
+      "file": "park/src/main.js",
+      "bytes": 22862,
+      "sha256": "98416d72a57d44e591c232913047d27e84c1afaf8751f2656fbd48fba0c2e01d"
+    },
+    {
+      "file": "trading/scripts/park-proxy.integration.test.mjs",
+      "bytes": 19410,
+      "sha256": "99763126a729ee70a7f3eb1817d3343a0730b9c3346f4d364b6baf53c7db261e"
+    }
+  ],
+  "raw_run": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-25-34-030Z-park-proxy-integration-0b408ce2",
+  "raw_inputs": [
+    {
+      "file": "report.json",
+      "bytes": 4896,
+      "sha256": "eaf8b46b198e3235cee5dadaa4050668b86977b2fee1add9b3c4e65240800e9e"
+    },
+    {
+      "file": "events.jsonl",
+      "bytes": 63458,
+      "sha256": "0eb3425bc86eb625cabe54c0dc649f0661b81fef9a63be6527526f58c24cb984"
+    },
+    {
+      "file": "denied-cases.json",
+      "bytes": 2048,
+      "sha256": "f3bf990304ac90cb9b17bae48318bb96ec46069aebe4916ad34d905ec1a4c90c"
+    },
+    {
+      "file": "forwarded-requests.json",
+      "bytes": 3606,
+      "sha256": "d22a99d978551d56ec2e9d524db0fc531c4fdcf86f04da3fa7f4f1b16bee424c"
+    },
+    {
+      "file": "valid-results.json",
+      "bytes": 4462,
+      "sha256": "9513790f19e9a5a337d3621c3b496f45c302c6dcccc526479526e0c3413d9f83"
+    },
+    {
+      "file": "initial-state.json",
+      "bytes": 4606,
+      "sha256": "af2b974b025f2df389cd7269813a913b8c6543646e05ed6699c7bef0aff2fddf"
+    },
+    {
+      "file": "final-state.json",
+      "bytes": 5397,
+      "sha256": "7efaef7e4c01f333f37987babdff023bfebe4c967e4fd0ab588d6d7ce0547e4b"
+    },
+    {
+      "file": "engine.stderr.log",
+      "bytes": 789,
+      "sha256": "6b89aead2b56f90764ba9cd850711576ce3e185c0388a3fee85cd9ca2d88cf97"
+    },
+    {
+      "file": "delivery.json",
+      "bytes": 3941,
+      "sha256": "662397745c9796f94cbb97a4d3539bb098defb9d236a9db79f4f8140c915457b"
+    }
+  ]
+}

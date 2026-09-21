@@ -21,7 +21,7 @@ node scripts/demo.mjs start
 ```
 
 - 독립 UI: http://127.0.0.1:5175
-- Wonder Park: 최초 준비 후 루트에서 `npm run park:dev` 또는 `npm run park:preview`를 시작하면 UI·엔진·12개 봇이 자동 실행됩니다. 이미 정상 실행 중인 시장은 재사용합니다. **휴가 거래소 → 휴가 거래소 입장 → 어트랙션 열기**에서 같은 UI로 연결되며, 준비가 끝날 때까지 입장 버튼이 기다립니다.
+- Wonder Park: 최초 준비 후 루트에서 `npm run dev` 또는 `npm run park:dev`를 시작하면 기본 로컬 UI·엔진·12개 봇을 자동 준비합니다. 이미 정상 실행 중인 시장은 재사용합니다. 파크의 입장 버튼은 준비를 기다린 뒤 같은 포트의 `/trading/` 화면으로 연결하며 HTTP·WebSocket도 `/trading/backend/`를 사용합니다. 외부·HTTPS·별도 포트 엔진은 자동 실행하지 않습니다. [통합 서버 설정](../park/ROUTER.md)
 - Rust API·WebSocket: http://127.0.0.1:8787 / ws://127.0.0.1:8787/ws
 - 기본 12개의 별도 Node 봇 프로세스가 공개 API로 같은 시장에 참여합니다.
 - 데이터는 `data/demo`, 실행별 로그·프로세스·봇 seed는 `evidence/<고유-run-ID>`에 보존됩니다.

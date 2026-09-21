@@ -1,0 +1,125 @@
+{
+  "finished_at": "2026-09-21T14:18:28.7028016Z",
+  "status": "prepared-not-executed",
+  "benchmark_runs": 0,
+  "builds": 0,
+  "services_controlled": 0,
+  "git_commands": 0,
+  "syntax_exit_code": 0,
+  "baseline_binary_actual_sha256": "069c1a336a7470122f3769dc2080d8472b72bf6290d3dbb2661893ce7fb63bb6",
+  "candidate_binary_actual_sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86",
+  "workload_source_same": true,
+  "fixed_pairs": [
+    "B/A",
+    "A/B",
+    "B/A"
+  ],
+  "commands_per_run": 120000,
+  "warmup_per_run": 6000,
+  "existing_targets_changed": false,
+  "runtime_runner_tested": false,
+  "source_hashes": [
+    {
+      "file": "engine/src/core.rs",
+      "sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "bytes": 34636
+    },
+    {
+      "file": "engine/src/model.rs",
+      "sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "bytes": 3121
+    },
+    {
+      "file": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954
+    },
+    {
+      "file": "engine/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038",
+      "bytes": 46
+    },
+    {
+      "file": "engine/examples/core_bench.rs",
+      "sha256": "1e7551861d1aa12525ac0ee3f246d82d5d18b0329d519d08d868d64da178d786",
+      "bytes": 12236
+    },
+    {
+      "file": "engine/Cargo.toml",
+      "sha256": "9bcaa0b13d35fd5cda66c80f65d46dad64759dddc36a1a1923b7fd0f603c12d6",
+      "bytes": 635
+    },
+    {
+      "file": "engine/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194
+    },
+    {
+      "file": "scripts/env.ps1",
+      "sha256": "480f8c3e50fd005dcf9598e413f060c15949ece5035fcb651516c216651609a8",
+      "bytes": 1227
+    },
+    {
+      "file": "scripts/demo-lifecycle.mjs",
+      "sha256": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8",
+      "bytes": 8852
+    },
+    {
+      "file": "docs/bench-plan.md",
+      "sha256": "3d5ec7687539b06bf9176649bba2d05947fe3835f0977438c774321a91c3c8c8",
+      "bytes": 10285
+    },
+    {
+      "file": "evidence/core-20260921T184147624-status-reuse/after/hashes.json",
+      "sha256": "eb47897817c74ad8112f1b1e95e58de8219c6305bba86f38a2a5c81500e2a713",
+      "bytes": 1729
+    },
+    {
+      "file": "evidence/core-20260921T184147624-status-reuse/after/release-build-run.json",
+      "sha256": "b553d8e41e73debb5a52a6d5c4fee62b0d98b4968392c4fa496e56b2512b81f7",
+      "bytes": 184
+    },
+    {
+      "file": "evidence/core-20260921T190443560-status-reuse-paired/metadata.json",
+      "sha256": "514292d4e5b48ee07e0e3e3dbe3d3898d5de7b00165570546a1becdbc5fce5b8",
+      "bytes": 1566
+    },
+    {
+      "file": "evidence/core-20260921T190443560-status-reuse-paired/runs.json",
+      "sha256": "2300e4a560b1e3b1712d5290e982d7fa8031f41561d87673e4dec1b8a9d8a648",
+      "bytes": 2663
+    },
+    {
+      "file": "evidence/core-20260921T190443560-status-reuse-paired/post-verification.json",
+      "sha256": "3c17108be5c3d26b9b9ceda8c6f98b065b88f3b9f452d04ef0302e5ecfc9e23f",
+      "bytes": 123
+    },
+    {
+      "file": "evidence/core-20260921T190443560-status-reuse-paired/02-after-result.json",
+      "sha256": "953ee272bf29d8002df8edeead1d2b72ce4b1bb7a1300492307a63b6a4a74c38",
+      "bytes": 2255
+    },
+    {
+      "file": "evidence/20260921T140412010Z-cow-production-validation-c19b5acd/source-sha256.json",
+      "sha256": "5f3d602f0fcdab58e5e08b893647447bf6c75ad06e217919a7601147ba6a8761",
+      "bytes": 798
+    },
+    {
+      "file": "evidence/20260921T140412010Z-cow-production-validation-c19b5acd/binary-sha256.json",
+      "sha256": "8a17fb0b2b4fc442f557c107917da8c48bbd0c8aefe2c95b58f5b62b8f8cd976",
+      "bytes": 533
+    },
+    {
+      "file": "evidence/20260921T140412010Z-cow-production-validation-c19b5acd/release-build.json",
+      "sha256": "7deafcf94641dfd4cb565b79f96746de9333fbfc0b2606acde72a6faf27df1b1",
+      "bytes": 342
+    }
+  ],
+  "limits": [
+    "No historical18:45lockhash",
+    "No per-command rawarrays in existingbenchmark",
+    "No current quiet or completed6h assertion",
+    "Pinned executables are local ignored artifacts",
+    "Cumulative inventoryCPU is not utilization"
+  ]
+}

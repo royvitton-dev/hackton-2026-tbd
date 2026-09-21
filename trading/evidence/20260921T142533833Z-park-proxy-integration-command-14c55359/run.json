@@ -1,0 +1,14 @@
+{
+  "command": "node",
+  "args": [
+    "--test",
+    "scripts/park-proxy.integration.test.mjs"
+  ],
+  "started_at": "2026-09-21T14:25:33.8575824Z",
+  "ended_at": "2026-09-21T14:25:38.0651233Z",
+  "exit_code": 0,
+  "test_sha256": "99763126a729ee70a7f3eb1817d3343a0730b9c3346f4d364b6baf53c7db261e",
+  "proxy_sha256": "eddc83f250b23d6214df19ddb55064ee81dd0c5a70fd6d850c1e33075a2410f4",
+  "normal_demo_controlled": false,
+  "park_server_started": false
+}

@@ -53,11 +53,11 @@ Rust 엔진 기본 주소는 `http://127.0.0.1:8787`, 스트림은 `ws://127.0.0
 
 ## Wonder Park 연결
 
-**실제 적용 상태: 로컬 등록 및 자동 시작 연결.** `trading/attraction.json`이 기존 Wonder Park 등록 인터페이스에 이름·소개·입장 버튼·`http://127.0.0.1:5175/` 주소를 제공한다. 파크는 최상위 프로젝트의 `index.html` 또는 Vite 패키지만 자동 감지하므로 중첩된 `trading/frontend`는 등록 URL 없이는 연결되지 않았다. 등록 후 파크의 **휴가 거래소 → 휴가 거래소 입장 → 어트랙션 열기**가 같은 독립 UI를 가리킨다. 후속 자동 시작 요청에는 파크 서버 호출부도 연결했다.
+**현재 소스: 같은 포트의 통합 경로와 로컬 자동 시작.** `trading/attraction.json`은 이름·소개·입장 버튼·독립 UI 주소를 등록한다. 최신 파크 라우터의 입장 버튼은 같은 포트의 `/trading/`로 이동하며 API와 WebSocket은 `/trading/backend/`로 연결한다. 독립 `http://127.0.0.1:5175/` 화면도 계속 사용할 수 있다. 과거의 “연결된 웹 화면이 없습니다” 문제는 중첩된 `trading/frontend`가 자동 발견되지 않아 발생했고 명시적인 등록으로 해결했다.
 
-최초 준비 후 Wonder Park 시작 시 `demo.mjs ensure`가 UI·엔진·12개 봇을 자동 실행하며 정상 실행 중이면 재사용한다. UI만 종료된 경우에는 UI만 복원한다. 독립 실행의 `node scripts/demo.mjs start`도 계속 사용할 수 있다. 실행 중인 파크는 약 5초마다 등록 정보를 다시 읽는다. 이전 안내창이 남으면 닫고 카드를 다시 선택하거나 페이지를 새로고침한다. 공개 배포 시에는 로컬 자동 시작 연결을 별도 배포 링크 방식으로 전환하고 실제 HTTPS UI/엔진 주소를 구성한다. 이 localhost 등록과 파크 자동 실행은 온라인 배포가 아니다.
+최초 준비 후 루트 `npm run dev` 또는 `npm run park:dev`로 Wonder Park를 시작하면 `demo.mjs ensure`가 UI·엔진·12개 봇을 자동 준비하고 정상 실행 중이면 재사용한다. UI만 종료된 경우에는 UI만 복원한다. 시작 시 준비가 실패하면 입장 요청에서 다시 시도한다. `TRADING_ENGINE_URL`이 기본 로컬 엔진과 다른 포트·외부·HTTPS 주소를 지정한 경우에는 해당 엔진을 자동 실행하지 않는다. 설정과 Origin 처리 범위는 [통합 서버 안내](../../park/ROUTER.md)에 있다. 독립 실행의 `node scripts/demo.mjs start`도 유지한다. 파크 종료는 거래소를 종료하지 않는다.
 
-실제 등록 API·입장 모달·목적지 화면 증거는 [Wonder Park 연결 검증](../evidence/20260921T123546085Z-wonder-park-link-c489e646/README.md)에 있다. 프런트엔드 내부에는 `/`, `#market`, `#my-orders`, `#bots` 진입점이 있다.
+기존 등록 API·입장 모달·독립 목적지 화면 증거는 [Wonder Park 연결 검증](../evidence/20260921T123546085Z-wonder-park-link-c489e646/README.md)에 있다. 최신 통합 프록시의 [실제 Rust 엔진 검증](../evidence/2026-09-21T14-25-34-030Z-park-proxy-integration-0b408ce2/README.md)은 주문·체결·잔고·재요청·WebSocket 및 출처 차단을 확인했다. 이 별도 검증은 새 통합 파크 전체의 실제 시작이나 브라우저 검증을 뜻하지 않는다. 프런트엔드 내부에는 `/`, `#market`, `#my-orders`, `#bots` 진입점이 있다.
 
 다른 React 호스트를 위한 최소 컴포넌트는 `frontend/src/integration/ExchangeLink.tsx`, 삽입 예시는 [연동 어댑터 절차](integration-adapter.md)에 있다. 이 선택적 컴포넌트는 Wonder Park 등록에 필요하지 않으며 루트에 복사하지 않았다.
 

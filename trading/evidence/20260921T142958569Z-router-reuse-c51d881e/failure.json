@@ -1,0 +1,5 @@
+{
+  "at": "2026-09-21T14:30:31.5202322Z",
+  "reason": "PowerShell ConvertFrom-Json converted prior timestamp strings to DateTime; string comparison falsely differed. All 17 process birth ticks independently confirmed equal.",
+  "before_helper_invocation": true
+}

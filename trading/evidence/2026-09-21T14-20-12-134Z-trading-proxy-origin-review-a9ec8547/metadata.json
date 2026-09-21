@@ -1,0 +1,37 @@
+{
+  "reviewed_at": "2026-09-21T14:20:12.141Z",
+  "reviewer": "/root/durability",
+  "inputs": [
+    {
+      "file": "park/server/trading-proxy.mjs",
+      "bytes": 2074,
+      "sha256": "e378404c651c80cc97a12d113c2d075f4d29bd73c4e3587432a9a01e03001540"
+    },
+    {
+      "file": "park/server.mjs",
+      "bytes": 9253,
+      "sha256": "d5d36fb0e90f16de9e251ad77839f699b32bf05e597e36ae1e42a3cf2ce9f9ac"
+    },
+    {
+      "file": "park/server/routes.mjs",
+      "bytes": 2160,
+      "sha256": "c39c05919290cc60226edc87509f7c667eca823c945b01ba44581bf30b6d6da9"
+    },
+    {
+      "file": "park/server/apps.mjs",
+      "bytes": 1959,
+      "sha256": "62c94e5b85e001263313d91c27e518ef5be9647f96be496b9cc676d695143ffb"
+    },
+    {
+      "file": "trading/engine/src/main.rs",
+      "bytes": 23831,
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    {
+      "file": "trading/scripts/demo.mjs",
+      "bytes": 23629,
+      "sha256": "d958e7e894de769a767de1fa060eadeaad9ecf3a10a924528bb395964eac7a19"
+    }
+  ],
+  "scope": "Read-only static source review. No service, HTTP request, test, build, process-control, source/shared-doc or Git changes. Root is concurrently implementing corrections; findings refer to captured source."
+}

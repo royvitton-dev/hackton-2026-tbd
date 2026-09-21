@@ -1,0 +1,6 @@
+import assert from 'node:assert/strict';
+import { createParkRouterTradingStartup } from './trading/scripts/park-router-startup.mjs';
+const result = await createParkRouterTradingStartup()();
+assert.equal(result.status, 'reused');
+assert.equal(result.managed, true);
+console.log(JSON.stringify(result));

@@ -1,0 +1,86 @@
+639:  }
+640:
+641:  storeHTTPOptions.call(this, options);
+642:
+643:  net.Server.call(
+644:    this,
+645:    { allowHalfOpen: true, noDelay: options.noDelay ?? true,
+646:      keepAlive: options.keepAlive,
+647:      keepAliveInitialDelay: options.keepAliveInitialDelay,
+648:      highWaterMark: options.highWaterMark });
+649:
+
+658:
+659:  this.on('connection', connectionListener);
+660:  this.on('listening', setupConnectionsTracking);
+661:
+662:  this.timeout = 0;
+663:  this.maxHeadersCount = null;
+664:  this.maxRequestsPerSocket = 0;
+
+1034:    debug('SERVER upgrade or connect', req.method);
+1035:
+1036:    d ||= parser.getCurrentBuffer();
+1037:
+1038:    socket.removeListener('data', state.onData);
+1039:    socket.removeListener('end', state.onEnd);
+1040:    socket.removeListener('close', state.onClose);
+1041:    socket.removeListener('drain', state.onDrain);
+1042:    socket.removeListener('error', socketOnError);
+1043:    socket.removeListener('timeout', socketOnTimeout);
+1044:    unconsume(parser, socket);
+1045:    parser.finish();
+1046:    freeParser(parser, req, socket);
+1047:    parser = null;
+1048:
+1049:    const eventName = req.method === 'CONNECT' ? 'connect' : 'upgrade';
+1050:    if (server.listenerCount(eventName) > 0) {
+1051:      debug('SERVER have listener for %s', eventName);
+1052:      const bodyHead = d.slice(ret, d.length);
+1053:
+1054:      socket.readableFlowing = null;
+1055:
+1056:      server.emit(eventName, req, socket, bodyHead);
+1057:    } else {
+
+1086:function resOnFinish(req, res, socket, state, server) {
+1087:  if (onResponseFinishChannel.hasSubscribers) {
+1088:    onResponseFinishChannel.publish({
+1089:      request: req,
+1090:      response: res,
+1091:      socket,
+1092:      server,
+1093:    });
+1094:  }
+1095:
+1096:  // Usually the first incoming element should be our request.  it may
+1097:  // be that in the case abortIncoming() was called that the incoming
+1098:  // array will be empty.
+1099:  assert(state.incoming.length === 0 || state.incoming[0] === req);
+1100:
+1101:  state.incoming.shift();
+1102:
+1103:  // If the user never called req.read(), and didn't pipe() or
+1104:  // .resume() or .on('data'), then we call req._dump() so that the
+1105:  // bytes will be pulled off the wire.
+1106:  if (!req._consuming && !req._readableState.resumeScheduled)
+1107:    req._dump();
+1108:
+1109:  res.detachSocket(socket);
+1110:  clearIncoming(req);
+1111:  process.nextTick(emitCloseNT, res);
+1112:
+1113:  if (res._last) {
+1114:    if (typeof socket.destroySoon === 'function') {
+1115:      socket.destroySoon();
+1116:    } else {
+1117:      socket.end();
+1118:    }
+1119:  } else if (state.outgoing.length === 0) {
+1120:    const keepAliveTimeout = NumberIsFinite(server.keepAliveTimeout) && server.keepAliveTimeout >= 0 ?
+1121:      server.keepAliveTimeout : 0;
+1122:    const keepAliveTimeoutBuffer = NumberIsFinite(server.keepAliveTimeoutBuffer) && server.keepAliveTimeoutBuffer >= 0 ?
+1123:      server.keepAliveTimeoutBuffer : 1e3;
+1124:
+1125:    if (keepAliveTimeout && typeof socket.setTimeout === 'function') {
+1126:      // Extend the internal timeout by the configured buffer to reduce

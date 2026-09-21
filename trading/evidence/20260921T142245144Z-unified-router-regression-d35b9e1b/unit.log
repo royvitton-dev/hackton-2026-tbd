@@ -1,0 +1,55 @@
+
+ RUN  v4.1.11 C:/project/hackton-2026-tbd
+
+ ✓ park/tests/router-unit/routes.test.mjs (14 tests) 6ms
+ ❯ park/tests/router-unit/proxy.test.mjs (6 tests | 2 failed) 120ms
+   ✓ rejects unsupported protocols and embedded credentials 2ms
+   ✓ forwards method, body, status and query to the engine through one public path 51ms
+   ✓ reports an unavailable engine without fabricating market data 12ms
+   ✓ times out an unresponsive engine 42ms
+   × returns a failed WebSocket upgrade when the engine is unavailable 8ms
+   × forwards WebSocket upgrade and bytes on the same routed path 4ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 2 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  park/tests/router-unit/proxy.test.mjs > returns a failed WebSocket upgrade when the engine is unavailable
+AssertionError: expected 'HTTP/1.1 403 Forbidden\r\nConnection:…' to contain '503 Service Unavailable'
+
+- Expected
++ Received
+
+- 503 Service Unavailable
++ HTTP/1.1 403 Forbidden
++ Connection: close
++ 
++
+
+ ❯ park/tests/router-unit/proxy.test.mjs:17:486
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/2]⎯
+
+ FAIL  park/tests/router-unit/proxy.test.mjs > forwards WebSocket upgrade and bytes on the same routed path
+AssertionError: expected 'HTTP/1.1 403 Forbidden\r\nConnection:…' to contain '101 Switching'
+
+- Expected
++ Received
+
+- 101 Switching
++ HTTP/1.1 403 Forbidden
++ Connection: close
++ 
++
+
+ ❯ park/tests/router-unit/proxy.test.mjs:23:240
+
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[2/2]⎯
+
+
+ Test Files  1 failed | 1 passed (2)
+      Tests  2 failed | 18 passed (20)
+   Start at  23:22:48
+   Duration  1.16s (transform 73ms, setup 0ms, import 232ms, tests 126ms, environment 0ms)
+
+JSON report written to C:/project/hackton-2026-tbd/trading/evidence/20260921T142245144Z-unified-router-regression-d35b9e1b/unit.json
