@@ -35,10 +35,10 @@ export function texture(type){
  }
  const t=new THREE.CanvasTexture(canvas);t.colorSpace=THREE.SRGBColorSpace;t.wrapS=t.wrapT=THREE.RepeatWrapping;t.repeat.set(type==='grass'?12:3,type==='grass'?12:3);t.anisotropy=8;return t;
 }
-export function textSign(parent,text,w,h,color='#f7e8bc',background='#244c46',x=0,y=0,z=0){
+export function textSign(parent,text,w,h,color='#f7e8bc',background='#244c46',x=0,y=0,z=0,maxFontSize=90){
  const canvas=document.createElement('canvas');canvas.width=1024;canvas.height=Math.round(1024*h/w);const c=canvas.getContext('2d');
  c.fillStyle=background;c.fillRect(0,0,canvas.width,canvas.height);c.strokeStyle=color;c.lineWidth=5;c.strokeRect(10,10,canvas.width-20,canvas.height-20);
- c.fillStyle=color;c.textAlign='center';c.textBaseline='middle';c.font=`600 ${Math.min(90,canvas.height*.5)}px Georgia, serif`;c.fillText(text,512,canvas.height/2,940);
+ c.fillStyle=color;c.textAlign='center';c.textBaseline='middle';c.font=`600 ${Math.min(maxFontSize,canvas.height*.5)}px Georgia, serif`;c.fillText(text,512,canvas.height/2,940);
  const map=new THREE.CanvasTexture(canvas);map.colorSpace=THREE.SRGBColorSpace;map.anisotropy=8;
  return mesh(parent,new THREE.PlaneGeometry(w,h),new THREE.MeshStandardMaterial({map,roughness:.65}),x,y,z);
 }

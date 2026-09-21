@@ -110,7 +110,7 @@ function texture(type) {
   t.anisotropy = 8;
   return t;
 }
-function textSign(parent, text, w, h, color = "#f7e8bc", background = "#244c46", x = 0, y = 0, z = 0) {
+function textSign(parent, text, w, h, color = "#f7e8bc", background = "#244c46", x = 0, y = 0, z = 0, maxFontSize = 90) {
   const canvas = document.createElement("canvas");
   canvas.width = 1024;
   canvas.height = Math.round(1024 * h / w);
@@ -123,7 +123,7 @@ function textSign(parent, text, w, h, color = "#f7e8bc", background = "#244c46",
   c.fillStyle = color;
   c.textAlign = "center";
   c.textBaseline = "middle";
-  c.font = `600 ${Math.min(90, canvas.height * 0.5)}px Georgia, serif`;
+  c.font = `600 ${Math.min(maxFontSize, canvas.height * 0.5)}px Georgia, serif`;
   c.fillText(text, 512, canvas.height / 2, 940);
   const map = new THREE.CanvasTexture(canvas);
   map.colorSpace = THREE.SRGBColorSpace;
@@ -624,7 +624,7 @@ function createLandscape(parent) {
 }
 
 // assets/wonder/park-source/attractions.js
-import * as THREE5 from "three";
+import * as THREE6 from "three";
 
 // assets/wonder/park-source/character-friends.js
 var ink = "#26282b";
@@ -920,6 +920,179 @@ function disneyCharacter(parent, kind = "mickey", scale = 1) {
   return root;
 }
 
+// assets/wonder/park-source/vehicle-attractions.js
+import * as THREE5 from "three";
+var cream2 = "#eee2c9";
+var ink2 = "#29473f";
+var rubber = "#303936";
+var mint = "#73bea3";
+function car(parent, color) {
+  const root = group(parent);
+  rounded(root, 1.3, 0.3, 2.35, 0.13, material(color, { metalness: 0.35, roughness: 0.32 }), 0, 0.47, 0);
+  rounded(root, 1.12, 0.12, 2.22, 0.05, ink2, 0, 0.29, 0);
+  rounded(root, 1.03, 0.4, 1.03, 0.14, material("#527677", { metalness: 0.3, roughness: 0.22 }), 0, 0.79, -0.18);
+  rounded(root, 1.07, 0.09, 0.8, 0.06, color, 0, 1.01, -0.23);
+  for (const x of [-0.65, 0.65]) for (const z of [-0.73, 0.73]) {
+    const wheel = cyl(root, 0.25, 0.16, rubber, x, 0.3, z);
+    wheel.rotation.z = Math.PI / 2;
+    const hub = cyl(root, 0.13, 0.175, "#bac3b6", x, 0.3, z);
+    hub.rotation.z = Math.PI / 2;
+  }
+  for (const x of [-0.43, 0.43]) {
+    box(root, 0.22, 0.075, 0.04, material("#fff1c9", { emissive: "#ffe6a5", emissiveIntensity: 0.35 }), x, 0.5, 1.18);
+    box(root, 0.25, 0.065, 0.04, "#b9604e", x, 0.48, -1.18);
+  }
+  box(root, 0.18, 0.015, 0.66, cream2, 0, 0.63, 0.73);
+  return root;
+}
+function cable(parent, points, color = ink2, radius = 0.035) {
+  const curve = new THREE5.CatmullRomCurve3(points.map((point) => new THREE5.Vector3(...point)));
+  return mesh(parent, new THREE5.TubeGeometry(curve, 24, radius, 6, false), color);
+}
+function charger(parent, x, z) {
+  const root = group(parent, x, 0.46, z);
+  root.name = "EV charging station";
+  rounded(root, 0.74, 1.72, 0.55, 0.1, cream2, 0, 0.87, 0);
+  rounded(root, 0.8, 0.16, 0.61, 0.05, mint, 0, 1.69, 0);
+  box(root, 0.48, 0.61, 0.025, ink2, 0, 1.16, 0.29);
+  textSign(root, "EV", 0.4, 0.32, "#b8efd1", ink2, 0, 1.26, 0.31);
+  for (let i = 0; i < 3; i++) box(root, 0.075, 0.12, 0.03, mint, -0.12 + i * 0.12, 0.98, 0.31);
+  cable(root, [[0.37, 1.28, 0.06], [0.7, 1.01, 0.13], [0.72, 0.35, 0.24], [0.47, 0.3, 0.36], [0.4, 0.99, 0.33]]);
+  const plug = box(root, 0.13, 0.31, 0.14, ink2, 0.4, 1.05, 0.34);
+  plug.rotation.z = -0.25;
+}
+function checkeredFlag(parent, x, z, reverse = false) {
+  cyl(parent, 0.038, 2.1, "#c7b888", x, 4.28, z);
+  const flag = group(parent, x, 4.75, z);
+  flag.rotation.y = reverse ? -0.2 : 0.2;
+  for (let row = 0; row < 3; row++) for (let col = 0; col < 4; col++) {
+    box(flag, 0.22, 0.22, 0.035, (row + col) % 2 ? ink2 : cream2, (col + 0.5) * 0.22 * (reverse ? -1 : 1), -row * 0.22, 0);
+  }
+}
+function buildPitStop(parent, color = mint) {
+  const root = group(parent), animation = [];
+  root.name = "EVision service garage";
+  const floor = material("#6e807a", { roughness: 0.94 });
+  rounded(root, 8.6, 0.34, 7, 0.24, cream2, 0, 0.2, 0);
+  rounded(root, 8.12, 0.1, 6.55, 0.12, floor, 0, 0.42, 0);
+  rounded(root, 7.3, 3.1, 0.35, 0.06, cream2, -0.25, 2.02, -2.55);
+  box(root, 3.55, 2.5, 0.05, ink2, -1.65, 1.94, -2.35);
+  for (const x of [-3.65, 0.45, 3.15]) {
+    box(root, 0.25, 3.2, 1.85, cream2, x, 2.05, -1.8);
+    box(root, 0.27, 0.48, 1.88, color, x, 0.76, -1.8);
+  }
+  rounded(root, 7.65, 0.26, 2.15, 0.09, ink2, -0.25, 3.69, -1.69);
+  box(root, 7.65, 0.11, 2.18, color, -0.25, 3.86, -1.69);
+  box(root, 7.65, 0.56, 0.2, ink2, -0.25, 3.46, -0.58);
+  textSign(root, "EVISION \xB7 PIT STOP", 6.2, 0.48, cream2, ink2, -0.25, 3.49, -0.465);
+  textSign(root, "01 / SERVICE", 2.35, 0.32, cream2, ink2, -1.65, 2.98, -2.31);
+  textSign(root, "CHARGE & GO", 1.98, 0.3, ink2, cream2, 1.8, 2.8, -2.34);
+  for (const x of [-2.95, -0.35]) box(root, 0.055, 0.015, 3.85, cream2, x, 0.48, 0.15);
+  box(root, 2.65, 0.015, 0.055, cream2, -1.65, 0.48, 2.05);
+  for (const x of [-2.9, -0.4]) {
+    rounded(root, 0.24, 2.35, 0.37, 0.04, color, x, 1.64, -0.25);
+    box(root, 0.38, 0.1, 0.6, ink2, x, 0.53, -0.25);
+  }
+  const lift = group(root, -1.65, 0.65, 0.1);
+  lift.name = "Vehicle service lift";
+  lift.userData.dynamic = true;
+  for (const x of [-0.56, 0.56]) box(lift, 0.24, 0.14, 2.75, "#b2b7a5", x, 0, 0);
+  box(lift, 2.6, 0.12, 0.25, ink2, 0, -0.08, -0.35);
+  const vehicle = car(lift, "#ece7d7");
+  vehicle.position.y = 0.08;
+  animation.push((time) => {
+    lift.position.y = 0.76 + Math.sin(time * 0.55) * 0.2;
+  });
+  const tools = group(root, 1.05, 0.47, -0.45);
+  tools.name = "Workshop tool trolley";
+  rounded(tools, 0.94, 0.76, 0.62, 0.05, color, 0, 0.48, 0);
+  box(tools, 1.05, 0.08, 0.72, ink2, 0, 0.91, 0);
+  for (let i = 0; i < 3; i++) {
+    box(tools, 0.79, 0.035, 0.025, cream2, 0, 0.32 + i * 0.2, 0.32);
+    box(tools, 0.32, 0.035, 0.04, ink2, 0, 0.38 + i * 0.2, 0.34);
+  }
+  for (const x of [-0.34, 0.34]) for (const z of [-0.2, 0.2]) {
+    const wheel = cyl(tools, 0.09, 0.09, rubber, x, 0.09, z);
+    wheel.rotation.z = Math.PI / 2;
+  }
+  for (let i = 0; i < 3; i++) {
+    const tire = torus(root, 0.29, 0.12, rubber, -3.36, 0.61 + i * 0.25, 0.85);
+    tire.rotation.x = Math.PI / 2;
+  }
+  charger(root, 2.77, 0.6);
+  rounded(root, 1.3, 0.06, 1.7, 0.04, color, 2.7, 0.5, 1.05);
+  for (const x of [-3.6, 3.6]) {
+    box(root, 0.38, 0.06, 0.38, ink2, x, 0.5, 2.65);
+    mesh(root, new THREE5.ConeGeometry(0.15, 0.4, 12), "#c89954", x, 0.72, 2.65);
+    cyl(root, 0.085, 0.07, cream2, x, 0.75, 2.65);
+  }
+  for (let i = 0; i < 20; i++) box(root, 0.37, 0.018, 0.18, i % 2 ? ink2 : cream2, -3.51 + i * 0.37, 0.49, 2.68);
+  const lane = textSign(root, "PIT LANE", 2.1, 0.45, cream2, "#6e807a", -0.2, 0.485, 2.98);
+  lane.rotation.x = -Math.PI / 2;
+  checkeredFlag(root, -3.5, -1.85);
+  checkeredFlag(root, 3, -1.85, true);
+  return { root, animation };
+}
+function buildParking(parent, color = "#659c88") {
+  const root = group(parent), animation = [];
+  root.name = "ATLAS parking navigation";
+  const road = "#71877b";
+  rounded(root, 8.6, 0.34, 7.2, 0.25, cream2, 0, 0.2, 0);
+  rounded(root, 8.18, 0.09, 6.8, 0.12, road, 0, 0.42, 0);
+  for (const x of [-3.55, 1.1]) for (const z of [-2.75, 0.6]) box(root, 0.24, 1.95, 0.25, cream2, x, 1.46, z);
+  box(root, 4.9, 0.25, 3.9, cream2, -1.22, 2.48, -1.12);
+  box(root, 4.64, 0.035, 3.65, road, -1.22, 2.63, -1.12);
+  for (const x of [-3.62, 1.18]) box(root, 0.12, 0.39, 3.9, color, x, 2.8, -1.12);
+  box(root, 4.95, 0.39, 0.12, color, -1.22, 2.8, -3.02);
+  box(root, 4.95, 0.25, 0.13, cream2, -1.22, 2.9, 0.8);
+  for (const x of [-3.5, -2.3, -1.1, 0.1, 1.1]) box(root, 0.065, 0.02, 1.83, cream2, x, 2.655, -1.98);
+  box(root, 4.62, 0.02, 0.055, cream2, -1.22, 2.655, -1.07);
+  for (const [x, paint] of [[-2.91, "#deb26a"], [-0.5, "#d5e4d7"]]) {
+    const parked = car(root, paint);
+    parked.scale.setScalar(0.7);
+    parked.position.set(x, 2.68, -2.02);
+  }
+  const lower = car(root, "#acbdce");
+  lower.scale.setScalar(0.66);
+  lower.position.set(-2.95, 0.47, -1.78);
+  const rise = 2.18, run = 3.5, slope = Math.atan2(rise, run), length = Math.hypot(rise, run);
+  const ramp = group(root, 2.32, 1.53, -1.08);
+  ramp.rotation.x = slope;
+  box(ramp, 1.62, 0.14, length, cream2);
+  box(ramp, 1.4, 0.02, length, road, 0, 0.08, 0);
+  for (const x of [-0.78, 0.78]) box(ramp, 0.095, 0.27, length, color, x, 0.2, 0);
+  for (let i = 0; i < 7; i++) box(ramp, 0.055, 0.02, 0.29, cream2, 0, 0.097, -1.72 + i * 0.56);
+  box(root, 1.2, 0.2, 0.7, cream2, 1.32, 2.48, -2.85);
+  const tower = group(root, -3.65, 0.46, -2.9);
+  tower.name = "Parking sign tower";
+  rounded(tower, 0.88, 4.5, 0.86, 0.07, color, 0, 2.25, 0);
+  rounded(tower, 1.26, 1.26, 0.2, 0.08, ink2, 0, 3.9, 0.49);
+  textSign(tower, "P", 1.08, 1.08, cream2, ink2, 0, 3.9, 0.602, 600);
+  textSign(tower, "02", 0.6, 0.4, cream2, ink2, 0, 2.83, 0.44);
+  textSign(tower, "01", 0.6, 0.4, cream2, ink2, 0, 1.06, 0.44);
+  box(tower, 1.11, 0.14, 1.09, cream2, 0, 4.58, 0);
+  for (const x of [-3.7, 1.02]) cyl(root, 0.065, 1.22, ink2, x, 1.08, 1.65);
+  box(root, 4.86, 0.61, 0.24, color, -1.34, 1.95, 1.65);
+  textSign(root, "ATLAS \xB7 PARKING", 4.57, 0.48, cream2, ink2, -1.34, 1.96, 1.782);
+  const gate = group(root, 0.3, 0.47, 1.6);
+  rounded(gate, 0.3, 0.87, 0.32, 0.035, ink2, 0, 0.44, 0);
+  box(gate, 1.9, 0.11, 0.1, cream2, -0.77, 0.85, 0);
+  for (let i = 0; i < 5; i++) box(gate, 0.15, 0.115, 0.11, color, -1.57 + i * 0.35, 0.85, 0);
+  charger(root, -3.25, 0.35);
+  for (let i = 0; i < 9; i++) cyl(root, 0.055, 0.025, "#bce3bb", -1.5 + i * 0.45, 0.49, 2.55);
+  const routeCar = car(root, "#d4ac6d");
+  routeCar.name = "Parking approach vehicle";
+  routeCar.userData.dynamic = true;
+  routeCar.scale.setScalar(0.57);
+  routeCar.rotation.y = Math.PI / 2;
+  animation.push((time) => {
+    routeCar.position.set(Math.sin(time * 0.3) * 1.15, 0.49, 2.46);
+  });
+  const entry = textSign(root, "IN  \u2192", 1, 0.4, cream2, road, -2.7, 0.49, 2.5);
+  entry.rotation.x = -Math.PI / 2;
+  return { root, animation };
+}
+
 // assets/wonder/park-source/attractions.js
 function bumperCar(parent, color = "#cf654c") {
   const g = group(parent);
@@ -938,8 +1111,8 @@ function bumperCar(parent, color = "#cf654c") {
 function buildBumper(parent) {
   const root = group(parent);
   const animation = [];
-  const cream2 = "#ecdcc1", red = "#bc6051", gold = "#d4b477";
-  rounded(root, 8.5, 0.42, 6.8, 0.3, cream2, 0, 0.22, 0);
+  const cream3 = "#ecdcc1", red = "#bc6051", gold = "#d4b477";
+  rounded(root, 8.5, 0.42, 6.8, 0.3, cream3, 0, 0.22, 0);
   rounded(root, 7.8, 0.08, 5.9, 0.12, material("#7f9ca0", { metalness: 0.35, roughness: 0.3 }), 0, 0.48, 0);
   for (let i = 0; i < 5; i++) {
     const ring = torus(root, 1 + i * 0.38, 0.025, "#d9dfcc", 0, 0.54, 0);
@@ -947,27 +1120,27 @@ function buildBumper(parent) {
     ring.scale.x = 1.42;
   }
   for (const x of [-3.7, 3.7]) for (const z of [-2.7, 2.7]) {
-    cyl(root, 0.14, 3.4, cream2, x, 2.1, z);
+    cyl(root, 0.14, 3.4, cream3, x, 2.1, z);
     for (let j = 0; j < 5; j++) cyl(root, 0.147, 0.2, red, x, 0.8 + j * 0.57, z);
     cyl(root, 0.25, 0.15, gold, x, 3.74, z);
   }
   rounded(root, 8.4, 0.22, 2.5, 0.12, red, 0, 3.95, -1.75);
   box(root, 8.5, 0.18, 0.22, gold, 0, 3.76, -0.48);
-  for (let i = 0; i < 18; i++) box(root, 0.22, 0.05, 2.5, cream2, -4 + i * 0.47, 4.08, -1.75);
+  for (let i = 0; i < 18; i++) box(root, 0.22, 0.05, 2.5, cream3, -4 + i * 0.47, 4.08, -1.75);
   box(root, 8.6, 0.48, 0.38, red, 0, 3.66, 2.86);
   textSign(root, "DOPAMIN SPEEDWAY", 6.7, 0.58, "#fff1cd", "#ad4e43", 0, 3.67, 3.06);
   for (let i = 0; i < 22; i++) sphere(root, 0.065, 0.065, 0.065, material("#fff0bb", { emissive: "#ffd78a", emissiveIntensity: 0.7 }), -4.02 + i * 0.383, 3.31, 3.08);
-  for (const x of [-3.7, 3.7]) box(root, 0.12, 0.5, 5.5, cream2, x, 0.83, 0);
+  for (const x of [-3.7, 3.7]) box(root, 0.12, 0.5, 5.5, cream3, x, 0.83, 0);
   for (let i = 0; i < 4; i++) {
-    const car = bumperCar(root, ["#dc765b", "#e4bf57", "#588f92", "#a98bb8"][i]);
-    car.scale.setScalar(0.8);
+    const car2 = bumperCar(root, ["#dc765b", "#e4bf57", "#588f92", "#a98bb8"][i]);
+    car2.scale.setScalar(0.8);
     animation.push((t) => {
       const a = t * 0.38 + i * Math.PI / 2;
-      car.position.set(Math.cos(a) * 2.35, 0.48, Math.sin(a) * 1.55);
-      car.rotation.y = -a + Math.PI;
+      car2.position.set(Math.cos(a) * 2.35, 0.48, Math.sin(a) * 1.55);
+      car2.rotation.y = -a + Math.PI;
     });
     if (i === 0) {
-      const driver = disneyCharacter(car, "mickey", 0.37);
+      const driver = disneyCharacter(car2, "mickey", 0.37);
       driver.position.set(0, 0.55, -0.15);
       animation.push((t) => driver.userData.animate(t, "drive"));
     }
@@ -976,19 +1149,19 @@ function buildBumper(parent) {
 }
 function buildTheater(parent) {
   const root = group(parent);
-  const cream2 = "#efdebf", rose = "#cc9790", dark = "#3b5553", gold = material("#d2b16c", { metalness: 0.5, roughness: 0.35 });
-  rounded(root, 8.1, 0.42, 6.3, 0.3, cream2, 0, 0.22, 0);
+  const cream3 = "#efdebf", rose = "#cc9790", dark = "#3b5553", gold = material("#d2b16c", { metalness: 0.5, roughness: 0.35 });
+  rounded(root, 8.1, 0.42, 6.3, 0.3, cream3, 0, 0.22, 0);
   rounded(root, 7.3, 4.8, 5.2, 0.14, rose, 0, 2.75, -0.3);
-  box(root, 7.6, 0.3, 5.5, cream2, 0, 5.24, -0.3);
+  box(root, 7.6, 0.3, 5.5, cream3, 0, 5.24, -0.3);
   box(root, 7.7, 0.12, 5.6, gold, 0, 5.45, -0.3);
-  box(root, 3.2, 1.75, 0.35, cream2, 0, 5.25, 2.46);
+  box(root, 3.2, 1.75, 0.35, cream3, 0, 5.25, 2.46);
   box(root, 2.8, 1.6, 0.22, "#7b9a9b", 0, 5.39, 2.7);
   for (const x of [-3.35, -2.8, 2.8, 3.35]) {
-    box(root, 0.2, 4.75, 0.38, cream2, x, 2.8, 2.45);
+    box(root, 0.2, 4.75, 0.38, cream3, x, 2.8, 2.45);
     box(root, 0.1, 4.8, 0.12, gold, x, 2.8, 2.68);
   }
   for (const x of [-1.45, 0, 1.45]) {
-    arch(root, 1.22, 2.8, 0.08, cream2, x, 0.55, 2.4);
+    arch(root, 1.22, 2.8, 0.08, cream3, x, 0.55, 2.4);
     arch(root, 0.97, 2.5, 0.06, dark, x, 0.6, 2.51);
     box(root, 0.025, 2, 0.035, gold, x, 1.6, 2.6);
     sphere(root, 0.055, 0.055, 0.025, gold, x + 0.15, 1.7, 2.64);
@@ -999,14 +1172,14 @@ function buildTheater(parent) {
   textSign(root, "NOW SHOWING \xB7 WONDER PARK", 6.6, 0.38, "#635646", "#f8edce", 0, 3.59, 3.98);
   for (let i = 0; i < 24; i++) sphere(root, 0.063, 0.063, 0.063, material("#ffefb0", { emissive: "#f2bb6b", emissiveIntensity: 0.8 }), -3.65 + i * 0.317, 3.23, 3.82);
   for (let i = -2; i <= 2; i++) box(root, 0.14, 0.9 - Math.abs(i) * 0.16, 0.2, gold, i * 0.33, 6.25, 2.52);
-  const star = new THREE5.Shape();
+  const star = new THREE6.Shape();
   for (let i = 0; i < 10; i++) {
     const a = i * Math.PI / 5 - Math.PI / 2, r = i % 2 ? 0.21 : 0.48;
     const x = Math.cos(a) * r, y = Math.sin(a) * r;
     i ? star.lineTo(x, y) : star.moveTo(x, y);
   }
   star.closePath();
-  const m = new THREE5.Mesh(new THREE5.ExtrudeGeometry(star, { depth: 0.08, bevelEnabled: true, bevelSize: 0.03, bevelThickness: 0.03, bevelSegments: 2 }), gold);
+  const m = new THREE6.Mesh(new THREE6.ExtrudeGeometry(star, { depth: 0.08, bevelEnabled: true, bevelSize: 0.03, bevelThickness: 0.03, bevelSegments: 2 }), gold);
   m.position.set(0, 6.2, 2.75);
   root.add(m);
   for (const x of [-3.1, 3.1]) {
@@ -1017,14 +1190,14 @@ function buildTheater(parent) {
 }
 function buildMusic(parent) {
   const root = group(parent);
-  const teal = "#62928c", cream2 = "#eadbbd", gold = "#d3b06b";
-  cyl(root, 3.7, 0.42, cream2, 0, 0.22, 0);
+  const teal = "#62928c", cream3 = "#eadbbd", gold = "#d3b06b";
+  cyl(root, 3.7, 0.42, cream3, 0, 0.22, 0);
   cyl(root, 3.35, 0.18, "#aa9a7b", 0, 0.53, 0);
   cyl(root, 3.23, 0.08, "#d8bba1", 0, 0.66, 0);
   for (let i = 0; i < 8; i++) {
     const a = i / 8 * Math.PI * 2;
     const x = Math.cos(a) * 2.85, z = Math.sin(a) * 2.85;
-    cyl(root, 0.11, 3.6, cream2, x, 2.4, z);
+    cyl(root, 0.11, 3.6, cream3, x, 2.4, z);
     cyl(root, 0.21, 0.15, gold, x, 4.16, z);
     cyl(root, 0.21, 0.12, gold, x, 0.78, z);
   }
@@ -1033,11 +1206,11 @@ function buildMusic(parent) {
   cone(root, 0.16, 1, gold, 0, 6.34, 0);
   for (let i = 0; i < 16; i++) {
     const a = i / 16 * Math.PI * 2;
-    const bar = cyl(root, 0.037, 3.72, cream2, Math.sin(a) * 1.74, 5.12, Math.cos(a) * 1.74);
+    const bar = cyl(root, 0.037, 3.72, cream3, Math.sin(a) * 1.74, 5.12, Math.cos(a) * 1.74);
     bar.rotation.set(Math.cos(a) * 1.16, 0, -Math.sin(a) * 1.16);
   }
   textSign(root, "MAGIC VOICE", 4.3, 0.58, "#fbe8bc", "#406c63", 0, 3.8, 3.05);
-  for (let i = 0; i < 4; i++) box(root, 2.5, 0.15, 0.6, cream2, 0, 0.65 - i * 0.14, 3.1 + i * 0.48);
+  for (let i = 0; i < 4; i++) box(root, 2.5, 0.15, 0.6, cream3, 0, 0.65 - i * 0.14, 3.1 + i * 0.48);
   const mic = group(root, 0, 0.66, 0.4);
   cyl(mic, 0.035, 1.5, gold, 0, 0.78, 0);
   cyl(mic, 0.34, 0.07, "#505453", 0, 0.07, 0);
@@ -1054,8 +1227,8 @@ function buildMusic(parent) {
 function buildGeneric(parent, theme, color) {
   const root = group(parent);
   const animation = [];
-  const cream2 = "#e9dcc1", gold = "#ceb176";
-  cyl(root, 3.6, 0.4, cream2, 0, 0.24, 0);
+  const cream3 = "#e9dcc1", gold = "#ceb176";
+  cyl(root, 3.6, 0.4, cream3, 0, 0.24, 0);
   if (theme === "construction") {
     box(root, 7.2, 0.15, 5.8, "#bbaa82", 0, 0.55, 0);
     for (const x of [-2, 0, 2]) for (const z of [-1.7, 1.7]) {
@@ -1099,8 +1272,8 @@ function buildGeneric(parent, theme, color) {
   } else if (theme === "pinball") {
     rounded(root, 6.6, 1, 5.5, 0.28, color, 0, 0.9, 0);
     rounded(root, 6.2, 0.15, 5.1, 0.18, "#314e60", 0, 1.48, 0);
-    for (const x of [-3, 3]) box(root, 0.16, 1.4, 5.1, cream2, x, 2.1, 0);
-    box(root, 6.2, 1.4, 0.16, cream2, 0, 2.1, -2.5);
+    for (const x of [-3, 3]) box(root, 0.16, 1.4, 5.1, cream3, x, 2.1, 0);
+    box(root, 6.2, 1.4, 0.16, cream3, 0, 2.1, -2.5);
     for (let i = 0; i < 6; i++) {
       const x = (i % 3 - 1) * 1.5, z = Math.floor(i / 3) * 1.7 - 0.8;
       cyl(root, 0.45, 0.25, "#e0ae64", x, 1.7, z);
@@ -1167,7 +1340,7 @@ function buildGeneric(parent, theme, color) {
     }
   } else {
     cyl(root, 3, 0.24, color, 0, 0.6, 0);
-    cyl(root, 0.22, 4, cream2, 0, 2.6, 0);
+    cyl(root, 0.22, 4, cream3, 0, 2.6, 0);
     cone(root, 3.55, 1.5, color, 0, 4.55, 0);
     const carousel = group(root);
     carousel.userData.dynamic = true;
@@ -1175,8 +1348,8 @@ function buildGeneric(parent, theme, color) {
       const a = i / 8 * Math.PI * 2;
       const g = group(carousel, Math.cos(a) * 2.35, 0, Math.sin(a) * 2.35);
       cyl(g, 0.055, 3.5, gold, 0, 2.35, 0);
-      sphere(g, 0.5, 0.23, 0.22, cream2, 0, 1.35, 0);
-      sphere(g, 0.2, 0.37, 0.19, cream2, 0.32, 1.65, 0);
+      sphere(g, 0.5, 0.23, 0.22, cream3, 0, 1.35, 0);
+      sphere(g, 0.2, 0.37, 0.19, cream3, 0.32, 1.65, 0);
       for (const x of [-0.25, 0.25]) cyl(g, 0.07, 0.5, gold, x, 1, 0);
       g.rotation.y = -a;
     }
@@ -1186,16 +1359,16 @@ function buildGeneric(parent, theme, color) {
 }
 function createAttraction(parent, item, position, index) {
   const outer = group(parent, ...position);
-  const built = item.theme === "bumper" ? buildBumper(outer) : item.theme === "theater" ? buildTheater(outer) : item.theme === "music" ? buildMusic(outer) : buildGeneric(outer, item.theme, item.color);
+  const built = item.theme === "pitstop" ? buildPitStop(outer, item.color) : item.theme === "parking" ? buildParking(outer, item.color) : item.theme === "bumper" ? buildBumper(outer) : item.theme === "theater" ? buildTheater(outer) : item.theme === "music" ? buildMusic(outer) : buildGeneric(outer, item.theme, item.color);
   const character = disneyCharacter(outer, item.character, 1.05);
   character.position.set(item.theme === "theater" ? -3.5 : 3.7, 0.55, 4.35);
   const motion = item.theme === "music" ? "dance" : item.theme === "bumper" ? "drive" : "wave";
   built.animation.push((t) => character.userData.animate(t + index, motion));
-  const pick = new THREE5.Mesh(new THREE5.BoxGeometry(9, 7, 8), new THREE5.MeshBasicMaterial({ visible: false }));
+  const pick = new THREE6.Mesh(new THREE6.BoxGeometry(9, 7, 8), new THREE6.MeshBasicMaterial({ visible: false }));
   pick.position.y = 3;
   pick.userData.attraction = item.id;
   outer.add(pick);
-  return { root: outer, animation: built.animation, pick, label: new THREE5.Vector3(position[0], position[1] + 0.6, position[2] + 5.5), character };
+  return { root: outer, animation: built.animation, pick, label: new THREE6.Vector3(position[0], position[1] + 0.6, position[2] + 5.5), character };
 }
 export {
   createAttraction,

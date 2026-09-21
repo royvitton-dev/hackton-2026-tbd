@@ -62,7 +62,7 @@ export class ParkScene {
  positions(index){return surfacePoint(...themeCoordinates(index));}
  setAttractions(items){
   if(JSON.stringify(items.map(i=>[i.id,i.revision]))===JSON.stringify(this.items.map(i=>[i.id,i.revision])))return;
-  this.items=items;disposeSubtree(this.projects);this.attractions=[];this.picks=[];
+  this.items=items;disposeSubtree(this.projects);this.attractions=[];this.picks=[];this.globe.setAttractionClearings(items.length);
   items.forEach((item,i)=>{
    const anchor=createThemeIsland(this.projects,i,item.color);const attraction=createAttraction(anchor,item,[0,.02,0],i);attraction.pick.userData.dynamic=true;attraction.character.position.y=.08;{const p=attraction.character.position;attraction.character.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),new THREE.Vector3(p.x,PLANET_RADIUS+surfaceDrop(p.x,p.z),p.z).normalize());}conformToSurface(attraction.root,anchor);attraction.animation=[surfaceMotion(attraction.root,anchor,attraction.animation)];attraction.anchor=anchor;this.attractions.push(attraction);this.picks.push(attraction.pick);
    anchor.updateWorldMatrix(true,true);attraction.label=attraction.root.localToWorld(new THREE.Vector3(0,.6+surfaceDrop(0,5.5),5.5));
