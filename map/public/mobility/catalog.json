@@ -1,0 +1,229 @@
+{
+  "version": 1,
+  "verifiedAt": "2026-09-21",
+  "sources": [
+    {
+      "id": "palo-alto",
+      "category": "plans",
+      "title": "주차 동선과 EV 설치 위치가 함께 있는 도면",
+      "provider": "City of Palo Alto · BDE Architecture",
+      "region": "미국 · 3606 El Camino Real",
+      "fields": [
+        "Floor 1·2",
+        "양방향 차로",
+        "EV 충전 주차면",
+        "접근성 주차면",
+        "벽부형 충전기"
+      ],
+      "access": "원문 연결",
+      "url": "https://www.paloalto.gov/files/assets/public/v/1/planning-amp-development-services/new-development-projects/3606-el-camino/c1_3606ecr_plan.pdf#page=10",
+      "summary": "AP0.10 / 2024-05-31. 1·2층 차로, 램프와 충전 주차면을 한 장에서 비교할 수 있습니다.",
+      "limits": "공개 설계안입니다. 준공 상태·배선 용량·실내 통신은 미확인입니다. 원문은 설계자 권리 표시에 따라 링크로 제공합니다.",
+      "verifiedAt": "2026-09-21",
+      "facts": {
+        "page": 10,
+        "sheet": "AP0.10",
+        "parkingFloors": [
+          1,
+          2
+        ],
+        "chargerStalls": 41,
+        "typicalStallWidthM": 2.7432,
+        "typicalStallLengthM": 5.4864,
+        "exampleTwoWayAisleM": 7.3152
+      },
+      "sourceSha256": "cb5b8fb9c1cab21bd6bf6821ed83d9228f67e0aa3b929762011147a8730fc27f",
+      "license": "설계자 권리 표시 · 원문 연결만 제공",
+      "use": "표시된 충전 주차면과 동선·보행 접근성을 함께 검토"
+    },
+    {
+      "id": "dlp",
+      "category": "plans",
+      "title": "실제 주차 차량의 움직임 · DLP",
+      "provider": "UC Berkeley MPC Lab · Dryad",
+      "region": "Dragon Lake · 실외 주차장",
+      "fields": [
+        "실제 차량 궤적",
+        "위치·방향·속도",
+        "차량 크기",
+        "정지 차량 장애물"
+      ],
+      "access": "공개 다운로드",
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.tht76hf5b",
+      "summary": "드론 관측으로 수집한 주차장 차량·보행자 데이터입니다. 차로 주행과 주차 상호작용 연구에 활용할 수 있습니다.",
+      "limits": "실외 관측 자료이며 국내 지하 도면과 같은 좌표계가 아닙니다. 원본 JSON 다운로드는 이번 환경에서 403 응답으로 수집하지 못했습니다.",
+      "verifiedAt": "2026-09-21",
+      "license": "Dryad 데이터 CC0 · API 도구는 별도 GPL-3.0",
+      "use": "경로 예측과 차량 회전 궤적을 실제 기록과 비교",
+      "facts": {
+        "mapWidthM": 140,
+        "mapHeightM": 80,
+        "scenes": 30
+      },
+      "related": "https://github.com/MPC-Berkeley/dlp-dataset"
+    },
+    {
+      "id": "changdong",
+      "category": "plans",
+      "title": "동북권 복합시설 · 실제 B2 도면",
+      "provider": "서울특별시 미디어허브",
+      "region": "대한민국 · 서울 창동",
+      "fields": [
+        "B2 원본 PDF",
+        "수동 주석 차로",
+        "램프·코어 접근"
+      ],
+      "access": "로컬 확보",
+      "url": "https://mediahub.seoul.go.kr/wp-content/uploads/2020/03/ff42c687eb729c49cb070336a85c9abc.pdf#page=16",
+      "summary": "기존에 확보한 실제 도면입니다. 새 카테고리에서 제조사 차폭을 반영한 동선 후보를 비교합니다.",
+      "limits": "0.09m/px는 추정 축척입니다. 차로·코어 접근점은 수동 주석이고 조향·차체 회전 간섭은 아직 검증하지 않았습니다.",
+      "verifiedAt": "2026-09-21",
+      "license": "서울시 공개 자료 · 원본 출처 유지",
+      "use": "현재 앱의 도면 주행과 충전기 설치 검토로 연결",
+      "local": "/plans/changdong-parking-source.pdf#page=16"
+    },
+    {
+      "id": "ioniq5",
+      "category": "vehicles",
+      "title": "현대 IONIQ 5 · 제조사 차량 제원",
+      "provider": "Hyundai Motor Australia",
+      "region": "호주 사양 · 2021 제원표",
+      "fields": [
+        "전장 4,635mm",
+        "전폭 1,890mm",
+        "축거 3,000mm",
+        "최소 회전 원 지름 11.98m"
+      ],
+      "access": "수치 확보",
+      "url": "https://www.hyundai.com/content/dam/hyundai/au/en/models/ioniq5/images/IONIQ5_SpecTable_Sept_2021.pdf#page=2",
+      "summary": "공식 제원표의 차체 크기와 최소 회전 원 지름을 기록했습니다.",
+      "limits": "전폭은 미러를 포함한 유효 주행 폭으로 검증되지 않았습니다. 현재 국내 판매 사양과 동일하다고 가정하지 않습니다.",
+      "verifiedAt": "2026-09-21",
+      "license": "제조사 제원 사실값 · 원문 연결",
+      "use": "차폭·주차면 외곽 비교와 회전 궤적 검토의 입력값"
+    },
+    {
+      "id": "ev6",
+      "category": "vehicles",
+      "title": "기아 EV6 Type A · 제조사 차량 제원",
+      "provider": "Kia · 공식 사용설명서",
+      "region": "인도용 영문 설명서 · Type A",
+      "fields": [
+        "전장 4,680mm",
+        "전폭 1,880mm",
+        "축거 2,900mm"
+      ],
+      "access": "수치 확보",
+      "url": "https://www.kia.com/content/dam/kia2/in/en/content/ev6-manual/topics/chapter9_1.html",
+      "summary": "Type A와 GT-Line의 제원을 섞지 않고 Type A 차체 크기만 기록했습니다.",
+      "limits": "해당 설명서 페이지에는 최소 회전 원 수치가 없어 비워 두었습니다. 모델 연식과 미러 포함 폭은 현장 차량과 대조해야 합니다.",
+      "verifiedAt": "2026-09-21",
+      "license": "제조사 제원 사실값 · 원문 연결",
+      "use": "다른 실제 차종의 주차면 여유 폭 비교"
+    },
+    {
+      "id": "keco",
+      "category": "charging",
+      "title": "국내 충전기 위치·출력·운영 상태",
+      "provider": "한국환경공단 · 공공데이터포털",
+      "region": "대한민국 전국",
+      "fields": [
+        "위도·경도",
+        "충전기 타입·출력",
+        "지상·지하 층수 정보",
+        "충전기 상태·갱신시각"
+      ],
+      "access": "키 필요",
+      "url": "https://www.data.go.kr/data/15076352/openapi.do",
+      "summary": "주변 기존 충전소와 지상·지하 층수 정보를 확인하는 공식 API입니다.",
+      "limits": "발급된 서비스 키가 필요합니다. 주소·위경도를 주차면의 정확한 도면 좌표로 바꿀 수는 없습니다. 현재 앱은 실시간 API를 연결하지 않았습니다.",
+      "verifiedAt": "2026-09-21",
+      "license": "공공누리 제1유형 · 출처 표시",
+      "use": "주변 충전 공급량과 접근 가능한 기존 시설 비교",
+      "endpoint": "https://apis.data.go.kr/B552584/EvCharger"
+    },
+    {
+      "id": "acn-data",
+      "category": "charging",
+      "title": "실제 충전 수요 · ACN-Data",
+      "provider": "Caltech · PowerFlex",
+      "region": "미국 · Caltech / JPL / Office 1",
+      "fields": [
+        "접속·해제 시각",
+        "충전량 kWh",
+        "주차면·충전기 ID",
+        "충전 전류 시계열"
+      ],
+      "access": "키 필요",
+      "url": "https://ev.caltech.edu/dataset",
+      "summary": "실제 충전 세션을 통해 도착 시간, 체류 시간과 필요한 충전량을 분석할 수 있습니다.",
+      "limits": "API 등록이 필요합니다. 해외 업무시설 수요를 국내 시설의 실측 수요로 표시하지 않습니다. 건축 도면 좌표나 회로 여유 용량을 제공하는 자료는 아닙니다.",
+      "verifiedAt": "2026-09-21",
+      "license": "공식 포털 이용 조건·논문 인용 요청 확인",
+      "use": "시간대별 수요와 필요한 설치 대수 산정의 연구 입력"
+    },
+    {
+      "id": "acn-network",
+      "category": "charging",
+      "title": "Caltech 충전 네트워크와 전력 제약",
+      "provider": "Caltech · ACN-Portal",
+      "region": "미국 · Caltech 시험 시설",
+      "fields": [
+        "전원 분기",
+        "회로·변압기 제약",
+        "동시 충전 모델"
+      ],
+      "access": "원문 연결",
+      "url": "https://ev.caltech.edu/assets/pub/Large_Scale_Adaptive_Electric_Vehicle_Charging.pdf",
+      "summary": "다수 충전기를 동시에 운영할 때 적용한 전력망 제약과 연구 방법을 제공합니다.",
+      "limits": "충전 전력 배분 연구입니다. 다른 건물의 배선도나 최적 설치 위치를 대신하지 않으며 현장 여유 용량으로 복사하면 안 됩니다.",
+      "verifiedAt": "2026-09-21",
+      "license": "논문 원문 연결 · 구현 도구는 별도 조건",
+      "use": "회로 용량을 반영한 후보 비교·동시 설치 모델 검토",
+      "related": "https://github.com/zach401/acnportal"
+    },
+    {
+      "id": "afdc",
+      "category": "charging",
+      "title": "충전소 위치와 커넥터·네트워크 자료",
+      "provider": "미국 에너지부 · AFDC",
+      "region": "미국·캐나다",
+      "fields": [
+        "충전소 위치",
+        "포트·커넥터",
+        "공개·비공개 시설",
+        "네트워크 출처·갱신"
+      ],
+      "access": "원문 연결",
+      "url": "https://afdc.energy.gov/stations/charging-networks",
+      "summary": "공식 충전소 데이터의 수집 방식과 네트워크별 갱신 현황을 확인할 수 있습니다.",
+      "limits": "시설 단위 위치 자료입니다. 실내 주차면 좌표와 배선·통신 측정은 별도로 확보해야 합니다.",
+      "verifiedAt": "2026-09-21",
+      "license": "AFDC 원문·다운로드 이용 조건 확인",
+      "use": "기존 공급과 네트워크 비교를 위한 해외 참고 데이터",
+      "related": "https://afdc.energy.gov/fuels/electricity-locations"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "ioniq5",
+      "name": "IONIQ 5",
+      "variant": "호주 · 2021 제원표",
+      "length": 4.635,
+      "width": 1.89,
+      "wheelbase": 3,
+      "turningDiameter": 11.98,
+      "sourceId": "ioniq5"
+    },
+    {
+      "id": "ev6",
+      "name": "EV6 Type A",
+      "variant": "인도용 영문 설명서",
+      "length": 4.68,
+      "width": 1.88,
+      "wheelbase": 2.9,
+      "turningDiameter": null,
+      "sourceId": "ev6"
+    }
+  ]
+}

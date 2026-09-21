@@ -72,6 +72,23 @@ test('manager, rendering controls, camera navigation and real character animatio
  const before=await page.evaluate(()=>window.__park.view.camera.position.length());await page.getByRole('button',{name:'확대',exact:true}).click();expect(await page.evaluate(()=>window.__park.view.camera.position.length())).toBeLessThan(before);await page.getByRole('button',{name:'전체 지도',exact:true}).click();await settled(page);
  const pose=await page.evaluate(()=>{const v=window.__park.view;const character=v.attractions[2].character;const b=character.children[0];v.setTime(1);v.frame(performance.now());const a=b.position.y;v.setTime(2);v.frame(performance.now());return [a,b.position.y];});expect(pose[0]).not.toBe(pose[1]);
 });
+test('mouse rotation and zoom keep the planet center fixed, including interrupted overview return',async({page})=>{
+ await ready(page);
+ const state=()=>page.evaluate(()=>{const v=window.__park.view;return {target:v.controls.target.toArray(),center:v.camera.position.clone().set(0,0,0).project(v.camera).toArray(),position:v.camera.position.toArray(),radius:v.camera.position.length(),pan:v.controls.enablePan};});
+ const centered=s=>{expect(s.target).toEqual([0,0,0]);expect(Math.hypot(s.center[0],s.center[1])).toBeLessThan(.0001);expect(s.pan).toBe(false);};
+ const initial=await state();centered(initial);
+ const box=await page.locator('#world canvas').boundingBox(),x=box.x+box.width*.65,y=box.y+box.height*.48;
+ const drag=async(dx,dy,button='left')=>{await page.mouse.move(x,y);await page.mouse.down({button});await page.mouse.move(x+dx,y+dy,{steps:10});await page.mouse.up({button});await page.waitForTimeout(500);};
+ await drag(130,65);const rotated=await state();centered(rotated);expect(Math.hypot(...rotated.position.map((v,i)=>v-initial.position[i]))).toBeGreaterThan(10);expect(rotated.radius).toBeCloseTo(initial.radius,3);
+ await drag(-100,-45);centered(await state());
+ await drag(80,50,'right');centered(await state());
+ await page.keyboard.down('Shift');await drag(80,40);await page.keyboard.up('Shift');centered(await state());
+ await page.mouse.move(x,y);await page.mouse.wheel(0,-180);await page.waitForTimeout(500);const zoomed=await state();centered(zoomed);expect(zoomed.radius).toBeLessThan(initial.radius);
+ await page.getByRole('button',{name:'성 불꽃놀이 보기',exact:true}).click();await settled(page);
+ // Return then drag before the camera finishes its 1.35-second transition.
+ await page.evaluate(()=>window.__park.view.overview());await drag(60,20);centered(await state());
+ await page.getByRole('button',{name:'전체 지도',exact:true}).click();await settled(page);centered(await state());
+});
 test('themes hug the storybook sphere and castle fireworks repeat with reduced-motion support',async({page})=>{
  await ready(page);
  const globe=await page.evaluate(()=>{const v=window.__park.view;return {procedural:v.globe.terrain.material.map.isCanvasTexture,radius:v.globe.terrain.geometry.parameters.radius,themes:v.attractions.map(a=>{const normal=a.anchor.position.clone().normalize(),up=normal.clone().set(0,1,0).applyQuaternion(a.anchor.quaternion),patch=a.anchor.getObjectByName('Surface inlay'),positions=patch.geometry.attributes.position,point=normal.clone();let maxGap=0;for(let i=0;i<positions.count;i++){point.fromBufferAttribute(positions,i);patch.localToWorld(point);maxGap=Math.max(maxGap,Math.abs(point.length()-24));}return {distance:a.anchor.position.length(),upright:normal.dot(up),maxGap};})};});
@@ -82,7 +99,7 @@ test('themes hug the storybook sphere and castle fireworks repeat with reduced-m
  await page.getByRole('button',{name:'성 불꽃놀이 보기',exact:true}).click();await settled(page);await expect(page.locator('body')).toHaveClass(/night/);
  await expect(page).toHaveScreenshot('castle-fireworks.png',{mask:[page.locator('#sync-button'),page.locator('#toast')],maskColor:'#f5f2eb'});
  await page.getByRole('button',{name:'전체 지도',exact:true}).click();await settled(page);
- expect(await page.evaluate(()=>window.__park.view.controls.target.y)).toBeCloseTo(4,4);
+ expect(await page.evaluate(()=>window.__park.view.controls.target.y)).toBeCloseTo(0,4);
 });
 test('ten Disney friends can be selected and six new character models have close-up goldens',async({page})=>{
  test.setTimeout(240000);const errors=[];page.on('pageerror',e=>errors.push(e.message));await ready(page);

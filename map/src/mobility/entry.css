@@ -1,0 +1,3 @@
+.header nav:has(.mobility-nav){gap:clamp(12px,1.6vw,26px)}
+.mobility-nav{display:flex;align-items:center;white-space:nowrap;text-decoration:none}
+@media(max-width:760px){.header nav:has(.mobility-nav){justify-content:flex-start;overflow-x:auto;padding-inline:15px;gap:22px}.header nav:has(.mobility-nav)>.nav{flex-shrink:0}}
