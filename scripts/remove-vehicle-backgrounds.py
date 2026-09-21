@@ -41,7 +41,7 @@ def main():
                 result = Image.open(output).convert('RGBA')
             else:
                 source = Image.open(original).convert('RGB')
-                source.thumbnail((1400, 1400))
+                source.thumbnail((2400, 2400))
                 result = remove(source, session=session, post_process_mask=True).convert('RGBA')
                 alpha = result.getchannel('A')
                 box = alpha.point(lambda p: 255 if p>32 else 0).getbbox()

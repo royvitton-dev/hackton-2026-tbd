@@ -1,6 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import { root, publicRoot, manifestPath, readJson } from './vehicle-assets.mjs';
 const entries = await readJson(manifestPath);
@@ -18,9 +19,11 @@ for (const e of entries) {
       assert(a.equals(b),'Public asset differs from original');
     }
     assert.equal((await sharp(path.join(root,e.resourceOriginalPath)).metadata()).format,'jpeg');
+    assert.equal(e.cutoutSourceSha256,createHash('sha256').update(await readFile(path.join(root,e.resourceOriginalPath))).digest('hex'),'Cutout is stale after original image replacement');
     const png=sharp(path.join(root,e.resourceCutoutPath));
     const meta=await png.metadata();
     assert.equal(meta.format,'png'); assert(meta.hasAlpha);
+    assert.equal(meta.width,e.cutoutWidth);assert.equal(meta.height,e.cutoutHeight);
     const {data,info}=await png.raw().toBuffer({resolveWithObject:true});
     let clear=0,solid=0;
     for(let i=info.channels-1;i<data.length;i+=info.channels){if(data[i]<16)clear++;if(data[i]>240)solid++;}
@@ -28,6 +31,7 @@ for (const e of entries) {
   } catch(error){failures.push(`${e.vehicleId}: ${error.message}`);}
 }
 const models=await readJson(path.join(root,'battery_health/resoures/images/model_sources.json'));
+assert.deepEqual(models.map(m=>m.vehicleId).sort(),vehicles.map(v=>v.vehicleId).sort(),'Every workbook vehicle needs a rendering mapping');
 assert.deepEqual(models,await readJson(path.join(publicRoot,'model_sources.json')));
 assert.deepEqual(models,await readJson(path.join(root,'src/data/vehicleModelSources.json')));
 for(const model of models.filter(m=>m.available)){
@@ -52,7 +56,12 @@ for(const model of models.filter(m=>m.available)){
     assert(model.license&&model.author&&model.sourceUrl,'GLB provenance missing');
   }catch(error){failures.push(`${model.vehicleId}: ${error.message}`);}
 }
+const photoProfiles=models.filter(m=>!m.available);
+for(const model of photoProfiles){
+  const image=entries.find(e=>e.vehicleId===model.vehicleId);
+  if(!image?.downloaded||!image?.cutoutGenerated)failures.push(`${model.vehicleId}: No GLB or verified PNG is available`);
+}
 if(failures.length){console.error(failures.join('\n'));process.exitCode=1;}else{
   console.log(`PASS: ${entries.length} vehicle mappings / ${new Set(entries.map(e=>e.fileName)).size} originals + alpha cutouts; public copies and provenance match.`);
-  console.log(`GLB: ${models.filter(m=>m.available).length}/${models.length} profiles available and valid; ${models.filter(m=>!m.available).length} unavailable and explicitly recorded (not substituted).`);
+  console.log(`GLB: ${models.filter(m=>m.available).length}/${models.length} profiles; fixed WebGL PNG: ${photoProfiles.length}/${models.length}. All ${models.length} profiles have verified vehicle assets. Missing GLB reasons remain recorded.`);
 }

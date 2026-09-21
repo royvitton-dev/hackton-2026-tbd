@@ -16,7 +16,7 @@ for (const entry of entries) {
       const bytes = Buffer.from(await response.arrayBuffer());
       const meta = await sharp(bytes).metadata();
       if (!meta.width || meta.width<500) throw Error('Source image too small or invalid');
-      await writeFile(dest, await sharp(bytes).rotate().resize({width:1600,withoutEnlargement:true}).jpeg({quality:94}).toBuffer());
+      await writeFile(dest, await sharp(bytes).rotate().resize({width:2400,withoutEnlargement:true}).flatten({background:'#ffffff'}).jpeg({quality:94}).toBuffer());
       cached=false;
       await new Promise(resolve=>setTimeout(resolve,1500));
     }
