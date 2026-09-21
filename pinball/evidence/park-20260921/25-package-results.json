@@ -1,0 +1,32 @@
+{
+  "at": "2026-09-21T13:25:29.486559+00:00",
+  "macOS": {
+    "build": "PASS",
+    "localSignature": "PASS",
+    "nativeLaunchAndOpenBrowser": "PASS",
+    "browserFlow": "PASS",
+    "quitStopsServer": "PASS",
+    "architecture": "arm64",
+    "minimum": "13.5",
+    "notarized": false,
+    "zipCRCAndExecutables": "PASS",
+    "zipBytes": 39913577,
+    "zipSha256": "4eb3c98ed47fd26c8d42f469c89ad4f8ec5baf3d1a4a94388e6870283ce16aef"
+  },
+  "android": {
+    "build": "PASS",
+    "signatureV2V3": "PASS",
+    "packagedAssetsMatch": "PASS",
+    "packagedChromeFlows": "2/2 PASS",
+    "nativeDeviceExecution": "NOT RUN",
+    "emulatorInstallation": "NOT RUN",
+    "nativeLifecycle": "NOT RUN",
+    "apkBytes": 489549,
+    "apkSha256": "b882259d7ad2bdfde3f5aceb014739441e4fabddec4f432c9c4a9823cb5e8454"
+  },
+  "retainedFailures": [
+    "25-macos-build.log: Swift module cache sandbox/toolchain failure",
+    "25b-macos-build.log: macOS icon conversion blocked inside sandbox; standalone conversion and full build succeeded with allowed native icon service",
+    "25-android-build.log: D8 library Object warning; JDK library added in 25b/25c"
+  ]
+}

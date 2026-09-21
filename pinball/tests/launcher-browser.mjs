@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';import {readFile,writeFile} from 'node:fs/promises';import {createHash} from 'node:crypto';import {pathToFileURL} from 'node:url';
+const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE_PATH).href),base=process.env.BASE_URL;
+const browser=await chromium.launch({channel:'chrome'}),report={at:new Date().toISOString(),base,status:'RUNNING',scope:'Actual macOS launcher child server and packaged game in Chrome'};
+try{
+ const page=await browser.newPage({viewport:{width:1440,height:1000}}),errors=[];page.on('pageerror',e=>errors.push(e.message));
+ assert.equal((await (await page.request.get(base+'/__health')).json()).app,'DROP LAND');
+ await page.goto(base);await page.waitForFunction(()=>window.pinball);assert.equal((await page.evaluate(()=>window.pinball.snapshot())).total,5);
+ const manifest=await (await page.request.get(base+'/build-info.json')).json();for(const [file,hash] of Object.entries(manifest.files)){const response=await page.request.get(base+'/'+file);assert.equal(response.status(),200);assert.equal(createHash('sha256').update(await response.body()).digest('hex'),hash);}
+ for(const file of ['/../runtime/node','/%2e%2e%2fruntime/node','/../server.mjs'])assert.notEqual((await page.request.get(base+file)).status(),200);
+ assert.equal((await page.request.post(base+'/')).status(),405);
+ await page.locator('#participants').fill('병우*2, 종호, 동길');await page.locator('[data-speed="3"]').click();await page.locator('input[name=rule][value=nth]').check();await page.locator('#nth').fill('2');await page.locator('#start').click();await page.waitForFunction(()=>window.pinball.snapshot().state==='racing');await page.locator('#pause').click();const paused=await page.evaluate(()=>window.pinball.snapshot());await page.waitForTimeout(200);assert.deepEqual(await page.evaluate(()=>window.pinball.snapshot()),paused);await page.locator('#pause').click();
+ await page.waitForFunction(()=>['complete','invalid'].includes(window.pinball.snapshot().state),null,{timeout:70000});const round=await page.evaluate(()=>window.pinball.exportRound());assert.equal(round.result.state,'complete');assert.equal(round.result.finishOrder.length,2);assert.equal(round.result.winner.id,round.result.finishOrder[1].id);assert.equal(await page.locator('#winner-name').textContent(),round.result.winner.label);await page.screenshot({path:'evidence/park-20260921/25-mac-app-result.png',fullPage:true});
+ await page.locator('#splash-replay').click();assert.equal((await page.evaluate(()=>window.pinball.snapshot())).state,'mixing');await page.locator('#reset').click();assert.equal((await page.evaluate(()=>window.pinball.snapshot())).state,'ready');assert.deepEqual(errors,[]);report.status='PASS';report.assets=Object.keys(manifest.files).length;report.round=round;report.errors=errors;console.log('PASS actual Mac launcher server, assets, input, pause, result and replay');
+}catch(e){report.status='FAIL';report.error=e.stack;process.exitCode=1;console.error(e);}
+finally{await writeFile('evidence/park-20260921/25-macos-browser-results.json',JSON.stringify(report,null,2));await browser.close();}

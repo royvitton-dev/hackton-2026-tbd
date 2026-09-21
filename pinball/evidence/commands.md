@@ -82,3 +82,8 @@ node tests/browser.mjs
 ## 24 실제반영본 (22:04–22:08 KST)
 
 `EXCLUDE_MAPS=split EVIDENCE_DIR=evidence/park-20260921/24-live-flow PLAYWRIGHT_MODULE_PATH=/Applications/ChatGPT.app/Contents/Resources/cua_node/lib/node_modules/playwright/index.mjs node tests/browser.mjs` — 6/6통과,5개성능표본,외부요청/페이지오류0. 원더가든명시제외.
+
+
+## Package build commands
+
+[Mac and Android build/test commands](park-20260921/25-packaging.md).
