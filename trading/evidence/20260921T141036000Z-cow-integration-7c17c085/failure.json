@@ -1,0 +1,8 @@
+{
+  "fix": "Resolve the documentation file to an absolute path before getting its parent",
+  "at": "2026-09-21T14:11:43.1550998+00:00",
+  "scope": "Root verification wrapper; production code and existing test results unchanged",
+  "stage": "documentation links",
+  "status": "failed",
+  "error": "Join-Path received empty parent for README.md"
+}

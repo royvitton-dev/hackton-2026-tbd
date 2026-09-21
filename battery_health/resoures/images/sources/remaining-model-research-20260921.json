@@ -47,7 +47,24 @@
       "vehicle": "MINI Cooper Electric",
       "url": "https://github.com/Natashaaak/mini-viewer/blob/main/public/Mini_Cooper.glb",
       "result": "HTTP 200 public GLB downloaded to ignored research cache only. Browser inspection showed a different five-door MINI body, not the requested Cooper Electric. Rejected; never connected to production."
+    },
+    {
+      "vehicle": "MINI Cooper Electric",
+      "url": "https://miniverse.mini.com/",
+      "sourceUrl": "https://www.mini.es/es_ES/home/explore/miniverso-mundo-virtual.html",
+      "result": "Official MINI page links to MINIverse. curl failed with exit 6: Could not resolve host: miniverse.mini.com, both inside and outside sandbox. No model obtained."
+    },
+    {
+      "vehicle": "Audi Q6 e-tron",
+      "url": "https://www.audi.at/q6-e-tron/q6-suv-e-tron/faszination",
+      "scriptUrl": "https://poi-nwi-cc-prod-mcc.azureedge.net/build/phs-marketing-cc.esm.js",
+      "result": "Page and public QuickCC module downloaded with HTTP 200. Advertised interactive 3D section uses mcc-rotation-view with rotationImages and fading-image, not an exposed GLB mesh. Rotating photos is not an acceptable substitute. No model obtained."
+    },
+    {
+      "vehicle": "Audi Q4 / Q6",
+      "url": "https://shop.americawant.com/wp-json/wp/v2/media?search=audi&per_page=30&_fields=source_url,title",
+      "result": "HTTP 200 JSON contained a generic charger JPEG only; no matching Audi 3D model."
     }
   ],
-  "nextAction": "BMW i5 and MINI require a legitimately downloadable exact EV model with its source/license, or further verified public CC distribution. Do not mark their static PNG display as interactive 3D. No placeholders or wrong vehicle substitutions."
+  "nextAction": "Obtain legitimately downloaded BMW i5, MINI Cooper Electric, Audi Q4 and Audi Q6 GLB/GLTF originals with their source/license records. For the free CC BY models, authenticated original downloads are needed; public metadata is not the model. No credentials were requested/read, no paid purchase made, and no protected viewer extraction performed. Do not mark static PNG display as interactive 3D."
 }

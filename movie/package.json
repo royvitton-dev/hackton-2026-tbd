@@ -7,9 +7,17 @@
     "dev": "node scripts/serve.mjs",
     "capture": "node scripts/capture-demo.mjs",
     "audio": "node scripts/audio.mjs",
+    "bundle:model": "node scripts/bundle-model.mjs",
     "stills": "node scripts/render.mjs --stills",
     "render": "node scripts/render.mjs",
     "verify": "node scripts/render.mjs --verify",
-    "publish:local": "node scripts/publish-local.mjs"
+    "publish:local": "node scripts/publish-local.mjs",
+    "auto:once": "node scripts/hourly.mjs",
+    "auto:prepare": "node scripts/schedule.mjs prepare",
+    "auto:install": "node scripts/schedule.mjs install",
+    "auto:status": "node scripts/schedule.mjs status",
+    "auto:run": "node scripts/schedule.mjs run",
+    "auto:stop": "node scripts/schedule.mjs uninstall",
+    "test": "node --test tests/hourly.test.mjs"
   }
 }

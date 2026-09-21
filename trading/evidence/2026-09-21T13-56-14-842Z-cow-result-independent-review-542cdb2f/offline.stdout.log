@@ -1,0 +1,52 @@
+{
+  "passed": 60,
+  "failed": 0,
+  "failures": [],
+  "full_core": {
+    "bytes": 6684357,
+    "sha256": "18ef7fd9c190d331e33a1dbca7e6741b8dba7c89eae805079a6cda94cf2e16ca"
+  },
+  "historical_trace_entries": 13,
+  "frames": [
+    {
+      "variant": "legacy-baseline",
+      "filename": "snapshot-00000000000000000004-historical.bin",
+      "bytes": 5935,
+      "sha256": "7e3ee4c4cbe6137cee3ccbae450d252974888f7dc1c2021db65604745837de5d",
+      "journal_seq": 4,
+      "command_seq": 4,
+      "event_seq": 4,
+      "prefix_crc": 3150217310
+    },
+    {
+      "variant": "legacy-baseline",
+      "filename": "snapshot-00000000000000000013-00000000000001789998686260995200-18660-0.bin",
+      "bytes": 9785,
+      "sha256": "b4581a61864cb065b290d3a81780ad1e56be2844907863eea8e67ec8db9214d1",
+      "journal_seq": 13,
+      "command_seq": 11,
+      "event_seq": 11,
+      "prefix_crc": 1653584337
+    },
+    {
+      "variant": "legacy-candidate",
+      "filename": "snapshot-00000000000000000004-historical.bin",
+      "bytes": 5935,
+      "sha256": "7e3ee4c4cbe6137cee3ccbae450d252974888f7dc1c2021db65604745837de5d",
+      "journal_seq": 4,
+      "command_seq": 4,
+      "event_seq": 4,
+      "prefix_crc": 3150217310
+    },
+    {
+      "variant": "legacy-candidate",
+      "filename": "snapshot-00000000000000000013-00000000000001789998686263692400-18660-0.bin",
+      "bytes": 9785,
+      "sha256": "b4581a61864cb065b290d3a81780ad1e56be2844907863eea8e67ec8db9214d1",
+      "journal_seq": 13,
+      "command_seq": 11,
+      "event_seq": 11,
+      "prefix_crc": 1653584337
+    }
+  ]
+}

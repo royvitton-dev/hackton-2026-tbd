@@ -5,7 +5,7 @@ Captured before the `Order.status` buffer reuse optimization from core SHA-256 `
 - `status_reuse_before_trace.json` contains each of 13 actual pre-change CommandResults and complete serialized Core states.
 - `status_reuse_legacy_frames.json` contains the exact UTF-8 JSON payload of the pre-change genesis, record-4 snapshot, and four journal frames. Header version/flags/length/CRC are rebuilt independently by `core_status_compatibility.rs`. The snapshot's existing genesis/prefix CRC binds the reconstructed bytes. Original file SHA-256 values are provenance, not an authentication mechanism.
 
-The test requires only these tracked JSON files; ignored evidence binaries are not inputs. It preserves newly reconstructed datasets under `trading/evidence/status-compat-tests/`.
+The test requires only these tracked JSON files; ignored evidence binaries are not inputs. It preserves newly reconstructed datasets under `trading/evidence/status-compat-tests/`. After processing the nine suffix records, it now closes without another checkpoint and verifies that a restart actually replays all nine. The13 trace inputs contain11 distinct request keys; lookup compares their original cached results before creating and reopening the next checkpoint.
 
 Run from `trading`: `cargo test --manifest-path engine/Cargo.toml --test core_status_compatibility`. See `docs/allocation-investigation.md` for capture commands, raw evidence, and comparison scope.
 

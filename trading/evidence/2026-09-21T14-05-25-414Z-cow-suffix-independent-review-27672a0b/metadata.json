@@ -1,0 +1,23 @@
+{
+  "review_started_at": "2026-09-21T14:05:25.420Z",
+  "reviewer": "/root/durability",
+  "source_experiment": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4",
+  "production_sources": [
+    {
+      "file": "engine/src/core.rs",
+      "bytes": 34636,
+      "sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa"
+    },
+    {
+      "file": "engine/src/model.rs",
+      "bytes": 3121,
+      "sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7"
+    },
+    {
+      "file": "engine/tests/core_status_compatibility.rs",
+      "bytes": 5573,
+      "sha256": "5a548ed11c6a0bab673e67f02e6c47b6ee332e0111951657611232b88fe71471"
+    }
+  ],
+  "scope": "Independent static and offline saved raw/frame review only; no builds/tests/services/process control/Git/source edits"
+}

@@ -1,0 +1,13 @@
+{
+  "command": "cargo",
+  "started_at": "2026-09-21T14:04:13.9874673+00:00",
+  "args": [
+    "test",
+    "--locked",
+    "--manifest-path",
+    "engine/Cargo.toml",
+    "--all-targets"
+  ],
+  "ended_at": "2026-09-21T14:05:32.7557599+00:00",
+  "exit_code": 0
+}

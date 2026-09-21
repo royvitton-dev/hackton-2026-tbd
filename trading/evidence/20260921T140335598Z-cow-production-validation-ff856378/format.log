@@ -1,0 +1,14 @@
+Diff in \\?\C:\project\hackton-2026-tbd\trading\engine\src\core.rs:219:
+         result
+     }
+ 
+-    fn rejection(&self, command: &Command, code: &'static str, message: &'static str) -> CommandResult {
++    fn rejection(
++        &self,
++        command: &Command,
++        code: &'static str,
++        message: &'static str,
++    ) -> CommandResult {
+         CommandResult {
+             request_id: command.request_id.clone(),
+             account_id: command.account_id.clone(),

@@ -10,6 +10,8 @@ const browser=await chromium.launch({channel:'chrome',headless:true,args:['--ena
 try {
  const page=await browser.newPage({viewport:{width:1920,height:1080},deviceScaleFactor:1}),errors=[];
  page.on('pageerror',e=>{errors.push(e.message);console.error(e.message);});
+ page.on('console',message=>{if(message.type()==='error')console.error(`Browser: ${message.text()}`);});
+ page.on('requestfailed',request=>console.error(`Failed resource: ${request.url()} ${request.failure()?.errorText}`));
  await page.goto(`http://127.0.0.1:${port}/film.html`);await page.waitForFunction(()=>window.filmReady,{},{timeout:120000});
  if(process.argv.includes('--stills')){
   for(const t of [1.6,4.7,6.9,8.5,10.3,12,14.5,17.5,19.5,21.7,23.5,28.2]){await page.evaluate(t=>window.drawFrame(t),t);await page.locator('canvas#film').screenshot({path:`output/wonder/still-${String(t).replace('.','-')}.png`});}

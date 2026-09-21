@@ -1,0 +1,118 @@
+{
+  "review_started_at": "2026-09-21T13:56:14.845Z",
+  "reviewer": "/root/durability",
+  "source_experiment": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4",
+  "scope": "Independent static/offline evidence review; no test, build, service, process-control, source/docs or Git changes.",
+  "production_sources": [
+    {
+      "path": "engine/src/core.rs",
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4",
+      "bytes": 34605,
+      "current_sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4"
+    },
+    {
+      "path": "engine/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "bytes": 3066,
+      "current_sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b"
+    },
+    {
+      "path": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954,
+      "current_sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+    },
+    {
+      "path": "engine/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038",
+      "bytes": 46,
+      "current_sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038"
+    },
+    {
+      "path": "engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "bytes": 23831,
+      "current_sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989"
+    },
+    {
+      "path": "engine/src/ws_frame.rs",
+      "sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e",
+      "bytes": 2632,
+      "current_sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "baseline/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b"
+    },
+    {
+      "path": "baseline/src/core.rs",
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4"
+    },
+    {
+      "path": "baseline/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+    },
+    {
+      "path": "baseline/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038"
+    },
+    {
+      "path": "candidate/src/model.rs",
+      "sha256": "f5d8c800befbbc8c6040d47ebb80b8f52e3641fe8df2695791349c7c1d4bbd13"
+    },
+    {
+      "path": "candidate/src/core.rs",
+      "sha256": "f08a6b14f975df7200528ff97c2b6d4b63380dfd16f614451ca7e45925616094"
+    },
+    {
+      "path": "candidate/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a"
+    },
+    {
+      "path": "candidate/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038"
+    },
+    {
+      "path": "probe/src/main.rs",
+      "sha256": "41230edf9cae09db8b660fbec5758f6641ffc1cf93988c83884b59740a0e4a92"
+    },
+    {
+      "path": "plan.json",
+      "sha256": "ec31fbf5689d7fce667d1112ac16b0203b360de2d71b51fac989ea3d32b75841"
+    },
+    {
+      "path": "run-01.json",
+      "sha256": "ea33e5b075abe0f132db6f7aed50207f271af78eb1b82912c9dfeec99c0c2913"
+    },
+    {
+      "path": "build-01.json",
+      "sha256": "265c5971d7915c492b95c9ab07a08a2e86a8c4c0eef2a8268a89def4bc52899c"
+    },
+    {
+      "path": "build-01.log",
+      "sha256": "22b2b1a7d082eea5ef6d2a6486f9df6b6c8342674eec58eb38dd4e3198077f39"
+    },
+    {
+      "path": "build-02.json",
+      "sha256": "1bd7984d86810727e674c0227f7a9f5262447c0676cf79a7bf8f3b34c6852ce5"
+    },
+    {
+      "path": "build-02.log",
+      "sha256": "00b37fa841e740b36712f73bc806ee17b4cd76dc0c07cc8de3e61d47f6b2cb1f"
+    },
+    {
+      "path": "Cargo.lock",
+      "sha256": "dd1f171771742e975619d5e5424e513838eea003fd4987c0a8cffdc3ada74ace"
+    },
+    {
+      "path": "production-Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9"
+    },
+    {
+      "path": "sha256.json",
+      "sha256": "6bd90614746b4ae3448addfb1520623a09d747071e117fe9cb97de3e0128e755"
+    }
+  ]
+}

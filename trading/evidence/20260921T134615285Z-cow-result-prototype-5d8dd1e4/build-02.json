@@ -1,0 +1,23 @@
+{
+  "command": "cargo",
+  "args": [
+    "build",
+    "--offline",
+    "--locked",
+    "--manifest-path",
+    "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\Cargo.toml",
+    "--target-dir",
+    "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\target",
+    "--jobs",
+    "1",
+    "--release",
+    "-p",
+    "cow-result-probe"
+  ],
+  "started_at": "2026-09-21T13:50:15.8606277Z",
+  "ended_at": "2026-09-21T13:50:58.5998079Z",
+  "exit_code": 0,
+  "target_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\target",
+  "temp_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\tmp",
+  "first_failure": "Mechanical replacement accidentally included Order.status; restored to production String without modifying order logic; first source/log retained"
+}

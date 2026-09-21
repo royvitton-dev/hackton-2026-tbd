@@ -1,0 +1,100 @@
+{
+  "frozen_at_utc": "2026-09-21T13:56:26.4813103Z",
+  "source_and_raw_frozen": true,
+  "production_applied": false,
+  "file_list": [
+    {
+      "file": "README.md",
+      "sha256": "07395e4f672774b1686142d4a40bee655ec3a6a2f8021b66f3f3dd67a52d8b2d",
+      "bytes": 10005
+    },
+    {
+      "file": "proposal.patch",
+      "sha256": "f88a06541bd80eb05da8641d6f303385516584d5250576d82ba14c14e3af627a",
+      "bytes": 2008
+    },
+    {
+      "file": "analysis.json",
+      "sha256": "775110114f8e59d847017079ea3f8a27aa5c8545d1ffa2a76cd0423119e15788",
+      "bytes": 7781
+    },
+    {
+      "file": "sha256.json",
+      "sha256": "6bd90614746b4ae3448addfb1520623a09d747071e117fe9cb97de3e0128e755",
+      "bytes": 7318
+    },
+    {
+      "file": "plan.json",
+      "sha256": "ec31fbf5689d7fce667d1112ac16b0203b360de2d71b51fac989ea3d32b75841",
+      "bytes": 3000
+    },
+    {
+      "file": "baseline/src/core.rs",
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4",
+      "bytes": 34605
+    },
+    {
+      "file": "baseline/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "bytes": 3066
+    },
+    {
+      "file": "baseline/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954
+    },
+    {
+      "file": "baseline/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038",
+      "bytes": 46
+    },
+    {
+      "file": "candidate/src/core.rs",
+      "sha256": "f08a6b14f975df7200528ff97c2b6d4b63380dfd16f614451ca7e45925616094",
+      "bytes": 34597
+    },
+    {
+      "file": "candidate/src/model.rs",
+      "sha256": "f5d8c800befbbc8c6040d47ebb80b8f52e3641fe8df2695791349c7c1d4bbd13",
+      "bytes": 3121
+    },
+    {
+      "file": "candidate/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954
+    },
+    {
+      "file": "candidate/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038",
+      "bytes": 46
+    },
+    {
+      "file": "probe/src/main.rs",
+      "sha256": "41230edf9cae09db8b660fbec5758f6641ffc1cf93988c83884b59740a0e4a92",
+      "bytes": 16376
+    },
+    {
+      "file": "target/release/cow-result-probe.exe",
+      "sha256": "80443583b28c448ed6e76198a78442b75501bfe06c11eb5d52b8e911a714e096",
+      "bytes": 2167680
+    },
+    {
+      "file": "run-01.json",
+      "sha256": "ea33e5b075abe0f132db6f7aed50207f271af78eb1b82912c9dfeec99c0c2913",
+      "bytes": 716
+    },
+    {
+      "file": "output-01/summary.json",
+      "sha256": "37a6671239b154abd1364c406b1dc367d412a38d687199ce223997b9555342ba",
+      "bytes": 3067
+    },
+    {
+      "file": "output-01/raw-counts-and-results.jsonl",
+      "sha256": "78b644f02b270534b2ac7406e6521ace7a09c1b8df9feab1e523ff2135beea7e",
+      "bytes": 3495166
+    }
+  ],
+  "minimal_patch": "proposal.patch",
+  "zero_allocation": false,
+  "timing_claim": false
+}

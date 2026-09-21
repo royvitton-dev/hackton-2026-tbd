@@ -1,0 +1,16 @@
+{
+  "command": "cargo",
+  "started_at": "2026-09-21T14:05:32.7591395+00:00",
+  "args": [
+    "clippy",
+    "--locked",
+    "--manifest-path",
+    "engine/Cargo.toml",
+    "--all-targets",
+    "--",
+    "-D",
+    "warnings"
+  ],
+  "ended_at": "2026-09-21T14:05:38.4664210+00:00",
+  "exit_code": 0
+}

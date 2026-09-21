@@ -2,6 +2,8 @@
 
 작성: `/root/matching_core`, 2026-09-21. **현재 정상 execute 경로는 zero allocation이 아니다.** 초기 조사는 기존 소스·벤치 계측·실측 JSON만 분석했다. 이후 root 승인으로 1순위만 구현하고 correctness/호환성/build를 검증했으며, 조율된 quiet window에서 세 쌍을 비교했다. 초기 예상량과 실제 측정 결과를 구분하여 아래에 기록한다.
 
+23:08 후속 [결과 문자열 할당 개선](result-allocation.md)은 아래에서 보류했던 status/code/message 후보를 별도 격리 실험·저장 데이터 검증 후 적용한 변경이다. 이 문서의 기존19:04 비교와 그 결과는 그대로 보존한다.
+
 ## 측정값과 경계
 
 [기존 A 결과](../evidence/20260921T084608Z-core-baseline/result.json)는 warm-up 6,000명령 뒤 120,000명령에서 alloc 1,799,875회, realloc 9회, 합계 **평균 14.999033회/명령**, p50 13회, p99 29회, 최대 34회다. 요청 바이트 합 124,644,248은 live 메모리가 아니다. 원래 결과·목표 미달 표시는 보존한다.

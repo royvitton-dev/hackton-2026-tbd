@@ -1,0 +1,7 @@
+{
+  "status": "failed",
+  "stage": "documentation links",
+  "at": "2026-09-21T14:12:22.5237284+00:00",
+  "fix": "Use System.IO.Path.GetDirectoryName for an already absolute file path",
+  "error": "Split-Path -LiteralPath and -Parent are not a valid parameter combination on this host"
+}

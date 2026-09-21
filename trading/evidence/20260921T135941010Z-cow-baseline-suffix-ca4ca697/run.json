@@ -1,0 +1,25 @@
+{
+  "phase": "Original String production model with strengthened suffix replay test",
+  "started_at": "2026-09-21T13:59:41.0704879+00:00",
+  "exit_code": 101,
+  "sources": [
+    {
+      "sha256": "2DDEF34B7310BA9B79825749643F7DECD0802ECFFD2E837ECF3905EA862607E4",
+      "file": "engine/src/core.rs"
+    },
+    {
+      "sha256": "6FB79EDD14BF0228FFD4BF439A75D1C91AD77F48F73DD1CABC9E127BD769AA8B",
+      "file": "engine/src/model.rs"
+    },
+    {
+      "sha256": "4AD009DF92A381897472A9F9A8EC3C0A15DDACF64559212137865F1D4B19202A",
+      "file": "engine/src/storage.rs"
+    },
+    {
+      "sha256": "6306EC103DC9477D64E77917A703D51DE2F5AA7C58FFD5951AEA94C7CAD66A1D",
+      "file": "engine/tests/core_status_compatibility.rs"
+    }
+  ],
+  "ended_at": "2026-09-21T14:00:07.4954259+00:00",
+  "command": "cargo test --locked --manifest-path engine/Cargo.toml --test core_status_compatibility"
+}

@@ -1,0 +1,110 @@
+   Compiling leave-exchange v0.1.0 (C:\project\hackton-2026-tbd\trading\engine)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 36.09s
+     Running unittests src\lib.rs (engine\target\debug\deps\leave_exchange-7ddcb9c050707818.exe)
+
+running 7 tests
+test storage::tests::storage_actual_write_syscall_failure_does_not_apply_or_ack ... ok
+test storage::tests::storage_sync_error_has_unknown_outcome_and_restart_resolves_it_without_duplicates ... ok
+test storage::tests::storage_interruption_after_sync_before_apply_or_ack_recovers_committed_command ... ok
+test storage::tests::storage_interrupted_snapshot_publication_preserves_previous_checkpoint ... ok
+test storage::tests::storage_partial_write_fails_closed_and_next_write_cannot_extend_bad_suffix ... ok
+test storage::tests::storage_process_kill_during_snapshot_save_recovers_acknowledged_state ... ok
+test storage::tests::storage_every_incomplete_frame_boundary_preserves_all_acknowledged_state ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 8.83s
+
+     Running unittests src\main.rs (engine\target\debug\deps\leave_engine-2fce65661df2edb7.exe)
+
+running 3 tests
+test ws_frame::tests::preserves_every_field_of_the_recorded_market ... ok
+test ws_frame::tests::preserves_failed_status_at_the_same_trading_revision ... ok
+test ws_frame::tests::preserves_unicode_escaping_and_full_unsigned_integer_values ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests\core_reference.rs (engine\target\debug\deps\core_reference-8fff347f1dd8e78f.exe)
+
+running 1 test
+test scan_sort_oracle_agrees_on_3000_seeded_commands ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 9.28s
+
+     Running tests\core_rules.rs (engine\target\debug\deps\core_rules-bc077b26322eed28.exe)
+
+running 19 tests
+test integer_overflow_and_json_safe_limits_are_explicit ... ok
+test cancel_middle_queue_and_owner_checks_preserve_fifo ... ok
+test invalid_and_insufficient_commands_change_only_command_metadata ... ok
+test price_then_time_priority_multi_fill_and_price_improvement ... ok
+test seeded_assets_and_synthetic_companies_are_exact ... ok
+test full_audit_detects_balances_shifted_without_changing_global_totals ... ok
+test partial_taker_reserve_then_cancel_and_idempotent_cancel ... ok
+test self_order_beyond_fully_executed_quantity_is_not_encountered ... ok
+test saved_rejection_is_stable_after_balance_changes_make_a_new_request_valid ... ok
+test malformed_request_keys_are_not_admitted_or_allowed_to_consume_capacity ... ok
+test self_trade_found_after_external_liquidity_rejects_every_fill_atomically ... ok
+test sell_taker_uses_highest_bid_and_maker_price ... ok
+test duplicate_and_conflict_never_mutate_and_timestamp_is_not_identity ... ok
+test sell_self_trade_prevalidation_also_rejects_external_prefix_atomically ... ok
+test all_capacity_rejections_are_atomic_and_preserve_previous_dedup ... ok
+test recovered_order_status_transitions_keep_exact_text_and_dedup ... ok
+test many_fills_reject_before_mutation_if_one_exceeds_remaining_trade_capacity ... ok
+test full_serialized_state_retains_history_that_public_snapshot_bounds ... ok
+test seeded_random_commands_preserve_invariants_and_replay_identically ... ok
+
+test result: ok. 19 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 15.07s
+
+     Running tests\core_status_compatibility.rs (engine\target\debug\deps\core_status_compatibility-41bce24db445e4f1.exe)
+
+running 2 tests
+test historical_trace_results_and_full_core_remain_identical ... ok
+test historical_snapshot_reconstructed_from_tracked_json_preserves_transitions ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+     Running tests\storage_recovery.rs (engine\target\debug\deps\storage_recovery-bc43e2bae4a62b87.exe)
+
+running 13 tests
+test storage_single_writer_lock_releases_when_store_drops ... ok
+test storage_genesis_pins_initialization_and_capacity_configuration ... ok
+test storage_response_loss_retries_without_checkpoint_have_no_second_effect ... ok
+test storage_conflicting_request_replays_without_mutating_original ... ok
+test storage_published_snapshot_with_missing_journal_suffix_refuses_data_loss ... ok
+test storage_final_complete_bad_checksum_is_fatal_not_a_torn_suffix ... ok
+test storage_middle_corruption_is_fatal_and_evidence_remains_untouched ... ok
+test storage_torn_last_header_is_preserved ... ok
+test storage_partial_snapshot_is_ignored_and_corrupt_latest_falls_back ... ok
+test storage_corrupted_header_length_cannot_be_misclassified_as_partial_tail ... ok
+test storage_torn_last_payload_is_preserved_and_prior_ack_state_recovers ... ok
+test storage_acknowledged_commands_full_state_and_dedup_survive_restart ... ok
+test storage_forced_process_exit_recovers_all_observed_acks_and_exact_journal_prefix ... ok
+
+test result: ok. 13 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.16s
+
+     Running unittests examples\aged_recovery.rs (engine\target\debug\examples\aged_recovery-61baf8bfe237f78e.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests examples\core_bench.rs (engine\target\debug\examples\core_bench-7ec50a543aefef68.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests examples\status_reuse_compat.rs (engine\target\debug\examples\status_reuse_compat-20d38411e05d0a67.exe)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests examples\ws_serialization_bench.rs (engine\target\debug\examples\ws_serialization_bench-f87e1558c42e4084.exe)
+
+running 3 tests
+test ws_frame::tests::preserves_unicode_escaping_and_full_unsigned_integer_values ... ok
+test ws_frame::tests::preserves_failed_status_at_the_same_trading_revision ... ok
+test ws_frame::tests::preserves_every_field_of_the_recorded_market ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

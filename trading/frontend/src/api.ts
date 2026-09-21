@@ -1,6 +1,7 @@
 const localHost = ['localhost', '127.0.0.1', '[::1]'].includes(window.location.hostname)
-const configuredApi = import.meta.env.VITE_API_URL as string | undefined
-const configuredWs = import.meta.env.VITE_WS_URL as string | undefined
+const routerMode = import.meta.env.VITE_ROUTER_MODE === true || import.meta.env.BASE_URL === '/trading/'
+const configuredApi = routerMode ? new URL('/trading/backend', window.location.origin).href : import.meta.env.VITE_API_URL as string | undefined
+const configuredWs = routerMode ? new URL('/trading/backend/ws', window.location.origin).href.replace(/^http/, 'ws') : import.meta.env.VITE_WS_URL as string | undefined
 export const API_URL = (configuredApi || (localHost ? 'http://127.0.0.1:8787' : '')).replace(/\/$/, '')
 export const WS_URL = configuredWs || (localHost ? 'ws://127.0.0.1:8787/ws' : '')
 export const configurationError =

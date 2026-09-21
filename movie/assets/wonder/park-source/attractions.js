@@ -41,13 +41,13 @@ export function buildTheater(parent){
  for(const x of [-1.45,0,1.45]){arch(root,1.22,2.8,.08,cream,x,.55,2.4);arch(root,.97,2.5,.06,dark,x,.6,2.51);box(root,.025,2,.035,gold,x,1.6,2.6);sphere(root,.055,.055,.025,gold,x+.15,1.7,2.64);}
  rounded(root,7.9,.65,1.8,.12,gold,0,3.6,3.02);box(root,7.55,.41,.035,'#f5eacb',0,3.6,3.95);
  textSign(root,'STARLIGHT CINEMA',6.85,.55,'#fff0ca','#406561',0,4.52,2.79);
- textSign(root,'NOW SHOWING · VITALIS',6.6,.38,'#635646','#f8edce',0,3.59,3.98);
+ textSign(root,'NOW SHOWING · WONDER PARK',6.6,.38,'#635646','#f8edce',0,3.59,3.98);
  for(let i=0;i<24;i++)sphere(root,.063,.063,.063,material('#ffefb0',{emissive:'#f2bb6b',emissiveIntensity:.8}),-3.65+i*.317,3.23,3.82);
  // Art-deco crown and star.
  for(let i=-2;i<=2;i++)box(root,.14,.9-Math.abs(i)*.16,.2,gold,i*.33,6.25,2.52);
  const star=new THREE.Shape();for(let i=0;i<10;i++){const a=i*Math.PI/5-Math.PI/2,r=i%2?.21:.48;const x=Math.cos(a)*r,y=Math.sin(a)*r;i?star.lineTo(x,y):star.moveTo(x,y);}star.closePath();
  const m=new THREE.Mesh(new THREE.ExtrudeGeometry(star,{depth:.08,bevelEnabled:true,bevelSize:.03,bevelThickness:.03,bevelSegments:2}),gold);m.position.set(0,6.2,2.75);root.add(m);
- for(const x of [-3.1,3.1]){box(root,.75,1.35,.04,'#45606b',x,2,2.73);textSign(root,'VITALIS',.67,.27,'#f5e4be','#45606b',x,1.98,2.765);}
+ for(const x of [-3.1,3.1]){box(root,.75,1.35,.04,'#45606b',x,2,2.73);textSign(root,'WONDER',.67,.27,'#f5e4be','#45606b',x,1.98,2.765);}
  return {root,animation:[]};
 }
 export function buildMusic(parent){

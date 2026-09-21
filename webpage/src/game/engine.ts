@@ -5,10 +5,10 @@ export const SKILL_COLOR: Record<Skill, string> = { vocal: '#c0a2ff', dance: '#7
 export const DAYS_PER_MONTH = 4;
 export const SAVE_KEY = 'debut-on.game.v1';
 export const IDOLS = [
-  { name: '카리나', english: 'KARINA', group: 'aespa', image: '/idols/karina.jpg', color: '#b49bff', specialty: 'dance' as Skill, author: '10Asia', source: 'https://commons.wikimedia.org/wiki/File:Aespa_Karina_2024_MMA_2_(cropped).jpg' },
-  { name: '장원영', english: 'WONYOUNG', group: 'IVE', image: '/idols/wonyoung.png', color: '#ff9fbe', specialty: 'vocal' as Skill, author: 'TenAsia', source: 'https://commons.wikimedia.org/wiki/File:Jang_Won-young_at_the_2024_Melon_Music_Awards-2.png' },
-  { name: '제니', english: 'JENNIE', group: 'BLACKPINK', image: '/idols/jennie.png', color: '#7ae3c6', specialty: 'rap' as Skill, author: '티비텐', source: 'https://commons.wikimedia.org/wiki/File:Jennie_Kim_2024_(facecrop).png' },
-  { name: '나연', english: 'NAYEON', group: 'TWICE', image: '/idols/nayeon.jpg', color: '#ffd58b', specialty: 'vocal' as Skill, author: 'K-POPIT 케이팝잇', source: 'https://commons.wikimedia.org/wiki/File:241024_TWICE_Nayeon.jpg' },
+  { name: '카리나', english: 'KARINA', group: 'aespa', image: `${import.meta.env?.BASE_URL ?? '/'}idols/karina.jpg`, color: '#b49bff', specialty: 'dance' as Skill, author: '10Asia', source: 'https://commons.wikimedia.org/wiki/File:Aespa_Karina_2024_MMA_2_(cropped).jpg' },
+  { name: '장원영', english: 'WONYOUNG', group: 'IVE', image: `${import.meta.env?.BASE_URL ?? '/'}idols/wonyoung.png`, color: '#ff9fbe', specialty: 'vocal' as Skill, author: 'TenAsia', source: 'https://commons.wikimedia.org/wiki/File:Jang_Won-young_at_the_2024_Melon_Music_Awards-2.png' },
+  { name: '제니', english: 'JENNIE', group: 'BLACKPINK', image: `${import.meta.env?.BASE_URL ?? '/'}idols/jennie.png`, color: '#7ae3c6', specialty: 'rap' as Skill, author: '티비텐', source: 'https://commons.wikimedia.org/wiki/File:Jennie_Kim_2024_(facecrop).png' },
+  { name: '나연', english: 'NAYEON', group: 'TWICE', image: `${import.meta.env?.BASE_URL ?? '/'}idols/nayeon.jpg`, color: '#ffd58b', specialty: 'vocal' as Skill, author: 'K-POPIT 케이팝잇', source: 'https://commons.wikimedia.org/wiki/File:241024_TWICE_Nayeon.jpg' },
 ];
 export type Tile = { name: string; subtitle: string; type: 'start' | 'agency' | 'chance' | 'stage' | 'rest'; skill?: Skill; color: string; mark: string };
 export const TILES: Tile[] = [

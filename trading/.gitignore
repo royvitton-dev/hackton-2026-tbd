@@ -10,6 +10,8 @@ data/
 .env.local
 *.tmp
 evidence/**/bin/
+evidence/**/target/
+evidence/**/tmp/
 evidence/**/*.exe
 evidence/**/*.dll
 evidence/**/*.pdb

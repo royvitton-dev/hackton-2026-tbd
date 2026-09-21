@@ -1,0 +1,17 @@
+{
+  "command": "cargo",
+  "started_at": "2026-09-21T14:05:38.4708465+00:00",
+  "args": [
+    "build",
+    "--locked",
+    "--release",
+    "--manifest-path",
+    "engine/Cargo.toml",
+    "--bin",
+    "leave-engine",
+    "--example",
+    "core_bench"
+  ],
+  "ended_at": "2026-09-21T14:06:50.1750066+00:00",
+  "exit_code": 0
+}

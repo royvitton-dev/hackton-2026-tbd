@@ -1,0 +1,85 @@
+{
+  "first": {
+    "baseline_counts": {
+      "allocations": 13,
+      "reallocations": 0,
+      "requested_bytes": 191
+    },
+    "candidate_counts": {
+      "allocations": 7,
+      "reallocations": 0,
+      "requested_bytes": 93
+    },
+    "candidate_result_json_bytes_equal": true,
+    "result": {
+      "account_id": "user-02",
+      "code": "OK",
+      "command_seq": 6001,
+      "duplicate": false,
+      "durable": false,
+      "event_seq": 6001,
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 4001,
+      "request_id": "bench-1000-0",
+      "status": "accepted",
+      "trades": []
+    },
+    "scope": "normal_new"
+  },
+  "last": {
+    "baseline_counts": {
+      "allocations": 10,
+      "reallocations": 0,
+      "requested_bytes": 136
+    },
+    "candidate_counts": {
+      "allocations": 4,
+      "reallocations": 0,
+      "requested_bytes": 38
+    },
+    "candidate_result_json_bytes_equal": true,
+    "result": {
+      "account_id": "user-01",
+      "code": "OK",
+      "command_seq": 12000,
+      "duplicate": false,
+      "durable": false,
+      "event_seq": 12000,
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 8000,
+      "request_id": "bench-1999-5",
+      "status": "accepted",
+      "trades": []
+    },
+    "scope": "normal_new"
+  },
+  "realloc_rows": [
+    {
+      "baseline_counts": {
+        "allocations": 13,
+        "reallocations": 1,
+        "requested_bytes": 983231
+      },
+      "candidate_counts": {
+        "allocations": 7,
+        "reallocations": 1,
+        "requested_bytes": 983133
+      },
+      "candidate_result_json_bytes_equal": true,
+      "result": {
+        "account_id": "user-02",
+        "code": "OK",
+        "command_seq": 6145,
+        "duplicate": false,
+        "durable": false,
+        "event_seq": 6145,
+        "message": "명령 처리가 완료되었습니다.",
+        "order_id": 4097,
+        "request_id": "bench-1024-0",
+        "status": "accepted",
+        "trades": []
+      },
+      "scope": "normal_new"
+    }
+  ]
+}

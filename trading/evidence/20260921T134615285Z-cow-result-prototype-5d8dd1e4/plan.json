@@ -1,0 +1,73 @@
+{
+  "experiment_id": "20260921T134615285Z-cow-result-prototype-5d8dd1e4",
+  "prepared_at_utc": "2026-09-21T13:46:15.5006492Z",
+  "source_hashes": [
+    {
+      "path": "engine/src/core.rs",
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4",
+      "bytes": 34605
+    },
+    {
+      "path": "engine/src/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "bytes": 3066
+    },
+    {
+      "path": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954
+    },
+    {
+      "path": "engine/src/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038",
+      "bytes": 46
+    },
+    {
+      "path": "engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "bytes": 23831
+    },
+    {
+      "path": "engine/src/ws_frame.rs",
+      "sha256": "1e9cf28aecf3cc681c4958b85d4f78f4b0dd41b014008832d5920a0bfd25616e",
+      "bytes": 2632
+    },
+    {
+      "path": "engine/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194
+    },
+    {
+      "path": "engine/examples/core_bench.rs",
+      "sha256": "1e7551861d1aa12525ac0ee3f246d82d5d18b0329d519d08d868d64da178d786",
+      "bytes": 12236
+    },
+    {
+      "path": "engine/target/release/leave-engine.exe",
+      "sha256": "f518b95fb3eaccdabd40d0ee828e830a2ec6b8d959610fc629043e46856ef240",
+      "bytes": 3008428
+    },
+    {
+      "path": "engine/target/debug/examples/aged_recovery.exe",
+      "sha256": "49adf4f1c36b3d38f2335ec60c8d010b53bb6255d174d37fae25c35fdd095b3e",
+      "bytes": 17325476
+    },
+    {
+      "path": "data/demo-current.json",
+      "sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+      "bytes": 11501
+    }
+  ],
+  "production_files_edited": false,
+  "main_services_controlled": false,
+  "scope": "isolated allocation counts and exact correctness/legacy frame compatibility; no timing/TPS comparison",
+  "planned_warmup_commands_per_variant": 6000,
+  "planned_measured_commands_per_variant": 6000,
+  "count_boundary": "Core::execute only: result creation and dedup clone included; input generation, JSON serialization, result drop, full snapshot/clone, checks and I/O excluded",
+  "normal_pattern": "same 6-command core_bench pattern",
+  "expected_delta": "6 fewer alloc operations per newly admitted command;3 fewer for borrowed cached duplicate/lookup or unsaved rejection;0 improvement for restored owned cache clone expected",
+  "serialization": "actual serde JSON and current binary CRC-framed JSON; bincode is not used in production",
+  "cargo_target_directory": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\target",
+  "build_jobs": 1,
+  "build_offline": true
+}

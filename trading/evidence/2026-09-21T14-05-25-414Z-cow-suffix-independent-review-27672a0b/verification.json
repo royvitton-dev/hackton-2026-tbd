@@ -1,0 +1,429 @@
+{
+  "reviewed_at": "2026-09-21T14:07:03.687Z",
+  "passed": 67,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "v2 frozen input output-02/all-13-request-checks.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/backward-recovered-full-core.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/backward-recovery-report.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/baseline-before-drop-full-core.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/baseline-written/genesis.bin",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/baseline-written/journal.bin",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/baseline-written/snapshot-00000000000000000004-historical.bin",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/baseline-written/writer.lock",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/candidate-before-drop-full-core.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/candidate-written/genesis.bin",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/candidate-written/journal.bin",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/candidate-written/snapshot-00000000000000000004-historical.bin",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/candidate-written/writer.lock",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/forward-recovered-full-core.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/forward-recovery-report.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/suffix-write-results.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input output-02/summary.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input run-02.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input run-02.log",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/analysis-command.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/analysis.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/analysis.log",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/analyze.mjs",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/build-01.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/build-01.log",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/Cargo.lock",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/Cargo.toml",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/lockfile.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/lockfile.log",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/plan.json",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/README.md",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/src/main.rs",
+      "passed": true
+    },
+    {
+      "name": "v2 frozen input suffix-replay-v2/target/release/cow-result-suffix-replay-v2.exe",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved README.md",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved proposal.patch",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved analysis.json",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved sha256.json",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved plan.json",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved baseline/src/core.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved baseline/src/model.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved baseline/src/storage.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved baseline/src/lib.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved candidate/src/core.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved candidate/src/model.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved candidate/src/storage.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved candidate/src/lib.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved probe/src/main.rs",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved target/release/cow-result-probe.exe",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved run-01.json",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved output-01/summary.json",
+      "passed": true
+    },
+    {
+      "name": "run01 preserved output-01/raw-counts-and-results.jsonl",
+      "passed": true
+    },
+    {
+      "name": "run02 identifies actual successful executable and source",
+      "passed": true
+    },
+    {
+      "name": "production model equals candidate except exact import reorder",
+      "passed": true
+    },
+    {
+      "name": "production core equals candidate except exact rejection signature formatting",
+      "passed": true
+    },
+    {
+      "name": "actual CRC frames, snapshot4 binding, nine suffix commands baseline-written",
+      "passed": true
+    },
+    {
+      "name": "actual CRC frames, snapshot4 binding, nine suffix commands candidate-written",
+      "passed": true
+    },
+    {
+      "name": "forward raw actual recovery report",
+      "passed": true
+    },
+    {
+      "name": "backward raw actual recovery report",
+      "passed": true
+    },
+    {
+      "name": "full Core bytes and historical full state baseline-before-drop",
+      "passed": true
+    },
+    {
+      "name": "full Core bytes and historical full state candidate-before-drop",
+      "passed": true
+    },
+    {
+      "name": "full Core bytes and historical full state forward-recovered",
+      "passed": true
+    },
+    {
+      "name": "full Core bytes and historical full state backward-recovered",
+      "passed": true
+    },
+    {
+      "name": "nine saved write results match trace and both implementations",
+      "passed": true
+    },
+    {
+      "name": "all13 actual lookup/retry outcomes independently match original cached results and conflict",
+      "passed": true
+    },
+    {
+      "name": "final sequence, asset totals and order equations match historical snapshot",
+      "passed": true
+    },
+    {
+      "name": "corrected production compatibility test matches recorded baseline passing source",
+      "passed": true
+    },
+    {
+      "name": "reviewed production source snapshots remain current at end of calculation",
+      "passed": true
+    }
+  ],
+  "frame_evidence": [
+    {
+      "variant": "baseline-written",
+      "snapshot_sequence": 4,
+      "journal_records": 13,
+      "suffix_records": 9,
+      "journal_bytes": 2251,
+      "journal_sha256": "4ca77590e927e5aaf6f2c6bb4934b72ea7a93f9aca1ecea0e4c08f5cbbbbd1e7",
+      "snapshot_bytes": 5935,
+      "snapshot_sha256": "7e3ee4c4cbe6137cee3ccbae450d252974888f7dc1c2021db65604745837de5d",
+      "snapshot_journal_offset": 702,
+      "snapshot_prefix_crc": 3150217310
+    },
+    {
+      "variant": "candidate-written",
+      "snapshot_sequence": 4,
+      "journal_records": 13,
+      "suffix_records": 9,
+      "journal_bytes": 2251,
+      "journal_sha256": "4ca77590e927e5aaf6f2c6bb4934b72ea7a93f9aca1ecea0e4c08f5cbbbbd1e7",
+      "snapshot_bytes": 5935,
+      "snapshot_sha256": "7e3ee4c4cbe6137cee3ccbae450d252974888f7dc1c2021db65604745837de5d",
+      "snapshot_journal_offset": 702,
+      "snapshot_prefix_crc": 3150217310
+    }
+  ],
+  "request_evidence": [
+    {
+      "trace_index": 0,
+      "account_id": "user-01",
+      "request_id": "maker-one",
+      "conflict": false,
+      "lookup_command_seq": 1,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 1,
+      "account_id": "user-02",
+      "request_id": "first-taker",
+      "conflict": false,
+      "lookup_command_seq": 2,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 2,
+      "account_id": "user-03",
+      "request_id": "rest-buy",
+      "conflict": false,
+      "lookup_command_seq": 3,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 3,
+      "account_id": "user-01",
+      "request_id": "maker-two",
+      "conflict": false,
+      "lookup_command_seq": 4,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 4,
+      "account_id": "user-02",
+      "request_id": "finish-first",
+      "conflict": false,
+      "lookup_command_seq": 5,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 5,
+      "account_id": "user-03",
+      "request_id": "cancel-rest",
+      "conflict": false,
+      "lookup_command_seq": 6,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 6,
+      "account_id": "user-02",
+      "request_id": "partial-second",
+      "conflict": false,
+      "lookup_command_seq": 7,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 7,
+      "account_id": "user-01",
+      "request_id": "cancel-partial",
+      "conflict": false,
+      "lookup_command_seq": 8,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 8,
+      "account_id": "user-02",
+      "request_id": "first-taker",
+      "conflict": false,
+      "lookup_command_seq": 2,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 9,
+      "account_id": "user-02",
+      "request_id": "first-taker",
+      "conflict": true,
+      "lookup_command_seq": 2,
+      "retry_duplicate": false,
+      "retry_code": "REQUEST_ID_CONFLICT"
+    },
+    {
+      "trace_index": 10,
+      "account_id": "user-01",
+      "request_id": "self-maker",
+      "conflict": false,
+      "lookup_command_seq": 9,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    },
+    {
+      "trace_index": 11,
+      "account_id": "user-01",
+      "request_id": "self-reject",
+      "conflict": false,
+      "lookup_command_seq": 10,
+      "retry_duplicate": true,
+      "retry_code": "SELF_TRADE"
+    },
+    {
+      "trace_index": 12,
+      "account_id": "user-02",
+      "request_id": "final-fill",
+      "conflict": false,
+      "lookup_command_seq": 11,
+      "retry_duplicate": true,
+      "retry_code": "OK"
+    }
+  ],
+  "full_core": {
+    "bytes": 9606,
+    "sha256": "d9481cfc59e5538c5162d5debf1e4de39ead4870d9fa9c13356bbc86c5001681",
+    "command_seq": 11,
+    "event_seq": 11,
+    "request_count": 11
+  },
+  "v2_delivery_sha256": "e8f27491df81a1b14ed00cc8277528a09d3995d47c83e1b41a376c3b08f25394",
+  "scope": "Offline frozen evidence recheck only, not another Rust run; production integration tests/build owned by root."
+}

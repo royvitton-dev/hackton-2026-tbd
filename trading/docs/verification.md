@@ -1,6 +1,6 @@
 # 누적 검증과 완료 기준
 
-2026-09-21 22:29 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-21 23:08 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
@@ -9,18 +9,18 @@
 | 최소 10개 봇 실제 API 참여 | 통과 | [5분 관찰](../evidence/2026-09-21T08-35-49-326Z-observe-828e38ca/summary.json): 12개 모두 주문·체결 |
 | 5분 지속 체결·호가·차트 | 통과 | 최초 API관찰309.9초,명령1818개·거래량1353시간 증가,호가62종,WS1848개,누락/단절0. 추가 [실제 브라우저 차트314.615초 표시 관찰](../evidence/browser-reconnect-2026-09-21T09-02-02-365Z/README.md)에서 가격선·거래량·시각 갱신 확인 |
 | 브라우저 수동 주문·취소·체결·잔고 | 통과 | [수동 기록](../evidence/browser-manual-20260921T083933Z/README.md), 확정 체결·취소 DOM/화면. 성공하지 않은 클릭도 구분 기록 |
-| 거래·정산·요청 ID·소유권 | 통과 | 최신 코어 debug/release 각22개(규칙19+oracle1+호환성2), 변경 전13단계 결과/FULLCore 및 legacy snapshot 호환. [검증 기록](allocation-investigation.md). 참조 모델3000명령·고정seed 불변조건 |
+| 거래·정산·요청 ID·소유권 | 통과 | 결과 문자열 변경 후 debug22개(규칙19+oracle1+호환성2), release 격리 원본/후보 결과·전체 Core 대조 및 실제 API회귀. [최신 검증](result-allocation.md). 참조 모델3000명령·고정seed 불변조건·legacy snapshot 이후9개 저널 재생 |
 | 12개 동시 주문·취소 | 통과 | [API10개 테스트](../evidence/20260921T091659182Z-api-fill-cancel-race-f9ae26af/output.log), 추가12회 실제 체결/취소 경합·재시작 후24요청 중복 확인. [2500개 동시 큐 포화](stress.md):2144ACK/356QUEUE_FULL,거절356키 동일ID 재시도·조회 전수 통과 |
 | 새 동일 요청의 최초 처리 중 중복 제출 | 통과(클라이언트 관측 중첩) | [새 키 12개 요청 검증](../evidence/2026-09-21T12-53-37-460Z-inflight-dedup-ab02c191): 첫 응답 헤더 이전 12개 write 완료, 1회 신규+11중복. 충돌6+6은 신규1·중복5·충돌6. 재시작 후 FULLCore 동일. [독립576개 대조](../evidence/2026-09-21T12-57-07-980Z-inflight-dedup-independent-review-98a146d6/review.md). 서버 내부 접수 시점 계측이나 journal-only 복구 검증은 아님 |
 | 저널·스냅샷·강제 종료 복구 | 통과(프로세스 장애 범위) | [저장소 19개 테스트](../evidence/20260921T083106130Z-storage-recovery-verified-toolchain-b43a25ff), 추가 [실제 snapshot 저장 중 kill 2경계](../evidence/durability-20260921T082016Z/validation-snapshot-process-0855.md). OS·전원 장애 미검증 |
 | 성공 ACK 복구·응답 유실·재시도 | 통과 | 저장소 실제 child kill + API 응답 차단 proxy·재시작·동일 ID 재시도, 전체 상태 비교 |
 | 브라우저 재연결·재동기화 | 통과 | [동일 탭 엔진 재시작 전후](../evidence/browser-reconnect-2026-09-21T09-02-02-365Z), 수동 reload 없이 EVENT2971→3026, 잔고 유지. [504 뒤 idle시장 재구독·unknown 보존·동일ID 재시도](../evidence/2026-09-21T09-04-20-029Z-browser-fault-ade34c84/README.md)도 통과 |
 | 브라우저 WS 누락·중복·초기 HTTP 경합 | 실제 주입 검증 통과 | [격리 브라우저 원본](../evidence/2026-09-21T13-15-32-792Z-browser-gap-91b002af/README.md): 실제 seq1 누락→seq2→HTTP2 재조회·재동기화1회·잔고 수렴. 동일 seq2 재전송 후 잔고·주문 동일. 초기 HTTP3을 보류하고 WS4/최신 잔고를 화면에서 확인한 뒤 367ms 만에 HTTP3 반환, 화면 seq4·예약3300P·미체결3개 유지. 첫 경합 검증의 locator 실패도 보존 |
-| 느린 수신자 격리 | 통과(이번 호스트·부하 범위) | 초기 [수신 중단 검증](slow-ws-validation.md)에 이어 최신 f518 바이너리의 [진단](ws-serialization.md)에서 정상 289개 상태·416 ACK/조회·16 중복 재시도, 자산/예약 일치와 paused 수신자의 `send_timeout/state`를 확인했다. 이전 고부하 단절의 원인 소급 확정은 아님 |
+| 느린 수신자 격리 | 통과(이번 호스트·부하 범위) | 초기 [수신 중단 검증](slow-ws-validation.md)에 이어 f518 바이너리의 [진단](ws-serialization.md)에서 정상 289개 상태·416 ACK/조회·16 중복 재시도, 자산/예약 일치와 paused 수신자의 `send_timeout/state`를 확인했다. 이후 결과 문자열 변경은 이 네트워크 경로를 바꾸지 않았다. 이전 고부하 단절의 원인 소급 확정은 아님 |
 | WS 종료 사유·peer 정상 종료 | 수정 후 통과 / 범위 제한 | [종료 진단](ws-diagnostics.md): peer Close응답flush후1000·오류0. 별도paused수신자의실제send_timeout/state확인,정상289frames·416ACK/조회·16중복검증. 서버행정shutdown의1006과이전고부하1005원인미확정은유지 |
-| 빌드·포맷·린트·테스트 | 통과(기록된 소스 범위) | 최신 f518 Rust [release](../evidence/20260921T114620498Z-ws-encoder-release-2aadbde9/run.json), [fmt](../evidence/20260921T114618896Z-ws-encoder-fmt-6b525e16/run.json), [Clippy all-targets](../evidence/20260921T114752406Z-ws-encoder-clippy-ae5df0a9/run.json), [직렬화 unit3](../evidence/20260921T114315186Z-ws-encoder-unit-4ccf2234/run.json), [API10](../evidence/20260921T114811576Z-ws-encoder-api-regression-a906177c/run.json). 프런트 변경 없이 기존 [7개 테스트](../evidence/frontend-20260921T090509598Z)·[TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) 근거 유지 |
+| 빌드·포맷·린트·테스트 | 통과(기록된 소스 범위) | 최신65348c의 [Rust 전체 타깃48검사·release·fmt·Clippy](../evidence/20260921T140412010Z-cow-production-validation-c19b5acd/), [API10](../evidence/20260921T140736706Z-cow-api-regression-0e07f8da/run.json), [복구 도구 자체 검사](../evidence/20260921T140736677Z-cow-aged-validator-selftest-76a29842/run.json).48개 중 WS3검사는 두 타깃에 각각 포함. 프런트 변경 없이 기존 [7개 테스트](../evidence/frontend-20260921T090509598Z)·[TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) 근거 유지 |
 | 성능·할당 계측 보존 | 통과 / 목표 일부 미달 | [성능 결과](performance.md). A 통과. B/C 최초 fetch 처리량 미달, 측정된 클라이언트 전송 대기 개선 후 동일 바이너리 node:http 목표 통과. 정상 execute 할당 0 미달 |
-| CPU·메모리 구간 분석 | 계산 검증 통과 / 장시간 관찰 진행 | [분석 방법과 7개 검증](resource-observation.md), [21:07 약2시간 독립 검산](../evidence/2026-09-21T12-09-28-609Z-two-hour-observation-independent-review-0a64746a/README.md). CPU238구간:14개 합계평균0.495%,엔진0.266%. 6시간 최종 결과는 아님 |
+| CPU·메모리 구간 분석 | 계산 검증 통과 / 장시간 관찰 진행 | [PID 재사용 정정·17개 검사·보완13개 검사·독립 산술·그래프](resource-observation.md).23:06 보완97표본/96구간의14개합계 CPU평균0.7582%,엔진0.4799%(16코어). 과거 자원 공백은 복원하지 않았으며6시간 최종 결과가 아님 |
 | 부하 중 CPU·메모리 실측 | 최신 실행 정합성·WS 연속성 통과 / 첫 실행 실패 보존 | [새 f518의 6·24·96 부하](engine-load-after-serialization.md):17736명령/8868체결,WS0…17736연속,단절0. 엔진CPU평균2.684/3.683/3.986%,working set최대35.77MiB. [첫 실행](engine-load-test.md)의WS실패/96무WS조건은별도 보존. 두 실행 모두 phase별20초 이전cap종료이며quiet 성능과 구분 |
 | Vercel UI 로컬 빌드·배포 설정 | 통과 | `trading/frontend`, `pnpm build`, `dist`; [배포 검토](review-deployment.md). Production정적130파일HTTP/해시,실제브라우저주문/부분체결/취소/reload통과. 실제 Vercel 빌드·배포 미실행 |
 | Rust 실행·영속 볼륨·배포 설정 | 준비 / 일부 미검증 | 로컬 Windows 실행 통과, Dockerfile/compose/Caddy 예시. Docker가 없어 실제 Linux 컨테이너 빌드·운영 미검증 |

@@ -1,0 +1,14 @@
+{
+  "command": "cargo",
+  "started_at": "2026-09-21T14:06:50.1789883+00:00",
+  "args": [
+    "build",
+    "--locked",
+    "--manifest-path",
+    "engine/Cargo.toml",
+    "--example",
+    "aged_recovery"
+  ],
+  "ended_at": "2026-09-21T14:06:55.3636866+00:00",
+  "exit_code": 0
+}
