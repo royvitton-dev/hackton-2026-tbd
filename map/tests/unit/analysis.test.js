@@ -1,0 +1,14 @@
+import {it,expect} from 'vitest';
+import {readFileSync} from 'node:fs';
+import {analyzeSvg,analyzeRaster,validatePlan} from '../../src/core/analysis.js';
+const svg=readFileSync(new URL('../../public/plans/parking-lab.svg',import.meta.url),'utf8');
+it('extracts dimensional geometry and semantics from a real SVG input',()=>{const p=analyzeSvg(svg);expect(p.width).toBe(84);expect(p.depth).toBe(56);expect(p.walls).toHaveLength(7);expect(p.nodes).toHaveLength(22);expect(p.spaces.filter(s=>s.kind==='parking')).toHaveLength(24);expect(p.routingReady).toBe(true);});
+it('rejects missing scale, entities, executable content and invalid geometry',()=>{for(const bad of ['',svg.replace('data-meters-per-unit="1"',''),'<script/>','<!ENTITY foo>','<foreignObject/>',null,'<svg viewBox="1 0 2 2" data-meters-per-unit="1">'])expect(()=>analyzeSvg(bad)).toThrow();expect(()=>validatePlan({})).toThrow();const p=analyzeSvg(svg);expect(()=>validatePlan({...p,nodes:[p.nodes[0],p.nodes[0]]})).toThrow();expect(()=>validatePlan({...p,walls:[{x1:NaN}]})).toThrow();expect(()=>validatePlan({...p,edges:[{from:'missing',to:'A',width:2}]})).toThrow();});
+it('detects thick walls but ignores isolated noise and thin dimensions',()=>{
+ const width=100,height=80,data=new Uint8ClampedArray(width*height*4).fill(255);
+ const rect=(x,z,w,h)=>{for(let j=z;j<z+h;j++)for(let i=x;i<x+w;i++){const off=(j*width+i)*4;data[off]=data[off+1]=data[off+2]=0;}};
+ rect(10,10,70,4);rect(10,10,4,60);rect(20,50,60,1);rect(50,30,2,2);
+ const p=analyzeRaster({data,width,height},{metersPerPixel:.1});expect(p.walls.length).toBe(2);expect(p.width).toBe(10);expect(p.routingReady).toBe(false);expect(p.scaleStatus).toBe('estimated');expect(analyzeRaster({data,width,height},{calibrated:true}).scaleStatus).toBe('user-calibrated');
+});
+it('handles blank and transparent images and invalid dimensions',()=>{const data=new Uint8ClampedArray(16*16*4);expect(analyzeRaster({data,width:16,height:16}).walls).toEqual([]);for(const p of [{data,width:0,height:1},{data,width:100,height:100}])expect(()=>analyzeRaster(p)).toThrow();expect(()=>analyzeRaster({data,width:16,height:16},{metersPerPixel:-1})).toThrow();});
+it('validates acquired originals rather than generated substitutes',()=>{const catalog=JSON.parse(readFileSync(new URL('../../public/plans/catalog.json',import.meta.url)));expect(catalog.length).toBe(10);expect(new Set(catalog.map(s=>s.id)).size).toBe(10);for(const s of catalog){expect(s.source).toMatch(/^https:\/\/soco.seoul.go.kr\//);expect(s.address).toContain('서울');for(const a of s.assets)expect(readFileSync(new URL(`../../public${a.file}`,import.meta.url)).length).toBe(a.bytes);}});

@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 56" data-meters-per-unit="1" data-name="ATLAS 주차장 동선 시험장">
+<rect width="84" height="56" fill="#e8ebe5"/>
+<line id="n00-n01" data-kind="edge" data-from="n00" data-to="n01" data-modes="car,person" data-width="6" x1="12" y1="10" x2="27" y2="10" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n00-n10" data-kind="edge" data-from="n00" data-to="n10" data-modes="car,person" data-width="6" x1="12" y1="10" x2="12" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n01-n02" data-kind="edge" data-from="n01" data-to="n02" data-modes="car,person" data-width="6" x1="27" y1="10" x2="42" y2="10" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n01-n11" data-kind="edge" data-from="n01" data-to="n11" data-modes="car,person" data-width="6" x1="27" y1="10" x2="27" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n02-n03" data-kind="edge" data-from="n02" data-to="n03" data-modes="car,person" data-width="6" x1="42" y1="10" x2="57" y2="10" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n02-n12" data-kind="edge" data-from="n02" data-to="n12" data-modes="car,person" data-width="6" x1="42" y1="10" x2="42" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n03-n04" data-kind="edge" data-from="n03" data-to="n04" data-modes="car,person" data-width="6" x1="57" y1="10" x2="72" y2="10" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n03-n13" data-kind="edge" data-from="n03" data-to="n13" data-modes="car,person" data-width="6" x1="57" y1="10" x2="57" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n04-n14" data-kind="edge" data-from="n04" data-to="n14" data-modes="car,person" data-width="6" x1="72" y1="10" x2="72" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n10-n11" data-kind="edge" data-from="n10" data-to="n11" data-modes="car,person" data-width="6" x1="12" y1="28" x2="27" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n10-n20" data-kind="edge" data-from="n10" data-to="n20" data-modes="car,person" data-width="6" x1="12" y1="28" x2="12" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n11-n12" data-kind="edge" data-from="n11" data-to="n12" data-modes="car,person" data-width="6" x1="27" y1="28" x2="42" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n11-n21" data-kind="edge" data-from="n11" data-to="n21" data-modes="car,person" data-width="6" x1="27" y1="28" x2="27" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n12-n13" data-kind="edge" data-from="n12" data-to="n13" data-modes="car,person" data-width="6" x1="42" y1="28" x2="57" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n12-n22" data-kind="edge" data-from="n12" data-to="n22" data-modes="car,person" data-width="6" x1="42" y1="28" x2="42" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n13-n14" data-kind="edge" data-from="n13" data-to="n14" data-modes="car,person" data-width="6" x1="57" y1="28" x2="72" y2="28" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n13-n23" data-kind="edge" data-from="n13" data-to="n23" data-modes="car,person" data-width="6" x1="57" y1="28" x2="57" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n14-n24" data-kind="edge" data-from="n14" data-to="n24" data-modes="car,person" data-width="6" x1="72" y1="28" x2="72" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n20-n21" data-kind="edge" data-from="n20" data-to="n21" data-modes="car,person" data-width="6" x1="12" y1="46" x2="27" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n21-n22" data-kind="edge" data-from="n21" data-to="n22" data-modes="car,person" data-width="6" x1="27" y1="46" x2="42" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n22-n23" data-kind="edge" data-from="n22" data-to="n23" data-modes="car,person" data-width="6" x1="42" y1="46" x2="57" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n23-n24" data-kind="edge" data-from="n23" data-to="n24" data-modes="car,person" data-width="6" x1="57" y1="46" x2="72" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="entrance-n22" data-kind="edge" data-from="entrance" data-to="n22" data-modes="car,person" data-width="6" x1="42" y1="55" x2="42" y2="46" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n00-A" data-kind="edge" data-from="n00" data-to="A" data-modes="car,person" data-width="6" x1="12" y1="10" x2="12" y2="3" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n04-B" data-kind="edge" data-from="n04" data-to="B" data-modes="car,person" data-width="6" x1="72" y1="10" x2="72" y2="3" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n20-C" data-kind="edge" data-from="n20" data-to="C" data-modes="car,person" data-width="6" x1="12" y1="46" x2="12" y2="53" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n24-D" data-kind="edge" data-from="n24" data-to="D" data-modes="car,person" data-width="6" x1="72" y1="46" x2="72" y2="53" stroke="#b4c5b8" stroke-width="6"/>
+<line id="n10-exit-west" data-kind="edge" data-from="n10" data-to="exit-west" data-modes="person" data-width="2.4" x1="12" y1="28" x2="2" y2="28" stroke="#b4c5b8" stroke-width="2.4"/>
+<line id="n14-exit-east" data-kind="edge" data-from="n14" data-to="exit-east" data-modes="person" data-width="2.4" x1="72" y1="28" x2="82" y2="28" stroke="#b4c5b8" stroke-width="2.4"/>
+<circle id="n00" data-kind="node" data-role="junction" data-label="n00" data-safe="false" cx="12" cy="10" r=".65" fill="#315e4f"/>
+<circle id="n01" data-kind="node" data-role="junction" data-label="n01" data-safe="false" cx="27" cy="10" r=".65" fill="#315e4f"/>
+<circle id="n02" data-kind="node" data-role="junction" data-label="n02" data-safe="false" cx="42" cy="10" r=".65" fill="#315e4f"/>
+<circle id="n03" data-kind="node" data-role="junction" data-label="n03" data-safe="false" cx="57" cy="10" r=".65" fill="#315e4f"/>
+<circle id="n04" data-kind="node" data-role="junction" data-label="n04" data-safe="false" cx="72" cy="10" r=".65" fill="#315e4f"/>
+<circle id="n10" data-kind="node" data-role="junction" data-label="n10" data-safe="false" cx="12" cy="28" r=".65" fill="#315e4f"/>
+<circle id="n11" data-kind="node" data-role="junction" data-label="n11" data-safe="false" cx="27" cy="28" r=".65" fill="#315e4f"/>
+<circle id="n12" data-kind="node" data-role="junction" data-label="n12" data-safe="false" cx="42" cy="28" r=".65" fill="#315e4f"/>
+<circle id="n13" data-kind="node" data-role="junction" data-label="n13" data-safe="false" cx="57" cy="28" r=".65" fill="#315e4f"/>
+<circle id="n14" data-kind="node" data-role="junction" data-label="n14" data-safe="false" cx="72" cy="28" r=".65" fill="#315e4f"/>
+<circle id="n20" data-kind="node" data-role="junction" data-label="n20" data-safe="false" cx="12" cy="46" r=".65" fill="#315e4f"/>
+<circle id="n21" data-kind="node" data-role="junction" data-label="n21" data-safe="false" cx="27" cy="46" r=".65" fill="#315e4f"/>
+<circle id="n22" data-kind="node" data-role="junction" data-label="n22" data-safe="false" cx="42" cy="46" r=".65" fill="#315e4f"/>
+<circle id="n23" data-kind="node" data-role="junction" data-label="n23" data-safe="false" cx="57" cy="46" r=".65" fill="#315e4f"/>
+<circle id="n24" data-kind="node" data-role="junction" data-label="n24" data-safe="false" cx="72" cy="46" r=".65" fill="#315e4f"/>
+<circle id="entrance" data-kind="node" data-role="entrance" data-label="차량 입구" data-safe="false" cx="42" cy="55" r=".65" fill="#315e4f"/>
+<circle id="A" data-kind="node" data-role="building" data-label="101동" data-safe="false" cx="12" cy="3" r=".65" fill="#315e4f"/>
+<circle id="B" data-kind="node" data-role="building" data-label="102동" data-safe="false" cx="72" cy="3" r=".65" fill="#315e4f"/>
+<circle id="C" data-kind="node" data-role="building" data-label="103동" data-safe="false" cx="12" cy="53" r=".65" fill="#315e4f"/>
+<circle id="D" data-kind="node" data-role="building" data-label="104동" data-safe="false" cx="72" cy="53" r=".65" fill="#315e4f"/>
+<circle id="exit-west" data-kind="node" data-role="exit" data-label="서측 외부 집결지" data-safe="true" cx="2" cy="28" r=".65" fill="#49aa79"/>
+<circle id="exit-east" data-kind="node" data-role="exit" data-label="동측 외부 집결지" data-safe="true" cx="82" cy="28" r=".65" fill="#49aa79"/>
+<line data-kind="wall" x1="1" y1="1" x2="83" y2="1" stroke="#596f65" stroke-width=".4" data-height="3.3"/>
+<line data-kind="wall" x1="1" y1="1" x2="1" y2="25" stroke="#596f65" stroke-width=".4" data-height="3.3"/>
+<line data-kind="wall" x1="1" y1="31" x2="1" y2="55" stroke="#596f65" stroke-width=".4" data-height="3.3"/>
+<line data-kind="wall" x1="83" y1="1" x2="83" y2="25" stroke="#596f65" stroke-width=".4" data-height="3.3"/>
+<line data-kind="wall" x1="83" y1="31" x2="83" y2="55" stroke="#596f65" stroke-width=".4" data-height="3.3"/>
+<line data-kind="wall" x1="1" y1="55" x2="38" y2="55" stroke="#596f65" stroke-width=".4" data-height="3.3"/>
+<line data-kind="wall" x1="46" y1="55" x2="83" y2="55" stroke="#596f65" stroke-width=".4" data-height="3.3"/>
+<rect id="p-16.5-17-0" data-kind="space" data-role="parking" x="16.5" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-16.5-17-1" data-kind="space" data-role="parking" x="19.1" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-16.5-17-2" data-kind="space" data-role="parking" x="21.7" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-31.5-17-0" data-kind="space" data-role="parking" x="31.5" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-31.5-17-1" data-kind="space" data-role="parking" x="34.1" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-31.5-17-2" data-kind="space" data-role="parking" x="36.7" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-46.5-17-0" data-kind="space" data-role="parking" x="46.5" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-46.5-17-1" data-kind="space" data-role="parking" x="49.1" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-46.5-17-2" data-kind="space" data-role="parking" x="51.7" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-61.5-17-0" data-kind="space" data-role="parking" x="61.5" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-61.5-17-1" data-kind="space" data-role="parking" x="64.1" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-61.5-17-2" data-kind="space" data-role="parking" x="66.7" y="17" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-16.5-35-0" data-kind="space" data-role="parking" x="16.5" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-16.5-35-1" data-kind="space" data-role="parking" x="19.1" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-16.5-35-2" data-kind="space" data-role="parking" x="21.7" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-31.5-35-0" data-kind="space" data-role="parking" x="31.5" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-31.5-35-1" data-kind="space" data-role="parking" x="34.1" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-31.5-35-2" data-kind="space" data-role="parking" x="36.7" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-46.5-35-0" data-kind="space" data-role="parking" x="46.5" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-46.5-35-1" data-kind="space" data-role="parking" x="49.1" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-46.5-35-2" data-kind="space" data-role="parking" x="51.7" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-61.5-35-0" data-kind="space" data-role="parking" x="61.5" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-61.5-35-1" data-kind="space" data-role="parking" x="64.1" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="p-61.5-35-2" data-kind="space" data-role="parking" x="66.7" y="35" width="2.5" height="4.8" fill="none" stroke="#8b9c92" stroke-width=".15"/>
+<rect id="core-101" data-kind="space" data-role="core" data-label="101동" x="7" y="2" width="10" height="5" fill="#709b87"/>
+<rect id="core-102" data-kind="space" data-role="core" data-label="102동" x="67" y="2" width="10" height="5" fill="#709b87"/>
+<rect id="core-103" data-kind="space" data-role="core" data-label="103동" x="7" y="49" width="10" height="5" fill="#709b87"/>
+<rect id="core-104" data-kind="space" data-role="core" data-label="104동" x="67" y="49" width="10" height="5" fill="#709b87"/>
+</svg>
