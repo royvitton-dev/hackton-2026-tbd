@@ -256,7 +256,7 @@ export class Renderer3D {
   for(const b of race.balls){
    const m=this.mesh(sphere,new THREE.MeshPhysicalMaterial({color:b.color,metalness:.18,roughness:.18,clearcoat:1,clearcoatRoughness:.1}),X(b.x),.19,Z(b.y));
    const label=document.createElement('span');label.className='ball-label';label.textContent=[...b.label].slice(0,5).join('')+([...b.label].length>5?'…':'')+(race.config.people.find(p=>p.id===b.participantId).count>1?`·${b.number}`:'');label.title=b.label;this.labels.append(label);
-   const dot=document.createElement('i');dot.style.background=b.color;this.progress.append(dot);this.balls.set(b.id,{m,label,dot,history:[],lastTrail:-1});
+   const dot=document.createElement('i');dot.style.background=b.color;this.progress.append(dot);this.balls.set(b.id,{m,label,dot,history:[],lastTrail:-1,lastX:b.x,lastY:b.y});
   }
   for(const entry of this.balls.values())entry.labelWidth=entry.label.getBoundingClientRect().width;
   this.impactCursor=0;this.impacts=[];
@@ -265,6 +265,7 @@ export class Renderer3D {
   this.trails=new THREE.InstancedMesh(new THREE.SphereGeometry(1,8,6),new THREE.MeshBasicMaterial({transparent:true,opacity:.19,depthWrite:false}),race.balls.length*2);this.trails.instanceMatrix.setUsage(THREE.DynamicDrawUsage);this.trails.frustumCulled=false;
   race.balls.forEach((b,i)=>{this.trails.setColorAt(i*2,new THREE.Color(b.color));this.trails.setColorAt(i*2+1,new THREE.Color(b.color));});this.group.add(this.trails);
   this.trailTransform=new THREE.Object3D();
+  this.winnerHalo=this.ring(0,0,.26,mat.neonGold,.045,.035);this.winnerHalo.visible=false;
  }
  impact(event,elapsed,reduced){
   if(reduced||!this.impacts?.length||!Number.isFinite(event.x+event.y))return;
@@ -295,14 +296,15 @@ export class Renderer3D {
   this.carousels.forEach(c=>{c.roof.rotation.y=decorTime*c.rate+c.phase;const hit=decorTime-c.hitAt,pulse=!reduced&&hit>=0&&hit<.32?Math.sin(hit/.32*Math.PI):0;c.roof.scale.y=1-pulse*.18;c.roof.position.y=c.baseY-pulse*.08;});
   this.neonMaterials.forEach((m,i)=>{m.emissiveIntensity=reduced?1.05:1.05+Math.sin(decorTime*.95+i*2)*.32;});
   for(const effect of this.impacts){const age=race.elapsed-effect.born;effect.mesh.visible=!reduced&&age>=0&&age<.32;effect.mesh.scale.setScalar(1+Math.max(0,age)*4);effect.mesh.material.opacity=Math.max(0,1-age/.32)*.72;}
-  const motion=!reduced&&['racing','paused'].includes(race.state)?race.motion():{roll:0,pitch:0,offsetX:0,offsetY:0};
+  const motion=!reduced&&['racing','paused','complete'].includes(race.state)?race.motion():{roll:0,pitch:0,offsetX:0,offsetY:0};
   this.group.rotation.set(motion.pitch,0,motion.roll);const pivot=new THREE.Vector3(0,0,map.height*S/2);this.group.position.copy(pivot).sub(pivot.clone().applyEuler(this.group.rotation));this.group.position.x+=motion.offsetX*S;this.group.position.z+=motion.offsetY*S;this.group.updateMatrixWorld(true);
   const now=performance.now();
-  this.trails.visible=!reduced&&race.state==='racing';let trailIndex=0;const labelCandidates=[];
+  this.trails.visible=!reduced&&race.state==='racing';this.winnerHalo.visible=false;let trailIndex=0;const labelCandidates=[];
   for(const b of race.balls){
    const entry=this.balls.get(b.id),{m,label,dot,history}=entry;if(b.finished&&!this.finishedAt.has(b.id))this.finishedAt.set(b.id,now);
    const sink=b.finished?Math.min(1,(now-this.finishedAt.get(b.id))/380):0;m.visible=sink<1;m.position.set(X(b.x),.19-sink*.8,Z(b.y));m.scale.setScalar(1-sink*.6);
-   m.rotation.x+=b.vy*.00025;m.rotation.z-=b.vx*.00025;dot.style.top=`${b.y/map.height*100}%`;
+   m.rotation.x+=(b.y-entry.lastY)/b.r;m.rotation.z-=(b.x-entry.lastX)/b.r;entry.lastX=b.x;entry.lastY=b.y;dot.style.top=`${b.y/map.height*100}%`;
+   if(b.id===selected&&!b.finished){this.winnerHalo.visible=true;this.winnerHalo.position.set(X(b.x),.045,Z(b.y));}
    if(race.state==='racing'&&race.elapsed-entry.lastTrail>=.035){history.unshift({x:X(b.x),z:Z(b.y)});if(history.length>5)history.pop();entry.lastTrail=race.elapsed;}
    for(let i=0;i<2;i++){const old=history[i*2+2];this.trailTransform.position.set(old?.x??X(b.x),.12,old?.z??Z(b.y));this.trailTransform.scale.setScalar(!b.finished&&old?(i===0?.12:.075):0);this.trailTransform.updateMatrix();this.trails.setMatrixAt(trailIndex++,this.trailTransform.matrix);}
    const v=new THREE.Vector3(X(b.x),.6,Z(b.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);label.hidden=true;

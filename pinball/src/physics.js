@@ -72,7 +72,7 @@ export class Race {
  step(dt=STEP){
   if(!['mixing','countdown','racing'].includes(this.state))return;
   // Public stepping is bounded too: no giant timestep can tunnel through the board.
-  let remaining=Math.min(Math.max(dt,0),.1);while(remaining>1e-9){const h=Math.min(STEP,remaining);this.integrate(h);remaining-=h;}
+  let remaining=Math.min(Math.max(dt,0),.1);while(remaining>1e-9&&['mixing','countdown','racing'].includes(this.state)){const h=Math.min(STEP,remaining);this.integrate(h);remaining-=h;}
  }
  integrate(dt){
   this.stats.steps++;this.elapsed+=dt;this.phaseTime+=dt;const racing=this.state==='racing';this.rotationTime+=dt;
@@ -106,9 +106,30 @@ export class Race {
   }
   // No pre-selected outcome. Substep crossing time defines order; pre-shuffled key breaks exact ties.
   crossing.sort((a,b)=>a.time-b.time||a.b.tieKey-b.b.tieKey||a.b.id.localeCompare(b.b.id));
-  for(const c of crossing)this.finish(c.b,c.time,c.exitId);
+  for(const c of crossing){
+   this.finish(c.b,c.time,c.exitId);
+   if(this.config.finishMode==='winner'){
+    if(this.config.rule==='last'&&this.finishOrder.length===this.balls.length-1){this.lastRemaining(c.time,dt);break;}
+    if(this.config.rule!=='last'&&this.winner){this.stopAt(c.time,dt,'target-arrived');break;}
+   }
+  }
+  if(this.state==='complete')return;
+  if(this.config.finishMode==='winner'&&this.config.rule==='last'&&this.balls.length===1&&this.state==='racing'){this.lastRemaining(this.raceTime,dt);return;}
   if(this.finishOrder.length===this.balls.length){this.state='complete';this.emit({type:'complete'});}
   else if(this.raceTime>=90){this.state='invalid';this.winner=null;this.emit({type:'invalid',reason:'90초 진행 제한'});}
+ }
+ stopAt(time,dt,reason){
+  // The same substep interpolation used to judge arrivals also freezes the
+  // remaining balls at that instant. Later crossings are never fabricated.
+  const trim=Math.max(0,this.raceTime-time),fraction=clamp(1-trim/dt,0,1);
+  for(const b of this.balls)if(!b.finished){b.x=b.prevX+(b.x-b.prevX)*fraction;b.y=b.prevY+(b.y-b.prevY)*fraction;}
+  this.raceTime=time;this.elapsed-=trim;this.rotationTime-=trim;this.phaseTime-=trim;
+  this.state='complete';this.completionReason=reason;this.emit({type:'complete'});
+ }
+ lastRemaining(time,dt){
+  const b=this.balls.find(b=>!b.finished);if(!b)return;
+  this.winner={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:this.balls.length,time,exitId:null,criterion:'last-remaining',crossedFinish:false};
+  this.emit({type:'winner',result:this.winner});this.stopAt(time,dt,'last-remaining');
  }
  boundaries(b,racing){
   if(b.x<this.map.left+b.r){b.x=this.map.left+b.r;b.vx=Math.abs(b.vx)*.7;}
@@ -120,6 +141,6 @@ export class Race {
  segment(b,s,e){const dx=s.bx-s.ax,dy=s.by-s.ay,t=clamp(((b.x-s.ax)*dx+(b.y-s.ay)*dy)/(dx*dx+dy*dy),0,1);const x=s.ax+t*dx,y=s.ay+t*dy;const bx=b.x-x,by=b.y-y,d=Math.hypot(bx,by),min=b.r+s.r;if(d>=min)return;const nx=d>1e-7?bx/d:-dy/Math.hypot(dx,dy),ny=d>1e-7?by/d:dx/Math.hypot(dx,dy);this.contact(b,nx,ny,min-d,e,s.svx??(s.omega?-s.omega*(y-s.y):0),s.svy??(s.omega?s.omega*(x-s.x):0));}
  contact(b,nx,ny,penetration,e,svx,svy,kind='rail',obstacle=null){b.x+=nx*penetration;b.y+=ny*penetration;const v=(b.vx-svx)*nx+(b.vy-svy)*ny;if(v<0){b.vx-=(1+e)*v*nx;b.vy-=(1+e)*v*ny;this.stats.collisions++;if(-v>80)this.emit({type:'hit',speed:-v,ballId:b.id,x:b.x-nx*b.r,y:b.y-ny*b.r,kind,obstacleX:obstacle?.x,obstacleY:obstacle?.y});}this.stats.maxPenetration=Math.max(this.stats.maxPenetration,penetration);}
  pair(a,b){const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy),min=a.r+b.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0,p=(min-d)/2;a.x-=nx*p;a.y-=ny*p;b.x+=nx*p;b.y+=ny*p;const v=(b.vx-a.vx)*nx+(b.vy-a.vy)*ny;if(v<0){const impulse=-(1+.6)*v/2;a.vx-=impulse*nx;a.vy-=impulse*ny;b.vx+=impulse*nx;b.vy+=impulse*ny;}}
- finish(b,time,exitId=null){if(b.finished)return false;b.finished=true;b.y=this.map.finish;b.rank=this.finishOrder.length+1;b.time=time;b.vx=0;b.vy=0;const result={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:b.rank,time,exitId};this.finishOrder.push(result);if(b.rank===this.config.target){this.winner=result;this.emit({type:'winner',result});}this.emit({type:'finish',result});return true;}
- snapshot(){return {roundId:this.roundId,state:this.state,seed:this.seed,time:this.raceTime,target:this.config.target,total:this.balls.length,winner:this.winner,finishOrder:this.finishOrder.map(r=>({...r})),assists:this.assists,motion:this.motion(),balls:this.balls.map(b=>({id:b.id,x:b.x,y:b.y,finished:b.finished,rank:b.rank}))};}
+ finish(b,time,exitId=null){if(b.finished)return false;b.finished=true;b.y=this.map.finish;b.rank=this.finishOrder.length+1;b.time=time;b.vx=0;b.vy=0;const result={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:b.rank,time,exitId};this.finishOrder.push(result);if(b.rank===this.config.target){this.winner={...result,criterion:'arrival',crossedFinish:true};this.emit({type:'winner',result:this.winner});}this.emit({type:'finish',result});return true;}
+ snapshot(){return {roundId:this.roundId,state:this.state,seed:this.seed,time:this.raceTime,target:this.config.target,total:this.balls.length,winner:this.winner,completionReason:this.completionReason??null,finishOrder:this.finishOrder.map(r=>({...r})),assists:this.assists,motion:this.motion(),balls:this.balls.map(b=>({id:b.id,x:b.x,y:b.y,finished:b.finished,rank:b.rank}))};}
 }

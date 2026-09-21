@@ -1,3 +1,4 @@
+import {assertGameResult} from './assert-result.mjs';
 import assert from 'node:assert/strict';
 import {writeFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
@@ -15,7 +16,7 @@ for(const mobile of [false,true]){
  for(const label of ['입체','측면','상단']){await p.locator('.camera-angle').click();assert.match(await p.locator('.camera-angle').textContent(),new RegExp(label));await p.waitForTimeout(80);assert.deepEqual(await p.evaluate(()=>window.pinball.snapshot()),paused);await p.locator('#board').screenshot({path:`evidence/3d-${mobile?'mobile':'desktop'}-${label}.png`});}
  await p.screenshot({path:`evidence/3d-${mobile?'mobile':'desktop'}-racing.png`,fullPage:true});await p.locator('#pause').click();
  await p.waitForTimeout(1000);await p.screenshot({path:`evidence/3d-${mobile?'mobile':'desktop'}-live.png`,fullPage:true});await p.waitForTimeout(2000);const perf=await p.evaluate(()=>window.pinball.performance());const frames=perf.samples.filter(s=>s.state==='racing'&&s.total===60&&s.delta>0);const sorted=frames.map(s=>s.delta).sort((a,b)=>a-b);
- await p.waitForFunction(()=>['complete','invalid'].includes(document.body.dataset.state),null,{timeout:70000});const round=await p.evaluate(()=>window.pinball.exportRound());assert.equal(round.result.state,'complete');assert.equal(round.result.finishOrder.length,60);assert.equal(new Set(round.result.finishOrder.map(x=>x.id)).size,60);assert.equal(round.result.winner.id,round.result.finishOrder[59].id);assert.ok(round.result.finishOrder.every(x=>[1,2,3,4].includes(x.exitId)));
+ await p.waitForFunction(()=>['complete','invalid'].includes(document.body.dataset.state),null,{timeout:70000});const round=await p.evaluate(()=>window.pinball.exportRound());assertGameResult(round.result);
  assert.deepEqual(await p.locator('#ranking li').evaluateAll(es=>es.map(e=>e.dataset.ballId)),round.result.finishOrder.map(x=>x.id));
  const replay=await p.evaluate(async round=>{const {Race}=await import(window.pinball.settings().physicsModule||'/src/physics.js');const race=new Race(round.config,round.seed);race.start();while(!['complete','invalid'].includes(race.state))race.step();return race.finishOrder;},round);assert.deepEqual(replay,round.result.finishOrder);
  await p.locator('#board').screenshot({path:`evidence/3d-${mobile?'mobile':'desktop'}-finish.png`});assert.equal(await p.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);assert.deepEqual(errors,[]);
