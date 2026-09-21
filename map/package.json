@@ -1,5 +1,8 @@
 {
-  "name": "atlas-blueprint-lab", "version": "0.1.0", "private": true, "type": "module",
+  "name": "atlas-blueprint-lab",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5185",
     "build": "vite build",
@@ -13,6 +16,16 @@
     "checkpoint": "node scripts/checkpoint.mjs",
     "checkpoint:watch": "node scripts/checkpoint.mjs --watch"
   },
-  "dependencies": { "three": "0.180.0" },
-  "devDependencies": { "vite": "7.3.6", "vitest": "4.1.11", "@vitest/coverage-v8": "4.1.11", "@playwright/test": "1.58.2" }
+  "dependencies": {
+    "@fontsource-variable/dm-sans": "5.3.0",
+    "@fontsource-variable/noto-sans-kr": "5.3.0",
+    "pdfjs-dist": "6.3.289",
+    "three": "0.180.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.58.2",
+    "@vitest/coverage-v8": "4.1.11",
+    "vite": "7.3.6",
+    "vitest": "4.1.11"
+  }
 }
