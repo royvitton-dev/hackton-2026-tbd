@@ -1,0 +1,535 @@
+{
+  "config": {
+    "people": [
+      {
+        "id": "p1",
+        "name": "하늘",
+        "label": "하늘",
+        "count": 1,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p2",
+        "name": "지우",
+        "label": "지우",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p3",
+        "name": "민준",
+        "label": "민준",
+        "count": 1,
+        "color": "#ff82af"
+      },
+      {
+        "id": "p4",
+        "name": "서연",
+        "label": "서연",
+        "count": 1,
+        "color": "#64e4e0"
+      },
+      {
+        "id": "p5",
+        "name": "도윤",
+        "label": "도윤",
+        "count": 1,
+        "color": "#ffc168"
+      },
+      {
+        "id": "p6",
+        "name": "수빈",
+        "label": "수빈",
+        "count": 1,
+        "color": "#8daaff"
+      },
+      {
+        "id": "p7",
+        "name": "지호",
+        "label": "지호",
+        "count": 1,
+        "color": "#edeeed"
+      },
+      {
+        "id": "p8",
+        "name": "예린",
+        "label": "예린",
+        "count": 1,
+        "color": "#ff826c"
+      },
+      {
+        "id": "p9",
+        "name": "우진",
+        "label": "우진",
+        "count": 1,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p10",
+        "name": "다은",
+        "label": "다은",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p11",
+        "name": "시우",
+        "label": "시우",
+        "count": 1,
+        "color": "#ff82af"
+      },
+      {
+        "id": "p12",
+        "name": "소윤",
+        "label": "소윤",
+        "count": 1,
+        "color": "#64e4e0"
+      },
+      {
+        "id": "p13",
+        "name": "준서",
+        "label": "준서",
+        "count": 1,
+        "color": "#ffc168"
+      },
+      {
+        "id": "p14",
+        "name": "하린",
+        "label": "하린",
+        "count": 1,
+        "color": "#8daaff"
+      },
+      {
+        "id": "p15",
+        "name": "건우",
+        "label": "건우",
+        "count": 1,
+        "color": "#edeeed"
+      },
+      {
+        "id": "p16",
+        "name": "유나",
+        "label": "유나",
+        "count": 1,
+        "color": "#ff826c"
+      },
+      {
+        "id": "p17",
+        "name": "현우",
+        "label": "현우",
+        "count": 1,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p18",
+        "name": "채원",
+        "label": "채원",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p19",
+        "name": "지안",
+        "label": "지안",
+        "count": 1,
+        "color": "#ff82af"
+      },
+      {
+        "id": "p20",
+        "name": "태오",
+        "label": "태오",
+        "count": 1,
+        "color": "#64e4e0"
+      }
+    ],
+    "total": 20,
+    "rule": "first",
+    "target": 1,
+    "mapId": "neon"
+  },
+  "seed": 672008627,
+  "result": {
+    "roundId": "bbf0ba5f-d292-4b6f-870f-4d4f8a95f764",
+    "state": "complete",
+    "seed": 672008627,
+    "time": 36.599999999998566,
+    "target": 1,
+    "total": 20,
+    "winner": {
+      "id": "p7-b1",
+      "participantId": "p7",
+      "name": "지호",
+      "label": "지호",
+      "color": "#edeeed",
+      "number": 1,
+      "rank": 1,
+      "time": 15.707773723997436,
+      "exitId": 2
+    },
+    "finishOrder": [
+      {
+        "id": "p7-b1",
+        "participantId": "p7",
+        "name": "지호",
+        "label": "지호",
+        "color": "#edeeed",
+        "number": 1,
+        "rank": 1,
+        "time": 15.707773723997436,
+        "exitId": 2
+      },
+      {
+        "id": "p1-b1",
+        "participantId": "p1",
+        "name": "하늘",
+        "label": "하늘",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 2,
+        "time": 16.06696514279008,
+        "exitId": 3
+      },
+      {
+        "id": "p6-b1",
+        "participantId": "p6",
+        "name": "수빈",
+        "label": "수빈",
+        "color": "#8daaff",
+        "number": 1,
+        "rank": 3,
+        "time": 16.251472197504217,
+        "exitId": 3
+      },
+      {
+        "id": "p9-b1",
+        "participantId": "p9",
+        "name": "우진",
+        "label": "우진",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 4,
+        "time": 18.074055683507492,
+        "exitId": 3
+      },
+      {
+        "id": "p12-b1",
+        "participantId": "p12",
+        "name": "소윤",
+        "label": "소윤",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 5,
+        "time": 18.767010977570155,
+        "exitId": 3
+      },
+      {
+        "id": "p15-b1",
+        "participantId": "p15",
+        "name": "건우",
+        "label": "건우",
+        "color": "#edeeed",
+        "number": 1,
+        "rank": 6,
+        "time": 19.291440035428902,
+        "exitId": 3
+      },
+      {
+        "id": "p13-b1",
+        "participantId": "p13",
+        "name": "준서",
+        "label": "준서",
+        "color": "#ffc168",
+        "number": 1,
+        "rank": 7,
+        "time": 19.537077540554552,
+        "exitId": 3
+      },
+      {
+        "id": "p11-b1",
+        "participantId": "p11",
+        "name": "시우",
+        "label": "시우",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 8,
+        "time": 20.226356237175494,
+        "exitId": 3
+      },
+      {
+        "id": "p10-b1",
+        "participantId": "p10",
+        "name": "다은",
+        "label": "다은",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 9,
+        "time": 20.594368207481086,
+        "exitId": 3
+      },
+      {
+        "id": "p17-b1",
+        "participantId": "p17",
+        "name": "현우",
+        "label": "현우",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 10,
+        "time": 21.39250063282466,
+        "exitId": 3
+      },
+      {
+        "id": "p2-b1",
+        "participantId": "p2",
+        "name": "지우",
+        "label": "지우",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 11,
+        "time": 22.368183451685006,
+        "exitId": 2
+      },
+      {
+        "id": "p16-b1",
+        "participantId": "p16",
+        "name": "유나",
+        "label": "유나",
+        "color": "#ff826c",
+        "number": 1,
+        "rank": 12,
+        "time": 22.623850088562477,
+        "exitId": 3
+      },
+      {
+        "id": "p14-b1",
+        "participantId": "p14",
+        "name": "하린",
+        "label": "하린",
+        "color": "#8daaff",
+        "number": 1,
+        "rank": 13,
+        "time": 22.96597907823679,
+        "exitId": 3
+      },
+      {
+        "id": "p5-b1",
+        "participantId": "p5",
+        "name": "도윤",
+        "label": "도윤",
+        "color": "#ffc168",
+        "number": 1,
+        "rank": 14,
+        "time": 23.580799072042847,
+        "exitId": 3
+      },
+      {
+        "id": "p20-b1",
+        "participantId": "p20",
+        "name": "태오",
+        "label": "태오",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 15,
+        "time": 23.755266022462386,
+        "exitId": 2
+      },
+      {
+        "id": "p8-b1",
+        "participantId": "p8",
+        "name": "예린",
+        "label": "예린",
+        "color": "#ff826c",
+        "number": 1,
+        "rank": 16,
+        "time": 25.202662541827408,
+        "exitId": 2
+      },
+      {
+        "id": "p19-b1",
+        "participantId": "p19",
+        "name": "지안",
+        "label": "지안",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 17,
+        "time": 26.010689531409447,
+        "exitId": 3
+      },
+      {
+        "id": "p3-b1",
+        "participantId": "p3",
+        "name": "민준",
+        "label": "민준",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 18,
+        "time": 27.766465025060782,
+        "exitId": 3
+      },
+      {
+        "id": "p18-b1",
+        "participantId": "p18",
+        "name": "채원",
+        "label": "채원",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 19,
+        "time": 31.951742542947194,
+        "exitId": 3
+      },
+      {
+        "id": "p4-b1",
+        "participantId": "p4",
+        "name": "서연",
+        "label": "서연",
+        "color": "#64e4e0",
+        "number": 1,
+        "rank": 20,
+        "time": 36.59602101711162,
+        "exitId": 3
+      }
+    ],
+    "assists": 0,
+    "balls": [
+      {
+        "id": "p11-b1",
+        "x": 386.3541952181092,
+        "y": 2150,
+        "finished": true,
+        "rank": 8
+      },
+      {
+        "id": "p13-b1",
+        "x": 374.8666493370358,
+        "y": 2150,
+        "finished": true,
+        "rank": 7
+      },
+      {
+        "id": "p15-b1",
+        "x": 386.20150290561554,
+        "y": 2150,
+        "finished": true,
+        "rank": 6
+      },
+      {
+        "id": "p2-b1",
+        "x": 240.6855765682053,
+        "y": 2150,
+        "finished": true,
+        "rank": 11
+      },
+      {
+        "id": "p3-b1",
+        "x": 391.4455123507545,
+        "y": 2150,
+        "finished": true,
+        "rank": 18
+      },
+      {
+        "id": "p7-b1",
+        "x": 236.481365097038,
+        "y": 2150,
+        "finished": true,
+        "rank": 1
+      },
+      {
+        "id": "p17-b1",
+        "x": 389.3305221932686,
+        "y": 2150,
+        "finished": true,
+        "rank": 10
+      },
+      {
+        "id": "p8-b1",
+        "x": 242.97302559684024,
+        "y": 2150,
+        "finished": true,
+        "rank": 16
+      },
+      {
+        "id": "p4-b1",
+        "x": 391.11536408935257,
+        "y": 2150,
+        "finished": true,
+        "rank": 20
+      },
+      {
+        "id": "p18-b1",
+        "x": 391.2583997499439,
+        "y": 2150,
+        "finished": true,
+        "rank": 19
+      },
+      {
+        "id": "p9-b1",
+        "x": 386.6372749869103,
+        "y": 2150,
+        "finished": true,
+        "rank": 4
+      },
+      {
+        "id": "p16-b1",
+        "x": 378.92131481145003,
+        "y": 2150,
+        "finished": true,
+        "rank": 12
+      },
+      {
+        "id": "p12-b1",
+        "x": 388.3211182154101,
+        "y": 2150,
+        "finished": true,
+        "rank": 5
+      },
+      {
+        "id": "p20-b1",
+        "x": 249.0361504015241,
+        "y": 2150,
+        "finished": true,
+        "rank": 15
+      },
+      {
+        "id": "p19-b1",
+        "x": 366.7274516933891,
+        "y": 2150,
+        "finished": true,
+        "rank": 17
+      },
+      {
+        "id": "p14-b1",
+        "x": 386.17994991624226,
+        "y": 2150,
+        "finished": true,
+        "rank": 13
+      },
+      {
+        "id": "p5-b1",
+        "x": 382.550675334616,
+        "y": 2150,
+        "finished": true,
+        "rank": 14
+      },
+      {
+        "id": "p6-b1",
+        "x": 379.23090257012507,
+        "y": 2150,
+        "finished": true,
+        "rank": 3
+      },
+      {
+        "id": "p10-b1",
+        "x": 393.0346953750887,
+        "y": 2150,
+        "finished": true,
+        "rank": 9
+      },
+      {
+        "id": "p1-b1",
+        "x": 391.9993177316402,
+        "y": 2150,
+        "finished": true,
+        "rank": 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+✔ participants: defaults, explicit counts, duplicate labels, Unicode and literal markup (1.7535ms)
+✔ reject empty, long, excessive and invalid counts without silently clamping (0.337625ms)
+✔ rule validation and ball-based N range (0.157625ms)
+✔ start/pause/resume are idempotent; all phases freeze including rotations (5.92425ms)
+✖ finish order is crossing time, not ball list; exact ties use seeded tie key (1.43975ms)
+✔ fixed stepping: frame chunking cannot change winner or ordered finish times (234.568333ms)
+✔ one physical seed, all rules: choosing the winner never changes the race (293.891542ms)
+✔ escape impulse after stagnation, invalid timeout cancels an earlier winner (0.380083ms)
+✔ fast wall and pin impacts remain inside the board (0.586584ms)
+✔ all 4 maps × 10 seeds × 1/20/60 balls: complete, containment, unique ordering, finite values (12454.186958ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 13041.386708
+
+✖ failing tests:
+
+test at tests/physics.test.mjs:8:1
+✖ finish order is crossing time, not ball list; exact ties use seeded tie key (1.43975ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+  + []
+  - [
+  -   'p2-b1',
+  -   'p1-b1',
+  -   'p3-b1'
+  - ]
+  
+      at TestContext.<anonymous> (file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/pinball-rush/tests/physics.test.mjs:8:265)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'p2-b1', 'p1-b1', 'p3-b1' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

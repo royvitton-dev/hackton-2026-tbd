@@ -11,6 +11,23 @@ export const MAPS=[
  {...MAP,id:'zigzag',name:'SWITCHBACK',subtitle:'지그재그 통로',accent:'#64e4e0',surface:'#203739',pins:[{x:490,y:410,r:9},{x:125,y:575,r:9},{x:490,y:740,r:9}],bumpers:[{x:270,y:436,r:24},{x:350,y:615,r:24}],rotors:[{x:320,y:893,length:75,omega:1.2,phase:0}],rails:[{ax:30,ay:280,bx:435,by:380,r:9},{ax:590,ay:460,bx:185,by:560,r:9},{ax:30,ay:640,bx:435,by:740,r:9}],description:'세 번 꺾이는 긴 경사와 마지막 회전문'},
  {...MAP,id:'split',name:'FORK & FLOW',subtitle:'갈림길',accent:'#ff82af',surface:'#382239',pins:[{x:145,y:345,r:9},{x:475,y:345,r:9},{x:310,y:565,r:10},{x:180,y:655,r:9},{x:440,y:655,r:9},{x:265,y:810,r:8},{x:355,y:810,r:8}],bumpers:[{x:150,y:500,r:36},{x:470,y:500,r:36},{x:310,y:735,r:38}],rotors:[{x:160,y:835,length:57,omega:1.8,phase:1},{x:460,y:835,length:57,omega:-1.8,phase:0}],rails:[{ax:310,ay:285,bx:230,by:430,r:9},{ax:310,ay:285,bx:390,by:430,r:9},{ax:230,ay:430,bx:310,by:515,r:9},{ax:390,ay:430,bx:310,by:515,r:9},{ax:30,ay:600,bx:125,by:695,r:8},{ax:590,ay:600,bx:495,by:695,r:8}],description:'둘로 나뉜 길, 다시 만나는 결승선'}
 ];
+// Each course has three acts, with distinct physical geometry in the second half.
+const extraCourses={
+ neon:{pins:Array.from({length:3},(_,r)=>Array.from({length:7},(_,i)=>({x:95+i*70+(r%2?22:0),y:1030+r*62,r:9}))).flat(),bumpers:[{x:200,y:1410,r:42},{x:420,y:1410,r:42},{x:310,y:1590,r:35}],rotors:[{x:155,y:1260,length:74,omega:1.45,phase:0},{x:465,y:1260,length:74,omega:-1.45,phase:1},{x:310,y:1770,length:95,omega:1.25,phase:0}],rails:[{ax:30,ay:1460,bx:140,by:1550,r:9},{ax:590,ay:1460,bx:480,by:1550,r:9},{ax:30,ay:1850,bx:245,by:1970,r:10},{ax:590,ay:1850,bx:375,by:1970,r:10}],sliders:[{x:310,y:1190,length:58,amplitude:150,omega:.9,phase:0},{x:310,y:1680,length:62,amplitude:160,omega:1.2,phase:1}]},
+ orbit:{pins:[{x:85,y:1190,r:10},{x:535,y:1190,r:10},{x:310,y:1390,r:10},{x:215,y:1880,r:9},{x:405,y:1880,r:9}],bumpers:[{x:195,y:1090,r:50},{x:425,y:1090,r:50},{x:310,y:1295,r:62},{x:135,y:1485,r:38},{x:485,y:1485,r:38},{x:220,y:1765,r:43},{x:400,y:1765,r:43}],rotors:[{x:310,y:1570,length:100,omega:1.35,phase:0},{x:310,y:1970,length:73,omega:-1.5,phase:1}],rails:[{ax:30,ay:1640,bx:155,by:1710,r:9},{ax:590,ay:1640,bx:465,by:1710,r:9}],sliders:[{x:310,y:940,length:66,amplitude:130,omega:1.1,phase:0},{x:310,y:1430,length:60,amplitude:160,omega:1.25,phase:1},{x:310,y:1880,length:70,amplitude:130,omega:.85,phase:0}]},
+ zigzag:{pins:[{x:110,y:950,r:9},{x:505,y:1125,r:9},{x:110,y:1320,r:9},{x:505,y:1510,r:9},{x:230,y:1850,r:10},{x:390,y:1850,r:10}],bumpers:[{x:510,y:1055,r:24},{x:510,y:1435,r:24},{x:310,y:1800,r:32}],rotors:[{x:310,y:1655,length:80,omega:-1.4,phase:1},{x:310,y:1985,length:75,omega:1.4,phase:0}],rails:[{ax:590,ay:825,bx:185,by:925,r:9},{ax:30,ay:1010,bx:435,by:1110,r:9},{ax:590,ay:1195,bx:185,by:1295,r:9},{ax:30,ay:1380,bx:435,by:1480,r:9}],sliders:[{x:310,y:1560,length:55,amplitude:150,omega:1.1,phase:0}]},
+ split:{pins:[{x:140,y:1040,r:10},{x:480,y:1040,r:10},{x:150,y:1340,r:10},{x:470,y:1340,r:10},{x:210,y:1720,r:10},{x:410,y:1720,r:10}],bumpers:[{x:135,y:1220,r:34},{x:485,y:1220,r:34},{x:310,y:1610,r:42},{x:190,y:1880,r:31},{x:430,y:1880,r:31}],rotors:[{x:310,y:1050,length:80,omega:1.7,phase:0},{x:160,y:1510,length:62,omega:1.5,phase:0},{x:460,y:1510,length:62,omega:-1.5,phase:1}],rails:[{ax:310,ay:1140,bx:230,by:1300,r:9},{ax:310,ay:1140,bx:390,by:1300,r:9},{ax:230,ay:1300,bx:310,by:1440,r:9},{ax:390,ay:1300,bx:310,by:1440,r:9},{ax:30,ay:1640,bx:130,by:1720,r:9},{ax:590,ay:1640,bx:490,by:1720,r:9},{ax:30,ay:1940,bx:230,by:2030,r:9},{ax:590,ay:1940,bx:390,by:2030,r:9}],sliders:[{x:310,y:950,length:65,amplitude:155,omega:1.2,phase:0},{x:310,y:1770,length:60,amplitude:175,omega:1.1,phase:1}]}
+};
+for(const map of MAPS){const extra=extraCourses[map.id];map.height=2240;map.finish=2150;map.sliders=extra.sliders;for(const key of ['pins','bumpers','rails','rotors'])map[key].push(...extra[key]);}
+// The short-course rotor in switchback is replaced by its fourth ramp.
+MAPS.find(m=>m.id==='zigzag').rotors=MAPS.find(m=>m.id==='zigzag').rotors.filter(r=>r.y!==893);
+// Four real exit throats. Sloping divider rails prevent a flat dead zone between holes.
+for(const map of MAPS){
+ map.exits=[100,240,380,520].map((x,i)=>({id:i+1,x,width:64}));
+ map.rails.push({ax:30,ay:2040,bx:68,by:2120,r:8},{ax:552,ay:2120,bx:590,by:2040,r:8});
+ for(let i=0;i<3;i++){const left=map.exits[i].x+32,right=map.exits[i+1].x-32,mid=(left+right)/2;map.rails.push({ax:left,ay:2120,bx:mid,by:2055,r:8},{ax:mid,ay:2055,bx:right,by:2120,r:8});}
+ for(const hole of map.exits)map.rails.push({ax:hole.x-32,ay:2120,bx:hole.x-32,by:2178,r:8},{ax:hole.x+32,ay:2120,bx:hole.x+32,by:2178,r:8});
+}
 export const SAMPLE_NAMES=['하늘','지우','민준','서연','도윤','수빈','지호','예린','우진','다은','시우','소윤','준서','하린','건우','유나','현우','채원','지안','태오'];
 export function integer(value,min,max,label){const s=String(value).trim();if(!/^\d+$/.test(s)||!Number.isSafeInteger(+s)||+s<min||+s>max)throw new Error(`${label}: ${min}~${max} 사이 정수를 입력해 주세요.`);return +s;}
 export function parseParticipants(text,defaultCount=1,overrides={}){
@@ -36,6 +53,7 @@ export class Race {
  pause(){if(!['mixing','countdown','racing'].includes(this.state))return false;this.resumeState=this.state;this.state='paused';return true;}
  resume(){if(this.state!=='paused')return false;this.state=this.resumeState;this.resumeState=null;return true;}
  emit(event){this.events.push(event);if(this.events.length>200)this.events.shift();}
+ sliderSegments(){return (this.map.sliders??[]).map(s=>{const phase=this.rotationTime*s.omega+s.phase,x=s.x+Math.sin(phase)*s.amplitude;return {...s,ax:x-s.length,ay:s.y,bx:x+s.length,by:s.y,r:10,svx:Math.cos(phase)*s.amplitude*s.omega,svy:0};});}
  rotorSegments(){return this.map.rotors.map(o=>{const a=o.phase+this.rotationTime*o.omega;return {...o,ax:o.x-Math.cos(a)*o.length,ay:o.y-Math.sin(a)*o.length,bx:o.x+Math.cos(a)*o.length,by:o.y+Math.sin(a)*o.length,r:9};});}
  step(dt=STEP){
   if(!['mixing','countdown','racing'].includes(this.state))return;
@@ -47,7 +65,7 @@ export class Race {
   if(this.state==='mixing'&&this.phaseTime>=1.8){this.state='countdown';this.phaseTime=0;}
   if(this.state==='countdown'&&this.phaseTime>=3){this.state='racing';this.phaseTime=0;this.emit({type:'gate'});}
   if(racing)this.raceTime+=dt;
-  const active=this.balls.filter(b=>!b.finished),rotors=this.rotorSegments();const crossing=[];
+  const active=this.balls.filter(b=>!b.finished),rotors=this.rotorSegments(),sliders=this.sliderSegments();const crossing=[];
   for(const b of active){b.prevX=b.x;b.prevY=b.y;
    if(!racing){b.vx+=Math.sin(this.elapsed*5+b.tieKey*18)*430*dt;b.vy+=Math.cos(this.elapsed*4+b.tieKey*13)*290*dt;}else b.vy+=255*dt;
    b.vx*=Math.exp(-.09*dt);b.vy*=Math.exp(-.04*dt);const speed=Math.hypot(b.vx,b.vy);if(speed>560){b.vx*=560/speed;b.vy*=560/speed;}
@@ -57,21 +75,21 @@ export class Race {
   for(let iteration=0;iteration<4;iteration++){
    for(const b of active){
     this.boundaries(b,racing);
-    if(racing){for(const p of this.map.pins)this.circle(b,p,.78);for(const p of this.map.bumpers)this.circle(b,p,1.03);for(const s of this.map.rails)this.segment(b,s,.55);for(const s of rotors)this.segment(b,s,.65);}
+    if(racing){for(const p of this.map.pins)this.circle(b,p,.78);for(const p of this.map.bumpers)this.circle(b,p,1.03);for(const s of this.map.rails)this.segment(b,s,.55);for(const s of rotors)this.segment(b,s,.65);for(const s of sliders)this.segment(b,s,.65);}
    }
    for(let i=0;i<active.length;i++)for(let j=i+1;j<active.length;j++)this.pair(active[i],active[j]);
   }
   for(const b of active){this.boundaries(b,racing);
    if(!Number.isFinite(b.x+b.y+b.vx+b.vy)){this.state='invalid';this.winner=null;this.emit({type:'invalid',reason:'물리 상태 오류'});return;}
    if(racing){
-    if(b.prevY<this.map.finish&&b.y>=this.map.finish){crossing.push({b,time:this.raceTime-dt+dt*(this.map.finish-b.prevY)/(b.y-b.prevY)});}
+    if(b.prevY<this.map.finish&&b.y>=this.map.finish){const fraction=(this.map.finish-b.prevY)/(b.y-b.prevY),crossX=b.prevX+(b.x-b.prevX)*fraction;const exit=this.map.exits.find(h=>Math.abs(crossX-h.x)<=h.width/2-b.r);if(exit)crossing.push({b,time:this.raceTime-dt+dt*fraction,exitId:exit.id});else{b.y=this.map.finish-.01;b.vy=-Math.abs(b.vy)*.55;}}
     const moved=Math.hypot(b.x-b.anchorX,b.y-b.anchorY);if(moved>20){b.anchorX=b.x;b.anchorY=b.y;b.stuckTime=0;}else b.stuckTime+=dt;
     if(b.stuckTime>4.5){b.vx+=(this.rng()<.5?-1:1)*150;b.vy-=145;b.stuckTime=0;b.assistCount++;this.assists++;this.emit({type:'assist',id:b.id,time:this.raceTime});}
    }
   }
   // No pre-selected outcome. Substep crossing time defines order; pre-shuffled key breaks exact ties.
   crossing.sort((a,b)=>a.time-b.time||a.b.tieKey-b.b.tieKey||a.b.id.localeCompare(b.b.id));
-  for(const c of crossing)this.finish(c.b,c.time);
+  for(const c of crossing)this.finish(c.b,c.time,c.exitId);
   if(this.finishOrder.length===this.balls.length){this.state='complete';this.emit({type:'complete'});}
   else if(this.raceTime>=90){this.state='invalid';this.winner=null;this.emit({type:'invalid',reason:'90초 진행 제한'});}
  }
@@ -82,9 +100,9 @@ export class Race {
   if(!racing&&b.y>this.map.gate-b.r){b.y=this.map.gate-b.r;b.vy=-Math.abs(b.vy)*.7;}
  }
  circle(b,p,e){const dx=b.x-p.x,dy=b.y-p.y,d=Math.hypot(dx,dy),min=b.r+p.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0;this.contact(b,nx,ny,min-d,e,0,0);}
- segment(b,s,e){const dx=s.bx-s.ax,dy=s.by-s.ay,t=clamp(((b.x-s.ax)*dx+(b.y-s.ay)*dy)/(dx*dx+dy*dy),0,1);const x=s.ax+t*dx,y=s.ay+t*dy;const bx=b.x-x,by=b.y-y,d=Math.hypot(bx,by),min=b.r+s.r;if(d>=min)return;const nx=d>1e-7?bx/d:-dy/Math.hypot(dx,dy),ny=d>1e-7?by/d:dx/Math.hypot(dx,dy);this.contact(b,nx,ny,min-d,e,s.omega?-s.omega*(y-s.y):0,s.omega?s.omega*(x-s.x):0);}
+ segment(b,s,e){const dx=s.bx-s.ax,dy=s.by-s.ay,t=clamp(((b.x-s.ax)*dx+(b.y-s.ay)*dy)/(dx*dx+dy*dy),0,1);const x=s.ax+t*dx,y=s.ay+t*dy;const bx=b.x-x,by=b.y-y,d=Math.hypot(bx,by),min=b.r+s.r;if(d>=min)return;const nx=d>1e-7?bx/d:-dy/Math.hypot(dx,dy),ny=d>1e-7?by/d:dx/Math.hypot(dx,dy);this.contact(b,nx,ny,min-d,e,s.svx??(s.omega?-s.omega*(y-s.y):0),s.svy??(s.omega?s.omega*(x-s.x):0));}
  contact(b,nx,ny,penetration,e,svx,svy){b.x+=nx*penetration;b.y+=ny*penetration;const v=(b.vx-svx)*nx+(b.vy-svy)*ny;if(v<0){b.vx-=(1+e)*v*nx;b.vy-=(1+e)*v*ny;this.stats.collisions++;if(-v>80)this.emit({type:'hit',speed:-v});}this.stats.maxPenetration=Math.max(this.stats.maxPenetration,penetration);}
  pair(a,b){const dx=b.x-a.x,dy=b.y-a.y,d=Math.hypot(dx,dy),min=a.r+b.r;if(d>=min)return;const nx=d>1e-7?dx/d:1,ny=d>1e-7?dy/d:0,p=(min-d)/2;a.x-=nx*p;a.y-=ny*p;b.x+=nx*p;b.y+=ny*p;const v=(b.vx-a.vx)*nx+(b.vy-a.vy)*ny;if(v<0){const impulse=-(1+.6)*v/2;a.vx-=impulse*nx;a.vy-=impulse*ny;b.vx+=impulse*nx;b.vy+=impulse*ny;}}
- finish(b,time){if(b.finished)return false;b.finished=true;b.y=this.map.finish;b.rank=this.finishOrder.length+1;b.time=time;b.vx=0;b.vy=0;const result={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:b.rank,time};this.finishOrder.push(result);if(b.rank===this.config.target){this.winner=result;this.emit({type:'winner',result});}this.emit({type:'finish',result});return true;}
+ finish(b,time,exitId=null){if(b.finished)return false;b.finished=true;b.y=this.map.finish;b.rank=this.finishOrder.length+1;b.time=time;b.vx=0;b.vy=0;const result={id:b.id,participantId:b.participantId,name:b.name,label:b.label,color:b.color,number:b.number,rank:b.rank,time,exitId};this.finishOrder.push(result);if(b.rank===this.config.target){this.winner=result;this.emit({type:'winner',result});}this.emit({type:'finish',result});return true;}
  snapshot(){return {roundId:this.roundId,state:this.state,seed:this.seed,time:this.raceTime,target:this.config.target,total:this.balls.length,winner:this.winner,finishOrder:this.finishOrder.map(r=>({...r})),assists:this.assists,balls:this.balls.map(b=>({id:b.id,x:b.x,y:b.y,finished:b.finished,rank:b.rank}))};}
 }

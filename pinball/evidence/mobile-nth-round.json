@@ -1,0 +1,128 @@
+{
+  "config": {
+    "people": [
+      {
+        "id": "p1",
+        "name": "모바일 A",
+        "label": "모바일 A",
+        "count": 2,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p2",
+        "name": "모바일 B",
+        "label": "모바일 B",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p3",
+        "name": "모바일 C",
+        "label": "모바일 C",
+        "count": 1,
+        "color": "#ff82af"
+      }
+    ],
+    "total": 4,
+    "rule": "nth",
+    "target": 3,
+    "mapId": "orbit"
+  },
+  "seed": 1094488179,
+  "result": {
+    "roundId": "2ab8106e-e9cf-419f-8498-1beefb146d99",
+    "state": "complete",
+    "seed": 1094488179,
+    "time": 17.574999999999644,
+    "target": 3,
+    "total": 4,
+    "winner": {
+      "id": "p1-b1",
+      "participantId": "p1",
+      "name": "모바일 A",
+      "label": "모바일 A",
+      "color": "#c6ff58",
+      "number": 1,
+      "rank": 3,
+      "time": 16.720999329748086,
+      "exitId": 2
+    },
+    "finishOrder": [
+      {
+        "id": "p3-b1",
+        "participantId": "p3",
+        "name": "모바일 C",
+        "label": "모바일 C",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 1,
+        "time": 11.794657285662083,
+        "exitId": 1
+      },
+      {
+        "id": "p1-b2",
+        "participantId": "p1",
+        "name": "모바일 A",
+        "label": "모바일 A",
+        "color": "#c6ff58",
+        "number": 2,
+        "rank": 2,
+        "time": 14.6214702717846,
+        "exitId": 1
+      },
+      {
+        "id": "p1-b1",
+        "participantId": "p1",
+        "name": "모바일 A",
+        "label": "모바일 A",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 3,
+        "time": 16.720999329748086,
+        "exitId": 2
+      },
+      {
+        "id": "p2-b1",
+        "participantId": "p2",
+        "name": "모바일 B",
+        "label": "모바일 B",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 4,
+        "time": 17.570420293105496,
+        "exitId": 3
+      }
+    ],
+    "assists": 0,
+    "balls": [
+      {
+        "id": "p3-b1",
+        "x": 114,
+        "y": 2150,
+        "finished": true,
+        "rank": 1
+      },
+      {
+        "id": "p1-b1",
+        "x": 248.85964985572946,
+        "y": 2150,
+        "finished": true,
+        "rank": 3
+      },
+      {
+        "id": "p1-b2",
+        "x": 87.0437519547429,
+        "y": 2150,
+        "finished": true,
+        "rank": 2
+      },
+      {
+        "id": "p2-b1",
+        "x": 366.37140975013114,
+        "y": 2150,
+        "finished": true,
+        "rank": 4
+      }
+    ]
+  }
+}
