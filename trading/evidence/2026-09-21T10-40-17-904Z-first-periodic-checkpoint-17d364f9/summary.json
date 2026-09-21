@@ -1,0 +1,32 @@
+{
+  "run_id": "2026-09-21T10-40-17-904Z-first-periodic-checkpoint-17d364f9",
+  "observed_at": "2026-09-21T10:40:18.174Z",
+  "demo_run_id": "2026-09-21T10-05-21-198Z-demo-3b10627b",
+  "periodic_checkpoint": {
+    "file": "snapshot-00000000000000032781-00000000000001789986921761326900-20540-0.bin",
+    "bytes": 24472791,
+    "last_write_at": "2026-09-21T10:35:21.759Z",
+    "sha256": "37c93106e245f049c5951ad07023600fbce12f0235208928dddf309419c6c085",
+    "sequence": 32781
+  },
+  "response_window": {
+    "from": "2026-09-21T10:35:11Z",
+    "to": "2026-09-21T10:35:32Z",
+    "definition": "Response timestamps surrounding the checkpoint file write time; no server checkpoint-duration instrumentation",
+    "count": 126,
+    "max_round_trip_ms": 75.97240000008605,
+    "accepted": 125,
+    "rejected": 1
+  },
+  "rejections_in_log_so_far": 5,
+  "rejection_codes": [
+    "ORDER_NOT_OPEN"
+  ],
+  "partial_tails_skipped": 0,
+  "long_observation_complete": false,
+  "limitations": [
+    "Snapshot presence and surrounding responses do not replace offline full recovery",
+    "The largest nearby response coincides with checkpoint publication but this alone does not prove causal delay",
+    "Ongoing normal demo with other development work; not quiet benchmark"
+  ]
+}

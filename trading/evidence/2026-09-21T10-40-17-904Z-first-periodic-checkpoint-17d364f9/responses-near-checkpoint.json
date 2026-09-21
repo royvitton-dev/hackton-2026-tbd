@@ -1,0 +1,4447 @@
+[
+  {
+    "timestamp": "2026-09-21T10:35:11.344Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 5.011399999959394,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:875",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 971,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:875",
+      "account_id": "bot-01",
+      "command_seq": 32719,
+      "event_seq": 32719,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28511,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:13.063Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 4.995500000193715,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:876",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 979,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:876",
+      "account_id": "bot-01",
+      "command_seq": 32730,
+      "event_seq": 32730,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28519,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:14.841Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 17.27099999994971,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:877",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 972,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:877",
+      "account_id": "bot-01",
+      "command_seq": 32741,
+      "event_seq": 32741,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28529,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:17.142Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 17.971900000004098,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:878",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 974,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:878",
+      "account_id": "bot-01",
+      "command_seq": 32755,
+      "event_seq": 32755,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28540,
+      "trades": [
+        {
+          "id": 18192,
+          "maker_order_id": 28512,
+          "taker_order_id": 28540,
+          "buyer_id": "bot-01",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986917141,
+          "command_seq": 32755
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:19.360Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 18.873699999880046,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:879",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 976,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:879",
+      "account_id": "bot-01",
+      "command_seq": 32769,
+      "event_seq": 32769,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28551,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:21.555Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 13.321999999927357,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:880",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 978,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:880",
+      "account_id": "bot-01",
+      "command_seq": 32781,
+      "event_seq": 32781,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28560,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:23.505Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 12.678800000110641,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:881",
+      "action": {
+        "type": "cancel",
+        "order_id": 28519
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:881",
+      "account_id": "bot-01",
+      "command_seq": 32793,
+      "event_seq": 32793,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28519,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:25.156Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 13.998400000156835,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:882",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 980,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:882",
+      "account_id": "bot-01",
+      "command_seq": 32803,
+      "event_seq": 32803,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28581,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:27.282Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 20.026599999982864,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:883",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 975,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:883",
+      "account_id": "bot-01",
+      "command_seq": 32818,
+      "event_seq": 32818,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28595,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:29.481Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 4.16150000016205,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:884",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 982,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:884",
+      "account_id": "bot-01",
+      "command_seq": 32828,
+      "event_seq": 32828,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28604,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:31.895Z",
+    "bot_id": "bot-01",
+    "event": "command_result",
+    "round_trip_ms": 26.454600000055507,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:885",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 971,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-01:885",
+      "account_id": "bot-01",
+      "command_seq": 32841,
+      "event_seq": 32841,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28614,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-01-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:11.526Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 20.865699999965727,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:873",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 976,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:873",
+      "account_id": "bot-02",
+      "command_seq": 32722,
+      "event_seq": 32722,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28514,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:13.454Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 12.796399999875575,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:874",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 978,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:874",
+      "account_id": "bot-02",
+      "command_seq": 32734,
+      "event_seq": 32734,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28523,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:15.817Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 24.999900000169873,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:875",
+      "action": {
+        "type": "cancel",
+        "order_id": 28458
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:875",
+      "account_id": "bot-02",
+      "command_seq": 32747,
+      "event_seq": 32747,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28458,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.261Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 19.133499999996275,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:876",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:876",
+      "account_id": "bot-02",
+      "command_seq": 32761,
+      "event_seq": 32761,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28544,
+      "trades": [
+        {
+          "id": 18198,
+          "maker_order_id": 28526,
+          "taker_order_id": 28544,
+          "buyer_id": "bot-02",
+          "seller_id": "bot-10",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986918257,
+          "command_seq": 32761
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:19.876Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 17.743999999947846,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:877",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 979,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:877",
+      "account_id": "bot-02",
+      "command_seq": 32771,
+      "event_seq": 32771,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28553,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:21.783Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 75.97240000008605,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:878",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 972,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:878",
+      "account_id": "bot-02",
+      "command_seq": 32782,
+      "event_seq": 32782,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28561,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:23.744Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 17.262199999997392,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:879",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 981,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:879",
+      "account_id": "bot-02",
+      "command_seq": 32795,
+      "event_seq": 32795,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28573,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:25.465Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 6.177000000141561,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:880",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 981,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:880",
+      "account_id": "bot-02",
+      "command_seq": 32805,
+      "event_seq": 32805,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28583,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:27.195Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 7.247900000074878,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:881",
+      "action": {
+        "type": "cancel",
+        "order_id": 28553
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:881",
+      "account_id": "bot-02",
+      "command_seq": 32817,
+      "event_seq": 32817,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28553,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:28.764Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 19.524699999950826,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:882",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 974,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:882",
+      "account_id": "bot-02",
+      "command_seq": 32824,
+      "event_seq": 32824,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28600,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:30.498Z",
+    "bot_id": "bot-02",
+    "event": "command_result",
+    "round_trip_ms": 17.66470000008121,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:883",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 975,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-02:883",
+      "account_id": "bot-02",
+      "command_seq": 32834,
+      "event_seq": 32834,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28608,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-02-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:11.044Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 19.095899999840185,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:877",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 976,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:877",
+      "account_id": "bot-03",
+      "command_seq": 32717,
+      "event_seq": 32717,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28509,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:12.964Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 5.104800000088289,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:878",
+      "action": {
+        "type": "cancel",
+        "order_id": 28461
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:878",
+      "account_id": "bot-03",
+      "command_seq": 32728,
+      "event_seq": 32728,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28461,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:15.009Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 16.31539999996312,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:879",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 977,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:879",
+      "account_id": "bot-03",
+      "command_seq": 32743,
+      "event_seq": 32743,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28531,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:17.376Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 17.557199999922886,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:880",
+      "action": {
+        "type": "cancel",
+        "order_id": 28472
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:880",
+      "account_id": "bot-03",
+      "command_seq": 32758,
+      "event_seq": 32758,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28472,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:19.160Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 18.836399999912828,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:881",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 972,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:881",
+      "account_id": "bot-03",
+      "command_seq": 32768,
+      "event_seq": 32768,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28550,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:20.774Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 13.94940000004135,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:882",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:882",
+      "account_id": "bot-03",
+      "command_seq": 32778,
+      "event_seq": 32778,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28557,
+      "trades": [
+        {
+          "id": 18206,
+          "maker_order_id": 28542,
+          "taker_order_id": 28557,
+          "buyer_id": "bot-03",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986920762,
+          "command_seq": 32778
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:22.559Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 17.504799999995157,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:883",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 978,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:883",
+      "account_id": "bot-03",
+      "command_seq": 32789,
+      "event_seq": 32789,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28568,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:24.793Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 17.521600000094622,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:884",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 975,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:884",
+      "account_id": "bot-03",
+      "command_seq": 32802,
+      "event_seq": 32802,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28580,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:27.119Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 23.052099999971688,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:885",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 977,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:885",
+      "account_id": "bot-03",
+      "command_seq": 32814,
+      "event_seq": 32814,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28592,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:29.649Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 4.512400000123307,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:886",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 979,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:886",
+      "account_id": "bot-03",
+      "command_seq": 32830,
+      "event_seq": 32830,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28605,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:31.377Z",
+    "bot_id": "bot-03",
+    "event": "command_result",
+    "round_trip_ms": 15.842900000046939,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:887",
+      "action": {
+        "type": "cancel",
+        "order_id": 28580
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-03:887",
+      "account_id": "bot-03",
+      "command_seq": 32839,
+      "event_seq": 32839,
+      "status": "rejected",
+      "code": "ORDER_NOT_OPEN",
+      "message": "이미 체결 또는 취소된 주문입니다.",
+      "order_id": null,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-03-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:13.176Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 17.306600000010803,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:876",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 972,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:876",
+      "account_id": "bot-04",
+      "command_seq": 32732,
+      "event_seq": 32732,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28521,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:15.047Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 3.8686999999918044,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:877",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 977,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:877",
+      "account_id": "bot-04",
+      "command_seq": 32744,
+      "event_seq": 32744,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28532,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:17.103Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 25.438400000100955,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:878",
+      "action": {
+        "type": "cancel",
+        "order_id": 28466
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:878",
+      "account_id": "bot-04",
+      "command_seq": 32753,
+      "event_seq": 32753,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28466,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.932Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 4.576800000155345,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:879",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 974,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:879",
+      "account_id": "bot-04",
+      "command_seq": 32767,
+      "event_seq": 32767,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28549,
+      "trades": [
+        {
+          "id": 18200,
+          "maker_order_id": 28538,
+          "taker_order_id": 28549,
+          "buyer_id": "bot-04",
+          "seller_id": "bot-10",
+          "price": 973,
+          "quantity": 2,
+          "timestamp_ms": 1789986918928,
+          "command_seq": 32767
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:21.075Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 13.900600000051782,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:880",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 977,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:880",
+      "account_id": "bot-04",
+      "command_seq": 32779,
+      "event_seq": 32779,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28558,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:23.015Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 4.778399999951944,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:881",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 979,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:881",
+      "account_id": "bot-04",
+      "command_seq": 32791,
+      "event_seq": 32791,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28570,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:25.545Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 18.103200000012293,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:882",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 979,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:882",
+      "account_id": "bot-04",
+      "command_seq": 32806,
+      "event_seq": 32806,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28584,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:27.153Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 5.527099999831989,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:883",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 974,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:883",
+      "account_id": "bot-04",
+      "command_seq": 32816,
+      "event_seq": 32816,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28594,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:29.498Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 4.18570000003092,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:884",
+      "action": {
+        "type": "cancel",
+        "order_id": 28584
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:884",
+      "account_id": "bot-04",
+      "command_seq": 32829,
+      "event_seq": 32829,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28584,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:31.568Z",
+    "bot_id": "bot-04",
+    "event": "command_result",
+    "round_trip_ms": 5.249500000150874,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:885",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 978,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-04:885",
+      "account_id": "bot-04",
+      "command_seq": 32840,
+      "event_seq": 32840,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28613,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-04-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:11.146Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 4.585999999893829,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:879",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:879",
+      "account_id": "bot-05",
+      "command_seq": 32718,
+      "event_seq": 32718,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28510,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:12.976Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 16.807499999878928,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:880",
+      "action": {
+        "type": "cancel",
+        "order_id": 28510
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:880",
+      "account_id": "bot-05",
+      "command_seq": 32729,
+      "event_seq": 32729,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28510,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:14.961Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 17.348400000017136,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:881",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 972,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:881",
+      "account_id": "bot-05",
+      "command_seq": 32742,
+      "event_seq": 32742,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28530,
+      "trades": [
+        {
+          "id": 18188,
+          "maker_order_id": 28529,
+          "taker_order_id": 28530,
+          "buyer_id": "bot-01",
+          "seller_id": "bot-05",
+          "price": 972,
+          "quantity": 2,
+          "timestamp_ms": 1789986914959,
+          "command_seq": 32742
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:16.561Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 3.503999999957159,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:882",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:882",
+      "account_id": "bot-05",
+      "command_seq": 32750,
+      "event_seq": 32750,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28537,
+      "trades": [
+        {
+          "id": 18191,
+          "maker_order_id": 28512,
+          "taker_order_id": 28537,
+          "buyer_id": "bot-05",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986916560,
+          "command_seq": 32750
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.518Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 25.63110000011511,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:883",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:883",
+      "account_id": "bot-05",
+      "command_seq": 32762,
+      "event_seq": 32762,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28545,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:20.136Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 24.99390000011772,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:884",
+      "action": {
+        "type": "cancel",
+        "order_id": 28545
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:884",
+      "account_id": "bot-05",
+      "command_seq": 32772,
+      "event_seq": 32772,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28545,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:22.077Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 18.466899999883026,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:885",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 972,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:885",
+      "account_id": "bot-05",
+      "command_seq": 32785,
+      "event_seq": 32785,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28564,
+      "trades": [
+        {
+          "id": 18211,
+          "maker_order_id": 28563,
+          "taker_order_id": 28564,
+          "buyer_id": "bot-05",
+          "seller_id": "bot-09",
+          "price": 972,
+          "quantity": 1,
+          "timestamp_ms": 1789986922075,
+          "command_seq": 32785
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:24.440Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 12.646399999968708,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:886",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 977,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:886",
+      "account_id": "bot-05",
+      "command_seq": 32798,
+      "event_seq": 32798,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28576,
+      "trades": [
+        {
+          "id": 18220,
+          "maker_order_id": 28532,
+          "taker_order_id": 28576,
+          "buyer_id": "bot-05",
+          "seller_id": "bot-04",
+          "price": 977,
+          "quantity": 1,
+          "timestamp_ms": 1789986924430,
+          "command_seq": 32798
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:26.870Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 3.850300000049174,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:887",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 978,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:887",
+      "account_id": "bot-05",
+      "command_seq": 32813,
+      "event_seq": 32813,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28591,
+      "trades": [
+        {
+          "id": 18232,
+          "maker_order_id": 28590,
+          "taker_order_id": 28591,
+          "buyer_id": "bot-05",
+          "seller_id": "bot-09",
+          "price": 978,
+          "quantity": 2,
+          "timestamp_ms": 1789986926869,
+          "command_seq": 32813
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:29.008Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 13.246299999998882,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:888",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 978,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:888",
+      "account_id": "bot-05",
+      "command_seq": 32825,
+      "event_seq": 32825,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28601,
+      "trades": [
+        {
+          "id": 18237,
+          "maker_order_id": 28598,
+          "taker_order_id": 28601,
+          "buyer_id": "bot-06",
+          "seller_id": "bot-05",
+          "price": 978,
+          "quantity": 1,
+          "timestamp_ms": 1789986928997,
+          "command_seq": 32825
+        },
+        {
+          "id": 18238,
+          "maker_order_id": 28599,
+          "taker_order_id": 28601,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-05",
+          "price": 978,
+          "quantity": 2,
+          "timestamp_ms": 1789986928997,
+          "command_seq": 32825
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:31.363Z",
+    "bot_id": "bot-05",
+    "event": "command_result",
+    "round_trip_ms": 17.697399999946356,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:889",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 975,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-05:889",
+      "account_id": "bot-05",
+      "command_seq": 32838,
+      "event_seq": 32838,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28612,
+      "trades": [
+        {
+          "id": 18247,
+          "maker_order_id": 28611,
+          "taker_order_id": 28612,
+          "buyer_id": "bot-09",
+          "seller_id": "bot-05",
+          "price": 979,
+          "quantity": 1,
+          "timestamp_ms": 1789986931360,
+          "command_seq": 32838
+        },
+        {
+          "id": 18248,
+          "maker_order_id": 28580,
+          "taker_order_id": 28612,
+          "buyer_id": "bot-03",
+          "seller_id": "bot-05",
+          "price": 975,
+          "quantity": 1,
+          "timestamp_ms": 1789986931360,
+          "command_seq": 32838
+        },
+        {
+          "id": 18249,
+          "maker_order_id": 28595,
+          "taker_order_id": 28612,
+          "buyer_id": "bot-01",
+          "seller_id": "bot-05",
+          "price": 975,
+          "quantity": 1,
+          "timestamp_ms": 1789986931360,
+          "command_seq": 32838
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-05-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:12.418Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 8.806600000010803,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:869",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 971,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:869",
+      "account_id": "bot-06",
+      "command_seq": 32726,
+      "event_seq": 32726,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28518,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:13.986Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 25.893600000068545,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:870",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 972,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:870",
+      "account_id": "bot-06",
+      "command_seq": 32737,
+      "event_seq": 32737,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28525,
+      "trades": [
+        {
+          "id": 18186,
+          "maker_order_id": 28521,
+          "taker_order_id": 28525,
+          "buyer_id": "bot-04",
+          "seller_id": "bot-06",
+          "price": 972,
+          "quantity": 1,
+          "timestamp_ms": 1789986913975,
+          "command_seq": 32737
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:16.535Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 26.585800000000745,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:871",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:871",
+      "account_id": "bot-06",
+      "command_seq": 32749,
+      "event_seq": 32749,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28536,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.143Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 17.965599999995902,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:872",
+      "action": {
+        "type": "cancel",
+        "order_id": 28536
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:872",
+      "account_id": "bot-06",
+      "command_seq": 32760,
+      "event_seq": 32760,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28536,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:20.229Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 4.069600000046194,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:873",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:873",
+      "account_id": "bot-06",
+      "command_seq": 32774,
+      "event_seq": 32774,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28554,
+      "trades": [
+        {
+          "id": 18202,
+          "maker_order_id": 28539,
+          "taker_order_id": 28554,
+          "buyer_id": "bot-06",
+          "seller_id": "bot-09",
+          "price": 973,
+          "quantity": 2,
+          "timestamp_ms": 1789986920227,
+          "command_seq": 32774
+        },
+        {
+          "id": 18203,
+          "maker_order_id": 28542,
+          "taker_order_id": 28554,
+          "buyer_id": "bot-06",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986920227,
+          "command_seq": 32774
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:22.405Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 26.989300000015646,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:874",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 976,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:874",
+      "account_id": "bot-06",
+      "command_seq": 32787,
+      "event_seq": 32787,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28566,
+      "trades": [
+        {
+          "id": 18213,
+          "maker_order_id": 28565,
+          "taker_order_id": 28566,
+          "buyer_id": "bot-06",
+          "seller_id": "bot-12",
+          "price": 972,
+          "quantity": 1,
+          "timestamp_ms": 1789986922392,
+          "command_seq": 32787
+        },
+        {
+          "id": 18214,
+          "maker_order_id": 28509,
+          "taker_order_id": 28566,
+          "buyer_id": "bot-06",
+          "seller_id": "bot-03",
+          "price": 976,
+          "quantity": 1,
+          "timestamp_ms": 1789986922392,
+          "command_seq": 32787
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:24.073Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 13.830599999986589,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:875",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 975,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:875",
+      "account_id": "bot-06",
+      "command_seq": 32796,
+      "event_seq": 32796,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28574,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:26.549Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 22.565199999837205,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:876",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 977,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:876",
+      "account_id": "bot-06",
+      "command_seq": 32809,
+      "event_seq": 32809,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28587,
+      "trades": [
+        {
+          "id": 18228,
+          "maker_order_id": 28578,
+          "taker_order_id": 28587,
+          "buyer_id": "bot-08",
+          "seller_id": "bot-06",
+          "price": 977,
+          "quantity": 1,
+          "timestamp_ms": 1789986926537,
+          "command_seq": 32809
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:28.564Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 3.2979999999515712,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:877",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 978,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:877",
+      "account_id": "bot-06",
+      "command_seq": 32822,
+      "event_seq": 32822,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28598,
+      "trades": [
+        {
+          "id": 18236,
+          "maker_order_id": 28593,
+          "taker_order_id": 28598,
+          "buyer_id": "bot-06",
+          "seller_id": "bot-08",
+          "price": 978,
+          "quantity": 1,
+          "timestamp_ms": 1789986928563,
+          "command_seq": 32822
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:30.904Z",
+    "bot_id": "bot-06",
+    "event": "command_result",
+    "round_trip_ms": 14.342299999902025,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:878",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 979,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-06:878",
+      "account_id": "bot-06",
+      "command_seq": 32836,
+      "event_seq": 32836,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28610,
+      "trades": [
+        {
+          "id": 18245,
+          "maker_order_id": 28606,
+          "taker_order_id": 28610,
+          "buyer_id": "bot-07",
+          "seller_id": "bot-06",
+          "price": 979,
+          "quantity": 1,
+          "timestamp_ms": 1789986930892,
+          "command_seq": 32836
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-06-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:11.346Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 6.85149999987334,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:873",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:873",
+      "account_id": "bot-07",
+      "command_seq": 32720,
+      "event_seq": 32720,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28512,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:13.192Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 16.903799999970943,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:874",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:874",
+      "account_id": "bot-07",
+      "command_seq": 32733,
+      "event_seq": 32733,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28522,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:15.314Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 4.6391999998595566,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:875",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:875",
+      "account_id": "bot-07",
+      "command_seq": 32745,
+      "event_seq": 32745,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28533,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:17.259Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 15.2929999998305,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:876",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:876",
+      "account_id": "bot-07",
+      "command_seq": 32757,
+      "event_seq": 32757,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28542,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.859Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 15.530800000065938,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:877",
+      "action": {
+        "type": "cancel",
+        "order_id": 28533
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:877",
+      "account_id": "bot-07",
+      "command_seq": 32766,
+      "event_seq": 32766,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28533,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:21.259Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 17.554799999808893,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:878",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 976,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:878",
+      "account_id": "bot-07",
+      "command_seq": 32780,
+      "event_seq": 32780,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28559,
+      "trades": [
+        {
+          "id": 18207,
+          "maker_order_id": 28501,
+          "taker_order_id": 28559,
+          "buyer_id": "bot-07",
+          "seller_id": "bot-01",
+          "price": 976,
+          "quantity": 2,
+          "timestamp_ms": 1789986921256,
+          "command_seq": 32780
+        },
+        {
+          "id": 18208,
+          "maker_order_id": 28509,
+          "taker_order_id": 28559,
+          "buyer_id": "bot-07",
+          "seller_id": "bot-03",
+          "price": 976,
+          "quantity": 1,
+          "timestamp_ms": 1789986921256,
+          "command_seq": 32780
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:23.262Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 16.438399999868125,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:879",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 976,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:879",
+      "account_id": "bot-07",
+      "command_seq": 32792,
+      "event_seq": 32792,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28571,
+      "trades": [
+        {
+          "id": 18217,
+          "maker_order_id": 28551,
+          "taker_order_id": 28571,
+          "buyer_id": "bot-07",
+          "seller_id": "bot-01",
+          "price": 976,
+          "quantity": 1,
+          "timestamp_ms": 1789986923259,
+          "command_seq": 32792
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:25.661Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 16.874499999918044,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:880",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 978,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:880",
+      "account_id": "bot-07",
+      "command_seq": 32807,
+      "event_seq": 32807,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28585,
+      "trades": [
+        {
+          "id": 18225,
+          "maker_order_id": 28523,
+          "taker_order_id": 28585,
+          "buyer_id": "bot-07",
+          "seller_id": "bot-02",
+          "price": 978,
+          "quantity": 3,
+          "timestamp_ms": 1789986925657,
+          "command_seq": 32807
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:28.149Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 25.7597999998834,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:881",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 977,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:881",
+      "account_id": "bot-07",
+      "command_seq": 32819,
+      "event_seq": 32819,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28596,
+      "trades": [
+        {
+          "id": 18234,
+          "maker_order_id": 28592,
+          "taker_order_id": 28596,
+          "buyer_id": "bot-03",
+          "seller_id": "bot-07",
+          "price": 977,
+          "quantity": 2,
+          "timestamp_ms": 1789986928135,
+          "command_seq": 32819
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:30.233Z",
+    "bot_id": "bot-07",
+    "event": "command_result",
+    "round_trip_ms": 14.885199999902397,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:882",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 979,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-07:882",
+      "account_id": "bot-07",
+      "command_seq": 32832,
+      "event_seq": 32832,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28606,
+      "trades": [
+        {
+          "id": 18242,
+          "maker_order_id": 28605,
+          "taker_order_id": 28606,
+          "buyer_id": "bot-07",
+          "seller_id": "bot-03",
+          "price": 979,
+          "quantity": 1,
+          "timestamp_ms": 1789986930229,
+          "command_seq": 32832
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-07-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:11.392Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 14.882100000046194,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:876",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 971,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:876",
+      "account_id": "bot-08",
+      "command_seq": 32721,
+      "event_seq": 32721,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28513,
+      "trades": [
+        {
+          "id": 18181,
+          "maker_order_id": 28511,
+          "taker_order_id": 28513,
+          "buyer_id": "bot-01",
+          "seller_id": "bot-08",
+          "price": 971,
+          "quantity": 1,
+          "timestamp_ms": 1789986911391,
+          "command_seq": 32721
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:13.145Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 4.825200000079349,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:877",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 971,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:877",
+      "account_id": "bot-08",
+      "command_seq": 32731,
+      "event_seq": 32731,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28520,
+      "trades": [
+        {
+          "id": 18184,
+          "maker_order_id": 28518,
+          "taker_order_id": 28520,
+          "buyer_id": "bot-06",
+          "seller_id": "bot-08",
+          "price": 971,
+          "quantity": 2,
+          "timestamp_ms": 1789986913143,
+          "command_seq": 32731
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:14.759Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 15.135499999858439,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:878",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:878",
+      "account_id": "bot-08",
+      "command_seq": 32739,
+      "event_seq": 32739,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28527,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:16.676Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 18.619699999922886,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:879",
+      "action": {
+        "type": "cancel",
+        "order_id": 28527
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:879",
+      "account_id": "bot-08",
+      "command_seq": 32752,
+      "event_seq": 32752,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28527,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.844Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 17.270299999974668,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:880",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:880",
+      "account_id": "bot-08",
+      "command_seq": 32765,
+      "event_seq": 32765,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28548,
+      "trades": [
+        {
+          "id": 18199,
+          "maker_order_id": 28533,
+          "taker_order_id": 28548,
+          "buyer_id": "bot-08",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986918842,
+          "command_seq": 32765
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:20.512Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 4.173799999989569,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:881",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 972,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:881",
+      "account_id": "bot-08",
+      "command_seq": 32777,
+      "event_seq": 32777,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28556,
+      "trades": [
+        {
+          "id": 18205,
+          "maker_order_id": 28550,
+          "taker_order_id": 28556,
+          "buyer_id": "bot-03",
+          "seller_id": "bot-08",
+          "price": 972,
+          "quantity": 1,
+          "timestamp_ms": 1789986920510,
+          "command_seq": 32777
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:22.934Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 25.43139999988489,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:882",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 976,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:882",
+      "account_id": "bot-08",
+      "command_seq": 32790,
+      "event_seq": 32790,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28569,
+      "trades": [
+        {
+          "id": 18216,
+          "maker_order_id": 28514,
+          "taker_order_id": 28569,
+          "buyer_id": "bot-08",
+          "seller_id": "bot-02",
+          "price": 976,
+          "quantity": 1,
+          "timestamp_ms": 1789986922924,
+          "command_seq": 32790
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:24.644Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 19.06469999998808,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:883",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 977,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:883",
+      "account_id": "bot-08",
+      "command_seq": 32800,
+      "event_seq": 32800,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28578,
+      "trades": [
+        {
+          "id": 18222,
+          "maker_order_id": 28558,
+          "taker_order_id": 28578,
+          "buyer_id": "bot-08",
+          "seller_id": "bot-04",
+          "price": 977,
+          "quantity": 1,
+          "timestamp_ms": 1789986924642,
+          "command_seq": 32800
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:27.133Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 5.166399999987334,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:884",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 978,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:884",
+      "account_id": "bot-08",
+      "command_seq": 32815,
+      "event_seq": 32815,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28593,
+      "trades": [
+        {
+          "id": 18233,
+          "maker_order_id": 28591,
+          "taker_order_id": 28593,
+          "buyer_id": "bot-05",
+          "seller_id": "bot-08",
+          "price": 978,
+          "quantity": 1,
+          "timestamp_ms": 1789986927132,
+          "command_seq": 32815
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:29.451Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 24.260299999965355,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:885",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 978,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:885",
+      "account_id": "bot-08",
+      "command_seq": 32827,
+      "event_seq": 32827,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28603,
+      "trades": [
+        {
+          "id": 18241,
+          "maker_order_id": 28599,
+          "taker_order_id": 28603,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-08",
+          "price": 978,
+          "quantity": 1,
+          "timestamp_ms": 1789986929439,
+          "command_seq": 32827
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:31.960Z",
+    "bot_id": "bot-08",
+    "event": "command_result",
+    "round_trip_ms": 15.523300000000745,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:886",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 975,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-08:886",
+      "account_id": "bot-08",
+      "command_seq": 32842,
+      "event_seq": 32842,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28615,
+      "trades": [
+        {
+          "id": 18250,
+          "maker_order_id": 28595,
+          "taker_order_id": 28615,
+          "buyer_id": "bot-01",
+          "seller_id": "bot-08",
+          "price": 975,
+          "quantity": 1,
+          "timestamp_ms": 1789986931958,
+          "command_seq": 32842
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-08-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:12.153Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 24.97540000011213,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:876",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:876",
+      "account_id": "bot-09",
+      "command_seq": 32724,
+      "event_seq": 32724,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28516,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:13.711Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 16.67450000019744,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:877",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 972,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:877",
+      "account_id": "bot-09",
+      "command_seq": 32735,
+      "event_seq": 32735,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28524,
+      "trades": [
+        {
+          "id": 18185,
+          "maker_order_id": 28521,
+          "taker_order_id": 28524,
+          "buyer_id": "bot-04",
+          "seller_id": "bot-09",
+          "price": 972,
+          "quantity": 1,
+          "timestamp_ms": 1789986913707,
+          "command_seq": 32735
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:15.443Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 17.93430000008084,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:878",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 972,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:878",
+      "account_id": "bot-09",
+      "command_seq": 32746,
+      "event_seq": 32746,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28534,
+      "trades": [
+        {
+          "id": 18189,
+          "maker_order_id": 28530,
+          "taker_order_id": 28534,
+          "buyer_id": "bot-09",
+          "seller_id": "bot-05",
+          "price": 972,
+          "quantity": 1,
+          "timestamp_ms": 1789986915440,
+          "command_seq": 32746
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:17.111Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 3.084000000031665,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:879",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:879",
+      "account_id": "bot-09",
+      "command_seq": 32754,
+      "event_seq": 32754,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28539,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.712Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 20.506999999983236,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:880",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:880",
+      "account_id": "bot-09",
+      "command_seq": 32764,
+      "event_seq": 32764,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28547,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:20.445Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 19.13660000008531,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:881",
+      "action": {
+        "type": "cancel",
+        "order_id": 28547
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:881",
+      "account_id": "bot-09",
+      "command_seq": 32775,
+      "event_seq": 32775,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28547,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:21.997Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 3.432299999985844,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:882",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 972,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:882",
+      "account_id": "bot-09",
+      "command_seq": 32784,
+      "event_seq": 32784,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28563,
+      "trades": [
+        {
+          "id": 18210,
+          "maker_order_id": 28561,
+          "taker_order_id": 28563,
+          "buyer_id": "bot-02",
+          "seller_id": "bot-09",
+          "price": 972,
+          "quantity": 2,
+          "timestamp_ms": 1789986921995,
+          "command_seq": 32784
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:23.577Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 16.63039999990724,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:883",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 977,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:883",
+      "account_id": "bot-09",
+      "command_seq": 32794,
+      "event_seq": 32794,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28572,
+      "trades": [
+        {
+          "id": 18218,
+          "maker_order_id": 28531,
+          "taker_order_id": 28572,
+          "buyer_id": "bot-09",
+          "seller_id": "bot-03",
+          "price": 977,
+          "quantity": 1,
+          "timestamp_ms": 1789986923574,
+          "command_seq": 32794
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:25.241Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 15.054400000022724,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:884",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 978,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:884",
+      "account_id": "bot-09",
+      "command_seq": 32804,
+      "event_seq": 32804,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28582,
+      "trades": [
+        {
+          "id": 18224,
+          "maker_order_id": 28498,
+          "taker_order_id": 28582,
+          "buyer_id": "bot-09",
+          "seller_id": "bot-03",
+          "price": 978,
+          "quantity": 2,
+          "timestamp_ms": 1789986925240,
+          "command_seq": 32804
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:26.831Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 19.381999999983236,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:885",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 978,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:885",
+      "account_id": "bot-09",
+      "command_seq": 32812,
+      "event_seq": 32812,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28590,
+      "trades": [
+        {
+          "id": 18231,
+          "maker_order_id": 28588,
+          "taker_order_id": 28590,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-09",
+          "price": 978,
+          "quantity": 1,
+          "timestamp_ms": 1789986926828,
+          "command_seq": 32812
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:29.046Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 9.27419999986887,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:886",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 979,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:886",
+      "account_id": "bot-09",
+      "command_seq": 32826,
+      "event_seq": 32826,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28602,
+      "trades": [
+        {
+          "id": 18239,
+          "maker_order_id": 28570,
+          "taker_order_id": 28602,
+          "buyer_id": "bot-09",
+          "seller_id": "bot-04",
+          "price": 979,
+          "quantity": 1,
+          "timestamp_ms": 1789986929045,
+          "command_seq": 32826
+        },
+        {
+          "id": 18240,
+          "maker_order_id": 28584,
+          "taker_order_id": 28602,
+          "buyer_id": "bot-09",
+          "seller_id": "bot-04",
+          "price": 979,
+          "quantity": 1,
+          "timestamp_ms": 1789986929045,
+          "command_seq": 32826
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:31.362Z",
+    "bot_id": "bot-09",
+    "event": "command_result",
+    "round_trip_ms": 15.648300000000745,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:887",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 979,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-09:887",
+      "account_id": "bot-09",
+      "command_seq": 32837,
+      "event_seq": 32837,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28611,
+      "trades": [
+        {
+          "id": 18246,
+          "maker_order_id": 28610,
+          "taker_order_id": 28611,
+          "buyer_id": "bot-09",
+          "seller_id": "bot-06",
+          "price": 979,
+          "quantity": 2,
+          "timestamp_ms": 1789986931360,
+          "command_seq": 32837
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-09-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:12.418Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 6.993900000117719,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:879",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 971,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:879",
+      "account_id": "bot-10",
+      "command_seq": 32725,
+      "event_seq": 32725,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28517,
+      "trades": [
+        {
+          "id": 18183,
+          "maker_order_id": 28515,
+          "taker_order_id": 28517,
+          "buyer_id": "bot-10",
+          "seller_id": "bot-12",
+          "price": 971,
+          "quantity": 1,
+          "timestamp_ms": 1789986912412,
+          "command_seq": 32725
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:14.303Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 25.46750000002794,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:880",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:880",
+      "account_id": "bot-10",
+      "command_seq": 32738,
+      "event_seq": 32738,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28526,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:16.575Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 16.000100000062957,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:881",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:881",
+      "account_id": "bot-10",
+      "command_seq": 32751,
+      "event_seq": 32751,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28538,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.628Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 18.335000000195578,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:882",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:882",
+      "account_id": "bot-10",
+      "command_seq": 32763,
+      "event_seq": 32763,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28546,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:20.197Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 4.432400000048801,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:883",
+      "action": {
+        "type": "cancel",
+        "order_id": 28546
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:883",
+      "account_id": "bot-10",
+      "command_seq": 32773,
+      "event_seq": 32773,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28546,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:22.444Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 17.410700000124052,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:884",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 976,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:884",
+      "account_id": "bot-10",
+      "command_seq": 32788,
+      "event_seq": 32788,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28567,
+      "trades": [
+        {
+          "id": 18215,
+          "maker_order_id": 28509,
+          "taker_order_id": 28567,
+          "buyer_id": "bot-10",
+          "seller_id": "bot-03",
+          "price": 976,
+          "quantity": 1,
+          "timestamp_ms": 1789986922441,
+          "command_seq": 32788
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:24.765Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 5.350300000049174,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:885",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 978,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:885",
+      "account_id": "bot-10",
+      "command_seq": 32801,
+      "event_seq": 32801,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28579,
+      "trades": [
+        {
+          "id": 18223,
+          "maker_order_id": 28498,
+          "taker_order_id": 28579,
+          "buyer_id": "bot-10",
+          "seller_id": "bot-03",
+          "price": 978,
+          "quantity": 1,
+          "timestamp_ms": 1789986924761,
+          "command_seq": 32801
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:26.728Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 17.10260000010021,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:886",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 979,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:886",
+      "account_id": "bot-10",
+      "command_seq": 32811,
+      "event_seq": 32811,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28589,
+      "trades": [
+        {
+          "id": 18230,
+          "maker_order_id": 28507,
+          "taker_order_id": 28589,
+          "buyer_id": "bot-10",
+          "seller_id": "bot-04",
+          "price": 979,
+          "quantity": 2,
+          "timestamp_ms": 1789986926724,
+          "command_seq": 32811
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:28.485Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 4.816899999976158,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:887",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 977,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:887",
+      "account_id": "bot-10",
+      "command_seq": 32821,
+      "event_seq": 32821,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28597,
+      "trades": [
+        {
+          "id": 18235,
+          "maker_order_id": 28596,
+          "taker_order_id": 28597,
+          "buyer_id": "bot-10",
+          "seller_id": "bot-07",
+          "price": 977,
+          "quantity": 1,
+          "timestamp_ms": 1789986928481,
+          "command_seq": 32821
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:30.231Z",
+    "bot_id": "bot-10",
+    "event": "command_result",
+    "round_trip_ms": 13.118599999928847,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:888",
+      "action": {
+        "type": "cancel",
+        "order_id": 28597
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-10:888",
+      "account_id": "bot-10",
+      "command_seq": 32831,
+      "event_seq": 32831,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28597,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-10-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:12.891Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 12.877099999925122,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:867",
+      "action": {
+        "type": "cancel",
+        "order_id": 28508
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:867",
+      "account_id": "bot-11",
+      "command_seq": 32727,
+      "event_seq": 32727,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28508,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:14.794Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 16.79050000011921,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:868",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 972,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:868",
+      "account_id": "bot-11",
+      "command_seq": 32740,
+      "event_seq": 32740,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28528,
+      "trades": [
+        {
+          "id": 18187,
+          "maker_order_id": 28525,
+          "taker_order_id": 28528,
+          "buyer_id": "bot-11",
+          "seller_id": "bot-06",
+          "price": 972,
+          "quantity": 2,
+          "timestamp_ms": 1789986914792,
+          "command_seq": 32740
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:17.210Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 18.895900000119582,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:869",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:869",
+      "account_id": "bot-11",
+      "command_seq": 32756,
+      "event_seq": 32756,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28541,
+      "trades": [
+        {
+          "id": 18193,
+          "maker_order_id": 28512,
+          "taker_order_id": 28541,
+          "buyer_id": "bot-11",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986917207,
+          "command_seq": 32756
+        },
+        {
+          "id": 18194,
+          "maker_order_id": 28516,
+          "taker_order_id": 28541,
+          "buyer_id": "bot-11",
+          "seller_id": "bot-09",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986917207,
+          "command_seq": 32756
+        },
+        {
+          "id": 18195,
+          "maker_order_id": 28522,
+          "taker_order_id": 28541,
+          "buyer_id": "bot-11",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986917207,
+          "command_seq": 32756
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:19.771Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 26.786700000055134,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:870",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:870",
+      "account_id": "bot-11",
+      "command_seq": 32770,
+      "event_seq": 32770,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28552,
+      "trades": [
+        {
+          "id": 18201,
+          "maker_order_id": 28539,
+          "taker_order_id": 28552,
+          "buyer_id": "bot-11",
+          "seller_id": "bot-09",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986919758,
+          "command_seq": 32770
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:21.960Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 17.944600000046194,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:871",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 973,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:871",
+      "account_id": "bot-11",
+      "command_seq": 32783,
+      "event_seq": 32783,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28562,
+      "trades": [
+        {
+          "id": 18209,
+          "maker_order_id": 28557,
+          "taker_order_id": 28562,
+          "buyer_id": "bot-03",
+          "seller_id": "bot-11",
+          "price": 973,
+          "quantity": 2,
+          "timestamp_ms": 1789986921957,
+          "command_seq": 32783
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:24.181Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 4.777699999976903,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:872",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 975,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:872",
+      "account_id": "bot-11",
+      "command_seq": 32797,
+      "event_seq": 32797,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28575,
+      "trades": [
+        {
+          "id": 18219,
+          "maker_order_id": 28574,
+          "taker_order_id": 28575,
+          "buyer_id": "bot-11",
+          "seller_id": "bot-06",
+          "price": 975,
+          "quantity": 1,
+          "timestamp_ms": 1789986924178,
+          "command_seq": 32797
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:26.255Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 13.197399999946356,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:873",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 978,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:873",
+      "account_id": "bot-11",
+      "command_seq": 32808,
+      "event_seq": 32808,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28586,
+      "trades": [
+        {
+          "id": 18226,
+          "maker_order_id": 28560,
+          "taker_order_id": 28586,
+          "buyer_id": "bot-11",
+          "seller_id": "bot-01",
+          "price": 978,
+          "quantity": 2,
+          "timestamp_ms": 1789986926244,
+          "command_seq": 32808
+        },
+        {
+          "id": 18227,
+          "maker_order_id": 28568,
+          "taker_order_id": 28586,
+          "buyer_id": "bot-11",
+          "seller_id": "bot-03",
+          "price": 978,
+          "quantity": 1,
+          "timestamp_ms": 1789986926244,
+          "command_seq": 32808
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:28.383Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 24.708400000119582,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:874",
+      "action": {
+        "type": "cancel",
+        "order_id": 28575
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:874",
+      "account_id": "bot-11",
+      "command_seq": 32820,
+      "event_seq": 32820,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28575,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:30.380Z",
+    "bot_id": "bot-11",
+    "event": "command_result",
+    "round_trip_ms": 17.12360000004992,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:875",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 979,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-11:875",
+      "account_id": "bot-11",
+      "command_seq": 32833,
+      "event_seq": 32833,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28607,
+      "trades": [
+        {
+          "id": 18243,
+          "maker_order_id": 28606,
+          "taker_order_id": 28607,
+          "buyer_id": "bot-07",
+          "seller_id": "bot-11",
+          "price": 979,
+          "quantity": 1,
+          "timestamp_ms": 1789986930375,
+          "command_seq": 32833
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-11-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:11.528Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 22.46240000007674,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:872",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 971,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:872",
+      "account_id": "bot-12",
+      "command_seq": 32723,
+      "event_seq": 32723,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28515,
+      "trades": [
+        {
+          "id": 18182,
+          "maker_order_id": 28511,
+          "taker_order_id": 28515,
+          "buyer_id": "bot-01",
+          "seller_id": "bot-12",
+          "price": 971,
+          "quantity": 1,
+          "timestamp_ms": 1789986911524,
+          "command_seq": 32723
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:13.743Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 18.136100000003353,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:873",
+      "action": {
+        "type": "cancel",
+        "order_id": 28504
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:873",
+      "account_id": "bot-12",
+      "command_seq": 32736,
+      "event_seq": 32736,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28504,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:16.070Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 27.582899999804795,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:874",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:874",
+      "account_id": "bot-12",
+      "command_seq": 32748,
+      "event_seq": 32748,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28535,
+      "trades": [
+        {
+          "id": 18190,
+          "maker_order_id": 28505,
+          "taker_order_id": 28535,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-10",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986916058,
+          "command_seq": 32748
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:18.020Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 26.158700000029057,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:875",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:875",
+      "account_id": "bot-12",
+      "command_seq": 32759,
+      "event_seq": 32759,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28543,
+      "trades": [
+        {
+          "id": 18196,
+          "maker_order_id": 28522,
+          "taker_order_id": 28543,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986918008,
+          "command_seq": 32759
+        },
+        {
+          "id": 18197,
+          "maker_order_id": 28526,
+          "taker_order_id": 28543,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-10",
+          "price": 973,
+          "quantity": 2,
+          "timestamp_ms": 1789986918008,
+          "command_seq": 32759
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:20.493Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 16.74790000007488,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:876",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 973,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:876",
+      "account_id": "bot-12",
+      "command_seq": 32776,
+      "event_seq": 32776,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28555,
+      "trades": [
+        {
+          "id": 18204,
+          "maker_order_id": 28542,
+          "taker_order_id": 28555,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-07",
+          "price": 973,
+          "quantity": 1,
+          "timestamp_ms": 1789986920491,
+          "command_seq": 32776
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:22.403Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 25.176900000078604,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:877",
+      "action": {
+        "type": "place",
+        "side": "sell",
+        "price": 972,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:877",
+      "account_id": "bot-12",
+      "command_seq": 32786,
+      "event_seq": 32786,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28565,
+      "trades": [
+        {
+          "id": 18212,
+          "maker_order_id": 28564,
+          "taker_order_id": 28565,
+          "buyer_id": "bot-05",
+          "seller_id": "bot-12",
+          "price": 972,
+          "quantity": 1,
+          "timestamp_ms": 1789986922392,
+          "command_seq": 32786
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:24.527Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 17.038200000068173,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:878",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 977,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:878",
+      "account_id": "bot-12",
+      "command_seq": 32799,
+      "event_seq": 32799,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28577,
+      "trades": [
+        {
+          "id": 18221,
+          "maker_order_id": 28558,
+          "taker_order_id": 28577,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-04",
+          "price": 977,
+          "quantity": 2,
+          "timestamp_ms": 1789986924525,
+          "command_seq": 32799
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:26.616Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 4.899100000038743,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:879",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 978,
+        "quantity": 2
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:879",
+      "account_id": "bot-12",
+      "command_seq": 32810,
+      "event_seq": 32810,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28588,
+      "trades": [
+        {
+          "id": 18229,
+          "maker_order_id": 28568,
+          "taker_order_id": 28588,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-03",
+          "price": 978,
+          "quantity": 1,
+          "timestamp_ms": 1789986926613,
+          "command_seq": 32810
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:28.579Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 16.10840000002645,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:880",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 978,
+        "quantity": 3
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:880",
+      "account_id": "bot-12",
+      "command_seq": 32823,
+      "event_seq": 32823,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28599,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  },
+  {
+    "timestamp": "2026-09-21T10:35:30.614Z",
+    "bot_id": "bot-12",
+    "event": "command_result",
+    "round_trip_ms": 16.92920000012964,
+    "command": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:881",
+      "action": {
+        "type": "place",
+        "side": "buy",
+        "price": 980,
+        "quantity": 1
+      }
+    },
+    "result": {
+      "request_id": "2026-09-21T10-05-21-198Z-demo-3b10627b:bot-12:881",
+      "account_id": "bot-12",
+      "command_seq": 32835,
+      "event_seq": 32835,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 28609,
+      "trades": [
+        {
+          "id": 18244,
+          "maker_order_id": 28581,
+          "taker_order_id": 28609,
+          "buyer_id": "bot-12",
+          "seller_id": "bot-01",
+          "price": 980,
+          "quantity": 1,
+          "timestamp_ms": 1789986930610,
+          "command_seq": 32835
+        }
+      ],
+      "duplicate": false,
+      "durable": true
+    },
+    "source_file": "bot-12-0000.jsonl"
+  }
+]

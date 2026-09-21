@@ -3,21 +3,38 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { observationContinuity } from './observation-continuity.mjs';
 import { latencySummary } from './latency-summary.mjs';
+import { resourceCpu } from './resource-cpu.mjs';
+import { resourceMemoryRows } from './resource-memory.mjs';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const evidenceRoot = path.join(root, 'evidence');
 const input = process.argv[2];
-if (!input) throw new Error('Usage: node scripts/summarize-observation.mjs <observation-run-id>');
+const extra = process.argv.slice(3);
+if (!input || (extra.length && (extra.length !== 2 || extra[0] !== '--logical-processors' || !/^[1-9]\d*$/.test(extra[1])))) throw new Error('Usage: node scripts/summarize-observation.mjs <observation-run-id> [--logical-processors <observed-host-count>]');
+const logicalProcessors = extra.length ? Number(extra[1]) : null;
 const directory = path.resolve(evidenceRoot, input);
 if (!directory.startsWith(evidenceRoot + path.sep)) throw new Error('Observation must be inside trading/evidence');
 const samples = fs.readFileSync(path.join(directory, 'samples.jsonl'), 'utf8').trim().split(/\r?\n/).filter(Boolean).map(JSON.parse);
 if (samples.length < 2) throw new Error('At least two observation samples are required');
 const runPath = path.join(directory, 'run.json');
 const run = fs.existsSync(runPath) ? JSON.parse(fs.readFileSync(runPath, 'utf8')) : {};
+let expectedProcessCount = null;
+if (typeof run.demo_run_id === 'string') {
+  const demoDirectory = path.resolve(evidenceRoot, run.demo_run_id);
+  if (demoDirectory.startsWith(evidenceRoot + path.sep)) {
+    const manifestPath = path.join(demoDirectory, 'processes.json');
+    if (fs.existsSync(manifestPath)) {
+      const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+      if (Array.isArray(manifest.processes)) expectedProcessCount = manifest.processes.length;
+    }
+  }
+}
 const first = samples[0], last = samples.at(-1);
 const elapsedHours = (last.elapsed_ms - first.elapsed_ms) / 3_600_000;
-const resourceSamples = samples.filter(sample => Array.isArray(sample.resources));
-const processTotals = resourceSamples.filter(sample => sample.resources.every(row => Number.isFinite(row.WorkingSet64))).map(sample => ({ at: sample.at, process_count: sample.resources.length, working_set_bytes: sample.resources.reduce((sum, row) => sum + row.WorkingSet64, 0), private_bytes: sample.resources.reduce((sum, row) => sum + row.PrivateMemorySize64, 0) }));
+const resourceObservations = samples.filter(sample => Object.hasOwn(sample, 'resources'));
+const resourceSamples = resourceObservations.filter(sample => resourceMemoryRows(sample.resources, expectedProcessCount) !== null);
+const excludedMemorySamples = resourceObservations.filter(sample => resourceMemoryRows(sample.resources, expectedProcessCount) === null).map(sample => ({ at: sample.at, reason: 'missing_or_invalid_complete_windows_process_sample' }));
+const processTotals = resourceSamples.map(sample => ({ at: sample.at, process_count: sample.resources.length, working_set_bytes: sample.resources.reduce((sum, row) => sum + row.WorkingSet64, 0), private_bytes: sample.resources.reduce((sum, row) => sum + row.PrivateMemorySize64, 0) }));
 const engine = resourceSamples.flatMap(sample => sample.resources.filter(row => row.ProcessName === 'leave-engine').map(row => ({ at: sample.at, elapsed_ms: sample.elapsed_ms, command_seq: sample.event_seq, pid: row.Id, working_set_bytes: row.WorkingSet64, private_bytes: row.PrivateMemorySize64, cpu_seconds: row.CPU, handles: row.Handles })));
 const engines = [...new Set(engine.map(row => row.pid))].map(pid => {
   const rows = engine.filter(row => row.pid === pid), begin = rows[0], end = rows.at(-1);
@@ -56,6 +73,8 @@ const result = {
   fraction_of_intervals_with_new_trades: samples.slice(1).filter((row, index) => row.volume > samples[index].volume).length / (samples.length - 1),
   tracked_process_total_memory_windows: processTotals.length ? { first: processTotals[0], last: processTotals.at(-1), observed_max_working_set_bytes: Math.max(...processTotals.map(row => row.working_set_bytes)), observed_max_private_bytes: Math.max(...processTotals.map(row => row.private_bytes)), note: 'Sum of tracked process working sets may count shared pages more than once; this is not whole-machine unique physical memory.' } : null,
   engine_memory_windows: engines,
+  memory_sample_validation: { expected_process_count: expectedProcessCount, valid_samples: resourceSamples.length, excluded_samples: excludedMemorySamples },
+  cpu_windows: resourceCpu(samples, logicalProcessors, expectedProcessCount),
   demo_logs: sizes('demo_logs'), persisted_data: sizes('data'),
   lowest_observed_disk_available_bytes: samples.some(row => row.disk_available_bytes !== undefined) ? Math.min(...samples.filter(row => row.disk_available_bytes !== undefined).map(row => row.disk_available_bytes)) : null,
   completed_summary: completed,
@@ -64,4 +83,5 @@ const result = {
 const output = path.join(evidenceRoot, `${new Date().toISOString().replace(/[:.]/g, '-')}-observation-analysis-${crypto.randomUUID().slice(0, 8)}`);
 fs.mkdirSync(output);
 fs.writeFileSync(path.join(output, 'analysis.json'), JSON.stringify(result, null, 2));
-console.log(JSON.stringify({ evidence: output, ...result }, null, 2));
+const { intervals: cpuIntervals, ...cpuConsole } = result.cpu_windows;
+console.log(JSON.stringify({ evidence: output, ...result, cpu_windows: { ...cpuConsole, interval_details: cpuIntervals ? 'See analysis.json in the evidence directory' : undefined } }, null, 2));

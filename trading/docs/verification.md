@@ -1,6 +1,6 @@
 # 누적 검증과 완료 기준
 
-2026-09-21 19:32 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
+2026-09-21 19:49 KST 기준 중간 기록. 아래 링크는 실제 실행 증거이며 최종 완료 선언이 아니다. 실패한 실행도 보존한다. 모든 합성 데이터와 장애 주입은 `trading` 내부 전용 디렉터리에 한정했다.
 
 | 요구 항목 | 상태 | 실제 근거 / 남은 확인 |
 |---|---|---|
@@ -17,6 +17,7 @@
 | 느린 수신자 격리 | 통과(이번 호스트·부하 범위) | [실제 WS 수신 중단](slow-ws-validation.md): 중단 중288명령 처리, 정상289상태 연속 수신, 전체416요청 조회/자산 검사. 느린 연결 reset 후 새 연결 상태 일치. reset 원인이 lag/send timeout 중 어느 것인지는 미확정 |
 | 빌드·포맷·린트·테스트 | 통과 | Rust release 및 fmt, [최신 Clippy all-targets -D warnings](../evidence/20260921T090534849Z-checkpoint-error-format-clippy-e41e5b01), [프런트7개 테스트](../evidence/frontend-20260921T090509598Z), [최신 안내문구 포함 TS/Vite build](../evidence/20260921T091933917Z-frontend-history-copy-build-3cca76ab) |
 | 성능·할당 계측 보존 | 통과 / 목표 일부 미달 | [성능 결과](performance.md). A 통과. B/C 최초 fetch 처리량 미달, 측정된 클라이언트 전송 대기 개선 후 동일 바이너리 node:http 목표 통과. 정상 execute 할당 0 미달 |
+| CPU·메모리 구간 분석 | 계산 검증 통과 / 장시간 관찰 진행 | [사용 방법·실측·독립 검토](resource-observation.md), 알려진 카운터·누락·공백·PID교체 등7검증. 현재41분 CPU평균14프로세스합0.581%,엔진0.307%;6시간최종결과는아님 |
 | Vercel UI 로컬 빌드·배포 설정 | 통과 | `trading/frontend`, `pnpm build`, `dist`; [배포 검토](review-deployment.md). Production정적130파일HTTP/해시,실제브라우저주문/부분체결/취소/reload통과. 실제 Vercel 빌드·배포 미실행 |
 | Rust 실행·영속 볼륨·배포 설정 | 준비 / 일부 미검증 | 로컬 Windows 실행 통과, Dockerfile/compose/Caddy 예시. Docker가 없어 실제 Linux 컨테이너 빌드·운영 미검증 |
 | 기존 UI 연동과 적용 여부 | 범위 명시 | 기존 루트 UI 읽기만 수행. 독립 UI 완성, 연동 절차 제공, 루트 적용 없음 |
@@ -32,6 +33,8 @@
 - 새6시간관찰이19:05:54KST부터진행 중이며예상종료는9월22일01:05:55KST. `evidence/2026-09-21T10-05-54-901Z-observe-0b80d28e`에공백/자원/REST응답시간,새봇로그에실제명령RTT를수집한다. 아직장시간최종pass가아니다.
 
 18:02시작한 이전1시간벽시계실행은19:02에끝났으나18:29:58–18:35:54 PC Modern Standby355.600초가포함되어 **연속1시간 검증은 불통과**다. 원summary.passed=true는당시코드결과로보존하고새analysis.continuous_demo_pass=false를명시했다. [최종 관찰 해석](../evidence/2026-09-21T09-02-19-482Z-observe-4abd2bbd/README.md), [시스템기록](evidence-policy.md#관찰-공백과-유휴-절전). 첫5분검증은해당공백이없으며별도통과근거를유지한다.
+
+19:38 새 관찰의 [32.7분 중간 분석](../evidence/2026-09-21T10-38-39-637Z-observation-analysis-39decc3a/analysis.json)은388표본,최대간격5.996초,12봇,자산보존,WS누락/단절0이다. [첫 자동 checkpoint32781](../evidence/2026-09-21T10-40-17-904Z-first-periodic-checkpoint-17d364f9/summary.json)은19:35:21에24.47MB로 게시됐다. 그 주변126응답은125accepted/1ORDER_NOT_OPEN,최대75.97ms. [현재 자원 원시계측](../evidence/20260921T103750097Z-live-resources-corrected-11589dd1/README.md)은 거래소14프로세스 합계 CPU0.351%(16논리코어,5.015초),working set1.012GB다. 브라우저·관찰기는제외하며공유메모리중복가능성을명시한다. 관찰은진행중이고6시간최종통과나전체복구검증을대신하지않는다.
 
 ## 실패 이력과 수정
 

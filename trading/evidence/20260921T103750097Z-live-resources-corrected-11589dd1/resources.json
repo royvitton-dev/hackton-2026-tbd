@@ -1,0 +1,189 @@
+{
+  "run_id": "20260921T103750097Z-live-resources-corrected-11589dd1",
+  "measured_at": "2026-09-21T10:37:50.1145982Z",
+  "interval_seconds": 5.0148806,
+  "logical_processors": 16,
+  "cpu_definition": "Raw TotalProcessorTime seconds delta / elapsed /16logicalCPUs *100; no integer-overload clamp",
+  "rejected_previous_cpu_report": "20260921T103636229Z-live-resources-d61e2008",
+  "integer_overload_diagnostic": {
+    "original_math_max_result": 0.25,
+    "explicit_double_result": 0.25
+  },
+  "system_cpu_recent_sample_percent": 15,
+  "system_physical_total_bytes": 16880881664,
+  "system_physical_free_bytes": 5089628160,
+  "groups": [
+    {
+      "name": "engine",
+      "processes": 1,
+      "cpu_percent_total_capacity": 0.1947329513687724,
+      "working_set_bytes": 56119296.0,
+      "private_commit_bytes": 52867072.0
+    },
+    {
+      "name": "frontend",
+      "processes": 1,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 105914368.0,
+      "private_commit_bytes": 145743872.0
+    },
+    {
+      "name": "bots",
+      "processes": 12,
+      "cpu_percent_total_capacity": 0.13631306595814066,
+      "working_set_bytes": 850165760.0,
+      "private_commit_bytes": 885256192.0
+    }
+  ],
+  "total_cpu_percent_total_capacity": 0.35051931246379026,
+  "total_working_set_bytes": 1012199424.0,
+  "total_private_commit_bytes": 1083867136.0,
+  "processes": [
+    {
+      "name": "engine",
+      "pid": 20540,
+      "cpu_before_seconds": 94.65625,
+      "cpu_after_seconds": 94.8125,
+      "cpu_delta_seconds": 0.15625,
+      "cpu_percent_total_capacity": 0.1947329513687724,
+      "working_set_bytes": 56119296,
+      "private_commit_bytes": 52867072
+    },
+    {
+      "name": "frontend",
+      "pid": 17556,
+      "cpu_before_seconds": 2.625,
+      "cpu_after_seconds": 2.640625,
+      "cpu_delta_seconds": 0.015625,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 105914368,
+      "private_commit_bytes": 145743872
+    },
+    {
+      "name": "bot-01",
+      "pid": 17444,
+      "cpu_before_seconds": 7.203125,
+      "cpu_after_seconds": 7.21875,
+      "cpu_delta_seconds": 0.015625,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 70139904,
+      "private_commit_bytes": 72470528
+    },
+    {
+      "name": "bot-02",
+      "pid": 7936,
+      "cpu_before_seconds": 7.328125,
+      "cpu_after_seconds": 7.328125,
+      "cpu_delta_seconds": 0.0,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 71446528,
+      "private_commit_bytes": 73547776
+    },
+    {
+      "name": "bot-03",
+      "pid": 20776,
+      "cpu_before_seconds": 7.140625,
+      "cpu_after_seconds": 7.140625,
+      "cpu_delta_seconds": 0.0,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 70893568,
+      "private_commit_bytes": 73371648
+    },
+    {
+      "name": "bot-04",
+      "pid": 16068,
+      "cpu_before_seconds": 6.875,
+      "cpu_after_seconds": 6.875,
+      "cpu_delta_seconds": 0.0,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 71925760,
+      "private_commit_bytes": 74194944
+    },
+    {
+      "name": "bot-05",
+      "pid": 4928,
+      "cpu_before_seconds": 6.921875,
+      "cpu_after_seconds": 6.921875,
+      "cpu_delta_seconds": 0.0,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 69611520,
+      "private_commit_bytes": 72994816
+    },
+    {
+      "name": "bot-06",
+      "pid": 20940,
+      "cpu_before_seconds": 7.453125,
+      "cpu_after_seconds": 7.453125,
+      "cpu_delta_seconds": 0.0,
+      "cpu_percent_total_capacity": 0.0,
+      "working_set_bytes": 70627328,
+      "private_commit_bytes": 72978432
+    },
+    {
+      "name": "bot-07",
+      "pid": 12172,
+      "cpu_before_seconds": 7.5625,
+      "cpu_after_seconds": 7.578125,
+      "cpu_delta_seconds": 0.015625,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 69713920,
+      "private_commit_bytes": 73846784
+    },
+    {
+      "name": "bot-08",
+      "pid": 7916,
+      "cpu_before_seconds": 7.390625,
+      "cpu_after_seconds": 7.40625,
+      "cpu_delta_seconds": 0.015625,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 69746688,
+      "private_commit_bytes": 71884800
+    },
+    {
+      "name": "bot-09",
+      "pid": 15272,
+      "cpu_before_seconds": 7.921875,
+      "cpu_after_seconds": 7.9375,
+      "cpu_delta_seconds": 0.015625,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 71233536,
+      "private_commit_bytes": 74735616
+    },
+    {
+      "name": "bot-10",
+      "pid": 5412,
+      "cpu_before_seconds": 7.765625,
+      "cpu_after_seconds": 7.78125,
+      "cpu_delta_seconds": 0.015625,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 71114752,
+      "private_commit_bytes": 74407936
+    },
+    {
+      "name": "bot-11",
+      "pid": 20484,
+      "cpu_before_seconds": 7.625,
+      "cpu_after_seconds": 7.640625,
+      "cpu_delta_seconds": 0.015625,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 71323648,
+      "private_commit_bytes": 74641408
+    },
+    {
+      "name": "bot-12",
+      "pid": 6128,
+      "cpu_before_seconds": 7.375,
+      "cpu_after_seconds": 7.390625,
+      "cpu_delta_seconds": 0.015625,
+      "cpu_percent_total_capacity": 0.019473295136877237,
+      "working_set_bytes": 72388608,
+      "private_commit_bytes": 76181504
+    }
+  ],
+  "limitations": [
+    "Working set sums may double-count shared pages",
+    "Private commit differs from physical RAM",
+    "Host CPU is a separate recent OS counter sample",
+    "Browser and observer/helper excluded"
+  ]
+}
