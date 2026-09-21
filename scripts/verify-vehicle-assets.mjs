@@ -15,6 +15,10 @@ for (const e of entries) {
   try {
     assert(e.downloaded && e.cutoutGenerated, e.failureReason??'Asset not prepared');
     assert(e.sourceUrl && e.downloadUrl && e.license && e.author,'Missing attribution');
+    if(e.sourceKind==='user-upload'){
+      assert(e.resourceSourcePath?.startsWith('battery_health/resoures/images/sources/'),'User source must be preserved in resources');
+      assert.equal(createHash('sha256').update(await readFile(path.join(root,e.resourceSourcePath))).digest('hex'),e.sourceFileSha256,'User source file changed');
+    }
     for (const [source,dest] of [[e.resourceOriginalPath,e.publicOriginalPath],[e.resourceCutoutPath,e.publicCutoutPath]]) {
       const a=await readFile(path.join(root,source)),b=await readFile(path.join(root,'public',dest));
       assert(a.equals(b),'Public asset differs from original');
@@ -22,6 +26,7 @@ for (const e of entries) {
     assert.equal((await sharp(path.join(root,e.resourceOriginalPath)).metadata()).format,'jpeg');
     assert.equal(e.cutoutSourceSha256,createHash('sha256').update(await readFile(path.join(root,e.resourceOriginalPath))).digest('hex'),'Cutout is stale after original image replacement');
     const png=sharp(path.join(root,e.resourceCutoutPath));
+    if(e.cutoutSha256)assert.equal(e.cutoutSha256,createHash('sha256').update(await readFile(path.join(root,e.resourceCutoutPath))).digest('hex'),'Cutout texture cache key is stale');
     const meta=await png.metadata();
     assert.equal(meta.format,'png'); assert(meta.hasAlpha);
     assert.equal(meta.width,e.cutoutWidth);assert.equal(meta.height,e.cutoutHeight);

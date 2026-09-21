@@ -17,7 +17,7 @@ test('Every remaining vehicle has a real PNG texture, fixed camera and battery f
     const canvas = page.locator('canvas');
     await expect(canvas).toHaveAttribute('data-vehicle-id', model.vehicleId,{timeout:90000});
     await expect(canvas).toHaveAttribute('data-renderer', 'webgl-cutout');
-    await expect(canvas).toHaveAttribute('data-cutout-path', `${source.publicCutoutPath}?v=${source.cutoutSourceSha256.slice(0,12)}`);
+    await expect(canvas).toHaveAttribute('data-cutout-path', `${source.publicCutoutPath}?v=${(source.cutoutSha256??source.cutoutSourceSha256).slice(0,12)}`);
     await expect(canvas).toHaveAttribute('data-camera-controls', 'locked');
     await expect(page.getByTestId('vehicle-model')).toHaveText(model.model);
     await expect(page.locator('img')).toHaveCount(0);

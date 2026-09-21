@@ -9,7 +9,7 @@ const photoHotspots: Record<string, VehicleImage['batteryHotspot']> = {
   audi_q6_etron_quattro_2025:{x:.73,y:.68,width:.19,height:.045},
   vw_id4_pro_2026:{x:.77,y:.65,width:.16,height:.045},
   bmw_i5_edrive40_2026:{x:.69,y:.67,width:.23,height:.045},
-  mini_electric_cooper_2026:{x:.26,y:.70,width:.20,height:.045},
+  mini_electric_cooper_2026:{x:.69,y:.70,width:.20,height:.045},
   volvo_ex30_2026:{x:.66,y:.70,width:.27,height:.045},
 };
 // Each model's provenance and license status is recorded in vehicleModelSources.json.
@@ -33,9 +33,9 @@ export const vehicleGlbPaths: Record<string, string> = {
 };
 export const vehicleImageMap: VehicleImage[] = sources.map(source => ({
   vehicleId:source.vehicleId,manufacturer:source.manufacturer,model:source.model,year:source.year,
-  imagePath:appPath(source.publicOriginalPath),cutoutImagePath:`${appPath(source.publicCutoutPath)}?v=${source.cutoutSourceSha256.slice(0,12)}`,
+  imagePath:appPath(source.publicOriginalPath),cutoutImagePath:`${appPath(source.publicCutoutPath)}?v=${(source.cutoutSha256??source.cutoutSourceSha256).slice(0,12)}`,
   resourceOriginalPath:source.resourceOriginalPath,resourceCutoutPath:source.resourceCutoutPath,
-  imageSourceUrl:source.sourceUrl,license:source.license,licenseUrl:source.licenseUrl,author:source.author,
+  imageSourceUrl:source.sourceUrl,license:source.license,licenseUrl:source.licenseUrl??'',author:source.author,
   representativeNote:source.representativeNote,glbPath:vehicleGlbPaths[source.vehicleId]?appPath(vehicleGlbPaths[source.vehicleId]):null,
   modelDisplayNote:models.find(m=>m.vehicleId===source.vehicleId)?.displayNote??null,
   renderMode:vehicleGlbPaths[source.vehicleId]?'glb':source.cutoutGenerated?'cutout':'unavailable',

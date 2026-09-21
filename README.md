@@ -249,6 +249,19 @@ node scripts/optimize-vehicle-model.mjs original.glb optimized.glb --preserve-ge
 
 ## 검증
 
+사용자가 제공한 이미지는 외부 다운로드 없이 원본 파일을 `battery_health/resoures/images/sources/`에 그대로 보관합니다. 아래 명령으로 모델 매핑을 교체한 뒤 누끼와 public 복사본을 다시 생성합니다.
+
+```sh
+node scripts/import-vehicle-image.mjs audi_q4_45_etron_2026 /path/to/vehicle.webp "사용자 제공 대표 이미지; 연식과 트림 차이 설명"
+npm run cutout:vehicles
+npm run sync:vehicle-assets
+npm run verify:assets
+```
+
+실제 alpha가 있는 PNG는 투명도를 보존하고, 체크무늬가 픽셀로 포함된 불투명 이미지는 rembg로 배경을 제거합니다. 교체 시 기존 누끼 캐시를 무효화합니다. 출처 파일 SHA-256, 사용자 제공 여부, 알 수 없는 저작자·라이선스를 기록하며 임의의 인터넷 출처를 만들지 않습니다. `download:vehicles -- --force`도 사용자 파일은 보관된 로컬 원본에서 다시 생성합니다. Q4의 작은 마스크 보정은 원본 해시에 묶인 `sources/*_alpha_corrections.json`으로 재현합니다. 새 파일로 교체할 때는 기존 보정을 재사용하지 않습니다.
+
+2026-09-22 사용자 제공 Q4(2024 표기), MINI Cooper S, BMW i5(최종 선택한 파란색 `4_221_f.webp`) 사진을 연결했습니다. BMW는 이전의 작은 흰색 이미지 대신 999×564 원본을 사용합니다. MINI 사진은 충전 데이터의 전기 MINI와 다른 구동계/세대일 수 있으며 출처 패널에 표시합니다. 이 세 파일은 정지 WebGL 사진이며 실제 3D 회전·배터리 투시 리소스를 대체하지 않습니다.
+
 `verify:assets`는 파일·출처·동기화 무결성을 검사하므로 사진만 있어도 통과할 수 있습니다. **전체 차량의 실제 3D 리소스 확보 여부는 `npm run verify:vehicle-3d`로 별도 검사합니다.** 현재 Audi Q4·Q6, BMW i5, MINI Cooper Electric의 GLB가 없어 이 명령은 차량별 원인과 함께 종료 코드 1을 반환합니다. 정지 PNG 표시 테스트 통과는 회전·배터리 투시 완료를 의미하지 않습니다. GLB 확보 후에도 실제 브라우저에서 드래그·투시를 검수해야 합니다.
 
 ```sh
