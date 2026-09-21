@@ -15,8 +15,8 @@ npm run dev
 | --- | --- |
 | `/park/` | 3D Wonder Park (기본 화면) |
 | `/map/`, `/map/mobility.html` | 도면·모빌리티 |
-| `/vehicle/` | EVision 차량·충전 이력 |
-| `/battery_health/` | 배터리 관리 |
+| `/vehicle/` | `/battery_health/`로 연결하는 호환 주소 |
+| `/battery_health/` | EVision 3D 차량·배터리·충전 이력 |
 | `/dopamin/`, `/pinball/` | 레이싱·핀볼 |
 | `/webpage/`, `/webpage/health/` | DEBUT : ON·VITALIS |
 | `/movie/` | 영상 재생 |
@@ -51,7 +51,7 @@ npm run dev
 
 ## 설치와 실행
 
-루트의 `package-lock.json`은 Next.js와 통합 서버 의존성 기준입니다. 기본 npm 스크립트는 통합 서버를 실행하며, EVision 단독 실행은 `vehicle:*` 스크립트를 사용합니다. `battery_health/`에는 동일한 데이터를 사용하는 독립형 Vite MVP가 있습니다.
+루트의 `package-lock.json`은 Next.js와 통합 서버 의존성 기준입니다. 기본 npm 스크립트는 통합 서버를 실행하며, EVision 단독 실행은 `vehicle:*` 스크립트를 사용합니다. `battery_health/` 폴더의 예전 Vite MVP 소스는 보존하며, 통합 서버의 `/battery_health/`는 루트의 최신 Next.js 3D 앱을 제공합니다. 사용자 링크 예: http://localhost:5190/battery_health/?user=U0037 .
 
 Node.js 22.12 이상이 필요합니다.
 
@@ -61,12 +61,12 @@ npm install
 npm run dev
 ```
 
-- 기본: http://localhost:5190/vehicle/?user=U0001 (Hyundai IONIQ 5)
-- Model 3: http://localhost:5190/vehicle/?user=U0002
-- Model Y: http://localhost:5190/vehicle/?user=U0009
-- Volvo EX30: http://localhost:5190/vehicle/?user=U0006
-- Volkswagen ID.4: http://localhost:5190/vehicle/?user=U0076
-- Kona Electric: http://localhost:5190/vehicle/?user=U0010 (2019 대표 외형)
+- 기본: http://localhost:5190/battery_health/?user=U0001 (Hyundai IONIQ 5)
+- Model 3: http://localhost:5190/battery_health/?user=U0002
+- Model Y: http://localhost:5190/battery_health/?user=U0009
+- Volvo EX30: http://localhost:5190/battery_health/?user=U0006
+- Volkswagen ID.4: http://localhost:5190/battery_health/?user=U0076
+- Kona Electric: http://localhost:5190/battery_health/?user=U0010 (2019 대표 외형)
 - 선택한 사용자 ID를 URL과 localStorage에 저장합니다.
 - 사용자 변경 시 차량·점수·주행 정보·충전 이력이 함께 바뀝니다.
 - 상단 검색은 사용자 ID, 제조사, 모델명, 프로필을 지원합니다.
@@ -88,7 +88,7 @@ npm run demo
 
 `demo`는 완성된 `.next`, public asset과 설정을 임시 디렉터리에 복사해 실행합니다. 이후 작업 폴더에서 빌드하거나 Git 브랜치를 바꿔도 실행 중인 화면의 JavaScript/GLB 경로가 유지됩니다. 새 결과를 보려면 데모를 종료한 뒤 다시 실행합니다. 의존성은 현재 `node_modules`를 사용하므로 의존성을 변경한 뒤에도 다시 실행해야 합니다. 임시 복사본은 정상 종료할 때 제거합니다.
 
-`npm run vehicle:start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:5190/vehicle/?user=U0001 입니다. 현재 20개 차량 프로필 모두 표시됩니다. GLB가 있는 16개는 실제 3D 모델로, 나머지 4개는 실차 투명 PNG를 WebGL에 고정해서 표시합니다. 장면 안내에서 두 방식을 구분합니다.
+`npm run vehicle:start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:5190/battery_health/?user=U0001 입니다. 현재 20개 차량 프로필 모두 표시됩니다. GLB가 있는 16개는 실제 3D 모델로, 나머지 4개는 실차 투명 PNG를 WebGL에 고정해서 표시합니다. 장면 안내에서 두 방식을 구분합니다.
 
 ## 데이터 기준
 

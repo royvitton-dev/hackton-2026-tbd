@@ -7,7 +7,7 @@ import { CHARACTERS } from './characters.mjs';
 
 const exec = promisify(execFile);
 export const EXCLUDED = new Set(['webpage', 'park', 'node_modules', 'dist', 'reports', 'coverage', 'test-results', 'playwright-report', 'scripts', 'docs', 'assets']);
-export const THEMES = ['bumper', 'theater', 'music', 'space', 'ocean', 'garden', 'arcade', 'laboratory', 'fantasy', 'construction', 'pinball'];
+export const THEMES = ['bumper', 'pitstop', 'parking', 'theater', 'music', 'space', 'ocean', 'garden', 'arcade', 'laboratory', 'fantasy', 'construction', 'pinball'];
 const defaults = {
   dopamin: { name: '도파민 범퍼카', english: 'DOPAMIN SPEEDWAY', theme: 'bumper', character: 'mickey', color: '#e99967', description: '친구들과 부딪히는 즐거움. 커피 한 잔을 건 짜릿한 레이스가 시작됩니다.', action: '레이스 입장' },
   movie: { name: '스타라이트 시네마', english: 'STARLIGHT CINEMA', theme: 'theater', character: 'minnie', color: '#a695cb', description: '작은 순간이 커다란 이야기가 되는 곳. 해커톤의 기억을 대형 스크린으로 만나세요.', action: '극장 입장' },

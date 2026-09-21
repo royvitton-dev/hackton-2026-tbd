@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 140 100" data-meters-per-unit="1" data-name="도로 → 주차·EV · 검증용 시나리오"><rect width="140" height="100" fill="#e9ece4"/>
+<line id="e0" data-kind="edge" data-from="road-west" data-to="road-gate" data-modes="car,person" data-width="9" data-height="2.4" data-connection="road" data-oneway="false" x1="8" y1="92" x2="70" y2="92" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e1" data-kind="edge" data-from="road-gate" data-to="road-east" data-modes="car,person" data-width="9" data-height="2.4" data-connection="road" data-oneway="false" x1="70" y1="92" x2="110" y2="92" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e2" data-kind="edge" data-from="road-gate" data-to="entrance" data-modes="car,person" data-width="9" data-height="2.4" data-connection="entrance" data-oneway="true" x1="70" y1="92" x2="70" y2="74" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e3" data-kind="edge" data-from="entrance" data-to="south" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="70" y1="74" x2="70" y2="62" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e4" data-kind="edge" data-from="south" data-to="west" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="70" y1="62" x2="46" y2="62" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e5" data-kind="edge" data-from="south" data-to="east" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="70" y1="62" x2="94" y2="62" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e6" data-kind="edge" data-from="west" data-to="north-west" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="46" y1="62" x2="46" y2="38" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e7" data-kind="edge" data-from="north-west" data-to="ev" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="46" y1="38" x2="58" y2="38" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e8" data-kind="edge" data-from="ev" data-to="north" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="58" y1="38" x2="70" y2="38" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e9" data-kind="edge" data-from="north" data-to="north-east" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="70" y1="38" x2="94" y2="38" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e10" data-kind="edge" data-from="north-east" data-to="east" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="94" y1="38" x2="94" y2="62" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e11" data-kind="edge" data-from="north" data-to="south" data-modes="car,person" data-width="9" data-height="2.4" data-connection="lane" data-oneway="false" x1="70" y1="38" x2="70" y2="62" stroke="#b9c8c3" stroke-width="9"/>
+<line id="e12" data-kind="edge" data-from="north-west" data-to="exit-west" data-modes="person" data-width="2.4" data-height="2.4" data-connection="stairs" data-oneway="false" x1="46" y1="38" x2="28" y2="38" stroke="#b9c8c3" stroke-width="2.4"/>
+<line id="e13" data-kind="edge" data-from="exit-west" data-to="shelter-west" data-modes="person" data-width="2.4" data-height="2.4" data-connection="walkway" data-oneway="false" x1="28" y1="38" x2="16" y2="38" stroke="#b9c8c3" stroke-width="2.4"/>
+<line id="e14" data-kind="edge" data-from="east" data-to="exit-east" data-modes="person" data-width="2.4" data-height="2.4" data-connection="walkway" data-oneway="false" x1="94" y1="62" x2="112" y2="62" stroke="#b9c8c3" stroke-width="2.4"/>
+<line id="e15" data-kind="edge" data-from="exit-east" data-to="shelter-east" data-modes="person" data-width="2.4" data-height="2.4" data-connection="walkway" data-oneway="false" x1="112" y1="62" x2="124" y2="62" stroke="#b9c8c3" stroke-width="2.4"/>
+<rect id="p0" data-kind="space" data-role="ev" data-label="EV-01" x="46.75" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p1" data-kind="space" data-role="parking" data-label="P-2" x="51.55" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p2" data-kind="space" data-role="parking" data-label="P-3" x="56.35" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p3" data-kind="space" data-role="parking" data-label="P-4" x="61.15" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p4" data-kind="space" data-role="parking" data-label="P-5" x="65.95" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p5" data-kind="space" data-role="parking" data-label="P-6" x="70.75" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p6" data-kind="space" data-role="parking" data-label="P-7" x="75.55" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p7" data-kind="space" data-role="parking" data-label="P-8" x="80.35" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p8" data-kind="space" data-role="parking" data-label="P-9" x="85.15" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p9" data-kind="space" data-role="parking" data-label="P-10" x="89.94999999999999" y="24.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p10" data-kind="space" data-role="parking" data-label="P-11" x="46.75" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p11" data-kind="space" data-role="parking" data-label="P-12" x="51.55" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p12" data-kind="space" data-role="parking" data-label="P-13" x="56.35" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p13" data-kind="space" data-role="parking" data-label="P-14" x="61.15" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p14" data-kind="space" data-role="parking" data-label="P-15" x="65.95" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p15" data-kind="space" data-role="parking" data-label="P-16" x="70.75" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p16" data-kind="space" data-role="parking" data-label="P-17" x="75.55" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p17" data-kind="space" data-role="parking" data-label="P-18" x="80.35" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p18" data-kind="space" data-role="parking" data-label="P-19" x="85.15" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<rect id="p19" data-kind="space" data-role="parking" data-label="P-20" x="89.94999999999999" y="47.5" width="2.5" height="5" fill="none" stroke="#739588" stroke-width=".2"/>
+<circle id="road-west" data-kind="node" data-role="road" data-label="외부 도로 출발" data-safe="false" data-zone="road" data-floor="L1" cx="8" cy="92" r="1" fill="#306d60"/>
+<circle id="road-east" data-kind="node" data-role="road" data-label="동쪽 도로" data-safe="false" data-zone="road" data-floor="L1" cx="110" cy="92" r="1" fill="#306d60"/>
+<circle id="road-gate" data-kind="node" data-role="junction" data-label="도로 진입 분기" data-safe="false" data-zone="road" data-floor="L1" cx="70" cy="92" r="1" fill="#306d60"/>
+<circle id="entrance" data-kind="node" data-role="entrance" data-label="주차장 진입" data-safe="false" data-zone="entry" data-floor="L1" cx="70" cy="74" r="1" fill="#306d60"/>
+<circle id="south" data-kind="node" data-role="junction" data-label="남측 차로" data-safe="false" data-zone="indoor" data-floor="L1" cx="70" cy="62" r="1" fill="#306d60"/>
+<circle id="west" data-kind="node" data-role="junction" data-label="서측 차로" data-safe="false" data-zone="indoor" data-floor="L1" cx="46" cy="62" r="1" fill="#306d60"/>
+<circle id="east" data-kind="node" data-role="junction" data-label="동측 차로" data-safe="false" data-zone="indoor" data-floor="L1" cx="94" cy="62" r="1" fill="#306d60"/>
+<circle id="north-west" data-kind="node" data-role="junction" data-label="서측 교차로" data-safe="false" data-zone="indoor" data-floor="L1" cx="46" cy="38" r="1" fill="#306d60"/>
+<circle id="north" data-kind="node" data-role="junction" data-label="북측 차로" data-safe="false" data-zone="indoor" data-floor="L1" cx="70" cy="38" r="1" fill="#306d60"/>
+<circle id="north-east" data-kind="node" data-role="parking" data-label="P-24 주차 구역" data-safe="false" data-zone="indoor" data-floor="L1" cx="94" cy="38" r="1" fill="#306d60"/>
+<circle id="ev" data-kind="node" data-role="ev" data-label="EV-01 충전 구역" data-safe="false" data-zone="indoor" data-floor="L1" cx="58" cy="38" r="1" fill="#306d60"/>
+<circle id="exit-west" data-kind="node" data-role="exit" data-label="서측 비상구" data-safe="false" data-zone="egress" data-floor="L1" cx="28" cy="38" r="1" fill="#306d60"/>
+<circle id="shelter-west" data-kind="node" data-role="shelter" data-label="서측 옥외 집결지" data-safe="true" data-zone="outside" data-floor="L1" cx="16" cy="38" r="1" fill="#306d60"/>
+<circle id="exit-east" data-kind="node" data-role="exit" data-label="동측 비상구" data-safe="false" data-zone="egress" data-floor="L1" cx="112" cy="62" r="1" fill="#306d60"/>
+<circle id="shelter-east" data-kind="node" data-role="shelter" data-label="동측 옥외 집결지" data-safe="true" data-zone="outside" data-floor="L1" cx="124" cy="62" r="1" fill="#306d60"/>
+</svg>

@@ -17,3 +17,12 @@ export function fireworkPhase(time,index){
  if(age<3.8){const progress=(age-1)/2.8;return {stage:'burst',progress,opacity:Math.pow(1-progress,1.2)};}
  return {stage:'rest',progress:0,opacity:0};
 }
+
+export function gsFireworkPhase(time){
+ const age=((time-2.7)%8+8)%8;
+ if(age<.9)return {stage:'launch',progress:age/.9,opacity:1};
+ if(age<2)return {stage:'form',progress:(age-.9)/1.1,opacity:1};
+ if(age<3.6)return {stage:'hold',progress:(age-2)/1.6,opacity:1};
+ if(age<5.5){const progress=(age-3.6)/1.9;return {stage:'fade',progress,opacity:Math.pow(1-progress,1.7)};}
+ return {stage:'rest',progress:0,opacity:0};
+}
