@@ -1,0 +1,19 @@
+{
+  "name": "ev-battery-care-dashboard",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "convert:data": "python3 scripts/convert-battery-xlsx-to-json.py",
+    "validate:data": "python3 scripts/validate-battery-json.py",
+    "dev": "vite",
+    "lint": "tsc --noEmit",
+    "test": "vitest run",
+    "build": "tsc --noEmit && vite build"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.2",
+    "vite": "^7.1.5",
+    "vitest": "^3.2.4"
+  }
+}
