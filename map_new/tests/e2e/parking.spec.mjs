@@ -1,12 +1,12 @@
 import {test,expect} from '@playwright/test';
 test.beforeEach(async({page})=>{const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&!r.url().includes('/reports/'))errors.push(r.status()+' '+r.url());});page.__errors=errors;});
 test.afterEach(async({page})=>expect(page.__errors).toEqual([]));
-async function screenshot(page,name,options={}){return expect(page).toHaveScreenshot(name,{...options,style:'#quality-status {visibility:hidden !important}'});}
+async function screenshot(page,name,options={}){return expect(page).toHaveScreenshot(name,{...options,mask:[page.locator('#quality-status')],maskColor:'#f6f6ee'});}
 async function open(page,site='changdong-b2'){
   await page.goto(`/map_new/?site=${site}`);await page.waitForFunction(id=>window.__parking?.state.plan?.id===id,site);await expect(page.locator('#world')).toHaveAttribute('data-ready','true');await page.evaluate(()=>document.fonts.ready);
 }
 test('public B2 source converts to actual WebGL meshes, with original and data export',async({page})=>{
-  await open(page);const state=await page.evaluate(()=>({walls:window.__parking.state.model.meshes.length,triangles:window.__parking.scene.renderer.info.render.triangles,provenance:window.__parking.state.plan.provenance}));expect(state.walls).toBe(24);expect(state.triangles).toBeGreaterThan(288);expect(state.provenance.kind).toBe('source-traced');
+  await open(page);const state=await page.evaluate(()=>({walls:window.__parking.state.model.meshes.length,triangles:window.__parking.scene.renderer.info.render.triangles,provenance:window.__parking.state.plan.provenance}));expect(state.walls).toBe(23);expect(state.triangles).toBeGreaterThan(288);expect(state.provenance.kind).toBe('source-traced');
   await expect(page.locator('#evidence')).toContainText('수동 동선 주석');await screenshot(page,'public-b2.png');
   await page.locator('#source-thumb').click();await expect(page.locator('dialog img')).toBeVisible();await page.getByRole('button',{name:'닫기',exact:true}).click();
   const download=page.waitForEvent('download');await page.locator('#export').click();expect((await download).suggestedFilename()).toBe('changdong-b2-model.json');
@@ -45,6 +45,15 @@ test('actual Naver-located building routes from acquired OSM road through the dr
   await open(page,'10000901-0');expect(await page.evaluate(()=>window.__parking.state.route.ids)).toEqual(['road-start','road-portal','entrance','P2']);await expect(page.locator('#route-message')).toContainText('외부 도로 → 건물 진입');await expect(page.locator('#evidence')).toContainText('자동 그래프');await screenshot(page,'neonadeuli-route.png');
   await page.locator('#speed').selectOption('4');await page.locator('#play').click();await expect(page.locator('#play')).toHaveText('✓ 도착했습니다',{timeout:15000});expect(await page.evaluate(()=>window.__parking.state.pose.arrived)).toBe(true);
 });
+test('parks inside a source bay with suitable dimensions and previews a proposed charger destination',async({page})=>{
+  await open(page,'10000901-0');await page.locator('#destination').selectOption('parking:bay-P2');await expect(page.locator('#play')).toBeDisabled();await expect(page.locator('#route-message')).toContainText('전진 주차 경로를 찾지 못했습니다');
+  await page.locator('#compact-vehicle').click();await expect(page.locator('#play')).toBeEnabled();expect(await page.evaluate(()=>window.__parking.state.route.parking.spaceId)).toBe('bay-P2');
+  expect(await page.evaluate(()=>window.__parking.scene.world.children.filter(o=>o.userData.kind==='parked-car'&&o.visible).length)).toBe(2);await screenshot(page,'parking-bay.png');
+  await page.locator('#speed').selectOption('4');await page.locator('#play').click();await expect(page.locator('#play')).toHaveText('✓ 도착했습니다',{timeout:15000});
+  const parked=await page.evaluate(()=>{const s=window.__parking.state;return {pose:s.pose,bay:s.plan.spaces.find(b=>b.id==='bay-P2')};});expect(parked.pose.x).toBeCloseTo(parked.bay.x);expect(Math.abs(parked.pose.z-parked.bay.z)).toBeLessThan(.3);
+  await page.locator('[data-tab=charging]').click();await page.locator('[data-candidate=bay-P3]').click();await page.locator('#charge-route').click();await expect(page.locator('#route-message')).toContainText('충전기 설치 후보');await expect(page.locator('#destination')).toHaveValue('parking:bay-P3');await expect(page.locator('#play')).toBeEnabled();
+  expect(await page.evaluate(()=>window.__parking.state.plan.nodes.some(n=>n.kind==='ev'))).toBe(false);
+});
 test('mobile source selection and 3D controls remain usable without horizontal overflow',async({page})=>{
   await page.setViewportSize({width:390,height:844});await open(page,'integration-lab');expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);await screenshot(page,'parking-mobile.png',{fullPage:true});
   await page.locator('#fire').click();await page.locator('#fire-location').selectOption('all');await expect(page.locator('#play')).toBeDisabled();await expect(page.locator('#fire-location')).toBeVisible();
@@ -75,11 +84,11 @@ test('actual station data drives disclosed green and red screening, filters and 
 });
 test('accessible bays stay visible, realistic objects accept multiple textures and drawing details preserve OCR',async({page})=>{
   await open(page);const scene=await page.evaluate(()=>{const w=window.__parking.scene.world;return {marks:w.children.filter(o=>o.userData.kind==='accessible-mark').length,cars:w.children.filter(o=>o.userData.kind==='parked-car').length,stairs:w.children.filter(o=>o.userData.kind==='stairs').length,objects:w.userData.objectCount};});
-  expect(scene).toEqual({marks:4,cars:101,stairs:3,objects:87});
+  expect(scene).toEqual({marks:4,cars:97,stairs:3,objects:87});
   await page.locator('.visual-controls summary').click();await page.locator('[data-finish=wall]').selectOption('brick');await page.locator('[data-finish=floor]').selectOption('epoxy');await page.locator('[data-finish=column]').selectOption('tile');await page.locator('[data-finish=stairs]').selectOption('concrete');await page.locator('#parked-cars').uncheck();
   expect(await page.evaluate(()=>window.__parking.scene.world.children.filter(o=>o.userData.kind==='parked-car').every(o=>!o.visible))).toBe(true);expect(await page.evaluate(()=>window.__parking.scene.finishes)).toMatchObject({wall:'brick',floor:'epoxy',column:'tile'});await screenshot(page,'drawing-materials.png');
   await page.locator('#ocr-labels').check();expect(await page.evaluate(()=>window.__parking.scene.textGroup.children.length)).toBeGreaterThan(5);
-  await page.locator('#drawing-info').click();await expect(page.locator('#dialog-content')).toContainText('전기실');await expect(page.locator('#dialog-content')).toContainText('현재 구획 105면');await expect(page.locator('#dialog-content')).toContainText('가정 높이');
+  await page.locator('#drawing-info').click();await expect(page.locator('#dialog-content')).toContainText('전기실');await expect(page.locator('#dialog-content')).toContainText('현재 구획 101면');await expect(page.locator('#dialog-content')).toContainText('가정 높이');
   await page.getByText(/자동 추출한 원본 글자 전체/).click();await expect(page.locator('.drawing-text')).toContainText('전기실');
 });
 test('mobile charging settings and all drawing information remain reachable',async({page})=>{

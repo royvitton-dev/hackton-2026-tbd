@@ -15,3 +15,5 @@
 }
 
 .drawing-totals{display:flex;flex-wrap:wrap;gap:10px;margin:20px 0}.drawing-totals span{padding:12px 18px;background:#eaf0e3;border-radius:6px;font-size:11px}.drawing-totals b{display:block;font-size:25px;font-weight:500}.drawing-note{padding:12px;background:#f3eddd;border-radius:6px}.drawing-table{max-height:330px;overflow:auto;margin:15px 0}.drawing-table table{border-collapse:collapse;width:100%;font-size:11px;white-space:nowrap}.drawing-table td,.drawing-table th{padding:8px 12px;border-bottom:1px solid #dce5d2;text-align:left}.drawing-table th{position:sticky;top:0;background:#eef2e6}.drawing-text{max-height:400px;overflow:auto}.drawing-text small{color:#829079;margin-left:10px}#dialog-content>details{padding:12px 0;border-top:1px solid #d8e0cf}#dialog-content>details>summary{cursor:pointer;font-size:13px}#dialog-content a{text-decoration:underline}
+
+.vehicle-fields .field{min-width:0}.compact-vehicle{font-size:10px;border:1px solid #dce5d3;border-radius:4px;padding:7px;width:100%;color:#617954}.charge-route{width:100%;margin:8px 0}.route-panel .compact-vehicle{grid-column:1/-1}

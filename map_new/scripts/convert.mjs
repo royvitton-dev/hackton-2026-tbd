@@ -45,6 +45,7 @@ for(const site of sites){
   plan.id=site.id;plan.name=site.name;plan.sourceAsset=site.sourceAsset.file;
   plan=annotateParking(plan,site);
   plan=enrichObjects(plan,site);
+  if(site.siteId==='10000901')plan.parkingAccess=plan.spaces.map((s,i)=>({spaceId:s.id,nodeId:i===0?'entrance':i===1?'P2':'P3',source:site.source,method:'source-reviewed-adjacent-lane',surveyed:false}));
   if(site.synthetic){plan.spaces[1].accessible=true;plan.spaces[1].label='장애인 전용 · 합성 검증';}
   if(site.id==='changdong-b2')plan.sourceCrop={x:550/1800,y:330/1350,width:1030/1800,height:830/1350};
   plan.provenance={kind:site.synthetic?'synthetic':site.annotation?'source-traced':'raster-extracted',source:site.source||null,sha256:sha(bytes),annotationSha256:site.annotation?sha(await readFile(path.join(root,site.annotation))):null};

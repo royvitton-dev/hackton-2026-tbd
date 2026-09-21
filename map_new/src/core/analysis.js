@@ -24,6 +24,10 @@ export function validatePlan(plan) {
     spaces.add(s.id);
   }
   if(plan.objects!==undefined){if(!Array.isArray(plan.objects)||plan.objects.length>2000)throw Error('오브젝트 목록이 잘못되었습니다.');const ids=new Set();for(const o of plan.objects){if(!o.id||ids.has(o.id)||!['column','stairs','lift','room','door','ramp'].includes(o.kind)||![o.x,o.z,o.width,o.depth,o.height].every(finite)||Math.min(o.width,o.depth,o.height)<=0)throw Error('오브젝트의 종류·크기·좌표를 확인하세요.');ids.add(o.id);if(o.kind==='stairs'&&(!Number.isInteger(o.steps)||o.steps<2||o.steps>100))throw Error('계단 단수가 잘못되었습니다.');if(o.kind==='ramp'&&(!Array.isArray(o.path)||o.path.length<2||!o.path.every(p=>[p.x,p.y,p.z].every(finite))))throw Error('램프 경로가 잘못되었습니다.');}}
+  if(plan.parkingAccess!==undefined){
+    if(!Array.isArray(plan.parkingAccess))throw Error('주차면과 차로의 연결을 확인하세요.');
+    const seen=new Set();for(const a of plan.parkingAccess){if(!a||!spaces.has(a.spaceId)||!nodes.has(a.nodeId)||seen.has(a.spaceId))throw Error('주차면과 차로의 연결을 확인하세요.');seen.add(a.spaceId);}
+  }
   return plan;
 }
 export function analyzeSvg(text) {
@@ -53,7 +57,7 @@ export function compileMeshes(plan) {
     const corners=[[w.x1+nx,w.z1+nz],[w.x2+nx,w.z2+nz],[w.x2-nx,w.z2-nz],[w.x1-nx,w.z1-nz]];
     return {id:`wall-${i}`,kind:'wall',positions:[0,w.height].flatMap(y=>corners.flatMap(([x,z])=>[x,y+(w.y||0),z])),indices:[...indices]};
   });
-  return {version:1,units:'meters',coordinateSystem:'drawing-x-right-y-up-z-down',meshes,objects:plan.objects||[],labels:plan.labels||[],nodes:plan.nodes,graph:plan.edges,spaces:plan.spaces,source:plan.provenance||null};
+  return {version:1,units:'meters',coordinateSystem:'drawing-x-right-y-up-z-down',meshes,objects:plan.objects||[],labels:plan.labels||[],nodes:plan.nodes,graph:plan.edges,spaces:plan.spaces,...(plan.parkingAccess?{parkingAccess:plan.parkingAccess}:{}),source:plan.provenance||null};
 }
 // Roads retain their source IDs and coordinate provenance. An explicit surveyed
 // portal is mandatory; never infer an entrance from a building centroid.
