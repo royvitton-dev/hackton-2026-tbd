@@ -1,0 +1,64 @@
+{
+  "checkedAt": "2026-09-21T23:21:23.745112+09:00",
+  "status": "AWAITING_LICENSE_APPROVAL",
+  "environment": {
+    "paths": {
+      "/Applications/Android Studio.app": false,
+      "/Users/gschargev/Library/Android/sdk": false,
+      "/opt/homebrew/share/android-commandlinetools": false,
+      "/Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/packaging-tools": true
+    },
+    "commands": {
+      "adb": null,
+      "emulator": null,
+      "sdkmanager": null,
+      "java": "/usr/bin/java"
+    },
+    "architecture": "arm64",
+    "memoryBytes": 17179869184,
+    "workspaceDiskFreeBytes": 425508827136,
+    "macOS": "26.5.1"
+  },
+  "components": [
+    {
+      "package": "cmdline-tools;23.0",
+      "version": "23.0",
+      "url": "https://dl.google.com/android/repository/commandlinetools-mac_arm64-16111833_latest.zip",
+      "downloadBytes": 155384151,
+      "officialSha1": "ad03dc49bfacfd52c110b14104ea548b8a07e830",
+      "license": "android-sdk-license"
+    },
+    {
+      "package": "platform-tools",
+      "version": "37.0.1",
+      "url": "https://dl.google.com/android/repository/platform-tools_r37.0.1-darwin.zip",
+      "downloadBytes": 16110554,
+      "officialSha1": "6ae73f4de6452dc57e62ec02b68eed92a4c21661",
+      "license": "android-sdk-license"
+    },
+    {
+      "package": "emulator",
+      "version": "37.1.11",
+      "url": "https://dl.google.com/android/repository/emulator-darwin_aarch64-15917651.zip",
+      "downloadBytes": 394555844,
+      "officialSha1": "f22f44948a2b7f0a0103645b9a639290eef92426",
+      "license": "android-sdk-license"
+    },
+    {
+      "package": "system-images;android-35;default;arm64-v8a",
+      "version": "2",
+      "url": "https://dl.google.com/android/repository/sys-img/android/arm64-v8a-35_r02.zip",
+      "downloadBytes": 769099654,
+      "officialSha1": "2026a06409db630b56711afdbffb457c1dbaed49",
+      "license": "android-sdk-license"
+    }
+  ],
+  "downloadBytes": 1335150203,
+  "licenseUrl": "https://developer.android.com/studio/terms",
+  "proposedRoot": "/Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/android-test-sdk",
+  "sdkInstalled": false,
+  "licenseAccepted": false,
+  "archivesDownloaded": false,
+  "apk": "/Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/outputs/DROP-LAND-Android.apk",
+  "target": "fresh local Android15 API35 arm64 emulator; no physical device or personal Android data"
+}

@@ -219,3 +219,12 @@ Existing heartbeat drop-land-23 was updated, not duplicated: every15minutes, unt
 - Fork접근은이번목표턴에서도Mac잠금으로실패했다. 앞선두목표턴의동일원인이며기존잠금해제질문이대기중이다. 제품오류수정·검증은계속진행할수있었으므로단순상태반복으로처리하지않았다. 아직푸시완료가아니다.
 
 - 29빌드모바일WebGL/Canvas3배속N번째당첨/재시작2/2및Chrome종료통과. Mac/APK별도29폴더재빌드·서명확인,내장22파일dist일치,resources1484offset/4byte정렬,MacZIP CRC/실행권한/라이선스보존확인후outputs갱신. 최신APK추출별도Chrome실행은반복하지않았으며현재웹빌드와바이트동일성만확인했다. 실제Android/최신Mac창재실행은미실행이다. 29-package-results에해시보존.
+
+## 30 — 2026-09-21 23:16–23:30 KST Android 준비와 통합 경로 검증
+
+- Android SDK/adb/emulator는 없고 arm64/RAM16GiB/macOS26.5.1/디스크 여유 약425GB를 확인했다. 최초 샌드박스 sysctl 읽기는 거부되어 읽기 전용 승인 실행으로 확인했다. Google 공식 XML 메타데이터만 읽어 Android15 AOSP arm64 구성을 정했다. 다운로드 약1.34GB, 준비 공간 약8GB는 추정이다. 약관2.1의 사전 동의 조건을 확인하고 설치·검증 동의를 요청했다. SDK 설치·라이선스 수락·Android 실행은 하지 않았다. 구체적인 계획과 체크섬은 desktop/android-emulator-plan.md 및30-android-emulator-plan.json에 있다.
+- 원격main60c331f8의 다른 프로젝트 변경을 확인했다. pinball 차이는 없었고 af26c156으로 정상 병합했다. 새 통합 서버가 /pinball/을 제공하므로 실제 park/server.mjs --production을 별도4191에서 실행했다. 기존4188/4189는 재시작하지 않았다.
+- 임시 Vite7.3.6 설치에서 번들Node의 서명 제한으로 Rollup 네이티브 모듈을 로드하지 못했다. 파일은 있었으며 npm의 모듈누락 안내가 근본 원인이 아니었다. 공식 같은 버전 @rollup/wasm-node4.63.4로 임시 환경만 바꾸어 실행에 성공했다. 저장소 package/lockfile이나 OS 보안 설정은 수정하지 않았다.
+- PC1440×1000 플레이어4공/모바일390×844 DPR2 로또45공 두 흐름 통과. 공개 실행파일15개 SHA256 일치, 기본명단5명/맵5개, 새로고침, 캐논퍼레이드3배속, 실제 정지250ms snapshot유지/재개, 첫1개/첫7개 종료, 대형 결과와 중복집계 없음, 재경기/초기화를 확인했다. 페이지오류·실패응답·경로외 요청0건. 검사 브라우저 종료 완료. 스크린샷과 실제 경기기록은30-shared-route에 있다. 본번호6개와7번째보너스도 저장한 실제 도착기록과 대조했다.
+- 실행코드는4e73d8fd와 같아서 Mac/APK 재빌드는 필요하지 않았다. 실제 통합 Node 서버의 정적 핀볼 경로 검사이며 다른 Vite/Next 앱의 종합 검증이나 Android WebView 검사로 확대하지 않는다. 임시 서버는 검사 후 SIGTERM으로 종료했다.
+- Fork는 이번에도 Mac잠금으로 접근할 수 없었다. 앞선27/28/29 목표턴과 같은 조건이다. 기존 잠금해제 질문이 대기중이며 동일한 CLI인증 실패를 반복하거나 토큰을 추출하지 않았다. 푸시와4188최신반영은 완료되지 않았다. 원더가든의 보류된 출구 구조도 재시도하지 않았다.

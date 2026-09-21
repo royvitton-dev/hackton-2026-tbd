@@ -1,0 +1,4 @@
+First shared server startup failed before listening.
+Node v24.21.0, Vite7.3.6, Rollup4.63.4.
+ERR_DLOPEN_FAILED: rollup.darwin-arm64.node code signature not valid for use in process: mapping process and mapped file (non-platform) have different Team IDs.
+The module existed; the wrapper Cannot find module message was misleading. Scratch install switched to official npm @rollup/wasm-node@4.63.4. Second startup succeeded on4191. No project dependency or security setting was changed.

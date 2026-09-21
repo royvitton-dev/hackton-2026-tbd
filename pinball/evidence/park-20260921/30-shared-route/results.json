@@ -1,0 +1,58 @@
+{
+  "at": "2026-09-21T14:27:50.229Z",
+  "server": "http://127.0.0.1:4191",
+  "status": "PASS",
+  "tests": [
+    {
+      "name": "desktop-player",
+      "status": "PASS",
+      "servedAssets": [
+        "index.html",
+        "src/app.js",
+        "src/board-motion.js",
+        "src/devices.js",
+        "src/geometry-batch.js",
+        "src/lands.js",
+        "src/lotto.js",
+        "src/physics.js",
+        "src/renderer.js",
+        "src/renderer2d.js",
+        "src/renderer3d.js",
+        "src/return-portals.js",
+        "src/style.css",
+        "vendor/three.core.js",
+        "vendor/three.module.js"
+      ],
+      "errors": [],
+      "unexpectedRequests": [],
+      "failedResponses": [],
+      "arrivals": 1
+    },
+    {
+      "name": "mobile-lotto",
+      "status": "PASS",
+      "servedAssets": [
+        "index.html",
+        "src/app.js",
+        "src/board-motion.js",
+        "src/devices.js",
+        "src/geometry-batch.js",
+        "src/lands.js",
+        "src/lotto.js",
+        "src/physics.js",
+        "src/renderer.js",
+        "src/renderer2d.js",
+        "src/renderer3d.js",
+        "src/return-portals.js",
+        "src/style.css",
+        "vendor/three.core.js",
+        "vendor/three.module.js"
+      ],
+      "errors": [],
+      "unexpectedRequests": [],
+      "failedResponses": [],
+      "arrivals": 7
+    }
+  ],
+  "browserClosed": true
+}

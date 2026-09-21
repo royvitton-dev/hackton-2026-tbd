@@ -111,3 +111,21 @@ node tests/browser.mjs
 - `EVIDENCE_PREFIX=29b node tests/context-loss.mjs`: PC/모바일×경기/결과/대기6/6,실제WebGL확장유도중단,같은Chrome최종판정재현. 수정전29실패보존.
 - `EVIDENCE_PREFIX=29-exception BASE_URL=http://127.0.0.1:4189/dist/index.html node tests/winner-recovery.mjs`: 기존그리기예외회귀PC/모바일2/2.
 - 브라우저PLAYWRIGHT_MODULE_PATH는앞선검사와동일하다. Android실기기검사로대체하지않는다.
+
+
+## 30 - Shared router and Android preflight
+
+Official SDK repository XML metadata was read only. No SDK archive installation, license acceptance, or Android execution occurred. Versions, URLs and checksums are in desktop/android-emulator-plan.md and30-android-emulator-plan.json.
+
+```sh
+# Scratch environment only; no repository package/lockfile changes.
+npm install --ignore-scripts --no-audit --no-fund vite@7.3.6
+# Initial native Rollup load failed because signed Node/extension Team IDs differed.
+npm install --ignore-scripts --no-audit --no-fund 'rollup@npm:@rollup/wasm-node@4.63.4'
+# main-integration/node_modules temporarily links scratch router-tools/node_modules; removed after tests.
+PORT=4191 PARK_SERVER_STATE_FILE=../router-tools/server.json node park/server.mjs --production
+# From pinball candidate, with PLAYWRIGHT_MODULE_PATH set to bundled Playwright:
+ROUTER_TEST_URL=http://127.0.0.1:4191 node tests/shared-route.mjs
+```
+
+Actual runs used absolute bundled Node/Playwright paths. Server started on second attempt; two Chrome flows passed, browser closed, own4191server stopped bySIGTERM with exit0. Source receipt and independent stored lotto arrival review:30-review.json. The first large documentation-write heredoc failed UTF-8 parsing before any writes; a smaller ASCII script and apply_patch completed the records.
