@@ -1,0 +1,28 @@
+PASS perspective cameras, 60 balls at 3x, exact replay {
+  device: 'desktop 1440x1000',
+  balls: 60,
+  speed: 3,
+  camera: 'PerspectiveCamera',
+  cameraSwitchWhilePaused: 'PASS',
+  sameBrowserReplay: 'PASS',
+  finishOrder: 'PASS',
+  frames: 212,
+  fps: 48.55369534846437,
+  p95IntervalMs: 33.399999999999636,
+  meanJsMs: 5.8410377357647105,
+  errors: []
+}
+PASS perspective cameras, 60 balls at 3x, exact replay {
+  device: 'mobile emulation 390x844 DPR2',
+  balls: 60,
+  speed: 3,
+  camera: 'PerspectiveCamera',
+  cameraSwitchWhilePaused: 'PASS',
+  sameBrowserReplay: 'PASS',
+  finishOrder: 'PASS',
+  frames: 237,
+  fps: 52.8675634076156,
+  p95IntervalMs: 33.399999999999636,
+  meanJsMs: 5.01012658198926,
+  errors: []
+}
