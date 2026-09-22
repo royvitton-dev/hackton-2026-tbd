@@ -1,9 +1,20 @@
 import { expect, test } from '@playwright/test';
+import { readFileSync } from 'node:fs';
 
 test.use({ contextOptions: { reducedMotion: 'reduce' } });
 
-for (const [userId, renderer] of [['U0004', 'webgl-3d-mesh'], ['U0059', 'webgl-cutout']]) {
-  test(`battery view toggles and restores the vehicle for ${renderer}`, async ({ page }) => {
+const workbook = JSON.parse(readFileSync(new URL('../../src/data/battery/workbook.json', import.meta.url), 'utf8')) as {
+  users: { userId: string; vehicleId: string }[];
+};
+const models = JSON.parse(readFileSync(new URL('../../src/data/vehicleModelSources.json', import.meta.url), 'utf8')) as {
+  vehicleId: string; glbPath: string | null; available: boolean;
+}[];
+
+for (const userId of ['U0004', 'U0059']) {
+  const vehicleId = workbook.users.find(user => user.userId === userId)!.vehicleId;
+  const asset = models.find(model => model.vehicleId === vehicleId)!;
+  const renderer = asset.available && asset.glbPath ? 'webgl-3d-mesh' : 'webgl-cutout';
+  test(`battery view toggles and restores the vehicle for ${userId} (${renderer})`, async ({ page }) => {
     await page.goto(`/?user=${userId}`);
     const canvas = page.locator('canvas');
     const toggle = page.getByRole('button', { name: '배터리 위치 보기' });

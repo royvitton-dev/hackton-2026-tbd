@@ -120,6 +120,7 @@ export function calculateUserSummary(
   const assessment = assessScientificHistory(features.map((feature) => ({
     startedAt: feature.startedAt,
     endedAt: feature.endedAt,
+    unpluggedAt: feature.unpluggedAt,
     startSocPct: feature.mockTruthStartSocPct ?? feature.userReportedStartSocPct,
     endSocPct: feature.mockTruthEndSocPct ?? feature.userReportedEndSocPct,
     usesReferenceSoc: feature.mockTruthStartSocPct != null || feature.mockTruthEndSocPct != null,
@@ -199,6 +200,7 @@ export function calculateUserSummary(
     referenceReasons: assessment.referenceReasons,
     modeledCapacityStress: round(scientific.observedCapacityStress, 6),
     scoreExplanation: assessment.scoreExplanation,
+    scoreEvidence: assessment.scoreEvidence,
     scoreLimitations: scientific.limitations,
     grade,
     goodHabits,

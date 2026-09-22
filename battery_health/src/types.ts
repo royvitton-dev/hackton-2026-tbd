@@ -1,4 +1,5 @@
 import type { ScoreExplanation } from './scoreExplanation';
+import type { ScoreEvidence } from './scoreNarrative';
 
 export type ChargerType = 'AC_SLOW' | 'DC_FAST' | 'ULTRA_FAST';
 
@@ -134,6 +135,7 @@ export interface UserSummary {
   referenceReasons: string[];
   modeledCapacityStress: number;
   scoreExplanation: ScoreExplanation | null;
+  scoreEvidence: ScoreEvidence;
   scoreLimitations: string[];
   grade: ScoreGrade;
   goodHabits: string[];

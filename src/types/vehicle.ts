@@ -1,4 +1,5 @@
 import type { ScoreExplanation } from '../../battery_health/src/scoreExplanation';
+import type { ScoreEvidence } from '../../battery_health/src/scoreNarrative';
 
 export interface Vehicle {
   vehicleId: string; manufacturer: string; model: string; year: number; trim: string;
@@ -18,6 +19,7 @@ export interface BatteryAttribution {
   scorePolicyId: string; referenceReasons: string[];
   modeledCapacityStress: number; scoreLimitations: string[];
   scoreExplanation: ScoreExplanation | null;
+  scoreEvidence: ScoreEvidence;
 }
 export interface UserVehicle {
   initialOdometerKm: number | null; totalChargedKwh: number; latestChargedKwh: number | null; latestChargerType: string | null;

@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { UserVehicle } from '@/types/vehicle';
 import { vehicleImageMap } from '@/data/vehicleImageMap';
 import { VehicleSelector } from './VehicleSelector';
-import { VehicleHealthSummary, gradeLabel } from './VehicleHealthSummary';
+import { VehicleHealthSummary, gradeLabel, gradeTone } from './VehicleHealthSummary';
 import { BatteryInfoPanel } from './BatteryInfoPanel';
 import { VehicleDetails } from './VehicleDetails';
 import { ChargingHistory } from './ChargingHistory';
@@ -40,7 +40,7 @@ export function VehicleBatteryDashboard({users}:{users:UserVehicle[]}){
       <header className="app-header"><div className="breadcrumb"><span>내 차량</span><b>/</b>{tabs.find(([id])=>id===tab)?.[1]}</div><div className="header-status">예시 데이터 · 실제 차량 미연동</div></header>
       <VehicleSelector users={users} selected={user} onChange={id=>{selectUser(id);setFocused(tab==='battery');}}/>
       <section className="vehicle-detail-surface" aria-label="선택한 사용자 차량 상세">
-        <div className="vehicle-page-heading"><div><span className="section-kicker">내 차 배터리 관리</span><h1>{user.vehicle.manufacturer} <span data-testid="vehicle-model">{user.vehicle.model}</span></h1><p>{user.vehicle.year}<i/> {user.vehicle.batteryCapacityKwh.toFixed(1)} kWh<i/> {user.vehicle.trim}</p></div><div className="vehicle-identity"><span className={`status-badge ${user.healthScore===null?'pending':user.healthScore<60?'caution':''}`}>{gradeLabel(user.healthScore,user.attribution.scoreScope)}</span></div></div>
+        <div className="vehicle-page-heading"><div><span className="section-kicker">내 차 배터리 관리</span><h1>{user.vehicle.manufacturer} <span data-testid="vehicle-model">{user.vehicle.model}</span></h1><p>{user.vehicle.year}<i/> {user.vehicle.batteryCapacityKwh.toFixed(1)} kWh<i/> {user.vehicle.trim}</p></div><div className="vehicle-identity"><span className={`status-badge ${user.healthScore===null?'pending':gradeLabel(user)==='관찰 필요'?'caution':''}`} data-tone={gradeTone(user)}>{gradeLabel(user)}</span></div></div>
         <div className="dashboard-grid"><div className="vehicle-scene-panel">
           {!introActive&&<Viewer key={user.vehicle.vehicleId} vehicle={user.vehicle} image={asset} focused={focused} onFocus={toggleFocus}/>}
           <div className="scene-data-strip"><span>{focused?'배터리 위치와 충전 습관을 확인하세요 · 버튼을 다시 누르면 차량 보기':'배터리 보기 버튼으로 위치와 충전 습관을 확인하세요'}</span></div>

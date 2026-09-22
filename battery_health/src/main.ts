@@ -2,7 +2,7 @@ import './style.css';
 import { loadBatteryData } from './data';
 import { calculateUserSummary, deriveSession, ruleMap } from './scoring';
 import { batteryStorage } from './storage';
-import { formatIdleTime, scoreArithmetic, scoreMainReason } from './scoreExplanation';
+import { buildScoreNarrative, type ScoreNarrative } from './scoreNarrative';
 import type { ChargingSession, SessionFeature, UserProfile, UserSummary, Vehicle, VehicleImage } from './types';
 
 const app = document.querySelector<HTMLDivElement>('#app')!;
@@ -63,20 +63,27 @@ function guideList(items: string[]): string {
   return items.map((item) => `<li>${escapeHtml(item)}</li>`).join('');
 }
 
-function scoreExplanation(summary: UserSummary): string {
-  const explanation = summary.scoreExplanation;
-  if (!explanation || summary.batteryCareScore === null) return '';
-  return `<details class="insufficient-note score-detail"><summary>왜 ${summary.batteryCareScore}점인가요?</summary>
-    <p>배터리 성능이 ${summary.batteryCareScore}% 남았다는 뜻이 아닙니다. ${escapeHtml(scoreMainReason(explanation))}</p>
-    <p>${summary.scoreObservationDays.toFixed(1)}일 동안의 충전 ${summary.scoreSessionCount}건을 반영했습니다. 평균 잔량 ${explanation.averageStartSocPct.toFixed(1)}%에서 시작해 ${explanation.averageEndSocPct.toFixed(1)}%에서 끝났습니다. 평균이 아닌 개별 충전 구간을 각각 계산합니다.</p>
-    <p>90% 이상에서 끝난 충전 ${explanation.highEndSocCount}건 중, 완료 후 2시간 이상 연결한 기록은 ${explanation.highSocLongIdleCount}건입니다. 종료 잔량 90% 이상 기록의 연결 대기는 합계 ${formatIdleTime(explanation.highSocIdleMinutes)}입니다. 연결 중 종료 잔량이 유지됐다고 가정합니다.</p>
-    <p>같은 잔량 증가폭·대기시간으로 부담이 적은 비교 기준을 100점, 큰 기준을 0점으로 정합니다. 충전 중 잔량 구간과 충전 후 연결 대기의 차이를 순서대로 반영하면:</p>
-    <strong>${scoreArithmetic(explanation)}</strong>
-    <p>원래 계산값 ${explanation.rawScore.toFixed(4)}점을 0~100점으로 제한하고 반올림해 ${summary.batteryCareScore}점으로 표시합니다. + 표시는 누적 계산이 비교 기준보다 작아진 경우이며, 검증된 보너스가 아닙니다. 위 숫자는 실제 손상률이나 임의의 벌점이 아닙니다.</p>
-    <p>급속 충전 자체의 감점·심야 충전 가점은 없습니다. 실제 온도·노후도·주행 중 방전·충전 사이의 주차는 미반영이며, 온도는 25°C 가정입니다.${explanation.referenceSocSessionCount ? ` 예시 데이터 ${explanation.referenceSocSessionCount}건의 기준 잔량을 사용했으며 실제 차량 측정값이 아닙니다.` : ''}</p>
-    <h3>논문 근거와 적용 한계</h3>
-    <p><a href="https://doi.org/10.1016/j.jpowsour.2014.02.012" target="_blank" rel="noreferrer">Schmalstieg 외 (2014), Journal of Power Sources 257, 325–334</a>의 충·방전 및 시간 경과 열화 모델을 참고했습니다. <a href="https://github.com/NatLabRockies/BLAST-Lite/blob/main/blast/models/nmc111_gr_Sanyo2Ah_2014.py" target="_blank" rel="noreferrer">BLAST-Lite 공개 구현</a>의 계수·잔량-전압 표를 사용했습니다. 원 구현의 사이클 부분은 약 1C·35°C 기준이며 속도·온도 차이에 따른 열화를 계산하지 않습니다.</p>
-    <p>충전 기록만 쓰는 방식과 25°C 가정, 비교 기준·0~100점 환산은 서비스 정책입니다. 논문이 이 점수의 정확도를 검증한 것은 아닙니다. 계산용 0%·100% 대기 기준은 운전 권고가 아닙니다.</p>
+function scoreExplanation(report: ScoreNarrative): string {
+  return `<details class="insufficient-note score-detail"><summary>${report.totalScore === null ? '기록이 더 필요한 이유' : `왜 ${report.totalScore}점인가요?`}</summary>
+    <p>${escapeHtml(report.summary)}</p><p>충전 기록 기반 관리 점수이며, 실제 배터리 건강도나 남은 성능의 비율이 아닙니다.</p>
+    <p>해석 범위: ${escapeHtml(report.confidenceLabel)}</p>
+    ${report.factorExplanations.map(factor => `<details class="score-factor"><summary>${escapeHtml(factor.label)} · ${escapeHtml(factor.statusLabel)}</summary>
+      <p>${escapeHtml(factor.description)}</p><p>${escapeHtml(factor.contributionLabel)}</p>
+      <h3>좋은 점 · 확인한 내용</h3><p>${escapeHtml(factor.positiveReason)}</p>
+      <h3>평가에 반영된 근거</h3><ul>${guideList(factor.evidence)}</ul>
+      <h3>다음에 해보면 좋은 행동</h3><p>${escapeHtml(factor.tip)}</p></details>`).join('')}
+    <details class="score-factor"><summary>계산 방식 · 데이터 출처</summary>
+      <ol>${guideList(report.calculationSteps)}</ol>${report.arithmetic ? `<strong>${escapeHtml(report.arithmetic)}</strong>` : ''}
+      ${report.rangeNote ? `<p>${escapeHtml(report.rangeNote)}</p>` : ''}
+      <p>반영 기록 기준 시점: ${escapeHtml(report.asOf?.replace('T', ' ') ?? '평가 가능한 기록 없음')} · 실시간 측정 시각이 아닙니다.</p>
+      <p>계산 방식: <code>${escapeHtml(report.algorithmVersion)}</code></p>
+      ${report.dataSources.map(source => `<h3>${escapeHtml(source.label)}</h3><p>${escapeHtml(source.detail)}</p>`).join('')}
+      <h3>이번 평가에 포함하지 않은 정보</h3><ul>${guideList(report.limitations)}</ul>
+    </details>
+    <details class="score-factor"><summary>논문 근거와 적용 한계</summary>
+      <p><a href="https://doi.org/10.1016/j.jpowsour.2014.02.012" target="_blank" rel="noreferrer">Schmalstieg 외 (2014), Journal of Power Sources 257, 325–334</a>의 모델과 <a href="https://github.com/NatLabRockies/BLAST-Lite/blob/main/blast/models/nmc111_gr_Sanyo2Ah_2014.py" target="_blank" rel="noreferrer">BLAST-Lite 공개 구현</a>의 계수·잔량-전압 표를 참고했습니다. 원 구현의 사이클 부분은 약 1C·35°C 기준이며 속도·온도 차이에 따른 열화를 계산하지 않습니다.</p>
+      <p>충전 기록만 쓰는 방식과 25°C 가정, 비교 기준·0~100점 환산은 서비스 정책입니다. 논문이 이 점수의 정확도를 검증한 것은 아닙니다. 계산용 0%·100% 대기 기준은 운전 권고가 아닙니다.</p>
+    </details>
   </details>`;
 }
 
@@ -95,9 +102,10 @@ function renderDashboard(
   const careScore = summary.batteryCareScore === null ? '—' : String(summary.batteryCareScore);
   const careArc = summary.batteryCareScore ?? 0;
   const profile = profileNames[user.driverProfile] ?? user.driverProfile;
-  const scoreDescription = summary.eligibleFlag
-    ? `전체 ${summary.sessionCount}건 중 ${summary.scoreSessionCount}건의 잔량·연결 시간을 표준셀 조건에서 비교했습니다. 실제 배터리 종류 차이와 급속 충전의 열화 영향은 계산하지 않습니다.`
-    : summary.insufficientReasons.join(' · ');
+  const report = buildScoreNarrative({ score: summary.batteryCareScore, confidence: summary.socConfidenceScore,
+    recordCount: summary.sessionCount, vehicleId: vehicle.vehicleId, batteryUsableKwh: vehicle.batteryUsableKwh,
+    assessment: summary, source: 'split-json' });
+  const scoreDescription = report.summary;
 
   app.innerHTML = `
     <div class="shell">
@@ -131,15 +139,15 @@ function renderDashboard(
         </section>
 
         <section class="score-grid">
-          <article class="score-card primary">
+          <article class="score-card primary" data-tone="${report.tone}">
             <div class="score-heading"><span>BatteryCareScore</span><span class="pill ${summary.eligibleFlag ? 'eligible' : 'insufficient'}">${summary.eligibleFlag ? (summary.scoreScope === 'FULL' ? '분석 가능' : gradeLabels[summary.grade]) : 'INSUFFICIENT'}</span></div>
             <div class="score-body">
               <div class="score-ring" style="--score:${careArc}"><div><strong>${careScore}</strong><span>/ 100</span></div></div>
-              <div class="score-copy"><small>충전 습관 등급</small><h2>${gradeLabels[summary.grade]}</h2><p>${escapeHtml(scoreDescription)}</p></div>
+              <div class="score-copy"><small>충전 기록의 관리 흐름</small><h2>${report.statusLabel}</h2><p>${escapeHtml(scoreDescription)}</p></div>
             </div>
             ${summary.insufficientReasons.length ? `<div class="insufficient-note"><strong>추가 데이터 필요</strong><span>${escapeHtml(summary.insufficientReasons.join(' · '))}</span></div>` : ''}
             <div class="insufficient-note"><strong>평가 범위</strong><span>반영 ${summary.scoreSessionCount}건 · 제외 ${summary.scoreExcludedSessionCount}건 · ${number.format(summary.scoreObservationDays)}일<br>${escapeHtml(summary.referenceReasons.join(' '))}<br>0–100점 환산과 참고 평가 정책 자체는 논문으로 검증된 진단법이 아닙니다.</span></div>
-            ${scoreExplanation(summary)}
+            ${scoreExplanation(report)}
           </article>
           <article class="score-card confidence">
             <div class="score-heading"><span>SOC 데이터 품질</span><span class="hint">배터리 점수 아님</span></div>

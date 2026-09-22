@@ -1,4 +1,11 @@
 import type { UserVehicle } from '../types/vehicle';
+import { buildScoreNarrative } from '../../battery_health/src/scoreNarrative';
+
+export function vehicleScoreNarrative(user: UserVehicle) {
+  return buildScoreNarrative({ score: user.healthScore, confidence: user.confidence,
+    recordCount: user.attribution.basisSessionCount, vehicleId: user.vehicle.vehicleId,
+    batteryUsableKwh: user.vehicle.batteryCapacityKwh, assessment: user.attribution, source: 'workbook' });
+}
 
 /** User-facing explanations only. Score eligibility and calculation stay in battery.ts. */
 export function scorePendingMessage(user: UserVehicle): string {

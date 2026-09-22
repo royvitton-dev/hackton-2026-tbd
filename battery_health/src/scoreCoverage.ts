@@ -1,11 +1,13 @@
 import { calculateScientificScore, isNmcReferenceCompatible, scientificSessionStatus, type ScientificSessionInput } from './scientificScore';
 import { buildScoreExplanation } from './scoreExplanation';
+import type { ScoreEvidence } from './scoreNarrative';
 
 export type ScoreScope = 'FULL' | 'PARTIAL' | 'REFERENCE' | 'NONE';
 export const SCORE_POLICY_ID = 'SOC_IDLE_REFERENCE_V2';
 export interface TimedScientificSession extends ScientificSessionInput {
   startedAt: string;
   endedAt: string;
+  unpluggedAt?: string;
 }
 
 /**
@@ -43,7 +45,18 @@ export function assessScientificHistory(
   const eligibleFlag = insufficientReasons.length === 0;
   const excludedSessionCount = sessions.length - supported.length;
   const scoreScope: ScoreScope = !eligibleFlag ? 'NONE' : referenceReasons.length > 0 ? 'REFERENCE' : excludedSessionCount > 0 ? 'PARTIAL' : 'FULL';
+  // The source workbook uses Korean local time; the standalone JSON omits its offset.
+  // Match scripts/extract-battery-data.py for display metadata only, leaving scoring untouched.
+  const basisTimes = supported.flatMap(session => [session.endedAt, session.unpluggedAt ?? session.endedAt])
+    .filter(value => Number.isFinite(Date.parse(value)))
+    .map(value => /(?:Z|[+-]\d{2}:\d{2})$/i.test(value) ? value : `${value}+09:00`);
+  const scoreEvidence: ScoreEvidence = {
+    asOf: basisTimes.sort((a, b) => Date.parse(a) - Date.parse(b)).at(-1) ?? null,
+    requirements: { sessions: rules.minimum_sessions_required, days: rules.minimum_period_days, efc: rules.minimum_total_efc_for_score },
+    referenceSocSessionCount: supported.filter(session => session.usesReferenceSoc).length,
+  };
   return { scientific, eligibleFlag, scoreScope, excludedSessionCount, observationDays, estimatedEfc, insufficientReasons,
+    scoreEvidence,
     scoreExplanation: buildScoreExplanation(scientific, supported, eligibleFlag),
     scorePolicyId: SCORE_POLICY_ID, modelSupportedSessionCount, modelOutOfRangeSessionCount, referenceReasons };
 }

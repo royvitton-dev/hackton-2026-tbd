@@ -56,6 +56,7 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
   const assessment = assessScientificHistory(feature.map((item) => ({
     startedAt: item.s.startedAt,
     endedAt: item.s.endedAt,
+    unpluggedAt: item.s.unpluggedAt,
     startSocPct: item.startSoc,
     endSocPct: item.endSoc,
     usesReferenceSoc: item.s.mockTruthStartSocPct != null || item.s.mockTruthEndSocPct != null,
@@ -83,6 +84,7 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
     referenceReasons: assessment.referenceReasons,
     modeledCapacityStress: scientific.observedCapacityStress,
     scoreExplanation: assessment.scoreExplanation,
+    scoreEvidence: assessment.scoreEvidence,
     scoreLimitations: scientific.limitations,
   };
   const score = eligible ? scientific.score : null;

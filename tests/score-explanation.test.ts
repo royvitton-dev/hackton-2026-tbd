@@ -18,7 +18,7 @@ test('seven-point explanation uses the actual scored records and reconstructs th
   assert.equal(explanation.referenceSocSessionCount, 8);
   assert.equal(explanation.averageStartSocPct.toFixed(1), '73.0');
   assert.equal(explanation.averageEndSocPct.toFixed(1), '98.4');
-  assert.equal(scoreArithmetic(explanation), '100 − 66.86 − 25.89 = 7.25점');
+  assert.equal(scoreArithmetic(explanation), '6.96 + 0.29 ≈ 7.25점 → 7점');
   assert.match(scoreMainReason(explanation), /충전할 때 사용한 잔량 구간/);
   assert.equal(formatIdleTime(explanation.totalIdleMinutes), '41시간 5분');
 });
@@ -32,6 +32,8 @@ test('every eligible user has a finite exact explanation; pending scores have no
     assert.ok(explanation, user.userId);
     assert.ok(Object.values(explanation).every(Number.isFinite), user.userId);
     assert.ok(Math.abs(100 - explanation.cyclePoints - explanation.idlePoints - explanation.rawScore) < 1e-8, user.userId);
+    assert.ok(Math.abs(explanation.cycleContributionPoints + explanation.idleContributionPoints - explanation.rawScore) < 1e-8, user.userId);
+    assert.ok(Math.abs(explanation.cycleWeightPct + explanation.idleWeightPct - 100) < 1e-8, user.userId);
     assert.equal(Math.round(explanation.boundedScore), user.healthScore, user.userId);
     assert.ok(explanation.highSocLongIdleCount <= explanation.highEndSocCount);
     assert.ok(explanation.highEndSocCount <= user.attribution.scoreSessionCount);
