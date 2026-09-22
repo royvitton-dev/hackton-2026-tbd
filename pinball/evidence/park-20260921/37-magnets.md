@@ -7,3 +7,5 @@
 - `node scripts/build.mjs`:런타임26파일및문법검사PASS.
 - 원더가든의보류된출구구조시험은실행하지않음.
 - Android1.3(code4)/Mac패키지·APK추출브라우저검증은37-package-results.json/37-apk-results.json에별도기록. Android실기기실행은미실행.
+
+최종실행결과:Macarm64/Android1.3빌드·서명·자산27파일일치/ZIPCRC검사PASS.최종APK추출플레이어·로또2흐름PASS,외부요청/JS오류0.기능main커밋ab8afc47의Fork푸시와원격일치,4188새로고침26실행파일일치PASS.실제Android/최신Mac네이티브실행은미실행.

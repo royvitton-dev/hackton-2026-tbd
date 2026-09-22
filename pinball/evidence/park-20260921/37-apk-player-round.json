@@ -1,0 +1,297 @@
+{
+  "config": {
+    "people": [
+      {
+        "id": "p1",
+        "name": "태성",
+        "label": "태성",
+        "count": 1,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p2",
+        "name": "병우",
+        "label": "병우",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p3",
+        "name": "순수",
+        "label": "순수",
+        "count": 1,
+        "color": "#ff82af"
+      },
+      {
+        "id": "p4",
+        "name": "종호",
+        "label": "종호",
+        "count": 1,
+        "color": "#64e4e0"
+      },
+      {
+        "id": "p5",
+        "name": "동길",
+        "label": "동길",
+        "count": 1,
+        "color": "#ffc168"
+      }
+    ],
+    "total": 5,
+    "rule": "first",
+    "target": 1,
+    "mode": "player",
+    "mapId": "parade",
+    "boardMotion": true,
+    "finishMode": "winner"
+  },
+  "seed": 3812647176,
+  "result": {
+    "roundId": "35d8b755-d0a5-4721-9867-1cdbd204ca5a",
+    "state": "complete",
+    "seed": 3812647176,
+    "time": 27.61559347136209,
+    "target": 1,
+    "total": 5,
+    "winner": {
+      "id": "p3-b1",
+      "participantId": "p3",
+      "name": "순수",
+      "label": "순수",
+      "color": "#ff82af",
+      "number": 1,
+      "rank": 1,
+      "time": 27.61559347136209,
+      "exitId": 1,
+      "exitLabel": "골인",
+      "criterion": "arrival",
+      "crossedFinish": true
+    },
+    "completionReason": "target-arrived",
+    "finishOrder": [
+      {
+        "id": "p3-b1",
+        "participantId": "p3",
+        "name": "순수",
+        "label": "순수",
+        "color": "#ff82af",
+        "number": 1,
+        "rank": 1,
+        "time": 27.61559347136209,
+        "exitId": 1,
+        "exitLabel": "골인"
+      }
+    ],
+    "assists": 0,
+    "returns": 0,
+    "returnClosed": false,
+    "motion": {
+      "enabled": true,
+      "active": false,
+      "axis": null,
+      "cycle": 5,
+      "phase": 0,
+      "roll": 0,
+      "pitch": 0,
+      "offsetX": 0,
+      "offsetY": 0,
+      "forceX": 0,
+      "forceY": 0,
+      "nextIn": 0.6813924151632733
+    },
+    "deviceStats": {
+      "captures": 22,
+      "launches": 16,
+      "releases": 5
+    },
+    "devices": [
+      {
+        "id": "parade-magnet-0",
+        "kind": "magnet",
+        "x": 90,
+        "y": 650,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-magnet-1",
+        "kind": "magnet",
+        "x": 530,
+        "y": 650,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-2",
+        "kind": "cannon",
+        "x": 150,
+        "y": 880,
+        "ballId": "p4-b1",
+        "ballIds": [
+          "p4-b1"
+        ],
+        "angle": 12.59783500984514,
+        "progress": 0.41456719119397106,
+        "holding": true,
+        "count": 1
+      },
+      {
+        "id": "parade-cannon-3",
+        "kind": "cannon",
+        "x": 310,
+        "y": 880,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 18.654796063057518,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-4",
+        "kind": "cannon",
+        "x": 470,
+        "y": 880,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-5",
+        "kind": "cannon",
+        "x": 150,
+        "y": 1080,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -12.818734920782667,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-6",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1080,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -10.173321097196574,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-7",
+        "kind": "cannon",
+        "x": 470,
+        "y": 1080,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 16.57975049826174,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-8",
+        "kind": "cannon",
+        "x": 150,
+        "y": 1280,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -9.375837026822076,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-9",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1280,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -10.118416339244654,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-10",
+        "kind": "cannon",
+        "x": 470,
+        "y": 1280,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -5.909745517611724,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      }
+    ],
+    "balls": [
+      {
+        "id": "p1-b1",
+        "x": 130.82094279510363,
+        "y": 1664.237784249206,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p5-b1",
+        "x": 309.60785850884486,
+        "y": 1100.8004448139632,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p2-b1",
+        "x": 574.7740374747623,
+        "y": 1265.1151368818928,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p4-b1",
+        "x": 164.70874250429824,
+        "y": 871.715940064256,
+        "finished": false,
+        "rank": null,
+        "heldBy": "parade-cannon-2",
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p3-b1",
+        "x": 307.89282265420735,
+        "y": 2150,
+        "finished": true,
+        "rank": 1,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      }
+    ]
+  },
+  "lotto": null
+}
