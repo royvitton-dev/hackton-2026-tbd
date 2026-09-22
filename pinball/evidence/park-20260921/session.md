@@ -278,3 +278,7 @@ Published immutable4633preview;31first/reload21assetchecks PASS and browser clos
 # 34 — 2026-09-22 Android·폴드·맵 추가 개선
 
 사용자사진과후속요청에따른변경,통과/실패/미실행,실행명령은 [34보고서](34-mobile-and-rides.md)에보존. 원본사용자사진과CodexJSONL은Git에추가하지않음.
+
+
+### 36 · 2026-09-22 사용자 후속 요청
+화면 유지, 스포츠 공/동물 얼굴, 공 추적 및 부분 확대, 이름표 깜빡임, 하프/전체 맵 세로 유지 구현.7개Node검사·실제ChromeWakeLock/탭상태·3개기기크기·16화면조합·2개최종APK추출흐름 통과. 실제Android기기실행은미실행. 기능main직접커밋6d40d3b3,정상병합193d2932와Fork푸시확인,웹즉시반영. 세부명령/검증/해시는36스크린문서와JSON에보존. 이문서는작업요약이며Codex원본JSONL이아님.
