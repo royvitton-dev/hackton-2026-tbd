@@ -13,6 +13,8 @@
     "test:browser": "node tests/browser.mjs",
     "test:action": "node tests/action.mjs",
     "test:audio": "node tests/soundscape.mjs && node tests/audio-load.mjs",
-    "test:layout": "node tests/responsive-layout.mjs"
+    "test:layout": "node tests/responsive-layout.mjs",
+    "test:fold": "node tests/fold-layout.mjs",
+    "test:courses": "node --test tests/course-clearance.test.mjs"
   }
 }

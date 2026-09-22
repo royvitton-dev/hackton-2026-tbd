@@ -2,13 +2,14 @@ import assert from 'node:assert/strict';
 import {writeFile,mkdir} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE_PATH).href);
+const mapId=process.env.PERFORMANCE_MAP||'parade';
 const out=process.env.AUDIO_EVIDENCE||'evidence/park-20260921/32-audio';await mkdir(out,{recursive:true});
-const browser=await chromium.launch({channel:'chrome',args:['--mute-audio']}),report={at:new Date().toISOString(),scope:'8-second live racing sample, 60 balls, parade, 3x, audio enabled; mobile is Chrome viewport emulation',tests:[]};
+const browser=await chromium.launch({channel:'chrome',args:['--mute-audio']}),report={at:new Date().toISOString(),scope:`8-second live racing sample, 60 balls, ${mapId}, 3x, audio enabled; mobile is Chrome viewport emulation`,tests:[]};
 try{
  for(const mobile of [false,true]){
   const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1000},isMobile:mobile,hasTouch:mobile}),page=await context.newPage(),errors=[];
   page.on('pageerror',e=>errors.push(e.message));await page.goto(process.env.TEST_URL||'http://127.0.0.1:4189');await page.waitForFunction(()=>window.pinball);
-  await page.locator('#participants').fill('A*10, B*10, C*10, D*10, E*10, F*10');await page.locator('input[name=rule][value=last]').check();await page.locator('[data-map=parade]').click();await page.locator('[data-speed="3"]').click();await page.locator('#half-view').click();await page.locator('#arena-sound').click();await page.locator('#arena-start').click();await page.waitForFunction(()=>window.pinball.snapshot().state==='racing');await page.waitForTimeout(8000);
+  await page.locator('#participants').fill('A*10, B*10, C*10, D*10, E*10, F*10');await page.locator('input[name=rule][value=last]').check();await page.locator(`[data-map=${mapId}]`).click();await page.locator('[data-speed="3"]').click();await page.locator('#half-view').click();await page.locator('#arena-sound').click();await page.locator('#arena-start').click();await page.waitForFunction(()=>window.pinball.snapshot().state==='racing');await page.waitForTimeout(8000);
   const state=await page.evaluate(()=>window.pinball.snapshot()),audio=await page.evaluate(()=>window.pinball.audio()),stats=await page.evaluate(()=>window.pinball.performance());
   const samples=stats.samples.filter(s=>s.state==='racing'),cost=samples.reduce((s,f)=>s+f.cost,0)/samples.length,fps=1000/(samples.reduce((s,f)=>s+f.delta,0)/samples.length);
   assert.equal(state.total,60);assert.ok(samples.length>100);assert.ok(audio.peakVoices<=40);assert.ok(audio.played.launch>0);assert.deepEqual(errors,[]);

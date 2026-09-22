@@ -33,7 +33,7 @@ export class Renderer3D {
   canvas.addEventListener('webglcontextrestored',()=>document.dispatchEvent(new Event('pinball-renderer-restored')));
  }
  overlay(className){const e=document.createElement('div');e.className=className;this.canvas.parentElement.append(e);return e;}
- resize(){const rect=this.canvas.getBoundingClientRect();this.width=Math.max(1,rect.width);this.height=Math.max(1,rect.height);this.webgl.setSize(this.width,this.height,false);this.aspect=this.width/this.height;}
+ resize(){const ratio=Math.min(devicePixelRatio||1,1.5);if(this.webgl.getPixelRatio()!==ratio)this.webgl.setPixelRatio(ratio);const rect=this.canvas.getBoundingClientRect();this.width=Math.max(1,rect.width);this.height=Math.max(1,rect.height);this.webgl.setSize(this.width,this.height,false);this.aspect=this.width/this.height;}
  material(color,metalness=.05,roughness=.48){const m=new THREE.MeshStandardMaterial({color,metalness,roughness});m.envMapIntensity=.2;return m;}
  mesh(geometry,material,x=0,y=0,z=0,parent=this.group){const m=new THREE.Mesh(geometry,material);m.position.set(x,y,z);m.castShadow=true;m.receiveShadow=true;parent.add(m);return m;}
  instances(geometry,material,items){
@@ -325,13 +325,14 @@ export class Renderer3D {
    const previous=this.lastRound===race.roundId?{cameraCenter:this.cameraCenter,finishedAt:new Map(this.finishedAt)}:null;
    this.build(race);if(previous){this.cameraCenter=previous.cameraCenter;this.finishedAt=previous.finishedAt;}this.rebuildPending=false;
   }
+  if(this.webgl.getPixelRatio()!==Math.min(devicePixelRatio||1,1.5))this.resize();
   const map=race.map,aspect=this.aspect||1,direction=CAMERA_DIRECTIONS[this.angle];
   const wide=this.overview||this.halfView,horizontal=wide&&aspect>1.2;
   const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.65)]?.y??map.finish;
   const target=['ready','mixing','countdown'].includes(race.state)?270:Math.max(270,Math.min(map.finish-200,progress+60));
   if(race.state!=='paused')this.cameraCenter=reduced?target:this.cameraCenter+(target-this.cameraCenter)*.08;
   const span=this.overview?map.height:this.halfView?map.height/2:520;
-  const center=this.overview?map.height/2:this.halfView?Math.max(span/2,Math.min(map.height-span/2,this.cameraCenter)):this.cameraCenter;
+  let center=this.overview?map.height/2:this.halfView?Math.max(span/2,Math.min(map.height-span/2,this.cameraCenter)):this.cameraCenter;
   this.camera.aspect=aspect;this.camera.up.set(horizontal?1:0,horizontal?0:1,0);this.camera.updateProjectionMatrix();
   // Fit playable rails, not distant scenery. Rotate the camera roll for wide windows;
   // game positions, collision radii and the simulation remain unchanged.
@@ -345,10 +346,24 @@ export class Renderer3D {
     if(corners.every(c=>{const v=c.clone().project(this.camera);return Math.abs(v.x)<.95&&Math.abs(v.y)<.94&&v.z<1;}))far=d;else near=d;
    }
    this.framingDistance=far;this.framingKey=key;
+   this.camera.position.copy(direction).multiplyScalar(far);this.camera.lookAt(0,0,0);this.camera.updateMatrixWorld();
+   // A tall viewport can show much more track than the requested span. Anchor its
+   // actual visible ground to the course ends instead of leaving half a blank screen.
+   const axis=horizontal?'x':'y';
+   this.groundEdges=[-.88,.88].map(edge=>{
+    const point=new THREE.Vector3(0,0,.5);point[axis]=edge;point.unproject(this.camera);
+    const ray=point.sub(this.camera.position).normalize();
+    return (this.camera.position.z-ray.z*this.camera.position.y/ray.y)/S;
+   }).sort((a,b)=>a-b);
+  }
+  if(!this.overview){
+   const minimum=-30-this.groundEdges[0],maximum=map.height+30-this.groundEdges[1];
+   center=minimum<=maximum?Math.max(minimum,Math.min(maximum,center)):map.height/2;
   }
   this.camera.position.copy(direction).multiplyScalar(this.framingDistance).add(new THREE.Vector3(0,0,Z(center)));this.camera.lookAt(0,0,Z(center));this.camera.updateMatrixWorld();
   const a=new THREE.Vector3(-5.17,0,Z(center)).project(this.camera),b=new THREE.Vector3(5.17,0,Z(center)).project(this.camera);
-  this.framing={horizontal,visibleSpan:span,boardWidthPixels:Math.hypot((a.x-b.x)*this.width/2,(a.y-b.y)*this.height/2),canvasWidth:this.width,canvasHeight:this.height};
+  const startPoint=new THREE.Vector3(0,0,0).project(this.camera);
+  this.framing={horizontal,visibleSpan:span,center,courseStartPixels:(1-startPoint.y)*this.height/2,boardWidthPixels:Math.hypot((a.x-b.x)*this.width/2,(a.y-b.y)*this.height/2),canvasWidth:this.width,canvasHeight:this.height};
   this.light.position.set(-6,16,Z(center)-5);this.light.target.position.set(0,0,Z(center));
   map.rotors.forEach((r,i)=>this.rotors[i].rotation.y=-rotorPose(r,race.rotationTime).angle);
   race.sliderSegments().forEach((s,i)=>this.sliders[i].position.x=X((s.ax+s.bx)/2));

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Build an offline APK from Maven-distributed open-source Android tools."""
-import argparse,pathlib,subprocess,tempfile,zipfile,hashlib,json,struct
+import argparse,pathlib,subprocess,tempfile,zipfile,hashlib,json,struct,xml.etree.ElementTree as ET
 p=argparse.ArgumentParser();p.add_argument('--tools',required=True);p.add_argument('--keystore',required=True);p.add_argument('--out',required=True);a=p.parse_args()
 source=pathlib.Path(__file__).resolve().parent/'android';game=source.parent.parent/'dist';tools=pathlib.Path(a.tools).resolve();out=pathlib.Path(a.out).resolve();key=pathlib.Path(a.keystore).resolve();key.parent.mkdir(parents=True,exist_ok=True);out.parent.mkdir(parents=True,exist_ok=True)
 java=list((tools/'jdk').glob('*/Contents/Home/bin/java'))[0];javac=java.with_name('javac');keytool=java.with_name('keytool');aapt=tools/'aapt2/aapt2';framework=tools/'android-all.jar'
@@ -30,5 +30,6 @@ with tempfile.TemporaryDirectory(prefix='dropland-apk-') as temp:
    if f.is_file():assert z.read('assets/game/'+str(f.relative_to(game)))==f.read_bytes()
   assert 'classes.dex' in z.namelist()
  run([aapt,'dump','badging',out])
-receipt={'platform':'Android','package':'com.dropland.game','minSdk':26,'targetSdk':35,'apkBytes':out.stat().st_size,'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'networkPermission':False,'assetsMatchBuiltGame':True,'signing':'local development certificate; private keystore excluded from deliverables','deviceExecution':'NOT RUN'}
+manifest=ET.parse(source/'AndroidManifest.xml').getroot();android='{http://schemas.android.com/apk/res/android}'
+receipt={'versionCode':int(manifest.get(android+'versionCode')),'versionName':manifest.get(android+'versionName'),'platform':'Android','package':'com.dropland.game','minSdk':26,'targetSdk':35,'apkBytes':out.stat().st_size,'sha256':hashlib.sha256(out.read_bytes()).hexdigest(),'networkPermission':False,'assetsMatchBuiltGame':True,'signing':'local development certificate; private keystore excluded from deliverables','deviceExecution':'NOT RUN'}
 out.with_suffix('.build.json').write_text(json.dumps(receipt,indent=2)+'\n');print('Built:',out)

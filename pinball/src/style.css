@@ -53,3 +53,6 @@ body.play-focus{overflow:hidden}.play-focus .topbar{display:none}.play-focus .ar
 .winner-splash{grid-template-rows:minmax(0,1fr);grid-template-columns:minmax(0,1fr);overflow:hidden}.winner-splash-card{align-self:center;max-height:100%;overflow-y:auto;overscroll-behavior:contain}
 
 @media(max-height:480px) and (min-aspect-ratio:6/5){.lotto-complete #splash-lotto{display:flex;align-items:center;justify-content:center;gap:10px;margin:6px auto}.lotto-complete #splash-lotto .lotto-bonus{border-top:0;border-left:1px dashed #d6ba84;padding:0 0 0 10px;gap:5px}.lotto-complete #splash-lotto .lotto-bonus>span{font-size:8px;letter-spacing:.5px}.lotto-complete #splash-name{margin:4px 0;font-size:25px}.lotto-complete #splash-status{display:none}.lotto-complete #splash-detail{font-size:11px}.lotto-complete .splash-actions{margin-top:6px}.lotto-complete .winner-splash-card>p:first-of-type{font-size:12px}}
+
+/* The ranking restart stays next to its title, with the count wrapping if needed. */
+.ranking .section-heading{flex-wrap:wrap;gap:8px}.ranking .section-heading h2{margin-right:0}.ranking #ranking-reset{min-height:44px;padding:6px 10px;margin-left:auto;color:var(--accent);font-size:12px;white-space:nowrap}.ranking #finished-count{font-size:10px;white-space:nowrap}

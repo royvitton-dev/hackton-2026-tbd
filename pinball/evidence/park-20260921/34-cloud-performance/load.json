@@ -1,0 +1,65 @@
+{
+  "at": "2026-09-22T02:08:22.214Z",
+  "scope": "8-second live racing sample, 60 balls, zigzag, 3x, audio enabled; mobile is Chrome viewport emulation",
+  "tests": [
+    {
+      "device": "desktop",
+      "status": "PASS",
+      "samples": 482,
+      "averageJsMs": 3.888589211364752,
+      "averageFps": 60.002489729864315,
+      "audio": {
+        "enabled": true,
+        "state": "racing",
+        "contextState": "running",
+        "activeVoices": 15,
+        "peakVoices": 23,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "mix": 1,
+          "countdown": 3,
+          "start": 1,
+          "hit": 72,
+          "swing": 6,
+          "bumper": 35,
+          "capture": 22,
+          "launch": 18,
+          "release": 11,
+          "finish": 13
+        }
+      },
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "status": "PASS",
+      "samples": 482,
+      "averageJsMs": 4.0190871369974746,
+      "averageFps": 60.00174278920964,
+      "audio": {
+        "enabled": true,
+        "state": "racing",
+        "contextState": "running",
+        "activeVoices": 13,
+        "peakVoices": 25,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "mix": 1,
+          "countdown": 3,
+          "start": 1,
+          "hit": 74,
+          "bumper": 31,
+          "capture": 15,
+          "swing": 6,
+          "launch": 14,
+          "release": 8,
+          "finish": 10
+        }
+      },
+      "errors": []
+    }
+  ],
+  "status": "PASS"
+}
