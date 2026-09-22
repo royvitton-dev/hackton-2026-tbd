@@ -89,6 +89,21 @@ CLI로 배포할 때는 저장소 루트에서 `vercel`(프리뷰) 또는 `verce
 독립 배포의 로고 링크는 현재 앱의 루트로 이동하며, 다른 프로젝트 홈을 연결하려면
 `NEXT_PUBLIC_PROJECT_HOME_URL`을 Vercel 프로젝트 환경 변수로 설정합니다.
 
+### GitHub Pages 배포
+
+현재 저장소는 `main` 브랜치가 갱신될 때 GitHub Actions로 EVision 정적 사이트를
+빌드하고 Pages에 배포합니다. GitHub 저장소의 **Settings → Pages → Source**를
+**GitHub Actions**로 한 번 지정한 뒤 워크플로를 실행합니다. 현재 원격 저장소 기준
+주소는 `https://royvitton-dev.github.io/hackton-2026-tbd/`입니다.
+
+GitHub Pages에는 서버 함수가 없으므로 빌드 과정에서 사용자 상세와 충전 이력을
+정적 JSON으로 생성합니다. 저장소 이름에 따른 하위 경로도 Actions가 자동으로
+전달합니다. 로컬 정적 내보내기는 다음 명령으로 검증할 수 있습니다.
+
+```sh
+GITHUB_PAGES_BASE_PATH=/hackton-2026-tbd npm run pages:build
+```
+
 작업 중 계속 열어 둘 데모는 빌드 복사본으로 실행합니다.
 
 ```sh
