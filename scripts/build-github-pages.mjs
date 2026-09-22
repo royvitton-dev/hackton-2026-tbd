@@ -26,11 +26,11 @@ for(const name of ['package.json','package-lock.json','next.config.ts','next-env
 await cp(path.join(root,'battery_health/src'),path.join(source,'battery_health/src'),{recursive:true});
 await rm(path.join(source,'src/app/api'),{recursive:true,force:true});
 await symlink(path.join(root,'node_modules'),path.join(source,'node_modules'),'dir');
-await run(process.execPath,[path.join(root,'node_modules/tsx/dist/cli.mjs'),path.join(root,'scripts/generate-github-pages-data.ts'),path.join(source,'public/data')],root);
+await run(process.execPath,['--import','tsx',path.join(root,'scripts/generate-github-pages-data.ts'),path.join(source,'public/data')],root);
 await run(process.execPath,[path.join(root,'node_modules/next/dist/bin/next'),'build','--webpack'],source,{
   GITHUB_PAGES:'1',
   NEXT_PUBLIC_BASE_PATH:basePath,
-  NEXT_PUBLIC_PROJECT_HOME_URL:`${basePath}/`,
+  NEXT_PUBLIC_PROJECT_HOME_URL:process.env.NEXT_PUBLIC_PROJECT_HOME_URL??`${basePath}/`,
   NEXT_PUBLIC_STATIC_DATA_PATH:'/data',
 });
 await rm(output,{recursive:true,force:true});

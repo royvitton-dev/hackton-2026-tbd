@@ -45,7 +45,7 @@ async function serveMedia(request, env, media) {
   return new Response(body, { status: range.partial ? 206 : 200, headers });
 }
 
-export function createSitesWorker({ catalog, media = {} }) {
+export function createSitesWorker({ catalog, media = {}, hosting = 'sites' }) {
   let infrastructure;
   let infrastructureKey;
   return {
@@ -63,7 +63,7 @@ export function createSitesWorker({ catalog, media = {} }) {
       if (url.pathname === '/api/park' || (url.pathname === '/api/refresh' && request.method === 'POST')) {
         const attractions = catalog.attractions.map(item => item.id === 'trading' && !env.TRADING_ENGINE_URL
           ? { ...item, status: 'attention', warning: '거래 화면은 열 수 있지만 거래 엔진이 연결되지 않아 실시간 거래를 사용할 수 없습니다.' } : item);
-        return json({ ...catalog, attractions, hosting: 'sites', watcher: false });
+        return json({ ...catalog, attractions, hosting, watcher: false });
       }
       if (url.pathname === '/api/launch' && request.method === 'POST') {
         const id = url.searchParams.get('id');
