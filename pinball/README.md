@@ -200,3 +200,8 @@ Three.js 0.183.0: `vendor/THREE-LICENSE.txt` (MIT), https://threejs.org/ .
 ### Android·폴더블 보정 (APK v1.1)
 
 앱이 시스템 바·화면 잘림·키보드 영역을 제외한 크기로 게임을 배치하도록 수정했습니다. 펼치기·접기·화면 밀도 변경 시 기존 WebView를 유지합니다. 이 수정은 새 APK 설치가 필요하며, 실제 Fold7/Android 시스템 UI 실행은 아직 검증하지 않았습니다. 도착 이야기 옆의 처음부터로 참가자/규칙을 유지하면서 새 경기를 준비할 수 있습니다. 캔디 하단 통로 확대, 구름 하단 대포2개 추가, 원더 BACK 반시계 회전도 포함합니다. [이번 실제 검사와 한계](evidence/park-20260921/34-mobile-and-rides.md).
+
+
+### 로컬 웹 반영과 원격 푸시
+
+검증을 마친 main 커밋은 `node scripts/publish-preview.mjs --repo <main작업트리> --releases <미리보기폴더> --local-preview`로4188에먼저반영할수있습니다. 이모드는원격푸시성공을뜻하지않으며release.json에local-only로기록됩니다. 옵션없이실행하면기존대로원격main일치를검사합니다. 열린경기를강제로새로고침하지않고,사용자가새로고침하면해당버전을읽습니다.
