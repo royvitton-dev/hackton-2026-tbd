@@ -16,7 +16,7 @@ it('preserves source-traced disclosure and golden conversion of the actual Korea
 });
 it('records source checksums and never silently substitutes a synthetic plan for a public source',()=>{
   const catalog=JSON.parse(readFileSync(new URL('../../public/generated/catalog.json',import.meta.url)));
-  expect(catalog.filter(s=>!s.synthetic)).toHaveLength(13);
+  expect(catalog.filter(s=>!s.synthetic)).toHaveLength(63);
   for(const site of catalog){const bytes=readFileSync(new URL('../../public/'+site.sourceAsset.file,import.meta.url));const result=JSON.parse(readFileSync(new URL('../../public/'+site.modelFile,import.meta.url)));expect(createHash('sha256').update(bytes).digest('hex')).toBe(result.plan.provenance.sha256);expect(result.plan.provenance.kind==='synthetic').toBe(!!site.synthetic);if(!site.synthetic)expect(site.source).toMatch(/^https:/);}
   const neon=catalog.find(s=>s.photo);expect(neon.location.precision).toBe('publisher-naver-point');const bytes=readFileSync(new URL('../../public/'+neon.photo.file,import.meta.url));expect(createHash('sha256').update(bytes).digest('hex')).toBe(neon.photo.sha256);
 });

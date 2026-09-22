@@ -11,6 +11,9 @@
     "stills": "node scripts/render.mjs --stills",
     "render": "node scripts/render.mjs",
     "verify": "node scripts/render.mjs --verify",
+    "tour:stills": "node scripts/tour.mjs --stills",
+    "tour:render": "node scripts/tour.mjs",
+    "tour:verify": "node scripts/tour-check.mjs",
     "publish:local": "node scripts/publish-local.mjs",
     "auto:once": "node scripts/hourly.mjs",
     "auto:prepare": "node scripts/schedule.mjs prepare",
@@ -18,6 +21,8 @@
     "auto:status": "node scripts/schedule.mjs status",
     "auto:run": "node scripts/schedule.mjs run",
     "auto:stop": "node scripts/schedule.mjs uninstall",
-    "test": "node --test tests/hourly.test.mjs"
+    "test": "node --test tests/hourly.test.mjs",
+    "tour:capture": "node scripts/tour-capture.mjs",
+    "tour:voice": "node scripts/tour-voice.mjs"
   }
 }

@@ -8,6 +8,13 @@ const root=fileURLToPath(new URL('../public/sources/',import.meta.url));
 const sha=b=>createHash('sha256').update(b).digest('hex');
 const catalog=JSON.parse(await readFile(path.join(root,'catalog.json')));
 const locations=JSON.parse(await readFile(path.join(root,'precise-locations.json')).catch(()=>'{}'));
+if(!locations['parking-168780']){
+  const url=new URL('https://nominatim.openstreetmap.org/search');url.search=new URLSearchParams({q:'동탄호수공원 주차타워',format:'jsonv2',limit:'5',countrycodes:'kr'});
+  const r=await fetch(url,{headers:{'User-Agent':'ATLAS-Blueprint-Research/1.0 (https://github.com/royvitton-dev/hackton-2026-tbd)'},signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error(`Parking location HTTP ${r.status}`);
+  const point=(await r.json()).find(p=>p.category==='amenity'&&p.type==='parking'&&p.name==='동탄호수공원 주차타워');if(!point)throw Error('Named public parking location missing');
+  locations['parking-168780']={lat:Number(point.lat),lng:Number(point.lon),precision:'osm-facility-centroid',source:`https://www.openstreetmap.org/${point.osm_type}/${point.osm_id}`,license:'© OpenStreetMap contributors · ODbL 1.0',bounds:point.boundingbox.map(Number),checkedAt:new Date().toISOString()};
+  await new Promise(r=>setTimeout(r,1100));
+}
 for(const site of catalog.filter((s,i,a)=>s.source?.includes('soco.seoul.go.kr')&&a.findIndex(x=>x.siteId===s.siteId)===i)){
   if(locations[site.siteId])continue;
   const r=await fetch(site.source,{signal:AbortSignal.timeout(30000)});if(!r.ok)throw Error(`Location source HTTP ${r.status}`);

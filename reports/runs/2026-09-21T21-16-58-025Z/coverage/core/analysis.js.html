@@ -1,0 +1,349 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/analysis.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">core</a> analysis.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">97.18% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>138/142</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">94.23% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>147/156</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>20/20</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>62/62</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-yes">4300x</span>
+<span class="cline-any cline-yes">169x</span>
+<span class="cline-any cline-yes">4300x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">4167x</span>
+<span class="cline-any cline-yes">4165x</span>
+<span class="cline-any cline-yes">4164x</span>
+<span class="cline-any cline-yes">4163x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">161x</span>
+<span class="cline-any cline-yes">4712x</span>
+<span class="cline-any cline-yes">14131x</span>
+<span class="cline-any cline-yes">4710x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3198x</span>
+<span class="cline-any cline-yes">153x</span>
+<span class="cline-any cline-yes">97x</span>
+<span class="cline-any cline-yes">3037x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">147x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">3130x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">138x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2493x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">106x</span>
+<span class="cline-any cline-yes">844x</span>
+<span class="cline-any cline-yes">106x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-yes">54x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3559x</span>
+<span class="cline-any cline-yes">75x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-yes">50x</span>
+<span class="cline-any cline-yes">400x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">23x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">// The raster detector and explicit annotated-SVG exchange format originate in map/.
+// Keep that source unchanged; all extensions and conversion outputs live here.
+import {analyzeBlueprint as parseBlueprint,analyzeSvg as parseSvg,validatePlan as validateV1} from '../vendor/analysis-v1.js';
+import {distance,localPosition} from './geometry.js';
+import {graphFromLayers} from './layers.js';
+import {detectParking} from './detect-parking.js';
+export function analyzeBlueprint(pixels,options={}){
+  const plan=parseBlueprint(pixels,options);
+  if(options.parkingDetection!==false)plan.parkingDetection=detectParking(pixels,{metersPerPixel:plan.analysis.metersPerPixel});
+  return plan;
+}
+const finite=Number.isFinite;
+export function validatePlan(plan) {
+  validateV1(plan);
+  const edgeIds=new Set(),nodes=new Map(plan.nodes.map(n=&gt;[n.id,n]));
+  for(const node of plan.nodes){
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(typeof node.id!=='string'||(node.y!==undefined&amp;&amp;!finite(node.y))||Math.max(Math.abs(node.x),Math.abs(node.z))&gt;100000)<span class="cstat-no" title="statement not covered" >throw Error('노드 좌표가 올바르지 않습니다.');</span>
+  }
+  for(const edge of plan.edges){
+    if(typeof edge.id!=='string'||!edge.id||edgeIds.has(edge.id)||edge.from===edge.to||distance(nodes.get(edge.from),nodes.get(edge.to))&lt;.001)throw Error('중복되거나 길이가 없는 경로입니다.');
+    if(edge.height!==undefined&amp;&amp;(!finite(edge.height)||edge.height&lt;=0))throw Error('통로 높이가 올바르지 않습니다.');
+    if(edge.oneWay!==undefined&amp;&amp;typeof edge.oneWay!=='boolean')throw Error('일방통행 값이 올바르지 않습니다.');
+    edgeIds.add(edge.id);
+  }
+  const spaces=new Set();
+  for(const s of plan.spaces){
+    if(!s.id||spaces.has(s.id)||![s.x,s.z,s.width,s.depth].every(finite)||s.width&lt;=0||s.depth&lt;=0)throw Error('주차 구역 좌표가 올바르지 않습니다.');
+    for(const key of ['accessible','reserved','blocked'])if(s[key]!==undefined&amp;&amp;typeof s[key]!=='boolean')throw Error('주차 구역 전용·차단 값은 boolean이어야 합니다.');
+    spaces.add(s.id);
+  }
+  if(plan.objects!==undefined){if(!Array.isArray(plan.objects)||plan.objects.length&gt;2000)throw Error('오브젝트 목록이 잘못되었습니다.');const ids=new Set();for(const o of plan.objects){if(!o.id||ids.has(o.id)||!['column','stairs','lift','room','door','ramp'].includes(o.kind)||![o.x,o.z,o.width,o.depth,o.height].every(finite)||Math.min(o.width,o.depth,o.height)&lt;=0)throw Error('오브젝트의 종류·크기·좌표를 확인하세요.');ids.add(o.id);if(o.kind==='stairs'&amp;&amp;(!Number.isInteger(o.steps)||o.steps&lt;2||o.steps&gt;100))throw Error('계단 단수가 잘못되었습니다.');if(o.kind==='ramp'&amp;&amp;(!Array.isArray(o.path)||o.path.length&lt;2||<span class="branch-3 cbranch-no" title="branch not covered" >!o.path.every(p=&gt;[p.x,p.y,p.z].every(finite)))</span>)throw Error('램프 경로가 잘못되었습니다.');}}
+  if(plan.parkingAccess!==undefined){
+    if(!Array.isArray(plan.parkingAccess))throw Error('주차면과 차로의 연결을 확인하세요.');
+    const seen=new Set();for(const a of plan.parkingAccess){if(!a||!spaces.has(a.spaceId)||!nodes.has(a.nodeId)||seen.has(a.spaceId)||(a.startNodeId!==undefined&amp;&amp;!nodes.has(a.startNodeId)))throw Error('주차면과 차로의 연결을 확인하세요.');seen.add(a.spaceId);}
+  }
+  if(plan.parkingDetection!==undefined){
+    const items=plan.parkingDetection?.spaces,ids=new Set();
+    if(!Array.isArray(items)||items.length&gt;400)throw Error('자동 주차 구획 후보가 잘못되었습니다.');
+    for(const s of items){if(typeof s.id!=='string'||!s.id||ids.has(s.id)||![s.x,s.z,s.width,s.depth,s.patternScore].every(finite)||Math.min(s.width,s.depth)&lt;=0||s.patternScore&lt;0||s.patternScore&gt;100)throw Error('자동 주차 구획 후보의 좌표·크기를 확인하세요.');ids.add(s.id);}
+  }
+  return plan;
+}
+export function analyzeSvg(text) {
+  const plan=parseSvg(text),attrs=tag=&gt;Object.fromEntries([...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map(m=&gt;[m[1],m[2]]));
+  const graph=graphFromLayers(text);
+  if(graph){if(plan.edges.length||plan.nodes.length)throw Error('차로 레이어와 명시적 그래프를 한 도면에서 혼용할 수 없습니다.');plan.nodes=graph.nodes;plan.edges=graph.edges;plan.graphAnalysis={method:graph.method,sourceLaneCount:graph.sourceLaneCount};plan.routingReady=true;}
+  for(const match of text.matchAll(/&lt;(circle|line)\b[^&gt;]*&gt;/g)){
+    const a=attrs(match[0]);
+    const item=(a['data-kind']==='node'?plan.nodes:plan.edges).find(n=&gt;n.id===a.id);
+    if(!item)continue;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(a['data-y']!==undefined)<span class="cstat-no" title="statement not covered" >item.y=Number(a['data-y']);</span>
+    if(a['data-floor'])item.floor=a['data-floor'];
+    if(a['data-zone'])item.zone=a['data-zone'];
+    if(a['data-connection'])item.kind=a['data-connection'];
+    if(a['data-height']&amp;&amp;a['data-kind']==='edge')item.height=Number(a['data-height']);
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(a['data-verified'])<span class="cstat-no" title="statement not covered" >item.verified=a['data-verified']==='true';</span>
+  }
+  for(const match of text.matchAll(/&lt;rect\b[^&gt;]*&gt;/g)){const a=attrs(match[0]),space=plan.spaces.find(s=&gt;s.id===a.id);if(!space)continue;for(const key of ['accessible','reserved'])if(a[`data-${key}`]!==undefined){if(!['true','false'].includes(a[`data-${key}`]))throw Error('주차 전용 구역 값이 잘못되었습니다.');space[key]=a[`data-${key}`]==='true';}}
+  let wallIndex=0;for(const match of text.matchAll(/&lt;line\b[^&gt;]*&gt;/g)){const a=attrs(match[0]);if(a['data-kind']!=='wall')continue;<span class="missing-if-branch" title="if path not taken" >I</span>if(a['data-material']==='glazing')<span class="cstat-no" title="statement not covered" >plan.walls[wallIndex].material='glazing';w</span>allIndex++;}
+  return validatePlan(plan);
+}
+// Indexed cuboids are standalone model data, not just a Three.js rendering hint.
+export function compileMeshes(plan) {
+  validatePlan(plan);
+  const indices=[0,2,1,0,3,2,4,5,6,4,6,7,0,1,5,0,5,4,2,3,7,2,7,6,1,2,6,1,6,5,3,0,4,3,4,7];
+  const meshes=plan.walls.map((w,i)=&gt;{
+    const length=Math.hypot(w.x2-w.x1,w.z2-w.z1),nx=length?-(w.z2-w.z1)/length*w.thickness/2:<span class="branch-1 cbranch-no" title="branch not covered" >0,</span>nz=length?(w.x2-w.x1)/length*w.thickness/2:<span class="branch-1 cbranch-no" title="branch not covered" >0;</span>
+    const corners=[[w.x1+nx,w.z1+nz],[w.x2+nx,w.z2+nz],[w.x2-nx,w.z2-nz],[w.x1-nx,w.z1-nz]];
+    return {id:`wall-${i}`,kind:'wall',positions:[0,w.height].flatMap(y=&gt;corners.flatMap(([x,z])=&gt;[x,y+(w.y||0),z])),indices:[...indices],...(w.material==='glazing'?<span class="branch-0 cbranch-no" title="branch not covered" >{material:'glazing'}:</span>{})};
+  });
+  return {version:1,units:'meters',coordinateSystem:'drawing-x-right-y-up-z-down',meshes,objects:plan.objects||[],labels:plan.labels||[],nodes:plan.nodes,graph:plan.edges,spaces:plan.spaces,...(plan.parkingAccess?{parkingAccess:plan.parkingAccess}:{}),...(plan.parkingDetection?{parkingCandidates:plan.parkingDetection.spaces}:{}),source:plan.provenance||null};
+}
+// Roads retain their source IDs and coordinate provenance. An explicit surveyed
+// portal is mandatory; never infer an entrance from a building centroid.
+export function connectRoads(plan,roads,portal) {
+  validatePlan(plan);
+  if(!portal?.verified||!plan.anchor||!roads.nodes?.length||!roads.edges?.length)throw Error('검증된 도로·진입점·기준 좌표가 필요합니다.');
+  const entry=plan.nodes.find(n=&gt;n.id===portal.indoorId),road=roads.nodes.find(n=&gt;n.id===portal.roadId);
+  if(!entry||!road)throw Error('진입점 노드를 찾을 수 없습니다.');
+  const projected=roads.nodes.map(n=&gt;({...n,...localPosition(n,plan.anchor),id:`road:${n.id}`,zone:'road'}));
+  const end=projected.find(n=&gt;n.id===`road:${road.id}`);
+  const gap=distance(entry,end);
+  if(gap&gt;.5&amp;&amp;!portal.path)throw Error('도로와 입구 사이에는 명시적인 연결 경로가 필요합니다.');
+  const middle=(portal.path||<span class="branch-1 cbranch-no" title="branch not covered" >[])</span>.map((p,i)=&gt;({...p,id:`portal:${i}`,zone:'entry'}));
+  const joined=[end,...middle,entry];
+  const connectors=joined.slice(1).map((n,i)=&gt;({id:`portal-edge:${i}`,from:joined[i].id,to:n.id,width:portal.width,height:portal.height,modes:['car','person'],kind:'entrance',verified:true}));
+  return validatePlan({...plan,nodes:[...plan.nodes,...projected,...middle],edges:[...plan.edges,...roads.edges.map(e=&gt;({...e,id:`road:${e.id}`,from:`road:${e.from}`,to:`road:${e.to}`})),...connectors]});
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-21T21:17:17.083Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    

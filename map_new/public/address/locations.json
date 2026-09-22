@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "places": [
+    {
+      "siteId": "parking-68790",
+      "location": {
+        "lat": 35.6464076,
+        "lng": 129.3588273,
+        "precision": "osm-facility-centroid",
+        "source": "https://www.openstreetmap.org/node/9787116144",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "address": "매곡도서관, 138-19, 매곡로, 농소2동, 북구, 울산광역시, 44222, 대한민국",
+        "checkedAt": "2026-09-21T22:34:06.326Z",
+        "identityEvidence": {
+          "address": "울산광역시 북구 매곡로 138-19",
+          "source": "https://cn.nld.go.kr/booknarae/joinLibSearch.do"
+        }
+      }
+    },
+    {
+      "siteId": "changdong",
+      "name": "창동 아우르네 · 공개 계획",
+      "address": "서울특별시 도봉구 마들로13길 84 (창동 아우르네)",
+      "location": {
+        "lat": 37.655512,
+        "lng": 127.048185,
+        "precision": "publisher-google-point",
+        "source": "https://www.50plus.or.kr/snc/location.do",
+        "sourcePageSha256": "790f5e49f688a0144d6797d288579e29d194d4f14c6759ae02225c6f83b23993",
+        "checkedAt": "2026-09-21T22:39:13.677Z",
+        "identityEvidence": {
+          "address": "서울특별시 도봉구 창동 1-8번지",
+          "source": "https://openab.seoul.go.kr/build/detail.do?mgmBldrgstPk=10111100220314",
+          "projectIdentitySource": "https://mediahub.seoul.go.kr/archives/1303529"
+        }
+      }
+    }
+  ]
+}

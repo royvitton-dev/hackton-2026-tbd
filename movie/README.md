@@ -1,5 +1,9 @@
 # Wonder Park — A Park Is Born
 
+새 예고편: [**코드세이: 집에 가는 길**](http://localhost:5190/movie/assets/odyssey/index.html) · **85초 시네마 컷 · 1080p**. GS → GS차지비 오프닝, 9월 21–22일 집에 못 가는 개발자 리그. 영화 장면을 중심으로 AI의 할루시네이션, 버그와 밤샘 개발을 표현하고 굵은 남성 내레이션을 넣었다. 마지막에는 영화 속 주인공을 바탕으로 만든 실사풍 AI 애니메이션으로 맥미니를 힘겹게 얻는다. [완성본 MP4](output/gs-codeyssey-trailer.mp4) · [장면 구성과 제작 노트](assets/odyssey/STORYBOARD.md).
+
+새 상영작: [**모든 어트랙션과 GS 폭죽 피날레**](http://localhost:5190/movie/?film=attractions) · 108초 · 1080p. 도파민의 레이싱·시상식·커피차, map_new의 도면·주차·충전 후보·화재 우회와 파크 8개 어트랙션의 실제 기능을 소개하고 마지막 10초를 야간 성과 GS 불꽃으로 마무리합니다. [영상 파일](output/wonder-park-tour.mp4) · [구성·재제작·검증 안내](TOUR.md).
+
 현재 `park/`의 3D 테마파크 제작 과정을 담은 30초 창작 영상. 디즈니 성 오프닝의 별빛 궤적·성·불꽃 연출을 응용했다. 기존 VITALIS 영상의 장면, 음악, 인터뷰, 이미지는 새 영상에 사용하지 않는다.
 
 - 최종 MP4: [`output/wonder-park-30s.mp4`](output/wonder-park-30s.mp4)

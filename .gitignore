@@ -1,5 +1,6 @@
 # Dependencies and generated build files
 node_modules/
+node_modules
 .next/
 dist/
 dist-health/
@@ -33,3 +34,10 @@ playwright-report/
 # Shared router builds and Next cache
 .next-unified/
 .server-dist/
+
+# Sites deployment snapshots and generated artifacts
+.sites-workspace/
+.sites-runtime/
+.next-sites/
+out/
+sites/generated/

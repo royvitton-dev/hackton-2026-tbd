@@ -1,0 +1,27 @@
+{
+  "python": "3.12.14",
+  "packages": {
+    "mlx": "0.32.2",
+    "mlx-audio": "0.5.5",
+    "mlx-lm": "0.31.3",
+    "ltx-pipelines-mlx": "0.15.9",
+    "ltx-core-mlx": "0.15.9",
+    "mlx-whisper": "0.4.3",
+    "huggingface-hub": "1.32.0",
+    "transformers": "5.17.0",
+    "numpy": "2.5.3",
+    "scipy": "1.18.1"
+  },
+  "hardware": "Apple M3 Pro · 18GB unified memory",
+  "inferenceMemoryCapGB": 12,
+  "videoRuntimeSource": "https://github.com/dgrauet/ltx-2-mlx",
+  "videoRuntimeCommit": "6200ce044f9ad268fd87e6ba9527daef760175f8",
+  "videoModel": {
+    "repository": "dgrauet/ltx-2.3-mlx-q4",
+    "revision": "56a5866d638ecfe37c54d348e88938235185c2d4"
+  },
+  "motionTextModel": {
+    "repository": "mlx-community/gemma-3-12b-it-4bit",
+    "revision": "86cc6a8dedbc456dd0e4af01a9d09f396f77e558"
+  }
+}

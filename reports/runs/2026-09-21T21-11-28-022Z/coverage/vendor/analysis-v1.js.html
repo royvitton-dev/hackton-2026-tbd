@@ -1,0 +1,349 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for vendor/analysis-v1.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">vendor</a> analysis-v1.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">99% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>100/101</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">93.03% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>147/158</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>12/12</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>61/61</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">46061x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">188x</span>
+<span class="cline-any cline-yes">749x</span>
+<span class="cline-any cline-yes">187x</span>
+<span class="cline-any cline-yes">5462x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">186x</span>
+<span class="cline-any cline-yes">186x</span>
+<span class="cline-any cline-yes">4330x</span>
+<span class="cline-any cline-yes">4329x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8126x</span>
+<span class="cline-any cline-yes">184x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">270400x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">2820x</span>
+<span class="cline-any cline-yes">2820x</span>
+<span class="cline-any cline-yes">543620x</span>
+<span class="cline-any cline-yes">543620x</span>
+<span class="cline-any cline-yes">543620x</span>
+<span class="cline-any cline-yes">1980x</span>
+<span class="cline-any cline-yes">55x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1980x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2820x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">1907x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">213x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">218x</span>
+<span class="cline-any cline-yes">218x</span>
+<span class="cline-any cline-yes">218x</span>
+<span class="cline-any cline-yes">218x</span>
+<span class="cline-any cline-yes">218x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const finite = n =&gt; typeof n === 'number' &amp;&amp; Number.isFinite(n);
+export function validatePlan(plan) {
+  <span class="missing-if-branch" title="if path not taken" >I</span>if (!plan || plan.version !== 1 || !finite(plan.width) || !finite(plan.depth) || plan.width &lt;= 0 || plan.depth &lt;= 0 || plan.width &gt; 2000 || plan.depth &gt; 2000) <span class="cstat-no" title="statement not covered" >throw new Error('도면의 크기와 버전을 확인하세요.');</span>
+  for(const key of ['walls','nodes','edges','spaces'])if(!Array.isArray(plan[key])||plan[key].length&gt;10000)throw new Error('도면 요소 목록이 없거나 너무 큽니다.');
+  for (const wall of plan.walls || <span class="branch-1 cbranch-no" title="branch not covered" >[])</span> {
+    if (![wall.x1, wall.z1, wall.x2, wall.z2, wall.height, wall.thickness].every(finite) || wall.height &lt;= 0 || wall.thickness &lt;= 0) throw new Error('벽체 좌표가 올바르지 않습니다.');
+  }
+  const ids = new Set();
+  for (const node of plan.nodes || <span class="branch-1 cbranch-no" title="branch not covered" >[])</span> {
+    if (!node.id || ids.has(node.id) || !finite(node.x) || !finite(node.z)) throw new Error('중복되거나 잘못된 동선 지점입니다.');
+    ids.add(node.id);
+  }
+  for (const edge of plan.edges || <span class="branch-1 cbranch-no" title="branch not covered" >[])</span> if (!ids.has(edge.from) || !ids.has(edge.to) || !finite(edge.width) || edge.width &lt;= 0 || !Array.isArray(edge.modes) || !edge.modes.length || edge.modes.some(mode=&gt;!['car','person'].includes(mode))) throw new Error('동선 연결이 올바르지 않습니다.');
+  return plan;
+}
+&nbsp;
+// Portable raster SDK: detect long, thick orthogonal structural lines. It does
+// not claim to infer doors, exits, semantic rooms or a physical scale from pixels.
+export function analyzeRaster({ data, width, height }, { metersPerPixel = 0.05, threshold = 85, minLength = 24, minThickness = 2, wallHeight = 2.8, calibrated = false } = {}) {
+  if (!Number.isInteger(width) || !Number.isInteger(height) || width &lt; 1 || height &lt; 1 || width * height &gt; 4_000_000 || data?.length !== width * height * 4 || !finite(metersPerPixel) || metersPerPixel &lt;= 0 || metersPerPixel &gt; 10) throw new Error('이미지 크기 또는 축척이 올바르지 않습니다.');
+  const mask = new Uint8Array(width * height);
+  for (let i = 0; i &lt; mask.length; i++) mask[i] = data[i*4+3] &gt; 100 &amp;&amp; Math.max(data[i*4], data[i*4+1], data[i*4+2]) &lt; threshold ? 1 : 0;
+  const walls = [];
+  for (const vertical of [false, true]) {
+    const major = vertical ? height : width, minor = vertical ? width : height;
+    const runs = [];
+    for (let line = 0; line &lt; minor; line++) {
+      let start = -1;
+      for (let p = 0; p &lt;= major; p++) {
+        const black = p &lt; major &amp;&amp; mask[vertical ? p*width+line : line*width+p];
+        if (black &amp;&amp; start &lt; 0) start = p;
+        if (!black &amp;&amp; start &gt;= 0) {
+          if (p - start &gt;= minLength) {
+            const previous = runs.findLast(r =&gt; r.last === line-1 &amp;&amp; Math.abs(r.start-start) &lt;= 3 &amp;&amp; Math.abs(r.end-p) &lt;= 3);
+            if (previous) { previous.last = line; previous.start = Math.min(previous.start,start); previous.end = Math.max(previous.end,p); }
+            else runs.push({ start, end:p, first:line, last:line });
+          }
+          start = -1;
+        }
+      }
+    }
+    for (const r of runs) {
+      const thick = r.last-r.first+1;
+      if (thick &lt; minThickness || thick &gt; (r.end-r.start)*0.4) continue;
+      const cross = (r.first+r.last)/2;
+      const x1 = vertical ? cross : r.start, z1 = vertical ? r.start : cross, x2 = vertical ? cross : r.end, z2 = vertical ? r.end : cross;
+      walls.push({ x1:(x1-width/2)*metersPerPixel, z1:(z1-height/2)*metersPerPixel, x2:(x2-width/2)*metersPerPixel, z2:(z2-height/2)*metersPerPixel, thickness:Math.max(.08,thick*metersPerPixel), height:wallHeight });
+    }
+  }
+  return validatePlan({ version:1, name:'도면 구조선 분석', width:width*metersPerPixel, depth:height*metersPerPixel, walls, nodes:[], edges:[], spaces:[], sourceType:'raster', scaleStatus:calibrated?'user-calibrated':'estimated', routingReady:false, warnings:['직교 구조선 추정: 글자·치수선이 포함될 수 있습니다.', '문·출입구·실측 축척 검토 후 동선을 지정하세요.'], analysis:{ wallCount:walls.length, pixels:width*height, metersPerPixel } });
+}
+&nbsp;
+export function analyzeBlueprint(pixels,options={}) {
+  let plan=analyzeRaster(pixels,options);
+  <span class="missing-if-branch" title="else path not taken" >E</span>if(plan.walls.length&lt;4){
+    plan=analyzeRaster(pixels,{...options,threshold:185,minThickness:1});
+    // Low contrast architectural scans often use one-pixel grey linework.
+    // Exclude sheet frames at the image boundary; dimension lines still require review.
+    const margin=.04;
+    plan.walls=plan.walls.filter(w=&gt;!((w.x1*w.x2&gt;0&amp;&amp;Math.abs(w.x1)&gt;plan.width*(.5-margin)&amp;&amp;<span class="branch-2 cbranch-no" title="branch not covered" >Math.abs(w.x2)&gt;plan.width*(.5-margin))</span>||(w.z1*w.z2&gt;0&amp;&amp;Math.abs(w.z1)&gt;plan.depth*(.5-margin)&amp;&amp;Math.abs(w.z2)&gt;plan.depth*(.5-margin))));
+    plan.analysis.wallCount=plan.walls.length;plan.analysis.adaptiveContrast=true;
+    plan.warnings.push('옅은 스캔의 선을 추가 추출했습니다. 치수선과 벽체를 대조하세요.');
+  }
+  return plan;
+}
+&nbsp;
+// Annotated SVG is an exchange format: explicit geometry, units, clearances,
+// movement modes and egress semantics are preserved rather than guessed.
+export function analyzeSvg(text) {
+  if (typeof text !== 'string' || text.length &gt; 2_000_000 || /&lt;!ENTITY|&lt;!DOCTYPE|&lt;script|&lt;foreignObject/i.test(text)) throw new Error('지원하지 않는 SVG입니다.');
+  const attrs = tag =&gt; Object.fromEntries([...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map(m=&gt;[m[1],m[2]]));
+  const root = attrs(text.match(/&lt;svg\b[^&gt;]*&gt;/i)?.[0] || '');
+  const scale = Number(root['data-meters-per-unit']);
+  const view = root.viewBox?.split(/[ ,]+/).map(Number);
+  if (!view || view.length !== 4 || !view.every(finite) || !finite(scale) || scale &lt;= 0 || view[0] !== 0 || view[1] !== 0) throw new Error('SVG에 viewBox와 data-meters-per-unit 축척이 필요합니다.');
+  const plan = { version:1, name:root['data-name'] || '가져온 SVG 도면', width:view[2]*scale, depth:view[3]*scale, walls:[], nodes:[], edges:[], spaces:[], sourceType:'annotated-svg', scaleStatus:'declared', routingReady:false, warnings:[] };
+  if(root['data-source-kind']==='source-traced'){plan.layoutType='source-traced';plan.scaleStatus='estimated';plan.warnings.push('공개 도면의 좌표를 분석가가 주석 처리한 모델입니다. 축척·현재 시설 상태·출입구는 현장 검증 전입니다.');}
+  const x = v =&gt; Number(v)*scale-plan.width/2, z = v =&gt; Number(v)*scale-plan.depth/2;
+  for (const match of text.matchAll(/&lt;(line|rect|circle)\b[^&gt;]*&gt;/g)) {
+    const a = attrs(match[0]);
+    if (a['data-kind']==='wall') plan.walls.push({x1:x(a.x1),z1:z(a.y1),x2:x(a.x2),z2:z(a.y2),height:Number(a['data-height']||<span class="branch-1 cbranch-no" title="branch not covered" >3)</span>,thickness:Number(a['stroke-width']||<span class="branch-1 cbranch-no" title="branch not covered" >.3)</span>*scale});
+    if (a['data-kind']==='node') plan.nodes.push({id:a.id,x:x(a.cx),z:z(a.cy),kind:a['data-role']||'junction',label:a['data-label']||a.id, safe:a['data-safe']==='true',heading:Number(a['data-heading']||Math.PI)});
+    if (a['data-kind']==='edge') plan.edges.push({id:a.id,from:a['data-from'],to:a['data-to'],width:Number(a['data-width']||<span class="branch-1 cbranch-no" title="branch not covered" >6)</span>,modes:(a['data-modes']||<span class="branch-1 cbranch-no" title="branch not covered" >'car,person')</span>.split(','),oneWay:a['data-oneway']==='true'});
+    if (a['data-kind']==='space') plan.spaces.push({id:a.id,kind:a['data-role']||<span class="branch-1 cbranch-no" title="branch not covered" >'parking',</span>x:x(a.x)+Number(a.width)*scale/2,z:z(a.y)+Number(a.height)*scale/2,width:Number(a.width)*scale,depth:Number(a.height)*scale,label:a['data-label']||''});
+  }
+  plan.routingReady=plan.nodes.length&gt;0&amp;&amp;plan.edges.length&gt;0;
+  return validatePlan(plan);
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-21T21:11:46.611Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    

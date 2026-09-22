@@ -1,0 +1,174 @@
+[
+  {
+    "chapter": "opening",
+    "time": 2,
+    "simulationTime": 7,
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "dopamin",
+    "time": 14,
+    "simulationTime": 14,
+    "demonstration": {
+      "kind": "browser-recording",
+      "time": 8,
+      "segment": "podium",
+      "features": [
+        "레이싱 · 실시간 순위",
+        "우승 시상식 · 트로피",
+        "커피차 · 커피 나누기"
+      ]
+    },
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "movie",
+    "time": 28,
+    "simulationTime": 28,
+    "demonstration": {
+      "kind": "browser-recording",
+      "time": 2,
+      "features": [
+        "영화 재생",
+        "챕터별 장면 이동"
+      ]
+    },
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "voice",
+    "time": 36,
+    "simulationTime": 36,
+    "demonstration": {
+      "kind": "actual-speech-session",
+      "time": 2,
+      "features": [
+        "호출어 인식",
+        "음성 명령 수집",
+        "실행 전 확인"
+      ]
+    },
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "battery_health",
+    "time": 44,
+    "simulationTime": 44,
+    "demonstration": {
+      "kind": "browser-recording",
+      "time": 2,
+      "features": [
+        "3D 차량 · 배터리 투시",
+        "배터리 건강 상태",
+        "충전 이력 확인"
+      ]
+    },
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "map",
+    "time": 52,
+    "simulationTime": 52,
+    "demonstration": {
+      "kind": "browser-recording",
+      "time": 2,
+      "features": [
+        "공개 원본 도면",
+        "구조선의 3D 변환",
+        "입체 공간 회전 탐색"
+      ]
+    },
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "map_new",
+    "time": 69,
+    "simulationTime": 69,
+    "demonstration": {
+      "kind": "browser-recording",
+      "time": 11,
+      "segment": "parking",
+      "features": [
+        "원본 도면 → 3D 공간",
+        "도로 → 주차면 진입",
+        "충전기 설치 후보 비교",
+        "화재 우회 경로"
+      ]
+    },
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "pinball",
+    "time": 86,
+    "simulationTime": 86,
+    "demonstration": {
+      "kind": "browser-recording",
+      "time": 2,
+      "features": [
+        "공의 물리 시뮬레이션",
+        "움직이는 놀이기구",
+        "재생 속도 전환"
+      ]
+    },
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "trading",
+    "time": 94,
+    "simulationTime": 94,
+    "demonstration": {
+      "kind": "browser-recording",
+      "time": 2,
+      "features": [
+        "실시간 호가 확인",
+        "휴가 지정가 주문",
+        "주문 체결 · 잔고 갱신"
+      ]
+    },
+    "gsStage": "fade",
+    "triangles": 1635552
+  },
+  {
+    "chapter": "finale",
+    "time": 100,
+    "simulationTime": 2,
+    "gsStage": "rest",
+    "triangles": 1299398
+  },
+  {
+    "chapter": "finale",
+    "time": 102,
+    "simulationTime": 4,
+    "gsStage": "form",
+    "triangles": 1284194
+  },
+  {
+    "chapter": "finale",
+    "time": 103.5,
+    "simulationTime": 5.5,
+    "gsStage": "hold",
+    "triangles": 1284194
+  },
+  {
+    "chapter": "finale",
+    "time": 105.5,
+    "simulationTime": 7.5,
+    "gsStage": "fade",
+    "triangles": 1284194
+  },
+  {
+    "chapter": "finale",
+    "time": 107,
+    "simulationTime": 9,
+    "gsStage": "rest",
+    "triangles": 1284194
+  }
+]

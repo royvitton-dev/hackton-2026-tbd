@@ -1,0 +1,10 @@
+import {readFile,writeFile,mkdir} from 'node:fs/promises';
+import {geoPlaces,earthKML,markerRecords} from '../src/address/geo-data.js';
+const publicRoot=new URL('../public/',import.meta.url);
+const read=async file=>JSON.parse(await readFile(new URL(file,publicRoot),'utf8'));
+const [catalog,drawings,locations]=await Promise.all([read('generated/catalog.json'),read('address/drawings/catalog.json'),read('address/locations.json')]);
+const places=geoPlaces(catalog,drawings.drawings,locations.places);
+await mkdir(new URL('address/exports/',publicRoot),{recursive:true});
+await writeFile(new URL('address/exports/atlas-address-3d-markers.kml',publicRoot),earthKML(places));
+await writeFile(new URL('address/exports/atlas-address-3d-precise.kml',publicRoot),earthKML(places,{includeAreas:false}));
+console.log(JSON.stringify({places:places.length,allMarkers:markerRecords(places).length,withoutAreas:markerRecords(places,{includeAreas:false}).length,drawings:drawings.summary}));

@@ -1,0 +1,38 @@
+{
+  "sha256": "1dda0c3e60691f10061656d0fa7f1585df9b05f4a0b4120bc58993a8ef386bb6",
+  "frames": 2040,
+  "media": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "24/1",
+        "nb_frames": "2040",
+        "side_data_list": [
+          {}
+        ]
+      },
+      {
+        "codec_name": "aac",
+        "codec_type": "audio",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "nb_frames": "3986"
+      }
+    ],
+    "format": {
+      "duration": "85.000000",
+      "size": "44853887"
+    }
+  },
+  "fullDecode": "passed",
+  "browserErrors": [],
+  "opening": [
+    "GS",
+    "GS차지비"
+  ]
+}

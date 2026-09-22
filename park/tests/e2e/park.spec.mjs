@@ -41,14 +41,14 @@ test('desktop miniature, real WebGL geometry, excluded project and day-night gol
  await expect(page).toHaveScreenshot('bumper-attraction.png',{mask:[page.locator('#sync-button')],maskColor:'#f5f2eb'});
  expect(errors).toEqual([]);
 });
-test('cinema shows the real 30-second film on a 3D screen and playback controls work',async({page})=>{
+test('cinema shows the 108-second attraction demo tour and GS finale on a 3D screen',async({page})=>{
  await ready(page);await page.locator('.attraction-card[data-id=movie]').click();await page.getByRole('button',{name:'극장 입장',exact:true}).click();
  await expect(page.locator('#cinema-ui')).toBeVisible();await settled(page);
- await page.evaluate(async()=>{const video=document.querySelector('#film');video.pause();if(video.readyState<1)await new Promise(r=>video.addEventListener('loadedmetadata',r,{once:true}));const sought=new Promise(r=>video.addEventListener('seeked',r,{once:true}));video.currentTime=8;await sought;});
- expect(await page.evaluate(()=>({duration:document.querySelector('#film').duration,texture:window.__park.view.cinema.screen.material.map.isVideoTexture,mode:window.__park.view.mode}))).toMatchObject({duration:30,texture:true,mode:'cinema'});
+ await page.evaluate(async()=>{const video=document.querySelector('#film');video.pause();if(video.readyState<1)await new Promise(r=>video.addEventListener('loadedmetadata',r,{once:true}));const sought=new Promise(r=>video.addEventListener('seeked',r,{once:true}));video.currentTime=103.5;await sought;});
+ expect(await page.evaluate(()=>({duration:document.querySelector('#film').duration,texture:window.__park.view.cinema.screen.material.map.isVideoTexture,mode:window.__park.view.mode}))).toMatchObject({duration:108,texture:true,mode:'cinema'});
  await page.waitForTimeout(1000);await expect(page).toHaveScreenshot('cinema-screen.png');
- await page.getByRole('button',{name:'영상 재생',exact:true}).click();await page.waitForFunction(()=>document.querySelector('#film').currentTime>8.5);
- await page.getByRole('button',{name:'영상 일시정지',exact:true}).click();await expect(page.locator('#film-seek')).toHaveAttribute('max','30');
+ await page.getByRole('button',{name:'영상 재생',exact:true}).click();await page.waitForFunction(()=>document.querySelector('#film').currentTime>104);
+ await page.getByRole('button',{name:'영상 일시정지',exact:true}).click();await expect(page.locator('#film-seek')).toHaveAttribute('max','108');
  await page.getByRole('button',{name:'영상 음소거',exact:true}).click();expect(await page.evaluate(()=>document.querySelector('#film').muted)).toBe(true);
  await page.getByRole('button',{name:'파크로 돌아가기'}).click();await expect(page.locator('#cinema-ui')).toBeHidden();expect(await page.evaluate(()=>document.querySelector('#film').paused)).toBe(true);
 });
@@ -122,8 +122,8 @@ test('new folders and changed themes update the live 3D park without a reload',a
  const changed=await page.evaluate(()=>{const v=window.__park.view;v.setAttractions(v.items.map(a=>a.id==='test-rocket'?{...a,theme:'ocean',revision:'changed'}:a));return v.attractions.at(-1).root.uuid;});expect(changed).not.toBe(added.old);
 });
 test('media range requests and private-file boundaries',async({request})=>{
- const range=await request.get('/api/project-asset/movie/output/vitalis-hackathon-30s.mp4',{headers:{Range:'bytes=0-255'}});expect(range.status()).toBe(206);expect(range.headers()['content-range']).toMatch(/^bytes 0-255\//);expect((await range.body()).length).toBe(256);
- const invalid=await request.get('/api/project-asset/movie/output/vitalis-hackathon-30s.mp4',{headers:{Range:'bytes=999999999-'}});expect(invalid.status()).toBe(416);
+ const range=await request.get('/api/project-asset/movie/output/wonder-park-tour.mp4',{headers:{Range:'bytes=0-255'}});expect(range.status()).toBe(206);expect(range.headers()['content-range']).toMatch(/^bytes 0-255\//);expect((await range.body()).length).toBe(256);
+ const invalid=await request.get('/api/project-asset/movie/output/wonder-park-tour.mp4',{headers:{Range:'bytes=999999999-'}});expect(invalid.status()).toBe(416);
  expect((await request.get('/api/project-asset/webpage/public/idols/jennie.png')).status()).toBe(403);
  expect((await request.get('/api/project-asset/movie/.env')).status()).toBe(403);
  expect((await request.post('/api/launch?id=webpage')).status()).toBe(404);

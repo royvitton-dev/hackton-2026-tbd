@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "node park/server.mjs",
     "build": "node scripts/build-unified.mjs",
+    "build:sites": "node scripts/build-sites.mjs",
+    "preview:sites": "node scripts/preview-sites.mjs",
     "start": "node park/server.mjs --production",
     "demo": "node scripts/serve-vehicle-demo.mjs",
     "lint": "eslint src scripts tests",

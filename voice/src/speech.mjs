@@ -6,7 +6,7 @@ import { EventEmitter } from 'node:events';
 
 // LaunchServices gives the helper its own privacy identity. Direct child execution
 // attributes Speech authorization to the host app, which may lack a usage description.
-export async function launchSpeech(bundle, { onDevice = false, check = false, feedbackOnly = false, sound = true, dryRun = false, diagnostics = false, audioFile, thread } = {}) {
+export async function launchSpeech(bundle, { onDevice = false, check = false, feedbackOnly = false, sound = true, dryRun = false, diagnostics = false, audioFile, thread, warpFocus = false } = {}) {
   const directory = await mkdtemp('/tmp/tbd-voice-');
   await chmod(directory, 0o700);
   const socketPath = join(directory, 'speech.sock');
@@ -56,6 +56,7 @@ export async function launchSpeech(bundle, { onDevice = false, check = false, fe
     if (diagnostics) args.push('--diagnostics');
     if (audioFile) args.push('--recognize-file', audioFile);
     if (thread) args.push('--target-session', thread);
+    if (warpFocus) args.push('--warp-focus');
     launcher = spawn('/usr/bin/open', args, { stdio: 'ignore' });
     launcher.once('error', rejectConnection);
     launcher.once('close', async (code, signal) => {

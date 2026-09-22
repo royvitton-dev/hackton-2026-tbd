@@ -1,0 +1,125 @@
+{
+  "config": {
+    "configFile": "/private/tmp/atlas-parking-publish/map_new/playwright.config.mjs",
+    "rootDir": "/private/tmp/atlas-parking-publish/map_new/tests/e2e",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/private/tmp/atlas-parking-publish/map_new/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "",
+        "name": "",
+        "testDir": "/private/tmp/atlas-parking-publish/map_new/tests/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "reports/e2e.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "runAgents": "none",
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "none",
+    "updateSourceMethod": "patch",
+    "version": "1.58.2",
+    "workers": 1,
+    "webServer": {
+      "command": "node park/server.mjs",
+      "cwd": "/private/tmp/atlas-parking-publish/",
+      "url": "http://127.0.0.1:5196/api/apps",
+      "reuseExistingServer": false,
+      "timeout": 60000,
+      "env": {
+        "PARK_PORT": "5196",
+        "PARK_SERVER_STATE_FILE": "/private/tmp/atlas-parking-publish/map_new/.runtime/review-server.json",
+        "ATLAS_VERIFY_WORKER": "1"
+      }
+    }
+  },
+  "suites": [
+    {
+      "title": "parking.spec.mjs",
+      "file": "parking.spec.mjs",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "",
+              "projectName": "",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16326,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-09-21T23:22:50.325Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "3d2d09aa366427a75d66-f9891e804d2c6165d01c",
+          "file": "parking.spec.mjs",
+          "line": 120,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-09-21T23:22:47.872Z",
+    "duration": 19596.847999999998,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

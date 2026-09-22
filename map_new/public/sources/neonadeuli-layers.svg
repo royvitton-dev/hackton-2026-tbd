@@ -20,6 +20,6 @@
 <circle id="entrance" data-kind="target" cx="545" cy="140" data-role="entrance" data-label="차량 진입 표시" r="3" fill="#4f8569"/>
 <circle id="P2" data-kind="target" cx="545" cy="208" data-role="parking" data-label="주차 구역 2 앞 차로" r="3" fill="#4f8569"/>
 <circle id="P3" data-kind="target" cx="545" cy="271" data-role="parking" data-label="주차 구역 3 앞 차로" r="3" fill="#4f8569"/>
-<rect id="bay-P1" data-kind="space" data-role="parking" x="593" y="138" width="70" height="34" fill="none" stroke="#809783"/>
-<rect id="bay-P2" data-kind="space" data-role="parking" x="593" y="191" width="70" height="34" fill="none" stroke="#809783"/>
-<rect id="bay-P3" data-kind="space" data-role="parking" x="593" y="254" width="70" height="34" fill="none" stroke="#809783"/></svg>
+<rect id="bay-P1" data-kind="space" data-role="parking" data-label="주차 P1" x="593" y="138" width="70" height="34" fill="none" stroke="#809783"/>
+<rect id="bay-P2" data-kind="space" data-role="parking" data-label="주차 P2" x="593" y="191" width="70" height="34" fill="none" stroke="#809783"/>
+<rect id="bay-P3" data-kind="space" data-role="parking" data-label="주차 P3" x="593" y="254" width="70" height="34" fill="none" stroke="#809783"/></svg>

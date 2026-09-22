@@ -1,0 +1,65 @@
+[2m[WebServer] [22m(node:45667) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+[2m[WebServer] [22m{"event":"trading_start_failed","code":"TRADING_START_FAILED","message":"Demo port 5175 is unavailable on 127.0.0.1 (EADDRINUSE); existing processes were not changed"}
+
+Running 19 tests using 1 worker
+
+(node:45673) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:45673) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/parking.spec.mjs:8:1 › public B2 source converts to actual WebGL meshes, with original and data export (12.5s)
+  ✓   2 tests/e2e/parking.spec.mjs:15:1 › drives through exterior road and entrance to EV, supports cameras and pauses (4.6s)
+  ✓   3 tests/e2e/parking.spec.mjs:26:1 › fire starts at current position, switches to human and fails closed when exits are blocked (4.4s)
+  ✓   4 tests/e2e/parking.spec.mjs:33:1 › photo-derived facade and mapped buildings preserve geographic source attribution (8.2s)
+  ✓   5 tests/e2e/parking.spec.mjs:39:1 › imports semantic SVG and rejects executable and corrupt input without losing current scene (3.4s)
+  ✓   6 tests/e2e/parking.spec.mjs:44:1 › actual Naver-located building routes from acquired OSM road through the drawn entrance (5.7s)
+  ✓   7 tests/e2e/parking.spec.mjs:48:1 › parks inside a source bay with suitable dimensions and previews a proposed charger destination (9.2s)
+  ✓   8 tests/e2e/parking.spec.mjs:57:1 › mobile source selection and 3D controls remain usable without horizontal overflow (3.0s)
+  ✓   9 tests/e2e/parking.spec.mjs:62:1 › existing park exposes the new attraction, shared launch route and root quality dashboard (20.7s)
+  ✓  10 tests/e2e/parking.spec.mjs:66:1 › real place inventory includes parks and public parking without counting floors as buildings (10.2s)
+  ✓  11 tests/e2e/parking.spec.mjs:74:1 › actual station data drives disclosed green and red screening, filters and export (9.9s)
+  ✓  12 tests/e2e/parking.spec.mjs:85:1 › accessible bays stay visible, realistic objects accept multiple textures and drawing details preserve OCR (12.2s)
+  ✘  13 tests/e2e/parking.spec.mjs:94:1 › mobile charging settings and all drawing information remain reachable (6.7s)
+(node:50051) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:50051) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  14 tests/e2e/parking.spec.mjs:99:1 › imports an actual PDF and keeps its drawing preview separate from the previously selected source (8.8s)
+  ✓  15 tests/e2e/parking.spec.mjs:105:1 › shows detected parking as review candidates while preserving high-resolution provenance and charging inputs (13.0s)
+  ✓  16 tests/e2e/parking.spec.mjs:120:1 › guides to a clicked source parking bay through the real drawing aisles and arrives without crossing walls (11.7s)
+  ✓  17 tests/e2e/parking.spec.mjs:130:1 › follows Dongtan one-way aisles and offers an explicit origin change for the separate east deck (7.7s)
+  ✓  18 tests/e2e/parking.spec.mjs:150:1 › compares native drawings, grayscale and overlapping tiles across the entire library (7.9s)
+  ✓  19 tests/e2e/parking.spec.mjs:167:1 › serves all native artifacts and provides usable mobile tile zoom without affecting source routes (4.3s)
+
+
+  1) tests/e2e/parking.spec.mjs:94:1 › mobile charging settings and all drawing information remain reachable 
+
+    Error: page.evaluate: Execution context was destroyed, most likely because of a navigation
+
+      93 | });
+      94 | test('mobile charging settings and all drawing information remain reachable',async({page})=>{
+    > 95 |   await page.setViewportSize({width:390,height:844});await open(page,'parking-168780-0');await page.locator('[data-tab=charging]').click();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);
+         |                                                                                                                                                              ^
+      96 |   await expect(page.locator('#charge-count')).toBeVisible();await page.locator('#charge-count').selectOption('1');expect(await page.evaluate(()=>window.__parking.state.charging.selected.length)).toBe(1);
+      97 |   await screenshot(page,'charging-mobile.png',{fullPage:true});await page.locator('.visual-controls summary').click();await page.locator('#drawing-info').click();await expect(page.locator('.drawing-table').first()).toBeVisible();expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBe(390);
+      98 | });
+        at /Users/jonghokim/Workspace/hackerton/map_new/tests/e2e/parking.spec.mjs:95:158
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/parking-mobile-charging-se-0749b-nformation-remain-reachable/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/parking-mobile-charging-se-0749b-nformation-remain-reachable/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/parking-mobile-charging-se-0749b-nformation-remain-reachable/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/parking-mobile-charging-se-0749b-nformation-remain-reachable/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/parking.spec.mjs:94:1 › mobile charging settings and all drawing information remain reachable 
+  18 passed (2.8m)

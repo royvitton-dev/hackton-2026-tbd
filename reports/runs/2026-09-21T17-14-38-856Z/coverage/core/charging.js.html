@@ -1,0 +1,169 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/charging.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">core</a> charging.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>58/58</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">98.78% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>81/82</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>16/16</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>22/22</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">165x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">106x</span>
+<span class="cline-any cline-yes">104x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">385x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">1200x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">293x</span>
+<span class="cline-any cline-yes">101x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {project,distance} from './geometry.js';
+import {signalForCandidate} from './radio.js';
+const clamp=n=&gt;Math.max(0,Math.min(1,n));
+export const SCORE_LIMITS=Object.freeze({weakDbm:-105,strongDbm:-65,positive:65,negative:40});
+export function scoreColor(score){return !Number.isFinite(score)?'#929d97':score&gt;=SCORE_LIMITS.positive?'#16845b':score&lt;SCORE_LIMITS.negative?'#d04444':'#c18b25';}
+export function signalScore(dbm){return Number.isFinite(dbm)?Math.round(100*clamp((dbm-SCORE_LIMITS.weakDbm)/(SCORE_LIMITS.strongDbm-SCORE_LIMITS.weakDbm))):null;}
+export function chargerPoint(space){const horizontal=space.width&gt;space.depth;return {x:space.x+(horizontal?space.width/2-.22:0),z:space.z+(horizontal?0:space.depth/2-.22),y:space.y||0};}
+export function optimizeCharging(plan,site,stations,{count=3,minimumSeparation=3,hazards=[],...radioOptions}={}){
+ if(!Number.isInteger(count)||count&lt;1||count&gt;20||!Number.isFinite(minimumSeparation)||minimumSeparation&lt;0)throw Error('설치 대수와 후보 간격을 확인하세요.');
+ const lanes=plan.edges.filter(e=&gt;e.modes.includes('car')).map(e=&gt;({a:plan.nodes.find(n=&gt;n.id===e.from),b:plan.nodes.find(n=&gt;n.id===e.to)}));
+ const ranked=plan.spaces.filter(s=&gt;['parking','ev'].includes(s.kind)).map(space=&gt;{
+  const width=Math.min(space.width,space.depth),length=Math.max(space.width,space.depth),fits=width&gt;=2.25&amp;&amp;length&gt;=4.6;
+  const point=chargerPoint(space),reasons=[],excluded=!fits||space.accessible===true||space.reserved===true||space.kind==='ev'||space.blocked===true||hazards.some(h=&gt;distance(point,{...h,y:point.y})&lt;h.radius+1);
+  if(space.accessible)reasons.push('장애인 전용 구역 보존');if(space.reserved)reasons.push('전용·보호 구역 보존');if(space.kind==='ev')reasons.push('기존 EV 구역');if(space.blocked)reasons.push('차단된 구역');if(hazards.some(h=&gt;distance(point,{...h,y:point.y})&lt;h.radius+1))reasons.push('위험구역 제외');
+  if(!fits)reasons.push('비교 기준 2.25 × 4.6m 미만 · 설치 후보 제외');
+  const nearest=lanes.length?Math.min(...lanes.map(l=&gt;project(point,l.a,l.b).distance)):null;
+  const accessScore=nearest===null?null:Math.round(100*clamp(1-nearest/20)),spaceScore=fits?100:30;
+  const signal=signalForCandidate(point,plan,site,stations,radioOptions),rf=signalScore(signal.best?.dbm);
+  if(signal.status==='location-needed')reasons.push('정확한 건물 좌표 필요');else if(!signal.best)reasons.push('선택한 통신망의 공개 제원 부족');
+  if(accessScore===null)reasons.push('차로 접근성 미확인');
+  // Scores compare known drawing/RF evidence only. No electrical capacity,
+  // feeder route or installation permission is inferred from a floor plan.
+  const score=excluded||rf===null?null:Math.round(accessScore===null?<span class="branch-0 cbranch-no" title="branch not covered" >rf*.8+spaceScore*.2:</span>rf*.5+accessScore*.3+spaceScore*.2);
+  return {id:space.id,label:space.label||space.id,space,point,signal,score,rfScore:rf,accessScore,spaceScore,excluded,reasons,status:excluded?'excluded':score===null?'data-needed':'preliminary',powerStatus:'not-verified',selected:false};
+ }).sort((a,b)=&gt;(b.score??-1)-(a.score??-1)||a.id.localeCompare(b.id));
+ const selected=[];for(const candidate of ranked)if(candidate.score!==null&amp;&amp;candidate.score&gt;=SCORE_LIMITS.positive&amp;&amp;!candidate.excluded&amp;&amp;selected.length&lt;count&amp;&amp;selected.every(c=&gt;distance(c.point,candidate.point)&gt;=minimumSeparation)){candidate.selected=true;selected.push(candidate);}
+ return {ranked,selected,requested:count,scope:'pre-installation-screening',electricalCapacityVerified:false,weights:{withLane:{signal:.5,access:.3,space:.2},withoutLane:{signal:.8,space:.2}},thresholds:SCORE_LIMITS};
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-21T17:14:41.712Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    

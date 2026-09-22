@@ -13,7 +13,7 @@ const browser=await chromium.launch({channel:'chrome',headless:true}),page=await
 const distance=(a,b)=>{const rad=Math.PI/180,dlat=(a.lat-b.lat)*rad,dlng=(a.lng-b.lng)*rad;return 6371000*2*Math.asin(Math.min(1,Math.sqrt(Math.sin(dlat/2)**2+Math.cos(a.lat*rad)*Math.cos(b.lat*rad)*Math.sin(dlng/2)**2)));};
 try{
  await page.goto(source,{waitUntil:'domcontentloaded',timeout:45000});
- const json=async(url,ids)=>page.evaluate(async({url,ids})=>{const response=await fetch(url,{signal:AbortSignal.timeout(30000),...(ids?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({uid:ids})}:{})});if(!response.ok)throw Error(`KCA HTTP ${response.status}`);return response.json();},{url,ids});
+ const json=async(url,ids)=>page.evaluate(async({url,ids})=>{const response=await fetch(url,{signal:AbortSignal.timeout(30000),...(ids?{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({uid:ids})}:{})});if(!response.ok)throw Error(`KCA HTTP ${response.status}`);const text=await response.text();if(!text.trim()&&url.startsWith('/geojson.do'))return [];return JSON.parse(text);},{url,ids});
  for(const site of sites){
   if(requested&&site.siteId!==requested)continue;
   const file=path.join(dir,site.siteId+'.json');if(!refresh){try{const old=JSON.parse(await readFile(file));if(old.query.lat===site.location.lat&&old.query.lng===site.location.lng){console.log(site.siteId,'cached');continue;}}catch{}}

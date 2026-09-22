@@ -1,0 +1,244 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/radio.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">core</a> radio.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>82/82</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">99.25% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>133/134</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>17/17</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>33/33</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-yes">67x</span>
+<span class="cline-any cline-yes">67x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">25x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">24x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-yes">70x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">82x</span>
+<span class="cline-any cline-yes">72x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-yes">69x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">65x</span>
+<span class="cline-any cline-yes">65x</span>
+<span class="cline-any cline-yes">65x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">110x</span>
+<span class="cline-any cline-yes">109x</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">106x</span>
+<span class="cline-any cline-yes">106x</span>
+<span class="cline-any cline-yes">84x</span>
+<span class="cline-any cline-yes">84x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {localPosition,geographicPosition} from './geometry.js';
+import {fitTwoPoints} from './georeference.js';
+export const RADIO_DEFAULTS=Object.freeze({pathLossExponent:3,wallLossDb:6,floorLossDb:18,clutterLossDb:15,uncertaintyDb:12,minDistanceM:10,receiverHeightM:1.5});
+export function distanceMeters(a,b){
+ if(![a?.lat,a?.lng,b?.lat,b?.lng].every(Number.isFinite)||[a.lat,b.lat].some(v=&gt;Math.abs(v)&gt;90)||[a.lng,b.lng].some(v=&gt;Math.abs(v)&gt;180))throw Error('유효한 기지국·대상지 좌표가 필요합니다.');
+ const r=Math.PI/180,v=Math.sin((a.lat-b.lat)*r/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin((a.lng-b.lng)*r/2)**2;
+ return 12742000*Math.asin(Math.sqrt(Math.min(1,v)));
+}
+export function dms(value){
+ if(typeof value==='number')return Number.isFinite(value)?value:null;
+ if(typeof value!=='string'||!value.trim())return null;
+ if(/^-?\d+(\.\d+)?$/.test(value.trim()))return Number(value);
+ const m=value.match(/^\s*(-?\d+)°\s*(\d+)'\s*([\d.]+)"\s*$/);if(!m||Number(m[2])&gt;=60||Number(m[3])&gt;=60)return null;
+ return (m[1].startsWith('-')?-1:1)*(Math.abs(Number(m[1]))+Number(m[2])/60+Number(m[3])/3600);
+}
+const numeric=value=&gt;value!==null&amp;&amp;value!==undefined&amp;&amp;String(value).trim()!==''&amp;&amp;Number.isFinite(Number(value))?Number(value):null;
+export function normalizeStation(raw,point){
+ const lat=dms(raw.lat),lng=dms(raw.lon),hz=numeric(raw.frq_hz),powerW=numeric(raw.arw_pwr_wtt),gainDbi=numeric(raw.arw_gan_nmv),heightM=numeric(raw.arw_gnd_altd_het);
+ if(!raw.uid||!Number.isFinite(lat)||!Number.isFinite(lng)||Math.abs(lat)&gt;90||Math.abs(lng)&gt;180)return null;
+ const frequencyMHz=hz===null?null:hz/1e6;
+ return {id:raw.uid,name:raw.rds_cll_nm||raw.uid,operator:point?.operator||raw.cus_nm||'사업자 미상',lat,lng,frequencyMHz:frequencyMHz&gt;=300&amp;&amp;frequencyMHz&lt;=6000?frequencyMHz:null,powerW:powerW&gt;0&amp;&amp;powerW&lt;=10000?powerW:null,gainDbi:gainDbi!==null&amp;&amp;gainDbi&gt;=-10&amp;&amp;gainDbi&lt;=60?gainDbi:null,heightM:heightM!==null&amp;&amp;heightM&gt;=0?heightM:null,radio:/5G/.test(raw.service_name)?'5G':/LTE/.test(raw.service_name)?'LTE':'other',outdoor:/지상/.test(raw.service_name)&amp;&amp;!/옥내|터널/.test(raw.service_name),address:raw.rds_trs_adr||'',installation:raw.arw_wek_nsn_form_cd_nm||'',measurement:null};
+}
+export function freeSpaceLoss(frequencyMHz,distanceM){
+ if(!Number.isFinite(frequencyMHz)||frequencyMHz&lt;=0||!Number.isFinite(distanceM)||distanceM&lt;=0)throw Error('주파수와 거리는 양수여야 합니다.');
+ return 32.45+20*Math.log10(frequencyMHz)+20*Math.log10(distanceM/1000);
+}
+export function prediction(station,distanceM,{walls=0,basements=0,...overrides}={}){
+ const a={...RADIO_DEFAULTS,...overrides};
+ if(!Number.isFinite(distanceM)||distanceM&lt;0||!Number.isInteger(walls)||walls&lt;0||!Number.isInteger(basements)||basements&lt;0||!Object.values(a).every(Number.isFinite)||a.pathLossExponent&lt;2||a.pathLossExponent&gt;6||a.wallLossDb&lt;0||a.floorLossDb&lt;0||a.clutterLossDb&lt;0||a.uncertaintyDb&lt;0||a.minDistanceM&lt;=0)throw Error('전파 추정 조건이 올바르지 않습니다.');
+ if(!station.outdoor||![station.frequencyMHz,station.powerW,station.gainDbi,station.heightM].every(Number.isFinite)||station.frequencyMHz&lt;=0||station.powerW&lt;=0)return null;
+ const d=Math.max(a.minDistanceM,Math.hypot(distanceM,station.heightM-a.receiverHeightM+basements*3));
+ const loss=freeSpaceLoss(station.frequencyMHz,1)+10*a.pathLossExponent*Math.log10(d)+walls*a.wallLossDb+basements*a.floorLossDb+a.clutterLossDb;
+ const dbm=10*Math.log10(station.powerW*1000)+station.gainDbi-loss;
+ return {dbm,lowDbm:dbm-a.uncertaintyDb,highDbm:dbm+a.uncertaintyDb,lossDb:loss,distanceM,stationId:station.id,frequencyMHz:station.frequencyMHz,walls,basements,assumptions:a,kind:'estimated-received-power',metric:'received-power-not-RSRP'};
+}
+export function wallCrossings(point,station,plan){
+ // Count each authored/extracted wall once; parallel/collinear rays do not
+ // invent a wall intersection. These are 2D screening losses, not ray tracing.
+ let count=0;const dx=station.x-point.x,dz=station.z-point.z;
+ for(const w of plan.walls){const wx=w.x2-w.x1,wz=w.z2-w.z1,den=dx*wz-dz*wx;if(Math.abs(den)&lt;1e-8)continue;const ax=w.x1-point.x,az=w.z1-point.z,t=(ax*wz-az*wx)/den,u=(ax*dz-az*dx)/den;if(t&gt;1e-6&amp;&amp;t&lt;1&amp;&amp;u&gt;=0&amp;&amp;u&lt;=1)count++;}
+ return count;
+}
+export function radioGeometry(plan,site){
+ if(plan.roadAlignment?.controls?.length===2){const fit=fitTwoPoints(...plan.roadAlignment.controls),scale=plan.roadAlignment.drawingMetersPerPixel;return {kind:'drawing-alignment',coordinate(point){return geographicPosition(fit.pixelToWorld({x:point.x/scale+500,z:point.z/scale+170}),fit.anchor);},station(s){const p=fit.geoToPixel(s);return {x:(p.x-500)*scale,z:(p.z-170)*scale};}};}
+ if(!site.location)return null;
+ return {kind:'assumed-north-up-at-site-center',coordinate:p=&gt;geographicPosition(p,site.location),station:s=&gt;localPosition(s,site.location)};
+}
+export function signalForCandidate(point,plan,site,stations,{operator='all',radio='LTE',basements=0,...assumptions}={}){
+ const geometry=radioGeometry(plan,site);
+ if(!geometry||site.location?.precision==='address-area')return {status:'location-needed',best:null,alternatives:[]};
+ const coordinate=geometry.coordinate(point),alternatives=stations.filter(s=&gt;(operator==='all'||s.operator===operator)&amp;&amp;(radio==='all'||s.radio===radio)).map(s=&gt;{const d=distanceMeters(coordinate,s);if(d&gt;1500)return null;const result=prediction(s,d,{...assumptions,basements,walls:wallCrossings(point,geometry.station(s),plan)});return result&amp;&amp;{...result,station:s};}).filter(Boolean).sort((a,b)=&gt;b.dbm-a.dbm||<span class="branch-1 cbranch-no" title="branch not covered" >a.stationId.localeCompare(b.stationId))</span>;
+ return {status:alternatives.length?'estimated':'no-station-data',best:alternatives[0]||null,alternatives,coordinate,alignment:geometry.kind};
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-21T22:09:57.707Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    

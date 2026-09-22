@@ -1,0 +1,29 @@
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 19 modules transformed.
+rendering chunks...
+computing gzip size...
+../.server-dist/map_new/index.html                                              0.79 kB │ gzip:   0.53 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-400-normal-BtiwyxMk.woff2      7.36 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-600-normal-4vooXBpG.woff2      7.42 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-500-normal-BJfUCQsA.woff2      7.43 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-400-normal-BjWJ59Pq.woff       9.98 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-600-normal-DRtaDpgU.woff      10.02 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-500-normal-DR84L5F-.woff      10.07 kB
+../.server-dist/map_new/assets/dm-sans-latin-600-normal-Aqo67rzb.woff2         14.14 kB
+../.server-dist/map_new/assets/dm-sans-latin-400-normal-CW0RaeGs.woff2         14.20 kB
+../.server-dist/map_new/assets/dm-sans-latin-500-normal-B9HHJjqV.woff2         14.30 kB
+../.server-dist/map_new/assets/dm-sans-latin-600-normal-BmdmIIQ2.woff          18.32 kB
+../.server-dist/map_new/assets/dm-sans-latin-400-normal-BwCSEQnW.woff          18.36 kB
+../.server-dist/map_new/assets/dm-sans-latin-500-normal-Dr3UlScf.woff          18.52 kB
+../.server-dist/map_new/assets/pdf.worker.min-Dswkl-cV.mjs                  1,265.41 kB
+../.server-dist/map_new/assets/index-DXYu-Rtf.css                              13.76 kB │ gzip:   3.80 kB
+../.server-dist/map_new/assets/index-E-gpipgM.js                               66.77 kB │ gzip:  23.45 kB
+../.server-dist/map_new/assets/pdf-BO3U8GeS.js                                437.20 kB │ gzip: 130.63 kB
+../.server-dist/map_new/assets/three-Dvwt-tZE.js                              570.09 kB │ gzip: 144.00 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.01s

@@ -1,0 +1,42 @@
+{
+  "id": "trading",
+  "capturedAt": "2026-09-21T16:56:50.120Z",
+  "source": "actual running application",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "before": {
+    "id": "user-01",
+    "name": "시연 임직원 1",
+    "company": "GS리테이",
+    "kind": "user",
+    "points_available": 1000000,
+    "points_reserved": 0,
+    "hours_available": 1000,
+    "hours_reserved": 0,
+    "orders_count": 0,
+    "trades_count": 0
+  },
+  "engine": "actual Rust leave-engine; isolated local demo",
+  "recordedSeconds": 6,
+  "after": {
+    "id": "user-01",
+    "name": "시연 임직원 1",
+    "company": "GS리테이",
+    "kind": "user",
+    "points_available": 996955,
+    "points_reserved": 0,
+    "hours_available": 1003,
+    "hours_reserved": 0,
+    "orders_count": 1,
+    "trades_count": 1
+  },
+  "result": "주문이 확정되었습니다\n\n주문 #67 · 3시간 체결\n\n저장 완료 · 명령 #73\n요청 ID",
+  "features": [
+    "12개 실제 봇의 호가와 체결",
+    "지정가 매수 주문",
+    "체결 결과와 잔고 갱신"
+  ],
+  "browserErrors": []
+}

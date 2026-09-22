@@ -2,6 +2,24 @@
 
 터미널에서 `헤이 TBD야`라고 부르고 작업을 설명한 다음, `TBD야 시작해줘`라고 말하면 모은 내용을 Codex에 전달합니다. **`--thread`로 기존 Codex CLI 대화에 연결**하거나, 옵션을 생략해 새로운 Codex 작업으로 실행할 수 있습니다.
 
+## 포커스된 Warp 탭에 전달
+
+```sh
+cd /Users/jonghokim/Workspace/hackerton/voice
+npm run build
+npm start -- --cwd /Users/jonghokim/Workspace/hackerton --warp-focus
+```
+
+Warp에서 명령을 받을 CLI의 **빈 입력줄**을 클릭하고 `헤이 티비디야` → 작업 내용 → `티비디야 시작해줘` 순서로 말하세요. 시작어를 인식하면 그때 포커스된 Warp 탭·분할 창에 내용을 붙여넣고 Enter를 보냅니다. 고정된 Codex 대화 ID를 사용하지 않으므로 다른 탭을 선택하면 다음 명령은 그 탭에 들어갑니다. Codex에게 작업을 맡기려면 해당 탭에서 Codex CLI를 먼저 실행하세요. 일반 셸 입력줄을 선택한 경우에는 그 셸로 입력됩니다.
+
+macOS **시스템 설정 → 개인정보 보호 및 보안 → 손쉬운 사용 → TBD Speech**를 허용해야 붙여넣기와 Enter를 보낼 수 있습니다. 마이크·음성 인식 권한도 필요합니다. 메뉴 막대를 클릭하면 `모드: 포커스된 Warp CLI에 입력`과 입력 권한 상태를 확인할 수 있습니다. `마이크 준비 완료` 또는 `TBD · 호출 대기`가 나타나면 음성 인식이 켜진 상태입니다.
+
+Warp가 앞에 없거나 권한이 없으면 전송하지 않고 알림을 표시합니다. 붙여넣기와 Enter 사이에 포커스·창 제목·사용자 입력·클립보드가 바뀌면 Enter를 보내지 않으므로, 이때는 Warp 입력줄을 확인하세요. Warp는 탭 정보를 충분히 노출하지 않아 같은 제목의 탭을 프로그램이 바꾸는 경우까지 식별할 수는 없습니다. 전달 중에는 탭을 전환하지 마세요. 전송 성공 알림은 입력 이벤트를 보냈다는 뜻이며, CLI의 작업 완료 여부는 해당 탭에서 확인합니다.
+
+한글과 여러 줄 내용을 붙여넣기 위해 클립보드를 잠시 사용하고 기존 내용을 복원합니다. 그 사이 새로 복사한 내용은 덮어쓰지 않습니다. 기존 입력줄에 내용이 있으면 붙여넣을 내용과 합쳐질 수 있습니다. 실패한 명령은 자동 재전송하지 않습니다. 이 모드에서 TBD를 종료해도 이미 전달한 CLI 작업은 계속됩니다.
+
+`--warp-focus`는 `--thread`, `--model`과 함께 사용할 수 없습니다. `--text --dry-run --warp-focus`로 실제 입력을 보내지 않고 명령 조합을 검사할 수 있습니다.
+
 ## 실행
 
 macOS, Node.js 22 이상, Xcode Command Line Tools의 `swiftc`, 로그인된 Codex CLI가 필요합니다. 추가 npm 패키지나 별도 음성 API 키는 필요하지 않습니다.
@@ -16,6 +34,12 @@ npm start -- --cwd /Users/jonghokim/Workspace/hackerton
 
 ```sh
 npm start -- --cwd /Users/jonghokim/Workspace/hackerton --thread tbd-voice
+```
+
+Codex가 도구로 음성 앱을 실행할 때는 `--thread current`를 사용하면 실행한 대화의 `CODEX_THREAD_ID`를 읽어 연결합니다. 여러 CLI 대화를 열어 둔 경우 이전 대화의 ID를 복사해 사용하는 실수를 피할 수 있습니다. 일반 터미널처럼 이 환경 변수가 없으면 대상 ID 또는 이름을 명시해야 합니다. 연결 대상은 실행 로그와 메뉴에 실제 ID로 표시됩니다.
+
+```sh
+node src/cli.mjs --cwd /Users/jonghokim/Workspace/hackerton --thread current
 ```
 
 연결 모드는 설치된 Codex의 `codex queue --thread <대화> --message <내용>`을 사용해 실행어가 확정될 때 기존 대화에 사용자 메시지를 전달합니다. 대상 CLI에서 응답과 작업 진행을 확인할 수 있습니다. CLI가 바쁘면 해당 대화의 큐에 접수됩니다. 입력창의 작성 중인 초안을 타이핑하는 방식은 아닙니다. 메뉴에 연결 대상이 표시되며, 잘못된 대상이나 전달 오류가 발생하면 새 작업으로 우회하지 않고 오류를 표시합니다.

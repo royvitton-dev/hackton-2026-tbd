@@ -1,0 +1,27 @@
+{"version":8,"type":"context-options","origin":"library","browserName":"","playwrightVersion":"1.58.2","options":{},"platform":"darwin","wallTime":1790025895128,"monotonicTime":54939.97,"sdkLanguage":"javascript","contextId":"request-context@cfb39200e3a356afd452cc5c751aa475","title":"parking.spec.mjs:62 › existing park exposes the new attraction, shared launch route and root quality dashboard"}
+{"type":"before","callId":"call@390","startTime":54942.138,"class":"APIRequestContext","method":"fetch","params":{"url":"/api/apps","method":"GET","timeout":0},"stepId":"pw:api@30"}
+{"type":"log","callId":"call@390","time":54948.523,"message":"→ GET http://127.0.0.1:5196/api/apps"}
+{"type":"log","callId":"call@390","time":54948.55,"message":"  user-agent: Playwright/1.58.2 (arm64; macOS 26.5) node/25.4"}
+{"type":"log","callId":"call@390","time":54948.552,"message":"  accept: */*"}
+{"type":"log","callId":"call@390","time":54948.553,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@390","time":54956.623,"message":"← 200 OK"}
+{"type":"log","callId":"call@390","time":54956.629,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@390","time":54956.632,"message":"  cache-control: no-store"}
+{"type":"log","callId":"call@390","time":54956.635,"message":"  date: Mon, 21 Sep 2026 21:24:55 GMT"}
+{"type":"log","callId":"call@390","time":54956.637,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@390","time":54956.638,"message":"  keep-alive: timeout=5"}
+{"type":"log","callId":"call@390","time":54956.639,"message":"  transfer-encoding: chunked"}
+{"type":"after","callId":"call@390","endTime":54956.703,"result":{"response":{"url":"http://127.0.0.1:5196/api/apps","status":200,"statusText":"OK","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Cache-Control","value":"no-store"},{"name":"Date","value":"Mon, 21 Sep 2026 21:24:55 GMT"},{"name":"Connection","value":"keep-alive"},{"name":"Keep-Alive","value":"timeout=5"},{"name":"Transfer-Encoding","value":"chunked"}],"fetchUid":"f90d97c8142498c81c6671961822c35e"}}}
+{"type":"before","callId":"call@393","startTime":54958.922,"class":"APIRequestContext","method":"fetch","params":{"url":"/api/launch?id=map_new","method":"POST","timeout":0},"stepId":"pw:api@32"}
+{"type":"log","callId":"call@393","time":54959.749,"message":"→ POST http://127.0.0.1:5196/api/launch?id=map_new"}
+{"type":"log","callId":"call@393","time":54959.773,"message":"  user-agent: Playwright/1.58.2 (arm64; macOS 26.5) node/25.4"}
+{"type":"log","callId":"call@393","time":54959.776,"message":"  accept: */*"}
+{"type":"log","callId":"call@393","time":54959.779,"message":"  accept-encoding: gzip,deflate,br"}
+{"type":"log","callId":"call@393","time":54965.383,"message":"← 200 OK"}
+{"type":"log","callId":"call@393","time":54965.388,"message":"  content-type: application/json; charset=utf-8"}
+{"type":"log","callId":"call@393","time":54965.39,"message":"  cache-control: no-store"}
+{"type":"log","callId":"call@393","time":54965.392,"message":"  date: Mon, 21 Sep 2026 21:24:55 GMT"}
+{"type":"log","callId":"call@393","time":54965.393,"message":"  connection: keep-alive"}
+{"type":"log","callId":"call@393","time":54965.394,"message":"  keep-alive: timeout=5"}
+{"type":"log","callId":"call@393","time":54965.395,"message":"  transfer-encoding: chunked"}
+{"type":"after","callId":"call@393","endTime":54965.463,"result":{"response":{"url":"http://127.0.0.1:5196/api/launch?id=map_new","status":200,"statusText":"OK","headers":[{"name":"Content-Type","value":"application/json; charset=utf-8"},{"name":"Cache-Control","value":"no-store"},{"name":"Date","value":"Mon, 21 Sep 2026 21:24:55 GMT"},{"name":"Connection","value":"keep-alive"},{"name":"Keep-Alive","value":"timeout=5"},{"name":"Transfer-Encoding","value":"chunked"}],"fetchUid":"bbb8bcf0706814c5155ec4db26df7da9"}}}
