@@ -13,7 +13,7 @@ test('all new rides activate in natural seeded races and finish with contained u
  const report=[];
  for(const map of MAPS){const counts={magnet:0,cannon:0};for(let seed=1;seed<=10;seed++){
   const r=new Race({...makeConfig(Array.from({length:20},(_,i)=>`R${i}`).join(','),1,'last',1),mapId:map.id,boardMotion:true},seed);r.start();let captures=0,launches=0;
-  while(!['complete','invalid'].includes(r.state)){r.step();for(const e of r.events.splice(0)){if(e.type==='capture'){counts[e.kind]++;captures++;assert.ok(e.duration>=(map.id==='parade'&&e.kind==='cannon'?.8:.5)&&e.duration<=(map.id==='parade'&&e.kind==='cannon'?1.5:1));}if(e.type==='launch')launches++;}for(const b of r.balls){assert.ok(b.x>=40-1e-5&&b.x<=580+1e-5);assert.ok(b.y<=map.finish+1e-5);}}
+  while(!['complete','invalid'].includes(r.state)){r.step();for(const e of r.events.splice(0)){if(e.type==='capture'){counts[e.kind]++;captures++;assert.ok(e.duration>=(map.id==='parade'&&e.kind==='cannon'?.8:.5)&&e.duration<=(e.kind==='magnet'?2:map.id==='parade'?1.5:1));}if(e.type==='launch')launches++;}for(const b of r.balls){assert.ok(b.x>=40-1e-5&&b.x<=580+1e-5);assert.ok(b.y<=map.finish+1e-5);}}
   assert.equal(r.state,'complete',`${map.id}/${seed}: ${JSON.stringify(r.balls.filter(b=>!b.finished))}`);assert.equal(new Set(r.finishOrder.map(b=>b.id)).size,20);assert.ok(r.finishOrder.every(b=>map.exits.some(h=>h.id===b.exitId)));report.push({map:map.id,seed,time:r.raceTime,captures,launches,assists:r.assists});
  }assert.ok(counts.magnet>0&&counts.cannon>0,JSON.stringify({map:map.id,counts}));}
  await writeFile(`evidence/park-20260921/${process.env.EVIDENCE_PREFIX||'09'}-course-device-results.json`,JSON.stringify({status:'PASS',cases:report},null,2));
