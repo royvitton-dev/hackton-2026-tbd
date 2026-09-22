@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-09-22T00:19:12.370759+00:00",
+  "branch": "main",
+  "localHead": "22828ab8b3dcc938af35cfb3019cd2c601ddf8d2",
+  "originMain": "22828ab8b3dcc938af35cfb3019cd2c601ddf8d2",
+  "remoteMainVerifiedByLsRemote": "22828ab8b3dcc938af35cfb3019cd2c601ddf8d2",
+  "cleanWorktree": true,
+  "finalReportCommit": "38c6349931d8bddcb27848517688790c1aceb490",
+  "finalReportIncluded": true,
+  "forcePush": false,
+  "preview": {
+    "at": "2026-09-22T00:12:43.791Z",
+    "commit": "22828ab8b3dcc938af35cfb3019cd2c601ddf8d2",
+    "status": "PASS",
+    "checks": [
+      {
+        "attempt": "open",
+        "version": "main-22828ab8b3dc",
+        "assets": 21,
+        "exactCommittedBytes": true
+      },
+      {
+        "attempt": "refresh",
+        "version": "main-22828ab8b3dc",
+        "assets": 21,
+        "exactCommittedBytes": true
+      }
+    ]
+  },
+  "earlierDeliveryFailure": "Remote advanced by four unrelated project commits after final report push; stale preview check failed. Fast-forward pull preserved those commits, publication and open/refresh verification then passed. Failed evidence retained.",
+  "recordScope": "Post-push local delivery receipt; no Codex session JSONL included."
+}

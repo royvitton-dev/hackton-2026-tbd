@@ -145,3 +145,7 @@ EVIDENCE_PREFIX=31 PREVIEW_REPO=<main-integration> EXPECTED_COMMIT=4633dc89f6725
 ```
 
 Actual Node and Playwright module paths were the bundled paths recorded earlier. Shared31receipt confirms main equality and clean worktree; package SHA256 checks match29-package-results.
+
+
+## 32 — Audio
+See park-20260921/32-sound.md for commands, actual checks, failures and package limits.

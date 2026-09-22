@@ -83,3 +83,7 @@ Direct main commit `7b211d2f14c0d85e35a50118fe21ad99959c8307` retains the two sh
 ## 2026-09-22 09:04 KST - Pull and push recovered
 
 User explicitly requested git pull and push. Pull on main: Already up to date. CLI push still lacked HTTPS username credentials. Fork became accessible; a normal main Push showed Everything is up-to-date. Remote main, origin/main and local HEAD were independently verified as4633dc89f672581f648c1290ab35e3958f58e815, clean worktree. All queued commits fe3203ba,8edb3942,4e73d8fd,7b211d2f are included. No force push or credential extraction. The4633 merge was already present from concurrent user work before this request. Preview updated tomain-4633dc89f672; first load/reload21assets passed. See31-push-receipt.json and31-pushed-preview.json.
+
+
+## 32 — Audio
+See park-20260921/32-sound.md for commands, actual checks, failures and package limits.

@@ -1,0 +1,5 @@
+PASS offline synthesis, headroom, independent cue palette and cleanup
+PASS rapid enable→mute during pending resume stays silent
+PASS desktop sound on→race→pause→winner→replay→mute
+PASS mobile sound on→race→pause→winner→replay→mute
+PASS 60-ball cue burst is bounded and reset cancels scheduled fanfare
