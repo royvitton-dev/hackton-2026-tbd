@@ -129,3 +129,19 @@ ROUTER_TEST_URL=http://127.0.0.1:4191 node tests/shared-route.mjs
 ```
 
 Actual runs used absolute bundled Node/Playwright paths. Server started on second attempt; two Chrome flows passed, browser closed, own4191server stopped bySIGTERM with exit0. Source receipt and independent stored lotto arrival review:30-review.json. The first large documentation-write heredoc failed UTF-8 parsing before any writes; a smaller ASCII script and apply_patch completed the records.
+
+
+## 31 - Deadline delivery
+
+```sh
+git fetch origin
+git pull --no-rebase --no-edit origin main
+GIT_TERMINAL_PROMPT=0 git push origin main # failed: username credential unavailable
+# Fork: main -> origin/main, Force unchecked, normal Push.
+git ls-remote origin refs/heads/main
+git merge-base --is-ancestor <pending-commit> origin/main
+node scripts/publish-preview.mjs --repo <main-integration> --releases <preview-releases>
+EVIDENCE_PREFIX=31 PREVIEW_REPO=<main-integration> EXPECTED_COMMIT=4633dc89f672581f648c1290ab35e3958f58e815 node tests/pushed-preview.mjs
+```
+
+Actual Node and Playwright module paths were the bundled paths recorded earlier. Shared31receipt confirms main equality and clean worktree; package SHA256 checks match29-package-results.

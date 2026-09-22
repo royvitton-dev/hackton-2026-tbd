@@ -228,3 +228,10 @@ Existing heartbeat drop-land-23 was updated, not duplicated: every15minutes, unt
 - PC1440×1000 플레이어4공/모바일390×844 DPR2 로또45공 두 흐름 통과. 공개 실행파일15개 SHA256 일치, 기본명단5명/맵5개, 새로고침, 캐논퍼레이드3배속, 실제 정지250ms snapshot유지/재개, 첫1개/첫7개 종료, 대형 결과와 중복집계 없음, 재경기/초기화를 확인했다. 페이지오류·실패응답·경로외 요청0건. 검사 브라우저 종료 완료. 스크린샷과 실제 경기기록은30-shared-route에 있다. 본번호6개와7번째보너스도 저장한 실제 도착기록과 대조했다.
 - 실행코드는4e73d8fd와 같아서 Mac/APK 재빌드는 필요하지 않았다. 실제 통합 Node 서버의 정적 핀볼 경로 검사이며 다른 Vite/Next 앱의 종합 검증이나 Android WebView 검사로 확대하지 않는다. 임시 서버는 검사 후 SIGTERM으로 종료했다.
 - Fork는 이번에도 Mac잠금으로 접근할 수 없었다. 앞선27/28/29 목표턴과 같은 조건이다. 기존 잠금해제 질문이 대기중이며 동일한 CLI인증 실패를 반복하거나 토큰을 추출하지 않았다. 푸시와4188최신반영은 완료되지 않았다. 원더가든의 보류된 출구 구조도 재시도하지 않았다.
+
+
+## 31 - Deadline closeout and user-requested pull/push
+
+No new gameplay changes or physics repeats after09:00. Read-only remote check at09:01 still showed queued commits absent. User then requested pull/push. Pull was up to date; CLI push failed without username credentials. Fork was now unlocked. The first click was interrupted by user interaction; fresh accessibility state was acquired before opening the normal main push sheet. Force checkbox remained off. Return submitted Push, showing Everything is up-to-date. At09:04 remote hash and all pending commit ancestry were confirmed. Parallel user activity means the receipt records verified delivery rather than attributing the remote update solely to this action.
+
+Published immutable4633preview;31first/reload21assetchecks PASS and browser closed. MacZIP/APK hashes exactly match phase29 verified artifacts. Android native tests and latest Mac native relaunch were not performed. Final report retains known Garden failure and honest overnight blocked interval. No new SDK acceptance or retry of the halted Garden geometry.

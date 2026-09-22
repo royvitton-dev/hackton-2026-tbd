@@ -73,3 +73,13 @@ main `8edb3942860b9609eedccd000d3ef7028ea7220c`에직접커밋했다. 21개실�
 ## 2026-09-21T23:15:39.879504+09:00 — 그래픽 복구 수정 커밋
 
 main `4e73d8fdc4bca52bf3fa95656656f6666c650e36` 직접 커밋. 원격 trading70f99072는 정상 병합으로 보존했다. 최신21개 실행파일이 커밋과 일치하며 Mac/APK 로컬 결과물을 갱신했다. Mac 잠금 때문에 푸시는 대기 중이며4188은 main-2131c72f70bf를 유지한다.
+
+
+## 2026-09-21 23:32 KST - Shared router verification
+
+Direct main commit `7b211d2f14c0d85e35a50118fe21ad99959c8307` retains the two shared-server pinball flows and Android emulator proposal. Remote60c331f8 was preserved by normal mergeaf26c156; no pinball conflicts. Worktree clean; all21 runtime assets match the committed and delivered source. Game runtime unchanged since4e73d8fd. Fork remained inaccessible while Mac locked; no new CLI retry or token extraction. Push is NOT complete and4188 remainsmain-2131c72f70bf. SDK license/installation approval is pending; Android native execution is NOT_RUN.
+
+
+## 2026-09-22 09:04 KST - Pull and push recovered
+
+User explicitly requested git pull and push. Pull on main: Already up to date. CLI push still lacked HTTPS username credentials. Fork became accessible; a normal main Push showed Everything is up-to-date. Remote main, origin/main and local HEAD were independently verified as4633dc89f672581f648c1290ab35e3958f58e815, clean worktree. All queued commits fe3203ba,8edb3942,4e73d8fd,7b211d2f are included. No force push or credential extraction. The4633 merge was already present from concurrent user work before this request. Preview updated tomain-4633dc89f672; first load/reload21assets passed. See31-push-receipt.json and31-pushed-preview.json.
