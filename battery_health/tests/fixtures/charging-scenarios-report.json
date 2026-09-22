@@ -1,0 +1,1069 @@
+{
+  "version": "CHARGING_SCENARIOS_V1",
+  "validationErrors": 0,
+  "original": {
+    "users": 1250,
+    "sessions": 10000,
+    "vehicles": 20,
+    "sessionsPerUser": {
+      "min": 2,
+      "median": 8.0,
+      "max": 12,
+      "mean": 8
+    },
+    "sessionsPerChargingDay": {
+      "min": 1,
+      "median": 1.0,
+      "max": 5,
+      "mean": 1.272
+    },
+    "observationDays": {
+      "min": 0.192,
+      "median": 10.55,
+      "max": 15.062,
+      "mean": 10.301
+    },
+    "durationMinutes": {
+      "min": 4.2,
+      "median": 32.35,
+      "max": 750.0,
+      "mean": 102.462
+    },
+    "chargedKwh": {
+      "min": 3.1,
+      "median": 22.695,
+      "max": 72.72,
+      "mean": 24.868
+    },
+    "idleMinutes": {
+      "min": 1.0,
+      "median": 22.0,
+      "max": 760.0,
+      "mean": 71.281
+    },
+    "sevenConsecutiveAcOnlyDaysUsers": 2,
+    "mixedAcDcDays": 651,
+    "threeOrMore10to30MinuteUltraDays": 1,
+    "repeatedUltraDaysUsers": 0,
+    "byCharger": {
+      "AC_SLOW": {
+        "count": 4125,
+        "durationMinutes": {
+          "min": 41.383,
+          "median": 197.967,
+          "max": 750.0,
+          "mean": 219.682
+        },
+        "chargedKwh": {
+          "min": 3.68,
+          "median": 20.74,
+          "max": 69.73,
+          "mean": 23.054
+        }
+      },
+      "DC_FAST": {
+        "count": 4153,
+        "durationMinutes": {
+          "min": 4.2,
+          "median": 21.15,
+          "max": 102.8,
+          "mean": 23.622
+        },
+        "chargedKwh": {
+          "min": 3.1,
+          "median": 26.72,
+          "max": 72.72,
+          "mean": 27.618
+        }
+      },
+      "ULTRA_FAST": {
+        "count": 1722,
+        "durationMinutes": {
+          "min": 4.2,
+          "median": 9.783,
+          "max": 45.033,
+          "mean": 11.808
+        },
+        "chargedKwh": {
+          "min": 3.19,
+          "median": 18.085,
+          "max": 72.7,
+          "mean": 22.583
+        }
+      }
+    }
+  },
+  "extension": {
+    "users": 360,
+    "sessions": 18189,
+    "vehicles": 20,
+    "sessionsPerUser": {
+      "min": 2,
+      "median": 40.0,
+      "max": 168,
+      "mean": 50.525
+    },
+    "sessionsPerChargingDay": {
+      "min": 1,
+      "median": 1.0,
+      "max": 5,
+      "mean": 1.595
+    },
+    "observationDays": {
+      "min": 27.046,
+      "median": 53.386,
+      "max": 55.362,
+      "mean": 51.816
+    },
+    "durationMinutes": {
+      "min": 5.0,
+      "median": 28.0,
+      "max": 420.017,
+      "mean": 74.28
+    },
+    "chargedKwh": {
+      "min": 2.0,
+      "median": 15.844,
+      "max": 49.529,
+      "mean": 16.459
+    },
+    "idleMinutes": {
+      "min": 0.0,
+      "median": 12.0,
+      "max": 606.367,
+      "mean": 149.564
+    },
+    "sevenConsecutiveAcOnlyDaysUsers": 40,
+    "mixedAcDcDays": 1408,
+    "threeOrMore10to30MinuteUltraDays": 1600,
+    "repeatedUltraDaysUsers": 40,
+    "byCharger": {
+      "AC_SLOW": {
+        "count": 7240,
+        "durationMinutes": {
+          "min": 18.25,
+          "median": 132.5,
+          "max": 420.017,
+          "mean": 154.905
+        },
+        "chargedKwh": {
+          "min": 2.0,
+          "median": 12.584,
+          "max": 45.625,
+          "mean": 14.556
+        }
+      },
+      "DC_FAST": {
+        "count": 4294,
+        "durationMinutes": {
+          "min": 5.0,
+          "median": 11.683,
+          "max": 79.633,
+          "mean": 22.665
+        },
+        "chargedKwh": {
+          "min": 2.0,
+          "median": 7.677,
+          "max": 49.529,
+          "mean": 14.988
+        }
+      },
+      "ULTRA_FAST": {
+        "count": 6655,
+        "durationMinutes": {
+          "min": 10.0,
+          "median": 20.0,
+          "max": 37.5,
+          "mean": 19.871
+        },
+        "chargedKwh": {
+          "min": 7.0,
+          "median": 19.099,
+          "max": 47.849,
+          "mean": 19.478
+        }
+      }
+    },
+    "noChargeUserDays": 8754,
+    "sessionsPerCalendarDay": {
+      "min": 0,
+      "median": 1.0,
+      "max": 5,
+      "mean": 0.902
+    }
+  },
+  "combined": {
+    "users": 1610,
+    "sessions": 28189,
+    "vehicles": 20,
+    "sessionsPerUser": {
+      "min": 2,
+      "median": 9.0,
+      "max": 168,
+      "mean": 17.509
+    },
+    "sessionsPerChargingDay": {
+      "min": 1,
+      "median": 1.0,
+      "max": 5,
+      "mean": 1.463
+    },
+    "observationDays": {
+      "min": 0.192,
+      "median": 11.172,
+      "max": 55.362,
+      "mean": 19.584
+    },
+    "durationMinutes": {
+      "min": 4.2,
+      "median": 29.0,
+      "max": 750.0,
+      "mean": 84.278
+    },
+    "chargedKwh": {
+      "min": 2.0,
+      "median": 18.06,
+      "max": 72.72,
+      "mean": 19.442
+    },
+    "idleMinutes": {
+      "min": 0.0,
+      "median": 14.0,
+      "max": 760.0,
+      "mean": 121.793
+    },
+    "sevenConsecutiveAcOnlyDaysUsers": 42,
+    "mixedAcDcDays": 2059,
+    "threeOrMore10to30MinuteUltraDays": 1601,
+    "repeatedUltraDaysUsers": 40,
+    "byCharger": {
+      "AC_SLOW": {
+        "count": 11365,
+        "durationMinutes": {
+          "min": 18.25,
+          "median": 158.283,
+          "max": 750.0,
+          "mean": 178.416
+        },
+        "chargedKwh": {
+          "min": 2.0,
+          "median": 16.094,
+          "max": 69.73,
+          "mean": 17.64
+        }
+      },
+      "DC_FAST": {
+        "count": 8447,
+        "durationMinutes": {
+          "min": 4.2,
+          "median": 18.183,
+          "max": 102.8,
+          "mean": 23.135
+        },
+        "chargedKwh": {
+          "min": 2.0,
+          "median": 21.3,
+          "max": 72.72,
+          "mean": 21.198
+        }
+      },
+      "ULTRA_FAST": {
+        "count": 8377,
+        "durationMinutes": {
+          "min": 4.2,
+          "median": 18.0,
+          "max": 45.033,
+          "mean": 18.213
+        },
+        "chargedKwh": {
+          "min": 3.19,
+          "median": 18.978,
+          "max": 72.7,
+          "mean": 20.117
+        }
+      }
+    }
+  },
+  "extensionWithoutFleetBoundary": {
+    "users": 320,
+    "sessions": 11854,
+    "vehicles": 20,
+    "sessionsPerUser": {
+      "min": 2,
+      "median": 39.5,
+      "max": 85,
+      "mean": 37.044
+    },
+    "sessionsPerChargingDay": {
+      "min": 1,
+      "median": 1.0,
+      "max": 2,
+      "mean": 1.209
+    },
+    "observationDays": {
+      "min": 27.046,
+      "median": 53.202,
+      "max": 55.362,
+      "mean": 51.619
+    },
+    "durationMinutes": {
+      "min": 5.0,
+      "median": 59.192,
+      "max": 420.017,
+      "mean": 103.24
+    },
+    "chargedKwh": {
+      "min": 2.0,
+      "median": 11.682,
+      "max": 49.529,
+      "mean": 15.151
+    },
+    "idleMinutes": {
+      "min": 0.0,
+      "median": 182.25,
+      "max": 606.367,
+      "mean": 225.429
+    },
+    "sevenConsecutiveAcOnlyDaysUsers": 40,
+    "mixedAcDcDays": 1408,
+    "threeOrMore10to30MinuteUltraDays": 0,
+    "repeatedUltraDaysUsers": 0,
+    "byCharger": {
+      "AC_SLOW": {
+        "count": 7240,
+        "durationMinutes": {
+          "min": 18.25,
+          "median": 132.5,
+          "max": 420.017,
+          "mean": 154.905
+        },
+        "chargedKwh": {
+          "min": 2.0,
+          "median": 12.584,
+          "max": 45.625,
+          "mean": 14.556
+        }
+      },
+      "DC_FAST": {
+        "count": 4294,
+        "durationMinutes": {
+          "min": 5.0,
+          "median": 11.683,
+          "max": 79.633,
+          "mean": 22.665
+        },
+        "chargedKwh": {
+          "min": 2.0,
+          "median": 7.677,
+          "max": 49.529,
+          "mean": 14.988
+        }
+      },
+      "ULTRA_FAST": {
+        "count": 320,
+        "durationMinutes": {
+          "min": 10.0,
+          "median": 13.183,
+          "max": 37.5,
+          "mean": 15.521
+        },
+        "chargedKwh": {
+          "min": 12.922,
+          "median": 31.011,
+          "max": 47.849,
+          "mean": 30.799
+        }
+      }
+    },
+    "noChargeUserDays": 8114,
+    "sessionsPerCalendarDay": {
+      "min": 0,
+      "median": 1.0,
+      "max": 2,
+      "mean": 0.661
+    }
+  },
+  "patterns": {
+    "NIGHT_AC": {
+      "users": 40,
+      "sessions": 940,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 19,
+        "median": 23.5,
+        "max": 28,
+        "mean": 23.5
+      },
+      "sessionsPerChargingDay": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1,
+        "mean": 1
+      },
+      "observationDays": {
+        "min": 54.166,
+        "median": 54.277,
+        "max": 54.306,
+        "mean": 54.255
+      },
+      "durationMinutes": {
+        "min": 135.033,
+        "median": 331.858,
+        "max": 420.017,
+        "mean": 329.142
+      },
+      "chargedKwh": {
+        "min": 13.318,
+        "median": 31.6,
+        "max": 45.126,
+        "mean": 30.841
+      },
+      "idleMinutes": {
+        "min": 46.983,
+        "median": 161.958,
+        "max": 383.967,
+        "mean": 165.664
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 0,
+      "mixedAcDcDays": 0,
+      "threeOrMore10to30MinuteUltraDays": 0,
+      "repeatedUltraDaysUsers": 0,
+      "byCharger": {
+        "AC_SLOW": {
+          "count": 940,
+          "durationMinutes": {
+            "min": 135.033,
+            "median": 331.858,
+            "max": 420.017,
+            "mean": 329.142
+          },
+          "chargedKwh": {
+            "min": 13.318,
+            "median": 31.6,
+            "max": 45.126,
+            "mean": 30.841
+          }
+        }
+      },
+      "noChargeUserDays": 1300,
+      "sessionsPerCalendarDay": {
+        "min": 0,
+        "median": 0.0,
+        "max": 1,
+        "mean": 0.42
+      }
+    },
+    "DAILY_AC": {
+      "users": 40,
+      "sessions": 2240,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 56,
+        "median": 56.0,
+        "max": 56,
+        "mean": 56
+      },
+      "sessionsPerChargingDay": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1,
+        "mean": 1
+      },
+      "observationDays": {
+        "min": 55.018,
+        "median": 55.043,
+        "max": 55.145,
+        "mean": 55.054
+      },
+      "durationMinutes": {
+        "min": 36.517,
+        "median": 117.175,
+        "max": 420.0,
+        "mean": 123.639
+      },
+      "chargedKwh": {
+        "min": 4.0,
+        "median": 11.004,
+        "max": 34.788,
+        "mean": 11.597
+      },
+      "idleMinutes": {
+        "min": 193.0,
+        "median": 496.075,
+        "max": 603.6,
+        "mean": 491.117
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 40,
+      "mixedAcDcDays": 0,
+      "threeOrMore10to30MinuteUltraDays": 0,
+      "repeatedUltraDaysUsers": 0,
+      "byCharger": {
+        "AC_SLOW": {
+          "count": 2240,
+          "durationMinutes": {
+            "min": 36.517,
+            "median": 117.175,
+            "max": 420.0,
+            "mean": 123.639
+          },
+          "chargedKwh": {
+            "min": 4.0,
+            "median": 11.004,
+            "max": 34.788,
+            "mean": 11.597
+          }
+        }
+      },
+      "noChargeUserDays": 0,
+      "sessionsPerCalendarDay": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1,
+        "mean": 1
+      }
+    },
+    "WORK_AC": {
+      "users": 40,
+      "sessions": 1412,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 29,
+        "median": 35.5,
+        "max": 39,
+        "mean": 35.3
+      },
+      "sessionsPerChargingDay": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1,
+        "mean": 1
+      },
+      "observationDays": {
+        "min": 52.069,
+        "median": 53.078,
+        "max": 53.221,
+        "mean": 53.011
+      },
+      "durationMinutes": {
+        "min": 36.8,
+        "median": 118.567,
+        "max": 372.25,
+        "mean": 123.406
+      },
+      "chargedKwh": {
+        "min": 4.0,
+        "median": 11.025,
+        "max": 38.329,
+        "mean": 11.606
+      },
+      "idleMinutes": {
+        "min": 127.75,
+        "median": 378.7,
+        "max": 486.317,
+        "mean": 371.159
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 0,
+      "mixedAcDcDays": 0,
+      "threeOrMore10to30MinuteUltraDays": 0,
+      "repeatedUltraDaysUsers": 0,
+      "byCharger": {
+        "AC_SLOW": {
+          "count": 1412,
+          "durationMinutes": {
+            "min": 36.8,
+            "median": 118.567,
+            "max": 372.25,
+            "mean": 123.406
+          },
+          "chargedKwh": {
+            "min": 4.0,
+            "median": 11.025,
+            "max": 38.329,
+            "mean": 11.606
+          }
+        }
+      },
+      "noChargeUserDays": 828,
+      "sessionsPerCalendarDay": {
+        "min": 0,
+        "median": 1.0,
+        "max": 1,
+        "mean": 0.63
+      }
+    },
+    "MIXED_DAY": {
+      "users": 40,
+      "sessions": 2400,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 56,
+        "median": 60.0,
+        "max": 64,
+        "mean": 60
+      },
+      "sessionsPerChargingDay": {
+        "min": 1,
+        "median": 1.5,
+        "max": 2,
+        "mean": 1.5
+      },
+      "observationDays": {
+        "min": 53.007,
+        "median": 53.239,
+        "max": 53.571,
+        "mean": 53.262
+      },
+      "durationMinutes": {
+        "min": 10.0,
+        "median": 89.392,
+        "max": 420.0,
+        "mean": 97.421
+      },
+      "chargedKwh": {
+        "min": 4.0,
+        "median": 10.507,
+        "max": 37.87,
+        "mean": 11.676
+      },
+      "idleMinutes": {
+        "min": 0.0,
+        "median": 435.175,
+        "max": 606.367,
+        "mean": 319.749
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 0,
+      "mixedAcDcDays": 800,
+      "threeOrMore10to30MinuteUltraDays": 0,
+      "repeatedUltraDaysUsers": 0,
+      "byCharger": {
+        "AC_SLOW": {
+          "count": 1600,
+          "durationMinutes": {
+            "min": 36.5,
+            "median": 132.325,
+            "max": 420.0,
+            "mean": 139.438
+          },
+          "chargedKwh": {
+            "min": 4.0,
+            "median": 12.605,
+            "max": 37.87,
+            "mean": 13.042
+          }
+        },
+        "DC_FAST": {
+          "count": 800,
+          "durationMinutes": {
+            "min": 10.0,
+            "median": 12.767,
+            "max": 22.05,
+            "mean": 13.388
+          },
+          "chargedKwh": {
+            "min": 7.0,
+            "median": 8.601,
+            "max": 12.968,
+            "mean": 8.945
+          }
+        }
+      },
+      "noChargeUserDays": 640,
+      "sessionsPerCalendarDay": {
+        "min": 0,
+        "median": 1.0,
+        "max": 2,
+        "mean": 1.071
+      }
+    },
+    "WEEKEND_TRIP": {
+      "users": 40,
+      "sessions": 1600,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 40,
+        "median": 40.0,
+        "max": 40,
+        "mean": 40
+      },
+      "sessionsPerChargingDay": {
+        "min": 1,
+        "median": 2.0,
+        "max": 2,
+        "mean": 1.667
+      },
+      "observationDays": {
+        "min": 50.784,
+        "median": 50.809,
+        "max": 50.849,
+        "mean": 50.813
+      },
+      "durationMinutes": {
+        "min": 10.0,
+        "median": 45.283,
+        "max": 420.017,
+        "mean": 97.111
+      },
+      "chargedKwh": {
+        "min": 10.204,
+        "median": 30.75,
+        "max": 49.166,
+        "mean": 30.888
+      },
+      "idleMinutes": {
+        "min": 0.0,
+        "median": 10.0,
+        "max": 450.283,
+        "mean": 62.772
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 0,
+      "mixedAcDcDays": 0,
+      "threeOrMore10to30MinuteUltraDays": 0,
+      "repeatedUltraDaysUsers": 0,
+      "byCharger": {
+        "AC_SLOW": {
+          "count": 320,
+          "durationMinutes": {
+            "min": 156.95,
+            "median": 337.575,
+            "max": 420.017,
+            "mean": 332.5
+          },
+          "chargedKwh": {
+            "min": 16.531,
+            "median": 32.15,
+            "max": 45.625,
+            "mean": 31.34
+          }
+        },
+        "DC_FAST": {
+          "count": 960,
+          "durationMinutes": {
+            "min": 13.283,
+            "median": 45.283,
+            "max": 78.333,
+            "mean": 45.845
+          },
+          "chargedKwh": {
+            "min": 10.204,
+            "median": 30.306,
+            "max": 49.166,
+            "mean": 30.767
+          }
+        },
+        "ULTRA_FAST": {
+          "count": 320,
+          "durationMinutes": {
+            "min": 10.0,
+            "median": 13.183,
+            "max": 37.5,
+            "mean": 15.521
+          },
+          "chargedKwh": {
+            "min": 12.922,
+            "median": 31.011,
+            "max": 47.849,
+            "mean": 30.799
+          }
+        }
+      },
+      "noChargeUserDays": 1280,
+      "sessionsPerCalendarDay": {
+        "min": 0,
+        "median": 0.0,
+        "max": 2,
+        "mean": 0.714
+      }
+    },
+    "PUBLIC_DC": {
+      "users": 40,
+      "sessions": 660,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 14,
+        "median": 16.5,
+        "max": 19,
+        "mean": 16.5
+      },
+      "sessionsPerChargingDay": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1,
+        "mean": 1
+      },
+      "observationDays": {
+        "min": 52.012,
+        "median": 53.036,
+        "max": 54.059,
+        "mean": 53.031
+      },
+      "durationMinutes": {
+        "min": 20.5,
+        "median": 45.975,
+        "max": 79.633,
+        "mean": 46.436
+      },
+      "chargedKwh": {
+        "min": 15.0,
+        "median": 31.141,
+        "max": 49.529,
+        "mean": 30.961
+      },
+      "idleMinutes": {
+        "min": 0.0,
+        "median": 7.0,
+        "max": 15.0,
+        "mean": 7.168
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 0,
+      "mixedAcDcDays": 0,
+      "threeOrMore10to30MinuteUltraDays": 0,
+      "repeatedUltraDaysUsers": 0,
+      "byCharger": {
+        "DC_FAST": {
+          "count": 660,
+          "durationMinutes": {
+            "min": 20.5,
+            "median": 45.975,
+            "max": 79.633,
+            "mean": 46.436
+          },
+          "chargedKwh": {
+            "min": 15.0,
+            "median": 31.141,
+            "max": 49.529,
+            "mean": 30.961
+          }
+        }
+      },
+      "noChargeUserDays": 1580,
+      "sessionsPerCalendarDay": {
+        "min": 0,
+        "median": 0.0,
+        "max": 1,
+        "mean": 0.295
+      }
+    },
+    "SHORT_TOPUP": {
+      "users": 40,
+      "sessions": 2482,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 42,
+        "median": 60.0,
+        "max": 85,
+        "mean": 62.05
+      },
+      "sessionsPerChargingDay": {
+        "min": 1,
+        "median": 1.0,
+        "max": 2,
+        "mean": 1.324
+      },
+      "observationDays": {
+        "min": 53.002,
+        "median": 55.004,
+        "max": 55.362,
+        "mean": 54.914
+      },
+      "durationMinutes": {
+        "min": 5.0,
+        "median": 7.05,
+        "max": 20.067,
+        "mean": 9.658
+      },
+      "chargedKwh": {
+        "min": 2.0,
+        "median": 3.098,
+        "max": 5.0,
+        "mean": 3.445
+      },
+      "idleMinutes": {
+        "min": 0.0,
+        "median": 8.0,
+        "max": 15.0,
+        "mean": 7.605
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 0,
+      "mixedAcDcDays": 608,
+      "threeOrMore10to30MinuteUltraDays": 0,
+      "repeatedUltraDaysUsers": 0,
+      "byCharger": {
+        "AC_SLOW": {
+          "count": 608,
+          "durationMinutes": {
+            "min": 18.25,
+            "median": 20.067,
+            "max": 20.067,
+            "mean": 19.765
+          },
+          "chargedKwh": {
+            "min": 2.0,
+            "median": 2.2,
+            "max": 2.2,
+            "mean": 2.167
+          }
+        },
+        "DC_FAST": {
+          "count": 1874,
+          "durationMinutes": {
+            "min": 5.0,
+            "median": 6.517,
+            "max": 8.833,
+            "mean": 6.379
+          },
+          "chargedKwh": {
+            "min": 2.0,
+            "median": 4.801,
+            "max": 5.0,
+            "mean": 3.86
+          }
+        }
+      },
+      "noChargeUserDays": 366,
+      "sessionsPerCalendarDay": {
+        "min": 0,
+        "median": 1.0,
+        "max": 2,
+        "mean": 1.108
+      }
+    },
+    "ULTRA_FLEET": {
+      "users": 40,
+      "sessions": 6335,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 151,
+        "median": 159.0,
+        "max": 168,
+        "mean": 158.375
+      },
+      "sessionsPerChargingDay": {
+        "min": 3,
+        "median": 4.0,
+        "max": 5,
+        "mean": 3.959
+      },
+      "observationDays": {
+        "min": 53.246,
+        "median": 53.388,
+        "max": 53.539,
+        "mean": 53.396
+      },
+      "durationMinutes": {
+        "min": 10.0,
+        "median": 20.0,
+        "max": 30.0,
+        "mean": 20.09
+      },
+      "chargedKwh": {
+        "min": 7.0,
+        "median": 18.788,
+        "max": 38.147,
+        "mean": 18.907
+      },
+      "idleMinutes": {
+        "min": 0.0,
+        "median": 8.0,
+        "max": 15.0,
+        "mean": 7.607
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 0,
+      "mixedAcDcDays": 0,
+      "threeOrMore10to30MinuteUltraDays": 1600,
+      "repeatedUltraDaysUsers": 40,
+      "byCharger": {
+        "ULTRA_FAST": {
+          "count": 6335,
+          "durationMinutes": {
+            "min": 10.0,
+            "median": 20.0,
+            "max": 30.0,
+            "mean": 20.09
+          },
+          "chargedKwh": {
+            "min": 7.0,
+            "median": 18.788,
+            "max": 38.147,
+            "mean": 18.907
+          }
+        }
+      },
+      "noChargeUserDays": 640,
+      "sessionsPerCalendarDay": {
+        "min": 0,
+        "median": 3.0,
+        "max": 5,
+        "mean": 2.828
+      }
+    },
+    "LOW_USE": {
+      "users": 40,
+      "sessions": 120,
+      "vehicles": 20,
+      "sessionsPerUser": {
+        "min": 2,
+        "median": 3.0,
+        "max": 4,
+        "mean": 3
+      },
+      "sessionsPerChargingDay": {
+        "min": 1,
+        "median": 1.0,
+        "max": 1,
+        "mean": 1
+      },
+      "observationDays": {
+        "min": 27.046,
+        "median": 38.616,
+        "max": 50.18,
+        "mean": 38.61
+      },
+      "durationMinutes": {
+        "min": 38.05,
+        "median": 150.858,
+        "max": 420.0,
+        "mean": 161.681
+      },
+      "chargedKwh": {
+        "min": 4.0,
+        "median": 14.562,
+        "max": 37.486,
+        "mean": 15.12
+      },
+      "idleMinutes": {
+        "min": 0.0,
+        "median": 7.0,
+        "max": 15.0,
+        "mean": 7.417
+      },
+      "sevenConsecutiveAcOnlyDaysUsers": 0,
+      "mixedAcDcDays": 0,
+      "threeOrMore10to30MinuteUltraDays": 0,
+      "repeatedUltraDaysUsers": 0,
+      "byCharger": {
+        "AC_SLOW": {
+          "count": 120,
+          "durationMinutes": {
+            "min": 38.05,
+            "median": 150.858,
+            "max": 420.0,
+            "mean": 161.681
+          },
+          "chargedKwh": {
+            "min": 4.0,
+            "median": 14.562,
+            "max": 37.486,
+            "mean": 15.12
+          }
+        }
+      },
+      "noChargeUserDays": 2120,
+      "sessionsPerCalendarDay": {
+        "min": 0,
+        "median": 0.0,
+        "max": 1,
+        "mean": 0.054
+      }
+    }
+  }
+}

@@ -6,6 +6,8 @@
   "scripts": {
     "convert:data": "python3 scripts/convert-battery-xlsx-to-json.py",
     "validate:data": "python3 scripts/validate-battery-json.py",
+    "generate:scenarios": "python3 scripts/generate-charging-scenarios.py",
+    "validate:scenarios": "python3 scripts/generate-charging-scenarios.py --check && python3 -m unittest discover -s tests -p 'test_*.py'",
     "dev": "vite",
     "lint": "tsc --noEmit",
     "test": "vitest run",

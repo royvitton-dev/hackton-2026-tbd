@@ -16,6 +16,7 @@ npm run dev
 
 ```bash
 npm run validate:data
+npm run validate:scenarios
 npm run lint
 npm test
 npm run build
@@ -28,3 +29,9 @@ npm run build
 ## 저장 정책
 
 전체 10,000건은 정적 JSON에서 한 번 로드한 뒤 사용자별로 메모리 인덱싱합니다. localStorage에는 선택 사용자/차량, 해당 사용자의 원본 세션, 최근 계산 결과와 UI 설정만 저장합니다. 최근 세션 표는 기본 20건만 렌더링합니다.
+
+## 확장 충전 패턴 검증
+
+8주·9개 생활 패턴의 합성 데이터 18,189건/360명을 별도로 추가했습니다. 기존 자료와 합산하면 28,189건/1,610명/20종입니다. `npm run generate:scenarios`로 재생성하고 `npm run validate:scenarios`로 재현성과 시간·차량·충전량·잔량 연결을 검증합니다. 기본 화면 데이터는 교체하지 않으며 테스트용 JSON은 브라우저에 로드하지 않습니다.
+
+최소·최대 통계, 패턴별 점수, 실제 연구와의 비교 및 한계는 [확장 데이터 검수 보고서](tests/fixtures/README.md)를 참고하세요. 실제 운전자 분포나 실차 SOH 검증을 완료한 데이터는 아닙니다.
