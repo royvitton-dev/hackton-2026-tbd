@@ -2957,3 +2957,23 @@ footer {
     max-width: 300px;
   }
 }
+.browser-bots-button {
+  flex-shrink: 0;
+  border: 1px solid #c9d2c6;
+  border-radius: 8px;
+  background: #fff;
+  color: #254437;
+  padding: 10px 14px;
+  cursor: pointer;
+  font: inherit;
+  white-space: nowrap;
+}
+.browser-bots-button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+@media (max-width: 700px) {
+  .guide-banner:has(.browser-bots-button) {
+    flex-wrap: wrap;
+  }
+}

@@ -442,7 +442,17 @@ function Balance({ account }: { account?: Account }) {
   )
 }
 
-function BotBoard({ bots, accounts, now }: { bots: Bot[]; accounts: Account[]; now: number }) {
+function BotBoard({
+  bots,
+  accounts,
+  now,
+  browserMode,
+}: {
+  bots: Bot[]
+  accounts: Account[]
+  now: number
+  browserMode: boolean
+}) {
   const online = bots.filter((b) => b.connected && now - b.last_heartbeat_ms < 15000).length
   return (
     <section className="bots-section" id="bots">
@@ -480,7 +490,7 @@ function BotBoard({ bots, accounts, now }: { bots: Bot[]; accounts: Account[]; n
                   <span>CREW {String(i + 1).padStart(2, '0')}</span>
                   <span className={alive ? 'bot-online' : 'bot-offline'}>
                     <i />
-                    {alive ? '활동 중' : '연결 대기'}
+                    {alive ? '활동 중' : browserMode ? '일시정지' : '연결 대기'}
                   </span>
                 </div>
                 <div className="bot-main">
@@ -520,9 +530,12 @@ function BotBoard({ bots, accounts, now }: { bots: Bot[]; accounts: Account[]; n
                 <details className="bot-details">
                   <summary>전략 정보</summary>
                   <span>
-                    {strategy.description} · seed {bot.seed}
+                    {strategy.description}
+                    {!browserMode && <> · seed {bot.seed}</>}
                     <br />
-                    API 시도 {fmt(bot.orders_sent)}회 · {bot.bot_id}
+                    {browserMode
+                      ? `브라우저 내부 실행 · ${bot.bot_id}`
+                      : `API 시도 ${fmt(bot.orders_sent)}회 · ${bot.bot_id}`}
                   </span>
                 </details>
               </article>
@@ -582,7 +595,7 @@ export default function App() {
   const change = state?.reference_price ? (delta / state.reference_price) * 100 : 0
   const connectionLabel = {
     connecting: '엔진 연결 중',
-    live: '시장 연결됨',
+    live: exchange.browserMode ? '브라우저 시장 실행 중' : '시장 연결됨',
     reconnecting: '재연결 중',
     offline: '엔진 연결 대기',
   }[connection]
@@ -662,6 +675,26 @@ export default function App() {
           </div>
           <ParkArt />
         </section>
+        {exchange.browserMode && (
+          <aside className="guide-banner" aria-label="브라우저 시장 안내">
+            <ShieldCheck size={20} />
+            <div>
+              <strong>설치 없이, 이 브라우저 안에서 거래합니다</strong>
+              <p>
+                별도 엔진 서버 없이 주문과 12개 봇을 실행합니다. 거래 기록은 이 브라우저에 저장되며 새로고침
+                후 복구됩니다. 탭을 닫으면 봇도 멈춥니다. 다른 기기와 시장을 공유하지 않으며, 브라우저 데이터
+                삭제 시 기록도 사라집니다.
+              </p>
+            </div>
+            <button
+              className="browser-bots-button"
+              onClick={() => void exchange.toggleBots()}
+              disabled={!canTrade}
+            >
+              {exchange.bots.some((bot) => bot.connected) ? '봇 일시정지' : '봇 시작'}
+            </button>
+          </aside>
+        )}
         {showGuide && (
           <aside className="guide-banner">
             <Ticket size={20} />
@@ -1086,7 +1119,12 @@ export default function App() {
             <Balance account={account} />
           </aside>
         </div>
-        <BotBoard bots={exchange.bots} accounts={state?.accounts || []} now={now} />
+        <BotBoard
+          bots={exchange.bots}
+          accounts={state?.accounts || []}
+          now={now}
+          browserMode={exchange.browserMode}
+        />
         <footer>
           <span className="footer-brand">
             <FerrisWheel size={16} />
@@ -1095,7 +1133,8 @@ export default function App() {
           </span>
           <div className="engine-status">
             <span>
-              {connected ? <Wifi size={12} /> : <WifiOff size={12} />}엔진{' '}
+              {connected ? <Wifi size={12} /> : <WifiOff size={12} />}
+              {exchange.browserMode ? '브라우저 엔진' : '엔진'}{' '}
               {stateNames[state?.engine_status || ''] || state?.engine_status || '연결 대기'}
             </span>
             <span>

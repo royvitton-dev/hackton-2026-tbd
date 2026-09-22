@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { API_URL, configurationError, request, WS_URL } from './api'
+import { API_URL, browserMode, configurationError, request, WS_URL } from './api'
+import { restartBrowser, subscribeBrowser } from './browser/client'
 import {
   isCommandResult,
   isSnapshot,
@@ -150,7 +151,23 @@ export function useExchange() {
         reconnectTimer = window.setTimeout(connect, Math.min(8000, 500 * 2 ** Math.min(attempt++, 4)))
       }
     }
-    connect()
+    const unsubscribe = browserMode
+      ? subscribeBrowser((event) => {
+          if (disposed) return
+          if (event.type === 'failure') {
+            if (event.state) applySnapshot(event.state)
+            setConnection('offline')
+            setNotice(event.message)
+          } else {
+            applySnapshot(event.state, true)
+            setBots(event.bots)
+            setConnection('live')
+            setNotice(null)
+            setLastReceived(Date.now())
+          }
+        })
+      : undefined
+    if (!browserMode) connect()
     void refresh()
     void poll()
     const pollTimer = window.setInterval(() => void poll(), 3000)
@@ -159,6 +176,7 @@ export function useExchange() {
       window.clearTimeout(reconnectTimer)
       window.clearInterval(pollTimer)
       socket?.close()
+      unsubscribe?.()
     }
   }, [applySnapshot, refresh, reconnectVersion])
 
@@ -281,7 +299,23 @@ export function useExchange() {
     submit,
     lookup,
     retry: sendRecord,
-    reconnect: () => setReconnectVersion((v) => v + 1),
+    browserMode,
+    toggleBots: async () => {
+      try {
+        const response = await request('/api/bots/control', {
+          method: 'POST',
+          body: JSON.stringify({ enabled: !bots.some((bot) => bot.connected) }),
+        })
+        if (response.ok && Array.isArray(response.data)) setBots(response.data as Bot[])
+        else setNotice('봇 실행 설정을 저장하지 못했습니다. 브라우저 저장 공간을 확인하세요.')
+      } catch {
+        setNotice('봇 실행 설정을 저장하지 못했습니다. 다시 연결해 주세요.')
+      }
+    },
+    reconnect: () => {
+      if (browserMode) restartBrowser()
+      setReconnectVersion((v) => v + 1)
+    },
     refresh,
   }
 }

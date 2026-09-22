@@ -22,6 +22,11 @@ function localKey(url) {
 // The injected environment selects endpoints only. The normal launcher keeps
 // ownership of its own CLI and child environment; tests inject a pure ensure.
 export function createParkRouterTradingStartup({ env = process.env, ensure = ensureParkTradingDemo } = {}) {
+  // Browser trading is the default. Even stale endpoint variables must never
+  // cause native engine/bot processes to start without explicit server mode.
+  if (env.TRADING_RUNTIME !== 'server') {
+    return async () => ({ ok: true, managed: false, runtime: 'browser', reason: 'browser_engine' });
+  }
   const backendValue = env.TRADING_ENGINE_URL || env.ENGINE_API_URL || defaultEndpoint;
   const demoValue = env.ENGINE_API_URL || defaultEndpoint;
   let pending;

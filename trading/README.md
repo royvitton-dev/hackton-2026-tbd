@@ -4,7 +4,23 @@
 
 2026-09-22 사용자 요청으로 지속 작업을 종료했습니다. 실행 중인 시연·최종 검증·미완료 항목은 [최종 인계](docs/handoff-20260922.md)를 확인하세요. 항목별 실제 상태는 [누적 검증](docs/verification.md), 현재 프로세스와 다음 작업은 [체크포인트](docs/checkpoint.md), 요구 범위는 [원본 명세](docs/requirements.ko.md)를 확인하세요. 외부 배포를 실행하지 않았습니다.
 
-## 준비와 한 명령 실행
+## 기본 실행: 브라우저 거래소
+
+2026-09-22 변경: **별도 엔진 서버나 Node 봇 프로세스 없이 브라우저에서 동작**합니다. 기존 Rust 매칭 코어를 WebAssembly로 빌드해 Web Worker에서 실행합니다. 파크 시작과 거래소 입장도 기본적으로 엔진 서버를 실행하지 않습니다.
+
+- Wonder Park: 루트에서 `npm run dev` → <http://localhost:5190/trading/>
+- 독립 UI: `trading/frontend`에서 `pnpm install --frozen-lockfile`, `pnpm dev` → <http://127.0.0.1:5175/>
+- 정적 배포: `pnpm build` → `dist`. API 주소와 Rust 설치 없이 포함된 WASM을 실행합니다. 외부 배포 자체는 수행하지 않았습니다.
+- 주문·체결·예약·취소·중복 방지는 기존 Rust 코어 규칙을 사용합니다. 12개 봇을 화면에서 일시정지/재개할 수 있습니다.
+- IndexedDB 저장 완료 후 주문을 확정하고 새로고침하면 저장된 명령을 재생합니다. 저장 실패 시 거래를 중단합니다. 이전 서버의 `data/demo`는 별도로 보존합니다.
+- 같은 출처(프로토콜·호스트·포트)의 한 탭만 시장을 실행합니다. 다른 탭은 안내 후 거래를 차단합니다. 브라우저/기기마다 별도 시장이며 탭을 닫으면 봇도 멈춥니다.
+- HTTPS 또는 localhost의 최신 Chrome/Edge를 사용하세요. 브라우저 데이터 삭제나 사이트 저장소 정리 시 기록이 사라질 수 있습니다.
+
+[브라우저 실행·복구·검증](docs/browser-runtime.md). 아래 실행 절차와 성능 수치는 이전 서버 모드에 관한 기록입니다.
+
+## 선택 사항: 이전 서버 모드 준비와 실행
+
+공유 서버가 필요한 경우에만 `TRADING_RUNTIME=server`, `VITE_TRADING_RUNTIME=server`를 함께 지정합니다. 기본 브라우저 모드는 아래 준비 절차가 필요 없습니다.
 
 검증 환경: Windows 11, Node 24.19.0, pnpm 11.25.0, Rust 1.98.1 GNU. Node와 pnpm이 PATH에 필요합니다. Rust·링커 도구와 캐시는 이 폴더의 `.tools` 안에 설치합니다.
 
@@ -21,7 +37,7 @@ node scripts/demo.mjs start
 ```
 
 - 독립 UI: http://127.0.0.1:5175
-- Wonder Park: 최초 준비 후 루트에서 `npm run dev` 또는 `npm run park:dev`를 시작하면 기본 로컬 UI·엔진·12개 봇을 자동 준비합니다. 이미 정상 실행 중인 시장은 재사용합니다. 파크의 입장 버튼은 준비를 기다린 뒤 같은 포트의 `/trading/` 화면으로 연결하며 HTTP·WebSocket도 `/trading/backend/`를 사용합니다. 외부·HTTPS·별도 포트 엔진은 자동 실행하지 않습니다. [통합 서버 설정](../park/ROUTER.md)
+- Wonder Park의 명시적 서버 모드: `TRADING_RUNTIME=server`일 때만 로컬 UI·엔진·12개 봇을 준비합니다. UI도 `VITE_TRADING_RUNTIME=server`로 실행/빌드해야 합니다. 이 모드에서는 `/trading/backend/` 프록시와 기존 시장 재사용을 지원합니다. [통합 서버 설정](../park/ROUTER.md)
 - Rust API·WebSocket: http://127.0.0.1:8787 / ws://127.0.0.1:8787/ws
 - 기본 12개의 별도 Node 봇 프로세스가 공개 API로 같은 시장에 참여합니다.
 - 데이터는 `data/demo`, 실행별 로그·프로세스·봇 seed는 `evidence/<고유-run-ID>`에 보존됩니다.
@@ -91,6 +107,6 @@ API 통합 테스트는 별도 합성 데이터와 임시 포트의 엔진 프�
 - [독립 UI·연동 범위](docs/ui.md), [Vercel·별도 엔진 배포 준비](docs/deployment.md)
 - [작업 체크포인트](docs/checkpoint.md), [실제 개발 에이전트 기록](docs/agents.jsonl)
 
-Vercel Root Directory는 `trading/frontend`, 빌드 `pnpm build`, 산출물 `dist`입니다. API 주소는 실제 별도 엔진의 HTTPS/WSS 주소로 지정해야 합니다. Rust 컨테이너/영속 볼륨 예시는 `deploy`에 있으며, Docker가 없는 현재 호스트에서는 컨테이너 빌드를 아직 검증하지 않았습니다. Wonder Park는 `trading/attraction.json`으로 독립 UI를 등록하고, 사용자 요청에 따라 서버 시작 시 거래소 실행을 준비합니다. 공개 배포 시에는 실제 HTTPS UI 주소와 별도 엔진 환경을 구성해야 합니다.
+Vercel Root Directory는 `trading/frontend`, 빌드 `pnpm build`, 산출물 `dist`입니다. 기본 브라우저 모드는 API 주소가 필요 없습니다. 명시적 서버 모드만 별도 HTTPS/WSS 엔진 주소가 필요합니다. 이전 Rust 컨테이너/영속 볼륨 예시는 `deploy`에 있으며 컨테이너 빌드는 미검증입니다. Wonder Park는 `trading/attraction.json`으로 UI를 등록하고, 기본값에서는 거래소 네이티브 프로세스를 시작하지 않습니다.
 
 기본 요청 ID 정책은 데이터셋 수명 동안 보존, 용량 도달 시 신규 접수 거절입니다. 파일/스냅샷/원본 증거를 자동 삭제하지 않습니다. 봇 로그는 파일당 5 MiB에서 새 파일로 분할합니다. OS·전원 장애 검증과 프로세스 강제 종료 검증은 구분합니다.

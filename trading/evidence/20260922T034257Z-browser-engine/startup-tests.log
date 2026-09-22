@@ -1,0 +1,17 @@
+✔ default browser runtime never starts native engine or bots, even with stale endpoints (3.2526ms)
+✔ explicit server runtime prepares the existing demo and preserves its result (0.599ms)
+✔ localhost alias and an explicitly shared engine port are managed (1.9389ms)
+✔ explicit different port, remote, HTTPS and other hosts never start a local demo (0.5324ms)
+✔ invalid endpoint rejects on preparation, leaving factory creation side effect free (1.3141ms)
+✔ concurrent startup and launch share one pending ensure and recheck after settlement (1.2529ms)
+✔ launcher rejection is preserved for every caller and later preparation can retry (0.3678ms)
+✔ an unconfirmed or mismatched ready result cannot authorize the backend (0.5189ms)
+✔ factory captures injected endpoints without reading later environment changes (0.2337ms)
+ℹ tests 9
+ℹ suites 0
+ℹ pass 9
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 194.6378

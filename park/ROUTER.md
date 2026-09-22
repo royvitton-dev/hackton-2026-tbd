@@ -27,7 +27,9 @@ npm start
 
 ## 백엔드와 네이티브 기능
 
-거래소 브라우저는 `/trading/backend/`로 REST와 WebSocket을 요청합니다. 통합 서버는 `TRADING_ENGINE_URL`, `ENGINE_API_URL`, 기본 `http://127.0.0.1:8787` 순서로 백엔드를 선택합니다. 최초 한 번 [거래소 준비 절차](../trading/README.md)를 실행하면 파크 시작과 거래소 입장이 `demo.mjs ensure`를 호출해 엔진·12개 봇·독립 UI를 준비합니다. 정상 시장은 재사용하고 UI만 꺼졌으면 UI만 복원합니다. 시작 실패 후에도 파크는 열리며 거래소 입장에서 오류 안내와 재시도가 가능합니다.
+거래소는 기본적으로 WebAssembly 매칭 코어와 12개 봇을 브라우저 Web Worker에서 실행합니다. 파크 시작과 거래소 입장은 별도 엔진 서버나 Node 봇을 실행하지 않으며, 거래 데이터는 해당 출처의 IndexedDB에 저장됩니다. 같은 출처의 한 탭만 시장을 실행하고, 다른 브라우저/기기와 시장을 공유하지 않습니다. [거래소 브라우저 실행](../trading/docs/browser-runtime.md)을 참고하세요.
+
+이전 공유 서버 모드는 `TRADING_RUNTIME=server`와 UI 실행/빌드의 `VITE_TRADING_RUNTIME=server`를 명시적으로 함께 설정할 때 사용합니다. 이 모드에서만 거래소가 `/trading/backend/`로 REST·WebSocket을 요청하고 파크가 `demo.mjs ensure`로 엔진을 준비합니다. 백엔드 선택 순서는 `TRADING_ENGINE_URL`, `ENGINE_API_URL`, 기본 `http://127.0.0.1:8787`입니다. 기존 준비 절차가 필요한 선택 모드입니다.
 
 자동 준비는 HTTP `localhost` 또는 `127.0.0.1` 주소가 `ENGINE_API_URL`의 로컬 포트(기본 8787)와 같을 때만 수행합니다. 외부·HTTPS·다른 포트를 지정하면 운영자가 준비한 엔진으로 전달하며 자동 준비 생략은 엔진 정상 여부를 보증하지 않습니다. 파크 종료는 시장을 종료하지 않으므로 전체 종료는 거래소 문서의 `demo.mjs stop`을 사용합니다. 독립 화면 `http://127.0.0.1:5175/`도 유지됩니다.
 

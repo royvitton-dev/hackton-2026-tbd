@@ -1,0 +1,21 @@
+✔ compiled Rust core matches FIFO at maker price, partial fills, refunds and cancel (30.7837ms)
+✔ self-cross is atomic; duplicate/conflict/invalid and insufficient balance do not trade (12.4194ms)
+✔ ACK and visible state wait for commit; replay and same-ID retry cannot duplicate a fill (9.7584ms)
+✔ quota/transaction abort fails closed, preserves last committed state and replays without the lost command (5.8282ms)
+✔ missing and duplicate replay records are rejected without silently resetting history (2.098ms)
+✔ 1,200 browser-bot commands preserve assets and replay exactly with actual matched trades (2931.9193ms)
+✔ initial, ordered, duplicate, out-of-order, and gap snapshots follow the sequence contract (1.2153ms)
+✔ queue or non-durable response cannot become confirmed success (0.2573ms)
+✔ a result must match both the request ID and synthetic account (0.2182ms)
+✔ unresolved requests are never discarded by the completed-history display limit (0.5034ms)
+✔ reload restores an in-flight request as unknown while preserving its dedup key and exact action (1.1328ms)
+✔ same-sequence writer failure is sticky against stale HTTP readiness but a fresh subscription can recover (0.1837ms)
+✔ an outstanding lookup excludes a same-account retry and double submit until its result settles (0.2541ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3208.5174

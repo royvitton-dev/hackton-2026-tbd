@@ -8,9 +8,10 @@
   },
   "scripts": {
     "dev": "vite --host 127.0.0.1 --port 5175 --strictPort",
-    "build": "tsc -b && vite build",
+    "build": "node ../scripts/verify-browser-engine.mjs && tsc -b && vite build",
     "preview": "vite preview --host 127.0.0.1 --port 5175 --strictPort",
-    "test": "node --experimental-strip-types --test src/protocol.test.ts",
+    "test": "node --experimental-strip-types --test src/protocol.test.ts src/browser/*.test.ts",
+    "build:engine": "node ../scripts/build-browser-engine.mjs",
     "format": "prettier --write src vite.config.ts package.json tsconfig.json vercel.json index.html pnpm-workspace.yaml",
     "format:check": "prettier --check src vite.config.ts package.json tsconfig.json vercel.json index.html pnpm-workspace.yaml"
   },

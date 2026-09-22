@@ -1,11 +1,20 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { createParkRouterTradingStartup } from './park-router-startup.mjs';
+import { createParkRouterTradingStartup as factory } from './park-router-startup.mjs';
+
+const createParkRouterTradingStartup = options => factory({ ...options, env: { ...options.env, TRADING_RUNTIME: 'server' } });
+
+test('default browser runtime never starts native engine or bots, even with stale endpoints', async () => {
+  for (const env of [{}, { TRADING_ENGINE_URL: 'invalid' }, { ENGINE_API_URL: 'http://localhost:8787' }]) {
+    const result = await factory({ env, ensure: () => assert.fail('must not launch native services') })();
+    assert.deepEqual(result, { ok: true, managed: false, runtime: 'browser', reason: 'browser_engine' });
+  }
+});
 
 const ready = { ok: true, status: 'reused', api_url: 'http://127.0.0.1:8787', ui_url: 'http://127.0.0.1:5175/', run_id: 'synthetic-no-service', frontend_pid: 1 };
 const neverEnsure = () => { throw new Error('This test must not call the launcher.'); };
 
-test('default local backend prepares the existing demo and preserves its result', async () => {
+test('explicit server runtime prepares the existing demo and preserves its result', async () => {
   let calls = 0;
   const prepare = createParkRouterTradingStartup({ env: {}, ensure: async () => { calls++; return ready; } });
   assert.deepEqual(await prepare(), { ...ready, managed: true, backend_url: 'http://127.0.0.1:8787/' });
