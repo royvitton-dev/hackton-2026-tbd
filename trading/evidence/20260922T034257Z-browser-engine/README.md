@@ -6,6 +6,7 @@ User-requested change: run the exchange inside the browser without a separate ma
 
 - `node --experimental-strip-types --test src/protocol.test.ts src/browser/engine.test.ts` in `trading/frontend`: 13 passed, 0 failed. Includes actual compiled Rust WASM, FIFO/maker price, reservation/refund/cancel, atomic self-trade rejection, idempotency, save-before-ACK, failed storage, journal replay, and 1,200 bot commands with asset conservation.
 - `node --test trading/scripts/park-router-startup.test.mjs`: 9 passed, 0 failed. Browser mode does not call the native launcher; explicit server-mode behavior remains covered.
+- After merging the updated remote main, `node node_modules/vitest/vitest.mjs run --config park/vitest.router.config.mjs`: 22 passed, 0 failed (`router-tests.log`). Trading source files are unchanged from the tested browser-engine commit; the existing explicit server WebSocket override is preserved.
 - `node trading/scripts/verify-browser-engine.mjs`: source and binary hashes match.
 - TypeScript project build and Vite production build succeeded. Shipped WASM is 242,719 bytes (242.72 kB in Vite output).
 - Logs: `frontend-tests-final.log`, `startup-tests.log`, `frontend-build-final.log`.
