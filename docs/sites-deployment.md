@@ -37,6 +37,8 @@ node scripts/verify-sites.mjs http://127.0.0.1:15398
 
 `dist/server/index.js`는 Sites Worker이며 `dist/client/`는 공개 정적 파일입니다. Next.js 화면과 1,250명의 합성 충전 이력 API를 정적으로 생성합니다. VITALIS는 별도 HTML 진입점도 빌드합니다. 큰 영상은 8 MiB 조각으로 저장하고 Worker가 원래 URL의 HTTP Range 요청을 처리하므로 화질과 탐색 기능을 유지합니다.
 
+정적 페이지의 경로 검사에서는 [Cloudflare의 HTML 주소 정규화](https://developers.cloudflare.com/workers/static-assets/routing/advanced/html-handling/)도 허용합니다. 예를 들어 예고편의 `index.html` 주소가 `/movie/assets/odyssey/`로 변경돼도 재생 페이지를 열 수 있습니다.
+
 `--assemble-only`는 직전 프레임워크 빌드의 입력이 변하지 않은 상태에서 포장 단계만 복구할 때 사용합니다. 코드 변경 후 일반 배포에서는 전체 빌드를 실행합니다.
 
 로컬 브라우저 검증 결과는 [local-verification.json](sites/local-verification.json)에 있습니다. 16개 항목 중 15개 통과, 거래소 백엔드 상태 검사는 엔진 주소 미설정으로 실패했습니다. 게임 시작·정지, 어트랙션 입장, 실제 3D 차량, 충전 이력과 새로고침, 세 상영작의 실제 재생·탐색을 확인했습니다. `/reports/`의 ATLAS 결과는 시각이 보존된 기존 로컬 검증 기록입니다.

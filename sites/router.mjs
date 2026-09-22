@@ -103,7 +103,14 @@ export function createSitesWorker({ catalog, media = {} }) {
       if (media[url.pathname]) return serveMedia(request, env, media[url.pathname]);
       if (url.pathname.startsWith('/api/')) return missing();
       const app = matchApp(url.pathname);
-      if (app?.kind === 'static' && !staticPath(app, url.pathname)) return json({ error: 'Unsupported file' }, 403);
+      if (app?.kind === 'static') {
+        // The asset service canonicalizes index.html to its folder URL and
+        // other HTML files to extensionless URLs. Validate their HTML targets
+        // while retaining the incoming URL so its redirects remain intact.
+        const htmlPath = url.pathname.endsWith('/') ? `${url.pathname}index.html`
+          : !url.pathname.split('/').at(-1).includes('.') ? `${url.pathname}.html` : null;
+        if (!staticPath(app, url.pathname) && !(htmlPath && staticPath(app, htmlPath))) return json({ error: 'Unsupported file' }, 403);
+      }
       if (!['GET', 'HEAD'].includes(request.method)) return json({ error: 'Method not allowed' }, 405);
       const asset = new Request(url, { method: request.method, headers: request.headers });
       let response = await env.ASSETS.fetch(asset);

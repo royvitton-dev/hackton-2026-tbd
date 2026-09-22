@@ -118,7 +118,7 @@ try {
     await expect(page.getByRole('combobox', { name: '사용자 및 차량' })).toHaveValue('U0037');
     return 'Real 3D vehicle, charging history, 11 API sessions, reload';
   });
-  for (const [id, route] of [['film', '/movie/'], ['tour-film', '/movie/?film=attractions'], ['trailer', '/movie/assets/odyssey/index.html']]) {
+  for (const [id, route] of [['film', '/movie/'], ['tour-film', '/movie/?film=attractions'], ['trailer', '/movie/assets/odyssey/']]) {
     await check(id, route, async (page, request) => {
       const video = page.locator('video').first();
       await video.evaluate(async element => { element.muted = true; await element.play(); });

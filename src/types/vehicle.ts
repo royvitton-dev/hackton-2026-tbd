@@ -31,6 +31,10 @@ export interface UserVehicle {
   windowStart: string; windowEnd: string; observationDays: number; efc: number;
   chargingHabitSummary: string[]; attribution: BatteryAttribution; insufficientReason: string | null;
 }
+export interface UserVehicleOption {
+  userId: string; userName: string | null; driverProfile: string;
+  vehicle: Pick<Vehicle, 'vehicleId' | 'manufacturer' | 'model' | 'year' | 'trim'>;
+}
 export interface ChargeSession {
   sessionId: string; userId: string; vehicleId: string; startedAt: string; endedAt: string; unpluggedAt: string;
   chargerType: string; stationType: string | null; chargedKwh: number; paymentAmountKrw: number | null;

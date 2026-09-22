@@ -19,6 +19,20 @@ test('Sites rejects private paths and cross-origin changes', async () => {
   assert.equal((await worker.fetch(request('/movie/package.json'), env)).status, 403);
   assert.equal((await worker.fetch(request('/api/launch?id=map', { method: 'POST', headers: { Origin: 'https://evil.example' } }), env)).status, 403);
 });
+test('trailer remains reachable after the asset service canonicalizes HTML URLs', async () => {
+  const storage = { ASSETS: { fetch: async req => {
+    const pathname = new URL(req.url).pathname;
+    if (pathname.endsWith('/index.html')) return new Response(null, { status: 307, headers: { Location: pathname.slice(0, -10) } });
+    return new Response('Trailer');
+  } } };
+  const redirected = await worker.fetch(request('/movie/assets/odyssey/index.html'), storage);
+  assert.equal(redirected.status, 307);
+  const response = await worker.fetch(request(redirected.headers.get('Location')), storage);
+  assert.equal(response.status, 200);
+  assert.equal(await response.text(), 'Trailer');
+  assert.equal((await worker.fetch(request('/movie/assets/odyssey'), storage)).status, 200);
+  assert.equal((await worker.fetch(request('/movie/package'), storage)).status, 403);
+});
 test('unconfigured engine and live cell API report real service limitations', async () => {
   assert.equal((await worker.fetch(request('/trading/backend/health'), env)).status, 503);
   assert.equal((await worker.fetch(request('/map/api/infrastructure/cells?lat=37.5&lng=127'), env)).status, 503);

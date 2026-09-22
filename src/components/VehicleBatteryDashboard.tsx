@@ -1,8 +1,8 @@
 'use client';
 import {appPath} from '../lib/appPath';
 import dynamic from 'next/dynamic';
-import { useCallback, useEffect, useMemo, useState } from 'react';
-import type { UserVehicle } from '@/types/vehicle';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import type { UserVehicle, UserVehicleOption } from '@/types/vehicle';
 import { vehicleImageMap } from '@/data/vehicleImageMap';
 import { VehicleSelector } from './VehicleSelector';
 import { VehicleHealthSummary, gradeLabel, gradeTone } from './VehicleHealthSummary';
@@ -14,20 +14,44 @@ import { selectUser, useSelectedUser } from '@/lib/userSelection';
 const Viewer=dynamic(()=>import('./VehicleImageWebGLViewer').then(m=>m.VehicleImageWebGLViewer),{ssr:false,loading:()=> <div className="viewer-loading">차량을 불러오는 중입니다…</div>});
 const PitIntro=dynamic(()=>import('./PitStopIntro').then(m=>m.PitStopIntro),{ssr:false});
 const tabs=[['overview','주요 정보'],['battery','배터리 정보'],['habits','충전 습관'],['history','충전 이력']] as const;
-const projectHomeUrl=(process.env.NEXT_PUBLIC_BASE_PATH?'/park/':process.env.NEXT_PUBLIC_PROJECT_HOME_URL||'http://localhost:5190/');
+const projectHomeUrl=(process.env.NEXT_PUBLIC_BASE_PATH?'/park/':process.env.NEXT_PUBLIC_PROJECT_HOME_URL||'/');
 type Tab=typeof tabs[number][0];
-export function VehicleBatteryDashboard({users}:{users:UserVehicle[]}){
+export function VehicleBatteryDashboard({initialUser}:{initialUser:UserVehicle}){
   const selectedId=useSelectedUser('U0001');
+  const cache=useRef(new Map<string,UserVehicle>([[initialUser.userId,initialUser]]));
+  const [users,setUsers]=useState<UserVehicleOption[]>([initialUser]),[usersLoading,setUsersLoading]=useState(true);
+  const [user,setUser]=useState(initialUser),[userLoading,setUserLoading]=useState(false),[userError,setUserError]=useState<string|null>(null);
   const [focused,setFocused]=useState(false),[tab,setTab]=useState<Tab>('overview');
   const [introActive,setIntroActive]=useState(false);
-  const user=useMemo(()=>users.find(u=>u.userId===selectedId)??users[0],[users,selectedId]);
   const asset=vehicleImageMap.find(v=>v.vehicleId===user.vehicle.vehicleId)!;
   const close=useCallback(()=>{setFocused(false);setTab('overview');},[]);
   const toggleFocus=()=>{const next=!focused;setFocused(next);setTab(next?'battery':'overview');};
   useEffect(()=>{const onKey=(e:KeyboardEvent)=>{if(e.key==='Escape')close();};window.addEventListener('keydown',onKey);return()=>window.removeEventListener('keydown',onKey);},[close]);
+  useEffect(()=>{
+    const controller=new AbortController();
+    fetch(appPath('/api/users'),{signal:controller.signal}).then(async response=>{
+      if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      return response.json() as Promise<{users:UserVehicleOption[]}>;
+    }).then(data=>setUsers(data.users)).catch(()=>{}).finally(()=>{
+      if(!controller.signal.aborted)setUsersLoading(false);
+    });
+    return()=>controller.abort();
+  },[]);
+  useEffect(()=>{
+    const cached=cache.current.get(selectedId);
+    if(cached){setUser(cached);setUserLoading(false);setUserError(null);return;}
+    const controller=new AbortController();setUserLoading(true);setUserError(null);
+    fetch(appPath(`/api/users/${encodeURIComponent(selectedId)}`),{signal:controller.signal}).then(async response=>{
+      if(!response.ok)throw new Error(`HTTP ${response.status}`);
+      return response.json() as Promise<{user:UserVehicle}>;
+    }).then(data=>{cache.current.set(selectedId,data.user);setUser(data.user);}).catch(error=>{
+      if(error.name!=='AbortError')setUserError('사용자 정보를 불러오지 못했습니다. 잠시 후 다시 시도해 주세요.');
+    }).finally(()=>{if(!controller.signal.aborted)setUserLoading(false);});
+    return()=>controller.abort();
+  },[selectedId]);
   const navigate=(target:Tab)=>{setTab(target);setFocused(target==='battery');};
   const explainScore=()=>{navigate('battery');requestAnimationFrame(()=>{const explanation=document.getElementById('score-walkthrough');explanation?.focus({preventScroll:true});explanation?.scrollIntoView({block:'start'});});};
-  return <><PitIntro onActiveChange={setIntroActive}/><div className="app-shell" inert={introActive} aria-hidden={introActive||undefined}>
+  return <><PitIntro onActiveChange={setIntroActive}/><div className="app-shell" inert={introActive} aria-hidden={introActive||undefined} aria-busy={userLoading}>
     <aside className="app-sidebar"><a href={projectHomeUrl} className="brand" aria-label="전체 프로젝트 메인으로 이동" title="전체 프로젝트 메인으로 이동"><span className="brand-mark">E<span/></span><span>EVision<small>BATTERY INTELLIGENCE</small></span></a>
       <div className="nav-caption">내 차량 관리</div><nav aria-label="주 메뉴">
         <button className={['overview','battery'].includes(tab)?'active':''} onClick={()=>navigate('overview')}><DashboardIcon name="car"/> 차량 상세</button>
@@ -37,8 +61,8 @@ export function VehicleBatteryDashboard({users}:{users:UserVehicle[]}){
       <div className="sidebar-user"><span className="avatar">{user.userId.slice(-2)}</span><div><strong>{user.userName??user.userId}</strong><small>내 차량 관리</small></div></div>
     </aside>
     <main className="main-content">
-      <header className="app-header"><div className="breadcrumb"><span>내 차량</span><b>/</b>{tabs.find(([id])=>id===tab)?.[1]}</div><div className="header-status">예시 데이터 · 실제 차량 미연동</div></header>
-      <VehicleSelector users={users} selected={user} onChange={id=>{selectUser(id);setFocused(tab==='battery');}}/>
+      <header className="app-header"><div className="breadcrumb"><span>내 차량</span><b>/</b>{tabs.find(([id])=>id===tab)?.[1]}</div><div className="header-status">{userError??(userLoading?'사용자 데이터 불러오는 중…':'예시 데이터 · 실제 차량 미연동')}</div></header>
+      <VehicleSelector users={users} selectedId={selectedId} loading={usersLoading} onChange={id=>{selectUser(id);setFocused(tab==='battery');}}/>
       <section className="vehicle-detail-surface" aria-label="선택한 사용자 차량 상세">
         <div className="vehicle-page-heading"><div><span className="section-kicker">내 차 배터리 관리</span><h1>{user.vehicle.manufacturer} <span data-testid="vehicle-model">{user.vehicle.model}</span></h1><p>{user.vehicle.year}<i/> {user.vehicle.batteryCapacityKwh.toFixed(1)} kWh<i/> {user.vehicle.trim}</p></div><div className="vehicle-identity"><span className={`status-badge ${user.healthScore===null?'pending':gradeLabel(user)==='관찰 필요'?'caution':''}`} data-tone={gradeTone(user)}>{gradeLabel(user)}</span></div></div>
         <div className="dashboard-grid"><div className="vehicle-scene-panel">

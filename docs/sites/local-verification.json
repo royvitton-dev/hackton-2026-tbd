@@ -1,6 +1,6 @@
 {
   "baseURL": "http://127.0.0.1:15398",
-  "checkedAt": "2026-09-21T23:48:03.623Z",
+  "checkedAt": "2026-09-22T00:28:55.455Z",
   "results": [
     {
       "id": "directory",
@@ -16,7 +16,7 @@
       "route": "/park/?capture=1",
       "status": "passed",
       "details": "WebGL park, 8 attractions, launch API and entry button",
-      "startedAt": "2026-09-21T23:47:12.748Z",
+      "startedAt": "2026-09-22T00:28:21.080Z",
       "errors": [],
       "failedResponses": []
     },
@@ -72,7 +72,7 @@
       "route": "/pinball/",
       "status": "passed",
       "details": "Game start and pause",
-      "startedAt": "2026-09-21T23:44:54.140Z",
+      "startedAt": "2026-09-22T00:28:42.209Z",
       "errors": [],
       "failedResponses": []
     },
@@ -108,7 +108,7 @@
       "route": "/movie/",
       "status": "passed",
       "details": "Actual playback, seeking, and cross-segment Range",
-      "startedAt": "2026-09-21T23:45:22.168Z",
+      "startedAt": "2026-09-22T00:28:51.407Z",
       "errors": [],
       "failedResponses": []
     },
@@ -117,16 +117,16 @@
       "route": "/movie/?film=attractions",
       "status": "passed",
       "details": "Actual playback, seeking, and cross-segment Range",
-      "startedAt": "2026-09-21T23:45:24.194Z",
+      "startedAt": "2026-09-22T00:28:53.018Z",
       "errors": [],
       "failedResponses": []
     },
     {
       "id": "trailer",
-      "route": "/movie/assets/odyssey/index.html",
+      "route": "/movie/assets/odyssey/",
       "status": "passed",
       "details": "Actual playback, seeking, and cross-segment Range",
-      "startedAt": "2026-09-21T23:45:25.637Z",
+      "startedAt": "2026-09-22T00:28:54.287Z",
       "errors": [],
       "failedResponses": []
     },

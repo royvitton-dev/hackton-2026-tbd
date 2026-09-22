@@ -80,6 +80,15 @@ npm run build
 npm run start
 ```
 
+### Vercel 배포
+
+루트 디렉터리를 Vercel 프로젝트로 가져오면 `vercel.json`이 EVision 앱 전용
+`npm run vehicle:build`를 실행합니다. 별도 환경 변수는 필요하지 않습니다.
+`.vercelignore`는 다른 해커톤 앱과 대용량 검증 산출물을 배포 업로드에서 제외합니다.
+CLI로 배포할 때는 저장소 루트에서 `vercel`(프리뷰) 또는 `vercel --prod`를 실행합니다.
+독립 배포의 로고 링크는 현재 앱의 루트로 이동하며, 다른 프로젝트 홈을 연결하려면
+`NEXT_PUBLIC_PROJECT_HOME_URL`을 Vercel 프로젝트 환경 변수로 설정합니다.
+
 작업 중 계속 열어 둘 데모는 빌드 복사본으로 실행합니다.
 
 ```sh
