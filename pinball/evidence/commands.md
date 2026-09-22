@@ -149,3 +149,26 @@ Actual Node and Playwright module paths were the bundled paths recorded earlier.
 
 ## 32 — Audio
 See park-20260921/32-sound.md for commands, actual checks, failures and package limits.
+
+
+# 33 — 화면 비율·출발 조작 개선 (2026-09-22 사용자 추가 요청)
+
+## 변경
+- 일반 화면은 설정과 경기장의2열로 배치하고 결과를 아래로 이동해 경기장 폭을 확대. 소개 영역 축소.
+- 경기 시작 시 보드가 창을 채움. 기본 따라가기 카메라를 더 가까이 조정.
+- 가로로 넓은 창의 하프·전체맵은 가로 코스, 세로 창은 세로 코스. 원근 투영과 보드 비율을 유지하고 장식 여백 대신 실제 레일 범위를 맞춤. 물리 파일5개 해시가 이전 main과 동일.
+- 고정 높이 행을 내용에 맞는 행으로 변경. 화면 모서리 안전 영역, 줄바꿈, 큰 출발 버튼, 확대 음소거 제공. 창 크기 변경은 경기 상태를 보존.
+- 짧은 가로 화면의 로또 결과에서6개+보너스와 재플레이를 함께 표시. 결과 카드 스크롤과 버튼 표시 순서 보정.
+
+## 실제 검사
+- PASS20/20: 1920×1080,1440×900,1024×768,768×1024,514×711(현재 앱 창 크기),390×844,320×568,844×390,667×320에서 하프·전체 맵 실제 출발→정지→재개→초기화18흐름. PC플레이어·모바일로또2흐름은 경기 중 방향 변경·상태 보존·실제 당첨·결과에서 재플레이까지 확인. 가로 로또7숫자의 가림과 클릭 검사 포함.
+- PASS5/5: 화면 확대 적용 후 효과음 합성13종·빠른 음소거·PC/모바일 당첨/재플레이·60이벤트 동시 재생 제한 회귀.
+- PASS: 최대60개·캐논 퍼레이드·3배속·효과/소리켜짐·하프8초 표본 PC59.9FPS/JS4.59ms, 모바일Chrome60.0FPS/JS4.39ms. 실제폰/GPU전체측정 아님.
+- PASS: 빌드22정적파일, 패키지23파일(빌드정보포함) 일치. Mac로컬서명, APK v2/v3서명, ZIP CRC/실행권한.33-package-results.json에 해시.
+
+## 실패 및 범위
+초기 가로 로또에서 재플레이가 가려짐(1회). 카드 높이를 제한한 다음 번호 영역이 sticky버튼 위를 덮는 원인을 확인(2회). 버튼 z-index를 수정하고6+보너스를 가로 한 줄로 배치한 후 대상 흐름과 최종20항목 통과. 실패 JSON/스크린샷/로그 보존. 초기 여러 기본창의 출발 버튼은 실제 클릭 가능했으며, 신고 환경에서 원래 발생했던 모든 상태를 재현했다고 주장하지 않음. 최종버전은 현재 앱창을 포함한 위 크기에서 직접 클릭해 검증.
+
+미실행: 최신 Mac 네이티브 창 실행, Android 실기기·에뮬레이터 실행, iOS/Safari. Chrome 모바일 에뮬레이션을 Android 성공으로 표시하지 않음. 기존 원더 가든 출구 정체 보류 유지.
+
+명령: `node tests/responsive-layout.mjs`, `AUDIO_EVIDENCE=evidence/park-20260921/33-audio-regression node tests/soundscape.mjs`, `AUDIO_EVIDENCE=evidence/park-20260921/33-audio-load node tests/audio-load.mjs`, `node scripts/build.mjs`. 기존 bundled Node/Playwright, 별도 Chrome 사용. 패키지는 desktop/build-macos.py / desktop/build-android.py로 work/package-33에 생성. 실제 사용자4188탭은 조회만 했고 임의로 새로고침하지 않음.

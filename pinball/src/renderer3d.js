@@ -326,21 +326,29 @@ export class Renderer3D {
    this.build(race);if(previous){this.cameraCenter=previous.cameraCenter;this.finishedAt=previous.finishedAt;}this.rebuildPending=false;
   }
   const map=race.map,aspect=this.aspect||1,direction=CAMERA_DIRECTIONS[this.angle];
-  const distance=Math.max(this.angle===2?14.5:20,(this.angle===2?6.2:7.2)/(Math.tan(THREE.MathUtils.degToRad(20))*aspect));
+  const wide=this.overview||this.halfView,horizontal=wide&&aspect>1.2;
   const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.65)]?.y??map.finish;
-  const target=['ready','mixing','countdown'].includes(race.state)?400:Math.max(400,Math.min(map.finish-200,progress+100));
+  const target=['ready','mixing','countdown'].includes(race.state)?270:Math.max(270,Math.min(map.finish-200,progress+60));
   if(race.state!=='paused')this.cameraCenter=reduced?target:this.cameraCenter+(target-this.cameraCenter)*.08;
-  const span=this.overview?map.height:map.height/2,wide=this.overview||this.halfView;
+  const span=this.overview?map.height:this.halfView?map.height/2:520;
   const center=this.overview?map.height/2:this.halfView?Math.max(span/2,Math.min(map.height-span/2,this.cameraCenter)):this.cameraCenter;
-  let cameraDistance=wide?Math.max(distance,span*S*1.44):distance;
-  this.camera.aspect=aspect;this.camera.updateProjectionMatrix();
-  for(let fit=0;fit<8;fit++){
-   this.camera.position.copy(direction).multiplyScalar(cameraDistance).add(new THREE.Vector3(0,0,Z(center)));this.camera.lookAt(0,0,Z(center));this.camera.updateMatrixWorld();
-   if(!wide)break;
-   const low=(center-span/2)*S-.3,high=(center+span/2)*S+.3;
-   const corners=[[-7.8,low],[7.8,low],[-7.8,high],[7.8,high]].map(([x,z])=>new THREE.Vector3(x,-.8,z).project(this.camera));
-   if(corners.every(v=>Math.abs(v.x)<.94&&Math.abs(v.y)<.94))break;cameraDistance*=1.1;
+  this.camera.aspect=aspect;this.camera.up.set(horizontal?1:0,horizontal?0:1,0);this.camera.updateProjectionMatrix();
+  // Fit playable rails, not distant scenery. Rotate the camera roll for wide windows;
+  // game positions, collision radii and the simulation remain unchanged.
+  const key=[this.width,this.height,this.angle,span,horizontal].join(':');
+  if(this.framingKey!==key){
+   const low=-span*S/2-.45,high=span*S/2+.45;
+   const corners=[];for(const x of [-5.6,5.6])for(const y of [-.8,1.1])for(const z of [low,high])corners.push(new THREE.Vector3(x,y,z));
+   let near=1,far=100;
+   for(let fit=0;fit<18;fit++){
+    const d=(near+far)/2;this.camera.position.copy(direction).multiplyScalar(d);this.camera.lookAt(0,0,0);this.camera.updateMatrixWorld();
+    if(corners.every(c=>{const v=c.clone().project(this.camera);return Math.abs(v.x)<.95&&Math.abs(v.y)<.94&&v.z<1;}))far=d;else near=d;
+   }
+   this.framingDistance=far;this.framingKey=key;
   }
+  this.camera.position.copy(direction).multiplyScalar(this.framingDistance).add(new THREE.Vector3(0,0,Z(center)));this.camera.lookAt(0,0,Z(center));this.camera.updateMatrixWorld();
+  const a=new THREE.Vector3(-5.17,0,Z(center)).project(this.camera),b=new THREE.Vector3(5.17,0,Z(center)).project(this.camera);
+  this.framing={horizontal,visibleSpan:span,boardWidthPixels:Math.hypot((a.x-b.x)*this.width/2,(a.y-b.y)*this.height/2),canvasWidth:this.width,canvasHeight:this.height};
   this.light.position.set(-6,16,Z(center)-5);this.light.target.position.set(0,0,Z(center));
   map.rotors.forEach((r,i)=>this.rotors[i].rotation.y=-rotorPose(r,race.rotationTime).angle);
   race.sliderSegments().forEach((s,i)=>this.sliders[i].position.x=X((s.ax+s.bx)/2));
@@ -378,8 +386,8 @@ export class Renderer3D {
   labelCandidates.sort((a,b)=>(b.id===selected)-(a.id===selected)||b.progress-a.progress);
   for(const c of labelCandidates){const box={l:c.x-c.width/2,r:c.x+c.width/2,t:c.y-21,b:c.y+3};if(!this.allLabels&&(shown>=(this.width<450?12:20)||occupied.some(o=>box.l<o.r+4&&box.r>o.l-4&&box.t<o.b+3&&box.b>o.t-3)))continue;c.label.hidden=false;c.label.style.left=`${c.x/this.width*100}%`;c.label.style.top=`${c.y/this.height*100}%`;occupied.push(box);shown++;}
   this.trails.instanceMatrix.needsUpdate=true;
-  this.hud.textContent=this.overview?`PARK MAP / ${map.exits.length===1?'ONE LUCKY GOAL':'ONE GOAL + ONE BACK'}`:this.halfView?`HALF MAP / ${Math.round(Math.max(0,center-span/2)/map.height*100)}–${Math.round(Math.min(map.height,center+span/2)/map.height*100)}%`:`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`;
+  this.hud.textContent=(horizontal?'가로 코스 · ':'')+(this.overview?`PARK MAP / ${map.exits.length===1?'ONE LUCKY GOAL':'ONE GOAL + ONE BACK'}`:this.halfView?`HALF MAP / ${Math.round(Math.max(0,center-span/2)/map.height*100)}–${Math.round(Math.min(map.height,center+span/2)/map.height*100)}%`:`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`);
   this.webgl.render(this.scene,this.camera);
  }
- graphics(){const i=this.webgl.info;return {geometries:i.memory.geometries,textures:i.memory.textures,programs:i.programs.length,drawCalls:i.render.calls,triangles:i.render.triangles,pixelRatio:this.webgl.getPixelRatio()};}
+ graphics(){const i=this.webgl.info;return {framing:{...this.framing},geometries:i.memory.geometries,textures:i.memory.textures,programs:i.programs.length,drawCalls:i.render.calls,triangles:i.render.triangles,pixelRatio:this.webgl.getPixelRatio()};}
 }

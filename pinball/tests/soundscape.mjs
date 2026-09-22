@@ -3,7 +3,7 @@ import {writeFile, mkdir} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE_PATH).href);
 const base=process.env.TEST_URL||'http://127.0.0.1:4189';
-const out='evidence/park-20260921/32-audio';await mkdir(out,{recursive:true});
+const out=process.env.AUDIO_EVIDENCE||'evidence/park-20260921/32-audio';await mkdir(out,{recursive:true});
 const report={at:new Date().toISOString(),tests:[],limitations:['Audio rendered and measured; no human speaker listening assessment.','Mobile Chrome viewport emulation; not an Android/iOS device.']};
 const browser=await chromium.launch({channel:'chrome',args:['--mute-audio']});
 async function test(name,fn){try{const data=await fn();report.tests.push({name,status:'PASS',...data});console.log('PASS',name);}catch(error){report.tests.push({name,status:'FAIL',error:error.stack});process.exitCode=1;console.error('FAIL',name,error.message);}}
@@ -43,7 +43,7 @@ try{
    const original=AudioContext.prototype.resume;
    AudioContext.prototype.resume=function(){return new Promise(resolve=>{window.releaseResume=()=>original.call(this).then(resolve);});};
   });await page.goto(base);await page.waitForFunction(()=>window.pinball);
-  await page.locator('#sound').click();await page.locator('#sound').click();
+  await page.locator('#sound:visible, #arena-sound:visible').click();await page.locator('#sound:visible, #arena-sound:visible').click();
   await page.evaluate(()=>window.releaseResume());await page.waitForTimeout(160);
   const s=await page.evaluate(()=>window.pinball.audio());assert.equal(s.enabled,false);assert.equal(s.activeVoices,0);assert.deepEqual(s.played,{});assert.equal(await page.locator('#sound').getAttribute('aria-pressed'),'false');
   await page.close();return {audio:s};
@@ -52,7 +52,7 @@ try{
   const context=await browser.newContext({viewport:mobile?{width:390,height:844}:{width:1440,height:1000},isMobile:mobile,hasTouch:mobile,reducedMotion:'reduce'});
   const page=await context.newPage(),errors=[];page.on('pageerror',e=>errors.push(e.message));
   await page.goto(base);await page.waitForFunction(()=>window.pinball);assert.equal((await page.evaluate(()=>window.pinball.audio())).contextState,'uninitialized');
-  await page.locator('[data-map=parade]').click();await page.locator('[data-speed="3"]').click();await page.locator('#sound').click();
+  await page.locator('[data-map=parade]').click();await page.locator('[data-speed="3"]').click();await page.locator('#sound:visible, #arena-sound:visible').click();
   await page.locator('#start').click();await page.waitForFunction(()=>window.pinball.snapshot().state==='racing');
   await page.locator('#pause').click();const snapshot=await page.evaluate(()=>window.pinball.snapshot());assert.equal((await page.evaluate(()=>window.pinball.audio())).activeVoices,0);
   await page.waitForTimeout(200);assert.deepEqual(await page.evaluate(()=>window.pinball.snapshot()),snapshot);
@@ -63,7 +63,7 @@ try{
   for(const kind of ['enable','mix','countdown','start','hit','finish','winner'])assert.ok(audio.played[kind]>0,kind+' not played');
   assert.equal(audio.played.winner,1);assert.equal(audio.played.start,1);assert.equal(audio.played.countdown,3);assert.ok(audio.peakVoices<=40);
   await page.locator('#splash-replay').click();assert.equal((await page.evaluate(()=>window.pinball.snapshot())).state,'mixing');
-  await page.locator('#sound').click();assert.equal((await page.evaluate(()=>window.pinball.audio())).activeVoices,0);
+  await page.locator('#sound:visible, #arena-sound:visible').click();assert.equal((await page.evaluate(()=>window.pinball.audio())).activeVoices,0);
   const muted=await page.evaluate(()=>window.pinball.audio().played);await page.waitForTimeout(900);assert.deepEqual(await page.evaluate(()=>window.pinball.audio().played),muted);
   await page.locator('#reset').click();assert.equal((await page.evaluate(()=>window.pinball.snapshot())).state,'ready');
   assert.deepEqual(errors,[]);await writeFile(out+'/'+(mobile?'mobile':'desktop')+'-round.json',JSON.stringify(round,null,2));await context.close();return {audio,errors};
