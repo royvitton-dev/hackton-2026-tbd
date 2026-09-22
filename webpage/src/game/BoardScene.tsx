@@ -156,7 +156,7 @@ const BoardScene = forwardRef<BoardHandle, Props>(function BoardScene({ state, s
     star.position.set(.1, 2.25, 1.5); star.castShadow = true; scene.add(star);
     const starBase = cylinder(.65, .85, .25, '#f2dba6', .1, 1.14, 1.5); starBase.castShadow = false;
     const floating: THREE.Mesh[] = [];
-    for (let i = 0; i < 16; i++) { const mesh = sphere(.027 + i % 3 * .012, i % 2 ? '#dab7ff' : '#ffe6bd', Math.sin(i * 2.4) * 3.2, 1.7 + (i % 5) * .5, Math.cos(i * 2.4) * 2.5); floating.push(mesh); }
+    for (let i = 0; i < 16; i++) { const mesh = sphere(.027 + i % 3 * .012, i % 2 ? '#dab7ff' : '#ffe6bd', Math.sin(i * 2.4) * 3.2, 1.7 + (i % 5) * .5, Math.cos(i * 2.4) * 2.5); mesh.userData.baseY = mesh.position.y; floating.push(mesh); }
     // Photo-textured pawn portraits remain camera facing while the miniature bodies grow.
     const pawns: THREE.Group[] = []; const portraits: THREE.Sprite[] = [];
     for (let i = 0; i < 4; i++) {
@@ -213,7 +213,7 @@ const BoardScene = forwardRef<BoardHandle, Props>(function BoardScene({ state, s
       highlight.visible = current.current.selected !== null;
       if (highlight.visible) { const [x,z] = tilePosition(current.current.selected!); highlight.position.set(x,.76,z); }
       star.rotation.y = Math.sin(t * .7) * .25; star.position.y = 2.28 + Math.sin(t * 1.5) * .12;
-      floating.forEach((mesh,i) => { mesh.position.y += Math.sin(t + i) * .0015; });
+      floating.forEach((mesh,i) => { mesh.position.y = mesh.userData.baseY + Math.sin(t * 1.15 + i) * .08; });
       controls.update(); renderer.render(scene,camera);
     }
     frame = requestAnimationFrame(animate); setReady(true);

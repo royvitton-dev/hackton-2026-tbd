@@ -27,14 +27,17 @@ try{
  await evaluate(sessionId,"document.getElementById('participants').value='병우*10, 종호*10, 동길*10, 태성*10, 순수*10, 하늘*10';document.getElementById('participants').dispatchEvent(new Event('input',{bubbles:true}));document.querySelector('input[name=rule][value=last]').click();");
  for(const phase of ['mixing','countdown','racing']){
   await evaluate(sessionId,"document.getElementById('start').click()");await waitUntil(sessionId,`window.pinball.snapshot().state===${JSON.stringify(phase)}`);
+  await waitUntil(sessionId,'window.pinball.screenAwake().held');
   const roundId=await evaluate(sessionId,'window.pinball.snapshot().roundId');await send('Target.activateTarget',{targetId:other});
   await waitUntil(sessionId,"document.visibilityState==='hidden'&&window.pinball.snapshot().state==='paused'");
+  await waitUntil(sessionId,'!window.pinball.screenAwake().held');
   const frozen=await evaluate(sessionId,'window.pinball.snapshot()');assert.equal(frozen.roundId,roundId);
   await sleep(900);assert.deepEqual(await evaluate(sessionId,'window.pinball.snapshot()'),frozen,'Hidden tab advanced');
   await send('Target.activateTarget',{targetId});await waitUntil(sessionId,"document.visibilityState==='visible'");await sleep(250);
   assert.deepEqual(await evaluate(sessionId,'window.pinball.snapshot()'),frozen,'Returning automatically resumed');
   assert.equal(await evaluate(sessionId,"document.getElementById('pause-overlay').hidden"),false);await evaluate(sessionId,"document.getElementById('pause').click()");
   await waitUntil(sessionId,`window.pinball.snapshot().state===${JSON.stringify(phase)}`);await sleep(150);
+  await waitUntil(sessionId,'window.pinball.screenAwake().held');
   const resumed=await evaluate(sessionId,'window.pinball.snapshot()');assert.equal(resumed.roundId,roundId);assert.notDeepEqual(resumed.balls,frozen.balls);assert.equal(resumed.finishOrder.length,frozen.finishOrder.length);
   report.tests.push({phase,status:'PASS',roundId,visibility:'actual hidden tab',hiddenSnapshot:frozen,resumedSnapshot:resumed});console.log('PASS actual hidden-tab pause and explicit resume',phase);
   await evaluate(sessionId,"document.getElementById('reset').click()");

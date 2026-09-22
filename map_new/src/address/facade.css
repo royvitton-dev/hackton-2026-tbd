@@ -1,0 +1,5 @@
+#address-material-tools{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:16px}
+#address-material-tools label{display:flex;align-items:center;gap:5px;margin:0;color:#4a7157;font-size:11px}
+#address-reset{border:1px solid #cbd8c4;border-radius:4px;background:#eff4e9;color:#4a6b50;padding:7px 8px;font-size:10px}
+#address-material-note,#address-facade-features{font-size:10px;color:#637d61;line-height:1.8}
+#address-facade-features:not(:empty){padding:10px 12px;border-left:2px solid #a6bc99;background:#eff3e8}

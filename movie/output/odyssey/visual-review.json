@@ -1,0 +1,46 @@
+{
+  "status": "final_edit_reviewed",
+  "lift": {
+    "decision": "use",
+    "evidence": [
+      "lift-contact.jpg",
+      "lift-last-frame.png"
+    ],
+    "observations": [
+      "Kneeling figure lifts the silver computer, rotates it upright and rises to standing.",
+      "Hands remain on the computer as it moves to the chest.",
+      "Helmet, beard, armor, two companions and coastal ruins remain continuous.",
+      "Camera follows the rise; the final close framing is suitable for the second shot."
+    ],
+    "note": "AI render slightly simplifies small product-logo detail."
+  },
+  "victory": {
+    "decision": "use",
+    "evidence": [
+      "victory-contact.jpg",
+      "victory/00120.jpg"
+    ],
+    "observations": [
+      "The shot begins with the same standing pose, armor and computer from the lift.",
+      "The hero raises his gaze while holding the computer in both hands.",
+      "Both companions step closer; cloaks and the camera move continuously.",
+      "The computer remains visible and held securely through the final frame."
+    ]
+  },
+  "renderSha256": "1dda0c3e60691f10061656d0fa7f1585df9b05f4a0b4120bc58993a8ef386bb6",
+  "finalEdit": {
+    "evidence": [
+      "contact-sheet.jpg",
+      "motion-lift-start.jpg",
+      "motion-lift-middle.jpg",
+      "motion-lift-end.jpg",
+      "motion-victory.jpg"
+    ],
+    "observations": [
+      "GS then GS차지비 opening, September 21–22 dates and AI-code comedy are present.",
+      "The serious keyring/Mac mini declaration precedes the animated prize lift.",
+      "Korean captions remain in the black lower margin.",
+      "Generated finale continues from the lift to the companions joining the hero."
+    ]
+  }
+}

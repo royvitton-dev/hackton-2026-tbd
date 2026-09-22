@@ -1,0 +1,24 @@
+[2m[WebServer] [22m(node:61674) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 13 tests using 1 worker
+
+(node:61680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:61680) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/parking.spec.mjs:8:1 › public B2 source converts to actual WebGL meshes, with original and data export (14.8s)
+  ✓   2 tests/e2e/parking.spec.mjs:15:1 › drives through exterior road and entrance to EV, supports cameras and pauses (4.7s)
+  ✓   3 tests/e2e/parking.spec.mjs:26:1 › fire starts at current position, switches to human and fails closed when exits are blocked (4.6s)
+  ✓   4 tests/e2e/parking.spec.mjs:33:1 › photo-derived facade and mapped buildings preserve geographic source attribution (8.0s)
+  ✓   5 tests/e2e/parking.spec.mjs:39:1 › imports semantic SVG and rejects executable and corrupt input without losing current scene (3.3s)
+  ✓   6 tests/e2e/parking.spec.mjs:44:1 › actual Naver-located building routes from acquired OSM road through the drawn entrance (5.5s)
+  ✓   7 tests/e2e/parking.spec.mjs:48:1 › mobile source selection and 3D controls remain usable without horizontal overflow (3.2s)
+  ✓   8 tests/e2e/parking.spec.mjs:53:1 › existing park exposes the new attraction, shared launch route and root quality dashboard (25.2s)
+  ✓   9 tests/e2e/parking.spec.mjs:57:1 › real place inventory includes parks and public parking without counting floors as buildings (15.3s)
+  ✓  10 tests/e2e/parking.spec.mjs:65:1 › actual station data drives disclosed green and red screening, filters and export (12.2s)
+  ✓  11 tests/e2e/parking.spec.mjs:76:1 › accessible bays stay visible, realistic objects accept multiple textures and drawing details preserve OCR (13.8s)
+  ✓  12 tests/e2e/parking.spec.mjs:85:1 › mobile charging settings and all drawing information remain reachable (4.3s)
+  ✓  13 tests/e2e/parking.spec.mjs:90:1 › imports an actual PDF and keeps its drawing preview separate from the previously selected source (5.5s)
+
+  13 passed (2.0m)

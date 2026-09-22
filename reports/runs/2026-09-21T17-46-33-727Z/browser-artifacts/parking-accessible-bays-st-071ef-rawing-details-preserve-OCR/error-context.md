@@ -1,0 +1,506 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - link "ATLAS 홈" [ref=e4] [cursor=pointer]:
+      - /url: /map_new/
+      - generic [ref=e5]: ⌁
+      - text: ATLAS
+      - generic [ref=e6]:
+        - text: PARKING
+        - text: INTELLIGENCE
+    - navigation "작업 공간" [ref=e7]:
+      - button "주차장 탐색" [ref=e8] [cursor=pointer]
+      - button "공간 지도" [ref=e9] [cursor=pointer]
+      - button "사진과 외관" [ref=e10] [cursor=pointer]
+      - button "충전기 입지" [ref=e11] [cursor=pointer]
+    - link "Wonder Park ↗" [ref=e12] [cursor=pointer]:
+      - /url: /park/
+  - main [ref=e13]:
+    - complementary [ref=e14]:
+      - generic [ref=e15]:
+        - paragraph [ref=e16]: FROM DRAWING TO DESTINATION
+        - heading "도면 속 공간에, 길을 더하다." [level=1] [ref=e17]:
+          - text: 도면 속 공간에,
+          - text: 길을 더하다.
+        - paragraph [ref=e18]:
+          - text: 공개 도면에서 시작하는 입체적인 여정.
+          - text: 공간을 살펴보고, 다음 경로를 찾아보세요.
+      - generic [ref=e19]:
+        - text: 장소·도면 라이브러리
+        - generic [ref=e20]: 45곳
+      - textbox "도면 검색" [ref=e21]:
+        - /placeholder: ⌕  건물, 주소 또는 층 검색
+      - combobox "장소 유형" [ref=e22]:
+        - option "모든 장소 유형" [selected]
+        - option "주택 · 21곳"
+        - option "공동주택 · 9곳"
+        - option "상업·업무 · 6곳"
+        - option "공공시설 · 3곳"
+        - option "공영주차장 · 1곳"
+        - option "공원 · 2곳"
+        - option "도서관 · 1곳"
+        - option "종교시설 · 1곳"
+        - option "문화시설 · 1곳"
+      - paragraph [ref=e23]: 서로 다른 장소 45곳 · 도면 63장
+      - generic [ref=e24]:
+        - button "▥ 동북권 복합시설 · B2 주차장 공공시설 · 주차 구획 101" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: ▥
+          - generic [ref=e27]:
+            - generic [ref=e28]: 동북권 복합시설 · B2 주차장
+            - generic [ref=e29]: 공공시설 · 주차 구획 101
+        - button "▥ 신내소행주 - 공동육아형 공동체주택 [너나들이] 공동주택 · 주차 구획 3 · 외관 사진" [ref=e30] [cursor=pointer]:
+          - generic [ref=e31]: ▥
+          - generic [ref=e32]:
+            - generic [ref=e33]: 신내소행주 - 공동육아형 공동체주택 [너나들이]
+            - generic [ref=e34]: 공동주택 · 주차 구획 3 · 외관 사진
+        - button "⌂ 어반그로잉 동숭 · 도면 1 주택 · 원본·구조선 분석" [ref=e35] [cursor=pointer]:
+          - generic [ref=e36]: ⌂
+          - generic [ref=e37]:
+            - generic [ref=e38]: 어반그로잉 동숭 · 도면 1
+            - generic [ref=e39]: 주택 · 원본·구조선 분석
+        - button "⌂ 어반그로잉 동숭 · 도면 2 주택 · 원본·구조선 분석" [ref=e40] [cursor=pointer]:
+          - generic [ref=e41]: ⌂
+          - generic [ref=e42]:
+            - generic [ref=e43]: 어반그로잉 동숭 · 도면 2
+            - generic [ref=e44]: 주택 · 원본·구조선 분석
+        - button "⌂ 어반그로잉 동숭 · 도면 3 주택 · 원본·구조선 분석" [ref=e45] [cursor=pointer]:
+          - generic [ref=e46]: ⌂
+          - generic [ref=e47]:
+            - generic [ref=e48]: 어반그로잉 동숭 · 도면 3
+            - generic [ref=e49]: 주택 · 원본·구조선 분석
+        - button "▥ 면목동 공동체주택마을 [도서당] · 도면 1 공동주택 · 원본·구조선 분석" [ref=e50] [cursor=pointer]:
+          - generic [ref=e51]: ▥
+          - generic [ref=e52]:
+            - generic [ref=e53]: 면목동 공동체주택마을 [도서당] · 도면 1
+            - generic [ref=e54]: 공동주택 · 원본·구조선 분석
+        - button "▥ 면목동 공동체주택마을 [도서당] · 도면 2 공동주택 · 원본·구조선 분석" [ref=e55] [cursor=pointer]:
+          - generic [ref=e56]: ▥
+          - generic [ref=e57]:
+            - generic [ref=e58]: 면목동 공동체주택마을 [도서당] · 도면 2
+            - generic [ref=e59]: 공동주택 · 원본·구조선 분석
+        - button "▥ 면목동 공동체주택마을 [도서당] · 도면 3 공동주택 · 원본·구조선 분석" [ref=e60] [cursor=pointer]:
+          - generic [ref=e61]: ▥
+          - generic [ref=e62]:
+            - generic [ref=e63]: 면목동 공동체주택마을 [도서당] · 도면 3
+            - generic [ref=e64]: 공동주택 · 원본·구조선 분석
+        - button "▥ 녹틸럭스 상업·업무 · 원본·구조선 분석" [ref=e65] [cursor=pointer]:
+          - generic [ref=e66]: ▥
+          - generic [ref=e67]:
+            - generic [ref=e68]: 녹틸럭스
+            - generic [ref=e69]: 상업·업무 · 원본·구조선 분석
+        - button "▥ 도곡중 복합시설 · 지하 1–4층 · B1 공공시설 · 원본·구조선 분석" [ref=e70] [cursor=pointer]:
+          - generic [ref=e71]: ▥
+          - generic [ref=e72]:
+            - generic [ref=e73]: 도곡중 복합시설 · 지하 1–4층 · B1
+            - generic [ref=e74]: 공공시설 · 원본·구조선 분석
+        - button "▥ 도곡중 복합시설 · 지하 1–4층 · B2 공공시설 · 원본·구조선 분석" [ref=e75] [cursor=pointer]:
+          - generic [ref=e76]: ▥
+          - generic [ref=e77]:
+            - generic [ref=e78]: 도곡중 복합시설 · 지하 1–4층 · B2
+            - generic [ref=e79]: 공공시설 · 원본·구조선 분석
+        - button "▥ 도곡중 복합시설 · 지하 1–4층 · B3 공공시설 · 원본·구조선 분석" [ref=e80] [cursor=pointer]:
+          - generic [ref=e81]: ▥
+          - generic [ref=e82]:
+            - generic [ref=e83]: 도곡중 복합시설 · 지하 1–4층 · B3
+            - generic [ref=e84]: 공공시설 · 원본·구조선 분석
+        - button "▥ 도곡중 복합시설 · 지하 1–4층 · B4 공공시설 · 원본·구조선 분석" [ref=e85] [cursor=pointer]:
+          - generic [ref=e86]: ▥
+          - generic [ref=e87]:
+            - generic [ref=e88]: 도곡중 복합시설 · 지하 1–4층 · B4
+            - generic [ref=e89]: 공공시설 · 원본·구조선 분석
+        - button "⌂ 맑은구름집 · 도면 1 주택 · 원본·구조선 분석" [ref=e90] [cursor=pointer]:
+          - generic [ref=e91]: ⌂
+          - generic [ref=e92]:
+            - generic [ref=e93]: 맑은구름집 · 도면 1
+            - generic [ref=e94]: 주택 · 원본·구조선 분석
+        - button "⌂ 맑은구름집 · 도면 2 주택 · 원본·구조선 분석" [ref=e95] [cursor=pointer]:
+          - generic [ref=e96]: ⌂
+          - generic [ref=e97]:
+            - generic [ref=e98]: 맑은구름집 · 도면 2
+            - generic [ref=e99]: 주택 · 원본·구조선 분석
+        - button "⌂ 맑은구름집 · 도면 3 주택 · 원본·구조선 분석" [ref=e100] [cursor=pointer]:
+          - generic [ref=e101]: ⌂
+          - generic [ref=e102]:
+            - generic [ref=e103]: 맑은구름집 · 도면 3
+            - generic [ref=e104]: 주택 · 원본·구조선 분석
+        - button "▥ 사는자리 공동체주택 공동주택 · 원본·구조선 분석" [ref=e105] [cursor=pointer]:
+          - generic [ref=e106]: ▥
+          - generic [ref=e107]:
+            - generic [ref=e108]: 사는자리 공동체주택
+            - generic [ref=e109]: 공동주택 · 원본·구조선 분석
+        - button "⌂ 신내 여성안심주택 [달리] 주택 · 원본·구조선 분석" [ref=e110] [cursor=pointer]:
+          - generic [ref=e111]: ⌂
+          - generic [ref=e112]:
+            - generic [ref=e113]: 신내 여성안심주택 [달리]
+            - generic [ref=e114]: 주택 · 원본·구조선 분석
+        - button "▥ 온음공동체주택 · 도면 1 공동주택 · 원본·구조선 분석" [ref=e115] [cursor=pointer]:
+          - generic [ref=e116]: ▥
+          - generic [ref=e117]:
+            - generic [ref=e118]: 온음공동체주택 · 도면 1
+            - generic [ref=e119]: 공동주택 · 원본·구조선 분석
+        - button "▥ 온음공동체주택 · 도면 2 공동주택 · 원본·구조선 분석" [ref=e120] [cursor=pointer]:
+          - generic [ref=e121]: ▥
+          - generic [ref=e122]:
+            - generic [ref=e123]: 온음공동체주택 · 도면 2
+            - generic [ref=e124]: 공동주택 · 원본·구조선 분석
+        - button "▥ 온음공동체주택 · 도면 3 공동주택 · 원본·구조선 분석" [ref=e125] [cursor=pointer]:
+          - generic [ref=e126]: ▥
+          - generic [ref=e127]:
+            - generic [ref=e128]: 온음공동체주택 · 도면 3
+            - generic [ref=e129]: 공동주택 · 원본·구조선 분석
+        - button "▥ 암사예가 · 도면 1 공동주택 · 원본·구조선 분석" [ref=e130] [cursor=pointer]:
+          - generic [ref=e131]: ▥
+          - generic [ref=e132]:
+            - generic [ref=e133]: 암사예가 · 도면 1
+            - generic [ref=e134]: 공동주택 · 원본·구조선 분석
+        - button "▥ 암사예가 · 도면 2 공동주택 · 원본·구조선 분석" [ref=e135] [cursor=pointer]:
+          - generic [ref=e136]: ▥
+          - generic [ref=e137]:
+            - generic [ref=e138]: 암사예가 · 도면 2
+            - generic [ref=e139]: 공동주택 · 원본·구조선 분석
+        - button "▥ 코이노니아 스테이 · 도면 1 공동주택 · 원본·구조선 분석" [ref=e140] [cursor=pointer]:
+          - generic [ref=e141]: ▥
+          - generic [ref=e142]:
+            - generic [ref=e143]: 코이노니아 스테이 · 도면 1
+            - generic [ref=e144]: 공동주택 · 원본·구조선 분석
+        - button "▥ 코이노니아 스테이 · 도면 2 공동주택 · 원본·구조선 분석" [ref=e145] [cursor=pointer]:
+          - generic [ref=e146]: ▥
+          - generic [ref=e147]:
+            - generic [ref=e148]: 코이노니아 스테이 · 도면 2
+            - generic [ref=e149]: 공동주택 · 원본·구조선 분석
+        - button "▥ 코이노니아 스테이 · 도면 3 공동주택 · 원본·구조선 분석" [ref=e150] [cursor=pointer]:
+          - generic [ref=e151]: ▥
+          - generic [ref=e152]:
+            - generic [ref=e153]: 코이노니아 스테이 · 도면 3
+            - generic [ref=e154]: 공동주택 · 원본·구조선 분석
+        - button "▥ 오늘공동체주택 · 도면 1 공동주택 · 원본·구조선 분석" [ref=e155] [cursor=pointer]:
+          - generic [ref=e156]: ▥
+          - generic [ref=e157]:
+            - generic [ref=e158]: 오늘공동체주택 · 도면 1
+            - generic [ref=e159]: 공동주택 · 원본·구조선 분석
+        - button "▥ 오늘공동체주택 · 도면 2 공동주택 · 원본·구조선 분석" [ref=e160] [cursor=pointer]:
+          - generic [ref=e161]: ▥
+          - generic [ref=e162]:
+            - generic [ref=e163]: 오늘공동체주택 · 도면 2
+            - generic [ref=e164]: 공동주택 · 원본·구조선 분석
+        - button "▥ 오늘공동체주택 · 도면 3 공동주택 · 원본·구조선 분석" [ref=e165] [cursor=pointer]:
+          - generic [ref=e166]: ▥
+          - generic [ref=e167]:
+            - generic [ref=e168]: 오늘공동체주택 · 도면 3
+            - generic [ref=e169]: 공동주택 · 원본·구조선 분석
+        - button "⌂ 레이어드 하우스 주택 · 원본·구조선 분석" [ref=e170] [cursor=pointer]:
+          - generic [ref=e171]: ⌂
+          - generic [ref=e172]:
+            - generic [ref=e173]: 레이어드 하우스
+            - generic [ref=e174]: 주택 · 원본·구조선 분석
+        - button "⌂ 후암동 복합주거 주택 · 원본·구조선 분석" [ref=e175] [cursor=pointer]:
+          - generic [ref=e176]: ⌂
+          - generic [ref=e177]:
+            - generic [ref=e178]: 후암동 복합주거
+            - generic [ref=e179]: 주택 · 원본·구조선 분석
+        - button "▥ 서소문성지 역사박물관 · 1F 문화시설 · 원본·구조선 분석" [ref=e180] [cursor=pointer]:
+          - generic [ref=e181]: ▥
+          - generic [ref=e182]:
+            - generic [ref=e183]: 서소문성지 역사박물관 · 1F
+            - generic [ref=e184]: 문화시설 · 원본·구조선 분석
+        - button "⌂ 스퀘어 앤 트라이앵글 하우스 주택 · 원본·구조선 분석" [ref=e185] [cursor=pointer]:
+          - generic [ref=e186]: ⌂
+          - generic [ref=e187]:
+            - generic [ref=e188]: 스퀘어 앤 트라이앵글 하우스
+            - generic [ref=e189]: 주택 · 원본·구조선 분석
+        - button "⌂ 유취헌 주택 · 원본·구조선 분석" [ref=e190] [cursor=pointer]:
+          - generic [ref=e191]: ⌂
+          - generic [ref=e192]:
+            - generic [ref=e193]: 유취헌
+            - generic [ref=e194]: 주택 · 원본·구조선 분석
+        - button "▥ 평창동 공동주택 공동주택 · 원본·구조선 분석" [ref=e195] [cursor=pointer]:
+          - generic [ref=e196]: ▥
+          - generic [ref=e197]:
+            - generic [ref=e198]: 평창동 공동주택
+            - generic [ref=e199]: 공동주택 · 원본·구조선 분석
+        - button "⌂ 성북동 회색집 주택 · 원본·구조선 분석" [ref=e200] [cursor=pointer]:
+          - generic [ref=e201]: ⌂
+          - generic [ref=e202]:
+            - generic [ref=e203]: 성북동 회색집
+            - generic [ref=e204]: 주택 · 원본·구조선 분석
+        - button "⌂ 리을 집 주택 · 원본·구조선 분석" [ref=e205] [cursor=pointer]:
+          - generic [ref=e206]: ⌂
+          - generic [ref=e207]:
+            - generic [ref=e208]: 리을 집
+            - generic [ref=e209]: 주택 · 원본·구조선 분석
+        - button "⌂ 신공덕동 Micro Housing S 주택 · 원본·구조선 분석" [ref=e210] [cursor=pointer]:
+          - generic [ref=e211]: ⌂
+          - generic [ref=e212]:
+            - generic [ref=e213]: 신공덕동 Micro Housing S
+            - generic [ref=e214]: 주택 · 원본·구조선 분석
+        - button "▥ 이오스 상업·업무 · 원본·구조선 분석" [ref=e215] [cursor=pointer]:
+          - generic [ref=e216]: ▥
+          - generic [ref=e217]:
+            - generic [ref=e218]: 이오스
+            - generic [ref=e219]: 상업·업무 · 원본·구조선 분석
+        - button "▥ 논현 109 상업·업무 · 원본·구조선 분석" [ref=e220] [cursor=pointer]:
+          - generic [ref=e221]: ▥
+          - generic [ref=e222]:
+            - generic [ref=e223]: 논현 109
+            - generic [ref=e224]: 상업·업무 · 원본·구조선 분석
+        - button "▥ 논현동 P스튜디오 상업·업무 · 원본·구조선 분석" [ref=e225] [cursor=pointer]:
+          - generic [ref=e226]: ▥
+          - generic [ref=e227]:
+            - generic [ref=e228]: 논현동 P스튜디오
+            - generic [ref=e229]: 상업·업무 · 원본·구조선 분석
+        - button "⌂ 효창동 첫 집 주택 · 원본·구조선 분석" [ref=e230] [cursor=pointer]:
+          - generic [ref=e231]: ⌂
+          - generic [ref=e232]:
+            - generic [ref=e233]: 효창동 첫 집
+            - generic [ref=e234]: 주택 · 원본·구조선 분석
+        - button "⌂ 능동 하늘집 주택 · 원본·구조선 분석" [ref=e235] [cursor=pointer]:
+          - generic [ref=e236]: ⌂
+          - generic [ref=e237]:
+            - generic [ref=e238]: 능동 하늘집
+            - generic [ref=e239]: 주택 · 원본·구조선 분석
+        - button "P 동탄호수공원 주차장 · 1F 공영주차장 · 주차 구획 31" [ref=e240] [cursor=pointer]:
+          - generic [ref=e241]: P
+          - generic [ref=e242]:
+            - generic [ref=e243]: 동탄호수공원 주차장 · 1F
+            - generic [ref=e244]: 공영주차장 · 주차 구획 31
+        - button "P 동탄호수공원 주차장 · B1 공영주차장 · 원본·구조선 분석" [ref=e245] [cursor=pointer]:
+          - generic [ref=e246]: P
+          - generic [ref=e247]:
+            - generic [ref=e248]: 동탄호수공원 주차장 · B1
+            - generic [ref=e249]: 공영주차장 · 원본·구조선 분석
+        - button "P 동탄호수공원 주차장 · B2 공영주차장 · 원본·구조선 분석" [ref=e250] [cursor=pointer]:
+          - generic [ref=e251]: P
+          - generic [ref=e252]:
+            - generic [ref=e253]: 동탄호수공원 주차장 · B2
+            - generic [ref=e254]: 공영주차장 · 원본·구조선 분석
+        - button "▥ 카페 목적지 상업·업무 · 원본·구조선 분석" [ref=e255] [cursor=pointer]:
+          - generic [ref=e256]: ▥
+          - generic [ref=e257]:
+            - generic [ref=e258]: 카페 목적지
+            - generic [ref=e259]: 상업·업무 · 원본·구조선 분석
+        - button "⌂ 서오재 주택 · 원본·구조선 분석" [ref=e260] [cursor=pointer]:
+          - generic [ref=e261]: ⌂
+          - generic [ref=e262]:
+            - generic [ref=e263]: 서오재
+            - generic [ref=e264]: 주택 · 원본·구조선 분석
+        - button "▥ 비례교회 종교시설 · 원본·구조선 분석" [ref=e265] [cursor=pointer]:
+          - generic [ref=e266]: ▥
+          - generic [ref=e267]:
+            - generic [ref=e268]: 비례교회
+            - generic [ref=e269]: 종교시설 · 원본·구조선 분석
+        - button "▥ 대천항 관공선 통합사무실 · 1F 공공시설 · 주차 구획 49" [ref=e270] [cursor=pointer]:
+          - generic [ref=e271]: ▥
+          - generic [ref=e272]:
+            - generic [ref=e273]: 대천항 관공선 통합사무실 · 1F
+            - generic [ref=e274]: 공공시설 · 주차 구획 49
+        - button "⌂ 판교 K&L 주택 주택 · 원본·구조선 분석" [ref=e275] [cursor=pointer]:
+          - generic [ref=e276]: ⌂
+          - generic [ref=e277]:
+            - generic [ref=e278]: 판교 K&L 주택
+            - generic [ref=e279]: 주택 · 원본·구조선 분석
+        - button "⌂ 스킵플로어 하우스 주택 · 원본·구조선 분석" [ref=e280] [cursor=pointer]:
+          - generic [ref=e281]: ⌂
+          - generic [ref=e282]:
+            - generic [ref=e283]: 스킵플로어 하우스
+            - generic [ref=e284]: 주택 · 원본·구조선 분석
+        - button "⌂ 예유재 주택 · 원본·구조선 분석" [ref=e285] [cursor=pointer]:
+          - generic [ref=e286]: ⌂
+          - generic [ref=e287]:
+            - generic [ref=e288]: 예유재
+            - generic [ref=e289]: 주택 · 원본·구조선 분석
+        - button "▥ 매곡도서관 도서관 · 원본·구조선 분석" [ref=e290] [cursor=pointer]:
+          - generic [ref=e291]: ▥
+          - generic [ref=e292]:
+            - generic [ref=e293]: 매곡도서관
+            - generic [ref=e294]: 도서관 · 원본·구조선 분석
+        - button "⌂ 왕자궁 백악관 주택 · 원본·구조선 분석" [ref=e295] [cursor=pointer]:
+          - generic [ref=e296]: ⌂
+          - generic [ref=e297]:
+            - generic [ref=e298]: 왕자궁 백악관
+            - generic [ref=e299]: 주택 · 원본·구조선 분석
+        - button "▥ 포뮬리에 상업·업무 · 원본·구조선 분석" [ref=e300] [cursor=pointer]:
+          - generic [ref=e301]: ▥
+          - generic [ref=e302]:
+            - generic [ref=e303]: 포뮬리에
+            - generic [ref=e304]: 상업·업무 · 원본·구조선 분석
+        - button "⌂ 운양동 리아네 두 가구 주택 주택 · 원본·구조선 분석" [ref=e305] [cursor=pointer]:
+          - generic [ref=e306]: ⌂
+          - generic [ref=e307]:
+            - generic [ref=e308]: 운양동 리아네 두 가구 주택
+            - generic [ref=e309]: 주택 · 원본·구조선 분석
+        - button "⌂ 또바기 집 · B1 주택 · 원본·구조선 분석" [ref=e310] [cursor=pointer]:
+          - generic [ref=e311]: ⌂
+          - generic [ref=e312]:
+            - generic [ref=e313]: 또바기 집 · B1
+            - generic [ref=e314]: 주택 · 원본·구조선 분석
+        - button "⌂ 백현동 주택 주택 · 원본·구조선 분석" [ref=e315] [cursor=pointer]:
+          - generic [ref=e316]: ⌂
+          - generic [ref=e317]:
+            - generic [ref=e318]: 백현동 주택
+            - generic [ref=e319]: 주택 · 원본·구조선 분석
+        - button "⌂ 일곡 하얀집 주택 · 원본·구조선 분석" [ref=e320] [cursor=pointer]:
+          - generic [ref=e321]: ⌂
+          - generic [ref=e322]:
+            - generic [ref=e323]: 일곡 하얀집
+            - generic [ref=e324]: 주택 · 원본·구조선 분석
+        - button "▥ 래미안 원펜타스 · 단지 배치도 · SITE 공동주택 · 원본·구조선 분석" [ref=e325] [cursor=pointer]:
+          - generic [ref=e326]: ▥
+          - generic [ref=e327]:
+            - generic [ref=e328]: 래미안 원펜타스 · 단지 배치도 · SITE
+            - generic [ref=e329]: 공동주택 · 원본·구조선 분석
+        - button "♧ 보라매공원 공원 · 공원 안내도" [ref=e330] [cursor=pointer]:
+          - generic [ref=e331]: ♧
+          - generic [ref=e332]:
+            - generic [ref=e333]: 보라매공원
+            - generic [ref=e334]: 공원 · 공원 안내도
+        - button "♧ 서울숲 공원 · 공원 안내도" [ref=e335] [cursor=pointer]:
+          - generic [ref=e336]: ♧
+          - generic [ref=e337]:
+            - generic [ref=e338]: 서울숲
+            - generic [ref=e339]: 공원 · 공원 안내도
+      - button "도로 → 주차·EV 시나리오 ↗" [ref=e340] [cursor=pointer]
+      - button "＋ 내 도면 가져오기" [ref=e341] [cursor=pointer]
+      - generic [ref=e342]:
+        - paragraph [ref=e343]: THE ORIGINAL DRAWING
+        - img "선택한 도면 원본" [ref=e344]
+        - paragraph [ref=e345]: 공개 PDF 16쪽 주차장 평면도. 차로·코어는 분석자가 수동 주석; 축척 추정.
+        - link "출처와 원본 확인 ↗" [ref=e346] [cursor=pointer]:
+          - /url: https://mediahub.seoul.go.kr/wp-content/uploads/2020/03/ff42c687eb729c49cb070336a85c9abc.pdf#page=16
+    - region "3D 공간" [ref=e347]:
+      - generic "3D 주차장 · 드래그 회전, 스크롤 확대" [ref=e348]
+      - generic:
+        - generic: ATLAS / PUBLIC BLUEPRINTS
+        - heading "동북권 복합시설 · B2 주차장" [level=2]
+        - generic: 공개 원본 · 수동 동선 주석 · 추정 축척
+      - generic [ref=e349]:
+        - checkbox "원본 도면 겹쳐 보기" [checked] [ref=e350]
+        - text: 원본 도면 겹쳐 보기
+      - group [ref=e351]:
+        - generic "공간 표현·도면 정보" [ref=e352] [cursor=pointer]
+        - generic [ref=e353]:
+          - generic [ref=e354]:
+            - text: 바닥
+            - combobox "바닥 재질" [ref=e355]:
+              - option "노출 콘크리트"
+              - option "밝은 도장"
+              - option "적벽돌"
+              - option "회색 타일"
+              - option "녹색 에폭시" [selected]
+              - option "아스팔트"
+          - generic [ref=e356]:
+            - text: 벽
+            - combobox "벽 재질" [ref=e357]:
+              - option "노출 콘크리트"
+              - option "밝은 도장"
+              - option "적벽돌" [selected]
+              - option "회색 타일"
+              - option "녹색 에폭시"
+              - option "아스팔트"
+          - generic [ref=e358]:
+            - text: 기둥
+            - combobox "기둥 재질" [ref=e359]:
+              - option "노출 콘크리트"
+              - option "밝은 도장"
+              - option "적벽돌"
+              - option "회색 타일" [selected]
+              - option "녹색 에폭시"
+              - option "아스팔트"
+          - generic [ref=e360]:
+            - text: 계단
+            - combobox "계단 재질" [ref=e361]:
+              - option "노출 콘크리트" [selected]
+              - option "밝은 도장"
+              - option "적벽돌"
+              - option "회색 타일"
+              - option "녹색 에폭시"
+              - option "아스팔트"
+        - generic [ref=e362]:
+          - checkbox "주차 구획의 예시 차량" [active] [ref=e363]
+          - text: 주차 구획의 예시 차량
+        - generic [ref=e364]:
+          - checkbox "자동 추출한 도면 글자" [ref=e365]
+          - text: 자동 추출한 도면 글자
+        - paragraph [ref=e366]: 차량은 실시간 점유가 아닙니다. 마감재·계단 단수·높이는 미리보기 가정입니다.
+        - button "오브젝트·도면 정보 전체 보기" [ref=e367] [cursor=pointer]
+      - region "경로 설정" [ref=e368]:
+        - generic [ref=e369]:
+          - heading "어디로 갈까요?" [level=3] [ref=e370]
+          - generic [ref=e371]: ROUTE PLANNER
+        - generic [ref=e372]:
+          - button "▱ 차량" [ref=e373] [cursor=pointer]
+          - button "♙ 보행자" [ref=e374] [cursor=pointer]
+        - generic [ref=e375]:
+          - text: 출발
+          - combobox "출발 위치" [ref=e376]:
+            - option "차량 램프 입구" [selected]
+            - option "북측 차로"
+            - option "서북 차로"
+            - option "동북 차로"
+            - option "서측 차로"
+            - option "동측 차로"
+            - option "서남 차로"
+            - option "동남 차로"
+            - option "서측 상부 코어 접근"
+            - option "서측 하부 코어 접근"
+            - option "동측 코어 접근"
+        - generic [ref=e377]:
+          - text: 목적지
+          - combobox "목적지" [ref=e378]:
+            - option "서측 상부 코어 접근" [selected]
+            - option "서측 하부 코어 접근"
+            - option "동측 코어 접근"
+        - generic [ref=e379]:
+          - generic [ref=e380]:
+            - text: 차폭 (m)
+            - spinbutton "차폭 (m)" [ref=e381]: "1.9"
+          - generic [ref=e382]:
+            - text: 차길이 (m)
+            - spinbutton "차길이 (m)" [ref=e383]: "4.6"
+          - generic [ref=e384]:
+            - text: 회전반경 (m)
+            - spinbutton "회전반경 (m)" [ref=e385]: "5.2"
+        - button "소형차 예시 · 1.7 × 4.1m / 반경 4.2m" [ref=e386] [cursor=pointer]
+        - generic [ref=e387]:
+          - generic [ref=e388]:
+            - strong [ref=e389]: —
+            - text: m
+            - generic [ref=e390]: 경로 거리
+          - generic [ref=e391]:
+            - strong [ref=e392]: —
+            - text: 초
+            - generic [ref=e393]: 예상 이동 시간
+        - paragraph [ref=e394]: 차량 제원과 통로 조건에 맞는 경로가 없습니다.
+        - button "▷ 안내 시작" [disabled] [ref=e395]
+        - generic [ref=e396]:
+          - button "↺ 출발점으로" [ref=e397] [cursor=pointer]
+          - generic [ref=e398]:
+            - text: 재생 속도
+            - combobox "재생 속도" [ref=e399]:
+              - option "1×" [selected]
+              - option "2×"
+              - option "4×"
+        - generic [ref=e400]:
+          - button "♧ 화재 우회 시뮬레이션" [ref=e401] [cursor=pointer]: ♧ 화재 우회 시뮬레이션
+          - paragraph [ref=e403]: 위험 구역을 피해서 확인된 집결지를 탐색합니다.
+      - generic "카메라 시점" [ref=e404]:
+        - button "⊞ 전체 보기" [ref=e405] [cursor=pointer]
+        - button "3인칭" [ref=e406] [cursor=pointer]
+        - button "1인칭" [ref=e407] [cursor=pointer]
+      - generic [ref=e408]:
+        - generic [ref=e409]: WEBGL 2
+        - generic [ref=e411]: 23 벽 / 87 오브젝트 / 4 장애인 구획
+        - generic [ref=e412]: 드래그하여 공간 둘러보기
+      - generic [ref=e413]: ↕
+  - contentinfo [ref=e414]:
+    - generic [ref=e415]: ATLAS RESEARCH · DRAWINGS BECOME PLACES
+    - link "검증 현황 검증 중 · 오전 02:46 ↗" [ref=e416] [cursor=pointer]:
+      - /url: /reports/map_new/
+    - link "모델 데이터 ↓" [ref=e417] [cursor=pointer]:
+      - /url: "#"
+    - link "© OpenStreetMap contributors" [ref=e418] [cursor=pointer]:
+      - /url: https://www.openstreetmap.org/copyright
+    - link "기존 ATLAS ↗" [ref=e419] [cursor=pointer]:
+      - /url: /map/
+```

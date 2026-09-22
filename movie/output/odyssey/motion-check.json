@@ -1,0 +1,44 @@
+{
+  "duration": 85,
+  "sourceFootageSeconds": 62,
+  "generatedMotionSeconds": 13,
+  "checks": [
+    {
+      "scene": "macmini",
+      "shot": "lift",
+      "start": 70.3,
+      "end": 75.55,
+      "firstFrame": 8,
+      "lastFrame": 134,
+      "sourceFramesChange": true,
+      "deterministic": true,
+      "startHash": "d09e249e5a656161209cd47f57eedce75124a65e2975750d6124083646850b21",
+      "endHash": "e44de4a91f737352765842117b5db610646c621d4b724136edf0b743a4320007"
+    },
+    {
+      "scene": "struggle",
+      "shot": "lift",
+      "start": 76.3,
+      "end": 77.55,
+      "firstFrame": 152,
+      "lastFrame": 182,
+      "sourceFramesChange": true,
+      "deterministic": true,
+      "startHash": "4cf921d318a4300a8ede73b96f6227eab0380999b3b61a74249176f2ccda424c",
+      "endHash": "8531226f555b2caea88ac5c03662852db412ad48c7cb0171688c8c4d5bcc5e4e"
+    },
+    {
+      "scene": "victory",
+      "shot": "victory",
+      "start": 78.3,
+      "end": 82.55,
+      "firstFrame": 8,
+      "lastFrame": 110,
+      "sourceFramesChange": true,
+      "deterministic": true,
+      "startHash": "68e931ad584cd92e104bbace5b23f112b0761f76e0a0ebb918262171ffa4290e",
+      "endHash": "b937cf145e617b9501cde6b1307eb2b980280d4d107ec5aff3c8625f589a8c29"
+    }
+  ],
+  "browserErrors": []
+}

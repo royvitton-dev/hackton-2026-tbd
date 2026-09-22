@@ -1,0 +1,86 @@
+{
+  "style": "Photoreal cinematic digital double based on the supplied Odyssey trailer",
+  "image": {
+    "tool": "built-in imagegen",
+    "references": [
+      "tmp/odyssey/hero-reference-2.jpg",
+      "tmp/odyssey/detail.jpg"
+    ],
+    "prompt": "Use case: identity-preserve. Asset type: first frame for a photoreal cinematic CGI animated finale of an Odyssey parody trailer. Reference image 1 is the precise central character identity, helmet, beard, ancient wrist guards and dark olive cloak. Reference image 2 supports his facial features without the helmet and the rough practical film lighting. Create ONE 16:9 widescreen image, edge to edge, no black bars, no captions. Faithfully depict the same weathered middle-aged bearded Odysseus from the references as a hyper-realistic cinematic 3D digital double, with realistic human proportions, skin pores, salt-and-pepper beard, exact dark patinated bronze helmet, worn bronze cuirass, dark olive wool cloak and leather wrist guards. No cartoon stylization, no toy, no plastic skin. This is a solemn invented prize-acquisition scene. On a weathered stone terrace above the cold Aegean sea, he kneels low on one knee behind a waist-low stone pedestal, shoulders braced, face raised enough to recognize him, both hands gripping the two sides of a single compact silver Apple Mac mini computer resting on the stone pedestal. The Mac mini is a small rounded-square silver desktop computer approximately 15 cm wide, 5 cm tall, black base, a black apple logo on top and two tiny front USB-C ports; it must look like a real compact Mac mini, never a laptop, never a huge box. Both hands anatomically correct and gripping the sides; the product unobscured. Pose is the start of a strenuous lift, elbows bent, hands at his lower abdomen, tired but determined eyes looking down toward the computer. Two tired ancient Greek soldiers in matching film-realistic armor stand slightly behind him, out of focus, watching, not obstructing him. Ancient columns and rough stone, no modern furniture, grey sea with distant surf. Blue-grey overcast atmosphere with restrained warm dawn light skimming his face and silver computer. Camera medium shot from slightly below shoulder height, center protagonist occupying central 55% of frame, head and both arms and pedestal fully in view, generous space above his helmet so he can rise during animation. Shallow depth of field, 50 mm cinematic lens, subtle film grain, sophisticated realistic VFX render that can cut smoothly from the original live-action footage. Preserve the central character likeness rigorously. No text, no watermark, no extra devices.",
+    "file": "assets/odyssey/cinematic-hero-start.png"
+  },
+  "video": {
+    "status": "generated",
+    "method": "LTX-2.3 image-to-video, two continuous generated shots",
+    "shots": [
+      {
+        "provider": "LTX-2.3 Distilled 1.1 / MLX local",
+        "shot": "lift",
+        "prompt": "A continuous cinematic shot of the bearded Greek warrior shown in the image. He wears the same bronze helmet, worn armor and olive cloak. Both hands grip the small silver Mac mini computer on the stone altar. With great effort, his arms and shoulders tense, he lifts the compact silver computer and slowly rises from one knee. He brings the computer to his chest with both hands. The compact silver square computer stays rigid and keeps the same shape throughout. His face is solemn and exhausted. Two soldiers watch behind him. A breeze moves their cloaks, sea waves move in the distance. Camera gently pulls back and tilts up to follow his rise, keeping his entire helmet and computer visible. Realistic restrained human motion, natural dawn lighting, photoreal epic film. No talking, no text, no cuts.",
+        "reference": "assets/odyssey/cinematic-hero-wide.png",
+        "output": "tmp/odyssey/cinematic/lift-raw.mp4",
+        "frames": 145,
+        "fps": 24,
+        "width": 896,
+        "height": 384,
+        "seed": 92122,
+        "status": "generated",
+        "asset": "assets/odyssey/cinematic-lift.mp4",
+        "media": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "width": 896,
+              "height": 384,
+              "r_frame_rate": "24/1",
+              "nb_frames": "145"
+            }
+          ],
+          "format": {
+            "duration": "6.041667"
+          }
+        },
+        "fullDecode": "passed",
+        "renderFrameRate": 32
+      },
+      {
+        "provider": "LTX-2.3 Distilled 1.1 / MLX local",
+        "shot": "victory",
+        "prompt": "A continuous cinematic shot, continuing the reference. The same bearded Greek warrior in bronze helmet and worn armor stands holding a small silver Mac mini computer securely at his chest with both hands. The compact silver square computer stays rigid and keeps the same shape. His shoulders settle after great effort. Breathing heavily, he slowly raises his gaze toward the dawn horizon. Solemn quiet triumph, no smile. His two companions step slightly closer behind him. The wind moves their olive cloaks, the sea glistens. Camera slowly tracks closer, keeping his helmet, face and the entire computer visible. Realistic live action film motion, preserve identity and costume. No dialogue, no text, no cuts.",
+        "reference": "tmp/odyssey/cinematic/lift-last-frame.png",
+        "output": "tmp/odyssey/cinematic/victory-raw.mp4",
+        "frames": 121,
+        "fps": 24,
+        "width": 896,
+        "height": 384,
+        "seed": 92122,
+        "status": "generated",
+        "asset": "assets/odyssey/cinematic-victory.mp4",
+        "media": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "width": 896,
+              "height": 384,
+              "r_frame_rate": "24/1",
+              "nb_frames": "121"
+            }
+          ],
+          "format": {
+            "duration": "5.041667"
+          }
+        },
+        "fullDecode": "passed",
+        "renderFrameRate": 24
+      }
+    ]
+  },
+  "wideReference": {
+    "tool": "built-in imagegen",
+    "reference": "assets/odyssey/cinematic-hero-start.png",
+    "file": "assets/odyssey/cinematic-hero-wide.png",
+    "prompt": "Edit the supplied photoreal cinematic frame into an extra-wide anamorphic 2.39:1 film shot for a continuous animated movie finale. Preserve the exact bearded main character face, bronze helmet, battle-worn armor, olive cloak, realistic skin, silver Mac mini in both hands, altar, two soldiers, Greek coastal ruins and dawn lighting. Pull the camera back enough that the complete helmet with generous headroom, both shoulders, both hands, the whole computer, and the altar top are all visible within the central safe area; no cropped helmet. The protagonist remains kneeling, body tensed just before lifting the small silver Mac mini, face intensely serious with quiet exhausted determination. Expand the coastal setting on the sides naturally; render as one live-action quality image with subtle film grain and realistic photographic optics. Widescreen 2.39:1 image; no letterbox bars, no text, no collage, no graphics, no toy-like or cartoon materials. The Mac mini remains the same small compact square desktop computer, not a laptop or tablet. This is the starting frame for a dramatic rising motion, so allow space above his head."
+  }
+}

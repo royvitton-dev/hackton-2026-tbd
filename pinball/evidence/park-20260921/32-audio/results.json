@@ -1,0 +1,267 @@
+{
+  "at": "2026-09-22T01:08:41.902Z",
+  "tests": [
+    {
+      "name": "offline synthesis, headroom, independent cue palette and cleanup",
+      "status": "PASS",
+      "cues": [
+        {
+          "kind": "enable",
+          "peak": 0.052492424845695496,
+          "rms": 0.0034713827494520007,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 6
+        },
+        {
+          "kind": "mix",
+          "peak": 0.05084463208913803,
+          "rms": 0.004312484543233795,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 5
+        },
+        {
+          "kind": "countdown",
+          "peak": 0.04066724330186844,
+          "rms": 0.0014609045357315267,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 3
+        },
+        {
+          "kind": "start",
+          "peak": 0.08502572774887085,
+          "rms": 0.007633169008834584,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 9
+        },
+        {
+          "kind": "hit",
+          "peak": 0.009041182696819305,
+          "rms": 0.00038408175916859885,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 1
+        },
+        {
+          "kind": "bumper",
+          "peak": 0.025679754093289375,
+          "rms": 0.001238150335517315,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 3
+        },
+        {
+          "kind": "capture",
+          "peak": 0.026593415066599846,
+          "rms": 0.0013649621696310362,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 3
+        },
+        {
+          "kind": "launch",
+          "peak": 0.046307891607284546,
+          "rms": 0.003543743336213572,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 4
+        },
+        {
+          "kind": "release",
+          "peak": 0.0360955111682415,
+          "rms": 0.0019210238680908234,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 4
+        },
+        {
+          "kind": "swing",
+          "peak": 0.031017746776342392,
+          "rms": 0.0018399275519126717,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 4
+        },
+        {
+          "kind": "return",
+          "peak": 0.04405686631798744,
+          "rms": 0.0032174419521263874,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 8
+        },
+        {
+          "kind": "finish",
+          "peak": 0.05591582879424095,
+          "rms": 0.003166597074326522,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 4
+        },
+        {
+          "kind": "winner",
+          "peak": 0.2498871088027954,
+          "rms": 0.014431749253657372,
+          "tail": 0,
+          "active": 0,
+          "peakVoices": 30
+        }
+      ]
+    },
+    {
+      "name": "rapid enable→mute during pending resume stays silent",
+      "status": "PASS",
+      "audio": {
+        "enabled": false,
+        "state": "ready",
+        "contextState": "running",
+        "activeVoices": 0,
+        "peakVoices": 0,
+        "voiceLimit": 40,
+        "played": {}
+      }
+    },
+    {
+      "name": "desktop sound on→race→pause→winner→replay→mute",
+      "status": "PASS",
+      "audio": {
+        "enabled": true,
+        "state": "complete",
+        "contextState": "running",
+        "activeVoices": 34,
+        "peakVoices": 34,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "mix": 1,
+          "countdown": 3,
+          "start": 1,
+          "hit": 51,
+          "bumper": 7,
+          "capture": 13,
+          "release": 3,
+          "swing": 5,
+          "launch": 11,
+          "winner": 1,
+          "finish": 1
+        }
+      },
+      "errors": []
+    },
+    {
+      "name": "mobile sound on→race→pause→winner→replay→mute",
+      "status": "PASS",
+      "audio": {
+        "enabled": true,
+        "state": "complete",
+        "contextState": "running",
+        "activeVoices": 34,
+        "peakVoices": 34,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "mix": 1,
+          "countdown": 3,
+          "start": 1,
+          "hit": 34,
+          "bumper": 5,
+          "capture": 6,
+          "swing": 3,
+          "release": 4,
+          "launch": 4,
+          "winner": 1,
+          "finish": 1
+        }
+      },
+      "errors": []
+    },
+    {
+      "name": "60-ball cue burst is bounded and reset cancels scheduled fanfare",
+      "status": "PASS",
+      "burst": {
+        "enabled": true,
+        "state": "racing",
+        "contextState": "running",
+        "activeVoices": 34,
+        "peakVoices": 34,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "start": 1,
+          "hit": 1,
+          "bumper": 1,
+          "capture": 1,
+          "launch": 1,
+          "release": 1,
+          "finish": 1
+        },
+        "schedulingMs": 0.6000000089406967
+      },
+      "winner": {
+        "enabled": true,
+        "state": "racing",
+        "contextState": "running",
+        "activeVoices": 30,
+        "peakVoices": 34,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "start": 1,
+          "hit": 1,
+          "bumper": 1,
+          "capture": 1,
+          "launch": 1,
+          "release": 1,
+          "finish": 1,
+          "winner": 1
+        }
+      },
+      "reset": {
+        "enabled": true,
+        "state": "ready",
+        "contextState": "running",
+        "activeVoices": 0,
+        "peakVoices": 34,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "start": 1,
+          "hit": 1,
+          "bumper": 1,
+          "capture": 1,
+          "launch": 1,
+          "release": 1,
+          "finish": 1,
+          "winner": 1
+        }
+      },
+      "after": {
+        "enabled": true,
+        "state": "ready",
+        "contextState": "running",
+        "activeVoices": 0,
+        "peakVoices": 34,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "start": 1,
+          "hit": 1,
+          "bumper": 1,
+          "capture": 1,
+          "launch": 1,
+          "release": 1,
+          "finish": 1,
+          "winner": 1
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Audio rendered and measured; no human speaker listening assessment.",
+    "Mobile Chrome viewport emulation; not an Android/iOS device."
+  ],
+  "status": "PASS"
+}

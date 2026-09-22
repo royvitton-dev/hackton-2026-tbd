@@ -2,6 +2,7 @@ import AppKit
 import AVFoundation
 import Speech
 import Darwin
+import ApplicationServices
 
 // A private Unix socket carries the same newline-delimited protocol as stdio,
 // while allowing LaunchServices to own the app's microphone/Speech permissions.
@@ -40,7 +41,7 @@ final class RecognitionFeedback {
     private var dismissal: Timer?
     private var sound: NSSound?
 
-    func show(_ kind: String) {
+    func show(_ kind: String, detailOverride: String? = nil) {
         let title: String, message: String, symbol: String, soundName: String
         let tint: NSColor
         switch kind {
@@ -49,12 +50,21 @@ final class RecognitionFeedback {
             message = "호출어 인식 완료. 작업 내용을 말해주세요."
             symbol = "mic.fill"; soundName = "Tink"; tint = .systemBlue
         case "start":
-            title = CommandLine.arguments.contains("--target-session") ? "TBD · CLI에 전달합니다" : "TBD · 명령을 실행합니다"
-            message = "실행어 인식 완료. Codex에 전달합니다."
+            title = CommandLine.arguments.contains("--warp-focus") ? "TBD · Warp 전송 준비"
+                : CommandLine.arguments.contains("--target-session") ? "TBD · CLI에 전달합니다" : "TBD · 명령을 실행합니다"
+            message = CommandLine.arguments.contains("--warp-focus") ? "실행어 인식 완료. 포커스된 Warp 입력줄을 확인합니다." : "실행어 인식 완료. Codex에 전달합니다."
             symbol = "play.fill"; soundName = "Glass"; tint = .systemGreen
         case "empty":
             title = "TBD · 작업 내용이 필요해요"
             message = "시작어를 인식했어요. 작업 내용을 먼저 말해주세요."
+            symbol = "exclamationmark.bubble.fill"; soundName = "Pop"; tint = .systemOrange
+        case "warp-sent":
+            title = "TBD · Warp로 전달했어요"
+            message = "포커스된 CLI에서 입력과 실행 결과를 확인하세요."
+            symbol = "checkmark.circle.fill"; soundName = "Glass"; tint = .systemGreen
+        case "warp-blocked":
+            title = "TBD · Warp 전달 확인 필요"
+            message = "Warp의 CLI 입력줄을 선택하고 다시 말해주세요."
             symbol = "exclamationmark.bubble.fill"; soundName = "Pop"; tint = .systemOrange
         default: return
         }
@@ -87,7 +97,7 @@ final class RecognitionFeedback {
         heading.frame = NSRect(x: 70, y: 51, width: 310, height: 24)
         background.addSubview(heading)
         let detail = CommandLine.arguments.contains("--dry-run") && kind == "start"
-            ? "시작어 인식 완료. 연습 모드: 실제 실행하지 않습니다." : message
+            ? "시작어 인식 완료. 연습 모드: 실제 실행하지 않습니다." : detailOverride ?? message
         let body = NSTextField(wrappingLabelWithString: detail)
         body.font = .systemFont(ofSize: 12)
         body.textColor = .secondaryLabelColor
@@ -117,12 +127,13 @@ enum CaptureState: String {
     case preparing, active, finalizing, reconnecting, paused, preview, stopped
 }
 
-final class VoiceMenuBar: NSObject {
+final class VoiceMenuBar: NSObject, NSMenuDelegate {
     private let item = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     private let summary = NSMenuItem(title: "", action: nil, keyEquivalent: "")
     private let microphone = NSMenuItem(title: "", action: nil, keyEquivalent: "")
     private let level = NSMenuItem(title: "입력 음량: 입력 대기", action: nil, keyEquivalent: "")
     private let transcript = NSMenuItem(title: "최근 인식: 아직 없음", action: nil, keyEquivalent: "")
+    private let warpPermission = NSMenuItem(title: "", action: nil, keyEquivalent: "")
     private(set) var capture: CaptureState = .preparing
     private(set) var phase = "idle"
     var onQuit: (() -> Void)?
@@ -131,13 +142,23 @@ final class VoiceMenuBar: NSObject {
         super.init()
         let menu = NSMenu()
         menu.autoenablesItems = false
+        menu.delegate = self
         for entry in [summary, microphone, level, transcript] { entry.isEnabled = false; menu.addItem(entry) }
         let mode = CommandLine.arguments.contains("--feedback-only") ? "알림 시연 · 마이크 사용 안 함"
             : CommandLine.arguments.contains("--dry-run") ? "연습 · Codex 실행 안 함"
+            : CommandLine.arguments.contains("--warp-focus") ? "포커스된 Warp CLI에 입력"
             : CommandLine.arguments.contains("--target-session") ? "기존 Codex CLI 연결" : "새 Codex 작업 실행"
         let modeItem = NSMenuItem(title: "모드: \(mode)", action: nil, keyEquivalent: "")
         modeItem.isEnabled = false
         menu.addItem(modeItem)
+        if CommandLine.arguments.contains("--warp-focus") {
+            let target = NSMenuItem(title: "연결 대상: 시작어를 말할 때 포커스된 Warp 탭", action: nil, keyEquivalent: "")
+            target.isEnabled = false
+            warpPermission.isEnabled = false
+            menu.addItem(target)
+            menu.addItem(warpPermission)
+            menuWillOpen(menu)
+        }
         if let index = CommandLine.arguments.firstIndex(of: "--target-session"), index + 1 < CommandLine.arguments.count {
             let target = NSMenuItem(title: "연결 대상: \(CommandLine.arguments[index + 1])", action: nil, keyEquivalent: "")
             target.isEnabled = false
@@ -148,7 +169,7 @@ final class VoiceMenuBar: NSObject {
         hint.isEnabled = false
         menu.addItem(hint)
         menu.addItem(.separator())
-        let quitTitle = CommandLine.arguments.contains("--target-session") ? "TBD 종료 (음성 입력 종료)" : "TBD 종료 (진행 중인 작업도 중단)"
+        let quitTitle = CommandLine.arguments.contains("--target-session") || CommandLine.arguments.contains("--warp-focus") ? "TBD 종료 (음성 입력 종료)" : "TBD 종료 (진행 중인 작업도 중단)"
         let quit = NSMenuItem(title: quitTitle, action: #selector(quitRequested), keyEquivalent: "")
         quit.target = self
         menu.addItem(quit)
@@ -165,7 +186,7 @@ final class VoiceMenuBar: NSObject {
         case .stopped: return "TBD · 꺼짐"
         case .paused:
             if phase != "running" { return "TBD · 일시정지" }
-            return CommandLine.arguments.contains("--target-session") ? "TBD · 전달 중" : "TBD · 실행 중"
+            return CommandLine.arguments.contains("--target-session") || CommandLine.arguments.contains("--warp-focus") ? "TBD · 전달 중" : "TBD · 실행 중"
         case .active: return phase == "listening" ? "TBD · 명령 수집" : "TBD · 호출 대기"
         }
     }
@@ -174,6 +195,10 @@ final class VoiceMenuBar: NSObject {
         guard capture != state else { return }
         capture = state
         refresh()
+    }
+
+    func menuWillOpen(_ menu: NSMenu) {
+        warpPermission.title = AXIsProcessTrusted() ? "Warp 입력 권한: 허용됨" : "Warp 입력 권한: 손쉬운 사용 허용 필요"
     }
 
     func setPhase(_ state: String) {
@@ -186,7 +211,8 @@ final class VoiceMenuBar: NSObject {
         ["type": "status-changed", "title": Self.label(capture: capture, phase: phase),
          "capture": capture.rawValue, "phase": phase, "microphoneActive": capture == .active,
          "visible": item.isVisible, "microphoneText": microphone.title,
-         "hasQuitAction": item.menu?.items.last?.action == #selector(quitRequested)]
+         "hasQuitAction": item.menu?.items.last?.action == #selector(quitRequested),
+         "warpFocus": CommandLine.arguments.contains("--warp-focus"), "accessibility": AXIsProcessTrusted()]
     }
 
     func updateLevel(_ decibels: Double) {
@@ -219,6 +245,7 @@ final class VoiceMenuBar: NSObject {
 final class SpeechInput {
     private let status = VoiceMenuBar()
     private let feedback = RecognitionFeedback()
+    private let warp = WarpInput()
     private let recognizer = SFSpeechRecognizer(locale: Locale(identifier: "ko-KR"))
     private let engine = AVAudioEngine()
     private var request: SFSpeechAudioBufferRecognitionRequest?
@@ -317,6 +344,21 @@ final class SpeechInput {
     }
 
     func control(_ line: String) {
+        if line.hasPrefix("warp-submit:") {
+            guard let data = String(line.dropFirst("warp-submit:".count)).data(using: .utf8),
+                  let request = try? JSONSerialization.jsonObject(with: data) as? [String: Any],
+                  let id = request["id"] as? Int, let text = request["text"] as? String else { return }
+            guard CommandLine.arguments.contains("--warp-focus"), !CommandLine.arguments.contains("--dry-run") else {
+                emit(["type": "warp-delivery", "id": id, "ok": false, "message": "Warp 입력 모드가 활성화되지 않았습니다."])
+                return
+            }
+            warp.submit(text) { ok, message in
+                self.feedback.show(ok ? "warp-sent" : "warp-blocked", detailOverride: message)
+                emit(["type": "warp-delivery", "id": id, "ok": ok, "message": message, "target": "focused-warp"])
+            }
+            return
+        }
+        if line.hasPrefix("warp-cancel:") { warp.cancel(); return }
         if line.hasPrefix("state:") {
             status.setPhase(String(line.dropFirst("state:".count)))
             return
@@ -326,6 +368,7 @@ final class SpeechInput {
             return
         }
         switch line {
+        case "warp-status": emit(WarpInput.snapshot())
         case "pause": paused = true; stopSession(); status.setCapture(.paused)
         case "resume":
             guard paused else { return }
@@ -334,11 +377,12 @@ final class SpeechInput {
             else { start() }
         case "status": emit(status.snapshot())
         case "quit":
+            warp.cancel()
             paused = true
             stopSession()
             status.setCapture(.stopped)
             emit(["type": "quit-requested"])
-        case "stop": stopSession(); status.setCapture(.stopped); exit(0)
+        case "stop": warp.cancel(); stopSession(); status.setCapture(.stopped); exit(0)
         default: break
         }
     }
@@ -475,7 +519,8 @@ if CommandLine.arguments.contains("--check") {
         "onDevice": recognizer?.supportsOnDeviceRecognition ?? false,
         "speechAuthorization": SFSpeechRecognizer.authorizationStatus().rawValue,
         "microphoneAuthorization": AVCaptureDevice.authorizationStatus(for: .audio).rawValue,
-        "bundleIdentifier": Bundle.main.bundleIdentifier ?? "unknown"
+        "bundleIdentifier": Bundle.main.bundleIdentifier ?? "unknown",
+        "accessibility": AXIsProcessTrusted()
     ])
     exit(0)
 }
@@ -498,6 +543,9 @@ interrupt.setEventHandler { input.control("stop") }
 termination.setEventHandler { input.control("stop") }
 interrupt.resume()
 termination.resume()
+if CommandLine.arguments.contains("--warp-focus"), !CommandLine.arguments.contains("--feedback-only"), !CommandLine.arguments.contains("--dry-run") {
+    WarpInput.requestPermission()
+}
 if CommandLine.arguments.contains("--feedback-only") { emit(["type": "feedback-ready"]) }
 else { input.authorize() }
 app.run()

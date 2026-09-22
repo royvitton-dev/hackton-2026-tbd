@@ -1,0 +1,24 @@
+{
+  "at": "2026-09-22T02:04:22.839Z",
+  "scope": "Chrome CSS viewport and density emulation, not native Android or a Fold 7 device",
+  "tests": [
+    {
+      "width": 412,
+      "height": 890,
+      "dpr": 2.625,
+      "mode": "follow",
+      "status": "PASS",
+      "framing": {
+        "horizontal": false,
+        "visibleSpan": 520,
+        "center": 567.8039325811749,
+        "courseStartPixels": 58.774126273765276,
+        "boardWidthPixels": 342.36967242964835,
+        "canvasWidth": 412,
+        "canvasHeight": 722
+      }
+    }
+  ],
+  "status": "FAIL",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n\n1 !== 1.5\n\n    at file:///Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/fold-layout.mjs:21:89"
+}

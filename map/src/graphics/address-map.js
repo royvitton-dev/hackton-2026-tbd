@@ -1,5 +1,7 @@
-import {Map as LibreMap,Marker,NavigationControl,MercatorCoordinate} from 'maplibre-gl';
+import {Map as LibreMap,Marker,NavigationControl,MercatorCoordinate,setWorkerUrl} from 'maplibre-gl';
+import workerURL from 'maplibre-gl/dist/maplibre-gl-worker.mjs?worker&url';
 import 'maplibre-gl/dist/maplibre-gl.css';
+setWorkerUrl(workerURL);
 import * as THREE from 'three';
 import {buildingModel,buildingType,buildingTypes} from './buildings.js';
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));

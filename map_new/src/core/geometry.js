@@ -11,11 +11,14 @@ export function pointAt(path,travel) {
   let remaining=Math.max(0,travel);
   for(let i=1;i<path.points.length;i++){
     const a=path.points[i-1],b=path.points[i],length=distance(a,b);
-    if(remaining<=length&&length>0)return {x:a.x+(b.x-a.x)*remaining/length,y:(a.y||0)+((b.y||0)-(a.y||0))*remaining/length,z:a.z+(b.z-a.z)*remaining/length,heading:Math.atan2(b.x-a.x,b.z-a.z),arrived:travel>=path.distance};
+    if(remaining<=length&&length>0){
+      const t=remaining/length,geared=Number.isFinite(a.heading)&&Number.isFinite(b.heading)&&a.gear!==undefined;
+      return {x:a.x+(b.x-a.x)*t,y:(a.y||0)+((b.y||0)-(a.y||0))*t,z:a.z+(b.z-a.z)*t,heading:geared?a.heading+Math.atan2(Math.sin(b.heading-a.heading),Math.cos(b.heading-a.heading))*t:Math.atan2(b.x-a.x,b.z-a.z),pitch:Math.atan2((b.y||0)-(a.y||0),Math.hypot(b.x-a.x,b.z-a.z))*(a.gear||1),...(a.gear!==undefined?{gear:a.gear}:{}),arrived:travel>=path.distance};
+    }
     remaining-=length;
   }
   const a=path.points.at(-2)||path.points.at(-1),b=path.points.at(-1);
-  return {...b,y:b.y||0,heading:Math.atan2(b.x-a.x,b.z-a.z),arrived:true};
+  return {...b,y:b.y||0,heading:b.gear!==undefined&&Number.isFinite(b.heading)?b.heading:Math.atan2(b.x-a.x,b.z-a.z),pitch:Math.atan2((b.y||0)-(a.y||0),Math.hypot(b.x-a.x,b.z-a.z))*(a.gear||1),arrived:true};
 }
 export function localPosition(coordinate,anchor) {
   if(![coordinate.lat,coordinate.lng,anchor.lat,anchor.lng].every(Number.isFinite)||Math.abs(anchor.lat)>=85)throw Error('유효한 WGS84 좌표가 필요합니다.');

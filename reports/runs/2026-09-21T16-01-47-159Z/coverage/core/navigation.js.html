@@ -1,0 +1,433 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/navigation.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">core</a> navigation.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">99.39% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>164/165</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">99.41% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>169/170</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>34/34</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>81/81</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-yes">42x</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">74276x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">91323x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">320x</span>
+<span class="cline-any cline-yes">320x</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-yes">78x</span>
+<span class="cline-any cline-yes">75x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">317x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">124x</span>
+<span class="cline-any cline-yes">124x</span>
+<span class="cline-any cline-yes">123x</span>
+<span class="cline-any cline-yes">123x</span>
+<span class="cline-any cline-yes">123x</span>
+<span class="cline-any cline-yes">90x</span>
+<span class="cline-any cline-yes">88x</span>
+<span class="cline-any cline-yes">88x</span>
+<span class="cline-any cline-yes">86x</span>
+<span class="cline-any cline-yes">124x</span>
+<span class="cline-any cline-yes">124x</span>
+<span class="cline-any cline-yes">2896x</span>
+<span class="cline-any cline-yes">124x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10156x</span>
+<span class="cline-any cline-yes">60936x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">20254x</span>
+<span class="cline-any cline-yes">20254x</span>
+<span class="cline-any cline-yes">20254x</span>
+<span class="cline-any cline-yes">71020x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">365x</span>
+<span class="cline-any cline-yes">29x</span>
+<span class="cline-any cline-yes">22x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">1192x</span>
+<span class="cline-any cline-yes">240x</span>
+<span class="cline-any cline-yes">240x</span>
+<span class="cline-any cline-yes">228x</span>
+<span class="cline-any cline-yes">3616x</span>
+<span class="cline-any cline-yes">3616x</span>
+<span class="cline-any cline-yes">320x</span>
+<span class="cline-any cline-yes">320x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">317x</span>
+<span class="cline-any cline-yes">17493x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">316x</span>
+<span class="cline-any cline-yes">118x</span>
+<span class="cline-any cline-yes">891x</span>
+<span class="cline-any cline-yes">2863x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3616x</span>
+<span class="cline-any cline-yes">3616x</span>
+<span class="cline-any cline-yes">249x</span>
+<span class="cline-any cline-yes">249x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">248x</span>
+<span class="cline-any cline-yes">56x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">46x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">91x</span>
+<span class="cline-any cline-yes">97x</span>
+<span class="cline-any cline-yes">6x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">76x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">32x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">105x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import {distance,project,pointAt} from './geometry.js';
+import {validatePlan} from './analysis.js';
+export {pointAt};
+export const DEFAULT_VEHICLE=Object.freeze({width:1.9,length:4.6,height:1.8,turnRadius:5.2,speed:3.5,clearance:.2});
+function settings(options){
+  const o={mode:'car',hazards:[],blocked:[],...options,vehicle:{...DEFAULT_VEHICLE,...options.vehicle}};
+  if(!['car','person'].includes(o.mode)||Object.values(o.vehicle).some(n=&gt;!Number.isFinite(n)||n&lt;=0)||!Array.isArray(o.hazards)||o.hazards.some(h=&gt;![h.x,h.z,h.radius,h.y??0].every(Number.isFinite)||h.radius&lt;0))throw Error('이동 모드·차량 제원·위험 위치를 확인하세요.');
+  return o;
+}
+function allowed(edge,o){
+  return edge.modes.includes(o.mode)&amp;&amp;!o.blocked.includes(edge.id)&amp;&amp;edge.width&gt;=(o.mode==='car'?o.vehicle.width+2*o.vehicle.clearance:.8)&amp;&amp;!(o.mode==='car'&amp;&amp;(['stairs','elevator'].includes(edge.kind)||(edge.height??Infinity)&lt;o.vehicle.height))&amp;&amp;!(o.hazards.length&amp;&amp;edge.kind==='elevator');
+}
+function dangerous(p,o,margin=0){
+  return o.hazards.some(h=&gt;Math.abs((p.y||0)-(h.y||0))&lt;=(h.verticalRadius??2)&amp;&amp;Math.hypot(p.x-h.x,p.z-h.z)&lt;=h.radius+margin);
+}
+function edgeRisk(a,b,o){
+  let risk=1;
+  for(const h of o.hazards){
+    const q=project({...h,y:h.y||0},a,b),gap=Math.hypot(q.x-h.x,q.z-h.z),margin=o.mode==='car'?o.vehicle.width/2:.35;
+    if(Math.abs(q.y-(h.y||0))&gt;(h.verticalRadius??2))continue;
+    if(gap&lt;=h.radius+margin)return Infinity;
+    risk+=Math.max(0,1-(gap-h.radius-margin)/8)*4;
+  }
+  return risk;
+}
+// Circular fillets enforce curvature. Each search state carries the tangent
+// consumed by its preceding turn so adjacent arcs cannot overlap.
+export function turn(a,b,c,radius,usedTangent=0){
+  const incoming=distance(a,b),outgoing=distance(b,c);
+  if(!incoming||!outgoing)return null;
+  const u={x:(b.x-a.x)/incoming,z:(b.z-a.z)/incoming},v={x:(c.x-b.x)/outgoing,z:(c.z-b.z)/outgoing};
+  const angle=Math.acos(Math.max(-1,Math.min(1,u.x*v.x+u.z*v.z)));
+  if(angle&lt;.005)return {points:[],tangent:0,angle:0};
+  if(Math.abs((a.y||0)-(b.y||0))&gt;.01||Math.abs((b.y||0)-(c.y||0))&gt;.01||angle&gt;Math.PI-.05)return null;
+  const tangent=radius*Math.tan(angle/2);
+  if(tangent&gt;incoming-usedTangent||tangent&gt;outgoing)return null;
+  const sign=Math.sign(u.x*v.z-u.z*v.x),start={x:b.x-u.x*tangent,y:b.y||0,z:b.z-u.z*tangent};
+  const center={x:start.x-u.z*sign*radius,z:start.z+u.x*sign*radius},startAngle=Math.atan2(start.z-center.z,start.x-center.x);
+  const count=Math.max(6,Math.ceil(radius*angle/.25));
+  const points=Array.from({length:count+1},(_,i)=&gt;{const t=startAngle+sign*angle*i/count;return {x:center.x+Math.cos(t)*radius,y:b.y||0,z:center.z+Math.sin(t)*radius,heading:Math.atan2(-Math.sin(t)*sign,Math.cos(t)*sign)};});
+  return {points,tangent,angle};
+}
+function corners(p,v){
+  const sin=Math.sin(p.heading),cos=Math.cos(p.heading),halfW=v.width/2+v.clearance,halfL=v.length/2+v.clearance;
+  return [-1,1].flatMap(side=&gt;[-1,0,1].map(end=&gt;({x:p.x+cos*halfW*side+sin*halfL*end,y:p.y||0,z:p.z-sin*halfW*side+cos*halfL*end})));
+}
+function sweptClear(p,plan,nodeMap,o,edges=plan.edges){
+  const footprint=o.mode==='car'?corners(p,o.vehicle):[p];
+  const radius=o.mode==='car'?o.vehicle.width/2:.35;
+  if(dangerous(p,o,radius))return false;
+  return footprint.every(q=&gt;!dangerous(q,o,o.mode==='person'?.35:0)&amp;&amp;edges.some(e=&gt;allowed(e,o)&amp;&amp;project(q,nodeMap.get(e.from),nodeMap.get(e.to)).distance&lt;=e.width/2)&amp;&amp;!plan.walls.some(w=&gt;Math.abs((w.y||0)-(q.y||0))&lt;2&amp;&amp;project(q,{x:w.x1,y:q.y,z:w.z1},{x:w.x2,y:q.y,z:w.z2}).distance&lt;=w.thickness/2));
+}
+export function route(plan,startId,endId,options={}){
+  validatePlan(plan);const o=settings(options),nodes=new Map(plan.nodes.map(n=&gt;[n.id,n]));
+  if(!nodes.has(startId)||!nodes.has(endId)||dangerous(nodes.get(startId),o)||dangerous(nodes.get(endId),o))return null;
+  if(startId===endId)return {ids:[startId],edges:[],points:[nodes.get(startId)],distance:0,seconds:0,cost:0,destination:nodes.get(endId),mode:o.mode};
+  const start={id:startId,previous:null,via:null,cost:0,key:JSON.stringify([null,startId])},open=[start],best=new Map([[start.key,0]]),came=new Map();let finish;
+  while(open.length){
+    open.sort((a,b)=&gt;b.cost-a.cost);const current=open.pop();
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(current.cost!==best.get(current.key))<span class="cstat-no" title="statement not covered" >continue;</span>
+    if(current.id===endId){finish=current;break;}
+    for(const e of plan.edges){
+      const next=e.from===current.id?e.to:e.to===current.id&amp;&amp;(!e.oneWay||o.mode==='person')?e.from:null;
+      if(!next||next===current.previous||!allowed(e,o))continue;
+      const a=nodes.get(current.id),b=nodes.get(next),risk=edgeRisk(a,b,o);
+      if(!Number.isFinite(risk))continue;
+      // Even a declared graph edge cannot pass through a wall in the drawing.
+      const count=Math.ceil(distance(a,b)/.4);
+      if(Array.from({length:count+1},(_,i)=&gt;({x:a.x+(b.x-a.x)*i/count,y:(a.y||0)+((b.y||0)-(a.y||0))*i/count,z:a.z+(b.z-a.z)*i/count,heading:Math.atan2(b.x-a.x,b.z-a.z)})).some(p=&gt;!sweptClear(p,plan,nodes,o,[e])))continue;
+      let bend;
+      if(o.mode==='car'&amp;&amp;current.previous){
+        bend=turn(nodes.get(current.previous),a,b,o.vehicle.turnRadius,current.bend?.tangent||0);
+        const incoming=plan.edges.find(x=&gt;x.id===current.via);
+        if(!bend||bend.points.some(p=&gt;!sweptClear(p,plan,nodes,o,[incoming,e])))continue;
+      }
+      const key=JSON.stringify([current.id,next,e.id,bend?.tangent||0]),cost=current.cost+distance(a,b)*risk;
+      if(cost&gt;=(best.get(key)??Infinity))continue;
+      const state={id:next,previous:current.id,via:e.id,cost,key,bend};
+      best.set(key,cost);came.set(key,current);open.push(state);
+    }
+  }
+  if(!finish)return null;
+  const states=[finish];while(states[0].key!==start.key)states.unshift(came.get(states[0].key));
+  const points=[nodes.get(startId)];
+  for(let i=1;i&lt;states.length-1;i++){
+    const bend=states[i+1].bend;
+    if(bend?.points.length)points.push(...bend.points);else points.push(nodes.get(states[i].id));
+  }
+  points.push(nodes.get(endId));
+  const length=points.slice(1).reduce((sum,p,i)=&gt;sum+distance(points[i],p),0);
+  return {ids:states.map(s=&gt;s.id),edges:states.slice(1).map(s=&gt;s.via),points,distance:length,cost:finish.cost,seconds:length/(o.mode==='car'?o.vehicle.speed:options.walkSpeed||1.3),destination:nodes.get(endId),mode:o.mode,objective:'minimum-risk-weighted-graph-distance'};
+}
+export function evacuation(plan,startId,options={}){
+  return plan.nodes.filter(n=&gt;['shelter','exit'].includes(n.kind)&amp;&amp;n.safe===true).map(n=&gt;route(plan,startId,n.id,{...options,mode:'person'})).filter(Boolean).sort((a,b)=&gt;a.cost-b.cost)[0]||null;
+}
+export function attachPosition(plan,position,options={}){
+  const o=settings(options),nodes=new Map(plan.nodes.map(n=&gt;[n.id,n]));let best;
+  for(const e of plan.edges){if(!allowed(e,o))continue;const p=project(position,nodes.get(e.from),nodes.get(e.to));if(p.distance&lt;=e.width/2&amp;&amp;(!best||p.distance&lt;best.p.distance))best={e,p};}
+  if(!best)return null;
+  const {e,p}=best,id='@position';
+  if(plan.nodes.some(n=&gt;n.id===id))throw Error('현재 위치 식별자가 이미 사용 중입니다.');
+  if(distance(position,nodes.get(e.from))&lt;.01)return {plan,startId:e.from};
+  if(distance(position,nodes.get(e.to))&lt;.01)return {plan,startId:e.to};
+  // Preserve actual location, avoid accidentally bridging adjacent unconnected lanes.
+  const node={...position,y:position.y||0,id,kind:'position',zone:nodes.get(e.from).zone};
+  return {plan:{...plan,nodes:[...plan.nodes,node],edges:[...plan.edges.filter(x=&gt;x!==e),{...e,id:e.id+':a',to:id},{...e,id:e.id+':b',from:id}]},startId:id,projection:p};
+}
+export function moveAgent(plan,pose,input,delta,options={}){
+  const o=settings(options),nodes=new Map(plan.nodes.map(n=&gt;[n.id,n]));
+  if(!Number.isFinite(delta)||delta&lt;0||![input.forward,input.turn].every(Number.isFinite))throw Error('이동 입력이 올바르지 않습니다.');
+  const dt=Math.min(delta,.1),forward=Math.max(-1,Math.min(1,input.forward)),steer=Math.max(-1,Math.min(1,input.turn)),speed=o.mode==='car'?o.vehicle.speed:1.3;
+  const step=forward*speed*dt;
+  const yaw=o.mode==='car'?step/o.vehicle.turnRadius*steer:steer*2*dt;
+  const next={...pose,heading:pose.heading+yaw,x:pose.x+Math.sin(pose.heading+yaw/2)*step,z:pose.z+Math.cos(pose.heading+yaw/2)*step};
+  return sweptClear(next,plan,nodes,o)?next:pose;
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-21T16:01:48.326Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    

@@ -1,0 +1,67 @@
+{
+  "id": "dopamin",
+  "capturedAt": "2026-09-21T17:50:46.181Z",
+  "source": "actual running application",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "before": "00:00.6",
+  "recordedSeconds": 18,
+  "after": "00:10.3",
+  "podium": {
+    "backdrop": "step-and-repeat",
+    "ready": "true",
+    "trophy": "raised",
+    "winner": "demo-1",
+    "time": "6.18"
+  },
+  "ranks": [
+    {
+      "rank": 2,
+      "name": "라떼러버"
+    },
+    {
+      "rank": 1,
+      "name": "김커피"
+    },
+    {
+      "rank": 3,
+      "name": "샷추가"
+    }
+  ],
+  "coffee": {
+    "ready": "true",
+    "barista": "demo-4",
+    "guests": "demo-1,demo-2,demo-3",
+    "phase": "pour",
+    "served": "2",
+    "time": "7.17"
+  },
+  "segments": [
+    {
+      "id": "race",
+      "name": "레이싱",
+      "start": 0,
+      "end": 6
+    },
+    {
+      "id": "podium",
+      "name": "우승 시상식",
+      "start": 6,
+      "end": 11
+    },
+    {
+      "id": "coffee",
+      "name": "커피차",
+      "start": 11,
+      "end": 18
+    }
+  ],
+  "features": [
+    "자동 레이싱과 실시간 순위",
+    "우승 시상식과 트로피",
+    "커피차에서 커피 나누기"
+  ],
+  "browserErrors": []
+}

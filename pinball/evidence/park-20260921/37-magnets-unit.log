@@ -1,0 +1,14 @@
+✔ magnet and cannon capture at physical position for magnet 0.5–2s and cannon 0.5–1s; pause freezes pose and ball (129.25075ms)
+✔ each device stores multiple incoming balls with independent randomized release times (21.158583ms)
+✔ cannon boost cannot tunnel through a pin or boundary (3.380375ms)
+✔ device capture, timing and launch are deterministic and varied across seeds (2.261ms)
+✔ cannons complete a full revolution every 0.4 physical seconds in either direction (0.425833ms)
+✔ all five maps use 0.5–2s magnets and preserve cannon ranges; long holds actually release (131.612958ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 356.69875

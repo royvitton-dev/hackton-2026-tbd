@@ -9,6 +9,8 @@
   "scripts": {
     "dev": "node park/server.mjs",
     "build": "node scripts/build-unified.mjs",
+    "build:sites": "node scripts/build-sites.mjs",
+    "preview:sites": "node scripts/preview-sites.mjs",
     "start": "node park/server.mjs --production",
     "demo": "node scripts/serve-vehicle-demo.mjs",
     "lint": "eslint src scripts tests",
@@ -37,6 +39,7 @@
     "vehicle:dev": "next dev",
     "vehicle:build": "next build --webpack",
     "vehicle:start": "next start",
+    "pages:build": "node scripts/build-github-pages.mjs",
     "server:test": "vitest run --coverage --config park/vitest.router.config.mjs",
     "server:test:e2e": "playwright test --config park/playwright.router.config.mjs",
     "server:reports": "node park/scripts/report-router.mjs"

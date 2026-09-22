@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <script type="module" src="/park/@vite/client"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f2eb" />
+    <meta name="description" content="프로젝트가 어트랙션이 되는 작은 세계. TBD Wonder Park의 3D 테마파크 관제실." />
+    <title>TBD Wonder Park — A little world of possibilities</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='12' fill='%23243830'/%3E%3Cpath d='M8 31V17l5-8 5 8v5h4V12l4-7 4 7v19Z' fill='%23e8c88f'/%3E%3C/svg%3E" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- ATLAS parking quality dashboard: current results are refreshed without replacing Wonder Park. -->
+    <details id="parking-quality"><summary>ATLAS 주차 · 최신 검증</summary><p id="parking-quality-summary">검증 기록을 확인합니다.</p><a href="/map_new/">3D 주차장 열기 ↗</a><a href="/reports/map_new/" target="_blank" rel="noopener">회차별 보고서 ↗</a></details>
+    <script type="module" src="/park/park/src/main.js"></script>
+    <script type="module" src="/park/map_new/src/park-dashboard.js"></script>
+  </body>
+</html>

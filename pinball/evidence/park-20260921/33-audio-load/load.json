@@ -1,0 +1,65 @@
+{
+  "at": "2026-09-22T01:25:12.567Z",
+  "scope": "8-second live racing sample, 60 balls, parade, 3x, audio enabled; mobile is Chrome viewport emulation",
+  "tests": [
+    {
+      "device": "desktop",
+      "status": "PASS",
+      "samples": 481,
+      "averageJsMs": 4.59147609153805,
+      "averageFps": 59.87800323664882,
+      "audio": {
+        "enabled": true,
+        "state": "racing",
+        "contextState": "running",
+        "activeVoices": 17,
+        "peakVoices": 23,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "mix": 1,
+          "countdown": 3,
+          "start": 1,
+          "hit": 73,
+          "bumper": 35,
+          "capture": 29,
+          "release": 13,
+          "launch": 29,
+          "swing": 5,
+          "finish": 16
+        }
+      },
+      "errors": []
+    },
+    {
+      "device": "mobile",
+      "status": "PASS",
+      "samples": 482,
+      "averageJsMs": 4.393775933943844,
+      "averageFps": 60.002489729864315,
+      "audio": {
+        "enabled": true,
+        "state": "racing",
+        "contextState": "running",
+        "activeVoices": 12,
+        "peakVoices": 25,
+        "voiceLimit": 40,
+        "played": {
+          "enable": 1,
+          "mix": 1,
+          "countdown": 3,
+          "start": 1,
+          "hit": 73,
+          "bumper": 32,
+          "capture": 29,
+          "release": 10,
+          "swing": 6,
+          "launch": 28,
+          "finish": 17
+        }
+      },
+      "errors": []
+    }
+  ],
+  "status": "PASS"
+}

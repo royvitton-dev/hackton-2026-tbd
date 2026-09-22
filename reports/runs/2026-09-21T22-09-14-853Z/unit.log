@@ -1,0 +1,59 @@
+
+ RUN  v4.1.11 /private/tmp/atlas-parking-publish/map_new
+      Coverage enabled with v8
+
+ ✓ tests/unit/radio-charging.test.js (12 tests) 69ms
+ ✓ tests/unit/navigation.test.js (10 tests) 181ms
+ ✓ tests/unit/raster-evidence.test.js (4 tests) 259ms
+ ✓ tests/unit/analysis.test.js (6 tests) 253ms
+ ✓ tests/unit/dongtan.test.js (3 tests) 299ms
+ ✓ tests/unit/layers.test.js (5 tests) 21ms
+ ✓ tests/unit/camera.test.js (3 tests) 8ms
+ ✓ tests/unit/ramps.test.js (6 tests) 404ms
+ ✓ tests/unit/daecheon.test.js (4 tests) 1084ms
+   ✓ routes from the source entrance to all 50 reviewed ordinary bays while protecting accessible bays  1011ms
+ ✓ tests/unit/detect-parking.test.js (7 tests) 1375ms
+   ✓ detects perpendicular rows at physical scale and deduplicates contrast passes  400ms
+   ✓ requires repeated stems and an end line; handles pale and transparent pixels  424ms
+ ✓ tests/unit/parking.test.js (6 tests) 4944ms
+   ✓ reaches a real source bay from the OSM road with a compact vehicle and a continuous radius-constrained maneuver  1807ms
+   ✓ rejects the complete maneuver if a bay obstacle or fire blocks its final position  2488ms
+   ✓ handles the same lane and bay geometry rotated by ninety degrees  595ms
+ ✓ tests/unit/maneuver.test.js (6 tests) 30096ms
+   ✓ supports forward-only and automatic choices while preserving bay restrictions  1006ms
+   ✓ does not force a maneuver through a bay obstruction or a blocked approach  16219ms
+
+ Test Files  12 passed (12)
+      Tests  72 passed (72)
+   Start at  07:09:27
+   Duration  30.47s (transform 425ms, setup 0ms, import 789ms, tests 38.99s, environment 1ms)
+
+JSON report written to /private/tmp/atlas-parking-publish/map_new/reports/unit.json
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   98.47 |    96.26 |     100 |     100 |                   
+ core              |   98.43 |    96.33 |     100 |     100 |                   
+  analysis.js      |   98.11 |    96.13 |     100 |     100 | 17,61,64-74,89    
+  charging.js      |     100 |    98.78 |     100 |     100 | 23                
+  ...ct-parking.js |     100 |    99.14 |     100 |     100 | 20                
+  geometry.js      |     100 |    98.41 |     100 |     100 | 20                
+  georeference.js  |   97.61 |    93.33 |     100 |     100 | 15                
+  layers.js        |     100 |    90.24 |     100 |     100 | 6-8,19,29         
+  maneuver.js      |    97.5 |    92.68 |     100 |     100 | ...11,118-123,130 
+  navigation.js    |   97.11 |    96.42 |     100 |     100 | ...01,148-149,155 
+  parking.js       |   98.02 |    95.57 |     100 |     100 | 12-17,45-47,95    
+  playback.js      |     100 |    91.66 |     100 |     100 | 7,12,21           
+  radio.js         |     100 |    99.25 |     100 |     100 | 51                
+  ...r-evidence.js |   98.36 |    97.05 |     100 |     100 | 7,13              
+ vendor            |      99 |    95.56 |     100 |     100 |                   
+  analysis-v1.js   |      99 |    95.56 |     100 |     100 | 3,5,9,13,55-60,83 
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 98.47% ( 1484/1507 )
+Branches     : 96.26% ( 1493/1551 )
+Functions    : 100% ( 226/226 )
+Lines        : 100% ( 666/666 )
+================================================================================

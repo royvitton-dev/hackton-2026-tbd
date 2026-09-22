@@ -1,0 +1,16 @@
+✔ Candy lower cannon has at least two ball diameters between its funnel and nearby bumpers (0.477208ms)
+✔ Cloud has four cannons; both lower funnels are clear of static pins, bumpers and magnet poles (0.215792ms)
+✔ Changed courses complete real seeded races at 5, 20 and 60 balls with unique physical arrivals (36866.71675ms)
+✔ magnet and cannon capture at physical position for 0.5–1 seconds; pause freezes pose and ball (179.648042ms)
+✔ each device stores multiple incoming balls with independent randomized release times (10.329708ms)
+✔ cannon boost cannot tunnel through a pin or boundary (4.012167ms)
+✔ device capture, timing and launch are deterministic and varied across seeds (2.0825ms)
+✔ cannons complete a full revolution every 0.4 physical seconds in either direction (0.290041ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 36920.323583

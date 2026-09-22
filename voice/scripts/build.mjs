@@ -12,9 +12,10 @@ await mkdir(join(contents, 'MacOS'), { recursive: true });
 await mkdir(join(build, 'module-cache'), { recursive: true });
 const plist = join(root, 'native/Info.plist');
 await copyFile(plist, join(contents, 'Info.plist'));
+await copyFile(join(root, 'native/Speech.swift'), join(build, 'main.swift'));
 for (const [cmd, args] of [
   ['swiftc', ['-swift-version', '5', '-O', '-module-cache-path', join(build, 'module-cache'),
-    join(root, 'native/Speech.swift'), '-o', join(contents, 'MacOS/tbd-speech'),
+    join(build, 'main.swift'), join(root, 'native/WarpInput.swift'), '-o', join(contents, 'MacOS/tbd-speech'),
     '-Xlinker', '-sectcreate', '-Xlinker', '__TEXT', '-Xlinker', '__info_plist', '-Xlinker', plist]],
   ['/usr/bin/codesign', ['--force', '--sign', '-', '--identifier', 'local.tbd.voice.speech', bundle]],
   ['/usr/bin/codesign', ['--verify', '--strict', bundle]],

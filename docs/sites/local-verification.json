@@ -1,0 +1,166 @@
+{
+  "baseURL": "http://127.0.0.1:15398",
+  "checkedAt": "2026-09-22T00:28:55.455Z",
+  "results": [
+    {
+      "id": "directory",
+      "route": "/projects/",
+      "status": "passed",
+      "details": "11 project links and mobile layout",
+      "startedAt": "2026-09-21T23:43:59.211Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "park",
+      "route": "/park/?capture=1",
+      "status": "passed",
+      "details": "WebGL park, 8 attractions, launch API and entry button",
+      "startedAt": "2026-09-22T00:28:21.080Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "map",
+      "route": "/map/?workspace=source-drive",
+      "status": "passed",
+      "details": "3D B2 parking drawing",
+      "startedAt": "2026-09-21T23:47:39.658Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "mobility",
+      "route": "/map/mobility.html",
+      "status": "passed",
+      "details": "Mobility routes and source drawing",
+      "startedAt": "2026-09-21T23:44:42.215Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "parking",
+      "route": "/map_new/",
+      "status": "passed",
+      "details": {
+        "selected": "parking-131601-0"
+      },
+      "startedAt": "2026-09-21T23:47:59.875Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "address",
+      "route": "/map_new/?view=address&site=20000441-0",
+      "status": "passed",
+      "details": "Address building model and photo textures",
+      "startedAt": "2026-09-21T23:44:46.000Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "racing",
+      "route": "/dopamin/",
+      "status": "passed",
+      "details": "WebGL race lobby and player registration",
+      "startedAt": "2026-09-21T23:44:49.014Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "pinball",
+      "route": "/pinball/",
+      "status": "passed",
+      "details": "Game start and pause",
+      "startedAt": "2026-09-22T00:28:42.209Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "board",
+      "route": "/webpage/",
+      "status": "passed",
+      "details": "3D board and character images",
+      "startedAt": "2026-09-21T23:45:02.655Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "health",
+      "route": "/webpage/health/",
+      "status": "passed",
+      "details": "Health dashboard and direct reload",
+      "startedAt": "2026-09-21T23:45:06.468Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "battery",
+      "route": "/battery_health/?user=U0037",
+      "status": "passed",
+      "details": "Real 3D vehicle, charging history, 11 API sessions, reload",
+      "startedAt": "2026-09-21T23:45:09.969Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "film",
+      "route": "/movie/",
+      "status": "passed",
+      "details": "Actual playback, seeking, and cross-segment Range",
+      "startedAt": "2026-09-22T00:28:51.407Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "tour-film",
+      "route": "/movie/?film=attractions",
+      "status": "passed",
+      "details": "Actual playback, seeking, and cross-segment Range",
+      "startedAt": "2026-09-22T00:28:53.018Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "trailer",
+      "route": "/movie/assets/odyssey/",
+      "status": "passed",
+      "details": "Actual playback, seeking, and cross-segment Range",
+      "startedAt": "2026-09-22T00:28:54.287Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "voice",
+      "route": "/voice/",
+      "status": "passed",
+      "details": "macOS native CLI usage guide (browser microphone execution is not part of this attraction)",
+      "startedAt": "2026-09-21T23:45:26.867Z",
+      "errors": [],
+      "failedResponses": []
+    },
+    {
+      "id": "trading",
+      "route": "/trading/",
+      "status": "failed",
+      "message": "expect(received).toBe(expected) // Object.is equality\n\nExpected: 200\nReceived: 503",
+      "startedAt": "2026-09-21T23:45:27.139Z",
+      "errors": [],
+      "failedResponses": [
+        {
+          "url": "http://127.0.0.1:15398/trading/backend/api/state",
+          "status": 503
+        },
+        {
+          "url": "http://127.0.0.1:15398/trading/backend/api/sessions",
+          "status": 503
+        },
+        {
+          "url": "http://127.0.0.1:15398/trading/backend/api/bots",
+          "status": 503
+        }
+      ]
+    }
+  ],
+  "scope": "Local browser verification of the Sites build. Remote verification is recorded separately."
+}

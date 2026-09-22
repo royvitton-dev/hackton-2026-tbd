@@ -1,0 +1,19 @@
+{
+  "at": "2026-09-22T01:10:57.381928+00:00",
+  "change": "Original amusement park sound palette, 13 cues",
+  "assetsMatchDist": 23,
+  "mac": "PASS build, ad-hoc signature, ZIP CRC and exact assets",
+  "macFirstAttempt": "FAIL iconutil Invalid Iconset in restricted environment; same build succeeded with normal macOS access",
+  "android": "PASS build, v2/v3 signature and exact assets",
+  "nativeDeviceExecution": "NOT RUN for refreshed packages; no Android emulator/device available",
+  "files": {
+    "DROP-LAND-macOS-arm64.zip": {
+      "bytes": 39894681,
+      "sha256": "c1b96369ab98e54ee98a631e9cf6834e313ac0878d121b3e0e7b683daa5d390a"
+    },
+    "DROP-LAND-Android.apk": {
+      "bytes": 493720,
+      "sha256": "c832923f38fb442475b92d8ac90ab8aa39005a578d0d84522be9838c35cf61ce"
+    }
+  }
+}

@@ -2,6 +2,7 @@ import {readFile,writeFile,mkdir,copyFile,stat} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
+import {applySourceUpgrades} from './source-upgrades.mjs';
 const root=fileURLToPath(new URL('../',import.meta.url)),previous=path.resolve(root,'../map/public');
 export const hash=bytes=>createHash('sha256').update(bytes).digest('hex');
 const catalog=JSON.parse(await readFile(path.join(previous,'plans/catalog.json'))),locations=JSON.parse(await readFile(path.join(previous,'plans/locations.json')));
@@ -18,7 +19,7 @@ for(const site of ordered){
     const file=`sources/${id}-${i}${path.extname(a.file)}`;
     await writeFile(path.join(root,'public',file),bytes);
     const floor=a.floor||a.label?.match(/지하\s*(\d)층/)?.[1]&&`B${a.label.match(/지하\s*(\d)층/)[1]}`||a.label?.match(/지상\s*(\d)층/)?.[1]&&`${a.label.match(/지상\s*(\d)층/)[1]}F`;
-    output.push({id:`${id}-${i}`,siteId:id,name:site.name+(floor?` · ${floor}`:site.assets.length>1?` · 도면 ${i+1}`:''),address:site.address,acquiredAt:site.acquiredAt,buildingType:typeOf(site),source:site.source,publisher:site.publisher,sourceAsset:{...a,file,bytes:bytes.length,...(floor?{floor}:{})},location:locations[id]||null,parkingEvidence:site.parkingEvidence||null,scaleStatus:'estimated',metersAcross:id==='multilevel-dogok'?90:id==='parking-168780'?100:id==='parking-131601'?70:40});
+    output.push({id:`${id}-${i}`,siteId:id,name:site.name+(floor?` · ${floor}`:site.assets.length>1?` · 도면 ${i+1}`:''),address:site.address,acquiredAt:site.acquiredAt,buildingType:typeOf(site),source:site.source,publisher:site.publisher,sourceAsset:{...a,file,bytes:bytes.length,...(floor?{floor}:{})},location:locations[id]||null,parkingEvidence:site.parkingEvidence||null,scaleStatus:'estimated',metersAcross:id==='multilevel-dogok'?90:id==='parking-168780'?905*8.75/64:id==='parking-131601'?70:40});
   }
 }
 for(const name of ['changdong-parking-b2.png','changdong-parking-annotated.svg','changdong-parking-source.pdf'])await copyFile(path.join(previous,'plans',name),path.join(root,'public/sources',name));
@@ -49,5 +50,6 @@ for(const extra of ['parks-catalog.json','precise-locations.json']){
   let data;try{data=JSON.parse(await readFile(path.join(root,'public/sources',extra)));}catch(error){if(error.code==='ENOENT')continue;throw error;}
   if(extra==='parks-catalog.json')output.push(...data);else for(const site of output)if(data[site.siteId])site.location={...data[site.siteId],independentCheck:site.location};
 }
+await applySourceUpgrades(output,path.join(root,'public'));
 await writeFile(path.join(root,'public/sources/catalog.json'),JSON.stringify(output,null,2)+'\n');
 console.log(`Verified ${output.length} source drawings and 1 exterior photograph in map_new/`);

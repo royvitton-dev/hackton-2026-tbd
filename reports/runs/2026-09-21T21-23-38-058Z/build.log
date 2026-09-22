@@ -1,0 +1,34 @@
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 37 modules transformed.
+rendering chunks...
+computing gzip size...
+../.server-dist/map_new/index.html                                              0.72 kB │ gzip:   0.50 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-400-normal-BtiwyxMk.woff2      7.36 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-600-normal-4vooXBpG.woff2      7.42 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-500-normal-BJfUCQsA.woff2      7.43 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-400-normal-BjWJ59Pq.woff       9.98 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-600-normal-DRtaDpgU.woff      10.02 kB
+../.server-dist/map_new/assets/dm-sans-latin-ext-500-normal-DR84L5F-.woff      10.07 kB
+../.server-dist/map_new/assets/dm-sans-latin-600-normal-Aqo67rzb.woff2         14.14 kB
+../.server-dist/map_new/assets/dm-sans-latin-400-normal-CW0RaeGs.woff2         14.20 kB
+../.server-dist/map_new/assets/dm-sans-latin-500-normal-B9HHJjqV.woff2         14.30 kB
+../.server-dist/map_new/assets/dm-sans-latin-600-normal-BmdmIIQ2.woff          18.32 kB
+../.server-dist/map_new/assets/dm-sans-latin-400-normal-BwCSEQnW.woff          18.36 kB
+../.server-dist/map_new/assets/dm-sans-latin-500-normal-Dr3UlScf.woff          18.52 kB
+../.server-dist/map_new/assets/pdf.worker.min-Dswkl-cV.mjs                  1,265.41 kB
+../.server-dist/map_new/assets/app-Dg_sE7AA.css                                10.38 kB │ gzip:   2.90 kB
+../.server-dist/map_new/assets/main-DA9071en.css                               22.50 kB │ gzip:   5.67 kB
+../.server-dist/map_new/assets/preload-helper-Bptf6dDn.js                       1.12 kB │ gzip:   0.66 kB
+../.server-dist/map_new/assets/index-C-10fN0f.js                                2.03 kB │ gzip:   1.06 kB
+../.server-dist/map_new/assets/OrbitControls-DrkqVv0C.js                       19.92 kB │ gzip:   4.48 kB
+../.server-dist/map_new/assets/app-FO6mYRay.js                                 32.61 kB │ gzip:  12.37 kB
+../.server-dist/map_new/assets/main-BOyCjo8z.js                               103.35 kB │ gzip:  38.86 kB
+../.server-dist/map_new/assets/pdf-B4yFDtmY.js                                437.17 kB │ gzip: 130.63 kB
+../.server-dist/map_new/assets/three-DDLCMnnr.js                              570.50 kB │ gzip: 144.16 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 1.95s

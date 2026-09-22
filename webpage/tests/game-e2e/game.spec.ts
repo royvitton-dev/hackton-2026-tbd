@@ -45,6 +45,8 @@ test('rap hold/release and an unanswered mini-game both finish', async ({page}) 
   const game=createGame({count:1,humans:1,target:400,idol:0,name:''});game.phase='training';game.players[0].position=4;
   await seed(page,game);await page.getByRole('button',{name:'퍼포먼스 시작'}).click();
   const button=page.locator('.performance-button');
+  await button.dispatchEvent('pointerdown',{pointerId:1});await page.waitForTimeout(200);await button.dispatchEvent('pointercancel',{pointerId:1});
+  await expect(page.locator('.challenge-progress')).toContainText('0 / 5');
   for(const duration of [450,700,550,850,650]){await button.dispatchEvent('pointerdown',{pointerId:1});await page.waitForTimeout(duration);await button.dispatchEvent('pointerup',{pointerId:1});await page.waitForTimeout(100);}
   await expect(page.getByRole('dialog',{name:'턴 결과'})).toBeVisible();expect((await read(page)).players[0].stats.rap).toBeGreaterThan(23);
   const timeoutState=createGame({count:1,humans:1,target:400,idol:0,name:''});timeoutState.phase='training';timeoutState.players[0].position=2;

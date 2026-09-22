@@ -9,8 +9,12 @@
   "scripts": {
     "start": "node scripts/serve.mjs",
     "build": "node scripts/build.mjs",
-    "test": "node --test tests/physics.test.mjs tests/motion.test.mjs tests/finish-rules.test.mjs tests/devices.test.mjs tests/course-devices.test.mjs tests/return-portals.test.mjs tests/parade.test.mjs tests/lotto.test.mjs",
+    "test": "node --test tests/physics.test.mjs tests/motion.test.mjs tests/finish-rules.test.mjs tests/devices.test.mjs tests/course-devices.test.mjs tests/return-portals.test.mjs tests/parade.test.mjs tests/lotto.test.mjs tests/screen-awake.test.mjs",
     "test:browser": "node tests/browser.mjs",
-    "test:action": "node tests/action.mjs"
+    "test:action": "node tests/action.mjs",
+    "test:audio": "node tests/soundscape.mjs && node tests/audio-load.mjs",
+    "test:layout": "node tests/responsive-layout.mjs",
+    "test:fold": "node tests/fold-layout.mjs",
+    "test:courses": "node --test tests/course-clearance.test.mjs"
   }
 }

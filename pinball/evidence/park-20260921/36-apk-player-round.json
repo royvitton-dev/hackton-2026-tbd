@@ -1,0 +1,297 @@
+{
+  "config": {
+    "people": [
+      {
+        "id": "p1",
+        "name": "순수",
+        "label": "순수",
+        "count": 1,
+        "color": "#c6ff58"
+      },
+      {
+        "id": "p2",
+        "name": "종호",
+        "label": "종호",
+        "count": 1,
+        "color": "#bca7ff"
+      },
+      {
+        "id": "p3",
+        "name": "병우",
+        "label": "병우",
+        "count": 1,
+        "color": "#ff82af"
+      },
+      {
+        "id": "p4",
+        "name": "태성",
+        "label": "태성",
+        "count": 1,
+        "color": "#64e4e0"
+      },
+      {
+        "id": "p5",
+        "name": "동길",
+        "label": "동길",
+        "count": 1,
+        "color": "#ffc168"
+      }
+    ],
+    "total": 5,
+    "rule": "first",
+    "target": 1,
+    "mode": "player",
+    "mapId": "parade",
+    "boardMotion": true,
+    "finishMode": "winner"
+  },
+  "seed": 1803580764,
+  "result": {
+    "roundId": "ffefab37-e4a7-403b-bb65-1806ef412fc5",
+    "state": "complete",
+    "seed": 1803580764,
+    "time": 15.088032484164257,
+    "target": 1,
+    "total": 5,
+    "winner": {
+      "id": "p1-b1",
+      "participantId": "p1",
+      "name": "순수",
+      "label": "순수",
+      "color": "#c6ff58",
+      "number": 1,
+      "rank": 1,
+      "time": 15.088032484164257,
+      "exitId": 1,
+      "exitLabel": "골인",
+      "criterion": "arrival",
+      "crossedFinish": true
+    },
+    "completionReason": "target-arrived",
+    "finishOrder": [
+      {
+        "id": "p1-b1",
+        "participantId": "p1",
+        "name": "순수",
+        "label": "순수",
+        "color": "#c6ff58",
+        "number": 1,
+        "rank": 1,
+        "time": 15.088032484164257,
+        "exitId": 1,
+        "exitLabel": "골인"
+      }
+    ],
+    "assists": 0,
+    "returns": 0,
+    "returnClosed": false,
+    "motion": {
+      "enabled": true,
+      "active": true,
+      "axis": "x",
+      "cycle": 3,
+      "phase": 0.08016303756883818,
+      "roll": 0.0035963478485824844,
+      "pitch": 0,
+      "offsetX": -0.9590260929553293,
+      "offsetY": 0,
+      "forceX": -4.135800025869857,
+      "forceY": 0,
+      "nextIn": 0
+    },
+    "deviceStats": {
+      "captures": 8,
+      "launches": 5,
+      "releases": 2
+    },
+    "devices": [
+      {
+        "id": "parade-magnet-0",
+        "kind": "magnet",
+        "x": 90,
+        "y": 650,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-magnet-1",
+        "kind": "magnet",
+        "x": 530,
+        "y": 650,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-2",
+        "kind": "cannon",
+        "x": 150,
+        "y": 880,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-3",
+        "kind": "cannon",
+        "x": 310,
+        "y": 880,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -16.92941735897199,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-4",
+        "kind": "cannon",
+        "x": 470,
+        "y": 880,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -12.226654382960124,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-5",
+        "kind": "cannon",
+        "x": 150,
+        "y": 1080,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-6",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1080,
+        "ballId": "p3-b1",
+        "ballIds": [
+          "p3-b1"
+        ],
+        "angle": -11.296511382912575,
+        "progress": 0.7654038929625333,
+        "holding": true,
+        "count": 1
+      },
+      {
+        "id": "parade-cannon-7",
+        "kind": "cannon",
+        "x": 470,
+        "y": 1080,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 20.077379028300527,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-8",
+        "kind": "cannon",
+        "x": 150,
+        "y": 1280,
+        "ballId": null,
+        "ballIds": [],
+        "angle": -15.849478000273006,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-9",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1280,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "parade-cannon-10",
+        "kind": "cannon",
+        "x": 470,
+        "y": 1280,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      }
+    ],
+    "balls": [
+      {
+        "id": "p5-b1",
+        "x": 204.67961081265474,
+        "y": 961.188518629669,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p2-b1",
+        "x": 214.99995830886462,
+        "y": 1556.1560206802246,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p3-b1",
+        "x": 298.22361322765767,
+        "y": 1067.497258162856,
+        "finished": false,
+        "rank": null,
+        "heldBy": "parade-cannon-6",
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p4-b1",
+        "x": 315.6588898064517,
+        "y": 2071.455075285855,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p1-b1",
+        "x": 288.89814547930206,
+        "y": 2150,
+        "finished": true,
+        "rank": 1,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      }
+    ]
+  },
+  "lotto": null
+}

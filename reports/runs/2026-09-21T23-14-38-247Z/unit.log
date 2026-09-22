@@ -1,0 +1,75 @@
+
+ RUN  v4.1.11 /private/tmp/atlas-parking-publish/map_new
+      Coverage enabled with v8
+
+ ✓ tests/unit/raster-evidence.test.js (4 tests) 446ms
+   ✓ every archived drawing has hash-matched native Python tiles and explicit wall-model policy  435ms
+ ✓ tests/unit/analysis.test.js (6 tests) 446ms
+ ✓ tests/unit/ramps.test.js (6 tests) 660ms
+   ✓ drives between levels and parks on the correct elevated deck without flattening the approach  459ms
+ ✓ tests/unit/navigation.test.js (10 tests) 279ms
+ ✓ tests/unit/dongtan.test.js (3 tests) 917ms
+   ✓ connects all 31 Dongtan bay fronts to reviewed one-way origins and preserves protected bay labels  722ms
+ ✓ tests/unit/radio-charging.test.js (12 tests) 122ms
+ ✓ tests/unit/layers.test.js (5 tests) 97ms
+ ✓ tests/unit/driving.test.js (4 tests) 27ms
+ ✓ tests/unit/camera.test.js (3 tests) 16ms
+ ✓ tests/unit/daecheon.test.js (4 tests) 2635ms
+   ✓ routes to all 52 source bay fronts including accessible bays  2374ms
+ ✓ tests/unit/detect-parking.test.js (7 tests) 3103ms
+   ✓ detects perpendicular rows at physical scale and deduplicates contrast passes  793ms
+   ✓ requires repeated stems and an end line; handles pale and transparent pixels  999ms
+   ✓ limits analysis to the drawing crop and projects into its local coordinate frame  478ms
+   ✓ matches one reviewed bay once while preserving accessibility and reserved status  347ms
+   ✓ exports candidate geometry separately from actual parking, destinations and routing  312ms
+ ✓ tests/unit/parking.test.js (6 tests) 9667ms
+   ✓ reaches a real source bay from the OSM road with a compact vehicle and a continuous radius-constrained maneuver  3859ms
+   ✓ rejects the complete maneuver if a bay obstacle or fire blocks its final position  4706ms
+   ✓ handles the same lane and bay geometry rotated by ninety degrees  981ms
+ ✓ tests/unit/route-coverage.test.js (4 tests) 33663ms
+   ✓ covers every reviewed parking bay on all four actual plans and independently selects the farthest feasible entry-to-bay route  27888ms
+   ✓ keeps every B2 approach outside adjacent parking interiors, not just walls and pillars  5686ms
+ ✓ tests/unit/maneuver.test.js (6 tests) 43958ms
+   ✓ supports forward-only and automatic choices while preserving bay restrictions  1552ms
+   ✓ does not force a maneuver through a bay obstruction or a blocked approach  21244ms
+ ✓ tests/unit/departure.test.js (4 tests) 45864ms
+   ✓ connects every reviewed bay to an exit or a clearly identified drawing boundary without reversing one-way lanes  14164ms
+   ✓ departs a real bay with a continuous front heading, collision clearance, gear pauses and an onward exit route  30730ms
+   ✓ retains reverse gear and the front-facing camera pose when leaving a forward-parked bay and descending a ramp  927ms
+
+ Test Files  15 passed (15)
+      Tests  84 passed (84)
+   Start at  08:14:58
+   Duration  46.43s (transform 853ms, setup 0ms, import 1.60s, tests 141.90s, environment 2ms)
+
+JSON report written to /private/tmp/atlas-parking-publish/map_new/reports/unit.json
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   98.49 |    96.54 |     100 |     100 |                   
+ core              |   98.45 |    96.63 |     100 |     100 |                   
+  analysis.js      |   98.11 |    96.13 |     100 |     100 | 17,61,64-74,89    
+  charging.js      |     100 |    98.78 |     100 |     100 | 23                
+  departure.js     |   95.45 |    89.83 |     100 |     100 | 37,43-47,50-51    
+  ...ct-parking.js |     100 |    99.14 |     100 |     100 | 20                
+  geometry.js      |     100 |    98.41 |     100 |     100 | 20                
+  georeference.js  |   97.61 |    93.33 |     100 |     100 | 15                
+  layers.js        |     100 |    90.24 |     100 |     100 | 6-8,19,29         
+  maneuver.js      |   97.86 |    93.65 |     100 |     100 | ...96,120-123,130 
+  navigation.js    |   97.23 |    96.62 |     100 |     100 | ...05,154-155,161 
+  parking.js       |   98.18 |    96.63 |     100 |     100 | 17,45-47,103      
+  playback.js      |     100 |    94.44 |     100 |     100 | 7,12              
+  radio.js         |     100 |    99.25 |     100 |     100 | 51                
+  ...r-evidence.js |   98.36 |    97.05 |     100 |     100 | 7,13              
+  ...e-coverage.js |     100 |    98.07 |     100 |     100 | 16                
+ vendor            |      99 |    95.56 |     100 |     100 |                   
+  analysis-v1.js   |      99 |    95.56 |     100 |     100 | 3,5,9,13,55-60,83 
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 98.49% ( 1696/1722 )
+Branches     : 96.54% ( 1704/1765 )
+Functions    : 100% ( 267/267 )
+Lines        : 100% ( 773/773 )
+================================================================================

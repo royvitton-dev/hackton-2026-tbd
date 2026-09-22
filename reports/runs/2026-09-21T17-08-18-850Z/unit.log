@@ -1,0 +1,39 @@
+
+ RUN  v4.1.11 /Users/jonghokim/Workspace/hackerton/map_new
+      Coverage enabled with v8
+
+ ✓ tests/unit/camera.test.js (3 tests) 22ms
+ ✓ tests/unit/layers.test.js (5 tests) 70ms
+ ✓ tests/unit/analysis.test.js (6 tests) 146ms
+ ✓ tests/unit/radio-charging.test.js (12 tests) 117ms
+ ✓ tests/unit/navigation.test.js (10 tests) 215ms
+
+ Test Files  5 passed (5)
+      Tests  36 passed (36)
+   Start at  02:08:21
+   Duration  820ms (transform 349ms, setup 0ms, import 648ms, tests 570ms, environment 0ms)
+
+JSON report written to /Users/jonghokim/Workspace/hackerton/map_new/reports/unit.json
+ % Coverage report from v8
+------------------|---------|----------|---------|---------|--------------------
+File              | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s  
+------------------|---------|----------|---------|---------|--------------------
+All files         |    99.1 |    96.18 |     100 |     100 |                    
+ core             |   99.12 |    97.17 |     100 |     100 |                    
+  analysis.js     |   97.34 |     93.1 |     100 |     100 | 12,26,37,42,52,69  
+  charging.js     |     100 |    98.78 |     100 |     100 | 23                 
+  geometry.js     |     100 |     97.5 |     100 |     100 | 17                 
+  georeference.js |   97.61 |    93.33 |     100 |     100 | 15                 
+  layers.js       |     100 |    90.24 |     100 |     100 | 6-8,19,29          
+  navigation.js   |   99.39 |    99.41 |     100 |     100 | 60                 
+  radio.js        |     100 |    99.25 |     100 |     100 | 51                 
+ vendor           |      99 |     92.4 |     100 |     100 |                    
+  analysis-v1.js  |      99 |     92.4 |     100 |     100 | ...,55-60,81,83-84 
+------------------|---------|----------|---------|---------|--------------------
+
+=============================== Coverage summary ===============================
+Statements   : 99.1% ( 668/674 )
+Branches     : 96.18% ( 731/760 )
+Functions    : 100% ( 135/135 )
+Lines        : 100% ( 308/308 )
+================================================================================

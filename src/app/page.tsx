@@ -1,3 +1,3 @@
 import { VehicleBatteryDashboard } from '@/components/VehicleBatteryDashboard';
-import { getMockUserVehicles } from '@/data/mockVehicles';
-export default function Page(){return <VehicleBatteryDashboard users={getMockUserVehicles()}/>;}
+import { getUserVehicle } from '@/data/mockVehicles';
+export default function Page(){return <VehicleBatteryDashboard initialUser={getUserVehicle('U0001')!}/>;}

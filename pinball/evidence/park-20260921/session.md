@@ -235,3 +235,53 @@ Existing heartbeat drop-land-23 was updated, not duplicated: every15minutes, unt
 No new gameplay changes or physics repeats after09:00. Read-only remote check at09:01 still showed queued commits absent. User then requested pull/push. Pull was up to date; CLI push failed without username credentials. Fork was now unlocked. The first click was interrupted by user interaction; fresh accessibility state was acquired before opening the normal main push sheet. Force checkbox remained off. Return submitted Push, showing Everything is up-to-date. At09:04 remote hash and all pending commit ancestry were confirmed. Parallel user activity means the receipt records verified delivery rather than attributing the remote update solely to this action.
 
 Published immutable4633preview;31first/reload21assetchecks PASS and browser closed. MacZIP/APK hashes exactly match phase29 verified artifacts. Android native tests and latest Mac native relaunch were not performed. Final report retains known Garden failure and honest overnight blocked interval. No new SDK acceptance or retry of the halted Garden geometry.
+
+
+# 32 — 놀이동산 효과음 (2026-09-22 사용자 추가 요청)
+
+원본13종 합성 효과음: 벨·통통 타악음·대포·자석·스윙·리턴·도착·짧은 당첨 팡파르. 외부 음원이나 경기 RNG 사용 없음. 기본 음소거 유지. 최대40음원과 종류별 재생 간격 제한, 일시정지/재시작/탭 이탈/음소거 시 예약 음원과 잔향 취소. 확대 화면에도 소리 버튼 제공.
+
+- PASS: 효과음13종 오프라인 렌더링(최대 절댓값0.250, 2.3초 후 잔향0), 노드 정리.
+- PASS: 초기 resume 대기 중 빠른 켜기/끄기, PC·모바일 실제 도착→당첨→재플레이 및 음소거, 60개 이벤트 폭주 제한. 브라우저 오류0. 5개 검사군 통과.
+- PASS: 60개 공·캐논 퍼레이드·3배속·소리·효과 켜짐·하프 모드8초 표본. PC59.9FPS/4.05ms, 모바일 Chrome60.0FPS/4.20ms. 실제 휴대폰 또는 GPU 전체 비용 아님.
+- PASS: PC/모바일 확대 음소거·전체맵 전환·320px 화면 가로 넘침 없음.
+- PASS: 웹 빌드22파일과 Mac/APK 내23파일(빌드 정보 포함) 일치, Mac로컬서명·APK v2/v3·ZIP CRC.
+- 초기 실패: 전체/하프 모드에서 기존 소리 버튼이 숨겨짐. 별도 확대 화면 버튼으로 수정 후 통과. 초기 Mac iconutil Invalid Iconset은 같은 빌드를 정상 macOS 접근으로 실행해 해결. 실패 로그 보존.
+- 미실행: 실제 스피커 청취 평가는 하지 않았음. 최신 Mac 네이티브 실행·Android 실기기/에뮬레이터 실행은 미실행. 기존 원더 가든 출구 보류는 이번 변경에서 건드리지 않음.
+
+명령: `node tests/soundscape.mjs`, `node tests/audio-load.mjs`, `node scripts/build.mjs`; 브라우저는 기존 bundled PLAYWRIGHT_MODULE_PATH와 Chrome을 사용. 패키지는 desktop/build-macos.py, desktop/build-android.py의 기존 절차로 work/package-32-final에 생성. 상세 해시는32-final-package-results.json. 직접 구성한 소리 미리듣기는32-audio/park-cues.wav.
+
+
+# 33 — 화면 비율·출발 조작 개선 (2026-09-22 사용자 추가 요청)
+
+## 변경
+- 일반 화면은 설정과 경기장의2열로 배치하고 결과를 아래로 이동해 경기장 폭을 확대. 소개 영역 축소.
+- 경기 시작 시 보드가 창을 채움. 기본 따라가기 카메라를 더 가까이 조정.
+- 가로로 넓은 창의 하프·전체맵은 가로 코스, 세로 창은 세로 코스. 원근 투영과 보드 비율을 유지하고 장식 여백 대신 실제 레일 범위를 맞춤. 물리 파일5개 해시가 이전 main과 동일.
+- 고정 높이 행을 내용에 맞는 행으로 변경. 화면 모서리 안전 영역, 줄바꿈, 큰 출발 버튼, 확대 음소거 제공. 창 크기 변경은 경기 상태를 보존.
+- 짧은 가로 화면의 로또 결과에서6개+보너스와 재플레이를 함께 표시. 결과 카드 스크롤과 버튼 표시 순서 보정.
+
+## 실제 검사
+- PASS20/20: 1920×1080,1440×900,1024×768,768×1024,514×711(현재 앱 창 크기),390×844,320×568,844×390,667×320에서 하프·전체 맵 실제 출발→정지→재개→초기화18흐름. PC플레이어·모바일로또2흐름은 경기 중 방향 변경·상태 보존·실제 당첨·결과에서 재플레이까지 확인. 가로 로또7숫자의 가림과 클릭 검사 포함.
+- PASS5/5: 화면 확대 적용 후 효과음 합성13종·빠른 음소거·PC/모바일 당첨/재플레이·60이벤트 동시 재생 제한 회귀.
+- PASS: 최대60개·캐논 퍼레이드·3배속·효과/소리켜짐·하프8초 표본 PC59.9FPS/JS4.59ms, 모바일Chrome60.0FPS/JS4.39ms. 실제폰/GPU전체측정 아님.
+- PASS: 빌드22정적파일, 패키지23파일(빌드정보포함) 일치. Mac로컬서명, APK v2/v3서명, ZIP CRC/실행권한.33-package-results.json에 해시.
+
+## 실패 및 범위
+초기 가로 로또에서 재플레이가 가려짐(1회). 카드 높이를 제한한 다음 번호 영역이 sticky버튼 위를 덮는 원인을 확인(2회). 버튼 z-index를 수정하고6+보너스를 가로 한 줄로 배치한 후 대상 흐름과 최종20항목 통과. 실패 JSON/스크린샷/로그 보존. 초기 여러 기본창의 출발 버튼은 실제 클릭 가능했으며, 신고 환경에서 원래 발생했던 모든 상태를 재현했다고 주장하지 않음. 최종버전은 현재 앱창을 포함한 위 크기에서 직접 클릭해 검증.
+
+미실행: 최신 Mac 네이티브 창 실행, Android 실기기·에뮬레이터 실행, iOS/Safari. Chrome 모바일 에뮬레이션을 Android 성공으로 표시하지 않음. 기존 원더 가든 출구 정체 보류 유지.
+
+명령: `node tests/responsive-layout.mjs`, `AUDIO_EVIDENCE=evidence/park-20260921/33-audio-regression node tests/soundscape.mjs`, `AUDIO_EVIDENCE=evidence/park-20260921/33-audio-load node tests/audio-load.mjs`, `node scripts/build.mjs`. 기존 bundled Node/Playwright, 별도 Chrome 사용. 패키지는 desktop/build-macos.py / desktop/build-android.py로 work/package-33에 생성. 실제 사용자4188탭은 조회만 했고 임의로 새로고침하지 않음.
+
+
+# 34 — 2026-09-22 Android·폴드·맵 추가 개선
+
+사용자사진과후속요청에따른변경,통과/실패/미실행,실행명령은 [34보고서](34-mobile-and-rides.md)에보존. 원본사용자사진과CodexJSONL은Git에추가하지않음.
+
+
+### 36 · 2026-09-22 사용자 후속 요청
+화면 유지, 스포츠 공/동물 얼굴, 공 추적 및 부분 확대, 이름표 깜빡임, 하프/전체 맵 세로 유지 구현.7개Node검사·실제ChromeWakeLock/탭상태·3개기기크기·16화면조합·2개최종APK추출흐름 통과. 실제Android기기실행은미실행. 기능main직접커밋6d40d3b3,정상병합193d2932와Fork푸시확인,웹즉시반영. 세부명령/검증/해시는36스크린문서와JSON에보존. 이문서는작업요약이며Codex원본JSONL이아님.
+
+### 37 · 자석0.5~2초 후속요청
+5맵자석의공별독립포획시간을늘리고대포범위보존.장치6검사·판정/배속2검사·최종APK추출2흐름통과,빌드/서명/27내장파일일치통과.기능main ab8afc47 직접커밋·Fork푸시·4188새로고침확인.실제Android실행미검증.기존Garden출구구조보류는재시도하지않음.

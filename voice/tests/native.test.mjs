@@ -108,3 +108,37 @@ test('menu bar reports actual microphone state, tracks command phases and suppor
   assert.equal(await closed, 0);
   lines.close();
 });
+
+test('Warp helper reports its focus/permission and rejects invalid input with a visible notice', { skip: process.platform !== 'darwin', timeout: 20_000 }, async t => {
+  const bundle = fileURLToPath(new URL('../.build/TBD Speech.app', import.meta.url));
+  const session = await launchSpeech(bundle, { feedbackOnly: true, sound: false, warpFocus: true });
+  t.after(() => session.stop());
+  const closed = new Promise(resolve => session.once('close', resolve));
+  const lines = createInterface({ input: session.stdout });
+  const iterator = lines[Symbol.asyncIterator]();
+  const next = async type => {
+    while (true) {
+      const line = await iterator.next();
+      assert.equal(line.done, false);
+      const event = JSON.parse(line.value);
+      if (event.type === type) return event;
+    }
+  };
+  await next('feedback-ready');
+  session.stdin.write('warp-status\n');
+  const status = await next('warp-status');
+  assert.equal(typeof status.accessibility, 'boolean');
+  assert.equal(typeof status.warpFocused, 'boolean');
+  // Never inject into the user's current app from automated tests.
+  session.stdin.write('warp-submit:{"id":7,"text":""}\n');
+  const feedback = await next('feedback-shown');
+  assert.equal(feedback.kind, 'warp-blocked');
+  assert.equal(feedback.visible, true);
+  const delivery = await next('warp-delivery');
+  assert.equal(delivery.id, 7);
+  assert.equal(delivery.ok, false);
+  assert.match(delivery.message, /비어 있거나/);
+  session.stop();
+  assert.equal(await closed, 0);
+  lines.close();
+});

@@ -1,0 +1,52 @@
+
+ RUN  v4.1.11 /Users/jonghokim/Workspace/hackerton/map_new
+      Coverage enabled with v8
+
+ ✓ tests/unit/camera.test.js (3 tests) 16ms
+ ✓ tests/unit/layers.test.js (5 tests) 29ms
+ ✓ tests/unit/radio-charging.test.js (12 tests) 79ms
+ ✓ tests/unit/navigation.test.js (10 tests) 107ms
+ ✓ tests/unit/analysis.test.js (6 tests) 212ms
+ ✓ tests/unit/raster-evidence.test.js (4 tests) 248ms
+ ✓ tests/unit/daecheon.test.js (4 tests) 1128ms
+   ✓ routes from the source entrance to all 50 reviewed ordinary bays while protecting accessible bays  1040ms
+ ✓ tests/unit/detect-parking.test.js (7 tests) 1365ms
+   ✓ detects perpendicular rows at physical scale and deduplicates contrast passes  318ms
+   ✓ requires repeated stems and an end line; handles pale and transparent pixels  454ms
+ ✓ tests/unit/parking.test.js (6 tests) 4077ms
+   ✓ reaches a real source bay from the OSM road with a compact vehicle and a continuous radius-constrained maneuver  1521ms
+   ✓ rejects the complete maneuver if a bay obstacle or fire blocks its final position  2021ms
+   ✓ handles the same lane and bay geometry rotated by ninety degrees  487ms
+
+ Test Files  9 passed (9)
+      Tests  57 passed (57)
+   Start at  05:39:41
+   Duration  4.40s (transform 315ms, setup 0ms, import 621ms, tests 7.26s, environment 1ms)
+
+JSON report written to /Users/jonghokim/Workspace/hackerton/map_new/reports/unit.json
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |    98.9 |    96.55 |     100 |     100 |                   
+ core              |   98.89 |    97.12 |     100 |     100 |                   
+  analysis.js      |   97.18 |    94.15 |     100 |     100 | ...51,56,59-69,84 
+  charging.js      |     100 |    98.78 |     100 |     100 | 23                
+  ...ct-parking.js |     100 |    99.14 |     100 |     100 | 20                
+  geometry.js      |     100 |     97.5 |     100 |     100 | 17                
+  georeference.js  |   97.61 |    93.33 |     100 |     100 | 15                
+  layers.js        |     100 |    90.24 |     100 |     100 | 6-8,19,29         
+  navigation.js    |   98.94 |    98.92 |     100 |     100 | 52,73             
+  parking.js       |   97.94 |    93.81 |     100 |     100 | 12-17,32,43-45,92 
+  radio.js         |     100 |    99.25 |     100 |     100 | 51                
+  ...r-evidence.js |   98.36 |    97.05 |     100 |     100 | 7,13              
+ vendor            |      99 |    93.03 |     100 |     100 |                   
+  analysis-v1.js   |      99 |    93.03 |     100 |     100 | ...55-60,81,83-84 
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 98.9% ( 1084/1096 )
+Branches     : 96.55% ( 1093/1132 )
+Functions    : 100% ( 189/189 )
+Lines        : 100% ( 505/505 )
+================================================================================

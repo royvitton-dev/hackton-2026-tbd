@@ -20,10 +20,10 @@ try{
   for(const [file,hash]of Object.entries(receipt.files)){
    const response=await page.request.get(new URL(file,root).href);assert.equal(response.status(),200);
    const bytes=await response.body(),source=execFileSync('git',['-C',repo,'show',commit+':pinball/'+file],{maxBuffer:16*1024*1024});
-   assert.equal(createHash('sha256').update(bytes).digest('hex'),hash);assert.ok(bytes.equals(source),file+' differs from pushed commit');
+   assert.equal(createHash('sha256').update(bytes).digest('hex'),hash);assert.ok(bytes.equals(source),file+' differs from selected commit');
   }
-  report.checks.push({attempt:attempt?'refresh':'open',version:receipt.version,assets:Object.keys(receipt.files).length,exactCommittedBytes:true});
+  report.checks.push({attempt:attempt?'refresh':'open',version:receipt.version,publication:receipt.publication||'legacy-remote-verified',assets:Object.keys(receipt.files).length,exactCommittedBytes:true});
  }
- assert.deepEqual(errors,[]);report.status='PASS';console.log('PASS open and refresh load exact pushed main assets',commit);
+ assert.deepEqual(errors,[]);report.status='PASS';console.log('PASS open and refresh load exact committed main assets',commit);
 }catch(e){report.status='FAIL';report.error=e.stack;process.exitCode=1;console.error(e.message);}
 finally{await writeFile(`evidence/park-20260921/${process.env.EVIDENCE_PREFIX||'22'}-pushed-preview.json`,JSON.stringify(report,null,2));await browser.close();}

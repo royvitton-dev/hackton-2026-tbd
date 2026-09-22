@@ -1,0 +1,67 @@
+
+ RUN  v4.1.11 /private/tmp/atlas-parking-publish/map_new
+      Coverage enabled with v8
+
+ ✓ tests/unit/navigation.test.js (10 tests) 250ms
+ ✓ tests/unit/analysis.test.js (6 tests) 328ms
+ ✓ tests/unit/raster-evidence.test.js (4 tests) 385ms
+   ✓ every archived drawing has hash-matched native Python tiles and explicit wall-model policy  376ms
+ ✓ tests/unit/ramps.test.js (6 tests) 462ms
+   ✓ drives between levels and parks on the correct elevated deck without flattening the approach  356ms
+ ✓ tests/unit/dongtan.test.js (3 tests) 575ms
+   ✓ connects all 31 Dongtan bay fronts to reviewed one-way origins and preserves protected bay labels  480ms
+ ✓ tests/unit/layers.test.js (5 tests) 42ms
+ ✓ tests/unit/radio-charging.test.js (12 tests) 59ms
+ ✓ tests/unit/driving.test.js (4 tests) 22ms
+ ✓ tests/unit/camera.test.js (3 tests) 19ms
+ ✓ tests/unit/daecheon.test.js (4 tests) 1572ms
+   ✓ routes to all 52 source bay fronts including accessible bays  1488ms
+ ✓ tests/unit/detect-parking.test.js (7 tests) 1740ms
+   ✓ detects perpendicular rows at physical scale and deduplicates contrast passes  508ms
+   ✓ requires repeated stems and an end line; handles pale and transparent pixels  555ms
+ ✓ tests/unit/parking.test.js (6 tests) 5714ms
+   ✓ reaches a real source bay from the OSM road with a compact vehicle and a continuous radius-constrained maneuver  2261ms
+   ✓ rejects the complete maneuver if a bay obstacle or fire blocks its final position  2710ms
+   ✓ handles the same lane and bay geometry rotated by ninety degrees  681ms
+ ✓ tests/unit/route-coverage.test.js (4 tests) 15752ms
+   ✓ covers every reviewed parking bay on all four actual plans and independently selects the farthest feasible entry-to-bay route  11259ms
+   ✓ keeps every B2 approach outside adjacent parking interiors, not just walls and pillars  4434ms
+ ✓ tests/unit/maneuver.test.js (6 tests) 32531ms
+   ✓ supports forward-only and automatic choices while preserving bay restrictions  1072ms
+   ✓ does not force a maneuver through a bay obstruction or a blocked approach  17158ms
+
+ Test Files  14 passed (14)
+      Tests  80 passed (80)
+   Start at  07:47:28
+   Duration  32.98s (transform 408ms, setup 0ms, import 1.02s, tests 59.45s, environment 2ms)
+
+JSON report written to /private/tmp/atlas-parking-publish/map_new/reports/unit.json
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   98.56 |    96.54 |     100 |     100 |                   
+ core              |   98.53 |    96.65 |     100 |     100 |                   
+  analysis.js      |   98.11 |    96.13 |     100 |     100 | 17,61,64-74,89    
+  charging.js      |     100 |    98.78 |     100 |     100 | 23                
+  ...ct-parking.js |     100 |    99.14 |     100 |     100 | 20                
+  geometry.js      |     100 |    98.41 |     100 |     100 | 20                
+  georeference.js  |   97.61 |    93.33 |     100 |     100 | 15                
+  layers.js        |     100 |    90.24 |     100 |     100 | 6-8,19,29         
+  maneuver.js      |    97.5 |    92.68 |     100 |     100 | ...11,118-123,130 
+  navigation.js    |   97.21 |    96.55 |     100 |     100 | ...04,153-154,160 
+  parking.js       |   98.02 |    96.39 |     100 |     100 | 17,45-47,95       
+  playback.js      |     100 |    91.66 |     100 |     100 | 7,12,21           
+  radio.js         |     100 |    99.25 |     100 |     100 | 51                
+  ...r-evidence.js |   98.36 |    97.05 |     100 |     100 | 7,13              
+  ...e-coverage.js |     100 |    97.56 |     100 |     100 | 15                
+ vendor            |      99 |    95.56 |     100 |     100 |                   
+  analysis-v1.js   |      99 |    95.56 |     100 |     100 | 3,5,9,13,55-60,83 
+-------------------|---------|----------|---------|---------|-------------------
+
+=============================== Coverage summary ===============================
+Statements   : 98.56% ( 1584/1607 )
+Branches     : 96.54% ( 1623/1681 )
+Functions    : 100% ( 251/251 )
+Lines        : 100% ( 715/715 )
+================================================================================

@@ -1,0 +1,411 @@
+{
+  "film": {
+    "title": "코드세이: 집에 가는 길",
+    "english": "THE CODEYSSEY",
+    "duration": 85,
+    "fps": 24,
+    "width": 1920,
+    "height": 1080,
+    "source": "https://www.youtube.com/watch?v=zz2ZH13NOi8",
+    "edition": "시네마 컷 · 영화 장면 중심 · 실사풍 피날레"
+  },
+  "scenes": [
+    {
+      "id": "gs",
+      "start": 0,
+      "end": 2.5,
+      "name": "GS",
+      "kind": "gs"
+    },
+    {
+      "id": "chargev",
+      "start": 2.5,
+      "end": 5,
+      "name": "GS차지비",
+      "kind": "chargev"
+    },
+    {
+      "id": "departure",
+      "start": 5,
+      "end": 9,
+      "name": "9월 21일, 출정",
+      "source": 8.25,
+      "speed": 0.82,
+      "kicker": "9월 21일",
+      "line": "우리는 집을 떠났다."
+    },
+    {
+      "id": "league",
+      "start": 9,
+      "end": 12,
+      "name": "집에 못 가는 개발자 리그",
+      "source": 18.1,
+      "speed": 0.65,
+      "kicker": "GS 해커콘 · 9월 21일 — 22일",
+      "line": "집에 못 가는 개발자 리그"
+    },
+    {
+      "id": "voyage",
+      "start": 12,
+      "end": 16,
+      "name": "돌아갈 시간은 없었다",
+      "source": 72.3,
+      "speed": 0.9,
+      "line": "돌아갈 시간은 없었다."
+    },
+    {
+      "id": "oracle",
+      "start": 16,
+      "end": 20,
+      "name": "AI의 완벽한 신탁",
+      "source": 49.5,
+      "speed": 1,
+      "speaker": "AI의 신탁",
+      "line": "“이 코드는 완벽합니다.”"
+    },
+    {
+      "id": "hallucination",
+      "start": 20,
+      "end": 24,
+      "name": "존재하지 않는 해결책",
+      "source": 102.2,
+      "speed": 0.7,
+      "line": "“아, 그건 제가 지어냈어요.”"
+    },
+    {
+      "id": "onebug",
+      "start": 24,
+      "end": 27,
+      "name": "버그 하나 해결",
+      "source": 76.6,
+      "speed": 0.45,
+      "line": "버그 하나 해결."
+    },
+    {
+      "id": "manybugs",
+      "start": 27,
+      "end": 31,
+      "name": "열두 개의 버그",
+      "source": 25.3,
+      "speed": 0.8,
+      "line": "열두 개가 돌아왔다."
+    },
+    {
+      "id": "lastfix",
+      "start": 31,
+      "end": 35,
+      "name": "진짜 마지막 수정",
+      "source": 54.6,
+      "speed": 0.85,
+      "speaker": "개발자 · 오늘만 23번째",
+      "line": "“진짜 마지막 수정이야.”"
+    },
+    {
+      "id": "review",
+      "start": 35,
+      "end": 39,
+      "name": "한 줄의 대가",
+      "source": 59,
+      "speed": 0.7,
+      "kicker": "AI CODE · 변경 사항",
+      "line": "수정 요청 1줄. 변경된 파일 47개."
+    },
+    {
+      "id": "battery",
+      "start": 39,
+      "end": 43,
+      "name": "9월 22일 새벽 3시 17분",
+      "source": 68.85,
+      "speed": 0.35,
+      "kicker": "9월 22일 · 03:17",
+      "line": "카페인 99%. 체력 1%."
+    },
+    {
+      "id": "context",
+      "start": 43,
+      "end": 48,
+      "name": "기억을 잃은 AI",
+      "source": 90.6,
+      "speed": 0.86,
+      "line": "“원래, 뭘 만들고 있었죠?”"
+    },
+    {
+      "id": "home",
+      "start": 48,
+      "end": 51,
+      "name": "멀어진 귀가",
+      "source": 62.6,
+      "speed": 0.75,
+      "line": "집은… 다음 문제였다."
+    },
+    {
+      "id": "return",
+      "start": 51,
+      "end": 55,
+      "name": "끝까지 버틴 원정대",
+      "source": 117.2,
+      "speed": 0.72,
+      "line": "그래도, 끝까지 버텼다."
+    },
+    {
+      "id": "battle",
+      "start": 55,
+      "end": 58,
+      "name": "배포까지 단 한 걸음",
+      "kind": "montage",
+      "sources": [
+        123.6,
+        125.8,
+        130.2
+      ],
+      "line": "배포까지, 단 한 걸음."
+    },
+    {
+      "id": "title",
+      "start": 58,
+      "end": 61,
+      "name": "코드세이",
+      "kind": "title"
+    },
+    {
+      "id": "purpose",
+      "start": 61,
+      "end": 65,
+      "name": "이 모든 여정의 이유",
+      "source": 30.1,
+      "speed": 0.58,
+      "line": "이 모든 여정은…"
+    },
+    {
+      "id": "notkeyring",
+      "start": 65,
+      "end": 70,
+      "name": "키링을 위해서가 아니었다",
+      "source": 126.1,
+      "speed": 0.55,
+      "line": "키링을 얻기 위해서가 아니었다."
+    },
+    {
+      "id": "macmini",
+      "start": 70,
+      "end": 76,
+      "name": "맥미니를 위한 원정",
+      "kind": "motion",
+      "shot": "lift",
+      "in": 0,
+      "speed": 0.75,
+      "line": "맥미니를 얻기 위해서였다."
+    },
+    {
+      "id": "struggle",
+      "start": 76,
+      "end": 78,
+      "name": "마지막 힘을 모아",
+      "kind": "motion",
+      "shot": "lift",
+      "in": 4.5,
+      "speed": 0.75,
+      "kicker": "밤을 버틴 자, 마침내 얻으리라",
+      "line": "마지막 힘을 모았다."
+    },
+    {
+      "id": "victory",
+      "start": 78,
+      "end": 83,
+      "name": "마침내, 맥미니를 쟁취하다",
+      "kind": "motion",
+      "shot": "victory",
+      "in": 0,
+      "speed": 1,
+      "line": "우리는, 맥미니를 들고 돌아간다."
+    },
+    {
+      "id": "end",
+      "start": 83,
+      "end": 85,
+      "name": "GS 해커콘 · 9.21–22",
+      "kind": "end"
+    }
+  ],
+  "probes": [
+    {
+      "time": 1.55,
+      "scene": "gs",
+      "sourceTime": null,
+      "motion": null,
+      "line": "GS"
+    },
+    {
+      "time": 4.05,
+      "scene": "chargev",
+      "sourceTime": null,
+      "motion": null,
+      "line": "GS차지비"
+    },
+    {
+      "time": 7.48,
+      "scene": "departure",
+      "sourceTime": 10.2836,
+      "motion": null,
+      "line": "우리는 집을 떠났다."
+    },
+    {
+      "time": 10.86,
+      "scene": "league",
+      "sourceTime": 19.309,
+      "motion": null,
+      "line": "집에 못 가는 개발자 리그"
+    },
+    {
+      "time": 14.48,
+      "scene": "voyage",
+      "sourceTime": 74.532,
+      "motion": null,
+      "line": "돌아갈 시간은 없었다."
+    },
+    {
+      "time": 18.48,
+      "scene": "oracle",
+      "sourceTime": 51.980000000000004,
+      "motion": null,
+      "line": "“이 코드는 완벽합니다.”"
+    },
+    {
+      "time": 22.48,
+      "scene": "hallucination",
+      "sourceTime": 103.936,
+      "motion": null,
+      "line": "“아, 그건 제가 지어냈어요.”"
+    },
+    {
+      "time": 25.86,
+      "scene": "onebug",
+      "sourceTime": 77.437,
+      "motion": null,
+      "line": "버그 하나 해결."
+    },
+    {
+      "time": 29.48,
+      "scene": "manybugs",
+      "sourceTime": 27.284000000000002,
+      "motion": null,
+      "line": "열두 개가 돌아왔다."
+    },
+    {
+      "time": 33.48,
+      "scene": "lastfix",
+      "sourceTime": 56.708,
+      "motion": null,
+      "line": "“진짜 마지막 수정이야.”"
+    },
+    {
+      "time": 37.48,
+      "scene": "review",
+      "sourceTime": 60.736,
+      "motion": null,
+      "line": "수정 요청 1줄. 변경된 파일 47개."
+    },
+    {
+      "time": 41.48,
+      "scene": "battery",
+      "sourceTime": 69.71799999999999,
+      "motion": null,
+      "line": "카페인 99%. 체력 1%."
+    },
+    {
+      "time": 46.1,
+      "scene": "context",
+      "sourceTime": 93.26599999999999,
+      "motion": null,
+      "line": "“원래, 뭘 만들고 있었죠?”"
+    },
+    {
+      "time": 49.86,
+      "scene": "home",
+      "sourceTime": 63.995000000000005,
+      "motion": null,
+      "line": "집은… 다음 문제였다."
+    },
+    {
+      "time": 53.48,
+      "scene": "return",
+      "sourceTime": 118.9856,
+      "motion": null,
+      "line": "그래도, 끝까지 버텼다."
+    },
+    {
+      "time": 56.86,
+      "scene": "battle",
+      "sourceTime": 126.53099999999999,
+      "motion": null,
+      "line": "배포까지, 단 한 걸음."
+    },
+    {
+      "time": 59.86,
+      "scene": "title",
+      "sourceTime": null,
+      "motion": null,
+      "line": "코드세이"
+    },
+    {
+      "time": 63.48,
+      "scene": "purpose",
+      "sourceTime": 31.5384,
+      "motion": null,
+      "line": "이 모든 여정은…"
+    },
+    {
+      "time": 68.1,
+      "scene": "notkeyring",
+      "sourceTime": 127.80499999999999,
+      "motion": null,
+      "line": "키링을 얻기 위해서가 아니었다."
+    },
+    {
+      "time": 73.72,
+      "scene": "macmini",
+      "sourceTime": null,
+      "motion": {
+        "kind": "generated-video",
+        "shot": "lift",
+        "clipTime": 2.789999999999999,
+        "frame": 90,
+        "fps": 32
+      },
+      "line": "맥미니를 얻기 위해서였다."
+    },
+    {
+      "time": 77.24,
+      "scene": "struggle",
+      "sourceTime": null,
+      "motion": {
+        "kind": "generated-video",
+        "shot": "lift",
+        "clipTime": 5.429999999999996,
+        "frame": 174,
+        "fps": 32
+      },
+      "line": "마지막 힘을 모았다."
+    },
+    {
+      "time": 81.1,
+      "scene": "victory",
+      "sourceTime": null,
+      "motion": {
+        "kind": "generated-video",
+        "shot": "victory",
+        "clipTime": 3.0999999999999943,
+        "frame": 75,
+        "fps": 24
+      },
+      "line": "우리는, 맥미니를 들고 돌아간다."
+    },
+    {
+      "time": 84.24,
+      "scene": "end",
+      "sourceTime": null,
+      "motion": null,
+      "line": "GS 해커콘 · 9.21–22"
+    }
+  ]
+}

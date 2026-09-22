@@ -1,0 +1,1682 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "mode": "normal",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 620,
+      "boardWidthPixels": 562.7337896645356,
+      "canvasWidth": 1080.40625,
+      "canvasHeight": 700
+    },
+    "bounds": {
+      "board": {
+        "x": 329.796875,
+        "y": 629.34375,
+        "width": 1080.40625,
+        "height": 700,
+        "visible": true,
+        "hit": false
+      },
+      "arena-start": {
+        "x": 347.796875,
+        "y": 1342.34375,
+        "width": 59.625,
+        "height": 42,
+        "visible": true,
+        "hit": false
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 422.421875,
+        "y": 1343.34375,
+        "width": 44.90625,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "view": {
+        "x": 482.328125,
+        "y": 1343.34375,
+        "width": 34.515625,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "reset": {
+        "x": 531.84375,
+        "y": 1343.34375,
+        "width": 54.71875,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "arena-sound": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "timer": {
+        "x": 1347.0625,
+        "y": 594.34375,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 1440,
+    "viewport": 1440
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "mode": "half",
+    "framing": {
+      "horizontal": true,
+      "visibleSpan": 1120,
+      "boardWidthPixels": 575.3922373279511,
+      "canvasWidth": 1440,
+      "canvasHeight": 747
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 96,
+        "width": 1440,
+        "height": 747,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 12,
+        "y": 850,
+        "width": 100,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 120,
+        "y": 852,
+        "width": 60.53125,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 188.53125,
+        "y": 852,
+        "width": 50.515625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 247.046875,
+        "y": 852,
+        "width": 70.71875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 1250.8125,
+        "y": 5,
+        "width": 47.390625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 1382.859375,
+        "y": 67,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 1440,
+    "viewport": 1440
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "mode": "full",
+    "framing": {
+      "horizontal": true,
+      "visibleSpan": 2240,
+      "boardWidthPixels": 338.16026500810557,
+      "canvasWidth": 1440,
+      "canvasHeight": 747
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 96,
+        "width": 1440,
+        "height": 747,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 12,
+        "y": 850,
+        "width": 100,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 120,
+        "y": 852,
+        "width": 60.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 188.90625,
+        "y": 852,
+        "width": 57.53125,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 254.4375,
+        "y": 852,
+        "width": 70.71875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 1250.8125,
+        "y": 5,
+        "width": 47.390625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 1382.859375,
+        "y": 67,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 1440,
+    "viewport": 1440
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "mode": "normal",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 620,
+      "boardWidthPixels": 456.61827504208037,
+      "canvasWidth": 681.0625,
+      "canvasHeight": 568
+    },
+    "bounds": {
+      "board": {
+        "x": 321.46875,
+        "y": 602.25,
+        "width": 681.0625,
+        "height": 568,
+        "visible": true,
+        "hit": false
+      },
+      "arena-start": {
+        "x": 339.46875,
+        "y": 1183.25,
+        "width": 59.625,
+        "height": 42,
+        "visible": true,
+        "hit": false
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 414.09375,
+        "y": 1184.25,
+        "width": 44.90625,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "view": {
+        "x": 474,
+        "y": 1184.25,
+        "width": 34.515625,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "reset": {
+        "x": 523.515625,
+        "y": 1184.25,
+        "width": 54.71875,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "arena-sound": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "timer": {
+        "x": 939.390625,
+        "y": 567.25,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 1024,
+    "viewport": 1024
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "mode": "half",
+    "framing": {
+      "horizontal": true,
+      "visibleSpan": 1120,
+      "boardWidthPixels": 464.9189213718993,
+      "canvasWidth": 1024,
+      "canvasHeight": 615
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 96,
+        "width": 1024,
+        "height": 615,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 12,
+        "y": 718,
+        "width": 100,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 120,
+        "y": 720,
+        "width": 60.53125,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 188.53125,
+        "y": 720,
+        "width": 50.515625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 247.046875,
+        "y": 720,
+        "width": 70.71875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 834.8125,
+        "y": 5,
+        "width": 47.390625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 966.859375,
+        "y": 67,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 1024,
+    "viewport": 1024
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "mode": "full",
+    "framing": {
+      "horizontal": true,
+      "visibleSpan": 2240,
+      "boardWidthPixels": 243.65166514378123,
+      "canvasWidth": 1024,
+      "canvasHeight": 615
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 96,
+        "width": 1024,
+        "height": 615,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 12,
+        "y": 718,
+        "width": 100,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 120,
+        "y": 720,
+        "width": 60.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 188.90625,
+        "y": 720,
+        "width": 57.53125,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 254.4375,
+        "y": 720,
+        "width": 70.71875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 834.8125,
+        "y": 5,
+        "width": 47.390625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 966.859375,
+        "y": 67,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 1024,
+    "viewport": 1024
+  },
+  {
+    "width": 514,
+    "height": 711,
+    "mode": "normal",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 620,
+      "boardWidthPixels": 389.9777459422267,
+      "canvasWidth": 488,
+      "canvasHeight": 511.90625
+    },
+    "bounds": {
+      "board": {
+        "x": 13,
+        "y": 464.25,
+        "width": 488,
+        "height": 511.90625,
+        "visible": true,
+        "hit": false
+      },
+      "arena-start": {
+        "x": 21,
+        "y": 985.15625,
+        "width": 50.953125,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 77.953125,
+        "y": 985.15625,
+        "width": 37.53125,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "view": {
+        "x": 121.484375,
+        "y": 985.15625,
+        "width": 28.890625,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "reset": {
+        "x": 156.375,
+        "y": 985.15625,
+        "width": 45.84375,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "arena-sound": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "timer": {
+        "x": 447.234375,
+        "y": 426.25,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 514,
+    "viewport": 514
+  },
+  {
+    "width": 514,
+    "height": 711,
+    "mode": "half",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 1120,
+      "boardWidthPixels": 255.37006765866818,
+      "canvasWidth": 514,
+      "canvasHeight": 543
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 95,
+        "width": 514,
+        "height": 543,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 645,
+        "width": 146.921875,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 158.921875,
+        "y": 647,
+        "width": 113.03125,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 275.953125,
+        "y": 647,
+        "width": 113.015625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 392.96875,
+        "y": 647,
+        "width": 113.015625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 403.734375,
+        "y": 4,
+        "width": 39.15625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 464.234375,
+        "y": 66,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 514,
+    "viewport": 514
+  },
+  {
+    "width": 514,
+    "height": 711,
+    "mode": "full",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 2240,
+      "boardWidthPixels": 132.34491050831264,
+      "canvasWidth": 514,
+      "canvasHeight": 543
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 95,
+        "width": 514,
+        "height": 543,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 645,
+        "width": 146.921875,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 158.921875,
+        "y": 647,
+        "width": 113.03125,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 275.953125,
+        "y": 647,
+        "width": 113.015625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 392.96875,
+        "y": 647,
+        "width": 113.015625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 403.734375,
+        "y": 4,
+        "width": 39.15625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 464.234375,
+        "y": 66,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 514,
+    "viewport": 514
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "mode": "normal",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 620,
+      "boardWidthPixels": 300.8191135428857,
+      "canvasWidth": 364,
+      "canvasHeight": 607.671875
+    },
+    "bounds": {
+      "board": {
+        "x": 13,
+        "y": 530.75,
+        "width": 364,
+        "height": 607.671875,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 21,
+        "y": 1147.421875,
+        "width": 50.953125,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 77.953125,
+        "y": 1147.421875,
+        "width": 37.53125,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "view": {
+        "x": 121.484375,
+        "y": 1147.421875,
+        "width": 28.890625,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "reset": {
+        "x": 156.375,
+        "y": 1147.421875,
+        "width": 45.84375,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "arena-sound": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "timer": {
+        "x": 323.234375,
+        "y": 492.75,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 390,
+    "viewport": 390
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "mode": "half",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 1120,
+      "boardWidthPixels": 317.91927391760544,
+      "canvasWidth": 390,
+      "canvasHeight": 676
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 95,
+        "width": 390,
+        "height": 676,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 778,
+        "width": 109.4375,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 121.4375,
+        "y": 780,
+        "width": 84.1875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 209.625,
+        "y": 780,
+        "width": 84.1875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 297.8125,
+        "y": 780,
+        "width": 84.171875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 279.734375,
+        "y": 4,
+        "width": 39.15625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 340.234375,
+        "y": 66,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 390,
+    "viewport": 390
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "mode": "full",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 2240,
+      "boardWidthPixels": 164.76088306375573,
+      "canvasWidth": 390,
+      "canvasHeight": 676
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 95,
+        "width": 390,
+        "height": 676,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 778,
+        "width": 109.4375,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 121.4375,
+        "y": 780,
+        "width": 84.1875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 209.625,
+        "y": 780,
+        "width": 84.1875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 297.8125,
+        "y": 780,
+        "width": 84.171875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 279.734375,
+        "y": 4,
+        "width": 39.15625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 340.234375,
+        "y": 66,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 390,
+    "viewport": 390
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "mode": "normal",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 620,
+      "boardWidthPixels": 240.1922220378729,
+      "canvasWidth": 294,
+      "canvasHeight": 408.953125
+    },
+    "bounds": {
+      "board": {
+        "x": 13,
+        "y": 432.8125,
+        "width": 294,
+        "height": 408.953125,
+        "visible": true,
+        "hit": false
+      },
+      "arena-start": {
+        "x": 21,
+        "y": 850.765625,
+        "width": 50.953125,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 77.953125,
+        "y": 850.765625,
+        "width": 37.53125,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "view": {
+        "x": 121.484375,
+        "y": 850.765625,
+        "width": 28.890625,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "reset": {
+        "x": 156.375,
+        "y": 850.765625,
+        "width": 45.84375,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "arena-sound": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "timer": {
+        "x": 253.234375,
+        "y": 394.8125,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 320,
+    "viewport": 320
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "mode": "half",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 1120,
+      "boardWidthPixels": 188.11791356071322,
+      "canvasWidth": 320,
+      "canvasHeight": 400
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 95,
+        "width": 320,
+        "height": 400,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 502,
+        "width": 88.265625,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 100.265625,
+        "y": 504,
+        "width": 67.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 172.171875,
+        "y": 504,
+        "width": 67.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 244.078125,
+        "y": 504,
+        "width": 67.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 209.734375,
+        "y": 4,
+        "width": 39.15625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 270.234375,
+        "y": 66,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 320,
+    "viewport": 320
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "mode": "full",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 2240,
+      "boardWidthPixels": 97.49164678328738,
+      "canvasWidth": 320,
+      "canvasHeight": 400
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 95,
+        "width": 320,
+        "height": 400,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 502,
+        "width": 88.265625,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 100.265625,
+        "y": 504,
+        "width": 67.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 172.171875,
+        "y": 504,
+        "width": 67.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 244.078125,
+        "y": 504,
+        "width": 67.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 209.734375,
+        "y": 4,
+        "width": 39.15625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 270.234375,
+        "y": 66,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 320,
+    "viewport": 320
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "mode": "normal",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 620,
+      "boardWidthPixels": 337.64027379872135,
+      "canvasWidth": 556.25,
+      "canvasHeight": 420
+    },
+    "bounds": {
+      "board": {
+        "x": 269.875,
+        "y": 307.0625,
+        "width": 556.25,
+        "height": 420,
+        "visible": true,
+        "hit": false
+      },
+      "arena-start": {
+        "x": 287.875,
+        "y": 740.0625,
+        "width": 59.625,
+        "height": 42,
+        "visible": true,
+        "hit": false
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 362.5,
+        "y": 741.0625,
+        "width": 44.90625,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "view": {
+        "x": 422.40625,
+        "y": 741.0625,
+        "width": 34.515625,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "reset": {
+        "x": 471.921875,
+        "y": 741.0625,
+        "width": 54.71875,
+        "height": 40,
+        "visible": true,
+        "hit": false
+      },
+      "arena-sound": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "timer": {
+        "x": 762.984375,
+        "y": 272.0625,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 844,
+    "viewport": 844
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "mode": "half",
+    "framing": {
+      "horizontal": true,
+      "visibleSpan": 1120,
+      "boardWidthPixels": 197.18930757156022,
+      "canvasWidth": 844,
+      "canvasHeight": 256
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 83,
+        "width": 844,
+        "height": 256,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 343,
+        "width": 88,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 104,
+        "y": 345,
+        "width": 60.53125,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 172.53125,
+        "y": 345,
+        "width": 50.515625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 231.046875,
+        "y": 345,
+        "width": 70.71875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 654.8125,
+        "y": 2,
+        "width": 47.390625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 786.859375,
+        "y": 57.5,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 844,
+    "viewport": 844
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "mode": "full",
+    "framing": {
+      "horizontal": true,
+      "visibleSpan": 2240,
+      "boardWidthPixels": 185.57158729380404,
+      "canvasWidth": 844,
+      "canvasHeight": 256
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 83,
+        "width": 844,
+        "height": 256,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 343,
+        "width": 88,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 104,
+        "y": 345,
+        "width": 60.90625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 172.90625,
+        "y": 345,
+        "width": 57.53125,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 238.4375,
+        "y": 345,
+        "width": 70.71875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 654.8125,
+        "y": 2,
+        "width": 47.390625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 786.859375,
+        "y": 57.5,
+        "width": 45.140625,
+        "height": 13,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 844,
+    "viewport": 844
+  },
+  {
+    "width": 667,
+    "height": 320,
+    "mode": "normal",
+    "framing": {
+      "horizontal": false,
+      "visibleSpan": 620,
+      "boardWidthPixels": 321.5621655225917,
+      "canvasWidth": 638.34375,
+      "canvasHeight": 400
+    },
+    "bounds": {
+      "board": {
+        "x": 14.328125,
+        "y": 269.25,
+        "width": 638.34375,
+        "height": 400,
+        "visible": true,
+        "hit": false
+      },
+      "arena-start": {
+        "x": 22.328125,
+        "y": 678.25,
+        "width": 50.953125,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 79.28125,
+        "y": 678.25,
+        "width": 37.53125,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "view": {
+        "x": 122.8125,
+        "y": 678.25,
+        "width": 28.890625,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "reset": {
+        "x": 157.703125,
+        "y": 678.25,
+        "width": 45.84375,
+        "height": 44,
+        "visible": true,
+        "hit": false
+      },
+      "arena-sound": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "timer": {
+        "x": 598.90625,
+        "y": 231.25,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 667,
+    "viewport": 667
+  },
+  {
+    "width": 667,
+    "height": 320,
+    "mode": "half",
+    "framing": {
+      "horizontal": true,
+      "visibleSpan": 1120,
+      "boardWidthPixels": 143.27035628246173,
+      "canvasWidth": 667,
+      "canvasHeight": 186
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 83,
+        "width": 667,
+        "height": 186,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 273,
+        "width": 88,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 100,
+        "y": 275,
+        "width": 44.875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 148.875,
+        "y": 275,
+        "width": 35.71875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 188.59375,
+        "y": 275,
+        "width": 54.296875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 556.734375,
+        "y": 2,
+        "width": 39.15625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 617.234375,
+        "y": 58,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 667,
+    "viewport": 667
+  },
+  {
+    "width": 667,
+    "height": 320,
+    "mode": "full",
+    "framing": {
+      "horizontal": true,
+      "visibleSpan": 2240,
+      "boardWidthPixels": 136.36682662297036,
+      "canvasWidth": 667,
+      "canvasHeight": 186
+    },
+    "bounds": {
+      "board": {
+        "x": 0,
+        "y": 83,
+        "width": 667,
+        "height": 186,
+        "visible": true,
+        "hit": true
+      },
+      "arena-start": {
+        "x": 8,
+        "y": 273,
+        "width": 88,
+        "height": 44,
+        "visible": true,
+        "hit": true
+      },
+      "pause": {
+        "x": 0,
+        "y": 0,
+        "width": 0,
+        "height": 0,
+        "visible": false,
+        "hit": false
+      },
+      "half-view": {
+        "x": 100,
+        "y": 275,
+        "width": 45.21875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "view": {
+        "x": 149.21875,
+        "y": 275,
+        "width": 42.0625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "reset": {
+        "x": 195.28125,
+        "y": 275,
+        "width": 54.296875,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "arena-sound": {
+        "x": 556.734375,
+        "y": 2,
+        "width": 39.15625,
+        "height": 40,
+        "visible": true,
+        "hit": true
+      },
+      "timer": {
+        "x": 617.234375,
+        "y": 58,
+        "width": 41.765625,
+        "height": 12,
+        "visible": true,
+        "hit": true
+      }
+    },
+    "scrollWidth": 667,
+    "viewport": 667
+  }
+]

@@ -1,0 +1,5707 @@
+[
+  {
+    "id": "changdong-b2",
+    "siteId": "changdong",
+    "sourceDocument": {
+      "file": "sources/changdong-parking-source.pdf",
+      "sha256": "5a5ed94416d48d77141977f192e78dabc788b8ecb3707acf50f4fd519c85a295",
+      "bytes": 7965912
+    },
+    "acquiredAt": "2026-09-21T08:38:23.048Z",
+    "name": "동북권 복합시설 · B2 주차장",
+    "address": "서울특별시 도봉구 창동 · 공개 계획도",
+    "buildingType": "public",
+    "publisher": "서울특별시",
+    "source": "https://mediahub.seoul.go.kr/wp-content/uploads/2020/03/ff42c687eb729c49cb070336a85c9abc.pdf#page=16",
+    "sourceAsset": {
+      "file": "sources/changdong-parking-b2.png",
+      "sha256": "891b63ffd187e2c2825b70ab6b958f99c5432cd2967a444f192bc2afaab1fc72",
+      "bytes": 621061,
+      "sourcePage": 16
+    },
+    "annotation": "sources/changdong-parking-annotated.svg",
+    "scaleStatus": "estimated",
+    "parkingEvidence": {
+      "floor": "B2",
+      "note": "공개 PDF 16쪽 주차장 평면도. 차로·코어는 분석자가 수동 주석; 축척 추정.",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "location": null,
+    "rasterAnalysis": {
+      "file": "analysis/changdong-b2/analysis.json",
+      "tileCount": 4,
+      "candidates": 529,
+      "sourcePixels": {
+        "width": 1800,
+        "height": 1350
+      },
+      "modelPolicy": "reviewed-preserved"
+    },
+    "modelFile": "generated/changdong-b2.json",
+    "statistics": {
+      "walls": 23,
+      "nodes": 11,
+      "edges": 12,
+      "spaces": 101,
+      "objects": 87,
+      "accessible": 4,
+      "ocrLabels": 14,
+      "triangles": 276,
+      "detectedParking": 57,
+      "matchedParking": 38
+    },
+    "routingReady": true,
+    "modelHash": "adc726403b4b3fa80bf4a60ca2df96aad5e660be2091d8d66c49576dc824bfab"
+  },
+  {
+    "id": "10000901-0",
+    "siteId": "10000901",
+    "name": "신내소행주 - 공동육아형 공동체주택 [너나들이]",
+    "address": "서울 중랑구 신내역로1길 145 너나들이",
+    "acquiredAt": "2026-09-21T08:30:08.582Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000901&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10000901-0.jpg",
+      "label": "신내소행주 - 공동육아형 공동체주택 [너나들이]_평면도_12",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA6408ABDDE050007F01002F05&fileSn=21",
+      "bytes": 336882,
+      "sha256": "0579a33ec8152eada9ee9c8d2cc662f7e4002a64c84ccc9fcaf3213b8b2b6fc6"
+    },
+    "location": {
+      "lat": 37.6180982,
+      "lng": 127.1102204,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000901&menuNo=200015",
+      "sourcePageSha256": "4a33e5798199cde04b7ced46b9da17abcdb30102e8e8309d1561b240da90857c",
+      "checkedAt": "2026-09-21T16:19:27.908Z",
+      "independentCheck": {
+        "lat": 37.6180982,
+        "lng": 127.1102204,
+        "precision": "publisher-naver-point",
+        "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000901&menuNo=200015",
+        "independentCheck": {
+          "lat": 37.618107,
+          "lng": 127.110295,
+          "query": "서울 중랑구 신내역로1길 145 너나들이",
+          "precision": "address-result",
+          "displayName": "신내소행주 너나들이, 145, 신내역로1길, 신내1동, 중랑구, 서울특별시, 02263, 대한민국",
+          "bounds": [
+            37.6179862,
+            37.6182214,
+            127.109983,
+            127.1106999
+          ],
+          "source": "https://www.openstreetmap.org/way/843403989",
+          "license": "© OpenStreetMap contributors · ODbL 1.0",
+          "checkedAt": "2026-09-21T10:41:59.795Z"
+        }
+      }
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "서울시 공개 평면도 상단: 차량 진입과 주차 차량 확인. 경계·차로는 분석가 추적, 교차점·주차구역 연결은 자동 생성. OSM 도로와 두 기준점 정합.",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "photo": {
+      "file": "photos/neonadeuli-exterior.jpg",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA6408ABDDE050007F01002F05&fileSn=15",
+      "sha256": "c15b5ad61d8e148461ad86180055ade9c9c81148a466b00796aa49e700ec48e7",
+      "bytes": 992732,
+      "publisher": "서울특별시 공동체주택 플랫폼",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000901&menuNo=200015",
+      "acquiredAt": "2026-09-21T15:20:24.130Z",
+      "rights": "서울시 공개 게시 사진. 별도 자유 재배포 라이선스 확인되지 않음.",
+      "review": "외관 직접 검토: 흰색 상부, 회색 하부, 어두운 기단, 검은 난간, 노란색 입면 부분. 공개 입주표 2–5층의 4개 주거층을 반영한 개념 재구성; 실측 아님.",
+      "facade": {
+        "residentialFloors": 4,
+        "baseHeight": 4,
+        "floorHeight": 2.8,
+        "upper": "#d5d4c3",
+        "lower": "#939292",
+        "base": "#41494a",
+        "accent": "#dbbd42",
+        "rail": "#303939"
+      }
+    },
+    "annotation": "sources/neonadeuli-layers.svg",
+    "footprint": [
+      {
+        "x": -17.494082851240446,
+        "y": 0,
+        "z": 12.467782969007416
+      },
+      {
+        "x": -20.932939863380827,
+        "y": 0,
+        "z": 2.504688542852705
+      },
+      {
+        "x": -9.716975455344114,
+        "y": 0,
+        "z": -1.3692297369387658
+      },
+      {
+        "x": -9.443630410734746,
+        "y": 0,
+        "z": -0.5788613525618723
+      },
+      {
+        "x": -2.0809493719052936,
+        "y": 0,
+        "z": -3.116945742251854
+      },
+      {
+        "x": -1.9222328938242805,
+        "y": 0,
+        "z": -2.6605358302025897
+      },
+      {
+        "x": 18.455199297526057,
+        "y": 0,
+        "z": -9.695927648292606
+      },
+      {
+        "x": 18.781449835246782,
+        "y": 0,
+        "z": -8.738580027356413
+      },
+      {
+        "x": 23.560579323251808,
+        "y": 0,
+        "z": -10.397240440576114
+      },
+      {
+        "x": 23.745748547261964,
+        "y": 0,
+        "z": -9.851774935642492
+      },
+      {
+        "x": 34.28275913518114,
+        "y": 0,
+        "z": -13.491922284409135
+      },
+      {
+        "x": 34.670732746318855,
+        "y": 0,
+        "z": -12.36759542691364
+      },
+      {
+        "x": 38.60337435581969,
+        "y": 0,
+        "z": -13.714561266224546
+      },
+      {
+        "x": 39.45867981713564,
+        "y": 0,
+        "z": -11.221004671790286
+      },
+      {
+        "x": 41.037027010121804,
+        "y": 0,
+        "z": -11.76647017672391
+      },
+      {
+        "x": 42.28030608382853,
+        "y": 0,
+        "z": -8.159718675585514
+      }
+    ],
+    "footprintSource": {
+      "source": "https://www.openstreetmap.org/way/843403989",
+      "license": "© OpenStreetMap contributors, ODbL 1.0",
+      "sha256": "8e45c8c71a3cc100330738195999f59a7f4cfbacb2fc4b23521178b5efc38fd7"
+    },
+    "rasterAnalysis": {
+      "file": "analysis/10000901-0/analysis.json",
+      "tileCount": 1,
+      "candidates": 475,
+      "sourcePixels": {
+        "width": 1000,
+        "height": 600
+      },
+      "modelPolicy": "reviewed-preserved"
+    },
+    "modelFile": "generated/10000901-0.json",
+    "statistics": {
+      "walls": 16,
+      "nodes": 6,
+      "edges": 5,
+      "spaces": 3,
+      "objects": 6,
+      "accessible": 0,
+      "ocrLabels": 34,
+      "triangles": 192,
+      "detectedParking": 3,
+      "matchedParking": 1
+    },
+    "routingReady": true,
+    "modelHash": "80c7545cdfafed67d7413f7d27aea2144c31b8c4dcdbdd20182d3ce9a4d5232a",
+    "radio": {
+      "file": "generated/radio-10000901.json",
+      "count": 48,
+      "nearbyCount": 353,
+      "acquiredAt": "2026-09-21T16:20:27.507Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000555-0",
+    "siteId": "20000555",
+    "name": "어반그로잉 동숭 · 도면 1",
+    "address": "서울 종로구 동숭동 192-6 1",
+    "acquiredAt": "2026-09-21T08:30:10.710Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000555-0.png",
+      "label": "어반그로잉 동숭_평면도_3",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=504806813443494d97388963c26a8317&fileSn=4",
+      "bytes": 86186,
+      "sha256": "78d0d7cf61bef7fef07a71f0902f668368ea5cbb66fa928a1fa7937b43170452"
+    },
+    "location": {
+      "lat": 37.5794313,
+      "lng": 127.0053034,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+      "sourcePageSha256": "e4f618197b7151bdbbaea5fe51de3994ac2732d1b4a44b694daad223ab18dcbf",
+      "checkedAt": "2026-09-21T16:19:29.062Z",
+      "independentCheck": {
+        "lat": 37.58096,
+        "lng": 127.0051932,
+        "query": "서울 종로구 동숭동",
+        "precision": "address-area",
+        "displayName": "동숭동, 이화동, 종로구, 서울특별시, 03085, 대한민국",
+        "bounds": [
+          37.57096,
+          37.59096,
+          126.9951932,
+          127.0151932
+        ],
+        "source": "https://www.openstreetmap.org/node/5611290376",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:06.956Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000555-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 338,
+      "sourcePixels": {
+        "width": 1065,
+        "height": 754
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000555-0.json",
+    "statistics": {
+      "walls": 17,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 16,
+      "triangles": 204,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "9c17ffd590638860be2447f6f71ae20b879e4b8eeca36cef8f8baeb13bab5590",
+    "radio": {
+      "file": "generated/radio-20000555.json",
+      "count": 48,
+      "nearbyCount": 1347,
+      "acquiredAt": "2026-09-21T16:25:42.915Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000555-1",
+    "siteId": "20000555",
+    "name": "어반그로잉 동숭 · 도면 2",
+    "address": "서울 종로구 동숭동 192-6 1",
+    "acquiredAt": "2026-09-21T08:30:10.710Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000555-1.png",
+      "label": "어반그로잉 동숭_평면도_4",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=504806813443494d97388963c26a8317&fileSn=5",
+      "bytes": 58763,
+      "sha256": "a7e2a50df2c9af8a95c9d2a9b38c8d6da89bdcfeb2fea1ac7bbbf551ac6fca12"
+    },
+    "location": {
+      "lat": 37.5794313,
+      "lng": 127.0053034,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+      "sourcePageSha256": "e4f618197b7151bdbbaea5fe51de3994ac2732d1b4a44b694daad223ab18dcbf",
+      "checkedAt": "2026-09-21T16:19:29.062Z",
+      "independentCheck": {
+        "lat": 37.58096,
+        "lng": 127.0051932,
+        "query": "서울 종로구 동숭동",
+        "precision": "address-area",
+        "displayName": "동숭동, 이화동, 종로구, 서울특별시, 03085, 대한민국",
+        "bounds": [
+          37.57096,
+          37.59096,
+          126.9951932,
+          127.0151932
+        ],
+        "source": "https://www.openstreetmap.org/node/5611290376",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:06.956Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000555-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 337,
+      "sourcePixels": {
+        "width": 1063,
+        "height": 757
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000555-1.json",
+    "statistics": {
+      "walls": 19,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 11,
+      "triangles": 228,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "3e2a251e14ccd23892dcb99feac4ee8794c5f8577f3fd1ffa8dc6472243210fc",
+    "radio": {
+      "file": "generated/radio-20000555.json",
+      "count": 48,
+      "nearbyCount": 1347,
+      "acquiredAt": "2026-09-21T16:25:42.915Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000555-2",
+    "siteId": "20000555",
+    "name": "어반그로잉 동숭 · 도면 3",
+    "address": "서울 종로구 동숭동 192-6 1",
+    "acquiredAt": "2026-09-21T08:30:10.710Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000555-2.png",
+      "label": "어반그로잉 동숭_평면도_5",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=504806813443494d97388963c26a8317&fileSn=6",
+      "bytes": 61561,
+      "sha256": "396861411f3315ff68c555a35e46ff320ce15827c2c6897dee4f622763e4973c"
+    },
+    "location": {
+      "lat": 37.5794313,
+      "lng": 127.0053034,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000555&menuNo=200015",
+      "sourcePageSha256": "e4f618197b7151bdbbaea5fe51de3994ac2732d1b4a44b694daad223ab18dcbf",
+      "checkedAt": "2026-09-21T16:19:29.062Z",
+      "independentCheck": {
+        "lat": 37.58096,
+        "lng": 127.0051932,
+        "query": "서울 종로구 동숭동",
+        "precision": "address-area",
+        "displayName": "동숭동, 이화동, 종로구, 서울특별시, 03085, 대한민국",
+        "bounds": [
+          37.57096,
+          37.59096,
+          126.9951932,
+          127.0151932
+        ],
+        "source": "https://www.openstreetmap.org/node/5611290376",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:06.956Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000555-2/analysis.json",
+      "tileCount": 2,
+      "candidates": 295,
+      "sourcePixels": {
+        "width": 1061,
+        "height": 755
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000555-2.json",
+    "statistics": {
+      "walls": 19,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 15,
+      "triangles": 228,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "558121586555487d9efa32612b3984aff5e15bb0d00ef537550fdf4202b82046",
+    "radio": {
+      "file": "generated/radio-20000555.json",
+      "count": 48,
+      "nearbyCount": 1347,
+      "acquiredAt": "2026-09-21T16:25:42.915Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "10002143-0",
+    "siteId": "10002143",
+    "name": "면목동 공동체주택마을 [도서당] · 도면 1",
+    "address": "서울특별시 중랑구 동일로631-3 (면목동) 앞 면목동 176-129번지",
+    "acquiredAt": "2026-09-21T08:30:23.359Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002143-0.jpg",
+      "label": "면목동 공동체주택마을 [도서당]_평면도_31",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA631EABDDE050007F01002F05&fileSn=115",
+      "bytes": 4095159,
+      "sha256": "aeaaa29b3491053c449bba01367b9e59a5ae009e5cec48235618b08442a74442"
+    },
+    "location": {
+      "lat": 37.586564,
+      "lng": 127.078164,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+      "sourcePageSha256": "6d3f16c67f0e7234384e3bc655b373ac64796ed304c897879e65f1965df67f51",
+      "checkedAt": "2026-09-21T16:19:30.208Z",
+      "independentCheck": {
+        "lat": 37.6063,
+        "lng": 127.093,
+        "query": "서울특별시 중랑구",
+        "precision": "address-area",
+        "displayName": "중랑구, 서울특별시, 대한민국",
+        "bounds": [
+          37.56955,
+          37.6210737,
+          127.0693771,
+          127.1183601
+        ],
+        "source": "https://www.openstreetmap.org/relation/2419948",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:10.363Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002143-0/analysis.json",
+      "tileCount": 48,
+      "candidates": 322,
+      "sourcePixels": {
+        "width": 4958,
+        "height": 7008
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
+    "modelFile": "generated/10002143-0.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 46,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "093adef8d7d047b7e3813b10440ef580d4e3cd90333811f7dd1481c56ec2c4da",
+    "radio": {
+      "file": "generated/radio-10002143.json",
+      "count": 48,
+      "nearbyCount": 1003,
+      "acquiredAt": "2026-09-21T16:25:45.610Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "10002143-1",
+    "siteId": "10002143",
+    "name": "면목동 공동체주택마을 [도서당] · 도면 2",
+    "address": "서울특별시 중랑구 동일로631-3 (면목동) 앞 면목동 176-129번지",
+    "acquiredAt": "2026-09-21T08:30:23.359Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002143-1.jpg",
+      "label": "면목동 공동체주택마을 [도서당]_평면도_32",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA631EABDDE050007F01002F05&fileSn=117",
+      "bytes": 158871,
+      "sha256": "d20183340dc5fe4ed8e22bf752332c660d067158656271e17343369627f4ad95"
+    },
+    "location": {
+      "lat": 37.586564,
+      "lng": 127.078164,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+      "sourcePageSha256": "6d3f16c67f0e7234384e3bc655b373ac64796ed304c897879e65f1965df67f51",
+      "checkedAt": "2026-09-21T16:19:30.208Z",
+      "independentCheck": {
+        "lat": 37.6063,
+        "lng": 127.093,
+        "query": "서울특별시 중랑구",
+        "precision": "address-area",
+        "displayName": "중랑구, 서울특별시, 대한민국",
+        "bounds": [
+          37.56955,
+          37.6210737,
+          127.0693771,
+          127.1183601
+        ],
+        "source": "https://www.openstreetmap.org/relation/2419948",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:10.363Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002143-1/analysis.json",
+      "tileCount": 1,
+      "candidates": 224,
+      "sourcePixels": {
+        "width": 664,
+        "height": 938
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
+    "modelFile": "generated/10002143-1.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 43,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "0cdf2733860962978ba9ef95ae8d6dcf8702bba64cc304616e00d3a0860c7d6f",
+    "radio": {
+      "file": "generated/radio-10002143.json",
+      "count": 48,
+      "nearbyCount": 1003,
+      "acquiredAt": "2026-09-21T16:25:45.610Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "10002143-2",
+    "siteId": "10002143",
+    "name": "면목동 공동체주택마을 [도서당] · 도면 3",
+    "address": "서울특별시 중랑구 동일로631-3 (면목동) 앞 면목동 176-129번지",
+    "acquiredAt": "2026-09-21T08:30:23.359Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002143-2.jpg",
+      "label": "면목동 공동체주택마을 [도서당]_평면도_33",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA631EABDDE050007F01002F05&fileSn=118",
+      "bytes": 2893170,
+      "sha256": "6eee0bcaf53b1646d2b7c2a21721a26f2ccc8206837e8f4587b41f6aeacfb5d0"
+    },
+    "location": {
+      "lat": 37.586564,
+      "lng": 127.078164,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002143&menuNo=200015",
+      "sourcePageSha256": "6d3f16c67f0e7234384e3bc655b373ac64796ed304c897879e65f1965df67f51",
+      "checkedAt": "2026-09-21T16:19:30.208Z",
+      "independentCheck": {
+        "lat": 37.6063,
+        "lng": 127.093,
+        "query": "서울특별시 중랑구",
+        "precision": "address-area",
+        "displayName": "중랑구, 서울특별시, 대한민국",
+        "bounds": [
+          37.56955,
+          37.6210737,
+          127.0693771,
+          127.1183601
+        ],
+        "source": "https://www.openstreetmap.org/relation/2419948",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:10.363Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002143-2/analysis.json",
+      "tileCount": 48,
+      "candidates": 52,
+      "sourcePixels": {
+        "width": 4958,
+        "height": 7008
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
+    "modelFile": "generated/10002143-2.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 37,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "f3c82365132fca37460bca7776a916251a10cda33061ddf2df2cd309ec4968d9",
+    "radio": {
+      "file": "generated/radio-10002143.json",
+      "count": 48,
+      "nearbyCount": 1003,
+      "acquiredAt": "2026-09-21T16:25:45.610Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-159344-0",
+    "siteId": "parking-159344",
+    "name": "녹틸럭스",
+    "address": "서울시 강남구 봉은사로37길 45-11 (논현동)",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "building",
+    "source": "https://magazine.brique.co/project/noctilux-ciid/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-159344-0.png",
+      "label": "1층 평면도 ©CIID",
+      "url": "https://media.brique.co/2025/11/1f-floor-plan-2048x1256.png",
+      "bytes": 83272,
+      "sha256": "fc228b07c1f67abe2a2a508500f3043b55d9dd6989f0cd74a660e17e350294cb",
+      "width": 2048,
+      "height": 1256
+    },
+    "location": {
+      "lat": 37.5088724,
+      "lng": 127.0369323,
+      "query": "서울특별시 강남구 봉은사로37길 45-11",
+      "precision": "address-area",
+      "displayName": "봉은사로37길, 논현2동, 강남구, 서울특별시, 06135, 대한민국",
+      "bounds": [
+        37.5083154,
+        37.5093478,
+        127.0365105,
+        127.0372394
+      ],
+      "source": "https://www.openstreetmap.org/way/908671828",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:19.519Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "왼쪽 차량 6대와 주차 구획, Parking lot 범례",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-159344-0.png",
+      "label": "1층 평면도 ©CIID",
+      "url": "https://media.brique.co/2025/11/1f-floor-plan-905x555.png",
+      "bytes": 29013,
+      "sha256": "899cda554bb68e53f8cf6dbf971f1a01c24ba15b38d31b434e85184d93e027e2"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/noctilux-ciid/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "af757e7e1beb36cded2de122e339e86da3a03916958722a811eda53906ac3ef2",
+      "previous": {
+        "file": "sources/parking-159344-0.png",
+        "url": "https://media.brique.co/2025/11/1f-floor-plan-905x555.png",
+        "sha256": "899cda554bb68e53f8cf6dbf971f1a01c24ba15b38d31b434e85184d93e027e2",
+        "width": 905,
+        "height": 555
+      },
+      "selectedWidth": 2048,
+      "selectedHeight": 1256
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-159344-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 348,
+      "sourcePixels": {
+        "width": 2048,
+        "height": 1256
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-159344-0.json",
+    "statistics": {
+      "walls": 109,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 7,
+      "triangles": 1308,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "a6ca641289e34c352b2cdf7eb3ed86bc0b4dc94baca8cb06aeb6c2e064737cff",
+    "radio": {
+      "file": "generated/radio-parking-159344.json",
+      "count": 48,
+      "nearbyCount": 1788,
+      "acquiredAt": "2026-09-21T16:25:47.898Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "multilevel-dogok-0",
+    "siteId": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층 · B1",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "public",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "sourceAsset": {
+      "file": "sources/multilevel-dogok-0.png",
+      "label": "지하 1층 · 학교 주차장·특별교실",
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+      "bytes": 756379,
+      "sha256": "ec1281817d5c39212f55d8763042286b40ec4d4d70e58d96b0b5ed2effea77fc",
+      "floor": "B1",
+      "kind": "parking-plan",
+      "sourcePage": 17,
+      "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+      "cropNormalized": [
+        0.502,
+        0.44,
+        0.395,
+        0.225
+      ]
+    },
+    "location": {
+      "lat": 37.4925348,
+      "lng": 127.0449746,
+      "query": "도곡중학교",
+      "precision": "address-result",
+      "displayName": "도곡중학교, 언주로57길, 도곡동, 도곡1동, 강남구, 서울특별시, 06273, 대한민국",
+      "bounds": [
+        37.4919393,
+        37.4930401,
+        127.0443661,
+        127.0457928
+      ],
+      "source": "https://www.openstreetmap.org/way/417952853",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 90,
+    "rasterAnalysis": {
+      "file": "analysis/multilevel-dogok-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 287,
+      "sourcePixels": {
+        "width": 1185,
+        "height": 955
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/multilevel-dogok-0.json",
+    "statistics": {
+      "walls": 143,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 9,
+      "triangles": 1716,
+      "detectedParking": 27,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "74984e8b66823d6658c36aa446b88c0bacd70d937d1c04e1630b083f8e41cea9",
+    "radio": {
+      "file": "generated/radio-multilevel-dogok.json",
+      "count": 48,
+      "nearbyCount": 1205,
+      "acquiredAt": "2026-09-21T16:25:50.321Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "multilevel-dogok-1",
+    "siteId": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층 · B2",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "public",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "sourceAsset": {
+      "file": "sources/multilevel-dogok-1.png",
+      "label": "지하 2층 · 병원 측 주차장",
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+      "bytes": 649771,
+      "sha256": "4b701b475eb5814c8c779f40b5a87230ae53f259fce99d96918864cb7f7876e8",
+      "floor": "B2",
+      "kind": "parking-plan",
+      "sourcePage": 17,
+      "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+      "cropNormalized": [
+        0.102,
+        0.44,
+        0.395,
+        0.225
+      ]
+    },
+    "location": {
+      "lat": 37.4925348,
+      "lng": 127.0449746,
+      "query": "도곡중학교",
+      "precision": "address-result",
+      "displayName": "도곡중학교, 언주로57길, 도곡동, 도곡1동, 강남구, 서울특별시, 06273, 대한민국",
+      "bounds": [
+        37.4919393,
+        37.4930401,
+        127.0443661,
+        127.0457928
+      ],
+      "source": "https://www.openstreetmap.org/way/417952853",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 90,
+    "rasterAnalysis": {
+      "file": "analysis/multilevel-dogok-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 270,
+      "sourcePixels": {
+        "width": 1185,
+        "height": 955
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/multilevel-dogok-1.json",
+    "statistics": {
+      "walls": 154,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 7,
+      "triangles": 1848,
+      "detectedParking": 3,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "1d9002f425552b7f432143a2f1d03ef81f9619f9225b604171ab93595f2162f4",
+    "radio": {
+      "file": "generated/radio-multilevel-dogok.json",
+      "count": 48,
+      "nearbyCount": 1205,
+      "acquiredAt": "2026-09-21T16:25:50.321Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "multilevel-dogok-2",
+    "siteId": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층 · B3",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "public",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "sourceAsset": {
+      "file": "sources/multilevel-dogok-2.png",
+      "label": "지하 3층 · 병원 측 주차장",
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+      "bytes": 796493,
+      "sha256": "450c734e12e3e1675509694f75cb3c48e603e608e17f115e5f120ef95b600e42",
+      "floor": "B3",
+      "kind": "parking-plan",
+      "sourcePage": 17,
+      "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+      "cropNormalized": [
+        0.502,
+        0.196,
+        0.395,
+        0.241
+      ]
+    },
+    "location": {
+      "lat": 37.4925348,
+      "lng": 127.0449746,
+      "query": "도곡중학교",
+      "precision": "address-result",
+      "displayName": "도곡중학교, 언주로57길, 도곡동, 도곡1동, 강남구, 서울특별시, 06273, 대한민국",
+      "bounds": [
+        37.4919393,
+        37.4930401,
+        127.0443661,
+        127.0457928
+      ],
+      "source": "https://www.openstreetmap.org/way/417952853",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 90,
+    "rasterAnalysis": {
+      "file": "analysis/multilevel-dogok-2/analysis.json",
+      "tileCount": 2,
+      "candidates": 259,
+      "sourcePixels": {
+        "width": 1185,
+        "height": 1022
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/multilevel-dogok-2.json",
+    "statistics": {
+      "walls": 146,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 9,
+      "triangles": 1752,
+      "detectedParking": 3,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "8e004ba1076cba5de44753f6b8de8607f20832a29d732330b2e9aa21ee54cff4",
+    "radio": {
+      "file": "generated/radio-multilevel-dogok.json",
+      "count": 48,
+      "nearbyCount": 1205,
+      "acquiredAt": "2026-09-21T16:25:50.321Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "multilevel-dogok-3",
+    "siteId": "multilevel-dogok",
+    "name": "도곡중 복합시설 · 지하 1–4층 · B4",
+    "address": "서울특별시 강남구 도곡동 541-2 도곡중학교",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "public",
+    "source": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+    "publisher": "서울특별시의회 · 서울특별시교육청",
+    "sourceAsset": {
+      "file": "sources/multilevel-dogok-3.png",
+      "label": "지하 4층 · 병원 측 주차장",
+      "url": "https://ms.smc.seoul.kr/attach/record/SEOUL/appendix/a10/A0051136.pdf#page=17",
+      "bytes": 781685,
+      "sha256": "68cffede0c299507ac72bfb9a5ca76be2401d514f5b22f9e034760aa3cf93fd4",
+      "floor": "B4",
+      "kind": "parking-plan",
+      "sourcePage": 17,
+      "transformation": "PDF 17쪽의 해당 층 사각 영역 추출 · 내용 변경 없음",
+      "cropNormalized": [
+        0.102,
+        0.196,
+        0.395,
+        0.241
+      ]
+    },
+    "location": {
+      "lat": 37.4925348,
+      "lng": 127.0449746,
+      "query": "도곡중학교",
+      "precision": "address-result",
+      "displayName": "도곡중학교, 언주로57길, 도곡동, 도곡1동, 강남구, 서울특별시, 06273, 대한민국",
+      "bounds": [
+        37.4919393,
+        37.4930401,
+        127.0443661,
+        127.0457928
+      ],
+      "source": "https://www.openstreetmap.org/way/417952853",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": {
+      "floor": "B1 · B2 · B3 · B4",
+      "note": "시의회 공개 문서 17쪽의 4개 지하층 평면도를 각각 분리했습니다. B1은 학교 주차장과 특별교실, B2–B4는 병원 측 주차장으로 표기됩니다.",
+      "method": "visual-review-of-published-plan",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 90,
+    "rasterAnalysis": {
+      "file": "analysis/multilevel-dogok-3/analysis.json",
+      "tileCount": 2,
+      "candidates": 265,
+      "sourcePixels": {
+        "width": 1185,
+        "height": 1022
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/multilevel-dogok-3.json",
+    "statistics": {
+      "walls": 155,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 9,
+      "triangles": 1860,
+      "detectedParking": 17,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "1ee97c5cc88bd253948e1e86196469f47ca1d2ad569b665941b8daaf8d2b26b3",
+    "radio": {
+      "file": "generated/radio-multilevel-dogok.json",
+      "count": 48,
+      "nearbyCount": 1205,
+      "acquiredAt": "2026-09-21T16:25:50.321Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000367-0",
+    "siteId": "20000367",
+    "name": "맑은구름집 · 도면 1",
+    "address": "서울특별시 종로구 자하문로30길19-9 (청운동) 맑은구름집",
+    "acquiredAt": "2026-09-21T08:30:07.985Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000367&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000367-0.jpg",
+      "label": "맑은구름집_평면도_10",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=3228cb2fdbe44a81bb856e67c4485349&fileSn=17",
+      "bytes": 193682,
+      "sha256": "e6ac80b689207f3b69354b4c7bfe714d9d05af1a79482d1426d9cbe2998a9adb"
+    },
+    "location": {
+      "lat": 37.566156,
+      "lng": 126.9658718,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000367&menuNo=200015",
+      "sourcePageSha256": "de4c05e0115f0c7481cfc6fe2fa99baabd462dcfab289857c132a6800ed6cb4b",
+      "checkedAt": "2026-09-21T16:19:31.358Z",
+      "independentCheck": {
+        "lat": 37.5854747,
+        "lng": 126.9707628,
+        "query": "서울특별시 종로구 자하문로30길",
+        "precision": "address-area",
+        "displayName": "자하문로30길, 궁정동, 청운효자동, 종로구, 서울특별시, 03032, 대한민국",
+        "bounds": [
+          37.5850784,
+          37.5858577,
+          126.9703322,
+          126.9711696
+        ],
+        "source": "https://www.openstreetmap.org/way/789051357",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:41:58.689Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000367-0/analysis.json",
+      "tileCount": 1,
+      "candidates": 274,
+      "sourcePixels": {
+        "width": 880,
+        "height": 613
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000367-0.json",
+    "statistics": {
+      "walls": 21,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 9,
+      "triangles": 252,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "b9b7205caa58075c6d6efe384913ddf992cd0230da1ad95b0d3c611c26ecac5f",
+    "radio": {
+      "file": "generated/radio-20000367.json",
+      "count": 48,
+      "nearbyCount": 1167,
+      "acquiredAt": "2026-09-21T16:25:53.090Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000367-1",
+    "siteId": "20000367",
+    "name": "맑은구름집 · 도면 2",
+    "address": "서울특별시 종로구 자하문로30길19-9 (청운동) 맑은구름집",
+    "acquiredAt": "2026-09-21T08:30:07.985Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000367&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000367-1.jpg",
+      "label": "맑은구름집_평면도_11",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=3228cb2fdbe44a81bb856e67c4485349&fileSn=18",
+      "bytes": 226299,
+      "sha256": "e94a1221227771e4c79dfd76daf1070ef1f4bd948bab2950669fa82e2b8aa409"
+    },
+    "location": {
+      "lat": 37.566156,
+      "lng": 126.9658718,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000367&menuNo=200015",
+      "sourcePageSha256": "de4c05e0115f0c7481cfc6fe2fa99baabd462dcfab289857c132a6800ed6cb4b",
+      "checkedAt": "2026-09-21T16:19:31.358Z",
+      "independentCheck": {
+        "lat": 37.5854747,
+        "lng": 126.9707628,
+        "query": "서울특별시 종로구 자하문로30길",
+        "precision": "address-area",
+        "displayName": "자하문로30길, 궁정동, 청운효자동, 종로구, 서울특별시, 03032, 대한민국",
+        "bounds": [
+          37.5850784,
+          37.5858577,
+          126.9703322,
+          126.9711696
+        ],
+        "source": "https://www.openstreetmap.org/way/789051357",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:41:58.689Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000367-1/analysis.json",
+      "tileCount": 1,
+      "candidates": 289,
+      "sourcePixels": {
+        "width": 880,
+        "height": 613
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000367-1.json",
+    "statistics": {
+      "walls": 13,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 17,
+      "triangles": 156,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "4f288a1fcd355bd2b46479e4a45c948db72d4c6d147910373df45ada9e196c02",
+    "radio": {
+      "file": "generated/radio-20000367.json",
+      "count": 48,
+      "nearbyCount": 1167,
+      "acquiredAt": "2026-09-21T16:25:53.090Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000367-2",
+    "siteId": "20000367",
+    "name": "맑은구름집 · 도면 3",
+    "address": "서울특별시 종로구 자하문로30길19-9 (청운동) 맑은구름집",
+    "acquiredAt": "2026-09-21T08:30:07.985Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000367&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000367-2.jpg",
+      "label": "맑은구름집_평면도_12",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=3228cb2fdbe44a81bb856e67c4485349&fileSn=19",
+      "bytes": 231693,
+      "sha256": "92ad5814743c249d4658fdc377ca3b2868896180db950c929683ea0a837f159b"
+    },
+    "location": {
+      "lat": 37.566156,
+      "lng": 126.9658718,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000367&menuNo=200015",
+      "sourcePageSha256": "de4c05e0115f0c7481cfc6fe2fa99baabd462dcfab289857c132a6800ed6cb4b",
+      "checkedAt": "2026-09-21T16:19:31.358Z",
+      "independentCheck": {
+        "lat": 37.5854747,
+        "lng": 126.9707628,
+        "query": "서울특별시 종로구 자하문로30길",
+        "precision": "address-area",
+        "displayName": "자하문로30길, 궁정동, 청운효자동, 종로구, 서울특별시, 03032, 대한민국",
+        "bounds": [
+          37.5850784,
+          37.5858577,
+          126.9703322,
+          126.9711696
+        ],
+        "source": "https://www.openstreetmap.org/way/789051357",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:41:58.689Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000367-2/analysis.json",
+      "tileCount": 1,
+      "candidates": 374,
+      "sourcePixels": {
+        "width": 880,
+        "height": 613
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000367-2.json",
+    "statistics": {
+      "walls": 22,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 18,
+      "triangles": 264,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "c9ff4877f95be1b80088a281494621ac1b6500400ff812836c02df735fc7d139",
+    "radio": {
+      "file": "generated/radio-20000367.json",
+      "count": 48,
+      "nearbyCount": 1167,
+      "acquiredAt": "2026-09-21T16:25:53.090Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000474-0",
+    "siteId": "20000474",
+    "name": "사는자리 공동체주택",
+    "address": "서울 금천구 시흥대로130길 13 사는자리",
+    "acquiredAt": "2026-09-21T08:30:09.288Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000474&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000474-0.jpg",
+      "label": "사는자리 공동체주택_평면도_30",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=6a422ef8ec704f0592d20008e8bff73e&fileSn=32",
+      "bytes": 366769,
+      "sha256": "50bd16960a329ca7d5483e2e14e0f9b59871de3403ce7b65ec063a13e95a1121"
+    },
+    "location": {
+      "lat": 37.4709282,
+      "lng": 126.8997224,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000474&menuNo=200015",
+      "sourcePageSha256": "38ab57f990e04cb0dc74b299a5ba1c274ae3faf3421e978d7ad80f411ae17030",
+      "checkedAt": "2026-09-21T16:19:32.513Z",
+      "independentCheck": {
+        "lat": 37.4707138,
+        "lng": 126.9005759,
+        "query": "서울 금천구 시흥대로130길",
+        "precision": "address-area",
+        "displayName": "시흥대로130길, 독산동, 독산4동, 금천구, 서울특별시, 08543, 대한민국",
+        "bounds": [
+          37.4704749,
+          37.4708419,
+          126.8990272,
+          126.9021122
+        ],
+        "source": "https://www.openstreetmap.org/way/278460678",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:02.548Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000474-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 495,
+      "sourcePixels": {
+        "width": 950,
+        "height": 1599
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000474-0.json",
+    "statistics": {
+      "walls": 117,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 44,
+      "triangles": 1404,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "6825614c2fb3d78ea132c6cf710f91f91301d7ca4a16387819ba709f508a70fc",
+    "radio": {
+      "file": "generated/radio-20000474.json",
+      "count": 48,
+      "nearbyCount": 1081,
+      "acquiredAt": "2026-09-21T16:25:55.852Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "10000921-0",
+    "siteId": "10000921",
+    "name": "신내 여성안심주택 [달리]",
+    "address": "서울 중랑구 신내동 243-14 여성안심공동체주택 달리",
+    "acquiredAt": "2026-09-21T08:30:09.643Z",
+    "buildingType": "house",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000921&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10000921-0.jpg",
+      "label": "신내 여성안심주택 [달리]_평면도_32",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA6427ABDDE050007F01002F05&fileSn=43",
+      "bytes": 273263,
+      "sha256": "423e4419ad2558ad8f7205deff82cc4fec04bc9c81f21e9b1184c0b8c78f1155"
+    },
+    "location": {
+      "lat": 37.6179732,
+      "lng": 127.1098077,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10000921&menuNo=200015",
+      "sourcePageSha256": "0ecc8fa0482c7f82bf617a97aec65903649d2c245aaba809ed0e16c84851942b",
+      "checkedAt": "2026-09-21T16:19:33.663Z",
+      "independentCheck": {
+        "lat": 37.6107129,
+        "lng": 127.0931277,
+        "query": "서울 중랑구 신내동",
+        "precision": "address-area",
+        "displayName": "신내동, 중랑구, 서울특별시, 대한민국",
+        "bounds": [
+          37.5994749,
+          37.6210737,
+          127.084879,
+          127.1174205
+        ],
+        "source": "https://www.openstreetmap.org/relation/3882925",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:04.854Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10000921-0/analysis.json",
+      "tileCount": 1,
+      "candidates": 238,
+      "sourcePixels": {
+        "width": 1000,
+        "height": 600
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
+    "modelFile": "generated/10000921-0.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 6,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "19765f0b513b05b65b9e4402d74b5da29423cee14ea0fb814c663db2487e75df",
+    "radio": {
+      "file": "generated/radio-10000921.json",
+      "count": 48,
+      "nearbyCount": 362,
+      "acquiredAt": "2026-09-21T16:25:57.803Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000441-0",
+    "siteId": "20000441",
+    "name": "온음공동체주택 · 도면 1",
+    "address": "서울 마포구 성미산로5안길 15 온음공동체주택",
+    "acquiredAt": "2026-09-21T08:30:26.458Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000441&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000441-0.jpg",
+      "label": "온음공동체주택_평면도_24",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=cdeea66b3c3c411196d401f3aaee339d&fileSn=34",
+      "bytes": 342601,
+      "sha256": "a1025fb1dc037bf7d10d44880628b756e33f630327f236f280b1e1098768d044"
+    },
+    "location": {
+      "lat": 37.5607555,
+      "lng": 126.9103709,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000441&menuNo=200015",
+      "sourcePageSha256": "acdce3174fd7c0e3e9d1ac2ef41d81a132d318bd76613c588df573317c94398f",
+      "checkedAt": "2026-09-21T16:19:34.810Z",
+      "independentCheck": {
+        "lat": 37.561073,
+        "lng": 126.9105264,
+        "query": "서울 마포구 성미산로5안길",
+        "precision": "address-area",
+        "displayName": "성미산로5안길, 성산1동, 마포구, 서울특별시, 03969, 대한민국",
+        "bounds": [
+          37.5601253,
+          37.5621067,
+          126.910081,
+          126.9105726
+        ],
+        "source": "https://www.openstreetmap.org/way/325120116",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:12.438Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000441-0/analysis.json",
+      "tileCount": 12,
+      "candidates": 785,
+      "sourcePixels": {
+        "width": 3309,
+        "height": 2339
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000441-0.json",
+    "statistics": {
+      "walls": 99,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 60,
+      "triangles": 1188,
+      "detectedParking": 3,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "0c46202f78ae6ed9a0d8cf442863e2843d3919d9660df4a2e1753bf67c91e541",
+    "radio": {
+      "file": "generated/radio-20000441.json",
+      "count": 48,
+      "nearbyCount": 1296,
+      "acquiredAt": "2026-09-21T16:25:59.964Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000441-1",
+    "siteId": "20000441",
+    "name": "온음공동체주택 · 도면 2",
+    "address": "서울 마포구 성미산로5안길 15 온음공동체주택",
+    "acquiredAt": "2026-09-21T08:30:26.458Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000441&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000441-1.jpg",
+      "label": "온음공동체주택_평면도_25",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=cdeea66b3c3c411196d401f3aaee339d&fileSn=35",
+      "bytes": 569224,
+      "sha256": "7e8dda3a7c6d1bc1a0ef3bf4843f4d321d4c112f122b01e489505f4cb7a74f2d"
+    },
+    "location": {
+      "lat": 37.5607555,
+      "lng": 126.9103709,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000441&menuNo=200015",
+      "sourcePageSha256": "acdce3174fd7c0e3e9d1ac2ef41d81a132d318bd76613c588df573317c94398f",
+      "checkedAt": "2026-09-21T16:19:34.810Z",
+      "independentCheck": {
+        "lat": 37.561073,
+        "lng": 126.9105264,
+        "query": "서울 마포구 성미산로5안길",
+        "precision": "address-area",
+        "displayName": "성미산로5안길, 성산1동, 마포구, 서울특별시, 03969, 대한민국",
+        "bounds": [
+          37.5601253,
+          37.5621067,
+          126.910081,
+          126.9105726
+        ],
+        "source": "https://www.openstreetmap.org/way/325120116",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:12.438Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000441-1/analysis.json",
+      "tileCount": 12,
+      "candidates": 1296,
+      "sourcePixels": {
+        "width": 3309,
+        "height": 2339
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000441-1.json",
+    "statistics": {
+      "walls": 64,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 78,
+      "triangles": 768,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "ba2d8617ac0444b47633c0a7b25d140f105ba80a0af1a943bf52f548fcafb972",
+    "radio": {
+      "file": "generated/radio-20000441.json",
+      "count": 48,
+      "nearbyCount": 1296,
+      "acquiredAt": "2026-09-21T16:25:59.964Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000441-2",
+    "siteId": "20000441",
+    "name": "온음공동체주택 · 도면 3",
+    "address": "서울 마포구 성미산로5안길 15 온음공동체주택",
+    "acquiredAt": "2026-09-21T08:30:26.458Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000441&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000441-2.jpg",
+      "label": "온음공동체주택_평면도_26",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=cdeea66b3c3c411196d401f3aaee339d&fileSn=36",
+      "bytes": 373752,
+      "sha256": "4096f3ce4fb20d150de9cb0322263b8ec0b2de84095fdc5b6bd66f222f9537fe"
+    },
+    "location": {
+      "lat": 37.5607555,
+      "lng": 126.9103709,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000441&menuNo=200015",
+      "sourcePageSha256": "acdce3174fd7c0e3e9d1ac2ef41d81a132d318bd76613c588df573317c94398f",
+      "checkedAt": "2026-09-21T16:19:34.810Z",
+      "independentCheck": {
+        "lat": 37.561073,
+        "lng": 126.9105264,
+        "query": "서울 마포구 성미산로5안길",
+        "precision": "address-area",
+        "displayName": "성미산로5안길, 성산1동, 마포구, 서울특별시, 03969, 대한민국",
+        "bounds": [
+          37.5601253,
+          37.5621067,
+          126.910081,
+          126.9105726
+        ],
+        "source": "https://www.openstreetmap.org/way/325120116",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:12.438Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000441-2/analysis.json",
+      "tileCount": 12,
+      "candidates": 828,
+      "sourcePixels": {
+        "width": 3309,
+        "height": 2339
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000441-2.json",
+    "statistics": {
+      "walls": 80,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 60,
+      "triangles": 960,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "a5974f058ea542203d26805368df032482641eaf0ef6a686e9ffe3f52f45641f",
+    "radio": {
+      "file": "generated/radio-20000441.json",
+      "count": 48,
+      "nearbyCount": 1296,
+      "acquiredAt": "2026-09-21T16:25:59.964Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000536-0",
+    "siteId": "20000536",
+    "name": "암사예가 · 도면 1",
+    "address": "서울 강동구 고덕로24나길 7 암사예가",
+    "acquiredAt": "2026-09-21T08:30:29.651Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000536&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000536-0.png",
+      "label": "암사예가_평면도_3",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=cea1fefe7ef242c2995c690cc2aa3177&fileSn=3",
+      "bytes": 222901,
+      "sha256": "53ed2eba3b6561ca0a51f189549e36ac36bfd0d2b3cff35a47532f1fdc7c277f"
+    },
+    "location": {
+      "lat": 37.5528195,
+      "lng": 127.1358008,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000536&menuNo=200015",
+      "sourcePageSha256": "ae03d894dc79b91c7bbceb64e8727ee878f9a43145048204ee8984147b9663ac",
+      "checkedAt": "2026-09-21T16:19:35.958Z",
+      "independentCheck": {
+        "lat": 37.5526907,
+        "lng": 127.1361257,
+        "query": "서울 강동구 고덕로24나길",
+        "precision": "address-area",
+        "displayName": "고덕로24나길, 암사1동, 강동구, 서울특별시, 05254, 대한민국",
+        "bounds": [
+          37.552676,
+          37.5526923,
+          127.1354065,
+          127.1368448
+        ],
+        "source": "https://www.openstreetmap.org/way/381493502",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:14.201Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000536-0/analysis.json",
+      "tileCount": 1,
+      "candidates": 367,
+      "sourcePixels": {
+        "width": 1000,
+        "height": 668
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000536-0.json",
+    "statistics": {
+      "walls": 45,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 56,
+      "triangles": 540,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "0fa83c40695c78788f1cf8051e894f4cb87fca0bf4c5938e5d849e1d59bb550a",
+    "radio": {
+      "file": "generated/radio-20000536.json",
+      "count": 48,
+      "nearbyCount": 1062,
+      "acquiredAt": "2026-09-21T16:26:01.798Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000536-1",
+    "siteId": "20000536",
+    "name": "암사예가 · 도면 2",
+    "address": "서울 강동구 고덕로24나길 7 암사예가",
+    "acquiredAt": "2026-09-21T08:30:29.651Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000536&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000536-1.png",
+      "label": "암사예가_평면도_4",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=cea1fefe7ef242c2995c690cc2aa3177&fileSn=4",
+      "bytes": 234310,
+      "sha256": "d09318c2531cda8d264ceec3db592dc3b4caedeef178c83d4e9b98b3a6a0ece0"
+    },
+    "location": {
+      "lat": 37.5528195,
+      "lng": 127.1358008,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000536&menuNo=200015",
+      "sourcePageSha256": "ae03d894dc79b91c7bbceb64e8727ee878f9a43145048204ee8984147b9663ac",
+      "checkedAt": "2026-09-21T16:19:35.958Z",
+      "independentCheck": {
+        "lat": 37.5526907,
+        "lng": 127.1361257,
+        "query": "서울 강동구 고덕로24나길",
+        "precision": "address-area",
+        "displayName": "고덕로24나길, 암사1동, 강동구, 서울특별시, 05254, 대한민국",
+        "bounds": [
+          37.552676,
+          37.5526923,
+          127.1354065,
+          127.1368448
+        ],
+        "source": "https://www.openstreetmap.org/way/381493502",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:14.201Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000536-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 374,
+      "sourcePixels": {
+        "width": 1044,
+        "height": 689
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000536-1.json",
+    "statistics": {
+      "walls": 45,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 48,
+      "triangles": 540,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "e42484ec169c298565b8229720ebc7eb38a9b90eb63ea92fb3c98387ce04c4c1",
+    "radio": {
+      "file": "generated/radio-20000536.json",
+      "count": 48,
+      "nearbyCount": 1062,
+      "acquiredAt": "2026-09-21T16:26:01.798Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "10002042-0",
+    "siteId": "10002042",
+    "name": "코이노니아 스테이  · 도면 1",
+    "address": "서울 강서구 강서로47길 60 코이노니아스테이",
+    "acquiredAt": "2026-09-21T08:30:48.940Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002042&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002042-0.png",
+      "label": "코이노니아 스테이 _평면도_44",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA63C1ABDDE050007F01002F05&fileSn=78",
+      "bytes": 1282244,
+      "sha256": "a11b6b8c452ff29115bd6c0dbdadcc979a2fc0ab4e251d3b3e942b6f20b524e6"
+    },
+    "location": {
+      "lat": 37.553125,
+      "lng": 126.8328836,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002042&menuNo=200015",
+      "sourcePageSha256": "48bc80e5befc54c17959fe9c9bb72faae0354c2f11a1cc7fb35496f49c881c11",
+      "checkedAt": "2026-09-21T16:19:37.110Z",
+      "independentCheck": {
+        "lat": 37.5529269,
+        "lng": 126.8332624,
+        "query": "서울 강서구 강서로47길",
+        "precision": "address-area",
+        "displayName": "강서로47길, 외발산동, 발산1동, 강서구, 서울특별시, 07633, 대한민국",
+        "bounds": [
+          37.5526389,
+          37.553328,
+          126.8301833,
+          126.836356
+        ],
+        "source": "https://www.openstreetmap.org/way/167750687",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:16.429Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002042-0/analysis.json",
+      "tileCount": 15,
+      "candidates": 574,
+      "sourcePixels": {
+        "width": 3840,
+        "height": 2160
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
+    "modelFile": "generated/10002042-0.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 0,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "eb89f08e69c57c9ed2373183c5426fdd731347dd449e9af2398032c7f9030ce3",
+    "radio": {
+      "file": "generated/radio-10002042.json",
+      "count": 48,
+      "nearbyCount": 904,
+      "acquiredAt": "2026-09-21T16:26:04.180Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "10002042-1",
+    "siteId": "10002042",
+    "name": "코이노니아 스테이  · 도면 2",
+    "address": "서울 강서구 강서로47길 60 코이노니아스테이",
+    "acquiredAt": "2026-09-21T08:30:48.940Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002042&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002042-1.png",
+      "label": "코이노니아 스테이 _평면도_45",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA63C1ABDDE050007F01002F05&fileSn=79",
+      "bytes": 1793333,
+      "sha256": "0d0de45ee4bf917b5d5a498559fb3fc25749feff29dbe253bcb403978056dbfc"
+    },
+    "location": {
+      "lat": 37.553125,
+      "lng": 126.8328836,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002042&menuNo=200015",
+      "sourcePageSha256": "48bc80e5befc54c17959fe9c9bb72faae0354c2f11a1cc7fb35496f49c881c11",
+      "checkedAt": "2026-09-21T16:19:37.110Z",
+      "independentCheck": {
+        "lat": 37.5529269,
+        "lng": 126.8332624,
+        "query": "서울 강서구 강서로47길",
+        "precision": "address-area",
+        "displayName": "강서로47길, 외발산동, 발산1동, 강서구, 서울특별시, 07633, 대한민국",
+        "bounds": [
+          37.5526389,
+          37.553328,
+          126.8301833,
+          126.836356
+        ],
+        "source": "https://www.openstreetmap.org/way/167750687",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:16.429Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002042-1/analysis.json",
+      "tileCount": 15,
+      "candidates": 885,
+      "sourcePixels": {
+        "width": 3840,
+        "height": 2160
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
+    "modelFile": "generated/10002042-1.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 0,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "98bb360b888a47cdc0c3dd9212e87e85931b8f0cb51f1afa6948e86c8631b91a",
+    "radio": {
+      "file": "generated/radio-10002042.json",
+      "count": 48,
+      "nearbyCount": 904,
+      "acquiredAt": "2026-09-21T16:26:04.180Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "10002042-2",
+    "siteId": "10002042",
+    "name": "코이노니아 스테이  · 도면 3",
+    "address": "서울 강서구 강서로47길 60 코이노니아스테이",
+    "acquiredAt": "2026-09-21T08:30:48.940Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002042&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/10002042-2.png",
+      "label": "코이노니아 스테이 _평면도_46",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=D5D1F9CA63C1ABDDE050007F01002F05&fileSn=80",
+      "bytes": 1134051,
+      "sha256": "7a0e6e74abfc9e1d118cd218d9de749cda784745c0753fd64c3c86fa64e11525"
+    },
+    "location": {
+      "lat": 37.553125,
+      "lng": 126.8328836,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=10002042&menuNo=200015",
+      "sourcePageSha256": "48bc80e5befc54c17959fe9c9bb72faae0354c2f11a1cc7fb35496f49c881c11",
+      "checkedAt": "2026-09-21T16:19:37.110Z",
+      "independentCheck": {
+        "lat": 37.5529269,
+        "lng": 126.8332624,
+        "query": "서울 강서구 강서로47길",
+        "precision": "address-area",
+        "displayName": "강서로47길, 외발산동, 발산1동, 강서구, 서울특별시, 07633, 대한민국",
+        "bounds": [
+          37.5526389,
+          37.553328,
+          126.8301833,
+          126.836356
+        ],
+        "source": "https://www.openstreetmap.org/way/167750687",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:16.429Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/10002042-2/analysis.json",
+      "tileCount": 15,
+      "candidates": 602,
+      "sourcePixels": {
+        "width": 3840,
+        "height": 2160
+      },
+      "modelPolicy": "non-plan-drawing"
+    },
+    "modelFile": "generated/10002042-2.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 0,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "1593e7a422978145d37ea7c095e6e74e82c750973c1e649692a575c2511a48b1",
+    "radio": {
+      "file": "generated/radio-10002042.json",
+      "count": 48,
+      "nearbyCount": 904,
+      "acquiredAt": "2026-09-21T16:26:04.180Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000570-0",
+    "siteId": "20000570",
+    "name": "오늘공동체주택 · 도면 1",
+    "address": "서울 도봉구 도봉로191길 80 (도봉동 351-2)",
+    "acquiredAt": "2026-09-21T08:30:50.233Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000570&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000570-0.jpg",
+      "label": "오늘공동체주택_평면도_15",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=1f4e0b381954488a8a4627839f025a63&fileSn=16",
+      "bytes": 229927,
+      "sha256": "f12ae8c233e3a9e142d03bb6a7742b2bf37c5c263c86f30853829447c1fa1a9c"
+    },
+    "location": {
+      "lat": 37.6904247,
+      "lng": 127.0409754,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000570&menuNo=200015",
+      "sourcePageSha256": "29b57f0b49ff34c204ac0d643681f6f066526dc33c1e3de645939816f44ad4a1",
+      "checkedAt": "2026-09-21T16:19:38.273Z",
+      "independentCheck": {
+        "lat": 37.6908774,
+        "lng": 127.0424031,
+        "query": "서울 도봉구 도봉로191길 80",
+        "precision": "address-area",
+        "displayName": "도봉로191길, 도봉동, 도봉1동, 도봉구, 서울특별시, 01301, 대한민국",
+        "bounds": [
+          37.6893759,
+          37.6909458,
+          127.0409945,
+          127.0453333
+        ],
+        "source": "https://www.openstreetmap.org/way/722646997",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:17.914Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000570-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 444,
+      "sourcePixels": {
+        "width": 1080,
+        "height": 763
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000570-0.json",
+    "statistics": {
+      "walls": 36,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 28,
+      "triangles": 432,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "98c0ecab0f6d15079c5d0231e67d00e3e079a872cc6471ca63802dde86f1ed79",
+    "radio": {
+      "file": "generated/radio-20000570.json",
+      "count": 48,
+      "nearbyCount": 307,
+      "acquiredAt": "2026-09-21T16:26:05.892Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000570-1",
+    "siteId": "20000570",
+    "name": "오늘공동체주택 · 도면 2",
+    "address": "서울 도봉구 도봉로191길 80 (도봉동 351-2)",
+    "acquiredAt": "2026-09-21T08:30:50.233Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000570&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000570-1.jpg",
+      "label": "오늘공동체주택_평면도_16",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=1f4e0b381954488a8a4627839f025a63&fileSn=17",
+      "bytes": 184152,
+      "sha256": "d197d084b9860615ad1da7532380a1d22fc8f019806af42aa34d9e12b0da9234"
+    },
+    "location": {
+      "lat": 37.6904247,
+      "lng": 127.0409754,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000570&menuNo=200015",
+      "sourcePageSha256": "29b57f0b49ff34c204ac0d643681f6f066526dc33c1e3de645939816f44ad4a1",
+      "checkedAt": "2026-09-21T16:19:38.273Z",
+      "independentCheck": {
+        "lat": 37.6908774,
+        "lng": 127.0424031,
+        "query": "서울 도봉구 도봉로191길 80",
+        "precision": "address-area",
+        "displayName": "도봉로191길, 도봉동, 도봉1동, 도봉구, 서울특별시, 01301, 대한민국",
+        "bounds": [
+          37.6893759,
+          37.6909458,
+          127.0409945,
+          127.0453333
+        ],
+        "source": "https://www.openstreetmap.org/way/722646997",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:17.914Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000570-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 322,
+      "sourcePixels": {
+        "width": 1080,
+        "height": 763
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000570-1.json",
+    "statistics": {
+      "walls": 52,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 10,
+      "triangles": 624,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "d3e824efde868364d7cd451070e5b166dd0bd7e5ee57f2104e7daedf35750032",
+    "radio": {
+      "file": "generated/radio-20000570.json",
+      "count": 48,
+      "nearbyCount": 307,
+      "acquiredAt": "2026-09-21T16:26:05.892Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "20000570-2",
+    "siteId": "20000570",
+    "name": "오늘공동체주택 · 도면 3",
+    "address": "서울 도봉구 도봉로191길 80 (도봉동 351-2)",
+    "acquiredAt": "2026-09-21T08:30:50.233Z",
+    "buildingType": "apartment",
+    "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000570&menuNo=200015",
+    "publisher": "서울특별시 공동체주택 플랫폼",
+    "sourceAsset": {
+      "file": "sources/20000570-2.jpg",
+      "label": "오늘공동체주택_평면도_17",
+      "url": "https://soco.seoul.go.kr/cohome/cmmn/file/fileDown.do?atchFileId=1f4e0b381954488a8a4627839f025a63&fileSn=18",
+      "bytes": 172980,
+      "sha256": "4f200b5ea785a1d8363125d5261098d136ec46d62a6cbbb899f65b4aff7db5b8"
+    },
+    "location": {
+      "lat": 37.6904247,
+      "lng": 127.0409754,
+      "precision": "publisher-naver-point",
+      "source": "https://soco.seoul.go.kr/coHouse/pgm/home/cohome/view.do?homeCode=20000570&menuNo=200015",
+      "sourcePageSha256": "29b57f0b49ff34c204ac0d643681f6f066526dc33c1e3de645939816f44ad4a1",
+      "checkedAt": "2026-09-21T16:19:38.273Z",
+      "independentCheck": {
+        "lat": 37.6908774,
+        "lng": 127.0424031,
+        "query": "서울 도봉구 도봉로191길 80",
+        "precision": "address-area",
+        "displayName": "도봉로191길, 도봉동, 도봉1동, 도봉구, 서울특별시, 01301, 대한민국",
+        "bounds": [
+          37.6893759,
+          37.6909458,
+          127.0409945,
+          127.0453333
+        ],
+        "source": "https://www.openstreetmap.org/way/722646997",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:17.914Z"
+      }
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/20000570-2/analysis.json",
+      "tileCount": 2,
+      "candidates": 304,
+      "sourcePixels": {
+        "width": 1080,
+        "height": 763
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/20000570-2.json",
+    "statistics": {
+      "walls": 59,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 11,
+      "triangles": 708,
+      "detectedParking": 3,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "9125dc325307960b6b081cfb57881ffa568e2bd4209626c0e260fe3f94ed9899",
+    "radio": {
+      "file": "generated/radio-20000570.json",
+      "count": 48,
+      "nearbyCount": 307,
+      "acquiredAt": "2026-09-21T16:26:05.892Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-139632-0",
+    "siteId": "parking-139632",
+    "name": "레이어드 하우스",
+    "address": "서울특별시 서초구 서초동",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/g-o-architecture_layered-house/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-139632-0.jpg",
+      "label": "1층 평면도 ©G/O Architecture",
+      "url": "https://media.brique.co/2025/02/plan-1F.jpg",
+      "bytes": 225811,
+      "sha256": "f1e5489cbede3597c4b38862319d6b3248f0de8851665be5e7a10104cc85d546",
+      "width": 2000,
+      "height": 1414
+    },
+    "location": {
+      "lat": 37.4884513,
+      "lng": 127.0164398,
+      "query": "서울특별시 서초구 서초동",
+      "precision": "address-area",
+      "displayName": "서초동, 서초구, 서울특별시, 대한민국",
+      "bounds": [
+        37.4725365,
+        37.504383,
+        126.9998511,
+        127.0344697
+      ],
+      "source": "https://www.openstreetmap.org/relation/3880697",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:18.642Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "범례 6 Parking Lot와 왼쪽 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-139632-0.jpg",
+      "label": "1층 평면도 ©G/O Architecture",
+      "url": "https://media.brique.co/2025/02/plan-1F-905x640.jpg",
+      "bytes": 65861,
+      "sha256": "b84a29e7e198f9b62980a54cb2b300214aa52349206f7578223efed020dc3efd"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/g-o-architecture_layered-house/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "3384258fd7737d83de4ca2ce54b8b634333995fcb3d7827f2785f5253605b533",
+      "previous": {
+        "file": "sources/parking-139632-0.jpg",
+        "url": "https://media.brique.co/2025/02/plan-1F-905x640.jpg",
+        "sha256": "b84a29e7e198f9b62980a54cb2b300214aa52349206f7578223efed020dc3efd",
+        "width": 905,
+        "height": 640
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1414
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-139632-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 349,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1414
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-139632-0.json",
+    "statistics": {
+      "walls": 37,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 10,
+      "triangles": 444,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "23456fb9da2b8af4f7a48752b17e384632ee314f821ae92b2b22603f3f43f303",
+    "radio": {
+      "file": "generated/radio-parking-139632.json",
+      "count": 48,
+      "nearbyCount": 1296,
+      "acquiredAt": "2026-09-21T16:26:07.674Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-27446-0",
+    "siteId": "parking-27446",
+    "name": "후암동 복합주거",
+    "address": "서울시 용산구 두텁바위로 Duteopbawi-ro, Yongsan-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ed%9b%84%ec%95%94%eb%8f%99-%eb%b3%b5%ed%95%a9%ec%a3%bc%ea%b1%b0-huam-dong-multiplex/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-27446-0.jpg",
+      "label": "1층 배치도. 근린생활시설과 주차장을 배치했다. ⓒBOUNDLESS",
+      "url": "https://media.brique.co/2019/07/경계없는-작업실-BOUNDLESS-후암동-복합주거-도면-후암동-1층-평면도.jpg",
+      "bytes": 98620,
+      "sha256": "0e35665c8e91e436732aca70ed3e4b70330d0a01639f476bd68f28d2782e45a7",
+      "width": 1500,
+      "height": 1060
+    },
+    "location": {
+      "lat": 37.5517514,
+      "lng": 126.9802728,
+      "query": "서울특별시 용산구 두텁바위로",
+      "precision": "address-area",
+      "displayName": "두텁바위로, 후암동, 회현동, 용산구, 서울특별시, 04327, 대한민국",
+      "bounds": [
+        37.5497497,
+        37.5540824,
+        126.9786564,
+        126.9817088
+      ],
+      "source": "https://www.openstreetmap.org/way/1506939325",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:21.260Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "진입로 오른쪽과 상단의 사선 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-27446-0.jpg",
+      "label": "1층 배치도. 근린생활시설과 주차장을 배치했다. ⓒBOUNDLESS",
+      "url": "https://media.brique.co/2019/07/경계없는-작업실-BOUNDLESS-후암동-복합주거-도면-후암동-1층-평면도-700x495.jpg",
+      "bytes": 30235,
+      "sha256": "bd34db963f63932df8ea13dd1d423ac90110938ae6c122729292eee843d61790"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ed%9b%84%ec%95%94%eb%8f%99-%eb%b3%b5%ed%95%a9%ec%a3%bc%ea%b1%b0-huam-dong-multiplex/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "e82cde1e673c36c2157043a1dd772327fdd6a37760c8da90da7ab1c33c3f1e6a",
+      "previous": {
+        "file": "sources/parking-27446-0.jpg",
+        "url": "https://media.brique.co/2019/07/경계없는-작업실-BOUNDLESS-후암동-복합주거-도면-후암동-1층-평면도-700x495.jpg",
+        "sha256": "bd34db963f63932df8ea13dd1d423ac90110938ae6c122729292eee843d61790",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 1500,
+      "selectedHeight": 1060
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-27446-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 96,
+      "sourcePixels": {
+        "width": 1500,
+        "height": 1060
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-27446-0.json",
+    "statistics": {
+      "walls": 12,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 0,
+      "triangles": 144,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "38b78fb0e4b343babdefdd61a09e722d726b876d6f32617ccd51ace104bff2b4",
+    "radio": {
+      "file": "generated/radio-parking-27446.json",
+      "count": 48,
+      "nearbyCount": 1133,
+      "acquiredAt": "2026-09-21T16:26:09.958Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-65955-0",
+    "siteId": "parking-65955",
+    "name": "서소문성지 역사박물관 · 1F",
+    "address": "서울특별시 중구 칠패로 5 5, Chilpae-ro, Jung-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "cultural",
+    "source": "https://magazine.brique.co/project/%ec%84%9c%ec%86%8c%eb%ac%b8%ec%84%b1%ec%a7%80-%ec%97%ad%ec%82%ac%eb%b0%95%eb%ac%bc%ea%b4%80/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-65955-0.jpg",
+      "label": "지상 1층 평면도 ©Interkerd Architects",
+      "url": "https://media.brique.co/2021/05/0e79e408-지상-1층-평면도.jpg",
+      "bytes": 214466,
+      "sha256": "ccb0c235424e6ce9fd39592dbe3f4d3901d0f8a107e87615970fff464db4e898",
+      "floor": "1F",
+      "width": 2000,
+      "height": 1112
+    },
+    "location": {
+      "lat": 37.5597268,
+      "lng": 126.9730689,
+      "query": "서울특별시 중구 칠패로 5 5,",
+      "precision": "address-area",
+      "displayName": "칠패로, 봉래동1가, 회현동, 중구, 서울특별시, 04512, 대한민국",
+      "bounds": [
+        37.5596095,
+        37.56002,
+        126.9715167,
+        126.9745844
+      ],
+      "source": "https://www.openstreetmap.org/way/516948900",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:21.926Z"
+    },
+    "parkingEvidence": {
+      "floor": "B1",
+      "note": "지하 1층 외곽의 반복 주차 구획과 차로",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-65955-0.jpg",
+      "label": "지상 1층 평면도 ©Interkerd Architects",
+      "url": "https://media.brique.co/2021/05/0e79e408-지상-1층-평면도-700x389.jpg",
+      "bytes": 43279,
+      "sha256": "4adcabb8ecbca5385abd1a7a44597393f0cf1630e6c2e566207bf1cc2415a2bc",
+      "floor": "1F"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%84%9c%ec%86%8c%eb%ac%b8%ec%84%b1%ec%a7%80-%ec%97%ad%ec%82%ac%eb%b0%95%eb%ac%bc%ea%b4%80/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "83d8991485ca2aa88b0b548beec0bd863c33ee15f51d5848d84549d8f9a3f2e5",
+      "previous": {
+        "file": "sources/parking-65955-0.jpg",
+        "url": "https://media.brique.co/2021/05/0e79e408-지상-1층-평면도-700x389.jpg",
+        "sha256": "4adcabb8ecbca5385abd1a7a44597393f0cf1630e6c2e566207bf1cc2415a2bc",
+        "width": 700,
+        "height": 389
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1112
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-65955-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 1470,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1112
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-65955-0.json",
+    "statistics": {
+      "walls": 216,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 10,
+      "triangles": 2592,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "1514eba207b2536d7c9026bc5a2138cb6f8b759f1dd7c8f552e063d569300a78",
+    "radio": {
+      "file": "generated/radio-parking-65955.json",
+      "count": 48,
+      "nearbyCount": 1451,
+      "acquiredAt": "2026-09-21T16:26:13.045Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-57413-0",
+    "siteId": "parking-57413",
+    "name": "스퀘어 앤 트라이앵글 하우스",
+    "address": "서울시 서대문구 연희동 Yeonhui-dong, Seodaemun-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ec%8a%a4%ed%80%98%ec%96%b4-%ec%95%a4-%ed%8a%b8%eb%9d%bc%ec%9d%b4%ec%95%b5%ea%b8%80-%ed%95%98%ec%9a%b0%ec%8a%a4-square-triangle-house/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-57413-0.jpg",
+      "label": "1층 평면도 ⓒStudio LXJX",
+      "url": "https://media.brique.co/2021/02/a0bd7ee5-스튜디오-李心田心-studio-lxjx-square-triangle-house-도면01.jpg",
+      "bytes": 181372,
+      "sha256": "03e1017a4c85cc555060b67d4da8241387af2f0b58698ade87c83f32ffa5342b",
+      "width": 2000,
+      "height": 1413
+    },
+    "location": {
+      "lat": 37.57234,
+      "lng": 126.93084,
+      "query": "서울특별시 서대문구 연희동",
+      "precision": "address-area",
+      "displayName": "연희동, 서대문구, 서울특별시, 대한민국",
+      "bounds": [
+        37.5609137,
+        37.5842447,
+        126.916785,
+        126.9456857
+      ],
+      "source": "https://www.openstreetmap.org/relation/3887532",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:22.864Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "범례 6 주차장과 오른쪽 아래 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-57413-0.jpg",
+      "label": "1층 평면도 ⓒStudio LXJX",
+      "url": "https://media.brique.co/2021/02/a0bd7ee5-스튜디오-李心田心-studio-lxjx-square-triangle-house-도면01-905x639.jpg",
+      "bytes": 52651,
+      "sha256": "35192b822696fe0f97fb8a77217dbaa83a11116b60aeb340ccb9a974983917b8"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%8a%a4%ed%80%98%ec%96%b4-%ec%95%a4-%ed%8a%b8%eb%9d%bc%ec%9d%b4%ec%95%b5%ea%b8%80-%ed%95%98%ec%9a%b0%ec%8a%a4-square-triangle-house/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "1546a724427ca3837c813ce355892bf379518b6d697a9ea5cefbe888f63b7462",
+      "previous": {
+        "file": "sources/parking-57413-0.jpg",
+        "url": "https://media.brique.co/2021/02/a0bd7ee5-스튜디오-李心田心-studio-lxjx-square-triangle-house-도면01-905x639.jpg",
+        "sha256": "35192b822696fe0f97fb8a77217dbaa83a11116b60aeb340ccb9a974983917b8",
+        "width": 905,
+        "height": 639
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1413
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-57413-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 343,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1413
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-57413-0.json",
+    "statistics": {
+      "walls": 197,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 10,
+      "triangles": 2364,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "32b5744109c573608efc27897b30f7a3854bab834249d69de126746840e2ce75",
+    "radio": {
+      "file": "generated/radio-parking-57413.json",
+      "count": 48,
+      "nearbyCount": 845,
+      "acquiredAt": "2026-09-21T16:26:14.875Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-63653-0",
+    "siteId": "parking-63653",
+    "name": "유취헌",
+    "address": "서울특별시 서초구 우면동 Umyeon-dong, Seocho-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ec%9c%a0%ec%b7%a8%ed%97%8c-%e5%b9%bd%e8%b6%a3%e8%bb%92/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-63653-0.jpg",
+      "label": "1층 평면도 ⓒhow architects",
+      "url": "https://media.brique.co/2021/04/b6aba77b--幽趣軒-하우-건축사사무소-how-architects-1층-평면도.jpg",
+      "bytes": 215131,
+      "sha256": "d26725fa6b70a1a8d53ebf8f45a2f301094cc3999c9e5272b2430fde1ee8633c",
+      "width": 2000,
+      "height": 1680
+    },
+    "location": {
+      "lat": 37.4647545,
+      "lng": 127.0188666,
+      "query": "서울특별시 서초구 우면동",
+      "precision": "address-area",
+      "displayName": "우면동, 양재1동, 서초구, 서울특별시, 06766, 대한민국",
+      "bounds": [
+        37.4547545,
+        37.4747545,
+        127.0088666,
+        127.0288666
+      ],
+      "source": "https://www.openstreetmap.org/node/415155276",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:24.517Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "범례 14 Parking과 왼쪽 상단 차량 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-63653-0.jpg",
+      "label": "1층 평면도 ⓒhow architects",
+      "url": "https://media.brique.co/2021/04/b6aba77b--幽趣軒-하우-건축사사무소-how-architects-1층-평면도-700x588.jpg",
+      "bytes": 44353,
+      "sha256": "563f97da9eca3716f457a51d1196244d8c86a45d547d063f5ee71842af0d665e"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%9c%a0%ec%b7%a8%ed%97%8c-%e5%b9%bd%e8%b6%a3%e8%bb%92/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "346545229621ff223af2ec18eeab88ab97a40ce1f3e9976db90e4512d25b5ab2",
+      "previous": {
+        "file": "sources/parking-63653-0.jpg",
+        "url": "https://media.brique.co/2021/04/b6aba77b--幽趣軒-하우-건축사사무소-how-architects-1층-평면도-700x588.jpg",
+        "sha256": "563f97da9eca3716f457a51d1196244d8c86a45d547d063f5ee71842af0d665e",
+        "width": 700,
+        "height": 588
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1680
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-63653-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 453,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1680
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-63653-0.json",
+    "statistics": {
+      "walls": 61,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 23,
+      "triangles": 732,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "7fe49847c431817dbf1ceff57d22f8f735281cfbbcfccb47ee78dc4befd01bff",
+    "radio": {
+      "file": "generated/radio-parking-63653.json",
+      "count": 48,
+      "nearbyCount": 348,
+      "acquiredAt": "2026-09-21T16:26:16.544Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-52328-0",
+    "siteId": "parking-52328",
+    "name": "평창동 공동주택",
+    "address": "서울특별시 종로구 평창동 Pyeongchang-dong, Jongno-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "apartment",
+    "source": "https://magazine.brique.co/project/%ed%8f%89%ec%b0%bd%eb%8f%99-%ea%b3%b5%eb%8f%99%ec%a3%bc%ed%83%9d/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-52328-0.jpg",
+      "label": "1층 평면도ⓒTERMINAL 7 ARCHITECTS",
+      "url": "https://media.brique.co/2020/10/1a628533-터미널7아키텍츠-건축사사무소-terminal-7-architects-평창동-공동주택-01-지상1층평면도-e1604876010345.jpg",
+      "bytes": 735594,
+      "sha256": "2e3ec53856967453ea08ce1672121f764518d0224ab61d32009b37ac18e11ffc",
+      "width": 2000,
+      "height": 1269
+    },
+    "location": {
+      "lat": 37.6159731,
+      "lng": 126.9676478,
+      "query": "서울특별시 종로구 평창동",
+      "precision": "address-area",
+      "displayName": "평창동, 종로구, 서울특별시, 대한민국",
+      "bounds": [
+        37.598696,
+        37.632353,
+        126.9489043,
+        126.9867986
+      ],
+      "source": "https://www.openstreetmap.org/relation/3883991",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:24.984Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "범례 15 parking과 양쪽 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-52328-0.jpg",
+      "label": "1층 평면도ⓒTERMINAL 7 ARCHITECTS",
+      "url": "https://media.brique.co/2020/10/1a628533-터미널7아키텍츠-건축사사무소-terminal-7-architects-평창동-공동주택-01-지상1층평면도-e1604876010345-700x444.jpg",
+      "bytes": 594468,
+      "sha256": "e12a64cd6591be97b8615127ed0aa4bd83fa4867601bd60b2b7708dad3db2d46"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ed%8f%89%ec%b0%bd%eb%8f%99-%ea%b3%b5%eb%8f%99%ec%a3%bc%ed%83%9d/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "f4f21a67d69561eaf8aac8adcf7a578d541fd768a4d4a435c184938a6437c20f",
+      "previous": {
+        "file": "sources/parking-52328-0.jpg",
+        "url": "https://media.brique.co/2020/10/1a628533-터미널7아키텍츠-건축사사무소-terminal-7-architects-평창동-공동주택-01-지상1층평면도-e1604876010345-700x444.jpg",
+        "sha256": "e12a64cd6591be97b8615127ed0aa4bd83fa4867601bd60b2b7708dad3db2d46",
+        "width": 700,
+        "height": 444
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1269
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-52328-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 260,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1269
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-52328-0.json",
+    "statistics": {
+      "walls": 31,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 21,
+      "triangles": 372,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "7143e4a7037e73dafb0dbbc178056fedc1e94b3bdb22890e878f26008b08b633",
+    "radio": {
+      "file": "generated/radio-parking-52328.json",
+      "count": 48,
+      "nearbyCount": 206,
+      "acquiredAt": "2026-09-21T16:26:18.037Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-49698-0",
+    "siteId": "parking-49698",
+    "name": "성북동 회색집",
+    "address": "서울시 성북구 성북로8다길 Seongbuk-ro 8da-gil, Seongbuk-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ec%84%b1%eb%b6%81%eb%8f%99-%ed%9a%8c%ec%83%89%ec%a7%91/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-49698-0.jpg",
+      "label": "1층 평면도 ⓒmood.a ARCHITECTS",
+      "url": "https://media.brique.co/2020/08/9d52df41--무드에이-mood.a-architects-성북동-회색집-02-1층-평면도.jpg",
+      "bytes": 201960,
+      "sha256": "b8b99fd271dd7cfd08a19c69e9c0ec42d9b6201fd31345326e9294432350c0db",
+      "width": 2000,
+      "height": 1379
+    },
+    "location": {
+      "lat": 37.593266,
+      "lng": 127.005912,
+      "query": "서울특별시 성북구 성북로8다길",
+      "precision": "address-area",
+      "displayName": "성북로8다길, 성북동1가, 성북동, 성북구, 서울특별시, 02834, 대한민국",
+      "bounds": [
+        37.5927853,
+        37.594042,
+        127.0056843,
+        127.0060664
+      ],
+      "source": "https://www.openstreetmap.org/way/381080939",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:26.728Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "오른쪽 차량 그림 및 범례 7 Parking",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-49698-0.jpg",
+      "label": "1층 평면도 ⓒmood.a ARCHITECTS",
+      "url": "https://media.brique.co/2020/08/9d52df41--무드에이-mood.a-architects-성북동-회색집-02-1층-평면도-700x483.jpg",
+      "bytes": 31865,
+      "sha256": "c6845bfafbd3482fe803defa7a9bdfca2ca899d1fb03f3327cfde7d64c71d5ab"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%84%b1%eb%b6%81%eb%8f%99-%ed%9a%8c%ec%83%89%ec%a7%91/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "d58465e1795d307928fe5c7b74fec0a2fcd64c009229990bba85f158885c34c0",
+      "previous": {
+        "file": "sources/parking-49698-0.jpg",
+        "url": "https://media.brique.co/2020/08/9d52df41--무드에이-mood.a-architects-성북동-회색집-02-1층-평면도-700x483.jpg",
+        "sha256": "c6845bfafbd3482fe803defa7a9bdfca2ca899d1fb03f3327cfde7d64c71d5ab",
+        "width": 700,
+        "height": 483
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1379
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-49698-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 463,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1379
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-49698-0.json",
+    "statistics": {
+      "walls": 49,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 13,
+      "triangles": 588,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "dc1ae6589c7af2103672a2a0a2b744684205cb0cb67857f8d6d20282e173b155",
+    "radio": {
+      "file": "generated/radio-parking-49698.json",
+      "count": 48,
+      "nearbyCount": 903,
+      "acquiredAt": "2026-09-21T16:26:20.498Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-43658-0",
+    "siteId": "parking-43658",
+    "name": "리을 집",
+    "address": "서울시 광진구 군자동 Gunja-dong, Gwangjin-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%e3%84%b9-%eb%a6%ac%ec%9d%84-%ec%a7%91/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-43658-0.jpg",
+      "label": "1층 평면도 ⓒTIUM ARCHITECTS",
+      "url": "https://media.brique.co/2020/05/틔움건축-TIUM-ARCHITECTS-리을집-평면01.jpg",
+      "bytes": 168297,
+      "sha256": "a4f68dc5528d6d19ad7d2f6e73e17d3a36038dbfc825b14a7a2fb2b5d35352b7",
+      "width": 2000,
+      "height": 1414
+    },
+    "location": {
+      "lat": 37.5532345,
+      "lng": 127.071936,
+      "query": "서울특별시 광진구 군자동",
+      "precision": "address-area",
+      "displayName": "군자동, 광진구, 서울특별시, 대한민국",
+      "bounds": [
+        37.5472811,
+        37.5594287,
+        127.0674553,
+        127.0795045
+      ],
+      "source": "https://www.openstreetmap.org/relation/3881561",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:27.826Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "오른쪽 주차 차량과 도로에서 진입하는 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-43658-0.jpg",
+      "label": "1층 평면도 ⓒTIUM ARCHITECTS",
+      "url": "https://media.brique.co/2020/05/틔움건축-TIUM-ARCHITECTS-리을집-평면01-905x640.jpg",
+      "bytes": 51020,
+      "sha256": "18d4ac6b97895318a891e214d3968aaedae7686f7ef501c9e749c898868d1ef0"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%e3%84%b9-%eb%a6%ac%ec%9d%84-%ec%a7%91/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "cab7eb4dfaafcc2e9b6daf7fb7076fb8e1f215e7cf5ec6a9c1d07233f9ad4a74",
+      "previous": {
+        "file": "sources/parking-43658-0.jpg",
+        "url": "https://media.brique.co/2020/05/틔움건축-TIUM-ARCHITECTS-리을집-평면01-905x640.jpg",
+        "sha256": "18d4ac6b97895318a891e214d3968aaedae7686f7ef501c9e749c898868d1ef0",
+        "width": 905,
+        "height": 640
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1414
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-43658-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 641,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1414
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-43658-0.json",
+    "statistics": {
+      "walls": 113,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 18,
+      "triangles": 1356,
+      "detectedParking": 4,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "f9c7f55b9a85297d5c7f184decfb03a599016206cebe712963b976839382eeae",
+    "radio": {
+      "file": "generated/radio-parking-43658.json",
+      "count": 48,
+      "nearbyCount": 679,
+      "acquiredAt": "2026-09-21T16:26:22.691Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-45519-0",
+    "siteId": "parking-45519",
+    "name": "신공덕동 Micro Housing S",
+    "address": "서울시 마포구 백범로39길 Baekbeom-ro 39-gil, Mapo-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ec%8b%a0%ea%b3%b5%eb%8d%95%eb%8f%99-%ed%98%91%ec%86%8c%ec%a3%bc%ed%83%9d-micro-housing-s/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-45519-0.jpg",
+      "label": "1층(왼쪽), 2층 평면도 ⓒArchitects H2L",
+      "url": "https://media.brique.co/2020/06/-H2L-ArchitectsH2L-신공덕동-협소주택-Micro-Hoiusing-S-도면02-e1593472280879.jpg",
+      "bytes": 218863,
+      "sha256": "6842cfb721d69b850d3bc578fdf6d7b672f5d97c2cc1f361c25ceb1ce130c0a5",
+      "width": 2000,
+      "height": 1675
+    },
+    "location": {
+      "lat": 37.5417265,
+      "lng": 126.9566037,
+      "query": "서울특별시 마포구 백범로39길",
+      "precision": "address-area",
+      "displayName": "백범로39길, 40통, 공덕동, 마포구, 서울특별시, 04193, 대한민국",
+      "bounds": [
+        37.5416629,
+        37.5422058,
+        126.956073,
+        126.9570013
+      ],
+      "source": "https://www.openstreetmap.org/way/464249406",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:28.924Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "왼쪽 평면의 범례 2 Parking Lot",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-45519-0.jpg",
+      "label": "1층(왼쪽), 2층 평면도 ⓒArchitects H2L",
+      "url": "https://media.brique.co/2020/06/-H2L-ArchitectsH2L-신공덕동-협소주택-Micro-Hoiusing-S-도면02-e1593472280879-700x586.jpg",
+      "bytes": 40192,
+      "sha256": "d2c4c4722aa625961ea331882b0ac7a0d39250cf0f265d99b05302decae50d2b"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%8b%a0%ea%b3%b5%eb%8d%95%eb%8f%99-%ed%98%91%ec%86%8c%ec%a3%bc%ed%83%9d-micro-housing-s/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "953180fcb18d5db858a1a7b002283329ff64a04164b017c941f74a3839bcb931",
+      "previous": {
+        "file": "sources/parking-45519-0.jpg",
+        "url": "https://media.brique.co/2020/06/-H2L-ArchitectsH2L-신공덕동-협소주택-Micro-Hoiusing-S-도면02-e1593472280879-700x586.jpg",
+        "sha256": "d2c4c4722aa625961ea331882b0ac7a0d39250cf0f265d99b05302decae50d2b",
+        "width": 700,
+        "height": 586
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1675
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-45519-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 313,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1675
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-45519-0.json",
+    "statistics": {
+      "walls": 52,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 27,
+      "triangles": 624,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "331008cf377ea89948b85ef5d0edd3b8894685bc2ab86ba18a7a75db18437c04",
+    "radio": {
+      "file": "generated/radio-parking-45519.json",
+      "count": 48,
+      "nearbyCount": 1276,
+      "acquiredAt": "2026-09-21T16:26:25.170Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-39327-0",
+    "siteId": "parking-39327",
+    "name": "이오스",
+    "address": "서울시 용산구 이태원동 Itaewon-dong, Yongsan-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "building",
+    "source": "https://magazine.brique.co/project/%ec%9d%b4%ec%98%a4%ec%8a%a4-eos/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-39327-0.jpg",
+      "label": "1층 평면도 ⓒJoHanjun Architects",
+      "url": "https://media.brique.co/2020/03/건축사사무소-더함_이오스_도면03-2048x1448.jpg",
+      "bytes": 210806,
+      "sha256": "9634a2fedaf46148a308cf2f2443c87bdc8afb69d23204ab4ce9904b441b08b6",
+      "width": 2048,
+      "height": 1448
+    },
+    "location": {
+      "lat": 37.53842,
+      "lng": 126.992,
+      "query": "서울특별시 용산구 이태원동",
+      "precision": "address-area",
+      "displayName": "이태원동, 이태원2동, 용산구, 서울특별시, 04344, 대한민국",
+      "bounds": [
+        37.52842,
+        37.54842,
+        126.982,
+        127.002
+      ],
+      "source": "https://www.openstreetmap.org/node/415153778",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:31.607Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "범례 1 주차장과 좌측 상단 주차 공간",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-39327-0.jpg",
+      "label": "1층 평면도 ⓒJoHanjun Architects",
+      "url": "https://media.brique.co/2020/03/건축사사무소-더함_이오스_도면03-700x495.jpg",
+      "bytes": 40052,
+      "sha256": "44c9b78cb53d1145d78e4697d56c209e42b03fa55a510a76000ee3435b3eeae3"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%9d%b4%ec%98%a4%ec%8a%a4-eos/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "da3bcc04cc90acfcb72b493b90e8cff4d7d5969c3a3719eca8f9dde15460c6b4",
+      "previous": {
+        "file": "sources/parking-39327-0.jpg",
+        "url": "https://media.brique.co/2020/03/건축사사무소-더함_이오스_도면03-700x495.jpg",
+        "sha256": "44c9b78cb53d1145d78e4697d56c209e42b03fa55a510a76000ee3435b3eeae3",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 2048,
+      "selectedHeight": 1448
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-39327-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 225,
+      "sourcePixels": {
+        "width": 2048,
+        "height": 1448
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-39327-0.json",
+    "statistics": {
+      "walls": 86,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 12,
+      "triangles": 1032,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "4f29862a528d1edfb0c2daf3e9dc0a9adae6e6831feff44b79a5be24812435f3",
+    "radio": {
+      "file": "generated/radio-parking-39327.json",
+      "count": 48,
+      "nearbyCount": 901,
+      "acquiredAt": "2026-09-21T16:26:26.947Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-35314-0",
+    "siteId": "parking-35314",
+    "name": "논현 109",
+    "address": "서울시 강남구 논현동 Nonhyeon dong, Gangnam-gu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "building",
+    "source": "https://magazine.brique.co/project/%eb%85%bc%ed%98%84-109/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-35314-0.jpg",
+      "label": "1층 평면도 ⓒO5STUDIO",
+      "url": "https://media.brique.co/2020/01/05STUDIO_논현동-109_1층평면도-e1579512441280.jpg",
+      "bytes": 60376,
+      "sha256": "7114fbf6ac39b044aa2a24bd4549d417b031222a11954a501e13226135275e1c",
+      "width": 1072,
+      "height": 930
+    },
+    "location": {
+      "lat": 37.5123018,
+      "lng": 127.0294935,
+      "query": "서울특별시 강남구 논현동",
+      "precision": "address-area",
+      "displayName": "논현동, 논현1동, 강남구, 서울특별시, 06112, 대한민국",
+      "bounds": [
+        37.5023018,
+        37.5223018,
+        127.0194935,
+        127.0394935
+      ],
+      "source": "https://www.openstreetmap.org/node/415153961",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:31.967Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "오른쪽 4개 차량 구획과 하단 스토퍼",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-35314-0.jpg",
+      "label": "1층 평면도 ⓒO5STUDIO",
+      "url": "https://media.brique.co/2020/01/05STUDIO_논현동-109_1층평면도-e1579512441280-700x607.jpg",
+      "bytes": 28275,
+      "sha256": "ee9df744f0592bf86ee2d8a95fcbfb86520dcac4143c39b1d567801369f5a53a"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%85%bc%ed%98%84-109/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "96f2ab661a2526cd8318be101a8340813a3d93357a38d9815bb4fb03d12b8134",
+      "previous": {
+        "file": "sources/parking-35314-0.jpg",
+        "url": "https://media.brique.co/2020/01/05STUDIO_논현동-109_1층평면도-e1579512441280-700x607.jpg",
+        "sha256": "ee9df744f0592bf86ee2d8a95fcbfb86520dcac4143c39b1d567801369f5a53a",
+        "width": 700,
+        "height": 607
+      },
+      "selectedWidth": 1072,
+      "selectedHeight": 930
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-35314-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 89,
+      "sourcePixels": {
+        "width": 1072,
+        "height": 930
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-35314-0.json",
+    "statistics": {
+      "walls": 15,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 2,
+      "triangles": 180,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "cda3777c38f0328239bb528a78a27ca2949f72563c83e47e63941a712d6d3a1f",
+    "radio": {
+      "file": "generated/radio-parking-35314.json",
+      "count": 48,
+      "nearbyCount": 1819,
+      "acquiredAt": "2026-09-21T16:26:29.833Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-146002-0",
+    "siteId": "parking-146002",
+    "name": "논현동 P스튜디오",
+    "address": "서울특별시 강남구 논현동",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "building",
+    "source": "https://magazine.brique.co/project/hwang-june-architect_nonhyeon-dong-p-studio/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-146002-0.jpg",
+      "label": "평면도 ©Hwang June Architect & Associates",
+      "url": "https://media.brique.co/2025/05/QokfjDIJ-논현동-빌딩-평면도-1536x1085.jpg",
+      "bytes": 106727,
+      "sha256": "a08a80452693467b79a9394002f1f43874d0f23890acfdc14539631bd1818b32",
+      "width": 1536,
+      "height": 1085
+    },
+    "location": {
+      "lat": 37.5123018,
+      "lng": 127.0294935,
+      "query": "서울특별시 강남구 논현동",
+      "precision": "address-area",
+      "displayName": "논현동, 논현1동, 강남구, 서울특별시, 06112, 대한민국",
+      "bounds": [
+        37.5023018,
+        37.5223018,
+        127.0194935,
+        127.0394935
+      ],
+      "source": "https://www.openstreetmap.org/node/415153961",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:31.967Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F 포함",
+      "note": "복합 평면 중 1층의 차량 그림 및 범례 10 Parking",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-146002-0.jpg",
+      "label": "평면도 ©Hwang June Architect & Associates",
+      "url": "https://media.brique.co/2025/05/QokfjDIJ-논현동-빌딩-평면도-905x639.jpg",
+      "bytes": 47977,
+      "sha256": "ce53707e71f2253a5be4cd99074fa90c65ccb9e126a3a978f958de33ac648d85"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/hwang-june-architect_nonhyeon-dong-p-studio/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "0df86362d0d18dc3cce0e1077c35dc860c8a1e16c9d8e014cfe6ca704b78ac43",
+      "previous": {
+        "file": "sources/parking-146002-0.jpg",
+        "url": "https://media.brique.co/2025/05/QokfjDIJ-논현동-빌딩-평면도-905x639.jpg",
+        "sha256": "ce53707e71f2253a5be4cd99074fa90c65ccb9e126a3a978f958de33ac648d85",
+        "width": 905,
+        "height": 639
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1085
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-146002-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 454,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1085
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-146002-0.json",
+    "statistics": {
+      "walls": 114,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 29,
+      "triangles": 1368,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "d0824675387a9ea0d47b1a812a650b6a40a44554faa3416a40a8177031bbdc66",
+    "radio": {
+      "file": "generated/radio-parking-146002.json",
+      "count": 48,
+      "nearbyCount": 1819,
+      "acquiredAt": "2026-09-21T16:26:32.709Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-7128-0",
+    "siteId": "parking-7128",
+    "name": "효창동 첫 집",
+    "address": "서울시 용산구 효창동 Hyochangdong, Yongsangu, Seoul, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ed%9a%a8%ec%b0%bd%eb%8f%99%ec%b2%ab%ec%a7%91-first-house-hyochangdong/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-7128-0.jpg",
+      "label": "PLAN ⓒB.U.S Architecture",
+      "url": "https://media.brique.co/2017/07/PLAN.jpg",
+      "bytes": 59020,
+      "sha256": "255bc12aec1bfb06bc630ec9c0fed03677c1d8b109af5e287be5dd17a735892d",
+      "width": 1220,
+      "height": 862
+    },
+    "location": {
+      "lat": 37.54341,
+      "lng": 126.96037,
+      "query": "서울특별시 용산구 효창동",
+      "precision": "address-area",
+      "displayName": "효창동, 용산구, 서울특별시, 대한민국",
+      "bounds": [
+        37.5384377,
+        37.5487588,
+        126.9565828,
+        126.9649069
+      ],
+      "source": "https://www.openstreetmap.org/relation/3884166",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:35.633Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F 포함",
+      "note": "좌상단 1층 평면의 주차 차량",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-7128-0.jpg",
+      "label": "PLAN ⓒB.U.S Architecture",
+      "url": "https://media.brique.co/2017/07/PLAN-700x495.jpg",
+      "bytes": 30526,
+      "sha256": "80252a76298cc207cf2f9ebbba9c7693dee3465e2447a56ff1a816b997ee549e"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ed%9a%a8%ec%b0%bd%eb%8f%99%ec%b2%ab%ec%a7%91-first-house-hyochangdong/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "d2755f7b68b84600ef16269e52d615114d41faf78f563d5bdafec6955c7d2cf3",
+      "previous": {
+        "file": "sources/parking-7128-0.jpg",
+        "url": "https://media.brique.co/2017/07/PLAN-700x495.jpg",
+        "sha256": "80252a76298cc207cf2f9ebbba9c7693dee3465e2447a56ff1a816b997ee549e",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 1220,
+      "selectedHeight": 862
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-7128-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 551,
+      "sourcePixels": {
+        "width": 1220,
+        "height": 862
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-7128-0.json",
+    "statistics": {
+      "walls": 40,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 13,
+      "triangles": 480,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "916aaad863a8efeae1e3d0ed8e412842f60614197666cfa9da3c0176a73ef1bb",
+    "radio": {
+      "file": "generated/radio-parking-7128.json",
+      "count": 48,
+      "nearbyCount": 1384,
+      "acquiredAt": "2026-09-21T16:26:35.092Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-15333-0",
+    "siteId": "parking-15333",
+    "name": "능동 하늘집",
+    "address": "서울시 광진구 능동 Neung-dong, Gwangjin-gu, Seoul",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%eb%8a%a5%eb%8f%99%ed%95%98%eb%8a%98%ec%a7%91-sky-house/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-15333-0.jpg",
+      "label": "1,4F planⒸTRU Architects",
+      "url": "https://media.brique.co/2018/08/SH_014-e1533618062266.jpg",
+      "bytes": 89272,
+      "sha256": "f3afdf6089fde033f892a320b16d5ee4c03412f2bf95f9c2928f9a472eed2826",
+      "width": 1220,
+      "height": 864
+    },
+    "location": {
+      "lat": 37.55444,
+      "lng": 127.08156,
+      "query": "서울특별시 광진구 능동",
+      "precision": "address-area",
+      "displayName": "능동, 광진구, 서울특별시, 대한민국",
+      "bounds": [
+        37.5451228,
+        37.5571777,
+        127.074153,
+        127.0897659
+      ],
+      "source": "https://www.openstreetmap.org/relation/3881562",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:36.901Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F 포함",
+      "note": "왼쪽 1F 평면 상단의 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-15333-0.jpg",
+      "label": "1,4F planⒸTRU Architects",
+      "url": "https://media.brique.co/2018/08/SH_014-e1533618062266-700x496.jpg",
+      "bytes": 48025,
+      "sha256": "cda8fc5afb4d7eb7b6833a1386bd7ffb4f3a773eb3fede1ce9177a453b81cebd"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%8a%a5%eb%8f%99%ed%95%98%eb%8a%98%ec%a7%91-sky-house/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "a81dddb4bfc6736c15846d903e70a162daee902cf20f1720c9b421925975843b",
+      "previous": {
+        "file": "sources/parking-15333-0.jpg",
+        "url": "https://media.brique.co/2018/08/SH_014-e1533618062266-700x496.jpg",
+        "sha256": "cda8fc5afb4d7eb7b6833a1386bd7ffb4f3a773eb3fede1ce9177a453b81cebd",
+        "width": 700,
+        "height": 496
+      },
+      "selectedWidth": 1220,
+      "selectedHeight": 864
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-15333-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 853,
+      "sourcePixels": {
+        "width": 1220,
+        "height": 864
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-15333-0.json",
+    "statistics": {
+      "walls": 141,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 0,
+      "triangles": 1692,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "4fb9b994b0d22a8a569cac5552938056d45bea57df503af2295ca1a015bdb85a",
+    "radio": {
+      "file": "generated/radio-parking-15333.json",
+      "count": 48,
+      "nearbyCount": 1137,
+      "acquiredAt": "2026-09-21T16:26:37.176Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-168780-0",
+    "siteId": "parking-168780",
+    "name": "동탄호수공원 주차장 · 1F",
+    "address": "경기도 화성시 동탄구 동탄대로5길 12 외 1필지",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "parking",
+    "source": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-168780-0.jpg",
+      "label": "지상 1층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-3-1536x822.jpg",
+      "bytes": 202413,
+      "sha256": "95a4a81a3a3f8d4744ab89611f9f3fa0890bc5eb69914a95c84894dc4c077632",
+      "floor": "1F",
+      "width": 1536,
+      "height": 822
+    },
+    "location": {
+      "lat": 37.167928,
+      "lng": 127.105092,
+      "precision": "osm-facility-centroid",
+      "source": "https://www.openstreetmap.org/way/683628616",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "bounds": [
+        37.1676164,
+        37.1682388,
+        127.1046871,
+        127.1054981
+      ],
+      "checkedAt": "2026-09-21T16:46:57.328Z",
+      "identityEvidence": {
+        "address": "경기도 화성시 동탄구 동탄대로5길 12",
+        "source": "https://www.ggvc.or.kr/",
+        "note": "경기도자원봉사센터의 화성시 분소 안내: 같은 주소의 동탄호수공원 주차타워 지하2층. 건축가 도면의 주소와 일치."
+      },
+      "independentCheck": {
+        "lat": 37.1872068,
+        "lng": 127.0984,
+        "query": "경기도 화성시 동탄구",
+        "precision": "address-area",
+        "displayName": "동탄구, 여울동, 동탄신도시, 화성시, 경기도, 대한민국",
+        "bounds": [
+          37.1418034,
+          37.2261714,
+          127.0487102,
+          127.162091
+        ],
+        "source": "https://www.openstreetmap.org/relation/13354995",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:38.840Z"
+      }
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "도면 치수선으로 축척 보정 · 서측/동측 차로별 일방통행 안내. 주차면 앞 도착까지만 제공하며 층간 램프는 아직 연결하지 않았습니다."
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 123.73046875,
+    "previewAsset": {
+      "file": "sources/parking-168780-0.jpg",
+      "label": "지상 1층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-3-905x484.jpg",
+      "bytes": 94097,
+      "sha256": "6db067d3a866f7fc9630fcf16f4665e56be28f9b5a3dd485cfdc2fc7f6eea6ca",
+      "floor": "1F"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "5bf20e9cdff62f284c3dda80e3f2358d78ba7da5f114c8f472a3b719e35bd9dc",
+      "previous": {
+        "file": "sources/parking-168780-0.jpg",
+        "url": "https://media.brique.co/2026/04/plan-3-905x484.jpg",
+        "sha256": "6db067d3a866f7fc9630fcf16f4665e56be28f9b5a3dd485cfdc2fc7f6eea6ca",
+        "width": 905,
+        "height": 484
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 822
+    },
+    "annotation": "sources/dongtan-1f-layers.svg",
+    "rasterAnalysis": {
+      "file": "analysis/parking-168780-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 1031,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 822
+      },
+      "modelPolicy": "reviewed-preserved"
+    },
+    "modelFile": "generated/parking-168780-0.json",
+    "statistics": {
+      "walls": 48,
+      "nodes": 19,
+      "edges": 17,
+      "spaces": 31,
+      "objects": 23,
+      "accessible": 12,
+      "ocrLabels": 40,
+      "triangles": 576,
+      "detectedParking": 17,
+      "matchedParking": 9
+    },
+    "routingReady": true,
+    "modelHash": "9fd1014a07e1220a5df44fa9d266f762477a33f20e46aaca9256e8eda7678108",
+    "radio": {
+      "file": "generated/radio-parking-168780.json",
+      "count": 48,
+      "nearbyCount": 531,
+      "acquiredAt": "2026-09-21T16:47:03.069Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-168780-1",
+    "siteId": "parking-168780",
+    "name": "동탄호수공원 주차장 · B1",
+    "address": "경기도 화성시 동탄구 동탄대로5길 12 외 1필지",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "parking",
+    "source": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-168780-1.jpg",
+      "label": "지하 1층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-2-1536x748.jpg",
+      "bytes": 179958,
+      "sha256": "30010a1fd374f7abadf0ff94db2190391a7a12c4c6ea3ae3d0511ee21af99f29",
+      "floor": "B1",
+      "width": 1536,
+      "height": 748
+    },
+    "location": {
+      "lat": 37.167928,
+      "lng": 127.105092,
+      "precision": "osm-facility-centroid",
+      "source": "https://www.openstreetmap.org/way/683628616",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "bounds": [
+        37.1676164,
+        37.1682388,
+        127.1046871,
+        127.1054981
+      ],
+      "checkedAt": "2026-09-21T16:46:57.328Z",
+      "identityEvidence": {
+        "address": "경기도 화성시 동탄구 동탄대로5길 12",
+        "source": "https://www.ggvc.or.kr/",
+        "note": "경기도자원봉사센터의 화성시 분소 안내: 같은 주소의 동탄호수공원 주차타워 지하2층. 건축가 도면의 주소와 일치."
+      },
+      "independentCheck": {
+        "lat": 37.1872068,
+        "lng": 127.0984,
+        "query": "경기도 화성시 동탄구",
+        "precision": "address-area",
+        "displayName": "동탄구, 여울동, 동탄신도시, 화성시, 경기도, 대한민국",
+        "bounds": [
+          37.1418034,
+          37.2261714,
+          127.0487102,
+          127.162091
+        ],
+        "source": "https://www.openstreetmap.org/relation/13354995",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:38.840Z"
+      }
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "양쪽 차량 주차 구획과 중앙 램프",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 123.73046875,
+    "previewAsset": {
+      "file": "sources/parking-168780-1.jpg",
+      "label": "지하 1층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-2-905x441.jpg",
+      "bytes": 80008,
+      "sha256": "a8cba9d40b5305527d30202a79c92103845c3058c19d43f9cf1eadb09d099d43",
+      "floor": "B1"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "5bf20e9cdff62f284c3dda80e3f2358d78ba7da5f114c8f472a3b719e35bd9dc",
+      "previous": {
+        "file": "sources/parking-168780-1.jpg",
+        "url": "https://media.brique.co/2026/04/plan-2-905x441.jpg",
+        "sha256": "a8cba9d40b5305527d30202a79c92103845c3058c19d43f9cf1eadb09d099d43",
+        "width": 905,
+        "height": 441
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 748
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-168780-1/analysis.json",
+      "tileCount": 2,
+      "candidates": 809,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 748
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-168780-1.json",
+    "statistics": {
+      "walls": 149,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 8,
+      "accessible": 0,
+      "ocrLabels": 30,
+      "triangles": 1788,
+      "detectedParking": 4,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "5226e78b865787624f3267f29357baf0f45a7e522f73c1e4ff2d3cdb16174b21",
+    "radio": {
+      "file": "generated/radio-parking-168780.json",
+      "count": 48,
+      "nearbyCount": 531,
+      "acquiredAt": "2026-09-21T16:47:03.069Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-168780-2",
+    "siteId": "parking-168780",
+    "name": "동탄호수공원 주차장 · B2",
+    "address": "경기도 화성시 동탄구 동탄대로5길 12 외 1필지",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "parking",
+    "source": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-168780-2.jpg",
+      "label": "지하 2층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-1536x743.jpg",
+      "bytes": 235513,
+      "sha256": "82d3be57367acf0d67466457ff8c2ccd6a539f595d188873f3abc0a9fdc55be2",
+      "floor": "B2",
+      "width": 1536,
+      "height": 743
+    },
+    "location": {
+      "lat": 37.167928,
+      "lng": 127.105092,
+      "precision": "osm-facility-centroid",
+      "source": "https://www.openstreetmap.org/way/683628616",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "bounds": [
+        37.1676164,
+        37.1682388,
+        127.1046871,
+        127.1054981
+      ],
+      "checkedAt": "2026-09-21T16:46:57.328Z",
+      "identityEvidence": {
+        "address": "경기도 화성시 동탄구 동탄대로5길 12",
+        "source": "https://www.ggvc.or.kr/",
+        "note": "경기도자원봉사센터의 화성시 분소 안내: 같은 주소의 동탄호수공원 주차타워 지하2층. 건축가 도면의 주소와 일치."
+      },
+      "independentCheck": {
+        "lat": 37.1872068,
+        "lng": 127.0984,
+        "query": "경기도 화성시 동탄구",
+        "precision": "address-area",
+        "displayName": "동탄구, 여울동, 동탄신도시, 화성시, 경기도, 대한민국",
+        "bounds": [
+          37.1418034,
+          37.2261714,
+          127.0487102,
+          127.162091
+        ],
+        "source": "https://www.openstreetmap.org/relation/13354995",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "checkedAt": "2026-09-21T10:42:38.840Z"
+      }
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "양쪽 차량 주차 구획과 중앙 램프",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 123.73046875,
+    "previewAsset": {
+      "file": "sources/parking-168780-2.jpg",
+      "label": "지하 2층 평면도 ©UIA",
+      "url": "https://media.brique.co/2026/04/plan-905x438.jpg",
+      "bytes": 99525,
+      "sha256": "72571515cd9d1a90c6bc2bb7b046dc4d45e9d0cb2316812b452aec3479a6e45d",
+      "floor": "B2"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/uia-dongtan-lake-park-arched-car-park-architecture/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "5bf20e9cdff62f284c3dda80e3f2358d78ba7da5f114c8f472a3b719e35bd9dc",
+      "previous": {
+        "file": "sources/parking-168780-2.jpg",
+        "url": "https://media.brique.co/2026/04/plan-905x438.jpg",
+        "sha256": "72571515cd9d1a90c6bc2bb7b046dc4d45e9d0cb2316812b452aec3479a6e45d",
+        "width": 905,
+        "height": 438
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 743
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-168780-2/analysis.json",
+      "tileCount": 2,
+      "candidates": 1324,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 743
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-168780-2.json",
+    "statistics": {
+      "walls": 163,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 12,
+      "accessible": 0,
+      "ocrLabels": 49,
+      "triangles": 1956,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "351311f3c7456e5c6543a9c6457c1e7d984b856b64f65fbb883f1753ccd8f828",
+    "radio": {
+      "file": "generated/radio-parking-168780.json",
+      "count": 48,
+      "nearbyCount": 531,
+      "acquiredAt": "2026-09-21T16:47:03.069Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-146396-0",
+    "siteId": "parking-146396",
+    "name": "카페 목적지",
+    "address": "경기도 안성시 양성면 이화1길 33-4",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "building",
+    "source": "https://magazine.brique.co/project/ima-architects_cafe-mokjeokji/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-146396-0.jpg",
+      "label": "배치도 ©IMA architects",
+      "url": "https://media.brique.co/2025/05/배치도_900-1536x1054.jpg",
+      "bytes": 347151,
+      "sha256": "69073516c753c2647f5be0fb586fe9bc02c7294536a43f58ba23363399db86b0",
+      "width": 1536,
+      "height": 1054
+    },
+    "location": {
+      "lat": 37.07156,
+      "lng": 127.21486,
+      "query": "경기도 안성시 양성면",
+      "precision": "address-area",
+      "displayName": "양성면, 안성시, 경기도, 대한민국",
+      "bounds": [
+        37.0153799,
+        37.1558891,
+        127.1684402,
+        127.2772321
+      ],
+      "source": "https://www.openstreetmap.org/relation/20272380",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:40.631Z"
+    },
+    "parkingEvidence": {
+      "floor": "배치도",
+      "note": "오른쪽 주차장 표기와 중앙 차로 양측 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-146396-0.jpg",
+      "label": "배치도 ©IMA architects",
+      "url": "https://media.brique.co/2025/05/배치도_900-905x621.jpg",
+      "bytes": 140936,
+      "sha256": "84c0225fd9768252ba12757960f7ce6ebc7ba17554ab6d1670792dae0f678697"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/ima-architects_cafe-mokjeokji/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "599eda4a5e684e6277e2666a79532830f22815eb4bc35432b33e5f9c41dcd498",
+      "previous": {
+        "file": "sources/parking-146396-0.jpg",
+        "url": "https://media.brique.co/2025/05/배치도_900-905x621.jpg",
+        "sha256": "84c0225fd9768252ba12757960f7ce6ebc7ba17554ab6d1670792dae0f678697",
+        "width": 905,
+        "height": 621
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1054
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-146396-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 757,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1054
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-146396-0.json",
+    "statistics": {
+      "walls": 62,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 7,
+      "triangles": 744,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "2fedbc06fd42c942ddc2e92bf58e340285922cfff1f211cca8bb8ae71828ace8",
+    "radio": {
+      "file": "generated/radio-parking-146396.json",
+      "count": 21,
+      "nearbyCount": 21,
+      "acquiredAt": "2026-09-21T16:26:40.644Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-143447-0",
+    "siteId": "parking-143447",
+    "name": "서오재",
+    "address": "인천광역시 중구 찬들로",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/designbug-seo-oh-jae/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-143447-0.jpg",
+      "label": "1층 평면도 ©designbug",
+      "url": "https://media.brique.co/2025/04/서오재-53-1536x1091.jpg",
+      "bytes": 123518,
+      "sha256": "76bff22f7e8200dd2f852296d7514e7219546c20891b5d4a85771e1cf3160c79",
+      "width": 1536,
+      "height": 1091
+    },
+    "location": {
+      "lat": 37.4735389,
+      "lng": 126.6214081,
+      "query": "인천광역시 중구",
+      "precision": "address-area",
+      "displayName": "중구, 제물포구, 인천광역시, 22315, 대한민국",
+      "bounds": [
+        37.4535389,
+        37.4935389,
+        126.6014081,
+        126.6414081
+      ],
+      "source": "https://www.openstreetmap.org/node/415154839",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:42.581Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "범례 1 Parking과 왼쪽 아래 차고",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-143447-0.jpg",
+      "label": "1층 평면도 ©designbug",
+      "url": "https://media.brique.co/2025/04/서오재-53-905x643.jpg",
+      "bytes": 64876,
+      "sha256": "fbb0020383c561a9896b0092f2fceb72863b023a0b43173bfcce5c6ce830ce9d"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/designbug-seo-oh-jae/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "791d5b091c05c6d78c402caea9dba44aa36eef129734f11a6491ef022919d05d",
+      "previous": {
+        "file": "sources/parking-143447-0.jpg",
+        "url": "https://media.brique.co/2025/04/서오재-53-905x643.jpg",
+        "sha256": "fbb0020383c561a9896b0092f2fceb72863b023a0b43173bfcce5c6ce830ce9d",
+        "width": 905,
+        "height": 643
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1091
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-143447-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 551,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1091
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-143447-0.json",
+    "statistics": {
+      "walls": 135,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 19,
+      "triangles": 1620,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "09d151e2b352c638c5c15c8fa3038f58b8750e33255aa84c92a6b733ca47c183",
+    "radio": {
+      "file": "generated/radio-parking-143447.json",
+      "count": 48,
+      "nearbyCount": 478,
+      "acquiredAt": "2026-09-21T16:26:43.650Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-140714-0",
+    "siteId": "parking-140714",
+    "name": "비례교회",
+    "address": "충청남도 금산군 추부면 골말길 54",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "religious",
+    "source": "https://magazine.brique.co/project/sml_birye-church/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-140714-0.jpg",
+      "label": "배치도 ©SML",
+      "url": "https://media.brique.co/2025/03/1.Site-Plan1_300-2048x1229.jpg",
+      "bytes": 118586,
+      "sha256": "f3a3eb5a87eaebfb374cb7ab412c568ef376cf9d9aaddb0b9b517b290eeaf556",
+      "width": 2048,
+      "height": 1229
+    },
+    "location": {
+      "lat": 36.2065355,
+      "lng": 127.4923916,
+      "query": "충청남도 금산군 추부면",
+      "precision": "address-area",
+      "displayName": "추부면, 금산군, 충청남도, 32712, 대한민국",
+      "bounds": [
+        36.1665355,
+        36.2465355,
+        127.4523916,
+        127.5323916
+      ],
+      "source": "https://www.openstreetmap.org/node/415162990",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:45.446Z"
+    },
+    "parkingEvidence": {
+      "floor": "배치도",
+      "note": "건물 오른쪽 중앙 차로 양쪽 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-140714-0.jpg",
+      "label": "배치도 ©SML",
+      "url": "https://media.brique.co/2025/03/1.Site-Plan1_300-905x543.jpg",
+      "bytes": 37142,
+      "sha256": "e063f2fd9b5d0a35f0bc80d122e6c7ad8683012cc4ef82ca50a897f70f662a21"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/sml_birye-church/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "1de80e5c3192d2c0455067f8bc15ee22a5e4db23534a9879a349d1d20cd7246e",
+      "previous": {
+        "file": "sources/parking-140714-0.jpg",
+        "url": "https://media.brique.co/2025/03/1.Site-Plan1_300-905x543.jpg",
+        "sha256": "e063f2fd9b5d0a35f0bc80d122e6c7ad8683012cc4ef82ca50a897f70f662a21",
+        "width": 905,
+        "height": 543
+      },
+      "selectedWidth": 2048,
+      "selectedHeight": 1229
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-140714-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 357,
+      "sourcePixels": {
+        "width": 2048,
+        "height": 1229
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-140714-0.json",
+    "statistics": {
+      "walls": 26,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 0,
+      "triangles": 312,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "da25b69de382990be2cfc05106155b6ce89311844c1bb0143ce1344346d842bf",
+    "radio": {
+      "file": "generated/radio-parking-140714.json",
+      "count": 15,
+      "nearbyCount": 15,
+      "acquiredAt": "2026-09-21T16:26:45.018Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-131601-0",
+    "siteId": "parking-131601",
+    "name": "대천항 관공선 통합사무실 · 1F",
+    "address": "충청남도 보령시 해안로 760",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "public",
+    "source": "https://magazine.brique.co/project/kode-architects_public-vessel-office-of-daecheonhang-port/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-131601-0.jpg",
+      "label": "지상 1층 평면도 ©KODE Architects",
+      "url": "https://media.brique.co/2024/09/02.-지상1층-평면도.jpg",
+      "bytes": 330126,
+      "sha256": "b35a410d896ffae06fd56186b9c37231877598283b5a96524b5a5db52e786d2b",
+      "floor": "1F",
+      "width": 2000,
+      "height": 1513
+    },
+    "location": {
+      "lat": 36.337438,
+      "lng": 126.532777,
+      "query": "충청남도 보령시 해안로 760",
+      "precision": "address-area",
+      "displayName": "해안로, 신흑동, 보령시, 충청남도, 33489, 대한민국",
+      "bounds": [
+        36.3269437,
+        36.3464082,
+        126.515093,
+        126.5504825
+      ],
+      "source": "https://www.openstreetmap.org/way/171584201",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:46.549Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "고해상도 원본의 벽체·유리면·문 개구부와 주차 차로를 대조했습니다. 도면 축척 막대 적용 · 현장 출입·현재 장애물 미확인."
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 70,
+    "previewAsset": {
+      "file": "sources/parking-131601-0.jpg",
+      "label": "지상 1층 평면도 ©KODE Architects",
+      "url": "https://media.brique.co/2024/09/02.-지상1층-평면도-700x530.jpg",
+      "bytes": 62997,
+      "sha256": "766295e83ac56998063f5e05aba6e6a70a0b303f13c4045f8b1ec221e23391ac",
+      "floor": "1F"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/kode-architects_public-vessel-office-of-daecheonhang-port/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "8bda5ef4fa3f0c9ba3bb7546f56786f7c49d4bc73ebdd212388f4c21128ebc25",
+      "previous": {
+        "file": "sources/parking-131601-0.jpg",
+        "url": "https://media.brique.co/2024/09/02.-지상1층-평면도-700x530.jpg",
+        "sha256": "766295e83ac56998063f5e05aba6e6a70a0b303f13c4045f8b1ec221e23391ac",
+        "width": 700,
+        "height": 530
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1513
+    },
+    "annotation": "sources/daecheon-layers.svg",
+    "rasterAnalysis": {
+      "file": "analysis/parking-131601-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 1426,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1513
+      },
+      "modelPolicy": "reviewed-preserved"
+    },
+    "modelFile": "generated/parking-131601-0.json",
+    "statistics": {
+      "walls": 72,
+      "nodes": 52,
+      "edges": 51,
+      "spaces": 52,
+      "objects": 47,
+      "accessible": 2,
+      "ocrLabels": 15,
+      "triangles": 864,
+      "detectedParking": 50,
+      "matchedParking": 50
+    },
+    "routingReady": true,
+    "modelHash": "24b77b66adb7daa53a096fa2426fceed5cbd7254da270d56752795b144f73034",
+    "radio": {
+      "file": "generated/radio-parking-131601.json",
+      "count": 37,
+      "nearbyCount": 40,
+      "acquiredAt": "2026-09-21T16:26:46.506Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-24500-0",
+    "siteId": "parking-24500",
+    "name": "판교 K&L 주택",
+    "address": "경기도 성남시 분당구 판교동 Pangyo-dong, Bundang-gu, Seongnam-si, Gyeonggi-do, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ed%8c%90%ea%b5%90-kl-%ec%a3%bc%ed%83%9d-pangyo-kl-house/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/parking-24500-0.jpg",
+      "label": "1층 평면도. 주차장과 중정을 가지는 F자 볼륨 ⒸUrban Topology",
+      "url": "https://media.brique.co/2019/05/어반토폴로지-Urban-Topology-판교-KL-주택-KL-House-Pangyo-Plan-1F.jpg",
+      "bytes": 141498,
+      "sha256": "a30a4d7b3e2be051eee92a45accbe99846ea18d8ce1f8b8f6a1de0478121fde4"
+    },
+    "location": {
+      "lat": 37.3899495,
+      "lng": 127.0985928,
+      "query": "경기도 성남시 분당구 판교동",
+      "precision": "address-area",
+      "displayName": "판교동, 판교, 분당구, 성남시, 경기도, 13479, 대한민국",
+      "bounds": [
+        37.3799495,
+        37.3999495,
+        127.0885928,
+        127.1085928
+      ],
+      "source": "https://www.openstreetmap.org/node/415155262",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:47.116Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "하단 오른쪽 두 개 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/parking-24500-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 404,
+      "sourcePixels": {
+        "width": 1062,
+        "height": 1500
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-24500-0.json",
+    "statistics": {
+      "walls": 72,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 3,
+      "triangles": 864,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "b22ff1581014500fde6bf0ddf01aa7ba9224f4e76c99e8c574a90ba423e4e500",
+    "radio": {
+      "file": "generated/radio-parking-24500.json",
+      "count": 48,
+      "nearbyCount": 375,
+      "acquiredAt": "2026-09-21T16:26:48.345Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-90014-0",
+    "siteId": "parking-90014",
+    "name": "스킵플로어 하우스",
+    "address": "울산시 중구 약사동 Yaksa-dong, Jung-gu, Ulsan, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/skipfloorhouse/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-90014-0.jpg",
+      "label": "1층 평면도 ©DO architects",
+      "url": "https://media.brique.co/2022/08/디오건축사사무소DOarchitects_스킵플로어하우스skipfloorhouse17-1536x1049.jpg",
+      "bytes": 862680,
+      "sha256": "12fcb2d1652f4afc4ffd17f41a783a20d91851c0e3990b8a941d3d57278faefc",
+      "width": 1536,
+      "height": 1049
+    },
+    "location": {
+      "lat": 35.570425,
+      "lng": 129.337294,
+      "query": "울산시 중구 약사동",
+      "precision": "address-area",
+      "displayName": "약사동, 복산동, 중구, 울산광역시, 44471, 대한민국",
+      "bounds": [
+        35.560425,
+        35.580425,
+        129.327294,
+        129.347294
+      ],
+      "source": "https://www.openstreetmap.org/node/9371700950",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:48.382Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "왼쪽 차량 그림과 나란한 주차장",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-90014-0.jpg",
+      "label": "1층 평면도 ©DO architects",
+      "url": "https://media.brique.co/2022/08/디오건축사사무소DOarchitects_스킵플로어하우스skipfloorhouse17-700x478.jpg",
+      "bytes": 637347,
+      "sha256": "c0b9d3141cb79799559b689a29013cfef956e6abc81ccb5ddd46c2dabf4b0643"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/skipfloorhouse/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "5a6cff2c66b338732d04ff3df1f87b0173a88c55b43c0919a398bd879f302803",
+      "previous": {
+        "file": "sources/parking-90014-0.jpg",
+        "url": "https://media.brique.co/2022/08/디오건축사사무소DOarchitects_스킵플로어하우스skipfloorhouse17-700x478.jpg",
+        "sha256": "c0b9d3141cb79799559b689a29013cfef956e6abc81ccb5ddd46c2dabf4b0643",
+        "width": 700,
+        "height": 478
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1049
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-90014-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 1867,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1049
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-90014-0.json",
+    "statistics": {
+      "walls": 186,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 15,
+      "triangles": 2232,
+      "detectedParking": 3,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "ff1feef0b0a6572c377ed83de1d858517c74eca4ee1ab4106693e7f94ffc5670",
+    "radio": {
+      "file": "generated/radio-parking-90014.json",
+      "count": 48,
+      "nearbyCount": 500,
+      "acquiredAt": "2026-09-21T16:26:50.194Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-89845-0",
+    "siteId": "parking-89845",
+    "name": "예유재",
+    "address": "경기도 파주시 탄현면 법흥리 Beopheung-ri, Tanhyeon-myeon, Paju, Gyeonggi-do, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/yeyoojae/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-89845-0.jpg",
+      "label": "1층 평면도©KUOTAA",
+      "url": "https://media.brique.co/2022/08/평단입면도-2-2048x1441.jpg",
+      "bytes": 209756,
+      "sha256": "4d4244b4ea8eb2934be5e79fbf2c4bedcabf90c825d2a227a3acf627b8f97804",
+      "width": 2048,
+      "height": 1441
+    },
+    "location": {
+      "lat": 37.7744084,
+      "lng": 126.6986149,
+      "query": "경기도 파주시 탄현면 법흥리",
+      "precision": "address-area",
+      "displayName": "법흥리, 탄현면, 파주시, 경기도, 대한민국",
+      "bounds": [
+        37.7465683,
+        37.8021413,
+        126.6691082,
+        126.7229719
+      ],
+      "source": "https://www.openstreetmap.org/relation/13170501",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:49.858Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "왼쪽 차량 두 대 및 범례 12 차고",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-89845-0.jpg",
+      "label": "1층 평면도©KUOTAA",
+      "url": "https://media.brique.co/2022/08/평단입면도-2-905x637.jpg",
+      "bytes": 55044,
+      "sha256": "f1ab20c1410530a52811c5633741882299516a1c5c94496197e11e8780c3a69b"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/yeyoojae/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "785d02e121ace2436fbbab6ed7fd56d835232ced0f48a7eea7d43cd8483ec93a",
+      "previous": {
+        "file": "sources/parking-89845-0.jpg",
+        "url": "https://media.brique.co/2022/08/평단입면도-2-905x637.jpg",
+        "sha256": "f1ab20c1410530a52811c5633741882299516a1c5c94496197e11e8780c3a69b",
+        "width": 905,
+        "height": 637
+      },
+      "selectedWidth": 2048,
+      "selectedHeight": 1441
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-89845-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 1172,
+      "sourcePixels": {
+        "width": 2048,
+        "height": 1441
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-89845-0.json",
+    "statistics": {
+      "walls": 97,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 16,
+      "triangles": 1164,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "520929d1889b194ebca164f07a6bb168d84df28161e8e1864ed6c6b3a0387d31",
+    "radio": {
+      "file": "generated/radio-parking-89845.json",
+      "count": 32,
+      "nearbyCount": 104,
+      "acquiredAt": "2026-09-21T16:26:51.664Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-68790-0",
+    "siteId": "parking-68790",
+    "name": "매곡도서관",
+    "address": "울산광역시 북구 매곡로 138-19 138-19, Maegok-ro, Buk-gu, Ulsan, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "library",
+    "source": "https://magazine.brique.co/project/%eb%a7%a4%ea%b3%a1%eb%8f%84%ec%84%9c%ea%b4%80/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-68790-0.jpg",
+      "label": "배치도 ⓒIDR Architects",
+      "url": "https://media.brique.co/2021/07/66100428-아이디알-건축사사무소-idr-architects-매곡도서관-배치도.jpg",
+      "bytes": 220887,
+      "sha256": "ada265fc182ab3d17b995957382d73c683d5a4a43ddc6d9dd9db8223a60e3a00",
+      "width": 2000,
+      "height": 1282
+    },
+    "location": {
+      "lat": 35.6561414,
+      "lng": 129.3625012,
+      "query": "울산광역시 북구 매곡로",
+      "precision": "address-area",
+      "displayName": "매곡로, 중산동, 농소2동, 북구, 울산광역시, 44222, 대한민국",
+      "bounds": [
+        35.6491481,
+        35.6601774,
+        129.3586026,
+        129.3676194
+      ],
+      "source": "https://www.openstreetmap.org/way/1086221879",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:52.051Z"
+    },
+    "parkingEvidence": {
+      "floor": "배치도",
+      "note": "건물 오른쪽 차량 그림과 연속 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-68790-0.jpg",
+      "label": "배치도 ⓒIDR Architects",
+      "url": "https://media.brique.co/2021/07/66100428-아이디알-건축사사무소-idr-architects-매곡도서관-배치도-905x580.jpg",
+      "bytes": 63272,
+      "sha256": "600b3f35a4d5a3a41591f127831945fb109380fa73855f0c23756d703e1657fd"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%a7%a4%ea%b3%a1%eb%8f%84%ec%84%9c%ea%b4%80/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "77ce6e026a6e788a35d5f51d7d9cfaa99e7225acfa9af0847e5b7a0daeca51ef",
+      "previous": {
+        "file": "sources/parking-68790-0.jpg",
+        "url": "https://media.brique.co/2021/07/66100428-아이디알-건축사사무소-idr-architects-매곡도서관-배치도-905x580.jpg",
+        "sha256": "600b3f35a4d5a3a41591f127831945fb109380fa73855f0c23756d703e1657fd",
+        "width": 905,
+        "height": 580
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1282
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-68790-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 485,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1282
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-68790-0.json",
+    "statistics": {
+      "walls": 64,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 2,
+      "triangles": 768,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "3712169aa52ea7c4ee52397b1fcaaf87e48c1b07946dc37a27a3ff299d54bbd5",
+    "radio": {
+      "file": "generated/radio-parking-68790.json",
+      "count": 48,
+      "nearbyCount": 147,
+      "acquiredAt": "2026-09-21T16:26:53.220Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-56837-0",
+    "siteId": "parking-56837",
+    "name": "왕자궁 백악관",
+    "address": "경기도 남양주시 이패동 Ipae-dong, Namyangju-si, Gyeonggi-do, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ec%99%95%ec%9e%90%ea%b6%81-%eb%b0%b1%ec%95%85%ea%b4%80/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-56837-0.jpg",
+      "label": "1층 평면도 ⓒADMOBE Architect",
+      "url": "https://media.brique.co/2021/01/5e124ed0-에이디모베-건축사사무소-admobe-architect-왕자궁-백악관-도면01.jpg",
+      "bytes": 191040,
+      "sha256": "63831ac56359b77223e2ad37b66dc79fdefa02851dd5a93a3cd349e0c627aade",
+      "width": 2000,
+      "height": 1413
+    },
+    "location": {
+      "lat": 37.6083349,
+      "lng": 127.1930732,
+      "query": "경기도 남양주시 이패동",
+      "precision": "address-area",
+      "displayName": "이패동, 양정동, 남양주시, 경기도, 12245, 대한민국",
+      "bounds": [
+        37.5983349,
+        37.6183349,
+        127.1830732,
+        127.2030732
+      ],
+      "source": "https://www.openstreetmap.org/node/415154172",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:52.614Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "범례 13 주차장과 도로에 연결된 양쪽 주차 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-56837-0.jpg",
+      "label": "1층 평면도 ⓒADMOBE Architect",
+      "url": "https://media.brique.co/2021/01/5e124ed0-에이디모베-건축사사무소-admobe-architect-왕자궁-백악관-도면01-905x639.jpg",
+      "bytes": 60606,
+      "sha256": "66fd29ad74c9f5d77c3277d048d11b2a94a0fb3120de2a782343c472b67fb637"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%99%95%ec%9e%90%ea%b6%81-%eb%b0%b1%ec%95%85%ea%b4%80/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "e9e166a85ed326b9cd3febfb78fa24c5b088c812551d4879826d584fddced8a2",
+      "previous": {
+        "file": "sources/parking-56837-0.jpg",
+        "url": "https://media.brique.co/2021/01/5e124ed0-에이디모베-건축사사무소-admobe-architect-왕자궁-백악관-도면01-905x639.jpg",
+        "sha256": "66fd29ad74c9f5d77c3277d048d11b2a94a0fb3120de2a782343c472b67fb637",
+        "width": 905,
+        "height": 639
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1413
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-56837-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 391,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1413
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-56837-0.json",
+    "statistics": {
+      "walls": 104,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 8,
+      "triangles": 1248,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "9719b59327b8d13d91e5dcca146a16f26d99f9f127f08f7db80530ff095765cd",
+    "radio": {
+      "file": "generated/radio-parking-56837.json",
+      "count": 48,
+      "nearbyCount": 129,
+      "acquiredAt": "2026-09-21T16:26:54.807Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-52390-0",
+    "siteId": "parking-52390",
+    "name": "포뮬리에",
+    "address": "대전광역시 유성구 탑립동 Taprip-dong, Yuseong-gu, Daejeon-si, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "building",
+    "source": "https://magazine.brique.co/project/%ed%8f%ac%eb%ae%ac%eb%a6%ac%ec%97%90-fomulier/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-52390-0.jpg",
+      "label": "1층 평면도 ⓒArchirie",
+      "url": "https://media.brique.co/2018/08/2-1층-평면도.jpg",
+      "bytes": 62844,
+      "sha256": "30939414acc16dd38ec00d2f102e5f4f58c8fccf51ecd905c16bfc21e606cc43",
+      "width": 1220,
+      "height": 862
+    },
+    "location": {
+      "lat": 36.4162285,
+      "lng": 127.4111826,
+      "query": "대전광역시 유성구 탑립동",
+      "precision": "address-area",
+      "displayName": "탑립동, 관평동, 유성구, 대전광역시, 34036, 대한민국",
+      "bounds": [
+        36.4062285,
+        36.4262285,
+        127.4011826,
+        127.4211826
+      ],
+      "source": "https://www.openstreetmap.org/node/415161440",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:53.732Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "상단 중앙 주차장 명시 공간",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-52390-0.jpg",
+      "label": "1층 평면도 ⓒArchirie",
+      "url": "https://media.brique.co/2018/08/2-1층-평면도-700x495.jpg",
+      "bytes": 34763,
+      "sha256": "a30a0206164af850c6ba6fc5ac6d4fa4ffe8ac3fba6422907f0642668e405c78"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ed%8f%ac%eb%ae%ac%eb%a6%ac%ec%97%90-fomulier/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "4de97ed19b1b22abe7c66612a6a9130fa84ca55125ddb96991153c4318d4e0fa",
+      "previous": {
+        "file": "sources/parking-52390-0.jpg",
+        "url": "https://media.brique.co/2018/08/2-1층-평면도-700x495.jpg",
+        "sha256": "a30a0206164af850c6ba6fc5ac6d4fa4ffe8ac3fba6422907f0642668e405c78",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 1220,
+      "selectedHeight": 862
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-52390-0/analysis.json",
+      "tileCount": 2,
+      "candidates": 179,
+      "sourcePixels": {
+        "width": 1220,
+        "height": 862
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-52390-0.json",
+    "statistics": {
+      "walls": 43,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 5,
+      "triangles": 516,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "168614be667dfb1addd02b1feba5b3731e674245bae9cfa3f01e73ea5dfbcc2e",
+    "radio": {
+      "file": "generated/radio-parking-52390.json",
+      "count": 48,
+      "nearbyCount": 174,
+      "acquiredAt": "2026-09-21T16:26:56.536Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-47946-0",
+    "siteId": "parking-47946",
+    "name": "운양동 리아네 두 가구 주택",
+    "address": "경기도 김포시 운양동 Unyang-dong, Gimpo-si, Gyeonggi-do, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%ec%9a%b4%ec%96%91%eb%8f%99-%eb%a6%ac%ec%95%84%eb%84%a4-%eb%91%90-%ea%b0%80%ea%b5%ac-%ec%a3%bc%ed%83%9d/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-47946-0.jpg",
+      "label": "1층 평면도 ⓒSeoga Architects",
+      "url": "https://media.brique.co/2020/08/8e573d79-_운양동-리아네-두가구주택-floor-plan-1f.jpg",
+      "bytes": 215964,
+      "sha256": "86eb7ebcdaa131640d42d55b335087131efb8b2553eff820f0c7d506e51788c5",
+      "width": 2000,
+      "height": 1414
+    },
+    "location": {
+      "lat": 37.6562562,
+      "lng": 126.6829889,
+      "query": "경기도 김포시 운양동",
+      "precision": "address-area",
+      "displayName": "운양동, 김포시, 경기도, 10078, 대한민국",
+      "bounds": [
+        37.6462562,
+        37.6662562,
+        126.6729889,
+        126.6929889
+      ],
+      "source": "https://www.openstreetmap.org/node/4754104133",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:55.395Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "상단 두 가구 주차 구획과 범례 9",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-47946-0.jpg",
+      "label": "1층 평면도 ⓒSeoga Architects",
+      "url": "https://media.brique.co/2020/08/8e573d79-_운양동-리아네-두가구주택-floor-plan-1f-700x495.jpg",
+      "bytes": 32273,
+      "sha256": "73af49972e21d71ad62f438f70ee4e2cf7415a00b61b85f7339ede8a0532f790"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%ec%9a%b4%ec%96%91%eb%8f%99-%eb%a6%ac%ec%95%84%eb%84%a4-%eb%91%90-%ea%b0%80%ea%b5%ac-%ec%a3%bc%ed%83%9d/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "0ffb1b00aea24444787ece83b9232f42fdea743762779c3eb04460ee783e97c1",
+      "previous": {
+        "file": "sources/parking-47946-0.jpg",
+        "url": "https://media.brique.co/2020/08/8e573d79-_운양동-리아네-두가구주택-floor-plan-1f-700x495.jpg",
+        "sha256": "73af49972e21d71ad62f438f70ee4e2cf7415a00b61b85f7339ede8a0532f790",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1414
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-47946-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 427,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1414
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-47946-0.json",
+    "statistics": {
+      "walls": 90,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 13,
+      "triangles": 1080,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "f938348da040ecaedcbf14f8cb2b3e350d3cf4bce56c0e3839a91746bcee656c",
+    "radio": {
+      "file": "generated/radio-parking-47946.json",
+      "count": 48,
+      "nearbyCount": 290,
+      "acquiredAt": "2026-09-21T16:26:58.222Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-46541-0",
+    "siteId": "parking-46541",
+    "name": "또바기 집 · B1",
+    "address": "경기도 용인시 수지구 죽전동 Gyeonggi-do Yongin-si Suji-gu Jukjeon-dong",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%eb%98%90%eb%b0%94%ea%b8%b0-%ec%a7%91/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-46541-0.jpg",
+      "label": "지하1층 평면도ⓒNAAULAB ARCHITECTS",
+      "url": "https://media.brique.co/2020/07/나우랩-아키텍츠-NAAULAB-ARCHITECTS-또바기집-지하층평면.jpg",
+      "bytes": 188532,
+      "sha256": "2995f9f57beefe2f505831ca15fabfec8653a1c9f651d3c23c127407000c9690",
+      "floor": "B1",
+      "width": 2000,
+      "height": 1414
+    },
+    "location": {
+      "lat": 37.3292,
+      "lng": 127.11631,
+      "query": "경기도 용인시 수지구 죽전동",
+      "precision": "address-area",
+      "displayName": "죽전동, 신봉동, 수지구, 용인시, 경기도, 16872, 대한민국",
+      "bounds": [
+        37.3192,
+        37.3392,
+        127.10631,
+        127.12631
+      ],
+      "source": "https://www.openstreetmap.org/node/415155241",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:56.550Z"
+    },
+    "parkingEvidence": {
+      "floor": "B1",
+      "note": "좌하단 2개 차량 구획과 스토퍼",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-46541-0.jpg",
+      "label": "지하1층 평면도ⓒNAAULAB ARCHITECTS",
+      "url": "https://media.brique.co/2020/07/나우랩-아키텍츠-NAAULAB-ARCHITECTS-또바기집-지하층평면-700x495.jpg",
+      "bytes": 27339,
+      "sha256": "814b9273c6e81738320a6fec718f89e835a3637ead73434852449a023ad6c63f",
+      "floor": "B1"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%98%90%eb%b0%94%ea%b8%b0-%ec%a7%91/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "281e1b36a9a8688fd607213d7940341920b3e97a145cb8d20a8d96dbc8e29ac5",
+      "previous": {
+        "file": "sources/parking-46541-0.jpg",
+        "url": "https://media.brique.co/2020/07/나우랩-아키텍츠-NAAULAB-ARCHITECTS-또바기집-지하층평면-700x495.jpg",
+        "sha256": "814b9273c6e81738320a6fec718f89e835a3637ead73434852449a023ad6c63f",
+        "width": 700,
+        "height": 495
+      },
+      "selectedWidth": 2000,
+      "selectedHeight": 1414
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-46541-0/analysis.json",
+      "tileCount": 6,
+      "candidates": 386,
+      "sourcePixels": {
+        "width": 2000,
+        "height": 1414
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-46541-0.json",
+    "statistics": {
+      "walls": 72,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 1,
+      "triangles": 864,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "91496a88fc66139399dbe838b3f5147e96248e29c77886054d23a1f72953fc20",
+    "radio": {
+      "file": "generated/radio-parking-46541.json",
+      "count": 48,
+      "nearbyCount": 591,
+      "acquiredAt": "2026-09-21T16:26:59.987Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-42450-0",
+    "siteId": "parking-42450",
+    "name": "백현동 주택",
+    "address": "경기도 성남시 분당구 백현동 Baekhyeon-dong, Bundang-gu, Seongman-si, Gyeonggi-do, Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/%eb%b0%b1%ed%98%84%eb%8f%99-%ec%a3%bc%ed%83%9d%ed%8e%b8%ec%a7%91-%ec%99%84/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-42450-0.jpg",
+      "label": "1층 평면도 ⓒUTTA Company",
+      "url": "https://media.brique.co/2020/05/-UTAA-ARCHITECTS-백현동-주택-Baekhyeon-dong02-e1590049365895.jpg",
+      "bytes": 208041,
+      "sha256": "1efdeaac96f49c486e7a06177bb699358819972cd52083b1f9b7828105056ddc",
+      "width": 1655,
+      "height": 1320
+    },
+    "location": {
+      "lat": 37.3887318,
+      "lng": 127.1078551,
+      "query": "경기도 성남시 분당구 백현동",
+      "precision": "address-area",
+      "displayName": "백현동, 판교, 분당구, 성남시, 경기도, 13531, 대한민국",
+      "bounds": [
+        37.3787318,
+        37.3987318,
+        127.0978551,
+        127.1178551
+      ],
+      "source": "https://www.openstreetmap.org/node/415155242",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:57.182Z"
+    },
+    "parkingEvidence": {
+      "floor": "1F",
+      "note": "상단 외부 차량 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-42450-0.jpg",
+      "label": "1층 평면도 ⓒUTTA Company",
+      "url": "https://media.brique.co/2020/05/-UTAA-ARCHITECTS-백현동-주택-Baekhyeon-dong02-e1590049365895-700x558.jpg",
+      "bytes": 41139,
+      "sha256": "7c86ed306f45079ee346fcc13be4064a275dfacd66eec4d93fc60c2bb6d9099a"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/%eb%b0%b1%ed%98%84%eb%8f%99-%ec%a3%bc%ed%83%9d%ed%8e%b8%ec%a7%91-%ec%99%84/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "d146fa13b5c80b499cb6d6902448179efc4fe1b2483e7a90c3bdfce123fefcc0",
+      "previous": {
+        "file": "sources/parking-42450-0.jpg",
+        "url": "https://media.brique.co/2020/05/-UTAA-ARCHITECTS-백현동-주택-Baekhyeon-dong02-e1590049365895-700x558.jpg",
+        "sha256": "7c86ed306f45079ee346fcc13be4064a275dfacd66eec4d93fc60c2bb6d9099a",
+        "width": 700,
+        "height": 558
+      },
+      "selectedWidth": 1655,
+      "selectedHeight": 1320
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-42450-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 834,
+      "sourcePixels": {
+        "width": 1655,
+        "height": 1320
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-42450-0.json",
+    "statistics": {
+      "walls": 107,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 41,
+      "triangles": 1284,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "132b2d5de3e803396f40538f511a17022b508b361003199219685039727eb4e8",
+    "radio": {
+      "file": "generated/radio-parking-42450.json",
+      "count": 48,
+      "nearbyCount": 435,
+      "acquiredAt": "2026-09-21T16:27:02.038Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "parking-170036-0",
+    "siteId": "parking-170036",
+    "name": "일곡 하얀집",
+    "address": "광주광역시 북구 일곡동 /Ilgok-dong, Buk-gu, Gwangju, Republic of Korea",
+    "acquiredAt": "2026-09-21",
+    "buildingType": "house",
+    "source": "https://magazine.brique.co/project/plan-architects-office-ilgok-white-house/",
+    "publisher": "브리크 매거진 · 건축가 제공 도면",
+    "sourceAsset": {
+      "file": "sources/high-resolution/parking-170036-0.jpg",
+      "label": "배치도 ©PLAN Architects office",
+      "url": "https://media.brique.co/2026/04/ilgok-white-house-6-1536x1086.jpg",
+      "bytes": 144111,
+      "sha256": "ea80c6cbdca6339778b8b8c6ea13e10161e73e2adfdbcf7a6c93845dc7a8fb8e",
+      "width": 1536,
+      "height": 1086
+    },
+    "location": {
+      "lat": 35.2093565,
+      "lng": 126.8950292,
+      "query": "광주광역시 북구 일곡동 /",
+      "precision": "address-area",
+      "displayName": "일곡동, 자연마을, 북구, 광주, 전남광주통합특별시, 61037, 대한민국",
+      "bounds": [
+        35.1993565,
+        35.2193565,
+        126.8850292,
+        126.9050292
+      ],
+      "source": "https://www.openstreetmap.org/node/415146305",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T10:42:58.011Z"
+    },
+    "parkingEvidence": {
+      "floor": "배치도",
+      "note": "왼쪽 상단 주차장 표기 및 2개 구획",
+      "method": "원본 평면도 시각 검토",
+      "verifiedAt": "2026-09-21",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "previewAsset": {
+      "file": "sources/parking-170036-0.jpg",
+      "label": "배치도 ©PLAN Architects office",
+      "url": "https://media.brique.co/2026/04/ilgok-white-house-6-905x640.jpg",
+      "bytes": 74090,
+      "sha256": "ab06091a73d0039b5bda385a65189ae3ac78ff5c3eafb3dc8ca579e207006b2d"
+    },
+    "sourceResolution": {
+      "method": "publisher-declared-srcset",
+      "publisherPage": "https://magazine.brique.co/project/plan-architects-office-ilgok-white-house/",
+      "inspectedAt": "2026-09-21T18:04:30.427Z",
+      "pageSha256": "096681941174d774966fdc028a83dae3d8f80e5530be5e876a38f7695a012742",
+      "previous": {
+        "file": "sources/parking-170036-0.jpg",
+        "url": "https://media.brique.co/2026/04/ilgok-white-house-6-905x640.jpg",
+        "sha256": "ab06091a73d0039b5bda385a65189ae3ac78ff5c3eafb3dc8ca579e207006b2d",
+        "width": 905,
+        "height": 640
+      },
+      "selectedWidth": 1536,
+      "selectedHeight": 1086
+    },
+    "rasterAnalysis": {
+      "file": "analysis/parking-170036-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 521,
+      "sourcePixels": {
+        "width": 1536,
+        "height": 1086
+      },
+      "modelPolicy": "automatic-structural-strokes"
+    },
+    "modelFile": "generated/parking-170036-0.json",
+    "statistics": {
+      "walls": 47,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 9,
+      "triangles": 564,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "2e7a5005f93f2afb836907f6e14914d21c0214d78b0cfca34b4d92f990fe17ca",
+    "radio": {
+      "file": "generated/radio-parking-170036.json",
+      "count": 48,
+      "nearbyCount": 338,
+      "acquiredAt": "2026-09-21T16:27:03.701Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "complex-onepentas-0",
+    "siteId": "complex-onepentas",
+    "name": "래미안 원펜타스 · 단지 배치도 · SITE",
+    "address": "서울특별시 서초구 반포동 12번지 일대",
+    "acquiredAt": "2026-09-21T11:11:59.901360+00:00",
+    "buildingType": "apartment",
+    "source": "https://www.raemian.co.kr/sales/sub/s/onepentas?menuSeq=10051",
+    "publisher": "삼성물산 래미안",
+    "sourceAsset": {
+      "file": "sources/complex-onepentas-0.jpg",
+      "label": "단지 전체 배치도 · 지하층 주차 평면도 아님",
+      "url": "https://www.raemian.co.kr/upload/editor/image/images/000280/01_01_baechido.jpg",
+      "bytes": 1228853,
+      "sha256": "2e12f643ae043634c1c225c2f68b3841f167b3e00dab856edb3d14f26800df04",
+      "floor": "SITE",
+      "kind": "site-plan"
+    },
+    "location": {
+      "lat": 37.5040052,
+      "lng": 127.0017984,
+      "query": "반포동",
+      "precision": "address-area",
+      "displayName": "반포동, 서초구, 서울특별시, 대한민국",
+      "bounds": [
+        37.4918878,
+        37.516276,
+        126.9805485,
+        127.0244262
+      ],
+      "source": "https://www.openstreetmap.org/relation/3880689",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "checkedAt": "2026-09-21T11:11:59.901360+00:00"
+    },
+    "parkingEvidence": null,
+    "scaleStatus": "estimated",
+    "metersAcross": 40,
+    "rasterAnalysis": {
+      "file": "analysis/complex-onepentas-0/analysis.json",
+      "tileCount": 4,
+      "candidates": 670,
+      "sourcePixels": {
+        "width": 1200,
+        "height": 1798
+      },
+      "modelPolicy": "context-map"
+    },
+    "modelFile": "generated/complex-onepentas-0.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 132,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "4f9ed36e3b7c7740324474ad3029c2159f2d152cb961a6f4b1be54ec3e962dcd",
+    "radio": {
+      "file": "generated/radio-complex-onepentas.json",
+      "count": 48,
+      "nearbyCount": 1119,
+      "acquiredAt": "2026-09-21T16:27:05.845Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "park-boramae",
+    "siteId": "park-boramae",
+    "name": "보라매공원",
+    "address": "서울특별시 동작구 여의대방로20길 33",
+    "buildingType": "park",
+    "source": "https://gov.seoul.go.kr/festa/files/2025/05/682bc1be350963.28180700.pdf#page=1",
+    "publisher": "서울특별시",
+    "acquiredAt": "2026-09-21T16:46:58.906Z",
+    "sourceDocument": {
+      "file": "sources/park-boramae.pdf",
+      "sha256": "951b8fb4450b2605f67a99369e945b3d420ce46f5711e91cb9665249eb6c1d58",
+      "bytes": 2482095
+    },
+    "sourceAsset": {
+      "file": "sources/park-boramae.png",
+      "url": "https://gov.seoul.go.kr/festa/files/2025/05/682bc1be350963.28180700.pdf",
+      "label": "공원 안내도",
+      "kind": "park-guide",
+      "sourcePage": 1,
+      "sha256": "7c04b98cd49652f805baf1508c5b74e84184040fc5820ef03fe9ef8cb31908be",
+      "bytes": 1059812
+    },
+    "location": {
+      "lat": 37.4932422,
+      "lng": 126.920474,
+      "precision": "park-centroid",
+      "source": "https://www.openstreetmap.org/way/286555214",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "bounds": [
+        37.490273,
+        37.4962073,
+        126.9158909,
+        126.9261166
+      ],
+      "checkedAt": "2026-09-21T16:19:41.071Z",
+      "independentCheck": {
+        "lat": 37.4932422,
+        "lng": 126.920474,
+        "precision": "park-centroid",
+        "source": "https://www.openstreetmap.org/way/286555214",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "bounds": [
+          37.490273,
+          37.4962073,
+          126.9158909,
+          126.9261166
+        ],
+        "checkedAt": "2026-09-21T16:19:41.071Z"
+      }
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 1250,
+    "parkingEvidence": {
+      "note": "서울시 2025 공원 안내도. P 주차장과 장애인 전용 주차장 범례 확인. 개별 주차면 치수는 제공되지 않습니다.",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "rasterAnalysis": {
+      "file": "analysis/park-boramae/analysis.json",
+      "tileCount": 6,
+      "candidates": 967,
+      "sourcePixels": {
+        "width": 2040,
+        "height": 1071
+      },
+      "modelPolicy": "context-map"
+    },
+    "modelFile": "generated/park-boramae.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 174,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "bc3c2a5c78fed89c79fc0962675e254836a363277ac25f28bf37799417b35015",
+    "radio": {
+      "file": "generated/radio-park-boramae.json",
+      "count": 48,
+      "nearbyCount": 1222,
+      "acquiredAt": "2026-09-21T16:27:08.654Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "park-seoul-forest",
+    "siteId": "park-seoul-forest",
+    "name": "서울숲",
+    "address": "서울특별시 성동구 뚝섬로 273",
+    "buildingType": "park",
+    "source": "https://www.seoul.go.kr/festa/files/2026/03/69a93ec17497e4.06719720.pdf#page=5",
+    "publisher": "서울특별시",
+    "acquiredAt": "2026-09-21T16:46:59.100Z",
+    "sourceDocument": {
+      "file": "sources/park-seoul-forest.pdf",
+      "sha256": "c6bd1b71e4556daed6f58d456b741d951bc6c6466c5363e2a0450a44f54306dd",
+      "bytes": 3362491
+    },
+    "sourceAsset": {
+      "file": "sources/park-seoul-forest.png",
+      "url": "https://www.seoul.go.kr/festa/files/2026/03/69a93ec17497e4.06719720.pdf",
+      "label": "공원 안내도",
+      "kind": "park-guide",
+      "sourcePage": 5,
+      "sha256": "dd1afd2495d0dbfda8e82c7c1202a857ce23becb43dd0d9d76c18e426604d41d",
+      "bytes": 841681
+    },
+    "location": {
+      "lat": 37.5435916,
+      "lng": 127.0447397,
+      "precision": "park-centroid",
+      "source": "https://www.openstreetmap.org/node/6312484234",
+      "license": "© OpenStreetMap contributors · ODbL 1.0",
+      "bounds": [
+        37.5385916,
+        37.5485916,
+        127.0397397,
+        127.0497397
+      ],
+      "checkedAt": "2026-09-21T16:19:43.119Z",
+      "independentCheck": {
+        "lat": 37.5435916,
+        "lng": 127.0447397,
+        "precision": "park-centroid",
+        "source": "https://www.openstreetmap.org/node/6312484234",
+        "license": "© OpenStreetMap contributors · ODbL 1.0",
+        "bounds": [
+          37.5385916,
+          37.5485916,
+          127.0397397,
+          127.0497397
+        ],
+        "checkedAt": "2026-09-21T16:19:43.119Z"
+      }
+    },
+    "scaleStatus": "estimated",
+    "metersAcross": 1200,
+    "parkingEvidence": {
+      "note": "서울시 2026-02-27 안내 자료 5쪽. 당시 이용 안내도이며 현재 운영·공사 현황을 뜻하지 않습니다. 오른쪽 아래 서울숲 주차장 표기.",
+      "currentFacilityStatus": "not-surveyed"
+    },
+    "rasterAnalysis": {
+      "file": "analysis/park-seoul-forest/analysis.json",
+      "tileCount": 4,
+      "candidates": 564,
+      "sourcePixels": {
+        "width": 1071,
+        "height": 1513
+      },
+      "modelPolicy": "context-map"
+    },
+    "modelFile": "generated/park-seoul-forest.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 0,
+      "edges": 0,
+      "spaces": 0,
+      "objects": 0,
+      "accessible": 0,
+      "ocrLabels": 37,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": false,
+    "modelHash": "0e5918cb545e2dadea7a9e8e9d0e766b6ccd9c26ac3ffe44eb4ce198e2ead87f",
+    "radio": {
+      "file": "generated/radio-park-seoul-forest.json",
+      "count": 48,
+      "nearbyCount": 986,
+      "acquiredAt": "2026-09-21T16:27:10.459Z",
+      "source": "https://spectrummap.kr/gis/mobile_service.do?menuNo=300480"
+    }
+  },
+  {
+    "id": "integration-lab",
+    "name": "도로 → 주차·EV · 검증용 시나리오",
+    "buildingType": "test",
+    "sourceAsset": {
+      "file": "sources/integration-lab.svg"
+    },
+    "annotation": "sources/integration-lab.svg",
+    "synthetic": true,
+    "modelFile": "generated/integration-lab.json",
+    "statistics": {
+      "walls": 0,
+      "nodes": 15,
+      "edges": 16,
+      "spaces": 20,
+      "objects": 0,
+      "accessible": 1,
+      "ocrLabels": 0,
+      "triangles": 0,
+      "detectedParking": 0,
+      "matchedParking": 0
+    },
+    "routingReady": true,
+    "modelHash": "477a7a0e5e1a98fd53849d03faae522319ec584c2232ef7b715961ea78cc8b92"
+  }
+]

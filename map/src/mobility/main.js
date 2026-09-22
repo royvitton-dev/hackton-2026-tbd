@@ -4,6 +4,7 @@ import '@fontsource-variable/noto-sans-kr';
 import './style.css';
 import {analyzeSvg} from '../core/analysis.js';
 import {sampleRoute} from '../core/routing.js';
+import {mountRoadMaps} from './maps.js';
 import {filterMobilitySources,parkingEnvelope,vehicleRoute} from '../core/mobility.js';
 
 const $=s=>document.querySelector(s),esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -62,7 +63,7 @@ try{
  document.querySelectorAll('[data-category]').forEach(b=>b.onclick=()=>{category=b.dataset.category;updateFilters();renderCatalog();});
  $('#query').oninput=e=>{query=e.target.value;renderCatalog();};$('#close-dialog').onclick=()=>$('#source-dialog').close();
  $('#export').onclick=()=>{const content={...data,sources:filterMobilitySources(data.sources,{category,query})};const url=URL.createObjectURL(new Blob([JSON.stringify(content,null,2)],{type:'application/json'}));const a=document.createElement('a');a.href=url;a.download='atlas-mobility-sources.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);};
- renderCatalog();renderRoute();frame=requestAnimationFrame(animate);document.body.dataset.ready='true';
+ renderCatalog();renderRoute();await mountRoadMaps().catch(error=>{const target=document.querySelector("#road-load-error");if(target){target.hidden=false;target.textContent=error.message;}});frame=requestAnimationFrame(animate);document.body.dataset.ready='true';
  window.__mobility={get state(){return {category,query,vehicle,result,playing,travel};}};
 }catch(error){$('#load-error').hidden=false;$('#load-error').textContent=error.message;}
 document.addEventListener('visibilitychange',()=>{if(document.hidden){playing=false;$('#drive').textContent='동선 재생';}});window.addEventListener('pagehide',()=>cancelAnimationFrame(frame));

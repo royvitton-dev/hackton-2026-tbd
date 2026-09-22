@@ -1,0 +1,87 @@
+[2m[WebServer] [22m(node:37167) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[2m[WebServer] [22m(Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 14 tests using 1 worker
+
+(node:37169) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:37169) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 tests/e2e/parking.spec.mjs:8:1 › public B2 source converts to actual WebGL meshes, with original and data export (12.1s)
+  ✓   2 tests/e2e/parking.spec.mjs:15:1 › drives through exterior road and entrance to EV, supports cameras and pauses (4.4s)
+  ✓   3 tests/e2e/parking.spec.mjs:26:1 › fire starts at current position, switches to human and fails closed when exits are blocked (3.6s)
+  ✓   4 tests/e2e/parking.spec.mjs:33:1 › photo-derived facade and mapped buildings preserve geographic source attribution (6.9s)
+  ✓   5 tests/e2e/parking.spec.mjs:39:1 › imports semantic SVG and rejects executable and corrupt input without losing current scene (2.9s)
+  ✓   6 tests/e2e/parking.spec.mjs:44:1 › actual Naver-located building routes from acquired OSM road through the drawn entrance (5.4s)
+  ✓   7 tests/e2e/parking.spec.mjs:48:1 › parks inside a source bay with suitable dimensions and previews a proposed charger destination (8.5s)
+  ✓   8 tests/e2e/parking.spec.mjs:57:1 › mobile source selection and 3D controls remain usable without horizontal overflow (2.9s)
+  ✓   9 tests/e2e/parking.spec.mjs:62:1 › existing park exposes the new attraction, shared launch route and root quality dashboard (19.6s)
+  ✓  10 tests/e2e/parking.spec.mjs:66:1 › real place inventory includes parks and public parking without counting floors as buildings (9.5s)
+  ✓  11 tests/e2e/parking.spec.mjs:74:1 › actual station data drives disclosed green and red screening, filters and export (9.4s)
+  ✘  12 tests/e2e/parking.spec.mjs:85:1 › accessible bays stay visible, realistic objects accept multiple textures and drawing details preserve OCR (12.4s)
+(node:42108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:42108) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  13 tests/e2e/parking.spec.mjs:94:1 › mobile charging settings and all drawing information remain reachable (8.4s)
+  ✓  14 tests/e2e/parking.spec.mjs:99:1 › imports an actual PDF and keeps its drawing preview separate from the previously selected source (5.7s)
+
+
+  1) tests/e2e/parking.spec.mjs:85:1 › accessible bays stay visible, realistic objects accept multiple textures and drawing details preserve OCR 
+
+    Error: [2mexpect([22m[31mpage[39m[2m).[22mtoHaveScreenshot[2m([22m[32mexpected[39m[2m)[22m failed
+
+      8616 pixels (ratio 0.01 of all image pixels) are different.
+
+      Snapshot: drawing-materials.png
+
+    Call log:
+    [2m  - Expect "toHaveScreenshot(drawing-materials.png)" with timeout 20000ms[22m
+    [2m    - verifying given screenshot expectation[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - 8616 pixels (ratio 0.01 of all image pixels) are different.[22m
+    [2m  - waiting 100ms before taking screenshot[22m
+    [2m  - taking page screenshot[22m
+    [2m    - disabled all CSS animations[22m
+    [2m  - waiting for fonts to load...[22m
+    [2m  - fonts loaded[22m
+    [2m  - captured a stable screenshot[22m
+    [2m  - 8616 pixels (ratio 0.01 of all image pixels) are different.[22m
+
+
+      2 | test.beforeEach(async({page})=>{const errors=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.status()>=400&&!r.url().includes('/reports/'))errors.push(r.status()+' '+r.url());});page.__errors=errors;});
+      3 | test.afterEach(async({page})=>expect(page.__errors).toEqual([]));
+    > 4 | async function screenshot(page,name,options={}){return expect(page).toHaveScreenshot(name,{...options,style:'#quality-status {visibility:hidden !important}'});}
+        |                                                                     ^
+      5 | async function open(page,site='changdong-b2'){
+      6 |   await page.goto(`/map_new/?site=${site}`);await page.waitForFunction(id=>window.__parking?.state.plan?.id===id,site);await expect(page.locator('#world')).toHaveAttribute('data-ready','true');await page.evaluate(()=>document.fonts.ready);
+      7 | }
+        at screenshot (/Users/jonghokim/Workspace/hackerton/map_new/tests/e2e/parking.spec.mjs:4:69)
+        at /Users/jonghokim/Workspace/hackerton/map_new/tests/e2e/parking.spec.mjs:89:277
+
+    attachment #1: drawing-materials (image/png) ───────────────────────────────────────────────────
+    Expected: tests/e2e/golden/drawing-materials.png
+    Received: test-results/parking-accessible-bays-st-071ef-rawing-details-preserve-OCR/drawing-materials-actual.png
+    Diff:     test-results/parking-accessible-bays-st-071ef-rawing-details-preserve-OCR/drawing-materials-diff.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/parking-accessible-bays-st-071ef-rawing-details-preserve-OCR/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/parking-accessible-bays-st-071ef-rawing-details-preserve-OCR/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/parking-accessible-bays-st-071ef-rawing-details-preserve-OCR/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/parking-accessible-bays-st-071ef-rawing-details-preserve-OCR/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    tests/e2e/parking.spec.mjs:85:1 › accessible bays stay visible, realistic objects accept multiple textures and drawing details preserve OCR 
+  13 passed (1.9m)

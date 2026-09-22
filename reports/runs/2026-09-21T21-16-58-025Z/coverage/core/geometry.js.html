@@ -1,0 +1,166 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for core/geometry.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">core</a> geometry.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>28/28</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">97.5% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>39/40</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>5/5</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>18/18</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">22117145x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22012879x</span>
+<span class="cline-any cline-yes">22012879x</span>
+<span class="cline-any cline-yes">22012879x</span>
+<span class="cline-any cline-yes">22012879x</span>
+<span class="cline-any cline-yes">22012879x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2012x</span>
+<span class="cline-any cline-yes">2011x</span>
+<span class="cline-any cline-yes">2011x</span>
+<span class="cline-any cline-yes">41989x</span>
+<span class="cline-any cline-yes">41989x</span>
+<span class="cline-any cline-yes">39982x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2012x</span>
+<span class="cline-any cline-yes">2012x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">174x</span>
+<span class="cline-any cline-yes">173x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">89x</span>
+<span class="cline-any cline-yes">89x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">export const distance = (a,b) =&gt; Math.hypot(a.x-b.x,(a.y||0)-(b.y||0),a.z-b.z);
+export function project(p,a,b) {
+  const dx=b.x-a.x,dy=(b.y||0)-(a.y||0),dz=b.z-a.z;
+  const d=dx*dx+dy*dy+dz*dz;
+  const t=d?Math.max(0,Math.min(1,((p.x-a.x)*dx+((p.y||0)-(a.y||0))*dy+(p.z-a.z)*dz)/d)):0;
+  const point={x:a.x+dx*t,y:(a.y||0)+dy*t,z:a.z+dz*t};
+  return {...point,t,distance:distance(p,point)};
+}
+export function pointAt(path,travel) {
+  if(!path?.points?.length)return null;
+  let remaining=Math.max(0,travel);
+  for(let i=1;i&lt;path.points.length;i++){
+    const a=path.points[i-1],b=path.points[i],length=distance(a,b);
+    if(remaining&lt;=length&amp;&amp;length&gt;0)return {x:a.x+(b.x-a.x)*remaining/length,y:(a.y||0)+((b.y||0)-(a.y||0))*remaining/length,z:a.z+(b.z-a.z)*remaining/length,heading:Math.atan2(b.x-a.x,b.z-a.z),arrived:travel&gt;=path.distance};
+    remaining-=length;
+  }
+  const a=path.points.at(-2)||<span class="branch-1 cbranch-no" title="branch not covered" >path.points.at(-1),</span>b=path.points.at(-1);
+  return {...b,y:b.y||0,heading:Math.atan2(b.x-a.x,b.z-a.z),arrived:true};
+}
+export function localPosition(coordinate,anchor) {
+  if(![coordinate.lat,coordinate.lng,anchor.lat,anchor.lng].every(Number.isFinite)||Math.abs(anchor.lat)&gt;=85)throw Error('유효한 WGS84 좌표가 필요합니다.');
+  return {x:(coordinate.lng-anchor.lng)*Math.PI/180*6378137*Math.cos(anchor.lat*Math.PI/180),y:coordinate.altitude||0,z:-(coordinate.lat-anchor.lat)*Math.PI/180*6378137};
+}
+export function geographicPosition(point,anchor) {
+  localPosition(anchor,anchor);
+  return {lat:anchor.lat-point.z/6378137*180/Math.PI,lng:anchor.lng+point.x/(6378137*Math.cos(anchor.lat*Math.PI/180))*180/Math.PI,altitude:point.y||0};
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-21T21:17:17.083Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    

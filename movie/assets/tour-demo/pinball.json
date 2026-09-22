@@ -1,0 +1,325 @@
+{
+  "id": "pinball",
+  "capturedAt": "2026-09-21T16:53:46.189Z",
+  "source": "actual running application",
+  "viewport": {
+    "width": 1440,
+    "height": 900
+  },
+  "before": {
+    "roundId": "99b9d341-f2a7-4383-8a52-57dc1f0bd8c5",
+    "state": "racing",
+    "seed": 3142805956,
+    "time": 0,
+    "target": 1,
+    "total": 5,
+    "winner": null,
+    "completionReason": null,
+    "finishOrder": [],
+    "assists": 0,
+    "returns": 0,
+    "returnClosed": false,
+    "motion": {
+      "enabled": true,
+      "active": false,
+      "axis": null,
+      "cycle": -1,
+      "phase": 0,
+      "roll": 0,
+      "pitch": 0,
+      "offsetX": 0,
+      "offsetY": 0,
+      "forceX": 0,
+      "forceY": 0,
+      "nextIn": 3.569998061284423
+    },
+    "deviceStats": {
+      "captures": 0,
+      "launches": 0,
+      "releases": 0
+    },
+    "devices": [
+      {
+        "id": "neon-magnet-0",
+        "kind": "magnet",
+        "x": 310,
+        "y": 530,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-magnet-1",
+        "kind": "magnet",
+        "x": 100,
+        "y": 1770,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-cannon-2",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1320,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-cannon-3",
+        "kind": "cannon",
+        "x": 480,
+        "y": 1630,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      }
+    ],
+    "balls": [
+      {
+        "id": "p5-b1",
+        "x": 202.92298042528964,
+        "y": 99.43419152004164,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p2-b1",
+        "x": 470.93479472581214,
+        "y": 169.43224748544742,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p1-b1",
+        "x": 312.24304733810726,
+        "y": 101.05456269924449,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p3-b1",
+        "x": 129.76654156901714,
+        "y": 82.61379391327404,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p4-b1",
+        "x": 402.35648495011145,
+        "y": 116.20464269906368,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      }
+    ]
+  },
+  "recordedSeconds": 6,
+  "after": {
+    "roundId": "99b9d341-f2a7-4383-8a52-57dc1f0bd8c5",
+    "state": "complete",
+    "seed": 3142805956,
+    "time": 13.716936320873373,
+    "target": 1,
+    "total": 5,
+    "winner": {
+      "id": "p2-b1",
+      "participantId": "p2",
+      "name": "태성",
+      "label": "태성",
+      "color": "#bca7ff",
+      "number": 1,
+      "rank": 1,
+      "time": 13.716936320873373,
+      "exitId": 1,
+      "exitLabel": "골인",
+      "criterion": "arrival",
+      "crossedFinish": true
+    },
+    "completionReason": "target-arrived",
+    "finishOrder": [
+      {
+        "id": "p2-b1",
+        "participantId": "p2",
+        "name": "태성",
+        "label": "태성",
+        "color": "#bca7ff",
+        "number": 1,
+        "rank": 1,
+        "time": 13.716936320873373,
+        "exitId": 1,
+        "exitLabel": "골인"
+      }
+    ],
+    "assists": 0,
+    "returns": 0,
+    "returnClosed": false,
+    "motion": {
+      "enabled": true,
+      "active": false,
+      "axis": null,
+      "cycle": 2,
+      "phase": 0,
+      "roll": 0,
+      "pitch": 0,
+      "offsetX": 0,
+      "offsetY": 0,
+      "forceX": 0,
+      "forceY": 0,
+      "nextIn": 1.8454375603548954
+    },
+    "deviceStats": {
+      "captures": 0,
+      "launches": 0,
+      "releases": 0
+    },
+    "devices": [
+      {
+        "id": "neon-magnet-0",
+        "kind": "magnet",
+        "x": 310,
+        "y": 530,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-magnet-1",
+        "kind": "magnet",
+        "x": 100,
+        "y": 1770,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-cannon-2",
+        "kind": "cannon",
+        "x": 310,
+        "y": 1320,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      },
+      {
+        "id": "neon-cannon-3",
+        "kind": "cannon",
+        "x": 480,
+        "y": 1630,
+        "ballId": null,
+        "ballIds": [],
+        "angle": 1.5707963267948966,
+        "progress": 0,
+        "holding": false,
+        "count": 0
+      }
+    ],
+    "balls": [
+      {
+        "id": "p5-b1",
+        "x": 401.4573790253106,
+        "y": 1256.2411681739638,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p2-b1",
+        "x": 297.95133756179564,
+        "y": 2150,
+        "finished": true,
+        "rank": 1,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p1-b1",
+        "x": 464.5094541477687,
+        "y": 1876.1845720638578,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p3-b1",
+        "x": 385.21328707981496,
+        "y": 1013.9278723590548,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      },
+      {
+        "id": "p4-b1",
+        "x": 413.4864756324092,
+        "y": 1074.7130436433924,
+        "finished": false,
+        "rank": null,
+        "heldBy": null,
+        "returning": null,
+        "returnCount": 0
+      }
+    ]
+  },
+  "settings": {
+    "gameMode": "player",
+    "sound": false,
+    "reduced": false,
+    "mapId": "neon",
+    "playbackSpeed": 2,
+    "renderFault": false,
+    "focusMode": true,
+    "viewMode": "follow",
+    "physicsModule": "http://127.0.0.1:5190/pinball/src/physics.js",
+    "renderer": "webgl",
+    "camera": "PerspectiveCamera"
+  },
+  "features": [
+    "실제 공 물리 시뮬레이션",
+    "움직이는 놀이기구",
+    "재생 속도 전환"
+  ],
+  "browserErrors": []
+}

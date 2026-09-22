@@ -101,7 +101,9 @@ export class VoiceController extends EventEmitter {
     this.emit('running', prompt);
     this.emit('feedback', 'start');
     this.pending = Promise.resolve().then(() => this.run(prompt)).then(
-      result => this.emit('notice', result?.delivery === 'queued' ? '기존 Codex 대화로 명령을 전달했습니다.' : 'Codex 실행이 끝났습니다.'),
+      result => this.emit('notice', result?.delivery === 'warp' ? '포커스된 Warp CLI에 붙여넣기와 Enter를 전달했습니다.'
+        : result?.delivery === 'warp-preview' ? '연습 모드: Warp에 전송하지 않았습니다.'
+        : result?.delivery === 'queued' ? '기존 Codex 대화로 명령을 전달했습니다.' : 'Codex 실행이 끝났습니다.'),
       error => this.emit('failure', error),
     ).finally(() => {
       if (this.state === 'closed') return;

@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from 'react';
 import { ArrowDown, ArrowLeft, ArrowRight, ArrowUp, AudioLines, Mic2, Music2, Play, Timer } from 'lucide-react';
 import { playTone } from './audio';
 import { SKILL_LABEL, type Skill } from './engine';
@@ -26,6 +26,11 @@ export default function Challenge({ skill, name, sound, onComplete }: { skill: S
     if (skill === 'dance') record(key === directions[sequence[p.count]] ? 100 : 0);
   }, [started, skill, sequence, record]);
   const beginHold = useCallback(() => { if (!started || progress.current.done || progress.current.hold) return; progress.current.hold = performance.now(); setHolding(true); playTone(220, sound, .07); }, [started, sound]);
+  const cancelHold = useCallback(() => {
+    progress.current.hold = 0;
+    setHolding(false);
+    setCursor(0);
+  }, []);
   const release = useCallback(() => {
     const p = progress.current; if (!p.hold || p.done) return;
     const held = performance.now() - p.hold; p.hold = 0; setHolding(false);
@@ -51,10 +56,10 @@ export default function Challenge({ skill, name, sound, onComplete }: { skill: S
       if (event.code === 'Space' && skill !== 'dance') { event.preventDefault(); if (skill === 'rap') beginHold(); else hit(); }
     };
     const up = (event: KeyboardEvent) => { if (event.code === 'Space' && skill === 'rap') { event.preventDefault(); release(); } };
-    const blur = () => { if (skill === 'rap') release(); };
+    const blur = () => { if (skill === 'rap') cancelHold(); };
     window.addEventListener('keydown', down); window.addEventListener('keyup', up); window.addEventListener('blur', blur);
     return () => { window.removeEventListener('keydown', down); window.removeEventListener('keyup', up); window.removeEventListener('blur', blur); };
-  }, [started, skill, hit, beginHold, release]);
+  }, [started, skill, hit, beginHold, release, cancelHold]);
   const Icon = skill === 'vocal' ? Mic2 : skill === 'dance' ? Music2 : AudioLines;
   return <div className={`challenge challenge-${skill}`}>
     <div className="challenge-heading"><span className="eyebrow">{name}’S PERFORMANCE</span><span className="timer"><Timer size={14} /> {seconds}s</span></div>
@@ -65,7 +70,7 @@ export default function Challenge({ skill, name, sound, onComplete }: { skill: S
       <div className="performance-feedback" aria-live="polite">{feedback}</div>
       {skill === 'vocal' && <><div className="pitch-track"><div className="pitch-perfect" /><i style={{ left: `${cursor}%` }} /><span>LOW</span><span>PERFECT ZONE</span><span>HIGH</span></div><button className="primary wide performance-button" onClick={() => hit()}><Mic2 size={18} /> 음정 맞추기 <kbd>SPACE</kbd></button></>}
       {skill === 'dance' && <><div className="dance-sequence">{sequence.map((direction,i) => { const Arrow = ArrowIcons[direction]; return <span key={i} className={i === step ? 'now' : i < step ? 'done' : ''}><Arrow size={23} /></span>; })}</div><div className="dance-controls">{ArrowIcons.map((Arrow,i) => <button key={i} aria-label={['왼쪽','위쪽','아래쪽','오른쪽'][i]} onClick={() => hit(directions[i])}><Arrow size={26} /></button>)}</div></>}
-      {skill === 'rap' && <><div className="rap-phrase">{['내 꿈은', '이 무대 위에', '더 빛나', '지금 이 순간', 'I make my debut'][Math.min(step,4)]}<small>목표 {(durations[Math.min(step,4)] / 1000).toFixed(2)}초</small></div><div className="hold-track"><i style={{ width: `${cursor}%` }} /></div><button className={`primary wide performance-button ${holding ? 'holding' : ''}`} onPointerDown={event => { event.preventDefault(); event.currentTarget.setPointerCapture(event.pointerId); beginHold(); }} onPointerUp={release} onPointerCancel={release}><AudioLines size={19} /> {holding ? '지금 박자를 느껴봐…' : '꾹 누르고 박자에 맞춰 놓기'} <kbd>SPACE</kbd></button></>}
+      {skill === 'rap' && <><div className="rap-phrase" aria-live="polite"><span key={step}>{['내 꿈은', '이 무대 위에', '더 빛나', '지금 이 순간', 'I make my debut'][Math.min(step,4)]}</span><small>목표 {(durations[Math.min(step,4)] / 1000).toFixed(2)}초</small></div><div className="rap-beats" aria-label={`랩 박자 ${step + 1} / ${count}`}>{durations.map((duration,i) => <i key={duration} className={i < step ? 'done' : i === step ? 'now' : ''} style={{ '--beat': duration / 450 } as CSSProperties} />)}</div><div className={`hold-track ${holding ? 'active' : ''}`}><span className="hold-target" /><i style={{ width: `${cursor}%` }} /></div><button className={`primary wide performance-button ${holding ? 'holding' : ''}`} onPointerDown={event => { if (event.button !== 0) return; event.preventDefault(); event.currentTarget.setPointerCapture(event.pointerId); beginHold(); }} onPointerUp={release} onPointerCancel={cancelHold}><AudioLines size={19} /> {holding ? '지금 박자를 느껴봐…' : '꾹 누르고 박자에 맞춰 놓기'} <kbd>SPACE</kbd></button></>}
       <div className="challenge-progress">{Array.from({ length: count }, (_,i) => <i key={i} className={i < step ? 'filled' : ''} />)}<span>{step} / {count}</span></div>
     </>}
   </div>;
