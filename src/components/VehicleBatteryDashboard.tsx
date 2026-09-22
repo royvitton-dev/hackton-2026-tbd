@@ -14,7 +14,8 @@ import { selectUser, useSelectedUser } from '@/lib/userSelection';
 const Viewer=dynamic(()=>import('./VehicleImageWebGLViewer').then(m=>m.VehicleImageWebGLViewer),{ssr:false,loading:()=> <div className="viewer-loading">차량을 불러오는 중입니다…</div>});
 const PitIntro=dynamic(()=>import('./PitStopIntro').then(m=>m.PitStopIntro),{ssr:false});
 const tabs=[['overview','주요 정보'],['battery','배터리 정보'],['habits','충전 습관'],['history','충전 이력']] as const;
-const projectHomeUrl=(process.env.NEXT_PUBLIC_BASE_PATH?'/park/':process.env.NEXT_PUBLIC_PROJECT_HOME_URL||'/');
+const staticDataPath=process.env.NEXT_PUBLIC_STATIC_DATA_PATH;
+const projectHomeUrl=process.env.NEXT_PUBLIC_PROJECT_HOME_URL||(process.env.NEXT_PUBLIC_BASE_PATH?'/park/':'/');
 type Tab=typeof tabs[number][0];
 export function VehicleBatteryDashboard({initialUser}:{initialUser:UserVehicle}){
   const selectedId=useSelectedUser('U0001');
@@ -29,7 +30,7 @@ export function VehicleBatteryDashboard({initialUser}:{initialUser:UserVehicle})
   useEffect(()=>{const onKey=(e:KeyboardEvent)=>{if(e.key==='Escape')close();};window.addEventListener('keydown',onKey);return()=>window.removeEventListener('keydown',onKey);},[close]);
   useEffect(()=>{
     const controller=new AbortController();
-    fetch(appPath('/api/users'),{signal:controller.signal}).then(async response=>{
+    fetch(appPath(staticDataPath?`${staticDataPath}/users.json`:'/api/users'),{signal:controller.signal}).then(async response=>{
       if(!response.ok)throw new Error(`HTTP ${response.status}`);
       return response.json() as Promise<{users:UserVehicleOption[]}>;
     }).then(data=>setUsers(data.users)).catch(()=>{}).finally(()=>{
@@ -41,7 +42,8 @@ export function VehicleBatteryDashboard({initialUser}:{initialUser:UserVehicle})
     const cached=cache.current.get(selectedId);
     if(cached){setUser(cached);setUserLoading(false);setUserError(null);return;}
     const controller=new AbortController();setUserLoading(true);setUserError(null);
-    fetch(appPath(`/api/users/${encodeURIComponent(selectedId)}`),{signal:controller.signal}).then(async response=>{
+    const userPath=staticDataPath?`${staticDataPath}/users/${encodeURIComponent(selectedId)}.json`:`/api/users/${encodeURIComponent(selectedId)}`;
+    fetch(appPath(userPath),{signal:controller.signal}).then(async response=>{
       if(!response.ok)throw new Error(`HTTP ${response.status}`);
       return response.json() as Promise<{user:UserVehicle}>;
     }).then(data=>{cache.current.set(selectedId,data.user);setUser(data.user);}).catch(error=>{
