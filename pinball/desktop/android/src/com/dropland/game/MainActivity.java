@@ -3,9 +3,15 @@ package com.dropland.game;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.os.Build;
+import android.content.res.Configuration;
+import android.graphics.Insets;
 import android.graphics.Color;
 import android.net.Uri;
 import android.view.View;
+import android.view.WindowInsets;
+import android.view.DisplayCutout;
+import android.widget.FrameLayout;
 import android.webkit.*;
 import java.io.*;
 import java.util.Collections;
@@ -14,12 +20,18 @@ public final class MainActivity extends Activity {
     private static final String HOST="appassets.androidplatform.net";
     private static final String HOME="https://"+HOST+"/assets/index.html";
     private WebView web;
+    private FrameLayout viewport;
     @Override public void onCreate(Bundle saved) {
         super.onCreate(saved);
-        getWindow().setStatusBarColor(Color.rgb(249,245,233));getWindow().setNavigationBarColor(Color.rgb(249,245,233));
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR|View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+        // Android 15+ enforces edge-to-edge. Reserve system space in a native
+        // parent so CSS fixed elements and 100dvh use the unobscured WebView bounds.
+        if(Build.VERSION.SDK_INT>=30)getWindow().setDecorFitsSystemWindows(false);
+        getWindow().setStatusBarColor(Color.TRANSPARENT);getWindow().setNavigationBarColor(Color.TRANSPARENT);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE|View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN|View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION|View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR|View.SYSTEM_UI_FLAG_LIGHT_NAVIGATION_BAR);
+        viewport=new FrameLayout(this);viewport.setBackgroundColor(Color.rgb(249,245,233));
         web=new WebView(this);web.setBackgroundColor(Color.rgb(249,245,233));
         WebSettings settings=web.getSettings();settings.setJavaScriptEnabled(true);settings.setDomStorageEnabled(true);settings.setAllowFileAccess(false);settings.setAllowContentAccess(false);settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);settings.setMediaPlaybackRequiresUserGesture(true);
+        settings.setUseWideViewPort(true);settings.setLoadWithOverviewMode(true);
         web.setWebChromeClient(new WebChromeClient());
         web.setWebViewClient(new WebViewClient(){
             @Override public boolean shouldOverrideUrlLoading(WebView view,WebResourceRequest request){return !local(request.getUrl());}
@@ -34,9 +46,36 @@ public final class MainActivity extends Activity {
                 view.destroy();web=null;new AlertDialog.Builder(MainActivity.this).setTitle("게임 화면을 다시 열까요?").setMessage("그래픽 연결이 종료됐어요. 진행 중 경기는 복구할 수 없어요.").setPositiveButton("다시 열기",(d,w)->recreate()).setNegativeButton("종료",(d,w)->finish()).show();return true;
             }
         });
-        // Keep page controls clear of Android status/navigation bars, including edge-to-edge devices.
-        web.setOnApplyWindowInsetsListener((v,insets)->{v.setPadding(insets.getSystemWindowInsetLeft(),insets.getSystemWindowInsetTop(),insets.getSystemWindowInsetRight(),insets.getSystemWindowInsetBottom());return insets;});
-        setContentView(web);web.loadUrl(HOME);
+        viewport.addView(web,new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.MATCH_PARENT));
+        viewport.setOnApplyWindowInsetsListener((v,insets)->applySafeViewport(insets));
+        setContentView(viewport);viewport.post(()->viewport.requestApplyInsets());web.loadUrl(HOME);
+    }
+    private WindowInsets applySafeViewport(WindowInsets insets){
+        if(Build.VERSION.SDK_INT>=30){
+            int bars=WindowInsets.Type.systemBars()|WindowInsets.Type.displayCutout();
+            int handled=bars|WindowInsets.Type.ime();
+            Insets safe=insets.getInsets(handled);
+            viewport.setPadding(safe.left,safe.top,safe.right,safe.bottom);
+            // Zero handled types, but keep dispatching updates to WebView. Returning
+            // unmodified insets can double-pad; consuming them can leave stale IME space.
+            return new WindowInsets.Builder(insets).setInsets(handled,Insets.NONE)
+                .setInsetsIgnoringVisibility(bars,Insets.NONE).setDisplayCutout(null).build();
+        }
+        int left=insets.getSystemWindowInsetLeft(),top=insets.getSystemWindowInsetTop();
+        int right=insets.getSystemWindowInsetRight(),bottom=insets.getSystemWindowInsetBottom();
+        if(Build.VERSION.SDK_INT>=28){
+            DisplayCutout cutout=insets.getDisplayCutout();
+            if(cutout!=null){left=Math.max(left,cutout.getSafeInsetLeft());top=Math.max(top,cutout.getSafeInsetTop());right=Math.max(right,cutout.getSafeInsetRight());bottom=Math.max(bottom,cutout.getSafeInsetBottom());}
+        }
+        viewport.setPadding(left,top,right,bottom);
+        WindowInsets remaining=insets.replaceSystemWindowInsets(0,0,0,0);
+        return Build.VERSION.SDK_INT>=28?remaining.consumeDisplayCutout():remaining;
+    }
+    @Override public void onConfigurationChanged(Configuration configuration){
+        super.onConfigurationChanged(configuration);
+        // Folding, rotation and density changes resize the existing game, never reload it.
+        if(viewport!=null){viewport.requestLayout();viewport.requestApplyInsets();}
+        if(web!=null)web.requestLayout();
     }
     private static boolean local(Uri url){return "https".equals(url.getScheme())&&HOST.equals(url.getHost());}
     private static String mime(String p){if(p.endsWith(".html"))return "text/html";if(p.endsWith(".js")||p.endsWith(".mjs"))return "text/javascript";if(p.endsWith(".css"))return "text/css";if(p.endsWith(".json"))return "application/json";if(p.endsWith(".svg"))return "image/svg+xml";if(p.endsWith(".png"))return "image/png";return "text/plain";}

@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE_PATH).href);
-const out='evidence/park-20260921/33-layout';await mkdir(out,{recursive:true});
+const out=process.env.LAYOUT_EVIDENCE||'evidence/park-20260921/33-layout';await mkdir(out,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',args:['--mute-audio']}),report={at:new Date().toISOString(),tests:[],scope:'Chrome desktop and mobile viewport emulation. No native Android/iOS execution.'};
 async function reachable(page,id){
  const box=await page.locator('#'+id).boundingBox();assert.ok(box,id+' hidden');

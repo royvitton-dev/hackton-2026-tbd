@@ -1,0 +1,13 @@
+{
+  "at": "2026-09-22T02:07:18.504Z",
+  "status": "FAIL",
+  "scope": "APK-extracted assets on emulated mobile Chrome; NOT Android device or WebView execution",
+  "tests": [
+    {
+      "mode": "player",
+      "status": "PASS",
+      "arrivals": 1
+    }
+  ],
+  "error": "locator.click: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#tab-lotto')\u001b[22m\n\u001b[2m    - locator resolved to <button role=\"tab\" tabindex=\"-1\" id=\"tab-lotto\" aria-selected=\"false\" data-game-mode=\"lotto\" aria-controls=\"lotto-options\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    56 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n\n    at /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/tests/android-assets.mjs:20:54"
+}

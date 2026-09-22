@@ -38,3 +38,6 @@ python3 desktop/build-android.py --tools /path/to/packaging-tools --keystore /pr
 
 
 현재 그래픽 복구 수정이 포함된 패키지는 [29 검증](../evidence/park-20260921/29-package-results.json)을 따른다. Mac/APK 모두 Chrome에서 검증한 최신dist22파일(메타포함)과 바이트가 일치한다. 이번판 APK 추출파일을 별도 브라우저에서 다시 실행하지는 않았으며, 이전28추출검사와 구분한다. 실제Android와 최신Mac네이티브창 재실행은 미실행이다.
+
+
+최신 Android는 versionName1.1/versionCode2입니다. 부모FrameLayout이 시스템영역을 처리하고 WebView로 전달되는 해당 insets를0으로설정합니다. density변경/회전/화면크기는Activity재생성없이처리합니다. [34검사](../evidence/park-20260921/34-mobile-and-rides.md)의미실행항목을확인하세요. 동일서명으로기존APK위에갱신할수있으며웹새로고침만으로native코드는바뀌지않습니다.

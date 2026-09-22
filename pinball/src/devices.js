@@ -3,7 +3,7 @@ export const CANNON_REVOLUTION_SECONDS=.4;
 export const DEVICE_LAYOUT={
  neon:[['magnet',310,530],['magnet',100,1770],['cannon',310,1320],['cannon',480,1630]],
  orbit:[['magnet',310,1160],['magnet',540,1760],['cannon',310,680],['cannon',310,1730]],
- zigzag:[['magnet',505,1150],['magnet',110,1750],['cannon',310,780],['cannon',310,1320]],
+ zigzag:[['magnet',505,1150],['magnet',110,1750],['cannon',310,780],['cannon',310,1320],['cannon',150,1840],['cannon',485,1930]],
  split:[['magnet',310,875],['magnet',90,1820],['cannon',310,1500],['cannon',310,1850]],
  parade:[['magnet',90,650],['magnet',530,650],... [880,1080,1280].flatMap(y=>[150,310,470].map(x=>['cannon',x,y]))]
 };

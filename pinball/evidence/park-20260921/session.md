@@ -273,3 +273,8 @@ Published immutable4633preview;31first/reload21assetchecks PASS and browser clos
 미실행: 최신 Mac 네이티브 창 실행, Android 실기기·에뮬레이터 실행, iOS/Safari. Chrome 모바일 에뮬레이션을 Android 성공으로 표시하지 않음. 기존 원더 가든 출구 정체 보류 유지.
 
 명령: `node tests/responsive-layout.mjs`, `AUDIO_EVIDENCE=evidence/park-20260921/33-audio-regression node tests/soundscape.mjs`, `AUDIO_EVIDENCE=evidence/park-20260921/33-audio-load node tests/audio-load.mjs`, `node scripts/build.mjs`. 기존 bundled Node/Playwright, 별도 Chrome 사용. 패키지는 desktop/build-macos.py / desktop/build-android.py로 work/package-33에 생성. 실제 사용자4188탭은 조회만 했고 임의로 새로고침하지 않음.
+
+
+# 34 — 2026-09-22 Android·폴드·맵 추가 개선
+
+사용자사진과후속요청에따른변경,통과/실패/미실행,실행명령은 [34보고서](34-mobile-and-rides.md)에보존. 원본사용자사진과CodexJSONL은Git에추가하지않음.
