@@ -4,6 +4,9 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
 import android.os.Build;
+import android.os.Handler;
+import android.os.Looper;
+import android.view.WindowManager;
 import android.content.res.Configuration;
 import android.graphics.Insets;
 import android.graphics.Color;
@@ -21,6 +24,23 @@ public final class MainActivity extends Activity {
     private static final String HOME="https://"+HOST+"/assets/index.html";
     private WebView web;
     private FrameLayout viewport;
+    private final Handler screenHandler=new Handler(Looper.getMainLooper());
+    private boolean foreground=false;
+    private int screenGeneration=0;
+    private final Runnable screenCheck=new Runnable(){@Override public void run(){
+        final WebView current=web;final int generation=screenGeneration;
+        if(!foreground||current==null)return;
+        // Read local game state without exposing a JavaScript/native bridge.
+        current.evaluateJavascript("['mixing','countdown','racing'].includes(document.body.dataset.state)",value->{
+            if(foreground&&web==current&&screenGeneration==generation)setScreenAwake("true".equals(value));
+        });
+        screenHandler.postDelayed(this,400);
+    }};
+    private void setScreenAwake(boolean keep){
+        if(keep)getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+        else getWindow().clearFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+    }
+    private void stopScreenCheck(){foreground=false;screenGeneration++;screenHandler.removeCallbacks(screenCheck);setScreenAwake(false);}
     @Override public void onCreate(Bundle saved) {
         super.onCreate(saved);
         // Android 15+ enforces edge-to-edge. Reserve system space in a native
@@ -43,7 +63,7 @@ public final class MainActivity extends Activity {
                 catch(IOException e){return error(404,"Not found");}
             }
             @Override public boolean onRenderProcessGone(WebView view,RenderProcessGoneDetail detail){
-                view.destroy();web=null;new AlertDialog.Builder(MainActivity.this).setTitle("게임 화면을 다시 열까요?").setMessage("그래픽 연결이 종료됐어요. 진행 중 경기는 복구할 수 없어요.").setPositiveButton("다시 열기",(d,w)->recreate()).setNegativeButton("종료",(d,w)->finish()).show();return true;
+                stopScreenCheck();view.destroy();web=null;new AlertDialog.Builder(MainActivity.this).setTitle("게임 화면을 다시 열까요?").setMessage("그래픽 연결이 종료됐어요. 진행 중 경기는 복구할 수 없어요.").setPositiveButton("다시 열기",(d,w)->recreate()).setNegativeButton("종료",(d,w)->finish()).show();return true;
             }
         });
         viewport.addView(web,new FrameLayout.LayoutParams(FrameLayout.LayoutParams.MATCH_PARENT,FrameLayout.LayoutParams.MATCH_PARENT));
@@ -80,8 +100,8 @@ public final class MainActivity extends Activity {
     private static boolean local(Uri url){return "https".equals(url.getScheme())&&HOST.equals(url.getHost());}
     private static String mime(String p){if(p.endsWith(".html"))return "text/html";if(p.endsWith(".js")||p.endsWith(".mjs"))return "text/javascript";if(p.endsWith(".css"))return "text/css";if(p.endsWith(".json"))return "application/json";if(p.endsWith(".svg"))return "image/svg+xml";if(p.endsWith(".png"))return "image/png";return "text/plain";}
     private static WebResourceResponse error(int status,String message){return new WebResourceResponse("text/plain","UTF-8",status,message,Collections.emptyMap(),new ByteArrayInputStream(message.getBytes(java.nio.charset.StandardCharsets.UTF_8)));}
-    @Override protected void onPause(){if(web!=null){web.evaluateJavascript("document.dispatchEvent(new Event('visibilitychange')); if(window.pinball && ['mixing','countdown','racing'].includes(window.pinball.snapshot()?.state)) document.getElementById('pause').click();",null);web.onPause();web.pauseTimers();}super.onPause();}
-    @Override protected void onResume(){super.onResume();if(web!=null){web.resumeTimers();web.onResume();}}
+    @Override protected void onPause(){stopScreenCheck();if(web!=null){web.evaluateJavascript("document.dispatchEvent(new Event('visibilitychange')); if(window.pinball && ['mixing','countdown','racing'].includes(window.pinball.snapshot()?.state)) document.getElementById('pause').click();",null);web.onPause();web.pauseTimers();}super.onPause();}
+    @Override protected void onResume(){super.onResume();if(web!=null){web.resumeTimers();web.onResume();}foreground=true;screenGeneration++;screenHandler.removeCallbacks(screenCheck);screenHandler.post(screenCheck);}
     @Override public void onBackPressed(){
         if(web==null){finish();return;}
         web.evaluateJavascript("(()=>{if(document.body.classList.contains('play-focus')){document.getElementById('focus-mode').click();return 'view';}const running=window.pinball&&['mixing','countdown','racing'].includes(window.pinball.snapshot()?.state);if(running)document.getElementById('pause').click();return running?'paused':'idle';})()",state->{
@@ -89,5 +109,5 @@ public final class MainActivity extends Activity {
             new AlertDialog.Builder(this).setTitle("놀이공원을 나갈까요?").setMessage("종료하면 현재 경기 기록이 사라져요.").setNegativeButton("계속하기",(d,w)->{if(web!=null&&"\"paused\"".equals(state))web.evaluateJavascript("if(window.pinball?.snapshot()?.state==='paused')document.getElementById('pause').click();",null);}).setPositiveButton("종료",(d,w)->finish()).show();
         });
     }
-    @Override protected void onDestroy(){if(web!=null){web.stopLoading();web.destroy();web=null;}super.onDestroy();}
+    @Override protected void onDestroy(){stopScreenCheck();if(web!=null){web.stopLoading();web.destroy();web=null;}super.onDestroy();}
 }

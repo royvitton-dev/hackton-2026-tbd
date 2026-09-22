@@ -1,4 +1,7 @@
 import * as THREE from '../vendor/three.module.js';
+import {assignLooks,drawBallLook} from './ball-looks.js';
+import {installBoardTap} from './board-tap.js';
+import {placeLabels} from './label-layout.js';
 import {LANDS} from './lands.js';
 import {batchStaticMeshes} from './geometry-batch.js';
 import {returnPose,returnGateSegments} from './return-portals.js';
@@ -10,7 +13,7 @@ const CAMERA_DIRECTIONS=[new THREE.Vector3(.18,.72,.67).normalize(),new THREE.Ve
 
 export class Renderer3D {
  constructor(canvas){
-  Object.assign(this,{canvas,mode:'webgl',overview:false,halfView:false,angle:2,lastRound:null,cameraCenter:400,finishedAt:new Map()});
+  Object.assign(this,{canvas,ballTheme:'sports',zoomTarget:null,labelOffsets:new Map(),mode:'webgl',overview:false,halfView:false,angle:2,lastRound:null,cameraCenter:400,finishedAt:new Map()});
   this.webgl=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true,powerPreference:'high-performance'});
   this.webgl.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
   this.webgl.shadowMap.enabled=true;this.webgl.shadowMap.type=THREE.PCFShadowMap;
@@ -25,12 +28,24 @@ export class Renderer3D {
   this.environment=new THREE.CubeTexture(faces);this.environment.needsUpdate=true;this.scene.environment=this.environment;
   this.labels=this.overlay('ball-labels');this.hud=this.overlay('camera-hud');this.progress=this.overlay('course-progress');
   this.angleButton=document.createElement('button');this.angleButton.className='camera-angle';this.angleButton.type='button';this.angleButton.textContent='◈ 상단 시점';this.angleButton.setAttribute('aria-label','3D 카메라 시점 변경');
-  this.angleButton.addEventListener('click',()=>{this.angle=(this.angle+1)%3;this.angleButton.textContent=['◈ 입체 시점','◈ 측면 시점','◈ 상단 시점'][this.angle];});canvas.parentElement.append(this.angleButton);
-  this.allLabels=false;this.labelButton=document.createElement('button');this.labelButton.className='label-toggle';this.labelButton.type='button';this.labelButton.textContent='이름 간결하게';this.labelButton.setAttribute('aria-label','공 이름표 모두 표시');this.labelButton.setAttribute('aria-pressed','false');
-  this.labelButton.addEventListener('click',()=>{this.allLabels=!this.allLabels;this.labelButton.textContent=this.allLabels?'이름 모두 보기':'이름 간결하게';this.labelButton.setAttribute('aria-pressed',String(this.allLabels));});canvas.parentElement.append(this.labelButton);
+  this.angleButton.addEventListener('click',()=>{this.resetZoom();this.angle=(this.angle+1)%3;this.angleButton.textContent=['◈ 입체 시점','◈ 측면 시점','◈ 상단 시점'][this.angle];});canvas.parentElement.append(this.angleButton);
+  this.allLabels=true;this.labelButton=document.createElement('button');this.labelButton.className='label-toggle';this.labelButton.type='button';this.labelButton.textContent='이름 숨기기';this.labelButton.setAttribute('aria-label','공 이름표 표시');this.labelButton.setAttribute('aria-pressed','true');
+  this.labelButton.addEventListener('click',()=>{this.allLabels=!this.allLabels;this.labelButton.textContent=this.allLabels?'이름 숨기기':'이름 표시';this.labelButton.setAttribute('aria-pressed',String(this.allLabels));});canvas.parentElement.append(this.labelButton);
+  this.zoomButton=document.createElement('button');this.zoomButton.className='zoom-reset';this.zoomButton.textContent='↙ 확대 원래대로';this.zoomButton.hidden=true;this.zoomButton.addEventListener('click',()=>this.resetZoom());canvas.parentElement.append(this.zoomButton);
+  installBoardTap(canvas,(x,y)=>this.toggleZoom(x,y),()=>this.resetZoom());
   this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();document.dispatchEvent(new Event('pinball-renderer-lost'));});
   canvas.addEventListener('webglcontextrestored',()=>document.dispatchEvent(new Event('pinball-renderer-restored')));
+ }
+ resetZoom(){this.zoomTarget=null;if(this.zoomButton)this.zoomButton.hidden=true;}
+ toggleZoom(clientX,clientY){
+  if(this.zoomTarget){this.resetZoom();return;}if(!this.group)return;
+  const rect=this.canvas.getBoundingClientRect(),x=clientX-rect.left,y=clientY-rect.top;
+  // Generous touch hit area: choose the closest visible ball before the ground.
+  const ball=[...this.balls.entries()].filter(([,e])=>e.pick?.visible).map(([id,e])=>({id,d:Math.hypot(x-e.pick.x,y-e.pick.y)})).sort((a,b)=>a.d-b.d)[0];
+  if(ball&&ball.d<=22)this.zoomTarget={kind:'ball',id:ball.id};
+  else{const ray=new THREE.Raycaster();ray.setFromCamera(new THREE.Vector2(x/rect.width*2-1,1-y/rect.height*2),this.camera);const plane=new THREE.Plane(new THREE.Vector3(0,1,0),0).applyMatrix4(this.group.matrixWorld),point=new THREE.Vector3();if(!ray.ray.intersectPlane(plane,point))return;this.group.worldToLocal(point);if(Math.abs(point.x)>5.3||point.z<0||point.z>Z(this.map.height))return;this.zoomTarget={kind:'area',x:point.x,y:point.z/S};}
+  this.zoomButton.hidden=false;
  }
  overlay(className){const e=document.createElement('div');e.className=className;this.canvas.parentElement.append(e);return e;}
  resize(){const ratio=Math.min(devicePixelRatio||1,1.5);if(this.webgl.getPixelRatio()!==ratio)this.webgl.setPixelRatio(ratio);const rect=this.canvas.getBoundingClientRect();this.width=Math.max(1,rect.width);this.height=Math.max(1,rect.height);this.webgl.setSize(this.width,this.height,false);this.aspect=this.width/this.height;}
@@ -263,6 +278,8 @@ export class Renderer3D {
   const label=document.createElement('span');label.className='device-label';this.labels.append(label);this.deviceRides.push({id:d.id,pivot,glow,label});
  }
  build(race){
+  const newRound=this.lastRound!==race.roundId;
+  if(newRound){this.resetZoom();this.looks=assignLooks(race.balls,race.config.mode==='lotto'?'classic':this.ballTheme);this.labelOffsets.clear();}
   this.clear();this.group=new THREE.Group();this.scene.add(this.group);this.labels.replaceChildren();this.progress.replaceChildren();
   this.balls=new Map();this.deviceRides=[];this.rotors=[];this.sliders=[];this.carousels=[];this.balloons=[];this.wheels=[];this.finishedAt.clear();this.map=race.map;this.lastRound=race.roundId;this.cameraCenter=400;
   const map=race.map,theme=LANDS[map.id],length=map.height*S;
@@ -297,11 +314,16 @@ export class Renderer3D {
   for(const g of [...this.rotors,...this.sliders,...this.wheels.map(w=>w.wheel)])batchStaticMeshes(g);
   const moving=new Set([this.returnGate,...this.deviceRides.flatMap(d=>[d.pivot,d.glow].filter(Boolean)),this.gate,...this.rotors,...this.sliders,...this.carousels.map(c=>c.roof),...this.balloons.map(b=>b.group),...this.wheels.map(w=>w.wheel)]);
   batchStaticMeshes(this.group,moving);
-  const sphere=new THREE.SphereGeometry(10*S,20,14);
+  const sphere=new THREE.SphereGeometry(10*S,24,16);
+  // Project the illustration across a real lit sphere, keeping faces readable.
+  const position=sphere.attributes.position,uv=sphere.attributes.uv;for(let i=0;i<position.count;i++)uv.setXY(i,position.getX(i)/(20*S)+.5,position.getY(i)/(20*S)+.5);
+  const lookMaterials=new Map();
   for(const b of race.balls){
-   const m=this.mesh(sphere,new THREE.MeshPhysicalMaterial({color:b.color,metalness:.18,roughness:.18,clearcoat:1,clearcoatRoughness:.1}),X(b.x),.19,Z(b.y));
-   const label=document.createElement('span');label.className='ball-label';label.textContent=[...b.label].slice(0,5).join('')+([...b.label].length>5?'…':'')+(race.config.people.find(p=>p.id===b.participantId).count>1?`·${b.number}`:'');label.title=b.label;this.labels.append(label);
-   const dot=document.createElement('i');dot.style.background=b.color;this.progress.append(dot);this.balls.set(b.id,{m,label,dot,history:[],lastTrail:-1,lastX:b.x,lastY:b.y});
+   const kind=this.looks.get(b.id);let material=lookMaterials.get(kind);
+   if(kind&&!material){const texture=new THREE.CanvasTexture(drawBallLook(kind));texture.colorSpace=THREE.SRGBColorSpace;material=new THREE.MeshStandardMaterial({color:0xffffff,map:texture,roughness:.64,metalness:0});lookMaterials.set(kind,material);}
+   const m=this.mesh(sphere,material||new THREE.MeshPhysicalMaterial({color:b.color,metalness:.18,roughness:.18,clearcoat:1,clearcoatRoughness:.1}),X(b.x),.19,Z(b.y));
+   const label=document.createElement('span');label.className='ball-label';label.textContent=[...b.label].slice(0,5).join('')+([...b.label].length>5?'…':'')+(race.config.people.find(p=>p.id===b.participantId).count>1?`·${b.number}`:'');label.title=b.label;label.style.borderColor=b.color;this.labels.append(label);
+   const dot=document.createElement('i');dot.style.background=b.color;this.progress.append(dot);this.balls.set(b.id,{m,label,dot,kind,spin:0,history:[],lastTrail:-1,lastX:b.x,lastY:b.y});
   }
   for(const entry of this.balls.values())entry.labelWidth=entry.label.getBoundingClientRect().width;
   // Reserve the maximum two-digit ride counter once, without per-frame layout reads.
@@ -327,14 +349,14 @@ export class Renderer3D {
   }
   if(this.webgl.getPixelRatio()!==Math.min(devicePixelRatio||1,1.5))this.resize();
   const map=race.map,aspect=this.aspect||1,direction=CAMERA_DIRECTIONS[this.angle];
-  const wide=this.overview||this.halfView,horizontal=wide&&aspect>1.2;
+  const horizontal=false; // Preserve the course direction in every view and aspect ratio.
   const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.65)]?.y??map.finish;
   const target=['ready','mixing','countdown'].includes(race.state)?270:Math.max(270,Math.min(map.finish-200,progress+60));
   if(race.state!=='paused')this.cameraCenter=reduced?target:this.cameraCenter+(target-this.cameraCenter)*.08;
   const span=this.overview?map.height:this.halfView?map.height/2:520;
   let center=this.overview?map.height/2:this.halfView?Math.max(span/2,Math.min(map.height-span/2,this.cameraCenter)):this.cameraCenter;
-  this.camera.aspect=aspect;this.camera.up.set(horizontal?1:0,horizontal?0:1,0);this.camera.updateProjectionMatrix();
-  // Fit playable rails, not distant scenery. Rotate the camera roll for wide windows;
+  this.camera.zoom=1;this.camera.aspect=aspect;this.camera.up.set(horizontal?1:0,horizontal?0:1,0);this.camera.updateProjectionMatrix();
+  // Fit playable rails, not distant scenery. Keep the camera roll unchanged;
   // game positions, collision radii and the simulation remain unchanged.
   const key=[this.width,this.height,this.angle,span,horizontal].join(':');
   if(this.framingKey!==key){
@@ -361,6 +383,12 @@ export class Renderer3D {
    center=minimum<=maximum?Math.max(minimum,Math.min(maximum,center)):map.height/2;
   }
   this.camera.position.copy(direction).multiplyScalar(this.framingDistance).add(new THREE.Vector3(0,0,Z(center)));this.camera.lookAt(0,0,Z(center));this.camera.updateMatrixWorld();
+  if(this.zoomTarget){
+   let point;const zoom=this.zoomTarget;
+   if(zoom.kind==='ball'){const b=race.balls.find(b=>b.id===zoom.id);if(!b||b.finished)this.resetZoom();else point=new THREE.Vector3(X(b.x),.19,Z(b.y));}
+   else point=new THREE.Vector3(zoom.x,0,Z(zoom.y));
+   if(point){point.applyMatrix4(this.group.matrixWorld);this.camera.zoom=2.3;this.camera.updateProjectionMatrix();this.camera.position.copy(direction).multiplyScalar(this.framingDistance).add(point);this.camera.lookAt(point);this.camera.updateMatrixWorld();}
+  }
   const a=new THREE.Vector3(-5.17,0,Z(center)).project(this.camera),b=new THREE.Vector3(5.17,0,Z(center)).project(this.camera);
   const startPoint=new THREE.Vector3(0,0,0).project(this.camera);
   this.framing={horizontal,visibleSpan:span,center,courseStartPixels:(1-startPoint.y)*this.height/2,boardWidthPixels:Math.hypot((a.x-b.x)*this.width/2,(a.y-b.y)*this.height/2),canvasWidth:this.width,canvasHeight:this.height};
@@ -389,20 +417,19 @@ export class Renderer3D {
   for(const b of race.balls){
    const entry=this.balls.get(b.id),{m,label,dot,history}=entry;if(b.finished&&!this.finishedAt.has(b.id))this.finishedAt.set(b.id,now);
    const portal=returnPose(b,race.raceTime);const sink=b.finished?Math.min(1,(now-this.finishedAt.get(b.id))/380):0;m.visible=portal?portal.visible:sink<1;m.position.set(X(b.x),portal?.height??.19-sink*.8,Z(b.y));m.scale.setScalar(portal?.scale??1-sink*.6);if(b.hold){if(b.hold.kind==='cannon')m.visible=false;else{const d=race.devices.find(d=>d.id===b.hold.deviceId),slot=d.holds.findIndex(h=>h.ballId===b.id);m.position.y=.6+slot*.13;m.scale.setScalar(.85);}}
-   m.rotation.x+=(b.y-entry.lastY)/b.r;m.rotation.z-=(b.x-entry.lastX)/b.r;entry.lastX=b.x;entry.lastY=b.y;dot.style.top=`${b.y/map.height*100}%`;
+   if(entry.kind){m.quaternion.copy(this.group.quaternion).invert().multiply(this.camera.quaternion);if(!reduced&&this.ballTheme==='sports')entry.spin+=(b.x-entry.lastX)/b.r*.35;m.rotateZ(entry.spin);}else{m.rotation.x+=(b.y-entry.lastY)/b.r;m.rotation.z-=(b.x-entry.lastX)/b.r;}entry.lastX=b.x;entry.lastY=b.y;dot.style.top=`${b.y/map.height*100}%`;
    if(b.id===selected&&!b.finished){this.winnerHalo.visible=true;this.winnerHalo.position.set(X(b.x),.045,Z(b.y));}
    if(b.portal||b.hold){history.length=0;entry.lastX=b.x;entry.lastY=b.y;}
    if(!b.portal&&!b.hold&&race.state==='racing'&&race.elapsed-entry.lastTrail>=.035){history.unshift({x:X(b.x),z:Z(b.y)});if(history.length>5)history.pop();entry.lastTrail=race.elapsed;}
    for(let i=0;i<2;i++){const old=history[i*2+2];this.trailTransform.position.set(old?.x??X(b.x),.12,old?.z??Z(b.y));this.trailTransform.scale.setScalar(!b.finished&&old?(i===0?.12:.075):0);this.trailTransform.updateMatrix();this.trails.setMatrixAt(trailIndex++,this.trailTransform.matrix);}
+   const projected=m.position.clone().applyMatrix4(this.group.matrixWorld).project(this.camera);entry.pick={x:(projected.x*.5+.5)*this.width,y:(-projected.y*.5+.5)*this.height,visible:!b.finished&&m.visible&&Math.abs(projected.x)<1&&Math.abs(projected.y)<1};
    const v=new THREE.Vector3(X(b.x),m.position.y+.41,Z(b.y)).applyMatrix4(this.group.matrixWorld).project(this.camera);label.hidden=true;
-   if(!b.finished&&m.visible&&!this.overview&&Math.abs(v.x)<.97&&Math.abs(v.y)<.88){const x=(v.x*.5+.5)*this.width,y=(-v.y*.5+.5)*this.height;labelCandidates.push({label,x,y,progress:b.y,width:entry.labelWidth,id:b.id});}
+   if(this.allLabels&&entry.pick.visible){const x=(v.x*.5+.5)*this.width,y=(-v.y*.5+.5)*this.height;labelCandidates.push({label,x,y,progress:b.y,width:entry.labelWidth,id:b.id});}
   }
-  const occupied=deviceBoxes;let shown=0;
-  labelCandidates.sort((a,b)=>(b.id===selected)-(a.id===selected)||b.progress-a.progress);
-  for(const c of labelCandidates){const box={l:c.x-c.width/2,r:c.x+c.width/2,t:c.y-21,b:c.y+3};if(!this.allLabels&&(shown>=(this.width<450?12:20)||occupied.some(o=>box.l<o.r+4&&box.r>o.l-4&&box.t<o.b+3&&box.b>o.t-3)))continue;c.label.hidden=false;c.label.style.left=`${c.x/this.width*100}%`;c.label.style.top=`${c.y/this.height*100}%`;occupied.push(box);shown++;}
+  for(const c of placeLabels(labelCandidates,this.width,this.height,this.labelOffsets,deviceBoxes)){c.label.hidden=false;c.label.style.left=`${c.x/this.width*100}%`;c.label.style.top=`${c.y/this.height*100}%`;}
   this.trails.instanceMatrix.needsUpdate=true;
-  this.hud.textContent=(horizontal?'가로 코스 · ':'')+(this.overview?`PARK MAP / ${map.exits.length===1?'ONE LUCKY GOAL':'ONE GOAL + ONE BACK'}`:this.halfView?`HALF MAP / ${Math.round(Math.max(0,center-span/2)/map.height*100)}–${Math.round(Math.min(map.height,center+span/2)/map.height*100)}%`:`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`);
+  this.hud.textContent=this.zoomTarget?(this.zoomTarget.kind==='ball'?'공 따라 확대 · 다시 누르면 복귀':'부분 확대 · 다시 누르면 복귀'):(horizontal?'가로 코스 · ':'')+(this.overview?`PARK MAP / ${map.exits.length===1?'ONE LUCKY GOAL':'ONE GOAL + ONE BACK'}`:this.halfView?`HALF MAP / ${Math.round(Math.max(0,center-span/2)/map.height*100)}–${Math.round(Math.min(map.height,center+span/2)/map.height*100)}%`:`3D / SECTOR ${Math.max(1,Math.min(3,Math.floor((center-200)/750)+1)).toString().padStart(2,'0')} / 03`);
   this.webgl.render(this.scene,this.camera);
  }
- graphics(){const i=this.webgl.info;return {framing:{...this.framing},geometries:i.memory.geometries,textures:i.memory.textures,programs:i.programs.length,drawCalls:i.render.calls,triangles:i.render.triangles,pixelRatio:this.webgl.getPixelRatio()};}
+ graphics(){const i=this.webgl.info;return {zoom:this.zoomTarget?{...this.zoomTarget}:null,ballTheme:this.ballTheme,ballLooks:[...this.balls].map(([id,e])=>({id,kind:e.kind||'classic',pick:e.pick,labelVisible:!e.label.hidden})),framing:{...this.framing},geometries:i.memory.geometries,textures:i.memory.textures,programs:i.programs.length,drawCalls:i.render.calls,triangles:i.render.triangles,pixelRatio:this.webgl.getPixelRatio()};}
 }

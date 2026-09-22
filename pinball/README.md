@@ -205,3 +205,15 @@ Three.js 0.183.0: `vendor/THREE-LICENSE.txt` (MIT), https://threejs.org/ .
 ### 로컬 웹 반영과 원격 푸시
 
 검증을 마친 main 커밋은 `node scripts/publish-preview.mjs --repo <main작업트리> --releases <미리보기폴더> --local-preview`로4188에먼저반영할수있습니다. 이모드는원격푸시성공을뜻하지않으며release.json에local-only로기록됩니다. 옵션없이실행하면기존대로원격main일치를검사합니다. 열린경기를강제로새로고침하지않고,사용자가새로고침하면해당버전을읽습니다.
+
+## 화면 유지 · 공 꾸미기 · 확대
+
+- 경기 중(섞기·카운트다운·경주) 화면 자동 꺼짐을 방지합니다. 일시정지·종료·화면 이탈 시 해제합니다. 웹은 HTTPS 또는 localhost의 Screen Wake Lock API 지원이 필요하며 절전 정책에 따라 거절·해제될 수 있습니다. 밝기 수치나 OS 자동 밝기 설정을 강제로 바꾸지는 않습니다. 진단은 `window.pinball.screenAwake()`로 확인합니다.
+- Android 1.2 앱은 전경에서 경기 상태를 읽어 `FLAG_KEEP_SCREEN_ON`을 적용합니다. 배경으로 이동하면 즉시 해제하며, 새 권한이나 JavaScript 네이티브 브리지를 추가하지 않습니다. 실제 Android 디스플레이 테스트는 미실행입니다.
+- 플레이어 설정에서 스포츠 공(농구·축구·야구·탁구·테니스·배구), 동물 얼굴(판다·고양이·여우·곰·개구리·돼지), 기본 컬러를 고릅니다. 외부 이미지 없이 직접 그린 무늬를 매 경기 무작위 배정합니다. 외형 난수는 경기 난수와 별개이며 공 크기·질량·충돌·순위는 동일합니다. 로또는 기존 숫자 공을 유지합니다.
+- 공을 클릭/탭하면 해당 공을 따라 2.3배 확대, 빈 보드를 클릭/탭하면 그 지점을 확대합니다. 다시 클릭/탭하거나 ‘확대 원래대로’/Escape로 복귀합니다. 확대해도 경기 상태는 바뀌지 않으며 시점·맵·경기 변경 시 확대는 해제됩니다. Tab으로 경기장에 초점을 두고 Enter/Space로 중앙을 확대할 수도 있습니다.
+- 화면 안에 있는 공의 이름은 겹침 때문에 숨기지 않습니다. 이전 위치를 우선해 이름표를 배치합니다. 60개가 한 곳에 몰리면 공간 한계로 일부 겹침은 남을 수 있으며 확대하면 더 잘 보입니다. 대포 내부·화면 밖·도착한 공의 이름표는 기존처럼 표시하지 않습니다.
+
+공식 참고: [Web Screen Wake Lock](https://developer.mozilla.org/en-US/docs/Web/API/Screen_Wake_Lock_API), [Android 화면 유지](https://developer.android.com/develop/background-work/background-tasks/awake/screen-on).
+
+하프 모드·전체 맵은 창이 가로로 넓어져도 보드를 90도로 돌리지 않습니다. 기본과 같은 위→아래 코스 방향을 유지하고, 시스템 내비게이션 영역과 조작 버튼 공간을 별도로 확보합니다.

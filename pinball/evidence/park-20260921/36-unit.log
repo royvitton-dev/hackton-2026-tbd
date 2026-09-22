@@ -1,0 +1,15 @@
+✔ one lock across active phases; pause, resume, finish release it (2.158916ms)
+✔ late request after reset cannot retain a lock (0.407958ms)
+✔ rapid restart keeps only the newest request (0.398208ms)
+✔ unsupported, denied and system release never poll requests each frame (0.869708ms)
+✔ hidden state releases, explicit resume can acquire again (0.269208ms)
+✔ looks use independent random bag, never mutate balls (0.694791ms)
+✔ overlapping names are all retained and placements stay stable (10.708666ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 59.431083

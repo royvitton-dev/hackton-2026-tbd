@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 import {pathToFileURL} from 'node:url';
 const {chromium}=await import(pathToFileURL(process.env.PLAYWRIGHT_MODULE_PATH).href);
-const out='evidence/park-20260921/34-fold';await mkdir(out,{recursive:true});
+const out=process.env.EVIDENCE_PREFIX||'evidence/park-20260921/34-fold';await mkdir(out,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',args:['--mute-audio']});
 const report={at:new Date().toISOString(),scope:'Chrome CSS viewport and density emulation, not native Android or a Fold 7 device',tests:[]};
 async function reachable(page,id){const result=await page.locator('#'+id).evaluate(e=>{const r=e.getBoundingClientRect();return {inside:r.x>=0&&r.y>=0&&r.right<=innerWidth+1&&r.bottom<=innerHeight+1,hit:e.contains(document.elementFromPoint(r.x+r.width/2,r.y+r.height/2))};});assert.ok(result.inside&&result.hit,id+' unreachable '+JSON.stringify(result));}
@@ -21,7 +21,7 @@ try{
    if(mode==='half')await page.locator('#half-view').click();if(mode==='full')await page.locator('#view').click();
    await page.waitForTimeout(200);assert.deepEqual(await page.evaluate(()=>window.pinball.snapshot()),paused,'resize changes race');
    for(const id of ['pause','half-view','view','reset','arena-sound'])await reachable(page,id);
-   const graphics=await page.evaluate(()=>window.pinball.performance().graphics);assert.equal(graphics.pixelRatio,Math.min(dpr,1.5));assert.ok(graphics.framing.canvasHeight>160);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
+   const graphics=await page.evaluate(()=>window.pinball.performance().graphics);assert.equal(graphics.framing.horizontal,false,'course must stay vertical');assert.equal(graphics.pixelRatio,Math.min(dpr,1.5));assert.ok(graphics.framing.canvasHeight>160);assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
    if(mode==='follow'&&height>width*1.8){assert.ok(graphics.framing.courseStartPixels/graphics.framing.canvasHeight<.15,'blank space above starting board');assert.ok(graphics.framing.courseStartPixels>=-1);}
    await writeFile(`${out}/${width}x${height}-${mode}.png`,Buffer.from((await session.send('Page.captureScreenshot',{format:'png'})).data,'base64'));report.tests.push({width,height,dpr,mode,status:'PASS',framing:graphics.framing});
   }

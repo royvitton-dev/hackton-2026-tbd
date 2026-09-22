@@ -1,0 +1,70 @@
+{
+  "at": "2026-09-22T02:57:00.048Z",
+  "tests": [
+    {
+      "name": "desktop",
+      "status": "PASS",
+      "ballZoom": "PASS",
+      "areaZoom": "PASS",
+      "physicsUnchangedDuringInspection": "PASS",
+      "wakeLock": "acquire/pause-release/resume/reset-release PASS",
+      "dense": {
+        "visible": 60,
+        "labels": 60,
+        "looks": [
+          "bear",
+          "panda",
+          "pig",
+          "fox",
+          "frog",
+          "cat"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "name": "phone",
+      "status": "PASS",
+      "ballZoom": "PASS",
+      "areaZoom": "PASS",
+      "physicsUnchangedDuringInspection": "PASS",
+      "wakeLock": "acquire/pause-release/resume/reset-release PASS",
+      "dense": {
+        "visible": 60,
+        "labels": 60,
+        "looks": [
+          "fox",
+          "pig",
+          "bear",
+          "panda",
+          "frog",
+          "cat"
+        ]
+      },
+      "errors": []
+    },
+    {
+      "name": "fold",
+      "status": "PASS",
+      "ballZoom": "PASS",
+      "areaZoom": "PASS",
+      "physicsUnchangedDuringInspection": "PASS",
+      "wakeLock": "acquire/pause-release/resume/reset-release PASS",
+      "dense": {
+        "visible": 60,
+        "labels": 60,
+        "looks": [
+          "pig",
+          "bear",
+          "frog",
+          "panda",
+          "cat",
+          "fox"
+        ]
+      },
+      "errors": []
+    }
+  ],
+  "status": "PASS",
+  "scope": "Chrome desktop/mobile emulation, real Screen Wake Lock API; not physical display timeout or Android WebView"
+}

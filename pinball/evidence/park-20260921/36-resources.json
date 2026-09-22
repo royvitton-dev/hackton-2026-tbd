@@ -1,0 +1,35 @@
+{
+  "at": "2026-09-22T02:55:38.134Z",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "12 theme rebuilds, 60 balls, stable GPU resource counts",
+      "status": "PASS",
+      "counts": {
+        "sports": {
+          "textures": 16,
+          "geometries": 76,
+          "programs": 23
+        },
+        "animals": {
+          "textures": 16,
+          "geometries": 76,
+          "programs": 23
+        },
+        "classic": {
+          "textures": 10,
+          "geometries": 76,
+          "programs": 23
+        }
+      }
+    },
+    {
+      "name": "drag ignored; keyboard/reset; live ball follow preserves simulation",
+      "status": "PASS"
+    },
+    {
+      "name": "Canvas fallback animal rendering and tap zoom",
+      "status": "PASS"
+    }
+  ]
+}

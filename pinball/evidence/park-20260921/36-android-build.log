@@ -1,0 +1,26 @@
+warning: [options] source value 8 is obsolete and will be removed in a future release
+warning: [options] target value 8 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/desktop/android/src/com/dropland/game/MainActivity.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+3 warnings
+Note: /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/pinball-candidate/desktop/android/SignApk.java uses or overrides a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+PASS APK signature v1=false v2=true v3=true
+package: name='com.dropland.game' versionCode='3' versionName='1.2' platformBuildVersionName='15' platformBuildVersionCode='35' compileSdkVersion='35' compileSdkVersionCodename='15'
+minSdkVersion:'26'
+targetSdkVersion:'35'
+application-label:'DROP LAND'
+application-icon-160:'res/drawable/app_icon.xml'
+application: label='DROP LAND' icon='res/drawable/app_icon.xml'
+launchable-activity: name='com.dropland.game.MainActivity'  label='' icon=''
+feature-group: label=''
+  uses-gl-es: '0x30000'
+  uses-feature: name='android.hardware.faketouch'
+  uses-implied-feature: name='android.hardware.faketouch' reason='default feature for all apps'
+main
+supports-screens: 'small' 'normal' 'large' 'xlarge'
+supports-any-density: 'true'
+locales: '--_--'
+densities: '160'
+Built: /Users/gschargev/Documents/Codex/2026-09-21/new-chat-4/work/package-36/DROP-LAND-Android.apk

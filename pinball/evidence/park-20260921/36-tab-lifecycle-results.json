@@ -1,0 +1,4138 @@
+{
+  "at": "2026-09-22T02:54:15.473Z",
+  "base": "http://127.0.0.1:4189/dist/index.html",
+  "status": "PASS",
+  "tests": [
+    {
+      "phase": "mixing",
+      "status": "PASS",
+      "roundId": "4272c12a-7e9f-4a8e-95c3-8c47a5dd5d28",
+      "visibility": "actual hidden tab",
+      "hiddenSnapshot": {
+        "roundId": "4272c12a-7e9f-4a8e-95c3-8c47a5dd5d28",
+        "state": "paused",
+        "seed": 2142767387,
+        "time": 0,
+        "target": 60,
+        "total": 60,
+        "winner": null,
+        "completionReason": null,
+        "finishOrder": [],
+        "assists": 0,
+        "returns": 0,
+        "returnClosed": false,
+        "motion": {
+          "enabled": true,
+          "active": false,
+          "axis": null,
+          "cycle": -1,
+          "phase": 0,
+          "roll": 0,
+          "pitch": 0,
+          "offsetX": 0,
+          "offsetY": 0,
+          "forceX": 0,
+          "forceY": 0,
+          "nextIn": 3.5421720766462386
+        },
+        "deviceStats": {
+          "captures": 0,
+          "launches": 0,
+          "releases": 0
+        },
+        "devices": [
+          {
+            "id": "neon-magnet-0",
+            "kind": "magnet",
+            "x": 310,
+            "y": 530,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-magnet-1",
+            "kind": "magnet",
+            "x": 100,
+            "y": 1770,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-2",
+            "kind": "cannon",
+            "x": 310,
+            "y": 1320,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-3",
+            "kind": "cannon",
+            "x": 480,
+            "y": 1630,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          }
+        ],
+        "balls": [
+          {
+            "id": "p3-b1",
+            "x": 122.71679090032274,
+            "y": 158.65139943340122,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b6",
+            "x": 153.83932705224018,
+            "y": 71.32191373631048,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b10",
+            "x": 101.59508290935189,
+            "y": 138.0397736826852,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b5",
+            "x": 45.05821318101192,
+            "y": 178.8058307529589,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b2",
+            "x": 210.1602613956138,
+            "y": 47.82483425625847,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b1",
+            "x": 352.5032496208534,
+            "y": 89.47232786921161,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b2",
+            "x": 152.99269150069188,
+            "y": 41.24901373890535,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b4",
+            "x": 523.479130691664,
+            "y": 50.7552203441647,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b5",
+            "x": 88.20553393230247,
+            "y": 179.28556676296608,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b6",
+            "x": 237.76253788316725,
+            "y": 110.18696703628014,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b6",
+            "x": 121.63413307994685,
+            "y": 188.6126646630802,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b3",
+            "x": 576.9611501389097,
+            "y": 136.28577670617972,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b9",
+            "x": 570.1808312891919,
+            "y": 58.012032414542404,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b5",
+            "x": 94.13412685875817,
+            "y": 97.73771041848192,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b4",
+            "x": 525.2791129273129,
+            "y": 183.24477408373428,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b10",
+            "x": 85.84752642719388,
+            "y": 59.52460736397932,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b9",
+            "x": 481.85740717255027,
+            "y": 105.33606333117602,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b5",
+            "x": 402.82944111126966,
+            "y": 137.57478547469506,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b4",
+            "x": 432.62758980615905,
+            "y": 98.49477620994578,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b4",
+            "x": 272.5621935758257,
+            "y": 156.7576584243197,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b10",
+            "x": 181.59336281603368,
+            "y": 92.03233972871679,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b1",
+            "x": 184.33663524722462,
+            "y": 122.46298402427637,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b9",
+            "x": 80.76046778002282,
+            "y": 134.78857214305492,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b3",
+            "x": 298.3727369154021,
+            "y": 83.51077314896804,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b6",
+            "x": 270.29419158800266,
+            "y": 110.09358770501487,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b9",
+            "x": 112.81034615031248,
+            "y": 59.471893533568746,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b5",
+            "x": 495.84643349989807,
+            "y": 83.23281991912647,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b1",
+            "x": 308.4383091808165,
+            "y": 42.85312683335771,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b6",
+            "x": 120.27510129884094,
+            "y": 88.6891129579969,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b8",
+            "x": 165.1556626128245,
+            "y": 194.24161268851685,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b9",
+            "x": 404.4926501937361,
+            "y": 78.92927348771062,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b3",
+            "x": 75.66255520426215,
+            "y": 78.78010036752025,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b10",
+            "x": 242.8887089127186,
+            "y": 134.35828629346278,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b2",
+            "x": 286.50597035180084,
+            "y": 38,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b8",
+            "x": 71.60592930323281,
+            "y": 114.70737350250153,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b4",
+            "x": 255.65941519458227,
+            "y": 207.1995771472914,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b7",
+            "x": 339.72185676773074,
+            "y": 136.48983928145606,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b7",
+            "x": 306.42133607152624,
+            "y": 124.22465836277341,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b9",
+            "x": 405.03091262139446,
+            "y": 49.02889026359169,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b5",
+            "x": 341.63405300154676,
+            "y": 157.59073014740088,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b10",
+            "x": 553.7100748057721,
+            "y": 124.61535303912228,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b7",
+            "x": 254.74920336474938,
+            "y": 79.16145383950914,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b8",
+            "x": 267.88056458273695,
+            "y": 176.50332117284822,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b7",
+            "x": 539.7574730302691,
+            "y": 62.37484042001802,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b7",
+            "x": 471.0540862704194,
+            "y": 87.34552092974711,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b8",
+            "x": 382.2214645663798,
+            "y": 99.7300109442305,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b7",
+            "x": 506.86091792148943,
+            "y": 151.94467925899136,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b10",
+            "x": 425.196022961017,
+            "y": 140.2272221379164,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b8",
+            "x": 338.1007830721917,
+            "y": 179.54339180991616,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b3",
+            "x": 505.9163071724501,
+            "y": 171.9223595680963,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b3",
+            "x": 467.8637043776407,
+            "y": 173.87813895101402,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b4",
+            "x": 426.33514601906376,
+            "y": 52.861620325134425,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b2",
+            "x": 568.0748720675263,
+            "y": 160.0085977684516,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b2",
+            "x": 455.1799308555726,
+            "y": 202.610672832677,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b2",
+            "x": 247.66097321349488,
+            "y": 154.42717837467544,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b3",
+            "x": 547.6230990032709,
+            "y": 181.9169392677519,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b1",
+            "x": 309.66485313920185,
+            "y": 102.95544008818908,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b8",
+            "x": 374.98738631326466,
+            "y": 192.73542337447088,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b1",
+            "x": 171.2955256535192,
+            "y": 152.08050155067963,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b6",
+            "x": 388.0819507074718,
+            "y": 168.03970755707311,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          }
+        ]
+      },
+      "resumedSnapshot": {
+        "roundId": "4272c12a-7e9f-4a8e-95c3-8c47a5dd5d28",
+        "state": "mixing",
+        "seed": 2142767387,
+        "time": 0,
+        "target": 60,
+        "total": 60,
+        "winner": null,
+        "completionReason": null,
+        "finishOrder": [],
+        "assists": 0,
+        "returns": 0,
+        "returnClosed": false,
+        "motion": {
+          "enabled": true,
+          "active": false,
+          "axis": null,
+          "cycle": -1,
+          "phase": 0,
+          "roll": 0,
+          "pitch": 0,
+          "offsetX": 0,
+          "offsetY": 0,
+          "forceX": 0,
+          "forceY": 0,
+          "nextIn": 3.5421720766462386
+        },
+        "deviceStats": {
+          "captures": 0,
+          "launches": 0,
+          "releases": 0
+        },
+        "devices": [
+          {
+            "id": "neon-magnet-0",
+            "kind": "magnet",
+            "x": 310,
+            "y": 530,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-magnet-1",
+            "kind": "magnet",
+            "x": 100,
+            "y": 1770,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-2",
+            "kind": "cannon",
+            "x": 310,
+            "y": 1320,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-3",
+            "kind": "cannon",
+            "x": 480,
+            "y": 1630,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          }
+        ],
+        "balls": [
+          {
+            "id": "p3-b1",
+            "x": 147.64186844796038,
+            "y": 156.8166301751409,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b6",
+            "x": 156.00801320339835,
+            "y": 57.73984526864883,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b10",
+            "x": 113.56446018230162,
+            "y": 151.12439813158105,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b5",
+            "x": 60.65937455451057,
+            "y": 203.5058051834205,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b2",
+            "x": 205.64540900045859,
+            "y": 42.67241448987513,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b1",
+            "x": 382.14553473693337,
+            "y": 108.40713281464133,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b2",
+            "x": 137.99253652613612,
+            "y": 39.29918420204699,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b4",
+            "x": 521.5651188420366,
+            "y": 51.020797273352194,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b5",
+            "x": 115.94194891784436,
+            "y": 174.6256487488471,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b6",
+            "x": 234.0992183224991,
+            "y": 123.60385949845737,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b6",
+            "x": 105.37125750116307,
+            "y": 203.18332257926582,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b3",
+            "x": 561.4963775819697,
+            "y": 133.15584319363154,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b9",
+            "x": 571.1265462554704,
+            "y": 76.09889090536632,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b5",
+            "x": 103.47962495127068,
+            "y": 99.03919342805249,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b4",
+            "x": 525.0644541124723,
+            "y": 171.66915408469498,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b10",
+            "x": 90.171839084006,
+            "y": 53.88832244584185,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b9",
+            "x": 461.8736780831842,
+            "y": 121.49950949236457,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b5",
+            "x": 370.5969701149013,
+            "y": 146.65757141281392,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b4",
+            "x": 442.5335408929255,
+            "y": 78.88567924366039,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b4",
+            "x": 298.51142017723197,
+            "y": 142.94211157845788,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b10",
+            "x": 203.42448151176788,
+            "y": 65.36141704091449,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b1",
+            "x": 212.977319825236,
+            "y": 107.71740310351274,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b9",
+            "x": 68.75982790222315,
+            "y": 131.93747582867186,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b3",
+            "x": 298.66447581974137,
+            "y": 46.11064907095916,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b6",
+            "x": 279.71393190290644,
+            "y": 120.92623392986803,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b9",
+            "x": 125.95566779699737,
+            "y": 82.65957733738684,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b5",
+            "x": 507.50221568971824,
+            "y": 88.65276411026778,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b1",
+            "x": 318.9380368243786,
+            "y": 38.12182003526929,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b6",
+            "x": 143.60893635046605,
+            "y": 106.33819460946181,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b8",
+            "x": 139.53045549410658,
+            "y": 205.24907597050196,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b9",
+            "x": 416.73955080960695,
+            "y": 79.88506066529153,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b3",
+            "x": 62.03690668573058,
+            "y": 73.68020099329317,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b10",
+            "x": 259.5039908527157,
+            "y": 128.1714111471224,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b2",
+            "x": 276.2974069444727,
+            "y": 42.036232278240654,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b8",
+            "x": 76.32730013690303,
+            "y": 111.70058068391377,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b4",
+            "x": 279.8864620723506,
+            "y": 196.7254054181038,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b7",
+            "x": 338.7498175344767,
+            "y": 136.46718880324678,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b7",
+            "x": 320.4472921441156,
+            "y": 121.03189867426784,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b9",
+            "x": 397.7049048901754,
+            "y": 40.91888963613449,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b5",
+            "x": 326.08560467689136,
+            "y": 156.60137501902042,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b10",
+            "x": 544.1376671526807,
+            "y": 146.29134820429516,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b7",
+            "x": 288.50129188362394,
+            "y": 77.41193480333168,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b8",
+            "x": 258.28487228193967,
+            "y": 173.30495598498726,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b7",
+            "x": 540.0118932286568,
+            "y": 58.748443404557186,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b7",
+            "x": 457.7585345644381,
+            "y": 91.85353323456995,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b8",
+            "x": 396.2320390472996,
+            "y": 79.1448849861569,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b7",
+            "x": 500.00917918168784,
+            "y": 167.80043958036347,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b10",
+            "x": 416.771175901254,
+            "y": 160.9401770490481,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b8",
+            "x": 347.57954857021207,
+            "y": 174.21019210705785,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b3",
+            "x": 513.0238403460636,
+            "y": 195.8403664546645,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b3",
+            "x": 482.81528444504113,
+            "y": 199.6090758433497,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b4",
+            "x": 441.09226994651783,
+            "y": 58.937678389964766,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b2",
+            "x": 571.1668136412923,
+            "y": 151.7830484837362,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b2",
+            "x": 440.72965561477616,
+            "y": 200.6183559636753,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b2",
+            "x": 247.54557825931747,
+            "y": 145.21857124587117,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b3",
+            "x": 557.5540754777487,
+            "y": 166.4354667036344,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b1",
+            "x": 307.87800903761683,
+            "y": 100.90951195281858,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b8",
+            "x": 349.04688065247376,
+            "y": 200.27583292563403,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b1",
+            "x": 182.1011797735562,
+            "y": 149.75666320720504,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b6",
+            "x": 367.7033341203708,
+            "y": 168.56935589424134,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          }
+        ]
+      }
+    },
+    {
+      "phase": "countdown",
+      "status": "PASS",
+      "roundId": "2dae3c82-625b-428e-aaa5-adf72694053a",
+      "visibility": "actual hidden tab",
+      "hiddenSnapshot": {
+        "roundId": "2dae3c82-625b-428e-aaa5-adf72694053a",
+        "state": "paused",
+        "seed": 640239060,
+        "time": 0,
+        "target": 60,
+        "total": 60,
+        "winner": null,
+        "completionReason": null,
+        "finishOrder": [],
+        "assists": 0,
+        "returns": 0,
+        "returnClosed": false,
+        "motion": {
+          "enabled": true,
+          "active": false,
+          "axis": null,
+          "cycle": -1,
+          "phase": 0,
+          "roll": 0,
+          "pitch": 0,
+          "offsetX": 0,
+          "offsetY": 0,
+          "forceX": 0,
+          "forceY": 0,
+          "nextIn": 3.886738670989871
+        },
+        "deviceStats": {
+          "captures": 0,
+          "launches": 0,
+          "releases": 0
+        },
+        "devices": [
+          {
+            "id": "neon-magnet-0",
+            "kind": "magnet",
+            "x": 310,
+            "y": 530,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-magnet-1",
+            "kind": "magnet",
+            "x": 100,
+            "y": 1770,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-2",
+            "kind": "cannon",
+            "x": 310,
+            "y": 1320,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-3",
+            "kind": "cannon",
+            "x": 480,
+            "y": 1630,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          }
+        ],
+        "balls": [
+          {
+            "id": "p5-b2",
+            "x": 561.6212436212469,
+            "y": 115.35377735675947,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b4",
+            "x": 374.74708931542665,
+            "y": 153.21020073793164,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b2",
+            "x": 67.6830297341182,
+            "y": 134.46980004662615,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b3",
+            "x": 458.70716443830275,
+            "y": 192.23081371707002,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b3",
+            "x": 429.2999224452479,
+            "y": 138.01543100035448,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b7",
+            "x": 141.37246954402931,
+            "y": 40.87995678597153,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b5",
+            "x": 140.45238937661824,
+            "y": 71.7218744989613,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b1",
+            "x": 114.94711404819117,
+            "y": 91.66912850406317,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b5",
+            "x": 505.108057184042,
+            "y": 55.025781154357624,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b3",
+            "x": 166.10770889345275,
+            "y": 141.07714757842,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b3",
+            "x": 231.42020025035822,
+            "y": 109.85184958366528,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b2",
+            "x": 212.3262375525896,
+            "y": 207.90258737674137,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b10",
+            "x": 73.61786867864798,
+            "y": 191.10901182323474,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b8",
+            "x": 360.5339357013302,
+            "y": 113.05935871216698,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b8",
+            "x": 315.1483931481495,
+            "y": 189.1804638318569,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b6",
+            "x": 206.91867481975896,
+            "y": 54.393424088348205,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b6",
+            "x": 468.71089554099507,
+            "y": 132.06173641387798,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b9",
+            "x": 308.22662288965745,
+            "y": 38.455549075764466,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b4",
+            "x": 44.66372774563268,
+            "y": 72.35755437745185,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b4",
+            "x": 502.41461356418233,
+            "y": 139.31521239140278,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b7",
+            "x": 209.9487285739097,
+            "y": 143.2261429595344,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b1",
+            "x": 483.4205588719462,
+            "y": 201.58699290481,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b6",
+            "x": 169.1777545258072,
+            "y": 171.84382925391304,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b3",
+            "x": 453.82276372279694,
+            "y": 82.1583314732132,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b8",
+            "x": 421.4309374731744,
+            "y": 197.88365488809123,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b9",
+            "x": 303.6054140501988,
+            "y": 59.18836581046117,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b7",
+            "x": 576.7995416465268,
+            "y": 84.98323004964169,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b9",
+            "x": 443.27484691426065,
+            "y": 45.84478541888248,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b4",
+            "x": 439.42219355969337,
+            "y": 207.39166523145255,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b2",
+            "x": 500.14606328054805,
+            "y": 111.95853257524388,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b7",
+            "x": 218.3050313789235,
+            "y": 124.95126498538697,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b8",
+            "x": 335.2735761579994,
+            "y": 38.291942356002565,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b9",
+            "x": 251.09172138096253,
+            "y": 56.0251061150544,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b5",
+            "x": 109.67911806697317,
+            "y": 189.86234374903685,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b3",
+            "x": 192.21022303714378,
+            "y": 133.98788439408364,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b8",
+            "x": 466.7234708737383,
+            "y": 165.55769212830376,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b7",
+            "x": 272.6103297152173,
+            "y": 39.73858421492721,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b1",
+            "x": 83.45148744704186,
+            "y": 79.60416691588547,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b4",
+            "x": 520.1116706001237,
+            "y": 101.15588042671946,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b6",
+            "x": 500.0577985828351,
+            "y": 74.90689479513092,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b10",
+            "x": 327.58414215441877,
+            "y": 99.63840153191103,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b10",
+            "x": 105.09116811071405,
+            "y": 167.52413749961605,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b1",
+            "x": 283.4917736150997,
+            "y": 80.99862085193766,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b5",
+            "x": 486.32518232012177,
+            "y": 153.49531629138454,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b4",
+            "x": 177.1002949610066,
+            "y": 92.94939679421306,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b8",
+            "x": 301.5825438090534,
+            "y": 96.68501656427027,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b6",
+            "x": 525.0570469824879,
+            "y": 81.6792210673318,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b7",
+            "x": 440.2892995293556,
+            "y": 120.76705916010317,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b1",
+            "x": 116.79200849660899,
+            "y": 62.46263370917019,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b5",
+            "x": 533.0615032184701,
+            "y": 134.10439197026207,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b2",
+            "x": 265.53562345606355,
+            "y": 89.80638285293125,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b9",
+            "x": 226.74264048362124,
+            "y": 64.758170320551,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b10",
+            "x": 284.76344994712076,
+            "y": 153.8224074684165,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b2",
+            "x": 145.6545200035434,
+            "y": 183.70474658603925,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b10",
+            "x": 199.50131308969918,
+            "y": 167.57349497537933,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b10",
+            "x": 204.31753050332858,
+            "y": 78.04122084251392,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b6",
+            "x": 109.5048242932323,
+            "y": 146.50991831723715,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b9",
+            "x": 319.1486035001322,
+            "y": 79.12796006317888,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b5",
+            "x": 160.13558173295374,
+            "y": 68.17618152529663,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b1",
+            "x": 150.59572707658128,
+            "y": 109.49431531882189,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          }
+        ]
+      },
+      "resumedSnapshot": {
+        "roundId": "2dae3c82-625b-428e-aaa5-adf72694053a",
+        "state": "countdown",
+        "seed": 640239060,
+        "time": 0,
+        "target": 60,
+        "total": 60,
+        "winner": null,
+        "completionReason": null,
+        "finishOrder": [],
+        "assists": 0,
+        "returns": 0,
+        "returnClosed": false,
+        "motion": {
+          "enabled": true,
+          "active": false,
+          "axis": null,
+          "cycle": -1,
+          "phase": 0,
+          "roll": 0,
+          "pitch": 0,
+          "offsetX": 0,
+          "offsetY": 0,
+          "forceX": 0,
+          "forceY": 0,
+          "nextIn": 3.886738670989871
+        },
+        "deviceStats": {
+          "captures": 0,
+          "launches": 0,
+          "releases": 0
+        },
+        "devices": [
+          {
+            "id": "neon-magnet-0",
+            "kind": "magnet",
+            "x": 310,
+            "y": 530,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-magnet-1",
+            "kind": "magnet",
+            "x": 100,
+            "y": 1770,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-2",
+            "kind": "cannon",
+            "x": 310,
+            "y": 1320,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-3",
+            "kind": "cannon",
+            "x": 480,
+            "y": 1630,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          }
+        ],
+        "balls": [
+          {
+            "id": "p5-b2",
+            "x": 544.2592812061446,
+            "y": 65.59166732428109,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b4",
+            "x": 342.3042890041121,
+            "y": 135.25807356841938,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b2",
+            "x": 85.71086803966288,
+            "y": 164.80702435263117,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b3",
+            "x": 457.2253287815539,
+            "y": 173.54279507935658,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b3",
+            "x": 432.1737732035182,
+            "y": 173.44974528594463,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b7",
+            "x": 102.22087449822595,
+            "y": 39.111484337327894,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b5",
+            "x": 141.790011984913,
+            "y": 73.28653914112328,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b1",
+            "x": 114.95350276533071,
+            "y": 81.90825834168967,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b5",
+            "x": 503.13123526326825,
+            "y": 50.84684606015836,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b3",
+            "x": 178.23926960262727,
+            "y": 145.7329595503158,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b3",
+            "x": 248.38576752876304,
+            "y": 119.97607716443034,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b2",
+            "x": 196.6254218439994,
+            "y": 202.20216208223061,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b10",
+            "x": 45.076081540289536,
+            "y": 165.6028646317575,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b8",
+            "x": 354.5128150072478,
+            "y": 119.4166123722178,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b8",
+            "x": 311.9975359675127,
+            "y": 207.46793576898278,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b6",
+            "x": 188.57739503894825,
+            "y": 39.82373776569612,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b6",
+            "x": 476.8830862988397,
+            "y": 140.4956901215466,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b9",
+            "x": 328.87176824425666,
+            "y": 44.5077841815551,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b4",
+            "x": 54.57280376826695,
+            "y": 72.00721179178868,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b4",
+            "x": 531.5116519703816,
+            "y": 148.75759199838828,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b7",
+            "x": 244.72287109592642,
+            "y": 153.51756449764443,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b1",
+            "x": 488.19450742912915,
+            "y": 201.4607784355432,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b6",
+            "x": 160.76031245031538,
+            "y": 206.7532523904934,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b3",
+            "x": 456.5092978124872,
+            "y": 77.45999890508035,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b8",
+            "x": 396.86848546029444,
+            "y": 207.54237898484106,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b9",
+            "x": 319.075085583411,
+            "y": 62.70341578062853,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b7",
+            "x": 569.5056685179892,
+            "y": 81.52426278252493,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b9",
+            "x": 382.4581201760513,
+            "y": 49.41367362854982,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b4",
+            "x": 425.55736428352964,
+            "y": 204.30063086960482,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b2",
+            "x": 525.0959026520377,
+            "y": 126.37546494086408,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b7",
+            "x": 208.791849437595,
+            "y": 117.43670277690592,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b8",
+            "x": 351.83294402197515,
+            "y": 42.53545418097301,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b9",
+            "x": 232.2330767468445,
+            "y": 60.69122087207338,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b5",
+            "x": 109.28118100987476,
+            "y": 208,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b3",
+            "x": 202.20252991065604,
+            "y": 136.844835989677,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b8",
+            "x": 476.6943539307693,
+            "y": 165.6770433998441,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b7",
+            "x": 280.79732564925735,
+            "y": 39.91856411097905,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b1",
+            "x": 82.14582270161335,
+            "y": 111.96770072423213,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b4",
+            "x": 536.1968122119182,
+            "y": 109.73906488125517,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b6",
+            "x": 498.5729498004685,
+            "y": 86.77710635924495,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b10",
+            "x": 357.39591664898006,
+            "y": 70.46132646962967,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b10",
+            "x": 96.83681884658967,
+            "y": 190.93068205886647,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b1",
+            "x": 293.06657916625375,
+            "y": 56.01895965368574,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b5",
+            "x": 504.92257780787645,
+            "y": 157.02681229479012,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b4",
+            "x": 181.528842128168,
+            "y": 122.06860704919978,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b8",
+            "x": 281.671649257266,
+            "y": 120.72023123751045,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b6",
+            "x": 524.0529898872134,
+            "y": 79.00076412456558,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b7",
+            "x": 441.62876663703145,
+            "y": 141.47684023290734,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b1",
+            "x": 126.75343561247387,
+            "y": 56.90864208996888,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b5",
+            "x": 554.2100337500457,
+            "y": 133.46784051042297,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b2",
+            "x": 267.8591699126706,
+            "y": 89.02550753584877,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b9",
+            "x": 215.5664995838821,
+            "y": 46.12814690349166,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b10",
+            "x": 323.2877913017065,
+            "y": 151.0808100652413,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b2",
+            "x": 142.23072751407614,
+            "y": 175.59980595582135,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b10",
+            "x": 206.48431822019415,
+            "y": 163.02421767075347,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b10",
+            "x": 195.07055201185818,
+            "y": 59.14188802669932,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b6",
+            "x": 100.58919281135603,
+            "y": 142.53746507153062,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b9",
+            "x": 305.39424090055746,
+            "y": 86.29590514749594,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b5",
+            "x": 174.58352839251907,
+            "y": 74.63040946798924,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b1",
+            "x": 133.36238050661794,
+            "y": 95.40233981377965,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          }
+        ]
+      }
+    },
+    {
+      "phase": "racing",
+      "status": "PASS",
+      "roundId": "8e2e9377-0220-4976-9fa2-7d03f0393337",
+      "visibility": "actual hidden tab",
+      "hiddenSnapshot": {
+        "roundId": "8e2e9377-0220-4976-9fa2-7d03f0393337",
+        "state": "paused",
+        "seed": 3209343032,
+        "time": 0.175,
+        "target": 60,
+        "total": 60,
+        "winner": null,
+        "completionReason": null,
+        "finishOrder": [],
+        "assists": 0,
+        "returns": 0,
+        "returnClosed": false,
+        "motion": {
+          "enabled": true,
+          "active": false,
+          "axis": null,
+          "cycle": -1,
+          "phase": 0,
+          "roll": 0,
+          "pitch": 0,
+          "offsetX": 0,
+          "offsetY": 0,
+          "forceX": 0,
+          "forceY": 0,
+          "nextIn": 3.926841252297163
+        },
+        "deviceStats": {
+          "captures": 0,
+          "launches": 0,
+          "releases": 0
+        },
+        "devices": [
+          {
+            "id": "neon-magnet-0",
+            "kind": "magnet",
+            "x": 310,
+            "y": 530,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-magnet-1",
+            "kind": "magnet",
+            "x": 100,
+            "y": 1770,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-2",
+            "kind": "cannon",
+            "x": 310,
+            "y": 1320,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-3",
+            "kind": "cannon",
+            "x": 480,
+            "y": 1630,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          }
+        ],
+        "balls": [
+          {
+            "id": "p5-b1",
+            "x": 193.84672414238574,
+            "y": 146.76236067227268,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b7",
+            "x": 479.62273441285595,
+            "y": 186.1046766204353,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b5",
+            "x": 69.08304232645638,
+            "y": 163.86577754217362,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b8",
+            "x": 392.1371324451281,
+            "y": 93.5665908277678,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b6",
+            "x": 302.10277472051604,
+            "y": 213.0713185838537,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b6",
+            "x": 413.85801535164717,
+            "y": 184.56778439977123,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b8",
+            "x": 40.03232364988006,
+            "y": 94.85910356062523,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b3",
+            "x": 138.85872626666045,
+            "y": 78.50347482175896,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b5",
+            "x": 497.823742757811,
+            "y": 68.72465489023895,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b8",
+            "x": 269.2513663312591,
+            "y": 187.34107364605512,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b9",
+            "x": 564.1315254025316,
+            "y": 141.0176903879074,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b7",
+            "x": 540.0100994877675,
+            "y": 58.19835158689769,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b2",
+            "x": 393.33296393010227,
+            "y": 44.935515621028266,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b6",
+            "x": 257.8472612521811,
+            "y": 170.91102838302106,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b3",
+            "x": 226.69181535550427,
+            "y": 65.27585143824473,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b5",
+            "x": 226.37363185153077,
+            "y": 119.66418430348443,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b2",
+            "x": 53.78556608382878,
+            "y": 207.0410291002492,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b9",
+            "x": 48.01679464736085,
+            "y": 163.6889106117441,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b1",
+            "x": 97.44380843925423,
+            "y": 179.04452603398144,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b3",
+            "x": 412.168312156727,
+            "y": 60.667191458441714,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b5",
+            "x": 219.72055825258101,
+            "y": 167.11902230584317,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b6",
+            "x": 254.11557890631343,
+            "y": 128.31931260141982,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b2",
+            "x": 162.42377330624066,
+            "y": 188.6478735595155,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b5",
+            "x": 300.4401164114832,
+            "y": 149.07945869408988,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b10",
+            "x": 530.3631518720402,
+            "y": 129.48226101226143,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b4",
+            "x": 126.17585579722868,
+            "y": 57.70461294644231,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b8",
+            "x": 239.59249950817014,
+            "y": 40.7187295127568,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b2",
+            "x": 296.4017077897999,
+            "y": 181.56057137721703,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b10",
+            "x": 275.6212811225691,
+            "y": 211.37955199881407,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b1",
+            "x": 422.2970728503741,
+            "y": 83.09152998424676,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b3",
+            "x": 278.90403670049227,
+            "y": 105.70897473880807,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b1",
+            "x": 60.93479625432367,
+            "y": 94.116468436792,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b4",
+            "x": 429.5611356321983,
+            "y": 123.47305636168102,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b9",
+            "x": 205.07172532597878,
+            "y": 47.04268461042137,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b6",
+            "x": 120.12023625032336,
+            "y": 180.58072427660997,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b8",
+            "x": 140.32026394363322,
+            "y": 195.21331862366782,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b9",
+            "x": 186.38027392652975,
+            "y": 169.03031382418231,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b4",
+            "x": 348.78076089780154,
+            "y": 124.60385027693577,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b7",
+            "x": 459.53904585800063,
+            "y": 113.05791445403955,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b10",
+            "x": 480.2362991274409,
+            "y": 119.11074412499781,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b7",
+            "x": 168.9263031339122,
+            "y": 50.1730487687692,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b3",
+            "x": 392.49793709066705,
+            "y": 161.23392538035117,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b9",
+            "x": 510.17270326729965,
+            "y": 89.01054265002648,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b4",
+            "x": 184.33636799404522,
+            "y": 110.49844922679718,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b3",
+            "x": 215.21504333438136,
+            "y": 91.07914709118909,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b9",
+            "x": 273.33060387144155,
+            "y": 45.37540958345969,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b5",
+            "x": 445.10367593405556,
+            "y": 154.91032383621925,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b4",
+            "x": 113.59229155525416,
+            "y": 92.68026765153837,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b4",
+            "x": 319.4933043962783,
+            "y": 168.05843846807883,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b8",
+            "x": 144.59090191830933,
+            "y": 112.28230726685995,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b7",
+            "x": 58.97828023127687,
+            "y": 120.1435229132459,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b7",
+            "x": 93.71535253744378,
+            "y": 82.64282955097588,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b6",
+            "x": 63.47052174819987,
+            "y": 73.83297919747511,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b2",
+            "x": 508.87945980108276,
+            "y": 116.64766233264675,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b1",
+            "x": 277.5513756498643,
+            "y": 144.87940827369118,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b10",
+            "x": 479.8382146291107,
+            "y": 83.50699019043935,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b10",
+            "x": 461.24492271038446,
+            "y": 176.03243033084215,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b2",
+            "x": 435.5120453723117,
+            "y": 48.65594253262401,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b1",
+            "x": 507.6677503461344,
+            "y": 137.09358182190027,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b10",
+            "x": 238.06598017841344,
+            "y": 96.75398923031082,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          }
+        ]
+      },
+      "resumedSnapshot": {
+        "roundId": "8e2e9377-0220-4976-9fa2-7d03f0393337",
+        "state": "racing",
+        "seed": 3209343032,
+        "time": 0.366666666666667,
+        "target": 60,
+        "total": 60,
+        "winner": null,
+        "completionReason": null,
+        "finishOrder": [],
+        "assists": 0,
+        "returns": 0,
+        "returnClosed": false,
+        "motion": {
+          "enabled": true,
+          "active": false,
+          "axis": null,
+          "cycle": -1,
+          "phase": 0,
+          "roll": 0,
+          "pitch": 0,
+          "offsetX": 0,
+          "offsetY": 0,
+          "forceX": 0,
+          "forceY": 0,
+          "nextIn": 3.735174585630496
+        },
+        "deviceStats": {
+          "captures": 0,
+          "launches": 0,
+          "releases": 0
+        },
+        "devices": [
+          {
+            "id": "neon-magnet-0",
+            "kind": "magnet",
+            "x": 310,
+            "y": 530,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-magnet-1",
+            "kind": "magnet",
+            "x": 100,
+            "y": 1770,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-2",
+            "kind": "cannon",
+            "x": 310,
+            "y": 1320,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          },
+          {
+            "id": "neon-cannon-3",
+            "kind": "cannon",
+            "x": 480,
+            "y": 1630,
+            "ballId": null,
+            "ballIds": [],
+            "angle": 1.5707963267948966,
+            "progress": 0,
+            "holding": false,
+            "count": 0
+          }
+        ],
+        "balls": [
+          {
+            "id": "p5-b1",
+            "x": 188.8235153142018,
+            "y": 158.95157425013213,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b7",
+            "x": 460.0483990893386,
+            "y": 209.65085171895603,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b5",
+            "x": 72.9527877953498,
+            "y": 183.9240152742039,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b8",
+            "x": 394.1665945458024,
+            "y": 123.26961231414855,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b6",
+            "x": 284.96708223151774,
+            "y": 240.7893322395741,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b6",
+            "x": 394.8291659017346,
+            "y": 195.5633002870294,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b8",
+            "x": 40.06714647261128,
+            "y": 95.86398584498444,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b3",
+            "x": 162.67325806218312,
+            "y": 94.6945840826758,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b5",
+            "x": 490.0784734558225,
+            "y": 66.39076062478539,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b8",
+            "x": 268.3498452241934,
+            "y": 222.22662998886602,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b9",
+            "x": 550.8992989030008,
+            "y": 139.73582714078674,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b7",
+            "x": 569.431523618769,
+            "y": 65.82633569393303,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b2",
+            "x": 391.87094656200327,
+            "y": 61.26011498180762,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b6",
+            "x": 255.9430270804723,
+            "y": 184.73969279248294,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b3",
+            "x": 236.23554510138277,
+            "y": 73.7552243866672,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b5",
+            "x": 219.3631066171688,
+            "y": 154.4614451282899,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b2",
+            "x": 57.03259880663077,
+            "y": 217.12150009690245,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b9",
+            "x": 50.653987604856695,
+            "y": 178.14935089625007,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b1",
+            "x": 101.28185577668395,
+            "y": 202.9863819804618,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b3",
+            "x": 416.4527810757449,
+            "y": 71.2711006430441,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b5",
+            "x": 222.53936240938788,
+            "y": 201.83943570170965,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b6",
+            "x": 267.37425486903294,
+            "y": 140.27205741222505,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b2",
+            "x": 177.31977492465157,
+            "y": 215.55709804263626,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b5",
+            "x": 314.8218870709346,
+            "y": 167.40415986156773,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b10",
+            "x": 527.4594640542098,
+            "y": 133.17127111328156,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b4",
+            "x": 145.6765913732465,
+            "y": 75.35943893985927,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b8",
+            "x": 215.07239221465716,
+            "y": 40.837423731455914,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b2",
+            "x": 282.15981349893457,
+            "y": 186.53802911321677,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b10",
+            "x": 262.0386255313585,
+            "y": 242.78489286284062,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b1",
+            "x": 435.01085969929574,
+            "y": 98.65988295682784,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b3",
+            "x": 291.76974988949956,
+            "y": 114.96320784280385,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b1",
+            "x": 61.34560369784059,
+            "y": 108.67348423381375,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b4",
+            "x": 422.96991203698116,
+            "y": 120.76595142460506,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b9",
+            "x": 193.11545893866582,
+            "y": 56.053169189420395,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b6",
+            "x": 124.83447765203653,
+            "y": 221.56999774554015,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b8",
+            "x": 147.28133920895837,
+            "y": 231.603496567728,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b9",
+            "x": 197.89472614545494,
+            "y": 184.6826412955784,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b4",
+            "x": 358.8733752535396,
+            "y": 143.29881962345482,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b7",
+            "x": 446.5162819946782,
+            "y": 127.37170692233157,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b10",
+            "x": 469.98876025325035,
+            "y": 126.5349593262611,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b7",
+            "x": 145.02533843543227,
+            "y": 49.20172254745818,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b3",
+            "x": 372.00545772363625,
+            "y": 186.14694700724897,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b9",
+            "x": 500.6189901942953,
+            "y": 83.51082791288279,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b4",
+            "x": 185.15464234238112,
+            "y": 121.09002604929928,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b3",
+            "x": 206.45917279287605,
+            "y": 106.36698709019277,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b9",
+            "x": 283.7075304240718,
+            "y": 38.09179064255616,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p4-b5",
+            "x": 437.39029186015574,
+            "y": 166.80551819689788,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b4",
+            "x": 124.24970061803124,
+            "y": 117.04579866103151,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b4",
+            "x": 309.40557968869757,
+            "y": 194.5156460551908,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b8",
+            "x": 143.59938901575413,
+            "y": 124.91161658798752,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b7",
+            "x": 58.93344871362827,
+            "y": 137.7956366725091,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b7",
+            "x": 115.12250576912705,
+            "y": 98.36218291440578,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b6",
+            "x": 70.35542909635427,
+            "y": 87.57441824610534,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b2",
+            "x": 505.9817610961702,
+            "y": 111.58916315798622,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p3-b1",
+            "x": 281.1470548502359,
+            "y": 165.62754949103564,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b10",
+            "x": 474.09678960831826,
+            "y": 93.98944975069362,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p6-b10",
+            "x": 443.00566117193813,
+            "y": 198.88525264179665,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p5-b2",
+            "x": 441.54514079344,
+            "y": 55.55631793041817,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p2-b1",
+            "x": 487.9031993401374,
+            "y": 142.37778412487123,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          },
+          {
+            "id": "p1-b10",
+            "x": 238.82829125462118,
+            "y": 124.80199228679383,
+            "finished": false,
+            "rank": null,
+            "heldBy": null,
+            "returning": null,
+            "returnCount": 0
+          }
+        ]
+      }
+    }
+  ],
+  "nativeAndroidTest": false,
+  "harness": "Raw CDP, headed isolated Chrome, no focus/visibility emulation",
+  "chromeStopped": true
+}

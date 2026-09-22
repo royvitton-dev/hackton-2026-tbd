@@ -1,8 +1,15 @@
+import {assignLooks,drawBallLook} from './ball-looks.js';
+import {installBoardTap} from './board-tap.js';
+import {placeLabels} from './label-layout.js';
 import {returnPose} from './return-portals.js';
 import {devicePose} from './devices.js';
 import {MAPS} from './physics.js';
 export class Renderer {
- constructor(canvas){this.canvas=canvas;this.ctx=canvas.getContext('2d');this.width=760;this.height=1100;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=760*dpr;canvas.height=1100*dpr;this.ctx.scale(dpr,dpr);this.map=MAPS[0];this.cameraY=0;this.overview=false;this.halfView=false;canvas.style.objectFit="contain";this.lastRound=null;}
+ constructor(canvas){this.canvas=canvas;this.ctx=canvas.getContext('2d');this.width=760;this.height=1100;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=760*dpr;canvas.height=1100*dpr;this.ctx.scale(dpr,dpr);this.map=MAPS[0];this.cameraY=0;this.overview=false;this.halfView=false;canvas.style.objectFit="contain";this.lastRound=null;this.ballTheme='sports';this.zoomTarget=null;this.labelOffsets=new Map();this.picks=[];
+ this.zoomButton=document.createElement('button');this.zoomButton.className='zoom-reset';this.zoomButton.textContent='↙ 확대 원래대로';this.zoomButton.hidden=true;this.zoomButton.addEventListener('click',()=>this.resetZoom());canvas.parentElement.append(this.zoomButton);installBoardTap(canvas,(x,y)=>this.toggleZoom(x,y),()=>this.resetZoom());}
+ resetZoom(){this.zoomTarget=null;this.zoomButton.hidden=true;}
+ toggleZoom(x,y){if(this.zoomTarget){this.resetZoom();return;}const r=this.canvas.getBoundingClientRect(),scale=Math.min(r.width/760,r.height/1100),px=(x-r.x-(r.width-760*scale)/2)/scale,py=(y-r.y-(r.height-1100*scale)/2)/scale;if(px<0||px>760||py<0||py>1100)return;const hit=this.picks.map(p=>({...p,d:Math.hypot(p.x-px,p.y-py)})).sort((a,b)=>a.d-b.d)[0];this.zoomTarget=hit&&hit.d*scale<22?{kind:'ball',id:hit.id}:{kind:'area',x:px,y:py};this.zoomButton.hidden=false;}
+ graphics(){return {zoom:this.zoomTarget?{...this.zoomTarget}:null,ballTheme:this.ballTheme,ballLooks:[...(this.looks||[])].map(([id,kind])=>({id,kind}))};}
  project(x,y,z=0){return {x:380+(x-310)*(.83+Math.max(0,Math.min(y/this.map.height,1))*.17),y:32+(y-this.cameraY)*.9-z};}
  path(points,fill,stroke,width=1){const c=this.ctx;c.beginPath();points.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));c.closePath();if(fill){c.fillStyle=fill;c.fill();}if(stroke){c.strokeStyle=stroke;c.lineWidth=width;c.stroke();}}
  line(ax,ay,bx,by,color,width,z=0){const c=this.ctx,a=this.project(ax,ay,z),b=this.project(bx,by,z);c.beginPath();c.moveTo(a.x,a.y);c.lineTo(b.x,b.y);c.lineWidth=width;c.lineCap='round';c.strokeStyle=color;c.stroke();}
@@ -11,11 +18,13 @@ export class Renderer {
  if(glow){c.shadowColor=color;c.shadowBlur=20;}c.fillStyle='#111119';c.beginPath();c.ellipse(p.x,p.y+7,r*s,r*.80,0,0,Math.PI*2);c.fill();c.shadowBlur=0;
  const g=c.createRadialGradient(p.x-r*.33,p.y-r*.4,1,p.x,p.y,r);g.addColorStop(0,'#fff');g.addColorStop(.2,color);g.addColorStop(.8,color);g.addColorStop(1,'#34303e');c.fillStyle=g;c.beginPath();c.ellipse(p.x,p.y,r*s,r*.8,0,0,Math.PI*2);c.fill();c.restore();}
  draw(race,reduced=false,selection=null){const c=this.ctx,map=race?.map??this.map;this.map=map;c.clearRect(0,0,760,1100);
- if(this.lastRound!==race.roundId){this.lastRound=race.roundId;this.cameraY=0;}
+ if(this.lastRound!==race.roundId){this.lastRound=race.roundId;this.cameraY=0;this.resetZoom();this.looks=assignLooks(race.balls,race.config.mode==='lotto'?'classic':this.ballTheme);this.lookImages=new Map([...new Set(this.looks.values())].map(kind=>[kind,drawBallLook(kind)]));this.labelOffsets.clear();}
  const active=race.balls.filter(b=>!b.finished).sort((a,b)=>a.y-b.y);const progress=active[Math.floor(active.length*.7)]?.y??map.finish;
  const target=['ready','mixing','countdown'].includes(race.state)?0:Math.max(0,Math.min(map.height-1080,progress-550));
- if(race.state!=='paused')this.cameraY=reduced?target:this.cameraY+(target-this.cameraY)*.07;
- const savedCamera=this.cameraY;c.save();if(this.overview){this.cameraY=0;const scale=1060/map.height;c.translate(380,0);c.scale(scale,scale);c.translate(-380,0);}else if(this.halfView){const scale=1060/(map.height*.5*.9);c.translate(380,0);c.scale(scale,scale);c.translate(-380,0);}
+ if(race.state!=='paused'&&this.zoomTarget?.kind!=='area')this.cameraY=reduced?target:this.cameraY+(target-this.cameraY)*.07;
+ const savedCamera=this.cameraY;this.picks=[];const names=[];c.save();
+ let zoom=this.zoomTarget;if(zoom?.kind==='ball'){const b=race.balls.find(b=>b.id===zoom.id);if(!b||b.finished){this.resetZoom();zoom=null;}else{const old=this.cameraY;if(this.overview)this.cameraY=0;const p=this.project(b.x,b.y,10),scale=this.overview?1060/map.height:this.halfView?1060/(map.height*.5*.9):1;zoom={...zoom,x:380+(p.x-380)*scale,y:p.y*scale};this.cameraY=old;}}
+ if(zoom){c.translate(380,550);c.scale(2.3,2.3);c.translate(-zoom.x,-zoom.y);}if(this.overview){this.cameraY=0;const scale=1060/map.height;c.translate(380,0);c.scale(scale,scale);c.translate(-380,0);}else if(this.halfView){const scale=1060/(map.height*.5*.9);c.translate(380,0);c.scale(scale,scale);c.translate(-380,0);}
 
  c.save();c.fillStyle='#0004';c.filter='blur(18px)';c.beginPath();c.ellipse(391,660,280,390,0,0,Math.PI*2);c.fill();c.restore();
  const corners=[[17,22],[603,22],[603,map.height-25],[17,map.height-25]],top=corners.map(([x,y])=>this.project(x,y)),bottom=corners.map(([x,y])=>this.project(x,y,-24));
@@ -51,10 +60,12 @@ c.textAlign='center';c.font='600 11px sans-serif';c.fillStyle='#a196b5';c.fillTe
   // A radial sphere highlight gives each equal physical marble a rounded appearance.
   const shade=c.createRadialGradient(p.x-4,p.y-5,1,p.x+2,p.y+3,13);shade.addColorStop(0,'#fff');shade.addColorStop(.22,b.color);shade.addColorStop(.72,b.color);shade.addColorStop(1,'#302433');
   c.fillStyle='#0006';c.beginPath();c.ellipse(p.x+5,p.y+14,12,5,0,0,Math.PI*2);c.fill();c.fillStyle=shade;c.beginPath();c.arc(p.x,p.y,12,0,Math.PI*2);c.fill();c.fillStyle='#fff9';c.beginPath();c.arc(p.x-4,p.y-5,2,0,Math.PI*2);c.fill();
-  if(this.overview)continue;
-  const label=[...b.label].slice(0,5).join('')+([...b.label].length>5?'…':'')+(race.config.people.find(v=>v.id===b.participantId)?.count>1?`·${b.number}`:'');const font=innerWidth<701?27:20;c.font=`600 ${font}px sans-serif`;const w=c.measureText(label).width;c.fillStyle='#131019d9';c.beginPath();c.roundRect(p.x-w/2-4,p.y-20-font,w+8,font+5,5);c.fill();c.fillStyle='#f5f0ff';c.fillText(label,p.x,p.y-18);
+  const image=this.lookImages.get(this.looks.get(b.id));if(image){c.save();c.beginPath();c.arc(p.x,p.y,12,0,7);c.clip();c.drawImage(image,p.x-12,p.y-12,24,24);c.restore();}
+  const matrix=c.getTransform(),dpr=this.canvas.width/760,screen=new DOMPoint(p.x,p.y).matrixTransform(matrix);this.picks.push({id:b.id,x:screen.x/dpr,y:screen.y/dpr});
+  const label=[...b.label].slice(0,5).join('')+([...b.label].length>5?'…':'')+(race.config.people.find(v=>v.id===b.participantId)?.count>1?`·${b.number}`:'');c.font='600 20px sans-serif';names.push({id:b.id,text:label,color:b.color,x:screen.x/dpr,y:screen.y/dpr-17,width:c.measureText(label).width+10});
  }
  c.restore();this.cameraY=savedCamera;
+ for(const name of placeLabels(names.filter(p=>p.x>0&&p.x<760&&p.y>0&&p.y<1100),760,1100,this.labelOffsets)){c.fillStyle='#382844eb';c.strokeStyle=name.color;c.lineWidth=2;c.beginPath();c.roundRect(name.x-name.width/2,name.y-24,name.width,24,5);c.fill();c.stroke();c.fillStyle='#fff8ee';c.font='600 20px sans-serif';c.textAlign='center';c.fillText(name.text,name.x,name.y-5);}
  // A progress rail keeps off-screen marbles visible during camera follow.
  c.fillStyle='#30263e';c.beginPath();c.roundRect(730,55,7,940,4);c.fill();c.strokeStyle=map.accent+'aa';c.lineWidth=1;c.strokeRect(723,55+this.cameraY/map.height*940,21,1080/map.height*940);
  for(const b of race.balls){c.fillStyle=b.color;c.beginPath();c.arc(733,55+b.y/map.height*940,3,0,Math.PI*2);c.fill();}
