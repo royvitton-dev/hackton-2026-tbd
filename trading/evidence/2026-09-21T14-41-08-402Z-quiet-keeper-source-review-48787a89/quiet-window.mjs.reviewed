@@ -1,0 +1,125 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import path from 'node:path';
+import { createHash, randomUUID } from 'node:crypto';
+import { fileURLToPath } from 'node:url';
+import { setTimeout as sleep } from 'node:timers/promises';
+import { acquireLauncherLock } from './demo-lifecycle.mjs';
+
+const expectedNames = ['engine', 'frontend', ...Array.from({ length: 12 }, (_, i) => `bot-${String(i + 1).padStart(2, '0')}`)].sort();
+const readJson = file => JSON.parse(fs.readFileSync(file, 'utf8').replace(/^\uFEFF/, ''));
+const hash = bytes => createHash('sha256').update(bytes).digest('hex');
+const writeNew = (file, value) => fs.writeFileSync(file, JSON.stringify(value, null, 2) + '\n', { flag: 'wx' });
+
+export function processAlive(pid) {
+  try { process.kill(pid, 0); return true; }
+  catch (error) { if (error.code === 'ESRCH') return false; throw error; }
+}
+
+// Holding this marker coordinates demo/Park launchers only. The aged validator
+// separately owns writer.lock; other builds or direct engine launches remain an
+// operator coordination requirement. This module never starts or stops services.
+export async function beginQuietWindow({ root, manifestSha256, absentPids, notBefore,
+  alive = processAlive, now = Date.now, acquire = acquireLauncherLock }) {
+  root = fs.realpathSync(root);
+  assert.match(manifestSha256, /^[a-f0-9]{64}$/i, 'Expected stopped manifest SHA256 is required');
+  assert.ok(typeof notBefore === 'string' && notBefore.endsWith('Z') && Number.isFinite(Date.parse(notBefore)), 'notBefore must be an explicit UTC timestamp');
+  assert.ok(Array.isArray(absentPids) && absentPids.length > 0 && new Set(absentPids).size === absentPids.length && absentPids.every(pid => Number.isSafeInteger(pid) && pid > 0 && pid !== process.pid), 'Supply distinct observer/helper PIDs');
+  const manifestFile = path.join(root, 'data', 'demo-current.json');
+  const lockFile = path.join(root, 'data', 'demo-launcher.lock');
+  function guard() {
+    assert.ok(now() >= Date.parse(notBefore), 'Observation window has not ended; the clock alone never proves completion');
+    const bytes = fs.readFileSync(manifestFile);
+    assert.equal(hash(bytes), manifestSha256.toLowerCase(), 'Stopped manifest changed');
+    const manifest = JSON.parse(bytes.toString('utf8').replace(/^\uFEFF/, ''));
+    assert.ok(Number.isFinite(Date.parse(manifest.stopped_at)), 'Require a stopped manifest');
+    assert.deepEqual(manifest.processes?.map(row => row.name).sort(), expectedNames, 'Require exactly the recorded 14 demo roles');
+    const pids = manifest.processes.map(row => row.pid);
+    assert.ok(pids.every(pid => Number.isSafeInteger(pid) && pid > 0) && new Set([...pids, ...absentPids]).size === pids.length + absentPids.length, 'Invalid or duplicate guarded PID');
+    for (const pid of [...pids, ...absentPids]) assert.equal(alive(pid), false, `Guarded process ${pid} still exists`);
+    const data = fs.realpathSync(manifest.data_dir);
+    assert.ok(data.startsWith(path.join(root, 'data') + path.sep), 'Dataset must remain inside trading/data');
+    return { manifest, bytes, absent_pids: [...pids, ...absentPids] };
+  }
+  guard();
+  const runId = `${new Date(now()).toISOString().replace(/[:.]/g, '-')}-quiet-window-${randomUUID().slice(0, 8)}`;
+  const directory = path.join(root, 'evidence', runId);
+  fs.mkdirSync(directory, { recursive: true });
+  writeNew(path.join(directory, 'preparation.json'), { run_id: runId, pid: process.pid, manifest_sha256: manifestSha256, not_before: notBefore, additional_absent_pids: absentPids });
+  let lock, owner, ready = false, released = false, aborted = false;
+  try {
+    lock = await acquire(lockFile, { timeout: 5000 });
+    const after = guard();
+    owner = readJson(lockFile);
+    assert.equal(owner.pid, process.pid, 'Keeper does not own launcher lock');
+    assert.ok(typeof owner.token === 'string' && owner.token.length > 0);
+    fs.writeFileSync(path.join(directory, 'manifest-copy.json'), after.bytes, { flag: 'wx' });
+    const record = { run_id: runId, pid: process.pid, token: owner.token, release_token: randomUUID(), ready_at: new Date(now()).toISOString(), manifest_sha256: manifestSha256.toLowerCase(), lock_file: lockFile, absent_pids: after.absent_pids,
+      scope: 'Only cooperative demo launchers are excluded. Root must confirm real observer completion and diagnostic child exits.' };
+    writeNew(path.join(directory, 'ready.pending.json'), record);
+    fs.renameSync(path.join(directory, 'ready.pending.json'), path.join(directory, 'ready.json'));
+    ready = true;
+    return {
+      directory, record,
+      poll() {
+        assert.ok(!aborted && !released, 'Keeper is no longer holding');
+        const current = readJson(lockFile);
+        assert.equal(current.pid, owner.pid, 'Launcher owner changed');
+        assert.equal(current.token, owner.token, 'Launcher token changed');
+        guard();
+        const requestFile = path.join(directory, 'release.request');
+        if (!fs.existsSync(requestFile)) return false;
+        const request = readJson(requestFile);
+        assert.equal(request.run_id, runId, 'Wrong release run');
+        assert.equal(request.pid, process.pid, 'Wrong release PID');
+        assert.equal(request.release_token, record.release_token, 'Wrong release token');
+        assert.equal(request.confirmed_no_running_diagnostics, true, 'Root must confirm diagnostic cleanup before release');
+        assert.ok(Array.isArray(request.evidence) && request.evidence.length > 0 && request.evidence.every(file => typeof file === 'string' && fs.existsSync(file) && fs.realpathSync(file).startsWith(path.join(root, 'evidence') + path.sep)), 'Provide existing diagnostic completion evidence under trading/evidence');
+        lock.release();
+        released = true;
+        writeNew(path.join(directory, 'released.json'), { ...record, released_at: new Date(now()).toISOString(), request, original_owner_released: true, current_lock_present: fs.existsSync(lockFile) });
+        return true;
+      },
+      abort(error) {
+        if (aborted || released) return;
+        aborted = true;
+        writeNew(path.join(directory, 'aborted.json'), { at: new Date(now()).toISOString(), error: String(error?.message ?? error), lock_preserved: true, pid: process.pid });
+      },
+    };
+  } catch (error) {
+    // READY has not been published, so no diagnostics may have started. Release
+    // only our own lock. After READY the caller must never use automatic finally
+    // release: diagnostics launched by another process may still be running.
+    let cleanupError;
+    if (lock && !ready) { try { lock.release(); } catch (failure) { cleanupError = failure.message; } }
+    writeNew(path.join(directory, 'preparation-failed.json'), { at: new Date(now()).toISOString(), error: error.message, cleanup_error: cleanupError ?? null });
+    throw error;
+  }
+}
+
+async function main() {
+  const options = {};
+  for (let i = 2; i < process.argv.length; i += 2) {
+    const key = process.argv[i], value = process.argv[i + 1];
+    assert.ok(['--manifest-sha256', '--absent-pids', '--not-before'].includes(key) && value && !options[key], 'Usage: quiet-window.mjs --manifest-sha256 <stopped SHA> --absent-pids <observer,helpers> --not-before <UTC>');
+    options[key] = value;
+  }
+  const keeper = await beginQuietWindow({ root: fileURLToPath(new URL('../', import.meta.url)), manifestSha256: options['--manifest-sha256'], absentPids: options['--absent-pids']?.split(',').map(Number), notBefore: options['--not-before'] });
+  const fail = error => {
+    try { keeper.abort(error); } catch (recordError) { console.error(recordError); }
+    console.error(error); process.exit(1);
+  };
+  process.once('SIGINT', () => fail(new Error('Interrupted; launcher lock preserved')));
+  process.once('SIGTERM', () => fail(new Error('Terminated; launcher lock preserved')));
+  process.once('uncaughtException', fail);
+  process.once('unhandledRejection', fail);
+  console.log(JSON.stringify({ status: 'ready', directory: keeper.directory, ...keeper.record }));
+  try {
+    while (!keeper.poll()) await sleep(500);
+    console.log(JSON.stringify({ status: 'released', directory: keeper.directory }));
+  } catch (error) { fail(error); }
+}
+
+if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  main().catch(error => { console.error(error); process.exitCode = 1; });
+}

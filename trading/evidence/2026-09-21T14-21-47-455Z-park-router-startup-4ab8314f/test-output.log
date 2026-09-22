@@ -1,0 +1,17 @@
+✔ default local backend prepares the existing demo and preserves its result (1.2087ms)
+✔ localhost alias and an explicitly shared engine port are managed (0.5845ms)
+✔ explicit different port, remote, HTTPS and other hosts never start a local demo (0.9543ms)
+✔ invalid endpoint rejects on preparation, leaving factory creation side effect free (1.4206ms)
+✔ concurrent startup and launch share one pending ensure and recheck after settlement (0.3168ms)
+✔ launcher rejection is preserved for every caller and later preparation can retry (0.654ms)
+✔ an unconfirmed or mismatched ready result cannot authorize the backend (0.3964ms)
+✔ factory captures injected endpoints without reading later environment changes (0.1801ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 102.4646
+

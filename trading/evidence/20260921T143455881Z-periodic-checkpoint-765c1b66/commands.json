@@ -1,0 +1,34 @@
+[
+  {
+    "ended_at": "2026-09-21T14:34:56.0734700Z",
+    "started_at": "2026-09-21T14:34:55.9121964Z",
+    "args": [
+      "scripts/summarize-observation.mjs",
+      "2026-09-21T10-05-54-901Z-observe-0b80d28e",
+      "--logical-processors",
+      "16"
+    ],
+    "name": "market",
+    "exit_code": 0
+  },
+  {
+    "ended_at": "2026-09-21T14:34:57.0794701Z",
+    "started_at": "2026-09-21T14:34:56.1056033Z",
+    "args": [
+      "scripts/summarize-bot-latency.mjs",
+      "2026-09-21T10-05-21-198Z-demo-3b10627b"
+    ],
+    "name": "bots",
+    "exit_code": 0
+  },
+  {
+    "ended_at": "2026-09-21T14:34:57.2125129Z",
+    "started_at": "2026-09-21T14:34:57.0832680Z",
+    "args": [
+      "scripts/summarize-supplementary-resources.mjs",
+      "20260921T131759342Z-supplementary-resources-259339d4"
+    ],
+    "name": "resources",
+    "exit_code": 0
+  }
+]

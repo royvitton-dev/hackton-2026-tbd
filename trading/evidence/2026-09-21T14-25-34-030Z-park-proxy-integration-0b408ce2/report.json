@@ -1,0 +1,222 @@
+{
+  "run_id": "2026-09-21T14-25-34-030Z-park-proxy-integration-0b408ce2",
+  "started_at": "2026-09-21T14:25:34.037Z",
+  "expected_binary_sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512",
+  "classification": "Isolated correctness fixture; no Park server launched; no performance measurement",
+  "allowed_engine_origins": "http://127.0.0.1:5175",
+  "protected_before": {
+    "manifest_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+    "processes": [
+      {
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "pid": 6128,
+        "alive": true
+      },
+      {
+        "pid": 4220,
+        "alive": true
+      },
+      {
+        "pid": 18184,
+        "alive": true
+      },
+      {
+        "pid": 15744,
+        "alive": true
+      },
+      {
+        "pid": 16840,
+        "alive": true
+      },
+      {
+        "pid": 19312,
+        "alive": true
+      }
+    ],
+    "scope": "PID existence and unchanged manifest only; no start-time/PID-reuse assertion"
+  },
+  "source_hashes": {
+    "test": "99763126a729ee70a7f3eb1817d3343a0730b9c3346f4d364b6baf53c7db261e",
+    "proxy": "eddc83f250b23d6214df19ddb55064ee81dd0c5a70fd6d850c1e33075a2410f4",
+    "engine": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512"
+  },
+  "owned_engine_pid": 19552,
+  "engine_port": 49280,
+  "relay_port": 49282,
+  "proxy_port": 49283,
+  "workload_complete": true,
+  "shutdown_response": {
+    "status": 200,
+    "headers": {
+      "content-type": "application/json",
+      "vary": "origin, access-control-request-method, access-control-request-headers",
+      "content-length": "26",
+      "connection": "close",
+      "date": "Mon, 21 Sep 2026 14:25:35 GMT"
+    },
+    "body": {
+      "status": "shutting_down"
+    }
+  },
+  "engine_exit": {
+    "name": "isolated-proxy-engine",
+    "pid": 19552,
+    "spawned": true,
+    "exited": true,
+    "exit_code": 0,
+    "exit_signal": null,
+    "spawn_error": null,
+    "closed": true,
+    "close_code": 0,
+    "close_signal": null,
+    "closed_at": "2026-09-21T14:25:35.051Z",
+    "forced": false,
+    "kill_error": null,
+    "diagnostic_errors": [],
+    "success": true
+  },
+  "engine_pid_absent": true,
+  "protected_after": {
+    "manifest_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+    "processes": [
+      {
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "pid": 6128,
+        "alive": true
+      },
+      {
+        "pid": 4220,
+        "alive": true
+      },
+      {
+        "pid": 18184,
+        "alive": true
+      },
+      {
+        "pid": 15744,
+        "alive": true
+      },
+      {
+        "pid": 16840,
+        "alive": true
+      },
+      {
+        "pid": 19312,
+        "alive": true
+      }
+    ],
+    "scope": "PID existence and unchanged manifest only; no start-time/PID-reuse assertion"
+  },
+  "proxy_sha256_after": "eddc83f250b23d6214df19ddb55064ee81dd0c5a70fd6d850c1e33075a2410f4",
+  "cleanup_errors": [],
+  "checks": [
+    "fixture Origin differs from allowed5175 and direct engine POST is403",
+    "real makerprice settlement reserves balances and sameID retry oneeffect",
+    "local aliases accepted and authentication still enforced",
+    "11invalid origin/host cases rejected for POSTandWS before backend with0forwarding",
+    "WS101 initial+eventstate exact and close1000"
+  ],
+  "forwarded_count": 12,
+  "remaining_fixture_sockets": {
+    "proxy": 0,
+    "relay": 0,
+    "outgoing": 0,
+    "client": 0
+  },
+  "ended_at": "2026-09-21T14:25:35.053Z",
+  "complete": true
+}

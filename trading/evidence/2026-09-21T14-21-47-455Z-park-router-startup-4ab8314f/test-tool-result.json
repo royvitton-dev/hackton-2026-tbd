@@ -1,0 +1,14 @@
+{
+  "tool": "exec_command",
+  "arguments": {
+    "cmd": "node --test trading/scripts/park-router-startup.test.mjs",
+    "workdir": "C:\\project\\hackton-2026-tbd"
+  },
+  "result": {
+    "chunk_id": "82fd35",
+    "wall_time_seconds": 0.5096323,
+    "exit_code": 0,
+    "original_token_count": 212,
+    "output": "✔ default local backend prepares the existing demo and preserves its result (1.2087ms)\n✔ localhost alias and an explicitly shared engine port are managed (0.5845ms)\n✔ explicit different port, remote, HTTPS and other hosts never start a local demo (0.9543ms)\n✔ invalid endpoint rejects on preparation, leaving factory creation side effect free (1.4206ms)\n✔ concurrent startup and launch share one pending ensure and recheck after settlement (0.3168ms)\n✔ launcher rejection is preserved for every caller and later preparation can retry (0.654ms)\n✔ an unconfirmed or mismatched ready result cannot authorize the backend (0.3964ms)\n✔ factory captures injected endpoints without reading later environment changes (0.1801ms)\nℹ tests 8\nℹ suites 0\nℹ pass 8\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 102.4646\n"
+  }
+}

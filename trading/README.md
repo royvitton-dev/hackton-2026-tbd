@@ -2,7 +2,7 @@
 
 **휴가 거래소만 독립적으로 실행하는 UI**입니다. 기존 통합 화면이나 로그인 없이 가격·호가·체결 차트·주문·취소·잔고·12개 거래 봇을 확인합니다. 모든 계정·휴가 시간·포인트는 합성 데이터이며, 그룹사 표기는 GS리테이 / GS칼테스 / GS건썰입니다.
 
-현재 마감까지 검증·개선을 진행 중입니다. 항목별 실제 상태는 [누적 검증](docs/verification.md), 현재 프로세스와 다음 작업은 [체크포인트](docs/checkpoint.md), 요구 범위는 [원본 명세](docs/requirements.ko.md)를 확인하세요. 외부 배포를 실행하지 않았습니다.
+2026-09-22 사용자 요청으로 지속 작업을 종료했습니다. 실행 중인 시연·최종 검증·미완료 항목은 [최종 인계](docs/handoff-20260922.md)를 확인하세요. 항목별 실제 상태는 [누적 검증](docs/verification.md), 현재 프로세스와 다음 작업은 [체크포인트](docs/checkpoint.md), 요구 범위는 [원본 명세](docs/requirements.ko.md)를 확인하세요. 외부 배포를 실행하지 않았습니다.
 
 ## 준비와 한 명령 실행
 
@@ -21,7 +21,7 @@ node scripts/demo.mjs start
 ```
 
 - 독립 UI: http://127.0.0.1:5175
-- Wonder Park: 최초 준비 후 루트에서 `npm run park:dev` 또는 `npm run park:preview`를 시작하면 UI·엔진·12개 봇이 자동 실행됩니다. 이미 정상 실행 중인 시장은 재사용합니다. **휴가 거래소 → 휴가 거래소 입장 → 어트랙션 열기**에서 같은 UI로 연결되며, 준비가 끝날 때까지 입장 버튼이 기다립니다.
+- Wonder Park: 최초 준비 후 루트에서 `npm run dev` 또는 `npm run park:dev`를 시작하면 기본 로컬 UI·엔진·12개 봇을 자동 준비합니다. 이미 정상 실행 중인 시장은 재사용합니다. 파크의 입장 버튼은 준비를 기다린 뒤 같은 포트의 `/trading/` 화면으로 연결하며 HTTP·WebSocket도 `/trading/backend/`를 사용합니다. 외부·HTTPS·별도 포트 엔진은 자동 실행하지 않습니다. [통합 서버 설정](../park/ROUTER.md)
 - Rust API·WebSocket: http://127.0.0.1:8787 / ws://127.0.0.1:8787/ws
 - 기본 12개의 별도 Node 봇 프로세스가 공개 API로 같은 시장에 참여합니다.
 - 데이터는 `data/demo`, 실행별 로그·프로세스·봇 seed는 `evidence/<고유-run-ID>`에 보존됩니다.

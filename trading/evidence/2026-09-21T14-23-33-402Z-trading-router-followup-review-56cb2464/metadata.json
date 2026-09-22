@@ -1,0 +1,29 @@
+{
+  "reviewed_at": "2026-09-21T14:23:33.409Z",
+  "reviewer": "/root/durability",
+  "inputs": [
+    {
+      "file": "park/server/trading-proxy.mjs",
+      "bytes": 3427,
+      "sha256": "c78af9dffb41279bbd4c3c4fb1fec01418063a30c4fc8ac1d7fb4d8bdfc9959e"
+    },
+    {
+      "file": "park/server.mjs",
+      "bytes": 9868,
+      "sha256": "81991168e696ede2cd002ce16bb18df2f72dd8234e0a2a0db0c46b80302c320d"
+    },
+    {
+      "file": "trading/scripts/park-router-startup.mjs",
+      "bytes": 2722,
+      "sha256": "23acdff2b4d95d86f1117d3a5b5c9ad40ea2e257a274986724bf09b5236af1bc"
+    },
+    {
+      "file": "trading/scripts/park-router-startup.test.mjs",
+      "bytes": 5349,
+      "sha256": "2bd2a180b81f57ac4ac4ab802b169e76323348286d87fa9978688d3a1aa40d45"
+    }
+  ],
+  "node_version": "v24.19.0",
+  "node_http_server_source_sha256": "de1d38cea481486670148cd9fdd7ab746007b20a5c23fde9eaccc3820f3642da",
+  "scope": "Static source and local runtime source reading only. No server, HTTP, tests, builds, process control, source/shared-doc/Git edits."
+}

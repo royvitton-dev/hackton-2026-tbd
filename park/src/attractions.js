@@ -1,6 +1,8 @@
 import * as THREE from 'three';
 import {box,rounded,sphere,cyl,cone,torus,group,material,textSign,arch} from './materials.js';
 import {disneyCharacter} from './characters.js';
+import {buildParking} from './vehicle-attractions.js';
+import {buildPitStop} from './pitstop.js';
 
 export function bumperCar(parent,color='#cf654c'){
  const g=group(parent);g.userData.dynamic=true;
@@ -110,7 +112,7 @@ export function buildGeneric(parent,theme,color){
  return {root,animation};
 }
 export function createAttraction(parent,item,position,index){
- const outer=group(parent,...position);const built=item.theme==='bumper'?buildBumper(outer):item.theme==='theater'?buildTheater(outer):item.theme==='music'?buildMusic(outer):buildGeneric(outer,item.theme,item.color);
+ const outer=group(parent,...position);const built=item.theme==='pitstop'?buildPitStop(outer,item.color):item.theme==='parking'?buildParking(outer,item.color):item.theme==='bumper'?buildBumper(outer):item.theme==='theater'?buildTheater(outer):item.theme==='music'?buildMusic(outer):buildGeneric(outer,item.theme,item.color);
  const character=disneyCharacter(outer,item.character,1.05);character.position.set(item.theme==='theater'?-3.5:3.7,.55,4.35);
  const motion=item.theme==='music'?'dance':item.theme==='bumper'?'drive':'wave';built.animation.push(t=>character.userData.animate(t+index,motion));
  const pick= new THREE.Mesh(new THREE.BoxGeometry(9,7,8),new THREE.MeshBasicMaterial({visible:false}));pick.position.y=3;pick.userData.attraction=item.id;outer.add(pick);

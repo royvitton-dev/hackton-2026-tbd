@@ -38,6 +38,7 @@ main { max-width: 1380px; margin: auto; padding: 56px 28px 30px; }
 .identity-card div { display: grid; gap: 2px; }.identity-card small, .identity-card span { color: #72807c; font-size: 10px; }.identity-card strong { font-size: 14px; }
 .score-grid { display: grid; grid-template-columns: 1.55fr .85fr .85fr; gap: 14px; margin-bottom: 14px; }
 .score-card, .panel { background: var(--paper); border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 5px 24px rgba(39,63,56,.035); }
+details.score-detail { display: block; font-size: 13px; line-height: 1.85; } .score-detail summary { cursor: pointer; color: #d9fff1; font-weight: 600; } .score-detail p { margin: 12px 0; } .score-detail a { color: #a9e9d4; } .score-detail h3 { margin: 20px 0 8px; font-size: 14px; }
 .score-card { min-height: 260px; padding: 24px; }.score-card.primary { color: #f8fff9; border-color: var(--green); background: linear-gradient(135deg, #173d36, #214b43); }
 .score-heading, .panel-title { display: flex; align-items: center; justify-content: space-between; gap: 14px; }.score-heading > span:first-child { font-size: 12px; font-weight: 600; letter-spacing: .2px; }
 .pill, .hint, .panel-title > span { border-radius: 99px; padding: 6px 9px; background: #f0f3ef; color: #778580; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .6px; }.primary .pill { background: rgba(255,255,255,.1); color: #cbe9d7; }.primary .pill.insufficient { color: #ffd2b7; }

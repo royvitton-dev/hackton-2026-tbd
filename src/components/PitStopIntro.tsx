@@ -71,6 +71,8 @@ function PitScene({ elapsed, ready: readyRef }: { elapsed: React.RefObject<numbe
 export function PitStopIntro({ onActiveChange }: { onActiveChange: (active: boolean) => void }) {
   const [open, setOpen] = useState(() => isPitStopEntry(window.location.search) && !window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   const [phase, setPhase] = useState<PitPhase>('racing'), [soundOn, setSoundOn] = useState(false);
+  const [waitingForStart, setWaitingForStart] = useState(true), [audioError, setAudioError] = useState(false);
+  const playbackStarted = useRef(false);
   const elapsed = useRef(0), layer = useRef<HTMLDivElement>(null), progress = useRef<HTMLDivElement>(null);
   const sceneReady = useRef(false);
   const audio = useRef<ReturnType<typeof createPitStopAudio> | null>(null), skip = useRef<HTMLButtonElement>(null);
@@ -85,14 +87,21 @@ export function PitStopIntro({ onActiveChange }: { onActiveChange: (active: bool
     const previousOverflow = document.body.style.overflow, previousFocus = document.activeElement as HTMLElement | null;
     document.body.style.overflow = 'hidden'; skip.current?.focus({ preventScroll: true });
     let alive = true;
-    // Autoplay may be permitted after portal navigation; otherwise the visible
-    // sound button resumes this same context inside a trusted user gesture.
-    try { audio.current = createPitStopAudio(); void audio.current.enable().then(enabled => { if (alive) setSoundOn(enabled); }); } catch { /* Silent visual fallback. */ }
+    // If autoplay is blocked, hold the animation until a trusted click starts
+    // sound (or the user explicitly chooses silence). Do not finish silently.
+    try {
+      audio.current = createPitStopAudio();
+      void audio.current.enable().then(enabled => {
+        if (alive && enabled && !playbackStarted.current) {
+          playbackStarted.current = true; setWaitingForStart(false); setSoundOn(true);
+        }
+      });
+    } catch { /* Keep both silent-start and skip available without Web Audio. */ }
     let frameId = 0, previous = performance.now(), waitingSeconds = 0, currentPhase: PitPhase = 'racing';
     const tick = (now: number) => {
       if (!document.hidden) {
         waitingSeconds += (now - previous) / 1000;
-        if (sceneReady.current) elapsed.current += (now - previous) / 1000;
+        if (sceneReady.current && playbackStarted.current) elapsed.current += (now - previous) / 1000;
       }
       previous = now;
       const frame = pitStopFrame(elapsed.current);
@@ -120,8 +129,14 @@ export function PitStopIntro({ onActiveChange }: { onActiveChange: (active: bool
   }, [open, finish, onActiveChange]);
   const toggleSound = async () => {
     if (soundOn) { audio.current?.mute(); setSoundOn(false); return; }
-    try { audio.current ??= createPitStopAudio(); setSoundOn(await audio.current.enable()); } catch { setSoundOn(false); }
+    try {
+      audio.current ??= createPitStopAudio();
+      const enabled = await audio.current.enable();
+      setSoundOn(enabled); setAudioError(!enabled);
+      if (enabled) { playbackStarted.current = true; setWaitingForStart(false); }
+    } catch { setSoundOn(false); setAudioError(true); }
   };
+  const startSilent = () => { audio.current?.mute(); playbackStarted.current = true; setWaitingForStart(false); setSoundOn(false); setAudioError(false); };
   if (!open) return null;
   return <div ref={layer} className={styles.overlay} role="dialog" aria-modal="true" aria-labelledby="pit-title" data-phase={phase} onKeyDown={event => {
     if (event.key === 'Escape') { event.stopPropagation(); finish(); }
@@ -133,7 +148,9 @@ export function PitStopIntro({ onActiveChange }: { onActiveChange: (active: bool
   }}>
     <IntroBoundary><Canvas style={{position:'absolute',inset:0}} dpr={[1, 1.5]} camera={{ position: [5.8, 3.4, 9], fov: 43 }} gl={{ antialias: true }} fallback={<div className={styles.fallback}>피트 스톱 · 차량 관리 화면 준비 중</div>} onCreated={({ gl }) => gl.domElement.setAttribute('aria-label', '피트 스톱 입장 애니메이션')}><PitScene elapsed={elapsed} ready={sceneReady}/></Canvas></IntroBoundary>
     <header className={styles.header}><span>EVision <small>PIT LANE</small></span><div><button onClick={toggleSound} aria-pressed={soundOn}>{soundOn ? '소리 끄기' : '소리 켜기'}</button><button ref={skip} onClick={finish}>건너뛰기 →</button></div></header>
-    <div className={styles.copy}><span className={styles.eyebrow}>A LITTLE CARE. A LONGER JOURNEY.</span><h1 id="pit-title">{captions[phase][0]}</h1><p>{captions[phase][1]}</p><div className={styles.progress}><div ref={progress} /></div><small>주행 · 피트 진입 · 정비 · 내 차 관리</small></div>
-    <span className={styles.soundNote}>{soundOn ? '주행음·정비음 연출 재생 중' : '소리 켜기를 누르면 주행음·정비음이 함께 재생됩니다'}</span>
+    <div className={styles.copy}><span className={styles.eyebrow}>A LITTLE CARE. A LONGER JOURNEY.</span><h1 id="pit-title">{waitingForStart?'소리와 함께 피트 스톱으로':captions[phase][0]}</h1><p>{waitingForStart?'자동 소리 재생이 제한될 수 있어요. 시작을 누르면 주행음과 정비음이 함께 재생됩니다.':captions[phase][1]}</p>
+      {waitingForStart&&<div className={styles.startActions}><button onClick={toggleSound}>소리와 함께 시작</button><button onClick={startSilent}>무음으로 시작</button></div>}
+      <div className={styles.progress}><div ref={progress} /></div><small>주행 · 피트 진입 · 정비 · 내 차 관리</small></div>
+    <span className={styles.soundNote} role="status">{audioError?'소리를 시작하지 못했습니다. 브라우저의 사이트 소리 설정을 확인하거나 무음으로 시작해 주세요.':soundOn ? '주행음·정비음 연출 재생 중 · 기기 음량과 탭 음소거도 확인해 주세요' : '소리 켜기를 누르면 주행음·정비음이 함께 재생됩니다'}</span>
   </div>;
 }

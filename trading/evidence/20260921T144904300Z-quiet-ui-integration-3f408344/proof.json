@@ -1,0 +1,230 @@
+{
+  "market_restarted": false,
+  "at": "2026-09-21T14:49:04.4584352Z",
+  "protected_processes": [
+    {
+      "ProcessName": "leave-engine",
+      "StartTimeUtc": "2026-09-21T10:05:21.4715478Z",
+      "Id": 20540,
+      "BirthTicks": 639255819214715478
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T12:52:39.7804367Z",
+      "Id": 4220,
+      "BirthTicks": 639255919597804367
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3890023Z",
+      "Id": 4928,
+      "BirthTicks": 639255819223890023
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5355012Z",
+      "Id": 5412,
+      "BirthTicks": 639255819225355012
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5945324Z",
+      "Id": 6128,
+      "BirthTicks": 639255819225945324
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4762676Z",
+      "Id": 7916,
+      "BirthTicks": 639255819224762676
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3037571Z",
+      "Id": 7936,
+      "BirthTicks": 639255819223037571
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4485053Z",
+      "Id": 12172,
+      "BirthTicks": 639255819224485053
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5047340Z",
+      "Id": 15272,
+      "BirthTicks": 639255819225047340
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3612932Z",
+      "Id": 16068,
+      "BirthTicks": 639255819223612932
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.2784404Z",
+      "Id": 17444,
+      "BirthTicks": 639255819222784404
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:54.8395149Z",
+      "Id": 18184,
+      "BirthTicks": 639255819548395149
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.5665942Z",
+      "Id": 20484,
+      "BirthTicks": 639255819225665942
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.3346242Z",
+      "Id": 20776,
+      "BirthTicks": 639255819223346242
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T10:05:22.4216442Z",
+      "Id": 20940,
+      "BirthTicks": 639255819224216442
+    },
+    {
+      "ProcessName": "powershell",
+      "StartTimeUtc": "2026-09-21T10:05:54.9077476Z",
+      "Id": 15744,
+      "BirthTicks": 639255819549077476
+    },
+    {
+      "ProcessName": "pwsh",
+      "StartTimeUtc": "2026-09-21T13:17:58.3172929Z",
+      "Id": 16840,
+      "BirthTicks": 639255934783172929
+    },
+    {
+      "ProcessName": "node",
+      "StartTimeUtc": "2026-09-21T13:13:17.7989384Z",
+      "Id": 19312,
+      "BirthTicks": 639255931977989384
+    }
+  ],
+  "doc_targets": [
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\scripts\\quiet-window.mjs",
+      "document": "trading/docs/quiet-window.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\docs\\aged-recovery-plan.md",
+      "document": "trading/docs/quiet-window.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T141355128Z-cow-quiet-a-preparation-97da6b86\\review.md",
+      "document": "trading/docs/quiet-window.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T144159354Z-quiet-keeper-abort-record-7f025b32\\run.json",
+      "document": "trading/docs/quiet-window.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-43-09-909Z-quiet-keeper-final-review-4787ab8a\\review.md",
+      "document": "trading/docs/quiet-window.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d\\README.md",
+      "document": "trading/docs/quiet-window.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\docs\\quiet-window.md",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\engine\\examples\\aged_recovery.rs",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\scripts\\aged-recovery.mjs",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T094221462Z-aged-recovery-tool-final-build-d576ef45\\run.json",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T094230079Z-aged-recovery-tool-final-selftest-70ecf825\\run.json",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5\\recovery-report.json",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T09-42-30-210Z-aged-recovery-47d8a9b5\\sha256.json",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T094037913Z-aged-recovery-tool-clippy-cc833adf\\run.json",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T10-03-16-660Z-aged-recovery-95f90658\\run.json",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T10-03-16-660Z-aged-recovery-95f90658\\recovery-report.json",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T100029870Z-demo-normal-stop\\process-exit.json",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\docs\\evidence-policy.md",
+      "document": "trading/docs/aged-recovery-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\docs\\quiet-window.md",
+      "document": "trading/docs/bench-plan.md"
+    },
+    {
+      "target": "C:\\project\\hackton-2026-tbd\\trading\\docs\\performance.md",
+      "document": "trading/docs/bench-plan.md"
+    }
+  ],
+  "pinned_hashes": [
+    {
+      "sha": "C54498A51F66A18E9CEFD3077E79539EB1E9A770A296A452111A8D206F185D73",
+      "path": "trading/scripts/quiet-window.mjs"
+    },
+    {
+      "sha": "62A413A9C1ADFC4731A22B4F568128ECA86F34D28B97636DF603F592933323C7",
+      "path": "trading/scripts/quiet-window.process.test.mjs"
+    },
+    {
+      "sha": "65348C203D3DDF0A29CB3FA19ECA650347E4CD77308F2352F434212063896512",
+      "path": "trading/engine/target/release/leave-engine.exe"
+    },
+    {
+      "sha": "7CFD820A78D0F2CE1CAC442F5DA941E817E23E880E8CF0653A76C7C037DF1A86",
+      "path": "trading/engine/target/release/examples/core_bench.exe"
+    },
+    {
+      "sha": "D2C8DD9ED9315D6859BE5350F5B2E8C909594735D6000A4C7A0C30966AD14D43",
+      "path": "trading/engine/target/debug/examples/aged_recovery.exe"
+    },
+    {
+      "sha": "12E8C26386584B4B238DEB064A8D8EB156D296A2CA699D8F6A65F0D11CE8F0CC",
+      "path": "park/vite.config.mjs"
+    },
+    {
+      "sha": "99714647EF8C859336B318F0939179A51CDB90439908A160E0A0A2A4561EE53E",
+      "path": "trading/data/demo-current.json"
+    }
+  ],
+  "owned_fixture_pids_absent": [
+    17040,
+    5684
+  ]
+}

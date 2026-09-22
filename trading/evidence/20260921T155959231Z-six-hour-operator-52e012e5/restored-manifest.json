@@ -1,0 +1,263 @@
+{
+  "run_id": "2026-09-21T23-48-07-743Z-demo-9621ddfc",
+  "started_at": "2026-09-21T23:48:07.748Z",
+  "run_dir": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+  "data_dir": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo",
+  "api_url": "http://127.0.0.1:8787",
+  "ui_url": "http://127.0.0.1:5175",
+  "processes": [
+    {
+      "name": "engine",
+      "pid": 16920,
+      "executable": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc\\bin\\leave-engine.exe",
+      "args": [],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading\\engine",
+      "identity": "leave-engine",
+      "started_at": "2026-09-21T23:48:08.046Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null,
+      "ready_at": "2026-09-21T23:48:09.491Z"
+    },
+    {
+      "name": "frontend",
+      "pid": 15124,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\frontend\\node_modules\\vite\\bin\\vite.js",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "5175",
+        "--strictPort"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading\\frontend",
+      "identity": "vite.js",
+      "started_at": "2026-09-21T23:48:09.507Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null,
+      "ready_at": "2026-09-21T23:48:13.157Z"
+    },
+    {
+      "name": "bot-01",
+      "pid": 23668,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "1",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.176Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-02",
+      "pid": 22876,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "2",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.211Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-03",
+      "pid": 21516,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "3",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.243Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-04",
+      "pid": 19620,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "4",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.287Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-05",
+      "pid": 6232,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "5",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.323Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-06",
+      "pid": 21628,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "6",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.357Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-07",
+      "pid": 13228,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "7",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.391Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-08",
+      "pid": 20512,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "8",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.428Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-09",
+      "pid": 11272,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "9",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.452Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-10",
+      "pid": 11800,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "10",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.495Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-11",
+      "pid": 19816,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "11",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.533Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    },
+    {
+      "name": "bot-12",
+      "pid": 18136,
+      "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+      "args": [
+        "C:\\project\\hackton-2026-tbd\\trading\\bots\\bot.mjs",
+        "12",
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc"
+      ],
+      "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+      "identity": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-48-07-743Z-demo-9621ddfc",
+      "started_at": "2026-09-21T23:48:13.570Z",
+      "spawned": true,
+      "exited": false,
+      "exit_code": null,
+      "exit_signal": null,
+      "spawn_error": null
+    }
+  ]
+}

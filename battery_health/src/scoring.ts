@@ -122,6 +122,7 @@ export function calculateUserSummary(
     endedAt: feature.endedAt,
     startSocPct: feature.mockTruthStartSocPct ?? feature.userReportedStartSocPct,
     endSocPct: feature.mockTruthEndSocPct ?? feature.userReportedEndSocPct,
+    usesReferenceSoc: feature.mockTruthStartSocPct != null || feature.mockTruthEndSocPct != null,
     chargedKwh: feature.chargedKwh,
     // Eligibility must use raw precision: rounding 1.0001C to 1C would admit an excluded record.
     cRate: feature.chargedKwh / ((Date.parse(feature.endedAt) - Date.parse(feature.startedAt)) / 3_600_000) / vehicle.batteryUsableKwh,
@@ -197,6 +198,7 @@ export function calculateUserSummary(
     scorePolicyId: assessment.scorePolicyId,
     referenceReasons: assessment.referenceReasons,
     modeledCapacityStress: round(scientific.observedCapacityStress, 6),
+    scoreExplanation: assessment.scoreExplanation,
     scoreLimitations: scientific.limitations,
     grade,
     goodHabits,

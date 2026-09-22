@@ -1,0 +1,32 @@
+{
+  "evidence": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T23-45-02-152Z-supplementary-resource-analysis-9743302d",
+  "source_status": "completed",
+  "source_reported_completed": true,
+  "parameters": {
+    "expected_process_count": 14,
+    "logical_processors": 16,
+    "source_interval_seconds": 30,
+    "max_gap_seconds": 65,
+    "max_gap_policy": "2 * recorded interval_seconds + 5 seconds",
+    "clock_disagreement_tolerance_ms": 1000,
+    "cpu_denominator": "Adjacent recorded elapsed_ms delta * recorded logical_processors"
+  },
+  "coverage": {
+    "sample_count": 336,
+    "first_at": "2026-09-21T13:17:59.7923779+00:00",
+    "last_at": "2026-09-21T16:05:52.8166549+00:00",
+    "observed_elapsed_span_seconds": 10073.120071899999,
+    "complete_membership_samples": 336,
+    "incomplete_or_invalid_samples": 0,
+    "all_samples_and_intervals_valid": true,
+    "completion_note": "Sampler status completed means its loop ended; it does not imply complete or valid resource coverage."
+  },
+  "full_group_cpu": {
+    "interval_count": 335,
+    "excluded_interval_count": 0,
+    "covered_interval_seconds": 10073.120071900004,
+    "cpu_seconds": 992.015625,
+    "mean_percent_total_capacity": 0.6155091582344784
+  },
+  "excluded_partial_tail_bytes": 0
+}

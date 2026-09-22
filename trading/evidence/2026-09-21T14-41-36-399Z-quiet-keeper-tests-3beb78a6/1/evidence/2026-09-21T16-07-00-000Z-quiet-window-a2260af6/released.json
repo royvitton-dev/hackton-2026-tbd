@@ -1,0 +1,41 @@
+{
+  "run_id": "2026-09-21T16-07-00-000Z-quiet-window-a2260af6",
+  "pid": 20568,
+  "token": "cdb9d483-802b-4690-8e7c-4b45b5044ea8",
+  "release_token": "fdd445df-6504-4762-b850-2066017e0a46",
+  "ready_at": "2026-09-21T16:07:00.000Z",
+  "manifest_sha256": "7ad9d1d69be5b7a7bfd829f5e2b936622e638243d769131230a173d530fe1999",
+  "lock_file": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-41-36-399Z-quiet-keeper-tests-3beb78a6\\1\\data\\demo-launcher.lock",
+  "absent_pids": [
+    700001,
+    700002,
+    700003,
+    700004,
+    700005,
+    700006,
+    700007,
+    700008,
+    700009,
+    700010,
+    700011,
+    700012,
+    700013,
+    700014,
+    710001,
+    710002,
+    710003
+  ],
+  "scope": "Only cooperative demo launchers are excluded. Root must confirm real observer completion and diagnostic child exits.",
+  "released_at": "2026-09-21T16:07:00.000Z",
+  "request": {
+    "run_id": "2026-09-21T16-07-00-000Z-quiet-window-a2260af6",
+    "pid": 20568,
+    "release_token": "fdd445df-6504-4762-b850-2066017e0a46",
+    "confirmed_no_running_diagnostics": true,
+    "evidence": [
+      "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-41-36-399Z-quiet-keeper-tests-3beb78a6\\1\\evidence\\2026-09-21T16-07-00-000Z-quiet-window-a2260af6\\diagnostics-completed.json"
+    ]
+  },
+  "original_owner_released": true,
+  "current_lock_present": false
+}

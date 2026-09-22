@@ -3,11 +3,11 @@ import images from '../../src/data/vehicleImageSources.json' with { type: 'json'
 import models from '../../src/data/vehicleModelSources.json' with { type: 'json' };
 import workbook from '../../src/data/battery/workbook.json' with { type: 'json' };
 
-test('Every remaining vehicle has a real PNG texture, fixed camera and battery focus', async ({ page }) => {
+test('Authored vehicles retain selectable source photos and return to 3D for battery focus', async ({ page }) => {
   test.setTimeout(300000); // Remaining photo profiles plus mobile on software WebGL.
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
-  const photos = models.filter(model => !model.available);
+  const photos = models.filter(model => 'sourceType' in model && model.sourceType === 'project-authored');
   expect(photos).toHaveLength(4);
   await page.goto('/?user=U0059');
   for (const model of photos) {
@@ -16,8 +16,9 @@ test('Every remaining vehicle has a real PNG texture, fixed camera and battery f
     await page.getByRole('combobox', { name: '사용자 및 차량' }).selectOption(user.userId);
     const canvas = page.locator('canvas');
     await expect(canvas).toHaveAttribute('data-vehicle-id', model.vehicleId,{timeout:90000});
+    await page.getByRole('button', { name: '실차 사진', exact: true }).click();
     await expect(canvas).toHaveAttribute('data-renderer', 'webgl-cutout');
-    await expect(canvas).toHaveAttribute('data-cutout-path', `${source.publicCutoutPath}?v=${source.cutoutSourceSha256.slice(0,12)}`);
+    await expect(canvas).toHaveAttribute('data-cutout-path', `${source.publicCutoutPath}?v=${(source.cutoutSha256??source.cutoutSourceSha256).slice(0,12)}`);
     await expect(canvas).toHaveAttribute('data-camera-controls', 'locked');
     await expect(page.getByTestId('vehicle-model')).toHaveText(model.model);
     await expect(page.locator('img')).toHaveCount(0);
@@ -39,6 +40,8 @@ test('Every remaining vehicle has a real PNG texture, fixed camera and battery f
     await expect(page.locator('#battery-info-panel')).toHaveCount(0);
     await page.getByRole('button',{name:'배터리 위치 보기'}).click();
     await expect(page.locator('#battery-info-panel')).toBeVisible();
+    await expect(canvas).toHaveAttribute('data-renderer', 'webgl-3d-mesh');
+    await expect(canvas).toHaveAttribute('data-pack-inside-vehicle', 'true');
     await page.screenshot({path:`test-results/png-focus-${model.vehicleId}.png`,fullPage:true});
     await page.keyboard.press('Escape');
     await expect(page.locator('#battery-info-panel')).toHaveCount(0);

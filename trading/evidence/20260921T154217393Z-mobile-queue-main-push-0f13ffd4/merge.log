@@ -1,0 +1,42 @@
+warning: in the working copy of 'park/vite.config.mjs', LF will be replaced by CRLF the next time Git touches it
+Merge made by the 'ort' strategy.
+ README.md                                          |  24 +-
+ battery_health/resoures/images/model_sources.json  | 170 +++++++++----
+ battery_health/resoures/images/models/CREDITS.md   |   8 +
+ .../models/audi_q4_45_etron_2026_authored.glb      | Bin 0 -> 474108 bytes
+ .../models/audi_q6_etron_quattro_2025_authored.glb | Bin 0 -> 478564 bytes
+ .../resoures/images/models/authored-models.json    |  50 ++++
+ .../models/bmw_i5_edrive40_2026_authored.glb       | Bin 0 -> 391688 bytes
+ .../models/mini_electric_cooper_2026_authored.glb  | Bin 0 -> 373040 bytes
+ public/assets/vehicles/model_sources.json          | 170 +++++++++----
+ public/assets/vehicles/models/CREDITS.md           |   8 +
+ .../models/audi_q4_45_etron_2026_authored.glb      | Bin 0 -> 474108 bytes
+ .../models/audi_q6_etron_quattro_2025_authored.glb | Bin 0 -> 478564 bytes
+ .../models/bmw_i5_edrive40_2026_authored.glb       | Bin 0 -> 391688 bytes
+ .../models/mini_electric_cooper_2026_authored.glb  | Bin 0 -> 373040 bytes
+ scripts/generate-authored-vehicles.mjs             | 266 +++++++++++++++++++++
+ src/app/globals.css                                |   2 +
+ src/components/VehicleGlbModel.tsx                 |   1 +
+ src/components/VehicleImageWebGLViewer.tsx         |  25 +-
+ src/data/vehicleImageMap.ts                        |   4 +
+ src/data/vehicleModelSources.json                  | 170 +++++++++----
+ tests/authored-vehicles.test.ts                    |  25 ++
+ tests/browser/audi-q4.spec.ts                      |   8 +-
+ tests/browser/authored-vehicles.spec.ts            |  46 ++++
+ tests/browser/cutouts.spec.ts                      |   7 +-
+ tests/browser/ioniq6.spec.ts                       |   2 +-
+ tests/browser/user-images.spec.ts                  |   3 +-
+ tests/browser/volvo-vw.spec.ts                     |   2 +-
+ 27 files changed, 842 insertions(+), 149 deletions(-)
+ create mode 100644 battery_health/resoures/images/models/audi_q4_45_etron_2026_authored.glb
+ create mode 100644 battery_health/resoures/images/models/audi_q6_etron_quattro_2025_authored.glb
+ create mode 100644 battery_health/resoures/images/models/authored-models.json
+ create mode 100644 battery_health/resoures/images/models/bmw_i5_edrive40_2026_authored.glb
+ create mode 100644 battery_health/resoures/images/models/mini_electric_cooper_2026_authored.glb
+ create mode 100644 public/assets/vehicles/models/audi_q4_45_etron_2026_authored.glb
+ create mode 100644 public/assets/vehicles/models/audi_q6_etron_quattro_2025_authored.glb
+ create mode 100644 public/assets/vehicles/models/bmw_i5_edrive40_2026_authored.glb
+ create mode 100644 public/assets/vehicles/models/mini_electric_cooper_2026_authored.glb
+ create mode 100644 scripts/generate-authored-vehicles.mjs
+ create mode 100644 tests/authored-vehicles.test.ts
+ create mode 100644 tests/browser/authored-vehicles.spec.ts

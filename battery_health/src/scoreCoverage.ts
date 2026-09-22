@@ -1,4 +1,5 @@
 import { calculateScientificScore, isNmcReferenceCompatible, scientificSessionStatus, type ScientificSessionInput } from './scientificScore';
+import { buildScoreExplanation } from './scoreExplanation';
 
 export type ScoreScope = 'FULL' | 'PARTIAL' | 'REFERENCE' | 'NONE';
 export const SCORE_POLICY_ID = 'SOC_IDLE_REFERENCE_V2';
@@ -43,5 +44,6 @@ export function assessScientificHistory(
   const excludedSessionCount = sessions.length - supported.length;
   const scoreScope: ScoreScope = !eligibleFlag ? 'NONE' : referenceReasons.length > 0 ? 'REFERENCE' : excludedSessionCount > 0 ? 'PARTIAL' : 'FULL';
   return { scientific, eligibleFlag, scoreScope, excludedSessionCount, observationDays, estimatedEfc, insufficientReasons,
+    scoreExplanation: buildScoreExplanation(scientific, supported, eligibleFlag),
     scorePolicyId: SCORE_POLICY_ID, modelSupportedSessionCount, modelOutOfRangeSessionCount, referenceReasons };
 }

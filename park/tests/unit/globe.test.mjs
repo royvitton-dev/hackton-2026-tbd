@@ -1,5 +1,5 @@
 import {describe,it,expect} from 'vitest';
-import {PLANET_RADIUS,surfacePoint,surfaceDrop,themeCoordinates,fireworkPhase} from '../../lib/globe.mjs';
+import {PLANET_RADIUS,surfacePoint,surfaceDrop,themeCoordinates,fireworkPhase,gsFireworkPhase} from '../../lib/globe.mjs';
 
 describe('theme placement on the storybook planet',()=>{
  it('keeps existing and newly discovered themes on the spherical surface',()=>{
@@ -19,6 +19,20 @@ describe('theme placement on the storybook planet',()=>{
  });
 });
 describe('endless castle fireworks',()=>{
+ it('forms GS, holds it for the reduced-motion view, then fades away completely',()=>{
+  expect(gsFireworkPhase(3).stage).toBe('launch');
+  expect(gsFireworkPhase(4).stage).toBe('form');
+  expect(gsFireworkPhase(6)).toMatchObject({stage:'hold',opacity:1});
+  expect(gsFireworkPhase(7).stage).toBe('fade');
+  expect(gsFireworkPhase(7.9).opacity).toBeLessThan(gsFireworkPhase(7).opacity);
+  expect(gsFireworkPhase(8.5)).toMatchObject({stage:'rest',opacity:0});
+ });
+ it('repeats every GS phase even after a long-running show',()=>{
+  for(const time of [3,4,6,7,8.5]){
+   const a=gsFireworkPhase(time),b=gsFireworkPhase(time+800);
+   expect(b.stage).toBe(a.stage);expect(b.progress).toBeCloseTo(a.progress,9);expect(b.opacity).toBeCloseTo(a.opacity,9);
+  }
+ });
  it('launches, blooms and fades before the next cycle',()=>{
   expect(fireworkPhase(.5,0)).toMatchObject({stage:'launch',progress:.5,opacity:1});
   expect(fireworkPhase(1,0)).toMatchObject({stage:'burst',progress:0,opacity:1});

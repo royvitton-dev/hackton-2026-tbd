@@ -1,0 +1,11 @@
+{
+  "command": "node evidence/20260921T153044611Z-snapshot-order-window-audit-348f51aa/analyze.mjs",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "exec_chunk": "27a0ea",
+  "exit_code": 0,
+  "wall_time_seconds": 0.4525256,
+  "created_at": "2026-09-21T15:31:28.477Z",
+  "input_files": 24,
+  "result": "analysis.json",
+  "scope": "Only reads existing mobile evidence, source, and pinned binaries; writes unique evidence. No API calls, builds, tests, service control or production changes."
+}

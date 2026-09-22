@@ -1,0 +1,26 @@
+{
+  "executable": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+  "args": [
+    "C:\\project\\hackton-2026-tbd\\node_modules\\vite\\bin\\vite.js",
+    "build",
+    "--config",
+    "C:\\project\\hackton-2026-tbd\\trading\\frontend\\vite.config.ts",
+    "--base",
+    "/trading/",
+    "--outDir",
+    "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T15-07-30-187Z-unified-trading-build-3c4f9b7c\\dist"
+  ],
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading\\frontend",
+  "started_at": "2026-09-21T15:08:08.974Z",
+  "node_version": "v24.19.0",
+  "root_vite_version": "7.3.6",
+  "frontend_vite_version": "7.3.6",
+  "unified_recipe_source": "scripts/build-unified.mjs",
+  "differences": [
+    "outDir changed to a fresh unique trading/evidence run/dist",
+    "--emptyOutDir omitted as instructed; no existing directory is emptied"
+  ],
+  "production_scope": "Only the trading Vite step; no tsc, other app, Next build, server, browser, API, or deployment.",
+  "env_policy": "Inherited current process environment, as the unified build does. No values changed or full environment dumped; present dotenv files are hashed without copying content.",
+  "child_pid": 8088
+}

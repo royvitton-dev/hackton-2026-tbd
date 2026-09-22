@@ -1,0 +1,7 @@
+{
+  "started": "2026-09-21T15:40:58.0150849Z",
+  "ended": "2026-09-21T15:40:59.1300061Z",
+  "command": "node node_modules/vitest/vitest.mjs run --config park/vitest.router.config.mjs --reporter=default park/tests/router-unit/routes.test.mjs",
+  "exit_code": 0,
+  "first_attempt": "Wrong node:test runner for a Vitest file, TypeError on runner.config; original output retained. No application test ran in that attempt."
+}

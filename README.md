@@ -1,6 +1,6 @@
 # hackton-2026-tbd
 
-2026 해커톤 작업 모음입니다. `npm run dev` 하나로 모든 웹 프로젝트를 **http://localhost:5190/projects/** 에서 엽니다. 앱을 선택해도 별도 UI 포트나 서버를 만들지 않습니다.
+2026 해커톤 작업 모음입니다. `npm run dev` 하나로 모든 웹 프로젝트를 **http://localhost:5190/projects/** 에서 엽니다. 통합 브라우저 화면은 같은 포트를 사용합니다. 거래소 최초 준비 후에는 로컬 엔진·12개 봇과 독립 UI도 함께 준비합니다.
 
 ## 통합 서버
 
@@ -15,8 +15,8 @@ npm run dev
 | --- | --- |
 | `/park/` | 3D Wonder Park (기본 화면) |
 | `/map/`, `/map/mobility.html` | 도면·모빌리티 |
-| `/vehicle/` | EVision 차량·충전 이력 |
-| `/battery_health/` | 배터리 관리 |
+| `/vehicle/` | `/battery_health/`로 연결하는 호환 주소 |
+| `/battery_health/` | EVision 3D 차량·배터리·충전 이력 |
 | `/dopamin/`, `/pinball/` | 레이싱·핀볼 |
 | `/webpage/`, `/webpage/health/` | DEBUT : ON·VITALIS |
 | `/movie/` | 영상 재생 |
@@ -24,7 +24,7 @@ npm run dev
 | `/voice/` | macOS 음성 CLI 실행 안내 |
 | `/reports/router/` | 통합 라우터 테스트·커버리지·골든 HTML |
 
-거래 엔진은 별도 백엔드 서비스이며 브라우저에서는 같은 5190 포트로 연결합니다. 음성 기능은 기존 네이티브 CLI를 유지합니다. [설치·구조·검증 상세](park/ROUTER.md)를 참고하세요.
+거래 엔진은 별도 백엔드 프로세스이며 통합 브라우저에서는 같은 5190 포트로 연결합니다. [거래소 최초 준비](trading/README.md) 후 기본 로컬 엔진은 서버 시작·거래소 입장 시 자동 준비하고, 실행 중이면 재사용합니다. 음성 기능은 기존 네이티브 CLI를 유지합니다. [설치·구조·검증 상세](park/ROUTER.md)를 참고하세요.
 
 ## 프로젝트 안내
 
@@ -51,7 +51,7 @@ npm run dev
 
 ## 설치와 실행
 
-루트의 `package-lock.json`은 Next.js와 통합 서버 의존성 기준입니다. 기본 npm 스크립트는 통합 서버를 실행하며, EVision 단독 실행은 `vehicle:*` 스크립트를 사용합니다. `battery_health/`에는 동일한 데이터를 사용하는 독립형 Vite MVP가 있습니다.
+루트의 `package-lock.json`은 Next.js와 통합 서버 의존성 기준입니다. 기본 npm 스크립트는 통합 서버를 실행하며, EVision 단독 실행은 `vehicle:*` 스크립트를 사용합니다. `battery_health/` 폴더의 예전 Vite MVP 소스는 보존하며, 통합 서버의 `/battery_health/`는 루트의 최신 Next.js 3D 앱을 제공합니다. 사용자 링크 예: http://localhost:5190/battery_health/?user=U0037 .
 
 Node.js 22.12 이상이 필요합니다.
 
@@ -61,12 +61,12 @@ npm install
 npm run dev
 ```
 
-- 기본: http://localhost:5190/vehicle/?user=U0001 (Hyundai IONIQ 5)
-- Model 3: http://localhost:5190/vehicle/?user=U0002
-- Model Y: http://localhost:5190/vehicle/?user=U0009
-- Volvo EX30: http://localhost:5190/vehicle/?user=U0006
-- Volkswagen ID.4: http://localhost:5190/vehicle/?user=U0076
-- Kona Electric: http://localhost:5190/vehicle/?user=U0010 (2019 대표 외형)
+- 기본: http://localhost:5190/battery_health/?user=U0001 (Hyundai IONIQ 5)
+- Model 3: http://localhost:5190/battery_health/?user=U0002
+- Model Y: http://localhost:5190/battery_health/?user=U0009
+- Volvo EX30: http://localhost:5190/battery_health/?user=U0006
+- Volkswagen ID.4: http://localhost:5190/battery_health/?user=U0076
+- Kona Electric: http://localhost:5190/battery_health/?user=U0010 (2019 대표 외형)
 - 선택한 사용자 ID를 URL과 localStorage에 저장합니다.
 - 사용자 변경 시 차량·점수·주행 정보·충전 이력이 함께 바뀝니다.
 - 상단 검색은 사용자 ID, 제조사, 모델명, 프로필을 지원합니다.
@@ -88,7 +88,7 @@ npm run demo
 
 `demo`는 완성된 `.next`, public asset과 설정을 임시 디렉터리에 복사해 실행합니다. 이후 작업 폴더에서 빌드하거나 Git 브랜치를 바꿔도 실행 중인 화면의 JavaScript/GLB 경로가 유지됩니다. 새 결과를 보려면 데모를 종료한 뒤 다시 실행합니다. 의존성은 현재 `node_modules`를 사용하므로 의존성을 변경한 뒤에도 다시 실행해야 합니다. 임시 복사본은 정상 종료할 때 제거합니다.
 
-`npm run vehicle:start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:5190/vehicle/?user=U0001 입니다. 현재 20개 차량 프로필 모두 표시됩니다. GLB가 있는 16개는 실제 3D 모델로, 나머지 4개는 실차 투명 PNG를 WebGL에 고정해서 표시합니다. 장면 안내에서 두 방식을 구분합니다.
+`npm run vehicle:start`로 실행 중인 `.next`를 다시 빌드하면 이전 HTML이 삭제된 JavaScript 파일을 참조해 404가 발생할 수 있습니다. 이 경우 서버를 재시작하고 브라우저를 새로고침합니다. 차량 확인 링크는 http://localhost:5190/battery_health/?user=U0001 입니다. 현재 20개 차량 프로필에 GLB를 연결했습니다. 16개는 외부에서 확보한 모델, BMW i5·Audi Q4/Q6·MINI 4개는 프로젝트에서 제작한 개략 모델입니다. 후자는 정밀 실차 형상이나 사진 수준의 품질에 도달한 모델이 아닙니다. 장면 안내와 출처에서 이를 구분합니다.
 
 ## 데이터 기준
 
@@ -168,7 +168,7 @@ MINI Cooper / BMW i5 / Audi Q4·Q6 / Volvo EX30 / Volkswagen ID.4는 제조사 �
 
 ## 실제 WebGL 3D 렌더링
 
-GLB가 있으면 **실제 차량 메시**를 우선 렌더링합니다. GLB 미확보 4종은 현재 실차 누끼 PNG를 Canvas의 texture로 표시하며, 요청된 3D 회전·배터리 투시는 미완료 상태입니다. PNG는 고정된 시점으로 표시하고 사진 회전이나 depth-stack을 사용하지 않습니다. UI에서도 실차 이미지로 표기하며 실제 3D 모델로 설명하지 않습니다. 차량을 HTML img 또는 Next Image로 렌더링하지 않습니다.
+GLB의 입체 geometry를 WebGL에서 렌더링합니다. BMW i5·Audi Q4/Q6·MINI에는 차체·유리·바퀴를 갖춘 자체 제작 개략 GLB를 연결했습니다. 사진을 회전하거나 depth-stack으로 만드는 방식이 아닙니다. 이 4종의 화면에는 **자체 제작 개략 3D · 정밀 CAD 아님**을 표시하며, `실차 사진` 버튼으로 기존 누끼 사진을 비교할 수 있습니다. 사진은 고정 시점이고 배터리 보기에서는 다시 GLB로 전환합니다. 차량을 HTML img 또는 Next Image로 렌더링하지 않습니다.
 
 현재 실제 GLB가 연결된 모델:
 - Volvo EX30: LagzDesign의 CC BY 4.0 커뮤니티 모델, 59,354 triangles / 0.33 MB. 실내가 없는 2023 대표 외형이며 정밀 CAD가 아닙니다. 원본 GLB에 제작자·원본 URL·라이선스가 포함되어 있습니다.
@@ -184,7 +184,17 @@ GLB가 있으면 **실제 차량 메시**를 우선 렌더링합니다. GLB 미�
 - Kia Niro EV: 기아 홍콩 공식 2세대 EV 모델. 445,929 triangles / 4.0 MB. 우핸들 대표 외형이며 연식/트림 차이가 있습니다.
 - Kia EV9: 기아 공식 글로벌 쇼룸의 GT-Line 모델. 228,611 triangles / 1.0 MB. 21인치 휠이 포함된 대표 외형입니다.
 
-**전체 16개 모델 / 20개 차량 프로필을 표시합니다: 실제 GLB 12개 모델 / 16개 프로필, 실차 PNG 4개 모델 / 4개 프로필.** PNG 대상은 Audi Q4 45 e-tron, Audi Q6 e-tron, BMW i5, MINI Cooper Electric입니다. 모두 원본 사진에서 실제 배경을 제거한 파일이며 임의 placeholder가 아닙니다. 4종의 상세 GLB는 아직 미확보이고 그 이유는 별도로 유지합니다. IONIQ 5와 EV6의 Sketchfab 다운로드는 HTTP 401 인증 요구로 진행하지 않았고, 제조사 공식 페이지에 공개 연결된 모델로 대체 확보했습니다. Model Y 최초 다운로드 timeout은 이어받기와 GLB 길이 검증으로 복구했습니다. `model_sources.json`에 기록합니다. 확보한 모델은 정확한 2026년형 CAD가 아닌 대표 외형이며 연식·트림 차이를 UI에 고지합니다.
+**전체 16개 모델 / 20개 차량 프로필에 GLB를 연결했습니다: 외부 출처 12개 모델 / 16개 프로필, 자체 제작 개략 4개 모델 / 4개 프로필.** 자체 제작 대상은 Audi Q4 45 e-tron, Audi Q6 e-tron, BMW i5, MINI Cooper Electric입니다. 제조사 CAD를 확보한 것으로 기록하지 않습니다. 기존 다운로드 실패 기록과 사진 출처는 보존합니다. 개략 GLB의 드래그·투시 지원은 사진 수준의 외형 완성도를 의미하지 않으며, 이 4종의 정밀 모델 확보와 외형 개선은 남아 있습니다.
+
+자체 모델은 치수와 차종별 특징을 참고해 만든 입체 메시입니다. 생성 코드에는 사진 texture가 없고 `model_sources.json`에 `sourceType: project-authored`, `downloaded: false`, `generated: true`, `manufacturerCad: false`를 기록합니다. 원본과 public 사본을 재생성하려면:
+
+```sh
+node scripts/generate-authored-vehicles.mjs battery_health/resoures/images/models
+npm run sync:vehicle-assets
+npm run verify:vehicle-3d
+```
+
+기존 외부 모델의 연식·트림 차이와 다운로드 실패/복구 기록은 `model_sources.json`에서 확인할 수 있습니다.
 
 IONIQ 5 출처는 현대 공식 페이지 및 `model_sources.json`에 기록합니다. **제조사 저작권 자료이며 공개 재배포 라이선스는 확인되지 않았습니다.** CC BY 모델로 표시하지 않습니다. 호주형 기본 트림 외형이므로 원본 데이터의 국내 트림과 차이가 있을 수 있습니다. 원본 GLB와 트림 구성 JSON은 `images/sources/`에 보존합니다. 아래 명령으로 공식 트림 선택 결과를 재생성하고 동기화합니다.
 
@@ -240,7 +250,7 @@ node scripts/optimize-vehicle-model.mjs original.glb optimized.glb --preserve-ge
 
 - WebGL 스튜디오 바닥, 원형 조명 플랫폼, 환경 반사광과 그림자. 차량 옆 네모로 보이던 충전기 장식은 모든 차량 장면에서 제거했습니다.
 - OrbitControls: 수평 이동 금지, polar 55–78°, azimuth −65–−15° (기본 3/4 방향 주변 ±25°), 거리 5.7–10.5. 360도/차량 하부 시점 금지.
-- GLB의 배터리 보기 버튼을 누르면 차체는 반투명해지고 바퀴 재질은 유지되어 내부 배터리 개략도가 보입니다. 배터리 팩은 차체 내부 치수와 depth test를 유지하며, 닫으면 원래 재질로 돌아갑니다. PNG는 실제 3D 모델이 없어 회전·투시를 지원하지 않습니다. 이 제한을 장면 상단에 표시하며 버튼은 배터리 정보 패널을 엽니다.
+- GLB의 배터리 보기 버튼을 누르면 차체는 반투명해지고 바퀴 재질은 유지되어 내부 배터리 개략도가 보입니다. 배터리 팩은 차체 내부 치수와 depth test를 유지하며, 닫으면 원래 재질로 돌아갑니다. 실차 사진 비교 모드에서 배터리 보기 버튼을 누르면 해당 차량의 개략 GLB로 전환해 투시를 표시합니다. ESC로 닫으면 사진 모드로 돌아갑니다.
 - ESC/닫기로 포커스 해제. reduced-motion 설정을 따릅니다.
 - 배터리 메시와 hotspot은 위치 설명용 개략도이며 실차의 정확한 팩 CAD가 아닙니다.
 - 배터리 개략도는 차체 내부의 케이스와 12개 모듈로 구성하고 depth test를 적용합니다. 큰 평판을 차량 앞에 강제로 겹쳐 그리지 않습니다. 배터리 보기의 polar angle은 65–78°로 제한해 상단 평판이나 하부가 강조되는 시점을 막습니다.
@@ -249,7 +259,20 @@ node scripts/optimize-vehicle-model.mjs original.glb optimized.glb --preserve-ge
 
 ## 검증
 
-`verify:assets`는 파일·출처·동기화 무결성을 검사하므로 사진만 있어도 통과할 수 있습니다. **전체 차량의 실제 3D 리소스 확보 여부는 `npm run verify:vehicle-3d`로 별도 검사합니다.** 현재 Audi Q4·Q6, BMW i5, MINI Cooper Electric의 GLB가 없어 이 명령은 차량별 원인과 함께 종료 코드 1을 반환합니다. 정지 PNG 표시 테스트 통과는 회전·배터리 투시 완료를 의미하지 않습니다. GLB 확보 후에도 실제 브라우저에서 드래그·투시를 검수해야 합니다.
+사용자가 제공한 이미지는 외부 다운로드 없이 원본 파일을 `battery_health/resoures/images/sources/`에 그대로 보관합니다. 아래 명령으로 모델 매핑을 교체한 뒤 누끼와 public 복사본을 다시 생성합니다.
+
+```sh
+node scripts/import-vehicle-image.mjs audi_q4_45_etron_2026 /path/to/vehicle.webp "사용자 제공 대표 이미지; 연식과 트림 차이 설명"
+npm run cutout:vehicles
+npm run sync:vehicle-assets
+npm run verify:assets
+```
+
+실제 alpha가 있는 PNG는 투명도를 보존하고, 체크무늬가 픽셀로 포함된 불투명 이미지는 rembg로 배경을 제거합니다. 교체 시 기존 누끼 캐시를 무효화합니다. 출처 파일 SHA-256, 사용자 제공 여부, 알 수 없는 저작자·라이선스를 기록하며 임의의 인터넷 출처를 만들지 않습니다. `download:vehicles -- --force`도 사용자 파일은 보관된 로컬 원본에서 다시 생성합니다. Q4의 작은 마스크 보정은 원본 해시에 묶인 `sources/*_alpha_corrections.json`으로 재현합니다. 새 파일로 교체할 때는 기존 보정을 재사용하지 않습니다.
+
+2026-09-22 사용자 제공 Q4(2024 표기), MINI Cooper S, BMW i5(최종 선택한 파란색 `4_221_f.webp`) 사진을 연결했습니다. BMW는 이전의 작은 흰색 이미지 대신 999×564 원본을 사용합니다. MINI 사진은 충전 데이터의 전기 MINI와 다른 구동계/세대일 수 있으며 출처 패널에 표시합니다. 이 세 파일은 정지 WebGL 사진이며 실제 3D 회전·배터리 투시 리소스를 대체하지 않습니다.
+
+`verify:assets`는 파일·출처·동기화 무결성을 검사하므로 사진만 있어도 통과할 수 있습니다. **전체 차량의 실제 3D 리소스 확보 여부는 `npm run verify:vehicle-3d`로 별도 검사합니다.** 현재 20개 프로필의 GLB 무결성 검사는 통과합니다. 이 검사는 자체 제작 개략 GLB도 포함하므로 실차 외형 정확도나 사진 수준의 품질을 보증하지 않습니다. 실제 브라우저의 드래그·투시는 `tests/browser/authored-vehicles.spec.ts`로 별도 검증합니다.
 
 ```sh
 npm run lint
@@ -271,8 +294,8 @@ node scripts/capture-demo.mjs
 핵심 파일:
 - `src/components/VehicleBatteryDashboard.tsx`: 단일 사용자 컨테이너/탭.
 - `VehicleImageWebGLViewer.tsx`, `VehicleGlbModel.tsx`, `GarageEnvironment.tsx`: 실제 3D 렌더링.
-- `VehicleCutoutMesh.tsx`: GLB 미확보 차량의 실제 투명 PNG를 WebGL에서 고정 표시.
-- `tests/browser/cutouts.spec.ts`, `casper.spec.ts`: 6종의 PNG 전환/고정 카메라/상세 버튼 및 캐스퍼 실제 메시 검증.
+- `VehicleCutoutMesh.tsx`: 실차 사진 비교 모드와 GLB 미확보 차량의 실제 투명 PNG를 WebGL에서 고정 표시.
+- `tests/browser/cutouts.spec.ts`, `authored-vehicles.spec.ts`, `casper.spec.ts`: 사진 비교 전환, 실제 메시 드래그, 배터리 투시와 캐스퍼 메시 검증.
 - `tests/browser/battery-depth.spec.ts`: 차체 투시와 원래 재질 복원, 배터리 depth test와 차체 경계, 상단·측면 카메라 제한 검증.
 - `BatteryHotspot.tsx`, `BatteryFocusController.tsx`, `BatteryInfoPanel.tsx`: 배터리 포커스.
 - `VehicleDetails.tsx`, `ChargingHistory.tsx`: 리소스 기반 상세 정보.

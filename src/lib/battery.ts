@@ -58,6 +58,7 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
     endedAt: item.s.endedAt,
     startSocPct: item.startSoc,
     endSocPct: item.endSoc,
+    usesReferenceSoc: item.s.mockTruthStartSocPct != null || item.s.mockTruthEndSocPct != null,
     chargedKwh: item.s.chargedKwh,
     cRate: item.power / vehicle.batteryCapacityKwh,
     idleMinutes: item.idle,
@@ -81,6 +82,7 @@ export function summarizeUser(user: RawUser, raw: RawVehicle, input: RawSession[
     scorePolicyId: assessment.scorePolicyId,
     referenceReasons: assessment.referenceReasons,
     modeledCapacityStress: scientific.observedCapacityStress,
+    scoreExplanation: assessment.scoreExplanation,
     scoreLimitations: scientific.limitations,
   };
   const score = eligible ? scientific.score : null;

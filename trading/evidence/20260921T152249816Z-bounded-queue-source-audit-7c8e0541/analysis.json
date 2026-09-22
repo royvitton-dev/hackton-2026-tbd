@@ -1,0 +1,363 @@
+{
+  "created_at": "2026-09-21T15:25:57.080Z",
+  "root": "C:\\project\\hackton-2026-tbd\\trading",
+  "scope": "Offline pinned local primary source audit, not runtime measurement or formal progress proof",
+  "new_builds": 0,
+  "benchmarks": 0,
+  "services_started": 0,
+  "service_signals": 0,
+  "production_edits": 0,
+  "packages": [
+    {
+      "name": "crossbeam-channel",
+      "version": "0.5.17",
+      "package_checksum": "98b0cc327b5bc766e7fda9c9260cc0fa81b43a8e240440422dff70788e3f9ef1",
+      "archive": {
+        "path": ".tools/cargo/registry/cache/index.crates.io-1949cf8c6b5b557f/crossbeam-channel-0.5.17.crate",
+        "sha256": "98b0cc327b5bc766e7fda9c9260cc0fa81b43a8e240440422dff70788e3f9ef1",
+        "bytes": 94171
+      },
+      "files": [
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-channel-0.5.17/Cargo.toml",
+          "sha256": "9c5e8051e04856bca1ea49edeb612b8a7ccb745bb79e67bc69d1d8cce2c02beb",
+          "bytes": 2670,
+          "verified_against_checksum_pinned_crate_archive": true
+        },
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-channel-0.5.17/src/channel.rs",
+          "sha256": "338d8bace28e022d4f6077a9a2a0d19365aa2729b8b3d492145b696faa501fca",
+          "bytes": 48923,
+          "verified_against_checksum_pinned_crate_archive": true
+        },
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-channel-0.5.17/src/flavors/array.rs",
+          "sha256": "c4cfcbecb137bb8d605801b36c5faee87abaa2579b6f6be7d35332a280e147c9",
+          "bytes": 22061,
+          "verified_against_checksum_pinned_crate_archive": true
+        },
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-channel-0.5.17/src/waker.rs",
+          "sha256": "05f4dbc45c36ffaf32656b289d276a46436be3bf83c75354c10dc80f33ef37b0",
+          "bytes": 8625,
+          "verified_against_checksum_pinned_crate_archive": true
+        },
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-channel-0.5.17/src/context.rs",
+          "sha256": "0c5f278572d3db33ed3dfba45f62c8db372c9153db0695a5cdecf700c2ba73a5",
+          "bytes": 4998,
+          "verified_against_checksum_pinned_crate_archive": true
+        },
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-channel-0.5.17/src/utils.rs",
+          "sha256": "e40bab015ced2ecab5bc76199112550891647666964f65f75bc53d8aea1e6c6f",
+          "bytes": 1896,
+          "verified_against_checksum_pinned_crate_archive": true
+        }
+      ]
+    },
+    {
+      "name": "crossbeam-utils",
+      "version": "0.8.23",
+      "package_checksum": "a31eee39dddec8330830986fcd7625edb5a24ec90ea038215273bbc3adb08ac6",
+      "archive": {
+        "path": ".tools/cargo/registry/cache/index.crates.io-1949cf8c6b5b557f/crossbeam-utils-0.8.23.crate",
+        "sha256": "a31eee39dddec8330830986fcd7625edb5a24ec90ea038215273bbc3adb08ac6",
+        "bytes": 47174
+      },
+      "files": [
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-utils-0.8.23/Cargo.toml",
+          "sha256": "e7a383373c60dea49a5c0dd2558aebbdae26ba9b07878d4f8fa004a5538e2b80",
+          "bytes": 2053,
+          "verified_against_checksum_pinned_crate_archive": true
+        },
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-utils-0.8.23/src/backoff.rs",
+          "sha256": "8715f0303ec91d1847c8ac3fc24bcc002a22a7284ade610e5eff4181f85827c7",
+          "bytes": 8361,
+          "verified_against_checksum_pinned_crate_archive": true
+        },
+        {
+          "path": ".tools/cargo/registry/src/index.crates.io-1949cf8c6b5b557f/crossbeam-utils-0.8.23/src/lib.rs",
+          "sha256": "060dabc6dc07de92a7afa57dcbc47222a95ef5819d543ad854858c3b329d6637",
+          "bytes": 3513,
+          "verified_against_checksum_pinned_crate_archive": true
+        }
+      ]
+    }
+  ],
+  "pins": [
+    {
+      "path": "engine/src/core.rs",
+      "sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "bytes": 34636,
+      "expected_sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa"
+    },
+    {
+      "path": "engine/src/model.rs",
+      "sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "bytes": 3121,
+      "expected_sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7"
+    },
+    {
+      "path": "engine/target/release/leave-engine.exe",
+      "sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512",
+      "bytes": 3010798,
+      "expected_sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512"
+    },
+    {
+      "path": "engine/target/release/examples/core_bench.exe",
+      "sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86",
+      "bytes": 600795,
+      "expected_sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86"
+    },
+    {
+      "path": "engine/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194,
+      "expected_sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9"
+    }
+  ],
+  "production": [
+    {
+      "path": "engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "bytes": 23831
+    },
+    {
+      "path": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954
+    },
+    {
+      "path": "engine/Cargo.toml",
+      "sha256": "9bcaa0b13d35fd5cda66c80f65d46dad64759dddc36a1a1923b7fd0f603c12d6",
+      "bytes": 635
+    },
+    {
+      "path": "scripts/env.ps1",
+      "sha256": "480f8c3e50fd005dcf9598e413f060c15949ece5035fcb651516c216651609a8",
+      "bytes": 1227
+    },
+    {
+      "path": "docs/requirements.ko.md",
+      "sha256": "bf190c0400db130f8632a5f8a331e0e0f4b07dc9a5ff479281662e122475e3d5",
+      "bytes": 29963
+    },
+    {
+      "path": "docs/adr/001-execution-and-ui.md",
+      "sha256": "a07f4fcc5d88289af6c7d2d7cd64cee5a9743e7249ffdf8aae721421d50b3d74",
+      "bytes": 4009
+    },
+    {
+      "path": "docs/adr/002-durability.md",
+      "sha256": "b6aa0dc7c977524db82fb44a51bf9755e22a4f601368a287cf0979138dd3786a",
+      "bytes": 11749
+    },
+    {
+      "path": "docs/core.md",
+      "sha256": "c22622ee75fc8b3c8e43a53cea0cdf81654793659c053a2ee106b0b7f1cf9791",
+      "bytes": 11412
+    }
+  ],
+  "fingerprints": [
+    {
+      "path": "engine/target/release/.fingerprint/crossbeam-channel-bda999b5b261b601/lib-crossbeam_channel.json",
+      "sha256": "d31175c062d9f6ba27dae4b57ca70d8eac4c9631a90a78ee73c5a6893c8e8ed5",
+      "bytes": 626,
+      "value": {
+        "rustc": 6001218111239039000,
+        "features": "[\"default\", \"std\"]",
+        "declared_features": "[\"default\", \"std\"]",
+        "target": 12076344148867932000,
+        "profile": 5876417064977357000,
+        "path": 2578187906679862300,
+        "deps": [
+          [
+            11050506297539643000,
+            "crossbeam_utils",
+            false,
+            709622658595874000
+          ]
+        ],
+        "local": [
+          {
+            "CheckDepInfo": {
+              "dep_info": "release\\.fingerprint\\crossbeam-channel-bda999b5b261b601\\dep-lib-crossbeam_channel",
+              "checksum": false
+            }
+          }
+        ],
+        "rustflags": [
+          "-C",
+          "link-self-contained=yes",
+          "-C",
+          "dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe"
+        ],
+        "config": 12461341433102277000,
+        "compile_kind": 0
+      }
+    },
+    {
+      "path": "engine/target/release/.fingerprint/crossbeam-channel-3b120ee420dce4b2/lib-crossbeam_channel.json",
+      "sha256": "6bd2dab80021b453055d07706b3bd2fc42da6c5ff4937ec9f0d33bff93a54d81",
+      "bytes": 627,
+      "value": {
+        "rustc": 6001218111239039000,
+        "features": "[\"default\", \"std\"]",
+        "declared_features": "[\"default\", \"std\"]",
+        "target": 12076344148867932000,
+        "profile": 7599899672558324000,
+        "path": 2578187906679862300,
+        "deps": [
+          [
+            11050506297539643000,
+            "crossbeam_utils",
+            false,
+            4002041890442359000
+          ]
+        ],
+        "local": [
+          {
+            "CheckDepInfo": {
+              "dep_info": "release\\.fingerprint\\crossbeam-channel-3b120ee420dce4b2\\dep-lib-crossbeam_channel",
+              "checksum": false
+            }
+          }
+        ],
+        "rustflags": [
+          "-C",
+          "link-self-contained=yes",
+          "-C",
+          "dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe"
+        ],
+        "config": 12461341433102277000,
+        "compile_kind": 0
+      }
+    },
+    {
+      "path": "engine/target/release/.fingerprint/crossbeam-utils-85e7c06599cde3ae/lib-crossbeam_utils.json",
+      "sha256": "270a61541a755b21d64ce9f251ea96113484919d8988cb812f3f56c2576d3765",
+      "bytes": 637,
+      "value": {
+        "rustc": 6001218111239039000,
+        "features": "[\"std\"]",
+        "declared_features": "[\"default\", \"loom\", \"nightly\", \"std\"]",
+        "target": 9626079250877207000,
+        "profile": 7599899672558324000,
+        "path": 12167842786353375000,
+        "deps": [
+          [
+            11050506297539643000,
+            "build_script_build",
+            false,
+            13570750802714644000
+          ]
+        ],
+        "local": [
+          {
+            "CheckDepInfo": {
+              "dep_info": "release\\.fingerprint\\crossbeam-utils-85e7c06599cde3ae\\dep-lib-crossbeam_utils",
+              "checksum": false
+            }
+          }
+        ],
+        "rustflags": [
+          "-C",
+          "link-self-contained=yes",
+          "-C",
+          "dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe"
+        ],
+        "config": 12461341433102277000,
+        "compile_kind": 0
+      }
+    },
+    {
+      "path": "engine/target/release/.fingerprint/crossbeam-utils-0c04f36de2bab65b/lib-crossbeam_utils.json",
+      "sha256": "04885af3bc2caea724de133b7ee1d789e642a254ae651618fa2b998e19ea9122",
+      "bytes": 637,
+      "value": {
+        "rustc": 6001218111239039000,
+        "features": "[\"std\"]",
+        "declared_features": "[\"default\", \"loom\", \"nightly\", \"std\"]",
+        "target": 9626079250877207000,
+        "profile": 5876417064977357000,
+        "path": 12167842786353375000,
+        "deps": [
+          [
+            11050506297539643000,
+            "build_script_build",
+            false,
+            13570750802714644000
+          ]
+        ],
+        "local": [
+          {
+            "CheckDepInfo": {
+              "dep_info": "release\\.fingerprint\\crossbeam-utils-0c04f36de2bab65b\\dep-lib-crossbeam_utils",
+              "checksum": false
+            }
+          }
+        ],
+        "rustflags": [
+          "-C",
+          "link-self-contained=yes",
+          "-C",
+          "dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe"
+        ],
+        "config": 12461341433102277000,
+        "compile_kind": 0
+      }
+    }
+  ],
+  "std_source_present": false,
+  "findings": [
+    {
+      "id": "Q1",
+      "path": "main.rs:33,145-157,514-519",
+      "finding": "Positive capacity 2048; HTTP Work admission uses try_send; one dedicated OS writer uses blocking recv. Full -> HTTP 503 QUEUE_FULL, not durable admission."
+    },
+    {
+      "id": "Q2",
+      "path": "channel.rs:109-128,402-406,818-822; flavors/array.rs:35-103,127-152,160-229",
+      "finding": "Positive capacity selects fixed boxed slot array; atomic head/tail/stamp and compare_exchange_weak reservation. This is an atomic transport segment, not a proof that the complete operation is lock-free or wait-free."
+    },
+    {
+      "id": "Q3",
+      "path": "flavors/array.rs:232-247,341-348; waker.rs:178-229; utils.rs:60-73",
+      "finding": "Successful try_send writes/publishes the slot then receivers.notify; notify may lock std::sync::Mutex when registered receiver waiters exist. Empty waiter fast branch skips this explicit waker mutex."
+    },
+    {
+      "id": "Q4",
+      "path": "flavors/array.rs:323-338,415-465; waker.rs:198-217; context.rs:140-170",
+      "finding": "Successful receive notifies sender waiters; empty blocking recv registers under mutex and calls std::thread::park (no deadline). A wake uses Thread::unpark. Registration/unregistration and disconnect also lock."
+    },
+    {
+      "id": "Q5",
+      "path": "crossbeam-utils/src/backoff.rs:145-155,205-224; flavors/array.rs:160-229,250-320",
+      "finding": "CAS retries spin with hint::spin_loop; snooze yields to the OS scheduler after initial spinning with the enabled std feature. No explicit custom Spinlock primitive was found in this traversed ring/waker path; spin/yield is not a proof of lock-free progress."
+    },
+    {
+      "id": "Q6",
+      "path": "main.rs:629-632; channel.rs:438-443; flavors/array.rs:351-402",
+      "finding": "Shutdown uses send(msg,None), which may register under mutex and park while full, then awaits checkpoint and joins the writer. This intentional control path differs from HTTP try_send admission."
+    },
+    {
+      "id": "Q7",
+      "path": "main.rs:521-528; storage.rs:349-389",
+      "finding": "ACK follows synchronous journal write/sync_all and Core execution on the dedicated writer. Pure Core allocation benchmark excludes this queue, notification, park/unpark, durability and API path."
+    }
+  ],
+  "excluded": [
+    "Exact Windows std Mutex/park syscall implementation",
+    "Runtime mutex contention or waiter frequency",
+    "Quantified latency/performance impact",
+    "Tokio broadcast/oneshot/RwLock internals",
+    "Formal lock-free/wait-free proof for the atomic ring segment"
+  ],
+  "conclusion": "Whole Crossbeam channel and HTTP admission path are not eligible for a blanket lock-free guarantee: their traced success/wait/wake paths include std mutex and/or park. No-waiter ring transport uses atomics/CAS and avoids the explicit waker mutex, but is not claimed formally lock-free.",
+  "next_small_action": "Keep ADR no-global-lock-free statement and optionally add pinned version + conditional notify mutex + blocking recv/shutdown paths; re-audit on dependency upgrade. No queue replacement or production changes proposed without measured evidence.",
+  "read_end": "2026-09-21T15:25:57.088Z",
+  "all_inputs_unchanged_at_end": true
+}

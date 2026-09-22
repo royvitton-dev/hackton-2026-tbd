@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import type { UserVehicle } from '@/types/vehicle';
 import { nextChargeAdvice, scoreCoverageMessage, scorePendingMessage } from '@/lib/batteryPresentation';
 import { formatDate } from './VehicleHealthSummary';
+import { BatteryScoreExplanation, ScoreResearchNotes } from './BatteryScoreExplanation';
 export function BatteryInfoPanel({user,onClose,initialExpanded=false}:{user:UserVehicle;onClose:()=>void;initialExpanded?:boolean}){
   const [showBasis,setShowBasis]=useState(initialExpanded);const close=useRef<HTMLButtonElement>(null);
   useEffect(()=>{const previous=document.activeElement as HTMLElement|null;close.current?.focus({preventScroll:true});return()=>previous?.focus({preventScroll:true});},[]);
@@ -17,6 +18,7 @@ export function BatteryInfoPanel({user,onClose,initialExpanded=false}:{user:User
       </>}
     </dl>
     <div className="charge-advice"><span>다음 충전은 이렇게</span><h3>{advice.title}</h3><p>{advice.description}</p></div>
+    <BatteryScoreExplanation user={user}/>
     <button className="basis-toggle" onClick={()=>setShowBasis(!showBasis)} aria-expanded={showBasis} aria-controls="score-attribution">점수는 어떻게 계산하나요? <span aria-hidden="true">{showBasis?'−':'+'}</span></button>
     {showBasis&&<div id="score-attribution" className="score-explanation">
       <p>충전 중 잔량 변화와 충전 후 연결 시간을 바탕으로 계산합니다. 점수가 높을수록 기준 모델에서 평가한 충전 부담이 적습니다.</p>
@@ -26,7 +28,7 @@ export function BatteryInfoPanel({user,onClose,initialExpanded=false}:{user:User
       {user.attribution.scoreExcludedSessionCount>0&&<p>잔량 누락·유효하지 않은 기록 {user.attribution.scoreExcludedSessionCount}건은 제외했습니다. 제외된 기록의 영향은 점수에 반영되지 않습니다.</p>}
       <p>논문의 열화식을 활용한 비교 지표이며, 0–100점 환산과 참고 평가 정책 자체가 논문으로 검증된 것은 아닙니다.</p>
       {user.healthScore===null&&<p className="insufficient">{scorePendingMessage(user)}</p>}
-      <a href="https://doi.org/10.1016/j.jpowsour.2014.02.012" target="_blank" rel="noreferrer">산정에 참고한 배터리 열화 연구 ↗</a>
     </div>}
+    <ScoreResearchNotes/>
   </section>;
 }

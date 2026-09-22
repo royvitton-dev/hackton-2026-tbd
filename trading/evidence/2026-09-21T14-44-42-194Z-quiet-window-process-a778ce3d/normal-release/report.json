@@ -1,0 +1,464 @@
+{
+  "name": "normal-release",
+  "started_at": "2026-09-21T14:44:42.205Z",
+  "expected_exit_code": 0,
+  "fixture_root": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d\\normal-release\\fixture",
+  "source_hashes": {
+    "quiet-window.mjs": "c54498a51f66a18e9cefd3077e79539eb1e9a770a296a452111a8d206f185d73",
+    "demo-lifecycle.mjs": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8"
+  },
+  "signals_to_existing_processes": "Only signal0 existence checks; no termination or control signals",
+  "protected_before": {
+    "manifest_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+    "processes": [
+      {
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "pid": 6128,
+        "alive": true
+      },
+      {
+        "pid": 4220,
+        "alive": true
+      },
+      {
+        "pid": 18184,
+        "alive": true
+      },
+      {
+        "pid": 15744,
+        "alive": true
+      },
+      {
+        "pid": 16840,
+        "alive": true
+      },
+      {
+        "pid": 19312,
+        "alive": true
+      }
+    ],
+    "scope": "PID existence and unchanged manifest; not start-time/PID-reuse evidence"
+  },
+  "fake_pid_inspections": [
+    {
+      "pid": 700001,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700002,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700003,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700004,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700005,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700006,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700007,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700008,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700009,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700010,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700011,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700012,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700013,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700014,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700015,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700016,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700017,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    }
+  ],
+  "manifest_sha256": "b58d7f0a0251513e89a585156ce59e96c2639096066f5c08fd5f86e176c32c0d",
+  "additional_absent_pids": [
+    700015,
+    700016,
+    700017
+  ],
+  "command": "C:\\Users\\Admin\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe",
+  "args": [
+    "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d\\normal-release\\fixture\\scripts\\quiet-window.mjs",
+    "--manifest-sha256",
+    "b58d7f0a0251513e89a585156ce59e96c2639096066f5c08fd5f86e176c32c0d",
+    "--absent-pids",
+    "700015,700016,700017",
+    "--not-before",
+    "2026-09-21T00:00:00.000Z"
+  ],
+  "owned_pid": 17040,
+  "ready": {
+    "status": "ready",
+    "directory": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d\\normal-release\\fixture\\evidence\\2026-09-21T14-44-42-311Z-quiet-window-36b3c2ea",
+    "run_id": "2026-09-21T14-44-42-311Z-quiet-window-36b3c2ea",
+    "pid": 17040,
+    "token": "50279ce9-2ff0-4ed6-8e96-cae409512ba5",
+    "release_token": "306833e5-5a39-4000-a85c-2280f57b6987",
+    "ready_at": "2026-09-21T14:44:42.321Z",
+    "manifest_sha256": "b58d7f0a0251513e89a585156ce59e96c2639096066f5c08fd5f86e176c32c0d",
+    "lock_file": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d\\normal-release\\fixture\\data\\demo-launcher.lock",
+    "absent_pids": [
+      700001,
+      700002,
+      700003,
+      700004,
+      700005,
+      700006,
+      700007,
+      700008,
+      700009,
+      700010,
+      700011,
+      700012,
+      700013,
+      700014,
+      700015,
+      700016,
+      700017
+    ],
+    "scope": "Only cooperative demo launchers are excluded. Root must confirm real observer completion and diagnostic child exits."
+  },
+  "lock_sha256_at_ready": "1b45b0769c261cc6f35bef2881edfced78afb534a85f9a62db993bad99854cfb",
+  "guard_pids_at_ready": [
+    {
+      "pid": 700001,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700002,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700003,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700004,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700005,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700006,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700007,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700008,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700009,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700010,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700011,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700012,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700013,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700014,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700015,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700016,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    },
+    {
+      "pid": 700017,
+      "alive": false,
+      "inspection_error_code": "ESRCH"
+    }
+  ],
+  "release_pending_sha256": "f6ba8f8799d8266dd2737a2f564e9e0162bf8ff2024ff78efd843d5096b24fcd",
+  "release_published_at": "2026-09-21T14:44:42.343Z",
+  "release_request": {
+    "run_id": "2026-09-21T14-44-42-311Z-quiet-window-36b3c2ea",
+    "pid": 17040,
+    "release_token": "306833e5-5a39-4000-a85c-2280f57b6987",
+    "confirmed_no_running_diagnostics": true,
+    "evidence": [
+      "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d\\normal-release\\fixture\\evidence\\2026-09-21T14-44-42-311Z-quiet-window-36b3c2ea\\fixture-diagnostics-completed.json"
+    ]
+  },
+  "exit": {
+    "name": "keeper-normal-release",
+    "pid": 17040,
+    "spawned": true,
+    "exited": true,
+    "exit_code": 0,
+    "exit_signal": null,
+    "spawn_error": null,
+    "closed": true,
+    "close_code": 0,
+    "close_signal": null,
+    "closed_at": "2026-09-21T14:44:42.851Z"
+  },
+  "owned_pid_absent": true,
+  "released": {
+    "run_id": "2026-09-21T14-44-42-311Z-quiet-window-36b3c2ea",
+    "pid": 17040,
+    "token": "50279ce9-2ff0-4ed6-8e96-cae409512ba5",
+    "release_token": "306833e5-5a39-4000-a85c-2280f57b6987",
+    "ready_at": "2026-09-21T14:44:42.321Z",
+    "manifest_sha256": "b58d7f0a0251513e89a585156ce59e96c2639096066f5c08fd5f86e176c32c0d",
+    "lock_file": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d\\normal-release\\fixture\\data\\demo-launcher.lock",
+    "absent_pids": [
+      700001,
+      700002,
+      700003,
+      700004,
+      700005,
+      700006,
+      700007,
+      700008,
+      700009,
+      700010,
+      700011,
+      700012,
+      700013,
+      700014,
+      700015,
+      700016,
+      700017
+    ],
+    "scope": "Only cooperative demo launchers are excluded. Root must confirm real observer completion and diagnostic child exits.",
+    "released_at": "2026-09-21T14:44:42.840Z",
+    "request": {
+      "run_id": "2026-09-21T14-44-42-311Z-quiet-window-36b3c2ea",
+      "pid": 17040,
+      "release_token": "306833e5-5a39-4000-a85c-2280f57b6987",
+      "confirmed_no_running_diagnostics": true,
+      "evidence": [
+        "C:\\project\\hackton-2026-tbd\\trading\\evidence\\2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d\\normal-release\\fixture\\evidence\\2026-09-21T14-44-42-311Z-quiet-window-36b3c2ea\\fixture-diagnostics-completed.json"
+      ]
+    },
+    "original_owner_released": true,
+    "current_lock_present": false
+  },
+  "original_owner_lock_removed": true,
+  "complete": true,
+  "final_owned_pid_state": {
+    "pid": 17040,
+    "alive": false,
+    "inspection_error_code": "ESRCH"
+  },
+  "protected_after": {
+    "manifest_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+    "processes": [
+      {
+        "pid": 20540,
+        "alive": true
+      },
+      {
+        "pid": 17444,
+        "alive": true
+      },
+      {
+        "pid": 7936,
+        "alive": true
+      },
+      {
+        "pid": 20776,
+        "alive": true
+      },
+      {
+        "pid": 16068,
+        "alive": true
+      },
+      {
+        "pid": 4928,
+        "alive": true
+      },
+      {
+        "pid": 20940,
+        "alive": true
+      },
+      {
+        "pid": 12172,
+        "alive": true
+      },
+      {
+        "pid": 7916,
+        "alive": true
+      },
+      {
+        "pid": 15272,
+        "alive": true
+      },
+      {
+        "pid": 5412,
+        "alive": true
+      },
+      {
+        "pid": 20484,
+        "alive": true
+      },
+      {
+        "pid": 6128,
+        "alive": true
+      },
+      {
+        "pid": 4220,
+        "alive": true
+      },
+      {
+        "pid": 18184,
+        "alive": true
+      },
+      {
+        "pid": 15744,
+        "alive": true
+      },
+      {
+        "pid": 16840,
+        "alive": true
+      },
+      {
+        "pid": 19312,
+        "alive": true
+      }
+    ],
+    "scope": "PID existence and unchanged manifest; not start-time/PID-reuse evidence"
+  },
+  "ended_at": "2026-09-21T14:44:42.858Z"
+}

@@ -1,0 +1,33 @@
+{
+  "run_id": "2026-09-21T14-44-42-194Z-quiet-window-process-a778ce3d",
+  "ended_at": "2026-09-21T14:44:43.509Z",
+  "test_source_sha256": "62a413a9c1adfc4731a22b4f568128eca86f34d28b97636df603f592933323c7",
+  "expected_source_hashes": {
+    "quiet-window.mjs": "c54498a51f66a18e9cefd3077e79539eb1e9a770a296a452111a8d206f185d73",
+    "demo-lifecycle.mjs": "d537c5e69f1edf3180042c5629e84a941e6b8a4bb174d4766b9801c65c2a2ba8"
+  },
+  "complete": true,
+  "cases": [
+    {
+      "name": "normal-release",
+      "complete": true,
+      "pid": 17040,
+      "exit_code": 0,
+      "owned_pid_absent": true,
+      "lock_preserved_after_exit": false,
+      "original_owner_lock_removed": true
+    },
+    {
+      "name": "wrong-token",
+      "complete": true,
+      "pid": 5684,
+      "exit_code": 1,
+      "owned_pid_absent": true,
+      "lock_preserved_after_exit": true,
+      "original_owner_lock_removed": false
+    }
+  ],
+  "real_trading_launcher_lock_accessed": false,
+  "live_services_controlled": false,
+  "synthetic_pid_absence_checks_use_real_signal0": true
+}

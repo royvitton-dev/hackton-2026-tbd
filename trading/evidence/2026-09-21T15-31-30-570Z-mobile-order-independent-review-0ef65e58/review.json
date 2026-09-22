@@ -1,0 +1,689 @@
+{
+  "review_created_at": "2026-09-21T15:32:28.300Z",
+  "scope": "Offline raw JSON/AX/screenshot review and arithmetic only; no browser, process, build, order, API, service, Git or operational-source modification.",
+  "action_window_from_recorded_dom_at": {
+    "first": "2026-09-21T15:20:59.977Z",
+    "last": "2026-09-21T15:26:19.500Z"
+  },
+  "cleanup_recorded_at": "2026-09-21T15:26:46.543Z",
+  "dom": [
+    {
+      "source": "before-dom.json",
+      "at": "2026-09-21T15:20:59.977Z",
+      "balance": {
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "points_total": 1000000,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "hours_total": 1000
+      },
+      "viewport": {
+        "documentWidth": 375,
+        "height": 844,
+        "width": 390
+      },
+      "recorded_width_within_viewport": true,
+      "codes": [],
+      "unique_codes": [],
+      "event_seq": 132847,
+      "resync_count": 0,
+      "request_tab_pressed": false,
+      "open_tab_pressed": true,
+      "cancel_confirmed": false
+    },
+    {
+      "source": "placed-dom.json",
+      "at": "2026-09-21T15:21:30.584Z",
+      "balance": {
+        "points_available": 999999,
+        "points_reserved": 1,
+        "points_total": 1000000,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "hours_total": 1000
+      },
+      "viewport": {
+        "documentWidth": 375,
+        "height": 844,
+        "width": 390
+      },
+      "recorded_width_within_viewport": true,
+      "codes": [],
+      "unique_codes": [],
+      "event_seq": 133027,
+      "resync_count": 0,
+      "request_tab_pressed": false,
+      "open_tab_pressed": true,
+      "cancel_confirmed": false
+    },
+    {
+      "source": "filled-dom.json",
+      "at": "2026-09-21T15:22:40.758Z",
+      "balance": {
+        "points_available": 999999,
+        "points_reserved": 0,
+        "points_total": 999999,
+        "hours_available": 1001,
+        "hours_reserved": 0,
+        "hours_total": 1001
+      },
+      "viewport": null,
+      "recorded_width_within_viewport": null,
+      "codes": [
+        "58d34c2f-b20f-4d59-9b17-5824e9e46443"
+      ],
+      "unique_codes": [
+        "58d34c2f-b20f-4d59-9b17-5824e9e46443"
+      ],
+      "event_seq": 133432,
+      "resync_count": 0,
+      "request_tab_pressed": false,
+      "open_tab_pressed": true,
+      "cancel_confirmed": false
+    },
+    {
+      "source": "cancelled-dom.json",
+      "at": "2026-09-21T15:23:04.641Z",
+      "balance": {
+        "points_available": 999999,
+        "points_reserved": 0,
+        "points_total": 999999,
+        "hours_available": 1001,
+        "hours_reserved": 0,
+        "hours_total": 1001
+      },
+      "viewport": {
+        "documentWidth": 375,
+        "height": 844,
+        "width": 390
+      },
+      "recorded_width_within_viewport": true,
+      "codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "unique_codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "event_seq": 133574,
+      "resync_count": 0,
+      "request_tab_pressed": false,
+      "open_tab_pressed": true,
+      "cancel_confirmed": true
+    },
+    {
+      "source": "cancel-confirmed-dom.json",
+      "at": "2026-09-21T15:23:21.591Z",
+      "balance": {
+        "points_available": 999999,
+        "points_reserved": 0,
+        "points_total": 999999,
+        "hours_available": 1001,
+        "hours_reserved": 0,
+        "hours_total": 1001
+      },
+      "viewport": {
+        "documentWidth": 375,
+        "height": 844,
+        "width": 390
+      },
+      "recorded_width_within_viewport": true,
+      "codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "unique_codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "event_seq": 133673,
+      "resync_count": 0,
+      "request_tab_pressed": false,
+      "open_tab_pressed": true,
+      "cancel_confirmed": true
+    },
+    {
+      "source": "reload-dom.json",
+      "at": "2026-09-21T15:25:14.355Z",
+      "balance": {
+        "points_available": 999999,
+        "points_reserved": 0,
+        "points_total": 999999,
+        "hours_available": 1001,
+        "hours_reserved": 0,
+        "hours_total": 1001
+      },
+      "viewport": {
+        "documentWidth": 375,
+        "height": 844,
+        "width": 390
+      },
+      "recorded_width_within_viewport": true,
+      "codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "unique_codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "event_seq": 134330,
+      "resync_count": 0,
+      "request_tab_pressed": false,
+      "open_tab_pressed": true,
+      "cancel_confirmed": true
+    },
+    {
+      "source": "reload-confirmed-dom.json",
+      "at": "2026-09-21T15:25:43.292Z",
+      "balance": {
+        "points_available": 999999,
+        "points_reserved": 0,
+        "points_total": 999999,
+        "hours_available": 1001,
+        "hours_reserved": 0,
+        "hours_total": 1001
+      },
+      "viewport": {
+        "documentWidth": 375,
+        "height": 844,
+        "width": 390
+      },
+      "recorded_width_within_viewport": true,
+      "codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "unique_codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "event_seq": 134501,
+      "resync_count": 0,
+      "request_tab_pressed": false,
+      "open_tab_pressed": true,
+      "cancel_confirmed": true
+    },
+    {
+      "source": "reload-requests-dom.json",
+      "at": "2026-09-21T15:26:19.500Z",
+      "balance": {
+        "points_available": 999999,
+        "points_reserved": 0,
+        "points_total": 999999,
+        "hours_available": 1001,
+        "hours_reserved": 0,
+        "hours_total": 1001
+      },
+      "viewport": {
+        "documentWidth": 375,
+        "height": 844,
+        "width": 390
+      },
+      "recorded_width_within_viewport": true,
+      "codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f",
+        "8856a37f-c621-494d-aef9-03f5b2280a71",
+        "58d34c2f-b20f-4d59-9b17-5824e9e46443",
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f"
+      ],
+      "unique_codes": [
+        "37ba3596-827e-4a8e-a6ea-fff344185d1f",
+        "8856a37f-c621-494d-aef9-03f5b2280a71",
+        "58d34c2f-b20f-4d59-9b17-5824e9e46443"
+      ],
+      "event_seq": 134710,
+      "resync_count": 0,
+      "request_tab_pressed": true,
+      "open_tab_pressed": false,
+      "cancel_confirmed": true
+    }
+  ],
+  "second_order_resting": {
+    "source": "second-placed-dom.txt",
+    "at": null,
+    "at_note": "This AX text has no capture timestamp; no file mtime or inferred agent time used.",
+    "points_available": 999998,
+    "points_reserved": 1,
+    "points_total": 999999,
+    "hours_available": 1001,
+    "hours_reserved": 0,
+    "hours_total": 1001,
+    "resting_row_present": true,
+    "cancel_button_present": true,
+    "durable_command_text_present": true
+  },
+  "states": [
+    {
+      "source": "before-state.json",
+      "at": null,
+      "capture_at_note": "Raw API snapshot contains no capture timestamp; retain event_seq instead.",
+      "event_seq": 132896,
+      "engine_status": "ready",
+      "user": {
+        "id": "user-03",
+        "name": "시연 임직원 3",
+        "company": "GS건썰",
+        "kind": "user",
+        "points_available": 1000000,
+        "points_reserved": 0,
+        "hours_available": 1000,
+        "hours_reserved": 0,
+        "orders_count": 0,
+        "trades_count": 0
+      },
+      "total_points": 15000000,
+      "total_hours": 15000,
+      "user_orders": [],
+      "user_trades": []
+    },
+    {
+      "source": "placed-state.json",
+      "at": null,
+      "capture_at_note": "Raw API snapshot contains no capture timestamp; retain event_seq instead.",
+      "event_seq": 133096,
+      "engine_status": "ready",
+      "user": {
+        "id": "user-03",
+        "name": "시연 임직원 3",
+        "company": "GS건썰",
+        "kind": "user",
+        "points_available": 999999,
+        "points_reserved": 0,
+        "hours_available": 1001,
+        "hours_reserved": 0,
+        "orders_count": 1,
+        "trades_count": 1
+      },
+      "total_points": 15000000,
+      "total_hours": 15000,
+      "user_orders": [
+        {
+          "id": 115979,
+          "account_id": "user-03",
+          "side": "buy",
+          "price": 1,
+          "quantity": 1,
+          "filled": 1,
+          "cancelled": 0,
+          "remaining": 0,
+          "status": "filled",
+          "command_seq": 133026,
+          "timestamp_ms": 1790004090357
+        }
+      ],
+      "user_trades": [
+        {
+          "id": 74196,
+          "maker_order_id": 115979,
+          "taker_order_id": 116023,
+          "buyer_id": "user-03",
+          "seller_id": "bot-05",
+          "price": 1,
+          "quantity": 1,
+          "timestamp_ms": 1790004098744,
+          "command_seq": 133076
+        }
+      ]
+    },
+    {
+      "source": "final-state.json",
+      "at": null,
+      "capture_at_note": "Raw API snapshot contains no capture timestamp; retain event_seq instead.",
+      "event_seq": 134029,
+      "engine_status": "ready",
+      "user": {
+        "id": "user-03",
+        "name": "시연 임직원 3",
+        "company": "GS건썰",
+        "kind": "user",
+        "points_available": 999999,
+        "points_reserved": 0,
+        "hours_available": 1001,
+        "hours_reserved": 0,
+        "orders_count": 2,
+        "trades_count": 1
+      },
+      "total_points": 15000000,
+      "total_hours": 15000,
+      "user_orders": [],
+      "user_trades": [
+        {
+          "id": 74196,
+          "maker_order_id": 115979,
+          "taker_order_id": 116023,
+          "buyer_id": "user-03",
+          "seller_id": "bot-05",
+          "price": 1,
+          "quantity": 1,
+          "timestamp_ms": 1790004098744,
+          "command_seq": 133076
+        }
+      ]
+    }
+  ],
+  "trade": {
+    "id": 74196,
+    "maker_order_id": 115979,
+    "taker_order_id": 116023,
+    "buyer_id": "user-03",
+    "seller_id": "bot-05",
+    "price": 1,
+    "quantity": 1,
+    "timestamp_ms": 1790004098744,
+    "command_seq": 133076
+  },
+  "first_order": {
+    "id": 115979,
+    "account_id": "user-03",
+    "side": "buy",
+    "price": 1,
+    "quantity": 1,
+    "filled": 1,
+    "cancelled": 0,
+    "remaining": 0,
+    "status": "filled",
+    "command_seq": 133026,
+    "timestamp_ms": 1790004090357
+  },
+  "first_order_created_at": "2026-09-21T15:21:30.357Z",
+  "first_trade_at": "2026-09-21T15:21:38.744Z",
+  "rested_before_fill_ms": 8387,
+  "request_ids": [
+    "37ba3596-827e-4a8e-a6ea-fff344185d1f",
+    "8856a37f-c621-494d-aef9-03f5b2280a71",
+    "58d34c2f-b20f-4d59-9b17-5824e9e46443"
+  ],
+  "lookups": [
+    {
+      "request_id": "37ba3596-827e-4a8e-a6ea-fff344185d1f",
+      "account_id": "user-03",
+      "command_seq": 133574,
+      "event_seq": 133574,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 116413,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    {
+      "request_id": "8856a37f-c621-494d-aef9-03f5b2280a71",
+      "account_id": "user-03",
+      "command_seq": 133569,
+      "event_seq": 133569,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 116413,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    },
+    {
+      "request_id": "58d34c2f-b20f-4d59-9b17-5824e9e46443",
+      "account_id": "user-03",
+      "command_seq": 133026,
+      "event_seq": 133026,
+      "status": "accepted",
+      "code": "OK",
+      "message": "명령 처리가 완료되었습니다.",
+      "order_id": 115979,
+      "trades": [],
+      "duplicate": false,
+      "durable": true
+    }
+  ],
+  "action_mapping_from_dom": {
+    "58d34c2f-b20f-4d59-9b17-5824e9e46443": {
+      "action": "first buy",
+      "command_seq": 133026,
+      "order_id": 115979
+    },
+    "8856a37f-c621-494d-aef9-03f5b2280a71": {
+      "action": "second buy",
+      "command_seq": 133569,
+      "order_id": 116413
+    },
+    "37ba3596-827e-4a8e-a6ea-fff344185d1f": {
+      "action": "second-order cancel",
+      "command_seq": 133574,
+      "order_id": 116413
+    }
+  },
+  "checks": {
+    "first_fill_arithmetic": true,
+    "second_reserve_and_cancel_release": true,
+    "three_durable_lookup_records": true,
+    "three_unique_request_ids_restored_after_reload": true,
+    "all_three_api_snapshots_conserve_global_points_and_hours": true,
+    "measured_viewport_records": 7,
+    "all_recorded_widths_within_viewport": true,
+    "observed_resync_counts": [
+      0
+    ],
+    "captured_console_entries": 0,
+    "reload_console_entries": 0
+  },
+  "images": [
+    {
+      "source": "placed.jpg",
+      "format": "JPEG",
+      "height": 812,
+      "width": 375,
+      "directly_viewed": true
+    },
+    {
+      "source": "cancel-confirmed.jpg",
+      "format": "JPEG",
+      "height": 812,
+      "width": 375,
+      "directly_viewed": true
+    },
+    {
+      "source": "reload.jpg",
+      "format": "JPEG",
+      "height": 812,
+      "width": 375,
+      "directly_viewed": true
+    },
+    {
+      "source": "reload-requests.jpg",
+      "format": "JPEG",
+      "height": 812,
+      "width": 375,
+      "directly_viewed": true
+    }
+  ],
+  "cleanup": {
+    "at": "2026-09-21T15:26:46.543Z",
+    "closed_tab": "13",
+    "viewport_reset": true,
+    "engine_or_park_restarted": false,
+    "manual_actions": "Two synthetic buy orders at price 1, quantity 1; first filled by existing bot; second cancelled through UI"
+  },
+  "limitations": [
+    "The first buy was intended to remain resting for cancellation but actually filled after 8.387 seconds; it was not cancelled. A separate second buy was cancelled.",
+    "reload-dom and reload-confirmed-dom still show the open tab and only the latest cancel request code. Only reload-requests-dom proves the request tab and three restored unique UUIDs. The first attempted post-reload tab change was not evidenced as successful; exact cause is not established.",
+    "App orderTab defaults to open and is component state; request records are independently restored from localStorage. No trace establishes whether the initial click failed, preceded a reload/remount, or was another automation timing issue.",
+    "The returned command receipt preserves the original accepted resting result; an empty trades array in that receipt does not negate the later maker trade.",
+    "The final public state no longer contains either historical order in its bounded recent terminal-order window. Do not use this absence alone to infer cancellation or lost history.",
+    "Screenshot images show sampled visible portions. Request code DOM extraction proves UUID recovery; the screenshot alone does not expose all collapsed UUID details.",
+    "No API-response capture timestamps are supplied for the three state JSON files or lookups. Use recorded event/command sequence and actual embedded order/trade timestamps; no inferred collection timestamp.",
+    "Cleanup is supported by the original browser-cleanup record; no independent browser inventory or process check was performed in this review."
+  ],
+  "raw_hashes": [
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/before-dom.json",
+      "bytes": 3813,
+      "sha256": "775812900e787e0b67b304cb39725e91bf55ecc9abc5313f491e528a01eb3c45"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/before-dom.txt",
+      "bytes": 9252,
+      "sha256": "88cf9270a06333b0d49f8a5ebbdefd767ee4816e5d5e9174196bbadba62693cf"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/placed-dom.json",
+      "bytes": 3885,
+      "sha256": "f0a3c7e37bdd7c3d50f3ffb81b3f412de5b139723d01c0002f9e55800d003e91"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/placed-dom.txt",
+      "bytes": 10023,
+      "sha256": "6078e28ad566feeb32c06f47654d9c10853a7ddb7b4476c27fcef6f94dd9f249"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/filled-dom.json",
+      "bytes": 3897,
+      "sha256": "468ef588150c93a6f425c1cadeba03818e1b6fa12861bcdc8c2ead6a27286ae2"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/filled-dom.txt",
+      "bytes": 9537,
+      "sha256": "51a99f5ffaabde6c48ccb1381dc17a4af68d9826a607531ffdad36b65e5c5f3a"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancelled-dom.json",
+      "bytes": 4011,
+      "sha256": "ced3de76c502449ed087f8727f8f42dce2b36dbc0a23d8575b29a4e1cd0bceed"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancelled-dom.txt",
+      "bytes": 9771,
+      "sha256": "d090a7e124733982c211c4db99a37b3cfe474c4e987dcd8cb28d351eb092eef9"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancel-confirmed-dom.json",
+      "bytes": 3984,
+      "sha256": "e66049f87e467dacb27041b75f3faf8b687187bd4caaee5d374e913dd7a546ff"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancel-confirmed-dom.txt",
+      "bytes": 9410,
+      "sha256": "06e19c0298837b44ccabd9367796ff2fd5b2b4853d18d6e9da0b94ad99d03baf"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-dom.json",
+      "bytes": 3994,
+      "sha256": "f221840bb5d498caa6e776889340d26d87ab6821e42b2f9a95f37c4f045f8962"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-dom.txt",
+      "bytes": 9624,
+      "sha256": "58cf9a485b4876a323f94b3aa2182cfe31b9be120a922434e2d1ba29ac748f98"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-confirmed-dom.json",
+      "bytes": 3969,
+      "sha256": "19e2ad73c7f0f1cc123db4e8df4b612c43d0dcadd9eca4de5920c47dea2ff5ef"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-confirmed-dom.txt",
+      "bytes": 9565,
+      "sha256": "405f9e6df3dce51772a1e6d66d4a3df9583db5bc25d19f73acf95ff71f2e24c2"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-requests-dom.json",
+      "bytes": 4272,
+      "sha256": "58f90a81b3499c739a88ce11e3456f99ee381c7fd0ce6eae99b247fb90217ce1"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-requests-dom.txt",
+      "bytes": 9635,
+      "sha256": "473c101215f4485518a56e3b26b6eb6d48ee94de7dc8fac8c05239b4df783851"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/second-placed-dom.txt",
+      "bytes": 9831,
+      "sha256": "cefae8d110cf8cfb3016fc663b9fa8bd5fe266bc761b2f68778491c9afc0a595"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/before-state.json",
+      "bytes": 218695,
+      "sha256": "ef90f1c5773c97e0ce49f95b245d6c20277d97847d36f1c2d5c4e143ee43569e"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/placed-state.json",
+      "bytes": 219802,
+      "sha256": "901b472cb5e50cea5f9ea39fd40117e962a2dac3dacb71216606140cf425c7d5"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/final-state.json",
+      "bytes": 220229,
+      "sha256": "0b90431aecb9e2c725a4f3bdae06c53864f7fad643dd2736770f2bfbe1c5a701"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/request-ids.json",
+      "bytes": 128,
+      "sha256": "c580a6d4e998d26cb6cdf4e4313532a7898087bf94e16606a79b3726aa28be6f"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/lookup-37ba3596-827e-4a8e-a6ea-fff344185d1f.json",
+      "bytes": 263,
+      "sha256": "ff56ff2a7f3525d47279bd6fef2f6ca8cfd203336aadb6979656002a14b96478"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/lookup-8856a37f-c621-494d-aef9-03f5b2280a71.json",
+      "bytes": 263,
+      "sha256": "21ba6884b0e5d39bbed9881537d32963028ef7c1ae6de0e679d4466da19fc953"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/lookup-58d34c2f-b20f-4d59-9b17-5824e9e46443.json",
+      "bytes": 263,
+      "sha256": "b7c6d6e24cede6c50b72a785f6e2f56cd1e97de471174e38b1a5054ff7cc4d38"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/placed.jpg",
+      "bytes": 24260,
+      "sha256": "6451f919e0b36daa975a5df4dabaf8df549e7ee236cb2310381e0b04531a1308"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/cancel-confirmed.jpg",
+      "bytes": 21032,
+      "sha256": "59415e208923be7d1338e7d0c029ac16437dcbd76e1bcd2166eaeaeddfb1936c"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload.jpg",
+      "bytes": 19990,
+      "sha256": "c9bca2fdf6c901fde158a267178f1f20c383d0098e0b06b8b583957301e3915f"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-requests.jpg",
+      "bytes": 22764,
+      "sha256": "3a9c4577ca76ebb845065bff5427f4c916882b3ee04fb90b5b341608f83f1355"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/reload-console.json",
+      "bytes": 2,
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/browser-cleanup.json",
+      "bytes": 253,
+      "sha256": "ecab66c8799fb13b06c9e6c967c4a7173a00d7d1eb5cbfd3f30c1c958632fcb2"
+    },
+    {
+      "path": "trading/evidence/2026-09-21T15-20-59-766Z-mobile-order-cancel-f43f0001/requests-dom.txt",
+      "bytes": 9684,
+      "sha256": "daf7fa4a16921ffe05573ed343cbe79b5edaeaa7c962109f4a6c0839ecdff3a2"
+    }
+  ],
+  "source_hashes": [
+    {
+      "path": "trading/frontend/src/App.tsx",
+      "bytes": 42790,
+      "sha256": "b4520c87c913c4f5af42cdc1560c4211a9703280558913a7399ace589722a0bd"
+    },
+    {
+      "path": "trading/frontend/src/useExchange.ts",
+      "bytes": 10416,
+      "sha256": "b5d1824d318c96fc75d154bc2bb53d761bddac8171dd065196fabe6661ccdb37"
+    },
+    {
+      "path": "trading/bots/bot.mjs",
+      "bytes": 5984,
+      "sha256": "3d4e635b41bfa3c4a7efac098176ed4f6d0be36b7af5208899740dfaa51f2f7c"
+    }
+  ]
+}

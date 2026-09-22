@@ -1,0 +1,130 @@
+{
+  "prepared_at": "2026-09-21T14:16:07.5118122Z",
+  "actual_benchmark_executed": false,
+  "not_before_utc": "2026-09-21T16:06:00.000Z",
+  "labels": {
+    "B": "status-reuse String result baseline",
+    "A": "status-reuse plus Cow result candidate"
+  },
+  "pair_order": [
+    "B",
+    "A",
+    "A",
+    "B",
+    "B",
+    "A"
+  ],
+  "cycles": 20000,
+  "warmup_cycles": 1000,
+  "measured_commands": 120000,
+  "warmup_commands": 6000,
+  "fills_per_measured_run": 40000,
+  "seed": 20260921,
+  "seed_scope": "Deterministic workload identifier; no pseudorandom sampling",
+  "concurrency": 1,
+  "queue": null,
+  "journal": "none",
+  "targets": {
+    "valid_rejections": 0,
+    "commands_per_second_min": 20000,
+    "p99_ns_max": 250000
+  },
+  "profile": "release; lto=thin; codegen-units=1",
+  "rustc": "rustc 1.98.1 (48a229cea 2026-09-01)\r\nbinary: rustc\r\ncommit-hash: 48a229ceaefd4985c50990b14116b6d856af0985\r\ncommit-date: 2026-09-01\r\nhost: x86_64-pc-windows-gnu\r\nrelease: 1.98.1\r\nLLVM version: 22.1.8",
+  "rustflags": "-C link-self-contained=yes -C dlltool=C:\\project\\hackton-2026-tbd\\trading\\.tools\\llvm-mingw-20260908-ucrt-x86_64\\bin\\llvm-dlltool.exe",
+  "binaries": {
+    "B": {
+      "file": "bin/baseline.exe",
+      "sha256": "069c1a336a7470122f3769dc2080d8472b72bf6290d3dbb2661893ce7fb63bb6"
+    },
+    "A": {
+      "file": "bin/candidate.exe",
+      "sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86"
+    }
+  },
+  "pinned_files": [
+    {
+      "file": "bin/baseline.exe",
+      "sha256": "069c1a336a7470122f3769dc2080d8472b72bf6290d3dbb2661893ce7fb63bb6",
+      "bytes": 599766,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\core-20260921T184147624-status-reuse\\after\\core_bench.exe"
+    },
+    {
+      "file": "bin/candidate.exe",
+      "sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86",
+      "bytes": 600795,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\release\\examples\\core_bench.exe"
+    },
+    {
+      "file": "source-baseline/core.rs",
+      "sha256": "2ddef34b7310ba9b79825749643f7decd0802ecffd2e837ecf3905ea862607e4",
+      "bytes": 34605,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\baseline\\src\\core.rs"
+    },
+    {
+      "file": "source-baseline/model.rs",
+      "sha256": "6fb79edd14bf0228ffd4bf439a75d1c91ad77f48f73dd1cabc9e127bd769aa8b",
+      "bytes": 3066,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\evidence\\20260921T134615285Z-cow-result-prototype-5d8dd1e4\\baseline\\src\\model.rs"
+    },
+    {
+      "file": "source-candidate/core.rs",
+      "sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "bytes": 34636,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\src\\core.rs"
+    },
+    {
+      "file": "source-candidate/model.rs",
+      "sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "bytes": 3121,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\src\\model.rs"
+    },
+    {
+      "file": "source-common/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\src\\storage.rs"
+    },
+    {
+      "file": "source-common/lib.rs",
+      "sha256": "6794c4a79d29e5a19868b49d98a087d158032c0b2fbf774d2982902ccbeac038",
+      "bytes": 46,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\src\\lib.rs"
+    },
+    {
+      "file": "source-common/core_bench.rs",
+      "sha256": "1e7551861d1aa12525ac0ee3f246d82d5d18b0329d519d08d868d64da178d786",
+      "bytes": 12236,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\examples\\core_bench.rs"
+    },
+    {
+      "file": "source-common/Cargo.toml",
+      "sha256": "9bcaa0b13d35fd5cda66c80f65d46dad64759dddc36a1a1923b7fd0f603c12d6",
+      "bytes": 635,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\Cargo.toml"
+    },
+    {
+      "file": "source-common/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\Cargo.lock"
+    },
+    {
+      "file": "source-common/env.ps1",
+      "sha256": "480f8c3e50fd005dcf9598e413f060c15949ece5035fcb651516c216651609a8",
+      "bytes": 1227,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\scripts\\env.ps1"
+    },
+    {
+      "file": "source-common/current-core-bench-dependencies.txt",
+      "sha256": "91a50cbec81806c9cd4182652e83b7d1ad1e5bc1fef54b6f8126fb1fe936b2b4",
+      "bytes": 372,
+      "copied_from": "C:\\project\\hackton-2026-tbd\\trading\\engine\\target\\release\\examples\\core_bench.d"
+    }
+  ],
+  "allocation_hypothesis": "720000 fewer alloc calls for120000 fresh commands if exactly6 saved percommand; hypothesis only, retain any different result",
+  "raw_scope": "Original stdout perrun with aggregate counts and percentiles; original benchmark does not export individual latency/allocation arrays or final fullCore",
+  "old_paired_runner_source_found": false,
+  "source_provenance_limit": "Historical18:45 core/model/benchmark and executable SHA preserved;18:45Cargo.lock SHA not present in that run, so complete historical dependency/build attestation is unavailable",
+  "guard_scope": "Require live externally owned launcher token; verify recorded14demoPIDs and explicit observer/helperPIDs absent before/after eachrun; no live service controls; PIDreuse conservatively blocks"
+}

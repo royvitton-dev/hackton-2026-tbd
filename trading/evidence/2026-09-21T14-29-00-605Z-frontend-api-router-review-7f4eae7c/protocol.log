@@ -1,0 +1,15 @@
+✔ initial, ordered, duplicate, out-of-order, and gap snapshots follow the sequence contract (0.7317ms)
+✔ queue or non-durable response cannot become confirmed success (0.1491ms)
+✔ a result must match both the request ID and synthetic account (0.1271ms)
+✔ unresolved requests are never discarded by the completed-history display limit (0.3441ms)
+✔ reload restores an in-flight request as unknown while preserving its dedup key and exact action (0.8049ms)
+✔ same-sequence writer failure is sticky against stale HTTP readiness but a fresh subscription can recover (0.149ms)
+✔ an outstanding lookup excludes a same-account retry and double submit until its result settles (0.157ms)
+ℹ tests 7
+ℹ suites 0
+ℹ pass 7
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 141.1865

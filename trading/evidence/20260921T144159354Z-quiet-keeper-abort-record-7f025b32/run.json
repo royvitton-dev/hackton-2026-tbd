@@ -1,0 +1,16 @@
+{
+  "exit_code": 0,
+  "hashes": [
+    {
+      "Path": "C:\\project\\hackton-2026-tbd\\trading\\scripts\\quiet-window.mjs",
+      "Hash": "C54498A51F66A18E9CEFD3077E79539EB1E9A770A296A452111A8D206F185D73"
+    },
+    {
+      "Path": "C:\\project\\hackton-2026-tbd\\trading\\scripts\\quiet-window.test.mjs",
+      "Hash": "4760FCFC7AC98C6B8E689C1D2811FA981DFC2F11E62119CFCF07E84A30247222"
+    }
+  ],
+  "scope": "Synthetic isolated keeper fixtures; no real demo lock or service changes",
+  "at": "2026-09-21T14:42:00.7801222Z",
+  "command": "node --test scripts/quiet-window.test.mjs"
+}

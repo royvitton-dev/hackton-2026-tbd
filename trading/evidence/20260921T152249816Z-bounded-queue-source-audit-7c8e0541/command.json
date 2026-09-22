@@ -1,0 +1,16 @@
+{
+  "command": "node evidence/20260921T152249816Z-bounded-queue-source-audit-7c8e0541/collect-evidence.mjs",
+  "cwd": "C:\\project\\hackton-2026-tbd\\trading",
+  "exec_chunk": "7714b0",
+  "exit_code": 0,
+  "wall_time_seconds": 0.7020431,
+  "stdout_result": {
+    "ok": true,
+    "created_at": "2026-09-21T15:25:57.080Z",
+    "files_verified": 28,
+    "packages": ["crossbeam-channel@0.5.17", "crossbeam-utils@0.8.23"],
+    "new_execution_measurements": false
+  },
+  "full_collected_result": "analysis.json",
+  "scope": "Offline file reads, archive decompression in memory, SHA comparison, unique evidence write only; no cargo/build/test/benchmark/service control."
+}

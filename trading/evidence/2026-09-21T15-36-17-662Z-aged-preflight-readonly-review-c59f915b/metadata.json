@@ -1,0 +1,192 @@
+{
+  "reviewed_at": "2026-09-21T15:36:17.715Z",
+  "reviewer": "/root/durability",
+  "sources": [
+    {
+      "relative": "scripts/aged-recovery.mjs",
+      "bytes": 3600,
+      "sha256": "e7d1b11d88f6887e0e8e08e433a85d5b8f4dc025e8a1cbfeb54fc8a13e4ac68b"
+    },
+    {
+      "relative": "engine/examples/aged_recovery.rs",
+      "bytes": 16955,
+      "sha256": "c911457e8f98c225b1908bd4f2fb99ce3f7c8df2fb6ac7594a2c3f36c6476a43"
+    },
+    {
+      "relative": "docs/quiet-window.md",
+      "bytes": 8601,
+      "sha256": "dc2127419b2dab9aa596fbfa33a544950fde3bd9ff654a747a3acd7585441d7f"
+    },
+    {
+      "relative": "docs/aged-recovery-plan.md",
+      "bytes": 9923,
+      "sha256": "77b36c8741e6da40d334200ad04c3d0469dd6c19780a379ea6ac9780412991d1"
+    }
+  ],
+  "binaries": [
+    {
+      "relative": "engine/target/release/leave-engine.exe",
+      "bytes": 3010798,
+      "sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512"
+    },
+    {
+      "relative": "engine/target/release/examples/core_bench.exe",
+      "bytes": 600795,
+      "sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86"
+    },
+    {
+      "relative": "engine/target/debug/examples/aged_recovery.exe",
+      "bytes": 17369063,
+      "sha256": "d2c8dd9ed9315d6859be5350f5b2e8c909594735d6000a4c7a0c30966ad14d43"
+    },
+    {
+      "relative": "evidence/20260921T141355128Z-cow-quiet-a-preparation-97da6b86/bin/candidate.exe",
+      "bytes": 600795,
+      "sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86"
+    },
+    {
+      "relative": "evidence/20260921T141355128Z-cow-quiet-a-preparation-97da6b86/bin/baseline.exe",
+      "bytes": 599766,
+      "sha256": "069c1a336a7470122f3769dc2080d8472b72bf6290d3dbb2661893ce7fb63bb6"
+    }
+  ],
+  "configured_validator_env": null,
+  "manifest_sha256": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+  "manifest_data_dir": "C:\\project\\hackton-2026-tbd\\trading\\data\\demo",
+  "source_stat_only": {
+    "captured_at": "2026-09-21T15:36:17.715Z",
+    "bytes_excluding_writer_lock": 782399740,
+    "genesis_plus_journal_bytes": 29318052,
+    "newest_snapshot_by_filename": {
+      "name": "snapshot-00000000000000137909-00000000000001790004926204237900-20540-20.bin",
+      "is_file": true,
+      "bytes": 103825784,
+      "mtime_utc": "2026-09-21T15:35:26.310Z"
+    },
+    "entries": [
+      {
+        "name": "genesis.bin",
+        "is_file": true,
+        "bytes": 3606,
+        "mtime_utc": "2026-09-21T08:35:31.886Z"
+      },
+      {
+        "name": "journal.bin",
+        "is_file": true,
+        "bytes": 29314446,
+        "mtime_utc": "2026-09-21T15:36:17.472Z"
+      },
+      {
+        "name": "snapshot-00000000000000002226-00000000000001789980114450707500-12856-1.bin",
+        "is_file": true,
+        "bytes": 1605243,
+        "mtime_utc": "2026-09-21T08:41:54.453Z"
+      },
+      {
+        "name": "snapshot-00000000000000002226-00000000000001789980114467391000-12856-3.bin",
+        "is_file": true,
+        "bytes": 1605243,
+        "mtime_utc": "2026-09-21T08:41:54.467Z"
+      },
+      {
+        "name": "snapshot-00000000000000002996-00000000000001789981326454757300-1996-0.bin",
+        "is_file": true,
+        "bytes": 2168423,
+        "mtime_utc": "2026-09-21T09:02:06.456Z"
+      },
+      {
+        "name": "snapshot-00000000000000012758-00000000000001789983354308301000-15804-0.bin",
+        "is_file": true,
+        "bytes": 9438818,
+        "mtime_utc": "2026-09-21T09:35:54.316Z"
+      },
+      {
+        "name": "snapshot-00000000000000022233-00000000000001789984975938949000-15804-2.bin",
+        "is_file": true,
+        "bytes": 16521683,
+        "mtime_utc": "2026-09-21T10:02:55.943Z"
+      },
+      {
+        "name": "snapshot-00000000000000022233-00000000000001789984976006464800-15804-4.bin",
+        "is_file": true,
+        "bytes": 16521683,
+        "mtime_utc": "2026-09-21T10:02:56.012Z"
+      },
+      {
+        "name": "snapshot-00000000000000032781-00000000000001789986921761326900-20540-0.bin",
+        "is_file": true,
+        "bytes": 24472791,
+        "mtime_utc": "2026-09-21T10:35:21.759Z"
+      },
+      {
+        "name": "snapshot-00000000000000043290-00000000000001789988722079105100-20540-2.bin",
+        "is_file": true,
+        "bytes": 32387464,
+        "mtime_utc": "2026-09-21T11:05:22.102Z"
+      },
+      {
+        "name": "snapshot-00000000000000053800-00000000000001789990522304475000-20540-4.bin",
+        "is_file": true,
+        "bytes": 40311291,
+        "mtime_utc": "2026-09-21T11:35:22.334Z"
+      },
+      {
+        "name": "snapshot-00000000000000064338-00000000000001789992322845077000-20540-6.bin",
+        "is_file": true,
+        "bytes": 48320486,
+        "mtime_utc": "2026-09-21T12:05:22.880Z"
+      },
+      {
+        "name": "snapshot-00000000000000074813-00000000000001789994123204042200-20540-8.bin",
+        "is_file": true,
+        "bytes": 56258024,
+        "mtime_utc": "2026-09-21T12:35:23.268Z"
+      },
+      {
+        "name": "snapshot-00000000000000085319-00000000000001789995923533662000-20540-10.bin",
+        "is_file": true,
+        "bytes": 64123344,
+        "mtime_utc": "2026-09-21T13:05:23.570Z"
+      },
+      {
+        "name": "snapshot-00000000000000095842-00000000000001789997724135025300-20540-12.bin",
+        "is_file": true,
+        "bytes": 71947049,
+        "mtime_utc": "2026-09-21T13:35:24.189Z"
+      },
+      {
+        "name": "snapshot-00000000000000106365-00000000000001789999524587663400-20540-14.bin",
+        "is_file": true,
+        "bytes": 79876634,
+        "mtime_utc": "2026-09-21T14:05:24.696Z"
+      },
+      {
+        "name": "snapshot-00000000000000116876-00000000000001790001325067332300-20540-16.bin",
+        "is_file": true,
+        "bytes": 87822419,
+        "mtime_utc": "2026-09-21T14:35:25.157Z"
+      },
+      {
+        "name": "snapshot-00000000000000127381-00000000000001790003125560866500-20540-18.bin",
+        "is_file": true,
+        "bytes": 95875309,
+        "mtime_utc": "2026-09-21T15:05:25.645Z"
+      },
+      {
+        "name": "snapshot-00000000000000137909-00000000000001790004926204237900-20540-20.bin",
+        "is_file": true,
+        "bytes": 103825784,
+        "mtime_utc": "2026-09-21T15:35:26.310Z"
+      },
+      {
+        "name": "writer.lock",
+        "is_file": true,
+        "bytes": 0,
+        "mtime_utc": "2026-09-21T08:35:31.886Z"
+      }
+    ]
+  },
+  "volume_available_bytes": 243372380160,
+  "disk_formula": "Additional evidence bytes = 2D + GJ + F_snapshot + F_genesis + copied validator + reports/logs/hash manifests; retained original D already occupies disk. Actual final stopped D/F must be rechecked.",
+  "scope": "Static source/docs and metadata/small pinned binary hash inspection only; no live journal/snapshot contents read; no recovery, benchmark, test, build, API, process or service controls; no implementation/docs/Git edits."
+}

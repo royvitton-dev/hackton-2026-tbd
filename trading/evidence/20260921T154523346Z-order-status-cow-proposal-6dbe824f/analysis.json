@@ -1,0 +1,132 @@
+{
+  "created_at": "2026-09-21T15:47:15.324Z",
+  "scope": "Prepared proposal only; no source application, compiler, benchmark, API or service operation",
+  "patch_sha256": "5fd68f1e90262296c20a5515c41936348e5d606dbfa2fe9c9afd1b370ebaaf64",
+  "patch_hunks": 5,
+  "patch_files": [
+    {
+      "file": "engine/src/model.rs",
+      "before_sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "candidate_sha256": "675630915d651d1a4978bd7e4bb592e751805871a679c08cda4936ab40609164"
+    },
+    {
+      "file": "engine/src/core.rs",
+      "before_sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "candidate_sha256": "6cc60ae8acc0c96469f7cdfbda1c3ab9328f520d9a46e721a1004a2130857f7b"
+    },
+    {
+      "file": "engine/tests/core_rules.rs",
+      "before_sha256": "d3d94a8882a733f7e581f3e0e8e809387470fbf0db3308bcb0cc3e43fbdd464c",
+      "candidate_sha256": "9f66f1fe4ba4959bd50312eaa4fcdf3b3542de08c83910dd6f7929df2aa6e690"
+    }
+  ],
+  "in_memory_unified_patch_reconstruction": true,
+  "compiled": false,
+  "measured": false,
+  "raw_normal_rows": 6000,
+  "normal_steps": [
+    {
+      "step": 0,
+      "rows": 1000,
+      "observed_calls": 7141,
+      "has_new_order_status_path": true
+    },
+    {
+      "step": 1,
+      "rows": 1000,
+      "observed_calls": 7118,
+      "has_new_order_status_path": true
+    },
+    {
+      "step": 2,
+      "rows": 1000,
+      "observed_calls": 20245,
+      "has_new_order_status_path": true
+    },
+    {
+      "step": 3,
+      "rows": 1000,
+      "observed_calls": 4188,
+      "has_new_order_status_path": false
+    },
+    {
+      "step": 4,
+      "rows": 1000,
+      "observed_calls": 7156,
+      "has_new_order_status_path": true
+    },
+    {
+      "step": 5,
+      "rows": 1000,
+      "observed_calls": 4140,
+      "has_new_order_status_path": false
+    }
+  ],
+  "static_hypothesis": {
+    "new_order_status_creation_sites": 4000,
+    "meaning": "Source-derived affected events, NOT measured allocations saved; no aggregate candidate performance reported"
+  },
+  "inputs": [
+    {
+      "path": "engine/src/core.rs",
+      "sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "bytes": 34636
+    },
+    {
+      "path": "engine/src/model.rs",
+      "sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "bytes": 3121
+    },
+    {
+      "path": "engine/target/release/leave-engine.exe",
+      "sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512",
+      "bytes": 3010798
+    },
+    {
+      "path": "engine/target/release/examples/core_bench.exe",
+      "sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86",
+      "bytes": 600795
+    },
+    {
+      "path": "engine/target/debug/examples/aged_recovery.exe",
+      "sha256": "d2c8dd9ed9315d6859be5350f5b2e8c909594735d6000a4c7a0c30966ad14d43",
+      "bytes": 17369063
+    },
+    {
+      "path": "engine/tests/core_rules.rs",
+      "sha256": "d3d94a8882a733f7e581f3e0e8e809387470fbf0db3308bcb0cc3e43fbdd464c",
+      "bytes": 21705
+    },
+    {
+      "path": "evidence/20260921T134615285Z-cow-result-prototype-5d8dd1e4/output-01/raw-counts-and-results.jsonl",
+      "sha256": "78b644f02b270534b2ac7406e6521ace7a09c1b8df9feab1e523ff2135beea7e",
+      "bytes": 3495166
+    },
+    {
+      "path": "engine/tests/core_status_compatibility.rs",
+      "sha256": "5a548ed11c6a0bab673e67f02e6c47b6ee332e0111951657611232b88fe71471",
+      "bytes": 5573
+    },
+    {
+      "path": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954
+    },
+    {
+      "path": "engine/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194
+    },
+    {
+      "path": "engine/tests/fixtures/status_reuse_before_trace.json",
+      "sha256": "a3fe59791e8f8efb7ee54238bd0a2d54504604e1da77682089f7f752248694a6",
+      "bytes": 179040
+    },
+    {
+      "path": "engine/tests/fixtures/status_reuse_legacy_frames.json",
+      "sha256": "acb402a146520fcf96d4afcbafc2355eb30cd904bbd0cf89e18f9fc3081d43a5",
+      "bytes": 12512
+    }
+  ],
+  "all_inputs_unchanged": true
+}

@@ -1,0 +1,467 @@
+{
+  "created_at": "2026-09-21T14:51:01.399Z",
+  "classification": "Read-only source investigation and offline aggregation of existing run-01; no new engine execution or allocation measurement",
+  "source_provenance": [
+    {
+      "file": "engine/src/core.rs",
+      "sha256": "714ba49e06155b3e245ded4db5a089930b348bea0348a3e490fbd6ac4cd8e8fa",
+      "bytes": 34636
+    },
+    {
+      "file": "engine/src/model.rs",
+      "sha256": "b3b042ba9dbc2b0fda95eccccbe29301c7016d143889ef7dedbfc0d1271a88d7",
+      "bytes": 3121
+    },
+    {
+      "file": "engine/src/storage.rs",
+      "sha256": "4ad009df92a381897472a9f9a8ec3c0a15ddacf64559212137865f1d4b19202a",
+      "bytes": 43954
+    },
+    {
+      "file": "engine/src/main.rs",
+      "sha256": "0fd70c734a587f9451a2f0ac0a47e8b140619797be89d673a7d53db8d96ad989",
+      "bytes": 23831
+    },
+    {
+      "file": "engine/examples/core_bench.rs",
+      "sha256": "1e7551861d1aa12525ac0ee3f246d82d5d18b0329d519d08d868d64da178d786",
+      "bytes": 12236
+    },
+    {
+      "file": "engine/Cargo.toml",
+      "sha256": "9bcaa0b13d35fd5cda66c80f65d46dad64759dddc36a1a1923b7fd0f603c12d6",
+      "bytes": 635
+    },
+    {
+      "file": "engine/Cargo.lock",
+      "sha256": "cc19627006e8cef2293c146bc358a5dc7510694ce88d36e797e5b90d97ff7ba9",
+      "bytes": 23194
+    },
+    {
+      "file": "engine/target/release/leave-engine.exe",
+      "sha256": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512",
+      "bytes": 3010798
+    },
+    {
+      "file": "engine/target/release/examples/core_bench.exe",
+      "sha256": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86",
+      "bytes": 600795
+    },
+    {
+      "file": "evidence/20260921T134615285Z-cow-result-prototype-5d8dd1e4/output-01/raw-counts-and-results.jsonl",
+      "sha256": "78b644f02b270534b2ac7406e6521ace7a09c1b8df9feab1e523ff2135beea7e",
+      "bytes": 3495166
+    },
+    {
+      "file": "evidence/20260921T134615285Z-cow-result-prototype-5d8dd1e4/output-01/summary.json",
+      "sha256": "37a6671239b154abd1364c406b1dc367d412a38d687199ce223997b9555342ba",
+      "bytes": 3067
+    },
+    {
+      "file": "evidence/20260921T134615285Z-cow-result-prototype-5d8dd1e4/probe/src/main.rs",
+      "sha256": "41230edf9cae09db8b660fbec5758f6641ffc1cf93988c83884b59740a0e4a92",
+      "bytes": 16376
+    },
+    {
+      "file": "evidence/20260921T134615285Z-cow-result-prototype-5d8dd1e4/candidate/src/core.rs",
+      "sha256": "f08a6b14f975df7200528ff97c2b6d4b63380dfd16f614451ca7e45925616094",
+      "bytes": 34597
+    },
+    {
+      "file": "evidence/20260921T134615285Z-cow-result-prototype-5d8dd1e4/candidate/src/model.rs",
+      "sha256": "f5d8c800befbbc8c6040d47ebb80b8f52e3641fe8df2695791349c7c1d4bbd13",
+      "bytes": 3121
+    },
+    {
+      "file": "evidence/20260921T134615285Z-cow-result-prototype-5d8dd1e4/suffix-replay-v2/README.md",
+      "sha256": "d0733eb4541e7d21116ab0347c8eda0a159b0d393283721ef94695e67516891d",
+      "bytes": 5745
+    }
+  ],
+  "raw_rows": 6784,
+  "normal": {
+    "rows": 6000,
+    "allocations": 49987,
+    "reallocations": 1,
+    "requested_bytes": 4446232,
+    "allocation_calls_mean": 8.331333333333333,
+    "min": 4,
+    "max": 23,
+    "histogram": {
+      "4": 1721,
+      "5": 234,
+      "6": 41,
+      "7": 2636,
+      "8": 326,
+      "9": 37,
+      "10": 5,
+      "20": 790,
+      "21": 181,
+      "22": 23,
+      "23": 6
+    },
+    "trade_count_values": [
+      0,
+      2
+    ],
+    "first_raw_line": 1,
+    "last_raw_line": 6000
+  },
+  "normal_by_cycle_step": [
+    {
+      "step": 0,
+      "name": "maker sell1000x4",
+      "rows": 1000,
+      "allocations": 7140,
+      "reallocations": 1,
+      "requested_bytes": 1437288,
+      "allocation_calls_mean": 7.141,
+      "min": 7,
+      "max": 10,
+      "histogram": {
+        "7": 877,
+        "8": 107,
+        "9": 14,
+        "10": 2
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 1,
+      "last_raw_line": 5995
+    },
+    {
+      "step": 1,
+      "name": "maker sell1005x2",
+      "rows": 1000,
+      "allocations": 7118,
+      "reallocations": 0,
+      "requested_bytes": 397176,
+      "allocation_calls_mean": 7.118,
+      "min": 7,
+      "max": 10,
+      "histogram": {
+        "7": 894,
+        "8": 95,
+        "9": 10,
+        "10": 1
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 2,
+      "last_raw_line": 5996
+    },
+    {
+      "step": 2,
+      "name": "buy1010x5 / two fills",
+      "rows": 1000,
+      "allocations": 20245,
+      "reallocations": 0,
+      "requested_bytes": 1193520,
+      "allocation_calls_mean": 20.245,
+      "min": 20,
+      "max": 23,
+      "histogram": {
+        "20": 790,
+        "21": 181,
+        "22": 23,
+        "23": 6
+      },
+      "trade_count_values": [
+        2
+      ],
+      "first_raw_line": 3,
+      "last_raw_line": 5997
+    },
+    {
+      "step": 3,
+      "name": "cancel partial second maker",
+      "rows": 1000,
+      "allocations": 4188,
+      "reallocations": 0,
+      "requested_bytes": 523376,
+      "allocation_calls_mean": 4.188,
+      "min": 4,
+      "max": 7,
+      "histogram": {
+        "4": 839,
+        "5": 138,
+        "6": 19,
+        "7": 4
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 4,
+      "last_raw_line": 5998
+    },
+    {
+      "step": 4,
+      "name": "resting buy900x3",
+      "rows": 1000,
+      "allocations": 7156,
+      "reallocations": 0,
+      "requested_bytes": 495240,
+      "allocation_calls_mean": 7.156,
+      "min": 7,
+      "max": 10,
+      "histogram": {
+        "7": 861,
+        "8": 124,
+        "9": 13,
+        "10": 2
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 5,
+      "last_raw_line": 5999
+    },
+    {
+      "step": 5,
+      "name": "cancel resting buy",
+      "rows": 1000,
+      "allocations": 4140,
+      "reallocations": 0,
+      "requested_bytes": 399632,
+      "allocation_calls_mean": 4.14,
+      "min": 4,
+      "max": 6,
+      "histogram": {
+        "4": 882,
+        "5": 96,
+        "6": 22
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 6,
+      "last_raw_line": 6000
+    }
+  ],
+  "groups": {
+    "normal_new": {
+      "rows": 6000,
+      "allocations": 49987,
+      "reallocations": 1,
+      "requested_bytes": 4446232,
+      "allocation_calls_mean": 8.331333333333333,
+      "min": 4,
+      "max": 23,
+      "histogram": {
+        "4": 1721,
+        "5": 234,
+        "6": 41,
+        "7": 2636,
+        "8": 326,
+        "9": 37,
+        "10": 5,
+        "20": 790,
+        "21": 181,
+        "22": 23,
+        "23": 6
+      },
+      "trade_count_values": [
+        0,
+        2
+      ],
+      "first_raw_line": 1,
+      "last_raw_line": 6000
+    },
+    "fresh_rejection": {
+      "rows": 128,
+      "allocations": 532,
+      "reallocations": 0,
+      "requested_bytes": 57476,
+      "allocation_calls_mean": 4.15625,
+      "min": 4,
+      "max": 6,
+      "histogram": {
+        "4": 110,
+        "5": 16,
+        "6": 2
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 6001,
+      "last_raw_line": 6128
+    },
+    "borrowed_duplicate": {
+      "rows": 128,
+      "allocations": 256,
+      "reallocations": 0,
+      "requested_bytes": 2432,
+      "allocation_calls_mean": 2,
+      "min": 2,
+      "max": 2,
+      "histogram": {
+        "2": 128
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 6129,
+      "last_raw_line": 6383
+    },
+    "borrowed_lookup": {
+      "rows": 128,
+      "allocations": 256,
+      "reallocations": 0,
+      "requested_bytes": 2432,
+      "allocation_calls_mean": 2,
+      "min": 2,
+      "max": 2,
+      "histogram": {
+        "2": 128
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 6130,
+      "last_raw_line": 6384
+    },
+    "request_conflict": {
+      "rows": 128,
+      "allocations": 256,
+      "reallocations": 0,
+      "requested_bytes": 2432,
+      "allocation_calls_mean": 2,
+      "min": 2,
+      "max": 2,
+      "histogram": {
+        "2": 128
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 6385,
+      "last_raw_line": 6512
+    },
+    "invalid_key_unadmitted": {
+      "rows": 16,
+      "allocations": 16,
+      "reallocations": 0,
+      "requested_bytes": 112,
+      "allocation_calls_mean": 1,
+      "min": 1,
+      "max": 1,
+      "histogram": {
+        "1": 16
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 6513,
+      "last_raw_line": 6528
+    },
+    "restored_owned_duplicate": {
+      "rows": 128,
+      "allocations": 640,
+      "reallocations": 0,
+      "requested_bytes": 8704,
+      "allocation_calls_mean": 5,
+      "min": 5,
+      "max": 5,
+      "histogram": {
+        "5": 128
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 6529,
+      "last_raw_line": 6783
+    },
+    "restored_owned_lookup": {
+      "rows": 128,
+      "allocations": 640,
+      "reallocations": 0,
+      "requested_bytes": 8704,
+      "allocation_calls_mean": 5,
+      "min": 5,
+      "max": 5,
+      "histogram": {
+        "5": 128
+      },
+      "trade_count_values": [
+        0
+      ],
+      "first_raw_line": 6530,
+      "last_raw_line": 6784
+    }
+  },
+  "normal_every_row_saved_exactly_six_calls": true,
+  "reallocation_rows": [
+    {
+      "line": 145,
+      "request_id": "bench-1024-0",
+      "candidate_counts": {
+        "allocations": 7,
+        "reallocations": 1,
+        "requested_bytes": 983133
+      }
+    }
+  ],
+  "maximum_examples": [
+    {
+      "line": 1995,
+      "request_id": "bench-1332-2",
+      "candidate_counts": {
+        "allocations": 23,
+        "reallocations": 0,
+        "requested_bytes": 8457
+      }
+    },
+    {
+      "line": 2217,
+      "request_id": "bench-1369-2",
+      "candidate_counts": {
+        "allocations": 23,
+        "reallocations": 0,
+        "requested_bytes": 8457
+      }
+    },
+    {
+      "line": 2763,
+      "request_id": "bench-1460-2",
+      "candidate_counts": {
+        "allocations": 23,
+        "reallocations": 0,
+        "requested_bytes": 8457
+      }
+    },
+    {
+      "line": 2949,
+      "request_id": "bench-1491-2",
+      "candidate_counts": {
+        "allocations": 23,
+        "reallocations": 0,
+        "requested_bytes": 8457
+      }
+    },
+    {
+      "line": 4251,
+      "request_id": "bench-1708-2",
+      "candidate_counts": {
+        "allocations": 23,
+        "reallocations": 0,
+        "requested_bytes": 8457
+      }
+    },
+    {
+      "line": 5421,
+      "request_id": "bench-1903-2",
+      "candidate_counts": {
+        "allocations": 23,
+        "reallocations": 0,
+        "requested_bytes": 8457
+      }
+    }
+  ],
+  "callsite_attribution_measured": false,
+  "full_core_clone_groups": "Only summary totals in original experiment; not part of execute rows",
+  "benchmarks_run": 0,
+  "builds_run": 0,
+  "production_edits": 0
+}

@@ -1,0 +1,117 @@
+{
+  "reviewed_at": "2026-09-21T14:37:53.628Z",
+  "method": "Read-only requirements/docs/raw browser JSON and DOM review, direct view of both existing PNGs, offline extraction of overlapping server samples. No new browser/test/service/API activity.",
+  "requirement": "13.4 최소 5분간 지속적인 체결·호가 변화·차트 갱신 확인",
+  "source_hashes": [
+    {
+      "path": "docs/requirements.ko.md",
+      "bytes": 29963,
+      "sha256": "bf190c0400db130f8632a5f8a331e0e0f4b07dc9a5ff479281662e122475e3d5"
+    },
+    {
+      "path": "docs/ui.md",
+      "bytes": 12692,
+      "sha256": "f5244277a594a64d70d2b833229b58d351ef3ea371414097341c7fca2bd6d9b1"
+    },
+    {
+      "path": "docs/verification.md",
+      "bytes": 22684,
+      "sha256": "ef437c1af235235c8d6a452a353fdf70aff379576ad64c8f926ac21d31d29ca6"
+    },
+    {
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/README.md",
+      "bytes": 1987,
+      "sha256": "8510017ca482171f740768cf3346d94853f3c2eddef8ff7c9aa3c6b2e4aff765"
+    },
+    {
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-start.json",
+      "bytes": 303,
+      "sha256": "e501b8986e1c11cb3a372ff3cec3d3b4c7550784ba7e0630f15bd5d2288c2ea3"
+    },
+    {
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-end.json",
+      "bytes": 380,
+      "sha256": "169eb3f21964e5daa72d761307dbac1c8d9d644aba608784f2a580df12afb8eb"
+    },
+    {
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-start.png",
+      "bytes": 37153,
+      "sha256": "c5832cee0ddb23c02e189962f593accacd59c5984e8b356d8ad6c9c4e85ebdf3"
+    },
+    {
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-visible-end.png",
+      "bytes": 36968,
+      "sha256": "5f4722184e6f617ea7afbd32cc72596876951ddc0cc3c55d6bced8aa85bd9825"
+    },
+    {
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/chart-0905.txt",
+      "bytes": 1033,
+      "sha256": "37de882fac2475d4d83504de4c1968d4a695d41dcdf90d87006a85dbf4961b8e"
+    },
+    {
+      "path": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z/after-five-minutes.txt",
+      "bytes": 9362,
+      "sha256": "fcf883d23945c544cbe1fcf0b019484d94beda8fad89a6f168f1d4cd1e3e4c5d"
+    }
+  ],
+  "existing_browser": {
+    "directory": "evidence/browser-reconnect-2026-09-21T09-02-02-365Z",
+    "start_at": "2026-09-21T09:08:04.525Z",
+    "end_at": "2026-09-21T09:13:19.140Z",
+    "elapsed_ms": 314615,
+    "start_chart": "01\n시장의 흐름\n실시간 체결\n최근 80건\n최근 240건\n체결 가격\n거래량\n\n18:08:04 1,005 P · 1시간\n\n1,029\n1,006\n984\n961\n18:06:55\n체결 순서\n18:08:04\n확정 체결 데이터\n표시 240건 · 동일 간격의 체결 순서",
+    "end_chart": "01\n시장의 흐름\n실시간 체결\n최근 80건\n최근 240건\n체결 가격\n거래량\n\n18:13:18 1,025 P · 1시간\n\n1,039\n1,016\n993\n970\n18:11:57\n체결 순서\n18:13:18\n확정 체결 데이터\n표시 240건 · 동일 간격의 체결 순서",
+    "direct_png_inspection": true,
+    "visible_chart_in_both": true,
+    "line_and_volume_bar_shapes_changed": true,
+    "latest_price_before": 1005,
+    "latest_price_after": 1025,
+    "latest_trade_time_before": "18:08:04",
+    "latest_trade_time_after": "18:13:18",
+    "depth_values_visible_in_pair": false,
+    "depth_header_visible_in_pair": true,
+    "raw_interior_screen_samples_in_this_interval_found": 0,
+    "scope": "Two actual rendered chart screenshots/DOM captures314.615s apart. Not a video or proof of every intermediate browser render. Earlier09:05/09:07 captures precede this visible-chart interval."
+  },
+  "overlapping_server": {
+    "source": "evidence/2026-09-21T09-02-19-482Z-observe-4abd2bbd/samples.jsonl",
+    "first_line": 69,
+    "last_line": 131,
+    "samples": 63,
+    "first_at": "2026-09-21T09:08:04.656Z",
+    "last_at": "2026-09-21T09:13:18.860Z",
+    "elapsed_ms": 314207.6784000001,
+    "event_delta": 1840,
+    "volume_hours_delta": 1315,
+    "unique_book_hashes": 63,
+    "unique_prices": 33,
+    "max_sample_gap_ms": 5375.789999999979,
+    "minimum_interval_volume_delta": 1,
+    "ws_gap_change": 0,
+    "ws_disconnect_change": 0,
+    "all_ready": true,
+    "minimum_bots": 12,
+    "scope": "API/WS sampling only; these are not browser render frames."
+  },
+  "assessment": {
+    "existing_supported": "At least five minutes of sampled genuine market activity and two actual chart renders over a314.615s span are supported. This is materially more than only API evidence.",
+    "remaining_gap": "No saved interior screenshot/DOM capture within the visible-chart interval, and book rows are below the viewport in both endpoints. Therefore sustained five-minute rendering of chart+depth+trade display as one browser observation remains weak.",
+    "docs_ui": "Correctly limits the separate08:35 API/WS observation; it does not currently link the later visible-chart pair in that paragraph.",
+    "docs_verification": "Its cited314.615s chart update exists and matches raw artifacts. Do not expand the row into uninterrupted rendering/every-frame assurance; describe sampled screen evidence and strengthen it."
+  },
+  "minimal_followup_plan": {
+    "owner": "root browser task",
+    "services": "Use existing standalone http://127.0.0.1:5175 and running engine/bots. No restart, new fixture, manual trades, extra load or currentdata modification.",
+    "start": "Use one actual desktop tab, fixed viewport/scroll with chart and depth values visible. Record URL, tab identity, source/build hashes, real start UTC, event seq, cumulative volume, latest trade and current connection/gap count. Keep UI source unchanged through the window.",
+    "cadence": "Observe for at least315s actual wall time. Save read-only DOM state every15-30s, plus raw screenshots near0/60/120/180/240/315s. Record exact capture timestamps; do not infer duration from scheduled sleeps.",
+    "fields": [
+      "EVENT/engine connection and resync baseline",
+      "current price and cumulative volume",
+      "last trade timestamp/price/quantity and recent trade rows",
+      "best bid/ask price+quantity or depth row signature",
+      "chart last-trade timestamp and price-line/volume-bar rendered signature"
+    ],
+    "check": "Across at least300s, consecutive recorded observations show new real trades, changing depth signatures and advancing chart trade time/shape; document any stall/reconnect/HMR separately. Pair screen fields with nearby existing observer rows if useful, without replacing screen evidence with server samples.",
+    "finish": "Save end screenshot/DOM, console issues, exact elapsed duration and compact per-observation table in a new run. Claim sampled browser rendering over the measured period, not all display frames or a new six-hour result."
+  }
+}

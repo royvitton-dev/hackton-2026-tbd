@@ -1,0 +1,111 @@
+{
+  "at": "2026-09-21T15:35:33.1078544Z",
+  "protected_processes": [
+    {
+      "Id": 20540,
+      "BirthTicks": 639255819214715478,
+      "name": "leave-engine"
+    },
+    {
+      "Id": 4220,
+      "BirthTicks": 639255919597804367,
+      "name": "node"
+    },
+    {
+      "Id": 4928,
+      "BirthTicks": 639255819223890023,
+      "name": "node"
+    },
+    {
+      "Id": 5412,
+      "BirthTicks": 639255819225355012,
+      "name": "node"
+    },
+    {
+      "Id": 6128,
+      "BirthTicks": 639255819225945324,
+      "name": "node"
+    },
+    {
+      "Id": 7916,
+      "BirthTicks": 639255819224762676,
+      "name": "node"
+    },
+    {
+      "Id": 7936,
+      "BirthTicks": 639255819223037571,
+      "name": "node"
+    },
+    {
+      "Id": 12172,
+      "BirthTicks": 639255819224485053,
+      "name": "node"
+    },
+    {
+      "Id": 15272,
+      "BirthTicks": 639255819225047340,
+      "name": "node"
+    },
+    {
+      "Id": 16068,
+      "BirthTicks": 639255819223612932,
+      "name": "node"
+    },
+    {
+      "Id": 17444,
+      "BirthTicks": 639255819222784404,
+      "name": "node"
+    },
+    {
+      "Id": 18184,
+      "BirthTicks": 639255819548395149,
+      "name": "node"
+    },
+    {
+      "Id": 20484,
+      "BirthTicks": 639255819225665942,
+      "name": "node"
+    },
+    {
+      "Id": 20776,
+      "BirthTicks": 639255819223346242,
+      "name": "node"
+    },
+    {
+      "Id": 20940,
+      "BirthTicks": 639255819224216442,
+      "name": "node"
+    },
+    {
+      "Id": 15744,
+      "BirthTicks": 639255819549077476,
+      "name": "powershell"
+    },
+    {
+      "Id": 16840,
+      "BirthTicks": 639255934783172929,
+      "name": "pwsh"
+    },
+    {
+      "Id": 19312,
+      "BirthTicks": 639255931977989384,
+      "name": "node"
+    }
+  ],
+  "protected_hashes": {
+    "trading/engine/target/debug/examples/aged_recovery.exe": "d2c8dd9ed9315d6859be5350f5b2e8c909594735d6000a4c7a0c30966ad14d43",
+    "trading/engine/target/release/leave-engine.exe": "65348c203d3ddf0a29cb3fa19eca650347e4cd77308f2352f434212063896512",
+    "trading/engine/target/release/examples/core_bench.exe": "7cfd820a78d0f2ce1cac442f5da941e817e23e880e8cf0653a76c7c037df1a86",
+    "trading/data/demo-current.json": "99714647ef8c859336b318f0939179a51cdb90439908a160e0a0a2a4561ee53e",
+    "park/vite.config.mjs": "12e8c26386584b4b238deb064a8d8eb156d296a2ca699d8f6a65f0d11ce8f0cc"
+  },
+  "last_sample_engine_memory": {
+    "at": "2026-09-22T00:30:48.7877365+09:00",
+    "working_set_bytes": 153796608,
+    "private_bytes": 163606528
+  },
+  "map_main_status": 200,
+  "map_font_import_error": false,
+  "map_check_scope": "Earlier read-only HTTP main.js check in this root turn; no reinstall or restart",
+  "earlier_check_failure": "A first verification command incorrectly named release/core-bench.exe, which does not exist. It stopped before writing integration.json. Actual known path release/examples/core_bench.exe was read from prior verified.json and checked here."
+}
